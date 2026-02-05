@@ -12,19 +12,15 @@
 
  
 
-  <!-- Fav -->
-
   <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
 
  
 
-  <!-- Simple SEO -->
-
-  <meta name="description" content="ZOTHEOS is an offline-first, privacy-respecting intelligence tool built to help people learn, decide, and build—without surveillance or manipulation." />
+  <meta name="description" content="ZOTHEOS is an offline-first intelligence tool built to give people clear knowledge—without surveillance, manipulation, or paywalls." />
 
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
 
-  <meta property="og:description" content="Offline-first. Privacy-respecting. Built to serve people without surveillance or manipulation." />
+  <meta property="og:description" content="Clear knowledge. No surveillance. No manipulation. No paywalls." />
 
   <meta property="og:image" content="/static/favicon_blackBW.ico" />
 
@@ -38,15 +34,15 @@
 
       --text:#f4f4f4;
 
-      --dim:#b3b3b3;
+      --dim:#b9b9b9;
 
-      --soft:#d6d6d6;
+      --soft:#dedede;
 
  
 
-      --panel: rgba(16,16,16,0.62);
+      --glass: rgba(14,14,14,0.62);
 
-      --panel2: rgba(12,12,12,0.52);
+      --glass2: rgba(10,10,10,0.50);
 
       --border: rgba(255,255,255,0.12);
 
@@ -54,15 +50,11 @@
 
  
 
-      --accent: rgba(255,255,255,0.9);
+      --shadow: 0 22px 85px rgba(0,0,0,0.72);
 
-      --shadow: 0 18px 70px rgba(0,0,0,0.68);
-
-      --shadow2: 0 10px 40px rgba(0,0,0,0.55);
+      --shadow2: 0 12px 55px rgba(0,0,0,0.62);
 
  
-
-      --max: 1120px;
 
       --r1: 18px;
 
@@ -70,9 +62,13 @@
 
  
 
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --max: 1120px;
+
+ 
 
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     }
 
@@ -96,59 +92,55 @@
 
     }
 
- 
-
     a{ color:inherit; text-decoration:none; }
 
-    .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+    .container{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
 
  
 
-    /* ---------------------------------
+    /* -----------------------
 
-      Background: more spacious + "illuminating"
+      Immersive background
 
-    ---------------------------------- */
+    ------------------------ */
 
     .bg{
 
-      position:fixed; inset:0; z-index:-5;
+      position:fixed; inset:0; z-index:-10;
 
       background:
 
-        radial-gradient(1200px 700px at 18% 12%, rgba(255,255,255,0.11), transparent 62%),
+        radial-gradient(1200px 700px at 18% 12%, rgba(255,255,255,0.12), transparent 62%),
 
-        radial-gradient(1000px 600px at 85% 16%, rgba(255,255,255,0.07), transparent 60%),
+        radial-gradient(1000px 600px at 85% 16%, rgba(255,255,255,0.08), transparent 60%),
 
         radial-gradient(900px 700px at 50% 90%, rgba(255,255,255,0.06), transparent 62%),
 
-        radial-gradient(700px 520px at 72% 62%, rgba(86,240,183,0.05), transparent 64%),
+        radial-gradient(700px 520px at 72% 62%, rgba(86,240,183,0.06), transparent 64%),
 
-        radial-gradient(720px 540px at 34% 68%, rgba(255,92,122,0.04), transparent 66%),
+        radial-gradient(720px 540px at 34% 68%, rgba(255,92,122,0.055), transparent 66%),
 
         linear-gradient(180deg, #050505 0%, #070707 46%, #050505 100%);
 
     }
 
- 
-
     .mist{
 
       position:absolute; inset:-22%;
 
-      opacity:0.9;
+      opacity:0.92;
 
-      filter: blur(16px) saturate(1.12);
+      filter: blur(16px) saturate(1.15);
 
       background:
 
-        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.12), transparent 62%),
+        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.14), transparent 62%),
 
-        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.08), transparent 62%),
+        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.09), transparent 62%),
 
-        radial-gradient(closest-side at 52% 70%, rgba(255,255,255,0.07), transparent 62%),
+        radial-gradient(closest-side at 52% 70%, rgba(255,255,255,0.08), transparent 62%),
 
-        radial-gradient(closest-side at 80% 76%, rgba(255,255,255,0.06), transparent 62%);
+        radial-gradient(closest-side at 80% 76%, rgba(255,255,255,0.07), transparent 62%);
 
       animation: float 18s ease-in-out infinite alternate;
 
@@ -164,15 +156,13 @@
 
     }
 
- 
-
     .stars{
 
       position:absolute; inset:0;
 
       opacity:0.18;
 
-      background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
 
       background-size: 3px 3px;
 
@@ -196,8 +186,6 @@
 
     }
 
- 
-
     @media (prefers-reduced-motion: reduce){
 
       .mist,.stars{ animation:none !important; }
@@ -206,11 +194,573 @@
 
  
 
-    /* ---------------------------------
+    /* -----------------------
 
-      Intro Video Overlay
+      Glass components
 
-    ---------------------------------- */
+    ------------------------ */
+
+    .panel{
+
+      background: var(--glass);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--r2);
+
+      box-shadow: var(--shadow2);
+
+      backdrop-filter: blur(16px);
+
+      -webkit-backdrop-filter: blur(16px);
+
+      overflow:hidden;
+
+    }
+
+    .pad{ padding: 28px; }
+
+    @media (max-width: 560px){
+
+      .pad{ padding: 20px; }
+
+    }
+
+ 
+
+    /* -----------------------
+
+      Header
+
+    ------------------------ */
+
+    header{
+
+      position:sticky; top:0; z-index:40;
+
+      backdrop-filter: blur(14px);
+
+      -webkit-backdrop-filter: blur(14px);
+
+      background: linear-gradient(180deg, rgba(5,5,5,0.82), rgba(5,5,5,0.46));
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    }
+
+    .nav{
+
+      display:flex; align-items:center; justify-content:space-between;
+
+      gap:14px;
+
+      padding: 14px 0;
+
+    }
+
+    .brand{
+
+      display:flex; align-items:center; gap:12px;
+
+      min-width: 220px;
+
+    }
+
+    .brand .ico{
+
+      width:34px; height:34px;
+
+      border-radius: 12px;
+
+      border: 1px solid rgba(255,255,255,0.14);
+
+      background: rgba(255,255,255,0.05);
+
+      padding: 7px;
+
+      display:block;
+
+    }
+
+    .brand .wordmark{
+
+      height: 18px;
+
+      width:auto;
+
+      display:block;
+
+      opacity:0.96;
+
+    }
+
+    .brand .fallback{
+
+      font-weight:800;
+
+      letter-spacing:0.06em;
+
+      font-size:14px;
+
+      text-transform:uppercase;
+
+      opacity:0.92;
+
+    }
+
+ 
+
+    .navlinks{
+
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+
+    }
+
+    .pill{
+
+      font-size:13px;
+
+      padding:9px 12px;
+
+      border-radius:999px;
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background: rgba(0,0,0,0.35);
+
+    }
+
+    .pill:hover{
+
+      border-color: rgba(255,255,255,0.22);
+
+      background: rgba(0,0,0,0.55);
+
+    }
+
+    .pill.primary{
+
+      border-color: rgba(255,255,255,0.24);
+
+      background: rgba(255,255,255,0.10);
+
+    }
+
+ 
+
+    /* -----------------------
+
+      Hero (Jessica Walsh-ish energy)
+
+    ------------------------ */
+
+    main{ padding: 56px 0 86px; }
+
+ 
+
+    .hero{
+
+      position:relative;
+
+      border-radius: var(--r2);
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background:
+
+        radial-gradient(900px 520px at 15% 0%, rgba(255,255,255,0.12), transparent 60%),
+
+        radial-gradient(780px 540px at 88% 18%, rgba(86,240,183,0.08), transparent 62%),
+
+        radial-gradient(820px 560px at 55% 110%, rgba(255,92,122,0.07), transparent 62%),
+
+        rgba(0,0,0,0.22);
+
+      box-shadow: var(--shadow);
+
+      overflow:hidden;
+
+    }
+
+ 
+
+    /* subtle motion ribbons */
+
+    .ribbons{
+
+      position:absolute; inset:-20%;
+
+      background:
+
+        conic-gradient(from 160deg at 40% 40%,
+
+          rgba(255,255,255,0.10),
+
+          rgba(86,240,183,0.06),
+
+          rgba(255,92,122,0.05),
+
+          rgba(255,255,255,0.08),
+
+          rgba(0,0,0,0) 60%);
+
+      opacity:0.55;
+
+      filter: blur(22px) saturate(1.15);
+
+      animation: drift 16s ease-in-out infinite alternate;
+
+      pointer-events:none;
+
+    }
+
+    @keyframes drift{
+
+      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03) rotate(-2deg); }
+
+      100%{ transform: translate3d(2%, 1.4%, 0) scale(1.08) rotate(2deg); }
+
+    }
+
+    @media (prefers-reduced-motion: reduce){
+
+      .ribbons{ animation:none !important; }
+
+    }
+
+ 
+
+    .hero-inner{ position:relative; padding: 44px 38px; }
+
+    @media (max-width: 560px){
+
+      .hero-inner{ padding: 30px 20px; }
+
+    }
+
+ 
+
+    .eyebrow{
+
+      display:inline-flex; align-items:center; gap:10px;
+
+      padding: 9px 12px;
+
+      border-radius: 999px;
+
+      border:1px solid rgba(255,255,255,0.14);
+
+      background: rgba(0,0,0,0.32);
+
+      font-size: 12px;
+
+      letter-spacing: 0.10em;
+
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.86);
+
+    }
+
+    .dot{
+
+      width:7px;height:7px;border-radius:999px;
+
+      background: rgba(255,255,255,0.92);
+
+      box-shadow: 0 0 18px rgba(255,255,255,0.24);
+
+    }
+
+ 
+
+    .headline{
+
+      margin: 18px 0 12px;
+
+      font-size: clamp(40px, 6vw, 70px);
+
+      line-height: 0.98;
+
+      letter-spacing: -0.03em;
+
+      font-weight: 900;
+
+    }
+
+    .subhead{
+
+      margin: 0;
+
+      color: var(--soft);
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      max-width: 70ch;
+
+    }
+
+ 
+
+    .cta{
+
+      display:flex; gap:12px; flex-wrap:wrap;
+
+      margin-top: 22px;
+
+    }
+
+    .btn{
+
+      display:inline-flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      padding:12px 16px;
+
+      border-radius: 16px;
+
+      border:1px solid rgba(255,255,255,0.18);
+
+      background: rgba(0,0,0,0.42);
+
+      backdrop-filter: blur(10px);
+
+      -webkit-backdrop-filter: blur(10px);
+
+      color: rgba(255,255,255,0.95);
+
+      font-size:14px;
+
+      cursor:pointer;
+
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+
+      user-select:none;
+
+      white-space:nowrap;
+
+    }
+
+    .btn:hover{
+
+      transform: translateY(-1px);
+
+      background: rgba(0,0,0,0.62);
+
+      border-color: rgba(255,255,255,0.26);
+
+    }
+
+    .btn.primary{
+
+      background: rgba(255,255,255,0.10);
+
+      border-color: rgba(255,255,255,0.28);
+
+    }
+
+ 
+
+    .pillgrid{
+
+      margin-top: 22px;
+
+      display:grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 12px;
+
+      max-width: 740px;
+
+    }
+
+    .pillcard{
+
+      border-radius: var(--r1);
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background: rgba(0,0,0,0.34);
+
+      padding: 16px 16px;
+
+    }
+
+    .pillcard b{ display:block; margin-bottom:6px; }
+
+    .pillcard span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
+
+ 
+
+    /* -----------------------
+
+      Stacked sections w/ gradient rhythm
+
+    ------------------------ */
+
+    .stack{ display:flex; flex-direction:column; gap: 16px; margin-top: 18px; }
+
+ 
+
+    .section-title{
+
+      margin:0 0 10px;
+
+      font-size: 18px;
+
+      letter-spacing: 0.01em;
+
+    }
+
+    .copy{
+
+      margin:0;
+
+      color: var(--soft);
+
+      line-height:1.75;
+
+      font-size: 15px;
+
+      max-width: 78ch;
+
+    }
+
+    .muted{ color: var(--dim); }
+
+ 
+
+    .gradient-bar{
+
+      height: 1px;
+
+      background: linear-gradient(90deg,
+
+        rgba(255,255,255,0.0),
+
+        rgba(255,255,255,0.18),
+
+        rgba(86,240,183,0.18),
+
+        rgba(255,92,122,0.16),
+
+        rgba(255,255,255,0.0));
+
+      opacity:0.9;
+
+    }
+
+ 
+
+    /* -----------------------
+
+      Screenshot (single)
+
+    ------------------------ */
+
+    .shot{
+
+      border-radius: var(--r2);
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      background: rgba(0,0,0,0.30);
+
+      overflow:hidden;
+
+      box-shadow: var(--shadow2);
+
+    }
+
+    .shot img{
+
+      width:100%;
+
+      height:auto;
+
+      display:block;
+
+      object-fit:cover;
+
+    }
+
+    .shot .cap{
+
+      padding: 14px 16px 16px;
+
+      border-top: 1px solid rgba(255,255,255,0.10);
+
+      color: var(--dim);
+
+      font-size: 13px;
+
+      line-height: 1.45;
+
+    }
+
+ 
+
+    /* -----------------------
+
+      Support cards
+
+    ------------------------ */
+
+    .donate{
+
+      display:grid;
+
+      grid-template-columns: 1fr 1fr 1fr;
+
+      gap: 12px;
+
+      margin-top: 14px;
+
+    }
+
+    @media (max-width: 960px){
+
+      .donate{ grid-template-columns: 1fr; }
+
+    }
+
+    .don{
+
+      padding: 16px;
+
+      border-radius: var(--r1);
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      background: rgba(0,0,0,0.34);
+
+    }
+
+    .don b{ display:block; margin-bottom:6px; }
+
+    .don span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
+
+    .don a{ display:block; margin-top: 12px; }
+
+    .don .btn{ width:100%; }
+
+ 
+
+    /* -----------------------
+
+      Intro Video Overlay (FIXED)
+
+      - No forced auto-hide
+
+      - User controls: Skip / Pause
+
+    ------------------------ */
 
     .intro{
 
@@ -218,7 +768,7 @@
 
       display:flex; align-items:stretch; justify-content:center;
 
-      background: #000;
+      background:#000;
 
     }
 
@@ -232,7 +782,7 @@
 
       display:block;
 
-      filter: contrast(1.03) saturate(1.03);
+      filter: contrast(1.03) saturate(1.04);
 
     }
 
@@ -244,9 +794,9 @@
 
       background:
 
-        radial-gradient(900px 500px at 50% 15%, rgba(0,0,0,0.25), transparent 60%),
+        radial-gradient(900px 520px at 50% 18%, rgba(0,0,0,0.18), transparent 62%),
 
-        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.72));
+        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.72));
 
       pointer-events:none;
 
@@ -284,6 +834,8 @@
 
       backdrop-filter: blur(10px);
 
+      -webkit-backdrop-filter: blur(10px);
+
       color: rgba(255,255,255,0.92);
 
       font-size:13px;
@@ -298,469 +850,15 @@
 
     }
 
-    .btn{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      padding:10px 14px;
-
-      border-radius:14px;
-
-      border:1px solid rgba(255,255,255,0.18);
-
-      background: rgba(0,0,0,0.45);
-
-      backdrop-filter: blur(10px);
-
-      color: rgba(255,255,255,0.95);
-
-      font-size:13px;
-
-      cursor:pointer;
-
-      transition: transform .10s ease, background .30s ease, border-color .15s ease;
-
-      user-select:none;
-
-      white-space:nowrap;
-
-    }
-
-    .btn:hover{
-
-      transform: translateY(-1px);
-
-      background: rgba(0,0,0,0.62);
-
-      border-color: rgba(255,255,255,0.26);
-
-    }
-
-    .btn.primary{
-
-      background: rgba(255,255,255,0.10);
-
-      border-color: rgba(255,255,255,0.28);
-
-    }
-
- 
-
     .hidden{ display:none !important; }
 
  
 
-    /* ---------------------------------
-
-      Header (clean + simple)
-
-    ---------------------------------- */
-
-    header{
-
-      position:sticky; top:0; z-index:40;
-
-      backdrop-filter: blur(14px);
-
-      background: linear-gradient(180deg, rgba(5,5,5,0.80), rgba(5,5,5,0.46));
-
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-
-    }
-
-    .nav{
-
-      display:flex; align-items:center; justify-content:space-between;
-
-      gap:14px;
-
-      padding: 14px 0;
-
-    }
-
-    .brand{
-
-      display:flex; align-items:center; gap:12px;
-
-      min-width: 220px;
-
-    }
-
- 
-
-    /* Wordmark PNG */
-
-    .wordmark{
-
-      height: 22px;
-
-      width: auto;
-
-      display:block;
-
-      opacity:0.95;
-
-    }
-
- 
-
-    /* Icon is separate, small square */
-
-    .icon{
-
-      width:50px; height:50px;
-
-      border-radius:10px;
-
-      border:1px solid rgba(255,255,255,0.12);
-
-      background: rgba(255,255,255,0.06);
-
-      padding:3px;
-
-      display:block;
-
-    }
-
- 
-
-    .navlinks{
-
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-
-    }
-
-    .link{
-
-      font-size:13px;
-
-      padding:9px 12px;
-
-      border-radius:999px;
-
-      border:1px solid rgba(255,255,255,0.12);
-
-      background: rgba(0,0,0,0.35);
-
-    }
-
-    .link:hover{
-
-      border-color: rgba(255,255,255,0.22);
-
-      background: rgba(0,0,0,0.52);
-
-    }
-
-    .link.primary{
-
-      border-color: rgba(255,255,255,0.24);
-
-      background: rgba(255,255,255,0.10);
-
-    }
-
- 
-
-    /* ---------------------------------
-
-      Layout (spacious)
-
-    ---------------------------------- */
-
-    main{ padding: 54px 0 86px; }
-
-    .hero{
-
-      display:grid;
-
-      grid-template-columns: 1.1fr 0.9fr;
-
-      gap: 18px;
-
-      align-items:stretch;
-
-    }
-
-    @media (max-width: 960px){
-
-      .hero{ grid-template-columns: 1fr; }
-
-      .brand{ min-width:auto; }
-
-    }
-
- 
-
-    .panel{
-
-      background: var(--panel);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--r2);
-
-      box-shadow: var(--shadow2);
-
-      overflow:hidden;
-
-    }
-
-    .pad{ padding: 28px; }
-
-    @media (max-width: 560px){
-
-      .pad{ padding: 20px; }
-
-    }
-
- 
-
-    .kicker{
-
-      display:inline-flex; align-items:center; gap:10px;
-
-      padding: 9px 12px;
-
-      border-radius: 999px;
-
-      border: 1px solid rgba(255,255,255,0.14);
-
-      background: rgba(0,0,0,0.32);
-
-      color: rgba(255,255,255,0.86);
-
-      font-size: 12px;
-
-      letter-spacing: 0.08em;
-
-      text-transform: uppercase;
-
-    }
-
-    .dot{
-
-      width:7px;height:7px;border-radius:999px;
-
-      background: rgba(255,255,255,0.88);
-
-      box-shadow: 0 0 18px rgba(255,255,255,0.20);
-
-    }
-
- 
-
-    h1{
-
-      margin: 14px 0 12px;
-
-      font-size: 44px;
-
-      line-height: 1.06;
-
-      letter-spacing: -0.02em;
-
-    }
-
-    @media (max-width: 560px){
-
-      h1{ font-size: 34px; }
-
-    }
-
- 
-
-    .lead{
-
-      color: var(--soft);
-
-      font-size: 16px;
-
-      line-height: 1.65;
-
-      margin: 0;
-
-      max-width: 56ch;
-
-    }
-
- 
-
-    .cta{
-
-      display:flex; gap:12px; flex-wrap:wrap;
-
-      margin-top: 22px;
-
-    }
-
-    .cta .btn{ padding: 12px 16px; font-size: 14px; border-radius: 16px; }
-
- 
-
-    .points{
-
-      display:grid;
-
-      grid-template-columns: 1fr;
-
-      gap: 12px;
-
-      margin-top: 14px;
-
-    }
-
-    .point{
-
-      padding: 16px;
-
-      border-radius: var(--r1);
-
-      border: 1px solid rgba(255,255,255,0.12);
-
-      background: rgba(0,0,0,0.32);
-
-    }
-
-    .point b{ display:block; margin-bottom:6px; }
-
-    .point span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
-
- 
-
-    .section{
-
-      margin-top: 18px;
-
-    }
-
-    .section h2{
-
-      margin: 0 0 10px;
-
-      font-size: 18px;
-
-      letter-spacing: 0.01em;
-
-    }
-
-    .section p{
-
-      margin: 0;
-
-      color: var(--soft);
-
-      line-height: 1.65;
-
-    }
-
-    .muted{ color: var(--dim); }
-
- 
-
-    /* ---------------------------------
-
-      Single screenshot block
-
-    ---------------------------------- */
-
-    .shot{
-
-      border-radius: var(--r2);
-
-      border: 1px solid rgba(255,255,255,0.12);
-
-      background: rgba(0,0,0,0.30);
-
-      overflow:hidden;
-
-      box-shadow: var(--shadow);
-
-    }
-
-    .shot img{
-
-      width:100%;
-
-      height:auto;
-
-      display:block;
-
-      object-fit:cover;
-
-    }
-
-    .shot .cap{
-
-      padding: 14px 16px 16px;
-
-      border-top: 1px solid rgba(255,255,255,0.10);
-
-      color: var(--dim);
-
-      font-size: 13px;
-
-      line-height: 1.45;
-
-    }
-
- 
-
-    /* ---------------------------------
-
-      Donate (simple)
-
-    ---------------------------------- */
-
-    .donate{
-
-      display:grid;
-
-      grid-template-columns: 1fr 1fr 1fr;
-
-      gap: 12px;
-
-      margin-top: 14px;
-
-    }
-
-    @media (max-width: 960px){
-
-      .donate{ grid-template-columns: 1fr; }
-
-    }
-
-    .don{
-
-      padding: 16px;
-
-      border-radius: var(--r1);
-
-      border: 1px solid rgba(255,255,255,0.12);
-
-      background: rgba(0,0,0,0.32);
-
-    }
-
-    .don b{ display:block; margin-bottom:6px; }
-
-    .don span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
-
-    .don a{ display:block; margin-top: 12px; }
-
-    .don .btn{ width:100%; }
-
- 
-
-    /* ---------------------------------
+    /* -----------------------
 
       Footer
 
-    ---------------------------------- */
+    ------------------------ */
 
     footer{
 
@@ -771,6 +869,8 @@
       background: rgba(0,0,0,0.18);
 
       backdrop-filter: blur(10px);
+
+      -webkit-backdrop-filter: blur(10px);
 
     }
 
@@ -786,7 +886,7 @@
 
     }
 
-    .foot a{ text-decoration:underline; text-decoration-color: rgba(255,255,255,0.20); color: var(--soft); }
+    .foot a{ text-decoration:underline; text-decoration-color: rgba(255,255,255,0.22); color: var(--soft); }
 
   </style>
 
@@ -810,17 +910,7 @@
 
   <div id="intro" class="intro">
 
-    <video id="introVideo"
-
-      autoplay
-
-      muted
-
-      playsinline
-
-      loop
-
-      preload="auto">
+    <video id="introVideo" autoplay muted playsinline loop preload="auto">
 
       <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
 
@@ -834,7 +924,7 @@
 
         <span class="dot" aria-hidden="true"></span>
 
-        <span>Loading ZOTHEOS…</span>
+        <span>ZOTHEOS is loading…</span>
 
       </div>
 
@@ -860,13 +950,17 @@
 
       <div class="nav">
 
-        <!-- Left brand: wordmark PNG + separate icon -->
-
         <a class="brand" href="#top" aria-label="ZOTHEOS home">
 
-          <img class="wordmark" src="/static/zotheos_wordmark.png" alt="ZOTHEOS" onerror="this.style.display='none'">
+          <!-- icon MUST be favicon_blackBW.ico -->
 
-          <img class="icon" src="/static/favicon_blackBW.ico" alt="ZOTHEOS icon" onerror="this.style.display='none'">
+          <img class="ico" src="/static/favicon_blackBW.ico" alt="ZOTHEOS icon" />
+
+          <!-- wordmark png (optional). if missing, fallback text shows -->
+
+          <img class="wordmark" src="/static/zotheos_wordmark.png" alt="ZOTHEOS" onerror="this.style.display='none'; document.getElementById('brandFallback').style.display='block';">
+
+          <span id="brandFallback" class="fallback" style="display:none;">ZOTHEOS</span>
 
         </a>
 
@@ -874,11 +968,11 @@
 
         <nav class="navlinks" aria-label="Primary">
 
-          <a class="link" href="#mission">Mission</a>
+          <a class="pill" href="#mission">Mission</a>
 
-          <a class="link" href="#proof">Proof</a>
+          <a class="pill" href="#proof">Proof</a>
 
-          <a class="link primary" href="#support">Support</a>
+          <a class="pill primary" href="#support">Support</a>
 
         </nav>
 
@@ -900,63 +994,143 @@
 
       <section class="hero">
 
-        <div class="panel">
+        <div class="ribbons" aria-hidden="true"></div>
+
+ 
+
+        <div class="hero-inner">
+
+          <span class="eyebrow"><span class="dot"></span> offline-first • private by default • built independently</span>
+
+ 
+
+          <h1 class="headline">Clear knowledge.<br/>No surveillance.<br/>No manipulation.</h1>
+
+ 
+
+          <p class="subhead">
+
+            ZOTHEOS is a tool built for real life: learning, planning, and problem-solving without getting tracked,
+
+            sold, or steered. It’s made to stay useful even when the internet isn’t.
+
+          </p>
+
+ 
+
+          <div class="cta">
+
+            <a class="btn primary" href="#support">Support the build</a>
+
+            <a class="btn" href="#proof">See the console</a>
+
+            <a class="btn" href="#mission">Why this exists</a>
+
+          </div>
+
+ 
+
+          <div class="pillgrid">
+
+            <div class="pillcard">
+
+              <b>It stays on your side.</b>
+
+              <span>Designed around humans, not engagement tricks.</span>
+
+            </div>
+
+            <div class="pillcard">
+
+              <b>It respects privacy.</b>
+
+              <span>Less dependence on always-online systems.</span>
+
+            </div>
+
+            <div class="pillcard">
+
+              <b>It aims for clarity.</b>
+
+              <span>Less noise. More usable answers.</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+ 
+
+      <div class="stack">
+
+ 
+
+        <!-- MISSION (stacked, spacious, less jargon) -->
+
+        <section id="mission" class="panel">
 
           <div class="pad">
 
-            <span class="kicker"><span class="dot"></span> offline-first • privacy-respecting • human-centered</span>
+            <h2 class="section-title">Why ZOTHEOS exists</h2>
+
+            <p class="copy">
+
+              The internet used to feel like a library. Now it often feels like a casino.
+
+              ZOTHEOS is my push in the opposite direction: a calm tool for learning and decision-making
+
+              that doesn’t need your data to “work.”
+
+            </p>
+
+            <div style="height:14px"></div>
+
+            <div class="gradient-bar"></div>
+
+            <div style="height:14px"></div>
+
+            <p class="copy muted">
+
+              The long-term goal is simple: keep knowledge accessible, keep people in control,
+
+              and keep the mission independent.
+
+            </p>
+
+          </div>
+
+        </section>
 
  
 
-            <h1>Clear knowledge.<br/>No surveillance.<br/>No manipulation.</h1>
+        <!-- PROOF (single screenshot only) -->
 
- 
+        <section id="proof" class="panel">
 
-            <p class="lead">
+          <div class="pad">
 
-              ZOTHEOS is built to help people learn, decide, and build—without being tracked, nudged, or divided.
+            <h2 class="section-title">Console proof</h2>
 
-              It’s designed to run reliably, even when the internet isn’t.
+            <p class="copy muted">
+
+              One screenshot for now. This is just to show the tool is real and active.
 
             </p>
 
  
 
-            <div class="cta">
+            <div class="shot" style="margin-top:14px">
 
-              <a class="btn primary" href="#support">Support development</a>
+              <img src="/static/console_hero.png" alt="ZOTHEOS console screenshot"
 
-              <a class="btn" href="#proof">See the console</a>
+                onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='Upload <span style=&quot;font-family:var(--mono)&quot;>/static/console_hero.png</span> to show the console here.';">
 
-              <a class="btn" href="#mission">Read the mission</a>
+              <div class="cap">
 
-            </div>
-
- 
-
-            <div class="points" style="margin-top:18px">
-
-              <div class="point">
-
-                <b>Easy access to answers</b>
-
-                <span>Built to be helpful in real life, not just impressive on paper.</span>
-
-              </div>
-
-              <div class="point">
-
-                <b>Privacy first</b>
-
-                <span>Designed to reduce dependence on always-online systems.</span>
-
-              </div>
-
-              <div class="point">
-
-                <b>Made to serve people</b>
-
-                <span>The goal is empowerment—more clarity, less noise.</span>
+                Upload <span style="font-family:var(--mono)">/static/console_hero.png</span> to show the console here.
 
               </div>
 
@@ -964,199 +1138,89 @@
 
           </div>
 
-        </div>
+        </section>
 
  
 
-        <!-- Right side: simple “what this is” -->
+        <!-- SUPPORT -->
 
-        <aside class="panel">
+        <section id="support" class="panel">
 
           <div class="pad">
 
-            <h2 style="margin:0 0 10px;">What this is</h2>
+            <h2 class="section-title">Support development</h2>
 
-            <p>
+            <p class="copy">
 
-              This page is the public front door. The console is the tool.
+              If this resonates, support keeps it moving and keeps it independent.
 
-              Here you’ll find a simple overview, a screenshot for proof, and ways to support the build.
+              Even small contributions help cover testing, releases, and the time it takes to build it right.
 
             </p>
 
  
 
-            <div class="section" style="margin-top:18px">
+            <div class="donate">
 
-              <h2>What it’s for</h2>
+              <div class="don">
 
-              <p class="muted">
+                <b>PayPal</b>
 
-                Helping people think clearly and act confidently—without feeding a system that profits from confusion.
+                <span>Quick one-time support.</span>
 
-              </p>
+                <a href=https://paypal.me/YOUR_HANDLE target="_blank" rel="noopener">
+
+                  <span class="btn primary">Donate via PayPal</span>
+
+                </a>
+
+              </div>
+
+              <div class="don">
+
+                <b>Stripe</b>
+
+                <span>Card-based support.</span>
+
+                <a href=https://buy.stripe.com/YOUR_LINK target="_blank" rel="noopener">
+
+                  <span class="btn">Donate via Stripe</span>
+
+                </a>
+
+              </div>
+
+              <div class="don">
+
+                <b>Gumroad</b>
+
+                <span>Supporter packs / future downloads.</span>
+
+                <a href=https://gumroad.com/YOUR_PRODUCT target="_blank" rel="noopener">
+
+                  <span class="btn">Support on Gumroad</span>
+
+                </a>
+
+              </div>
 
             </div>
 
  
 
-            <div class="section" style="margin-top:18px">
+            <p class="muted" style="margin-top:12px;font-size:13px;">
 
-              <h2>Status</h2>
+              Replace the three URLs in <span style="font-family:var(--mono)">index.html</span> with your real links.
 
-              <p class="muted">
-
-                Live site is up. Landing page is being refined. Console proof goes below.
-
-              </p>
-
-            </div>
+            </p>
 
           </div>
 
-        </aside>
-
-      </section>
+        </section>
 
  
 
-      <!-- MISSION -->
-
-      <section id="mission" class="panel section">
-
-        <div class="pad">
-
-          <h2>Mission</h2>
-
-          <p>
-
-            ZOTHEOS exists to keep knowledge in the hands of people—not platforms.
-
-            The aim is a tool that helps humans learn and solve problems while respecting privacy, reducing manipulation risk,
-
-            and staying usable in the real world.
-
-          </p>
-
-        </div>
-
-      </section>
-
- 
-
-      <!-- PROOF (single screenshot only) -->
-
-      <section id="proof" class="panel section">
-
-        <div class="pad">
-
-          <h2>Console (proof)</h2>
-
-          <p class="muted">
-
-            One screenshot for now—more will come later when the story is tight and simple.
-
-          </p>
-
- 
-
-          <div class="shot" style="margin-top:14px">
-
-            <img src="/static/console_hero.png" alt="ZOTHEOS console screenshot"
-
-                 onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='Upload <span style=&quot;font-family:var(--mono)&quot;>/static/console_hero.png</span> to show the console here.';">
-
-            <div class="cap">
-
-              Upload <span style="font-family:var(--mono)">/static/console_hero.png</span> to show the console here.
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
- 
-
-      <!-- SUPPORT (3 direct links) -->
-
-      <section id="support" class="panel section">
-
-        <div class="pad">
-
-          <h2>Support development</h2>
-
-          <p>
-
-            If this mission resonates, support helps keep the project independent and moving.
-
-            Even small contributions help with time, testing, and release polish.
-
-          </p>
-
- 
-
-          <div class="donate">
-
-            <div class="don">
-
-              <b>PayPal</b>
-
-              <span>Fast one-time support.</span>
-
-              <a href=https://paypal.me/YOUR_HANDLE target="_blank" rel="noopener">
-
-                <span class="btn primary">Donate via PayPal</span>
-
-              </a>
-
-            </div>
-
-            <div class="don">
-
-              <b>Stripe</b>
-
-              <span>Card-based support.</span>
-
-              <a href=https://buy.stripe.com/YOUR_LINK target="_blank" rel="noopener">
-
-                <span class="btn">Donate via Stripe</span>
-
-              </a>
-
-            </div>
-
-            <div class="don">
-
-              <b>Gumroad</b>
-
-              <span>Supporter packs / future downloads.</span>
-
-              <a href=https://gumroad.com/YOUR_PRODUCT target="_blank" rel="noopener">
-
-                <span class="btn">Support on Gumroad</span>
-
-              </a>
-
-            </div>
-
-          </div>
-
- 
-
-          <p class="muted" style="margin-top:12px;font-size:13px;">
-
-            Replace the three URLs in <span style="font-family:var(--mono)">index.html</span> with your real links.
-
-          </p>
-
-        </div>
-
-      </section>
-
- 
+      </div>
 
     </div>
 
@@ -1172,9 +1236,9 @@
 
         <div>
 
-          <div style="color:var(--soft);font-weight:600;letter-spacing:0.08em">ZOTHEOS</div>
+          <div style="color:var(--soft);font-weight:700;letter-spacing:0.08em">ZOTHEOS</div>
 
-          <div>Offline-first • privacy-respecting • built independently</div>
+          <div>Offline-first • private by default • built independently</div>
 
         </div>
 
@@ -1200,21 +1264,15 @@
 
   <script>
 
-    // Year
-
     document.getElementById('year').textContent = new Date().getFullYear();
 
  
 
-    // Intro video controls:
+    // Intro overlay controls:
 
-    // - Autoplays muted (browser requirement)
+    // - NO forced auto-hide (fixes the “cuts off after ~5 seconds” issue)
 
-    // - Skippable (hides overlay)
-
-    // - Pause/Play button
-
-    // - Auto-hides after a short moment OR after user skips
+    // - User can Pause/Play and Skip
 
     (function(){
 
@@ -1233,8 +1291,6 @@
  
 
       let dismissed = false;
-
- 
 
       function hideIntro(){
 
@@ -1256,13 +1312,9 @@
 
  
 
-      // Skip button
-
       skip.addEventListener('click', hideIntro);
 
  
-
-      // Pause / Play
 
       toggle.addEventListener('click', function(){
 
@@ -1284,27 +1336,19 @@
 
  
 
-      // Auto-hide after 3.2 seconds (keeps it graceful + not annoying)
+      // If user taps/clicks the video itself, toggle play (nice UX)
 
-      // You can increase if you want more “intro time”
+      v.addEventListener('click', function(){
 
-      setTimeout(() => {
+        toggle.click();
 
-        // If user paused it, let them control it; don’t force-hide
-
-        if(!v.paused) hideIntro();
-
-      }, 3200);
+      });
 
  
 
-      // Also hide if user scrolls (means they’re ready)
+      // Attempt to play (some browsers are picky even when muted)
 
-      window.addEventListener('scroll', () => {
-
-        if(window.scrollY > 30) hideIntro();
-
-      }, { passive:true });
+      v.play().catch(()=>{ /* muted autoplay usually works; ignore if blocked */ });
 
     })();
 
