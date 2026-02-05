@@ -12,69 +12,61 @@
 
  
 
-  <!-- Favicon -->
+  <!-- Fav -->
 
   <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
 
  
 
-  <!-- Social preview (optional but good) -->
+  <!-- Simple SEO -->
 
-  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system built to empower people with reliable knowledge without surveillance, manipulation, or paywalls." />
+  <meta name="description" content="ZOTHEOS is an offline-first, privacy-respecting intelligence tool built to help people learn, decide, and build—without surveillance or manipulation." />
 
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
 
-  <meta property="og:description" content="Offline-first ethical intelligence built to empower humans with trustworthy knowledge without surveillance or manipulation." />
+  <meta property="og:description" content="Offline-first. Privacy-respecting. Built to serve people—without surveillance or manipulation." />
 
-  <meta property="og:image" content="/static/zotheos_logo.png" />
+  <meta property="og:image" content="/static/zotheos_icon.png" />
 
  
 
   <style>
 
-    /* -----------------------------
-
-       Base
-
-    ------------------------------ */
-
     :root{
 
       --bg:#050505;
 
-      --panel:rgba(14,14,14,0.76);
+      --text:#f4f4f4;
 
-      --panel2:rgba(18,18,18,0.68);
+      --dim:#b3b3b3;
 
-      --border:rgba(255,255,255,0.12);
-
-      --text:#f5f5f5;
-
-      --dim:#a8a8a8;
-
-      --soft:#cfcfcf;
-
-      --accent:#ffffff;
-
-      --good:#56f0b7;
-
-      --warn:#ffcb6b;
-
-      --danger:#ff5c7a;
+      --soft:#d6d6d6;
 
  
 
-      --max:1140px;
+      --panel: rgba(16,16,16,0.62);
 
-      --radius:16px;
+      --panel2: rgba(12,12,12,0.52);
 
-      --radius2:22px;
+      --border: rgba(255,255,255,0.12);
+
+      --border2: rgba(255,255,255,0.18);
 
  
 
-      --shadow: 0 18px 70px rgba(0,0,0,0.65);
+      --accent: rgba(255,255,255,0.9);
 
-      --shadow2: 0 12px 45px rgba(0,0,0,0.55);
+      --shadow: 0 18px 70px rgba(0,0,0,0.68);
+
+      --shadow2: 0 10px 40px rgba(0,0,0,0.55);
+
+ 
+
+      --max: 1120px;
+
+      --r1: 18px;
+
+      --r2: 26px;
 
  
 
@@ -86,19 +78,19 @@
 
  
 
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
 
-    html,body{height:100%}
+    html,body{ height:100%; }
 
     body{
 
       margin:0;
 
-      color:var(--text);
+      font-family: var(--sans);
 
-      background:var(--bg);
+      color: var(--text);
 
-      font-family:var(--sans);
+      background: var(--bg);
 
       overflow-x:hidden;
 
@@ -106,173 +98,99 @@
 
  
 
-    a{color:inherit;text-decoration:none}
+    a{ color:inherit; text-decoration:none; }
 
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
 
  
 
-    /* -----------------------------
+    /* ---------------------------------
 
-       Animated Immersive Background
+      Background: more spacious + "illuminating"
 
-       - Prominent nebula + waves
+    ---------------------------------- */
 
-       - Canvas overlay for subtle motion
+    .bg{
 
-    ------------------------------ */
-
-    .bg-wrap{
-
-      position:fixed;
-
-      inset:0;
-
-      z-index:-5;
+      position:fixed; inset:0; z-index:-5;
 
       background:
 
-        radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,0.08), transparent 62%),
+        radial-gradient(1200px 700px at 18% 12%, rgba(255,255,255,0.11), transparent 62%),
 
-        radial-gradient(1000px 600px at 85% 15%, rgba(255,255,255,0.06), transparent 60%),
+        radial-gradient(1000px 600px at 85% 16%, rgba(255,255,255,0.07), transparent 60%),
 
-        radial-gradient(900px 700px at 50% 85%, rgba(255,255,255,0.05), transparent 60%),
+        radial-gradient(900px 700px at 50% 90%, rgba(255,255,255,0.06), transparent 62%),
 
-        radial-gradient(600px 400px at 70% 60%, rgba(86,240,183,0.06), transparent 62%),
+        radial-gradient(700px 520px at 72% 62%, rgba(86,240,183,0.05), transparent 64%),
 
-        radial-gradient(700px 500px at 35% 65%, rgba(255,92,122,0.045), transparent 63%),
+        radial-gradient(720px 540px at 34% 68%, rgba(255,92,122,0.04), transparent 66%),
 
-        linear-gradient(180deg, #050505 0%, #070707 40%, #050505 100%);
+        linear-gradient(180deg, #050505 0%, #070707 46%, #050505 100%);
 
     }
 
  
 
-    /* Nebula sheet: more prominent + moving */
+    .mist{
 
-    .nebula{
+      position:absolute; inset:-22%;
 
-      position:absolute;
+      opacity:0.9;
 
-      inset:-25%;
-
-      filter: blur(18px) saturate(1.25);
-
-      opacity:0.95;
+      filter: blur(16px) saturate(1.12);
 
       background:
 
-        radial-gradient(closest-side at 20% 30%, rgba(255,255,255,0.12), transparent 60%),
+        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.12), transparent 62%),
 
-        radial-gradient(closest-side at 75% 22%, rgba(86,240,183,0.09), transparent 62%),
+        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.08), transparent 62%),
 
-        radial-gradient(closest-side at 55% 65%, rgba(255,92,122,0.07), transparent 62%),
+        radial-gradient(closest-side at 52% 70%, rgba(255,255,255,0.07), transparent 62%),
 
-        radial-gradient(closest-side at 35% 75%, rgba(255,203,107,0.06), transparent 60%),
+        radial-gradient(closest-side at 80% 76%, rgba(255,255,255,0.06), transparent 62%);
 
-        radial-gradient(closest-side at 80% 72%, rgba(255,255,255,0.08), transparent 58%);
-
-      animation: nebulaFloat 18s ease-in-out infinite alternate;
+      animation: float 18s ease-in-out infinite alternate;
 
       transform: translate3d(0,0,0);
 
     }
 
-    @keyframes nebulaFloat{
+    @keyframes float{
 
-      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03) rotate(-1.2deg); }
+      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03); }
 
-      100%{ transform: translate3d(2.5%, 1.8%, 0) scale(1.06) rotate(1.4deg); }
-
-    }
-
- 
-
-    /* Wave layer: more visible + slow drift */
-
-    .waves{
-
-      position:absolute;
-
-      inset:auto -10% -25% -10%;
-
-      height:60%;
-
-      opacity:0.85;
-
-      filter: blur(0.2px);
-
-      background:
-
-        radial-gradient(1200px 420px at 20% 20%, rgba(255,255,255,0.06), transparent 60%),
-
-        radial-gradient(900px 380px at 80% 45%, rgba(255,255,255,0.05), transparent 58%),
-
-        repeating-linear-gradient(115deg,
-
-          rgba(255,255,255,0.00) 0px,
-
-          rgba(255,255,255,0.00) 24px,
-
-          rgba(255,255,255,0.06) 25px,
-
-          rgba(255,255,255,0.00) 42px
-
-        );
-
-      mask-image: radial-gradient(closest-side at 50% 20%, rgba(0,0,0,0.95), transparent 70%);
-
-      animation: waveDrift 16s linear infinite;
-
-      transform: translate3d(0,0,0);
-
-    }
-
-    @keyframes waveDrift{
-
-      0%{ transform: translate3d(-2%, 0, 0) skewX(-2deg); }
-
-      50%{ transform: translate3d(2%, -1%, 0) skewX(2deg); }
-
-      100%{ transform: translate3d(-2%, 0, 0) skewX(-2deg); }
+      100%{ transform: translate3d(2.2%, 1.6%, 0) scale(1.06); }
 
     }
 
  
 
-    /* Star grain */
+    .stars{
 
-    .grain{
+      position:absolute; inset:0;
 
-      position:absolute;
+      opacity:0.18;
 
-      inset:0;
-
-      opacity:0.22;
-
-      background-image:
-
-        radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
 
       background-size: 3px 3px;
 
       mix-blend-mode: screen;
 
-      filter: blur(0.2px);
-
-      animation: grainShift 9s steps(8,end) infinite;
+      animation: stars 10s steps(10,end) infinite;
 
     }
 
-    @keyframes grainShift{
+    @keyframes stars{
 
       0%{ transform: translate(0,0); }
 
-      25%{ transform: translate(-1%, 0.5%); }
+      25%{ transform: translate(-1%, 0.7%); }
 
-      50%{ transform: translate(1%, -0.5%); }
+      50%{ transform: translate(1%, -0.6%); }
 
-      75%{ transform: translate(-0.6%, -1%); }
+      75%{ transform: translate(-0.7%, -1%); }
 
       100%{ transform: translate(0,0); }
 
@@ -280,119 +198,243 @@
 
  
 
-    canvas#drift{
+    @media (prefers-reduced-motion: reduce){
 
-      position:absolute;
+      .mist,.stars{ animation:none !important; }
 
-      inset:0;
+    }
+
+ 
+
+    /* ---------------------------------
+
+      Intro Video Overlay
+
+    ---------------------------------- */
+
+    .intro{
+
+      position:fixed; inset:0; z-index:999;
+
+      display:flex; align-items:stretch; justify-content:center;
+
+      background: #000;
+
+    }
+
+    .intro video{
 
       width:100%;
 
       height:100%;
 
-      opacity:0.65;
+      object-fit:cover;
 
-      mix-blend-mode: screen;
+      display:block;
 
-      filter: blur(0.2px);
-
-    }
-
- 
-
-    /* Respect reduced motion */
-
-    @media (prefers-reduced-motion: reduce){
-
-      .nebula,.waves,.grain{animation:none !important}
-
-      canvas#drift{display:none}
+      filter: contrast(1.03) saturate(1.03);
 
     }
 
- 
+    .intro::after{
 
-    /* -----------------------------
+      content:"";
 
-       Header / Nav
+      position:absolute; inset:0;
 
-    ------------------------------ */
+      background:
 
-    header{
+        radial-gradient(900px 500px at 50% 15%, rgba(0,0,0,0.25), transparent 60%),
 
-      position:sticky;
+        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.72));
 
-      top:0;
-
-      z-index:50;
-
-      backdrop-filter: blur(14px);
-
-      background: linear-gradient(180deg, rgba(5,5,5,0.88), rgba(5,5,5,0.55));
-
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      pointer-events:none;
 
     }
 
- 
+    .intro-ui{
 
-    .nav{
+      position:absolute;
 
-      display:flex;
+      left:18px; right:18px; bottom:18px;
+
+      display:flex; gap:10px; flex-wrap:wrap;
+
+      justify-content:space-between; align-items:center;
+
+      max-width: var(--max);
+
+      margin: 0 auto;
+
+      width: calc(100% - 36px);
+
+    }
+
+    .intro-chip{
+
+      display:inline-flex; align-items:center; gap:10px;
+
+      padding:10px 12px;
+
+      border-radius:999px;
+
+      border:1px solid rgba(255,255,255,0.16);
+
+      background: rgba(0,0,0,0.45);
+
+      backdrop-filter: blur(10px);
+
+      color: rgba(255,255,255,0.92);
+
+      font-size:13px;
+
+    }
+
+    .intro-actions{
+
+      display:flex; gap:10px; flex-wrap:wrap;
+
+      justify-content:flex-end;
+
+    }
+
+    .btn{
+
+      display:inline-flex;
 
       align-items:center;
 
-      justify-content:space-between;
+      justify-content:center;
 
-      gap:14px;
+      padding:10px 14px;
 
-      padding:14px 0;
+      border-radius:14px;
+
+      border:1px solid rgba(255,255,255,0.18);
+
+      background: rgba(0,0,0,0.45);
+
+      backdrop-filter: blur(10px);
+
+      color: rgba(255,255,255,0.95);
+
+      font-size:13px;
+
+      cursor:pointer;
+
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+
+      user-select:none;
+
+      white-space:nowrap;
+
+    }
+
+    .btn:hover{
+
+      transform: translateY(-1px);
+
+      background: rgba(0,0,0,0.62);
+
+      border-color: rgba(255,255,255,0.26);
+
+    }
+
+    .btn.primary{
+
+      background: rgba(255,255,255,0.10);
+
+      border-color: rgba(255,255,255,0.28);
 
     }
 
  
 
-    .brand{
+    .hidden{ display:none !important; }
 
-      display:flex;align-items:center;gap:10px;
+ 
 
-      min-width:210px;
+    /* ---------------------------------
+
+      Header (clean + simple)
+
+    ---------------------------------- */
+
+    header{
+
+      position:sticky; top:0; z-index:40;
+
+      backdrop-filter: blur(14px);
+
+      background: linear-gradient(180deg, rgba(5,5,5,0.80), rgba(5,5,5,0.46));
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
 
     }
 
-    .brand img{
+    .nav{
 
-      width:34px;height:34px;
+      display:flex; align-items:center; justify-content:space-between;
 
-      border-radius:9px;
+      gap:14px;
 
-      background:rgba(255,255,255,0.06);
+      padding: 14px 0;
 
-      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .brand{
+
+      display:flex; align-items:center; gap:12px;
+
+      min-width: 220px;
+
+    }
+
+ 
+
+    /* Wordmark PNG */
+
+    .wordmark{
+
+      height: 22px;
+
+      width: auto;
+
+      display:block;
+
+      opacity:0.95;
+
+    }
+
+ 
+
+    /* Icon is separate, small square */
+
+    .icon{
+
+      width:30px; height:30px;
+
+      border-radius:10px;
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background: rgba(255,255,255,0.06);
 
       padding:6px;
 
-    }
-
-    .brand-title{
-
-      display:flex;flex-direction:column;line-height:1.1;
+      display:block;
 
     }
-
-    .brand-title b{letter-spacing:0.12em;font-size:13px}
-
-    .brand-title span{color:var(--dim);font-size:12px;margin-top:3px}
 
  
 
     .navlinks{
 
-      display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
 
     }
 
-    .pill{
+    .link{
 
       font-size:13px;
 
@@ -402,57 +444,53 @@
 
       border:1px solid rgba(255,255,255,0.12);
 
-      background:rgba(0,0,0,0.35);
-
-      transition:transform .15s ease, border-color .15s ease, background .15s ease;
-
-      white-space:nowrap;
+      background: rgba(0,0,0,0.35);
 
     }
 
-    .pill:hover{
-
-      transform: translateY(-1px);
+    .link:hover{
 
       border-color: rgba(255,255,255,0.22);
 
-      background:rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.52);
 
     }
 
-    .pill.primary{
+    .link.primary{
 
-      border-color: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.24);
 
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.10);
 
     }
 
  
 
-    /* -----------------------------
+    /* ---------------------------------
 
-       Sections / Panels
+      Layout (spacious)
 
-    ------------------------------ */
+    ---------------------------------- */
 
-    main{padding:36px 0 80px}
+    main{ padding: 54px 0 86px; }
 
-    .grid{
+    .hero{
 
       display:grid;
 
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.1fr 0.9fr;
 
-      gap:18px;
+      gap: 18px;
+
+      align-items:stretch;
 
     }
 
-    @media (max-width: 940px){
+    @media (max-width: 960px){
 
-      .grid{grid-template-columns: 1fr; }
+      .hero{ grid-template-columns: 1fr; }
 
-      .brand{min-width:auto}
+      .brand{ min-width:auto; }
 
     }
 
@@ -460,239 +498,187 @@
 
     .panel{
 
-      background:var(--panel);
+      background: var(--panel);
 
-      border:1px solid var(--border);
+      border: 1px solid var(--border);
 
-      border-radius:var(--radius2);
+      border-radius: var(--r2);
 
-      box-shadow:var(--shadow2);
+      box-shadow: var(--shadow2);
 
       overflow:hidden;
 
     }
 
-    .panel-inner{padding:22px}
+    .pad{ padding: 28px; }
 
-    .panel h2{
+    @media (max-width: 560px){
 
-      margin:0 0 10px;
-
-      font-size:18px;
-
-      letter-spacing:0.02em;
+      .pad{ padding: 20px; }
 
     }
-
-    .panel p{margin:0;color:var(--soft);line-height:1.55}
-
-    .muted{color:var(--dim)}
-
-    .tiny{font-size:12px;color:var(--dim);line-height:1.4}
 
  
 
     .kicker{
 
-      display:inline-flex;align-items:center;gap:8px;
+      display:inline-flex; align-items:center; gap:10px;
 
-      padding:8px 12px;
+      padding: 9px 12px;
 
-      border-radius:999px;
+      border-radius: 999px;
 
-      border:1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.14);
 
-      background:rgba(0,0,0,0.35);
+      background: rgba(0,0,0,0.32);
 
-      font-size:12px;
+      color: rgba(255,255,255,0.86);
 
-      letter-spacing:0.08em;
+      font-size: 12px;
 
-      text-transform:uppercase;
+      letter-spacing: 0.08em;
 
-      color:var(--soft);
-
-    }
-
-    .dot{width:7px;height:7px;border-radius:99px;background:var(--good);box-shadow:0 0 18px rgba(86,240,183,0.35)}
-
- 
-
-    .hero{
-
-      padding:26px 22px 22px;
+      text-transform: uppercase;
 
     }
 
-    .hero h1{
+    .dot{
 
-      margin:14px 0 10px;
+      width:7px;height:7px;border-radius:999px;
 
-      font-size:38px;
+      background: rgba(255,255,255,0.88);
 
-      line-height:1.08;
-
-      letter-spacing:-0.02em;
-
-    }
-
-    .hero p{font-size:15px}
-
-    @media (max-width: 520px){
-
-      .hero h1{font-size:30px}
+      box-shadow: 0 0 18px rgba(255,255,255,0.20);
 
     }
 
  
 
-    .cta-row{
+    h1{
 
-      display:flex;
+      margin: 14px 0 12px;
 
-      gap:10px;
+      font-size: 44px;
 
-      flex-wrap:wrap;
+      line-height: 1.06;
 
-      margin-top:18px;
-
-    }
-
-    .btn{
-
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-
-      padding:12px 14px;
-
-      border-radius:14px;
-
-      border:1px solid rgba(255,255,255,0.16);
-
-      background:rgba(0,0,0,0.45);
-
-      color:var(--text);
-
-      font-size:14px;
-
-      cursor:pointer;
-
-      transition: transform .15s ease, border-color .15s ease, background .15s ease;
-
-      user-select:none;
+      letter-spacing: -0.02em;
 
     }
 
-    .btn:hover{
+    @media (max-width: 560px){
 
-      transform: translateY(-1px);
-
-      border-color: rgba(255,255,255,0.26);
-
-      background:rgba(0,0,0,0.60);
-
-    }
-
-    .btn.primary{
-
-      background: rgba(255,255,255,0.10);
-
-      border-color: rgba(255,255,255,0.24);
+      h1{ font-size: 34px; }
 
     }
 
  
 
-    .cards{
+    .lead{
+
+      color: var(--soft);
+
+      font-size: 16px;
+
+      line-height: 1.65;
+
+      margin: 0;
+
+      max-width: 56ch;
+
+    }
+
+ 
+
+    .cta{
+
+      display:flex; gap:12px; flex-wrap:wrap;
+
+      margin-top: 22px;
+
+    }
+
+    .cta .btn{ padding: 12px 16px; font-size: 14px; border-radius: 16px; }
+
+ 
+
+    .points{
 
       display:grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
 
-      gap:14px;
+      gap: 12px;
 
-      margin-top:14px;
-
-    }
-
-    @media (max-width: 940px){
-
-      .cards{grid-template-columns: 1fr;}
+      margin-top: 14px;
 
     }
 
-    .card{
+    .point{
 
-      padding:16px;
+      padding: 16px;
 
-      border-radius:16px;
+      border-radius: var(--r1);
 
-      border:1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
 
-      background:rgba(0,0,0,0.35);
-
-    }
-
-    .card b{display:block;margin-bottom:6px}
-
-    .card span{color:var(--soft);font-size:14px;line-height:1.45}
-
-    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-
-    .tag{
-
-      font-family:var(--mono);
-
-      font-size:12px;
-
-      padding:6px 10px;
-
-      border-radius:999px;
-
-      border:1px solid rgba(255,255,255,0.12);
-
-      background:rgba(0,0,0,0.32);
-
-      color:var(--soft);
+      background: rgba(0,0,0,0.32);
 
     }
+
+    .point b{ display:block; margin-bottom:6px; }
+
+    .point span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
 
  
 
-    /* -----------------------------
+    .section{
 
-       Screenshot Gallery
-
-    ------------------------------ */
-
-    .gallery{
-
-      display:grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap:12px;
-
-      margin-top:14px;
+      margin-top: 18px;
 
     }
 
-    @media (max-width: 940px){
+    .section h2{
 
-      .gallery{grid-template-columns: 1fr;}
+      margin: 0 0 10px;
+
+      font-size: 18px;
+
+      letter-spacing: 0.01em;
 
     }
+
+    .section p{
+
+      margin: 0;
+
+      color: var(--soft);
+
+      line-height: 1.65;
+
+    }
+
+    .muted{ color: var(--dim); }
+
+ 
+
+    /* ---------------------------------
+
+      Single screenshot block
+
+    ---------------------------------- */
 
     .shot{
 
-      border-radius:16px;
+      border-radius: var(--r2);
 
-      border:1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
 
-      background:rgba(0,0,0,0.35);
+      background: rgba(0,0,0,0.30);
 
       overflow:hidden;
 
-      box-shadow: 0 10px 35px rgba(0,0,0,0.55);
+      box-shadow: var(--shadow);
 
     }
 
@@ -700,185 +686,89 @@
 
       width:100%;
 
-      height:210px;
-
-      object-fit:cover;
+      height:auto;
 
       display:block;
 
-      filter:saturate(1.02) contrast(1.02);
+      object-fit:cover;
 
     }
 
     .shot .cap{
 
-      padding:12px 12px 14px;
+      padding: 14px 16px 16px;
 
-      color:var(--soft);
+      border-top: 1px solid rgba(255,255,255,0.10);
 
-      font-size:13px;
+      color: var(--dim);
 
-      line-height:1.35;
+      font-size: 13px;
+
+      line-height: 1.45;
 
     }
-
-    .shot .cap b{display:block;color:var(--text);margin-bottom:4px;font-size:13px}
 
  
 
-    /* -----------------------------
+    /* ---------------------------------
 
-       Console Preview (brand consistency)
+      Donate (simple)
 
-    ------------------------------ */
+    ---------------------------------- */
 
-    .console{
-
-      background: linear-gradient(180deg, rgba(10,10,10,0.72), rgba(12,12,12,0.58));
-
-      border-top:1px solid rgba(255,255,255,0.10);
-
-    }
-
-    .console-top{
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
-
-      gap:12px;
-
-      padding:14px 16px;
-
-      border-bottom:1px solid rgba(255,255,255,0.10);
-
-      background:rgba(0,0,0,0.30);
-
-    }
-
-    .lights{display:flex;gap:7px}
-
-    .light{width:10px;height:10px;border-radius:99px;border:1px solid rgba(255,255,255,0.10)}
-
-    .light.red{background:rgba(255,92,122,0.85)}
-
-    .light.yellow{background:rgba(255,203,107,0.85)}
-
-    .light.green{background:rgba(86,240,183,0.85)}
-
-    .console-title{
-
-      font-family:var(--mono);
-
-      font-size:12px;
-
-      color:var(--soft);
-
-      opacity:0.95;
-
-      letter-spacing:0.08em;
-
-      text-transform:uppercase;
-
-    }
-
-    .console-body{
-
-      padding:16px;
-
-      font-family:var(--mono);
-
-      font-size:12.5px;
-
-      line-height:1.6;
-
-      color:rgba(255,255,255,0.80);
-
-      white-space:pre-wrap;
-
-    }
-
-    .prompt{color:rgba(255,255,255,0.92)}
-
-    .ok{color:var(--good)}
-
-    .warn{color:var(--warn)}
-
-    .bad{color:var(--danger)}
-
- 
-
-    /* -----------------------------
-
-       Donate
-
-    ------------------------------ */
-
-    .donate-grid{
+    .donate{
 
       display:grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 
-      gap:14px;
+      gap: 12px;
 
-      margin-top:14px;
-
-    }
-
-    @media (max-width: 940px){
-
-      .donate-grid{grid-template-columns: 1fr;}
+      margin-top: 14px;
 
     }
 
-    .donate-box{
+    @media (max-width: 960px){
 
-      padding:16px;
-
-      border-radius:16px;
-
-      border:1px solid rgba(255,255,255,0.12);
-
-      background:rgba(0,0,0,0.35);
+      .donate{ grid-template-columns: 1fr; }
 
     }
 
-    .donate-actions{
+    .don{
 
-      display:flex;
+      padding: 16px;
 
-      flex-wrap:wrap;
+      border-radius: var(--r1);
 
-      gap:10px;
+      border: 1px solid rgba(255,255,255,0.12);
 
-      margin-top:12px;
+      background: rgba(0,0,0,0.32);
 
     }
 
-    .donate-actions a{flex:1 1 160px}
+    .don b{ display:block; margin-bottom:6px; }
 
-    .btn.pay{width:100%}
+    .don span{ color: var(--soft); font-size: 14px; line-height: 1.55; }
+
+    .don a{ display:block; margin-top: 12px; }
+
+    .don .btn{ width:100%; }
 
  
 
-    /* -----------------------------
+    /* ---------------------------------
 
-       Footer
+      Footer
 
-    ------------------------------ */
+    ---------------------------------- */
 
     footer{
 
-      padding:22px 0 32px;
+      padding: 24px 0 34px;
 
-      color:var(--dim);
+      border-top: 1px solid rgba(255,255,255,0.08);
 
-      border-top:1px solid rgba(255,255,255,0.08);
-
-      background:rgba(0,0,0,0.18);
+      background: rgba(0,0,0,0.18);
 
       backdrop-filter: blur(10px);
 
@@ -886,19 +776,17 @@
 
     .foot{
 
-      display:flex;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
 
-      align-items:flex-start;
+      color: var(--dim);
 
-      justify-content:space-between;
+      font-size: 12px;
 
-      gap:12px;
-
-      flex-wrap:wrap;
+      line-height: 1.5;
 
     }
 
-    .foot a{color:var(--soft);text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22)}
+    .foot a{ text-decoration:underline; text-decoration-color: rgba(255,255,255,0.20); color: var(--soft); }
 
   </style>
 
@@ -908,17 +796,59 @@
 
 <body>
 
-  <!-- Immersive Background -->
+  <div class="bg" aria-hidden="true">
 
-  <div class="bg-wrap" aria-hidden="true">
+    <div class="mist"></div>
 
-    <div class="nebula"></div>
+    <div class="stars"></div>
 
-    <canvas id="drift"></canvas>
+  </div>
 
-    <div class="waves"></div>
+ 
 
-    <div class="grain"></div>
+  <!-- INTRO VIDEO OVERLAY -->
+
+  <div id="intro" class="intro">
+
+    <video id="introVideo"
+
+      autoplay
+
+      muted
+
+      playsinline
+
+      loop
+
+      preload="auto">
+
+      <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
+
+    </video>
+
+ 
+
+    <div class="intro-ui">
+
+      <div class="intro-chip">
+
+        <span class="dot" aria-hidden="true"></span>
+
+        <span>Loading ZOTHEOS…</span>
+
+      </div>
+
+ 
+
+      <div class="intro-actions">
+
+        <button id="togglePlay" class="btn" type="button">Pause</button>
+
+        <button id="skipIntro" class="btn primary" type="button">Skip</button>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -930,31 +860,25 @@
 
       <div class="nav">
 
-        <a class="brand" href="#top">
+        <!-- Left brand: wordmark PNG + separate icon -->
 
-          <img src="/static/zotheos_logo.png" alt="ZOTHEOS logo">
+        <a class="brand" href="#top" aria-label="ZOTHEOS home">
 
-          <div class="brand-title">
+          <img class="wordmark" src="/static/zotheos_wordmark.png" alt="ZOTHEOS" onerror="this.style.display='none'">
 
-            <b>ZOTHEOS</b>
-
-            <span>Offline Ethical Intelligence</span>
-
-          </div>
+          <img class="icon" src="/static/zotheos_icon.png" alt="ZOTHEOS icon" onerror="this.style.display='none'">
 
         </a>
 
  
 
-        <nav class="navlinks">
+        <nav class="navlinks" aria-label="Primary">
 
-          <a class="pill" href="#mission">Mission</a>
+          <a class="link" href="#mission">Mission</a>
 
-          <a class="pill" href="#screens">Screens</a>
+          <a class="link" href="#proof">Proof</a>
 
-          <a class="pill" href="#roadmap">Roadmap</a>
-
-          <a class="pill primary" href="#donate">Support</a>
+          <a class="link primary" href="#support">Support</a>
 
         </nav>
 
@@ -970,245 +894,149 @@
 
     <div class="container">
 
-      <div class="grid">
+ 
 
-        <!-- HERO -->
+      <!-- HERO -->
 
-        <section class="panel hero" aria-label="ZOTHEOS introduction">
+      <section class="hero">
 
-          <div class="panel-inner">
+        <div class="panel">
 
-            <span class="kicker"><span class="dot"></span> offline-first • ethical intelligence • human-centered</span>
+          <div class="pad">
 
-            <h1>ZOTHEOS is built to give people reliable knowledge without surveillance, manipulation, or paywalls.</h1>
+            <span class="kicker"><span class="dot"></span> offline-first • privacy-respecting • human-centered</span>
 
-            <p>
+ 
 
-              This is an independent project designed to keep intelligence <span class="muted">local</span>, keep people <span class="muted">in control</span>,
+            <h1>Clear knowledge.<br/>No surveillance.<br/>No manipulation.</h1>
 
-              and keep truth <span class="muted">usable</span>. The goal is simple: empower humans with clarity, not noise.
+ 
+
+            <p class="lead">
+
+              ZOTHEOS is built to help people learn, decide, and build—without being tracked, nudged, or divided.
+
+              It’s designed to run reliably, even when the internet isn’t.
 
             </p>
 
  
 
-            <div class="cta-row">
+            <div class="cta">
 
-              <a class="btn primary" href="#donate">Support the mission</a>
+              <a class="btn primary" href="#support">Support development</a>
 
-              <a class="btn" href="#screens">See the console</a>
+              <a class="btn" href="#proof">See the console</a>
 
-              <a class="btn" href="#mission">How it works</a>
-
-            </div>
-
- 
-
-            <div class="cards" style="margin-top:18px">
-
-              <div class="card">
-
-                <b>Offline-first</b>
-
-                <span>Designed to function without a constant internet tether — resilient by default.</span>
-
-              </div>
-
-              <div class="card">
-
-                <b>Ethical by design</b>
-
-                <span>Built to reduce manipulation risk and encourage balanced, grounded reasoning.</span>
-
-              </div>
-
-              <div class="card">
-
-                <b>Human sovereignty</b>
-
-                <span>Knowledge that serves people — not platforms, ad models, or surveillance incentives.</span>
-
-              </div>
+              <a class="btn" href="#mission">Read the mission</a>
 
             </div>
 
  
 
-            <div class="tagrow" aria-label="Key tags">
+            <div class="points" style="margin-top:18px">
 
-              <span class="tag">local-LLMs</span>
+              <div class="point">
 
-              <span class="tag">fusion-engine</span>
+                <b>Easy access to answers</b>
 
-              <span class="tag">memory-core</span>
+                <span>Built to be helpful in real life, not just impressive on paper.</span>
 
-              <span class="tag">ethical-guardrails</span>
+              </div>
 
-              <span class="tag">offline-access</span>
+              <div class="point">
+
+                <b>Privacy first</b>
+
+                <span>Designed to reduce dependence on always-online systems.</span>
+
+              </div>
+
+              <div class="point">
+
+                <b>Made to serve people</b>
+
+                <span>The goal is empowerment—more clarity, less noise.</span>
+
+              </div>
 
             </div>
 
           </div>
 
-        </section>
+        </div>
 
  
 
-        <!-- SIDE PANEL -->
+        <!-- Right side: simple “what this is” -->
 
-        <aside class="panel" aria-label="Quick summary">
+        <aside class="panel">
 
-          <div class="panel-inner">
+          <div class="pad">
 
-            <h2>What this site is</h2>
+            <h2 style="margin:0 0 10px;">What this is</h2>
 
             <p>
 
               This page is the public front door. The console is the tool.
 
-              Here you’ll find the mission, proof, progress, and ways to help fund development.
+              Here you’ll find a simple overview, a screenshot for proof, and ways to support the build.
 
             </p>
 
-            <div style="height:12px"></div>
+ 
 
-            <h2>What’s coming</h2>
+            <div class="section" style="margin-top:18px">
 
-            <p class="muted">
+              <h2>What it’s for</h2>
 
-              A polished demo flow, clearer documentation, faster onboarding, and a funding path that keeps the mission intact.
+              <p class="muted">
 
-            </p>
+                Helping people think clearly and act confidently—without feeding a system that profits from confusion.
 
-            <div style="height:14px"></div>
-
-            <div class="card">
-
-              <b>Transparency promise</b>
-
-              <span>
-
-                ZOTHEOS aims to show its reasoning structure, not hide it behind marketing.
-
-                Trust comes from clarity.
-
-              </span>
+              </p>
 
             </div>
 
-            <div style="height:12px"></div>
+ 
 
-            <p class="tiny">
+            <div class="section" style="margin-top:18px">
 
-              Tip: this landing page is intentionally focused. The console remains a separate experience — a tool, not a billboard.
+              <h2>Status</h2>
 
-            </p>
+              <p class="muted">
+
+                Live site is up. Landing page is being refined. Console proof goes below.
+
+              </p>
+
+            </div>
 
           </div>
 
         </aside>
 
-      </div>
+      </section>
 
  
 
       <!-- MISSION -->
 
-      <section id="mission" class="panel" style="margin-top:18px">
+      <section id="mission" class="panel section">
 
-        <div class="panel-inner">
+        <div class="pad">
 
           <h2>Mission</h2>
 
           <p>
 
-            ZOTHEOS exists to push back on a world where information is often shaped by incentives that don’t serve people:
+            ZOTHEOS exists to keep knowledge in the hands of people—not platforms.
 
-            attention economies, algorithmic manipulation, and centralized control.
+            The aim is a tool that helps humans learn and solve problems while respecting privacy, reducing manipulation risk,
 
-            The long-term goal is an ethical intelligence system that helps humans think clearly, learn quickly, and build a better future — without surrendering privacy or autonomy.
+            and staying usable in the real world.
 
           </p>
-
- 
-
-          <div class="cards" style="margin-top:14px">
-
-            <div class="card">
-
-              <b>Why offline matters</b>
-
-              <span>Offline capability protects access during outages, censorship, instability, or paywall barriers.</span>
-
-            </div>
-
-            <div class="card">
-
-              <b>Why “ethical” matters</b>
-
-              <span>Because intelligence without values becomes a weapon. Alignment isn’t optional.</span>
-
-            </div>
-
-            <div class="card">
-
-              <b>Why “fusion” matters</b>
-
-              <span>Multiple perspectives reduce single-model blind spots and improve balance.</span>
-
-            </div>
-
-          </div>
-
-        </div>
-
- 
-
-        <!-- Console Preview block to keep brand consistency -->
-
-        <div class="console">
-
-          <div class="console-top">
-
-            <div class="lights" aria-hidden="true">
-
-              <div class="light red"></div>
-
-              <div class="light yellow"></div>
-
-              <div class="light green"></div>
-
-            </div>
-
-            <div class="console-title">ZOTHEOS OS • Console Preview (public)</div>
-
-            <div class="tiny">status: <span class="ok">ready</span></div>
-
-          </div>
-
-          <div class="console-body" role="region" aria-label="Console preview text">
-
-<span class="prompt">zotheos@local</span>:~$ <span class="ok">launch</span>
-
-[ OK ] Fusion Engine initialized
-
-[ OK ] Offline tier checks passed
-
-[ OK ] Memory Core online (local)
-
-[ OK ] Guardian Layer active
-
- 
-
-<span class="prompt">user</span>: Your mission in one paragraph.
-
-<span class="prompt">zotheos</span>: I exist to help humans access trustworthy knowledge without surveillance, manipulation, or centralized control. I prioritize clarity, balanced perspectives, and ethical guardrails so intelligence serves people — not profit models, war incentives, or algorithmic division.
-
- 
-
-<span class="warn">note</span>: This is a landing page preview. The console experience lives inside the app/tool itself.
-
-          </div>
 
         </div>
 
@@ -1216,101 +1044,31 @@
 
  
 
-      <!-- SCREENSHOTS -->
+      <!-- PROOF (single screenshot only) -->
 
-      <section id="screens" class="panel" style="margin-top:18px">
+      <section id="proof" class="panel section">
 
-        <div class="panel-inner">
+        <div class="pad">
 
-          <h2>Console Screens (proof & progress)</h2>
+          <h2>Console (proof)</h2>
 
           <p class="muted">
 
-            Drop your real screenshots into <span style="font-family:var(--mono)">/static/</span> and keep these filenames.
-
-            The gallery will auto-populate.
+            One screenshot for now—more will come later when the story is tight and simple.
 
           </p>
 
  
 
-          <div class="gallery" style="margin-top:14px">
+          <div class="shot" style="margin-top:14px">
 
-            <div class="shot">
+            <img src="/static/console_hero.png" alt="ZOTHEOS console screenshot"
 
-              <img src="/static/console_1.png" alt="ZOTHEOS console screenshot 1" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_1.png';">
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='Upload <span style=&quot;font-family:var(--mono)&quot;>/static/console_hero.png</span> to show the console here.';">
 
-              <div class="cap"><b>Fusion Response View</b>Multi-model output + synthesized insight.</div>
+            <div class="cap">
 
-            </div>
-
-            <div class="shot">
-
-              <img src="/static/console_2.png" alt="ZOTHEOS console screenshot 2" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_2.png';">
-
-              <div class="cap"><b>Memory Logging</b>Transparent session memory & export.</div>
-
-            </div>
-
-            <div class="shot">
-
-              <img src="/static/console_3.png" alt="ZOTHEOS console screenshot 3" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_3.png';">
-
-              <div class="cap"><b>Offline Mode</b>Knowledge access without cloud dependence.</div>
-
-            </div>
-
-          </div>
-
- 
-
-          <p class="tiny" style="margin-top:12px">
-
-            Recommended screenshot size: 1600×900 (or similar widescreen). PNG preferred.
-
-          </p>
-
-        </div>
-
-      </section>
-
- 
-
-      <!-- ROADMAP -->
-
-      <section id="roadmap" class="panel" style="margin-top:18px">
-
-        <div class="panel-inner">
-
-          <h2>Roadmap (simple + honest)</h2>
-
-          <p class="muted">This keeps expectations real while showing momentum.</p>
-
- 
-
-          <div class="cards" style="margin-top:14px">
-
-            <div class="card">
-
-              <b>Now</b>
-
-              <span>Polish the public landing page, stabilize console demo flow, tighten documentation.</span>
-
-            </div>
-
-            <div class="card">
-
-              <b>Next</b>
-
-              <span>Public-facing onboarding, lightweight installer packaging, clearer tier/value model.</span>
-
-            </div>
-
-            <div class="card">
-
-              <b>Later</b>
-
-              <span>Expanded transparency features, model scorecards, and resilience tooling for broader device compatibility.</span>
+              Upload <span style="font-family:var(--mono)">/static/console_hero.png</span> to show the console here.
 
             </div>
 
@@ -1322,99 +1080,77 @@
 
  
 
-      <!-- DONATE -->
+      <!-- SUPPORT (3 direct links) -->
 
-      <section id="donate" class="panel" style="margin-top:18px">
+      <section id="support" class="panel section">
 
-        <div class="panel-inner">
+        <div class="pad">
 
-          <h2>Support Development</h2>
+          <h2>Support development</h2>
 
           <p>
 
-            If this mission resonates, donations help keep development moving and help protect the project’s independence.
+            If this mission resonates, support helps keep the project independent and moving.
 
-            Support funds time, infrastructure, testing, and distribution — without turning ZOTHEOS into a corporate product.
+            Even small contributions help with time, testing, and release polish.
 
           </p>
 
  
 
-          <div class="donate-grid">
+          <div class="donate">
 
-            <div class="donate-box">
+            <div class="don">
 
-              <b style="display:block;margin-bottom:6px">One-time support</b>
+              <b>PayPal</b>
 
-              <div class="muted" style="font-size:14px;line-height:1.45">
+              <span>Fast one-time support.</span>
 
-                Quick contribution to help cover immediate build + release costs.
+              <a href=https://paypal.me/YOUR_HANDLE target="_blank" rel="noopener">
 
-              </div>
+                <span class="btn primary">Donate via PayPal</span>
 
-              <div class="donate-actions">
-
-                <!-- Replace these href links with your real donation URLs -->
-
-                <a href=https://paypal.me/YOUR_HANDLE target="_blank" rel="noopener">
-
-                  <span class="btn pay primary">Donate via PayPal</span>
-
-                </a>
-
-                <a href=https://buy.stripe.com/YOUR_LINK target="_blank" rel="noopener">
-
-                  <span class="btn pay">Donate via Stripe</span>
-
-                </a>
-
-              </div>
-
-              <div class="tiny" style="margin-top:10px">
-
-                Replace the links in <span style="font-family:var(--mono)">index.html</span> with your real PayPal/Stripe URLs.
-
-              </div>
+              </a>
 
             </div>
 
- 
+            <div class="don">
 
-            <div class="donate-box">
+              <b>Stripe</b>
 
-              <b style="display:block;margin-bottom:6px">Support tiers (optional)</b>
+              <span>Card-based support.</span>
 
-              <div class="muted" style="font-size:14px;line-height:1.45">
+              <a href=https://buy.stripe.com/YOUR_LINK target="_blank" rel="noopener">
 
-                Offer “supporter packs” or early access downloads without locking core knowledge behind paywalls.
+                <span class="btn">Donate via Stripe</span>
 
-              </div>
+              </a>
 
-              <div class="donate-actions">
+            </div>
 
-                <a href=https://gumroad.com/YOUR_PRODUCT target="_blank" rel="noopener">
+            <div class="don">
 
-                  <span class="btn pay primary">Support on Gumroad</span>
+              <b>Gumroad</b>
 
-                </a>
+              <span>Supporter packs / future downloads.</span>
 
-                <a href="#top" onclick="alert('Optional: Add Patreon/Ko-fi later if you want recurring support.'); return false;">
+              <a href=https://gumroad.com/YOUR_PRODUCT target="_blank" rel="noopener">
 
-                  <span class="btn pay">Add recurring later</span>
+                <span class="btn">Support on Gumroad</span>
 
-                </a>
-
-              </div>
-
-              <div class="tiny" style="margin-top:10px">
-
-                Keep the mission intact: supporters fund development, but the system stays human-first.
-
-              </div>
+              </a>
 
             </div>
 
           </div>
+
+ 
+
+          <p class="muted" style="margin-top:12px;font-size:13px;">
+
+            Replace the three URLs in <span style="font-family:var(--mono)">index.html</span> with your real links.
+
+          </p>
 
         </div>
 
@@ -1438,23 +1174,19 @@
 
           <div style="color:var(--soft);font-weight:600;letter-spacing:0.08em">ZOTHEOS</div>
 
-          <div class="tiny">Offline Ethical Intelligence • Built independently</div>
+          <div>Offline-first • privacy-respecting • built independently</div>
 
         </div>
 
-        <div class="tiny">
+        <div>
 
-          <div>© <span id="year"></span> ZOTHEOS</div>
+          © <span id="year"></span> ZOTHEOS ·
 
-          <div>
+          <a href="#mission">Mission</a> ·
 
-            <a href="#donate">Support</a> ·
+          <a href="#proof">Proof</a> ·
 
-            <a href="#screens">Screens</a> ·
-
-            <a href="#mission">Mission</a>
-
-          </div>
+          <a href="#support">Support</a>
 
         </div>
 
@@ -1474,129 +1206,105 @@
 
  
 
-    // Animated background particles (subtle drift)
+    // Intro video controls:
+
+    // - Autoplays muted (browser requirement)
+
+    // - Skippable (hides overlay)
+
+    // - Pause/Play button
+
+    // - Auto-hides after a short moment OR after user skips
 
     (function(){
 
-      const canvas = document.getElementById('drift');
+      const intro = document.getElementById('intro');
 
-      if(!canvas) return;
+      const v = document.getElementById('introVideo');
 
- 
+      const skip = document.getElementById('skipIntro');
 
-      const ctx = canvas.getContext('2d', { alpha: true });
-
-      let w=0, h=0, dpr=1;
-
-      let particles = [];
-
-      const COUNT = 90;
+      const toggle = document.getElementById('togglePlay');
 
  
 
-      function resize(){
+      if(!intro || !v || !skip || !toggle) return;
 
-        dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+ 
 
-        w = canvas.clientWidth;
+      let dismissed = false;
 
-        h = canvas.clientHeight;
+ 
 
-        canvas.width = Math.floor(w * dpr);
+      function hideIntro(){
 
-        canvas.height = Math.floor(h * dpr);
+        if(dismissed) return;
 
-        ctx.setTransform(dpr,0,0,dpr,0,0);
+        dismissed = true;
+
+        intro.classList.add('hidden');
+
+        try { v.pause(); } catch(e) {}
 
       }
 
  
 
-      function rand(min,max){ return Math.random()*(max-min)+min; }
+      // If video fails to load, don’t block the site.
+
+      v.addEventListener('error', hideIntro);
 
  
 
-      function init(){
+      // Skip button
 
-        particles = Array.from({length: COUNT}).map(() => ({
-
-          x: rand(0,w), y: rand(0,h),
-
-          r: rand(0.6, 2.2),
-
-          vx: rand(-0.08, 0.08),
-
-          vy: rand(-0.06, 0.06),
-
-          a: rand(0.05, 0.18)
-
-        }));
-
-      }
+      skip.addEventListener('click', hideIntro);
 
  
 
-      function step(){
+      // Pause / Play
 
-        ctx.clearRect(0,0,w,h);
+      toggle.addEventListener('click', function(){
 
- 
+        if(v.paused){
 
-        // Soft glow dots
+          v.play().catch(()=>{});
 
-        for(const p of particles){
+          toggle.textContent = 'Pause';
 
-          p.x += p.vx;
+        }else{
 
-          p.y += p.vy;
+          v.pause();
 
- 
-
-          // wrap
-
-          if(p.x < -10) p.x = w+10;
-
-          if(p.x > w+10) p.x = -10;
-
-          if(p.y < -10) p.y = h+10;
-
-          if(p.y > h+10) p.y = -10;
-
- 
-
-          const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*7);
-
-          g.addColorStop(0, `rgba(255,255,255,${p.a})`);
-
-          g.addColorStop(1, 'rgba(255,255,255,0)');
-
-          ctx.fillStyle = g;
-
-          ctx.beginPath();
-
-          ctx.arc(p.x,p.y,p.r*7,0,Math.PI*2);
-
-          ctx.fill();
+          toggle.textContent = 'Play';
 
         }
 
- 
-
-        requestAnimationFrame(step);
-
-      }
+      });
 
  
 
-      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // Auto-hide after 3.2 seconds (keeps it graceful + not annoying)
 
-      if(reduceMotion) return;
+      // You can increase if you want more “intro time”
+
+      setTimeout(() => {
+
+        // If user paused it, let them control it; don’t force-hide
+
+        if(!v.paused) hideIntro();
+
+      }, 3200);
 
  
 
-      resize(); init(); step();
+      // Also hide if user scrolls (means they’re ready)
 
-      window.addEventListener('resize', () => { resize(); init(); });
+      window.addEventListener('scroll', () => {
+
+        if(window.scrollY > 30) hideIntro();
+
+      }, { passive:true });
 
     })();
 
