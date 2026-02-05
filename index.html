@@ -412,36 +412,35 @@
 
     }
 
+/* Center the brand without changing HTML */
 .nav{
-  display: flex;
+  position: relative;                 /* establish positioning context */
   align-items: center;
-  gap: 14px;
-  padding: 14px 0;
+  justify-content: flex-end;          /* keep the navlinks on the right */
+  padding: 14px 0;                    /* keep your original padding */
 }
 
 .nav-spacer{
   flex: 1;                            /* takes same space as the right column */
-}
-
-.navlinks{
-  flex: 1;                            /* mirrors the left spacer */
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
+}    
+    
 .brand{
-  flex: 0;                            /* center column is content-sized */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);        /* perfect horizontal center */
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  min-width: unset;                    /* optional: remove the 220px if it causes crowding */
 }
 
-.brand .ico{ width: 54px; height: 54px; }
+.brand .ico{
+  width: 54px;                        /* a touch bigger */
+  height: 54px;
+}
 
 .brand .logo{
-  height: 40px;                       /* a bit bigger */
+  height: 40px;                       /* bigger logo */
   width: auto;
   display: block;
   opacity: 0.98;
@@ -450,10 +449,20 @@
     drop-shadow(0 0 22px rgba(86,240,183,0.12));
 }
 
-/* Responsive tighten */
+/* Ensure the right-side nav stays clickable and doesn’t wrap under the brand */
+.navlinks{
+  position: relative;                  /* stays in normal flow, at the right edge */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* (Optional) on very small screens, give the brand room so it doesn’t collide */
 @media (max-width: 560px){
   .brand .ico{ width: 48px; height: 48px; }
   .brand .logo{ height: 34px; }
+  .nav{ padding: 12px 0; }
 }
 
     .pill{
