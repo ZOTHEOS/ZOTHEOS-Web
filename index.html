@@ -16,11 +16,11 @@
 
  
 
-  <meta name="description" content="ZOTHEOS is an offline-first intelligence tool built to give people clear knowledge—without surveillance, manipulation, or paywalls." />
+  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system built to keep knowledge reliable, private, and human-centered." />
 
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
 
-  <meta property="og:description" content="Clear knowledge. No surveillance. No manipulation. No paywalls." />
+  <meta property="og:description" content="Clear knowledge. Private by default. Built independently." />
 
   <meta property="og:image" content="/static/favicon_blackBW.ico" />
 
@@ -42,7 +42,7 @@
 
       --glass: rgba(14,14,14,0.62);
 
-      --glass2: rgba(10,10,10,0.50);
+      --glass2: rgba(10,10,10,0.48);
 
       --border: rgba(255,255,255,0.12);
 
@@ -102,6 +102,8 @@
 
       Immersive background
 
+      + visible “Animus” waves
+
     ------------------------ */
 
     .bg{
@@ -110,41 +112,193 @@
 
       background:
 
-        radial-gradient(1200px 700px at 18% 12%, rgba(255,255,255,0.12), transparent 62%),
+        radial-gradient(1200px 700px at 18% 12%, rgba(255,255,255,0.10), transparent 62%),
 
-        radial-gradient(1000px 600px at 85% 16%, rgba(255,255,255,0.08), transparent 60%),
+        radial-gradient(1000px 600px at 85% 16%, rgba(255,255,255,0.07), transparent 60%),
 
-        radial-gradient(900px 700px at 50% 90%, rgba(255,255,255,0.06), transparent 62%),
+        radial-gradient(900px 700px at 50% 92%, rgba(255,255,255,0.06), transparent 62%),
 
-        radial-gradient(700px 520px at 72% 62%, rgba(86,240,183,0.06), transparent 64%),
+        radial-gradient(720px 520px at 72% 64%, rgba(86,240,183,0.07), transparent 64%),
 
-        radial-gradient(720px 540px at 34% 68%, rgba(255,92,122,0.055), transparent 66%),
+        radial-gradient(720px 540px at 34% 70%, rgba(255,92,122,0.06), transparent 66%),
 
-        linear-gradient(180deg, #050505 0%, #070707 46%, #050505 100%);
+        linear-gradient(180deg, #050505 0%, #070707 48%, #050505 100%);
 
     }
+
+ 
+
+    /* Smooth “Animus wave” layers */
+
+    .waves{
+
+      position:absolute; inset:0;
+
+      pointer-events:none;
+
+      opacity:0.55;
+
+      filter: blur(0.2px);
+
+      mix-blend-mode: screen;
+
+    }
+
+    .wave{
+
+      position:absolute; inset:-25% -25%;
+
+      background:
+
+        radial-gradient(closest-side at 50% 50%, rgba(255,255,255,0.10), transparent 62%);
+
+      opacity:0.0;
+
+    }
+
+ 
+
+    /* We create waves using repeating linear gradients + motion */
+
+    .wave.w1{
+
+      opacity:0.32;
+
+      background:
+
+        repeating-linear-gradient(
+
+          115deg,
+
+          rgba(255,255,255,0.10) 0px,
+
+          rgba(255,255,255,0.10) 1px,
+
+          transparent 10px,
+
+          transparent 26px
+
+        );
+
+      mask-image: radial-gradient(80% 70% at 50% 45%, #000 55%, transparent 74%);
+
+      -webkit-mask-image: radial-gradient(80% 70% at 50% 45%, #000 55%, transparent 74%);
+
+      animation: waveDrift1 14s ease-in-out infinite alternate;
+
+      transform: translate3d(0,0,0);
+
+    }
+
+    .wave.w2{
+
+      opacity:0.22;
+
+      background:
+
+        repeating-linear-gradient(
+
+          65deg,
+
+          rgba(86,240,183,0.12) 0px,
+
+          rgba(86,240,183,0.12) 1px,
+
+          transparent 12px,
+
+          transparent 30px
+
+        );
+
+      mask-image: radial-gradient(78% 70% at 55% 60%, #000 52%, transparent 72%);
+
+      -webkit-mask-image: radial-gradient(78% 70% at 55% 60%, #000 52%, transparent 72%);
+
+      animation: waveDrift2 18s ease-in-out infinite alternate;
+
+      transform: translate3d(0,0,0);
+
+    }
+
+    .wave.w3{
+
+      opacity:0.18;
+
+      background:
+
+        repeating-linear-gradient(
+
+          140deg,
+
+          rgba(255,92,122,0.10) 0px,
+
+          rgba(255,92,122,0.10) 1px,
+
+          transparent 14px,
+
+          transparent 34px
+
+        );
+
+      mask-image: radial-gradient(80% 70% at 40% 58%, #000 50%, transparent 72%);
+
+      -webkit-mask-image: radial-gradient(80% 70% at 40% 58%, #000 50%, transparent 72%);
+
+      animation: waveDrift3 22s ease-in-out infinite alternate;
+
+      transform: translate3d(0,0,0);
+
+    }
+
+ 
+
+    @keyframes waveDrift1{
+
+      0%{ transform: translate3d(-1.2%, -0.8%, 0) scale(1.02) rotate(-1deg); }
+
+      100%{ transform: translate3d(1.6%, 1.0%, 0) scale(1.06) rotate(1deg); }
+
+    }
+
+    @keyframes waveDrift2{
+
+      0%{ transform: translate3d(1.2%, -1.0%, 0) scale(1.01) rotate(1deg); }
+
+      100%{ transform: translate3d(-1.6%, 1.2%, 0) scale(1.07) rotate(-1deg); }
+
+    }
+
+    @keyframes waveDrift3{
+
+      0%{ transform: translate3d(-1.0%, 1.0%, 0) scale(1.02) rotate(0deg); }
+
+      100%{ transform: translate3d(1.0%, -1.2%, 0) scale(1.08) rotate(0.6deg); }
+
+    }
+
+ 
 
     .mist{
 
       position:absolute; inset:-22%;
 
-      opacity:0.92;
+      opacity:0.78;
 
-      filter: blur(16px) saturate(1.15);
+      filter: blur(18px) saturate(1.15);
 
       background:
 
-        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.14), transparent 62%),
+        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.12), transparent 62%),
 
-        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.09), transparent 62%),
+        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.08), transparent 62%),
 
-        radial-gradient(closest-side at 52% 70%, rgba(255,255,255,0.08), transparent 62%),
-
-        radial-gradient(closest-side at 80% 76%, rgba(255,255,255,0.07), transparent 62%);
+        radial-gradient(closest-side at 52% 70%, rgba(255,255,255,0.08), transparent 62%);
 
       animation: float 18s ease-in-out infinite alternate;
 
       transform: translate3d(0,0,0);
+
+      pointer-events:none;
 
     }
 
@@ -160,7 +314,7 @@
 
       position:absolute; inset:0;
 
-      opacity:0.18;
+      opacity:0.14;
 
       background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
 
@@ -169,6 +323,8 @@
       mix-blend-mode: screen;
 
       animation: stars 10s steps(10,end) infinite;
+
+      pointer-events:none;
 
     }
 
@@ -186,9 +342,11 @@
 
     }
 
+ 
+
     @media (prefers-reduced-motion: reduce){
 
-      .mist,.stars{ animation:none !important; }
+      .mist,.stars,.wave{ animation:none !important; }
 
     }
 
@@ -232,6 +390,12 @@
 
       Header
 
+      - icon 50x50
+
+      - logo png only (no ZOTHEOS text)
+
+      - glow
+
     ------------------------ */
 
     header{
@@ -242,7 +406,7 @@
 
       -webkit-backdrop-filter: blur(14px);
 
-      background: linear-gradient(180deg, rgba(5,5,5,0.82), rgba(5,5,5,0.46));
+      background: linear-gradient(180deg, rgba(5,5,5,0.82), rgba(5,5,5,0.42));
 
       border-bottom: 1px solid rgba(255,255,255,0.08);
 
@@ -268,43 +432,43 @@
 
     .brand .ico{
 
-      width:34px; height:34px;
+      width:50px; height:50px;
 
-      border-radius: 12px;
+      border-radius: 16px;
 
-      border: 1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
 
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.06);
 
-      padding: 7px;
+      padding: 9px;
 
       display:block;
 
+      box-shadow:
+
+        0 0 0 1px rgba(255,255,255,0.06),
+
+        0 0 34px rgba(255,255,255,0.10),
+
+        0 0 80px rgba(86,240,183,0.10);
+
     }
 
-    .brand .wordmark{
+    .brand .logo{
 
-      height: 18px;
+      height: 30px;
 
       width:auto;
 
       display:block;
 
-      opacity:0.96;
+      opacity:0.98;
 
-    }
+      filter:
 
-    .brand .fallback{
+        drop-shadow(0 0 12px rgba(255,255,255,0.16))
 
-      font-weight:800;
-
-      letter-spacing:0.06em;
-
-      font-size:14px;
-
-      text-transform:uppercase;
-
-      opacity:0.92;
+        drop-shadow(0 0 22px rgba(86,240,183,0.12));
 
     }
 
@@ -350,7 +514,7 @@
 
     /* -----------------------
 
-      Hero (Jessica Walsh-ish energy)
+      Hero
 
     ------------------------ */
 
@@ -370,65 +534,17 @@
 
         radial-gradient(900px 520px at 15% 0%, rgba(255,255,255,0.12), transparent 60%),
 
-        radial-gradient(780px 540px at 88% 18%, rgba(86,240,183,0.08), transparent 62%),
+        radial-gradient(780px 540px at 88% 18%, rgba(86,240,183,0.09), transparent 62%),
 
         radial-gradient(820px 560px at 55% 110%, rgba(255,92,122,0.07), transparent 62%),
 
-        rgba(0,0,0,0.22);
+        rgba(0,0,0,0.20);
 
       box-shadow: var(--shadow);
 
       overflow:hidden;
 
     }
-
- 
-
-    /* subtle motion ribbons */
-
-    .ribbons{
-
-      position:absolute; inset:-20%;
-
-      background:
-
-        conic-gradient(from 160deg at 40% 40%,
-
-          rgba(255,255,255,0.10),
-
-          rgba(86,240,183,0.06),
-
-          rgba(255,92,122,0.05),
-
-          rgba(255,255,255,0.08),
-
-          rgba(0,0,0,0) 60%);
-
-      opacity:0.55;
-
-      filter: blur(22px) saturate(1.15);
-
-      animation: drift 16s ease-in-out infinite alternate;
-
-      pointer-events:none;
-
-    }
-
-    @keyframes drift{
-
-      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03) rotate(-2deg); }
-
-      100%{ transform: translate3d(2%, 1.4%, 0) scale(1.08) rotate(2deg); }
-
-    }
-
-    @media (prefers-reduced-motion: reduce){
-
-      .ribbons{ animation:none !important; }
-
-    }
-
- 
 
     .hero-inner{ position:relative; padding: 44px 38px; }
 
@@ -478,13 +594,13 @@
 
       margin: 18px 0 12px;
 
-      font-size: clamp(40px, 6vw, 70px);
+      font-size: clamp(42px, 6vw, 74px);
 
       line-height: 0.98;
 
       letter-spacing: -0.03em;
 
-      font-weight: 900;
+      font-weight: 950;
 
     }
 
@@ -576,7 +692,7 @@
 
       gap: 12px;
 
-      max-width: 740px;
+      max-width: 760px;
 
     }
 
@@ -586,7 +702,7 @@
 
       border:1px solid rgba(255,255,255,0.12);
 
-      background: rgba(0,0,0,0.34);
+      background: rgba(0,0,0,0.32);
 
       padding: 16px 16px;
 
@@ -600,7 +716,7 @@
 
     /* -----------------------
 
-      Stacked sections w/ gradient rhythm
+      Stacked sections rhythm
 
     ------------------------ */
 
@@ -624,7 +740,7 @@
 
       color: var(--soft);
 
-      line-height:1.75;
+      line-height:1.78;
 
       font-size: 15px;
 
@@ -652,7 +768,7 @@
 
         rgba(255,255,255,0.0));
 
-      opacity:0.9;
+      opacity:0.95;
 
     }
 
@@ -660,7 +776,7 @@
 
     /* -----------------------
 
-      Screenshot (single)
+      Screenshot
 
     ------------------------ */
 
@@ -670,7 +786,7 @@
 
       border: 1px solid rgba(255,255,255,0.12);
 
-      background: rgba(0,0,0,0.30);
+      background: rgba(0,0,0,0.26);
 
       overflow:hidden;
 
@@ -738,7 +854,7 @@
 
       border: 1px solid rgba(255,255,255,0.12);
 
-      background: rgba(0,0,0,0.34);
+      background: rgba(0,0,0,0.32);
 
     }
 
@@ -754,11 +870,11 @@
 
     /* -----------------------
 
-      Intro Video Overlay (FIXED)
+      Intro Video Overlay
 
-      - No forced auto-hide
+      - auto-skip at 9 seconds
 
-      - User controls: Skip / Pause
+      - still pausible + skippable
 
     ------------------------ */
 
@@ -796,7 +912,7 @@
 
         radial-gradient(900px 520px at 50% 18%, rgba(0,0,0,0.18), transparent 62%),
 
-        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.72));
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.76));
 
       pointer-events:none;
 
@@ -866,7 +982,7 @@
 
       border-top: 1px solid rgba(255,255,255,0.08);
 
-      background: rgba(0,0,0,0.18);
+      background: rgba(0,0,0,0.16);
 
       backdrop-filter: blur(10px);
 
@@ -898,6 +1014,16 @@
 
   <div class="bg" aria-hidden="true">
 
+    <div class="waves">
+
+      <div class="wave w1"></div>
+
+      <div class="wave w2"></div>
+
+      <div class="wave w3"></div>
+
+    </div>
+
     <div class="mist"></div>
 
     <div class="stars"></div>
@@ -924,7 +1050,7 @@
 
         <span class="dot" aria-hidden="true"></span>
 
-        <span>ZOTHEOS is loading…</span>
+        <span>Initializing…</span>
 
       </div>
 
@@ -956,11 +1082,9 @@
 
           <img class="ico" src="/static/favicon_blackBW.ico" alt="ZOTHEOS icon" />
 
-          <!-- wordmark png (optional). if missing, fallback text shows -->
+          <!-- logo PNG only (no word text) -->
 
-          <img class="wordmark" src="/static/zotheos_wordmark.png" alt="ZOTHEOS" onerror="this.style.display='none'; document.getElementById('brandFallback').style.display='block';">
-
-          <span id="brandFallback" class="fallback" style="display:none;">ZOTHEOS</span>
+          <img class="logo" src="/static/zotheos_logo.png" alt="ZOTHEOS logo" />
 
         </a>
 
@@ -994,10 +1118,6 @@
 
       <section class="hero">
 
-        <div class="ribbons" aria-hidden="true"></div>
-
- 
-
         <div class="hero-inner">
 
           <span class="eyebrow"><span class="dot"></span> offline-first • private by default • built independently</span>
@@ -1010,9 +1130,9 @@
 
           <p class="subhead">
 
-            ZOTHEOS is a tool built for real life: learning, planning, and problem-solving without getting tracked,
+            ZOTHEOS is an offline-first ethical intelligence system built to keep knowledge usable and grounded.
 
-            sold, or steered. It’s made to stay useful even when the internet isn’t.
+            No tracking. No hidden steering. No paywalls shaping what you’re allowed to learn.
 
           </p>
 
@@ -1034,25 +1154,25 @@
 
             <div class="pillcard">
 
-              <b>It stays on your side.</b>
+              <b>Private by default.</b>
 
-              <span>Designed around humans, not engagement tricks.</span>
-
-            </div>
-
-            <div class="pillcard">
-
-              <b>It respects privacy.</b>
-
-              <span>Less dependence on always-online systems.</span>
+              <span>Built to reduce dependence on data-hungry systems.</span>
 
             </div>
 
             <div class="pillcard">
 
-              <b>It aims for clarity.</b>
+              <b>Made for real decisions.</b>
 
-              <span>Less noise. More usable answers.</span>
+              <span>Learning, planning, and problem-solving—without noise.</span>
+
+            </div>
+
+            <div class="pillcard">
+
+              <b>Independent by design.</b>
+
+              <span>Support keeps the mission intact: humans first.</span>
 
             </div>
 
@@ -1068,7 +1188,7 @@
 
  
 
-        <!-- MISSION (stacked, spacious, less jargon) -->
+        <!-- MISSION (more “pre-launch gravity”, less casual) -->
 
         <section id="mission" class="panel">
 
@@ -1076,15 +1196,19 @@
 
             <h2 class="section-title">Why ZOTHEOS exists</h2>
 
+ 
+
             <p class="copy">
 
-              The internet used to feel like a library. Now it often feels like a casino.
+              Most systems today compete for attention. They optimize for engagement, not understanding.
 
-              ZOTHEOS is my push in the opposite direction: a calm tool for learning and decision-making
+              ZOTHEOS is built for the opposite outcome: clear, calm intelligence that helps people learn and act
 
-              that doesn’t need your data to “work.”
+              without being tracked, nudged, or profiled.
 
             </p>
+
+ 
 
             <div style="height:14px"></div>
 
@@ -1092,11 +1216,25 @@
 
             <div style="height:14px"></div>
 
+ 
+
+            <p class="copy">
+
+              The mission is simple: keep knowledge accessible, keep privacy intact, and keep the tool reliable
+
+              even when the internet isn’t. Over time, this becomes something bigger than a product —
+
+              it becomes infrastructure for human clarity.
+
+            </p>
+
+ 
+
+            <div style="height:10px"></div>
+
             <p class="copy muted">
 
-              The long-term goal is simple: keep knowledge accessible, keep people in control,
-
-              and keep the mission independent.
+              This page is the front door. The console is the tool.
 
             </p>
 
@@ -1116,7 +1254,7 @@
 
             <p class="copy muted">
 
-              One screenshot for now. This is just to show the tool is real and active.
+              One screenshot for now — just enough to show the system is real and running.
 
             </p>
 
@@ -1152,9 +1290,9 @@
 
             <p class="copy">
 
-              If this resonates, support keeps it moving and keeps it independent.
+              Support funds time, testing, and releases — and it keeps ZOTHEOS independent.
 
-              Even small contributions help cover testing, releases, and the time it takes to build it right.
+              If this mission matters, this is the simplest way to help move it forward.
 
             </p>
 
@@ -1270,9 +1408,9 @@
 
     // Intro overlay controls:
 
-    // - NO forced auto-hide (fixes the “cuts off after ~5 seconds” issue)
+    // - auto-skip at 9 seconds (your intro length)
 
-    // - User can Pause/Play and Skip
+    // - user can Pause/Play and Skip
 
     (function(){
 
@@ -1292,6 +1430,12 @@
 
       let dismissed = false;
 
+      let autoTimer = null;
+
+      const AUTO_SKIP_SECONDS = 9;
+
+ 
+
       function hideIntro(){
 
         if(dismissed) return;
@@ -1302,6 +1446,8 @@
 
         try { v.pause(); } catch(e) {}
 
+        if(autoTimer) clearTimeout(autoTimer);
+
       }
 
  
@@ -1309,6 +1455,12 @@
       // If video fails to load, don’t block the site.
 
       v.addEventListener('error', hideIntro);
+
+ 
+
+      // Auto-skip after 9 seconds
+
+      autoTimer = setTimeout(hideIntro, AUTO_SKIP_SECONDS * 1000);
 
  
 
@@ -1336,7 +1488,7 @@
 
  
 
-      // If user taps/clicks the video itself, toggle play (nice UX)
+      // clicking the video toggles play
 
       v.addEventListener('click', function(){
 
@@ -1346,9 +1498,9 @@
 
  
 
-      // Attempt to play (some browsers are picky even when muted)
+      // attempt autoplay
 
-      v.play().catch(()=>{ /* muted autoplay usually works; ignore if blocked */ });
+      v.play().catch(()=>{});
 
     })();
 
