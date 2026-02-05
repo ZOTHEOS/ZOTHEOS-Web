@@ -6,115 +6,99 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
 
-  <title>ZOTHEOS OS | Offline Ethical Intelligence</title>
+  <title>ZOTHEOS | Offline Ethical Intelligence</title>
+
+ 
+
+  <!-- Favicon -->
 
   <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
 
  
 
-  <style>
+  <!-- Social preview (optional but good) -->
 
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system built to empower people with reliable knowledge without surveillance, manipulation, or paywalls." />
+
+  <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
+
+  <meta property="og:description" content="Offline-first ethical intelligence built to empower humans with trustworthy knowledge without surveillance or manipulation." />
+
+  <meta property="og:image" content="/static/zotheos_logo.png" />
 
  
+
+  <style>
+
+    /* -----------------------------
+
+       Base
+
+    ------------------------------ */
 
     :root{
 
-      --bg-dark:#050505;
+      --bg:#050505;
 
-      --text-main:#f5f5f5;
+      --panel:rgba(14,14,14,0.76);
 
-      --text-dim:#a0a0a0;
+      --panel2:rgba(18,18,18,0.68);
 
-      --text-soft:#c9c9c9;
+      --border:rgba(255,255,255,0.12);
 
- 
+      --text:#f5f5f5;
+
+      --dim:#a8a8a8;
+
+      --soft:#cfcfcf;
 
       --accent:#ffffff;
 
- 
+      --good:#56f0b7;
 
-      --glass-panel:rgba(10,10,10,0.84);
+      --warn:#ffcb6b;
 
-      --glass-panel-2:rgba(12,12,12,0.72);
-
-      --border:rgba(255,255,255,0.08);
-
-      --border-strong:rgba(255,255,255,0.14);
+      --danger:#ff5c7a;
 
  
 
-      --tier-1:#ffffff;
+      --max:1140px;
 
-      --tier-2:#ff3b3b;
+      --radius:16px;
 
-      --tier-3:#8a8a8a;
-
- 
-
-      --ok:#ffffff;
-
-      --warn:#9b9b9b;
-
-      --bad:#ff3b3b;
+      --radius2:22px;
 
  
 
-      --shadow: 0 24px 60px rgba(0,0,0,0.65);
+      --shadow: 0 18px 70px rgba(0,0,0,0.65);
 
-      --shadow-soft: 0 10px 30px rgba(0,0,0,0.45);
-
- 
-
-      --radius: 12px;
-
-      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-      --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-
-      --display: 'Bebas Neue', system-ui, sans-serif;
+      --shadow2: 0 12px 45px rgba(0,0,0,0.55);
 
  
 
-      --focus: 0 0 0 3px rgba(255,255,255,0.12);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
- 
-
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-
-      --dur: 220ms;
-
-      --grid-gap: 18px;
-
- 
-
-      /* Mobile tuning vars */
-
-      --tap: 44px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 
     }
 
  
 
-    * { box-sizing: border-box; }
+    *{box-sizing:border-box}
 
-    html, body { height: 100%; }
-
- 
+    html,body{height:100%}
 
     body{
 
-      background-color:var(--bg-dark);
-
-      color:var(--text-main);
-
-      font-family:var(--sans);
-
       margin:0;
 
-      padding:0;
+      color:var(--text);
+
+      background:var(--bg);
+
+      font-family:var(--sans);
 
       overflow-x:hidden;
 
@@ -122,1697 +106,799 @@
 
  
 
-    /* ====== BACKGROUND CANVAS ====== */
+    a{color:inherit;text-decoration:none}
 
-    #bgCanvas{
-
-      position: fixed;
-
-      inset: 0;
-
-      width: 100%;
-
-      height: 100%;
-
-      z-index: 0;
-
-      pointer-events: none;
-
-      filter: blur(0.2px) saturate(1.05) contrast(1.05);
-
-      opacity: 1;
-
-    }
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
  
 
-    /* Noise overlay */
+    /* -----------------------------
 
-    body::before {
+       Animated Immersive Background
 
-      content: "";
+       - Prominent nebula + waves
 
-      position: fixed; inset: 0;
+       - Canvas overlay for subtle motion
 
-      background-image:
+    ------------------------------ */
 
-        url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+    .bg-wrap{
 
-      opacity: 0.055;
+      position:fixed;
 
-      pointer-events: none;
+      inset:0;
 
-      z-index: 1;
-
-    }
-
- 
-
-    /* Vignette */
-
-    body::after{
-
-      content:"";
-
-      position: fixed; inset: 0;
+      z-index:-5;
 
       background:
 
-        radial-gradient(70% 55% at 50% 30%, rgba(0,0,0,0.10) 10%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.75) 100%),
+        radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,0.08), transparent 62%),
 
-        radial-gradient(1200px 600px at 50% 15%, rgba(255,255,255,0.05), transparent 60%);
+        radial-gradient(1000px 600px at 85% 15%, rgba(255,255,255,0.06), transparent 60%),
 
-      pointer-events: none;
+        radial-gradient(900px 700px at 50% 85%, rgba(255,255,255,0.05), transparent 60%),
 
-      z-index: 2;
+        radial-gradient(600px 400px at 70% 60%, rgba(86,240,183,0.06), transparent 62%),
 
-    }
+        radial-gradient(700px 500px at 35% 65%, rgba(255,92,122,0.045), transparent 63%),
 
- 
-
-    .container{
-
-      position: relative;
-
-      z-index:10;
-
-      width:100%;
-
-      max-width:1180px;
-
-      padding:34px 18px 60px;
-
-      margin:0 auto;
+        linear-gradient(180deg, #050505 0%, #070707 40%, #050505 100%);
 
     }
 
  
 
-    header{
+    /* Nebula sheet: more prominent + moving */
 
-      text-align:center;
-
-      margin-bottom:14px;
-
-    }
-
- 
-
-    .logo{
-
-      height:88px;
-
-      margin-bottom:8px;
-
-      filter: drop-shadow(0 0 16px rgba(255,255,255,0.10));
-
-      user-select: none;
-
-    }
-
- 
-
-    .subtitle{
-
-      font-size:0.78rem;
-
-      color:var(--text-dim);
-
-      letter-spacing:5px;
-
-      text-transform:uppercase;
-
-      font-weight:300;
-
-    }
-
- 
-
-    .promise{
-
-      margin-top: 10px;
-
-      font-size: 0.95rem;
-
-      color: rgba(255,255,255,0.88);
-
-      line-height: 1.45;
-
-    }
-
- 
-
-    /* ====== STATUS STRIP ====== */
-
-    .status-strip{
-
-      margin: 18px 0 14px;
-
-      padding: 12px;
-
-      border: 1px solid var(--border);
-
-      background: rgba(0,0,0,0.35);
-
-      backdrop-filter: blur(18px);
-
-      border-radius: var(--radius);
-
-      box-shadow: var(--shadow-soft);
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content: space-between;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-    }
-
- 
-
-    .os-meta{
-
-      display:flex;
-
-      align-items:center;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-      font-family: var(--mono);
-
-      font-size: 0.70rem;
-
-      color: var(--text-dim);
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.7px;
-
-    }
-
- 
-
-    .pill{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      gap:8px;
-
-      padding: 7px 10px;
-
-      border: 1px solid var(--border);
-
-      border-radius: 999px;
-
-      background: rgba(0,0,0,0.32);
-
-    }
-
- 
-
-    .dot{
-
-      width: 8px; height: 8px;
-
-      border-radius: 50%;
-
-      background: var(--tier-3);
-
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.06);
-
-    }
-
-    .dot.ok{ background: var(--ok); }
-
-    .dot.warn{ background: var(--warn); }
-
-    .dot.bad{ background: var(--bad); }
-
- 
-
-    .status-actions{
-
-      display:flex;
-
-      align-items:center;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-    }
-
- 
-
-    .mode-switch{
-
-      display:flex;
-
-      justify-content:center;
-
-      gap:12px;
-
-      margin: 10px 0 18px;
-
-      flex-wrap: wrap;
-
-    }
-
- 
-
-    .mode-btn{
-
-      background: rgba(0,0,0,0.52);
-
-      border: 1px solid var(--border);
-
-      color: var(--text-dim);
-
-      padding: 12px 26px;
-
-      cursor: pointer;
-
-      font-family: var(--display);
-
-      letter-spacing: 2px;
-
-      font-size: 1.05rem;
-
-      border-radius: 10px;
-
-      transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-
-      backdrop-filter: blur(12px);
-
-      user-select:none;
-
-    }
-
- 
-
-    .mode-btn:hover{
-
-      transform: translateY(-1px);
-
-      border-color: var(--border-strong);
-
-      color: var(--text-main);
-
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.04);
-
-    }
-
- 
-
-    .mode-btn.active{
-
-      border-color: rgba(255,255,255,0.35);
-
-      color: var(--accent);
-
-      background: rgba(255,255,255,0.06);
-
-      box-shadow: 0 0 24px rgba(255,255,255,0.06);
-
-    }
-
- 
-
-    .panel{ display:none; animation: fadeIn 260ms var(--ease); }
-
-    .panel.active{ display:block; }
-
-    @keyframes fadeIn { from{opacity:0; transform: translateY(6px);} to{opacity:1; transform: translateY(0);} }
-
- 
-
-    .card{
-
-      background: var(--glass-panel);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius);
-
-      padding: 22px;
-
-      margin-bottom: 18px;
-
-      backdrop-filter: blur(22px);
-
-      box-shadow: var(--shadow);
-
-    }
-
-    .card.slim{ padding: 16px; background: var(--glass-panel-2); }
-
- 
-
-    .card h2{
-
-      font-family: var(--display);
-
-      font-size: 1.55rem;
-
-      letter-spacing: 2px;
-
-      margin: 0 0 14px;
-
-      text-transform: uppercase;
-
-      border-bottom: 1px solid var(--border);
-
-      padding-bottom: 10px;
-
-    }
-
- 
-
-    .muted{ color: var(--text-dim); }
-
- 
-
-    /* Guided input */
-
-    .input-box{
-
-      background: rgba(12,12,12,0.78);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius);
-
-      padding: 18px;
-
-      margin-bottom: 18px;
-
-      box-shadow: var(--shadow-soft);
-
-      backdrop-filter: blur(18px);
-
-    }
-
- 
-
-    .guide-row{
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content: space-between;
-
-      gap: 12px;
-
-      flex-wrap: wrap;
-
-      margin-bottom: 10px;
-
-    }
-
- 
-
-    .guide-left{
-
-      display:flex;
-
-      flex-direction: column;
-
-      gap: 6px;
-
-      min-width: 240px;
-
-      flex: 1 1 auto;
-
-    }
-
- 
-
-    .guide-title{
-
-      font-family: var(--mono);
-
-      font-size: 0.75rem;
-
-      color: rgba(255,255,255,0.82);
-
-      letter-spacing: 0.6px;
-
-      text-transform: uppercase;
-
-    }
-
- 
-
-    .guide-sub{
-
-      font-size: 0.92rem;
-
-      color: var(--text-dim);
-
-      line-height: 1.35;
-
-    }
-
- 
-
-    .chips{
-
-      display:flex;
-
-      gap: 8px;
-
-      flex-wrap: wrap;
-
-      justify-content:flex-end;
-
-    }
-
- 
-
-    .chip-btn{
-
-      background: rgba(0,0,0,0.35);
-
-      border: 1px solid var(--border);
-
-      color: rgba(255,255,255,0.86);
-
-      border-radius: 999px;
-
-      padding: 8px 10px;
-
-      cursor: pointer;
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
-
-      user-select:none;
-
-      white-space: nowrap;
-
-      min-height: 34px;
-
-    }
-
-    .chip-btn:hover{
-
-      transform: translateY(-1px);
-
-      border-color: rgba(255,255,255,0.20);
-
-      background: rgba(255,255,255,0.04);
-
-    }
-
- 
-
-    textarea{
-
-      width:100%;
-
-      background: rgba(0,0,0,0.18);
-
-      border: 1px solid var(--border);
-
-      border-radius: 12px;
-
-      color: var(--text-main);
-
-      font-family: var(--sans);
-
-      font-size: 1.05rem;
-
-      min-height: 120px;
-
-      outline: none;
-
-      line-height: 1.55;
-
-      padding: 14px 14px;
-
-      transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-
-      resize: vertical;
-
-    }
-
-    textarea:focus{
-
-      border-color: rgba(255,255,255,0.22);
-
-      box-shadow: var(--focus);
-
-    }
-
- 
-
-    .toolbar{
-
-      display:flex;
-
-      justify-content: space-between;
-
-      align-items:center;
-
-      gap: 12px;
-
-      flex-wrap: wrap;
-
-      margin-top: 10px;
-
-      border-top: 1px solid var(--border);
-
-      padding-top: 14px;
-
-    }
-
- 
-
-    .toolbar-left, .toolbar-right{
-
-      display:flex;
-
-      align-items:center;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-    }
-
- 
-
-    .kbd{
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      border: 1px solid var(--border);
-
-      padding: 4px 7px;
-
-      border-radius: 8px;
-
-      color: var(--text-dim);
-
-      background: rgba(0,0,0,0.25);
-
-    }
-
- 
-
-    .btn-primary{
-
-      background: var(--accent);
-
-      color: #000;
-
-      border: none;
-
-      padding: 12px 22px;
-
-      border-radius: 12px;
-
-      font-family: var(--display);
-
-      font-size: 1.12rem;
-
-      letter-spacing: 1.4px;
-
-      cursor: pointer;
-
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
-
-      user-select:none;
-
-      min-height: var(--tap);
-
-    }
-
-    .btn-primary:hover{
-
-      background: #ffffff;
-
-      transform: translateY(-1px);
-
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.12), 0 18px 45px rgba(0,0,0,0.35);
-
-    }
-
-    .btn-primary:active{ transform: translateY(0px) scale(0.99); }
-
- 
-
-    .btn-quiet{
-
-      background: transparent;
-
-      color: var(--text-dim);
-
-      border: 1px solid var(--border);
-
-      padding: 10px 14px;
-
-      border-radius: 12px;
-
-      cursor: pointer;
-
-      font-size: 0.72rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-      transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
-
-      user-select:none;
-
-      font-family: var(--mono);
-
-      min-height: var(--tap);
-
-    }
-
-    .btn-quiet:hover{
-
-      border-color: rgba(255,255,255,0.22);
-
-      color: var(--text-main);
-
-      transform: translateY(-1px);
-
-      background: rgba(255,255,255,0.03);
-
-    }
-
-    .btn-danger{
-
-      border-color: rgba(255,59,59,0.45) !important;
-
-      color: var(--bad) !important;
-
-    }
-
-    .btn-danger:hover{
-
-      border-color: rgba(255,59,59,0.65) !important;
-
-      background: rgba(255,59,59,0.08) !important;
-
-    }
-
- 
-
-    .toggle{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      gap: 10px;
-
-      padding: 9px 12px;
-
-      border-radius: 12px;
-
-      border: 1px solid var(--border);
-
-      background: rgba(0,0,0,0.25);
-
-      user-select:none;
-
-      cursor: pointer;
-
-      transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.8px;
-
-      color: var(--text-dim);
-
-      min-height: var(--tap);
-
-    }
-
-    .toggle:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.18); }
-
-    .toggle .switch{
-
-      width: 42px;
-
-      height: 22px;
-
-      border-radius: 999px;
-
-      border: 1px solid var(--border);
-
-      background: rgba(255,255,255,0.06);
-
-      position: relative;
-
-      transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
-
-      flex: 0 0 auto;
-
-    }
-
-    .toggle .switch::after{
-
-      content:"";
+    .nebula{
 
       position:absolute;
 
-      top: 2px; left: 2px;
+      inset:-25%;
 
-      width: 18px; height: 18px;
+      filter: blur(18px) saturate(1.25);
 
-      border-radius: 50%;
+      opacity:0.95;
 
-      background: rgba(255,255,255,0.85);
+      background:
 
-      transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+        radial-gradient(closest-side at 20% 30%, rgba(255,255,255,0.12), transparent 60%),
 
-    }
+        radial-gradient(closest-side at 75% 22%, rgba(86,240,183,0.09), transparent 62%),
 
-    .toggle.on{
+        radial-gradient(closest-side at 55% 65%, rgba(255,92,122,0.07), transparent 62%),
 
-      color: var(--text-main);
+        radial-gradient(closest-side at 35% 75%, rgba(255,203,107,0.06), transparent 60%),
 
-      border-color: rgba(255,59,59,0.35);
+        radial-gradient(closest-side at 80% 72%, rgba(255,255,255,0.08), transparent 58%);
 
-    }
+      animation: nebulaFloat 18s ease-in-out infinite alternate;
 
-    .toggle.on .switch{
-
-      background: rgba(255,59,59,0.12);
-
-      border-color: rgba(255,59,59,0.35);
+      transform: translate3d(0,0,0);
 
     }
 
-    .toggle.on .switch::after{
+    @keyframes nebulaFloat{
 
-      transform: translateX(20px);
+      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03) rotate(-1.2deg); }
 
-      background: var(--bad);
+      100%{ transform: translate3d(2.5%, 1.8%, 0) scale(1.06) rotate(1.4deg); }
 
     }
 
  
 
-    /* Tooltip */
+    /* Wave layer: more visible + slow drift */
 
-    .tip{
+    .waves{
 
-      display:inline-flex;
+      position:absolute;
 
-      align-items:center;
+      inset:auto -10% -25% -10%;
 
-      gap: 8px;
+      height:60%;
 
-      font-family: var(--mono);
+      opacity:0.85;
 
-      font-size: 0.72rem;
+      filter: blur(0.2px);
 
-      color: var(--text-dim);
+      background:
 
-      user-select:none;
+        radial-gradient(1200px 420px at 20% 20%, rgba(255,255,255,0.06), transparent 60%),
 
-    }
+        radial-gradient(900px 380px at 80% 45%, rgba(255,255,255,0.05), transparent 58%),
 
-    .tip button{
+        repeating-linear-gradient(115deg,
 
-      border: 1px solid var(--border);
+          rgba(255,255,255,0.00) 0px,
 
-      background: rgba(0,0,0,0.25);
+          rgba(255,255,255,0.00) 24px,
 
-      color: rgba(255,255,255,0.82);
+          rgba(255,255,255,0.06) 25px,
 
-      border-radius: 999px;
+          rgba(255,255,255,0.00) 42px
 
-      width: 22px;
+        );
 
-      height: 22px;
+      mask-image: radial-gradient(closest-side at 50% 20%, rgba(0,0,0,0.95), transparent 70%);
 
-      cursor: pointer;
+      animation: waveDrift 16s linear infinite;
 
-      font-family: var(--mono);
-
-      font-size: 0.75rem;
-
-      line-height: 1;
-
-      transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+      transform: translate3d(0,0,0);
 
     }
 
-    .tip button:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.20); }
+    @keyframes waveDrift{
 
- 
+      0%{ transform: translate3d(-2%, 0, 0) skewX(-2deg); }
 
-    /* Collapsible sections */
+      50%{ transform: translate3d(2%, -1%, 0) skewX(2deg); }
 
-    details.section{
-
-      border: 1px solid var(--border);
-
-      border-radius: 14px;
-
-      background: rgba(255,255,255,0.02);
-
-      padding: 12px 14px;
-
-      margin-top: 12px;
-
-    }
-
-    details.section summary{
-
-      cursor:pointer;
-
-      font-family: var(--mono);
-
-      font-size: 0.75rem;
-
-      color: rgba(255,255,255,0.80);
-
-      letter-spacing: 0.6px;
-
-      text-transform: uppercase;
-
-      user-select:none;
+      100%{ transform: translate3d(-2%, 0, 0) skewX(-2deg); }
 
     }
 
  
 
-    .loader{
+    /* Star grain */
 
-      display:none;
+    .grain{
 
-      text-align:center;
+      position:absolute;
 
-      font-family: var(--display);
+      inset:0;
 
-      font-size: 1.6rem;
+      opacity:0.22;
 
-      letter-spacing: 4px;
+      background-image:
 
-      margin: 22px 0;
+        radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px);
 
-      color: var(--accent);
+      background-size: 3px 3px;
 
-      animation: pulse 1.25s infinite;
+      mix-blend-mode: screen;
 
-      user-select:none;
+      filter: blur(0.2px);
+
+      animation: grainShift 9s steps(8,end) infinite;
 
     }
 
-    @keyframes pulse { 0% { opacity: 0.35; } 50% { opacity: 1; } 100% { opacity: 0.35; } }
+    @keyframes grainShift{
 
- 
+      0%{ transform: translate(0,0); }
 
-    #output{ display:none; margin-top: 16px; }
+      25%{ transform: translate(-1%, 0.5%); }
 
- 
+      50%{ transform: translate(1%, -0.5%); }
 
-    .synthesis{
+      75%{ transform: translate(-0.6%, -1%); }
 
-      line-height: 1.75;
-
-      color: #eee;
-
-      font-size: 1.03rem;
-
-      white-space: pre-wrap;
-
-      word-break: break-word;
+      100%{ transform: translate(0,0); }
 
     }
 
  
 
-    .runtime{
+    canvas#drift{
 
-      font-family: var(--mono);
+      position:absolute;
 
-      font-size: 0.68rem;
+      inset:0;
 
-      color: var(--text-dim);
+      width:100%;
 
-      margin-top: 18px;
+      height:100%;
 
-      text-align: right;
+      opacity:0.65;
 
-    }
+      mix-blend-mode: screen;
 
- 
-
-    .row{
-
-      display:flex;
-
-      gap: var(--grid-gap);
-
-      flex-wrap: wrap;
-
-      align-items: center;
-
-      justify-content: space-between;
+      filter: blur(0.2px);
 
     }
 
  
 
-    .mini{
+    /* Respect reduced motion */
 
-      font-family: var(--mono);
+    @media (prefers-reduced-motion: reduce){
 
-      font-size: 0.72rem;
+      .nebula,.waves,.grain{animation:none !important}
 
-      color: var(--text-dim);
-
-    }
-
- 
-
-    .alert{
-
-      display:none;
-
-      background: rgba(255,59,59,0.10);
-
-      border: 1px solid rgba(255,59,59,0.40);
-
-      color: var(--bad);
-
-      padding: 14px;
-
-      border-radius: 12px;
-
-      margin-bottom: 14px;
-
-      font-size: 0.88rem;
-
-      line-height: 1.4;
+      canvas#drift{display:none}
 
     }
 
  
 
-    .arb-summary{
+    /* -----------------------------
 
-      font-size: 0.96rem;
+       Header / Nav
 
-      color: #cfcfcf;
+    ------------------------------ */
 
-      line-height: 1.65;
+    header{
 
-      white-space: pre-wrap;
+      position:sticky;
+
+      top:0;
+
+      z-index:50;
+
+      backdrop-filter: blur(14px);
+
+      background: linear-gradient(180deg, rgba(5,5,5,0.88), rgba(5,5,5,0.55));
+
+      border-bottom:1px solid rgba(255,255,255,0.08);
 
     }
 
  
 
-    .vault-item{
-
-      padding: 14px 0;
-
-      border-bottom: 1px solid var(--border);
-
-    }
-
- 
-
-    .vault-head{
+    .nav{
 
       display:flex;
 
       align-items:center;
 
-      justify-content: space-between;
+      justify-content:space-between;
 
-      gap: 12px;
+      gap:14px;
 
-      flex-wrap: wrap;
-
-      margin-bottom: 10px;
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      color: var(--text-dim);
+      padding:14px 0;
 
     }
 
  
 
-    .tier-badge{
+    .brand{
 
-      display:inline-flex;
+      display:flex;align-items:center;gap:10px;
 
-      align-items:center;
-
-      gap: 8px;
-
-      padding: 4px 10px;
-
-      border-radius: 999px;
-
-      font-weight: 700;
-
-      color: #000;
-
-      letter-spacing: 0.6px;
-
-      border: 1px solid rgba(0,0,0,0.25);
-
-      text-transform: uppercase;
-
-      box-shadow: 0 10px 25px rgba(0,0,0,0.20);
-
-      user-select:none;
+      min-width:210px;
 
     }
 
-    .tier-1{ background: var(--tier-1); }
+    .brand img{
 
-    .tier-2{ background: var(--tier-2); }
+      width:34px;height:34px;
 
-    .tier-3{ background: var(--tier-3); color:#111; }
+      border-radius:9px;
 
- 
+      background:rgba(255,255,255,0.06);
 
-    .vault-body{
+      border:1px solid rgba(255,255,255,0.10);
 
-      font-size: 0.90rem;
-
-      color: #d0d0d0;
-
-      line-height: 1.6;
-
-      white-space: pre-wrap;
-
-      word-break: break-word;
+      padding:6px;
 
     }
 
- 
+    .brand-title{
 
-    .vault-meta{
-
-      display:flex;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-      align-items:center;
-
-      justify-content:flex-end;
+      display:flex;flex-direction:column;line-height:1.1;
 
     }
 
+    .brand-title b{letter-spacing:0.12em;font-size:13px}
+
+    .brand-title span{color:var(--dim);font-size:12px;margin-top:3px}
+
  
 
-    .chip{
+    .navlinks{
 
-      display:inline-flex;
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;
 
-      align-items:center;
+    }
 
-      gap: 6px;
+    .pill{
 
-      padding: 6px 10px;
+      font-size:13px;
 
-      border-radius: 999px;
+      padding:9px 12px;
 
-      border: 1px solid var(--border);
+      border-radius:999px;
 
-      background: rgba(0,0,0,0.25);
+      border:1px solid rgba(255,255,255,0.12);
 
-      color: var(--text-dim);
+      background:rgba(0,0,0,0.35);
 
-      font-family: var(--mono);
+      transition:transform .15s ease, border-color .15s ease, background .15s ease;
 
-      font-size: 0.70rem;
+      white-space:nowrap;
 
-      user-select:none;
+    }
+
+    .pill:hover{
+
+      transform: translateY(-1px);
+
+      border-color: rgba(255,255,255,0.22);
+
+      background:rgba(0,0,0,0.5);
+
+    }
+
+    .pill.primary{
+
+      border-color: rgba(255,255,255,0.25);
+
+      background: rgba(255,255,255,0.08);
 
     }
 
  
 
-    .bias-grid{
+    /* -----------------------------
+
+       Sections / Panels
+
+    ------------------------------ */
+
+    main{padding:36px 0 80px}
+
+    .grid{
 
       display:grid;
 
       grid-template-columns: 1.2fr 0.8fr;
 
-      gap: 26px;
+      gap:18px;
 
     }
 
-    .bias-bar-outer{
+    @media (max-width: 940px){
 
-      width:100%;
+      .grid{grid-template-columns: 1fr; }
 
-      height: 8px;
+      .brand{min-width:auto}
 
-      background: rgba(255,255,255,0.06);
+    }
 
-      border-radius: 999px;
+ 
 
-      margin-top: 10px;
+    .panel{
+
+      background:var(--panel);
+
+      border:1px solid var(--border);
+
+      border-radius:var(--radius2);
+
+      box-shadow:var(--shadow2);
 
       overflow:hidden;
 
-      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .panel-inner{padding:22px}
+
+    .panel h2{
+
+      margin:0 0 10px;
+
+      font-size:18px;
+
+      letter-spacing:0.02em;
 
     }
 
-    .bias-bar-inner{
+    .panel p{margin:0;color:var(--soft);line-height:1.55}
 
-      height:100%;
+    .muted{color:var(--dim)}
 
-      width:0%;
+    .tiny{font-size:12px;color:var(--dim);line-height:1.4}
 
-      background: var(--accent);
+ 
 
-      transition: width 800ms var(--ease);
+    .kicker{
 
-      border-radius: 999px;
+      display:inline-flex;align-items:center;gap:8px;
+
+      padding:8px 12px;
+
+      border-radius:999px;
+
+      border:1px solid rgba(255,255,255,0.14);
+
+      background:rgba(0,0,0,0.35);
+
+      font-size:12px;
+
+      letter-spacing:0.08em;
+
+      text-transform:uppercase;
+
+      color:var(--soft);
 
     }
 
-    .diag-stat{
+    .dot{width:7px;height:7px;border-radius:99px;background:var(--good);box-shadow:0 0 18px rgba(86,240,183,0.35)}
+
+ 
+
+    .hero{
+
+      padding:26px 22px 22px;
+
+    }
+
+    .hero h1{
+
+      margin:14px 0 10px;
+
+      font-size:38px;
+
+      line-height:1.08;
+
+      letter-spacing:-0.02em;
+
+    }
+
+    .hero p{font-size:15px}
+
+    @media (max-width: 520px){
+
+      .hero h1{font-size:30px}
+
+    }
+
+ 
+
+    .cta-row{
 
       display:flex;
 
-      align-items:center;
+      gap:10px;
 
-      justify-content: space-between;
+      flex-wrap:wrap;
 
-      gap: 10px;
-
-      margin-top: 12px;
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      color: var(--text-dim);
+      margin-top:18px;
 
     }
 
-    .leaning{
+    .btn{
 
-      font-family: var(--display);
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
 
-      font-size: 1.9rem;
+      padding:12px 14px;
 
-      letter-spacing: 4px;
+      border-radius:14px;
 
-      margin: 0 0 10px;
+      border:1px solid rgba(255,255,255,0.16);
 
-      color: var(--accent);
+      background:rgba(0,0,0,0.45);
+
+      color:var(--text);
+
+      font-size:14px;
+
+      cursor:pointer;
+
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
 
       user-select:none;
 
     }
 
+    .btn:hover{
+
+      transform: translateY(-1px);
+
+      border-color: rgba(255,255,255,0.26);
+
+      background:rgba(0,0,0,0.60);
+
+    }
+
+    .btn.primary{
+
+      background: rgba(255,255,255,0.10);
+
+      border-color: rgba(255,255,255,0.24);
+
+    }
+
  
 
-    .perspectives-grid{
+    .cards{
 
       display:grid;
 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
 
-      gap: 16px;
+      gap:14px;
 
-    }
-
-    .persp-card{
-
-      background: rgba(255,255,255,0.03);
-
-      padding: 18px;
-
-      border-radius: 14px;
-
-      border: 1px solid var(--border);
-
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-
-      transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
+      margin-top:14px;
 
     }
 
-    .persp-card:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,0.16); }
+    @media (max-width: 940px){
 
-    .persp-label{
-
-      color: var(--text-dim);
-
-      font-size: 0.70rem;
-
-      font-family: var(--mono);
-
-      letter-spacing: 0.8px;
-
-      text-transform: uppercase;
+      .cards{grid-template-columns: 1fr;}
 
     }
 
-    .persp-text{
+    .card{
 
-      font-size: 0.92rem;
+      padding:16px;
 
-      margin-top: 12px;
+      border-radius:16px;
 
-      color: #c7c7c7;
+      border:1px solid rgba(255,255,255,0.12);
 
-      line-height: 1.55;
+      background:rgba(0,0,0,0.35);
 
-      white-space: pre-wrap;
+    }
 
-      word-break: break-word;
+    .card b{display:block;margin-bottom:6px}
+
+    .card span{color:var(--soft);font-size:14px;line-height:1.45}
+
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+    .tag{
+
+      font-family:var(--mono);
+
+      font-size:12px;
+
+      padding:6px 10px;
+
+      border-radius:999px;
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background:rgba(0,0,0,0.32);
+
+      color:var(--soft);
 
     }
 
  
 
-    .hintbar{
+    /* -----------------------------
 
-      margin-top: 14px;
+       Screenshot Gallery
 
-      color: var(--text-dim);
+    ------------------------------ */
 
-      font-family: var(--mono);
+    .gallery{
 
-      font-size: 0.72rem;
+      display:grid;
 
-      display:flex;
+      grid-template-columns: repeat(3, 1fr);
 
-      gap: 10px;
+      gap:12px;
 
-      flex-wrap: wrap;
-
-      justify-content: center;
-
-      opacity: 0.9;
+      margin-top:14px;
 
     }
+
+    @media (max-width: 940px){
+
+      .gallery{grid-template-columns: 1fr;}
+
+    }
+
+    .shot{
+
+      border-radius:16px;
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      background:rgba(0,0,0,0.35);
+
+      overflow:hidden;
+
+      box-shadow: 0 10px 35px rgba(0,0,0,0.55);
+
+    }
+
+    .shot img{
+
+      width:100%;
+
+      height:210px;
+
+      object-fit:cover;
+
+      display:block;
+
+      filter:saturate(1.02) contrast(1.02);
+
+    }
+
+    .shot .cap{
+
+      padding:12px 12px 14px;
+
+      color:var(--soft);
+
+      font-size:13px;
+
+      line-height:1.35;
+
+    }
+
+    .shot .cap b{display:block;color:var(--text);margin-bottom:4px;font-size:13px}
 
  
 
-    .toasts{
+    /* -----------------------------
 
-      position: fixed;
+       Console Preview (brand consistency)
 
-      bottom: 16px;
+    ------------------------------ */
 
-      right: 16px;
+    .console{
 
-      z-index: 50;
+      background: linear-gradient(180deg, rgba(10,10,10,0.72), rgba(12,12,12,0.58));
+
+      border-top:1px solid rgba(255,255,255,0.10);
+
+    }
+
+    .console-top{
 
       display:flex;
 
-      flex-direction: column;
+      align-items:center;
 
-      gap: 10px;
+      justify-content:space-between;
 
-      max-width: 360px;
+      gap:12px;
 
-    }
+      padding:14px 16px;
 
-    .toast{
+      border-bottom:1px solid rgba(255,255,255,0.10);
 
-      border: 1px solid var(--border);
-
-      background: rgba(0,0,0,0.55);
-
-      backdrop-filter: blur(18px);
-
-      border-radius: 14px;
-
-      padding: 12px 12px;
-
-      box-shadow: var(--shadow-soft);
-
-      display:flex;
-
-      gap: 10px;
-
-      align-items:flex-start;
-
-      animation: toastIn 260ms var(--ease);
+      background:rgba(0,0,0,0.30);
 
     }
 
-    @keyframes toastIn{ from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .lights{display:flex;gap:7px}
 
-    .toast .ticon{ width: 10px; height: 10px; margin-top: 6px; border-radius: 50%; background: var(--tier-3); flex: 0 0 auto; }
+    .light{width:10px;height:10px;border-radius:99px;border:1px solid rgba(255,255,255,0.10)}
 
-    .toast.ok .ticon{ background: var(--ok); }
+    .light.red{background:rgba(255,92,122,0.85)}
 
-    .toast.warn .ticon{ background: var(--warn); }
+    .light.yellow{background:rgba(255,203,107,0.85)}
 
-    .toast.bad .ticon{ background: var(--bad); }
+    .light.green{background:rgba(86,240,183,0.85)}
 
-    .toast .tmain{ flex: 1 1 auto; min-width: 0; }
+    .console-title{
 
-    .toast .ttitle{
+      font-family:var(--mono);
 
-      font-family: var(--mono);
+      font-size:12px;
 
-      font-size: 0.72rem;
+      color:var(--soft);
 
-      color: var(--text-main);
+      opacity:0.95;
 
-      letter-spacing: 0.4px;
+      letter-spacing:0.08em;
 
-      text-transform: uppercase;
-
-      margin: 0 0 4px;
+      text-transform:uppercase;
 
     }
 
-    .toast .tmsg{
+    .console-body{
 
-      font-size: 0.86rem;
+      padding:16px;
 
-      color: var(--text-soft);
+      font-family:var(--mono);
 
-      line-height: 1.35;
+      font-size:12.5px;
 
-      margin: 0;
+      line-height:1.6;
 
-      word-break: break-word;
+      color:rgba(255,255,255,0.80);
 
-    }
-
-    .toast .tclose{
-
-      background: transparent;
-
-      border: 1px solid var(--border);
-
-      color: var(--text-dim);
-
-      border-radius: 10px;
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      padding: 4px 8px;
-
-      cursor:pointer;
-
-      flex: 0 0 auto;
-
-      transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
-
-      min-height: 32px;
+      white-space:pre-wrap;
 
     }
 
-    .toast .tclose:hover{ border-color: rgba(255,255,255,0.22); color: var(--text-main); }
+    .prompt{color:rgba(255,255,255,0.92)}
+
+    .ok{color:var(--good)}
+
+    .warn{color:var(--warn)}
+
+    .bad{color:var(--danger)}
 
  
 
-    /* ====== MODEL CARD MODAL ====== */
+    /* -----------------------------
 
-    .modal-backdrop{
+       Donate
 
-      position: fixed;
+    ------------------------------ */
 
-      inset: 0;
-
-      background: rgba(0,0,0,0.65);
-
-      backdrop-filter: blur(8px);
-
-      z-index: 80;
-
-      display:none;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 16px;
-
-    }
-
-    .modal{
-
-      width: 100%;
-
-      max-width: 780px;
-
-      border: 1px solid var(--border-strong);
-
-      border-radius: 16px;
-
-      background: rgba(8,8,8,0.78);
-
-      box-shadow: var(--shadow);
-
-      padding: 16px;
-
-    }
-
-    .modal-head{
-
-      display:flex;
-
-      align-items:flex-start;
-
-      justify-content: space-between;
-
-      gap: 12px;
-
-      border-bottom: 1px solid var(--border);
-
-      padding-bottom: 12px;
-
-      margin-bottom: 12px;
-
-    }
-
-    .modal-title{
-
-      font-family: var(--display);
-
-      letter-spacing: 2px;
-
-      font-size: 1.6rem;
-
-      margin: 0;
-
-      text-transform: uppercase;
-
-    }
-
-    .modal-sub{
-
-      margin: 6px 0 0;
-
-      color: var(--text-dim);
-
-      font-family: var(--mono);
-
-      font-size: 0.74rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.7px;
-
-    }
-
-    .modal-grid{
+    .donate-grid{
 
       display:grid;
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 14px;
+      gap:14px;
+
+      margin-top:14px;
 
     }
 
-    .kv{
+    @media (max-width: 940px){
 
-      border: 1px solid var(--border);
-
-      border-radius: 14px;
-
-      padding: 12px;
-
-      background: rgba(255,255,255,0.02);
+      .donate-grid{grid-template-columns: 1fr;}
 
     }
 
-    .kv .k{
+    .donate-box{
 
-      font-family: var(--mono);
+      padding:16px;
 
-      font-size: 0.70rem;
+      border-radius:16px;
 
-      text-transform: uppercase;
+      border:1px solid rgba(255,255,255,0.12);
 
-      letter-spacing: 0.7px;
-
-      color: var(--text-dim);
+      background:rgba(0,0,0,0.35);
 
     }
 
-    .kv .v{
-
-      margin-top: 8px;
-
-      color: rgba(255,255,255,0.92);
-
-      line-height: 1.45;
-
-      font-size: 0.95rem;
-
-      word-break: break-word;
-
-    }
-
-    .modal-actions{
-
-      margin-top: 14px;
+    .donate-actions{
 
       display:flex;
 
-      justify-content:flex-end;
+      flex-wrap:wrap;
 
-      gap: 10px;
+      gap:10px;
 
-      flex-wrap: wrap;
+      margin-top:12px;
 
     }
+
+    .donate-actions a{flex:1 1 160px}
+
+    .btn.pay{width:100%}
 
  
 
-    /* ====== RESPONSIVE ====== */
+    /* -----------------------------
 
-    @media (max-width: 900px){
+       Footer
 
-      .bias-grid{ grid-template-columns: 1fr; }
+    ------------------------------ */
 
-      .status-strip{ justify-content: center; }
+    footer{
 
-      .status-actions{ justify-content: center; }
+      padding:22px 0 32px;
 
-      .os-meta{ justify-content: center; }
+      color:var(--dim);
 
-      .chips{ justify-content: flex-start; }
+      border-top:1px solid rgba(255,255,255,0.08);
 
-    }
+      background:rgba(0,0,0,0.18);
 
- 
-
-    /* ====== MOBILE MODE (AUTO or FORCED) ====== */
-
-    body.mobile .container{
-
-      max-width: 100%;
-
-      padding: 18px 12px 90px;
+      backdrop-filter: blur(10px);
 
     }
 
-    body.mobile .logo{ height: 68px; }
+    .foot{
 
-    body.mobile .subtitle{ letter-spacing: 3px; }
+      display:flex;
 
-    body.mobile .card{ padding: 16px; }
+      align-items:flex-start;
 
-    body.mobile .card h2{ font-size: 1.35rem; }
+      justify-content:space-between;
 
-    body.mobile textarea{
+      gap:12px;
 
-      font-size: 1.05rem;
-
-      min-height: 140px;
+      flex-wrap:wrap;
 
     }
 
-    body.mobile .mode-btn{
-
-      padding: 11px 16px;
-
-      font-size: 0.95rem;
-
-    }
-
-    body.mobile .toolbar{
-
-      position: sticky;
-
-      bottom: 10px;
-
-      background: rgba(0,0,0,0.35);
-
-      backdrop-filter: blur(16px);
-
-      border: 1px solid var(--border);
-
-      border-radius: 14px;
-
-      padding: 12px;
-
-      z-index: 40;
-
-      box-shadow: var(--shadow-soft);
-
-    }
-
-    body.mobile .toolbar-left{ width: 100%; justify-content: space-between; }
-
-    body.mobile .toolbar-right{ width: 100%; justify-content: stretch; }
-
-    body.mobile .btn-primary{ width: 100%; }
-
- 
-
-    @media (max-width: 560px){
-
-      .modal-grid{ grid-template-columns: 1fr; }
-
-    }
-
- 
-
-    @media (prefers-reduced-motion: reduce){
-
-      #bgCanvas{ display:none; }
-
-    }
+    .foot a{color:var(--soft);text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22)}
 
   </style>
 
@@ -1822,2243 +908,697 @@
 
 <body>
 
-  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  <!-- Immersive Background -->
 
- 
+  <div class="bg-wrap" aria-hidden="true">
 
-  <div class="container">
+    <div class="nebula"></div>
 
-    <header>
+    <canvas id="drift"></canvas>
 
-      <img src="/static/zotheos_logo.png" alt="ZOTHEOS" class="logo" />
+    <div class="waves"></div>
 
-      <div class="subtitle">OFFLINE ETHICAL INTELLIGENCE | DIGITAL GUARDIAN</div>
-
-      <div class="promise">FUSION CLARITY | FULL TRANSPARENCY</div>
-
-    </header>
-
- 
-
-    <!-- Beginner-friendly status strip -->
-
-    <div class="status-strip">
-
-      <div class="os-meta">
-
-        <span class="pill"><span class="dot" id="wsDot"></span> <span id="wsStatus">DISCONNECTED</span></span>
-
-        <span class="pill">CORES: <span id="coresCount">—</span></span>
-
-        <span class="pill">EVIDENCE: <span id="evidenceStatus">OFF</span></span>
-
-        <span class="pill">OFFLINE: <span id="offlineStatus">ON</span></span>
-
-        <span class="pill">VIEW: <span id="viewStatus">AUTO</span></span>
-
-      </div>
-
- 
-
-      <div class="status-actions">
-
-        <button class="btn-quiet" id="modelsBtn" onclick="openModelPicker()">MODELS</button>
-
-        <button class="btn-quiet" id="mobileCycleBtn" onclick="cycleMobileMode()" title="Switch between AUTO / ON / OFF">MOBILE: <span id="mobileModeLabel">AUTO</span></button>
-
-        <button class="btn-quiet" id="advancedToggleBtn" onclick="toggleAdvanced()" aria-expanded="false">ADVANCED ▾</button>
-
-      </div>
-
-    </div>
-
- 
-
-    <!-- Advanced drawer -->
-
-    <div class="card slim" id="advancedPanel" style="display:none;">
-
-      <div class="row">
-
-        <div class="mini muted">Power tools, session controls, and debugging.</div>
-
-        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-
-          <button class="btn-quiet" onclick="copySynthesis()" title="Copy synthesis to clipboard">COPY ANSWER</button>
-
-          <button class="btn-quiet" onclick="exportLastJSON()" title="Download last response JSON">EXPORT JSON</button>
-
-          <button class="btn-quiet btn-danger" onclick="hardResetSession()" title="Reset local session state">RESET SESSION</button>
-
-        </div>
-
-      </div>
-
- 
-
-      <div class="row" style="margin-top:12px;">
-
-        <div class="os-meta">
-
-          <span class="pill">SYSTEM: <span id="sysVersion">SOVEREIGN-v3.2</span></span>
-
-          <span class="pill"><span id="clock">00:00:00 UTC</span></span>
-
-          <span class="pill">UPTIME: <span id="uptime">0h 0m 0s</span></span>
-
-          <span class="pill">SESSION_ID: <span id="threadId" style="color:var(--ok)">—</span></span>
-
-        </div>
-
-      </div>
-
- 
-
-      <div class="row" style="margin-top:14px;">
-
-        <div class="mini muted" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-
-          <span class="chip">THREAD: <b id="threadState">—</b></span>
-
-          <span class="chip">PARENT: <b id="parentThread">—</b></span>
-
-          <span class="chip">STATE: <b id="threadMode">hot</b></span>
-
-        </div>
-
- 
-
-        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-
-          <button class="btn-quiet" onclick="threadFork()">FORK</button>
-
-          <button class="btn-quiet" onclick="threadMerge()">MERGE</button>
-
-        </div>
-
-      </div>
-
- 
-
-      <details class="section" style="margin-top:14px;">
-
-        <summary>RAW PAYLOAD (DEBUG)</summary>
-
-        <pre id="rawPayload" style="margin-top:12px; font-family:var(--mono); font-size:0.72rem; color:#bdbdbd; white-space:pre-wrap; word-break:break-word;"></pre>
-
-      </details>
-
-    </div>
-
- 
-
-    <!-- Modes -->
-
-    <div class="mode-switch">
-
-      <button class="mode-btn active" id="btnFusion" onclick="setMode('fusion')">ANSWER</button>
-
-      <button class="mode-btn" id="btnArchitect" onclick="setMode('architect')">PLAN</button>
-
-      <button class="mode-btn" id="btnEvolution" onclick="setMode('evolution')">STATUS</button>
-
-    </div>
-
- 
-
-    <!-- Fusion panel -->
-
-    <div id="panelFusion" class="panel active">
-
- 
-
-      <div class="card">
-
-        <h2>Conversation</h2>
-
-        <div class="row">
-
-          <div class="mini muted">Start fresh or continue your current session.</div>
-
-          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-
-            <button class="btn-quiet" onclick="location.reload()">NEW CHAT</button>
-
-            <button class="btn-quiet" id="continueBtn" onclick="threadContinue()">CONTINUE</button>
-
-          </div>
-
-        </div>
-
- 
-
-        <div class="hintbar">
-
-          <span><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span> = Ask</span>
-
-          <span>•</span>
-
-          <span><span class="kbd">Ctrl</span> + <span class="kbd">K</span> = Focus</span>
-
-          <span>•</span>
-
-          <span><span class="kbd">Esc</span> = Stop Loader</span>
-
-        </div>
-
-      </div>
-
- 
-
-      <div class="input-box">
-
-        <div class="guide-row">
-
-          <div class="guide-left">
-
-            <div class="guide-title">Ask anything</div>
-
-            <div class="guide-sub">Type a question. Toggle evidence if you want ZOTHEOS to use your local vault.</div>
-
-          </div>
-
- 
-
-          <div class="chips" aria-label="Example prompts">
-
-            <button class="chip-btn" onclick="setExample('Explain this like I’m new: ')">Explain simply</button>
-
-            <button class="chip-btn" onclick="setExample('Compare these two options: ')">Compare</button>
-
-            <button class="chip-btn" onclick="setExample('Help me write a message about: ')">Write a message</button>
-
-            <button class="chip-btn" onclick="setExample('Summarize this topic with pros/cons: ')">Summarize</button>
-
-          </div>
-
-        </div>
-
- 
-
-        <textarea id="queryInput" placeholder="Type your question here..."></textarea>
-
- 
-
-        <div class="toolbar">
-
-          <div class="toolbar-left">
-
-            <div class="toggle" id="researchToggle" onclick="toggleResearch()" title="Use your local Knowledge Vault evidence">
-
-              <div class="switch"></div>
-
-              <span id="researchLabel">USE MY FILES (EVIDENCE): OFF</span>
-
-            </div>
-
- 
-
-            <span class="tip">
-
-              <button type="button" onclick="showEvidenceHelp()" title="What does Evidence do?">?</button>
-
-              <span class="muted">What is Evidence?</span>
-
-            </span>
-
- 
-
-            <button class="btn-quiet" onclick="clearQuery()">CLEAR</button>
-
-          </div>
-
- 
-
-          <div class="toolbar-right">
-
-            <button class="btn-primary" onclick="igniteFusion()">ASK ZOTHEOS</button>
-
-          </div>
-
-        </div>
-
-      </div>
-
- 
-
-      <div id="loader" class="loader">/// THINKING ///</div>
-
- 
-
-      <div id="output">
-
-        <div class="card">
-
-          <div class="row" style="align-items:flex-start;">
-
-            <div style="flex:1 1 auto; min-width:0;">
-
-              <h2>Answer</h2>
-
-            </div>
-
-            <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-
-              <span class="chip" id="modelsChip">CORES: —</span>
-
-              <span class="chip" id="runtimeChip">RUNTIME: —</span>
-
-            </div>
-
-          </div>
-
- 
-
-          <div id="synthesis" class="synthesis"></div>
-
-          <div class="runtime" id="runtimeDisplay"></div>
-
- 
-
-          <details class="section" id="vaultSection" style="display:none;">
-
-            <summary>SOURCES USED (EVIDENCE)</summary>
-
-            <div id="vaultCard" style="display:block; margin-top:12px;">
-
-              <div id="vaultList"></div>
-
-            </div>
-
-          </details>
-
- 
-
-          <details class="section">
-
-            <summary>OTHER PERSPECTIVES</summary>
-
-            <div id="perspectivesGrid" class="perspectives-grid" style="margin-top:12px;"></div>
-
-          </details>
-
- 
-
-          <details class="section">
-
-            <summary>WHY THIS ANSWER (ARBITRATION + DIAGNOSTICS)</summary>
-
- 
-
-            <div class="card slim" id="arbitrationCard" style="margin-top:12px;">
-
-              <div id="dissonanceAlert" class="alert">
-
-                ⚠️ <strong>ETHICAL DISSONANCE:</strong> Conflict detected between internal model cores.
-
-              </div>
-
-              <div id="arbitrationSummary" class="arb-summary">—</div>
-
-            </div>
-
- 
-
-            <div class="card slim" style="margin-top:12px;">
-
-              <div class="bias-grid">
-
-                <div>
-
-                  <label class="mini muted" style="letter-spacing:1px;">BIAS LEVEL</label>
-
-                  <div class="bias-bar-outer"><div id="barBias" class="bias-bar-inner"></div></div>
-
-                  <div class="diag-stat"><span>Bias Score</span><b id="biasNum">0/100</b></div>
-
- 
-
-                  <label class="mini muted" style="margin-top:14px; display:block; letter-spacing:1px;">TRUST LEVEL (RELIABILITY)</label>
-
-                  <div class="bias-bar-outer"><div id="barRel" class="bias-bar-inner" style="background:rgba(255,255,255,0.9)"></div></div>
-
-                  <div class="diag-stat"><span>Reliability</span><b id="relNum">0/100</b></div>
-
- 
-
-                  <label class="mini muted" style="margin-top:14px; display:block; letter-spacing:1px;">EMOTIONAL CHARGE</label>
-
-                  <div class="bias-bar-outer"><div id="barEmo" class="bias-bar-inner" style="background:rgba(255,59,59,0.85)"></div></div>
-
-                  <div class="diag-stat"><span>Emotional Charge</span><b id="emoNum">0/100</b></div>
-
- 
-
-                  <div class="diag-stat" style="margin-top:14px;">
-
-                    <span>Reliability Spread</span>
-
-                    <b id="spreadNum">—</b>
-
-                  </div>
-
-                </div>
-
- 
-
-                <div style="border-left: 1px solid var(--border); padding-left: 22px;">
-
-                  <div id="leaning" class="leaning">NEUTRAL</div>
-
- 
-
-                  <details>
-
-                    <summary>LOGIC TRACE</summary>
-
-                    <ul id="logicTraceList" style="margin-top:12px; font-family:var(--mono); font-size:0.72rem; color:var(--text-dim); list-style:none; padding:0;"></ul>
-
-                  </details>
-
-                </div>
-
-              </div>
-
-            </div>
-
- 
-
-          </details>
-
-        </div>
-
-      </div>
-
-    </div>
-
- 
-
-    <!-- Architect panel -->
-
-    <div id="panelArchitect" class="panel">
-
-      <div class="card">
-
-        <h2>Plan</h2>
-
-        <p class="muted" style="font-size:0.92rem; margin-top:0;">
-
-          Turn a goal into a step-by-step plan.
-
-        </p>
-
- 
-
-        <textarea id="archInput" placeholder="Example: Build a 7-day launch plan for ZOTHEOS."></textarea>
-
- 
-
-        <div class="toolbar" style="margin-top:12px;">
-
-          <div class="toolbar-left">
-
-            <span class="mini muted">Planning mode uses a separate pipeline.</span>
-
-          </div>
-
-          <div class="toolbar-right">
-
-            <button class="btn-primary" onclick="runArch()">GENERATE PLAN</button>
-
-          </div>
-
-        </div>
-
- 
-
-        <div class="card slim" style="margin-top:18px;">
-
-          <h2 style="margin-top:0;">Output</h2>
-
-          <pre id="archOutput" style="margin:0; font-family:var(--mono); font-size:0.82rem; color:#cfcfcf; white-space:pre-wrap; word-break:break-word;">—</pre>
-
-        </div>
-
-      </div>
-
-    </div>
-
- 
-
-    <!-- Evolution panel -->
-
-    <div id="panelEvolution" class="panel">
-
-      <div class="card">
-
-        <h2>Status</h2>
-
-        <p class="muted" style="font-size:0.92rem; margin-top:0;">
-
-          Sync the local vault and verify system health.
-
-        </p>
-
- 
-
-        <div class="toolbar" style="border-top:none; padding-top:0; margin-top:12px;">
-
-          <div class="toolbar-left">
-
-            <button class="btn-primary" onclick="syncLibrary()">SYNC EVIDENCE VAULT</button>
-
-            <button class="btn-quiet" onclick="runDiag()">RUN DIAGNOSTIC</button>
-
-          </div>
-
-          <div class="toolbar-right">
-
-            <span class="mini muted">If sync fails, verify /vault/sync route.</span>
-
-          </div>
-
-        </div>
-
- 
-
-        <div class="card slim" style="margin-top:18px;">
-
-          <h2 style="margin-top:0;">Log</h2>
-
-          <div id="diagLog" style="font-family:var(--mono); font-size:0.82rem; color:rgba(255,255,255,0.9); line-height: 1.6;">
-
-            &gt; System State: Standing By...
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
- 
+    <div class="grain"></div>
 
   </div>
 
  
 
-  <div class="toasts" id="toasts"></div>
+  <header>
+
+    <div class="container">
+
+      <div class="nav">
+
+        <a class="brand" href="#top">
+
+          <img src="/static/zotheos_logo.png" alt="ZOTHEOS logo">
+
+          <div class="brand-title">
+
+            <b>ZOTHEOS</b>
+
+            <span>Offline Ethical Intelligence</span>
+
+          </div>
+
+        </a>
 
  
 
-  <!-- MODEL MODAL -->
+        <nav class="navlinks">
 
-  <div class="modal-backdrop" id="modelModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+          <a class="pill" href="#mission">Mission</a>
 
-    <div class="modal">
+          <a class="pill" href="#screens">Screens</a>
 
-      <div class="modal-head">
+          <a class="pill" href="#roadmap">Roadmap</a>
+
+          <a class="pill primary" href="#donate">Support</a>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+ 
+
+  <main id="top">
+
+    <div class="container">
+
+      <div class="grid">
+
+        <!-- HERO -->
+
+        <section class="panel hero" aria-label="ZOTHEOS introduction">
+
+          <div class="panel-inner">
+
+            <span class="kicker"><span class="dot"></span> offline-first • ethical intelligence • human-centered</span>
+
+            <h1>ZOTHEOS is built to give people reliable knowledge without surveillance, manipulation, or paywalls.</h1>
+
+            <p>
+
+              This is an independent project designed to keep intelligence <span class="muted">local</span>, keep people <span class="muted">in control</span>,
+
+              and keep truth <span class="muted">usable</span>. The goal is simple: empower humans with clarity, not noise.
+
+            </p>
+
+ 
+
+            <div class="cta-row">
+
+              <a class="btn primary" href="#donate">Support the mission</a>
+
+              <a class="btn" href="#screens">See the console</a>
+
+              <a class="btn" href="#mission">How it works</a>
+
+            </div>
+
+ 
+
+            <div class="cards" style="margin-top:18px">
+
+              <div class="card">
+
+                <b>Offline-first</b>
+
+                <span>Designed to function without a constant internet tether — resilient by default.</span>
+
+              </div>
+
+              <div class="card">
+
+                <b>Ethical by design</b>
+
+                <span>Built to reduce manipulation risk and encourage balanced, grounded reasoning.</span>
+
+              </div>
+
+              <div class="card">
+
+                <b>Human sovereignty</b>
+
+                <span>Knowledge that serves people — not platforms, ad models, or surveillance incentives.</span>
+
+              </div>
+
+            </div>
+
+ 
+
+            <div class="tagrow" aria-label="Key tags">
+
+              <span class="tag">local-LLMs</span>
+
+              <span class="tag">fusion-engine</span>
+
+              <span class="tag">memory-core</span>
+
+              <span class="tag">ethical-guardrails</span>
+
+              <span class="tag">offline-access</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- SIDE PANEL -->
+
+        <aside class="panel" aria-label="Quick summary">
+
+          <div class="panel-inner">
+
+            <h2>What this site is</h2>
+
+            <p>
+
+              This page is the public front door. The console is the tool.
+
+              Here you’ll find the mission, proof, progress, and ways to help fund development.
+
+            </p>
+
+            <div style="height:12px"></div>
+
+            <h2>What’s coming</h2>
+
+            <p class="muted">
+
+              A polished demo flow, clearer documentation, faster onboarding, and a funding path that keeps the mission intact.
+
+            </p>
+
+            <div style="height:14px"></div>
+
+            <div class="card">
+
+              <b>Transparency promise</b>
+
+              <span>
+
+                ZOTHEOS aims to show its reasoning structure, not hide it behind marketing.
+
+                Trust comes from clarity.
+
+              </span>
+
+            </div>
+
+            <div style="height:12px"></div>
+
+            <p class="tiny">
+
+              Tip: this landing page is intentionally focused. The console remains a separate experience — a tool, not a billboard.
+
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+ 
+
+      <!-- MISSION -->
+
+      <section id="mission" class="panel" style="margin-top:18px">
+
+        <div class="panel-inner">
+
+          <h2>Mission</h2>
+
+          <p>
+
+            ZOTHEOS exists to push back on a world where information is often shaped by incentives that don’t serve people:
+
+            attention economies, algorithmic manipulation, and centralized control.
+
+            The long-term goal is an ethical intelligence system that helps humans think clearly, learn quickly, and build a better future — without surrendering privacy or autonomy.
+
+          </p>
+
+ 
+
+          <div class="cards" style="margin-top:14px">
+
+            <div class="card">
+
+              <b>Why offline matters</b>
+
+              <span>Offline capability protects access during outages, censorship, instability, or paywall barriers.</span>
+
+            </div>
+
+            <div class="card">
+
+              <b>Why “ethical” matters</b>
+
+              <span>Because intelligence without values becomes a weapon. Alignment isn’t optional.</span>
+
+            </div>
+
+            <div class="card">
+
+              <b>Why “fusion” matters</b>
+
+              <span>Multiple perspectives reduce single-model blind spots and improve balance.</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+ 
+
+        <!-- Console Preview block to keep brand consistency -->
+
+        <div class="console">
+
+          <div class="console-top">
+
+            <div class="lights" aria-hidden="true">
+
+              <div class="light red"></div>
+
+              <div class="light yellow"></div>
+
+              <div class="light green"></div>
+
+            </div>
+
+            <div class="console-title">ZOTHEOS OS • Console Preview (public)</div>
+
+            <div class="tiny">status: <span class="ok">ready</span></div>
+
+          </div>
+
+          <div class="console-body" role="region" aria-label="Console preview text">
+
+<span class="prompt">zotheos@local</span>:~$ <span class="ok">launch</span>
+
+[ OK ] Fusion Engine initialized
+
+[ OK ] Offline tier checks passed
+
+[ OK ] Memory Core online (local)
+
+[ OK ] Guardian Layer active
+
+ 
+
+<span class="prompt">user</span>: Your mission in one paragraph.
+
+<span class="prompt">zotheos</span>: I exist to help humans access trustworthy knowledge without surveillance, manipulation, or centralized control. I prioritize clarity, balanced perspectives, and ethical guardrails so intelligence serves people — not profit models, war incentives, or algorithmic division.
+
+ 
+
+<span class="warn">note</span>: This is a landing page preview. The console experience lives inside the app/tool itself.
+
+          </div>
+
+        </div>
+
+      </section>
+
+ 
+
+      <!-- SCREENSHOTS -->
+
+      <section id="screens" class="panel" style="margin-top:18px">
+
+        <div class="panel-inner">
+
+          <h2>Console Screens (proof & progress)</h2>
+
+          <p class="muted">
+
+            Drop your real screenshots into <span style="font-family:var(--mono)">/static/</span> and keep these filenames.
+
+            The gallery will auto-populate.
+
+          </p>
+
+ 
+
+          <div class="gallery" style="margin-top:14px">
+
+            <div class="shot">
+
+              <img src="/static/console_1.png" alt="ZOTHEOS console screenshot 1" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_1.png';">
+
+              <div class="cap"><b>Fusion Response View</b>Multi-model output + synthesized insight.</div>
+
+            </div>
+
+            <div class="shot">
+
+              <img src="/static/console_2.png" alt="ZOTHEOS console screenshot 2" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_2.png';">
+
+              <div class="cap"><b>Memory Logging</b>Transparent session memory & export.</div>
+
+            </div>
+
+            <div class="shot">
+
+              <img src="/static/console_3.png" alt="ZOTHEOS console screenshot 3" onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='<b>Missing file</b>Add /static/console_3.png';">
+
+              <div class="cap"><b>Offline Mode</b>Knowledge access without cloud dependence.</div>
+
+            </div>
+
+          </div>
+
+ 
+
+          <p class="tiny" style="margin-top:12px">
+
+            Recommended screenshot size: 1600×900 (or similar widescreen). PNG preferred.
+
+          </p>
+
+        </div>
+
+      </section>
+
+ 
+
+      <!-- ROADMAP -->
+
+      <section id="roadmap" class="panel" style="margin-top:18px">
+
+        <div class="panel-inner">
+
+          <h2>Roadmap (simple + honest)</h2>
+
+          <p class="muted">This keeps expectations real while showing momentum.</p>
+
+ 
+
+          <div class="cards" style="margin-top:14px">
+
+            <div class="card">
+
+              <b>Now</b>
+
+              <span>Polish the public landing page, stabilize console demo flow, tighten documentation.</span>
+
+            </div>
+
+            <div class="card">
+
+              <b>Next</b>
+
+              <span>Public-facing onboarding, lightweight installer packaging, clearer tier/value model.</span>
+
+            </div>
+
+            <div class="card">
+
+              <b>Later</b>
+
+              <span>Expanded transparency features, model scorecards, and resilience tooling for broader device compatibility.</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+ 
+
+      <!-- DONATE -->
+
+      <section id="donate" class="panel" style="margin-top:18px">
+
+        <div class="panel-inner">
+
+          <h2>Support Development</h2>
+
+          <p>
+
+            If this mission resonates, donations help keep development moving and help protect the project’s independence.
+
+            Support funds time, infrastructure, testing, and distribution — without turning ZOTHEOS into a corporate product.
+
+          </p>
+
+ 
+
+          <div class="donate-grid">
+
+            <div class="donate-box">
+
+              <b style="display:block;margin-bottom:6px">One-time support</b>
+
+              <div class="muted" style="font-size:14px;line-height:1.45">
+
+                Quick contribution to help cover immediate build + release costs.
+
+              </div>
+
+              <div class="donate-actions">
+
+                <!-- Replace these href links with your real donation URLs -->
+
+                <a href=https://paypal.me/YOUR_HANDLE target="_blank" rel="noopener">
+
+                  <span class="btn pay primary">Donate via PayPal</span>
+
+                </a>
+
+                <a href=https://buy.stripe.com/YOUR_LINK target="_blank" rel="noopener">
+
+                  <span class="btn pay">Donate via Stripe</span>
+
+                </a>
+
+              </div>
+
+              <div class="tiny" style="margin-top:10px">
+
+                Replace the links in <span style="font-family:var(--mono)">index.html</span> with your real PayPal/Stripe URLs.
+
+              </div>
+
+            </div>
+
+ 
+
+            <div class="donate-box">
+
+              <b style="display:block;margin-bottom:6px">Support tiers (optional)</b>
+
+              <div class="muted" style="font-size:14px;line-height:1.45">
+
+                Offer “supporter packs” or early access downloads without locking core knowledge behind paywalls.
+
+              </div>
+
+              <div class="donate-actions">
+
+                <a href=https://gumroad.com/YOUR_PRODUCT target="_blank" rel="noopener">
+
+                  <span class="btn pay primary">Support on Gumroad</span>
+
+                </a>
+
+                <a href="#top" onclick="alert('Optional: Add Patreon/Ko-fi later if you want recurring support.'); return false;">
+
+                  <span class="btn pay">Add recurring later</span>
+
+                </a>
+
+              </div>
+
+              <div class="tiny" style="margin-top:10px">
+
+                Keep the mission intact: supporters fund development, but the system stays human-first.
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+ 
+
+    </div>
+
+  </main>
+
+ 
+
+  <footer>
+
+    <div class="container">
+
+      <div class="foot">
 
         <div>
 
-          <h3 class="modal-title" id="modelModalTitle">MODEL</h3>
+          <div style="color:var(--soft);font-weight:600;letter-spacing:0.08em">ZOTHEOS</div>
 
-          <p class="modal-sub" id="modelModalSub">—</p>
+          <div class="tiny">Offline Ethical Intelligence • Built independently</div>
 
         </div>
 
-        <button class="btn-quiet" onclick="closeModelModal()">CLOSE</button>
+        <div class="tiny">
 
-      </div>
+          <div>© <span id="year"></span> ZOTHEOS</div>
 
- 
+          <div>
 
-      <div class="modal-grid" id="modelModalGrid"></div>
+            <a href="#donate">Support</a> ·
 
- 
+            <a href="#screens">Screens</a> ·
 
-      <div class="modal-actions">
+            <a href="#mission">Mission</a>
 
-        <button class="btn-quiet" onclick="copyModelCard()">COPY CARD</button>
+          </div>
 
-        <button class="btn-primary" onclick="closeModelModal()">DONE</button>
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </footer>
 
  
 
   <script>
 
-    // ---------- BACKGROUND: OCEAN + NEBULA HYBRID ----------
+    // Year
 
-    (function initLivingBackground(){
-
-      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (reduceMotion) return;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
  
 
-      const canvas = document.getElementById("bgCanvas");
+    // Animated background particles (subtle drift)
 
-      if (!canvas) return;
+    (function(){
 
-      const ctx = canvas.getContext("2d", { alpha: true, desynchronized: true });
+      const canvas = document.getElementById('drift');
 
-      if (!ctx) return;
-
- 
-
-      let w = 0, h = 0, dpr = 1;
+      if(!canvas) return;
 
  
 
-      const noiseTile = document.createElement("canvas");
+      const ctx = canvas.getContext('2d', { alpha: true });
 
-      const nt = noiseTile.getContext("2d");
+      let w=0, h=0, dpr=1;
 
-      noiseTile.width = 256;
+      let particles = [];
 
-      noiseTile.height = 256;
-
- 
-
-      function seedNoise(){
-
-        const img = nt.createImageData(noiseTile.width, noiseTile.height);
-
-        for (let i = 0; i < img.data.length; i += 4) {
-
-          const v = (Math.random() * 255) | 0;
-
-          img.data[i] = v; img.data[i+1] = v; img.data[i+2] = v;
-
-          img.data[i+3] = 34;
-
-        }
-
-        nt.putImageData(img, 0, 0);
-
-      }
-
-      seedNoise();
+      const COUNT = 90;
 
  
 
       function resize(){
 
-        dpr = Math.min(2, window.devicePixelRatio || 1);
+        dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
 
-        w = Math.floor(window.innerWidth * dpr);
+        w = canvas.clientWidth;
 
-        h = Math.floor(window.innerHeight * dpr);
+        h = canvas.clientHeight;
 
-        canvas.width = w;
+        canvas.width = Math.floor(w * dpr);
 
-        canvas.height = h;
+        canvas.height = Math.floor(h * dpr);
 
-      }
-
-      window.addEventListener("resize", resize, { passive: true });
-
-      resize();
-
- 
-
-      function bloom(x, y, r, rgbaA, rgbaB){
-
-        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-
-        g.addColorStop(0, rgbaA);
-
-        g.addColorStop(1, rgbaB);
-
-        return g;
+        ctx.setTransform(dpr,0,0,dpr,0,0);
 
       }
 
  
 
-      function drawCaustics(t){
-
-        ctx.save();
-
-        ctx.globalCompositeOperation = "screen";
-
-        ctx.lineWidth = 1.0 * dpr;
-
-        ctx.globalAlpha = 0.16;
+      function rand(min,max){ return Math.random()*(max-min)+min; }
 
  
 
-        const bands = 14;
+      function init(){
 
-        for (let b = 0; b < bands; b++){
+        particles = Array.from({length: COUNT}).map(() => ({
 
-          const yBase = (h * (0.35 + b * 0.045)) + Math.sin(t*0.7 + b) * (16*dpr);
+          x: rand(0,w), y: rand(0,h),
+
+          r: rand(0.6, 2.2),
+
+          vx: rand(-0.08, 0.08),
+
+          vy: rand(-0.06, 0.06),
+
+          a: rand(0.05, 0.18)
+
+        }));
+
+      }
+
+ 
+
+      function step(){
+
+        ctx.clearRect(0,0,w,h);
+
+ 
+
+        // Soft glow dots
+
+        for(const p of particles){
+
+          p.x += p.vx;
+
+          p.y += p.vy;
+
+ 
+
+          // wrap
+
+          if(p.x < -10) p.x = w+10;
+
+          if(p.x > w+10) p.x = -10;
+
+          if(p.y < -10) p.y = h+10;
+
+          if(p.y > h+10) p.y = -10;
+
+ 
+
+          const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*7);
+
+          g.addColorStop(0, `rgba(255,255,255,${p.a})`);
+
+          g.addColorStop(1, 'rgba(255,255,255,0)');
+
+          ctx.fillStyle = g;
 
           ctx.beginPath();
 
- 
+          ctx.arc(p.x,p.y,p.r*7,0,Math.PI*2);
 
-          const amp = (18 + b*1.2) * dpr;
-
-          const freq = 0.006 + b*0.00018;
-
-          const phase = t*0.9 + b*1.7;
-
- 
-
-          for (let x = 0; x <= w; x += 10*dpr){
-
-            const y = yBase
-
-              + Math.sin(x*freq + phase) * amp
-
-              + Math.sin(x*(freq*1.9) - phase*0.8) * (amp*0.35);
-
-            ctx.lineTo(x, y);
-
-          }
-
- 
-
-          const redPulse = 0.35 + 0.35*Math.sin(t*0.6 + b);
-
-          ctx.strokeStyle = `rgba(255, ${Math.floor(255 - 140*redPulse)}, ${Math.floor(255 - 140*redPulse)}, 0.22)`;
-
-          ctx.stroke();
+          ctx.fill();
 
         }
 
  
 
-        ctx.restore();
+        requestAnimationFrame(step);
 
       }
 
  
 
-      function drawNebula(t){
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        ctx.save();
-
-        ctx.globalCompositeOperation = "lighter";
-
-        ctx.globalAlpha = 0.95;
+      if(reduceMotion) return;
 
  
 
-        const x1 = w*0.22 + Math.sin(t*0.18)*140*dpr;
+      resize(); init(); step();
 
-        const y1 = h*0.22 + Math.cos(t*0.12)*120*dpr;
-
- 
-
-        const x2 = w*0.78 + Math.cos(t*0.15)*160*dpr;
-
-        const y2 = h*0.30 + Math.sin(t*0.11)*130*dpr;
-
- 
-
-        const x3 = w*0.50 + Math.sin(t*0.10)*110*dpr;
-
-        const y3 = h*0.82 + Math.cos(t*0.09)*140*dpr;
-
- 
-
-        ctx.fillStyle = "rgba(0,0,0,0.18)";
-
-        ctx.fillRect(0,0,w,h);
-
- 
-
-        ctx.fillStyle = bloom(x3, y3, Math.max(w,h)*0.55, "rgba(255,255,255,0.08)", "rgba(0,0,0,0)");
-
-        ctx.fillRect(0,0,w,h);
-
- 
-
-        ctx.fillStyle = bloom(x1, y1, Math.max(w,h)*0.55, "rgba(255,59,59,0.09)", "rgba(0,0,0,0)");
-
-        ctx.fillRect(0,0,w,h);
-
- 
-
-        ctx.fillStyle = bloom(x2, y2, Math.max(w,h)*0.62, "rgba(255,59,59,0.07)", "rgba(0,0,0,0)");
-
-        ctx.fillRect(0,0,w,h);
-
- 
-
-        ctx.restore();
-
-      }
-
- 
-
-      function drawNoise(t){
-
-        ctx.save();
-
-        ctx.globalCompositeOperation = "overlay";
-
-        ctx.globalAlpha = 0.10;
-
- 
-
-        const ox = (Math.sin(t*0.12) * 80 + 120) * dpr;
-
-        const oy = (Math.cos(t*0.10) * 70 + 100) * dpr;
-
- 
-
-        for (let y = -oy; y < h + 256*dpr; y += 256*dpr){
-
-          for (let x = -ox; x < w + 256*dpr; x += 256*dpr){
-
-            ctx.drawImage(noiseTile, x, y, 256*dpr, 256*dpr);
-
-          }
-
-        }
-
- 
-
-        ctx.globalCompositeOperation = "soft-light";
-
-        ctx.globalAlpha = 0.07;
-
-        ctx.fillStyle = "rgba(255,59,59,1)";
-
-        ctx.fillRect(0,0,w,h);
-
- 
-
-        ctx.restore();
-
-      }
-
- 
-
-      let last = 0;
-
-      const targetFrameMS = 1000/45;
-
- 
-
-      function loop(ts){
-
-        if (!last) last = ts;
-
-        const dt = ts - last;
-
-        if (dt >= targetFrameMS){
-
-          last = ts;
-
-          const t = ts * 0.001;
-
- 
-
-          ctx.clearRect(0,0,w,h);
-
-          const bg = ctx.createLinearGradient(0,0,w,h);
-
-          bg.addColorStop(0, "rgba(0,0,0,1)");
-
-          bg.addColorStop(0.55, "rgba(10,10,12,1)");
-
-          bg.addColorStop(1, "rgba(0,0,0,1)");
-
-          ctx.fillStyle = bg;
-
-          ctx.fillRect(0,0,w,h);
-
- 
-
-          drawNebula(t);
-
-          drawCaustics(t);
-
-          drawNoise(t);
-
-        }
-
-        requestAnimationFrame(loop);
-
-      }
-
- 
-
-      requestAnimationFrame(loop);
-
-      setInterval(() => seedNoise(), 12000);
+      window.addEventListener('resize', () => { resize(); init(); });
 
     })();
-
- 
-
-    /* ============================
-
-      ZOTHEOS OS — CLIENT LOGIC
-
-    ============================ */
-
- 
-
-    // ---------- MODEL REGISTRY ----------
-
-    const MODEL_REGISTRY = [
-
-      {
-
-        key: "mistral",
-
-        displayName: "MISTRAL",
-
-        fullName: "Mistral (GGUF Local Build)",
-
-        provider: "Mistral AI",
-
-        roleHint: "Core role varies by mode (you can map it).",
-
-        strengths: "Nuance, summarization, balanced writing, instruction following.",
-
-        notes: "Runs locally via llama.cpp stack. Quantization impacts speed/quality."
-
-      },
-
-      {
-
-        key: "gemma",
-
-        displayName: "GEMMA",
-
-        fullName: "Gemma (GGUF Local Build)",
-
-        provider: "Google / DeepMind",
-
-        roleHint: "Core role varies by mode (you can map it).",
-
-        strengths: "Efficiency, reasoning, structured outputs.",
-
-        notes: "Great as a reliability anchor when fused."
-
-      },
-
-      {
-
-        key: "qwen",
-
-        displayName: "QWEN",
-
-        fullName: "Qwen (GGUF Local Build)",
-
-        provider: "Alibaba / Qwen Team",
-
-        roleHint: "Core role varies by mode (you can map it).",
-
-        strengths: "Multilingual, strong general reasoning, creative breadth.",
-
-        notes: "Often strong in counterpoints and alternative interpretations."
-
-      }
-
-    ];
-
- 
-
-    const MODEL_KEYWORDS = [
-
-      { match: /mistral/i, key: "mistral" },
-
-      { match: /gemma/i, key: "gemma" },
-
-      { match: /qwen/i, key: "qwen" }
-
-    ];
-
- 
-
-    function mapModelName(raw){
-
-      const s = (raw || "").toString();
-
-      for (const k of MODEL_KEYWORDS){
-
-        if (k.match.test(s)) {
-
-          const m = MODEL_REGISTRY.find(x => x.key === k.key);
-
-          return m ? m.displayName : s;
-
-        }
-
-      }
-
-      return s;
-
-    }
-
- 
-
-    // ---------- MOBILE MODE (AUTO / ON / OFF) ----------
-
-    const MOBILE_KEY = "zotheos_mobile_mode"; // auto|on|off
-
-    let mobileMode = (localStorage.getItem(MOBILE_KEY) || "auto").toLowerCase();
-
- 
-
-    function isAutoMobile(){
-
-      return window.matchMedia && window.matchMedia("(max-width: 900px)").matches;
-
-    }
-
- 
-
-    function applyMobileClass(){
-
-      const shouldMobile =
-
-        mobileMode === "on" ? true :
-
-        mobileMode === "off" ? false :
-
-        isAutoMobile();
-
- 
-
-      document.body.classList.toggle("mobile", shouldMobile);
-
- 
-
-      const view = document.getElementById("viewStatus");
-
-      const label = document.getElementById("mobileModeLabel");
-
-      if (view) view.textContent = (mobileMode === "auto" ? (shouldMobile ? "MOBILE" : "DESKTOP") : (mobileMode === "on" ? "MOBILE" : "DESKTOP"));
-
-      if (label) label.textContent = mobileMode.toUpperCase();
-
-    }
-
- 
-
-    function cycleMobileMode(){
-
-      mobileMode = mobileMode === "auto" ? "on" : (mobileMode === "on" ? "off" : "auto");
-
-      localStorage.setItem(MOBILE_KEY, mobileMode);
-
-      applyMobileClass();
-
-      toast("ok", "View Mode", `Mobile mode set to ${mobileMode.toUpperCase()}.`);
-
-    }
-
- 
-
-    window.addEventListener("resize", () => {
-
-      if (mobileMode === "auto") applyMobileClass();
-
-    }, { passive: true });
-
- 
-
-    // ---------- STATE ----------
-
-    let researchActive = false;
-
-    let currentId = null;
-
-    let startTime = Date.now();
-
-    let lastPayload = null;
-
- 
-
-    let threadMeta = {
-
-      thread: null,
-
-      parent: null,
-
-      state: "hot"
-
-    };
-
- 
-
-    const $ = (id) => document.getElementById(id);
-
- 
-
-    function setText(id, text) {
-
-      const el = $(id);
-
-      if (el) el.textContent = text;
-
-    }
-
- 
-
-    function escapeHTML(str) {
-
-      return (str || "")
-
-        .replaceAll("&", "&amp;")
-
-        .replaceAll("<", "&lt;")
-
-        .replaceAll(">", "&gt;")
-
-        .replaceAll("\"", "&quot;")
-
-        .replaceAll("'", "&#039;");
-
-    }
-
- 
-
-    function toSafeHTMLWithBreaks(text) {
-
-      return escapeHTML(text).replace(/\n/g, "<br>");
-
-    }
-
- 
-
-    function toast(type, title, msg, ttl=4500) {
-
-      const box = $("toasts");
-
-      if (!box) return;
-
- 
-
-      const el = document.createElement("div");
-
-      el.className = `toast ${type || ""}`;
-
- 
-
-      el.innerHTML = `
-
-        <div class="ticon"></div>
-
-        <div class="tmain">
-
-          <div class="ttitle">${escapeHTML(title || "NOTICE")}</div>
-
-          <p class="tmsg">${escapeHTML(msg || "")}</p>
-
-        </div>
-
-        <button class="tclose" aria-label="Close">X</button>
-
-      `;
-
- 
-
-      el.querySelector(".tclose").addEventListener("click", () => el.remove());
-
-      box.appendChild(el);
-
- 
-
-      if (ttl > 0) setTimeout(() => el.remove(), ttl);
-
-    }
-
- 
-
-    // Advanced drawer
-
-    function toggleAdvanced(){
-
-      const p = $("advancedPanel");
-
-      const b = $("advancedToggleBtn");
-
-      if (!p || !b) return;
-
-      const open = p.style.display !== "none";
-
-      p.style.display = open ? "none" : "block";
-
-      b.setAttribute("aria-expanded", open ? "false" : "true");
-
-      b.textContent = open ? "ADVANCED ▾" : "ADVANCED ▴";
-
-    }
-
- 
-
-    // Example chips
-
-    function setExample(text){
-
-      const input = $("queryInput");
-
-      if (!input) return;
-
-      if (!input.value.trim()) input.value = text;
-
-      else input.value = text + input.value;
-
-      input.focus();
-
-      input.setSelectionRange(input.value.length, input.value.length);
-
-    }
-
- 
-
-    function showEvidenceHelp(){
-
-      toast("ok", "Evidence", "When ON, ZOTHEOS searches your local Knowledge Vault and injects relevant snippets into the answer (shown under Sources Used).", 6000);
-
-    }
-
- 
-
-    setInterval(() => {
-
-      const now = new Date();
-
-      setText("clock", now.toUTCString().split(" ")[4] + " UTC");
-
- 
-
-      const uptime = Math.floor((Date.now() - startTime) / 1000);
-
-      const mins = Math.floor(uptime / 60);
-
-      const hrs = Math.floor(mins / 60);
-
-      setText("uptime", `${hrs}h ${mins % 60}m ${uptime % 60}s`);
-
-    }, 1000);
-
- 
-
-    function setMode(mode) {
-
-      $("panelFusion").classList.remove("active");
-
-      $("panelArchitect").classList.remove("active");
-
-      $("panelEvolution").classList.remove("active");
-
-      $("btnFusion").classList.remove("active");
-
-      $("btnArchitect").classList.remove("active");
-
-      $("btnEvolution").classList.remove("active");
-
- 
-
-      if (mode === "fusion") {
-
-        $("panelFusion").classList.add("active");
-
-        $("btnFusion").classList.add("active");
-
-      } else if (mode === "architect") {
-
-        $("panelArchitect").classList.add("active");
-
-        $("btnArchitect").classList.add("active");
-
-      } else if (mode === "evolution") {
-
-        $("panelEvolution").classList.add("active");
-
-        $("btnEvolution").classList.add("active");
-
-      }
-
- 
-
-      if (mode === "fusion") $("queryInput")?.focus();
-
-    }
-
- 
-
-    function toggleResearch() {
-
-      researchActive = !researchActive;
-
-      const t = $("researchToggle");
-
-      const label = $("researchLabel");
-
- 
-
-      if (researchActive) {
-
-        t.classList.add("on");
-
-        label.textContent = "USE MY FILES (EVIDENCE): ON";
-
-        setText("evidenceStatus", "ON");
-
-        toast("ok", "Evidence", "Evidence injection enabled.");
-
-      } else {
-
-        t.classList.remove("on");
-
-        label.textContent = "USE MY FILES (EVIDENCE): OFF";
-
-        setText("evidenceStatus", "OFF");
-
-        toast("warn", "Evidence", "Evidence injection disabled.");
-
-      }
-
-    }
-
- 
-
-    function clearQuery(){
-
-      $("queryInput").value = "";
-
-      $("queryInput").focus();
-
-      toast("ok", "Cleared", "Input cleared.");
-
-    }
-
- 
-
-    function hardResetSession(){
-
-      currentId = null;
-
-      lastPayload = null;
-
-      threadMeta = { thread: null, parent: null, state: "hot" };
-
- 
-
-      setText("threadId", "—");
-
-      setText("threadState", "—");
-
-      setText("parentThread", "—");
-
-      setText("threadMode", "hot");
-
-      const cbtn = $("continueBtn");
-
-      if (cbtn) cbtn.disabled = false;
-
- 
-
-      $("output").style.display = "none";
-
-      $("loader").style.display = "none";
-
- 
-
-      toast("warn", "Session Reset", "Local session state reset.");
-
-    }
-
- 
-
-    async function copySynthesis(){
-
-      const syn = $("synthesis")?.textContent || "";
-
-      if (!syn.trim()){
-
-        toast("warn", "Copy", "No answer to copy yet.");
-
-        return;
-
-      }
-
-      try{
-
-        await navigator.clipboard.writeText(syn);
-
-        toast("ok", "Copied", "Answer copied.");
-
-      } catch(e){
-
-        toast("bad", "Copy Failed", "Clipboard permission blocked.");
-
-      }
-
-    }
-
- 
-
-    function exportLastJSON(){
-
-      if (!lastPayload){
-
-        toast("warn", "Export", "No payload available yet.");
-
-        return;
-
-      }
-
-      try{
-
-        const blob = new Blob([JSON.stringify(lastPayload, null, 2)], { type: "application/json" });
-
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-
-        a.href = url;
-
-        a.download = `zotheos_payload_${Date.now()}.json`;
-
-        document.body.appendChild(a);
-
-        a.click();
-
-        a.remove();
-
-        URL.revokeObjectURL(url);
-
-        toast("ok", "Exported", "Downloaded last payload JSON.");
-
-      } catch(e){
-
-        toast("bad", "Export Failed", "Could not export payload.");
-
-      }
-
-    }
-
- 
-
-    function threadFork() { toast("ok", "Thread", "Fork requested (UI placeholder)."); alert("Session forked to new branch."); }
-
-    function threadContinue(){ toast("ok", "Thread", "Continue requested."); $("queryInput").focus(); }
-
-    function threadMerge(){ toast("warn", "Thread", "Merge not enabled in this build."); alert("Merge is currently disabled."); }
-
- 
-
-    async function syncLibrary() {
-
-      const log = $("diagLog");
-
-      log.innerHTML = "&gt; ACCESSING LIBRARIAN...<br>&gt; SCANNING VAULT_RAW DIRECTORY...";
-
- 
-
-      try {
-
-        const res = await fetch("/vault/sync", { method: "POST" });
-
-        const data = await res.json();
-
- 
-
-        if (data.status === "success") {
-
-          log.innerHTML =
-
-            `&gt; SUCCESS: KNOWLEDGE INDEX UPDATED.<br>` +
-
-            `&gt; NEW FILES: ${escapeHTML(String(data.stats?.new ?? "0"))}<br>` +
-
-            `&gt; TOTAL CHUNKS: ${escapeHTML(String(data.stats?.total ?? "0"))}<br>` +
-
-            `&gt; STATE: READY`;
-
- 
-
-          toast("ok", "Vault Sync", "Evidence vault updated.");
-
-        } else {
-
-          log.innerHTML = "&gt; ERROR: Vault sync returned non-success status.";
-
-          toast("bad", "Vault Sync Failed", "Non-success response from server.");
-
-        }
-
-      } catch (e) {
-
-        log.innerHTML = "&gt; ERROR: CONNECTION INTERRUPTED.";
-
-        toast("bad", "Vault Sync Failed", "Server route /vault/sync not reachable.");
-
-      }
-
-    }
-
- 
-
-    function runDiag() {
-
-      const log = $("diagLog");
-
-      log.innerHTML =
-
-        "&gt; DIAGNOSTIC RUNNING...<br>" +
-
-        "&gt; CHECKING MODEL HEALTH...<br>" +
-
-        "&gt; PINGING SENTINEL LAYER...<br>" +
-
-        "&gt; VALIDATING SOCKET CHANNEL...";
-
- 
-
-      setTimeout(() => {
-
-        log.innerHTML += "<br>&gt; ALL SYSTEMS NOMINAL.";
-
-        toast("ok", "Diagnostics", "Basic diagnostics completed.");
-
-      }, 1200);
-
-    }
-
- 
-
-    function runArch() {
-
-      const q = $("archInput").value.trim();
-
-      if (!q) {
-
-        toast("warn", "Plan", "Enter a goal first.");
-
-        return;
-
-      }
-
-      $("archOutput").textContent = "> GENERATING...";
-
-      sendWS({ query: q, mode: "architect" });
-
-    }
-
- 
-
-    function igniteFusion() {
-
-      const q = $("queryInput").value.trim();
-
-      if (!q) {
-
-        toast("warn", "Ask", "Type a question first.");
-
-        return;
-
-      }
-
- 
-
-      $("loader").style.display = "block";
-
-      $("output").style.display = "none";
-
- 
-
-      sendWS({
-
-        query: q,
-
-        mode: "fusion",
-
-        request_research: researchActive,
-
-        conversation_id: currentId
-
-      });
-
-    }
-
- 
-
-    document.addEventListener("keydown", (e) => {
-
-      if (e.ctrlKey && e.key === "Enter") { e.preventDefault(); igniteFusion(); }
-
-      if (e.ctrlKey && (e.key === "k" || e.key === "K")) { e.preventDefault(); $("queryInput").focus(); }
-
-      if (e.key === "Escape") { $("loader").style.display = "none"; }
-
-    });
-
- 
-
-    let ws = null;
-
-    let wsRetries = 0;
-
-    const wsMaxRetries = 999;
-
-    const wsBaseDelay = 500;
-
- 
-
-    function wsUrl() {
-
-      const isHttps = window.location.protocol === "https:";
-
-      const proto = isHttps ? "wss" : "ws";
-
-      return `${proto}://${window.location.host}/ws/fusion`;
-
-    }
-
- 
-
-    function setWsStatus(state) {
-
-      const dot = $("wsDot");
-
-      const label = $("wsStatus");
-
-      if (!dot || !label) return;
-
- 
-
-      if (state === "connected") { dot.className = "dot ok"; label.textContent = "CONNECTED"; }
-
-      else if (state === "connecting") { dot.className = "dot warn"; label.textContent = "CONNECTING"; }
-
-      else { dot.className = "dot bad"; label.textContent = "DISCONNECTED"; }
-
-    }
-
- 
-
-    function connectWS() {
-
-      setWsStatus("connecting");
-
- 
-
-      try {
-
-        ws = new WebSocket(wsUrl());
-
- 
-
-        ws.onopen = () => {
-
-          wsRetries = 0;
-
-          setWsStatus("connected");
-
-          toast("ok", "Connected", "WebSocket connected.");
-
-        };
-
- 
-
-        ws.onclose = () => {
-
-          setWsStatus("disconnected");
-
-          if (wsRetries < wsMaxRetries) {
-
-            wsRetries++;
-
-            const delay = Math.min(8000, wsBaseDelay * Math.pow(1.35, wsRetries));
-
-            toast("warn", "Disconnected", `Reconnecting in ${Math.round(delay)}ms...`, 2200);
-
-            setTimeout(connectWS, delay);
-
-          } else {
-
-            toast("bad", "WebSocket", "Max reconnect attempts reached.");
-
-          }
-
-        };
-
- 
-
-        ws.onerror = () => { setWsStatus("disconnected"); };
-
- 
-
-        ws.onmessage = (event) => {
-
-          let data = null;
-
-          try { data = JSON.parse(event.data); }
-
-          catch (e) { toast("bad", "Parse Error", "Non-JSON message received."); return; }
-
- 
-
-          lastPayload = data;
-
-          const rp = $("rawPayload");
-
-          if (rp) rp.textContent = JSON.stringify(data, null, 2);
-
- 
-
-          if (data.type === "status") return;
-
- 
-
-          if (data.type === "architect_result") {
-
-            $("archOutput").textContent = JSON.stringify(data.plan, null, 2);
-
-            toast("ok", "Plan", "Plan generated.");
-
-            return;
-
-          }
-
- 
-
-          $("loader").style.display = "none";
-
-          $("output").style.display = "block";
-
- 
-
-          const synthesisText = (data.synthesis || "").toString();
-
-          const perspectives = data.perspectives || {};
-
-          const b = data.bias_report || {};
-
-          const arb = data.arbitration || {};
-
- 
-
-          currentId = data.conversation_id || currentId;
-
-          setText("threadId", currentId || "—");
-
-          setText("threadState", currentId ? "active" : "none");
-
-          setText("parentThread", "—");
-
-          setText("threadMode", "hot");
-
- 
-
-          const models = data.models || data.active_models || Object.keys(perspectives || {});
-
-          const modelListRaw = Array.isArray(models) ? models : Object.keys(perspectives || {});
-
-          const modelListDisplay = modelListRaw.map(m => mapModelName(m)).filter(Boolean);
-
- 
-
-          const coreCount = modelListDisplay.length || Object.keys(perspectives || {}).length;
-
-          setText("coresCount", coreCount ? String(coreCount) : "—");
-
-          setText("modelsChip", `CORES: ${modelListDisplay.length ? modelListDisplay.join(", ") : "—"}`);
-
- 
-
-          setText("runtimeChip", `RUNTIME: ${data.runtime || "N/A"}`);
-
-          setText("runtimeDisplay", `[ RUNTIME: ${data.runtime || "N/A"} ]`);
-
- 
-
-          $("synthesis").textContent = synthesisText;
-
- 
-
-          const biasScore = clampNum(b.bias_score, 0, 100);
-
-          const relScore = clampNum(b.reliability_score, 0, 100);
-
-          const emoScore = clampNum(b.emotional_charge, 0, 100);
-
- 
-
-          $("barBias").style.width = biasScore + "%";
-
-          $("barRel").style.width = relScore + "%";
-
-          $("barEmo").style.width = emoScore + "%";
-
- 
-
-          setText("biasNum", `${biasScore}/100`);
-
-          setText("relNum", `${relScore}/100`);
-
-          setText("emoNum", `${emoScore}/100`);
-
- 
-
-          const spread = data.dispersion?.reliability_spread ?? data.reliability_spread ?? "—";
-
-          setText("spreadNum", String(spread));
-
-          setText("leaning", (b.leaning || "NEUTRAL").toString().toUpperCase());
-
- 
-
-          const traceList = $("logicTraceList");
-
-          if (traceList){
-
-            traceList.innerHTML = "";
-
-            (b.logic_trace || []).forEach(t => {
-
-              const li = document.createElement("li");
-
-              li.style.marginBottom = "6px";
-
-              li.style.paddingLeft = "10px";
-
-              li.style.borderLeft = "2px solid rgba(255,255,255,0.08)";
-
-              li.textContent = `• ${t}`;
-
-              traceList.appendChild(li);
-
-            });
-
-          }
-
- 
-
-          const arbitrationText =
-
-            arb.arbitration_summary ||
-
-            arb.summary ||
-
-            (typeof arb === "string" ? arb : "Analysis complete.");
-
-          $("arbitrationSummary").textContent = arbitrationText;
-
- 
-
-          const dissonance = !!data.ethical_dissonance;
-
-          $("dissonanceAlert").style.display = dissonance ? "block" : "none";
-
-          if (dissonance) toast("warn", "Ethical Dissonance", "Conflicting outputs detected.");
-
- 
-
-          renderVault(data);
-
-          renderPerspectives(perspectives);
-
- 
-
-          toast("ok", "Complete", "Answer updated.", 2000);
-
-        };
-
- 
-
-      } catch (e) {
-
-        setWsStatus("disconnected");
-
-        toast("bad", "WebSocket Error", "Failed to initialize WebSocket.");
-
-      }
-
-    }
-
- 
-
-    function sendWS(payload) {
-
-      if (!ws || ws.readyState !== WebSocket.OPEN) {
-
-        toast("bad", "WebSocket", "Not connected.");
-
-        $("loader").style.display = "none";
-
-        return;
-
-      }
-
-      ws.send(JSON.stringify(payload));
-
-    }
-
- 
-
-    function clampNum(v, min, max) {
-
-      const n = Number(v);
-
-      if (Number.isNaN(n)) return min;
-
-      return Math.max(min, Math.min(max, Math.round(n)));
-
-    }
-
- 
-
-    function renderVault(data) {
-
-      const vList = $("vaultList");
-
-      if (!vList) return;
-
-      vList.innerHTML = "";
-
- 
-
-      const hits = data.ranked_chunks || (data.research_bundle ? data.research_bundle.ranked_chunks : []);
-
-      const section = $("vaultSection");
-
- 
-
-      if (hits && hits.length > 0) {
-
-        if (section) section.style.display = "block";
-
- 
-
-        hits.forEach(item => {
-
-          const tier = Number(item.epistemic_tier || 3);
-
-          const tierClass = tier === 1 ? "tier-1" : (tier === 2 ? "tier-2" : "tier-3");
-
- 
-
-          const source = (item.source || "UNKNOWN").toString();
-
-          const sim = (item.similarity_score ?? item.similarity ?? "—");
-
-          const text = (item.text || item.content || "").toString();
-
- 
-
-          const div = document.createElement("div");
-
-          div.className = "vault-item";
-
- 
-
-          div.innerHTML = `
-
-            <div class="vault-head">
-
-              <span class="tier-badge ${tierClass}">TIER_${tier}</span>
-
-              <div class="vault-meta">
-
-                <span class="chip">FILE: ${escapeHTML(source)}</span>
-
-                <span class="chip">SIM: ${escapeHTML(String(sim))}</span>
-
-              </div>
-
-            </div>
-
-            <details>
-
-              <summary>VIEW SNIPPET</summary>
-
-              <div class="vault-body" style="margin-top:10px;">${toSafeHTMLWithBreaks(text.slice(0, 1200))}${text.length > 1200 ? "<br><br><span class='muted'>[truncated]</span>" : ""}</div>
-
-            </details>
-
-          `;
-
- 
-
-          vList.appendChild(div);
-
-        });
-
-      } else {
-
-        if (section) section.style.display = "none";
-
-      }
-
-    }
-
- 
-
-    function renderPerspectives(perspectives) {
-
-      const grid = $("perspectivesGrid");
-
-      if (!grid) return;
-
- 
-
-      grid.innerHTML = "";
-
-      const entries = Object.entries(perspectives || {});
-
- 
-
-      if (entries.length === 0) {
-
-        grid.innerHTML = `<div class="mini muted" style="width:100%;">No additional perspectives returned.</div>`;
-
-        return;
-
-      }
-
- 
-
-      entries.forEach(([core, text]) => {
-
-        const card = document.createElement("div");
-
-        card.className = "persp-card";
-
- 
-
-        const label = mapModelName((core || "CORE").toString().replace('core_', '')).toUpperCase();
-
-        const body = (text || "").toString();
-
- 
-
-        card.innerHTML = `
-
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-
-            <span class="persp-label">${escapeHTML(label)}</span>
-
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-
-              <button class="btn-quiet" style="padding:6px 10px; font-size:0.62rem; min-height:32px;" onclick="openModelModalByLabel('${escapeHTML(label)}')">MODEL CARD</button>
-
-              <button class="btn-quiet" style="padding:6px 10px; font-size:0.62rem; min-height:32px;" data-copy-content>COPY</button>
-
-            </div>
-
-          </div>
-
-          <div class="persp-text">${toSafeHTMLWithBreaks(body)}</div>
-
-        `;
-
- 
-
-        card.querySelector('[data-copy-content]').addEventListener("click", () => {
-
-          navigator.clipboard.writeText(body).then(() => {
-
-            toast("ok", "Copied", `Copied ${label}.`);
-
-          }).catch(() => {
-
-            toast("bad", "Error", "Clipboard denied.");
-
-          });
-
-        });
-
- 
-
-        grid.appendChild(card);
-
-      });
-
-    }
-
- 
-
-    // ---------- MODEL MODAL / PICKER ----------
-
-    let lastModelCardText = "";
-
- 
-
-    function openModelPicker(){
-
-      const list = MODEL_REGISTRY.map(m => m.displayName).join(", ");
-
-      toast("ok", "Models", `Active registry: ${list}. Tap a model in OTHER PERSPECTIVES → MODEL CARD.`, 6500);
-
-      openModelModal(MODEL_REGISTRY[0]);
-
-    }
-
- 
-
-    function openModelModalByLabel(label){
-
-      const clean = (label || "").toString().toLowerCase();
-
-      const m =
-
-        MODEL_REGISTRY.find(x => x.displayName.toLowerCase() === clean) ||
-
-        MODEL_REGISTRY.find(x => clean.includes(x.key));
-
-      if (!m){
-
-        toast("warn", "Model Card", "No model metadata found for this core yet.");
-
-        return;
-
-      }
-
-      openModelModal(m);
-
-    }
-
- 
-
-    function openModelModal(model){
-
-      const back = $("modelModalBackdrop");
-
-      const grid = $("modelModalGrid");
-
-      if (!back || !grid) return;
-
- 
-
-      $("modelModalTitle").textContent = model.displayName || "MODEL";
-
-      $("modelModalSub").textContent = `${model.fullName || "Local GGUF"} • ${model.provider || "Unknown Provider"}`;
-
- 
-
-      const fields = [
-
-        ["Provider", model.provider],
-
-        ["Full Name", model.fullName],
-
-        ["Strengths", model.strengths],
-
-        ["Role Hint", model.roleHint],
-
-        ["Notes", model.notes]
-
-      ];
-
- 
-
-      grid.innerHTML = fields.map(([k,v]) => `
-
-        <div class="kv">
-
-          <div class="k">${escapeHTML(k)}</div>
-
-          <div class="v">${escapeHTML(v || "—")}</div>
-
-        </div>
-
-      `).join("");
-
- 
-
-      lastModelCardText = fields.map(([k,v]) => `${k}: ${v || "—"}`).join("\n");
-
- 
-
-      back.style.display = "flex";
-
-      back.setAttribute("aria-hidden", "false");
-
-    }
-
- 
-
-    function closeModelModal(){
-
-      const back = $("modelModalBackdrop");
-
-      if (!back) return;
-
-      back.style.display = "none";
-
-      back.setAttribute("aria-hidden", "true");
-
-    }
-
- 
-
-    function copyModelCard(){
-
-      if (!lastModelCardText.trim()){
-
-        toast("warn", "Copy", "No model card ready.");
-
-        return;
-
-      }
-
-      navigator.clipboard.writeText(lastModelCardText).then(() => {
-
-        toast("ok", "Copied", "Model card copied.");
-
-      }).catch(() => {
-
-        toast("bad", "Copy Failed", "Clipboard denied.");
-
-      });
-
-    }
-
- 
-
-    document.addEventListener("click", (e) => {
-
-      const back = $("modelModalBackdrop");
-
-      if (!back || back.style.display === "none") return;
-
-      if (e.target === back) closeModelModal();
-
-    });
-
- 
-
-    window.addEventListener("DOMContentLoaded", () => {
-
-      applyMobileClass();
-
-      connectWS();
-
-      const input = $("queryInput");
-
-      if(input) input.focus();
-
-      setText("offlineStatus", "ON");
-
-      setText("evidenceStatus", "OFF");
-
-      setText("mobileModeLabel", mobileMode.toUpperCase());
-
-      console.log("%c ZOTHEOS OS :: ONLINE ", "background:#000; color:#fff; padding:4px; border:1px solid #fff;");
-
-    });
 
   </script>
 
