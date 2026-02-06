@@ -21,13 +21,10 @@
       --dim:#b9b9b9;
       --soft:#dedede;
 
-      /* Carnage blood red accents */
+      /* Blood accents */
       --blood:#7b0a12;
       --blood2:#a10f1b;
       --blood3:#4f060b;
-
-      /* Subtle neutral highlights */
-      --ice: rgba(255,255,255,0.10);
 
       /* Glass */
       --glass: rgba(10,10,10,0.72);
@@ -45,6 +42,14 @@
 
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+      /* Button gradient (same treatment for all CTAs) */
+      --btnGrad:
+        radial-gradient(140% 140% at 20% 20%, rgba(161,15,27,0.55), rgba(123,10,18,0.20) 40%, rgba(0,0,0,0.68) 75%),
+        linear-gradient(180deg, rgba(123,10,18,0.20), rgba(0,0,0,0.62));
+      --btnGradHover:
+        radial-gradient(140% 140% at 20% 20%, rgba(161,15,27,0.70), rgba(123,10,18,0.26) 42%, rgba(0,0,0,0.72) 78%),
+        linear-gradient(180deg, rgba(161,15,27,0.24), rgba(0,0,0,0.70));
     }
 
     *{ box-sizing:border-box; }
@@ -55,131 +60,63 @@
       color: var(--text);
       background: var(--bg);
       overflow-x:hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     a{ color:inherit; text-decoration:none; }
     .container{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
+    .copy, .subhead { overflow-wrap:anywhere; word-break:break-word; }
 
-    /* -----------------------
-      Immersive background
-      (more black, blood-red glow)
-    ------------------------ */
+    /* -----------------------------------
+      BACKGROUND (smooth + fluid “real” waves)
+      - removes grain / diamonds entirely
+      - uses SVG turbulence + displacement
+    ----------------------------------- */
     .bg{
       position:fixed; inset:0; z-index:-10;
       background:
-        radial-gradient(1200px 700px at 18% 10%, rgba(255,255,255,0.05), transparent 64%),
-        radial-gradient(980px 620px at 86% 14%, rgba(255,255,255,0.04), transparent 62%),
-        radial-gradient(900px 700px at 50% 92%, rgba(255,255,255,0.03), transparent 65%),
-        radial-gradient(880px 560px at 74% 64%, rgba(123,10,18,0.10), transparent 66%),
-        radial-gradient(980px 620px at 26% 72%, rgba(161,15,27,0.07), transparent 70%),
-        radial-gradient(1100px 720px at 50% 50%, rgba(79,6,11,0.10), transparent 72%),
+        radial-gradient(1200px 700px at 18% 10%, rgba(255,255,255,0.04), transparent 64%),
+        radial-gradient(980px 620px at 86% 14%, rgba(255,255,255,0.03), transparent 62%),
+        radial-gradient(980px 620px at 26% 72%, rgba(161,15,27,0.06), transparent 70%),
+        radial-gradient(1100px 720px at 50% 50%, rgba(79,6,11,0.10), transparent 74%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg2) 50%, var(--bg) 100%);
+      overflow:hidden;
     }
 
-    .waves{
-      position:absolute; inset:0;
+    /* Inline SVG wave layer sits above gradients, below content */
+    .bg-svg{
+      position:absolute;
+      inset:-12% -12%;
+      width:124%;
+      height:124%;
       pointer-events:none;
-      opacity:0.55;
+      opacity:0.72;
+      filter: saturate(1.12) contrast(1.02);
       mix-blend-mode: screen;
-      filter: blur(0.2px);
-    }
-    .wave{ position:absolute; inset:-25% -25%; opacity:0; }
-
-    .wave.w1{
-      opacity:0.26;
-      background:
-        repeating-linear-gradient(
-          115deg,
-          rgba(255,255,255,0.08) 0px,
-          rgba(255,255,255,0.08) 1px,
-          transparent 10px,
-          transparent 26px
-        );
-      mask-image: radial-gradient(80% 70% at 50% 45%, #000 55%, transparent 74%);
-      -webkit-mask-image: radial-gradient(80% 70% at 50% 45%, #000 55%, transparent 74%);
-      animation: waveDrift1 14s ease-in-out infinite alternate;
-      transform: translate3d(0,0,0);
-    }
-    .wave.w2{
-      opacity:0.22;
-      background:
-        repeating-linear-gradient(
-          65deg,
-          rgba(123,10,18,0.18) 0px,
-          rgba(123,10,18,0.18) 1px,
-          transparent 12px,
-          transparent 30px
-        );
-      mask-image: radial-gradient(78% 70% at 55% 60%, #000 52%, transparent 72%);
-      -webkit-mask-image: radial-gradient(78% 70% at 55% 60%, #000 52%, transparent 72%);
-      animation: waveDrift2 18s ease-in-out infinite alternate;
-      transform: translate3d(0,0,0);
-    }
-    .wave.w3{
-      opacity:0.18;
-      background:
-        repeating-linear-gradient(
-          140deg,
-          rgba(161,15,27,0.14) 0px,
-          rgba(161,15,27,0.14) 1px,
-          transparent 14px,
-          transparent 34px
-        );
-      mask-image: radial-gradient(80% 70% at 40% 58%, #000 50%, transparent 72%);
-      -webkit-mask-image: radial-gradient(80% 70% at 40% 58%, #000 50%, transparent 72%);
-      animation: waveDrift3 22s ease-in-out infinite alternate;
-      transform: translate3d(0,0,0);
     }
 
-    @keyframes waveDrift1{
-      0%{ transform: translate3d(-1.2%, -0.8%, 0) scale(1.02) rotate(-1deg); }
-      100%{ transform: translate3d(1.6%, 1.0%, 0) scale(1.06) rotate(1deg); }
-    }
-    @keyframes waveDrift2{
-      0%{ transform: translate3d(1.2%, -1.0%, 0) scale(1.01) rotate(1deg); }
-      100%{ transform: translate3d(-1.6%, 1.2%, 0) scale(1.07) rotate(-1deg); }
-    }
-    @keyframes waveDrift3{
-      0%{ transform: translate3d(-1.0%, 1.0%, 0) scale(1.02) rotate(0deg); }
-      100%{ transform: translate3d(1.0%, -1.2%, 0) scale(1.08) rotate(0.6deg); }
-    }
-
+    /* A second softer haze layer (smooth, not grain) */
     .mist{
       position:absolute; inset:-22%;
-      opacity:0.75;
-      filter: blur(18px) saturate(1.10);
+      opacity:0.62;
+      filter: blur(26px) saturate(1.08);
       background:
-        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.06), transparent 64%),
-        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.04), transparent 66%),
-        radial-gradient(closest-side at 50% 70%, rgba(123,10,18,0.10), transparent 68%),
-        radial-gradient(closest-side at 58% 56%, rgba(161,15,27,0.06), transparent 72%);
-      animation: float 18s ease-in-out infinite alternate;
+        radial-gradient(closest-side at 22% 28%, rgba(255,255,255,0.05), transparent 66%),
+        radial-gradient(closest-side at 78% 22%, rgba(255,255,255,0.03), transparent 68%),
+        radial-gradient(closest-side at 52% 70%, rgba(123,10,18,0.10), transparent 70%),
+        radial-gradient(closest-side at 60% 56%, rgba(161,15,27,0.06), transparent 74%);
+      animation: float 14s ease-in-out infinite alternate;
       transform: translate3d(0,0,0);
       pointer-events:none;
     }
     @keyframes float{
-      0%{ transform: translate3d(-2%, -1%, 0) scale(1.03); }
-      100%{ transform: translate3d(2.2%, 1.6%, 0) scale(1.06); }
-    }
-
-    .stars{
-      position:absolute; inset:0;
-      opacity:0.10;
-      background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
-      background-size: 3px 3px;
-      mix-blend-mode: screen;
-      animation: stars 10s steps(10,end) infinite;
-      pointer-events:none;
-    }
-    @keyframes stars{
-      0%{ transform: translate(0,0); }
-      25%{ transform: translate(-1%, 0.7%); }
-      50%{ transform: translate(1%, -0.6%); }
-      75%{ transform: translate(-0.7%, -1%); }
-      100%{ transform: translate(0,0); }
+      0%{ transform: translate3d(-1.6%, -0.8%, 0) scale(1.02); }
+      100%{ transform: translate3d(1.8%, 1.2%, 0) scale(1.05); }
     }
 
     @media (prefers-reduced-motion: reduce){
-      .mist,.stars,.wave{ animation:none !important; }
+      .mist{ animation:none !important; }
+      .bg-svg animate, .bg-svg animateTransform{ display:none !important; }
     }
 
     /* -----------------------
@@ -198,7 +135,7 @@
     @media (max-width: 560px){ .pad{ padding: 20px; } }
 
     /* -----------------------
-      Header
+      Header (icon left, logo centered, nav right)
     ------------------------ */
     header{
       position:sticky; top:0; z-index:40;
@@ -237,8 +174,8 @@
       display:block;
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.05),
-        0 0 24px rgba(255,255,255,0.07),
-        0 0 60px rgba(123,10,18,0.16);
+        0 0 24px rgba(255,255,255,0.06),
+        0 0 70px rgba(123,10,18,0.18);
     }
 
     .logo{
@@ -249,7 +186,7 @@
       filter:
         drop-shadow(0 0 10px rgba(255,255,255,0.10))
         drop-shadow(0 0 26px rgba(123,10,18,0.22))
-        drop-shadow(0 0 52px rgba(161,15,27,0.16));
+        drop-shadow(0 0 62px rgba(161,15,27,0.16));
     }
 
     .pill{
@@ -262,14 +199,18 @@
     }
     .pill:hover{
       transform: translateY(-1px);
-      border-color: rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.60);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.16), 0 0 26px rgba(123,10,18,0.10);
+      border-color: rgba(161,15,27,0.36);
+      background: rgba(0,0,0,0.64);
+      box-shadow: 0 0 0 1px rgba(123,10,18,0.16), 0 0 26px rgba(123,10,18,0.12);
     }
     .pill.primary{
-      border-color: rgba(123,10,18,0.42);
-      background: linear-gradient(180deg, rgba(123,10,18,0.22), rgba(0,0,0,0.40));
-      box-shadow: 0 0 0 1px rgba(161,15,27,0.16), 0 0 36px rgba(123,10,18,0.14);
+      border-color: rgba(161,15,27,0.46);
+      background: var(--btnGrad);
+      box-shadow: 0 0 0 1px rgba(161,15,27,0.16), 0 0 40px rgba(123,10,18,0.16);
+    }
+    .pill.primary:hover{
+      background: var(--btnGradHover);
+      box-shadow: 0 0 0 1px rgba(161,15,27,0.22), 0 0 56px rgba(123,10,18,0.18);
     }
 
     @media (max-width: 720px){
@@ -354,75 +295,44 @@
       margin-top: 22px;
     }
 
-    /* -----------------------
-      Buttons: subtle by default, BLOOD GRADIENT on hover/active (your request)
-    ------------------------ */
+    /* ✅ All buttons share the same gradient (idle + hover), no mismatched styles */
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       padding:12px 16px;
       border-radius: 16px;
-      border:1px solid rgba(255,255,255,0.16);
-      background: rgba(0,0,0,0.46);
+      border:1px solid rgba(161,15,27,0.34);
+      background: var(--btnGrad);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: rgba(255,255,255,0.95);
+      color: rgba(255,255,255,0.96);
       font-size:14px;
       cursor:pointer;
       transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease, filter .15s ease;
       user-select:none;
       white-space:nowrap;
+      box-shadow:
+        0 0 0 1px rgba(161,15,27,0.10),
+        0 0 44px rgba(123,10,18,0.12);
     }
-
-    /* Unified blood gradient when hovered */
     .btn:hover{
       transform: translateY(-1px);
-      border-color: rgba(161,15,27,0.55);
-      background:
-        linear-gradient(180deg,
-          rgba(161,15,27,0.30) 0%,
-          rgba(123,10,18,0.18) 32%,
-          rgba(0,0,0,0.74) 75%,
-          rgba(0,0,0,0.82) 100%);
+      background: var(--btnGradHover);
+      border-color: rgba(161,15,27,0.50);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.14) inset,
-        0 12px 44px rgba(0,0,0,0.62),
-        0 0 78px rgba(123,10,18,0.22);
+        0 0 0 1px rgba(161,15,27,0.18),
+        0 0 60px rgba(123,10,18,0.18);
     }
-
-    /* Active/clicked = slightly deeper */
     .btn:active{
       transform: translateY(0px);
-      border-color: rgba(161,15,27,0.65);
-      background:
-        linear-gradient(180deg,
-          rgba(161,15,27,0.26) 0%,
-          rgba(123,10,18,0.16) 34%,
-          rgba(0,0,0,0.78) 78%,
-          rgba(0,0,0,0.86) 100%);
+      filter: brightness(1.02);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.16) inset,
-        0 8px 28px rgba(0,0,0,0.60),
-        0 0 56px rgba(123,10,18,0.18);
+        0 0 0 1px rgba(161,15,27,0.22),
+        0 0 34px rgba(123,10,18,0.16);
     }
-
-    /* Keyboard focus */
-    .btn:focus-visible{
-      outline:none;
-      border-color: rgba(161,15,27,0.70);
-      box-shadow:
-        0 0 0 2px rgba(161,15,27,0.20),
-        0 0 0 1px rgba(161,15,27,0.12) inset,
-        0 0 90px rgba(123,10,18,0.18);
-    }
-
-    /* Keep .primary class but make it not “different” */
-    .btn.primary{
-      border-color: rgba(255,255,255,0.16);
-      background: rgba(0,0,0,0.46);
-      box-shadow: none;
-    }
+    /* Keep "primary" class for semantics, but visually identical (as requested) */
+    .btn.primary{ }
 
     .pillgrid{
       margin-top: 22px;
@@ -467,14 +377,18 @@
       opacity:0.95;
     }
 
-    /* Features grid */
+    /* -----------------------
+      Features section (new)
+    ------------------------ */
     .features{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 12px;
       margin-top: 14px;
     }
-    @media (max-width: 960px){ .features{ grid-template-columns: 1fr; } }
+    @media (max-width: 960px){
+      .features{ grid-template-columns: 1fr; }
+    }
 
     .feat{
       padding: 16px;
@@ -485,19 +399,18 @@
     }
     .feat b{ display:block; margin-bottom:6px; }
     .feat span{ color: rgba(222,222,222,0.90); font-size: 14px; line-height: 1.55; }
-    .tagline{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
+
+    .chips{
+      display:flex; flex-wrap:wrap; gap:8px;
       margin-top: 12px;
     }
-    .tag{
+    .chip{
       font-size:12px;
-      padding:7px 10px;
+      padding:8px 10px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.10);
       background: rgba(0,0,0,0.34);
-      color: rgba(255,255,255,0.86);
+      color: rgba(222,222,222,0.92);
     }
 
     /* -----------------------
@@ -543,9 +456,7 @@
     .don .btn{ width:100%; }
 
     /* -----------------------
-      Intro Video Overlay
-      - auto-skip at 9 seconds
-      - pausable + skippable
+      Intro Video Overlay (auto-skip 9s)
     ------------------------ */
     .intro{
       position:fixed; inset:0; z-index:999;
@@ -563,8 +474,7 @@
       content:"";
       position:absolute; inset:0;
       background:
-        radial-gradient(900px 520px at 50% 18%, rgba(0,0,0,0.14), transparent 62%),
-        radial-gradient(900px 520px at 50% 55%, rgba(123,10,18,0.10), transparent 70%),
+        radial-gradient(900px 520px at 50% 55%, rgba(123,10,18,0.12), transparent 70%),
         linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.82));
       pointer-events:none;
     }
@@ -613,14 +523,63 @@
 </head>
 
 <body>
+  <!-- Smooth background -->
   <div class="bg" aria-hidden="true">
-    <div class="waves">
-      <div class="wave w1"></div>
-      <div class="wave w2"></div>
-      <div class="wave w3"></div>
-    </div>
+    <!-- Real wave layer (SVG turbulence/displacement) -->
+    <svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <!-- Turbulence for flowing wave field -->
+        <filter id="flow">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.010 0.020"
+            numOctaves="2"
+            seed="8"
+            result="noise">
+            <!-- animate the noise over time -->
+            <animate attributeName="baseFrequency" dur="12s" values="0.010 0.020;0.012 0.018;0.010 0.020" repeatCount="indefinite"/>
+          </feTurbulence>
+
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="42" xChannelSelector="R" yChannelSelector="G">
+            <animate attributeName="scale" dur="10s" values="36;48;36" repeatCount="indefinite"/>
+          </feDisplacementMap>
+
+          <feGaussianBlur stdDeviation="0.35" />
+        </filter>
+
+        <!-- Blood-to-white subtle gradient that gets displaced -->
+        <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+          <stop offset="28%" stop-color="rgba(161,15,27,0.16)"/>
+          <stop offset="62%" stop-color="rgba(123,10,18,0.12)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0.06)"/>
+        </linearGradient>
+
+        <radialGradient id="glow" cx="50%" cy="45%" r="70%">
+          <stop offset="0%" stop-color="rgba(161,15,27,0.10)"/>
+          <stop offset="55%" stop-color="rgba(123,10,18,0.08)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Base layer -->
+      <rect x="-80" y="-80" width="1360" height="960" fill="url(#glow)"/>
+
+      <!-- Displaced sheen “waves” -->
+      <g filter="url(#flow)" opacity="0.95">
+        <rect x="-120" y="-120" width="1440" height="1040" fill="url(#sheen)"/>
+      </g>
+
+      <!-- Slow drifting transform for extra “fluid” feel -->
+      <g opacity="0.22">
+        <rect x="-160" y="-160" width="1520" height="1120" fill="rgba(161,15,27,0.18)">
+          <animateTransform attributeName="transform" type="translate" dur="16s"
+            values="-20,-10; 18,12; -20,-10" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </svg>
+
     <div class="mist"></div>
-    <div class="stars"></div>
   </div>
 
   <!-- INTRO VIDEO OVERLAY -->
@@ -637,7 +596,7 @@
 
       <div class="intro-actions">
         <button id="togglePlay" class="btn" type="button">Pause</button>
-        <button id="skipIntro" class="btn primary" type="button">Skip</button>
+        <button id="skipIntro" class="btn" type="button">Skip</button>
       </div>
     </div>
   </div>
@@ -678,12 +637,12 @@
           <h1 class="headline">Clear knowledge.<br/>No surveillance.<br/>No manipulation.</h1>
 
           <p class="subhead">
-            ZOTHEOS is built to help people think clearly and act with confidence, without being tracked, nudged, or sold.
-            It’s designed to stay useful even when the internet isn’t.
+            ZOTHEOS is built to help people think clearly and act with confidence-without being tracked,
+            nudged, or sold. It stays useful even when the internet isn’t.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="#support">Support the build</a>
+            <a class="btn" href="#support">Support the build</a>
             <a class="btn" href="#proof">See the console</a>
             <a class="btn" href="#features">What it is</a>
           </div>
@@ -724,25 +683,23 @@
             <div style="height:14px"></div>
 
             <p class="copy">
-              The long-term goal is simple: keep knowledge accessible, keep privacy intact, and keep the system reliable
-              even when the internet isn’t. Over time, this becomes something bigger than a product |
+              The long-term goal is simple: keep knowledge accessible, keep privacy intact, and keep the tool
+              reliable even when the internet isn’t. Over time, this becomes something bigger than a product |
               it becomes infrastructure for human clarity.
             </p>
 
             <div style="height:10px"></div>
-            <p class="copy muted">
-              This page is the front door. The console is the tool.
-            </p>
+            <p class="copy muted">This page is the front door. The console is the tool.</p>
           </div>
         </section>
 
-        <!-- FEATURES / WHAT IT IS -->
+        <!-- FEATURES (new, clearer + more explanation) -->
         <section id="features" class="panel">
           <div class="pad">
             <h2 class="section-title">What ZOTHEOS is</h2>
             <p class="copy">
               ZOTHEOS is an offline-first intelligence system that combines multiple models to produce a clearer final answer.
-              Think of it as a “panel of minds” working together, then a final synthesis that keeps the response grounded and readable.
+              Think of it as a “doctor conference” for knowledge: you consult multiple perspectives, compare, and then publish one grounded synthesis.
             </p>
 
             <div style="height:14px"></div>
@@ -753,52 +710,51 @@
               <div class="feat">
                 <b>Fusion architecture</b>
                 <span>
-                  Instead of trusting one model blindly, ZOTHEOS can consult multiple local LLMs and merge the best parts into one response.
-                  The goal is fewer blind spots and a more balanced output.
+                  Instead of trusting a single model blindly, ZOTHEOS can consult multiple local models and merge the best parts into one response.
+                  The goal is fewer blind spots and more balance.
                 </span>
               </div>
 
               <div class="feat">
                 <b>Local-first by design</b>
                 <span>
-                  The system is built to run without always needing the cloud. That means fewer dependency risks, better resilience,
-                  and a path toward real privacy.
+                  The system is built to run without always needing the cloud.
+                  That means fewer dependencies, better resilience, and a clear path toward real privacy.
                 </span>
               </div>
 
               <div class="feat">
                 <b>Designed for clarity</b>
                 <span>
-                  The output is meant to be usable. Clear steps when you need action, plain language when you need understanding.
+                  It’s meant to be usable. Clear steps when action is needed, plain language when understanding matters,
+                  and a format that stays readable.
                 </span>
               </div>
             </div>
 
-            <div style="height:14px"></div>
-
-            <h3 class="section-title" style="margin-top:10px;">The “doctor conference” meaning</h3>
-            <p class="copy">
-              The “doctor conference” is the philosophy behind the fusion system:
-              when something matters, you don’t rely on a single opinion, you consult multiple specialists, compare perspectives,
-              and then choose the most responsible conclusion.
-              ZOTHEOS aims to bring that same feel to AI: multiple viewpoints, then a single clear recommendation.
-            </p>
-
             <div style="height:12px"></div>
 
-            <h3 class="section-title">A future nexus of models</h3>
             <p class="copy">
-              As it grows, ZOTHEOS can become a nexus where different model types work together | general LLMs, reasoning models, vision models,
-              and purpose-built “experts” all orchestrated through the same fusion approach.
+              <b>The “doctor conference” meaning.</b><br/>
+              When something matters, you don’t rely on a single opinion. You consult multiple specialists, compare perspectives,
+              then choose the most responsible conclusion. ZOTHEOS brings that same logic to AI: multiple viewpoints, then one careful recommendation.
+            </p>
+
+            <div style="height:10px"></div>
+
+            <p class="copy">
+              <b>A future nexus of models.</b><br/>
+              As it grows, ZOTHEOS can become a hub where different model types work together: general LLMs, reasoning models,
+              vision models, and purpose-built “experts,” all orchestrated through the same fusion approach.
               The north star stays the same: privacy-respecting intelligence that serves people, not platforms.
             </p>
 
-            <div class="tagline" aria-label="ZOTHEOS capabilities tags">
-              <span class="tag">multi-model fusion</span>
-              <span class="tag">offline-first</span>
-              <span class="tag">privacy-respecting</span>
-              <span class="tag">human-centered output</span>
-              <span class="tag">scales into a model nexus</span>
+            <div class="chips">
+              <span class="chip">multi-model fusion</span>
+              <span class="chip">offline-first</span>
+              <span class="chip">privacy-respecting</span>
+              <span class="chip">human-centered output</span>
+              <span class="chip">scales into a model nexus</span>
             </div>
           </div>
         </section>
@@ -853,7 +809,7 @@
             </div>
 
             <p class="muted" style="margin-top:12px;font-size:13px;">
-              <span style="font-family:var(--mono)">index.html</span>
+              <span style="font-family:var(--mono)"></span>
             </p>
           </div>
         </section>
@@ -883,7 +839,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Intro overlay controls:
+    // Intro overlay:
     // - auto-skip at 9 seconds
     // - user can Pause/Play and Skip
     (function(){
@@ -908,6 +864,7 @@
 
       v.addEventListener('error', hideIntro);
 
+      // Auto-skip after 9 seconds
       autoTimer = setTimeout(hideIntro, AUTO_SKIP_SECONDS * 1000);
 
       skip.addEventListener('click', hideIntro);
@@ -922,12 +879,12 @@
         }
       });
 
-      v.addEventListener('click', function(){
-        toggle.click();
-      });
+      // Clicking video toggles play
+      v.addEventListener('click', function(){ toggle.click(); });
 
+      // Ensure it starts cleanly
       v.addEventListener('loadedmetadata', function(){
-        v.currentTime = 0;
+        try { v.currentTime = 0; } catch(e) {}
         v.play().catch(()=>{});
       });
 
