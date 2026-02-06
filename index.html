@@ -15,16 +15,16 @@
   <style>
     :root{
       /* Core */
-      --bg:#030303;             /* deeper black */
+      --bg:#030303;
       --bg2:#060606;
       --text:#f4f4f4;
       --dim:#b9b9b9;
       --soft:#dedede;
 
-      /* Carnage blood red accents (less bright, richer) */
-      --blood:#7b0a12;          /* base blood */
-      --blood2:#a10f1b;         /* brighter edge */
-      --blood3:#4f060b;         /* deep shadow red */
+      /* Carnage blood red accents */
+      --blood:#7b0a12;
+      --blood2:#a10f1b;
+      --blood3:#4f060b;
 
       /* Subtle neutral highlights */
       --ice: rgba(255,255,255,0.10);
@@ -84,7 +84,6 @@
     }
     .wave{ position:absolute; inset:-25% -25%; opacity:0; }
 
-    /* “Animus” lines tinted toward blood red */
     .wave.w1{
       opacity:0.26;
       background:
@@ -228,7 +227,6 @@
       justify-content:flex-end;
     }
 
-    /* icon (favicon) with subtle blood halo */
     .ico{
       width: 54px;
       height: 54px;
@@ -243,7 +241,6 @@
         0 0 60px rgba(123,10,18,0.16);
     }
 
-    /* centered logo with stronger blood glow */
     .logo{
       height: 44px;
       width:auto;
@@ -357,6 +354,9 @@
       margin-top: 22px;
     }
 
+    /* -----------------------
+      Buttons: subtle by default, BLOOD GRADIENT on hover/active (your request)
+    ------------------------ */
     .btn{
       display:inline-flex;
       align-items:center;
@@ -370,31 +370,58 @@
       color: rgba(255,255,255,0.95);
       font-size:14px;
       cursor:pointer;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease, filter .15s ease;
       user-select:none;
       white-space:nowrap;
     }
+
+    /* Unified blood gradient when hovered */
     .btn:hover{
       transform: translateY(-1px);
-      background: rgba(0,0,0,0.68);
-      border-color: rgba(255,255,255,0.24);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.14), 0 0 34px rgba(123,10,18,0.10);
+      border-color: rgba(161,15,27,0.55);
+      background:
+        linear-gradient(180deg,
+          rgba(161,15,27,0.30) 0%,
+          rgba(123,10,18,0.18) 32%,
+          rgba(0,0,0,0.74) 75%,
+          rgba(0,0,0,0.82) 100%);
+      box-shadow:
+        0 0 0 1px rgba(161,15,27,0.14) inset,
+        0 12px 44px rgba(0,0,0,0.62),
+        0 0 78px rgba(123,10,18,0.22);
     }
 
-    /* primary = blood accent, not bright */
-    .btn.primary{
-      border-color: rgba(123,10,18,0.44);
+    /* Active/clicked = slightly deeper */
+    .btn:active{
+      transform: translateY(0px);
+      border-color: rgba(161,15,27,0.65);
       background:
-        linear-gradient(180deg, rgba(123,10,18,0.26), rgba(0,0,0,0.52));
+        linear-gradient(180deg,
+          rgba(161,15,27,0.26) 0%,
+          rgba(123,10,18,0.16) 34%,
+          rgba(0,0,0,0.78) 78%,
+          rgba(0,0,0,0.86) 100%);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.14),
-        0 0 44px rgba(123,10,18,0.14);
+        0 0 0 1px rgba(161,15,27,0.16) inset,
+        0 8px 28px rgba(0,0,0,0.60),
+        0 0 56px rgba(123,10,18,0.18);
     }
-    .btn.primary:hover{
-      border-color: rgba(161,15,27,0.54);
+
+    /* Keyboard focus */
+    .btn:focus-visible{
+      outline:none;
+      border-color: rgba(161,15,27,0.70);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.18),
-        0 0 60px rgba(123,10,18,0.18);
+        0 0 0 2px rgba(161,15,27,0.20),
+        0 0 0 1px rgba(161,15,27,0.12) inset,
+        0 0 90px rgba(123,10,18,0.18);
+    }
+
+    /* Keep .primary class but make it not “different” */
+    .btn.primary{
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.46);
+      box-shadow: none;
     }
 
     .pillgrid{
@@ -438,6 +465,39 @@
         rgba(161,15,27,0.18),
         rgba(255,255,255,0.0));
       opacity:0.95;
+    }
+
+    /* Features grid */
+    .features{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    @media (max-width: 960px){ .features{ grid-template-columns: 1fr; } }
+
+    .feat{
+      padding: 16px;
+      border-radius: var(--r1);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.36);
+      box-shadow: 0 0 0 1px rgba(123,10,18,0.06);
+    }
+    .feat b{ display:block; margin-bottom:6px; }
+    .feat span{ color: rgba(222,222,222,0.90); font-size: 14px; line-height: 1.55; }
+    .tagline{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top: 12px;
+    }
+    .tag{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.34);
+      color: rgba(255,255,255,0.86);
     }
 
     /* -----------------------
@@ -599,6 +659,7 @@
         <!-- RIGHT: nav -->
         <nav class="nav-right" aria-label="Primary">
           <a class="pill" href="#mission">Mission</a>
+          <a class="pill" href="#features">Features</a>
           <a class="pill" href="#proof">Proof</a>
           <a class="pill primary" href="#support">Support</a>
         </nav>
@@ -617,24 +678,24 @@
           <h1 class="headline">Clear knowledge.<br/>No surveillance.<br/>No manipulation.</h1>
 
           <p class="subhead">
-            ZOTHEOS is an offline-first ethical intelligence system built to keep knowledge usable and grounded.
-            No tracking. No hidden steering. No paywalls shaping what you’re allowed to learn.
+            ZOTHEOS is built to help people think clearly and act with confidence, without being tracked, nudged, or sold.
+            It’s designed to stay useful even when the internet isn’t.
           </p>
 
           <div class="cta">
             <a class="btn primary" href="#support">Support the build</a>
             <a class="btn" href="#proof">See the console</a>
-            <a class="btn" href="#mission">Why this exists</a>
+            <a class="btn" href="#features">What it is</a>
           </div>
 
           <div class="pillgrid">
             <div class="pillcard">
               <b>Private by default.</b>
-              <span>Built to reduce dependence on data-hungry systems.</span>
+              <span>No accounts required. No data harvested as the price of “help.”</span>
             </div>
             <div class="pillcard">
-              <b>Made for real decisions.</b>
-              <span>Learning, planning, and problem-solving without noise.</span>
+              <b>Built for real decisions.</b>
+              <span>Learning, planning, and problem-solving without noise or manipulation.</span>
             </div>
             <div class="pillcard">
               <b>Independent by design.</b>
@@ -652,9 +713,10 @@
             <h2 class="section-title">Why ZOTHEOS exists</h2>
 
             <p class="copy">
-              Most systems today compete for attention. They optimize for engagement, not understanding.
-              ZOTHEOS is built for the opposite outcome: clear, calm intelligence that helps people learn and act
-              without being tracked, nudged, or profiled.
+              The internet used to feel like a library. Now it often feels like a casino.
+              Algorithms reward what keeps you scrolling, not what helps you understand.
+              ZOTHEOS is built as a calm, reliable alternative: a tool that helps people learn and solve problems
+              without surveillance, manipulation, or paywalls shaping the outcome.
             </p>
 
             <div style="height:14px"></div>
@@ -662,7 +724,7 @@
             <div style="height:14px"></div>
 
             <p class="copy">
-              The mission is simple: keep knowledge accessible, keep privacy intact, and keep the tool reliable
+              The long-term goal is simple: keep knowledge accessible, keep privacy intact, and keep the system reliable
               even when the internet isn’t. Over time, this becomes something bigger than a product |
               it becomes infrastructure for human clarity.
             </p>
@@ -674,13 +736,78 @@
           </div>
         </section>
 
+        <!-- FEATURES / WHAT IT IS -->
+        <section id="features" class="panel">
+          <div class="pad">
+            <h2 class="section-title">What ZOTHEOS is</h2>
+            <p class="copy">
+              ZOTHEOS is an offline-first intelligence system that combines multiple models to produce a clearer final answer.
+              Think of it as a “panel of minds” working together, then a final synthesis that keeps the response grounded and readable.
+            </p>
+
+            <div style="height:14px"></div>
+            <div class="gradient-bar"></div>
+            <div style="height:14px"></div>
+
+            <div class="features">
+              <div class="feat">
+                <b>Fusion architecture</b>
+                <span>
+                  Instead of trusting one model blindly, ZOTHEOS can consult multiple local LLMs and merge the best parts into one response.
+                  The goal is fewer blind spots and a more balanced output.
+                </span>
+              </div>
+
+              <div class="feat">
+                <b>Local-first by design</b>
+                <span>
+                  The system is built to run without always needing the cloud. That means fewer dependency risks, better resilience,
+                  and a path toward real privacy.
+                </span>
+              </div>
+
+              <div class="feat">
+                <b>Designed for clarity</b>
+                <span>
+                  The output is meant to be usable. Clear steps when you need action, plain language when you need understanding.
+                </span>
+              </div>
+            </div>
+
+            <div style="height:14px"></div>
+
+            <h3 class="section-title" style="margin-top:10px;">The “doctor conference” meaning</h3>
+            <p class="copy">
+              The “doctor conference” is the philosophy behind the fusion system:
+              when something matters, you don’t rely on a single opinion, you consult multiple specialists, compare perspectives,
+              and then choose the most responsible conclusion.
+              ZOTHEOS aims to bring that same feel to AI: multiple viewpoints, then a single clear recommendation.
+            </p>
+
+            <div style="height:12px"></div>
+
+            <h3 class="section-title">A future nexus of models</h3>
+            <p class="copy">
+              As it grows, ZOTHEOS can become a nexus where different model types work together | general LLMs, reasoning models, vision models,
+              and purpose-built “experts” all orchestrated through the same fusion approach.
+              The north star stays the same: privacy-respecting intelligence that serves people, not platforms.
+            </p>
+
+            <div class="tagline" aria-label="ZOTHEOS capabilities tags">
+              <span class="tag">multi-model fusion</span>
+              <span class="tag">offline-first</span>
+              <span class="tag">privacy-respecting</span>
+              <span class="tag">human-centered output</span>
+              <span class="tag">scales into a model nexus</span>
+            </div>
+          </div>
+        </section>
+
         <!-- PROOF -->
         <section id="proof" class="panel">
           <div class="pad">
             <h2 class="section-title">Console</h2>
-            <p class="copy muted">
-              ZOTHEOS at a glimpse.
-            </p>
+            <p class="copy muted">ZOTHEOS at a glimpse.</p>
 
             <div class="shot" style="margin-top:14px">
               <img src="/static/console_hero.png" alt="ZOTHEOS console screenshot"
@@ -706,7 +833,7 @@
                 <b>PayPal</b>
                 <span>One-time support.</span>
                 <a href="https://paypal.me/YOUR_HANDLE" target="_blank" rel="noopener">
-                  <span class="btn primary">Donate via PayPal</span>
+                  <span class="btn">Donate via PayPal</span>
                 </a>
               </div>
               <div class="don">
@@ -726,7 +853,7 @@
             </div>
 
             <p class="muted" style="margin-top:12px;font-size:13px;">
-              Replace the three URLs in <span style="font-family:var(--mono)">index.html</span> with your real links.
+              <span style="font-family:var(--mono)">index.html</span>
             </p>
           </div>
         </section>
@@ -745,6 +872,7 @@
         <div>
           © <span id="year"></span> ZOTHEOS ·
           <a href="#mission">Mission</a> ·
+          <a href="#features">Features</a> ·
           <a href="#proof">Proof</a> ·
           <a href="#support">Support</a>
         </div>
@@ -778,10 +906,8 @@
         if(autoTimer) clearTimeout(autoTimer);
       }
 
-      // If video fails to load, don’t block the site.
       v.addEventListener('error', hideIntro);
 
-      // Auto-skip after 9 seconds
       autoTimer = setTimeout(hideIntro, AUTO_SKIP_SECONDS * 1000);
 
       skip.addEventListener('click', hideIntro);
@@ -796,18 +922,15 @@
         }
       });
 
-      // clicking the video toggles play
       v.addEventListener('click', function(){
         toggle.click();
       });
 
-      // Make sure it starts even if browser delays autoplay
       v.addEventListener('loadedmetadata', function(){
         v.currentTime = 0;
         v.play().catch(()=>{});
       });
 
-      // attempt autoplay
       v.play().catch(()=>{});
     })();
   </script>
