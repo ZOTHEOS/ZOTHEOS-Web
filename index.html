@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
+  <!-- ✅ Fix: use dynamic viewport + safe-area + correct scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
 
   <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
@@ -21,9 +22,9 @@
       --dim:#b9b9b9;
       --soft:#dedede;
 
-      /* Blood accents (kept, but used sparingly) */
-      --blood:#7b0a12;
-      --blood2:#a10f1b;
+      /* ✅ Brighter blood accents */
+      --blood:#a10f1b;   /* was #7b0a12 */
+      --blood2:#e0162a;  /* was #a10f1b */
       --blood3:#3a0408;
 
       /* Glass */
@@ -43,17 +44,18 @@
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-      /* Unified button gradient */
+      /* Unified button gradient (slightly brighter) */
       --btnGrad:
-        radial-gradient(120% 140% at 18% 22%, rgba(161,15,27,0.62), rgba(123,10,18,0.18) 44%, rgba(0,0,0,0.80) 78%),
-        linear-gradient(180deg, rgba(123,10,18,0.18), rgba(0,0,0,0.78));
+        radial-gradient(120% 140% at 18% 22%, rgba(224,22,42,0.66), rgba(161,15,27,0.20) 44%, rgba(0,0,0,0.80) 78%),
+        linear-gradient(180deg, rgba(161,15,27,0.20), rgba(0,0,0,0.78));
       --btnGradHover:
-        radial-gradient(120% 140% at 18% 22%, rgba(161,15,27,0.76), rgba(123,10,18,0.22) 46%, rgba(0,0,0,0.84) 80%),
-        linear-gradient(180deg, rgba(161,15,27,0.20), rgba(0,0,0,0.82));
+        radial-gradient(120% 140% at 18% 22%, rgba(224,22,42,0.80), rgba(161,15,27,0.24) 46%, rgba(0,0,0,0.84) 80%),
+        linear-gradient(180deg, rgba(224,22,42,0.22), rgba(0,0,0,0.82));
     }
 
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
+
     body{
       margin:0;
       font-family: var(--sans);
@@ -63,14 +65,18 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+
+    /* ✅ Helps iOS/Android avoid weird full-screen jumps */
+    @supports (height: 100dvh){
+      body{ min-height: 100dvh; }
+    }
+
     a{ color:inherit; text-decoration:none; }
     .container{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
     .copy, .subhead { overflow-wrap:anywhere; word-break:break-word; }
 
     /* -----------------------------------
       BACKGROUND (smooth, high-res wave ribbons)
-      - no turbulence/noise (so no pixel mush)
-      - black dominant, red as accents
     ----------------------------------- */
     .bg{
       position:fixed; inset:0; z-index:-10;
@@ -112,13 +118,13 @@
       animation: drift1 14s ease-in-out infinite alternate;
     }
 
-    /* blood ribbon (accent, not wash) */
+    /* ✅ blood ribbon (brighter) */
     .rib.r2{
       top: 24%;
-      opacity: 0.18;
+      opacity: 0.22; /* was 0.18 */
       background:
-        radial-gradient(120% 120% at 22% 50%, rgba(161,15,27,0.22), rgba(123,10,18,0.10) 52%, transparent 74%),
-        linear-gradient(90deg, transparent 0%, rgba(123,10,18,0.12) 46%, transparent 100%);
+        radial-gradient(120% 120% at 22% 50%, rgba(224,22,42,0.30), rgba(161,15,27,0.14) 52%, transparent 74%),
+        linear-gradient(90deg, transparent 0%, rgba(224,22,42,0.16) 46%, transparent 100%);
       animation: drift2 18s ease-in-out infinite alternate;
     }
 
@@ -152,6 +158,7 @@
       animation: stars 12s steps(12,end) infinite;
       pointer-events:none;
     }
+
     @keyframes stars{
       0%{ transform: translate(0,0); }
       25%{ transform: translate(-1%, 0.7%); }
@@ -233,7 +240,7 @@
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.05),
         0 0 24px rgba(255,255,255,0.06),
-        0 0 56px rgba(123,10,18,0.14);
+        0 0 56px rgba(224,22,42,0.16);
     }
 
     .logo{
@@ -243,8 +250,8 @@
       opacity:0.99;
       filter:
         drop-shadow(0 0 10px rgba(255,255,255,0.10))
-        drop-shadow(0 0 22px rgba(123,10,18,0.18))
-        drop-shadow(0 0 46px rgba(161,15,27,0.12));
+        drop-shadow(0 0 22px rgba(224,22,42,0.18))
+        drop-shadow(0 0 46px rgba(224,22,42,0.12));
     }
 
     .pill{
@@ -257,18 +264,18 @@
     }
     .pill:hover{
       transform: translateY(-1px);
-      border-color: rgba(161,15,27,0.34);
+      border-color: rgba(224,22,42,0.38);
       background: rgba(0,0,0,0.66);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.14), 0 0 26px rgba(123,10,18,0.10);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.16), 0 0 26px rgba(224,22,42,0.10);
     }
     .pill.primary{
-      border-color: rgba(161,15,27,0.46);
+      border-color: rgba(224,22,42,0.52);
       background: var(--btnGrad);
-      box-shadow: 0 0 0 1px rgba(161,15,27,0.14), 0 0 40px rgba(123,10,18,0.14);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.16), 0 0 40px rgba(224,22,42,0.14);
     }
     .pill.primary:hover{
       background: var(--btnGradHover);
-      box-shadow: 0 0 0 1px rgba(161,15,27,0.20), 0 0 56px rgba(123,10,18,0.16);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.22), 0 0 56px rgba(224,22,42,0.16);
     }
 
     @media (max-width: 720px){
@@ -303,7 +310,7 @@
       border:1px solid rgba(255,255,255,0.10);
       background:
         radial-gradient(980px 560px at 14% 0%, rgba(255,255,255,0.06), transparent 62%),
-        radial-gradient(820px 560px at 88% 18%, rgba(123,10,18,0.12), transparent 68%),
+        radial-gradient(820px 560px at 88% 18%, rgba(224,22,42,0.16), transparent 68%),
         rgba(0,0,0,0.22);
       box-shadow: var(--shadow);
       overflow:hidden;
@@ -321,12 +328,12 @@
       letter-spacing: 0.10em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.86);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.08), 0 0 28px rgba(123,10,18,0.05);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.10), 0 0 28px rgba(224,22,42,0.06);
     }
     .dot{
       width:7px;height:7px;border-radius:999px;
-      background: rgba(161,15,27,0.92);
-      box-shadow: 0 0 16px rgba(161,15,27,0.26), 0 0 30px rgba(123,10,18,0.14);
+      background: rgba(224,22,42,0.95);
+      box-shadow: 0 0 16px rgba(224,22,42,0.30), 0 0 30px rgba(224,22,42,0.16);
     }
 
     .headline{
@@ -337,7 +344,7 @@
       font-weight: 950;
       text-shadow:
         0 0 18px rgba(0,0,0,0.55),
-        0 0 38px rgba(123,10,18,0.08);
+        0 0 38px rgba(224,22,42,0.10);
     }
     .subhead{
       margin: 0;
@@ -358,7 +365,7 @@
       justify-content:center;
       padding:12px 16px;
       border-radius: 16px;
-      border:1px solid rgba(161,15,27,0.32);
+      border:1px solid rgba(224,22,42,0.34);
       background: var(--btnGrad);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -369,25 +376,24 @@
       user-select:none;
       white-space:nowrap;
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.10),
-        0 0 40px rgba(123,10,18,0.10);
+        0 0 0 1px rgba(224,22,42,0.12),
+        0 0 40px rgba(224,22,42,0.12);
     }
     .btn:hover{
       transform: translateY(-1px);
       background: var(--btnGradHover);
-      border-color: rgba(161,15,27,0.48);
+      border-color: rgba(224,22,42,0.52);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.16),
-        0 0 58px rgba(123,10,18,0.16);
+        0 0 0 1px rgba(224,22,42,0.18),
+        0 0 58px rgba(224,22,42,0.16);
     }
     .btn:active{
       transform: translateY(0px);
       filter: brightness(1.02);
       box-shadow:
-        0 0 0 1px rgba(161,15,27,0.18),
-        0 0 32px rgba(123,10,18,0.14);
+        0 0 0 1px rgba(224,22,42,0.20),
+        0 0 32px rgba(224,22,42,0.14);
     }
-    .btn.primary{ }
 
     .pillgrid{
       margin-top: 22px;
@@ -401,7 +407,7 @@
       border:1px solid rgba(255,255,255,0.10);
       background: rgba(0,0,0,0.36);
       padding: 16px 16px;
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.05);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.06);
     }
     .pillcard b{ display:block; margin-bottom:6px; }
     .pillcard span{ color: rgba(222,222,222,0.90); font-size: 14px; line-height: 1.55; }
@@ -426,8 +432,8 @@
       background: linear-gradient(90deg,
         rgba(255,255,255,0.0),
         rgba(255,255,255,0.14),
-        rgba(123,10,18,0.22),
-        rgba(161,15,27,0.16),
+        rgba(224,22,42,0.26),
+        rgba(224,22,42,0.18),
         rgba(255,255,255,0.0));
       opacity:0.95;
     }
@@ -450,7 +456,7 @@
       border-radius: var(--r1);
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(0,0,0,0.36);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.05);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.06);
     }
     .feat b{ display:block; margin-bottom:6px; }
     .feat span{ color: rgba(222,222,222,0.90); font-size: 14px; line-height: 1.55; }
@@ -503,7 +509,7 @@
       border-radius: var(--r1);
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(0,0,0,0.36);
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.05);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.06);
     }
     .don b{ display:block; margin-bottom:6px; }
     .don span{ color: rgba(222,222,222,0.90); font-size: 14px; line-height: 1.55; }
@@ -511,37 +517,66 @@
     .don .btn{ width:100%; }
 
     /* -----------------------
-      Intro Video Overlay (auto-skip 9s)
+      ✅ Intro Video Overlay (adaptive + mobile-safe)
+      Fixes:
+      - uses dynamic viewport units (dvh/svh) to avoid iOS address bar crop
+      - centers video correctly with object-fit + object-position
+      - prevents "cut off" feeling by using contain on small screens
     ------------------------ */
     .intro{
       position:fixed; inset:0; z-index:999;
       display:flex; align-items:stretch; justify-content:center;
       background:#000;
+      /* safe-area padding for iPhone notches */
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      height: 100vh;
+      width: 100vw;
     }
+    @supports (height: 100dvh){
+      .intro{ height: 100dvh; }
+    }
+    @supports (height: 100svh){
+      .intro{ height: 100svh; }
+    }
+
     .intro video{
       width:100%;
       height:100%;
-      object-fit:cover;
       display:block;
+      object-fit: cover;
+      object-position: center center;
       filter: contrast(1.04) saturate(1.06);
+      background:#000;
     }
+
+    /* ✅ On phones, prioritize seeing the full logo/title in the video (less crop) */
+    @media (max-width: 640px){
+      .intro video{
+        object-fit: contain; /* shows entire frame, no cut-off */
+      }
+    }
+
     .intro::after{
       content:"";
       position:absolute; inset:0;
       background:
-        radial-gradient(900px 520px at 50% 55%, rgba(123,10,18,0.10), transparent 72%),
-        linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.84));
+        radial-gradient(900px 520px at 50% 55%, rgba(224,22,42,0.14), transparent 72%),
+        linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.86));
       pointer-events:none;
     }
+
     .intro-ui{
       position:absolute;
-      left:18px; right:18px; bottom:18px;
+      left:18px; right:18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
       display:flex; gap:10px; flex-wrap:wrap;
       justify-content:space-between; align-items:center;
       max-width: var(--max);
       margin: 0 auto;
       width: calc(100% - 36px);
+      z-index: 2;
     }
+
     .intro-chip{
       display:inline-flex; align-items:center; gap:10px;
       padding:10px 12px;
@@ -552,7 +587,7 @@
       -webkit-backdrop-filter: blur(10px);
       color: rgba(255,255,255,0.92);
       font-size:13px;
-      box-shadow: 0 0 0 1px rgba(123,10,18,0.08), 0 0 34px rgba(123,10,18,0.06);
+      box-shadow: 0 0 0 1px rgba(224,22,42,0.10), 0 0 34px rgba(224,22,42,0.08);
     }
     .intro-actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .hidden{ display:none !important; }
@@ -771,7 +806,7 @@
               <img src="/static/console_hero.png" alt="ZOTHEOS console screenshot"
                 onerror="this.style.display='none'; this.parentElement.querySelector('.cap').innerHTML='Upload <span style=&quot;font-family:var(--mono)&quot;>/static/console_hero.png</span> to show the console here.';">
               <div class="cap">
-                <span style="font-family:var(--mono)"</span>
+                <span style="font-family:var(--mono)">/static/console_hero.png</span>
               </div>
             </div>
           </div>
@@ -841,6 +876,17 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // ✅ Mobile-safe intro sizing: sets a CSS var to the current innerHeight
+    // This prevents iOS Safari address-bar resizing from cropping the video.
+    (function(){
+      function setVH(){
+        document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+      }
+      setVH();
+      window.addEventListener('resize', setVH, { passive: true });
+      window.addEventListener('orientationchange', setVH, { passive: true });
+    })();
+
     // Intro overlay controls:
     // - auto-skip at 9 seconds
     // - user can Pause/Play and Skip
@@ -886,6 +932,7 @@
         v.play().catch(()=>{});
       });
 
+      // ✅ If autoplay is blocked on some devices, show intro anyway and allow skip
       v.play().catch(()=>{});
     })();
   </script>
