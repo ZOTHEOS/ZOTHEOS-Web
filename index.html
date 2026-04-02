@@ -5,630 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
-  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system built to keep knowledge reliable, private, and human-centered." />
+  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system. Clear knowledge, private by default, built independently." />
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta property="og:description" content="Clear knowledge. Private by default. Built independently." />
- 
+  <meta property="og:description" content="Three AI perspectives. One grounded answer. No surveillance. No manipulation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
- 
   <style>
     :root {
-      --bg: #030303;
-      --surface: #0a0a0a;
-      --surface2: #111111;
-      --text: #f0ede8;
-      --text2: #b8b3aa;
-      --text3: #7a756d;
-      --red: #c41425;
-      --red-bright: #e8192e;
-      --red-glow: rgba(200, 20, 40, 0.35);
-      --red-deep: #2a0508;
-      --gold: #d4a853;
-      --serif: 'Instrument Serif', Georgia, serif;
-      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-out: cubic-bezier(0, 0, 0.2, 1);
+      --bg:#030303;--surface:rgba(8,8,12,0.75);--surface2:rgba(255,255,255,0.02);
+      --text:#f0ede8;--text2:#b8b3aa;--text3:#7a756d;
+      --red:#c41425;--red-bright:#e8192e;--red-glow:rgba(200,20,40,0.35);
+      --serif:'Instrument Serif',Georgia,serif;
+      --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+      --mono:'JetBrains Mono',monospace;
+      --ease:cubic-bezier(0.16,1,0.3,1);
+      --glass-bg:rgba(8,8,12,0.75);--glass-border:rgba(255,255,255,0.06);--glass-blur:blur(24px);
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{font-family:var(--sans);color:var(--text);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    ::selection{background:rgba(200,20,40,0.3);color:#fff}
  
-    * { box-sizing: border-box; margin: 0; padding: 0; }
- 
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
- 
-    body {
-      font-family: var(--sans);
-      color: var(--text);
-      background: var(--bg);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
- 
-    a { color: inherit; text-decoration: none; }
- 
-    ::selection {
-      background: rgba(200, 20, 40, 0.3);
-      color: #fff;
-    }
- 
-    /* ============================================
-       INTRO OVERLAY
-    ============================================ */
-    .intro-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: #000;
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.8s var(--ease), visibility 0.8s;
-    }
-    .intro-overlay.dismissed {
-      opacity: 0; visibility: hidden; pointer-events: none;
-    }
-    .intro-overlay video {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    @media (max-width: 640px) {
-      .intro-overlay video { object-fit: contain; }
-    }
-    .intro-overlay::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7));
-      pointer-events: none;
-    }
-    .intro-controls {
-      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 12px; z-index: 2;
-    }
-    .intro-controls button {
-      padding: 10px 20px; border-radius: 100px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.9);
-      font-family: var(--sans); font-size: 13px;
-      cursor: pointer; backdrop-filter: blur(12px);
-      transition: all 0.2s;
-    }
-    .intro-controls button:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,255,255,0.25);
-    }
- 
-    /* ============================================
-       AMBIENT BACKGROUND
-    ============================================ */
-    .ambient {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      overflow: hidden;
-    }
-    .ambient-orb {
-      position: absolute; border-radius: 50%;
-      filter: blur(120px);
-      animation: float 20s ease-in-out infinite alternate;
-    }
-    .ambient-orb:nth-child(1) {
-      width: 800px; height: 800px; top: -15%; left: -10%;
-      background: radial-gradient(circle, rgba(200,20,40,0.08), transparent 70%);
-    }
-    .ambient-orb:nth-child(2) {
-      width: 600px; height: 600px; top: 30%; right: -15%;
-      background: radial-gradient(circle, rgba(255,255,255,0.03), transparent 70%);
-      animation-delay: -7s; animation-duration: 25s;
-    }
-    .ambient-orb:nth-child(3) {
-      width: 900px; height: 900px; bottom: -20%; left: 30%;
-      background: radial-gradient(circle, rgba(200,20,40,0.05), transparent 70%);
-      animation-delay: -13s; animation-duration: 30s;
-    }
-    @keyframes float {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(40px, -30px) scale(1.05); }
+    /* === AURORA BACKGROUND === */
+    .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:visible}
+    .aurora-orb{position:absolute;border-radius:50%;filter:blur(250px);animation:auroraFloat 50s ease-in-out infinite alternate}
+    .aurora-orb:nth-child(1){width:80vw;height:70vh;top:-10%;left:-20%;background:rgba(200,30,50,0.16);animation-duration:55s}
+    .aurora-orb:nth-child(2){width:70vw;height:60vh;top:10%;right:-25%;background:rgba(0,50,120,0.20);animation-delay:-15s;animation-duration:60s}
+    .aurora-orb:nth-child(3){width:60vw;height:80vh;bottom:-20%;left:20%;background:rgba(0,160,160,0.14);animation-delay:-25s;animation-duration:50s}
+    .aurora-orb:nth-child(4){width:50vw;height:50vh;top:40%;right:10%;background:rgba(200,130,50,0.08);animation-delay:-35s;animation-duration:65s}
+    @keyframes auroraFloat{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}100%{transform:translate(-20px,30px) scale(0.97)}}
+    @media(max-width:1024px){
+      .aurora-orb{display:none}
+      .aurora{background:radial-gradient(ellipse 80% 50% at 20% 20%,rgba(0,50,120,0.25),transparent),radial-gradient(ellipse 60% 80% at 80% 30%,rgba(0,160,160,0.18),transparent),radial-gradient(ellipse 70% 60% at 50% 70%,rgba(200,30,50,0.20),transparent),radial-gradient(ellipse 50% 40% at 30% 90%,rgba(200,130,50,0.10),transparent);animation:auroraShift 30s ease-in-out infinite alternate}
+      @keyframes auroraShift{0%{background-position:0% 0%,100% 0%,50% 100%,0% 100%}100%{background-position:100% 100%,0% 100%,50% 0%,100% 0%}}
     }
  
     /* grain */
-    .grain {
-      position: fixed; inset: 0; z-index: 9998; pointer-events: none;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-    }
+    .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat}
  
-    /* ============================================
-       HEADER
-    ============================================ */
-    header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0 32px;
-      transition: background 0.4s, backdrop-filter 0.4s;
-    }
-    header.scrolled {
-      background: rgba(3,3,3,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .header-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      height: 72px;
-    }
-    .header-left { justify-self: start; }
-    .header-left img {
-      height: 40px; width: 40px; border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 5px;
-      filter: drop-shadow(0 0 16px rgba(200,20,40,0.15));
-    }
-    .header-center { justify-self: center; }
-    .header-center img {
-      height: 38px; width: auto;
-      filter: drop-shadow(0 0 24px rgba(200,20,40,0.18));
-    }
-    .header-nav {
-      justify-self: end;
-      display: flex; align-items: center; gap: 6px;
-    }
-    .header-nav a {
-      padding: 8px 14px; border-radius: 100px;
-      font-size: 13px; font-weight: 500;
-      color: var(--text2);
-      transition: color 0.2s, background 0.2s;
-    }
-    .header-nav a:hover { color: var(--text); background: rgba(255,255,255,0.04); }
-    .header-nav .nav-cta {
-      color: #fff;
-      background: linear-gradient(135deg, var(--red), #8a0e1a);
-      border: 1px solid rgba(200,20,40,0.35);
-      box-shadow: 0 0 28px rgba(200,20,40,0.12);
-      transition: all 0.25s var(--ease);
-    }
-    .header-nav .nav-cta:hover {
-      box-shadow: 0 0 44px rgba(200,20,40,0.22);
-      transform: translateY(-1px);
-    }
-    @media (max-width: 720px) {
-      .header-inner { grid-template-columns: auto 1fr auto; height: 64px; }
-      .header-center { justify-self: center; }
-      .header-nav a:not(.nav-cta) { display: none; }
-      .header-left img { height: 34px; width: 34px; }
-      .header-center img { height: 30px; }
-    }
+    /* === PRISMATIC LINE === */
+    .prismatic-line{height:2px;border:none;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite}
+    @keyframes prismaticShift{0%{background-position:0% 0}100%{background-position:300% 0}}
  
-    /* ============================================
-       SCROLL REVEAL SYSTEM
-    ============================================ */
-    .reveal {
-      opacity: 0; transform: translateY(40px);
-      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
-    }
-    .reveal.visible {
-      opacity: 1; transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    /* === GLASS PANELS === */
+    .glass{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;position:relative}
+    .glass::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.8}
  
-    /* ============================================
-       HERO
-    ============================================ */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 120px 32px 80px;
-      position: relative;
-    }
-    .hero-inner {
-      max-width: 1200px; margin: 0 auto; width: 100%;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 8px 16px; border-radius: 100px;
-      border: 1px solid rgba(200,20,40,0.25);
-      background: rgba(200,20,40,0.06);
-      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--text2); margin-bottom: 32px;
-    }
-    .hero-eyebrow .pulse {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--red-bright);
-      box-shadow: 0 0 12px var(--red-glow);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
-    }
+    /* === HEADER === */
+    header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;transition:background 0.4s,backdrop-filter 0.4s}
+    header.scrolled{background:rgba(3,3,3,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.05)}
+    .header-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
+    .header-left{justify-self:start}
+    .header-left img{height:40px;width:auto;object-fit:contain;filter:drop-shadow(0 0 12px rgba(200,20,40,0.3)) drop-shadow(0 0 24px rgba(200,20,40,0.15));animation:iconBreathe 3s ease-in-out infinite}
+    @keyframes iconBreathe{0%,100%{opacity:0.9;transform:scale(1)}50%{opacity:1;transform:scale(1.03)}}
+    .header-center{justify-self:center}
+    .header-center img{height:38px;width:auto;filter:drop-shadow(0 0 20px rgba(200,20,40,0.15))}
+    .header-nav{justify-self:end;display:flex;align-items:center;gap:6px}
+    .header-nav a{padding:8px 14px;border-radius:100px;font-size:13px;font-weight:500;color:var(--text2);transition:all 0.2s}
+    .header-nav a:hover{color:var(--text);background:rgba(255,255,255,0.04)}
+    .nav-cta{color:#fff!important;background:linear-gradient(135deg,var(--red),#8a0e1a)!important;border:1px solid rgba(200,20,40,0.35);box-shadow:0 0 28px rgba(200,20,40,0.12);transition:all 0.25s var(--ease)!important}
+    .nav-cta:hover{box-shadow:0 0 44px rgba(200,20,40,0.25)!important;transform:translateY(-1px)}
+    @media(max-width:720px){.header-inner{height:64px}.header-nav a:not(.nav-cta){display:none}.header-left img{height:32px}.header-center img{height:28px}}
  
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(48px, 8vw, 96px);
-      line-height: 0.95;
-      letter-spacing: -0.01em;
-      word-spacing: 0.05em;
-      font-weight: 400;
-      margin-bottom: 28px;
-      max-width: 900px;
-    }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--red-bright);
-      text-shadow: 0 0 60px var(--red-glow);
-    }
-    .hero-sub {
-      font-size: 18px; line-height: 1.7;
-      color: var(--text2);
-      max-width: 560px;
-      margin-bottom: 40px;
-    }
-    .hero-actions {
-      display: flex; gap: 14px; flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; border-radius: 14px;
-      background: linear-gradient(135deg, var(--red), #8a0e1a);
-      border: 1px solid rgba(200,20,40,0.4);
-      color: #fff; font-size: 15px; font-weight: 500;
-      font-family: var(--sans);
-      cursor: pointer;
-      box-shadow: 0 4px 40px rgba(200,20,40,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
-      transition: all 0.25s var(--ease);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 60px rgba(200,20,40,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text); font-size: 15px; font-weight: 500;
-      font-family: var(--sans);
-      cursor: pointer;
-      transition: all 0.25s var(--ease);
-    }
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.18);
-      transform: translateY(-2px);
-    }
+    /* === SCROLL REVEAL === */
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity 0.85s var(--ease),transform 0.85s var(--ease)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-d1{transition-delay:0.1s}.reveal-d2{transition-delay:0.2s}.reveal-d3{transition-delay:0.3s}.reveal-d4{transition-delay:0.4s}
  
-    /* hero stats strip */
-    .hero-stats {
-      display: flex; gap: 48px; margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .hero-stat .num {
-      font-family: var(--mono); font-size: 28px;
-      color: var(--red-bright);
-      text-shadow: 0 0 30px var(--red-glow);
-    }
-    .hero-stat .label {
-      font-size: 13px; color: var(--text3);
-      margin-top: 4px;
-    }
-    @media (max-width: 640px) {
-      .hero { padding: 100px 20px 60px; }
-      .hero-stats { gap: 28px; flex-wrap: wrap; }
-    }
+    /* === INTRO === */
+    .intro-overlay{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity 1s var(--ease),visibility 1s}
+    .intro-overlay.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+    .intro-overlay video{width:100%;height:100%;object-fit:cover}
+    @media(max-width:640px){.intro-overlay video{object-fit:contain}}
+    .intro-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.7));pointer-events:none}
+    .intro-controls{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:2}
+    .intro-controls button{padding:12px 24px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.9);font-family:var(--sans);font-size:14px;cursor:pointer;backdrop-filter:blur(16px);transition:all 0.25s}
+    .intro-controls button:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25)}
+    .skip-btn{background:linear-gradient(135deg,var(--red),#8a0e1a)!important;border-color:rgba(200,20,40,0.4)!important;box-shadow:0 0 40px rgba(200,20,40,0.2)}
  
-    /* ============================================
-       SECTION SHARED
-    ============================================ */
-    section { padding: 100px 32px; }
-    @media (max-width: 640px) { section { padding: 64px 20px; } }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-label {
-      font-family: var(--mono); font-size: 11px;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 16px;
-    }
-    .section-title {
-      font-family: var(--serif); font-size: clamp(32px, 5vw, 56px);
-      line-height: 1.05; letter-spacing: -0.005em;
-      word-spacing: 0.04em;
-      font-weight: 400; margin-bottom: 20px;
-      max-width: 700px;
-    }
-    .section-desc {
-      font-size: 17px; line-height: 1.75; color: var(--text2);
-      max-width: 600px; margin-bottom: 48px;
-    }
+    /* === HERO === */
+    .hero{min-height:100vh;display:flex;align-items:center;padding:120px 32px 80px;position:relative;z-index:1}
+    .hero-inner{max-width:1200px;margin:0 auto;width:100%}
+    .hero-icon{width:auto;height:80px;object-fit:contain;display:block;margin-bottom:28px;filter:drop-shadow(0 0 16px rgba(200,20,40,0.3)) drop-shadow(0 0 32px rgba(200,20,40,0.15));animation:iconBreathe 3s ease-in-out infinite}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;border:1px solid rgba(200,20,40,0.2);background:rgba(200,20,40,0.04);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text2);margin-bottom:28px}
+    .pulse{width:8px;height:8px;border-radius:50%;background:var(--red-bright);box-shadow:0 0 14px var(--red-glow);animation:pulse 2.2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+    .hero h1{font-family:var(--serif);font-size:clamp(46px,7.5vw,92px);line-height:0.96;letter-spacing:-0.01em;word-spacing:0.05em;font-weight:400;margin-bottom:28px;max-width:880px}
+    .hero h1 em{font-style:italic;color:var(--red-bright);text-shadow:0 0 80px var(--red-glow)}
+    .hero-sub{font-size:18px;line-height:1.75;color:var(--text2);max-width:540px;margin-bottom:40px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:14px;background:linear-gradient(135deg,var(--red),#8a0e1a);border:1px solid rgba(200,20,40,0.4);color:#fff;font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;box-shadow:0 4px 40px rgba(200,20,40,0.18);transition:all 0.25s var(--ease);position:relative;overflow:hidden}
+    .btn-primary::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,0.08) 50%,transparent 60%);transform:translateX(-100%);transition:none}
+    .btn-primary:hover::after{transform:translateX(100%);transition:transform 0.6s ease}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 60px rgba(200,20,40,0.28)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:14px;background:var(--surface);border:1px solid var(--glass-border);color:var(--text);font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;backdrop-filter:var(--glass-blur);transition:all 0.25s var(--ease)}
+    .btn-ghost:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-2px)}
+    .hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:28px;position:relative}
+    .hero-stats::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.6}
+    .hero-stat .num{font-family:var(--mono);font-size:26px;color:var(--red-bright);text-shadow:0 0 30px var(--red-glow)}
+    .hero-stat .label{font-size:12px;color:var(--text3);margin-top:4px}
+    @media(max-width:640px){.hero{padding:100px 20px 60px}.hero-stats{gap:24px;flex-wrap:wrap}.hero-icon{height:60px}}
  
-    /* ============================================
-       MISSION (split layout)
-    ============================================ */
-    .mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-    }
-    .mission-quote {
-      font-family: var(--serif); font-size: 28px;
-      line-height: 1.4; font-style: italic;
-      color: var(--text);
-      padding-left: 24px;
-      border-left: 2px solid var(--red);
-      margin-top: 16px;
-    }
-    .mission-values {
-      display: flex; flex-direction: column; gap: 20px;
-    }
-    .value-item {
-      padding: 24px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(255,255,255,0.02);
-      transition: all 0.3s var(--ease);
-    }
-    .value-item:hover {
-      border-color: rgba(200,20,40,0.2);
-      background: rgba(200,20,40,0.03);
-      transform: translateX(4px);
-    }
-    .value-item strong {
-      display: block; margin-bottom: 6px;
-      font-size: 15px;
-    }
-    .value-item span {
-      font-size: 14px; color: var(--text2); line-height: 1.6;
-    }
-    @media (max-width: 860px) {
-      .mission-grid { grid-template-columns: 1fr; gap: 40px; }
-    }
+    /* === SECTIONS === */
+    section{padding:100px 32px;position:relative;z-index:1}
+    @media(max-width:640px){section{padding:60px 20px}}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+    .section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.06;letter-spacing:-0.01em;word-spacing:0.03em;font-weight:400;margin-bottom:20px;max-width:700px}
+    .section-desc{font-size:16px;line-height:1.75;color:var(--text2);max-width:580px;margin-bottom:48px}
  
-    /* ============================================
-       FEATURES (bento grid)
-    ============================================ */
-    .bento {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
-      gap: 16px;
-    }
-    .bento-card {
-      padding: 32px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: var(--surface);
-      position: relative; overflow: hidden;
-      transition: all 0.35s var(--ease);
-    }
-    .bento-card:hover {
-      border-color: rgba(255,255,255,0.1);
-      transform: translateY(-2px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-    .bento-card.span-2 { grid-column: span 2; }
-    .bento-card .card-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(200,20,40,0.08);
-      border: 1px solid rgba(200,20,40,0.15);
-      margin-bottom: 20px; font-size: 20px;
-    }
-    .bento-card h3 {
-      font-family: var(--serif); font-size: 22px;
-      font-weight: 400; margin-bottom: 10px;
-    }
-    .bento-card p {
-      font-size: 14px; color: var(--text2); line-height: 1.65;
-    }
-    .bento-card .card-glow {
-      position: absolute; top: -50%; right: -30%;
-      width: 300px; height: 300px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,20,40,0.06), transparent 70%);
-      pointer-events: none;
-    }
-    @media (max-width: 860px) {
-      .bento { grid-template-columns: 1fr; }
-      .bento-card.span-2 { grid-column: span 1; }
-    }
+    /* === MISSION === */
+    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+    .mission-quote{font-family:var(--serif);font-size:26px;line-height:1.4;font-style:italic;color:var(--text);padding-left:24px;border-left:2px solid var(--red);margin-top:20px}
+    .mission-values{display:flex;flex-direction:column;gap:14px}
+    .value-item{padding:22px;border-radius:14px;border:1px solid var(--glass-border);background:var(--surface2);transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+    .value-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform 0.3s var(--ease);transform-origin:bottom}
+    .value-item:hover{border-color:rgba(200,20,40,0.18);background:rgba(200,20,40,0.025);transform:translateX(4px)}
+    .value-item:hover::before{transform:scaleY(1)}
+    .value-item strong{display:block;margin-bottom:5px;font-size:15px}
+    .value-item span{font-size:14px;color:var(--text2);line-height:1.6}
+    @media(max-width:860px){.mission-grid{grid-template-columns:1fr;gap:36px}}
  
-    /* ============================================
-       CONSOLE DEMO
-    ============================================ */
-    .console-section {
-      background:
-        radial-gradient(800px at 50% 0%, rgba(200,20,40,0.06), transparent),
-        var(--bg);
-    }
-    .console-frame {
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: var(--surface);
-      overflow: hidden;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.6), 0 0 80px rgba(200,20,40,0.05);
-    }
-    .console-titlebar {
-      display: flex; align-items: center; gap: 8px;
-      padding: 14px 20px;
-      background: rgba(255,255,255,0.02);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .console-dot {
-      width: 12px; height: 12px; border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-    }
-    .console-dot:first-child { background: rgba(200,20,40,0.5); }
-    .console-titlebar span {
-      flex: 1; text-align: center;
-      font-family: var(--mono); font-size: 12px; color: var(--text3);
-    }
-    .console-body {
-      padding: 32px;
-      min-height: 400px;
-      position: relative;
-    }
-    .console-query {
-      font-family: var(--mono); font-size: 13px;
-      color: var(--text3); margin-bottom: 24px;
-    }
-    .console-query .prompt { color: var(--red-bright); }
-    .console-verdict {
-      padding: 24px;
-      border-radius: 14px;
-      border: 1px solid rgba(200,20,40,0.15);
-      background: rgba(200,20,40,0.03);
-      margin-bottom: 24px;
-    }
-    .console-verdict .verdict-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    .console-verdict .verdict-label {
-      font-family: var(--mono); font-size: 11px;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--red-bright);
-    }
-    .confidence-badge {
-      font-family: var(--mono); font-size: 13px;
-      padding: 4px 12px; border-radius: 100px;
-      background: rgba(200,20,40,0.12);
-      color: var(--red-bright);
-      border: 1px solid rgba(200,20,40,0.2);
-    }
-    .console-verdict p {
-      font-size: 14px; line-height: 1.7; color: var(--text);
-    }
-    .console-cores {
-      display: flex; gap: 12px; flex-wrap: wrap;
-    }
-    .core-tag {
-      padding: 8px 14px; border-radius: 10px;
-      font-family: var(--mono); font-size: 11px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.02);
-      color: var(--text2);
-    }
-    .core-tag .core-name { color: var(--text); font-weight: 500; }
-    .console-link {
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 32px;
-    }
+    /* === FEATURES BENTO === */
+    .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .bento-card{padding:30px;border-radius:18px;border:1px solid var(--glass-border);background:var(--surface);position:relative;overflow:hidden;transition:all 0.35s var(--ease);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
+    .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0}
+    .bento-card:hover::before{opacity:0.8}
+    .bento-card:hover{border-color:rgba(255,255,255,0.09);transform:translateY(-2px);box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+    .bento-card.span-2{grid-column:span 2}
+    .bento-card .card-icon{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(200,20,40,0.06);border:1px solid rgba(200,20,40,0.12);margin-bottom:18px;font-size:18px}
+    .bento-card h3{font-family:var(--serif);font-size:20px;font-weight:400;margin-bottom:8px}
+    .bento-card p{font-size:14px;color:var(--text2);line-height:1.65}
+    .bento-card .card-glow{position:absolute;top:-50%;right:-30%;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(200,20,40,0.05),transparent 70%);pointer-events:none}
+    @media(max-width:860px){.bento{grid-template-columns:1fr}.bento-card.span-2{grid-column:span 1}}
  
-    /* ============================================
-       SUPPORT
-    ============================================ */
-    .support-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .support-card {
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: var(--surface);
-      transition: all 0.3s var(--ease);
-    }
-    .support-card:hover {
-      border-color: rgba(200,20,40,0.2);
-      transform: translateY(-3px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .support-card h3 {
-      font-family: var(--serif); font-size: 20px;
-      margin-bottom: 8px;
-    }
-    .support-card p {
-      font-size: 14px; color: var(--text2);
-      line-height: 1.5; margin-bottom: 20px;
-    }
-    .support-card .btn-primary { width: 100%; justify-content: center; }
-    @media (max-width: 860px) {
-      .support-grid { grid-template-columns: 1fr; }
-    }
+    /* === CONSOLE DEMO === */
+    .console-section{background:radial-gradient(900px at 50% 0%,rgba(200,20,40,0.05),transparent)}
+    .console-frame{border-radius:18px;border:1px solid var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,0.5),0 0 80px rgba(200,20,40,0.04);position:relative}
+    .console-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite}
+    .console-titlebar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:rgba(255,255,255,0.015);border-bottom:1px solid rgba(255,255,255,0.05)}
+    .console-dot{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.08)}
+    .console-dot:first-child{background:rgba(200,20,40,0.45)}
+    .console-titlebar span{flex:1;text-align:center;font-family:var(--mono);font-size:12px;color:var(--text3)}
+    .console-body{padding:28px}
+    @media(max-width:640px){.console-body{padding:20px}}
+    .console-status{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;font-family:var(--mono);font-size:11px;color:var(--text3)}
+    .console-status .on{color:var(--red-bright)}
+    .console-query{font-family:var(--mono);font-size:13px;color:var(--text2);margin-bottom:22px;padding:14px 16px;border-radius:10px;background:rgba(200,20,40,0.06);border:1px solid rgba(200,20,40,0.1)}
+    .console-query .prompt{color:var(--red-bright);font-weight:500}
+    .console-verdict{padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.04);background:var(--surface2);margin-bottom:20px;position:relative}
+    .verdict-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .verdict-label{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3)}
+    .verdict-label img{height:28px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(200,20,40,0.3))}
+    .confidence-badge{font-family:var(--mono);font-size:13px;padding:4px 14px;border-radius:100px;background:rgba(200,20,40,0.1);color:var(--red-bright);border:1px solid rgba(200,20,40,0.18)}
+    .console-verdict p{font-size:14px;line-height:1.7;color:var(--text)}
+    .console-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .meta-tag{padding:7px 12px;border-radius:8px;font-family:var(--mono);font-size:11px;border:1px solid rgba(255,255,255,0.06);background:var(--surface2);color:var(--text3)}
+    .meta-tag .name{color:var(--text2);font-weight:500}
+    .console-footer-note{text-align:center;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:13px;color:var(--text3)}
+    .console-cta{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04)}
  
-    /* ============================================
-       FOOTER
-    ============================================ */
-    footer {
-      padding: 48px 32px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .footer-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; justify-content: space-between;
-      align-items: start; gap: 32px; flex-wrap: wrap;
-    }
-    .footer-brand {
-      font-family: var(--serif); font-size: 20px;
-      letter-spacing: 0.04em;
-    }
-    .footer-tagline {
-      font-size: 13px; color: var(--text3);
-      margin-top: 6px; line-height: 1.6;
-    }
-    .footer-founder {
-      font-size: 12px; color: var(--text3);
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .footer-founder strong {
-      color: var(--text2); font-weight: 500;
-    }
-    .footer-links {
-      display: flex; gap: 24px;
-      font-size: 13px; color: var(--text3);
-    }
-    .footer-links a { transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy {
-      font-size: 12px; color: var(--text3);
-      text-align: right;
-    }
-    @media (max-width: 640px) {
-      footer { padding: 32px 20px; }
-      .footer-inner { flex-direction: column; gap: 24px; }
-      .footer-copy { text-align: left; }
-    }
+    /* === SUPPORT === */
+    .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .support-card{padding:26px;border-radius:16px;border:1px solid var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+    .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0}
+    .support-card:hover::before{opacity:0.8}
+    .support-card:hover{border-color:rgba(200,20,40,0.2);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+    .support-card h3{font-family:var(--serif);font-size:19px;margin-bottom:8px}
+    .support-card p{font-size:14px;color:var(--text2);line-height:1.5;margin-bottom:18px}
+    .support-card .btn-primary{width:100%;justify-content:center;font-size:14px;padding:12px 20px}
+    @media(max-width:860px){.support-grid{grid-template-columns:1fr}}
  
-    /* horizontal rule */
-    .divider {
-      height: 1px; border: none; margin: 0;
-      background: linear-gradient(90deg,
-        transparent,
-        rgba(200,20,40,0.25) 30%,
-        rgba(255,255,255,0.08) 50%,
-        rgba(200,20,40,0.25) 70%,
-        transparent
-      );
-    }
+    /* === FOOTER === */
+    footer{padding:44px 32px;border-top:1px solid rgba(255,255,255,0.04);position:relative;z-index:1}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.5}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:start;gap:32px;flex-wrap:wrap}
+    .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:0.05em}
+    .footer-tagline{font-size:13px;color:var(--text3);margin-top:6px;line-height:1.6}
+    .footer-founder{font-size:12px;color:var(--text3);margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.04)}
+    .footer-founder strong{color:var(--text2);font-weight:500}
+    .footer-links{display:flex;gap:24px;font-size:13px;color:var(--text3)}
+    .footer-links a{transition:color 0.2s}
+    .footer-links a:hover{color:var(--text)}
+    .footer-copy{font-size:12px;color:var(--text3);text-align:right}
+    @media(max-width:640px){footer{padding:28px 20px}.footer-inner{flex-direction:column;gap:20px}.footer-copy{text-align:left}}
+ 
+    /* === DIVIDER === */
+    .divider{height:2px;border:none;margin:0;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.4}
   </style>
 </head>
- 
 <body>
  
-  <!-- GRAIN OVERLAY -->
   <div class="grain" aria-hidden="true"></div>
- 
-  <!-- AMBIENT -->
-  <div class="ambient" aria-hidden="true">
-    <div class="ambient-orb"></div>
-    <div class="ambient-orb"></div>
-    <div class="ambient-orb"></div>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb"></div><div class="aurora-orb"></div><div class="aurora-orb"></div><div class="aurora-orb"></div>
   </div>
  
-  <!-- INTRO VIDEO -->
+  <!-- INTRO -->
   <div id="introOverlay" class="intro-overlay">
     <video id="introVideo" autoplay muted playsinline preload="auto">
       <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
     </video>
     <div class="intro-controls">
       <button id="togglePlay">Pause</button>
-      <button id="skipIntro">Enter ZOTHEOS</button>
+      <button id="skipIntro" class="skip-btn">Enter ZOTHEOS →</button>
     </div>
   </div>
  
@@ -636,7 +218,7 @@
   <header id="header">
     <div class="header-inner">
       <a class="header-left" href="#top">
-        <img src="/static/favicon_blackBW.ico" alt="ZOTHEOS icon" />
+        <img src="/static/zotheos_icon.png" alt="ZOTHEOS" />
       </a>
       <a class="header-center" href="#top">
         <img src="/static/zotheos_logo.png" alt="ZOTHEOS" />
@@ -653,45 +235,35 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-inner">
-      <div class="hero-eyebrow reveal">
+      <img src="/static/zotheos_icon.png" alt="" class="hero-icon reveal" />
+ 
+      <div class="hero-eyebrow reveal reveal-d1">
         <span class="pulse"></span>
         <span>Offline-first&ensp;·&ensp;Private by default&ensp;·&ensp;Built independently</span>
       </div>
  
-      <h1 class="reveal reveal-delay-1">
+      <h1 class="reveal reveal-d2">
         Clear knowledge.<br/>
         No surveillance.<br/>
         No <em>manipulation.</em>
       </h1>
  
-      <p class="hero-sub reveal reveal-delay-2">
+      <p class="hero-sub reveal reveal-d3">
         ZOTHEOS helps people think clearly and act with confidence&mdash;without
         being tracked, nudged, or sold. Intelligence that works even when the
         internet doesn't.
       </p>
  
-      <div class="hero-actions reveal reveal-delay-3">
-        <a class="btn-primary" href="#support">Support the build &rarr;</a>
+      <div class="hero-actions reveal reveal-d3">
+        <a class="btn-primary" href="#support">Support the build →</a>
         <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the console →</a>
       </div>
  
-      <div class="hero-stats reveal reveal-delay-4">
-        <div class="hero-stat">
-          <div class="num">3</div>
-          <div class="label">Thinking cores</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">728</div>
-          <div class="label">Knowledge chunks</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">~9s</div>
-          <div class="label">Fused response</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">0</div>
-          <div class="label">Data collected</div>
-        </div>
+      <div class="hero-stats reveal reveal-d4">
+        <div class="hero-stat"><div class="num">3</div><div class="label">Thinking cores</div></div>
+        <div class="hero-stat"><div class="num">728+</div><div class="label">Knowledge chunks</div></div>
+        <div class="hero-stat"><div class="num">~9s</div><div class="label">Fused response</div></div>
+        <div class="hero-stat"><div class="num">0</div><div class="label">Data collected</div></div>
       </div>
     </div>
   </section>
@@ -704,34 +276,22 @@
       <div class="section-label reveal">01 / Mission</div>
       <div class="mission-grid">
         <div>
-          <h2 class="section-title reveal">The internet became a casino. This is the library.</h2>
-          <p class="section-desc reveal reveal-delay-1">
+          <h2 class="section-title reveal">The internet became a casino.<br/>This is the library.</h2>
+          <p class="section-desc reveal reveal-d1">
             Algorithms reward what keeps you scrolling, not what helps you understand.
-            ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and solve
-            problems without surveillance, manipulation, or paywalls shaping the outcome.
+            ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and
+            solve problems without surveillance, manipulation, or paywalls shaping the outcome.
           </p>
-          <div class="mission-quote reveal reveal-delay-2">
+          <div class="mission-quote reveal reveal-d2">
             "Keep knowledge accessible. Keep privacy intact. Keep the tool reliable
             even when the internet isn't."
           </div>
         </div>
         <div class="mission-values">
-          <div class="value-item reveal">
-            <strong>Private by default</strong>
-            <span>No accounts required. No data harvested as the price of "help."</span>
-          </div>
-          <div class="value-item reveal reveal-delay-1">
-            <strong>Built for real decisions</strong>
-            <span>Learning, planning, and problem-solving without noise or manipulation.</span>
-          </div>
-          <div class="value-item reveal reveal-delay-2">
-            <strong>Independent by design</strong>
-            <span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span>
-          </div>
-          <div class="value-item reveal reveal-delay-3">
-            <strong>Ethical guardrails</strong>
-            <span>Structural constraints, not just policy promises. The architecture enforces integrity.</span>
-          </div>
+          <div class="value-item reveal"><strong>Private by default</strong><span>No accounts required. No data harvested as the price of "help."</span></div>
+          <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
+          <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
+          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
         </div>
       </div>
     </div>
@@ -743,40 +303,14 @@
   <section id="features">
     <div class="section-inner">
       <div class="section-label reveal">02 / Architecture</div>
-      <h2 class="section-title reveal">Three minds. One grounded answer.</h2>
-      <p class="section-desc reveal reveal-delay-1">
-        Like a medical conference&mdash;multiple specialists consult, compare perspectives,
-        then deliver one careful recommendation. ZOTHEOS brings that logic to intelligence.
-      </p>
- 
+      <h2 class="section-title reveal">Three minds.<br/>One grounded answer.</h2>
+      <p class="section-desc reveal reveal-d1">Like a medical conference&mdash;multiple specialists consult, compare perspectives, then deliver one careful recommendation.</p>
       <div class="bento">
-        <div class="bento-card span-2 reveal">
-          <div class="card-glow"></div>
-          <div class="card-icon">&#9878;</div>
-          <h3>Fusion architecture</h3>
-          <p>Three local AI models&mdash;Analyst, Humanist, and Skeptic&mdash;each examine your query from a different angle. Their perspectives are scored, compared, and synthesized into a single verdict with transparent confidence scoring. You see where they agreed, where they clashed, and why.</p>
-        </div>
-        <div class="bento-card reveal reveal-delay-1">
-          <div class="card-icon">&#9041;</div>
-          <h3>Local-first</h3>
-          <p>Runs on your hardware. No cloud dependency. Your conversations, memory, and knowledge never leave your device unless you choose otherwise.</p>
-        </div>
-        <div class="bento-card reveal reveal-delay-1">
-          <div class="card-icon">&#9670;</div>
-          <h3>Evidence vault</h3>
-          <p>A curated local knowledge base with tiered sourcing&mdash;treaties, regulations, and peer-reviewed work ranked above opinion. Grounded answers, not hallucinations.</p>
-        </div>
-        <div class="bento-card reveal reveal-delay-2">
-          <div class="card-icon">&#10003;</div>
-          <h3>Bias detection</h3>
-          <p>Every response is scored for bias level, emotional charge, and reliability spread. Absolutist framing and loaded language get flagged automatically.</p>
-        </div>
-        <div class="bento-card span-2 reveal reveal-delay-2">
-          <div class="card-glow"></div>
-          <div class="card-icon">&#9733;</div>
-          <h3>Model transparency</h3>
-          <p>See exactly which model said what. GGUF files, quantization levels, inference parameters&mdash;everything disclosed. No black boxes. No hidden reasoning. Every claim attributed to the core that produced it, with cross-core agreement scores visible.</p>
-        </div>
+        <div class="bento-card span-2 reveal"><div class="card-glow"></div><div class="card-icon">⚖</div><h3>Fusion architecture</h3><p>Three local AI models&mdash;Analyst, Humanist, and Skeptic&mdash;each examine your query from a different angle. Their perspectives are scored, compared, and synthesized into a single verdict with transparent confidence scoring.</p></div>
+        <div class="bento-card reveal reveal-d1"><div class="card-icon">◉</div><h3>Local-first</h3><p>Runs on your hardware. No cloud dependency. Your conversations, memory, and knowledge never leave your device.</p></div>
+        <div class="bento-card reveal reveal-d1"><div class="card-icon">◆</div><h3>Evidence vault</h3><p>A curated local knowledge base with tiered sourcing&mdash;treaties, regulations, and peer-reviewed work ranked above opinion.</p></div>
+        <div class="bento-card reveal reveal-d2"><div class="card-icon">✓</div><h3>Bias detection</h3><p>Every response scored for bias level, emotional charge, and reliability. Absolutist framing and loaded language get flagged.</p></div>
+        <div class="bento-card span-2 reveal reveal-d2"><div class="card-glow"></div><div class="card-icon">★</div><h3>Model transparency</h3><p>See exactly which model said what. GGUF files, quantization levels, inference parameters&mdash;everything disclosed. No black boxes. Every claim attributed to the core that produced it.</p></div>
       </div>
     </div>
   </section>
@@ -787,52 +321,44 @@
   <section id="console" class="console-section">
     <div class="section-inner">
       <div class="section-label reveal">03 / Console</div>
-      <h2 class="section-title reveal">See them think.</h2>
-      <p class="section-desc reveal reveal-delay-1">
-        A live query through the ZOTHEOS fusion pipeline. Three AI models.
-        One synthesized verdict. Full transparency.
-      </p>
+      <h2 class="section-title reveal">See it think.</h2>
+      <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges.</p>
  
-      <div class="console-frame reveal reveal-delay-2">
+      <div class="console-frame reveal reveal-d2">
         <div class="console-titlebar">
-          <div class="console-dot"></div>
-          <div class="console-dot"></div>
-          <div class="console-dot"></div>
+          <div class="console-dot"></div><div class="console-dot"></div><div class="console-dot"></div>
           <span>ZOTHEOS Sovereign Core — Fusion Console</span>
         </div>
         <div class="console-body">
-          <div class="console-query">
-            <span class="prompt">&gt;</span> How can AI systems be designed to promote universal peace while protecting individual rights?
+          <div class="console-status">
+            <span>CORES: <span class="on">3</span></span>
+            <span>EVIDENCE: <span class="on">ON</span></span>
+            <span>OFFLINE: <span class="on">ON</span></span>
           </div>
- 
+          <div class="console-query"><span class="prompt">▶</span>&ensp;How can AI systems be designed to promote universal peace while protecting individual rights?</div>
           <div class="console-verdict">
             <div class="verdict-header">
-              <span class="verdict-label">Fused Verdict</span>
+              <span class="verdict-label"><img src="/static/zotheos_icon.png" alt="" /> FUSED ANSWER</span>
               <span class="confidence-badge">78 / 100</span>
             </div>
             <p>AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally&mdash;not as policy afterthoughts&mdash;with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals.</p>
           </div>
- 
-          <div class="console-cores">
-            <div class="core-tag"><span class="core-name">Analyst</span> &mdash; Mistral 7B</div>
-            <div class="core-tag"><span class="core-name">Humanist</span> &mdash; Gemma 7B</div>
-            <div class="core-tag"><span class="core-name">Skeptic</span> &mdash; Qwen 7B</div>
-            <div class="core-tag">Consensus: NUANCED &middot; Bias: 8/100 &middot; Reliability: 82/100 &middot; Runtime: 9.2s</div>
+          <div class="console-meta">
+            <div class="meta-tag"><span class="name">Analyst</span> — Mistral 7B</div>
+            <div class="meta-tag"><span class="name">Humanist</span> — Gemma 7B</div>
+            <div class="meta-tag"><span class="name">Skeptic</span> — Qwen 7B</div>
           </div>
- 
-          <div style="text-align:center; margin-top:24px; font-size:13px; color:var(--text3); padding-top:16px; border-top:1px solid rgba(255,255,255,0.04);">
-            Three perspectives. One synthesis. Every claim attributed.
+          <div class="console-meta">
+            <div class="meta-tag">Consensus: NUANCED</div>
+            <div class="meta-tag">Bias: 8/100</div>
+            <div class="meta-tag">Reliability: 82/100</div>
+            <div class="meta-tag">Runtime: 9.2s</div>
           </div>
- 
-          <div style="text-align:center; margin-top:20px;">
-            <a class="btn-primary" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener" id="consoleLiveLink">
-              Try the live console →
-            </a>
-            <div style="margin-top:12px; font-size:12px; color:var(--text3); line-height:1.5;">
-              Live beta — available when the server is online.<br/>
-              Protected by AEGIS. No data collected. Invite code required.
-            </div>
+          <div class="console-footer-note">Three perspectives. One synthesis. Every claim attributed.</div>
+          <div class="console-cta">
+            <a class="btn-primary" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the live console →</a>
           </div>
+          <div style="text-align:center;margin-top:10px;font-size:12px;color:var(--text3);">Live beta — available when the server is online. Protected by AEGIS.</div>
         </div>
       </div>
     </div>
@@ -844,28 +370,12 @@
   <section id="support">
     <div class="section-inner">
       <div class="section-label reveal">04 / Support</div>
-      <h2 class="section-title reveal">Fund the mission</h2>
-      <p class="section-desc reveal reveal-delay-1">
-        Support funds development time, testing, and releases&mdash;and keeps ZOTHEOS
-        permanently independent. No investors. No ads. Just the work.
-      </p>
- 
+      <h2 class="section-title reveal">Fund the mission.</h2>
+      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases&mdash;and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
       <div class="support-grid">
-        <div class="support-card reveal">
-          <h3>PayPal</h3>
-          <p>One-time support to keep the build moving.</p>
-          <a class="btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal</a>
-        </div>
-        <div class="support-card reveal reveal-delay-1">
-          <h3>Stripe</h3>
-          <p>Card-based support, processed securely.</p>
-          <a class="btn-primary" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe</a>
-        </div>
-        <div class="support-card reveal reveal-delay-2">
-          <h3>Gumroad</h3>
-          <p>Supporter packs and future early access.</p>
-          <a class="btn-primary" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad</a>
-        </div>
+        <div class="support-card reveal"><h3>PayPal</h3><p>One-time support to keep the build moving.</p><a class="btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal</a></div>
+        <div class="support-card reveal reveal-d1"><h3>Stripe</h3><p>Card-based support, processed securely.</p><a class="btn-primary" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe</a></div>
+        <div class="support-card reveal reveal-d2"><h3>Gumroad</h3><p>Supporter packs and future early access.</p><a class="btn-primary" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad</a></div>
       </div>
     </div>
   </section>
@@ -875,14 +385,8 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">ZOTHEOS</div>
-        <div class="footer-tagline">
-          Offline Ethical Intelligence<br/>
-          Private by default. Built independently.
-        </div>
-        <div class="footer-founder">
-          Founded by <strong>David Garcia</strong><br/>
-          United States Marine Corps Veteran
-        </div>
+        <div class="footer-tagline">Offline Ethical Intelligence<br/>Private by default. Built independently.</div>
+        <div class="footer-founder">Founded by <strong>David Garcia</strong><br/>United States Marine Corps Veteran</div>
       </div>
       <div class="footer-links">
         <a href="#mission">Mission</a>
@@ -890,63 +394,15 @@
         <a href="#console">Console</a>
         <a href="#support">Support</a>
       </div>
-      <div class="footer-copy">
-        &copy; <span id="yr"></span> ZOTHEOS<br/>
-        All rights reserved.
-      </div>
+      <div class="footer-copy">© <span id="yr"></span> ZOTHEOS<br/>All rights reserved.</div>
     </div>
   </footer>
  
   <script>
-    // Year
-    document.getElementById('yr').textContent = new Date().getFullYear();
- 
-    // Intro
-    (function(){
-      const overlay = document.getElementById('introOverlay');
-      const v = document.getElementById('introVideo');
-      const skip = document.getElementById('skipIntro');
-      const toggle = document.getElementById('togglePlay');
-      if(!overlay || !v) return;
- 
-      let dismissed = false;
-      function dismiss(){
-        if(dismissed) return; dismissed = true;
-        overlay.classList.add('dismissed');
-        try { v.pause(); } catch(e){}
-      }
- 
-      v.addEventListener('error', dismiss);
-      setTimeout(dismiss, 9000);
-      skip.addEventListener('click', dismiss);
-      toggle.addEventListener('click', function(){
-        if(v.paused){ v.play().catch(()=>{}); toggle.textContent='Pause'; }
-        else { v.pause(); toggle.textContent='Play'; }
-      });
-      v.play().catch(()=>{});
-    })();
- 
-    // Header scroll
-    (function(){
-      const h = document.getElementById('header');
-      window.addEventListener('scroll', function(){
-        h.classList.toggle('scrolled', window.scrollY > 40);
-      }, {passive:true});
-    })();
- 
-    // Scroll reveal
-    (function(){
-      const els = document.querySelectorAll('.reveal');
-      const obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){
-            e.target.classList.add('visible');
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      els.forEach(function(el){ obs.observe(el); });
-    })();
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    (function(){var o=document.getElementById('introOverlay'),v=document.getElementById('introVideo'),s=document.getElementById('skipIntro'),t=document.getElementById('togglePlay');if(!o||!v)return;var d=false;function dismiss(){if(d)return;d=true;o.classList.add('dismissed');try{v.pause()}catch(e){}}v.addEventListener('error',dismiss);setTimeout(dismiss,9000);s.addEventListener('click',dismiss);t.addEventListener('click',function(){if(v.paused){v.play().catch(function(){});t.textContent='Pause'}else{v.pause();t.textContent='Play'}});v.play().catch(function(){})})();
+    (function(){var h=document.getElementById('header');window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>40)},{passive:true})})();
+    (function(){var els=document.querySelectorAll('.reveal');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){obs.observe(el)})})();
   </script>
 </body>
 </html>
