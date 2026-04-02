@@ -88,7 +88,6 @@
     /* === HERO === */
     .hero{min-height:100vh;display:flex;align-items:center;padding:120px 32px 80px;position:relative;z-index:1}
     .hero-inner{max-width:1200px;margin:0 auto;width:100%}
-    .hero-icon{width:auto;height:80px;object-fit:contain;display:block;margin-bottom:28px;filter:drop-shadow(0 0 16px rgba(200,20,40,0.3)) drop-shadow(0 0 32px rgba(200,20,40,0.15));animation:iconBreathe 3s ease-in-out infinite}
     .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;border:1px solid rgba(200,20,40,0.2);background:rgba(200,20,40,0.04);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text2);margin-bottom:28px}
     .pulse{width:8px;height:8px;border-radius:50%;background:var(--red-bright);box-shadow:0 0 14px var(--red-glow);animation:pulse 2.2s ease-in-out infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
@@ -106,7 +105,7 @@
     .hero-stats::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.6}
     .hero-stat .num{font-family:var(--mono);font-size:26px;color:var(--red-bright);text-shadow:0 0 30px var(--red-glow)}
     .hero-stat .label{font-size:12px;color:var(--text3);margin-top:4px}
-    @media(max-width:640px){.hero{padding:100px 20px 60px}.hero-stats{gap:24px;flex-wrap:wrap}.hero-icon{height:60px}}
+    @media(max-width:640px){.hero{padding:100px 20px 60px}.hero-stats{gap:24px;flex-wrap:wrap}}
  
     /* === SECTIONS === */
     section{padding:100px 32px;position:relative;z-index:1}
@@ -235,8 +234,6 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-inner">
-      <img src="/static/zotheos_icon.png" alt="" class="hero-icon reveal" />
- 
       <div class="hero-eyebrow reveal reveal-d1">
         <span class="pulse"></span>
         <span>Offline-first&ensp;·&ensp;Private by default&ensp;·&ensp;Built independently</span>
