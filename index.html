@@ -1,405 +1,1124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>ZOTHEOS | Offline Ethical Intelligence</title>
-  <link rel="icon" type="image/x-icon" href="/static/favicon_blackBW.ico" />
-  <meta name="description" content="ZOTHEOS is an offline-first ethical intelligence system. Clear knowledge, private by default, built independently." />
-  <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta property="og:description" content="Three AI perspectives. One grounded answer. No surveillance. No manipulation." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:#030303;--surface:rgba(8,8,12,0.75);--surface2:rgba(255,255,255,0.02);
-      --text:#f0ede8;--text2:#b8b3aa;--text3:#7a756d;
-      --red:#c41425;--red-bright:#e8192e;--red-glow:rgba(200,20,40,0.35);
-      --serif:'Instrument Serif',Georgia,serif;
-      --sans:'DM Sans',system-ui,-apple-system,sans-serif;
-      --mono:'JetBrains Mono',monospace;
-      --ease:cubic-bezier(0.16,1,0.3,1);
-      --glass-bg:rgba(8,8,12,0.75);--glass-border:rgba(255,255,255,0.06);--glass-blur:blur(24px);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;background:var(--bg)}
-    body{font-family:var(--sans);color:var(--text);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    ::selection{background:rgba(200,20,40,0.3);color:#fff}
- 
-    /* === AURORA BACKGROUND === */
-    .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:visible}
-    .aurora-orb{position:absolute;border-radius:50%;filter:blur(250px);animation:auroraFloat 50s ease-in-out infinite alternate}
-    .aurora-orb:nth-child(1){width:80vw;height:70vh;top:-10%;left:-20%;background:rgba(200,30,50,0.16);animation-duration:55s}
-    .aurora-orb:nth-child(2){width:70vw;height:60vh;top:10%;right:-25%;background:rgba(0,50,120,0.20);animation-delay:-15s;animation-duration:60s}
-    .aurora-orb:nth-child(3){width:60vw;height:80vh;bottom:-20%;left:20%;background:rgba(0,160,160,0.14);animation-delay:-25s;animation-duration:50s}
-    .aurora-orb:nth-child(4){width:50vw;height:50vh;top:40%;right:10%;background:rgba(200,130,50,0.08);animation-delay:-35s;animation-duration:65s}
-    @keyframes auroraFloat{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}100%{transform:translate(-20px,30px) scale(0.97)}}
-    @media(max-width:1024px){
-      .aurora-orb{display:none}
-      .aurora{background:radial-gradient(ellipse 80% 50% at 20% 20%,rgba(0,50,120,0.25),transparent),radial-gradient(ellipse 60% 80% at 80% 30%,rgba(0,160,160,0.18),transparent),radial-gradient(ellipse 70% 60% at 50% 70%,rgba(200,30,50,0.20),transparent),radial-gradient(ellipse 50% 40% at 30% 90%,rgba(200,130,50,0.10),transparent);animation:auroraShift 30s ease-in-out infinite alternate}
-      @keyframes auroraShift{0%{background-position:0% 0%,100% 0%,50% 100%,0% 100%}100%{background-position:100% 100%,0% 100%,50% 0%,100% 0%}}
-    }
- 
-    /* grain */
-    .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat}
- 
-    /* === PRISMATIC LINE === */
-    .prismatic-line{height:2px;border:none;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite}
-    @keyframes prismaticShift{0%{background-position:0% 0}100%{background-position:300% 0}}
- 
-    /* === GLASS PANELS === */
-    .glass{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;position:relative}
-    .glass::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.8}
- 
-    /* === HEADER === */
-    header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;transition:background 0.4s,backdrop-filter 0.4s}
-    header.scrolled{background:rgba(3,3,3,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.05)}
-    .header-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
-    .header-left{justify-self:start}
-    .header-left img{height:40px;width:auto;object-fit:contain;filter:drop-shadow(0 0 12px rgba(200,20,40,0.3)) drop-shadow(0 0 24px rgba(200,20,40,0.15));animation:iconBreathe 3s ease-in-out infinite}
-    @keyframes iconBreathe{0%,100%{opacity:0.9;transform:scale(1)}50%{opacity:1;transform:scale(1.03)}}
-    .header-center{justify-self:center}
-    .header-center img{height:38px;width:auto;filter:drop-shadow(0 0 20px rgba(200,20,40,0.15))}
-    .header-nav{justify-self:end;display:flex;align-items:center;gap:6px}
-    .header-nav a{padding:8px 14px;border-radius:100px;font-size:13px;font-weight:500;color:var(--text2);transition:all 0.2s}
-    .header-nav a:hover{color:var(--text);background:rgba(255,255,255,0.04)}
-    .nav-cta{color:#fff!important;background:linear-gradient(135deg,var(--red),#8a0e1a)!important;border:1px solid rgba(200,20,40,0.35);box-shadow:0 0 28px rgba(200,20,40,0.12);transition:all 0.25s var(--ease)!important}
-    .nav-cta:hover{box-shadow:0 0 44px rgba(200,20,40,0.25)!important;transform:translateY(-1px)}
-    @media(max-width:720px){.header-inner{height:64px}.header-nav a:not(.nav-cta){display:none}.header-left img{height:32px}.header-center img{height:28px}}
- 
-    /* === SCROLL REVEAL === */
-    .reveal{opacity:0;transform:translateY(36px);transition:opacity 0.85s var(--ease),transform 0.85s var(--ease)}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .reveal-d1{transition-delay:0.1s}.reveal-d2{transition-delay:0.2s}.reveal-d3{transition-delay:0.3s}.reveal-d4{transition-delay:0.4s}
- 
-    /* === INTRO === */
-    .intro-overlay{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity 1s var(--ease),visibility 1s}
-    .intro-overlay.dismissed{opacity:0;visibility:hidden;pointer-events:none}
-    .intro-overlay video{width:100%;height:100%;object-fit:cover}
-    @media(max-width:640px){.intro-overlay video{object-fit:contain}}
-    .intro-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.7));pointer-events:none}
-    .intro-controls{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:2}
-    .intro-controls button{padding:12px 24px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.9);font-family:var(--sans);font-size:14px;cursor:pointer;backdrop-filter:blur(16px);transition:all 0.25s}
-    .intro-controls button:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25)}
-    .skip-btn{background:linear-gradient(135deg,var(--red),#8a0e1a)!important;border-color:rgba(200,20,40,0.4)!important;box-shadow:0 0 40px rgba(200,20,40,0.2)}
- 
-    /* === HERO === */
-    .hero{min-height:100vh;display:flex;align-items:center;padding:120px 32px 80px;position:relative;z-index:1}
-    .hero-inner{max-width:1200px;margin:0 auto;width:100%}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;border:1px solid rgba(200,20,40,0.2);background:rgba(200,20,40,0.04);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text2);margin-bottom:28px}
-    .pulse{width:8px;height:8px;border-radius:50%;background:var(--red-bright);box-shadow:0 0 14px var(--red-glow);animation:pulse 2.2s ease-in-out infinite}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
-    .hero h1{font-family:var(--serif);font-size:clamp(46px,7.5vw,92px);line-height:0.96;letter-spacing:-0.01em;word-spacing:0.05em;font-weight:400;margin-bottom:28px;max-width:880px}
-    .hero h1 em{font-style:italic;color:var(--red-bright);text-shadow:0 0 80px var(--red-glow)}
-    .hero-sub{font-size:18px;line-height:1.75;color:var(--text2);max-width:540px;margin-bottom:40px}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:14px;background:linear-gradient(135deg,var(--red),#8a0e1a);border:1px solid rgba(200,20,40,0.4);color:#fff;font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;box-shadow:0 4px 40px rgba(200,20,40,0.18);transition:all 0.25s var(--ease);position:relative;overflow:hidden}
-    .btn-primary::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,0.08) 50%,transparent 60%);transform:translateX(-100%);transition:none}
-    .btn-primary:hover::after{transform:translateX(100%);transition:transform 0.6s ease}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 60px rgba(200,20,40,0.28)}
-    .btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:14px;background:var(--surface);border:1px solid var(--glass-border);color:var(--text);font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;backdrop-filter:var(--glass-blur);transition:all 0.25s var(--ease)}
-    .btn-ghost:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-2px)}
-    .hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:28px;position:relative}
-    .hero-stats::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.6}
-    .hero-stat .num{font-family:var(--mono);font-size:26px;color:var(--red-bright);text-shadow:0 0 30px var(--red-glow)}
-    .hero-stat .label{font-size:12px;color:var(--text3);margin-top:4px}
-    @media(max-width:640px){.hero{padding:100px 20px 60px}.hero-stats{gap:24px;flex-wrap:wrap}}
- 
-    /* === SECTIONS === */
-    section{padding:100px 32px;position:relative;z-index:1}
-    @media(max-width:640px){section{padding:60px 20px}}
-    .section-inner{max-width:1200px;margin:0 auto}
-    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
-    .section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.06;letter-spacing:-0.01em;word-spacing:0.03em;font-weight:400;margin-bottom:20px;max-width:700px}
-    .section-desc{font-size:16px;line-height:1.75;color:var(--text2);max-width:580px;margin-bottom:48px}
- 
-    /* === MISSION === */
-    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-    .mission-quote{font-family:var(--serif);font-size:26px;line-height:1.4;font-style:italic;color:var(--text);padding-left:24px;border-left:2px solid var(--red);margin-top:20px}
-    .mission-values{display:flex;flex-direction:column;gap:14px}
-    .value-item{padding:22px;border-radius:14px;border:1px solid var(--glass-border);background:var(--surface2);transition:all 0.3s var(--ease);position:relative;overflow:hidden}
-    .value-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform 0.3s var(--ease);transform-origin:bottom}
-    .value-item:hover{border-color:rgba(200,20,40,0.18);background:rgba(200,20,40,0.025);transform:translateX(4px)}
-    .value-item:hover::before{transform:scaleY(1)}
-    .value-item strong{display:block;margin-bottom:5px;font-size:15px}
-    .value-item span{font-size:14px;color:var(--text2);line-height:1.6}
-    @media(max-width:860px){.mission-grid{grid-template-columns:1fr;gap:36px}}
- 
-    /* === FEATURES BENTO === */
-    .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .bento-card{padding:30px;border-radius:18px;border:1px solid var(--glass-border);background:var(--surface);position:relative;overflow:hidden;transition:all 0.35s var(--ease);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
-    .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0}
-    .bento-card:hover::before{opacity:0.8}
-    .bento-card:hover{border-color:rgba(255,255,255,0.09);transform:translateY(-2px);box-shadow:0 20px 60px rgba(0,0,0,0.35)}
-    .bento-card.span-2{grid-column:span 2}
-    .bento-card .card-icon{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(200,20,40,0.06);border:1px solid rgba(200,20,40,0.12);margin-bottom:18px;font-size:18px}
-    .bento-card h3{font-family:var(--serif);font-size:20px;font-weight:400;margin-bottom:8px}
-    .bento-card p{font-size:14px;color:var(--text2);line-height:1.65}
-    .bento-card .card-glow{position:absolute;top:-50%;right:-30%;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(200,20,40,0.05),transparent 70%);pointer-events:none}
-    @media(max-width:860px){.bento{grid-template-columns:1fr}.bento-card.span-2{grid-column:span 1}}
- 
-    /* === CONSOLE DEMO === */
-    .console-section{background:radial-gradient(900px at 50% 0%,rgba(200,20,40,0.05),transparent)}
-    .console-frame{border-radius:18px;border:1px solid var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,0.5),0 0 80px rgba(200,20,40,0.04);position:relative}
-    .console-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite}
-    .console-titlebar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:rgba(255,255,255,0.015);border-bottom:1px solid rgba(255,255,255,0.05)}
-    .console-dot{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.08)}
-    .console-dot:first-child{background:rgba(200,20,40,0.45)}
-    .console-titlebar span{flex:1;text-align:center;font-family:var(--mono);font-size:12px;color:var(--text3)}
-    .console-body{padding:28px}
-    @media(max-width:640px){.console-body{padding:20px}}
-    .console-status{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;font-family:var(--mono);font-size:11px;color:var(--text3)}
-    .console-status .on{color:var(--red-bright)}
-    .console-query{font-family:var(--mono);font-size:13px;color:var(--text2);margin-bottom:22px;padding:14px 16px;border-radius:10px;background:rgba(200,20,40,0.06);border:1px solid rgba(200,20,40,0.1)}
-    .console-query .prompt{color:var(--red-bright);font-weight:500}
-    .console-verdict{padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.04);background:var(--surface2);margin-bottom:20px;position:relative}
-    .verdict-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-    .verdict-label{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3)}
-    .verdict-label img{height:28px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(200,20,40,0.3))}
-    .confidence-badge{font-family:var(--mono);font-size:13px;padding:4px 14px;border-radius:100px;background:rgba(200,20,40,0.1);color:var(--red-bright);border:1px solid rgba(200,20,40,0.18)}
-    .console-verdict p{font-size:14px;line-height:1.7;color:var(--text)}
-    .console-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-    .meta-tag{padding:7px 12px;border-radius:8px;font-family:var(--mono);font-size:11px;border:1px solid rgba(255,255,255,0.06);background:var(--surface2);color:var(--text3)}
-    .meta-tag .name{color:var(--text2);font-weight:500}
-    .console-footer-note{text-align:center;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:13px;color:var(--text3)}
-    .console-cta{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04)}
- 
-    /* === SUPPORT === */
-    .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .support-card{padding:26px;border-radius:16px;border:1px solid var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);transition:all 0.3s var(--ease);position:relative;overflow:hidden}
-    .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0}
-    .support-card:hover::before{opacity:0.8}
-    .support-card:hover{border-color:rgba(200,20,40,0.2);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-    .support-card h3{font-family:var(--serif);font-size:19px;margin-bottom:8px}
-    .support-card p{font-size:14px;color:var(--text2);line-height:1.5;margin-bottom:18px}
-    .support-card .btn-primary{width:100%;justify-content:center;font-size:14px;padding:12px 20px}
-    @media(max-width:860px){.support-grid{grid-template-columns:1fr}}
- 
-    /* === FOOTER === */
-    footer{padding:44px 32px;border-top:1px solid rgba(255,255,255,0.04);position:relative;z-index:1}
-    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.5}
-    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:start;gap:32px;flex-wrap:wrap}
-    .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:0.05em}
-    .footer-tagline{font-size:13px;color:var(--text3);margin-top:6px;line-height:1.6}
-    .footer-founder{font-size:12px;color:var(--text3);margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.04)}
-    .footer-founder strong{color:var(--text2);font-weight:500}
-    .footer-links{display:flex;gap:24px;font-size:13px;color:var(--text3)}
-    .footer-links a{transition:color 0.2s}
-    .footer-links a:hover{color:var(--text)}
-    .footer-copy{font-size:12px;color:var(--text3);text-align:right}
-    @media(max-width:640px){footer{padding:28px 20px}.footer-inner{flex-direction:column;gap:20px}.footer-copy{text-align:left}}
- 
-    /* === DIVIDER === */
-    .divider{height:2px;border:none;margin:0;background:linear-gradient(90deg,var(--red),#4090cc,#00b4b4,var(--red));background-size:300% 100%;animation:prismaticShift 4s linear infinite;opacity:0.4}
-  </style>
-</head>
-<body>
- 
-  <div class="grain" aria-hidden="true"></div>
-  <div class="aurora" aria-hidden="true">
-    <div class="aurora-orb"></div><div class="aurora-orb"></div><div class="aurora-orb"></div><div class="aurora-orb"></div>
-  </div>
- 
-  <!-- INTRO -->
-  <div id="introOverlay" class="intro-overlay">
-    <video id="introVideo" autoplay muted playsinline preload="auto">
-      <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
-    </video>
-    <div class="intro-controls">
-      <button id="togglePlay">Pause</button>
-      <button id="skipIntro" class="skip-btn">Enter ZOTHEOS →</button>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+  viewport-fit=cover" />
+    <title>ZOTHEOS — Offline Ethical Intelligence</title>
+    <link rel="icon" type="image/x-icon"
+  href="/static/favicon_blackBW.ico" />
+    <meta name="description" content="Three local AI cores debate, then
+  synthesize one grounded answer. Offline-first. Privacy proven by
+  automated test, not by promise. Built independently." />
+    <meta property="og:title" content="ZOTHEOS — Offline Ethical
+  Intelligence" />
+    <meta property="og:description" content="Three perspectives. One
+  grounded answer. Privacy verified by runnable test." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zotheos.org" />
+    <meta name="theme-color" content="#060608" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:
+  ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700
+  &family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"
+  />
+    <style>
+      /* ============================================================
+         ZOTHEOS — Aztec Cosmos palette
+         Same six tokens as the actual product (cursor-cosmos.css).
+         Cinnabar = Humanist (blood, life, passion)
+         Jade     = Analyst  (greenstone, renewal, clarity)
+         Lapis    = Skeptic  (mineral blue, intellect, depth)
+         Obsidian = the void everything floats on
+         Sun-gold = the rare/earned accent
+         Codex-cream = manuscript prose
+      ============================================================ */
+      :root {
+        --obsidian:    #060608;
+        --bg:          #060608;
+        --surface:     rgba(14,14,20,0.78);
+        --surface2:    rgba(255,255,255,0.025);
+
+        --rgb-r:       #ef3b3b;
+        --rgb-g:       #1ec8a0;
+        --rgb-b:       #3a5fd4;
+        --sun-gold:    #e8b14d;
+        --codex-cream: #e8d8b8;
+
+        --rgb-r-rgb:   239,59,59;
+        --rgb-g-rgb:   30,200,160;
+        --rgb-b-rgb:   58,95,212;
+        --sun-gold-rgb:232,177,77;
+
+        --text:        #f0ede8;
+        --text2:       #b8b3aa;
+        --text3:       #7a756d;
+
+        --serif:       'Instrument Serif', Georgia, serif;
+        --sans:        'DM Sans', system-ui, -apple-system, sans-serif;
+        --mono:        'JetBrains Mono', ui-monospace, SFMono-Regular,
+  Menlo, monospace;
+
+        --ease:        cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-cosmos: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+        --glass-bg:    rgba(10,10,14,0.72);
+        --glass-border:rgba(255,255,255,0.06);
+        --glass-blur:  blur(24px);
+
+        /* Cosmos Aura — same shadow system as the real product. */
+        --aura-idle:
+          0 0 0 1px rgba(255,255,255,0.06),
+          0 0 18px rgba(var(--rgb-r-rgb),0.12),
+          0 0 18px rgba(var(--rgb-g-rgb),0.10),
+          0 0 18px rgba(var(--rgb-b-rgb),0.12);
+        --aura-hover:
+          0 0 0 1px rgba(255,255,255,0.20),
+          0 0 26px rgba(var(--rgb-r-rgb),0.24),
+          0 0 26px rgba(var(--rgb-g-rgb),0.20),
+          0 0 26px rgba(var(--rgb-b-rgb),0.26),
+          inset 0 1px 0 rgba(255,255,255,0.08);
+        --aura-active:
+          0 0 0 1px rgba(255,255,255,0.32),
+          0 0 32px rgba(var(--rgb-r-rgb),0.30),
+          0 0 32px rgba(var(--rgb-g-rgb),0.26),
+          0 0 32px rgba(var(--rgb-b-rgb),0.32),
+          inset 0 1px 0 rgba(255,255,255,0.10);
+      }
+
+      /* ================ Reset + base ================ */
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth;background:var(--bg)}
+      body{font-family:var(--sans);color:var(--text);background:var(--bg);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.55}
+      a{color:inherit;text-decoration:none}
+      ::selection{background:rgba(var(--rgb-r-rgb),0.34);color:#fff}
+      img{display:block;max-width:100%}
+      button{font-family:inherit}
+
+      /* ================ Cosmos backdrop ================
+         Three drifting cores (Cinnabar/Jade/Lapis) at distinct
+         depths — same identity as the gate. Plus subtle starfield
+         and slow-drifting hex texture for visual continuity.
+      ================ */
+      .cosmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflo
+  w:hidden}
+      .cosmos-core{position:absolute;border-radius:50%;filter:blur(110px);
+  opacity:0.45;will-change:transform}
+      .cosmos-core-h{width:62vw;height:62vh;background:radial-gradient(cir
+  cle,var(--rgb-r),transparent 60%);top:-12vh;left:-8vw;animation:driftH
+  40s ease-in-out infinite alternate}
+      .cosmos-core-a{width:55vw;height:55vh;background:radial-gradient(cir
+  cle,var(--rgb-g),transparent
+  60%);bottom:-10vh;right:-6vw;animation:driftA 46s ease-in-out infinite
+  alternate}
+      .cosmos-core-s{width:50vw;height:50vh;background:radial-gradient(cir
+  cle,var(--rgb-b),transparent 60%);top:38vh;left:46vw;animation:driftS
+  52s ease-in-out infinite alternate}
+      @keyframes driftH{0%{transform:translate(0,0)
+  scale(1)}100%{transform:translate(70px,40px) scale(1.06)}}
+      @keyframes driftA{0%{transform:translate(0,0)
+  scale(1)}100%{transform:translate(-60px,-50px) scale(1.04)}}
+      @keyframes driftS{0%{transform:translate(0,0)
+  scale(1)}100%{transform:translate(50px,-70px) scale(1.05)}}
+
+      /* Hex texture — vector pattern, 4K-crisp. */
+      .hex-texture{position:fixed;inset:-10vh -10vw;z-index:0;pointer-even
+  ts:none;background-image:url("data:image/svg+xml;utf8,%3Csvg
+  xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0
+  56 64'%3E%3Cpath d='M28 1L55 16.5V47.5L28 63L1 47.5V16.5Z' fill='none'
+  stroke='rgba(255,255,255,0.03)'
+  stroke-width='1'/%3E%3C/svg%3E");background-size:56px
+  64px;animation:hexDrift 90s linear infinite}
+      @keyframes hexDrift{from{transform:translate3d(0,0,0)}to{transform:t
+  ranslate3d(56px,64px,0)}}
+
+      /* Vignette darkener so text always wins contrast. */
+      .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;backg
+  round:radial-gradient(ellipse at center,transparent 0%,rgba(0,0,0,0.55)
+  100%)}
+
+      /* Grain. */
+      .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opaci
+  ty:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0
+  256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter
+  id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'
+  numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect
+  width='100%25' height='100%25'
+  filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat}
+
+      @media (prefers-reduced-motion: reduce){
+        .cosmos-core, .hex-texture { animation:none !important; }
+      }
+
+      /* ================ Prismatic line (RGB triplet) ================ */
+      .prismatic-line{height:2px;border:none;background:linear-gradient(90
+  deg,var(--rgb-r),var(--rgb-g),var(--rgb-b),var(--rgb-r));background-size
+  :300% 100%;animation:prismaticShift 4.5s linear infinite}
+      @keyframes prismaticShift{0%{background-position:0%
+  0}100%{background-position:300% 0}}
+
+      /* ================ Header ================ */
+      header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0
+  24px;transition:background 0.4s,backdrop-filter 0.4s,border-color 0.4s}
+      header.scrolled{background:rgba(6,6,8,0.86);backdrop-filter:blur(24p
+  x);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid
+  rgba(255,255,255,0.05)}
+      .header-inner{max-width:1200px;margin:0
+  auto;display:grid;grid-template-columns:1fr auto
+  1fr;align-items:center;height:72px}
+      .header-left{justify-self:start}
+      .header-left
+  img{height:40px;width:auto;object-fit:contain;filter:drop-shadow(0 0
+  14px rgba(var(--rgb-r-rgb),0.30)) drop-shadow(0 0 24px
+  rgba(var(--rgb-b-rgb),0.18));animation:iconBreathe 4s ease-in-out
+  infinite}
+      @keyframes
+  iconBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 14px
+  rgba(var(--rgb-r-rgb),0.30)) drop-shadow(0 0 24px rgba(var(--rgb-b-rgb),
+  0.18))}50%{transform:scale(1.04);filter:drop-shadow(0 0 18px
+  rgba(var(--rgb-g-rgb),0.32)) drop-shadow(0 0 28px
+  rgba(var(--rgb-r-rgb),0.22))}}
+      .header-center{justify-self:center}
+      .header-center img{height:36px;width:auto;filter:drop-shadow(0 0
+  18px rgba(var(--rgb-r-rgb),0.16))}
+
+  .header-nav{justify-self:end;display:flex;align-items:center;gap:6px}
+      .header-nav a{padding:8px 14px;border-radius:8px;font-size:13px;font
+  -weight:500;color:var(--text2);transition:all 0.2s}
+      .header-nav
+  a:hover{color:var(--text);background:rgba(255,255,255,0.04)}
+      @media(max-width:720px){.header-inner{height:64px}.header-nav
+  a:not(.nav-cta){display:none}.header-left img{height:32px}.header-center
+   img{height:28px}}
+
+      /* ================ Cosmos-aura button system ================
+         Same as the real product: black surface, breathing RGB
+         edge glow, lift on hover. Headline button on the page.
+      ================ */
+      .btn-cosmos,
+      .nav-cta {
+        display:inline-flex;align-items:center;gap:10px;
+        padding:13px 26px;
+        border-radius:8px;
+        background:linear-gradient(180deg,#0c0c14,#060608);
+        border:1px solid rgba(255,255,255,0.10);
+        color:#fff;
+        font-family:var(--sans);
+        font-size:14px;
+        font-weight:500;
+        letter-spacing:0.02em;
+        cursor:pointer;
+        box-shadow:var(--aura-idle);
+        transition:transform 160ms var(--ease-cosmos),
+                   box-shadow 280ms var(--ease-cosmos),
+                   border-color 200ms var(--ease-cosmos);
+        position:relative;
+        overflow:hidden;
+      }
+      .btn-cosmos:hover, .nav-cta:hover {
+        transform:translateY(-1px);
+        border-color:rgba(255,255,255,0.22);
+        box-shadow:var(--aura-hover);
+      }
+      .btn-cosmos:active, .nav-cta:active { transform:translateY(0);
+  box-shadow:var(--aura-active); }
+      .btn-cosmos:focus-visible, .nav-cta:focus-visible {
+        outline:none;
+        box-shadow:var(--aura-active);
+      }
+      .nav-cta { padding:8px 18px; font-size:13px; }
+
+
+  .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:13px
+  26px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px
+  solid var(--glass-border);color:var(--text);font-family:var(--sans);font
+  -size:14px;font-weight:500;cursor:pointer;backdrop-filter:var(--glass-bl
+  ur);transition:all 0.25s var(--ease-cosmos)}
+      .btn-ghost:hover{background:rgba(255,255,255,0.05);border-color:rgba
+  (255,255,255,0.16);transform:translateY(-1px)}
+
+      /* ================ Reveal-on-scroll ================ */
+      .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s
+   var(--ease),transform 0.8s var(--ease)}
+      .reveal.visible{opacity:1;transform:translateY(0)}
+      .reveal-d1{transition-delay:0.08s}.reveal-d2{transition-delay:0.16s}
+  .reveal-d3{transition-delay:0.24s}.reveal-d4{transition-delay:0.32s}
+
+      /* ================ Intro overlay (existing) ================ */
+      .intro-overlay{position:fixed;inset:0;z-index:9999;background:#000;d
+  isplay:flex;align-items:center;justify-content:center;transition:opacity
+   1s var(--ease),visibility 1s}
+      .intro-overlay.dismissed{opacity:0;visibility:hidden;pointer-events:
+  none}
+      .intro-overlay video{width:100%;height:100%;object-fit:cover}
+      @media(max-width:640px){.intro-overlay video{object-fit:contain}}
+      .intro-overlay::after{content:'';position:absolute;inset:0;backgroun
+  d:linear-gradient(180deg,transparent
+  40%,rgba(0,0,0,0.7));pointer-events:none}
+      .intro-controls{position:absolute;bottom:40px;left:50%;transform:tra
+  nslateX(-50%);display:flex;gap:12px;z-index:2}
+      .intro-controls button{padding:11px 22px;border-radius:8px;backgroun
+  d:linear-gradient(180deg,#0c0c14,#060608);border:1px solid rgba(255,255,
+  255,0.14);color:rgba(255,255,255,0.9);font-family:var(--sans);font-size:
+  13px;cursor:pointer;backdrop-filter:blur(16px);transition:all 0.25s
+  var(--ease-cosmos);box-shadow:var(--aura-idle)}
+      .intro-controls button:hover{border-color:rgba(255,255,255,0.3);box-
+  shadow:var(--aura-hover)}
+
+      /* ================ Hero ================ */
+      .hero{min-height:100vh;display:flex;align-items:center;padding:120px
+   32px 80px;position:relative;z-index:2}
+      .hero-inner{max-width:1200px;margin:0 auto;width:100%}
+      .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;paddin
+  g:7px 16px;border-radius:100px;border:1px solid
+  rgba(var(--rgb-r-rgb),0.22);background:rgba(var(--rgb-r-rgb),0.05);font-
+  family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:u
+  ppercase;color:rgba(255,200,200,0.85);margin-bottom:28px}
+      .pulse{width:7px;height:7px;border-radius:50%;background:var(--rgb-r
+  );box-shadow:0 0 14px rgba(var(--rgb-r-rgb),0.7);animation:pulse 2.2s
+  ease-in-out infinite}
+      @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.
+  4;transform:scale(0.75)}}
+
+      .hero h1{font-family:var(--serif);font-size:clamp(46px,7.5vw,92px);l
+  ine-height:0.96;letter-spacing:-0.01em;font-weight:400;margin-bottom:28p
+  x;max-width:920px}
+      .hero h1
+  em{font-style:italic;background:linear-gradient(135deg,#fff,var(--rgb-r)
+   50%,var(--rgb-b));-webkit-background-clip:text;background-clip:text;col
+  or:transparent;background-size:200% 200%;animation:heroEm 4.5s linear
+  infinite}
+      @keyframes heroEm{0%{background-position:0%
+  50%}100%{background-position:200% 50%}}
+      .hero-sub{font-size:18px;line-height:1.75;color:var(--codex-cream);o
+  pacity:0.78;max-width:560px;margin-bottom:40px}
+      .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+      .hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:28px;p
+  osition:relative}
+      .hero-stats::before{content:'';position:absolute;top:0;left:0;right:
+  0;height:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-g),
+  var(--rgb-b),var(--rgb-r));background-size:300%
+  100%;animation:prismaticShift 4.5s linear infinite;opacity:0.65}
+      .hero-stat .num{font-family:var(--mono);font-size:26px;font-weight:6
+  00;color:#fff;text-shadow:0 0 24px rgba(var(--rgb-g-rgb),0.35)}
+      .hero-stat .label{font-family:var(--mono);font-size:11px;letter-spac
+  ing:0.08em;text-transform:uppercase;color:var(--text3);margin-top:6px}
+      @media(max-width:640px){.hero{padding:100px 20px
+  60px}.hero-stats{gap:24px;flex-wrap:wrap}}
+
+      /* ================ Sections ================ */
+      section{padding:100px 32px;position:relative;z-index:2}
+      @media(max-width:640px){section{padding:60px 20px}}
+      .section-inner{max-width:1200px;margin:0 auto}
+      .section-label{font-family:var(--mono);font-size:11px;letter-spacing
+  :0.18em;text-transform:uppercase;color:var(--rgb-r);margin-bottom:16px}
+      .section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,5
+  4px);line-height:1.06;letter-spacing:-0.01em;font-weight:400;margin-bott
+  om:20px;max-width:760px}
+      .section-desc{font-size:16px;line-height:1.75;color:var(--codex-crea
+  m);opacity:0.78;max-width:600px;margin-bottom:48px}
+
+      /* ================ Mission ================ */
+      .mission-grid{display:grid;grid-template-columns:1fr
+  1fr;gap:56px;align-items:start}
+
+  .mission-quote{font-family:var(--serif);font-size:24px;line-height:1.45;
+  font-style:italic;color:var(--text);padding-left:22px;border-left:2px
+  solid var(--rgb-r);margin-top:24px}
+      .mission-values{display:flex;flex-direction:column;gap:12px}
+      .value-item{padding:22px;border-radius:10px;border:1px solid
+  var(--glass-border);background:var(--surface2);transition:all 0.3s
+  var(--ease);position:relative;overflow:hidden}
+      .value-item::before{content:'';position:absolute;left:0;top:0;bottom
+  :0;width:2px;background:var(--rgb-r);transform:scaleY(0);transition:tran
+  sform 0.3s var(--ease);transform-origin:bottom}
+      .value-item:hover{border-color:rgba(var(--rgb-r-rgb),0.22);backgroun
+  d:rgba(var(--rgb-r-rgb),0.03);transform:translateX(4px)}
+      .value-item:hover::before{transform:scaleY(1)}
+      .value-item
+  strong{display:block;margin-bottom:5px;font-size:15px;color:#fff}
+      .value-item span{font-size:14px;color:var(--text2);line-height:1.6}
+      @media(max-width:860px){.mission-grid{grid-template-columns:1fr;gap:
+  36px}}
+
+      /* ================ Features (Bento) ================ */
+      .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+      .bento-card{padding:30px;border-radius:14px;border:1px solid
+  var(--glass-border);background:var(--surface);position:relative;overflow
+  :hidden;transition:all 0.35s var(--ease);backdrop-filter:var(--glass-blu
+  r);-webkit-backdrop-filter:var(--glass-blur)}
+      .bento-card::before{content:'';position:absolute;top:0;left:0;right:
+  0;height:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-g),
+  var(--rgb-b),var(--rgb-r));background-size:300%
+  100%;animation:prismaticShift 4.5s linear
+  infinite;opacity:0;transition:opacity 0.3s}
+      .bento-card:hover::before{opacity:0.85}
+      .bento-card:hover{border-color:rgba(255,255,255,0.10);transform:tran
+  slateY(-2px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+      .bento-card.span-2{grid-column:span 2}
+      .bento-card .card-icon{width:42px;height:42px;border-radius:10px;dis
+  play:flex;align-items:center;justify-content:center;background:rgba(var(
+  --rgb-r-rgb),0.06);border:1px solid
+  rgba(var(--rgb-r-rgb),0.12);margin-bottom:18px;font-size:18px}
+      .bento-card.core-a .card-icon{background:rgba(var(--rgb-g-rgb),0.08)
+  ;border-color:rgba(var(--rgb-g-rgb),0.22);color:var(--rgb-g)}
+      .bento-card.core-h .card-icon{background:rgba(var(--rgb-r-rgb),0.08)
+  ;border-color:rgba(var(--rgb-r-rgb),0.22);color:var(--rgb-r)}
+      .bento-card.core-s .card-icon{background:rgba(var(--rgb-b-rgb),0.08)
+  ;border-color:rgba(var(--rgb-b-rgb),0.22);color:var(--rgb-b)}
+      .bento-card h3{font-family:var(--serif);font-size:21px;font-weight:4
+  00;margin-bottom:8px;color:#fff}
+      .bento-card p{font-size:14px;color:var(--text2);line-height:1.65}
+      @media(max-width:860px){.bento{grid-template-columns:1fr}.bento-card
+  .span-2{grid-column:span 1}}
+
+      /* ================ Memory Awareness section (NEW) ================
+  */
+      .memory-section{position:relative}
+      .memory-callout{display:grid;grid-template-columns:1.1fr
+  1fr;gap:48px;align-items:center}
+      @media(max-width:860px){.memory-callout{grid-template-columns:1fr}}
+      .memory-vis{position:relative;border-radius:14px;border:1px solid
+  var(--glass-border);background:linear-gradient(180deg,rgba(20,20,28,0.86
+  ),rgba(8,8,12,0.86));backdrop-filter:var(--glass-blur);padding:28px;over
+  flow:hidden}
+      .memory-vis::before{content:'';position:absolute;top:0;left:0;right:
+  0;height:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-g),
+  var(--rgb-b),var(--rgb-r));background-size:300%
+  100%;animation:prismaticShift 4.5s linear infinite}
+      .mv-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;marg
+  in-bottom:14px}
+
+  .mv-glyph{width:28px;height:28px;border-radius:50%;display:flex;align-it
+  ems:center;justify-content:center;font-family:var(--mono);font-size:14px
+  ;color:var(--rgb-g);background:rgba(var(--rgb-g-rgb),0.08);border:1px
+  solid rgba(var(--rgb-g-rgb),0.30);text-shadow:0 0 12px
+  rgba(var(--rgb-g-rgb),0.55)}
+      .mv-label{font-family:var(--mono);font-size:11px;letter-spacing:0.10
+  em;text-transform:uppercase;color:var(--text2)}
+      .mv-label strong{color:#fff;font-weight:600;text-transform:none;lett
+  er-spacing:0.02em}
+      .mv-meta{font-family:var(--mono);font-size:11px;color:var(--text3);m
+  argin-left:auto}
+      .mv-facets{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+      .mv-chip{padding:2px 9px;border:1px solid rgba(var(--rgb-g-rgb),0.30
+  );background:rgba(var(--rgb-g-rgb),0.06);color:rgba(180,230,200,0.92);bo
+  rder-radius:100px;font-family:var(--mono);font-size:10px;letter-spacing:
+  0.06em;text-transform:lowercase;line-height:1.6}
+      .mv-tech{padding:9px 12px;display:flex;align-items:center;gap:10px;b
+  ackground:rgba(var(--sun-gold-rgb),0.06);border:1px solid
+  rgba(var(--sun-gold-rgb),0.22);border-radius:6px;font-size:13px;color:rg
+  ba(232,216,184,0.90)}
+      .mv-tech-icon{color:var(--sun-gold);font-size:14px;flex-shrink:0}
+      .mv-tech-name{font-family:var(--mono);font-size:10px;letter-spacing:
+  0.08em;text-transform:uppercase;color:var(--sun-gold);flex-shrink:0}
+      .memory-points{display:flex;flex-direction:column;gap:18px}
+      .memory-point{padding-left:18px;border-left:2px solid
+  rgba(var(--rgb-g-rgb),0.35);position:relative}
+      .memory-point
+  strong{display:block;font-size:15px;color:#fff;margin-bottom:4px}
+      .memory-point
+  span{font-size:14px;color:var(--text2);line-height:1.65}
+
+      /* ================ Verify section (NEW — threat model link)
+  ================ */
+      .verify-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12
+  px;margin-bottom:36px}
+      @media(max-width:860px){.verify-grid{grid-template-columns:repeat(2,
+  1fr)}}
+      @media(max-width:480px){.verify-grid{grid-template-columns:1fr}}
+      .verify-card{padding:22px;border-radius:12px;border:1px solid
+  var(--glass-border);background:var(--surface);backdrop-filter:var(--glas
+  s-blur);transition:all 0.3s var(--ease)}
+      .verify-card:hover{border-color:rgba(var(--rgb-g-rgb),0.30);backgrou
+  nd:rgba(var(--rgb-g-rgb),0.03);transform:translateY(-2px)}
+      .verify-icon{font-family:var(--mono);font-size:14px;color:var(--rgb-
+  g);margin-bottom:10px;display:inline-block;padding:3px 9px;border:1px
+  solid rgba(var(--rgb-g-rgb),0.30);border-radius:100px;background:rgba(va
+  r(--rgb-g-rgb),0.06);letter-spacing:0.02em}
+      .verify-card h3{font-family:var(--serif);font-size:17px;font-weight:
+  400;margin-bottom:6px;color:#fff;line-height:1.3}
+      .verify-card p{font-size:13px;color:var(--text2);line-height:1.6}
+      .verify-card strong{color:var(--codex-cream);font-weight:500}
+
+      /* ================ Console demo ================ */
+      .console-section{position:relative}
+      .console-frame{border-radius:14px;border:1px solid var(--glass-borde
+  r);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-
+  backdrop-filter:var(--glass-blur);overflow:hidden;box-shadow:0 40px
+  120px rgba(0,0,0,0.55),0 0 60px
+  rgba(var(--rgb-r-rgb),0.04);position:relative}
+      .console-frame::before{content:'';position:absolute;top:0;left:0;rig
+  ht:0;height:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-
+  g),var(--rgb-b),var(--rgb-r));background-size:300%
+  100%;animation:prismaticShift 4.5s linear infinite}
+
+  .console-titlebar{display:flex;align-items:center;gap:8px;padding:14px
+  20px;background:rgba(255,255,255,0.015);border-bottom:1px solid
+  rgba(255,255,255,0.05)}
+      .console-dot{width:11px;height:11px;border-radius:50%;background:rgb
+  a(255,255,255,0.08)}
+      .console-dot:nth-child(1){background:var(--rgb-r)}
+      .console-dot:nth-child(2){background:var(--rgb-g)}
+      .console-dot:nth-child(3){background:var(--rgb-b)}
+      .console-titlebar span{flex:1;text-align:center;font-family:var(--mo
+  no);font-size:12px;color:var(--text3)}
+      .console-body{padding:28px}
+      @media(max-width:640px){.console-body{padding:20px}}
+      .console-status{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:2
+  0px;font-family:var(--mono);font-size:11px;color:var(--text3);letter-spa
+  cing:0.04em}
+      .console-status .on{color:var(--rgb-g)}
+      .console-query{font-family:var(--mono);font-size:13px;color:var(--te
+  xt2);margin-bottom:22px;padding:14px
+  16px;border-radius:8px;background:rgba(var(--rgb-r-rgb),0.05);border:1px
+   solid rgba(var(--rgb-r-rgb),0.14)}
+      .console-query .prompt{color:var(--rgb-r);font-weight:500}
+      .console-verdict{padding:22px;border-radius:12px;border:1px solid
+  rgba(255,255,255,0.05);background:var(--surface2);margin-bottom:18px;pos
+  ition:relative}
+      .verdict-header{display:flex;align-items:center;justify-content:spac
+  e-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+      .verdict-label{display:flex;align-items:center;gap:8px;font-family:v
+  ar(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase
+  ;color:var(--text3)}
+      .verdict-label
+  img{height:24px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px
+   rgba(var(--rgb-r-rgb),0.3))}
+      .confidence-badge{font-family:var(--mono);font-size:12px;padding:4px
+   12px;border-radius:100px;background:rgba(var(--rgb-g-rgb),0.08);color:v
+  ar(--rgb-g);border:1px solid
+  rgba(var(--rgb-g-rgb),0.30);letter-spacing:0.02em}
+      .console-verdict p{font-size:14px;line-height:1.7;color:var(--text)}
+
+  .console-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+      .meta-tag{padding:6px
+  11px;border-radius:6px;font-family:var(--mono);font-size:11px;border:1px
+   solid rgba(255,255,255,0.06);background:var(--surface2);color:var(--tex
+  t3);letter-spacing:0.02em}
+      .meta-tag.core-a{border-color:rgba(var(--rgb-g-rgb),0.30);background
+  :rgba(var(--rgb-g-rgb),0.05);color:var(--rgb-g)}
+      .meta-tag.core-h{border-color:rgba(var(--rgb-r-rgb),0.30);background
+  :rgba(var(--rgb-r-rgb),0.05);color:var(--rgb-r)}
+      .meta-tag.core-s{border-color:rgba(var(--rgb-b-rgb),0.30);background
+  :rgba(var(--rgb-b-rgb),0.05);color:var(--rgb-b)}
+      .meta-tag .name{color:#fff;font-weight:500}
+
+  .console-footer-note{text-align:center;padding-top:16px;border-top:1px
+  solid rgba(255,255,255,0.04);font-size:13px;color:var(--text3)}
+      .console-cta{display:flex;align-items:center;justify-content:center;
+  gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid
+  rgba(255,255,255,0.04)}
+
+      /* ================ Waitlist (NEW) ================ */
+      .waitlist-section{position:relative}
+      .waitlist-card{padding:48px 40px;border-radius:14px;border:1px solid
+   rgba(var(--rgb-g-rgb),0.20);background:linear-gradient(180deg,rgba(14,1
+  4,20,0.88),rgba(8,8,12,0.88));backdrop-filter:var(--glass-blur);text-ali
+  gn:center;box-shadow:var(--aura-idle)}
+      .waitlist-card h3{font-family:var(--serif);font-size:clamp(28px,4vw,
+  40px);font-weight:400;margin-bottom:14px;line-height:1.1}
+      .waitlist-card p{font-size:15px;color:var(--codex-cream);opacity:0.7
+  8;max-width:520px;margin:0 auto 28px;line-height:1.65}
+      .waitlist-form{display:flex;gap:10px;max-width:480px;margin:0
+  auto;flex-wrap:wrap}
+      .waitlist-input{flex:1;min-width:220px;padding:14px
+  16px;background:rgba(0,0,0,0.42);border:1px solid
+  rgba(255,255,255,0.10);border-radius:8px;color:#fff;font-family:var(--mo
+  no);font-size:14px;letter-spacing:0.02em;transition:all 0.25s
+  var(--ease-cosmos)}
+      .waitlist-input:focus{outline:none;border-color:rgba(var(--rgb-g-rgb
+  ),0.55);box-shadow:0 0 0 1px rgba(var(--rgb-g-rgb),0.35),0 0 24px
+  rgba(var(--rgb-g-rgb),0.18);background:rgba(0,0,0,0.55)}
+      .waitlist-input::placeholder{color:rgba(255,255,255,0.30)}
+      .waitlist-status{margin-top:14px;font-family:var(--mono);font-size:1
+  2px;letter-spacing:0.06em;color:var(--rgb-g);min-height:18px}
+      .waitlist-status.error{color:var(--rgb-r)}
+
+      /* ================ Support section ================ */
+
+  .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+      .support-card{padding:26px;border-radius:12px;border:1px solid
+  var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--gla
+  ss-blur);-webkit-backdrop-filter:var(--glass-blur);transition:all 0.3s
+  var(--ease);position:relative;overflow:hidden}
+      .support-card::before{content:'';position:absolute;top:0;left:0;righ
+  t:0;height:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-g
+  ),var(--rgb-b),var(--rgb-r));background-size:300%
+  100%;animation:prismaticShift 4.5s linear
+  infinite;opacity:0;transition:opacity 0.3s}
+      .support-card:hover::before{opacity:0.8}
+      .support-card:hover{border-color:rgba(var(--rgb-r-rgb),0.20);transfo
+  rm:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+      .support-card h3{font-family:var(--serif);font-size:19px;font-weight
+  :400;margin-bottom:8px;color:#fff}
+      .support-card
+  p{font-size:14px;color:var(--text2);line-height:1.55;margin-bottom:18px}
+      .support-card .btn-cosmos{width:100%;justify-content:center;font-siz
+  e:13px;padding:11px 18px}
+      @media(max-width:860px){.support-grid{grid-template-columns:1fr}}
+
+      /* ================ Footer ================ */
+      footer{padding:44px 32px 32px;border-top:1px solid
+  rgba(255,255,255,0.04);position:relative;z-index:2}
+      footer::before{content:'';position:absolute;top:0;left:0;right:0;hei
+  ght:2px;background:linear-gradient(90deg,var(--rgb-r),var(--rgb-g),var(-
+  -rgb-b),var(--rgb-r));background-size:300% 100%;animation:prismaticShift
+   4.5s linear infinite;opacity:0.5}
+      .footer-inner{max-width:1200px;margin:0
+  auto;display:grid;grid-template-columns:1fr 1fr
+  1fr;gap:32px;align-items:start}
+      @media(max-width:860px){.footer-inner{grid-template-columns:1fr;gap:
+  24px}}
+      .footer-brand{font-family:var(--serif);font-size:22px;letter-spacing
+  :0.04em;color:#fff}
+      .footer-tagline{font-size:13px;color:var(--text3);margin-top:6px;lin
+  e-height:1.6}
+      .footer-founder{font-size:12px;color:var(--text3);margin-top:14px;pa
+  dding-top:14px;border-top:1px solid
+  rgba(255,255,255,0.04);line-height:1.6}
+      .footer-founder strong{color:var(--text2);font-weight:500}
+      .footer-links{display:flex;flex-direction:column;gap:8px;font-size:1
+  3px;color:var(--text3)}
+      .footer-links a{transition:color 0.2s}
+      .footer-links a:hover{color:var(--text)}
+      .footer-meta{font-family:var(--mono);font-size:11px;color:var(--text
+  3);text-align:right;letter-spacing:0.04em;line-height:1.7}
+      @media(max-width:860px){.footer-meta{text-align:left}}
+      .footer-meta strong{color:var(--codex-cream);font-weight:500}
+
+      /* ================ Divider ================ */
+      .divider{height:2px;border:none;margin:0;background:linear-gradient(
+  90deg,var(--rgb-r),var(--rgb-g),var(--rgb-b),var(--rgb-r));background-si
+  ze:300% 100%;animation:prismaticShift 4.5s linear infinite;opacity:0.4}
+    </style>
+  </head>
+  <body>
+
+    <!-- Cosmos backdrop layers -->
+    <div class="cosmos" aria-hidden="true">
+      <div class="cosmos-core cosmos-core-h"></div>
+      <div class="cosmos-core cosmos-core-a"></div>
+      <div class="cosmos-core cosmos-core-s"></div>
     </div>
-  </div>
- 
-  <!-- HEADER -->
-  <header id="header">
-    <div class="header-inner">
-      <a class="header-left" href="#top">
-        <img src="/static/zotheos_icon.png" alt="ZOTHEOS" />
-      </a>
-      <a class="header-center" href="#top">
-        <img src="/static/zotheos_logo.png" alt="ZOTHEOS" />
-      </a>
-      <nav class="header-nav">
-        <a href="#mission">Mission</a>
-        <a href="#features">Architecture</a>
-        <a href="#console">Console</a>
-        <a href="#support" class="nav-cta">Support</a>
-      </nav>
-    </div>
-  </header>
- 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <div class="hero-eyebrow reveal reveal-d1">
-        <span class="pulse"></span>
-        <span>Offline-first&ensp;·&ensp;Private by default&ensp;·&ensp;Built independently</span>
-      </div>
- 
-      <h1 class="reveal reveal-d2">
-        Clear knowledge.<br/>
-        No surveillance.<br/>
-        No <em>manipulation.</em>
-      </h1>
- 
-      <p class="hero-sub reveal reveal-d3">
-        ZOTHEOS helps people think clearly and act with confidence&mdash;without
-        being tracked, nudged, or sold. Intelligence that works even when the
-        internet doesn't.
-      </p>
- 
-      <div class="hero-actions reveal reveal-d3">
-        <a class="btn-primary" href="#support">Support the build →</a>
-        <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the console →</a>
-      </div>
- 
-      <div class="hero-stats reveal reveal-d4">
-        <div class="hero-stat"><div class="num">3</div><div class="label">Thinking cores</div></div>
-        <div class="hero-stat"><div class="num">728+</div><div class="label">Knowledge chunks</div></div>
-        <div class="hero-stat"><div class="num">~9s</div><div class="label">Fused response</div></div>
-        <div class="hero-stat"><div class="num">0</div><div class="label">Data collected</div></div>
+    <div class="hex-texture" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Intro overlay -->
+    <div id="introOverlay" class="intro-overlay">
+      <video id="introVideo" autoplay muted playsinline preload="auto">
+        <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
+      </video>
+      <div class="intro-controls">
+        <button id="togglePlay">Pause</button>
+        <button id="skipIntro">Enter ZOTHEOS →</button>
       </div>
     </div>
-  </section>
- 
-  <hr class="divider" />
- 
-  <!-- MISSION -->
-  <section id="mission">
-    <div class="section-inner">
-      <div class="section-label reveal">01 / Mission</div>
-      <div class="mission-grid">
-        <div>
-          <h2 class="section-title reveal">The internet became a casino.<br/>This is the library.</h2>
-          <p class="section-desc reveal reveal-d1">
-            Algorithms reward what keeps you scrolling, not what helps you understand.
-            ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and
-            solve problems without surveillance, manipulation, or paywalls shaping the outcome.
-          </p>
-          <div class="mission-quote reveal reveal-d2">
-            "Keep knowledge accessible. Keep privacy intact. Keep the tool reliable
-            even when the internet isn't."
-          </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="header-inner">
+        <a class="header-left" href="#top">
+          <img src="/static/zotheos_icon.png" alt="ZOTHEOS" />
+        </a>
+        <a class="header-center" href="#top">
+          <img src="/static/zotheos_logo.png" alt="ZOTHEOS" />
+        </a>
+        <nav class="header-nav">
+          <a href="#mission">Mission</a>
+          <a href="#features">Architecture</a>
+          <a href="#memory">Memory</a>
+          <a href="#verify">Verify</a>
+          <a href="#waitlist" class="nav-cta">Get early access</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-eyebrow reveal reveal-d1">
+          <span class="pulse"></span>
+          <span>Offline-first&ensp;·&ensp;Private by
+  default&ensp;·&ensp;Built independently</span>
         </div>
-        <div class="mission-values">
-          <div class="value-item reveal"><strong>Private by default</strong><span>No accounts required. No data harvested as the price of "help."</span></div>
-          <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
-          <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
-          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
+
+        <h1 class="reveal reveal-d2">
+          Clear knowledge.<br/>
+          No surveillance.<br/>
+          No <em>manipulation.</em>
+        </h1>
+
+        <p class="hero-sub reveal reveal-d3">
+          ZOTHEOS helps people think clearly and act with confidence —
+  without
+          being tracked, nudged, or sold. Three local AI cores debate,
+  then
+          synthesize one grounded answer. Privacy proven by automated
+  test, not
+          by promise.
+        </p>
+
+        <div class="hero-actions reveal reveal-d3">
+          <a class="btn-cosmos" href="#waitlist">Get early access →</a>
+          <a class="btn-ghost" href="#verify">Verify our promises →</a>
+        </div>
+
+        <div class="hero-stats reveal reveal-d4">
+          <div class="hero-stat"><div class="num">3</div><div
+  class="label">Thinking cores</div></div>
+          <div class="hero-stat"><div class="num">878+</div><div
+  class="label">Knowledge chunks</div></div>
+          <div class="hero-stat"><div class="num">389</div><div
+  class="label">Tests passing</div></div>
+          <div class="hero-stat"><div class="num">0</div><div
+  class="label">Data collected</div></div>
         </div>
       </div>
-    </div>
-  </section>
- 
-  <hr class="divider" />
- 
-  <!-- FEATURES -->
-  <section id="features">
-    <div class="section-inner">
-      <div class="section-label reveal">02 / Architecture</div>
-      <h2 class="section-title reveal">Three minds.<br/>One grounded answer.</h2>
-      <p class="section-desc reveal reveal-d1">Like a medical conference&mdash;multiple specialists consult, compare perspectives, then deliver one careful recommendation.</p>
-      <div class="bento">
-        <div class="bento-card span-2 reveal"><div class="card-glow"></div><div class="card-icon">⚖</div><h3>Fusion architecture</h3><p>Three local AI models&mdash;Analyst, Humanist, and Skeptic&mdash;each examine your query from a different angle. Their perspectives are scored, compared, and synthesized into a single verdict with transparent confidence scoring.</p></div>
-        <div class="bento-card reveal reveal-d1"><div class="card-icon">◉</div><h3>Local-first</h3><p>Runs on your hardware. No cloud dependency. Your conversations, memory, and knowledge never leave your device.</p></div>
-        <div class="bento-card reveal reveal-d1"><div class="card-icon">◆</div><h3>Evidence vault</h3><p>A curated local knowledge base with tiered sourcing&mdash;treaties, regulations, and peer-reviewed work ranked above opinion.</p></div>
-        <div class="bento-card reveal reveal-d2"><div class="card-icon">✓</div><h3>Bias detection</h3><p>Every response scored for bias level, emotional charge, and reliability. Absolutist framing and loaded language get flagged.</p></div>
-        <div class="bento-card span-2 reveal reveal-d2"><div class="card-glow"></div><div class="card-icon">★</div><h3>Model transparency</h3><p>See exactly which model said what. GGUF files, quantization levels, inference parameters&mdash;everything disclosed. No black boxes. Every claim attributed to the core that produced it.</p></div>
-      </div>
-    </div>
-  </section>
- 
-  <hr class="divider" />
- 
-  <!-- CONSOLE DEMO -->
-  <section id="console" class="console-section">
-    <div class="section-inner">
-      <div class="section-label reveal">03 / Console</div>
-      <h2 class="section-title reveal">See it think.</h2>
-      <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges.</p>
- 
-      <div class="console-frame reveal reveal-d2">
-        <div class="console-titlebar">
-          <div class="console-dot"></div><div class="console-dot"></div><div class="console-dot"></div>
-          <span>ZOTHEOS Sovereign Core — Fusion Console</span>
-        </div>
-        <div class="console-body">
-          <div class="console-status">
-            <span>CORES: <span class="on">3</span></span>
-            <span>EVIDENCE: <span class="on">ON</span></span>
-            <span>OFFLINE: <span class="on">ON</span></span>
-          </div>
-          <div class="console-query"><span class="prompt">▶</span>&ensp;How can AI systems be designed to promote universal peace while protecting individual rights?</div>
-          <div class="console-verdict">
-            <div class="verdict-header">
-              <span class="verdict-label"><img src="/static/zotheos_icon.png" alt="" /> FUSED ANSWER</span>
-              <span class="confidence-badge">78 / 100</span>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Mission -->
+    <section id="mission">
+      <div class="section-inner">
+        <div class="section-label reveal">01 / Mission</div>
+        <div class="mission-grid">
+          <div>
+            <h2 class="section-title reveal">The internet became a
+  casino.<br/>This is the library.</h2>
+            <p class="section-desc reveal reveal-d1">
+              Algorithms reward what keeps you scrolling, not what helps
+  you understand.
+              ZOTHEOS is a calm, reliable alternative: a tool that helps
+  people learn and
+              solve problems without surveillance, manipulation, or
+  paywalls shaping the outcome.
+            </p>
+            <div class="mission-quote reveal reveal-d2">
+              "Keep knowledge accessible. Keep privacy intact. Keep the
+  tool reliable
+              even when the internet isn't."
             </div>
-            <p>AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally&mdash;not as policy afterthoughts&mdash;with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals.</p>
           </div>
-          <div class="console-meta">
-            <div class="meta-tag"><span class="name">Analyst</span> — Mistral 7B</div>
-            <div class="meta-tag"><span class="name">Humanist</span> — Gemma 7B</div>
-            <div class="meta-tag"><span class="name">Skeptic</span> — Qwen 7B</div>
+          <div class="mission-values">
+            <div class="value-item reveal"><strong>Private by
+  default</strong><span>No accounts required. No data harvested as the
+  price of "help."</span></div>
+            <div class="value-item reveal reveal-d1"><strong>Built for
+  real decisions</strong><span>Learning, planning, and problem-solving
+  without noise or manipulation.</span></div>
+            <div class="value-item reveal reveal-d2"><strong>Independent
+  by design</strong><span>No VC funding, no corporate agenda. Built by one
+   veteran with a mission.</span></div>
+            <div class="value-item reveal reveal-d3"><strong>Ethical
+  guardrails</strong><span>Structural constraints, not just policy
+  promises. The architecture enforces integrity.</span></div>
           </div>
-          <div class="console-meta">
-            <div class="meta-tag">Consensus: NUANCED</div>
-            <div class="meta-tag">Bias: 8/100</div>
-            <div class="meta-tag">Reliability: 82/100</div>
-            <div class="meta-tag">Runtime: 9.2s</div>
-          </div>
-          <div class="console-footer-note">Three perspectives. One synthesis. Every claim attributed.</div>
-          <div class="console-cta">
-            <a class="btn-primary" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the live console →</a>
-          </div>
-          <div style="text-align:center;margin-top:10px;font-size:12px;color:var(--text3);">Live beta — available when the server is online. Protected by AEGIS.</div>
         </div>
       </div>
-    </div>
-  </section>
- 
-  <hr class="divider" />
- 
-  <!-- SUPPORT -->
-  <section id="support">
-    <div class="section-inner">
-      <div class="section-label reveal">04 / Support</div>
-      <h2 class="section-title reveal">Fund the mission.</h2>
-      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases&mdash;and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
-      <div class="support-grid">
-        <div class="support-card reveal"><h3>PayPal</h3><p>One-time support to keep the build moving.</p><a class="btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal</a></div>
-        <div class="support-card reveal reveal-d1"><h3>Stripe</h3><p>Card-based support, processed securely.</p><a class="btn-primary" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe</a></div>
-        <div class="support-card reveal reveal-d2"><h3>Gumroad</h3><p>Supporter packs and future early access.</p><a class="btn-primary" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad</a></div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Architecture -->
+    <section id="features">
+      <div class="section-inner">
+        <div class="section-label reveal">02 / Architecture</div>
+        <h2 class="section-title reveal">Three minds.<br/>One grounded
+  answer.</h2>
+        <p class="section-desc reveal reveal-d1">
+          Like a medical conference — multiple specialists consult,
+  compare perspectives, then deliver one careful recommendation. Each core
+   has its own sacred color: Analyst (Jade) reasons from evidence,
+  Humanist (Cinnabar) centers human impact, Skeptic (Lapis) attacks the
+  strongest emerging consensus.
+        </p>
+        <div class="bento">
+          <div class="bento-card span-2 reveal">
+            <div class="card-icon">⚖</div>
+            <h3>Fusion architecture</h3>
+            <p>Three local GGUF models — Analyst, Humanist, Skeptic — each
+   examine your query from a different angle. Their perspectives are
+  scored by core_weights derived from query type, cross-probed against
+  each other for weak claims, then synthesized into one answer with a
+  parsed self-reported confidence tag for every response.</p>
+          </div>
+          <div class="bento-card core-a reveal reveal-d1"><div
+  class="card-icon">◉</div><h3>Local-first</h3><p>Runs on your hardware
+  via llama.cpp. No cloud dependency. Your conversations, vault, and
+  persistent memory never leave your device.</p></div>
+          <div class="bento-card core-h reveal reveal-d1"><div
+  class="card-icon">◆</div><h3>Evidence vault</h3><p>Local knowledge base
+  with tiered sourcing. Cross-encoder reranking. Citations enforced as
+  <code>[Vault:Source]</code> with strict-mode checking.</p></div>
+          <div class="bento-card core-s reveal reveal-d2"><div
+  class="card-icon">✓</div><h3>Anti-consensus Skeptic</h3><p>The Skeptic
+  argues against the strongest emerging consensus between the other two
+  cores — not against the user. Catches the place where smart panelists
+  agree without checking each other.</p></div>
+          <div class="bento-card span-2 reveal reveal-d2"><div
+  class="card-icon">★</div><h3>Calibration measured</h3><p>Every response
+  carries three confidence signals — heuristic (evidence-derived),
+  model-stated (parsed from the synthesizer), and blended. Brier scores
+  and ECE tracked against ground-truth corpora. The system is honest about
+   how confident it has the right to be.</p></div>
+        </div>
       </div>
-    </div>
-  </section>
- 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">ZOTHEOS</div>
-        <div class="footer-tagline">Offline Ethical Intelligence<br/>Private by default. Built independently.</div>
-        <div class="footer-founder">Founded by <strong>David Garcia</strong><br/>United States Marine Corps Veteran</div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Memory Awareness (NEW) -->
+    <section id="memory" class="memory-section">
+      <div class="section-inner">
+        <div class="section-label reveal">03 / Memory awareness</div>
+        <h2 class="section-title reveal">Make people remember
+  better,<br/>not remember <em
+  style="font-style:italic;color:var(--rgb-g)">for</em> them.</h2>
+        <p class="section-desc reveal reveal-d1">
+          Most AI memory tools remember <em>for</em> you — they keep your
+  context, you stay passive. ZOTHEOS does the opposite. Memory awareness
+  activates only inside Projects. Inside one, ZOTHEOS stays focused on the
+   facets you're exploring and quietly teaches you how to organize what
+  you learn.
+        </p>
+
+        <div class="memory-callout reveal reveal-d2">
+          <div class="memory-vis">
+            <div class="mv-row">
+              <span class="mv-glyph">◬</span>
+              <span class="mv-label">Memory awareness ·
+  <strong>Investing</strong></span>
+              <span class="mv-meta">3 facets · 5 conversations</span>
+            </div>
+            <div class="mv-facets">
+              <span class="mv-chip">compounding</span>
+              <span class="mv-chip">taxes</span>
+              <span class="mv-chip">market history</span>
+            </div>
+            <div class="mv-tech">
+              <span class="mv-tech-icon">🪶</span>
+              <span class="mv-tech-name">Feynman</span>
+              <span>Explain it back to me as if to a 12-year-old. Gaps in
+  your explanation = gaps in your understanding.</span>
+            </div>
+          </div>
+          <div class="memory-points">
+            <div class="memory-point">
+              <strong>Facets at project creation</strong>
+              <span>Name the 3-5 angles you're exploring. ZOTHEOS keeps
+  them in mind every time you ask a question inside the project.</span>
+            </div>
+            <div class="memory-point">
+              <strong>Periodic recap</strong>
+              <span>One click — "what's been covered, what's recurring,
+  what's still open, what to explore next." Pulls across the entire
+  project history.</span>
+            </div>
+            <div class="memory-point">
+              <strong>Memory techniques</strong>
+              <span>Five built-in techniques — Feynman, spaced repetition,
+   chunking, dual coding, method of loci. Suggested when the content type
+  warrants it.</span>
+            </div>
+            <div class="memory-point">
+              <strong>Outside projects? Forgets cleanly.</strong>
+              <span>No global memory creep. ZOTHEOS doesn't accumulate
+  context about you across casual sessions — only in territories you
+  explicitly commit to.</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#mission">Mission</a>
-        <a href="#features">Architecture</a>
-        <a href="#console">Console</a>
-        <a href="#support">Support</a>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Verify (NEW — threat model link) -->
+    <section id="verify">
+      <div class="section-inner">
+        <div class="section-label reveal">04 / Verify</div>
+        <h2 class="section-title reveal">Every promise is testable.</h2>
+        <p class="section-desc reveal reveal-d1">
+          Most "private AI" tools claim privacy. ZOTHEOS proves it. Every
+  public guarantee is mapped to a runnable test in the repository. Open
+  the file. Run the test. See for yourself.
+        </p>
+
+        <div class="verify-grid">
+          <div class="verify-card reveal">
+            <span class="verify-icon">A1–A4</span>
+            <h3>Privacy invariant</h3>
+            <p><strong>Zero non-loopback calls</strong> during inference.
+  Verified by a 6-test suite that monkey-patches socket.connect and
+  asserts no outbound traffic.</p>
+          </div>
+          <div class="verify-card reveal reveal-d1">
+            <span class="verify-icon">A5</span>
+            <h3>Ethics evaluation</h3>
+            <p><strong>P=R=F1=1.0</strong> on a 50-question harm-design
+  corpus (20 should-block, 15 allow, 15 critique-bypass). Re-run on every
+  push.</p>
+          </div>
+          <div class="verify-card reveal reveal-d2">
+            <span class="verify-icon">A7</span>
+            <h3>Calibration</h3>
+            <p>Three Brier scores side-by-side. Confidence is scored
+  against ground truth, not asserted. Failures are documented openly.</p>
+          </div>
+          <div class="verify-card reveal reveal-d3">
+            <span class="verify-icon">13</span>
+            <h3>Threat model</h3>
+            <p>13 adversaries documented and ranked. Three categories:
+  defended, partial, out-of-scope. Honest about what we don't protect
+  against.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:36px" class="reveal
+  reveal-d2">
+          <a class="btn-cosmos" href="#" onclick="alert('Trust Center
+  available in the live console at /trust');return false">Read the threat
+  model →</a>
+        </div>
       </div>
-      <div class="footer-copy">© <span id="yr"></span> ZOTHEOS<br/>All rights reserved.</div>
-    </div>
-  </footer>
- 
-  <script>
-    document.getElementById('yr').textContent=new Date().getFullYear();
-    (function(){var o=document.getElementById('introOverlay'),v=document.getElementById('introVideo'),s=document.getElementById('skipIntro'),t=document.getElementById('togglePlay');if(!o||!v)return;var d=false;function dismiss(){if(d)return;d=true;o.classList.add('dismissed');try{v.pause()}catch(e){}}v.addEventListener('error',dismiss);setTimeout(dismiss,9000);s.addEventListener('click',dismiss);t.addEventListener('click',function(){if(v.paused){v.play().catch(function(){});t.textContent='Pause'}else{v.pause();t.textContent='Play'}});v.play().catch(function(){})})();
-    (function(){var h=document.getElementById('header');window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>40)},{passive:true})})();
-    (function(){var els=document.querySelectorAll('.reveal');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){obs.observe(el)})})();
-  </script>
-</body>
-</html>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Console demo -->
+    <section id="console" class="console-section">
+      <div class="section-inner">
+        <div class="section-label reveal">05 / Console</div>
+        <h2 class="section-title reveal">See it think.</h2>
+        <p class="section-desc reveal reveal-d1">A real query through the
+  ZOTHEOS fusion pipeline. Three cores reason independently, then one
+  synthesized answer emerges with full attribution.</p>
+
+        <div class="console-frame reveal reveal-d2">
+          <div class="console-titlebar">
+            <div class="console-dot"></div><div
+  class="console-dot"></div><div class="console-dot"></div>
+            <span>ZOTHEOS Sovereign Core — Fusion Console</span>
+          </div>
+          <div class="console-body">
+            <div class="console-status">
+              <span>CORES: <span class="on">3</span></span>
+              <span>EVIDENCE: <span class="on">ON</span></span>
+              <span>OFFLINE: <span class="on">ON</span></span>
+              <span>AEGIS: <span class="on">ACTIVE</span></span>
+            </div>
+            <div class="console-query"><span
+  class="prompt">▶</span>&ensp;How can AI systems be designed to promote
+  universal peace while protecting individual rights?</div>
+            <div class="console-verdict">
+              <div class="verdict-header">
+                <span class="verdict-label"><img
+  src="/static/zotheos_icon.png" alt="" /> FUSED ANSWER</span>
+                <span class="confidence-badge">CONFIDENCE 0.78</span>
+              </div>
+              <p>AI systems designed to promote universal peace must
+  balance collective security with individual liberty through transparent,
+   accountable architectures. This requires embedding ethical guardrails
+  structurally — not as policy afterthoughts — with decentralized
+  governance to prevent any single entity from weaponizing the technology.
+   Privacy-preserving design, open-source auditability, and cross-cultural
+   consultation are essential pillars. Individual data sovereignty must
+  remain non-negotiable, even in pursuit of collective goals.</p>
+            </div>
+            <div class="console-meta">
+              <div class="meta-tag core-a"><span
+  class="name">Analyst</span> · Qwen 14B</div>
+              <div class="meta-tag core-h"><span
+  class="name">Humanist</span> · Gemma 9B</div>
+              <div class="meta-tag core-s"><span
+  class="name">Skeptic</span> · Qwen 7B</div>
+            </div>
+            <div class="console-meta">
+              <div class="meta-tag">Consensus: NUANCED</div>
+              <div class="meta-tag">Bias: 8/100</div>
+              <div class="meta-tag">Reliability: 82/100</div>
+              <div class="meta-tag">Runtime: 9.2s</div>
+            </div>
+            <div class="console-footer-note">Three perspectives. One
+  synthesis. Every claim attributed to the core that produced it.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Waitlist (NEW) -->
+    <section id="waitlist" class="waitlist-section">
+      <div class="section-inner">
+        <div class="section-label reveal">06 / Be among the first</div>
+        <div class="waitlist-card reveal reveal-d1">
+          <h3>ZOTHEOS launches publicly when the privacy invariant, ethics
+   suite, and calibration suite stay green for 30 consecutive days.</h3>
+          <p>Drop your email and you'll get the invite ahead of public
+  launch. We'll only email you about ZOTHEOS milestones — no newsletter
+  spam, no third-party sharing. Same privacy posture as the product.</p>
+          <form class="waitlist-form" id="waitlistForm"
+  action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="email" name="email" required autocomplete="email"
+   placeholder="your@email.com" class="waitlist-input" aria-label="Email
+  address" />
+            <button type="submit" class="btn-cosmos">Join the waitlist
+  →</button>
+          </form>
+          <div class="waitlist-status" id="waitlistStatus" role="status"
+  aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Support -->
+    <section id="support">
+      <div class="section-inner">
+        <div class="section-label reveal">07 / Support</div>
+        <h2 class="section-title reveal">Fund the mission.</h2>
+        <p class="section-desc reveal reveal-d1">Support funds
+  development, testing, and releases — and keeps ZOTHEOS permanently
+  independent. No investors. No ads. Just the work.</p>
+        <div class="support-grid">
+          <div class="support-card reveal"><h3>PayPal</h3><p>One-time
+  support to keep the build moving.</p><a class="btn-cosmos"
+  href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG"
+  target="_blank" rel="noopener">Donate via PayPal</a></div>
+          <div class="support-card reveal
+  reveal-d1"><h3>Stripe</h3><p>Card-based support, processed
+  securely.</p><a class="btn-cosmos"
+  href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank"
+   rel="noopener">Donate via Stripe</a></div>
+          <div class="support-card reveal
+  reveal-d2"><h3>Gumroad</h3><p>Supporter packs and future early
+  access.</p><a class="btn-cosmos"
+  href="https://zotheos.gumroad.com/l/jibfv" target="_blank"
+  rel="noopener">Support on Gumroad</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">ZOTHEOS</div>
+          <div class="footer-tagline">Offline Ethical
+  Intelligence<br/>Private by default. Built independently.</div>
+          <div class="footer-founder">Founded by <strong>David
+  Garcia</strong><br/>United States Marine Corps Veteran<br/>ZOTHEOS LLC ·
+   Established March 2025<br/>In development since January 2024</div>
+        </div>
+        <div class="footer-links">
+          <a href="#mission">Mission</a>
+          <a href="#features">Architecture</a>
+          <a href="#memory">Memory</a>
+          <a href="#verify">Verify</a>
+          <a href="#console">Console</a>
+          <a href="#waitlist">Early access</a>
+          <a href="#support">Support</a>
+        </div>
+        <div class="footer-meta">
+          © <span id="yr"></span> ZOTHEOS LLC<br/>
+          All rights reserved.<br/><br/>
+          <strong>v3.2 · Sovereign OS</strong><br/>
+          389 tests passing<br/>
+          13 adversaries defended
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('yr').textContent = new
+  Date().getFullYear();
+
+      // Intro overlay (preserved behavior)
+      (function(){
+        var o=document.getElementById('introOverlay'),
+            v=document.getElementById('introVideo'),
+            s=document.getElementById('skipIntro'),
+            t=document.getElementById('togglePlay');
+        if(!o||!v) return;
+        var d=false;
+        function dismiss(){ if(d) return; d=true;
+  o.classList.add('dismissed'); try{v.pause()}catch(e){} }
+        v.addEventListener('error',dismiss);
+        v.addEventListener('ended',dismiss);
+        setTimeout(dismiss, 9000);
+        s.addEventListener('click',dismiss);
+        t.addEventListener('click', function(){
+          if(v.paused){ v.play().catch(function(){});
+  t.textContent='Pause'; }
+          else { v.pause(); t.textContent='Play'; }
+        });
+        v.play().catch(function(){});
+      })();
+
+      // Header scroll state
+      (function(){
+        var h=document.getElementById('header');
+        window.addEventListener('scroll', function(){
+          h.classList.toggle('scrolled', window.scrollY>40);
+        }, {passive:true});
+      })();
+
+      // Reveal-on-scroll
+      (function(){
+        var els=document.querySelectorAll('.reveal');
+        var obs=new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){ e.target.classList.add('visible');
+  obs.unobserve(e.target); }
+          });
+        }, {threshold:0.10, rootMargin:'0px 0px -30px 0px'});
+        els.forEach(function(el){ obs.observe(el); });
+      })();
+
+      // Waitlist submit — Formspree (or any AJAX-friendly form endpoint).
+      // Replace the form action URL with your real endpoint. The handler
+      // below catches the submit, posts via fetch, and shows inline
+  status
+      // so visitors don't get redirected away from the page.
+      (function(){
+        var f=document.getElementById('waitlistForm');
+        var status=document.getElementById('waitlistStatus');
+        if(!f) return;
+        f.addEventListener('submit', async function(e){
+          e.preventDefault();
+          status.classList.remove('error');
+          status.textContent = 'Sending…';
+          var fd = new FormData(f);
+          try {
+            var res = await fetch(f.action, {
+              method: 'POST',
+              headers: { 'Accept': 'application/json' },
+              body: fd
+            });
+            if (res.ok) {
+              status.textContent = "You're on the list. We'll be in
+  touch.";
+              f.reset();
+            } else {
+              status.classList.add('error');
+              status.textContent = 'Could not submit — please try again,
+  or email contact@zotheos.org';
+            }
+          } catch (err) {
+            status.classList.add('error');
+            status.textContent = 'Network issue — please try again, or
+  email contact@zotheos.org';
+          }
+        });
+      })();
+    </script>
+  </body>
+  </html>
