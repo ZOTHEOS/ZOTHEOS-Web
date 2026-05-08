@@ -398,6 +398,32 @@
         inset 0 0 32px rgba(var(--cochineal-rgb), 0.18),
         0 4px 14px rgba(var(--cochineal-rgb), 0.22);
     }
+    /* Codex theme — wax-stamp variant so dark text doesn't disappear
+       on cream background. Matches the codex .btn treatment. */
+    [data-theme="codex"] .header-nav a.nav-cta {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 40%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(135deg, #b03030 0%, #8B2222 100%);
+      border-color: rgba(0, 0, 0, 0.32);
+      color: #f4ecd8;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.40);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.20),
+        inset 0 -1px 4px rgba(0, 0, 0, 0.30),
+        0 2px 8px rgba(26, 15, 8, 0.40);
+    }
+    [data-theme="codex"] .header-nav a.nav-cta:hover {
+      border-color: rgba(0, 0, 0, 0.55);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.28),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.34),
+        0 4px 12px rgba(26, 15, 8, 0.45),
+        0 0 24px rgba(139, 34, 34, 0.30);
+    }
+    /* Skeleton theme — keep base basalt but ensure cream text */
+    [data-theme="skeleton"] .header-nav a.nav-cta {
+      color: #EDE4D3;
+    }
     @media (max-width: 720px) {
       .header-inner { height: 60px; gap: 8px; }
       .header-nav a:not(.nav-cta) { display: none; }
@@ -2488,7 +2514,10 @@
       });
     })();
 
-    /* GSAP entrance choreography */
+    /* GSAP entrance choreography — hero only. Council pillars
+       fade in via the CSS .reveal + IntersectionObserver system
+       above, which is more robust than GSAP's from() pattern that
+       can lock content at opacity 0 if ScrollTrigger fails. */
     window.addEventListener('load', function () {
       if (typeof gsap === 'undefined') return;
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -2499,37 +2528,6 @@
         .from('.hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.6')
         .from('.hero-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.5 }, '-=0.5')
         .from('.hero-stats .hero-stat', { opacity: 0, y: 14, stagger: 0.08, duration: 0.55 }, '-=0.4');
-
-      // Council pillars: scroll-triggered stagger so the chamber
-      // assembles as the user reaches it.
-      if (typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from('.council-pillar', {
-          scrollTrigger: {
-            trigger: '#council-pillars',
-            start: 'top 78%',
-            once: true,
-          },
-          opacity: 0,
-          y: 28,
-          stagger: 0.16,
-          duration: 0.9,
-          ease: 'power3.out',
-        });
-        gsap.from('.council-pillar .cap', {
-          scrollTrigger: {
-            trigger: '#council-pillars',
-            start: 'top 70%',
-            once: true,
-          },
-          opacity: 0,
-          scale: 0,
-          stagger: 0.06,
-          duration: 0.5,
-          ease: 'back.out(2)',
-          delay: 0.6,
-        });
-      }
     });
   </script>
 </body>
