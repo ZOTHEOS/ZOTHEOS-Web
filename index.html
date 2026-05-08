@@ -26,75 +26,48 @@
 
   <style>
     /* ============================================================
-       ZOTHEOS — Amoxtli palette (Wave 5 redesign)
-       Mexica artifacts on a near-black field.
-       Maya Blue · Cochineal · Sun-gold · Amoxtli cream.
-       The three cores keep their chromatic identity inside the system
-       (Analyst jade · Humanist cinnabar · Skeptic lapis) but the page
-       chrome now reads as an amoxtli laid open on obsidian.
+       ZOTHEOS — Amoxtli theme system
+       Three themes, one structural language:
+
+         DEFAULT           Maya Blue cosmic.  Sky-Maya at top
+                           descending through ceremonial indigo to
+                           deep horizon at the floor. Stone-textured
+                           limestone buttons with hairline cracks.
+                           This is the page on first paint.
+
+         [data-theme=
+          "codex"]         Cream parchment with deep cochineal
+                           gradient accents. Mexica codex page held
+                           open in daylight. Cinnabar wax-stamp
+                           buttons. Greca step-fret takes over the
+                           dividers in cinnabar instead of cream.
+
+         [data-theme=
+          "skeleton"]      Warm obsidian (#0E0C0A range, not pure
+                           black). Cinnabar (#D14B2C) on cream
+                           (#EDE4D3). Clean dark glass buttons. The
+                           dark mode for night sessions.
+
+       Variable names stay constant across themes so every rule
+       downstream inherits the swap automatically. The toggle in
+       the header is a 3-way swatch group; the choice persists in
+       localStorage as `zotheos_landing_theme`.
     ============================================================ */
     :root {
-      /* Void layer (black-to-grey gradient field) */
-      --void:        #050507;
-      --midnight:    #0a0a12;
-      --graphite:    #14141a;
-      --ink:         #1a1a22;
-      --slate-edge:  rgba(255,255,255,0.06);
-      --slate-line:  rgba(255,255,255,0.10);
-
-      /* Mexica pigment spine */
-      --maya-blue:        #2c5da7;
-      --maya-blue-deep:   #1e4378;
-      --maya-blue-glow:   rgba(44,93,167,0.32);
-      --cochineal:        #c12626;       /* the brave color, used at seals */
-      --cochineal-bright: #ef3b3b;       /* energy moments */
-      --cochineal-rgb:    193,38,38;
-      --cochineal-bright-rgb: 239,59,59;
-      --gold:        #e8b14d;
-      --gold-rgb:    232,177,77;
-      --jade:        #1ec8a0;
-      --jade-rgb:    30,200,160;
-      --lapis:       #3a5fd4;
-      --lapis-rgb:   58,95,212;
-
-      /* Cream ink hierarchy */
-      --cream:       #f4ecd8;     /* hero, ceremonial */
-      --cream-2:     #e8d8b8;     /* prose */
-      --cream-3:     #b8a888;     /* tracked labels */
-      --slate-3:     #5e5e68;     /* meta */
-
-      --text:   #f0ede8;
-      --text2:  #b8b3aa;
-      --text3:  #7a756d;
-
-      /* Type stack */
+      /* Type stack — same across all three themes. */
       --serif: 'Instrument Serif', Georgia, serif;
       --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
       --mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-      /* Easing personalities */
+      /* Easing personalities — same across all three themes. */
       --ease-editorial:  cubic-bezier(0.16, 1, 0.3, 1);
       --ease-ceremony:   cubic-bezier(0.65, 0, 0.35, 1);
       --ease-cosmos:     cubic-bezier(0.2, 0.8, 0.2, 1);
       --ease-anticipate: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-      --glass-bg:     rgba(10,10,14,0.72);
-      --glass-border: rgba(255,255,255,0.06);
-      --glass-blur:   blur(24px);
-    }
+      --glass-blur: blur(24px);
 
-    /* ============================================================
-       TEMPLO — bright Maya Blue mode, ancient temple courtyard.
-       The default (Skeleton) is the dark amoxtli; Templo flips to
-       the daylight version: a saturated Maya Blue gradient field
-       with parchment-cream type, deeper cochineal pigment, and
-       stone-textured buttons that read as carved limestone with
-       hairline cracks. Activated via [data-theme="templo"] on
-       <html>; the flame toggle in the header persists it in
-       localStorage. Variable names stay constant across modes so
-       every CSS rule downstream inherits the swap automatically.
-    ============================================================ */
-    [data-theme="templo"] {
+      /* DEFAULT theme — Maya Blue cosmic. */
       --void:        #1a2a4e;
       --midnight:    #2c5da7;
       --graphite:    #3d6db0;
@@ -120,13 +93,9 @@
       --lapis:       #6f9adc;
       --lapis-rgb:   111,154,220;
 
-      /* Parchment cream still reads as the primary text color, now
-         on saturated Maya Blue instead of obsidian. The cream value
-         brightens slightly so it holds against the bluer field. */
       --cream:       #f7eed8;
       --cream-2:     #ead8b0;
       --cream-3:     #c8b890;
-
       --slate-3:     #a8a89c;
       --text:        #f7eed8;
       --text2:       #ead8b0;
@@ -136,117 +105,105 @@
       --glass-border: rgba(244,236,216,0.18);
     }
 
-    /* Templo body — Maya Blue sky-to-floor gradient. Replaces the
-       symmetric void-to-graphite gradient with a top-down descent
-       from sky-Maya through core Maya Blue to deep ceremonial
-       indigo at the floor. Reads as a temple courtyard at midday. */
-    [data-theme="templo"] body {
-      background:
-        linear-gradient(180deg,
-          #6b9adc 0%,
-          #4a7eb8 28%,
-          #2c5da7 56%,
-          #1e4378 82%,
-          #142e58 100%);
-      background-attachment: fixed;
+    /* ============================================================
+       CODEX — cream parchment with deep cochineal gradient accents.
+       Reads as a Mexica codex page held open in daylight, not a
+       fluorescent app screen. Text inverts (dark on cream); the
+       cinnabar shifts deeper to hold against the warm field; the
+       greca and seal-dots take over the spine in cinnabar instead
+       of cream so they remain visible.
+    ============================================================ */
+    [data-theme="codex"] {
+      --void:        #d8c89e;
+      --midnight:    #e0d0a8;
+      --graphite:    #e8dbc0;
+      --ink:         #d8c89e;
+      --slate-edge:  rgba(26,15,8,0.14);
+      --slate-line:  rgba(26,15,8,0.20);
+
+      --maya-blue:        #4a5d8a;
+      --maya-blue-deep:   #3a4a6e;
+      --maya-blue-glow:   rgba(74,93,138,0.30);
+
+      --cochineal:        #6b1414;
+      --cochineal-bright: #8B2222;
+      --cochineal-rgb:    107,20,20;
+      --cochineal-bright-rgb: 139,34,34;
+
+      --gold:        #b88820;
+      --gold-rgb:    184,136,32;
+
+      --jade:        #2a6850;
+      --jade-rgb:    42,104,80;
+
+      --lapis:       #2a3e6a;
+      --lapis-rgb:   42,62,106;
+
+      /* Text inverts: dark on cream. The variable names stay so
+         downstream rules (color: var(--cream)) work without
+         changes — the value is now near-black ink. */
+      --cream:       #1a0f08;
+      --cream-2:     #2a1f18;
+      --cream-3:     #5a4a3a;
+      --slate-3:     #9a8870;
+      --text:        #1a0f08;
+      --text2:       #4a3a2a;
+      --text3:       #6b5945;
+
+      --glass-bg:     rgba(232,219,192,0.78);
+      --glass-border: rgba(26,15,8,0.18);
     }
 
-    /* Templo also kills the obsidian pigment-field cores so the
-       Maya Blue gradient reads cleanly. The page motion still has
-       the disc + glyphs + grain; the radial blurs would muddy the
-       saturation in this mode. */
-    [data-theme="templo"] .pigment-core { display: none; }
+    /* ============================================================
+       SKELETON — warm obsidian night.
+       Not pure black; warm-toned dark in the #0E0C0A range that
+       reads as candlelit shadow rather than fluorescent dark mode.
+       The cinnabar shifts toward warm cinnabar (#D14B2C) so it
+       holds against the warm dark.
+    ============================================================ */
+    [data-theme="skeleton"] {
+      --void:        #050507;
+      --midnight:    #0E0C0A;
+      --graphite:    #14110E;
+      --ink:         #1f1c18;
+      --slate-edge:  rgba(244,236,216,0.06);
+      --slate-line:  rgba(244,236,216,0.10);
 
-    /* Templo CTA — carved limestone with hairline cracks and the
-       cinnabar-edge that becomes the operative emergency-glow on
-       hover. Multi-layer background: hairline crack SVG on top,
-       a vertical highlight gradient in the middle, a warm
-       limestone gradient at the base. Inset shadows give the stone
-       block depth; the drop-shadow gives it weight. */
-    [data-theme="templo"] .btn-amoxtli {
-      background-image:
-        url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='60' viewBox='0 0 220 60'%3E%3Cg stroke='rgba(40,30,20,0.22)' stroke-width='0.6' fill='none' stroke-linecap='round'%3E%3Cpath d='M5 8 L 18 24 L 32 18 L 48 32'/%3E%3Cpath d='M64 6 L 76 22 L 88 14'/%3E%3Cpath d='M104 28 L 118 44 L 132 38'/%3E%3Cpath d='M148 10 L 162 28 L 178 22 L 195 30'/%3E%3Cpath d='M28 48 L 42 38'/%3E%3Cpath d='M158 50 L 172 42'/%3E%3Cpath d='M86 50 L 96 40 L 108 50'/%3E%3C/g%3E%3Cg stroke='rgba(40,30,20,0.14)' stroke-width='0.4' fill='none' stroke-linecap='round'%3E%3Cpath d='M40 14 L 50 22'/%3E%3Cpath d='M120 12 L 132 24'/%3E%3Cpath d='M180 18 L 188 28'/%3E%3C/g%3E%3C/svg%3E"),
-        linear-gradient(180deg, rgba(255,250,235,0.18) 0%, transparent 50%, rgba(40,30,20,0.14) 100%),
-        linear-gradient(135deg, #e6d3a0 0%, #d4bf85 50%, #b89a5a 100%);
-      background-blend-mode: multiply, normal, normal;
-      background-size: 220px 60px, 100% 100%, 100% 100%;
-      background-repeat: repeat, no-repeat, no-repeat;
-      border: 1px solid rgba(40,30,20,0.36);
-      color: #1a1a22;
-      text-shadow: 0 1px 0 rgba(255,250,235,0.30);
-      box-shadow:
-        inset 0 1px 1.5px rgba(255,250,235,0.55),
-        inset 0 -2px 4px rgba(40,30,20,0.20),
-        inset 0 0 0 1px rgba(40,30,20,0.06),
-        0 2px 5px rgba(20,46,88,0.30);
-    }
-    [data-theme="templo"] .btn-amoxtli::before {
-      /* Suppress the gold catch-light wash — the stone surface has
-         its own sun reflection via the inset highlights. */
-      display: none;
-    }
-    [data-theme="templo"] .btn-amoxtli:hover {
-      border-color: rgba(var(--cochineal-rgb),0.85);
-      transform: translateY(-1px);
-      box-shadow:
-        inset 0 1px 1.5px rgba(255,250,235,0.65),
-        inset 0 -2px 6px rgba(40,30,20,0.30),
-        inset 0 0 0 1px rgba(40,30,20,0.10),
-        0 4px 10px rgba(20,46,88,0.35),
-        0 0 28px rgba(var(--cochineal-rgb),0.32);
-    }
-    [data-theme="templo"] .btn-amoxtli:active {
-      transform: translateY(1px);
-      box-shadow:
-        inset 0 1px 0 rgba(255,250,235,0.30),
-        inset 0 -1px 2px rgba(40,30,20,0.30),
-        0 1px 2px rgba(20,46,88,0.40);
+      --maya-blue:        #2c5da7;
+      --maya-blue-deep:   #1e4378;
+      --maya-blue-glow:   rgba(44,93,167,0.32);
+
+      --cochineal:        #a01818;
+      --cochineal-bright: #D14B2C;
+      --cochineal-rgb:    160,24,24;
+      --cochineal-bright-rgb: 209,75,44;
+
+      --gold:        #e8b14d;
+      --gold-rgb:    232,177,77;
+
+      --jade:        #1ec8a0;
+      --jade-rgb:    30,200,160;
+
+      --lapis:       #3a5fd4;
+      --lapis-rgb:   58,95,212;
+
+      --cream:       #EDE4D3;
+      --cream-2:     #B8AC95;
+      --cream-3:     #8A7F6E;
+      --slate-3:     #5a5247;
+      --text:        #EDE4D3;
+      --text2:       #B8AC95;
+      --text3:       #8A7F6E;
+
+      --glass-bg:     rgba(20,17,14,0.78);
+      --glass-border: rgba(244,236,216,0.06);
     }
 
-    /* Ghost button gains a parchment frame in Templo, not a glass one. */
-    [data-theme="templo"] .btn-ghost {
-      background: rgba(247,238,216,0.10);
-      border-color: rgba(247,238,216,0.32);
-      color: var(--cream);
-    }
-    [data-theme="templo"] .btn-ghost:hover {
-      background: rgba(247,238,216,0.18);
-      border-color: rgba(247,238,216,0.55);
-      color: var(--cream);
-    }
-
-    /* Intro overlay buttons — match the Templo stone treatment when in mode. */
-    [data-theme="templo"] .intro-controls button {
-      background: linear-gradient(135deg, #d4bf85, #b89a5a);
-      color: #1a1a22;
-      border-color: rgba(40,30,20,0.36);
-      text-shadow: 0 1px 0 rgba(255,250,235,0.30);
-    }
-
-    /* Card surfaces shift their tint in Templo so they read against
-       the new Maya Blue field. Glass darkens to a deep-blue parchment. */
-    [data-theme="templo"] .bento-card,
-    [data-theme="templo"] .console-frame,
-    [data-theme="templo"] .waitlist-card,
-    [data-theme="templo"] .support-card,
-    [data-theme="templo"] .memory-vis {
-      background: rgba(20,30,58,0.55);
-      border-color: rgba(247,238,216,0.20);
-    }
-    [data-theme="templo"] .value-item {
-      background: rgba(247,238,216,0.04);
-      border-color: rgba(247,238,216,0.16);
-    }
-    [data-theme="templo"] .console-titlebar {
-      background: rgba(247,238,216,0.04);
-      border-bottom-color: rgba(247,238,216,0.14);
-    }
-    [data-theme="templo"] .console-status .on { color: #6affd4; }
-
-    /* Smooth transition between Skeleton (default) and Templo. The
-       body and a few high-impact surfaces fade their colors over
-       480ms; the grain and animated layers swap instantly so motion
-       stays in sync. Skipped under prefers-reduced-motion. */
+    /* Smooth transition between Maya Blue (default), Codex, and
+       Skeleton. The body and a few high-impact surfaces fade their
+       colors over 480ms; the grain and animated layers swap
+       instantly so motion stays in sync. Skipped under
+       prefers-reduced-motion. */
     body,
     .pigment-core,
     .seal-dot,
@@ -292,17 +249,16 @@
     body {
       font-family: var(--sans);
       color: var(--text);
-      /* Black-to-deep-slate gradient — the void on which the amoxtli
-         sits. Top fades from pure void to graphite mid-page, settles
-         back to midnight in the lower third. Reads as ambient depth
-         without competing with the amoxtli spine. */
+      /* DEFAULT — Maya Blue cosmic. Sky-Maya at top descending
+         through ceremonial indigo to deep horizon. Reads as
+         standing in a temple courtyard at midday. */
       background:
         linear-gradient(180deg,
-          var(--void)     0%,
-          var(--midnight) 18%,
-          var(--graphite) 48%,
-          var(--midnight) 76%,
-          var(--void)    100%);
+          #6b9adc 0%,
+          #4a7eb8 28%,
+          #2c5da7 56%,
+          #1e4378 82%,
+          #142e58 100%);
       background-attachment: fixed;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -312,6 +268,33 @@
     ::selection { background: rgba(var(--cochineal-rgb),0.42); color: var(--cream); }
     img { display: block; max-width: 100%; }
     button { font-family: inherit; }
+
+    /* Per-theme body backgrounds. Default (above) is Maya Blue. */
+    [data-theme="codex"] body {
+      /* Cream parchment with deep cochineal warm wash. The radial
+         gives a vellum-warmed-by-candlelight feel without making
+         text unreadable. */
+      background:
+        radial-gradient(ellipse 110% 90% at 50% 30%,
+          #f0e5cc 0%,
+          #e8dbc0 36%,
+          #dcca9e 70%,
+          #c8b078 100%);
+      background-attachment: fixed;
+    }
+    [data-theme="skeleton"] body {
+      /* Warm obsidian — not pure black. Reads as candlelit shadow
+         rather than fluorescent dark. Same symmetric envelope as
+         the original dark mode. */
+      background:
+        linear-gradient(180deg,
+          #050507 0%,
+          #0E0C0A 18%,
+          #14110E 48%,
+          #0E0C0A 76%,
+          #050507 100%);
+      background-attachment: fixed;
+    }
 
     /* ============================================================
        Backdrop layers (z-stack):
@@ -333,7 +316,13 @@
       filter: blur(140px);
       opacity: 0.22;
       will-change: transform;
+      /* Hidden by default. The cinnabar/jade/lapis radial blurs
+         only make sense against a dark field; they would muddy the
+         Maya Blue gradient and disappear into cream parchment.
+         Skeleton mode brings them back. */
+      display: none;
     }
+    [data-theme="skeleton"] .pigment-core { display: block; }
     .pigment-core.h {
       width: 56vw; height: 56vh;
       background: radial-gradient(circle, var(--cochineal-bright), transparent 60%);
@@ -392,12 +381,21 @@
       width: 1px;
       background: linear-gradient(180deg,
         transparent 0%,
-        rgba(244,236,216,0.04) 8%,
-        rgba(244,236,216,0.06) 50%,
-        rgba(244,236,216,0.04) 92%,
+        rgba(244,236,216,0.06) 8%,
+        rgba(244,236,216,0.10) 50%,
+        rgba(244,236,216,0.06) 92%,
         transparent 100%);
       z-index: 0;
       pointer-events: none;
+    }
+    /* Codex spine inverts to dark on cream so the binding line stays visible. */
+    [data-theme="codex"] .amoxtli-spine {
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(26,15,8,0.10) 8%,
+        rgba(26,15,8,0.16) 50%,
+        rgba(26,15,8,0.10) 92%,
+        transparent 100%);
     }
 
     /* ============================================================
@@ -414,13 +412,24 @@
       background:
         linear-gradient(90deg,
           transparent 0%,
-          rgba(244,236,216,0.18) 20%,
-          rgba(244,236,216,0.28) 50%,
-          rgba(244,236,216,0.18) 80%,
+          rgba(244,236,216,0.22) 20%,
+          rgba(244,236,216,0.32) 50%,
+          rgba(244,236,216,0.22) 80%,
           transparent 100%);
       -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='18' viewBox='0 0 72 18'%3E%3Cpath fill='black' d='M0 6 H6 V0 H18 V6 H24 V12 H30 V6 H42 V12 H48 V6 H60 V0 H72 V6 H66 V12 H72 V18 H0 Z'/%3E%3C/svg%3E") repeat-x center / 72px 18px;
               mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='18' viewBox='0 0 72 18'%3E%3Cpath fill='black' d='M0 6 H6 V0 H18 V6 H24 V12 H30 V6 H42 V12 H48 V6 H60 V0 H72 V6 H66 V12 H72 V18 H0 Z'/%3E%3C/svg%3E") repeat-x center / 72px 18px;
-      opacity: 0.55;
+      opacity: 0.65;
+    }
+    /* Codex greca shifts to deep cinnabar — a printed-broadside step-fret. */
+    [data-theme="codex"] .greca-divider {
+      background:
+        linear-gradient(90deg,
+          transparent 0%,
+          rgba(139,34,34,0.55) 20%,
+          rgba(139,34,34,0.85) 50%,
+          rgba(139,34,34,0.55) 80%,
+          transparent 100%);
+      opacity: 0.85;
     }
 
     /* Cochineal seal-dot — the recurring punctuation between sections.
@@ -505,68 +514,69 @@
     }
 
     /* ============================================================
-       Theme toggle — small candle/flame icon in the header. Click
-       to switch between Skeleton (default) and Templo (daylight).
-       Choice persists in localStorage. The flame deepens to
-       cempasúchil-orange when vigil mode is active so the icon
-       itself reads the current state.
+       Theme picker — three-way swatch group in the header. Each
+       swatch is a small filled disc whose dominant color matches
+       the theme it activates: Maya Blue, cinnabar wax (Codex),
+       warm obsidian (Skeleton). Clicking any swatch sets the
+       theme immediately; the active one carries a cream ring so
+       the choice reads at a glance. Choice persists in
+       localStorage as `zotheos_landing_theme`.
     ============================================================ */
-    .theme-toggle {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      background: rgba(244,236,216,0.03);
-      border: 1px solid var(--slate-line);
-      color: var(--cream-2);
+    .theme-picker {
       display: inline-flex;
+      gap: 4px;
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin-left: 8px;
+      margin-left: 10px;
+      padding: 4px;
+      border-radius: 100px;
+      background: rgba(244,236,216,0.04);
+      border: 1px solid var(--slate-line);
+    }
+    [data-theme="codex"] .theme-picker {
+      background: rgba(26,15,8,0.04);
+      border-color: rgba(26,15,8,0.18);
+    }
+    .theme-swatch {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      border: none;
       padding: 0;
-      transition:
-        background 0.28s var(--ease-editorial),
-        border-color 0.28s var(--ease-editorial),
-        color 0.28s var(--ease-editorial),
-        transform 0.18s var(--ease-anticipate);
+      cursor: pointer;
       position: relative;
+      transition:
+        transform 0.18s var(--ease-anticipate),
+        box-shadow 0.24s var(--ease-editorial);
     }
-    .theme-toggle:hover {
-      background: rgba(245,165,42,0.10);
-      border-color: rgba(245,165,42,0.45);
-      color: var(--gold);
-      transform: translateY(-1px);
+    .theme-swatch::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.30), inset 0 -1px 1px rgba(0,0,0,0.20);
     }
-    .theme-toggle:focus-visible {
+    .theme-swatch[data-set=""]::before {
+      background: linear-gradient(135deg, #6b9adc 0%, #2c5da7 60%, #142e58 100%);
+    }
+    .theme-swatch[data-set="codex"]::before {
+      background: linear-gradient(135deg, #e8dbc0 0%, #b03030 70%, #8B2222 100%);
+    }
+    .theme-swatch[data-set="skeleton"]::before {
+      background: radial-gradient(circle at 35% 35%, #2a2622 0%, #14110E 60%, #050507 100%);
+    }
+    .theme-swatch:hover { transform: scale(1.08); }
+    .theme-swatch:focus-visible {
       outline: none;
-      box-shadow: 0 0 0 2px rgba(245,165,42,0.65);
+      box-shadow: 0 0 0 2px rgba(var(--gold-rgb),0.65);
     }
-    .theme-toggle svg {
-      transition: filter 0.28s var(--ease-editorial), transform 0.28s var(--ease-anticipate);
+    .theme-swatch[aria-pressed="true"] {
+      box-shadow:
+        0 0 0 2px var(--cream),
+        0 0 0 3px rgba(0,0,0,0.30);
     }
-    .theme-toggle:hover svg {
-      filter: drop-shadow(0 0 8px rgba(245,165,42,0.65));
-      transform: translateY(-1px);
-    }
-    [data-theme="templo"] .theme-toggle {
-      /* In Templo mode the sun-disc reads as the active mode marker.
-         The frame becomes parchment, the glyph becomes warm gold,
-         and the disc gains a slow breathing glow rather than a
-         flicker (the temple is steady; the candle was the one that
-         flickered). */
-      background: rgba(247,238,216,0.18);
-      border-color: rgba(247,238,216,0.55);
-      color: var(--gold);
-    }
-    [data-theme="templo"] .theme-toggle svg {
-      filter: drop-shadow(0 0 10px rgba(232,177,77,0.75));
-      animation: sun-breathe 5.2s var(--ease-ceremony) infinite;
-    }
-    @keyframes sun-breathe {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(232,177,77,0.55)); }
-      50%      { transform: scale(1.08); filter: drop-shadow(0 0 14px rgba(232,177,77,0.85)); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      [data-theme="templo"] .theme-toggle svg { animation: none !important; }
+    [data-theme="codex"] .theme-swatch[aria-pressed="true"] {
+      box-shadow:
+        0 0 0 2px #1a0f08,
+        0 0 0 3px rgba(255,255,255,0.30);
     }
 
     /* Phonetic mark in the footer version line — small, cream,
@@ -583,56 +593,132 @@
     }
 
     /* ============================================================
-       Buttons — amoxtli aura.
-       The brave color (cochineal) is reserved for the primary CTA.
-       Ghost button stays neutral so the cochineal carries weight.
+       Buttons — three-mode aware.
+       DEFAULT (Maya Blue): carved limestone with hairline cracks
+         and inset stone highlights. Reads as a temple stele.
+       CODEX (cream): cinnabar wax-stamp on parchment, deep red
+         pressed into the page.
+       SKELETON (dark): clean obsidian glass with cinnabar border,
+         the original night-mode treatment.
     ============================================================ */
     .btn-amoxtli,
     .nav-cta {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 14px 28px; border-radius: 6px;
-      background: linear-gradient(180deg, #0c0c14, var(--void));
-      border: 1px solid rgba(var(--cochineal-rgb),0.45);
-      color: var(--cream);
       font-family: var(--mono);
       font-size: 12px; font-weight: 500;
       letter-spacing: 0.10em;
       text-transform: uppercase;
       cursor: pointer;
+      transition:
+        transform 200ms var(--ease-anticipate),
+        box-shadow 320ms var(--ease-ceremony),
+        border-color 240ms var(--ease-editorial),
+        background 320ms var(--ease-editorial);
+      position: relative; overflow: hidden;
+      /* DEFAULT (Maya Blue) — carved limestone with hairline cracks. */
+      background-image:
+        url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='60' viewBox='0 0 220 60'%3E%3Cg stroke='rgba(40,30,20,0.22)' stroke-width='0.6' fill='none' stroke-linecap='round'%3E%3Cpath d='M5 8 L 18 24 L 32 18 L 48 32'/%3E%3Cpath d='M64 6 L 76 22 L 88 14'/%3E%3Cpath d='M104 28 L 118 44 L 132 38'/%3E%3Cpath d='M148 10 L 162 28 L 178 22 L 195 30'/%3E%3Cpath d='M28 48 L 42 38'/%3E%3Cpath d='M158 50 L 172 42'/%3E%3Cpath d='M86 50 L 96 40 L 108 50'/%3E%3C/g%3E%3Cg stroke='rgba(40,30,20,0.14)' stroke-width='0.4' fill='none' stroke-linecap='round'%3E%3Cpath d='M40 14 L 50 22'/%3E%3Cpath d='M120 12 L 132 24'/%3E%3Cpath d='M180 18 L 188 28'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(180deg, rgba(255,250,235,0.18) 0%, transparent 50%, rgba(40,30,20,0.14) 100%),
+        linear-gradient(135deg, #e6d3a0 0%, #d4bf85 50%, #b89a5a 100%);
+      background-blend-mode: multiply, normal, normal;
+      background-size: 220px 60px, 100% 100%, 100% 100%;
+      background-repeat: repeat, no-repeat, no-repeat;
+      border: 1px solid rgba(40,30,20,0.36);
+      color: #1a1a22;
+      text-shadow: 0 1px 0 rgba(255,250,235,0.30);
+      box-shadow:
+        inset 0 1px 1.5px rgba(255,250,235,0.55),
+        inset 0 -2px 4px rgba(40,30,20,0.20),
+        inset 0 0 0 1px rgba(40,30,20,0.06),
+        0 2px 5px rgba(20,46,88,0.30);
+    }
+    .btn-amoxtli:hover {
+      transform: translateY(-1px);
+      border-color: rgba(var(--cochineal-rgb),0.85);
+      box-shadow:
+        inset 0 1px 1.5px rgba(255,250,235,0.65),
+        inset 0 -2px 6px rgba(40,30,20,0.30),
+        inset 0 0 0 1px rgba(40,30,20,0.10),
+        0 4px 10px rgba(20,46,88,0.35),
+        0 0 28px rgba(var(--cochineal-rgb),0.32);
+    }
+    .btn-amoxtli:active {
+      transform: translateY(1px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,250,235,0.30),
+        inset 0 -1px 2px rgba(40,30,20,0.30),
+        0 1px 2px rgba(20,46,88,0.40);
+    }
+    .btn-amoxtli:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--cochineal-bright), 0 0 30px rgba(var(--cochineal-bright-rgb),0.40);
+    }
+    .nav-cta { padding: 9px 18px; font-size: 11px; }
+
+    /* CODEX — cinnabar wax-stamp on parchment. */
+    [data-theme="codex"] .btn-amoxtli,
+    [data-theme="codex"] .nav-cta {
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,0.10) 0%, transparent 60%, rgba(0,0,0,0.18) 100%),
+        linear-gradient(135deg, #b03030 0%, #8B2222 60%, #6b1414 100%);
+      background-blend-mode: normal, normal;
+      background-size: 100% 100%, 100% 100%;
+      background-repeat: no-repeat, no-repeat;
+      border: 1px solid rgba(0,0,0,0.32);
+      color: #f4ecd8;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.40);
+      box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.22),
+        inset 0 -2px 4px rgba(0,0,0,0.32),
+        0 2px 5px rgba(26,15,8,0.40),
+        0 0 0 0 rgba(0,0,0,0);
+    }
+    [data-theme="codex"] .btn-amoxtli:hover {
+      transform: translateY(-1px);
+      border-color: rgba(0,0,0,0.55);
+      box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.30),
+        inset 0 -2px 6px rgba(0,0,0,0.36),
+        0 5px 12px rgba(26,15,8,0.45),
+        0 0 24px rgba(139,34,34,0.30);
+    }
+
+    /* SKELETON — clean dark obsidian glass. */
+    [data-theme="skeleton"] .btn-amoxtli,
+    [data-theme="skeleton"] .nav-cta {
+      background-image: linear-gradient(180deg, #0c0c14, var(--void));
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-blend-mode: normal;
+      border: 1px solid rgba(var(--cochineal-rgb),0.45);
+      color: var(--cream);
+      text-shadow: none;
       box-shadow:
         0 0 0 1px rgba(244,236,216,0.04),
         0 0 26px rgba(var(--cochineal-bright-rgb),0.18),
         inset 0 1px 0 rgba(255,255,255,0.04);
-      transition:
-        transform 200ms var(--ease-anticipate),
-        box-shadow 320ms var(--ease-ceremony),
-        border-color 240ms var(--ease-editorial);
-      position: relative; overflow: hidden;
     }
-    .btn-amoxtli::before {
-      /* Subtle diagonal gold wash on hover — letterpress catch-light. */
-      content: ''; position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg,
-        transparent 30%,
-        rgba(var(--gold-rgb),0.08) 50%,
-        transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s var(--ease-editorial);
-      pointer-events: none;
+    [data-theme="skeleton"] .btn-amoxtli:hover {
+      transform: translateY(-1px);
+      border-color: rgba(var(--cochineal-bright-rgb),0.85);
+      box-shadow:
+        0 0 0 1px rgba(var(--cochineal-bright-rgb),0.30),
+        0 0 34px rgba(var(--cochineal-bright-rgb),0.32),
+        inset 0 1px 0 rgba(255,255,255,0.08);
     }
-    .btn-amoxtli:hover { transform: translateY(-1px); border-color: rgba(var(--cochineal-bright-rgb),0.85); box-shadow: 0 0 0 1px rgba(var(--cochineal-bright-rgb),0.30), 0 0 34px rgba(var(--cochineal-bright-rgb),0.32), inset 0 1px 0 rgba(255,255,255,0.08); }
-    .btn-amoxtli:hover::before { opacity: 1; }
-    .btn-amoxtli:active { transform: translateY(0); }
-    .btn-amoxtli:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--cochineal-bright), 0 0 30px rgba(var(--cochineal-bright-rgb),0.40); }
-    .nav-cta { padding: 9px 18px; font-size: 11px; }
 
+    /* ============================================================
+       Ghost button — same neutral frame across modes; the page
+       background does the work. The border + text use theme
+       variables so they auto-shift.
+    ============================================================ */
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 14px 28px; border-radius: 6px;
-      background: rgba(244,236,216,0.02);
-      border: 1px solid var(--slate-line);
-      color: var(--cream-2);
+      background: rgba(244,236,216,0.10);
+      border: 1px solid rgba(244,236,216,0.32);
+      color: var(--cream);
       font-family: var(--mono);
       font-size: 12px; font-weight: 500;
       letter-spacing: 0.10em;
@@ -642,10 +728,98 @@
       transition: all 0.28s var(--ease-editorial);
     }
     .btn-ghost:hover {
+      background: rgba(244,236,216,0.18);
+      border-color: rgba(244,236,216,0.55);
+      color: var(--cream);
+      transform: translateY(-1px);
+    }
+    [data-theme="codex"] .btn-ghost {
+      background: rgba(26,15,8,0.06);
+      border-color: rgba(26,15,8,0.30);
+      color: var(--cream);
+    }
+    [data-theme="codex"] .btn-ghost:hover {
+      background: rgba(26,15,8,0.12);
+      border-color: rgba(26,15,8,0.55);
+    }
+    [data-theme="skeleton"] .btn-ghost {
+      background: rgba(244,236,216,0.02);
+      border-color: rgba(244,236,216,0.10);
+      color: var(--cream-2);
+    }
+    [data-theme="skeleton"] .btn-ghost:hover {
       background: rgba(244,236,216,0.05);
       border-color: rgba(244,236,216,0.28);
       color: var(--cream);
-      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       Codex card surfaces — cream parchment with deep ink frames.
+       Cards on cream cannot be glass; they're slightly-deeper paper
+       inset into the page. The cinnabar gradient accent appears on
+       hover as a printed underline rather than a glow.
+    ============================================================ */
+    [data-theme="codex"] .bento-card,
+    [data-theme="codex"] .console-frame,
+    [data-theme="codex"] .waitlist-card,
+    [data-theme="codex"] .support-card,
+    [data-theme="codex"] .memory-vis {
+      background: rgba(232,219,192,0.55);
+      border-color: rgba(26,15,8,0.18);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    [data-theme="codex"] .value-item {
+      background: rgba(26,15,8,0.04);
+      border-color: rgba(26,15,8,0.16);
+    }
+    [data-theme="codex"] .value-item:hover {
+      background: rgba(139,34,34,0.06);
+      border-color: rgba(139,34,34,0.32);
+    }
+    [data-theme="codex"] .value-item::before {
+      background: var(--cochineal-bright);
+    }
+    [data-theme="codex"] .console-titlebar {
+      background: rgba(26,15,8,0.04);
+      border-bottom-color: rgba(26,15,8,0.14);
+    }
+    [data-theme="codex"] .console-status .on { color: var(--cochineal-bright); }
+    [data-theme="codex"] .console-query {
+      background: rgba(139,34,34,0.06);
+      border-color: rgba(139,34,34,0.22);
+    }
+    [data-theme="codex"] .console-verdict {
+      background: rgba(26,15,8,0.04);
+      border-color: rgba(26,15,8,0.10);
+    }
+    [data-theme="codex"] .meta-tag {
+      background: rgba(26,15,8,0.04);
+      border-color: rgba(26,15,8,0.16);
+      color: var(--text2);
+    }
+    [data-theme="codex"] .mv-row > .mv-label,
+    [data-theme="codex"] .mv-tech {
+      color: var(--text2);
+    }
+    [data-theme="codex"] .console-footer-note {
+      border-top-color: rgba(26,15,8,0.10);
+    }
+
+    /* Skeleton card surfaces stay glass-on-dark — the original
+       look. Provided explicitly so the default (Maya Blue) glass
+       does not bleed in. */
+    [data-theme="skeleton"] .bento-card,
+    [data-theme="skeleton"] .console-frame,
+    [data-theme="skeleton"] .waitlist-card,
+    [data-theme="skeleton"] .support-card,
+    [data-theme="skeleton"] .memory-vis {
+      background: rgba(10,10,14,0.72);
+      border-color: rgba(244,236,216,0.06);
+    }
+    [data-theme="skeleton"] .value-item {
+      background: rgba(244,236,216,0.025);
+      border-color: rgba(244,236,216,0.06);
     }
 
     /* ============================================================
@@ -1587,492 +1761,9 @@
       text-transform: uppercase;
     }
 
-    /* ============================================================
-       BANNER · The Council of Three (zk-*)
-       Maya Blue cosmic spread. Self-contained — does not theme-
-       switch with the page. Reads as an inset artifact: this is
-       what lives inside ZOTHEOS, formally introduced. The strip
-       at top carries the Nahuatl epigraph; the body is three
-       columns (Analyst, Humanist, Skeptic) each with verb +
-       object; a centered bridge ("Flor y canto.") plus tagline
-       caps the composition. Cosmetic query and footer at the
-       bottom give it the feel of an actual page from the system,
-       not a brochure.
-    ============================================================ */
-    .zk-frame {
-      max-width: 1180px;
-      margin: 0 auto;
-      border-radius: 6px;
-      overflow: hidden;
-      border: 0.5px solid rgba(244,236,216,0.10);
-      background: #02101E;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.55), 0 0 60px rgba(44,93,167,0.06);
-    }
-    .zk-strip {
-      background: rgba(2, 16, 30, 0.92);
-      color: #F4ECD8;
-      padding: 11px 22px;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 9.5px;
-      line-height: 1;
-      letter-spacing: 0.46em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #D14F35;
-    }
-    .zk-paper {
-      position: relative;
-      background-color: #02101E;
-      background-image: radial-gradient(ellipse 110% 80% at 50% 38%, #2F7693 0%, #15506F 26%, #0A2E48 56%, #04162A 82%, #02101E 100%);
-      color: #F4ECD8;
-      padding: 56px 56px 48px;
-      min-height: 720px;
-      overflow: hidden;
-      font-family: var(--mono);
-    }
-    @media (max-width: 720px) { .zk-paper { padding: 44px 28px 36px; min-height: 600px; } }
-    .zk-grain {
-      position: absolute; inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.7' numOctaves='2' seed='21'/%3E%3CfeColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.90  0 0 0 0 0.82  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-    }
-    .zk-vignette {
-      position: absolute; inset: 0;
-      pointer-events: none;
-      background: radial-gradient(ellipse at center 38%, transparent 45%, rgba(2, 16, 30, 0.65) 100%);
-    }
-    .zk-meta {
-      position: relative; z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 56px;
-      font-family: var(--mono);
-      font-size: 11px;
-      line-height: 1;
-      color: #B5C4D0;
-      letter-spacing: 0.08em;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .zk-meta .label {
-      color: #6E8294;
-      font-size: 9px;
-      letter-spacing: 0.36em;
-      font-family: var(--sans);
-      font-weight: 500;
-      margin-right: 14px;
-    }
-    .zk-cols {
-      position: relative; z-index: 2;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 64px;
-    }
-    @media (max-width: 720px) {
-      .zk-cols { grid-template-columns: 1fr; gap: 36px; }
-    }
-    .zk-col {
-      padding: 8px 28px 0;
-      position: relative;
-    }
-    .zk-col:first-child { padding-left: 0; }
-    .zk-col:last-child { padding-right: 0; }
-    .zk-col:not(:first-child) { border-left: 0.5px solid rgba(244, 236, 216, 0.16); }
-    .zk-col:not(:first-child)::before {
-      content: ''; position: absolute;
-      left: -3px; top: 0;
-      width: 5px; height: 5px;
-      background: #D14F35;
-    }
-    .zk-col:not(:first-child)::after {
-      content: ''; position: absolute;
-      left: -3px; bottom: 0;
-      width: 5px; height: 5px;
-      background: #D14F35;
-    }
-    @media (max-width: 720px) {
-      .zk-col { padding: 0; }
-      .zk-col:not(:first-child) { border-left: none; border-top: 0.5px solid rgba(244, 236, 216, 0.16); padding-top: 24px; }
-      .zk-col:not(:first-child)::before, .zk-col:not(:first-child)::after { display: none; }
-    }
-    .zk-glyph-wrap {
-      display: flex; justify-content: flex-start;
-      margin-bottom: 26px;
-    }
-    .zk-glyph-wrap svg { width: 56px; height: 56px; }
-    @keyframes zk-b-slow { 0%,100% { opacity:.6; transform: scale(.94);} 50% { opacity:1; transform: scale(1);} }
-    @keyframes zk-b-mid  { 0%,100% { opacity:.6; transform: scale(.94);} 50% { opacity:1; transform: scale(1.02);} }
-    @keyframes zk-b-fast { 0%,100% { opacity:.55; transform: scale(.92);} 45% { opacity:1; transform: scale(1.03);} 60% { opacity:.85; transform: scale(.98);} }
-    .zk-col.c-a .zk-glyph-wrap svg { animation: zk-b-slow 6s ease-in-out infinite; transform-origin: center; }
-    .zk-col.c-h .zk-glyph-wrap svg { animation: zk-b-mid  4.2s ease-in-out infinite; animation-delay: .6s; transform-origin: center; }
-    .zk-col.c-s .zk-glyph-wrap svg { animation: zk-b-fast 3.4s ease-in-out infinite; animation-delay: .2s; transform-origin: center; }
-    @media (prefers-reduced-motion: reduce) {
-      .zk-col .zk-glyph-wrap svg { animation: none !important; }
-    }
-    .zk-numeral {
-      font-family: var(--mono);
-      font-size: 13px;
-      line-height: 1;
-      color: #D14F35;
-      letter-spacing: 0.16em;
-      margin-bottom: 12px;
-    }
-    .zk-role {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 11px;
-      line-height: 1;
-      letter-spacing: 0.42em;
-      color: #F4ECD8;
-      margin-bottom: 14px;
-    }
-    .zk-divider {
-      width: 32px; height: 2px;
-      background: #D14F35;
-      margin-bottom: 22px;
-    }
-    .zk-verb {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 400;
-      font-size: 36px;
-      line-height: 1;
-      color: #F4ECD8;
-      margin-bottom: 14px;
-      letter-spacing: -0.012em;
-    }
-    .zk-object {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.4;
-      color: #B5C4D0;
-      max-width: 180px;
-    }
-    .zk-bridge {
-      position: relative; z-index: 2;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    .zk-title {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 400;
-      color: #F4ECD8;
-      line-height: 0.94;
-      letter-spacing: -0.022em;
-      margin: 0 0 18px 0;
-      font-size: clamp(64px, 9vw, 100px);
-    }
-    .zk-title .seal {
-      color: #D14F35;
-      text-shadow: 0 0 24px rgba(209,75,53,0.55);
-    }
-    .zk-tagline {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 1;
-      letter-spacing: 0.46em;
-      color: #B5C4D0;
-    }
-    .zk-query {
-      position: relative; z-index: 2;
-      border-bottom: 1.5px solid rgba(244, 236, 216, 0.4);
-      padding: 14px 0 16px;
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      font-family: var(--mono);
-      font-size: 13px;
-      line-height: 1.4;
-      color: #B5C4D0;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-    .zk-query .qlabel {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 1;
-      letter-spacing: 0.42em;
-      color: #F4ECD8;
-    }
-    .zk-query .ph { color: #6E8294; flex: 1; min-width: 0; }
-    .zk-query .qmark { color: #D14F35; font-size: 16px; }
-    .zk-cursor {
-      display: inline-block;
-      width: 9px; height: 14px;
-      background: #D14F35;
-      vertical-align: -2px;
-      animation: zk-blink 1.05s steps(2, jump-none) infinite;
-    }
-    @keyframes zk-blink { 50% { opacity: 0; } }
-    .zk-foot {
-      position: relative; z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 9px;
-      line-height: 1;
-      letter-spacing: 0.36em;
-      color: #B5C4D0;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .zk-foot .seal {
-      color: #D14F35;
-      font-family: var(--mono);
-      letter-spacing: 0.2em;
-      font-weight: 400;
-    }
-
-    /* ============================================================
-       BANNER · Flor y canto manifesto (zm-*)
-       Cream parchment with cinnabar strip + greca step-fret.
-       Self-contained. Reads as a printed broadside or formal
-       declaration: massive italic title, numbered manifesto, three
-       signatures with hand-drawn-looking flourishes. The emotional
-       climax of the page — the moment after you have seen what
-       lives here, before you are invited in.
-    ============================================================ */
-    .zm-frame {
-      max-width: 1180px;
-      margin: 0 auto;
-      border-radius: 6px;
-      overflow: hidden;
-      border: 0.5px solid rgba(232,219,192,0.18);
-      background: #E8DBC0;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.55);
-    }
-    .zm-strip {
-      background: #8B2222;
-      color: #F2E5CC;
-      padding: 11px 18px;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 9.5px;
-      line-height: 1;
-      letter-spacing: 0.42em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .zm-strip .mid {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      opacity: 0.85;
-    }
-    .zm-strip .mid span {
-      width: 4px; height: 4px;
-      background: #F2E5CC;
-    }
-    .zm-fret {
-      height: 14px;
-      background: #E8DBC0;
-      position: relative;
-      overflow: hidden;
-    }
-    .zm-fret svg { width: 100%; height: 100%; display: block; }
-    .zm-paper {
-      position: relative;
-      background: #E8DBC0;
-      color: #1A0F08;
-      padding: 44px 56px 44px;
-      min-height: 720px;
-      overflow: hidden;
-      font-family: var(--mono);
-    }
-    @media (max-width: 720px) { .zm-paper { padding: 32px 28px; min-height: 600px; } }
-    .zm-grain {
-      position: absolute; inset: 0;
-      pointer-events: none;
-      opacity: 0.20;
-      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' seed='14'/%3E%3CfeColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.07  0 0 0 0 0.04  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
-      mix-blend-mode: multiply;
-    }
-    .zm-meta {
-      position: relative; z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 48px;
-      font-family: var(--mono);
-      font-size: 11px;
-      line-height: 1;
-      color: #6B5945;
-      letter-spacing: 0.08em;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .zm-meta .label {
-      color: #9A8870;
-      font-size: 9px;
-      letter-spacing: 0.34em;
-      font-family: var(--sans);
-      font-weight: 500;
-      margin-right: 14px;
-    }
-    .zm-title-row {
-      position: relative; z-index: 2;
-      margin-bottom: 16px;
-    }
-    .zm-title {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 400;
-      color: #1A0F08;
-      line-height: 0.94;
-      letter-spacing: -0.022em;
-      margin: 0;
-    }
-    .zm-title .t1 { display: block; font-size: clamp(72px, 11vw, 124px); }
-    .zm-title .t2 {
-      display: block;
-      font-size: clamp(72px, 11vw, 124px);
-      padding-left: clamp(40px, 6vw, 80px);
-    }
-    .zm-title .seal {
-      color: #8B2222;
-      text-shadow: 0 0 16px rgba(139,34,34,0.40);
-    }
-    .zm-subtitle {
-      position: relative; z-index: 2;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 1;
-      letter-spacing: 0.46em;
-      color: #6B5945;
-      margin: 0 0 36px 4px;
-    }
-    .zm-fret-mid {
-      position: relative; z-index: 2;
-      margin: 0 0 32px 0;
-      height: 12px;
-    }
-    .zm-fret-mid svg { width: 280px; max-width: 100%; height: 100%; display: block; }
-    .zm-body {
-      position: relative; z-index: 2;
-      margin-bottom: 48px;
-      font-family: var(--mono);
-      font-size: 14px;
-      line-height: 1.85;
-      color: #1A0F08;
-      max-width: 520px;
-    }
-    .zm-body .row { display: flex; gap: 22px; }
-    .zm-body .num { color: #9A8870; font-size: 11px; padding-top: 3px; min-width: 20px; }
-    .zm-body .row.empty { height: 8px; }
-    .zm-sigs {
-      position: relative; z-index: 2;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 48px;
-    }
-    @media (max-width: 720px) {
-      .zm-sigs { grid-template-columns: 1fr; gap: 24px; }
-    }
-    .zm-sig {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .zm-sig svg.glyph { width: 38px; height: 38px; }
-    .zm-sig .role {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 9px;
-      line-height: 1;
-      letter-spacing: 0.38em;
-      color: #6B5945;
-    }
-    .zm-sig .signature { width: 70%; height: 12px; margin-top: 6px; }
-    .zm-sig .line {
-      width: 100%; height: 1px;
-      background: #1A0F08;
-      margin-top: -8px;
-      opacity: 0.35;
-    }
-    .zm-sig.s-a svg.glyph { animation: zk-b-slow 6s ease-in-out infinite; transform-origin: center; }
-    .zm-sig.s-h svg.glyph { animation: zk-b-mid 4.2s ease-in-out infinite; animation-delay: .6s; transform-origin: center; }
-    .zm-sig.s-s svg.glyph { animation: zk-b-fast 3.4s ease-in-out infinite; animation-delay: .2s; transform-origin: center; }
-    @media (prefers-reduced-motion: reduce) {
-      .zm-sig svg.glyph { animation: none !important; }
-    }
-    .zm-query {
-      position: relative; z-index: 2;
-      border-bottom: 1.5px solid #1A0F08;
-      padding: 14px 0 16px;
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      font-family: var(--mono);
-      font-size: 13px;
-      line-height: 1.4;
-      color: #6B5945;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-    }
-    .zm-query .qlabel {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 1;
-      letter-spacing: 0.42em;
-      color: #1A0F08;
-    }
-    .zm-query .ph { color: #9A8870; flex: 1; min-width: 0; }
-    .zm-query .qmark { color: #8B2222; font-size: 16px; }
-    .zm-cursor {
-      display: inline-block;
-      width: 9px; height: 14px;
-      background: #8B2222;
-      vertical-align: -2px;
-      animation: zk-blink 1.05s steps(2, jump-none) infinite;
-    }
-    .zm-foot {
-      position: relative; z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 9px;
-      line-height: 1;
-      letter-spacing: 0.36em;
-      color: #6B5945;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .zm-foot .seal {
-      color: #8B2222;
-      font-family: var(--mono);
-      letter-spacing: 0.2em;
-      font-weight: 400;
-    }
-
-    /* Banner sections themselves — full-width container so the
-       banners breathe, not pinned inside the standard 1280px grid. */
-    .banner-section {
-      padding: 80px 32px;
-      position: relative;
-      z-index: 2;
-    }
-    @media (max-width: 640px) {
-      .banner-section { padding: 56px 16px; }
-    }
+    /* Banner CSS removed — the zk/zm references were guidance for
+       theme palettes, not page sections. Maya Blue, Codex, and
+       Skeleton themes below carry that guidance. */
 
   </style>
 </head>
@@ -2113,27 +1804,25 @@
         <a href="#features">Architecture</a>
         <a href="#memory">Memory</a>
         <a href="#waitlist" class="nav-cta">Early access</a>
-        <button id="themeToggle" class="theme-toggle" type="button"
-                aria-label="Switch to Templo · daylight temple mode"
-                title="Templo · ancient temple daylight">
-          <!-- Sun-disc icon. Simple radial sun, reads as "step into
-               the courtyard at midday" without iconic clutter. The
-               disc fills with cinnabar in Skeleton mode and with
-               gold-on-stone in Templo mode. -->
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <circle cx="8" cy="8" r="3.2" fill="currentColor"/>
-            <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-              <line x1="8" y1="1.4" x2="8" y2="3.2"/>
-              <line x1="8" y1="12.8" x2="8" y2="14.6"/>
-              <line x1="1.4" y1="8" x2="3.2" y2="8"/>
-              <line x1="12.8" y1="8" x2="14.6" y2="8"/>
-              <line x1="3.2" y1="3.2" x2="4.4" y2="4.4"/>
-              <line x1="11.6" y1="11.6" x2="12.8" y2="12.8"/>
-              <line x1="3.2" y1="12.8" x2="4.4" y2="11.6"/>
-              <line x1="11.6" y1="4.4" x2="12.8" y2="3.2"/>
-            </g>
-          </svg>
-        </button>
+        <div class="theme-picker" role="radiogroup" aria-label="Page theme">
+          <!-- Three swatches, one per theme. Click to switch.
+               Active swatch carries a cream ring. -->
+          <button class="theme-swatch" type="button"
+                  data-set=""
+                  aria-pressed="true"
+                  aria-label="Maya Blue · default cosmic spread"
+                  title="Maya Blue · cosmic"></button>
+          <button class="theme-swatch" type="button"
+                  data-set="codex"
+                  aria-pressed="false"
+                  aria-label="Codex · cream parchment with deep cinnabar"
+                  title="Codex · parchment"></button>
+          <button class="theme-swatch" type="button"
+                  data-set="skeleton"
+                  aria-pressed="false"
+                  aria-label="Skeleton · warm obsidian night"
+                  title="Skeleton · obsidian"></button>
+        </div>
       </nav>
     </div>
   </header>
@@ -2336,113 +2025,6 @@
   </div>
 
   <!-- ============================================================
-       BANNER · The Council of Three (zk)
-       Self-contained Maya Blue spread. Introduces the cores
-       formally before Architecture explains how they work.
-  ============================================================ -->
-  <section class="banner-section reveal">
-    <div class="zk-frame">
-      <div class="zk-strip">
-        <span>IN&nbsp;&nbsp;XOCHITL&nbsp;&nbsp;&middot;&nbsp;&nbsp;IN&nbsp;&nbsp;CUICATL</span>
-        <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO</span>
-      </div>
-
-      <div class="zk-paper">
-        <div class="zk-grain"></div>
-        <div class="zk-vignette"></div>
-
-        <div class="zk-meta">
-          <div>
-            <span class="label">EXPEDIENTE</span>
-            <span>026&nbsp;&nbsp;&middot;&nbsp;&nbsp;CONSEJO&nbsp;&nbsp;DE&nbsp;&nbsp;TRES</span>
-          </div>
-          <div>
-            <span class="label">FECHA</span>
-            <span id="zkFecha">07&nbsp;&nbsp;MAYO&nbsp;&nbsp;2026</span>
-          </div>
-        </div>
-
-        <div class="zk-cols">
-          <div class="zk-col c-a">
-            <div class="zk-glyph-wrap">
-              <svg viewBox="0 0 40 40" fill="none" stroke="#F4ECD8" stroke-width="1.4" stroke-linecap="square">
-                <rect x="3" y="3" width="34" height="34"/>
-                <line x1="20" y1="9" x2="20" y2="31"/>
-                <line x1="14" y1="9" x2="26" y2="9"/>
-                <line x1="14" y1="31" x2="26" y2="31"/>
-              </svg>
-            </div>
-            <div class="zk-numeral">I.</div>
-            <div class="zk-role">ANALYST</div>
-            <div class="zk-divider"></div>
-            <div class="zk-verb">Measures.</div>
-            <div class="zk-object">what can be counted, what holds.</div>
-          </div>
-
-          <div class="zk-col c-h">
-            <div class="zk-glyph-wrap">
-              <svg viewBox="0 0 40 40" fill="none" stroke="#D14F35" stroke-width="1.4" stroke-linecap="square">
-                <rect x="3" y="3" width="34" height="34"/>
-                <circle cx="20" cy="20" r="6.5" fill="#D14F35"/>
-                <line x1="20" y1="6.5" x2="20" y2="10"/>
-                <line x1="20" y1="30" x2="20" y2="33.5"/>
-                <line x1="6.5" y1="20" x2="10" y2="20"/>
-                <line x1="30" y1="20" x2="33.5" y2="20"/>
-              </svg>
-            </div>
-            <div class="zk-numeral">II.</div>
-            <div class="zk-role">HUMANIST</div>
-            <div class="zk-divider"></div>
-            <div class="zk-verb">Witnesses.</div>
-            <div class="zk-object">what is felt, what matters.</div>
-          </div>
-
-          <div class="zk-col c-s">
-            <div class="zk-glyph-wrap">
-              <svg viewBox="0 0 40 40" fill="none" stroke="#F4ECD8" stroke-width="1.4" stroke-linecap="square">
-                <rect x="3" y="3" width="34" height="34"/>
-                <line x1="20" y1="8" x2="20" y2="20"/>
-                <line x1="20" y1="20" x2="11" y2="32"/>
-                <line x1="20" y1="20" x2="29" y2="32"/>
-                <circle cx="20" cy="20" r="1.6" fill="#F4ECD8" stroke="none"/>
-              </svg>
-            </div>
-            <div class="zk-numeral">III.</div>
-            <div class="zk-role">SKEPTIC</div>
-            <div class="zk-divider"></div>
-            <div class="zk-verb">Doubts.</div>
-            <div class="zk-object">what is silenced, what hides.</div>
-          </div>
-        </div>
-
-        <div class="zk-bridge">
-          <h2 class="zk-title">
-            Flor y canto<span class="seal">.</span>
-          </h2>
-          <div class="zk-tagline">ONE&nbsp;&nbsp;SONG&nbsp;&nbsp;&middot;&nbsp;&nbsp;THREE&nbsp;&nbsp;VOICES&nbsp;&nbsp;&middot;&nbsp;&nbsp;YOU&nbsp;&nbsp;DECIDE&nbsp;&nbsp;WHAT&nbsp;&nbsp;IS&nbsp;&nbsp;TRUE</div>
-        </div>
-
-        <div class="zk-query">
-          <span class="qlabel">PREGUNTA</span>
-          <span class="qmark">&rsaquo;</span>
-          <span class="ph">address the council</span>
-          <span class="zk-cursor"></span>
-        </div>
-
-        <div class="zk-foot">
-          <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO&nbsp;&nbsp;&middot;&nbsp;&nbsp;NUNCA&nbsp;&nbsp;UN&nbsp;&nbsp;AMO</span>
-          <span class="seal">ZTHS&middot;026</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div style="position:relative; max-width:1280px; margin:0 auto;">
-    <hr class="greca-divider" />
-    <span class="seal-dot top"></span>
-  </div>
-
-  <!-- ============================================================
        Architecture
   ============================================================ -->
   <section id="features">
@@ -2611,145 +2193,6 @@
   </div>
 
   <!-- ============================================================
-       BANNER · Flor y canto manifesto (zm)
-       Cream parchment broadside. The emotional climax — after the
-       reader has seen who lives here, this is the formal vow,
-       signed by all three voices. Sits before the waitlist so the
-       invitation that follows lands with weight.
-  ============================================================ -->
-  <section class="banner-section reveal">
-    <div class="zm-frame">
-      <div class="zm-strip">
-        <span>IN&nbsp;&nbsp;XOCHITL&nbsp;&nbsp;&middot;&nbsp;&nbsp;IN&nbsp;&nbsp;CUICATL</span>
-        <span class="mid"><span></span><span></span><span></span></span>
-        <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO</span>
-      </div>
-
-      <div class="zm-fret">
-        <svg viewBox="0 0 600 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <g fill="#8B2222">
-            <rect x="0" y="2" width="600" height="2"/>
-            <rect x="0" y="10" width="600" height="2"/>
-          </g>
-        </svg>
-      </div>
-
-      <div class="zm-paper">
-        <div class="zm-grain"></div>
-
-        <div class="zm-meta">
-          <div>
-            <span class="label">EXPEDIENTE</span>
-            <span>026&nbsp;&nbsp;&middot;&nbsp;&nbsp;CONSEJO&nbsp;&nbsp;DE&nbsp;&nbsp;TRES</span>
-          </div>
-          <div>
-            <span class="label">FECHA</span>
-            <span id="zmFecha">07&nbsp;&nbsp;MAYO&nbsp;&nbsp;2026</span>
-          </div>
-        </div>
-
-        <div class="zm-title-row">
-          <h2 class="zm-title">
-            <span class="t1">Flor y</span>
-            <span class="t2">canto<span class="seal">.</span></span>
-          </h2>
-        </div>
-        <div class="zm-subtitle">FLOWER&nbsp;&nbsp;AND&nbsp;&nbsp;SONG&nbsp;&nbsp;&middot;&nbsp;&nbsp;THE&nbsp;&nbsp;WAY&nbsp;&nbsp;TRUTH&nbsp;&nbsp;IS&nbsp;&nbsp;TOLD</div>
-
-        <div class="zm-fret-mid">
-          <svg viewBox="0 0 280 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#8B2222">
-              <rect x="0" y="2" width="14" height="8"/>
-              <rect x="20" y="0" width="14" height="12"/>
-              <rect x="40" y="2" width="14" height="8"/>
-              <rect x="60" y="4" width="14" height="4"/>
-              <rect x="80" y="2" width="14" height="8"/>
-              <rect x="100" y="0" width="14" height="12"/>
-              <rect x="120" y="2" width="14" height="8"/>
-              <rect x="140" y="4" width="14" height="4"/>
-              <rect x="160" y="2" width="14" height="8"/>
-              <rect x="180" y="0" width="14" height="12"/>
-              <rect x="200" y="2" width="14" height="8"/>
-              <rect x="220" y="4" width="14" height="4"/>
-              <rect x="240" y="2" width="14" height="8"/>
-              <rect x="260" y="0" width="14" height="12"/>
-            </g>
-          </svg>
-        </div>
-
-        <div class="zm-body">
-          <div class="row"><span class="num">01</span><span>Three minds. Each speaks alone.</span></div>
-          <div class="row"><span class="num">02</span><span>Their song reveals what one cannot.</span></div>
-          <div class="row empty"></div>
-          <div class="row"><span class="num">03</span><span>You decide what is true.</span></div>
-        </div>
-
-        <div class="zm-sigs">
-          <div class="zm-sig s-a">
-            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#1A0F08" stroke-width="1.4" stroke-linecap="square">
-              <rect x="3" y="3" width="34" height="34"/>
-              <line x1="20" y1="9" x2="20" y2="31"/>
-              <line x1="14" y1="9" x2="26" y2="9"/>
-              <line x1="14" y1="31" x2="26" y2="31"/>
-            </svg>
-            <span class="role">ANALYST</span>
-            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
-              <path d="M2 8 Q 12 2 18 7 T 32 6 Q 42 11 50 5 T 68 8 Q 78 3 86 7 L 96 5"/>
-            </svg>
-            <div class="line"></div>
-          </div>
-          <div class="zm-sig s-h">
-            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#8B2222" stroke-width="1.4" stroke-linecap="square">
-              <rect x="3" y="3" width="34" height="34"/>
-              <circle cx="20" cy="20" r="6.5" fill="#8B2222"/>
-              <line x1="20" y1="6.5" x2="20" y2="10"/>
-              <line x1="20" y1="30" x2="20" y2="33.5"/>
-              <line x1="6.5" y1="20" x2="10" y2="20"/>
-              <line x1="30" y1="20" x2="33.5" y2="20"/>
-            </svg>
-            <span class="role">HUMANIST</span>
-            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
-              <path d="M3 9 Q 14 2 22 8 T 40 5 Q 50 10 60 4 T 80 7 Q 88 3 95 8"/>
-            </svg>
-            <div class="line"></div>
-          </div>
-          <div class="zm-sig s-s">
-            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#1A0F08" stroke-width="1.4" stroke-linecap="square">
-              <rect x="3" y="3" width="34" height="34"/>
-              <line x1="20" y1="8" x2="20" y2="20"/>
-              <line x1="20" y1="20" x2="11" y2="32"/>
-              <line x1="20" y1="20" x2="29" y2="32"/>
-              <circle cx="20" cy="20" r="1.6" fill="#1A0F08" stroke="none"/>
-            </svg>
-            <span class="role">SKEPTIC</span>
-            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
-              <path d="M2 6 Q 10 11 18 5 T 36 8 Q 46 3 54 9 T 72 6 Q 82 10 90 4 L 97 7"/>
-            </svg>
-            <div class="line"></div>
-          </div>
-        </div>
-
-        <div class="zm-query">
-          <span class="qlabel">PREGUNTA</span>
-          <span class="qmark">&rsaquo;</span>
-          <span class="ph">ask anything that needs honest reasoning</span>
-          <span class="zm-cursor"></span>
-        </div>
-
-        <div class="zm-foot">
-          <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO&nbsp;&nbsp;&middot;&nbsp;&nbsp;NUNCA&nbsp;&nbsp;UN&nbsp;&nbsp;AMO</span>
-          <span class="seal">ZTHS&middot;026</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div style="position:relative; max-width:1280px; margin:0 auto;">
-    <hr class="greca-divider" />
-    <span class="seal-dot top"></span>
-  </div>
-
-  <!-- ============================================================
        Waitlist
   ============================================================ -->
   <section id="waitlist" class="waitlist-section">
@@ -2845,65 +2288,56 @@
 
   <script>
     /* ============================================================
-       Year + banner dates
+       Year
     ============================================================ */
     document.getElementById('yr').textContent = new Date().getFullYear();
-    (function () {
-      // Render today's date in the Spanish "DD MES AAAA" format used
-      // by the two banners. Two non-breaking spaces between tokens
-      // match the existing tracked-out look.
-      var months = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO',
-                    'JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
-      var d = new Date();
-      var dd = String(d.getDate()).padStart(2, '0');
-      var label = dd + '  ' + months[d.getMonth()] + '  ' + d.getFullYear();
-      var zk = document.getElementById('zkFecha');
-      var zm = document.getElementById('zmFecha');
-      if (zk) zk.textContent = label;
-      if (zm) zm.textContent = label;
-    })();
 
     /* ============================================================
-       Theme toggle — Skeleton (default) ↔ Templo (daylight mode).
-       Persists choice in localStorage. Applied on <html> as
-       data-theme="templo" so the CSS variable swap takes over
-       without touching the body class space.
+       Theme picker — three themes. Default (no data-theme) is
+       Maya Blue cosmic. data-theme="codex" is cream parchment with
+       deep cinnabar. data-theme="skeleton" is warm obsidian night.
+       Choice persists in localStorage as `zotheos_landing_theme`.
+       Applied early so first paint is correct.
     ============================================================ */
     (function () {
       var KEY = 'zotheos_landing_theme';
       var root = document.documentElement;
-      var btn = document.getElementById('themeToggle');
 
       function apply(theme) {
-        if (theme === 'templo') {
-          root.setAttribute('data-theme', 'templo');
-          if (btn) {
-            btn.setAttribute('aria-label', 'Switch to Skeleton · obsidian night mode');
-            btn.setAttribute('title', 'Templo active · click for Skeleton');
-          }
+        if (theme === 'codex' || theme === 'skeleton') {
+          root.setAttribute('data-theme', theme);
         } else {
           root.removeAttribute('data-theme');
-          if (btn) {
-            btn.setAttribute('aria-label', 'Switch to Templo · daylight temple mode');
-            btn.setAttribute('title', 'Templo · ancient temple daylight');
-          }
+          theme = '';
+        }
+        // Reflect on the swatch buttons.
+        var btns = document.querySelectorAll('.theme-swatch');
+        for (var i = 0; i < btns.length; i++) {
+          var t = btns[i].getAttribute('data-set') || '';
+          btns[i].setAttribute('aria-pressed', t === theme ? 'true' : 'false');
         }
       }
 
-      // Restore saved preference (do this before bind so the page
-      // is in the right state on first paint).
-      try {
-        var saved = localStorage.getItem(KEY);
-        if (saved === 'templo') apply('templo');
-      } catch (e) { /* localStorage may be disabled; safe to ignore */ }
+      // Restore on first paint, BEFORE binding click handlers.
+      var saved = '';
+      try { saved = localStorage.getItem(KEY) || ''; } catch (e) {}
+      apply(saved);
 
-      if (btn) {
-        btn.addEventListener('click', function () {
-          var current = root.getAttribute('data-theme') === 'templo' ? 'templo' : 'amoxtli';
-          var next = current === 'templo' ? 'amoxtli' : 'templo';
-          apply(next);
-          try { localStorage.setItem(KEY, next); } catch (e) {}
-        });
+      // Bind clicks once DOM has loaded the swatches.
+      function bind() {
+        var btns = document.querySelectorAll('.theme-swatch');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener('click', function (ev) {
+            var t = this.getAttribute('data-set') || '';
+            apply(t);
+            try { localStorage.setItem(KEY, t); } catch (e) {}
+          });
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bind);
+      } else {
+        bind();
       }
     })();
 
