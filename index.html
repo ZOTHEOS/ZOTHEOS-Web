@@ -232,9 +232,12 @@
     }
 
     /* ============================================================
-       Greca step-fret divider — authentic L-hook-and-bar pattern
-       drawn as inline SVG. Threads cochineal across the page as
-       the architectural rhythm.
+       Floral xochitl band — replaces the old greca step-fret.
+       Small 4-petal Mexica xochitl flowers strung along a thin
+       cochineal vine. Reads as embroidery, not as a chain.
+       Each flower is an 8x8px radial of one center + 4 petals.
+       Generated programmatically by JS into every .grecaTeeth
+       group so the rhythm scales to viewport.
     ============================================================ */
     .greca-divider {
       position: relative;
@@ -242,28 +245,37 @@
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 32px;
-      height: 18px;
+      height: 22px;
       display: flex;
       align-items: center;
     }
     .greca-divider svg {
       width: 100%;
-      height: 14px;
+      height: 18px;
       display: block;
     }
 
-    /* Cochineal seal-dot — flat disc, single soft halo. Sits
-       centered on the greca as a visible joint. */
+    /* Center seal-dot — now a tiny xochitl flower instead of a flat disc */
     .seal-dot {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--cochineal);
-      box-shadow: 0 0 14px rgba(var(--cochineal-rgb), 0.55);
+      width: 18px; height: 18px;
+      pointer-events: none;
       z-index: 3;
+      filter: drop-shadow(0 0 10px rgba(var(--cochineal-rgb), 0.55));
+    }
+    .seal-dot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, var(--cochineal) 0%, var(--cochineal) 14%, transparent 20%),
+        radial-gradient(circle at 50% 14%, var(--cochineal) 0%, var(--cochineal) 18%, transparent 28%),
+        radial-gradient(circle at 86% 50%, var(--cochineal) 0%, var(--cochineal) 18%, transparent 28%),
+        radial-gradient(circle at 50% 86%, var(--cochineal) 0%, var(--cochineal) 18%, transparent 28%),
+        radial-gradient(circle at 14% 50%, var(--cochineal) 0%, var(--cochineal) 18%, transparent 28%);
     }
 
     /* ============================================================
@@ -293,25 +305,59 @@
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       gap: 16px;
-      height: 68px;
+      height: 72px;
     }
     .header-left {
       justify-self: start;
-      display: flex; align-items: center; gap: 12px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .header-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s var(--ease-editorial);
+    }
+    .header-icon img {
+      height: 32px; width: auto;
+      filter: drop-shadow(0 0 12px rgba(var(--cochineal-rgb), 0.30));
+      animation: icon-breathe 5s ease-in-out infinite;
+    }
+    .header-icon.img-failed img { display: none; }
+    @keyframes icon-breathe {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.04); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .header-icon img { animation: none !important; }
+    }
+    .header-icon:hover img {
+      filter: drop-shadow(0 0 18px rgba(var(--cochineal-rgb), 0.50));
     }
     .header-mark {
       justify-self: center;
+      display: inline-flex; align-items: center;
+      gap: 12px;
+      transition: opacity 0.2s var(--ease-editorial);
+    }
+    .header-logo-img {
+      height: 30px; width: auto;
+      filter: drop-shadow(0 0 14px rgba(var(--cochineal-rgb), 0.18));
+    }
+    .header-mark:hover .header-logo-img {
+      filter: drop-shadow(0 0 20px rgba(var(--cochineal-rgb), 0.32));
+    }
+    /* Image-failed state: hide the broken img, show the text. Set
+       by JS onerror handler that adds .img-failed to the parent. */
+    .header-mark .header-mark-text {
       font-family: var(--sans);
-      font-size: 13px; font-weight: 500;
+      font-size: 14px; font-weight: 500;
       letter-spacing: 0.52em;
       color: var(--ink);
       text-transform: uppercase;
-      display: inline-flex; align-items: center;
-      gap: 12px;
+      display: none;
     }
-    .header-mark img {
-      height: 22px; width: auto;
-    }
+    .header-mark.img-failed .header-logo-img { display: none; }
+    .header-mark.img-failed .header-mark-text { display: inline; }
     .header-nav {
       display: flex; align-items: center; gap: 4px;
       justify-self: end;
@@ -355,8 +401,9 @@
     @media (max-width: 720px) {
       .header-inner { height: 60px; gap: 8px; }
       .header-nav a:not(.nav-cta) { display: none; }
-      .header-mark { font-size: 11px; letter-spacing: 0.40em; }
-      .header-mark img { height: 18px; }
+      .header-icon img { height: 24px; }
+      .header-logo-img { height: 22px; }
+      .header-left { gap: 8px; }
     }
 
     /* Theme picker — three swatches in a tight pill */
@@ -626,11 +673,12 @@
     }
 
     /* ============================================================
-       HERO — Sun Stone disc above editorial type, CENTERED
+       HERO — Sun Stone disc above editorial type, CENTERED.
+       Sized to its content, not stretched to viewport — a hero
+       that fills 100vh creates blue voids beneath short content.
     ============================================================ */
     .hero {
-      min-height: 100vh;
-      padding: 96px 32px 60px;
+      padding: 92px 32px 48px;
       position: relative; z-index: 2;
       display: flex; align-items: center; justify-content: center;
     }
@@ -641,18 +689,18 @@
       text-align: center;
     }
     @media (max-width: 640px) {
-      .hero { padding: 88px 22px 44px; min-height: 92vh; }
+      .hero { padding: 80px 22px 36px; }
     }
 
     .hero-disc-wrap {
       position: relative;
       aspect-ratio: 1 / 1;
       width: 100%;
-      max-width: 360px;
-      margin: 0 auto 44px;
+      max-width: 320px;
+      margin: 0 auto 36px;
     }
     @media (max-width: 640px) {
-      .hero-disc-wrap { max-width: 260px; margin-bottom: 32px; }
+      .hero-disc-wrap { max-width: 240px; margin-bottom: 28px; }
     }
     .hero-disc { width: 100%; height: 100%; }
     .hero-disc svg { width: 100%; height: 100%; display: block; }
@@ -692,28 +740,30 @@
     /* THE HEADLINE — small setup line + dominant punchline.
        L1 sits as a quiet introduction in muted ink; L2 lands at
        full scale with cochineal glow on the operative phrase.
-       Reads as luminous pigment painted on stone, not as Web 2.0
-       neon. */
+       Tight stack but with breathing room — the two lines should
+       feel related, not collide. */
     .hero-headline {
-      margin: 0 0 32px 0;
+      margin: 0 0 28px 0;
       font-family: var(--serif);
       font-weight: 400;
       font-style: italic;
-      line-height: 0.94;
+      line-height: 0.95;
       letter-spacing: -0.026em;
       color: var(--ink);
     }
     .hero-headline .l1 {
       display: block;
-      font-size: clamp(36px, 5vw, 56px);
+      font-size: clamp(34px, 4.6vw, 52px);
       color: var(--ink-2);
-      opacity: 0.88;
-      margin-bottom: 4px;
+      opacity: 0.86;
+      line-height: 1.1;
+      margin-bottom: 8px;
     }
     .hero-headline .l2 {
       display: block;
-      font-size: clamp(84px, 13vw, 148px);
-      line-height: 0.9;
+      font-size: clamp(80px, 12.5vw, 140px);
+      line-height: 0.96;
+      margin-top: 0;
     }
     .hero-headline .glow {
       color: var(--cochineal);
@@ -741,12 +791,12 @@
     .hero-actions {
       display: flex; gap: 14px; flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
     }
     .hero-stats {
       display: flex; gap: 48px; flex-wrap: wrap;
       justify-content: center;
-      padding-top: 32px;
+      padding-top: 28px;
       position: relative;
     }
     .hero-stats::before {
@@ -778,6 +828,191 @@
     @media (max-width: 640px) {
       .hero-stats { gap: 28px; }
       .hero-stat .num { font-size: 30px; }
+    }
+
+    /* ============================================================
+       COUNCIL PILLARS — the chamber. The three minds become the
+       page's spine, not a feature card. Bracketed top and bottom
+       by IN XOCHITL · IN CUICATL strips so the section reads as
+       a contained ceremonial space.
+
+       Each pillar carries glyph + numeral + role + verb + object,
+       plus a small unique floral mark near the role label
+       (xochitl / marigold / dahlia). All in cochineal — the brave
+       color stays singular, only the floral form distinguishes
+       each voice.
+    ============================================================ */
+    .council-strip {
+      position: relative;
+      z-index: 2;
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: var(--cochineal);
+      border-top: 1px solid rgba(var(--cochineal-rgb), 0.32);
+      border-bottom: 1px solid rgba(var(--cochineal-rgb), 0.32);
+      background:
+        linear-gradient(180deg,
+          rgba(var(--cochineal-rgb), 0.06) 0%,
+          rgba(var(--cochineal-rgb), 0.02) 50%,
+          rgba(var(--cochineal-rgb), 0.06) 100%);
+    }
+    .council-strip .center {
+      color: var(--ink-3);
+      font-style: italic;
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+    @media (max-width: 720px) {
+      .council-strip { font-size: 9px; letter-spacing: 0.32em; }
+      .council-strip .center { font-size: 11px; }
+    }
+
+    .council-section {
+      position: relative;
+      z-index: 2;
+      padding: 48px 0 48px;
+      /* Slight inner shadow at top + bottom edges so the chamber
+         feels carved INTO the page, not floating on it */
+      box-shadow:
+        inset 0 14px 24px -14px rgba(0, 0, 0, 0.45),
+        inset 0 -14px 24px -14px rgba(0, 0, 0, 0.45);
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%,
+          rgba(var(--cochineal-rgb), 0.05) 0%,
+          transparent 70%);
+    }
+    .council-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .council-pillar {
+      padding: 28px 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+    /* Cochineal vertical separator with iron-cap dots top + bottom */
+    .council-pillar:not(:first-child)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      bottom: 14px;
+      width: 1px;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(var(--cochineal-rgb), 0.45) 12%,
+        rgba(var(--cochineal-rgb), 0.45) 88%,
+        transparent 100%);
+    }
+    .council-pillar .cap {
+      display: none;
+      position: absolute;
+      left: -3px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--cochineal);
+      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.55);
+    }
+    .council-pillar:not(:first-child) .cap { display: block; }
+    .council-pillar .cap.top { top: 10px; }
+    .council-pillar .cap.bottom { bottom: 10px; }
+
+    .pillar-glyph {
+      width: 56px; height: 56px;
+      color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pillar-glyph svg { width: 100%; height: 100%; }
+    .pillar-glyph.is-cochineal { color: var(--cochineal); }
+    .council-pillar.p-a .pillar-glyph svg { animation: g-slow 6s ease-in-out infinite; transform-origin: center; }
+    .council-pillar.p-h .pillar-glyph svg { animation: g-mid  4.2s ease-in-out infinite 0.6s; transform-origin: center; }
+    .council-pillar.p-s .pillar-glyph svg { animation: g-fast 3.4s ease-in-out infinite 0.2s; transform-origin: center; }
+
+    .pillar-numeral {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.20em;
+      color: var(--cochineal);
+    }
+    .pillar-rolerow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pillar-floral {
+      width: 14px; height: 14px;
+      color: var(--cochineal);
+      opacity: 0.92;
+    }
+    .pillar-floral svg { width: 100%; height: 100%; }
+    .pillar-role {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .pillar-divider {
+      width: 32px; height: 2px;
+      background: var(--cochineal);
+      opacity: 0.85;
+    }
+    .pillar-verb {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 32px;
+      line-height: 1;
+      color: var(--ink);
+      letter-spacing: -0.012em;
+      margin-top: 4px;
+    }
+    .pillar-object {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-2);
+      max-width: 180px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 860px) {
+      .council-section { padding: 56px 0; }
+      .council-grid { grid-template-columns: 1fr; gap: 0; }
+      .council-pillar { padding: 32px 24px; }
+      .council-pillar:not(:first-child)::before {
+        /* On stacked layout, separator becomes horizontal between rows */
+        left: 14px; right: 14px;
+        top: 0; bottom: auto;
+        width: auto; height: 1px;
+        background: linear-gradient(90deg,
+          transparent 0%,
+          rgba(var(--cochineal-rgb), 0.45) 12%,
+          rgba(var(--cochineal-rgb), 0.45) 88%,
+          transparent 100%);
+      }
+      .council-pillar .cap.top { left: 10px; top: -3px; }
+      .council-pillar .cap.bottom { right: 10px; left: auto; top: -3px; bottom: auto; }
+      .pillar-verb { font-size: 28px; }
     }
 
     /* ============================================================
@@ -1298,13 +1533,24 @@
       .footer-inner { grid-template-columns: 1fr; gap: 26px; }
     }
     .footer-brand {
+      display: inline-flex;
+      align-items: center;
+    }
+    .footer-logo-img {
+      height: 28px; width: auto;
+      filter: drop-shadow(0 0 12px rgba(var(--cochineal-rgb), 0.18));
+    }
+    .footer-brand-text {
       font-family: var(--sans);
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.46em;
       color: var(--ink);
       text-transform: uppercase;
+      display: none;
     }
+    .footer-brand.img-failed .footer-logo-img { display: none; }
+    .footer-brand.img-failed .footer-brand-text { display: inline; }
     .footer-tagline {
       font-family: var(--serif);
       font-style: italic;
@@ -1406,6 +1652,9 @@
   <header id="header">
     <div class="header-inner">
       <div class="header-left">
+        <a class="header-icon" href="#top" aria-label="ZOTHEOS home">
+          <img src="/static/zotheos_icon.png" alt="" onerror="this.parentNode.classList.add('img-failed')" />
+        </a>
         <div class="theme-picker" role="radiogroup" aria-label="Page theme">
           <button class="theme-swatch" type="button"
                   data-set=""
@@ -1424,8 +1673,9 @@
                   title="Skeleton obsidian"></button>
         </div>
       </div>
-      <a class="header-mark" href="#top">
-        <img src="/static/zotheos_icon.png" alt="" />ZOTHEOS
+      <a class="header-mark" href="#top" aria-label="ZOTHEOS">
+        <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
+        <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav">
         <a href="#mission">Mission</a>
@@ -1553,15 +1803,126 @@
     </div>
   </section>
 
-  <!-- Greca + seal-dot -->
-  <div class="greca-divider">
-    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <g fill="currentColor" style="color: var(--cochineal); opacity: 0.55;">
-        <rect x="0" y="6" width="1216" height="1.5"/>
-      </g>
-      <g fill="currentColor" id="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
-    </svg>
-    <span class="seal-dot"></span>
+  <!-- ============================================================
+       COUNCIL PILLARS — three minds as the spine of the page,
+       bracketed top and bottom by IN XOCHITL · IN CUICATL strips.
+  ============================================================ -->
+  <div class="council-strip reveal">
+    <span>IN&nbsp;XOCHITL&nbsp;&middot;&nbsp;IN&nbsp;CUICATL</span>
+    <span class="center">flower and song</span>
+    <span>FLOR&nbsp;Y&nbsp;CANTO</span>
+  </div>
+
+  <section class="council-section" id="council-pillars">
+    <div class="council-grid">
+
+      <div class="council-pillar p-a reveal">
+        <span class="cap top"></span>
+        <span class="cap bottom"></span>
+        <div class="pillar-glyph">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square">
+            <line x1="13" y1="6" x2="27" y2="6"/>
+            <line x1="20" y1="6" x2="20" y2="34"/>
+            <line x1="13" y1="34" x2="27" y2="34"/>
+          </svg>
+        </div>
+        <span class="pillar-numeral">I.</span>
+        <div class="pillar-rolerow">
+          <span class="pillar-floral" aria-hidden="true">
+            <!-- Xochitl 4-petal -->
+            <svg viewBox="0 0 14 14" fill="currentColor">
+              <circle cx="7" cy="7" r="1.6"/>
+              <circle cx="7" cy="2.4" r="1.2"/>
+              <circle cx="11.6" cy="7" r="1.2"/>
+              <circle cx="7" cy="11.6" r="1.2"/>
+              <circle cx="2.4" cy="7" r="1.2"/>
+            </svg>
+          </span>
+          <span class="pillar-role">Analyst</span>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-verb">Measures.</div>
+        <div class="pillar-object">what can be counted, what holds.</div>
+      </div>
+
+      <div class="council-pillar p-h reveal reveal-d1">
+        <span class="cap top"></span>
+        <span class="cap bottom"></span>
+        <div class="pillar-glyph is-cochineal">
+          <svg viewBox="0 0 40 40" fill="currentColor" stroke="currentColor">
+            <circle cx="20" cy="20" r="6"/>
+            <g stroke-width="2.2" stroke-linecap="round" fill="none">
+              <line x1="20" y1="4" x2="20" y2="10"/>
+              <line x1="20" y1="30" x2="20" y2="36"/>
+              <line x1="4" y1="20" x2="10" y2="20"/>
+              <line x1="30" y1="20" x2="36" y2="20"/>
+              <line x1="8" y1="8" x2="12" y2="12"/>
+              <line x1="28" y1="12" x2="32" y2="8"/>
+              <line x1="8" y1="32" x2="12" y2="28"/>
+              <line x1="28" y1="28" x2="32" y2="32"/>
+            </g>
+          </svg>
+        </div>
+        <span class="pillar-numeral">II.</span>
+        <div class="pillar-rolerow">
+          <span class="pillar-floral" aria-hidden="true">
+            <!-- Cempasuchil / marigold 8-ray -->
+            <svg viewBox="0 0 14 14" fill="currentColor">
+              <circle cx="7" cy="7" r="1.6"/>
+              <circle cx="7" cy="2" r="1"/>
+              <circle cx="10.5" cy="3.5" r="1"/>
+              <circle cx="12" cy="7" r="1"/>
+              <circle cx="10.5" cy="10.5" r="1"/>
+              <circle cx="7" cy="12" r="1"/>
+              <circle cx="3.5" cy="10.5" r="1"/>
+              <circle cx="2" cy="7" r="1"/>
+              <circle cx="3.5" cy="3.5" r="1"/>
+            </svg>
+          </span>
+          <span class="pillar-role">Humanist</span>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-verb">Witnesses.</div>
+        <div class="pillar-object">what is felt, what matters.</div>
+      </div>
+
+      <div class="council-pillar p-s reveal reveal-d2">
+        <span class="cap top"></span>
+        <span class="cap bottom"></span>
+        <div class="pillar-glyph">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <circle cx="20" cy="6" r="1.8" fill="currentColor"/>
+            <line x1="20" y1="9" x2="9" y2="34"/>
+            <line x1="20" y1="9" x2="31" y2="34"/>
+          </svg>
+        </div>
+        <span class="pillar-numeral">III.</span>
+        <div class="pillar-rolerow">
+          <span class="pillar-floral" aria-hidden="true">
+            <!-- Night dahlia — asymmetric 5-petal -->
+            <svg viewBox="0 0 14 14" fill="currentColor">
+              <circle cx="7" cy="7" r="1.4"/>
+              <ellipse cx="7" cy="3" rx="1.2" ry="1.8"/>
+              <ellipse cx="10.6" cy="5.4" rx="1.6" ry="1.2" transform="rotate(35 10.6 5.4)"/>
+              <ellipse cx="9.6" cy="10.2" rx="1.6" ry="1.2" transform="rotate(-35 9.6 10.2)"/>
+              <ellipse cx="4.4" cy="10.2" rx="1.6" ry="1.2" transform="rotate(35 4.4 10.2)"/>
+              <ellipse cx="3.4" cy="5.4" rx="1.6" ry="1.2" transform="rotate(-35 3.4 5.4)"/>
+            </svg>
+          </span>
+          <span class="pillar-role">Skeptic</span>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-verb">Doubts.</div>
+        <div class="pillar-object">what is silenced, what hides.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="council-strip reveal">
+    <span>EYI&nbsp;TLAMATINIME</span>
+    <span class="center">three wise voices</span>
+    <span>CONSEJO&nbsp;DE&nbsp;TRES</span>
   </div>
 
   <!-- MISSION -->
@@ -1894,7 +2255,10 @@
     </div>
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">ZOTHEOS</div>
+        <div class="footer-brand">
+          <img src="/static/zotheos_logo.png" alt="" class="footer-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
+          <span class="footer-brand-text">ZOTHEOS</span>
+        </div>
         <div class="footer-tagline">Offline ethical intelligence. Private by default. Built independently.</div>
         <div class="footer-founder">
           Founded by <strong>David Garcia</strong><br/>
@@ -1967,22 +2331,56 @@
       }
     })();
 
-    /* Greca step-fret teeth — generate L-hooks programmatically */
+    /* Floral xochitl band — replaces the chain-greca with a vine
+       of small Mexica flowers. Each flower is one center + 4
+       petals at cardinal points, ~6px wide. Spaced 56px apart so
+       they read as a textile band, not a row of asterisks. */
     (function () {
       var ns = 'http://www.w3.org/2000/svg';
       var teeth = document.querySelectorAll('#grecaTeeth, .grecaTeeth');
       teeth.forEach(function (g) {
-        var i = 0;
-        for (var x = 0; x < 1216; x += 24) {
-          var hook = document.createElementNS(ns, 'path');
-          if (i % 2 === 0) {
-            hook.setAttribute('d', 'M' + x + ' 4 h12 v-4 h-12 z');
-          } else {
-            hook.setAttribute('d', 'M' + x + ' 8 h12 v4 h-12 z');
-          }
-          hook.setAttribute('fill', 'currentColor');
-          g.appendChild(hook);
-          i++;
+        // Wipe the L-hook bar that the static markup left behind
+        // (we want flowers, not a continuous bar)
+        var parentSvg = g.closest('svg');
+        if (parentSvg) {
+          var staleBar = parentSvg.querySelector('rect');
+          if (staleBar) staleBar.remove();
+        }
+        // Faint vine line along the center
+        var vine = document.createElementNS(ns, 'rect');
+        vine.setAttribute('x', '60');
+        vine.setAttribute('y', '6.6');
+        vine.setAttribute('width', '1096');
+        vine.setAttribute('height', '0.7');
+        vine.setAttribute('fill', 'currentColor');
+        vine.setAttribute('opacity', '0.32');
+        g.appendChild(vine);
+        // Flowers every 56px, centered vertically in the 14-unit viewBox
+        for (var x = 80; x < 1140; x += 56) {
+          var flower = document.createElementNS(ns, 'g');
+          flower.setAttribute('transform', 'translate(' + x + ', 7)');
+          // Tiny cream halo behind each flower for a "petal blush"
+          var halo = document.createElementNS(ns, 'circle');
+          halo.setAttribute('r', '3.6');
+          halo.setAttribute('fill', 'currentColor');
+          halo.setAttribute('opacity', '0.10');
+          flower.appendChild(halo);
+          // Center
+          var center = document.createElementNS(ns, 'circle');
+          center.setAttribute('r', '1.4');
+          center.setAttribute('fill', 'currentColor');
+          flower.appendChild(center);
+          // Four petals
+          var petals = [[0, -2.6], [2.6, 0], [0, 2.6], [-2.6, 0]];
+          petals.forEach(function (p) {
+            var petal = document.createElementNS(ns, 'circle');
+            petal.setAttribute('cx', p[0]);
+            petal.setAttribute('cy', p[1]);
+            petal.setAttribute('r', '1.05');
+            petal.setAttribute('fill', 'currentColor');
+            flower.appendChild(petal);
+          });
+          g.appendChild(flower);
         }
       });
     })();
@@ -2101,6 +2499,37 @@
         .from('.hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.6')
         .from('.hero-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.5 }, '-=0.5')
         .from('.hero-stats .hero-stat', { opacity: 0, y: 14, stagger: 0.08, duration: 0.55 }, '-=0.4');
+
+      // Council pillars: scroll-triggered stagger so the chamber
+      // assembles as the user reaches it.
+      if (typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.council-pillar', {
+          scrollTrigger: {
+            trigger: '#council-pillars',
+            start: 'top 78%',
+            once: true,
+          },
+          opacity: 0,
+          y: 28,
+          stagger: 0.16,
+          duration: 0.9,
+          ease: 'power3.out',
+        });
+        gsap.from('.council-pillar .cap', {
+          scrollTrigger: {
+            trigger: '#council-pillars',
+            start: 'top 70%',
+            once: true,
+          },
+          opacity: 0,
+          scale: 0,
+          stagger: 0.06,
+          duration: 0.5,
+          ease: 'back.out(2)',
+          delay: 0.6,
+        });
+      }
     });
   </script>
 </body>
