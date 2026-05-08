@@ -718,32 +718,37 @@
     ============================================================ */
     .hero-amoxtli {
       min-height: 100vh;
-      padding: 100px 32px 56px;
+      padding: 96px 32px 60px;
       position: relative; z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .hero-amoxtli .hero-inner {
-      max-width: 760px;
+      max-width: 880px;
       margin: 0 auto; width: 100%;
-      text-align: center;
+      /* Editorial alignment — type runs left-edge from the centered
+         container while the disc above stays centered. Reads like a
+         Walsh-tier spread: ceremonial seal up top, set type below. */
+      text-align: left;
     }
     @media (max-width: 640px) {
-      .hero-amoxtli { padding: 92px 20px 48px; min-height: 92vh; }
+      .hero-amoxtli { padding: 88px 20px 44px; min-height: 92vh; }
       .hero-amoxtli .hero-inner { max-width: 100%; }
     }
 
-    /* --- Sun Stone disc, centered, scaled to the question --- */
+    /* --- Sun Stone disc, centered ABOVE the type. Bigger now —
+       the council is the visual anchor; the question reads as its
+       caption. --- */
     .hero-disc-wrap {
       position: relative;
       aspect-ratio: 1 / 1;
       width: 100%;
-      max-width: 360px;
-      margin: 0 auto 28px;
+      max-width: 520px;
+      margin: 0 auto 32px;
     }
     @media (max-width: 640px) {
-      .hero-disc-wrap { max-width: 240px; margin-bottom: 18px; }
+      .hero-disc-wrap { max-width: 320px; margin-bottom: 22px; }
     }
     .hero-disc { width: 100%; height: 100%; position: relative; }
     .hero-disc svg { width: 100%; height: 100%; display: block; }
@@ -780,34 +785,42 @@
       .disc-outer, .wax-sigil, .glyph-12, .glyph-04, .glyph-08 { animation: none !important; }
     }
 
-    /* --- The Question — small setup, massive italic punchline --- */
+    /* --- The Question — serif setup, massive italic punchline.
+       Both lines are Instrument Serif. The setup runs at 56px in a
+       muted sandy color, the punchline drops at 132px italic with a
+       64px left indent that creates the editorial step-down feel.
+       The cinnabar glow on the operative word stays — that's the
+       system signature. --- */
     .hero-question {
-      margin-bottom: 28px;
+      margin: 0 0 32px -3px;
     }
     .hero-setup {
-      font-family: var(--mono);
-      font-size: 13px;
-      letter-spacing: 0.24em;
-      text-transform: lowercase;
+      display: block;
+      font-family: var(--serif);
+      font-size: clamp(36px, 5.6vw, 56px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.005em;
       color: var(--cream-3);
       margin-bottom: 6px;
-      opacity: 0.78;
     }
     .hero-punchline {
+      display: block;
       font-family: var(--serif);
-      /* Editorial extreme. Clamp keeps it from breaking on small
-         screens but the upper bound is intentionally large. */
-      font-size: clamp(76px, 14.5vw, 132px);
+      font-size: clamp(78px, 13.5vw, 132px);
       font-style: italic;
       font-weight: 400;
       line-height: 0.94;
       letter-spacing: -0.025em;
       color: var(--cream);
       margin: 0;
+      padding-left: clamp(20px, 7.6vw, 64px);
     }
     .hero-punchline em {
       font-style: italic;
       color: var(--cochineal-bright);
+      /* The cinnabar glow stays — system signature. */
       text-shadow:
         0 0 36px rgba(var(--cochineal-bright-rgb),0.45),
         0 0 12px rgba(var(--cochineal-bright-rgb),0.30);
@@ -820,39 +833,39 @@
 
     .hero-sub {
       font-family: var(--sans);
-      font-size: 17px; line-height: 1.7;
-      color: var(--cream-2); opacity: 0.86;
-      max-width: 560px;
-      margin: 0 auto 36px;
-      text-align: center;
+      font-size: 16px; line-height: 1.65;
+      color: var(--cream-2); opacity: 0.82;
+      max-width: 540px;
+      margin: 0 0 40px;
+      text-align: left;
     }
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 56px;
+      justify-content: flex-start;
+      margin-bottom: 60px;
     }
 
     .hero-stats {
       display: flex;
-      gap: 48px;
-      justify-content: center;
+      gap: 56px;
+      justify-content: flex-start;
       flex-wrap: wrap;
       padding-top: 30px;
       position: relative;
     }
     .hero-stats::before {
-      /* Centered gold rule — a single horizontal seal across the stats. */
+      /* Gold rule above the stats — anchored to the left edge of the
+         editorial frame. */
       content: '';
       position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: min(440px, 80%);
+      top: 0; left: 0;
+      width: min(440px, 100%);
       height: 1px;
       background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(var(--gold-rgb),0.55) 50%,
+        rgba(var(--gold-rgb),0.55) 0%,
+        rgba(var(--gold-rgb),0.20) 70%,
         transparent 100%);
     }
     .hero-stat .num {
@@ -1574,6 +1587,493 @@
       text-transform: uppercase;
     }
 
+    /* ============================================================
+       BANNER · The Council of Three (zk-*)
+       Maya Blue cosmic spread. Self-contained — does not theme-
+       switch with the page. Reads as an inset artifact: this is
+       what lives inside ZOTHEOS, formally introduced. The strip
+       at top carries the Nahuatl epigraph; the body is three
+       columns (Analyst, Humanist, Skeptic) each with verb +
+       object; a centered bridge ("Flor y canto.") plus tagline
+       caps the composition. Cosmetic query and footer at the
+       bottom give it the feel of an actual page from the system,
+       not a brochure.
+    ============================================================ */
+    .zk-frame {
+      max-width: 1180px;
+      margin: 0 auto;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 0.5px solid rgba(244,236,216,0.10);
+      background: #02101E;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.55), 0 0 60px rgba(44,93,167,0.06);
+    }
+    .zk-strip {
+      background: rgba(2, 16, 30, 0.92);
+      color: #F4ECD8;
+      padding: 11px 22px;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 9.5px;
+      line-height: 1;
+      letter-spacing: 0.46em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #D14F35;
+    }
+    .zk-paper {
+      position: relative;
+      background-color: #02101E;
+      background-image: radial-gradient(ellipse 110% 80% at 50% 38%, #2F7693 0%, #15506F 26%, #0A2E48 56%, #04162A 82%, #02101E 100%);
+      color: #F4ECD8;
+      padding: 56px 56px 48px;
+      min-height: 720px;
+      overflow: hidden;
+      font-family: var(--mono);
+    }
+    @media (max-width: 720px) { .zk-paper { padding: 44px 28px 36px; min-height: 600px; } }
+    .zk-grain {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.7' numOctaves='2' seed='21'/%3E%3CfeColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.90  0 0 0 0 0.82  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+    }
+    .zk-vignette {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center 38%, transparent 45%, rgba(2, 16, 30, 0.65) 100%);
+    }
+    .zk-meta {
+      position: relative; z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 56px;
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1;
+      color: #B5C4D0;
+      letter-spacing: 0.08em;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .zk-meta .label {
+      color: #6E8294;
+      font-size: 9px;
+      letter-spacing: 0.36em;
+      font-family: var(--sans);
+      font-weight: 500;
+      margin-right: 14px;
+    }
+    .zk-cols {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 64px;
+    }
+    @media (max-width: 720px) {
+      .zk-cols { grid-template-columns: 1fr; gap: 36px; }
+    }
+    .zk-col {
+      padding: 8px 28px 0;
+      position: relative;
+    }
+    .zk-col:first-child { padding-left: 0; }
+    .zk-col:last-child { padding-right: 0; }
+    .zk-col:not(:first-child) { border-left: 0.5px solid rgba(244, 236, 216, 0.16); }
+    .zk-col:not(:first-child)::before {
+      content: ''; position: absolute;
+      left: -3px; top: 0;
+      width: 5px; height: 5px;
+      background: #D14F35;
+    }
+    .zk-col:not(:first-child)::after {
+      content: ''; position: absolute;
+      left: -3px; bottom: 0;
+      width: 5px; height: 5px;
+      background: #D14F35;
+    }
+    @media (max-width: 720px) {
+      .zk-col { padding: 0; }
+      .zk-col:not(:first-child) { border-left: none; border-top: 0.5px solid rgba(244, 236, 216, 0.16); padding-top: 24px; }
+      .zk-col:not(:first-child)::before, .zk-col:not(:first-child)::after { display: none; }
+    }
+    .zk-glyph-wrap {
+      display: flex; justify-content: flex-start;
+      margin-bottom: 26px;
+    }
+    .zk-glyph-wrap svg { width: 56px; height: 56px; }
+    @keyframes zk-b-slow { 0%,100% { opacity:.6; transform: scale(.94);} 50% { opacity:1; transform: scale(1);} }
+    @keyframes zk-b-mid  { 0%,100% { opacity:.6; transform: scale(.94);} 50% { opacity:1; transform: scale(1.02);} }
+    @keyframes zk-b-fast { 0%,100% { opacity:.55; transform: scale(.92);} 45% { opacity:1; transform: scale(1.03);} 60% { opacity:.85; transform: scale(.98);} }
+    .zk-col.c-a .zk-glyph-wrap svg { animation: zk-b-slow 6s ease-in-out infinite; transform-origin: center; }
+    .zk-col.c-h .zk-glyph-wrap svg { animation: zk-b-mid  4.2s ease-in-out infinite; animation-delay: .6s; transform-origin: center; }
+    .zk-col.c-s .zk-glyph-wrap svg { animation: zk-b-fast 3.4s ease-in-out infinite; animation-delay: .2s; transform-origin: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .zk-col .zk-glyph-wrap svg { animation: none !important; }
+    }
+    .zk-numeral {
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1;
+      color: #D14F35;
+      letter-spacing: 0.16em;
+      margin-bottom: 12px;
+    }
+    .zk-role {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.42em;
+      color: #F4ECD8;
+      margin-bottom: 14px;
+    }
+    .zk-divider {
+      width: 32px; height: 2px;
+      background: #D14F35;
+      margin-bottom: 22px;
+    }
+    .zk-verb {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1;
+      color: #F4ECD8;
+      margin-bottom: 14px;
+      letter-spacing: -0.012em;
+    }
+    .zk-object {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #B5C4D0;
+      max-width: 180px;
+    }
+    .zk-bridge {
+      position: relative; z-index: 2;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .zk-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      color: #F4ECD8;
+      line-height: 0.94;
+      letter-spacing: -0.022em;
+      margin: 0 0 18px 0;
+      font-size: clamp(64px, 9vw, 100px);
+    }
+    .zk-title .seal {
+      color: #D14F35;
+      text-shadow: 0 0 24px rgba(209,75,53,0.55);
+    }
+    .zk-tagline {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.46em;
+      color: #B5C4D0;
+    }
+    .zk-query {
+      position: relative; z-index: 2;
+      border-bottom: 1.5px solid rgba(244, 236, 216, 0.4);
+      padding: 14px 0 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.4;
+      color: #B5C4D0;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .zk-query .qlabel {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.42em;
+      color: #F4ECD8;
+    }
+    .zk-query .ph { color: #6E8294; flex: 1; min-width: 0; }
+    .zk-query .qmark { color: #D14F35; font-size: 16px; }
+    .zk-cursor {
+      display: inline-block;
+      width: 9px; height: 14px;
+      background: #D14F35;
+      vertical-align: -2px;
+      animation: zk-blink 1.05s steps(2, jump-none) infinite;
+    }
+    @keyframes zk-blink { 50% { opacity: 0; } }
+    .zk-foot {
+      position: relative; z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: 0.36em;
+      color: #B5C4D0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .zk-foot .seal {
+      color: #D14F35;
+      font-family: var(--mono);
+      letter-spacing: 0.2em;
+      font-weight: 400;
+    }
+
+    /* ============================================================
+       BANNER · Flor y canto manifesto (zm-*)
+       Cream parchment with cinnabar strip + greca step-fret.
+       Self-contained. Reads as a printed broadside or formal
+       declaration: massive italic title, numbered manifesto, three
+       signatures with hand-drawn-looking flourishes. The emotional
+       climax of the page — the moment after you have seen what
+       lives here, before you are invited in.
+    ============================================================ */
+    .zm-frame {
+      max-width: 1180px;
+      margin: 0 auto;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 0.5px solid rgba(232,219,192,0.18);
+      background: #E8DBC0;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.55);
+    }
+    .zm-strip {
+      background: #8B2222;
+      color: #F2E5CC;
+      padding: 11px 18px;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 9.5px;
+      line-height: 1;
+      letter-spacing: 0.42em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .zm-strip .mid {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      opacity: 0.85;
+    }
+    .zm-strip .mid span {
+      width: 4px; height: 4px;
+      background: #F2E5CC;
+    }
+    .zm-fret {
+      height: 14px;
+      background: #E8DBC0;
+      position: relative;
+      overflow: hidden;
+    }
+    .zm-fret svg { width: 100%; height: 100%; display: block; }
+    .zm-paper {
+      position: relative;
+      background: #E8DBC0;
+      color: #1A0F08;
+      padding: 44px 56px 44px;
+      min-height: 720px;
+      overflow: hidden;
+      font-family: var(--mono);
+    }
+    @media (max-width: 720px) { .zm-paper { padding: 32px 28px; min-height: 600px; } }
+    .zm-grain {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      opacity: 0.20;
+      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' seed='14'/%3E%3CfeColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.07  0 0 0 0 0.04  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+    .zm-meta {
+      position: relative; z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 48px;
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1;
+      color: #6B5945;
+      letter-spacing: 0.08em;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .zm-meta .label {
+      color: #9A8870;
+      font-size: 9px;
+      letter-spacing: 0.34em;
+      font-family: var(--sans);
+      font-weight: 500;
+      margin-right: 14px;
+    }
+    .zm-title-row {
+      position: relative; z-index: 2;
+      margin-bottom: 16px;
+    }
+    .zm-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      color: #1A0F08;
+      line-height: 0.94;
+      letter-spacing: -0.022em;
+      margin: 0;
+    }
+    .zm-title .t1 { display: block; font-size: clamp(72px, 11vw, 124px); }
+    .zm-title .t2 {
+      display: block;
+      font-size: clamp(72px, 11vw, 124px);
+      padding-left: clamp(40px, 6vw, 80px);
+    }
+    .zm-title .seal {
+      color: #8B2222;
+      text-shadow: 0 0 16px rgba(139,34,34,0.40);
+    }
+    .zm-subtitle {
+      position: relative; z-index: 2;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.46em;
+      color: #6B5945;
+      margin: 0 0 36px 4px;
+    }
+    .zm-fret-mid {
+      position: relative; z-index: 2;
+      margin: 0 0 32px 0;
+      height: 12px;
+    }
+    .zm-fret-mid svg { width: 280px; max-width: 100%; height: 100%; display: block; }
+    .zm-body {
+      position: relative; z-index: 2;
+      margin-bottom: 48px;
+      font-family: var(--mono);
+      font-size: 14px;
+      line-height: 1.85;
+      color: #1A0F08;
+      max-width: 520px;
+    }
+    .zm-body .row { display: flex; gap: 22px; }
+    .zm-body .num { color: #9A8870; font-size: 11px; padding-top: 3px; min-width: 20px; }
+    .zm-body .row.empty { height: 8px; }
+    .zm-sigs {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 720px) {
+      .zm-sigs { grid-template-columns: 1fr; gap: 24px; }
+    }
+    .zm-sig {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .zm-sig svg.glyph { width: 38px; height: 38px; }
+    .zm-sig .role {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: 0.38em;
+      color: #6B5945;
+    }
+    .zm-sig .signature { width: 70%; height: 12px; margin-top: 6px; }
+    .zm-sig .line {
+      width: 100%; height: 1px;
+      background: #1A0F08;
+      margin-top: -8px;
+      opacity: 0.35;
+    }
+    .zm-sig.s-a svg.glyph { animation: zk-b-slow 6s ease-in-out infinite; transform-origin: center; }
+    .zm-sig.s-h svg.glyph { animation: zk-b-mid 4.2s ease-in-out infinite; animation-delay: .6s; transform-origin: center; }
+    .zm-sig.s-s svg.glyph { animation: zk-b-fast 3.4s ease-in-out infinite; animation-delay: .2s; transform-origin: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .zm-sig svg.glyph { animation: none !important; }
+    }
+    .zm-query {
+      position: relative; z-index: 2;
+      border-bottom: 1.5px solid #1A0F08;
+      padding: 14px 0 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.4;
+      color: #6B5945;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .zm-query .qlabel {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.42em;
+      color: #1A0F08;
+    }
+    .zm-query .ph { color: #9A8870; flex: 1; min-width: 0; }
+    .zm-query .qmark { color: #8B2222; font-size: 16px; }
+    .zm-cursor {
+      display: inline-block;
+      width: 9px; height: 14px;
+      background: #8B2222;
+      vertical-align: -2px;
+      animation: zk-blink 1.05s steps(2, jump-none) infinite;
+    }
+    .zm-foot {
+      position: relative; z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: 0.36em;
+      color: #6B5945;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .zm-foot .seal {
+      color: #8B2222;
+      font-family: var(--mono);
+      letter-spacing: 0.2em;
+      font-weight: 400;
+    }
+
+    /* Banner sections themselves — full-width container so the
+       banners breathe, not pinned inside the standard 1280px grid. */
+    .banner-section {
+      padding: 80px 32px;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 640px) {
+      .banner-section { padding: 56px 16px; }
+    }
+
   </style>
 </head>
 <body>
@@ -1760,16 +2260,17 @@
         </div>
       </div>
 
-      <!-- The question — small setup, massive italic punchline.
-           "what is" is mono-tracked, almost a label. "true?" is
-           Instrument Serif italic at editorial scale, with cinnabar
-           on the operative word. The eye reads small to large. -->
-      <div class="hero-question reveal reveal-d2">
-        <div class="hero-setup">what is</div>
-        <h1 class="hero-punchline">
+      <!-- The question — serif setup, massive italic punchline.
+           "what is" runs at 56px serif in a muted sandy gray, then
+           "true?" drops at 132px italic with a left indent. The
+           operative word carries the cinnabar glow. Eye reads small
+           to large; the question stops you and stays. -->
+      <h1 class="hero-question reveal reveal-d2">
+        <span class="hero-setup">what is</span>
+        <span class="hero-punchline">
           <em>true</em><span class="period">?</span>
-        </h1>
-      </div>
+        </span>
+      </h1>
 
       <p class="hero-sub reveal reveal-d3">
         Three local AI cores debate, then synthesize one grounded answer.
@@ -1824,6 +2325,113 @@
           <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
           <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
           <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
+
+  <!-- ============================================================
+       BANNER · The Council of Three (zk)
+       Self-contained Maya Blue spread. Introduces the cores
+       formally before Architecture explains how they work.
+  ============================================================ -->
+  <section class="banner-section reveal">
+    <div class="zk-frame">
+      <div class="zk-strip">
+        <span>IN&nbsp;&nbsp;XOCHITL&nbsp;&nbsp;&middot;&nbsp;&nbsp;IN&nbsp;&nbsp;CUICATL</span>
+        <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO</span>
+      </div>
+
+      <div class="zk-paper">
+        <div class="zk-grain"></div>
+        <div class="zk-vignette"></div>
+
+        <div class="zk-meta">
+          <div>
+            <span class="label">EXPEDIENTE</span>
+            <span>026&nbsp;&nbsp;&middot;&nbsp;&nbsp;CONSEJO&nbsp;&nbsp;DE&nbsp;&nbsp;TRES</span>
+          </div>
+          <div>
+            <span class="label">FECHA</span>
+            <span id="zkFecha">07&nbsp;&nbsp;MAYO&nbsp;&nbsp;2026</span>
+          </div>
+        </div>
+
+        <div class="zk-cols">
+          <div class="zk-col c-a">
+            <div class="zk-glyph-wrap">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#F4ECD8" stroke-width="1.4" stroke-linecap="square">
+                <rect x="3" y="3" width="34" height="34"/>
+                <line x1="20" y1="9" x2="20" y2="31"/>
+                <line x1="14" y1="9" x2="26" y2="9"/>
+                <line x1="14" y1="31" x2="26" y2="31"/>
+              </svg>
+            </div>
+            <div class="zk-numeral">I.</div>
+            <div class="zk-role">ANALYST</div>
+            <div class="zk-divider"></div>
+            <div class="zk-verb">Measures.</div>
+            <div class="zk-object">what can be counted, what holds.</div>
+          </div>
+
+          <div class="zk-col c-h">
+            <div class="zk-glyph-wrap">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#D14F35" stroke-width="1.4" stroke-linecap="square">
+                <rect x="3" y="3" width="34" height="34"/>
+                <circle cx="20" cy="20" r="6.5" fill="#D14F35"/>
+                <line x1="20" y1="6.5" x2="20" y2="10"/>
+                <line x1="20" y1="30" x2="20" y2="33.5"/>
+                <line x1="6.5" y1="20" x2="10" y2="20"/>
+                <line x1="30" y1="20" x2="33.5" y2="20"/>
+              </svg>
+            </div>
+            <div class="zk-numeral">II.</div>
+            <div class="zk-role">HUMANIST</div>
+            <div class="zk-divider"></div>
+            <div class="zk-verb">Witnesses.</div>
+            <div class="zk-object">what is felt, what matters.</div>
+          </div>
+
+          <div class="zk-col c-s">
+            <div class="zk-glyph-wrap">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#F4ECD8" stroke-width="1.4" stroke-linecap="square">
+                <rect x="3" y="3" width="34" height="34"/>
+                <line x1="20" y1="8" x2="20" y2="20"/>
+                <line x1="20" y1="20" x2="11" y2="32"/>
+                <line x1="20" y1="20" x2="29" y2="32"/>
+                <circle cx="20" cy="20" r="1.6" fill="#F4ECD8" stroke="none"/>
+              </svg>
+            </div>
+            <div class="zk-numeral">III.</div>
+            <div class="zk-role">SKEPTIC</div>
+            <div class="zk-divider"></div>
+            <div class="zk-verb">Doubts.</div>
+            <div class="zk-object">what is silenced, what hides.</div>
+          </div>
+        </div>
+
+        <div class="zk-bridge">
+          <h2 class="zk-title">
+            Flor y canto<span class="seal">.</span>
+          </h2>
+          <div class="zk-tagline">ONE&nbsp;&nbsp;SONG&nbsp;&nbsp;&middot;&nbsp;&nbsp;THREE&nbsp;&nbsp;VOICES&nbsp;&nbsp;&middot;&nbsp;&nbsp;YOU&nbsp;&nbsp;DECIDE&nbsp;&nbsp;WHAT&nbsp;&nbsp;IS&nbsp;&nbsp;TRUE</div>
+        </div>
+
+        <div class="zk-query">
+          <span class="qlabel">PREGUNTA</span>
+          <span class="qmark">&rsaquo;</span>
+          <span class="ph">address the council</span>
+          <span class="zk-cursor"></span>
+        </div>
+
+        <div class="zk-foot">
+          <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO&nbsp;&nbsp;&middot;&nbsp;&nbsp;NUNCA&nbsp;&nbsp;UN&nbsp;&nbsp;AMO</span>
+          <span class="seal">ZTHS&middot;026</span>
         </div>
       </div>
     </div>
@@ -2003,6 +2611,145 @@
   </div>
 
   <!-- ============================================================
+       BANNER · Flor y canto manifesto (zm)
+       Cream parchment broadside. The emotional climax — after the
+       reader has seen who lives here, this is the formal vow,
+       signed by all three voices. Sits before the waitlist so the
+       invitation that follows lands with weight.
+  ============================================================ -->
+  <section class="banner-section reveal">
+    <div class="zm-frame">
+      <div class="zm-strip">
+        <span>IN&nbsp;&nbsp;XOCHITL&nbsp;&nbsp;&middot;&nbsp;&nbsp;IN&nbsp;&nbsp;CUICATL</span>
+        <span class="mid"><span></span><span></span><span></span></span>
+        <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO</span>
+      </div>
+
+      <div class="zm-fret">
+        <svg viewBox="0 0 600 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#8B2222">
+            <rect x="0" y="2" width="600" height="2"/>
+            <rect x="0" y="10" width="600" height="2"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="zm-paper">
+        <div class="zm-grain"></div>
+
+        <div class="zm-meta">
+          <div>
+            <span class="label">EXPEDIENTE</span>
+            <span>026&nbsp;&nbsp;&middot;&nbsp;&nbsp;CONSEJO&nbsp;&nbsp;DE&nbsp;&nbsp;TRES</span>
+          </div>
+          <div>
+            <span class="label">FECHA</span>
+            <span id="zmFecha">07&nbsp;&nbsp;MAYO&nbsp;&nbsp;2026</span>
+          </div>
+        </div>
+
+        <div class="zm-title-row">
+          <h2 class="zm-title">
+            <span class="t1">Flor y</span>
+            <span class="t2">canto<span class="seal">.</span></span>
+          </h2>
+        </div>
+        <div class="zm-subtitle">FLOWER&nbsp;&nbsp;AND&nbsp;&nbsp;SONG&nbsp;&nbsp;&middot;&nbsp;&nbsp;THE&nbsp;&nbsp;WAY&nbsp;&nbsp;TRUTH&nbsp;&nbsp;IS&nbsp;&nbsp;TOLD</div>
+
+        <div class="zm-fret-mid">
+          <svg viewBox="0 0 280 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#8B2222">
+              <rect x="0" y="2" width="14" height="8"/>
+              <rect x="20" y="0" width="14" height="12"/>
+              <rect x="40" y="2" width="14" height="8"/>
+              <rect x="60" y="4" width="14" height="4"/>
+              <rect x="80" y="2" width="14" height="8"/>
+              <rect x="100" y="0" width="14" height="12"/>
+              <rect x="120" y="2" width="14" height="8"/>
+              <rect x="140" y="4" width="14" height="4"/>
+              <rect x="160" y="2" width="14" height="8"/>
+              <rect x="180" y="0" width="14" height="12"/>
+              <rect x="200" y="2" width="14" height="8"/>
+              <rect x="220" y="4" width="14" height="4"/>
+              <rect x="240" y="2" width="14" height="8"/>
+              <rect x="260" y="0" width="14" height="12"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="zm-body">
+          <div class="row"><span class="num">01</span><span>Three minds. Each speaks alone.</span></div>
+          <div class="row"><span class="num">02</span><span>Their song reveals what one cannot.</span></div>
+          <div class="row empty"></div>
+          <div class="row"><span class="num">03</span><span>You decide what is true.</span></div>
+        </div>
+
+        <div class="zm-sigs">
+          <div class="zm-sig s-a">
+            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#1A0F08" stroke-width="1.4" stroke-linecap="square">
+              <rect x="3" y="3" width="34" height="34"/>
+              <line x1="20" y1="9" x2="20" y2="31"/>
+              <line x1="14" y1="9" x2="26" y2="9"/>
+              <line x1="14" y1="31" x2="26" y2="31"/>
+            </svg>
+            <span class="role">ANALYST</span>
+            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
+              <path d="M2 8 Q 12 2 18 7 T 32 6 Q 42 11 50 5 T 68 8 Q 78 3 86 7 L 96 5"/>
+            </svg>
+            <div class="line"></div>
+          </div>
+          <div class="zm-sig s-h">
+            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#8B2222" stroke-width="1.4" stroke-linecap="square">
+              <rect x="3" y="3" width="34" height="34"/>
+              <circle cx="20" cy="20" r="6.5" fill="#8B2222"/>
+              <line x1="20" y1="6.5" x2="20" y2="10"/>
+              <line x1="20" y1="30" x2="20" y2="33.5"/>
+              <line x1="6.5" y1="20" x2="10" y2="20"/>
+              <line x1="30" y1="20" x2="33.5" y2="20"/>
+            </svg>
+            <span class="role">HUMANIST</span>
+            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
+              <path d="M3 9 Q 14 2 22 8 T 40 5 Q 50 10 60 4 T 80 7 Q 88 3 95 8"/>
+            </svg>
+            <div class="line"></div>
+          </div>
+          <div class="zm-sig s-s">
+            <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="#1A0F08" stroke-width="1.4" stroke-linecap="square">
+              <rect x="3" y="3" width="34" height="34"/>
+              <line x1="20" y1="8" x2="20" y2="20"/>
+              <line x1="20" y1="20" x2="11" y2="32"/>
+              <line x1="20" y1="20" x2="29" y2="32"/>
+              <circle cx="20" cy="20" r="1.6" fill="#1A0F08" stroke="none"/>
+            </svg>
+            <span class="role">SKEPTIC</span>
+            <svg class="signature" viewBox="0 0 100 12" fill="none" stroke="#1A0F08" stroke-width="1.1" stroke-linecap="round" preserveAspectRatio="none">
+              <path d="M2 6 Q 10 11 18 5 T 36 8 Q 46 3 54 9 T 72 6 Q 82 10 90 4 L 97 7"/>
+            </svg>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <div class="zm-query">
+          <span class="qlabel">PREGUNTA</span>
+          <span class="qmark">&rsaquo;</span>
+          <span class="ph">ask anything that needs honest reasoning</span>
+          <span class="zm-cursor"></span>
+        </div>
+
+        <div class="zm-foot">
+          <span>FLOR&nbsp;&nbsp;Y&nbsp;&nbsp;CANTO&nbsp;&nbsp;&middot;&nbsp;&nbsp;NUNCA&nbsp;&nbsp;UN&nbsp;&nbsp;AMO</span>
+          <span class="seal">ZTHS&middot;026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
+
+  <!-- ============================================================
        Waitlist
   ============================================================ -->
   <section id="waitlist" class="waitlist-section">
@@ -2098,9 +2845,23 @@
 
   <script>
     /* ============================================================
-       Year
+       Year + banner dates
     ============================================================ */
     document.getElementById('yr').textContent = new Date().getFullYear();
+    (function () {
+      // Render today's date in the Spanish "DD MES AAAA" format used
+      // by the two banners. Two non-breaking spaces between tokens
+      // match the existing tracked-out look.
+      var months = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO',
+                    'JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+      var d = new Date();
+      var dd = String(d.getDate()).padStart(2, '0');
+      var label = dd + '  ' + months[d.getMonth()] + '  ' + d.getFullYear();
+      var zk = document.getElementById('zkFecha');
+      var zm = document.getElementById('zmFecha');
+      if (zk) zk.textContent = label;
+      if (zm) zm.textContent = label;
+    })();
 
     /* ============================================================
        Theme toggle — Skeleton (default) ↔ Templo (daylight mode).
