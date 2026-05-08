@@ -13,222 +13,381 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zotheos.org" />
   <meta name="theme-color" content="#060608" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Wave 5: GSAP for choreographed motion. ~30KB gzipped, no runtime
+       overhead once the timelines are built. Loaded async so it never
+       blocks first paint. -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
   <style>
     /* ============================================================
-       ZOTHEOS — Aztec Cosmos palette
-       Cinnabar = Humanist · Jade = Analyst · Lapis = Skeptic
-       Obsidian = void · Sun-gold = rare accent · Codex-cream = prose
+       ZOTHEOS — Amoxtli palette (Wave 5 redesign)
+       Mexica artifacts on a near-black field.
+       Maya Blue · Cochineal · Sun-gold · Amoxtli cream.
+       The three cores keep their chromatic identity inside the system
+       (Analyst jade · Humanist cinnabar · Skeptic lapis) but the page
+       chrome now reads as an amoxtli laid open on obsidian.
     ============================================================ */
     :root {
-      --obsidian: #060608;
-      --bg: #060608;
-      --surface: rgba(14,14,20,0.78);
-      --surface2: rgba(255,255,255,0.025);
+      /* Void layer (black-to-grey gradient field) */
+      --void:        #050507;
+      --midnight:    #0a0a12;
+      --graphite:    #14141a;
+      --ink:         #1a1a22;
+      --slate-edge:  rgba(255,255,255,0.06);
+      --slate-line:  rgba(255,255,255,0.10);
 
-      --rgb-r: #ef3b3b;
-      --rgb-g: #1ec8a0;
-      --rgb-b: #3a5fd4;
-      --sun-gold: #e8b14d;
-      --codex-cream: #e8d8b8;
+      /* Mexica pigment spine */
+      --maya-blue:        #2c5da7;
+      --maya-blue-deep:   #1e4378;
+      --maya-blue-glow:   rgba(44,93,167,0.32);
+      --cochineal:        #c12626;       /* the brave color, used at seals */
+      --cochineal-bright: #ef3b3b;       /* energy moments */
+      --cochineal-rgb:    193,38,38;
+      --cochineal-bright-rgb: 239,59,59;
+      --gold:        #e8b14d;
+      --gold-rgb:    232,177,77;
+      --jade:        #1ec8a0;
+      --jade-rgb:    30,200,160;
+      --lapis:       #3a5fd4;
+      --lapis-rgb:   58,95,212;
 
-      --rgb-r-rgb: 239,59,59;
-      --rgb-g-rgb: 30,200,160;
-      --rgb-b-rgb: 58,95,212;
-      --sun-gold-rgb: 232,177,77;
+      /* Cream ink hierarchy */
+      --cream:       #f4ecd8;     /* hero, ceremonial */
+      --cream-2:     #e8d8b8;     /* prose */
+      --cream-3:     #b8a888;     /* tracked labels */
+      --slate-3:     #5e5e68;     /* meta */
 
-      --text: #f0ede8;
-      --text2: #b8b3aa;
-      --text3: #7a756d;
+      --text:   #f0ede8;
+      --text2:  #b8b3aa;
+      --text3:  #7a756d;
 
+      /* Type stack */
       --serif: 'Instrument Serif', Georgia, serif;
-      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+      --mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-cosmos: cubic-bezier(0.2, 0.8, 0.2, 1);
+      /* Easing personalities */
+      --ease-editorial:  cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-ceremony:   cubic-bezier(0.65, 0, 0.35, 1);
+      --ease-cosmos:     cubic-bezier(0.2, 0.8, 0.2, 1);
+      --ease-anticipate: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-      --glass-bg: rgba(10,10,14,0.72);
+      --glass-bg:     rgba(10,10,14,0.72);
       --glass-border: rgba(255,255,255,0.06);
-      --glass-blur: blur(24px);
-
-      --aura-idle:
-        0 0 0 1px rgba(255,255,255,0.06),
-        0 0 18px rgba(var(--rgb-r-rgb),0.12),
-        0 0 18px rgba(var(--rgb-g-rgb),0.10),
-        0 0 18px rgba(var(--rgb-b-rgb),0.12);
-      --aura-hover:
-        0 0 0 1px rgba(255,255,255,0.20),
-        0 0 26px rgba(var(--rgb-r-rgb),0.24),
-        0 0 26px rgba(var(--rgb-g-rgb),0.20),
-        0 0 26px rgba(var(--rgb-b-rgb),0.26),
-        inset 0 1px 0 rgba(255,255,255,0.08);
-      --aura-active:
-        0 0 0 1px rgba(255,255,255,0.32),
-        0 0 32px rgba(var(--rgb-r-rgb),0.30),
-        0 0 32px rgba(var(--rgb-g-rgb),0.26),
-        0 0 32px rgba(var(--rgb-b-rgb),0.32),
-        inset 0 1px 0 rgba(255,255,255,0.10);
+      --glass-blur:   blur(24px);
     }
 
-    /* ================ Reset + base ================ */
+    /* ============================================================
+       Velación — Day of the Dead vigil mode (no skulls).
+       The palette pulls deeper into ofrenda territory: candlelit
+       cream, deep wine cochineal, indigo-shifted Maya Blue, and
+       cempasúchil marigold replacing yellow gold. Reads as the
+       page lit by candles in the small hours, not by daylight.
+       Activated via [data-theme="velacion"] on <html>; the toggle
+       button persists the choice in localStorage.
+    ============================================================ */
+    [data-theme="velacion"] {
+      --void:        #020203;
+      --midnight:    #07070e;
+      --graphite:    #0d0d14;
+      --ink:         #14141d;
+      --slate-edge:  rgba(245,165,42,0.05);
+      --slate-line:  rgba(245,165,42,0.08);
+
+      --maya-blue:        #1a3a6e;
+      --maya-blue-deep:   #102243;
+      --maya-blue-glow:   rgba(26,58,110,0.32);
+
+      --cochineal:        #8b1d1d;
+      --cochineal-bright: #d63838;
+      --cochineal-rgb:    139,29,29;
+      --cochineal-bright-rgb: 214,56,56;
+
+      /* Cempasúchil marigold replaces yellow-gold in vigil mode.
+         The variable name stays --gold so the rest of the CSS
+         inherits the swap without needing to know which mode is
+         active. The eye reads orange where it used to read yellow. */
+      --gold:        #f5a52a;
+      --gold-rgb:    245,165,42;
+
+      --jade:        #18a587;
+      --jade-rgb:    24,165,135;
+
+      --lapis:       #2a4ba8;
+      --lapis-rgb:   42,75,168;
+
+      --cream:       #f0d8a8;
+      --cream-2:     #d8b88c;
+      --cream-3:     #a8946a;
+
+      --slate-3:     #5e564a;
+      --text:        #f0e8d8;
+      --text2:       #b8a888;
+      --text3:       #6a604c;
+
+      --glass-bg:     rgba(7,7,14,0.78);
+      --glass-border: rgba(245,165,42,0.06);
+    }
+
+    /* Smooth transition between Amoxtli and Velación. The body and
+       a few high-impact surfaces fade their colors over 480ms; the
+       grain + animated layers swap instantly so motion stays in sync.
+       Skipped under prefers-reduced-motion so the swap is instant. */
+    body,
+    .pigment-core,
+    .seal-dot,
+    .greca-divider,
+    .btn-amoxtli,
+    .btn-ghost,
+    .bento-card,
+    .console-frame,
+    .waitlist-card,
+    .support-card,
+    .value-item,
+    .maya-numeral,
+    .hero-eyebrow,
+    .verdict-label img,
+    .footer-epigraph .nahuatl,
+    .footer-epigraph .version,
+    .section-label,
+    .section-head .marker .bar,
+    .section-head .marker .dot {
+      transition:
+        background-color 480ms cubic-bezier(0.65,0,0.35,1),
+        background    480ms cubic-bezier(0.65,0,0.35,1),
+        color         480ms cubic-bezier(0.65,0,0.35,1),
+        border-color  480ms cubic-bezier(0.65,0,0.35,1),
+        box-shadow    480ms cubic-bezier(0.65,0,0.35,1),
+        filter        480ms cubic-bezier(0.65,0,0.35,1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body, .pigment-core, .seal-dot, .greca-divider, .btn-amoxtli,
+      .btn-ghost, .bento-card, .console-frame, .waitlist-card,
+      .support-card, .value-item, .maya-numeral, .hero-eyebrow,
+      .footer-epigraph .nahuatl, .footer-epigraph .version,
+      .section-label {
+        transition: none !important;
+      }
+    }
+
+    /* ============================================================
+       Reset + base
+    ============================================================ */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background: var(--bg); }
+    html { scroll-behavior: smooth; background: var(--void); }
     body {
       font-family: var(--sans);
       color: var(--text);
-      background: var(--bg);
+      /* Black-to-deep-slate gradient — the void on which the amoxtli
+         sits. Top fades from pure void to graphite mid-page, settles
+         back to midnight in the lower third. Reads as ambient depth
+         without competing with the amoxtli spine. */
+      background:
+        linear-gradient(180deg,
+          var(--void)     0%,
+          var(--midnight) 18%,
+          var(--graphite) 48%,
+          var(--midnight) 76%,
+          var(--void)    100%);
+      background-attachment: fixed;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       line-height: 1.55;
     }
     a { color: inherit; text-decoration: none; }
-    ::selection { background: rgba(var(--rgb-r-rgb),0.34); color: #fff; }
+    ::selection { background: rgba(var(--cochineal-rgb),0.42); color: var(--cream); }
     img { display: block; max-width: 100%; }
     button { font-family: inherit; }
 
-    /* ================ Cosmos backdrop ================ */
-    .cosmos {
-      position: fixed; inset: 0; z-index: 0;
+    /* ============================================================
+       Backdrop layers (z-stack):
+         z:-3  void gradient (body bg)
+         z:-2  faint pigment cores (cinnabar/jade/lapis radial blurs)
+         z:-1  amoxtli spine + grain overlay
+         z: 0  vignette
+         z: 2  content
+         z:9998 grain top-layer
+         z:9999 intro overlay
+    ============================================================ */
+    .pigment-field {
+      position: fixed; inset: 0; z-index: -2;
       pointer-events: none; overflow: hidden;
     }
-    .cosmos-core {
+    .pigment-core {
       position: absolute;
       border-radius: 50%;
-      filter: blur(110px);
-      opacity: 0.45;
+      filter: blur(140px);
+      opacity: 0.22;
       will-change: transform;
     }
-    .cosmos-core-h {
-      width: 62vw; height: 62vh;
-      background: radial-gradient(circle, var(--rgb-r), transparent 60%);
-      top: -12vh; left: -8vw;
-      animation: driftH 40s ease-in-out infinite alternate;
+    .pigment-core.h {
+      width: 56vw; height: 56vh;
+      background: radial-gradient(circle, var(--cochineal-bright), transparent 60%);
+      top: -10vh; left: -8vw;
+      animation: drift-h 40s ease-in-out infinite alternate;
     }
-    .cosmos-core-a {
-      width: 55vw; height: 55vh;
-      background: radial-gradient(circle, var(--rgb-g), transparent 60%);
-      bottom: -10vh; right: -6vw;
-      animation: driftA 46s ease-in-out infinite alternate;
-    }
-    .cosmos-core-s {
+    .pigment-core.a {
       width: 50vw; height: 50vh;
-      background: radial-gradient(circle, var(--rgb-b), transparent 60%);
+      background: radial-gradient(circle, var(--jade), transparent 60%);
+      bottom: -8vh; right: -6vw;
+      animation: drift-a 46s ease-in-out infinite alternate;
+    }
+    .pigment-core.s {
+      width: 48vw; height: 48vh;
+      background: radial-gradient(circle, var(--lapis), transparent 60%);
       top: 38vh; left: 46vw;
-      animation: driftS 52s ease-in-out infinite alternate;
+      animation: drift-s 52s ease-in-out infinite alternate;
     }
-    @keyframes driftH {
-      0% { transform: translate(0,0) scale(1); }
-      100% { transform: translate(70px,40px) scale(1.06); }
-    }
-    @keyframes driftA {
-      0% { transform: translate(0,0) scale(1); }
-      100% { transform: translate(-60px,-50px) scale(1.04); }
-    }
-    @keyframes driftS {
-      0% { transform: translate(0,0) scale(1); }
-      100% { transform: translate(50px,-70px) scale(1.05); }
-    }
+    @keyframes drift-h { 0%{transform:translate(0,0) scale(1);} 100%{transform:translate(70px,40px) scale(1.06);} }
+    @keyframes drift-a { 0%{transform:translate(0,0) scale(1);} 100%{transform:translate(-60px,-50px) scale(1.04);} }
+    @keyframes drift-s { 0%{transform:translate(0,0) scale(1);} 100%{transform:translate(50px,-70px) scale(1.05);} }
 
-    /* Hex texture */
-    .hex-texture {
-      position: fixed; inset: -10vh -10vw;
-      z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cpath d='M28 1L55 16.5V47.5L28 63L1 47.5V16.5Z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/svg%3E");
-      background-size: 56px 64px;
-      animation: hexDrift 90s linear infinite;
-    }
-    @keyframes hexDrift {
-      from { transform: translate3d(0,0,0); }
-      to { transform: translate3d(56px,64px,0); }
-    }
-
-    /* Vignette */
-    .vignette {
-      position: fixed; inset: 0;
-      z-index: 1; pointer-events: none;
-      background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.55) 100%);
-    }
-
-    /* Grain */
+    /* Grain — paper-tooth texture overlay. Uses fractal noise rendered
+       to SVG with deliberate octave count + base frequency tuned so it
+       reads as printed-paper grain, not digital static. */
     .grain {
       position: fixed; inset: 0;
       z-index: 9998; pointer-events: none;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
+      opacity: 0.04;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='3' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.93  0 0 0 0 0.85  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 320px 320px;
+    }
+
+    .vignette {
+      position: fixed; inset: 0;
+      z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.55) 100%);
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .cosmos-core, .hex-texture { animation: none !important; }
+      .pigment-core { animation: none !important; }
     }
 
-    /* ================ Prismatic line ================ */
-    .prismatic-line {
-      height: 2px; border: none;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
-    }
-    @keyframes prismaticShift {
-      0% { background-position: 0% 0; }
-      100% { background-position: 300% 0; }
+    /* ============================================================
+       Amoxtli spine — the faint vertical line that runs the page,
+       evoking the binding of an open amoxtli. Cochineal seal-dots
+       break it at section boundaries (rendered per-section).
+    ============================================================ */
+    .amoxtli-spine {
+      position: fixed;
+      top: 0; bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(244,236,216,0.04) 8%,
+        rgba(244,236,216,0.06) 50%,
+        rgba(244,236,216,0.04) 92%,
+        transparent 100%);
+      z-index: 0;
+      pointer-events: none;
     }
 
-    /* ================ Header ================ */
+    /* ============================================================
+       Greca step-fret divider (Mexica geometric meander).
+       Rendered as inline SVG via mask on a cream-tinted bar so it
+       inherits color + animation cheaply.
+    ============================================================ */
+    .greca-divider {
+      height: 18px;
+      border: none;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      background:
+        linear-gradient(90deg,
+          transparent 0%,
+          rgba(244,236,216,0.18) 20%,
+          rgba(244,236,216,0.28) 50%,
+          rgba(244,236,216,0.18) 80%,
+          transparent 100%);
+      -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='18' viewBox='0 0 72 18'%3E%3Cpath fill='black' d='M0 6 H6 V0 H18 V6 H24 V12 H30 V6 H42 V12 H48 V6 H60 V0 H72 V6 H66 V12 H72 V18 H0 Z'/%3E%3C/svg%3E") repeat-x center / 72px 18px;
+              mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='18' viewBox='0 0 72 18'%3E%3Cpath fill='black' d='M0 6 H6 V0 H18 V6 H24 V12 H30 V6 H42 V12 H48 V6 H60 V0 H72 V6 H66 V12 H72 V18 H0 Z'/%3E%3C/svg%3E") repeat-x center / 72px 18px;
+      opacity: 0.55;
+    }
+
+    /* Cochineal seal-dot — the recurring punctuation between sections.
+       Sits on the amoxtli spine. Kissed with a single pixel of warm gold
+       underneath for a metallic-ink letterpress feel that no flat color
+       achieves. */
+    .seal-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255,180,120,0.55) 0%, transparent 55%),
+        radial-gradient(circle, var(--cochineal-bright) 0%, var(--cochineal) 60%, var(--maya-blue-deep) 100%);
+      box-shadow:
+        0 0 0 1px rgba(232,177,77,0.20),
+        0 0 16px rgba(var(--cochineal-bright-rgb),0.42),
+        inset 0 1px 1px rgba(255,200,160,0.30);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+    .seal-dot.top { top: -7px; }
+    .seal-dot.bottom { bottom: -7px; }
+
+    /* ============================================================
+       Header — restrained, mono-led, with maya numeral chrome.
+    ============================================================ */
     header {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100; padding: 0 24px;
       transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s;
     }
     header.scrolled {
-      background: rgba(6,6,8,0.86);
+      background: rgba(5,5,7,0.86);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid var(--slate-edge);
     }
     .header-inner {
-      max-width: 1200px; margin: 0 auto;
+      max-width: 1280px; margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      align-items: center; height: 72px;
+      align-items: center; height: 76px;
     }
     .header-left { justify-self: start; }
     .header-left img {
-      height: 40px; width: auto; object-fit: contain;
-      filter: drop-shadow(0 0 14px rgba(var(--rgb-r-rgb),0.30)) drop-shadow(0 0 24px rgba(var(--rgb-b-rgb),0.18));
-      animation: iconBreathe 4s ease-in-out infinite;
+      height: 38px; width: auto; object-fit: contain;
+      filter: drop-shadow(0 0 14px rgba(var(--cochineal-bright-rgb),0.30)) drop-shadow(0 0 24px rgba(var(--lapis-rgb),0.18));
+      animation: icon-breathe 4.6s ease-in-out infinite;
     }
-    @keyframes iconBreathe {
-      0%, 100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 14px rgba(var(--rgb-r-rgb),0.30)) drop-shadow(0 0 24px rgba(var(--rgb-b-rgb),0.18));
-      }
-      50% {
-        transform: scale(1.04);
-        filter: drop-shadow(0 0 18px rgba(var(--rgb-g-rgb),0.32)) drop-shadow(0 0 28px rgba(var(--rgb-r-rgb),0.22));
-      }
+    @keyframes icon-breathe {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 14px rgba(var(--cochineal-bright-rgb),0.30)) drop-shadow(0 0 24px rgba(var(--lapis-rgb),0.18)); }
+      50%      { transform: scale(1.04); filter: drop-shadow(0 0 18px rgba(var(--jade-rgb),0.32)) drop-shadow(0 0 28px rgba(var(--cochineal-bright-rgb),0.22)); }
     }
     .header-center { justify-self: center; }
     .header-center img {
-      height: 36px; width: auto;
-      filter: drop-shadow(0 0 18px rgba(var(--rgb-r-rgb),0.16));
+      height: 34px; width: auto;
+      filter: drop-shadow(0 0 18px rgba(var(--cochineal-bright-rgb),0.16));
     }
     .header-nav {
       justify-self: end;
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; gap: 4px;
     }
     .header-nav a {
-      padding: 8px 14px; border-radius: 8px;
-      font-size: 13px; font-weight: 500;
+      padding: 8px 14px; border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--text2);
-      transition: all 0.2s;
+      transition: color 0.2s var(--ease-editorial), background 0.2s;
     }
     .header-nav a:hover {
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
+      color: var(--cream);
+      background: rgba(244,236,216,0.04);
     }
     @media (max-width: 720px) {
       .header-inner { height: 64px; }
@@ -237,87 +396,179 @@
       .header-center img { height: 28px; }
     }
 
-    /* ================ Cosmos-aura buttons ================ */
-    .btn-cosmos,
+    /* ============================================================
+       Theme toggle — small candle/flame icon in the header. Click
+       to switch between Amoxtli (default) and Velación (vigil).
+       Choice persists in localStorage. The flame deepens to
+       cempasúchil-orange when vigil mode is active so the icon
+       itself reads the current state.
+    ============================================================ */
+    .theme-toggle {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(244,236,216,0.03);
+      border: 1px solid var(--slate-line);
+      color: var(--cream-2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 8px;
+      padding: 0;
+      transition:
+        background 0.28s var(--ease-editorial),
+        border-color 0.28s var(--ease-editorial),
+        color 0.28s var(--ease-editorial),
+        transform 0.18s var(--ease-anticipate);
+      position: relative;
+    }
+    .theme-toggle:hover {
+      background: rgba(245,165,42,0.10);
+      border-color: rgba(245,165,42,0.45);
+      color: var(--gold);
+      transform: translateY(-1px);
+    }
+    .theme-toggle:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(245,165,42,0.65);
+    }
+    .theme-toggle svg {
+      transition: filter 0.28s var(--ease-editorial), transform 0.28s var(--ease-anticipate);
+    }
+    .theme-toggle:hover svg {
+      filter: drop-shadow(0 0 8px rgba(245,165,42,0.65));
+      transform: translateY(-1px);
+    }
+    [data-theme="velacion"] .theme-toggle {
+      background: rgba(245,165,42,0.10);
+      border-color: rgba(245,165,42,0.45);
+      color: var(--gold);
+    }
+    [data-theme="velacion"] .theme-toggle svg {
+      filter: drop-shadow(0 0 10px rgba(245,165,42,0.75));
+      animation: flame-flicker 3.6s ease-in-out infinite;
+    }
+    @keyframes flame-flicker {
+      0%, 100% { transform: scale(1) translateY(0); }
+      35%      { transform: scale(1.04) translateY(-0.5px); }
+      55%      { transform: scale(0.98) translateY(0.5px); }
+      75%      { transform: scale(1.02) translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-theme="velacion"] .theme-toggle svg { animation: none !important; }
+    }
+
+    /* Phonetic mark in the footer version line — small, cream,
+       italic, sits next to "amoxtli i" so anyone who has not seen
+       the word before learns how it is spoken. */
+    .footer-epigraph .version .phonetic {
+      display: inline-block;
+      margin-left: 10px;
+      font-style: italic;
+      color: var(--cream-3);
+      letter-spacing: 0.04em;
+      text-transform: none;
+      opacity: 0.78;
+    }
+
+    /* ============================================================
+       Buttons — amoxtli aura.
+       The brave color (cochineal) is reserved for the primary CTA.
+       Ghost button stays neutral so the cochineal carries weight.
+    ============================================================ */
+    .btn-amoxtli,
     .nav-cta {
       display: inline-flex; align-items: center; gap: 10px;
-      padding: 13px 26px; border-radius: 8px;
-      background: linear-gradient(180deg, #0c0c14, #060608);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 14px; font-weight: 500;
-      letter-spacing: 0.02em;
+      padding: 14px 28px; border-radius: 6px;
+      background: linear-gradient(180deg, #0c0c14, var(--void));
+      border: 1px solid rgba(var(--cochineal-rgb),0.45);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
       cursor: pointer;
-      box-shadow: var(--aura-idle);
-      transition: transform 160ms var(--ease-cosmos),
-                  box-shadow 280ms var(--ease-cosmos),
-                  border-color 200ms var(--ease-cosmos);
+      box-shadow:
+        0 0 0 1px rgba(244,236,216,0.04),
+        0 0 26px rgba(var(--cochineal-bright-rgb),0.18),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+      transition:
+        transform 200ms var(--ease-anticipate),
+        box-shadow 320ms var(--ease-ceremony),
+        border-color 240ms var(--ease-editorial);
       position: relative; overflow: hidden;
     }
-    .btn-cosmos:hover,
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      border-color: rgba(255,255,255,0.22);
-      box-shadow: var(--aura-hover);
+    .btn-amoxtli::before {
+      /* Subtle diagonal gold wash on hover — letterpress catch-light. */
+      content: ''; position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+        transparent 30%,
+        rgba(var(--gold-rgb),0.08) 50%,
+        transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease-editorial);
+      pointer-events: none;
     }
-    .btn-cosmos:active,
-    .nav-cta:active {
-      transform: translateY(0);
-      box-shadow: var(--aura-active);
-    }
-    .btn-cosmos:focus-visible,
-    .nav-cta:focus-visible {
-      outline: none;
-      box-shadow: var(--aura-active);
-    }
-    .nav-cta { padding: 8px 18px; font-size: 13px; }
+    .btn-amoxtli:hover { transform: translateY(-1px); border-color: rgba(var(--cochineal-bright-rgb),0.85); box-shadow: 0 0 0 1px rgba(var(--cochineal-bright-rgb),0.30), 0 0 34px rgba(var(--cochineal-bright-rgb),0.32), inset 0 1px 0 rgba(255,255,255,0.08); }
+    .btn-amoxtli:hover::before { opacity: 1; }
+    .btn-amoxtli:active { transform: translateY(0); }
+    .btn-amoxtli:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--cochineal-bright), 0 0 30px rgba(var(--cochineal-bright-rgb),0.40); }
+    .nav-cta { padding: 9px 18px; font-size: 11px; }
 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 10px;
-      padding: 13px 26px; border-radius: 8px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--glass-border);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 14px; font-weight: 500;
+      padding: 14px 28px; border-radius: 6px;
+      background: rgba(244,236,216,0.02);
+      border: 1px solid var(--slate-line);
+      color: var(--cream-2);
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
       cursor: pointer;
       backdrop-filter: var(--glass-blur);
-      transition: all 0.25s var(--ease-cosmos);
+      transition: all 0.28s var(--ease-editorial);
     }
     .btn-ghost:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.16);
+      background: rgba(244,236,216,0.05);
+      border-color: rgba(244,236,216,0.28);
+      color: var(--cream);
       transform: translateY(-1px);
     }
 
-    /* ================ Reveal-on-scroll ================ */
+    /* ============================================================
+       Reveal-on-scroll — preserved, with anticipation.
+    ============================================================ */
     .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      transition:
+        opacity 0.9s var(--ease-editorial),
+        transform 0.9s var(--ease-editorial);
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: 0.08s; }
-    .reveal-d2 { transition-delay: 0.16s; }
-    .reveal-d3 { transition-delay: 0.24s; }
-    .reveal-d4 { transition-delay: 0.32s; }
+    .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
+    .reveal-d1 { transition-delay: 0.10s; }
+    .reveal-d2 { transition-delay: 0.20s; }
+    .reveal-d3 { transition-delay: 0.30s; }
+    .reveal-d4 { transition-delay: 0.40s; }
 
-    /* ================ Intro overlay ================ */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ============================================================
+       Intro overlay (preserved, refined chrome)
+    ============================================================ */
     .intro-overlay {
       position: fixed; inset: 0;
       z-index: 9999; background: #000;
       display: flex; align-items: center; justify-content: center;
-      transition: opacity 1s var(--ease), visibility 1s;
+      transition: opacity 1s var(--ease-ceremony), visibility 1s;
     }
-    .intro-overlay.dismissed {
-      opacity: 0; visibility: hidden; pointer-events: none;
-    }
-    .intro-overlay video {
-      width: 100%; height: 100%; object-fit: cover;
-    }
-    @media (max-width: 640px) {
-      .intro-overlay video { object-fit: contain; }
-    }
+    .intro-overlay.dismissed { opacity: 0; visibility: hidden; pointer-events: none; }
+    .intro-overlay video { width: 100%; height: 100%; object-fit: cover; }
+    @media (max-width: 640px) { .intro-overlay video { object-fit: contain; } }
     .intro-overlay::after {
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7));
@@ -329,174 +580,314 @@
       display: flex; gap: 12px; z-index: 2;
     }
     .intro-controls button {
-      padding: 11px 22px; border-radius: 8px;
-      background: linear-gradient(180deg, #0c0c14, #060608);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.9);
-      font-family: var(--sans); font-size: 13px;
+      padding: 11px 22px; border-radius: 6px;
+      background: linear-gradient(180deg, #0c0c14, var(--void));
+      border: 1px solid rgba(244,236,216,0.18);
+      color: var(--cream);
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.10em; text-transform: uppercase;
       cursor: pointer;
       backdrop-filter: blur(16px);
-      transition: all 0.25s var(--ease-cosmos);
-      box-shadow: var(--aura-idle);
+      transition: all 0.25s var(--ease-editorial);
     }
     .intro-controls button:hover {
-      border-color: rgba(255,255,255,0.3);
-      box-shadow: var(--aura-hover);
+      border-color: rgba(var(--cochineal-bright-rgb),0.55);
+      box-shadow: 0 0 24px rgba(var(--cochineal-bright-rgb),0.22);
     }
 
-    /* ================ Hero ================ */
-    .hero {
+    /* ============================================================
+       HERO — amoxtli magazine spread
+       Left half: Sun Stone disc with three council glyphs
+       Right half: editorial composition with Maya numeral marker,
+                   massive serif headline, sub, CTAs, stats row.
+       The cream spine drops from header to greca below the hero.
+    ============================================================ */
+    .hero-amoxtli {
       min-height: 100vh;
-      display: flex; align-items: center;
       padding: 120px 32px 80px;
       position: relative; z-index: 2;
+      display: flex; align-items: center;
     }
-    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
+    .hero-amoxtli .hero-inner {
+      max-width: 1340px;
+      margin: 0 auto; width: 100%;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-amoxtli .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+    @media (max-width: 640px) {
+      .hero-amoxtli { padding: 100px 22px 60px; }
+    }
+
+    /* --- Sun Stone disc (left half) --- */
+    .hero-disc-wrap {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      max-width: 600px;
+      margin-left: -16px;
+    }
+    .hero-disc {
+      width: 100%; height: 100%;
+      position: relative;
+    }
+    .hero-disc svg { width: 100%; height: 100%; display: block; }
+
+    /* The outer ring rotates very slowly. 240s feels arbitrary; we
+       use 260s so each tick mark equals one Tonalpohualli day in the
+       Mexica count. Subtle but real. */
+    .disc-outer {
+      transform-origin: 50% 50%;
+      animation: disc-rotate 260s linear infinite;
+    }
+    @keyframes disc-rotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* The wax sigil at center breathes (council in session). */
+    .wax-sigil {
+      transform-origin: 50% 50%;
+      animation: wax-breathe 4.4s var(--ease-ceremony) infinite;
+    }
+    @keyframes wax-breathe {
+      0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 12px rgba(var(--cochineal-bright-rgb),0.45)); }
+      50%      { transform: scale(1.035); filter: drop-shadow(0 0 22px rgba(var(--cochineal-bright-rgb),0.65)); }
+    }
+
+    /* The three council glyphs — each pulses on its own rhythm so
+       they read as three voices, not a synchronized triplet. */
+    .glyph-12 { animation: glyph-pulse-a 5.2s ease-in-out infinite; transform-origin: 50% 50%; }
+    .glyph-04 { animation: glyph-pulse-h 4.8s ease-in-out infinite 0.4s; transform-origin: 50% 50%; }
+    .glyph-08 { animation: glyph-pulse-s 5.6s ease-in-out infinite 0.8s; transform-origin: 50% 50%; }
+    @keyframes glyph-pulse-a { 0%,100%{opacity:0.78;} 50%{opacity:1; filter:drop-shadow(0 0 8px rgba(var(--jade-rgb),0.55));} }
+    @keyframes glyph-pulse-h { 0%,100%{opacity:0.78;} 50%{opacity:1; filter:drop-shadow(0 0 8px rgba(var(--cochineal-bright-rgb),0.55));} }
+    @keyframes glyph-pulse-s { 0%,100%{opacity:0.78;} 50%{opacity:1; filter:drop-shadow(0 0 8px rgba(var(--lapis-rgb),0.55));} }
+
+    @media (prefers-reduced-motion: reduce) {
+      .disc-outer, .wax-sigil, .glyph-12, .glyph-04, .glyph-08 { animation: none !important; }
+    }
+
+    /* --- Editorial column (right half) --- */
+    .hero-prose { position: relative; }
+    .maya-numeral {
+      display: inline-flex;
+      gap: 4px; align-items: center;
+      padding: 6px 12px;
+      border: 1px solid rgba(var(--gold-rgb),0.32);
+      border-radius: 100px;
+      background: rgba(var(--gold-rgb),0.04);
+      font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(232,177,77,0.92);
+      margin-bottom: 28px;
+    }
+    /* Bar-and-dot Maya numeral rendered with simple shapes. One.       Inline-block for crispness. */
+    .maya-numeral .num {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .maya-numeral .num .bar { width: 14px; height: 2px; background: var(--gold); border-radius: 1px; }
+    .maya-numeral .num .dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+    .maya-numeral .num .dot-row { display: flex; gap: 2px; }
+
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 7px 16px; border-radius: 100px;
-      border: 1px solid rgba(var(--rgb-r-rgb),0.22);
-      background: rgba(var(--rgb-r-rgb),0.05);
+      border: 1px solid rgba(var(--cochineal-rgb),0.32);
+      background: rgba(var(--cochineal-rgb),0.05);
       font-family: var(--mono);
-      font-size: 11px; letter-spacing: 0.16em;
+      font-size: 10px; letter-spacing: 0.16em;
       text-transform: uppercase;
       color: rgba(255,200,200,0.85);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .pulse {
       width: 7px; height: 7px; border-radius: 50%;
-      background: var(--rgb-r);
-      box-shadow: 0 0 14px rgba(var(--rgb-r-rgb),0.7);
-      animation: pulse 2.2s ease-in-out infinite;
+      background: var(--jade);
+      box-shadow: 0 0 14px rgba(var(--jade-rgb),0.7);
+      animation: pulse-online 2.2s ease-in-out infinite;
     }
-    @keyframes pulse {
+    @keyframes pulse-online {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.4; transform: scale(0.75); }
     }
 
-    .hero h1 {
+    .hero-prose h1 {
       font-family: var(--serif);
-      font-size: clamp(46px, 7.5vw, 92px);
-      line-height: 0.96; letter-spacing: -0.01em;
+      /* Editorial scale — pushed up from the original. */
+      font-size: clamp(54px, 7.6vw, 104px);
+      line-height: 0.94;
+      letter-spacing: -0.018em;
       font-weight: 400;
-      margin-bottom: 28px; max-width: 920px;
+      margin-bottom: 30px;
+      max-width: 720px;
+      color: var(--cream);
     }
-    .hero h1 em {
+    .hero-prose h1 .em-shock {
+      /* The italic word that carries the brave color. The shock is
+         saturation, not gradient noise — one cochineal hit, framed by
+         cream around it. */
       font-style: italic;
-      background: linear-gradient(135deg, #fff, var(--rgb-r) 50%, var(--rgb-b));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-size: 200% 200%;
-      animation: heroEm 4.5s linear infinite;
+      color: var(--cochineal-bright);
+      text-shadow: 0 0 32px rgba(var(--cochineal-bright-rgb),0.45);
     }
-    @keyframes heroEm {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
+    .hero-prose h1 .period {
+      /* The cochineal seal as the final period — system signature. */
+      color: var(--cochineal-bright);
     }
+
     .hero-sub {
-      font-size: 18px; line-height: 1.75;
-      color: var(--codex-cream); opacity: 0.78;
-      max-width: 560px; margin-bottom: 40px;
+      font-size: 18px; line-height: 1.7;
+      color: var(--cream-2); opacity: 0.88;
+      max-width: 540px; margin-bottom: 40px;
+      font-family: var(--sans);
     }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
     .hero-stats {
-      display: flex; gap: 48px;
-      margin-top: 64px; padding-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 28px;
       position: relative;
     }
     .hero-stats::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
-      opacity: 0.65;
+      /* Top edge: subtle gold rule — a single horizontal seal. */
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(var(--gold-rgb),0.32) 20%,
+        rgba(var(--gold-rgb),0.55) 50%,
+        rgba(var(--gold-rgb),0.32) 80%,
+        transparent 100%);
     }
     .hero-stat .num {
-      font-family: var(--mono);
-      font-size: 26px; font-weight: 600;
-      color: #fff;
-      text-shadow: 0 0 24px rgba(var(--rgb-g-rgb),0.35);
+      font-family: var(--serif);
+      font-size: 38px; font-weight: 400;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+      line-height: 1;
     }
     .hero-stat .label {
       font-family: var(--mono);
-      font-size: 11px; letter-spacing: 0.08em;
+      font-size: 10px; letter-spacing: 0.10em;
       text-transform: uppercase;
-      color: var(--text3); margin-top: 6px;
+      color: var(--text3); margin-top: 8px;
     }
     @media (max-width: 640px) {
-      .hero { padding: 100px 20px 60px; }
-      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-stats { grid-template-columns: repeat(2, auto); gap: 28px; }
     }
 
-    /* ================ Sections ================ */
-    section { padding: 100px 32px; position: relative; z-index: 2; }
-    @media (max-width: 640px) {
-      section { padding: 60px 20px; }
+    /* ============================================================
+       Sections — preserved structure, refined chrome
+    ============================================================ */
+    section {
+      padding: 110px 32px;
+      position: relative; z-index: 2;
     }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
+    @media (max-width: 640px) { section { padding: 70px 22px; } }
+
+    .section-inner { max-width: 1280px; margin: 0 auto; }
+    .section-head {
+      display: flex; align-items: baseline;
+      gap: 14px; margin-bottom: 18px;
+    }
+    .section-head .marker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border: 1px solid rgba(var(--gold-rgb),0.30);
+      border-radius: 100px;
+      background: rgba(var(--gold-rgb),0.04);
+    }
+    .section-head .marker .bar { width: 12px; height: 2px; background: var(--gold); border-radius: 1px; }
+    .section-head .marker .dot { width: 3px; height: 3px; background: var(--gold); border-radius: 50%; }
+
     .section-label {
       font-family: var(--mono);
-      font-size: 11px; letter-spacing: 0.18em;
+      font-size: 11px; letter-spacing: 0.20em;
       text-transform: uppercase;
-      color: var(--rgb-r); margin-bottom: 16px;
+      color: var(--cochineal-bright);
     }
     .section-title {
       font-family: var(--serif);
-      font-size: clamp(30px, 4.5vw, 54px);
-      line-height: 1.06; letter-spacing: -0.01em;
-      font-weight: 400; margin-bottom: 20px;
-      max-width: 760px;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.04; letter-spacing: -0.012em;
+      font-weight: 400;
+      margin-bottom: 22px;
+      max-width: 820px;
+      color: var(--cream);
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--cochineal-bright);
     }
     .section-desc {
       font-size: 16px; line-height: 1.75;
-      color: var(--codex-cream); opacity: 0.78;
-      max-width: 600px; margin-bottom: 48px;
+      color: var(--cream-2); opacity: 0.82;
+      max-width: 620px; margin-bottom: 50px;
     }
 
-    /* ================ Mission ================ */
+    /* ============================================================
+       Mission
+    ============================================================ */
     .mission-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 56px; align-items: start;
+      gap: 64px; align-items: start;
     }
     .mission-quote {
       font-family: var(--serif);
-      font-size: 24px; line-height: 1.45;
+      font-size: 26px; line-height: 1.42;
       font-style: italic;
-      color: var(--text);
-      padding-left: 22px;
-      border-left: 2px solid var(--rgb-r);
-      margin-top: 24px;
+      color: var(--cream);
+      padding-left: 24px;
+      border-left: 2px solid var(--cochineal-bright);
+      margin-top: 28px;
+      max-width: 520px;
     }
     .mission-values {
       display: flex; flex-direction: column; gap: 12px;
     }
     .value-item {
-      padding: 22px; border-radius: 10px;
+      padding: 22px; border-radius: 8px;
       border: 1px solid var(--glass-border);
-      background: var(--surface2);
-      transition: all 0.3s var(--ease);
+      background: rgba(244,236,216,0.02);
+      transition: all 0.32s var(--ease-editorial);
       position: relative; overflow: hidden;
     }
     .value-item::before {
       content: ''; position: absolute;
       left: 0; top: 0; bottom: 0; width: 2px;
-      background: var(--rgb-r);
+      background: var(--cochineal-bright);
       transform: scaleY(0);
-      transition: transform 0.3s var(--ease);
+      transition: transform 0.32s var(--ease-anticipate);
       transform-origin: bottom;
     }
     .value-item:hover {
-      border-color: rgba(var(--rgb-r-rgb),0.22);
-      background: rgba(var(--rgb-r-rgb),0.03);
+      border-color: rgba(var(--cochineal-bright-rgb),0.30);
+      background: rgba(var(--cochineal-rgb),0.04);
       transform: translateX(4px);
     }
     .value-item:hover::before { transform: scaleY(1); }
     .value-item strong {
       display: block; margin-bottom: 5px;
-      font-size: 15px; color: #fff;
+      font-size: 15px; color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 600;
     }
     .value-item span {
       font-size: 14px; color: var(--text2); line-height: 1.6;
@@ -505,62 +896,68 @@
       .mission-grid { grid-template-columns: 1fr; gap: 36px; }
     }
 
-    /* ================ Features (Bento) ================ */
+    /* ============================================================
+       Architecture — bento, refined
+    ============================================================ */
     .bento {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
     .bento-card {
-      padding: 30px; border-radius: 14px;
+      padding: 32px; border-radius: 12px;
       border: 1px solid var(--glass-border);
-      background: var(--surface);
+      background: var(--glass-bg);
       position: relative; overflow: hidden;
-      transition: all 0.35s var(--ease);
+      transition: all 0.4s var(--ease-editorial);
       backdrop-filter: var(--glass-blur);
       -webkit-backdrop-filter: var(--glass-blur);
     }
     .bento-card::before {
+      /* Top edge: subtle gold rule on hover (letterpress). */
       content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
-      opacity: 0; transition: opacity 0.3s;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(var(--gold-rgb),0.55),
+        transparent);
+      opacity: 0;
+      transition: opacity 0.35s var(--ease-editorial);
     }
-    .bento-card:hover::before { opacity: 0.85; }
+    .bento-card:hover::before { opacity: 1; }
     .bento-card:hover {
-      border-color: rgba(255,255,255,0.10);
-      transform: translateY(-2px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border-color: rgba(244,236,216,0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 0 30px rgba(var(--cochineal-bright-rgb),0.04);
     }
     .bento-card.span-2 { grid-column: span 2; }
     .bento-card .card-icon {
-      width: 42px; height: 42px; border-radius: 10px;
+      width: 44px; height: 44px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(var(--rgb-r-rgb),0.06);
-      border: 1px solid rgba(var(--rgb-r-rgb),0.12);
-      margin-bottom: 18px; font-size: 18px;
+      background: rgba(var(--cochineal-rgb),0.06);
+      border: 1px solid rgba(var(--cochineal-rgb),0.20);
+      margin-bottom: 20px; font-size: 18px;
     }
     .bento-card.core-a .card-icon {
-      background: rgba(var(--rgb-g-rgb),0.08);
-      border-color: rgba(var(--rgb-g-rgb),0.22);
-      color: var(--rgb-g);
+      background: rgba(var(--jade-rgb),0.08);
+      border-color: rgba(var(--jade-rgb),0.30);
+      color: var(--jade);
     }
     .bento-card.core-h .card-icon {
-      background: rgba(var(--rgb-r-rgb),0.08);
-      border-color: rgba(var(--rgb-r-rgb),0.22);
-      color: var(--rgb-r);
+      background: rgba(var(--cochineal-rgb),0.08);
+      border-color: rgba(var(--cochineal-rgb),0.30);
+      color: var(--cochineal-bright);
     }
     .bento-card.core-s .card-icon {
-      background: rgba(var(--rgb-b-rgb),0.08);
-      border-color: rgba(var(--rgb-b-rgb),0.22);
-      color: var(--rgb-b);
+      background: rgba(var(--lapis-rgb),0.08);
+      border-color: rgba(var(--lapis-rgb),0.30);
+      color: var(--lapis);
     }
     .bento-card h3 {
       font-family: var(--serif);
-      font-size: 21px; font-weight: 400;
-      margin-bottom: 8px; color: #fff;
+      font-size: 24px; font-weight: 400;
+      margin-bottom: 10px; color: var(--cream);
+      letter-spacing: -0.005em;
     }
     .bento-card p {
       font-size: 14px; color: var(--text2); line-height: 1.65;
@@ -570,44 +967,46 @@
       .bento-card.span-2 { grid-column: span 1; }
     }
 
-    /* ================ Memory Awareness ================ */
-    .memory-section { position: relative; }
+    /* ============================================================
+       Memory section
+    ============================================================ */
     .memory-callout {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
-      gap: 48px; align-items: center;
+      gap: 56px; align-items: center;
     }
     @media (max-width: 860px) {
       .memory-callout { grid-template-columns: 1fr; }
     }
     .memory-vis {
       position: relative;
-      border-radius: 14px;
+      border-radius: 12px;
       border: 1px solid var(--glass-border);
       background: linear-gradient(180deg, rgba(20,20,28,0.86), rgba(8,8,12,0.86));
       backdrop-filter: var(--glass-blur);
-      padding: 28px; overflow: hidden;
+      padding: 30px; overflow: hidden;
     }
     .memory-vis::before {
       content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(var(--gold-rgb),0.55),
+        transparent);
     }
     .mv-row {
       display: flex; align-items: center; gap: 10px;
-      flex-wrap: wrap; margin-bottom: 14px;
+      flex-wrap: wrap; margin-bottom: 16px;
     }
     .mv-glyph {
-      width: 28px; height: 28px; border-radius: 50%;
+      width: 30px; height: 30px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--mono);
       font-size: 14px;
-      color: var(--rgb-g);
-      background: rgba(var(--rgb-g-rgb),0.08);
-      border: 1px solid rgba(var(--rgb-g-rgb),0.30);
-      text-shadow: 0 0 12px rgba(var(--rgb-g-rgb),0.55);
+      color: var(--jade);
+      background: rgba(var(--jade-rgb),0.08);
+      border: 1px solid rgba(var(--jade-rgb),0.36);
+      text-shadow: 0 0 12px rgba(var(--jade-rgb),0.55);
     }
     .mv-label {
       font-family: var(--mono);
@@ -616,7 +1015,7 @@
       color: var(--text2);
     }
     .mv-label strong {
-      color: #fff; font-weight: 600;
+      color: var(--cream); font-weight: 600;
       text-transform: none; letter-spacing: 0.02em;
     }
     .mv-meta {
@@ -626,13 +1025,13 @@
       margin-left: auto;
     }
     .mv-facets {
-      display: flex; flex-wrap: wrap; gap: 5px;
-      margin-bottom: 14px;
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 16px;
     }
     .mv-chip {
-      padding: 2px 9px;
-      border: 1px solid rgba(var(--rgb-g-rgb),0.30);
-      background: rgba(var(--rgb-g-rgb),0.06);
+      padding: 3px 10px;
+      border: 1px solid rgba(var(--jade-rgb),0.36);
+      background: rgba(var(--jade-rgb),0.06);
       color: rgba(180,230,200,0.92);
       border-radius: 100px;
       font-family: var(--mono);
@@ -641,38 +1040,35 @@
       line-height: 1.6;
     }
     .mv-tech {
-      padding: 9px 12px;
+      padding: 10px 14px;
       display: flex; align-items: center; gap: 10px;
-      background: rgba(var(--sun-gold-rgb),0.06);
-      border: 1px solid rgba(var(--sun-gold-rgb),0.22);
+      background: rgba(var(--gold-rgb),0.06);
+      border: 1px solid rgba(var(--gold-rgb),0.26);
       border-radius: 6px;
       font-size: 13px;
-      color: rgba(232,216,184,0.90);
+      color: rgba(232,216,184,0.92);
     }
-    .mv-tech-icon {
-      color: var(--sun-gold);
-      font-size: 14px;
-      flex-shrink: 0;
-    }
+    .mv-tech-icon { color: var(--gold); font-size: 14px; flex-shrink: 0; }
     .mv-tech-name {
       font-family: var(--mono);
       font-size: 10px; letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--sun-gold);
+      color: var(--gold);
       flex-shrink: 0;
     }
     .memory-points {
-      display: flex; flex-direction: column; gap: 18px;
+      display: flex; flex-direction: column; gap: 20px;
     }
     .memory-point {
-      padding-left: 18px;
-      border-left: 2px solid rgba(var(--rgb-g-rgb),0.35);
+      padding-left: 20px;
+      border-left: 2px solid rgba(var(--jade-rgb),0.40);
       position: relative;
     }
     .memory-point strong {
       display: block;
-      font-size: 15px; color: #fff;
+      font-size: 15px; color: var(--cream);
       margin-bottom: 4px;
+      font-weight: 600;
     }
     .memory-point span {
       font-size: 14px;
@@ -680,70 +1076,74 @@
       line-height: 1.65;
     }
 
-    /* ================ Console demo ================ */
-    .console-section { position: relative; }
+    /* ============================================================
+       Console demo — scripted choreography (anticipation, follow-through)
+    ============================================================ */
     .console-frame {
-      border-radius: 14px;
+      border-radius: 12px;
       border: 1px solid var(--glass-border);
       background: var(--glass-bg);
       backdrop-filter: var(--glass-blur);
       -webkit-backdrop-filter: var(--glass-blur);
       overflow: hidden;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.55), 0 0 60px rgba(var(--rgb-r-rgb),0.04);
+      box-shadow:
+        0 40px 120px rgba(0,0,0,0.55),
+        0 0 60px rgba(var(--cochineal-bright-rgb),0.04);
       position: relative;
     }
     .console-frame::before {
       content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(var(--gold-rgb),0.55),
+        transparent);
     }
     .console-titlebar {
       display: flex; align-items: center; gap: 8px;
-      padding: 14px 20px;
-      background: rgba(255,255,255,0.015);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 14px 22px;
+      background: rgba(244,236,216,0.012);
+      border-bottom: 1px solid var(--slate-edge);
     }
     .console-dot {
       width: 11px; height: 11px; border-radius: 50%;
-      background: rgba(255,255,255,0.08);
+      background: rgba(244,236,216,0.08);
     }
-    .console-dot:nth-child(1) { background: var(--rgb-r); }
-    .console-dot:nth-child(2) { background: var(--rgb-g); }
-    .console-dot:nth-child(3) { background: var(--rgb-b); }
+    .console-dot:nth-child(1) { background: var(--cochineal-bright); }
+    .console-dot:nth-child(2) { background: var(--jade); }
+    .console-dot:nth-child(3) { background: var(--lapis); }
     .console-titlebar span {
       flex: 1; text-align: center;
       font-family: var(--mono);
       font-size: 12px; color: var(--text3);
+      letter-spacing: 0.04em;
     }
-    .console-body { padding: 28px; }
-    @media (max-width: 640px) {
-      .console-body { padding: 20px; }
-    }
+    .console-body { padding: 30px; }
+    @media (max-width: 640px) { .console-body { padding: 22px; } }
+
     .console-status {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      margin-bottom: 20px;
+      display: flex; gap: 18px; flex-wrap: wrap;
+      margin-bottom: 22px;
       font-family: var(--mono);
       font-size: 11px; color: var(--text3);
       letter-spacing: 0.04em;
     }
-    .console-status .on { color: var(--rgb-g); }
+    .console-status .on { color: var(--jade); }
     .console-query {
       font-family: var(--mono);
       font-size: 13px; color: var(--text2);
-      margin-bottom: 22px;
-      padding: 14px 16px; border-radius: 8px;
-      background: rgba(var(--rgb-r-rgb),0.05);
-      border: 1px solid rgba(var(--rgb-r-rgb),0.14);
+      margin-bottom: 24px;
+      padding: 14px 18px; border-radius: 6px;
+      background: rgba(var(--cochineal-rgb),0.05);
+      border: 1px solid rgba(var(--cochineal-rgb),0.18);
     }
     .console-query .prompt {
-      color: var(--rgb-r); font-weight: 500;
+      color: var(--cochineal-bright); font-weight: 600;
     }
     .console-verdict {
-      padding: 22px; border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.05);
-      background: var(--surface2);
+      padding: 24px; border-radius: 10px;
+      border: 1px solid var(--slate-edge);
+      background: rgba(244,236,216,0.02);
       margin-bottom: 18px;
       position: relative;
     }
@@ -754,24 +1154,24 @@
       flex-wrap: wrap; gap: 10px;
     }
     .verdict-label {
-      display: flex; align-items: center; gap: 8px;
+      display: flex; align-items: center; gap: 10px;
       font-family: var(--mono);
-      font-size: 11px; letter-spacing: 0.12em;
+      font-size: 11px; letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--text3);
     }
     .verdict-label img {
-      height: 24px; width: auto; object-fit: contain;
-      filter: drop-shadow(0 0 8px rgba(var(--rgb-r-rgb),0.3));
+      height: 22px; width: auto; object-fit: contain;
+      filter: drop-shadow(0 0 8px rgba(var(--cochineal-bright-rgb),0.30));
     }
     .confidence-badge {
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 11px;
       padding: 4px 12px; border-radius: 100px;
-      background: rgba(var(--rgb-g-rgb),0.08);
-      color: var(--rgb-g);
-      border: 1px solid rgba(var(--rgb-g-rgb),0.30);
-      letter-spacing: 0.02em;
+      background: rgba(var(--jade-rgb),0.08);
+      color: var(--jade);
+      border: 1px solid rgba(var(--jade-rgb),0.36);
+      letter-spacing: 0.04em;
     }
     .console-verdict p {
       font-size: 14px; line-height: 1.7;
@@ -782,245 +1182,301 @@
       margin-bottom: 10px;
     }
     .meta-tag {
-      padding: 6px 11px; border-radius: 6px;
+      padding: 6px 11px; border-radius: 5px;
       font-family: var(--mono);
       font-size: 11px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: var(--surface2);
+      border: 1px solid var(--slate-edge);
+      background: rgba(244,236,216,0.02);
       color: var(--text3);
       letter-spacing: 0.02em;
     }
     .meta-tag.core-a {
-      border-color: rgba(var(--rgb-g-rgb),0.30);
-      background: rgba(var(--rgb-g-rgb),0.05);
-      color: var(--rgb-g);
+      border-color: rgba(var(--jade-rgb),0.36);
+      background: rgba(var(--jade-rgb),0.05);
+      color: var(--jade);
     }
     .meta-tag.core-h {
-      border-color: rgba(var(--rgb-r-rgb),0.30);
-      background: rgba(var(--rgb-r-rgb),0.05);
-      color: var(--rgb-r);
+      border-color: rgba(var(--cochineal-rgb),0.36);
+      background: rgba(var(--cochineal-rgb),0.05);
+      color: var(--cochineal-bright);
     }
     .meta-tag.core-s {
-      border-color: rgba(var(--rgb-b-rgb),0.30);
-      background: rgba(var(--rgb-b-rgb),0.05);
-      color: var(--rgb-b);
+      border-color: rgba(var(--lapis-rgb),0.36);
+      background: rgba(var(--lapis-rgb),0.05);
+      color: var(--lapis);
     }
-    .meta-tag .name { color: #fff; font-weight: 500; }
+    .meta-tag .name { color: var(--cream); font-weight: 500; }
     .console-footer-note {
       text-align: center;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.04);
+      padding-top: 18px;
+      border-top: 1px solid var(--slate-edge);
       font-size: 13px;
       color: var(--text3);
+      font-style: italic;
+      font-family: var(--serif);
     }
 
-    /* ================ Waitlist ================ */
-    .waitlist-section { position: relative; }
+    /* Scripted-demo classes — toggled by JS when in viewport */
+    .console-scripted .core-a-dot,
+    .console-scripted .core-h-dot,
+    .console-scripted .core-s-dot {
+      animation: core-anticipate 4s var(--ease-ceremony) infinite;
+    }
+    .console-scripted .core-h-dot { animation-delay: 0.3s; }
+    .console-scripted .core-s-dot { animation-delay: 0.6s; }
+    @keyframes core-anticipate {
+      0%, 60%, 100% { transform: scale(1); box-shadow: none; }
+      40% { transform: scale(1.55); box-shadow: 0 0 18px currentColor; }
+    }
+
+    /* ============================================================
+       Waitlist
+    ============================================================ */
     .waitlist-card {
-      padding: 48px 40px;
-      border-radius: 14px;
-      border: 1px solid rgba(var(--rgb-g-rgb),0.20);
-      background: linear-gradient(180deg, rgba(14,14,20,0.88), rgba(8,8,12,0.88));
+      padding: 56px 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(var(--gold-rgb),0.22);
+      background: linear-gradient(180deg, rgba(14,14,20,0.92), rgba(8,8,12,0.92));
       backdrop-filter: var(--glass-blur);
       text-align: center;
-      box-shadow: var(--aura-idle);
+      box-shadow:
+        0 0 0 1px rgba(244,236,216,0.04),
+        0 0 50px rgba(var(--gold-rgb),0.06);
+      position: relative;
     }
+    .waitlist-card::before,
+    .waitlist-card::after {
+      /* Gold corner ornaments — small Mexica-style brackets at the four
+         corners of the card. Pure CSS via pseudo-elements. */
+      content: '';
+      position: absolute;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(var(--gold-rgb),0.65);
+    }
+    .waitlist-card::before { top: 14px; left: 14px; border-right: none; border-bottom: none; }
+    .waitlist-card::after  { bottom: 14px; right: 14px; border-left: none; border-top: none; }
     .waitlist-card h3 {
       font-family: var(--serif);
-      font-size: clamp(28px, 4vw, 40px);
+      font-size: clamp(30px, 4.4vw, 46px);
       font-weight: 400;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       line-height: 1.1;
+      color: var(--cream);
+      letter-spacing: -0.01em;
     }
     .waitlist-card p {
       font-size: 15px;
-      color: var(--codex-cream);
-      opacity: 0.78;
-      max-width: 520px;
-      margin: 0 auto 28px;
-      line-height: 1.65;
+      color: var(--cream-2);
+      opacity: 0.82;
+      max-width: 540px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
     }
     .waitlist-form {
       display: flex; gap: 10px;
-      max-width: 480px; margin: 0 auto;
+      max-width: 500px; margin: 0 auto;
       flex-wrap: wrap;
     }
     .waitlist-input {
       flex: 1; min-width: 220px;
       padding: 14px 16px;
       background: rgba(0,0,0,0.42);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 8px;
-      color: #fff;
+      border: 1px solid var(--slate-line);
+      border-radius: 6px;
+      color: var(--cream);
       font-family: var(--mono);
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 0.02em;
-      transition: all 0.25s var(--ease-cosmos);
+      transition: all 0.28s var(--ease-editorial);
     }
     .waitlist-input:focus {
       outline: none;
-      border-color: rgba(var(--rgb-g-rgb),0.55);
-      box-shadow: 0 0 0 1px rgba(var(--rgb-g-rgb),0.35), 0 0 24px rgba(var(--rgb-g-rgb),0.18);
+      border-color: rgba(var(--gold-rgb),0.65);
+      box-shadow: 0 0 0 1px rgba(var(--gold-rgb),0.40), 0 0 24px rgba(var(--gold-rgb),0.18);
       background: rgba(0,0,0,0.55);
     }
-    .waitlist-input::placeholder {
-      color: rgba(255,255,255,0.30);
-    }
+    .waitlist-input::placeholder { color: rgba(244,236,216,0.30); }
     .waitlist-status {
-      margin-top: 14px;
+      margin-top: 16px;
       font-family: var(--mono);
       font-size: 12px;
       letter-spacing: 0.06em;
-      color: var(--rgb-g);
+      color: var(--jade);
       min-height: 18px;
     }
-    .waitlist-status.error { color: var(--rgb-r); }
+    .waitlist-status.error { color: var(--cochineal-bright); }
 
-    /* ================ Support ================ */
+    /* ============================================================
+       Support
+    ============================================================ */
     .support-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
     .support-card {
-      padding: 26px;
-      border-radius: 12px;
+      padding: 28px;
+      border-radius: 10px;
       border: 1px solid var(--glass-border);
       background: var(--glass-bg);
       backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      transition: all 0.3s var(--ease);
+      transition: all 0.32s var(--ease-editorial);
       position: relative; overflow: hidden;
     }
     .support-card::before {
       content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg,
+        transparent, rgba(var(--gold-rgb),0.55), transparent);
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.35s;
     }
-    .support-card:hover::before { opacity: 0.8; }
+    .support-card:hover::before { opacity: 1; }
     .support-card:hover {
-      border-color: rgba(var(--rgb-r-rgb),0.20);
+      border-color: rgba(var(--cochineal-rgb),0.22);
       transform: translateY(-3px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.36);
     }
     .support-card h3 {
       font-family: var(--serif);
-      font-size: 19px; font-weight: 400;
-      margin-bottom: 8px; color: #fff;
+      font-size: 22px; font-weight: 400;
+      margin-bottom: 8px; color: var(--cream);
+      letter-spacing: -0.005em;
     }
     .support-card p {
       font-size: 14px;
       color: var(--text2);
-      line-height: 1.55;
-      margin-bottom: 18px;
+      line-height: 1.6;
+      margin-bottom: 22px;
     }
-    .support-card .btn-cosmos {
+    .support-card .btn-amoxtli {
       width: 100%;
       justify-content: center;
-      font-size: 13px;
-      padding: 11px 18px;
+      font-size: 11px;
+      padding: 12px 18px;
     }
     @media (max-width: 860px) {
       .support-grid { grid-template-columns: 1fr; }
     }
 
-    /* ================ Footer ================ */
+    /* ============================================================
+       Footer — single-line Nahuatl epigraph + greca above
+    ============================================================ */
     footer {
-      padding: 44px 32px 32px;
-      border-top: 1px solid rgba(255,255,255,0.04);
+      padding: 56px 32px 36px;
       position: relative; z-index: 2;
     }
-    footer::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
-      opacity: 0.5;
+    footer .greca-divider {
+      max-width: 1280px;
+      margin: 0 auto 36px;
     }
     .footer-inner {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 32px;
+      gap: 36px;
       align-items: start;
     }
     @media (max-width: 860px) {
-      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 26px; }
     }
     .footer-brand {
       font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: 0.04em;
-      color: #fff;
+      font-size: 26px;
+      letter-spacing: 0.02em;
+      color: var(--cream);
     }
     .footer-tagline {
       font-size: 13px;
       color: var(--text3);
-      margin-top: 6px;
-      line-height: 1.6;
+      margin-top: 8px;
+      line-height: 1.65;
     }
     .footer-founder {
       font-size: 12px;
       color: var(--text3);
-      margin-top: 14px;
+      margin-top: 18px;
       padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.04);
-      line-height: 1.6;
+      border-top: 1px solid var(--slate-edge);
+      line-height: 1.7;
     }
     .footer-founder strong {
-      color: var(--text2);
+      color: var(--cream-2);
       font-weight: 500;
     }
     .footer-links {
       display: flex; flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
       color: var(--text3);
     }
     .footer-links a { transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
+    .footer-links a:hover { color: var(--cream); }
     .footer-meta {
       font-family: var(--mono);
       font-size: 11px;
       color: var(--text3);
       text-align: right;
       letter-spacing: 0.04em;
-      line-height: 1.7;
+      line-height: 1.8;
     }
     @media (max-width: 860px) {
       .footer-meta { text-align: left; }
     }
     .footer-meta strong {
-      color: var(--codex-cream);
+      color: var(--cream-2);
       font-weight: 500;
     }
-
-    /* ================ Divider ================ */
-    .divider {
-      height: 2px; border: none; margin: 0;
-      background: linear-gradient(90deg, var(--rgb-r), var(--rgb-g), var(--rgb-b), var(--rgb-r));
-      background-size: 300% 100%;
-      animation: prismaticShift 4.5s linear infinite;
-      opacity: 0.4;
+    .footer-epigraph {
+      max-width: 1280px;
+      margin: 36px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid var(--slate-edge);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+    .footer-epigraph .nahuatl {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--cream-2);
+      letter-spacing: 0.005em;
+    }
+    .footer-epigraph .nahuatl span {
+      color: var(--text3);
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      margin-left: 12px;
+    }
+    .footer-epigraph .version {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--cochineal-bright);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
   </style>
 </head>
 <body>
 
-  <!-- Cosmos backdrop layers -->
-  <div class="cosmos" aria-hidden="true">
-    <div class="cosmos-core cosmos-core-h"></div>
-    <div class="cosmos-core cosmos-core-a"></div>
-    <div class="cosmos-core cosmos-core-s"></div>
+  <!-- Backdrop layers -->
+  <div class="pigment-field" aria-hidden="true">
+    <div class="pigment-core h"></div>
+    <div class="pigment-core a"></div>
+    <div class="pigment-core s"></div>
   </div>
-  <div class="hex-texture" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
+  <div class="amoxtli-spine" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
   <!-- Intro overlay -->
@@ -1030,7 +1486,7 @@
     </video>
     <div class="intro-controls">
       <button id="togglePlay">Pause</button>
-      <button id="skipIntro">Enter ZOTHEOS →</button>
+      <button id="skipIntro">Enter ZOTHEOS &rarr;</button>
     </div>
   </div>
 
@@ -1047,55 +1503,204 @@
         <a href="#mission">Mission</a>
         <a href="#features">Architecture</a>
         <a href="#memory">Memory</a>
-        <a href="#waitlist" class="nav-cta">Get early access</a>
+        <a href="#waitlist" class="nav-cta">Early access</a>
+        <button id="themeToggle" class="theme-toggle" type="button"
+                aria-label="Switch to Velación · vigil mode"
+                title="Velación · vigil mode">
+          <!-- Candle flame: simple silhouette. The wick line lives
+               inside so it reads as a candle, not a generic teardrop. -->
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="none" aria-hidden="true">
+            <path d="M7 1.6 C 4.6 4.6, 3.5 7.4, 3.5 10 C 3.5 12.6, 5 14.4, 7 14.4 C 9 14.4, 10.5 12.6, 10.5 10 C 10.5 7.4, 9.4 4.6, 7 1.6 Z"
+                  stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" fill="none"/>
+            <line x1="7" y1="14.4" x2="7" y2="17" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="top">
+  <!-- ============================================================
+       HERO — amoxtli spread
+  ============================================================ -->
+  <section class="hero-amoxtli" id="top">
     <div class="hero-inner">
-      <div class="hero-eyebrow reveal reveal-d1">
-        <span class="pulse"></span>
-        <span>Offline-first&ensp;·&ensp;Private by default&ensp;·&ensp;Built independently</span>
+
+      <!-- LEFT: Sun Stone disc -->
+      <div class="hero-disc-wrap reveal">
+        <div class="hero-disc">
+          <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="diskWash" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1a1a22" stop-opacity="0.0"/>
+                <stop offset="60%" stop-color="#1a1a22" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#050507" stop-opacity="0.85"/>
+              </radialGradient>
+              <radialGradient id="waxFire" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffd9a8" stop-opacity="0.95"/>
+                <stop offset="35%" stop-color="#ef3b3b" stop-opacity="0.95"/>
+                <stop offset="80%" stop-color="#c12626" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#1e4378" stop-opacity="0.9"/>
+              </radialGradient>
+              <filter id="waxGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Disk wash (subtle radial darkening so the disc reads as
+                 floating on the void). -->
+            <circle cx="300" cy="300" r="290" fill="url(#diskWash)"/>
+
+            <!-- Outer ring + 24 cochineal tick marks (one per hour) -->
+            <g class="disc-outer">
+              <circle cx="300" cy="300" r="265" fill="none" stroke="rgba(244,236,216,0.18)" stroke-width="1"/>
+              <circle cx="300" cy="300" r="248" fill="none" stroke="rgba(244,236,216,0.10)" stroke-width="0.5"/>
+              <!-- 24 tick marks rendered programmatically: every 15deg.
+                   Cream tint, except the user's "current hour" gets the
+                   cochineal mark (we paint that one in JS at runtime). -->
+              <g id="tickRing">
+                <!-- placeholder: filled in by JS so we don't write 24
+                     repetitive lines. Initial render shows nothing
+                     until JS runs; that's fine for first paint. -->
+              </g>
+            </g>
+
+            <!-- Inner ring -->
+            <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(244,236,216,0.16)" stroke-width="0.8"/>
+            <circle cx="300" cy="300" r="184" fill="none" stroke="rgba(244,236,216,0.08)" stroke-width="0.5"/>
+
+            <!-- Three cream radial spokes connecting glyphs to center.
+                 Set at 12, 4, and 8 o'clock angles. -->
+            <g stroke="rgba(244,236,216,0.16)" stroke-width="1" fill="none" stroke-linecap="round">
+              <line x1="300" y1="300" x2="300" y2="100"/>            <!-- 12 -->
+              <line x1="300" y1="300" x2="473" y2="400"/>            <!-- 4: cos30=0.866 sin30=0.5; r=200 -->
+              <line x1="300" y1="300" x2="127" y2="400"/>            <!-- 8 -->
+            </g>
+
+            <!-- Glyph: 12 o'clock — Analyst (jade), vertical I-rod -->
+            <g class="glyph-12" transform="translate(300, 100)">
+              <circle r="26" fill="rgba(30,200,160,0.06)" stroke="rgba(30,200,160,0.45)" stroke-width="1"/>
+              <!-- I-rod: vertical bar with serif top/bottom -->
+              <line x1="-8" y1="-12" x2="8" y2="-12" stroke="rgba(30,200,160,0.92)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="0"  y1="-12" x2="0"  y2="12"  stroke="rgba(30,200,160,0.92)" stroke-width="2.4" stroke-linecap="round"/>
+              <line x1="-8" y1="12"  x2="8"  y2="12"  stroke="rgba(30,200,160,0.92)" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Glyph: 4 o'clock — Humanist (cinnabar), solar disc with 8 rays -->
+            <g class="glyph-04" transform="translate(473, 400)">
+              <circle r="26" fill="rgba(239,59,59,0.06)" stroke="rgba(239,59,59,0.45)" stroke-width="1"/>
+              <circle r="6" fill="rgba(239,59,59,0.92)"/>
+              <!-- 8 rays at every 45deg, length 14 from radius 6 outward -->
+              <g stroke="rgba(239,59,59,0.85)" stroke-width="1.6" stroke-linecap="round">
+                <line x1="0"   y1="-9"  x2="0"   y2="-18"/>
+                <line x1="0"   y1="9"   x2="0"   y2="18"/>
+                <line x1="-9"  y1="0"   x2="-18" y2="0"/>
+                <line x1="9"   y1="0"   x2="18"  y2="0"/>
+                <line x1="-6"  y1="-6"  x2="-13" y2="-13"/>
+                <line x1="6"   y1="-6"  x2="13"  y2="-13"/>
+                <line x1="-6"  y1="6"   x2="-13" y2="13"/>
+                <line x1="6"   y1="6"   x2="13"  y2="13"/>
+              </g>
+            </g>
+
+            <!-- Glyph: 8 o'clock — Skeptic (lapis), divergence point -->
+            <g class="glyph-08" transform="translate(127, 400)">
+              <circle r="26" fill="rgba(58,95,212,0.06)" stroke="rgba(58,95,212,0.45)" stroke-width="1"/>
+              <!-- Central dot + two divergent strokes -->
+              <circle r="3.5" fill="rgba(58,95,212,0.92)"/>
+              <line x1="0" y1="-2" x2="-13" y2="-13" stroke="rgba(58,95,212,0.92)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="0" y1="-2" x2="13"  y2="-13" stroke="rgba(58,95,212,0.92)" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Maya bar-and-dot 3 inscribed at the bottom of the disc.
+                 (Three dots = 3, the council count.) -->
+            <g transform="translate(300, 540)" fill="rgba(232,177,77,0.55)">
+              <circle cx="-10" cy="0" r="2.5"/>
+              <circle cx="0"   cy="0" r="2.5"/>
+              <circle cx="10"  cy="0" r="2.5"/>
+            </g>
+
+            <!-- Central wax sigil (the breathing altar) -->
+            <g class="wax-sigil" filter="url(#waxGlow)">
+              <!-- Outer cochineal ring -->
+              <circle cx="300" cy="300" r="62" fill="none" stroke="rgba(193,38,38,0.65)" stroke-width="1.2"/>
+              <circle cx="300" cy="300" r="54" fill="none" stroke="rgba(193,38,38,0.40)" stroke-width="0.8"/>
+
+              <!-- Wax body — radial gradient simulating molten center -->
+              <circle cx="300" cy="300" r="40" fill="url(#waxFire)"/>
+
+              <!-- Three council dots inside -->
+              <circle cx="300" cy="278" r="4.2" fill="rgba(244,236,216,0.92)"/>
+              <circle cx="282" cy="312" r="4.2" fill="rgba(244,236,216,0.92)"/>
+              <circle cx="318" cy="312" r="4.2" fill="rgba(244,236,216,0.92)"/>
+            </g>
+          </svg>
+        </div>
       </div>
 
-      <h1 class="reveal reveal-d2">
-        Clear knowledge.<br/>
-        No surveillance.<br/>
-        No <em>manipulation.</em>
-      </h1>
+      <!-- RIGHT: Editorial column -->
+      <div class="hero-prose">
 
-      <p class="hero-sub reveal reveal-d3">
-        ZOTHEOS helps people think clearly and act with confidence | without
-        being tracked, nudged, or sold. Three local AI cores debate, then
-        synthesize one grounded answer.
-      </p>
+        <!-- Maya numeral marker for the prologue (1 = single dot) -->
+        <div class="maya-numeral reveal reveal-d1">
+          <span class="num"><span class="dot"></span></span>
+          <span>Prologue</span>
+        </div>
 
-      <div class="hero-actions reveal reveal-d3">
-        <a class="btn-cosmos" href="#waitlist">Get early access →</a>
-        <a class="btn-ghost" href="#features">See how it works →</a>
-        <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the Beta →</a>
-      </div>
+        <div class="hero-eyebrow reveal reveal-d1">
+          <span class="pulse"></span>
+          <span>Offline-first &nbsp;&middot;&nbsp; Private by default &nbsp;&middot;&nbsp; Built independently</span>
+        </div>
 
-      <div class="hero-stats reveal reveal-d4">
-        <div class="hero-stat"><div class="num">3</div><div class="label">Thinking cores</div></div>
-        <div class="hero-stat"><div class="num">878+</div><div class="label">Knowledge chunks</div></div>
-        <div class="hero-stat"><div class="num">100%</div><div class="label">Local inference</div></div>
-        <div class="hero-stat"><div class="num">0</div><div class="label">Data collected</div></div>
+        <h1 class="reveal reveal-d2">
+          Clear knowledge.<br/>
+          No surveillance.<br/>
+          No <span class="em-shock">manipulation</span><span class="period">.</span>
+        </h1>
+
+        <p class="hero-sub reveal reveal-d3">
+          ZOTHEOS helps people think clearly and act with confidence, without
+          being tracked, nudged, or sold. Three local AI cores debate, then
+          synthesize one grounded answer.
+        </p>
+
+        <div class="hero-actions reveal reveal-d3">
+          <a class="btn-amoxtli" href="#waitlist">Get early access &rarr;</a>
+          <a class="btn-ghost" href="#features">See how it works &rarr;</a>
+          <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the Beta &rarr;</a>
+        </div>
+
+        <div class="hero-stats reveal reveal-d4">
+          <div class="hero-stat"><div class="num">3</div><div class="label">Thinking cores</div></div>
+          <div class="hero-stat"><div class="num">878+</div><div class="label">Knowledge chunks</div></div>
+          <div class="hero-stat"><div class="num">100%</div><div class="label">Local inference</div></div>
+          <div class="hero-stat"><div class="num">0</div><div class="label">Data collected</div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <!-- Greca divider with cochineal seal-dot on the spine -->
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top" style="top:-7px;"></span>
+  </div>
 
-  <!-- Mission -->
+  <!-- ============================================================
+       Mission
+  ============================================================ -->
   <section id="mission">
     <div class="section-inner">
-      <div class="section-label reveal">01 / Mission</div>
+      <div class="section-head reveal">
+        <span class="marker"><span class="dot"></span><span class="bar"></span></span>
+        <span class="section-label">01 &nbsp;/&nbsp; Mission</span>
+      </div>
       <div class="mission-grid">
         <div>
-          <h2 class="section-title reveal">The internet became a casino.<br/>This is the library.</h2>
+          <h2 class="section-title reveal">The internet became a casino.<br/>This is the <em>library.</em></h2>
           <p class="section-desc reveal reveal-d1">
             Algorithms reward what keeps you scrolling, not what helps you understand.
             ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and
@@ -1116,63 +1721,79 @@
     </div>
   </section>
 
-  <hr class="divider" />
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
 
-  <!-- Architecture -->
+  <!-- ============================================================
+       Architecture
+  ============================================================ -->
   <section id="features">
     <div class="section-inner">
-      <div class="section-label reveal">02 / Architecture</div>
-      <h2 class="section-title reveal">Three minds.<br/>One grounded answer.</h2>
+      <div class="section-head reveal">
+        <span class="marker"><span class="dot"></span><span class="dot"></span><span class="bar"></span></span>
+        <span class="section-label">02 &nbsp;/&nbsp; Architecture</span>
+      </div>
+      <h2 class="section-title reveal">Three minds.<br/>One grounded <em>answer.</em></h2>
       <p class="section-desc reveal reveal-d1">
-        Like a medical conference | multiple specialists consult, compare perspectives, then deliver one careful recommendation. Each core has its own sacred color: Analyst (Jade) reasons from evidence, Humanist (Cinnabar) centers human impact, Skeptic (Lapis) attacks the strongest emerging consensus.
+        Like a medical conference, multiple specialists consult, compare perspectives, then deliver one careful recommendation. Each core has its own sacred color: Analyst (Jade) reasons from evidence, Humanist (Cinnabar) centers human impact, Skeptic (Lapis) attacks the strongest emerging consensus.
       </p>
       <div class="bento">
         <div class="bento-card span-2 reveal">
-          <div class="card-icon">⚖</div>
+          <div class="card-icon">&#9878;</div>
           <h3>Fusion architecture</h3>
-          <p>Three local GGUF models | Analyst, Humanist, Skeptic | each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer with a parsed self-reported confidence tag for every response.</p>
+          <p>Three local GGUF models, Analyst, Humanist, Skeptic, each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer with a parsed self-reported confidence tag for every response.</p>
         </div>
         <div class="bento-card core-a reveal reveal-d1">
-          <div class="card-icon">◉</div>
+          <div class="card-icon">&#9737;</div>
           <h3>Local-first</h3>
           <p>Runs on your hardware via llama.cpp. No cloud dependency. Your conversations, vault, and persistent memory never leave your device.</p>
         </div>
         <div class="bento-card core-h reveal reveal-d1">
-          <div class="card-icon">◆</div>
+          <div class="card-icon">&#9670;</div>
           <h3>Evidence vault</h3>
           <p>Local knowledge base with tiered sourcing. Cross-encoder reranking. Citations enforced as <code>[Vault:Source]</code> with strict-mode checking.</p>
         </div>
         <div class="bento-card core-s reveal reveal-d2">
-          <div class="card-icon">✓</div>
+          <div class="card-icon">&#10003;</div>
           <h3>Anti-consensus Skeptic</h3>
-          <p>The Skeptic argues against the strongest emerging consensus between the other two cores | not against the user. Catches the place where smart panelists agree without checking each other.</p>
+          <p>The Skeptic argues against the strongest emerging consensus between the other two cores, not against the user. Catches the place where smart panelists agree without checking each other.</p>
         </div>
         <div class="bento-card span-2 reveal reveal-d2">
-          <div class="card-icon">★</div>
+          <div class="card-icon">&#9733;</div>
           <h3>Calibration measured</h3>
-          <p>Every response carries three confidence signals | heuristic (evidence-derived), model-stated (parsed from the synthesizer), and blended. The system is honest about how confident it has the right to be.</p>
+          <p>Every response carries three confidence signals, heuristic (evidence-derived), model-stated (parsed from the synthesizer), and blended. The system is honest about how confident it has the right to be.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
 
-  <!-- Memory Awareness -->
+  <!-- ============================================================
+       Memory
+  ============================================================ -->
   <section id="memory" class="memory-section">
     <div class="section-inner">
-      <div class="section-label reveal">03 / Memory awareness</div>
-      <h2 class="section-title reveal">Make people remember better,<br/>not remember <em style="font-style:italic;color:var(--rgb-g)">for</em> them.</h2>
+      <div class="section-head reveal">
+        <span class="marker"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="bar"></span></span>
+        <span class="section-label">03 &nbsp;/&nbsp; Memory awareness</span>
+      </div>
+      <h2 class="section-title reveal">Make people remember better,<br/>not remember <em>for</em> them.</h2>
       <p class="section-desc reveal reveal-d1">
-        Most AI memory tools remember <em>for</em> you | they keep your context, you stay passive. ZOTHEOS does the opposite. Memory awareness activates only inside Projects. Inside one, ZOTHEOS stays focused on the facets you're exploring and quietly teaches you how to organize what you learn.
+        Most AI memory tools remember <em>for</em> you, they keep your context, you stay passive. ZOTHEOS does the opposite. Memory awareness activates only inside Projects. Inside one, ZOTHEOS stays focused on the facets you're exploring and quietly teaches you how to organize what you learn.
       </p>
 
       <div class="memory-callout reveal reveal-d2">
         <div class="memory-vis">
           <div class="mv-row">
-            <span class="mv-glyph">◬</span>
-            <span class="mv-label">Memory awareness · <strong>Investing</strong></span>
-            <span class="mv-meta">3 facets · 5 conversations</span>
+            <span class="mv-glyph">&#9772;</span>
+            <span class="mv-label">Memory awareness &middot; <strong>Investing</strong></span>
+            <span class="mv-meta">3 facets &middot; 5 conversations</span>
           </div>
           <div class="mv-facets">
             <span class="mv-chip">compounding</span>
@@ -1180,7 +1801,7 @@
             <span class="mv-chip">market history</span>
           </div>
           <div class="mv-tech">
-            <span class="mv-tech-icon">🪶</span>
+            <span class="mv-tech-icon">&#129714;</span>
             <span class="mv-tech-name">Feynman</span>
             <span>Explain it back to me as if to a 12-year-old. Gaps in your explanation = gaps in your understanding.</span>
           </div>
@@ -1192,36 +1813,44 @@
           </div>
           <div class="memory-point">
             <strong>Periodic recap</strong>
-            <span>One click | "what's been covered, what's recurring, what's still open, what to explore next." Pulls across the entire project history.</span>
+            <span>One click, "what's been covered, what's recurring, what's still open, what to explore next." Pulls across the entire project history.</span>
           </div>
           <div class="memory-point">
             <strong>Memory techniques</strong>
-            <span>Five built-in techniques | Feynman, spaced repetition, chunking, dual coding, method of loci. Suggested when the content type warrants it.</span>
+            <span>Five built-in techniques, Feynman, spaced repetition, chunking, dual coding, method of loci. Suggested when the content type warrants it.</span>
           </div>
           <div class="memory-point">
             <strong>Outside projects? Forgets cleanly.</strong>
-            <span>No global memory creep. ZOTHEOS doesn't accumulate context about you across casual sessions | only in territories you explicitly commit to.</span>
+            <span>No global memory creep. ZOTHEOS doesn't accumulate context about you across casual sessions, only in territories you explicitly commit to.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
 
-  <!-- Console demo -->
+  <!-- ============================================================
+       Console demo (scripted choreography on viewport entry)
+  ============================================================ -->
   <section id="console" class="console-section">
     <div class="section-inner">
-      <div class="section-label reveal">04 / Console</div>
-      <h2 class="section-title reveal">See it think.</h2>
+      <div class="section-head reveal">
+        <span class="marker"><span class="bar"></span></span>
+        <span class="section-label">04 &nbsp;/&nbsp; Console</span>
+      </div>
+      <h2 class="section-title reveal">See it <em>think.</em></h2>
       <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges with full attribution.</p>
 
-      <div class="console-frame reveal reveal-d2">
+      <div class="console-frame reveal reveal-d2" id="consoleFrame">
         <div class="console-titlebar">
-          <div class="console-dot"></div>
-          <div class="console-dot"></div>
-          <div class="console-dot"></div>
-          <span>ZOTHEOS Sovereign Core | Fusion Console</span>
+          <div class="console-dot core-h-dot"></div>
+          <div class="console-dot core-a-dot"></div>
+          <div class="console-dot core-s-dot"></div>
+          <span>ZOTHEOS Sovereign Core &middot; Fusion Console</span>
         </div>
         <div class="console-body">
           <div class="console-status">
@@ -1230,18 +1859,18 @@
             <span>OFFLINE: <span class="on">ON</span></span>
             <span>AEGIS: <span class="on">ACTIVE</span></span>
           </div>
-          <div class="console-query"><span class="prompt">▶</span>&ensp;How can AI systems be designed to promote universal peace while protecting individual rights?</div>
+          <div class="console-query"><span class="prompt">&#9654;</span>&ensp;How can AI systems be designed to promote universal peace while protecting individual rights?</div>
           <div class="console-verdict">
             <div class="verdict-header">
-              <span class="verdict-label"><img src="/static/zotheos_icon.png" alt="" /> FUSED ANSWER</span>
+              <span class="verdict-label"><img src="/static/zotheos_icon.png" alt="" /> Fused answer</span>
               <span class="confidence-badge">CONFIDENCE 0.78</span>
             </div>
-            <p>AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally | not as policy afterthoughts | with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals.</p>
+            <p>AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally, not as policy afterthoughts, with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals.</p>
           </div>
           <div class="console-meta">
-            <div class="meta-tag core-a"><span class="name">Analyst</span> · Qwen 14B</div>
-            <div class="meta-tag core-h"><span class="name">Humanist</span> · Gemma 9B</div>
-            <div class="meta-tag core-s"><span class="name">Skeptic</span> · Qwen 7B</div>
+            <div class="meta-tag core-a"><span class="name">Analyst</span> &middot; Qwen 14B</div>
+            <div class="meta-tag core-h"><span class="name">Humanist</span> &middot; Gemma 9B</div>
+            <div class="meta-tag core-s"><span class="name">Skeptic</span> &middot; Qwen 7B</div>
           </div>
           <div class="console-meta">
             <div class="meta-tag">Consensus: NUANCED</div>
@@ -1253,82 +1882,88 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:36px" class="reveal reveal-d3">
-        <a class="btn-cosmos" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the live console →</a>
-        <p style="font-family:var(--mono); font-size:11px; color:var(--text3); margin-top:14px; letter-spacing:0.04em;">Hosted on personal hardware via Tailscale Funnel · may be offline</p>
+      <div style="text-align:center; margin-top:40px" class="reveal reveal-d3">
+        <a class="btn-amoxtli" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the live console &rarr;</a>
+        <p style="font-family:var(--mono); font-size:11px; color:var(--text3); margin-top:14px; letter-spacing:0.06em;">Hosted on personal hardware via Tailscale Funnel &middot; may be offline</p>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
 
-  <!-- Waitlist -->
+  <!-- ============================================================
+       Waitlist
+  ============================================================ -->
   <section id="waitlist" class="waitlist-section">
     <div class="section-inner">
-      <div class="section-label reveal">05 / Be among the first</div>
+      <div class="section-head reveal">
+        <span class="marker"><span class="bar"></span><span class="dot"></span></span>
+        <span class="section-label">05 &nbsp;/&nbsp; Be among the first</span>
+      </div>
       <div class="waitlist-card reveal reveal-d1">
         <h3>ZOTHEOS launches publicly when the platform is stable, calibrated, and ready.</h3>
-        <p>Drop your email and you'll get the invite ahead of public launch. We'll only email you about ZOTHEOS milestones | no newsletter spam, no third-party sharing. Same privacy posture as the product.</p>
+        <p>Drop your email and you'll get the invite ahead of public launch. We'll only email you about ZOTHEOS milestones, no newsletter spam, no third-party sharing. Same privacy posture as the product.</p>
 
-        <!--
-          ============================================================
-           FORMSPREE SETUP
-          ============================================================
-           1. Sign up at https://formspree.io (free)
-           2. Create a new form → copy the form ID it gives you
-              (looks like: xqrwblvk — 8 random characters)
-           3. Replace YOUR_FORM_ID below with that ID
-           4. Push to GitHub → Vercel auto-deploys → form is live
-           5. First submission, Formspree will email you to confirm
-              ownership of the destination address. Click the link.
-          ============================================================
-        -->
         <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mrejgqyb" method="POST">
           <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" class="waitlist-input" aria-label="Email address" />
           <input type="hidden" name="_subject" value="New ZOTHEOS waitlist signup" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn-cosmos">Join the waitlist →</button>
+          <button type="submit" class="btn-amoxtli">Join the waitlist &rarr;</button>
         </form>
         <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <div style="position:relative; max-width:1280px; margin:0 auto;">
+    <hr class="greca-divider" />
+    <span class="seal-dot top"></span>
+  </div>
 
-  <!-- Support -->
+  <!-- ============================================================
+       Support
+  ============================================================ -->
   <section id="support">
     <div class="section-inner">
-      <div class="section-label reveal">06 / Support</div>
-      <h2 class="section-title reveal">Fund the mission.</h2>
-      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases | and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
+      <div class="section-head reveal">
+        <span class="marker"><span class="bar"></span><span class="dot"></span><span class="dot"></span></span>
+        <span class="section-label">06 &nbsp;/&nbsp; Support</span>
+      </div>
+      <h2 class="section-title reveal">Fund the <em>mission.</em></h2>
+      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases, and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
       <div class="support-grid">
         <div class="support-card reveal">
           <h3>PayPal</h3>
           <p>One-time support to keep the build moving.</p>
-          <a class="btn-cosmos" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal</a>
+          <a class="btn-amoxtli" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal</a>
         </div>
         <div class="support-card reveal reveal-d1">
           <h3>Stripe</h3>
           <p>Card-based support, processed securely.</p>
-          <a class="btn-cosmos" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe</a>
+          <a class="btn-amoxtli" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe</a>
         </div>
         <div class="support-card reveal reveal-d2">
           <h3>Gumroad</h3>
           <p>Supporter packs and future early access.</p>
-          <a class="btn-cosmos" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad</a>
+          <a class="btn-amoxtli" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ============================================================
+       Footer
+  ============================================================ -->
   <footer>
+    <hr class="greca-divider" />
     <div class="footer-inner">
       <div>
         <div class="footer-brand">ZOTHEOS</div>
         <div class="footer-tagline">Offline Ethical Intelligence<br/>Private by default. Built independently.</div>
-        <div class="footer-founder">Founded by <strong>David Garcia</strong><br/>United States Marine Corps Veteran<br/>ZOTHEOS LLC · Established March 2025<br/>In development since January 2024</div>
+        <div class="footer-founder">Founded by <strong>David Garcia</strong><br/>United States Marine Corps Veteran<br/>ZOTHEOS LLC &middot; Established March 2025<br/>In development since January 2024</div>
       </div>
       <div class="footer-links">
         <a href="#mission">Mission</a>
@@ -1339,19 +1974,103 @@
         <a href="#support">Support</a>
       </div>
       <div class="footer-meta">
-        © <span id="yr"></span> ZOTHEOS LLC<br/>
+        &copy; <span id="yr"></span> ZOTHEOS LLC<br/>
         All rights reserved.<br/><br/>
         <strong>Sovereign OS</strong><br/>
-        Offline · Private · Independent
+        Offline &middot; Private &middot; Independent
       </div>
+    </div>
+    <!-- Single-line Nahuatl epigraph: in xochitl, in cuicatl =
+         "in flower, in song" — Mexica metaphor for poetry-truth. -->
+    <div class="footer-epigraph">
+      <span class="nahuatl">in xochitl, in cuicatl<span>flower-and-song &middot; the way truth is spoken</span></span>
+      <span class="version">amoxtli i <span class="phonetic">ah-MOSH-tli</span></span>
     </div>
   </footer>
 
   <script>
-    // Year
+    /* ============================================================
+       Year
+    ============================================================ */
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Intro overlay
+    /* ============================================================
+       Theme toggle — Amoxtli (default) ↔ Velación (vigil mode).
+       Persists choice in localStorage. Applied on <html> as
+       data-theme="velacion" so the CSS variable swap takes over
+       without touching the body class space.
+    ============================================================ */
+    (function () {
+      var KEY = 'zotheos_landing_theme';
+      var root = document.documentElement;
+      var btn = document.getElementById('themeToggle');
+
+      function apply(theme) {
+        if (theme === 'velacion') {
+          root.setAttribute('data-theme', 'velacion');
+          if (btn) {
+            btn.setAttribute('aria-label', 'Switch to Amoxtli · default mode');
+            btn.setAttribute('title', 'Velación active · click for Amoxtli');
+          }
+        } else {
+          root.removeAttribute('data-theme');
+          if (btn) {
+            btn.setAttribute('aria-label', 'Switch to Velación · vigil mode');
+            btn.setAttribute('title', 'Velación · vigil mode');
+          }
+        }
+      }
+
+      // Restore saved preference (do this before bind so the page
+      // is in the right state on first paint).
+      try {
+        var saved = localStorage.getItem(KEY);
+        if (saved === 'velacion') apply('velacion');
+      } catch (e) { /* localStorage may be disabled; safe to ignore */ }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = root.getAttribute('data-theme') === 'velacion' ? 'velacion' : 'amoxtli';
+          var next = current === 'velacion' ? 'amoxtli' : 'velacion';
+          apply(next);
+          try { localStorage.setItem(KEY, next); } catch (e) {}
+        });
+      }
+    })();
+
+    /* ============================================================
+       Tick ring — render 24 cream tick marks plus one cochineal
+       "current hour" mark on the disc. Done in JS so we don't write
+       24 repetitive SVG lines in the markup.
+    ============================================================ */
+    (function () {
+      var ring = document.getElementById('tickRing');
+      if (!ring) return;
+      var ns = 'http://www.w3.org/2000/svg';
+      var cx = 300, cy = 300;
+      var rOuter = 264, rInner = 248;
+      var hour = new Date().getHours();
+      for (var i = 0; i < 24; i++) {
+        var angle = (i * 15 - 90) * Math.PI / 180;
+        var x1 = cx + rInner * Math.cos(angle);
+        var y1 = cy + rInner * Math.sin(angle);
+        var x2 = cx + rOuter * Math.cos(angle);
+        var y2 = cy + rOuter * Math.sin(angle);
+        var line = document.createElementNS(ns, 'line');
+        line.setAttribute('x1', x1.toFixed(2));
+        line.setAttribute('y1', y1.toFixed(2));
+        line.setAttribute('x2', x2.toFixed(2));
+        line.setAttribute('y2', y2.toFixed(2));
+        line.setAttribute('stroke', i === hour ? 'rgba(239,59,59,0.85)' : 'rgba(244,236,216,0.32)');
+        line.setAttribute('stroke-width', i === hour ? '2.2' : '1');
+        line.setAttribute('stroke-linecap', 'round');
+        ring.appendChild(line);
+      }
+    })();
+
+    /* ============================================================
+       Intro overlay
+    ============================================================ */
     (function () {
       var o = document.getElementById('introOverlay'),
           v = document.getElementById('introVideo'),
@@ -1371,7 +2090,9 @@
       v.play().catch(function () {});
     })();
 
-    // Header scroll state
+    /* ============================================================
+       Header scroll state
+    ============================================================ */
     (function () {
       var h = document.getElementById('header');
       window.addEventListener('scroll', function () {
@@ -1379,18 +2100,38 @@
       }, { passive: true });
     })();
 
-    // Reveal-on-scroll
+    /* ============================================================
+       Reveal-on-scroll + scripted console choreography
+    ============================================================ */
     (function () {
       var els = document.querySelectorAll('.reveal');
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
         });
       }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
       els.forEach(function (el) { obs.observe(el); });
+
+      // Console demo: when the frame enters viewport, start the
+      // anticipation pulse loop on the three core dots. Stops when
+      // the frame leaves so it doesn't run forever on idle pages.
+      var consoleFrame = document.getElementById('consoleFrame');
+      if (consoleFrame) {
+        var consoleObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            consoleFrame.classList.toggle('console-scripted', e.isIntersecting);
+          });
+        }, { threshold: 0.20 });
+        consoleObs.observe(consoleFrame);
+      }
     })();
 
-    // Waitlist submit (Formspree AJAX — keeps user on page)
+    /* ============================================================
+       Waitlist (Formspree AJAX)
+    ============================================================ */
     (function () {
       var f = document.getElementById('waitlistForm');
       var status = document.getElementById('waitlistStatus');
@@ -1398,7 +2139,7 @@
       f.addEventListener('submit', async function (e) {
         e.preventDefault();
         status.classList.remove('error');
-        status.textContent = 'Sending…';
+        status.textContent = 'Sending...';
         var fd = new FormData(f);
         try {
           var res = await fetch(f.action, {
@@ -1411,14 +2152,37 @@
             f.reset();
           } else {
             status.classList.add('error');
-            status.textContent = 'Could not submit | please try again, or email contact@zotheos.org';
+            status.textContent = 'Could not submit, please try again, or email contact@zotheos.org';
           }
         } catch (err) {
           status.classList.add('error');
-          status.textContent = 'Network issue | please try again, or email contact@zotheos.org';
+          status.textContent = 'Network issue, please try again, or email contact@zotheos.org';
         }
       });
     })();
+
+    /* ============================================================
+       GSAP entrance choreography (loaded async via CDN). Falls
+       through silently if GSAP didn't load (offline first paint).
+    ============================================================ */
+    window.addEventListener('load', function () {
+      if (typeof gsap === 'undefined') return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      // Hero entrance: anticipation (slight scale-down) then settle.
+      // The disc rises with a soft bounce; the prose elements stagger.
+      var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('.hero-disc-wrap', {
+        opacity: 0, y: 30, scale: 0.92, duration: 1.2, ease: 'expo.out',
+      })
+      .from('.hero-prose .maya-numeral', { opacity: 0, x: -16, duration: 0.6 }, '-=0.8')
+      .from('.hero-prose .hero-eyebrow', { opacity: 0, x: -16, duration: 0.6 }, '-=0.4')
+      .from('.hero-prose h1', { opacity: 0, y: 24, duration: 0.9, ease: 'power4.out' }, '-=0.5')
+      .from('.hero-prose .hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.6')
+      .from('.hero-prose .hero-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.5 }, '-=0.5')
+      .from('.hero-prose .hero-stats .hero-stat', { opacity: 0, y: 14, stagger: 0.08, duration: 0.55 }, '-=0.4');
+    });
+
   </script>
 </body>
 </html>
