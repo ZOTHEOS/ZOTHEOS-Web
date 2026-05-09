@@ -56,6 +56,11 @@
       --cochineal-rgb:    209, 79, 53;
 
       --pulse-green:      #5EBE6A;
+      --pulse-green-rgb:  94, 190, 106;
+
+      --basalt-1: #1f1a18;
+      --basalt-2: #100c0a;
+      --basalt-3: #1a1410;
 
       --rule:        rgba(244, 236, 216, 0.16);
       --rule-soft:   rgba(244, 236, 216, 0.08);
@@ -81,6 +86,11 @@
       --cochineal-rgb:    139, 34, 34;
 
       --pulse-green:      #2A6850;
+      --pulse-green-rgb:  42, 104, 80;
+
+      --basalt-1: #6B1414;
+      --basalt-2: #4A0808;
+      --basalt-3: #2D0404;
 
       --rule:        rgba(26, 15, 8, 0.20);
       --rule-soft:   rgba(26, 15, 8, 0.10);
@@ -106,6 +116,11 @@
       --cochineal-rgb:    209, 75, 44;
 
       --pulse-green:      #5EBE6A;
+      --pulse-green-rgb:  94, 190, 106;
+
+      --basalt-1: #14110E;
+      --basalt-2: #050507;
+      --basalt-3: #0E0C0A;
 
       --rule:        rgba(237, 228, 211, 0.10);
       --rule-soft:   rgba(237, 228, 211, 0.05);
@@ -115,7 +130,7 @@
 
     body, .btn, .btn-ghost, .bento-card, .console-frame,
     .waitlist-card, .support-card, .value-item, .greca-divider,
-    .seal-dot, .scroll-top {
+    .seal-dot, .scroll-top, .hero-quick-btn {
       transition:
         background-color 480ms var(--ease-ceremony),
         color           480ms var(--ease-ceremony),
@@ -125,7 +140,7 @@
     @media (prefers-reduced-motion: reduce) {
       body, .btn, .btn-ghost, .bento-card, .console-frame,
       .waitlist-card, .support-card, .value-item, .greca-divider,
-      .seal-dot, .scroll-top { transition: none !important; }
+      .seal-dot, .scroll-top, .hero-quick-btn { transition: none !important; }
     }
 
     /* Reset + base */
@@ -205,7 +220,7 @@
         rgba(0, 0, 0, 0.55) 100%);
     }
 
-    /* Floral xochitl band — replaces the chain greca step-fret. */
+    /* Floral xochitl band */
     .greca-divider {
       position: relative;
       z-index: 2;
@@ -342,7 +357,7 @@
       letter-spacing: 0.36em;
       background:
         linear-gradient(180deg, rgba(244, 236, 216, 0.05) 0%, transparent 40%, rgba(0, 0, 0, 0.32) 100%),
-        linear-gradient(135deg, #1f1a18 0%, #100c0a 100%);
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 100%);
       border: 1px solid rgba(var(--cochineal-rgb), 0.55);
       box-shadow:
         inset 0 1px 0 rgba(244, 236, 216, 0.06),
@@ -436,7 +451,12 @@
       box-shadow: 0 0 0 2px var(--cochineal);
     }
 
-    /* Buttons */
+    /* ============================================================
+       TEMPLE-STONE BUTTONS — primary and ghost variants share the
+       same recipe. Used for major CTAs, the new hero quick actions,
+       and the support cards. Same surface across landing and console
+       so the brand reads as one material language.
+    ============================================================ */
     .btn {
       display: inline-flex; align-items: center; gap: 14px;
       padding: 18px 32px;
@@ -452,7 +472,7 @@
         radial-gradient(circle at 70% 60%, rgba(244, 236, 216, 0.02) 0%, transparent 5%),
         radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 8%),
         linear-gradient(180deg, rgba(244, 236, 216, 0.06) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.42) 100%),
-        linear-gradient(135deg, #1f1a18 0%, #100c0a 50%, #1a1410 100%);
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 50%, var(--basalt-3) 100%);
       border: 1px solid rgba(var(--cochineal-rgb), 0.65);
       box-shadow:
         inset 0 1px 0 rgba(244, 236, 216, 0.10),
@@ -527,7 +547,7 @@
         radial-gradient(circle at 25% 35%, rgba(244, 236, 216, 0.025) 0%, transparent 6%),
         radial-gradient(circle at 65% 65%, rgba(0, 0, 0, 0.12) 0%, transparent 7%),
         linear-gradient(180deg, rgba(244, 236, 216, 0.06) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.36) 100%),
-        linear-gradient(135deg, #1f1a18 0%, #100c0a 50%, #1a1410 100%);
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 50%, var(--basalt-3) 100%);
       border: 1px solid rgba(244, 236, 216, 0.22);
       box-shadow:
         inset 0 1px 0 rgba(244, 236, 216, 0.08),
@@ -594,6 +614,7 @@
     .reveal-d2 { transition-delay: 0.20s; }
     .reveal-d3 { transition-delay: 0.30s; }
     .reveal-d4 { transition-delay: 0.40s; }
+    .reveal-d5 { transition-delay: 0.50s; }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
     }
@@ -658,15 +679,23 @@
       .hero { padding: 80px 22px 36px; }
     }
 
+    /* ============================================================
+       COUNCIL DISC — full ceremonial disc matching the debate-mode
+       disc in the live console. Three council seats orbit the disc
+       slowly, each in a temple-stone pill labeled with its glyph.
+       Center sigil pulses jade. Three concentric hairline rings,
+       three radial spokes, dense tick ring around the perimeter,
+       three cochineal seal-dots at 6 o'clock.
+    ============================================================ */
     .hero-disc-wrap {
       position: relative;
       aspect-ratio: 1 / 1;
       width: 100%;
-      max-width: 320px;
+      max-width: 360px;
       margin: 0 auto 36px;
     }
     @media (max-width: 640px) {
-      .hero-disc-wrap { max-width: 240px; margin-bottom: 28px; }
+      .hero-disc-wrap { max-width: 280px; margin-bottom: 28px; }
     }
     .hero-disc { width: 100%; height: 100%; }
     .hero-disc svg { width: 100%; height: 100%; display: block; }
@@ -690,19 +719,106 @@
       50%      { transform: scale(1.03);  opacity: 1; }
     }
 
-    .glyph-12 { animation: g-slow 6s ease-in-out infinite; transform-origin: 50% 50%; transform-box: fill-box; }
-    .glyph-04 { animation: g-mid  4.2s ease-in-out infinite 0.6s; transform-origin: 50% 50%; transform-box: fill-box; }
-    .glyph-08 { animation: g-fast 3.4s ease-in-out infinite 0.2s; transform-origin: 50% 50%; transform-box: fill-box; }
-    @keyframes g-slow { 0%,100%{opacity:.6; transform: scale(.94);} 50%{opacity:1; transform: scale(1);} }
-    @keyframes g-mid  { 0%,100%{opacity:.6; transform: scale(.94);} 50%{opacity:1; transform: scale(1.02);} }
-    @keyframes g-fast { 0%,100%{opacity:.55; transform: scale(.92);} 45%{opacity:1; transform: scale(1.03);} 60%{opacity:.85; transform: scale(.98);} }
+    /* Council seats orbit — pill containers placed on a rotating
+       wrapper so they sweep around the disc together. Each pill
+       counter-rotates so its label stays upright. */
+    .council-orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 4;
+      animation: council-orbit-spin 80s linear infinite;
+    }
+    @keyframes council-orbit-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .council-seat {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transform: rotate(var(--seat-angle, 0deg));
+    }
+    .council-seat-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, calc(-1 * var(--orbit-radius)));
+      animation: council-seat-counter 80s linear infinite;
+      pointer-events: auto;
+    }
+    @keyframes council-seat-counter {
+      from { rotate: 0deg; }
+      to   { rotate: -360deg; }
+    }
+
+    .council-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(244, 236, 216, 0.025) 0%, transparent 6%),
+        radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 8%),
+        linear-gradient(180deg, rgba(244, 236, 216, 0.06) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.42) 100%),
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 50%, var(--basalt-3) 100%);
+      border: 1px solid rgba(var(--cochineal-rgb), 0.55);
+      border-radius: 999px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(244, 236, 216, 0.10),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+        inset 0 0 18px rgba(var(--cochineal-rgb), 0.15),
+        0 3px 10px rgba(0, 0, 0, 0.40);
+      white-space: nowrap;
+    }
+    .council-pill .pill-glyph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      color: var(--cochineal);
+      flex-shrink: 0;
+    }
+    .council-pill .pill-glyph svg {
+      width: 100%;
+      height: 100%;
+    }
+    .council-pill .pill-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--pulse-green);
+      box-shadow: 0 0 6px rgba(var(--pulse-green-rgb), 0.85);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .council-pill {
+        padding: 5px 10px;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        gap: 6px;
+      }
+      .council-pill .pill-glyph { width: 11px; height: 11px; }
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      .disc-outer, .wax-sigil, .glyph-12, .glyph-04, .glyph-08 {
+      .disc-outer, .wax-sigil, .council-orbit, .council-seat-inner {
         animation: none !important;
       }
     }
 
+    /* HEADLINE */
     .hero-headline {
       margin: 0 0 28px 0;
       font-family: var(--serif);
@@ -740,6 +856,118 @@
         0 0 8px  rgba(var(--cochineal-rgb), 0.55);
     }
 
+    /* ============================================================
+       HERO QUICK ACTIONS — three temple-stone pills directly under
+       the headline. Anchor links to the most useful sections so a
+       new visitor has three immediate paths forward.
+    ============================================================ */
+    .hero-quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 36px;
+      padding: 0 8px;
+      max-width: 720px;
+    }
+    .hero-quick-btn {
+      flex: 1 1 200px;
+      min-width: 180px;
+      max-width: 240px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(244, 236, 216, 0.025) 0%, transparent 6%),
+        radial-gradient(circle at 70% 60%, rgba(244, 236, 216, 0.02) 0%, transparent 5%),
+        radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 8%),
+        linear-gradient(180deg, rgba(244, 236, 216, 0.06) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.42) 100%),
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 50%, var(--basalt-3) 100%);
+      border: 1px solid rgba(var(--cochineal-rgb), 0.45);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(244, 236, 216, 0.10),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.50),
+        inset 0 0 22px rgba(var(--cochineal-rgb), 0.10),
+        0 3px 12px rgba(0, 0, 0, 0.40);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.28s var(--ease-ceremony);
+    }
+    .hero-quick-btn .quick-glyph {
+      flex-shrink: 0;
+      color: var(--cochineal);
+      width: 14px;
+      height: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-quick-btn .quick-glyph svg {
+      width: 100%;
+      height: 100%;
+    }
+    .hero-quick-btn:hover {
+      border-color: var(--cochineal);
+      box-shadow:
+        inset 0 1px 0 rgba(244, 236, 216, 0.14),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.55),
+        inset 0 0 36px rgba(var(--cochineal-rgb), 0.20),
+        0 5px 18px rgba(var(--cochineal-rgb), 0.28);
+      transform: translateY(-1px);
+    }
+    .hero-quick-btn:active { transform: translateY(0); }
+    .hero-quick-btn:focus-visible {
+      outline: none;
+      box-shadow:
+        inset 0 1px 0 rgba(244, 236, 216, 0.14),
+        inset 0 0 36px rgba(var(--cochineal-rgb), 0.20),
+        0 0 0 2px rgba(var(--cochineal-rgb), 0.85);
+    }
+    [data-theme="codex"] .hero-quick-btn {
+      color: #f4ecd8;
+      border-color: rgba(0, 0, 0, 0.32);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, transparent 40%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(135deg, #b03030 0%, #8B2222 50%, #6b1414 100%);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.22),
+        inset 0 -1px 4px rgba(0, 0, 0, 0.32),
+        0 3px 10px rgba(26, 15, 8, 0.45);
+    }
+    [data-theme="codex"] .hero-quick-btn .quick-glyph {
+      color: #f4ecd8;
+    }
+    [data-theme="codex"] .hero-quick-btn:hover {
+      border-color: rgba(0, 0, 0, 0.55);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.30),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.36),
+        0 5px 14px rgba(26, 15, 8, 0.5),
+        0 0 24px rgba(139, 34, 34, 0.30);
+    }
+    @media (max-width: 640px) {
+      .hero-quick-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .hero-quick-btn {
+        flex: 0 0 auto;
+        max-width: none;
+        width: 100%;
+        padding: 13px 16px;
+      }
+    }
+
     .hero-sub {
       font-family: var(--serif);
       font-style: italic;
@@ -747,7 +975,7 @@
       line-height: 1.45;
       color: var(--ink-2);
       max-width: 580px;
-      margin: 0 auto 44px;
+      margin: 0 auto 36px;
     }
     .hero-actions {
       display: flex; gap: 14px; flex-wrap: wrap;
@@ -892,6 +1120,16 @@
     .council-pillar.p-a .pillar-glyph svg { animation: g-slow 6s ease-in-out infinite; transform-origin: center; }
     .council-pillar.p-h .pillar-glyph svg { animation: g-mid  4.2s ease-in-out infinite 0.6s; transform-origin: center; }
     .council-pillar.p-s .pillar-glyph svg { animation: g-fast 3.4s ease-in-out infinite 0.2s; transform-origin: center; }
+
+    @keyframes g-slow { 0%,100%{opacity:.6; transform: scale(.94);} 50%{opacity:1; transform: scale(1);} }
+    @keyframes g-mid  { 0%,100%{opacity:.6; transform: scale(.94);} 50%{opacity:1; transform: scale(1.02);} }
+    @keyframes g-fast { 0%,100%{opacity:.55; transform: scale(.92);} 45%{opacity:1; transform: scale(1.03);} 60%{opacity:.85; transform: scale(.98);} }
+
+    @media (prefers-reduced-motion: reduce) {
+      .council-pillar.p-a .pillar-glyph svg,
+      .council-pillar.p-h .pillar-glyph svg,
+      .council-pillar.p-s .pillar-glyph svg { animation: none !important; }
+    }
 
     .pillar-numeral {
       font-family: var(--mono);
@@ -1559,13 +1797,7 @@
       letter-spacing: 0.20em;
     }
 
-    /* ============================================================
-       Scroll-to-top — floating glowing pulsating wax-seal button
-       fixed to the bottom-left. Hidden until the user has scrolled
-       past the hero. Cochineal glow pulses on a slow 2.6s cycle.
-       Hover deepens the glow and lifts the disc; click smooth-
-       scrolls to the top of the page. Respects reduced motion.
-    ============================================================ */
+    /* Scroll-to-top */
     .scroll-top {
       position: fixed;
       left: 24px;
@@ -1582,7 +1814,7 @@
       background:
         radial-gradient(circle at 30% 30%, rgba(244, 236, 216, 0.10) 0%, transparent 40%),
         radial-gradient(circle at center, rgba(var(--cochineal-rgb), 0.18) 0%, transparent 60%),
-        linear-gradient(135deg, #1f1a18 0%, #100c0a 100%);
+        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 100%);
       box-shadow:
         inset 0 1px 0 rgba(244, 236, 216, 0.10),
         inset 0 -1px 0 rgba(0, 0, 0, 0.55),
@@ -1631,9 +1863,6 @@
       width: 18px; height: 18px;
       filter: drop-shadow(0 0 6px rgba(var(--cochineal-rgb), 0.55));
     }
-
-    /* Cochineal wax-stamp variant in Codex theme so it stays
-       readable on cream parchment. */
     [data-theme="codex"] .scroll-top {
       background:
         radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 40%),
@@ -1655,7 +1884,6 @@
         0 0 72px rgba(139, 34, 34, 0.30),
         0 6px 16px rgba(26, 15, 8, 0.50);
     }
-
     @keyframes scroll-top-pulse {
       0%, 100% {
         box-shadow:
@@ -1744,6 +1972,13 @@
   <section class="hero" id="top">
     <div class="hero-inner">
 
+      <!-- ============================================================
+           COUNCIL DISC — full ceremonial disc that matches the live
+           debate-mode disc in the console. Three council seats orbit
+           around the wax sigil at the center. Dense tick ring, three
+           hairline rings, three radial spokes, three cochineal seal
+           dots at the bottom.
+      ============================================================ -->
       <div class="hero-disc-wrap reveal">
         <div class="hero-disc">
           <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1758,58 +1993,47 @@
                 <stop offset="60%"  stop-color="#0A2E48" stop-opacity="0.18"/>
                 <stop offset="100%" stop-color="#02101E" stop-opacity="0.10"/>
               </radialGradient>
+              <radialGradient id="sigilGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#5EBE6A" stop-opacity="0.40"/>
+                <stop offset="40%"  stop-color="#5EBE6A" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#5EBE6A" stop-opacity="0"/>
+              </radialGradient>
             </defs>
 
+            <!-- Background fill + vignette wash -->
             <circle cx="300" cy="300" r="290" fill="url(#diskFill)"/>
             <circle cx="300" cy="300" r="290" fill="url(#diskWash)"/>
 
+            <!-- Outer rotating tick ring + outer hairline rings -->
             <g class="disc-outer">
               <circle cx="300" cy="300" r="265" fill="none" stroke="rgba(244,236,216,0.28)" stroke-width="1.2"/>
               <circle cx="300" cy="300" r="248" fill="none" stroke="rgba(244,236,216,0.14)" stroke-width="0.6"/>
               <g id="tickRing"></g>
             </g>
 
+            <!-- Inner concentric hairline rings -->
             <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(244,236,216,0.22)" stroke-width="1"/>
             <circle cx="300" cy="300" r="184" fill="none" stroke="rgba(244,236,216,0.12)" stroke-width="0.6"/>
+            <circle cx="300" cy="300" r="148" fill="none" stroke="rgba(244,236,216,0.08)" stroke-width="0.5"/>
 
+            <!-- Three radial spokes (12, 4, 8 o'clock) -->
             <g stroke="rgba(244,236,216,0.20)" stroke-width="1" fill="none" stroke-linecap="round">
               <line x1="300" y1="300" x2="300" y2="100"/>
               <line x1="300" y1="300" x2="473" y2="400"/>
               <line x1="300" y1="300" x2="127" y2="400"/>
             </g>
 
-            <g class="glyph-12" transform="translate(300, 100)">
-              <line x1="-14" y1="-18" x2="14" y2="-18" stroke="#F4ECD8" stroke-width="3.4" stroke-linecap="square"/>
-              <line x1="0"   y1="-18" x2="0"  y2="18"  stroke="#F4ECD8" stroke-width="3.4" stroke-linecap="square"/>
-              <line x1="-14" y1="18"  x2="14" y2="18"  stroke="#F4ECD8" stroke-width="3.4" stroke-linecap="square"/>
-            </g>
-
-            <g class="glyph-04" transform="translate(473, 400)">
-              <circle r="9" fill="#D14F35"/>
-              <g stroke="#D14F35" stroke-width="2.8" stroke-linecap="round">
-                <line x1="0"   y1="-24" x2="0"   y2="-15"/>
-                <line x1="0"   y1="15"  x2="0"   y2="24"/>
-                <line x1="-24" y1="0"   x2="-15" y2="0"/>
-                <line x1="15"  y1="0"   x2="24"  y2="0"/>
-                <line x1="-17" y1="-17" x2="-11" y2="-11"/>
-                <line x1="11"  y1="-11" x2="17"  y2="-17"/>
-                <line x1="-17" y1="17"  x2="-11" y2="11"/>
-                <line x1="11"  y1="11"  x2="17"  y2="17"/>
-              </g>
-            </g>
-
-            <g class="glyph-08" transform="translate(127, 400)">
-              <circle cx="0" cy="-18" r="3" fill="#F4ECD8"/>
-              <line x1="0" y1="-15" x2="-17" y2="22" stroke="#F4ECD8" stroke-width="3" stroke-linecap="round"/>
-              <line x1="0" y1="-15" x2="17"  y2="22" stroke="#F4ECD8" stroke-width="3" stroke-linecap="round"/>
-            </g>
-
+            <!-- Three cochineal seal dots at 6 o'clock -->
             <g transform="translate(300, 552)" fill="#D14F35">
               <circle cx="-14" cy="0" r="3.5"/>
               <circle cx="0"   cy="0" r="3.5"/>
               <circle cx="14"  cy="0" r="3.5"/>
             </g>
 
+            <!-- Center jade glow halo behind sigil -->
+            <circle cx="300" cy="300" r="100" fill="url(#sigilGlow)"/>
+
+            <!-- Wax sigil center -->
             <g class="wax-sigil">
               <circle cx="300" cy="300" r="52" fill="none" stroke="#D14F35" stroke-width="1.6"/>
               <circle cx="300" cy="300" r="44" fill="none" stroke="#D14F35" stroke-width="0.8"/>
@@ -1819,6 +2043,63 @@
             </g>
           </svg>
         </div>
+
+        <!-- ============================================================
+             COUNCIL ORBIT — three seats orbit around the disc. Each
+             seat is positioned via a CSS angle variable, then counter-
+             rotates so the label stays upright as the orbit wrapper
+             spins. Glyphs match the console's three council members.
+        ============================================================ -->
+        <div class="council-orbit" aria-hidden="true">
+          <div class="council-seat" style="--seat-angle: 0deg;">
+            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+              <div class="council-pill">
+                <span class="pill-glyph">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square">
+                    <path d="M 1 12 L 1 11 L 3 11 L 3 9 L 5 9 L 5 6 L 6 6 L 6 3 L 8 3 L 8 6 L 9 6 L 9 9 L 11 9 L 11 11 L 13 11 L 13 12 Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span>Analyst</span>
+              </div>
+            </div>
+          </div>
+          <div class="council-seat" style="--seat-angle: 130deg;">
+            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+              <div class="council-pill">
+                <span class="pill-glyph">
+                  <svg viewBox="0 0 14 14" fill="currentColor">
+                    <circle cx="7" cy="7" r="2.2"/>
+                    <g stroke="currentColor" stroke-width="0.9" stroke-linecap="round" fill="none">
+                      <line x1="7" y1="1.6" x2="7" y2="3.4"/>
+                      <line x1="7" y1="10.6" x2="7" y2="12.4"/>
+                      <line x1="1.6" y1="7" x2="3.4" y2="7"/>
+                      <line x1="10.6" y1="7" x2="12.4" y2="7"/>
+                      <line x1="3" y1="3" x2="4.2" y2="4.2"/>
+                      <line x1="9.8" y1="4.2" x2="11" y2="3"/>
+                      <line x1="3" y1="11" x2="4.2" y2="9.8"/>
+                      <line x1="9.8" y1="9.8" x2="11" y2="11"/>
+                    </g>
+                  </svg>
+                </span>
+                <span>Humanist</span>
+              </div>
+            </div>
+          </div>
+          <div class="council-seat" style="--seat-angle: 230deg;">
+            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+              <div class="council-pill">
+                <span class="pill-glyph">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                    <circle cx="7" cy="2.2" r="0.9" fill="currentColor"/>
+                    <line x1="7" y1="3.2" x2="3" y2="12"/>
+                    <line x1="7" y1="3.2" x2="11" y2="12"/>
+                  </svg>
+                </span>
+                <span>Skeptic</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <h1 class="hero-headline reveal reveal-d2">
@@ -1826,11 +2107,47 @@
         <span class="l2"><span class="glow">You decide</span><span class="seal">.</span></span>
       </h1>
 
+      <!-- ============================================================
+           HERO QUICK ACTIONS — three temple-stone pills below the
+           headline. Each anchors to a section that answers a common
+           "what is this for me" question. Order of priority for a
+           first-time visitor: see the perspectives, watch a debate,
+           understand privacy.
+      ============================================================ -->
+      <div class="hero-quick-actions reveal reveal-d3">
+        <a class="hero-quick-btn" href="#features">
+          <span class="quick-glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 3v18M3 12h18"/>
+            </svg>
+          </span>
+          <span>Three perspectives</span>
+        </a>
+        <a class="hero-quick-btn" href="#console">
+          <span class="quick-glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 4l14 8-14 8V4z"/>
+            </svg>
+          </span>
+          <span>Watch the council</span>
+        </a>
+        <a class="hero-quick-btn" href="#memory">
+          <span class="quick-glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="10" rx="2"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+          </span>
+          <span>Private vault</span>
+        </a>
+      </div>
+
       <p class="hero-sub reveal reveal-d3">
         Three local AI cores reason independently, then synthesize one grounded answer. Offline-first. Private by default.
       </p>
 
-      <div class="hero-actions reveal reveal-d3">
+      <div class="hero-actions reveal reveal-d4">
         <a class="btn" href="#waitlist">
           Early access <span class="arrow">&rarr;</span>
         </a>
@@ -1842,7 +2159,7 @@
         </a>
       </div>
 
-      <div class="hero-stats reveal reveal-d4">
+      <div class="hero-stats reveal reveal-d5">
         <div class="hero-stat"><div class="num">3</div><div class="label">Reasoning cores</div></div>
         <div class="hero-stat"><div class="num">878+</div><div class="label">Knowledge chunks</div></div>
         <div class="hero-stat"><div class="num">100%</div><div class="label">Local inference</div></div>
@@ -2344,7 +2661,7 @@
     </div>
   </footer>
 
-  <!-- Floating glowing pulsating scroll-to-top button -->
+  <!-- Scroll-to-top -->
   <button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <line x1="12" y1="20" x2="12" y2="4"/>
@@ -2395,7 +2712,7 @@
       }
     })();
 
-    /* Floral xochitl band — replace static greca with vine + flowers */
+    /* Floral xochitl band */
     (function () {
       var ns = 'http://www.w3.org/2000/svg';
       var teeth = document.querySelectorAll('#grecaTeeth, .grecaTeeth');
@@ -2466,10 +2783,12 @@
       var cx = 300, cy = 300;
       var rOuter = 264, rInner = 248;
       var hour = new Date().getHours();
-      for (var i = 0; i < 24; i++) {
-        var angle = (i * 15 - 90) * Math.PI / 180;
-        var x1 = cx + rInner * Math.cos(angle);
-        var y1 = cy + rInner * Math.sin(angle);
+      for (var i = 0; i < 60; i++) {
+        var angle = (i * 6 - 90) * Math.PI / 180;
+        var isMajor = (i % 5 === 0);
+        var inner = isMajor ? 244 : 252;
+        var x1 = cx + inner * Math.cos(angle);
+        var y1 = cy + inner * Math.sin(angle);
         var x2 = cx + rOuter * Math.cos(angle);
         var y2 = cy + rOuter * Math.sin(angle);
         var line = document.createElementNS(ns, 'line');
@@ -2477,8 +2796,8 @@
         line.setAttribute('y1', y1.toFixed(2));
         line.setAttribute('x2', x2.toFixed(2));
         line.setAttribute('y2', y2.toFixed(2));
-        line.setAttribute('stroke', i === hour ? '#D14F35' : 'rgba(244,236,216,0.32)');
-        line.setAttribute('stroke-width', i === hour ? '2.4' : '1');
+        line.setAttribute('stroke', i === (hour % 24) ? '#D14F35' : (isMajor ? 'rgba(244,236,216,0.32)' : 'rgba(244,236,216,0.18)'));
+        line.setAttribute('stroke-width', i === (hour % 24) ? '2.4' : (isMajor ? '1.2' : '0.7'));
         line.setAttribute('stroke-linecap', 'round');
         ring.appendChild(line);
       }
@@ -2576,7 +2895,7 @@
       });
     })();
 
-    /* GSAP entrance choreography — hero only */
+    /* GSAP entrance choreography */
     window.addEventListener('load', function () {
       if (typeof gsap === 'undefined') return;
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -2584,7 +2903,8 @@
       tl.from('.hero-disc-wrap', { opacity: 0, y: 24, scale: 0.94, duration: 1.1, ease: 'expo.out' })
         .from('.hero-headline .l1', { opacity: 0, y: 14, duration: 0.7 }, '-=0.6')
         .from('.hero-headline .l2', { opacity: 0, y: 28, duration: 1.0, ease: 'power4.out' }, '-=0.5')
-        .from('.hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.6')
+        .from('.hero-quick-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.55 }, '-=0.5')
+        .from('.hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.4')
         .from('.hero-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.5 }, '-=0.5')
         .from('.hero-stats .hero-stat', { opacity: 0, y: 14, stagger: 0.08, duration: 0.55 }, '-=0.4');
     });
