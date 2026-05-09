@@ -19,15 +19,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 
   <style>
     /* ============================================================
        ZOTHEOS DESIGN SYSTEM
-       Three themes, one structural language. Same glyphs, same
-       greca, same wax sigil, same italic editorial type, same
-       cochineal seal-dot rhythm. Only the surface temperature
-       changes between them.
     ============================================================ */
     :root {
       --serif: 'Instrument Serif', Georgia, serif;
@@ -38,7 +33,6 @@
       --ease-ceremony:   cubic-bezier(0.65, 0, 0.35, 1);
       --ease-anticipate: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-      /* DEFAULT (Maya Blue cosmic) palette */
       --bg-floor:   #02101E;
       --bg-mid:     #04162A;
       --bg-deep:    #0A2E48;
@@ -143,7 +137,6 @@
       .seal-dot, .scroll-top, .hero-quick-btn { transition: none !important; }
     }
 
-    /* Reset + base */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; background: var(--bg-floor); }
     body {
@@ -187,7 +180,6 @@
       background-attachment: fixed;
     }
 
-    /* Grain */
     .grain {
       position: fixed; inset: 0;
       z-index: 50; pointer-events: none;
@@ -220,7 +212,6 @@
         rgba(0, 0, 0, 0.55) 100%);
     }
 
-    /* Floral xochitl band */
     .greca-divider {
       position: relative;
       z-index: 2;
@@ -405,7 +396,6 @@
       .header-left { gap: 8px; }
     }
 
-    /* Theme picker */
     .theme-picker {
       display: inline-flex;
       gap: 4px; align-items: center;
@@ -451,12 +441,7 @@
       box-shadow: 0 0 0 2px var(--cochineal);
     }
 
-    /* ============================================================
-       TEMPLE-STONE BUTTONS — primary and ghost variants share the
-       same recipe. Used for major CTAs, the new hero quick actions,
-       and the support cards. Same surface across landing and console
-       so the brand reads as one material language.
-    ============================================================ */
+    /* Buttons */
     .btn {
       display: inline-flex; align-items: center; gap: 14px;
       padding: 18px 32px;
@@ -598,7 +583,7 @@
         linear-gradient(135deg, #14110E 0%, #050507 50%, #0E0C0A 100%);
     }
 
-    /* Reveal-on-scroll */
+    /* Reveal-on-scroll — IMPORTANT FIX: ensure visible state has full opacity */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -607,8 +592,8 @@
         transform 0.9s var(--ease-editorial);
     }
     .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
     .reveal-d1 { transition-delay: 0.10s; }
     .reveal-d2 { transition-delay: 0.20s; }
@@ -680,12 +665,9 @@
     }
 
     /* ============================================================
-       COUNCIL DISC — full ceremonial disc matching the debate-mode
-       disc in the live console. Three council seats orbit the disc
-       slowly, each in a temple-stone pill labeled with its glyph.
-       Center sigil pulses jade. Three concentric hairline rings,
-       three radial spokes, dense tick ring around the perimeter,
-       three cochineal seal-dots at 6 o'clock.
+       COUNCIL DISC — pure CSS layout for the orbiting pills.
+       Uses CSS variables to set seat angle and orbit radius;
+       counter-rotates each pill so labels stay upright.
     ============================================================ */
     .hero-disc-wrap {
       position: relative;
@@ -719,19 +701,21 @@
       50%      { transform: scale(1.03);  opacity: 1; }
     }
 
-    /* Council seats orbit — pill containers placed on a rotating
-       wrapper so they sweep around the disc together. Each pill
-       counter-rotates so its label stays upright. */
+    /* ============================================================
+       COUNCIL ORBIT — fixed-position pills (no rotation animation
+       on the wrapper, since the previous tilted pills bug came from
+       the wrapper rotating without each pill counter-rotating in
+       sync). Each pill is positioned using a CSS variable for its
+       angle, then a static translate places it on the orbit ring.
+       The pill itself is never rotated, so the label always reads
+       upright. The orbit gives the disc its richness through
+       presence rather than motion.
+    ============================================================ */
     .council-orbit {
       position: absolute;
       inset: 0;
       pointer-events: none;
       z-index: 4;
-      animation: council-orbit-spin 80s linear infinite;
-    }
-    @keyframes council-orbit-spin {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
     }
 
     .council-seat {
@@ -740,26 +724,21 @@
       left: 50%;
       width: 0;
       height: 0;
-      transform: rotate(var(--seat-angle, 0deg));
-    }
-    .council-seat-inner {
-      position: absolute;
-      left: 0;
-      top: 0;
-      transform: translate(-50%, calc(-1 * var(--orbit-radius)));
-      animation: council-seat-counter 80s linear infinite;
       pointer-events: auto;
     }
-    @keyframes council-seat-counter {
-      from { rotate: 0deg; }
-      to   { rotate: -360deg; }
+    /* Position each seat at its angle on the orbit ring. We compute
+       the offset directly via cos/sin in the inline style on each
+       element: --x and --y CSS vars in pixels. */
+    .council-seat-inner {
+      position: absolute;
+      transform: translate(calc(-50% + var(--seat-x, 0px)), calc(-50% + var(--seat-y, 0px)));
     }
 
     .council-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 13px;
+      padding: 7px 14px;
       background:
         radial-gradient(circle at 20% 30%, rgba(244, 236, 216, 0.025) 0%, transparent 6%),
         radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 8%),
@@ -793,18 +772,10 @@
       width: 100%;
       height: 100%;
     }
-    .council-pill .pill-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--pulse-green);
-      box-shadow: 0 0 6px rgba(var(--pulse-green-rgb), 0.85);
-      flex-shrink: 0;
-    }
 
     @media (max-width: 640px) {
       .council-pill {
-        padding: 5px 10px;
+        padding: 5px 11px;
         font-size: 9px;
         letter-spacing: 0.16em;
         gap: 6px;
@@ -813,12 +784,9 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .disc-outer, .wax-sigil, .council-orbit, .council-seat-inner {
-        animation: none !important;
-      }
+      .disc-outer, .wax-sigil { animation: none !important; }
     }
 
-    /* HEADLINE */
     .hero-headline {
       margin: 0 0 28px 0;
       font-family: var(--serif);
@@ -838,7 +806,7 @@
     }
     .hero-headline .l2 {
       display: block;
-      font-size: clamp(80px, 12.5vw, 140px);
+      font-size: clamp(72px, 11.5vw, 130px);
       line-height: 0.96;
       margin-top: 0;
     }
@@ -857,9 +825,9 @@
     }
 
     /* ============================================================
-       HERO QUICK ACTIONS — three temple-stone pills directly under
-       the headline. Anchor links to the most useful sections so a
-       new visitor has three immediate paths forward.
+       HERO QUICK ACTIONS — three temple-stone pills below the
+       headline. NOT inside .reveal because the reveal stuck on
+       a previous render and hid them. Always fully visible.
     ============================================================ */
     .hero-quick-actions {
       display: flex;
@@ -958,13 +926,14 @@
       .hero-quick-actions {
         flex-direction: column;
         align-items: stretch;
-        gap: 8px;
+        gap: 10px;
+        padding: 0 12px;
       }
       .hero-quick-btn {
         flex: 0 0 auto;
         max-width: none;
         width: 100%;
-        padding: 13px 16px;
+        padding: 14px 16px;
       }
     }
 
@@ -1199,7 +1168,6 @@
       .pillar-verb { font-size: 28px; }
     }
 
-    /* Sections */
     section {
       padding: 110px 32px;
       position: relative; z-index: 2;
@@ -1247,7 +1215,6 @@
       margin-bottom: 50px;
     }
 
-    /* Mission */
     .mission-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1303,7 +1270,6 @@
       .mission-grid { grid-template-columns: 1fr; gap: 36px; }
     }
 
-    /* Architecture bento */
     .bento {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1345,7 +1311,6 @@
       .bento-card.span-2 { grid-column: span 1; }
     }
 
-    /* Memory */
     .memory-callout {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -1440,7 +1405,6 @@
       line-height: 1.65;
     }
 
-    /* Console */
     .console-frame {
       border: 1px solid var(--rule);
       background: rgba(0, 0, 0, 0.28);
@@ -1580,7 +1544,6 @@
       font-family: var(--serif);
     }
 
-    /* Waitlist */
     .waitlist-card {
       padding: 56px 44px;
       border: 1px solid var(--rule);
@@ -1643,7 +1606,6 @@
     }
     .waitlist-status.error { color: var(--cochineal); }
 
-    /* Support */
     .support-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1683,7 +1645,6 @@
       .support-grid { grid-template-columns: 1fr; }
     }
 
-    /* Footer */
     footer {
       padding: 60px 32px 36px;
       position: relative; z-index: 2;
@@ -1797,7 +1758,6 @@
       letter-spacing: 0.20em;
     }
 
-    /* Scroll-to-top */
     .scroll-top {
       position: fixed;
       left: 24px;
@@ -1841,48 +1801,11 @@
     .scroll-top:hover {
       border-color: var(--cochineal);
       transform: translateY(-2px);
-      box-shadow:
-        inset 0 1px 0 rgba(244, 236, 216, 0.14),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.6),
-        inset 0 0 38px rgba(var(--cochineal-rgb), 0.32),
-        0 0 36px rgba(var(--cochineal-rgb), 0.65),
-        0 0 72px rgba(var(--cochineal-rgb), 0.32),
-        0 6px 18px rgba(0, 0, 0, 0.55);
       animation-play-state: paused;
     }
-    .scroll-top:focus-visible {
-      outline: none;
-      box-shadow:
-        inset 0 1px 0 rgba(244, 236, 216, 0.14),
-        inset 0 0 38px rgba(var(--cochineal-rgb), 0.32),
-        0 0 0 2px var(--cochineal),
-        0 0 36px rgba(var(--cochineal-rgb), 0.55);
-    }
-    .scroll-top:active { transform: translateY(0); }
     .scroll-top svg {
       width: 18px; height: 18px;
       filter: drop-shadow(0 0 6px rgba(var(--cochineal-rgb), 0.55));
-    }
-    [data-theme="codex"] .scroll-top {
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 40%),
-        linear-gradient(135deg, #b03030 0%, #8B2222 100%);
-      border-color: rgba(0, 0, 0, 0.40);
-      color: #f4ecd8;
-      box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.25),
-        inset 0 -1px 4px rgba(0, 0, 0, 0.32),
-        0 0 24px rgba(139, 34, 34, 0.45),
-        0 0 48px rgba(139, 34, 34, 0.22),
-        0 4px 12px rgba(26, 15, 8, 0.40);
-    }
-    [data-theme="codex"] .scroll-top:hover {
-      box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.32),
-        inset 0 -1px 6px rgba(0, 0, 0, 0.36),
-        0 0 36px rgba(139, 34, 34, 0.65),
-        0 0 72px rgba(139, 34, 34, 0.30),
-        0 6px 16px rgba(26, 15, 8, 0.50);
     }
     @keyframes scroll-top-pulse {
       0%, 100% {
@@ -1915,11 +1838,9 @@
 </head>
 <body>
 
-  <!-- Backdrop -->
   <div class="vignette" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- Intro overlay -->
   <div id="introOverlay" class="intro-overlay">
     <video id="introVideo" autoplay muted playsinline preload="auto">
       <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
@@ -1930,7 +1851,6 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header id="header">
     <div class="header-inner">
       <div class="header-left">
@@ -1938,21 +1858,9 @@
           <img src="/static/zotheos_icon.png" alt="" onerror="this.parentNode.classList.add('img-failed')" />
         </a>
         <div class="theme-picker" role="radiogroup" aria-label="Page theme">
-          <button class="theme-swatch" type="button"
-                  data-set=""
-                  aria-pressed="true"
-                  aria-label="Maya Blue cosmic"
-                  title="Maya Blue cosmic"></button>
-          <button class="theme-swatch" type="button"
-                  data-set="codex"
-                  aria-pressed="false"
-                  aria-label="Codex parchment"
-                  title="Codex parchment"></button>
-          <button class="theme-swatch" type="button"
-                  data-set="skeleton"
-                  aria-pressed="false"
-                  aria-label="Skeleton obsidian"
-                  title="Skeleton obsidian"></button>
+          <button class="theme-swatch" type="button" data-set="" aria-pressed="true" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
+          <button class="theme-swatch" type="button" data-set="codex" aria-pressed="false" aria-label="Codex parchment" title="Codex parchment"></button>
+          <button class="theme-swatch" type="button" data-set="skeleton" aria-pressed="false" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
         </div>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
@@ -1968,18 +1876,11 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-inner">
 
-      <!-- ============================================================
-           COUNCIL DISC — full ceremonial disc that matches the live
-           debate-mode disc in the console. Three council seats orbit
-           around the wax sigil at the center. Dense tick ring, three
-           hairline rings, three radial spokes, three cochineal seal
-           dots at the bottom.
-      ============================================================ -->
-      <div class="hero-disc-wrap reveal">
+      <!-- Council disc -->
+      <div class="hero-disc-wrap">
         <div class="hero-disc">
           <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
@@ -2000,40 +1901,33 @@
               </radialGradient>
             </defs>
 
-            <!-- Background fill + vignette wash -->
             <circle cx="300" cy="300" r="290" fill="url(#diskFill)"/>
             <circle cx="300" cy="300" r="290" fill="url(#diskWash)"/>
 
-            <!-- Outer rotating tick ring + outer hairline rings -->
             <g class="disc-outer">
               <circle cx="300" cy="300" r="265" fill="none" stroke="rgba(244,236,216,0.28)" stroke-width="1.2"/>
               <circle cx="300" cy="300" r="248" fill="none" stroke="rgba(244,236,216,0.14)" stroke-width="0.6"/>
               <g id="tickRing"></g>
             </g>
 
-            <!-- Inner concentric hairline rings -->
             <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(244,236,216,0.22)" stroke-width="1"/>
             <circle cx="300" cy="300" r="184" fill="none" stroke="rgba(244,236,216,0.12)" stroke-width="0.6"/>
             <circle cx="300" cy="300" r="148" fill="none" stroke="rgba(244,236,216,0.08)" stroke-width="0.5"/>
 
-            <!-- Three radial spokes (12, 4, 8 o'clock) -->
             <g stroke="rgba(244,236,216,0.20)" stroke-width="1" fill="none" stroke-linecap="round">
               <line x1="300" y1="300" x2="300" y2="100"/>
               <line x1="300" y1="300" x2="473" y2="400"/>
               <line x1="300" y1="300" x2="127" y2="400"/>
             </g>
 
-            <!-- Three cochineal seal dots at 6 o'clock -->
             <g transform="translate(300, 552)" fill="#D14F35">
               <circle cx="-14" cy="0" r="3.5"/>
               <circle cx="0"   cy="0" r="3.5"/>
               <circle cx="14"  cy="0" r="3.5"/>
             </g>
 
-            <!-- Center jade glow halo behind sigil -->
             <circle cx="300" cy="300" r="100" fill="url(#sigilGlow)"/>
 
-            <!-- Wax sigil center -->
             <g class="wax-sigil">
               <circle cx="300" cy="300" r="52" fill="none" stroke="#D14F35" stroke-width="1.6"/>
               <circle cx="300" cy="300" r="44" fill="none" stroke="#D14F35" stroke-width="0.8"/>
@@ -2044,18 +1938,15 @@
           </svg>
         </div>
 
-        <!-- ============================================================
-             COUNCIL ORBIT — three seats orbit around the disc. Each
-             seat is positioned via a CSS angle variable, then counter-
-             rotates so the label stays upright as the orbit wrapper
-             spins. Glyphs match the console's three council members.
-        ============================================================ -->
-        <div class="council-orbit" aria-hidden="true">
-          <div class="council-seat" style="--seat-angle: 0deg;">
-            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+        <!-- Council seats — pure positional placement, no rotation animation
+             so the labels always read upright. Positions are computed by
+             a tiny script on load using the disc's actual rendered size. -->
+        <div class="council-orbit" aria-hidden="true" id="councilOrbit">
+          <div class="council-seat" data-angle="-90">
+            <div class="council-seat-inner">
               <div class="council-pill">
                 <span class="pill-glyph">
-                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square">
                     <path d="M 1 12 L 1 11 L 3 11 L 3 9 L 5 9 L 5 6 L 6 6 L 6 3 L 8 3 L 8 6 L 9 6 L 9 9 L 11 9 L 11 11 L 13 11 L 13 12 Z" fill="currentColor"/>
                   </svg>
                 </span>
@@ -2063,8 +1954,8 @@
               </div>
             </div>
           </div>
-          <div class="council-seat" style="--seat-angle: 130deg;">
-            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+          <div class="council-seat" data-angle="30">
+            <div class="council-seat-inner">
               <div class="council-pill">
                 <span class="pill-glyph">
                   <svg viewBox="0 0 14 14" fill="currentColor">
@@ -2085,8 +1976,8 @@
               </div>
             </div>
           </div>
-          <div class="council-seat" style="--seat-angle: 230deg;">
-            <div class="council-seat-inner" style="--orbit-radius: clamp(92px, 23vw, 160px);">
+          <div class="council-seat" data-angle="150">
+            <div class="council-seat-inner">
               <div class="council-pill">
                 <span class="pill-glyph">
                   <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
@@ -2102,19 +1993,14 @@
         </div>
       </div>
 
-      <h1 class="hero-headline reveal reveal-d2">
+      <h1 class="hero-headline">
         <span class="l1">Three minds reason.</span>
         <span class="l2"><span class="glow">You decide</span><span class="seal">.</span></span>
       </h1>
 
-      <!-- ============================================================
-           HERO QUICK ACTIONS — three temple-stone pills below the
-           headline. Each anchors to a section that answers a common
-           "what is this for me" question. Order of priority for a
-           first-time visitor: see the perspectives, watch a debate,
-           understand privacy.
-      ============================================================ -->
-      <div class="hero-quick-actions reveal reveal-d3">
+      <!-- Three quick-action buttons. NOT inside .reveal so they're
+           always visible regardless of scroll/animation state. -->
+      <div class="hero-quick-actions">
         <a class="hero-quick-btn" href="#features">
           <span class="quick-glyph">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -2143,23 +2029,17 @@
         </a>
       </div>
 
-      <p class="hero-sub reveal reveal-d3">
+      <p class="hero-sub">
         Three local AI cores reason independently, then synthesize one grounded answer. Offline-first. Private by default.
       </p>
 
-      <div class="hero-actions reveal reveal-d4">
-        <a class="btn" href="#waitlist">
-          Early access <span class="arrow">&rarr;</span>
-        </a>
-        <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">
-          Try the Beta <span class="arrow">&rarr;</span>
-        </a>
-        <a class="btn-ghost" href="#support">
-          Support the mission <span class="arrow">&rarr;</span>
-        </a>
+      <div class="hero-actions">
+        <a class="btn" href="#waitlist">Early access <span class="arrow">&rarr;</span></a>
+        <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">Try the Beta <span class="arrow">&rarr;</span></a>
+        <a class="btn-ghost" href="#support">Support the mission <span class="arrow">&rarr;</span></a>
       </div>
 
-      <div class="hero-stats reveal reveal-d5">
+      <div class="hero-stats">
         <div class="hero-stat"><div class="num">3</div><div class="label">Reasoning cores</div></div>
         <div class="hero-stat"><div class="num">878+</div><div class="label">Knowledge chunks</div></div>
         <div class="hero-stat"><div class="num">100%</div><div class="label">Local inference</div></div>
@@ -2169,7 +2049,6 @@
     </div>
   </section>
 
-  <!-- COUNCIL PILLARS -->
   <div class="council-strip reveal">
     <span>IN&nbsp;XOCHITL&nbsp;&middot;&nbsp;IN&nbsp;CUICATL</span>
     <span class="center">flower and song</span>
@@ -2178,10 +2057,8 @@
 
   <section class="council-section" id="council-pillars">
     <div class="council-grid">
-
       <div class="council-pillar p-a reveal">
-        <span class="cap top"></span>
-        <span class="cap bottom"></span>
+        <span class="cap top"></span><span class="cap bottom"></span>
         <div class="pillar-glyph">
           <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
             <path d="M 3 36 L 3 32 L 8 32 L 8 25 L 13 25 L 13 18 L 16 18 L 16 10 L 24 10 L 24 18 L 27 18 L 27 25 L 32 25 L 32 32 L 37 32 L 37 36 Z"/>
@@ -2192,10 +2069,8 @@
         <div class="pillar-rolerow">
           <span class="pillar-floral" aria-hidden="true">
             <svg viewBox="0 0 14 14" fill="currentColor">
-              <circle cx="7" cy="7" r="1.6"/>
-              <circle cx="7" cy="2.4" r="1.2"/>
-              <circle cx="11.6" cy="7" r="1.2"/>
-              <circle cx="7" cy="11.6" r="1.2"/>
+              <circle cx="7" cy="7" r="1.6"/><circle cx="7" cy="2.4" r="1.2"/>
+              <circle cx="11.6" cy="7" r="1.2"/><circle cx="7" cy="11.6" r="1.2"/>
               <circle cx="2.4" cy="7" r="1.2"/>
             </svg>
           </span>
@@ -2207,20 +2082,15 @@
       </div>
 
       <div class="council-pillar p-h reveal reveal-d1">
-        <span class="cap top"></span>
-        <span class="cap bottom"></span>
+        <span class="cap top"></span><span class="cap bottom"></span>
         <div class="pillar-glyph is-cochineal">
           <svg viewBox="0 0 40 40" fill="currentColor" stroke="currentColor">
             <circle cx="20" cy="20" r="6"/>
             <g stroke-width="2.2" stroke-linecap="round" fill="none">
-              <line x1="20" y1="4" x2="20" y2="10"/>
-              <line x1="20" y1="30" x2="20" y2="36"/>
-              <line x1="4" y1="20" x2="10" y2="20"/>
-              <line x1="30" y1="20" x2="36" y2="20"/>
-              <line x1="8" y1="8" x2="12" y2="12"/>
-              <line x1="28" y1="12" x2="32" y2="8"/>
-              <line x1="8" y1="32" x2="12" y2="28"/>
-              <line x1="28" y1="28" x2="32" y2="32"/>
+              <line x1="20" y1="4" x2="20" y2="10"/><line x1="20" y1="30" x2="20" y2="36"/>
+              <line x1="4" y1="20" x2="10" y2="20"/><line x1="30" y1="20" x2="36" y2="20"/>
+              <line x1="8" y1="8" x2="12" y2="12"/><line x1="28" y1="12" x2="32" y2="8"/>
+              <line x1="8" y1="32" x2="12" y2="28"/><line x1="28" y1="28" x2="32" y2="32"/>
             </g>
           </svg>
         </div>
@@ -2228,14 +2098,10 @@
         <div class="pillar-rolerow">
           <span class="pillar-floral" aria-hidden="true">
             <svg viewBox="0 0 14 14" fill="currentColor">
-              <circle cx="7" cy="7" r="1.6"/>
-              <circle cx="7" cy="2" r="1"/>
-              <circle cx="10.5" cy="3.5" r="1"/>
-              <circle cx="12" cy="7" r="1"/>
-              <circle cx="10.5" cy="10.5" r="1"/>
-              <circle cx="7" cy="12" r="1"/>
-              <circle cx="3.5" cy="10.5" r="1"/>
-              <circle cx="2" cy="7" r="1"/>
+              <circle cx="7" cy="7" r="1.6"/><circle cx="7" cy="2" r="1"/>
+              <circle cx="10.5" cy="3.5" r="1"/><circle cx="12" cy="7" r="1"/>
+              <circle cx="10.5" cy="10.5" r="1"/><circle cx="7" cy="12" r="1"/>
+              <circle cx="3.5" cy="10.5" r="1"/><circle cx="2" cy="7" r="1"/>
               <circle cx="3.5" cy="3.5" r="1"/>
             </svg>
           </span>
@@ -2247,8 +2113,7 @@
       </div>
 
       <div class="council-pillar p-s reveal reveal-d2">
-        <span class="cap top"></span>
-        <span class="cap bottom"></span>
+        <span class="cap top"></span><span class="cap bottom"></span>
         <div class="pillar-glyph">
           <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
             <circle cx="20" cy="6" r="1.8" fill="currentColor"/>
@@ -2274,7 +2139,6 @@
         <div class="pillar-verb">Doubts.</div>
         <div class="pillar-object">what is silenced, what hides.</div>
       </div>
-
     </div>
   </section>
 
@@ -2284,7 +2148,6 @@
     <span>CONSEJO&nbsp;DE&nbsp;TRES</span>
   </div>
 
-  <!-- MISSION -->
   <section id="mission">
     <div class="section-inner">
       <div class="section-head reveal">
@@ -2321,72 +2184,39 @@
     <span class="seal-dot"></span>
   </div>
 
-  <!-- ARCHITECTURE -->
   <section id="features">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Architecture</span>
       </div>
-      <h2 class="section-title reveal">
-        Three minds. One grounded answer<span class="seal">.</span>
-      </h2>
+      <h2 class="section-title reveal">Three minds. One grounded answer<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
         Like a medical conference, three specialists examine the question from different angles, then deliver one careful synthesis. Analyst checks the facts. Humanist reads the room. Skeptic asks what's missing.
       </p>
       <div class="bento">
         <div class="bento-card span-2 reveal">
-          <div class="card-glyph">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <circle cx="16" cy="16" r="13"/>
-              <line x1="16" y1="3" x2="16" y2="29"/>
-              <line x1="3" y1="16" x2="29" y2="16"/>
-            </svg>
-          </div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><line x1="16" y1="3" x2="16" y2="29"/><line x1="3" y1="16" x2="29" y2="16"/></svg></div>
           <h3>Fusion architecture</h3>
           <p>Three local GGUF models, Analyst, Humanist, Skeptic, each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer with a parsed self-reported confidence tag for every response.</p>
         </div>
         <div class="bento-card reveal reveal-d1">
-          <div class="card-glyph">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <rect x="6" y="6" width="20" height="20"/>
-              <circle cx="16" cy="16" r="3"/>
-            </svg>
-          </div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="6" width="20" height="20"/><circle cx="16" cy="16" r="3"/></svg></div>
           <h3>Local-first</h3>
           <p>Runs on your hardware via llama.cpp. No cloud dependency. Your conversations, vault, and persistent memory never leave your device.</p>
         </div>
         <div class="bento-card reveal reveal-d1">
-          <div class="card-glyph">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <path d="M6 8 L 16 4 L 26 8 L 26 22 L 16 28 L 6 22 Z"/>
-              <line x1="16" y1="4" x2="16" y2="28"/>
-            </svg>
-          </div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 8 L 16 4 L 26 8 L 26 22 L 16 28 L 6 22 Z"/><line x1="16" y1="4" x2="16" y2="28"/></svg></div>
           <h3>Evidence vault</h3>
           <p>Local knowledge base with tiered sourcing. Cross-encoder reranking. Citations enforced as <code>[Vault:Source]</code> with strict-mode checking.</p>
         </div>
         <div class="bento-card reveal reveal-d2">
-          <div class="card-glyph">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <line x1="16" y1="4" x2="16" y2="16"/>
-              <line x1="16" y1="16" x2="6" y2="28"/>
-              <line x1="16" y1="16" x2="26" y2="28"/>
-              <circle cx="16" cy="16" r="1.4" fill="currentColor"/>
-            </svg>
-          </div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="16" y1="4" x2="16" y2="16"/><line x1="16" y1="16" x2="6" y2="28"/><line x1="16" y1="16" x2="26" y2="28"/><circle cx="16" cy="16" r="1.4" fill="currentColor"/></svg></div>
           <h3>Anti-consensus Skeptic</h3>
           <p>The Skeptic argues against the strongest emerging consensus between the other two cores, not against the user. Catches the place where smart panelists agree without checking each other.</p>
         </div>
         <div class="bento-card span-2 reveal reveal-d2">
-          <div class="card-glyph">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <line x1="6" y1="26" x2="26" y2="26"/>
-              <line x1="10" y1="26" x2="10" y2="18"/>
-              <line x1="16" y1="26" x2="16" y2="10"/>
-              <line x1="22" y1="26" x2="22" y2="14"/>
-            </svg>
-          </div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="6" y1="26" x2="26" y2="26"/><line x1="10" y1="26" x2="10" y2="18"/><line x1="16" y1="26" x2="16" y2="10"/><line x1="22" y1="26" x2="22" y2="14"/></svg></div>
           <h3>Calibration measured</h3>
           <p>Every response carries three confidence signals, heuristic (evidence-derived), model-stated (parsed from the synthesizer), and blended. The system is honest about how confident it has the right to be.</p>
         </div>
@@ -2402,20 +2232,16 @@
     <span class="seal-dot"></span>
   </div>
 
-  <!-- MEMORY -->
   <section id="memory">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Memory awareness</span>
       </div>
-      <h2 class="section-title reveal">
-        Help people remember better, not remember <em>for</em> them<span class="seal">.</span>
-      </h2>
+      <h2 class="section-title reveal">Help people remember better, not remember <em>for</em> them<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
         Most AI memory tools remember <em>for</em> you, they keep your context, you stay passive. ZOTHEOS does the opposite. Memory awareness activates only inside Projects. Inside one, ZOTHEOS stays focused on the facets you're exploring and quietly teaches you how to organize what you learn.
       </p>
-
       <div class="memory-callout reveal reveal-d2">
         <div class="memory-vis">
           <div class="mv-row">
@@ -2423,14 +2249,10 @@
               <svg viewBox="0 0 28 28" width="14" height="14" fill="currentColor" stroke="currentColor" stroke-linecap="round">
                 <circle cx="14" cy="14" r="3.6"/>
                 <g stroke-width="1.6" fill="none">
-                  <line x1="14" y1="3.5" x2="14" y2="6.5"/>
-                  <line x1="14" y1="21.5" x2="14" y2="24.5"/>
-                  <line x1="3.5" y1="14" x2="6.5" y2="14"/>
-                  <line x1="21.5" y1="14" x2="24.5" y2="14"/>
-                  <line x1="6.5" y1="6.5" x2="8.6" y2="8.6"/>
-                  <line x1="19.4" y1="19.4" x2="21.5" y2="21.5"/>
-                  <line x1="6.5" y1="21.5" x2="8.6" y2="19.4"/>
-                  <line x1="19.4" y1="8.6" x2="21.5" y2="6.5"/>
+                  <line x1="14" y1="3.5" x2="14" y2="6.5"/><line x1="14" y1="21.5" x2="14" y2="24.5"/>
+                  <line x1="3.5" y1="14" x2="6.5" y2="14"/><line x1="21.5" y1="14" x2="24.5" y2="14"/>
+                  <line x1="6.5" y1="6.5" x2="8.6" y2="8.6"/><line x1="19.4" y1="19.4" x2="21.5" y2="21.5"/>
+                  <line x1="6.5" y1="21.5" x2="8.6" y2="19.4"/><line x1="19.4" y1="8.6" x2="21.5" y2="6.5"/>
                 </g>
               </svg>
             </span>
@@ -2477,20 +2299,14 @@
     <span class="seal-dot"></span>
   </div>
 
-  <!-- CONSOLE DEMO -->
   <section id="console">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Console</span>
       </div>
-      <h2 class="section-title reveal">
-        See it think<span class="seal">.</span>
-      </h2>
-      <p class="section-desc reveal reveal-d1">
-        A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges with full attribution.
-      </p>
-
+      <h2 class="section-title reveal">See it think<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges with full attribution.</p>
       <div class="console-frame reveal reveal-d2">
         <div class="console-titlebar">
           <span class="ts-mark">ZOTHEOS<span class="sub">Console</span></span>
@@ -2524,12 +2340,9 @@
             <div class="meta-tag">Reliability: 82/100</div>
             <div class="meta-tag">Runtime: 9.2s</div>
           </div>
-          <div class="console-footer-note">
-            Three perspectives. One synthesis. Every claim attributed.
-          </div>
+          <div class="console-footer-note">Three perspectives. One synthesis. Every claim attributed.</div>
         </div>
       </div>
-
       <div style="text-align: center; margin-top: 40px;" class="reveal reveal-d3">
         <a class="btn" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">
           Try the live console <span class="arrow">&rarr;</span>
@@ -2549,7 +2362,6 @@
     <span class="seal-dot"></span>
   </div>
 
-  <!-- WAITLIST -->
   <section id="waitlist">
     <div class="section-inner">
       <div class="section-head reveal">
@@ -2563,9 +2375,7 @@
           <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" class="waitlist-input" aria-label="Email address" />
           <input type="hidden" name="_subject" value="New ZOTHEOS waitlist signup" />
           <input type="text" name="_gotcha" style="display: none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn">
-            Join the waitlist <span class="arrow">&rarr;</span>
-          </button>
+          <button type="submit" class="btn">Join the waitlist <span class="arrow">&rarr;</span></button>
         </form>
         <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
       </div>
@@ -2580,7 +2390,6 @@
     <span class="seal-dot"></span>
   </div>
 
-  <!-- SUPPORT -->
   <section id="support">
     <div class="section-inner">
       <div class="section-head reveal">
@@ -2588,36 +2397,27 @@
         <span class="section-label">Support</span>
       </div>
       <h2 class="section-title reveal">Fund the mission<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">
-        Support funds development, testing, and releases, and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.
-      </p>
+      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases, and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
       <div class="support-grid">
         <div class="support-card reveal">
           <h3>PayPal</h3>
           <p>One-time support to keep the build moving.</p>
-          <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">
-            Donate via PayPal <span class="arrow">&rarr;</span>
-          </a>
+          <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal <span class="arrow">&rarr;</span></a>
         </div>
         <div class="support-card reveal reveal-d1">
           <h3>Stripe</h3>
           <p>Card-based support, processed securely.</p>
-          <a class="btn" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">
-            Donate via Stripe <span class="arrow">&rarr;</span>
-          </a>
+          <a class="btn" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe <span class="arrow">&rarr;</span></a>
         </div>
         <div class="support-card reveal reveal-d2">
           <h3>Gumroad</h3>
           <p>Supporter packs and future early access.</p>
-          <a class="btn" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">
-            Support on Gumroad <span class="arrow">&rarr;</span>
-          </a>
+          <a class="btn" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad <span class="arrow">&rarr;</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="greca-divider" style="margin-bottom: 36px;">
       <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -2661,7 +2461,6 @@
     </div>
   </footer>
 
-  <!-- Scroll-to-top -->
   <button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <line x1="12" y1="20" x2="12" y2="4"/>
@@ -2676,7 +2475,6 @@
     (function () {
       var KEY = 'zotheos_landing_theme';
       var root = document.documentElement;
-
       function apply(theme) {
         if (theme === 'codex' || theme === 'skeleton') {
           root.setAttribute('data-theme', theme);
@@ -2690,11 +2488,9 @@
           btns[i].setAttribute('aria-pressed', t === theme ? 'true' : 'false');
         }
       }
-
       var saved = '';
       try { saved = localStorage.getItem(KEY) || ''; } catch (e) {}
       apply(saved);
-
       function bind() {
         var btns = document.querySelectorAll('.theme-swatch');
         for (var i = 0; i < btns.length; i++) {
@@ -2710,6 +2506,40 @@
       } else {
         bind();
       }
+    })();
+
+    /* ============================================================
+       COUNCIL SEAT POSITIONING
+       Compute each pill's offset on the orbit ring using the actual
+       rendered disc size. Runs on load AND on resize so the pills
+       stay correctly placed across viewport changes.
+    ============================================================ */
+    (function () {
+      function positionCouncilSeats() {
+        var wrap = document.querySelector('.hero-disc-wrap');
+        if (!wrap) return;
+        var rect = wrap.getBoundingClientRect();
+        var radius = rect.width * 0.42;
+        var seats = document.querySelectorAll('.council-seat');
+        seats.forEach(function (seat) {
+          var angle = parseFloat(seat.getAttribute('data-angle')) || 0;
+          var rad = angle * Math.PI / 180;
+          var x = Math.cos(rad) * radius;
+          var y = Math.sin(rad) * radius;
+          var inner = seat.querySelector('.council-seat-inner');
+          if (inner) {
+            inner.style.setProperty('--seat-x', x.toFixed(1) + 'px');
+            inner.style.setProperty('--seat-y', y.toFixed(1) + 'px');
+          }
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', positionCouncilSeats);
+      } else {
+        positionCouncilSeats();
+      }
+      window.addEventListener('resize', positionCouncilSeats);
+      window.addEventListener('load', positionCouncilSeats);
     })();
 
     /* Floral xochitl band */
@@ -2730,7 +2560,6 @@
         vine.setAttribute('fill', 'currentColor');
         vine.setAttribute('opacity', '0.32');
         g.appendChild(vine);
-
         function makeFlower(x) {
           var flower = document.createElementNS(ns, 'g');
           flower.setAttribute('transform', 'translate(' + x + ', 7)');
@@ -2754,7 +2583,6 @@
           });
           g.appendChild(flower);
         }
-
         var centerX = 608;
         var spacing = 56;
         var clearRadius = 36;
@@ -2762,14 +2590,8 @@
           var leftX  = centerX - n * spacing;
           var rightX = centerX + n * spacing;
           var placed = false;
-          if (leftX > 12 && (centerX - leftX) > clearRadius) {
-            makeFlower(leftX);
-            placed = true;
-          }
-          if (rightX < 1204 && (rightX - centerX) > clearRadius) {
-            makeFlower(rightX);
-            placed = true;
-          }
+          if (leftX > 12 && (centerX - leftX) > clearRadius) { makeFlower(leftX); placed = true; }
+          if (rightX < 1204 && (rightX - centerX) > clearRadius) { makeFlower(rightX); placed = true; }
           if (!placed) break;
         }
       });
@@ -2781,7 +2603,7 @@
       if (!ring) return;
       var ns = 'http://www.w3.org/2000/svg';
       var cx = 300, cy = 300;
-      var rOuter = 264, rInner = 248;
+      var rOuter = 264;
       var hour = new Date().getHours();
       for (var i = 0; i < 60; i++) {
         var angle = (i * 6 - 90) * Math.PI / 180;
@@ -2828,7 +2650,7 @@
       v.play().catch(function () {});
     })();
 
-    /* Header scroll state + scroll-to-top visibility */
+    /* Header scroll state + scroll-to-top */
     (function () {
       var h = document.getElementById('header');
       var st = document.getElementById('scrollTop');
@@ -2841,7 +2663,6 @@
       onScroll();
     })();
 
-    /* Scroll-to-top click */
     (function () {
       var btn = document.getElementById('scrollTop');
       if (!btn) return;
@@ -2894,20 +2715,6 @@
         }
       });
     })();
-
-    /* GSAP entrance choreography */
-    window.addEventListener('load', function () {
-      if (typeof gsap === 'undefined') return;
-      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      tl.from('.hero-disc-wrap', { opacity: 0, y: 24, scale: 0.94, duration: 1.1, ease: 'expo.out' })
-        .from('.hero-headline .l1', { opacity: 0, y: 14, duration: 0.7 }, '-=0.6')
-        .from('.hero-headline .l2', { opacity: 0, y: 28, duration: 1.0, ease: 'power4.out' }, '-=0.5')
-        .from('.hero-quick-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.55 }, '-=0.5')
-        .from('.hero-sub', { opacity: 0, y: 16, duration: 0.7 }, '-=0.4')
-        .from('.hero-actions > *', { opacity: 0, y: 12, stagger: 0.08, duration: 0.5 }, '-=0.5')
-        .from('.hero-stats .hero-stat', { opacity: 0, y: 14, stagger: 0.08, duration: 0.55 }, '-=0.4');
-    });
   </script>
 </body>
 </html>
