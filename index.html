@@ -1770,12 +1770,479 @@
       .scroll-top { left: 16px; bottom: 16px; width: 48px; height: 48px; }
       .scroll-top svg { width: 16px; height: 16px; }
     }
+
+    /* ============================================================
+       PROFESSIONAL UPGRADE LAYER
+       Reads/writes nothing in --bg-*/--ink-*/--cochineal* tokens;
+       all theme palettes carry through untouched.
+    ============================================================ */
+
+    /* Scroll progress indicator — cochineal thread along the top */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0;
+      height: 2px; width: 0;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(var(--cochineal-rgb), 0.65) 15%,
+        var(--cochineal) 55%,
+        rgba(var(--cochineal-rgb), 0.85) 100%);
+      z-index: 200;
+      box-shadow: 0 0 12px rgba(var(--cochineal-rgb), 0.55);
+      transition: width 0.12s linear, opacity 0.4s var(--ease-editorial);
+      pointer-events: none;
+      opacity: 0;
+      will-change: width;
+    }
+    .scroll-progress.active { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-progress { transition: none; }
+    }
+
+    /* Aurora drift — barely perceptible slow gradient breathing
+       layered above body bg, behind everything else.            */
+    .aurora {
+      position: fixed; inset: -10%;
+      z-index: 0; pointer-events: none;
+      opacity: 0.55;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(40% 30% at 20% 30%, rgba(var(--cochineal-rgb), 0.10) 0%, transparent 60%),
+        radial-gradient(35% 25% at 80% 20%, rgba(var(--pulse-green-rgb), 0.05) 0%, transparent 60%),
+        radial-gradient(50% 35% at 60% 80%, rgba(var(--cochineal-rgb), 0.06) 0%, transparent 65%);
+      filter: blur(40px);
+      animation: aurora-drift 32s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    [data-theme="codex"] .aurora { mix-blend-mode: multiply; opacity: 0.35; }
+    [data-theme="skeleton"] .aurora { opacity: 0.45; }
+    @keyframes aurora-drift {
+      0%   { transform: translate3d(0, 0, 0) scale(1); }
+      50%  { transform: translate3d(-2%, 1.5%, 0) scale(1.04); }
+      100% { transform: translate3d(2%, -1%, 0) scale(1.02); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .aurora { animation: none !important; }
+    }
+
+    /* Cursor light — follows the mouse on capable devices.       */
+    .cursor-light {
+      position: fixed; top: 0; left: 0;
+      width: 520px; height: 520px;
+      margin: -260px 0 0 -260px;
+      z-index: 49; pointer-events: none;
+      background: radial-gradient(circle at center,
+        rgba(var(--cochineal-rgb), 0.12) 0%,
+        rgba(var(--cochineal-rgb), 0.05) 30%,
+        transparent 60%);
+      filter: blur(12px);
+      mix-blend-mode: screen;
+      opacity: 0;
+      transform: translate3d(-100vw, -100vh, 0);
+      transition: opacity 0.6s var(--ease-editorial);
+      will-change: transform;
+    }
+    [data-theme="codex"] .cursor-light {
+      mix-blend-mode: multiply;
+      background: radial-gradient(circle at center,
+        rgba(139, 34, 34, 0.08) 0%,
+        rgba(139, 34, 34, 0.03) 30%,
+        transparent 60%);
+    }
+    .cursor-light.active { opacity: 1; }
+    @media (hover: none), (prefers-reduced-motion: reduce) {
+      .cursor-light { display: none; }
+    }
+
+    /* Spotlight on interactive cards — cursor-tracked highlight */
+    .bento-card, .support-card, .value-item, .waitlist-card,
+    .memory-vis, .console-frame {
+      --mx: 50%;
+      --my: 50%;
+    }
+    .bento-card::after, .support-card::after, .value-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background: radial-gradient(380px circle at var(--mx) var(--my),
+        rgba(var(--cochineal-rgb), 0.10) 0%,
+        rgba(var(--cochineal-rgb), 0.04) 30%,
+        transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease-editorial);
+    }
+    [data-theme="codex"] .bento-card::after,
+    [data-theme="codex"] .support-card::after,
+    [data-theme="codex"] .value-item::after {
+      background: radial-gradient(380px circle at var(--mx) var(--my),
+        rgba(139, 34, 34, 0.10) 0%,
+        rgba(139, 34, 34, 0.04) 30%,
+        transparent 60%);
+    }
+    .bento-card:hover::after,
+    .support-card:hover::after,
+    .value-item:hover::after { opacity: 1; }
+
+    /* Card top hairline that grows on hover                     */
+    .bento-card::before, .support-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0;
+      height: 1px; width: 0;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--cochineal) 50%,
+        transparent);
+      transition: width 0.6s var(--ease-ceremony);
+    }
+    .bento-card:hover::before,
+    .support-card:hover::before { width: 100%; }
+
+    /* Smoother card lifts using cubic-bezier + brightness shift */
+    .bento-card, .support-card {
+      transition:
+        transform 0.5s var(--ease-editorial),
+        border-color 0.45s var(--ease-ceremony),
+        background-color 0.45s var(--ease-ceremony),
+        box-shadow 0.45s var(--ease-ceremony);
+      will-change: transform;
+    }
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.55),
+                  0 0 0 1px rgba(var(--cochineal-rgb), 0.18);
+    }
+    .support-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.55),
+                  0 0 0 1px rgba(var(--cochineal-rgb), 0.18);
+    }
+    [data-theme="codex"] .bento-card:hover,
+    [data-theme="codex"] .support-card:hover {
+      box-shadow: 0 18px 40px -22px rgba(26, 15, 8, 0.45),
+                  0 0 0 1px rgba(139, 34, 34, 0.25);
+    }
+    .bento-card .card-glyph,
+    .support-card { transition-property: transform, color, opacity; }
+    .bento-card:hover .card-glyph {
+      transform: scale(1.08) rotate(-3deg);
+      transition: transform 0.6s var(--ease-anticipate);
+    }
+
+    /* Reveal variants — directional and scale fades */
+    .reveal-left  { opacity: 0; transform: translate3d(-28px, 0, 0); transition: opacity 0.9s var(--ease-editorial), transform 0.9s var(--ease-editorial); }
+    .reveal-right { opacity: 0; transform: translate3d(28px, 0, 0);  transition: opacity 0.9s var(--ease-editorial), transform 0.9s var(--ease-editorial); }
+    .reveal-scale { opacity: 0; transform: scale(0.96);              transition: opacity 0.9s var(--ease-editorial), transform 1s var(--ease-anticipate); }
+    .reveal-blur  { opacity: 0; filter: blur(8px);                   transition: opacity 0.9s var(--ease-editorial), filter 1.1s var(--ease-editorial); }
+    .reveal-left.visible,
+    .reveal-right.visible { opacity: 1 !important; transform: translate3d(0, 0, 0) !important; }
+    .reveal-scale.visible { opacity: 1 !important; transform: scale(1) !important; }
+    .reveal-blur.visible  { opacity: 1 !important; filter: blur(0) !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-left, .reveal-right, .reveal-scale, .reveal-blur {
+        opacity: 1; transform: none; filter: none; transition: none;
+      }
+    }
+
+    /* Section-title letter shimmer on first reveal */
+    .section-title.visible .seal,
+    .hero-headline .glow {
+      position: relative;
+    }
+    .hero-headline .glow::after {
+      content: '';
+      position: absolute;
+      left: -6%; right: -6%; top: 0; bottom: 0;
+      background: linear-gradient(110deg,
+        transparent 30%,
+        rgba(244, 236, 216, 0.45) 50%,
+        transparent 70%);
+      background-size: 250% 100%;
+      background-position: 200% 0;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      animation: glow-sweep 6.5s ease-in-out 1.2s infinite;
+      border-radius: 6px;
+    }
+    [data-theme="codex"] .hero-headline .glow::after { mix-blend-mode: multiply; }
+    @keyframes glow-sweep {
+      0%   { background-position: 200% 0; opacity: 0; }
+      20%  { opacity: 0.9; }
+      60%  { background-position: -100% 0; opacity: 0; }
+      100% { background-position: -100% 0; opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-headline .glow::after { animation: none !important; }
+    }
+
+    /* Hero stats — animated counters with separator hairlines    */
+    .hero-stat {
+      position: relative;
+      padding: 0 8px;
+      transition: transform 0.4s var(--ease-anticipate);
+    }
+    .hero-stat:hover { transform: translateY(-3px); }
+    .hero-stat .num {
+      background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: filter 0.4s var(--ease-editorial);
+    }
+    .hero-stat:hover .num {
+      filter: drop-shadow(0 0 12px rgba(var(--cochineal-rgb), 0.35));
+    }
+
+    /* Hero disc parallax — subtle 3D tilt on mouse */
+    .hero-disc-wrap {
+      transition: transform 0.6s var(--ease-editorial);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .hero-disc, .council-orbit {
+      transition: transform 0.6s var(--ease-editorial);
+      will-change: transform;
+    }
+
+    /* Council pill — subtle float */
+    .council-pill {
+      animation: pill-float 7s ease-in-out infinite;
+      will-change: transform;
+    }
+    .council-seat[data-angle="-90"] .council-pill { animation-delay: 0s; }
+    .council-seat[data-angle="30"]  .council-pill { animation-delay: 2.3s; }
+    .council-seat[data-angle="150"] .council-pill { animation-delay: 4.6s; }
+    @keyframes pill-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .council-pill { animation: none !important; }
+    }
+
+    /* Primary CTA — magnetic + shimmer sheen */
+    .btn-primary { overflow: hidden; }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: -120%;
+      width: 60%;
+      background: linear-gradient(110deg,
+        transparent 30%,
+        rgba(244, 236, 216, 0.18) 50%,
+        transparent 70%);
+      pointer-events: none;
+      transition: left 0.9s var(--ease-ceremony);
+    }
+    .btn-primary:hover::after { left: 140%; }
+    .btn .arrow, .btn-ghost .arrow {
+      transition: transform 0.32s var(--ease-anticipate);
+    }
+    .btn:hover .arrow,
+    .btn-ghost:hover .arrow { transform: translateX(4px); }
+
+    /* Header nav — animated underline on hover */
+    .header-nav a:not(.nav-cta) {
+      position: relative;
+    }
+    .header-nav a:not(.nav-cta)::after {
+      content: '';
+      position: absolute;
+      left: 14px; right: 14px;
+      bottom: 4px; height: 1px;
+      background: var(--cochineal);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s var(--ease-ceremony);
+    }
+    .header-nav a:not(.nav-cta):hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Footer links — same underline cadence */
+    .footer-links a {
+      position: relative;
+      display: inline-block;
+      width: max-content;
+    }
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: -3px;
+      height: 1px;
+      background: var(--cochineal);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.36s var(--ease-ceremony);
+    }
+    .footer-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Console — caret blink + live tag pulse */
+    .console-query .prompt {
+      animation: caret-blink 1.15s steps(2, end) infinite;
+    }
+    @keyframes caret-blink {
+      0%, 50%  { opacity: 1; }
+      51%, 100%{ opacity: 0.35; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .console-query .prompt { animation: none !important; }
+    }
+
+    .console-titlebar .ts-meta {
+      position: relative;
+      padding-left: 14px;
+    }
+    .console-titlebar .ts-meta::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      width: 6px; height: 6px;
+      margin-top: -3px;
+      border-radius: 50%;
+      background: var(--pulse-green);
+      box-shadow: 0 0 8px rgba(var(--pulse-green-rgb), 0.65);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    .confidence-badge {
+      position: relative; overflow: hidden;
+    }
+    .confidence-badge::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(110deg,
+        transparent 30%,
+        rgba(var(--cochineal-rgb), 0.22) 50%,
+        transparent 70%);
+      transform: translateX(-100%);
+      animation: sheen-sweep 4.2s ease-in-out 0.6s infinite;
+    }
+    @keyframes sheen-sweep {
+      0%   { transform: translateX(-100%); }
+      40%  { transform: translateX(180%); }
+      100% { transform: translateX(180%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .confidence-badge::before { animation: none !important; }
+    }
+
+    /* Waitlist — button & input choreography */
+    .waitlist-input {
+      box-shadow: inset 0 0 0 0 rgba(var(--cochineal-rgb), 0);
+    }
+    .waitlist-input:focus {
+      box-shadow:
+        inset 0 0 0 1px rgba(var(--cochineal-rgb), 0.55),
+        0 0 24px rgba(var(--cochineal-rgb), 0.15);
+    }
+    .waitlist-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .waitlist-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgba(var(--cochineal-rgb), 0.4) 30deg,
+        transparent 90deg,
+        transparent 360deg);
+      mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      padding: 1px;
+      opacity: 0;
+      animation: card-conic 18s linear infinite;
+    }
+    .waitlist-card.visible::before { opacity: 0.65; }
+    @keyframes card-conic {
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .waitlist-card::before { animation: none !important; }
+    }
+
+    /* Council pillar — interactive lift */
+    .council-pillar {
+      transition: transform 0.5s var(--ease-editorial), filter 0.5s var(--ease-editorial);
+      will-change: transform;
+    }
+    .council-pillar:hover {
+      transform: translateY(-4px);
+      filter: drop-shadow(0 12px 24px rgba(var(--cochineal-rgb), 0.18));
+    }
+    .council-pillar:hover .pillar-divider {
+      width: 48px;
+      transition: width 0.45s var(--ease-anticipate);
+    }
+    .pillar-divider { transition: width 0.45s var(--ease-anticipate); }
+
+    /* Memory chips — hover */
+    .mv-chip {
+      transition: border-color 0.3s var(--ease-editorial),
+                  color 0.3s var(--ease-editorial),
+                  transform 0.3s var(--ease-anticipate);
+    }
+    .mv-chip:hover {
+      border-color: var(--cochineal);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    /* Focus rings — accessible without breaking the aesthetic   */
+    a:focus-visible,
+    button:focus-visible,
+    .waitlist-input:focus-visible {
+      outline: 2px solid var(--cochineal);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* Header — refined enter transition */
+    header { transform: translateY(0); }
+    header.scrolled {
+      transition:
+        background 0.5s var(--ease-ceremony),
+        backdrop-filter 0.5s var(--ease-ceremony),
+        border-color 0.5s var(--ease-ceremony),
+        box-shadow 0.5s var(--ease-ceremony);
+      box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Stagger child reveals automatically when parent visible    */
+    .stagger > *      { opacity: 0; transform: translateY(14px); transition: opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial); }
+    .stagger.visible > * { opacity: 1; transform: translateY(0); }
+    .stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+    .stagger.visible > *:nth-child(2) { transition-delay: 0.15s; }
+    .stagger.visible > *:nth-child(3) { transition-delay: 0.25s; }
+    .stagger.visible > *:nth-child(4) { transition-delay: 0.35s; }
+    @media (prefers-reduced-motion: reduce) {
+      .stagger > * { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* Smooth scroll-snap-safe behaviour                          */
+    html { scroll-padding-top: 88px; }
   </style>
 </head>
 <body>
 
   <div class="vignette" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true" id="cursorLight"></div>
+  <div class="scroll-progress" aria-hidden="true" id="scrollProgress"></div>
 
   <div id="introOverlay" class="intro-overlay">
     <video id="introVideo" autoplay muted playsinline preload="auto">
@@ -1932,8 +2399,8 @@
       </p>
 
       <!-- Three CTAs only. Primary = Early access (cochineal halo). -->
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#waitlist">
+      <div class="hero-actions stagger reveal">
+        <a class="btn btn-primary" href="#waitlist" data-magnetic>
           Early access <span class="arrow">&rarr;</span>
         </a>
         <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">
@@ -1944,11 +2411,11 @@
         </a>
       </div>
 
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="num">3</div><div class="label">Reasoning cores</div></div>
-        <div class="hero-stat"><div class="num">878+</div><div class="label">Knowledge chunks</div></div>
-        <div class="hero-stat"><div class="num">100%</div><div class="label">Local inference</div></div>
-        <div class="hero-stat"><div class="num">0</div><div class="label">Data collected</div></div>
+      <div class="hero-stats stagger reveal">
+        <div class="hero-stat"><div class="num" data-count="3">3</div><div class="label">Reasoning cores</div></div>
+        <div class="hero-stat"><div class="num" data-count="878" data-suffix="+">878+</div><div class="label">Knowledge chunks</div></div>
+        <div class="hero-stat"><div class="num" data-count="100" data-suffix="%">100%</div><div class="label">Local inference</div></div>
+        <div class="hero-stat"><div class="num" data-count="0">0</div><div class="label">Data collected</div></div>
       </div>
 
     </div>
@@ -2574,7 +3041,7 @@
 
     /* Reveal-on-scroll */
     (function () {
-      var els = document.querySelectorAll('.reveal');
+      var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur, .stagger');
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) {
@@ -2584,6 +3051,195 @@
         });
       }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
       els.forEach(function (el) { obs.observe(el); });
+    })();
+
+    /* Scroll progress thread */
+    (function () {
+      var bar = document.getElementById('scrollProgress');
+      if (!bar) return;
+      function update() {
+        var h = document.documentElement;
+        var scrollable = (h.scrollHeight - window.innerHeight);
+        if (scrollable <= 0) {
+          bar.style.width = '0%';
+          bar.classList.remove('active');
+          return;
+        }
+        var p = (window.scrollY / scrollable) * 100;
+        bar.style.width = Math.max(0, Math.min(100, p)) + '%';
+        bar.classList.toggle('active', window.scrollY > 60);
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    /* Cursor light — disabled on touch & reduced motion */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var coarse = window.matchMedia('(hover: none)').matches;
+      if (reduce || coarse) return;
+      var el = document.getElementById('cursorLight');
+      if (!el) return;
+      var tx = -300, ty = -300, cx = -300, cy = -300;
+      var raf = null;
+      function loop() {
+        cx += (tx - cx) * 0.18;
+        cy += (ty - cy) * 0.18;
+        el.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+        raf = requestAnimationFrame(loop);
+      }
+      document.addEventListener('mousemove', function (e) {
+        tx = e.clientX;
+        ty = e.clientY;
+        el.classList.add('active');
+        if (raf == null) loop();
+      }, { passive: true });
+      document.addEventListener('mouseleave', function () {
+        el.classList.remove('active');
+      });
+    })();
+
+    /* Card spotlight — cursor-tracked radial glow on cards */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      var cards = document.querySelectorAll('.bento-card, .support-card, .value-item');
+      cards.forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var r = card.getBoundingClientRect();
+          var x = ((e.clientX - r.left) / r.width) * 100;
+          var y = ((e.clientY - r.top) / r.height) * 100;
+          card.style.setProperty('--mx', x + '%');
+          card.style.setProperty('--my', y + '%');
+        });
+      });
+    })();
+
+    /* Hero disc parallax — gentle 3D tilt that follows the cursor */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var coarse = window.matchMedia('(hover: none)').matches;
+      if (reduce || coarse) return;
+      var wrap = document.querySelector('.hero-disc-wrap');
+      var disc = document.querySelector('.hero-disc');
+      var orbit = document.getElementById('councilOrbit');
+      if (!wrap || !disc) return;
+      var tx = 0, ty = 0, cx = 0, cy = 0;
+      var active = false;
+      function loop() {
+        cx += (tx - cx) * 0.08;
+        cy += (ty - cy) * 0.08;
+        var rx = (-cy * 6).toFixed(2);
+        var ry = (cx * 6).toFixed(2);
+        disc.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+        if (orbit) orbit.style.transform = 'translate3d(' + (cx * 8).toFixed(1) + 'px,' + (cy * 8).toFixed(1) + 'px,0)';
+        if (active) requestAnimationFrame(loop);
+      }
+      function onMove(e) {
+        var r = wrap.getBoundingClientRect();
+        // viewport-relative offset normalized to disc area
+        var dx = (e.clientX - (r.left + r.width / 2)) / window.innerWidth;
+        var dy = (e.clientY - (r.top + r.height / 2)) / window.innerHeight;
+        tx = Math.max(-1, Math.min(1, dx * 2));
+        ty = Math.max(-1, Math.min(1, dy * 2));
+        if (!active) { active = true; requestAnimationFrame(loop); }
+      }
+      function onLeave() {
+        tx = 0; ty = 0;
+        setTimeout(function () { active = false; }, 800);
+        if (!active) { active = true; requestAnimationFrame(loop); }
+      }
+      window.addEventListener('mousemove', onMove, { passive: true });
+      window.addEventListener('mouseleave', onLeave);
+    })();
+
+    /* Magnetic primary CTA — gentle pull toward the cursor */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var coarse = window.matchMedia('(hover: none)').matches;
+      if (reduce || coarse) return;
+      var els = document.querySelectorAll('[data-magnetic]');
+      els.forEach(function (el) {
+        var raf = null, tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+        function loop() {
+          cx += (tx - cx) * 0.18;
+          cy += (ty - cy) * 0.18;
+          el.style.transform = 'translate(' + cx.toFixed(2) + 'px,' + cy.toFixed(2) + 'px)';
+          if (active || Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) {
+            raf = requestAnimationFrame(loop);
+          } else {
+            raf = null;
+            el.style.transform = '';
+          }
+        }
+        el.addEventListener('mousemove', function (e) {
+          var r = el.getBoundingClientRect();
+          tx = (e.clientX - (r.left + r.width / 2)) * 0.22;
+          ty = (e.clientY - (r.top + r.height / 2)) * 0.22;
+          active = true;
+          if (!raf) loop();
+        });
+        el.addEventListener('mouseleave', function () {
+          tx = 0; ty = 0; active = false;
+          if (!raf) loop();
+        });
+      });
+    })();
+
+    /* Counter animation on hero stats */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var nums = document.querySelectorAll('[data-count]');
+      if (!nums.length) return;
+      function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+      function animate(el) {
+        var target = parseFloat(el.getAttribute('data-count')) || 0;
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (reduce || target === 0) {
+          el.textContent = (target === 0 ? '0' : target.toString()) + suffix;
+          return;
+        }
+        var start = performance.now();
+        var duration = 1600;
+        function tick(now) {
+          var t = Math.min(1, (now - start) / duration);
+          var v = Math.round(target * easeOutQuart(t));
+          el.textContent = v + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            animate(e.target);
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      nums.forEach(function (n) {
+        n.textContent = (n.getAttribute('data-suffix') === '%' ? '0%' : '0');
+        obs.observe(n);
+      });
+    })();
+
+    /* Anchor links — interruptible smooth scroll with offset */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (!href || href === '#' || href.length < 2) return;
+        a.addEventListener('click', function (e) {
+          var target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.scrollY - 72;
+          window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+          history.replaceState(null, '', href);
+        });
+      });
     })();
 
     /* Waitlist */
