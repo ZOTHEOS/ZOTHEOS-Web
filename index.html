@@ -12,11 +12,112 @@
   <meta property="og:description" content="Three perspectives. One grounded answer. Private by default." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zotheos.org" />
-  <meta name="theme-color" content="#02101E" />
+  <meta property="og:image" content="https://zotheos.org/static/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ZOTHEOS — three minds reason, you decide." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
+  <meta name="twitter:description" content="Three perspectives. One grounded answer. Private by default." />
+  <meta name="twitter:image" content="https://zotheos.org/static/og.png" />
+  <meta name="theme-color" content="#02101E" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#E8DBC0" media="(prefers-color-scheme: light)" />
+  <link rel="canonical" href="https://zotheos.org" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/static/zotheos_logo.png" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zotheos.org/#org",
+        "name": "ZOTHEOS LLC",
+        "url": "https://zotheos.org",
+        "logo": "https://zotheos.org/static/zotheos_logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "David Garcia",
+          "description": "United States Marine Corps Veteran"
+        },
+        "foundingDate": "2025-03",
+        "description": "Independent builder of offline ethical intelligence."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ZOTHEOS",
+        "applicationCategory": "AIApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Three local AI cores reason independently, then synthesize one grounded answer. Offline-first, private by default.",
+        "url": "https://zotheos.org",
+        "image": "https://zotheos.org/static/og.png",
+        "publisher": { "@id": "https://zotheos.org/#org" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder"
+        },
+        "featureList": [
+          "Fusion architecture: Analyst, Humanist, Skeptic",
+          "Local-first inference via llama.cpp",
+          "Evidence vault with citation enforcement",
+          "Anti-consensus Skeptic core",
+          "Calibration measured per response"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does ZOTHEOS work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Inference runs locally on your hardware via llama.cpp. No cloud dependency. Your conversations and vault never leave your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why three models instead of one?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A single model averages over its biases. Three cores with distinct roles, Analyst, Humanist, and Skeptic, examine the question from different angles, and a synthesizer produces one fused answer with each claim attributed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What hardware do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ZOTHEOS targets consumer machines. A modern CPU with 16 GB RAM runs the smaller core profile; a discrete GPU with 12 GB or more VRAM unlocks the full Qwen 14B + Gemma 9B + Qwen 7B trio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data collected?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No accounts are required and no usage data is harvested. The waitlist form is the only point of contact, and it is used only for launch notifications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is ZOTHEOS funded?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Independently. No VC funding, no investors, no advertising. Optional supporter donations via PayPal, Stripe, or Gumroad keep the project moving."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
     /* ============================================================
@@ -2234,18 +2335,544 @@
 
     /* Smooth scroll-snap-safe behaviour                          */
     html { scroll-padding-top: 88px; }
+
+    /* ============================================================
+       UPGRADE PACK 2 — live console, reasoning graph, compare,
+       FAQ, custom cursor, theme wipe, skip link, page-load reveal.
+       Theme tokens untouched.
+    ============================================================ */
+
+    /* Skip-to-content link */
+    .skip-link {
+      position: fixed; top: -100px; left: 16px;
+      z-index: 9999;
+      padding: 10px 18px;
+      background: var(--cochineal);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      transition: top 0.3s var(--ease-anticipate);
+    }
+    .skip-link:focus { top: 16px; outline: none; }
+
+    /* Custom cursor */
+    .custom-cursor {
+      position: fixed; top: 0; left: 0;
+      z-index: 9998; pointer-events: none;
+      width: 0; height: 0;
+      opacity: 0;
+      mix-blend-mode: difference;
+      transition: opacity 0.4s var(--ease-editorial);
+      will-change: transform;
+    }
+    .custom-cursor.ready { opacity: 1; }
+    .custom-cursor .cc-dot,
+    .custom-cursor .cc-ring {
+      position: absolute;
+      left: 0; top: 0;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition:
+        width 0.25s var(--ease-anticipate),
+        height 0.25s var(--ease-anticipate),
+        background-color 0.25s var(--ease-editorial),
+        border-color 0.25s var(--ease-editorial),
+        opacity 0.25s var(--ease-editorial);
+    }
+    .custom-cursor .cc-dot {
+      width: 6px; height: 6px;
+      background: #F4ECD8;
+    }
+    .custom-cursor .cc-ring {
+      width: 28px; height: 28px;
+      border: 1px solid #F4ECD8;
+    }
+    .custom-cursor.hover-link .cc-ring {
+      width: 44px; height: 44px;
+      border-color: #D14F35;
+    }
+    .custom-cursor.hover-link .cc-dot {
+      width: 0; height: 0;
+    }
+    .custom-cursor.hover-text .cc-ring {
+      width: 4px; height: 28px;
+      border-radius: 1px;
+    }
+    .custom-cursor.hover-text .cc-dot { opacity: 0; }
+    .custom-cursor.down .cc-ring {
+      width: 18px; height: 18px;
+    }
+    @media (hover: none), (prefers-reduced-motion: reduce) {
+      .custom-cursor { display: none; }
+    }
+    body.has-custom-cursor,
+    body.has-custom-cursor a,
+    body.has-custom-cursor button {
+      cursor: none;
+    }
+
+    /* Theme transition wipe — radial expand from clicked swatch */
+    .theme-wipe {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9000;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center,
+        rgba(var(--cochineal-rgb), 0.55) 0%,
+        rgba(var(--cochineal-rgb), 0.18) 60%,
+        transparent 100%);
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.85s var(--ease-ceremony), opacity 0.85s var(--ease-ceremony);
+      mix-blend-mode: screen;
+    }
+    [data-theme="codex"] .theme-wipe { mix-blend-mode: multiply; }
+    .theme-wipe.active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(420);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .theme-wipe { display: none; }
+    }
+
+    /* Page-load reveal — fade in after intro overlay */
+    body.page-loading .hero-inner > *,
+    body.page-loading header,
+    body.page-loading .scroll-progress {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    body:not(.page-loading) .hero-inner > *,
+    body:not(.page-loading) header,
+    body:not(.page-loading) .scroll-progress {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.9s var(--ease-editorial), transform 0.9s var(--ease-editorial);
+    }
+    body:not(.page-loading) header { transition-delay: 0.0s; }
+    body:not(.page-loading) .hero-disc-wrap   { transition-delay: 0.15s; }
+    body:not(.page-loading) .hero-headline    { transition-delay: 0.30s; }
+    body:not(.page-loading) .hero-sub         { transition-delay: 0.45s; }
+    body:not(.page-loading) .hero-actions     { transition-delay: 0.55s; }
+    body:not(.page-loading) .hero-stats       { transition-delay: 0.70s; }
+    @media (prefers-reduced-motion: reduce) {
+      body.page-loading .hero-inner > *,
+      body.page-loading header { opacity: 1; transform: none; }
+    }
+
+    /* Header nav — active-section state */
+    .header-nav a.is-active {
+      color: var(--ink);
+    }
+    .header-nav a.is-active::after {
+      content: '';
+      position: absolute;
+      left: 14px; right: 14px;
+      bottom: 4px; height: 1px;
+      background: var(--cochineal);
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Reasoning graph */
+    .reasoning-graph .rg-ray {
+      stroke-dasharray: 6 10;
+      stroke-dashoffset: 0;
+      animation: rg-flow 4s linear infinite;
+      opacity: 0;
+    }
+    .reasoning-graph .rg-ray.rg-r1 { animation-delay: 0s; }
+    .reasoning-graph .rg-ray.rg-r2 { animation-delay: 1.2s; }
+    .reasoning-graph .rg-ray.rg-r3 { animation-delay: 2.4s; }
+    .reasoning-graph .rg-node {
+      opacity: 0;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+    .reasoning-graph .rg-n1 { animation: rg-pulse 4s ease-in-out 0.8s infinite; }
+    .reasoning-graph .rg-n2 { animation: rg-pulse 4s ease-in-out 2.0s infinite; }
+    .reasoning-graph .rg-n3 { animation: rg-pulse 4s ease-in-out 3.2s infinite; }
+    .reasoning-graph .rg-tri {
+      animation: rg-tri 8s ease-in-out infinite;
+    }
+    @keyframes rg-flow {
+      0%   { opacity: 0; stroke-dashoffset: 0; }
+      30%  { opacity: 0.7; }
+      80%  { opacity: 0.7; stroke-dashoffset: -160; }
+      100% { opacity: 0; stroke-dashoffset: -180; }
+    }
+    @keyframes rg-pulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      20%      { opacity: 1; transform: scale(1.4); }
+      40%      { opacity: 0.6; transform: scale(1); }
+    }
+    @keyframes rg-tri {
+      0%, 100% { stroke-dashoffset: 800; opacity: 0; }
+      45%      { stroke-dashoffset: 0;   opacity: 0.5; }
+      65%      { stroke-dashoffset: 0;   opacity: 0.5; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reasoning-graph .rg-ray,
+      .reasoning-graph .rg-node,
+      .reasoning-graph .rg-tri { animation: none !important; opacity: 0.3; }
+    }
+
+    /* Live console — typed query + caret */
+    .console-query .typed { white-space: pre-wrap; }
+    .console-query .caret {
+      display: inline-block;
+      color: var(--cochineal);
+      animation: console-caret 1.05s steps(2, end) infinite;
+      margin-left: 1px;
+      transform: translateY(-1px);
+      font-size: 0.92em;
+      opacity: 0;
+    }
+    .console-query .caret.live { opacity: 1; }
+    @keyframes console-caret {
+      0%, 50%   { opacity: 1; }
+      51%, 100% { opacity: 0.2; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .console-query .caret { animation: none !important; }
+    }
+
+    /* Core thinking rows */
+    .core-think {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 22px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        opacity 0.5s var(--ease-editorial),
+        max-height 0.6s var(--ease-ceremony),
+        margin-bottom 0.5s var(--ease-ceremony);
+    }
+    .core-think.active {
+      opacity: 1;
+      max-height: 220px;
+    }
+    .ct-row {
+      display: grid;
+      grid-template-columns: 92px 1fr 90px;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      border: 1px solid var(--rule-soft);
+      background: var(--surface-2);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      transition:
+        border-color 0.4s var(--ease-editorial),
+        background-color 0.4s var(--ease-editorial);
+    }
+    .ct-row.thinking {
+      border-color: rgba(var(--cochineal-rgb), 0.45);
+      background: rgba(var(--cochineal-rgb), 0.06);
+    }
+    .ct-row.done {
+      border-color: rgba(var(--pulse-green-rgb), 0.45);
+    }
+    .ct-name { color: var(--ink); }
+    .ct-bar {
+      position: relative;
+      height: 4px;
+      background: var(--rule-soft);
+      overflow: hidden;
+    }
+    .ct-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 0;
+      background: linear-gradient(90deg,
+        rgba(var(--cochineal-rgb), 0.55),
+        var(--cochineal));
+      transition: width 0.3s linear;
+    }
+    .ct-row.done .ct-fill {
+      background: linear-gradient(90deg,
+        rgba(var(--pulse-green-rgb), 0.55),
+        var(--pulse-green));
+    }
+    .ct-state {
+      text-align: right;
+      color: var(--ink-3);
+    }
+    .ct-row.thinking .ct-state { color: var(--cochineal); }
+    .ct-row.done .ct-state     { color: var(--pulse-green); }
+    @media (max-width: 640px) {
+      .ct-row { grid-template-columns: 78px 1fr 70px; font-size: 10px; gap: 10px; padding: 8px 10px; }
+    }
+
+    /* Verdict starts hidden during live demo */
+    .console-frame.is-live #verdictBlock,
+    .console-frame.is-live .console-meta,
+    .console-frame.is-live .console-footer-note {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial);
+    }
+    .console-frame.is-live.answered #verdictBlock { opacity: 1; transform: none; transition-delay: 0.05s; }
+    .console-frame.is-live.answered .console-meta:nth-of-type(3) { opacity: 1; transform: none; transition-delay: 0.20s; }
+    .console-frame.is-live.answered .console-meta:nth-of-type(4) { opacity: 1; transform: none; transition-delay: 0.35s; }
+    .console-frame.is-live.answered .console-footer-note { opacity: 1; transform: none; transition-delay: 0.50s; }
+
+    /* Comparison table */
+    .compare-table {
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      align-items: stretch;
+    }
+    .compare-row + .compare-row {
+      border-top: 1px solid var(--rule-soft);
+    }
+    .compare-row > * {
+      padding: 18px 22px;
+      font-size: 14px;
+      color: var(--ink-2);
+      transition: background-color 0.4s var(--ease-editorial);
+    }
+    .compare-row > [role="rowheader"] {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      border-right: 1px solid var(--rule-soft);
+    }
+    .compare-row .col-z {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: rgba(var(--cochineal-rgb), 0.06);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .col-z .col-logo {
+      display: inline-flex; align-items: center;
+      width: 24px; height: 24px;
+    }
+    .col-z .col-logo img {
+      width: 100%; height: auto;
+      filter: drop-shadow(0 0 8px rgba(var(--cochineal-rgb), 0.32));
+    }
+    .compare-row .col-them {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      border-left: 1px solid var(--rule-soft);
+    }
+    .compare-row.compare-head > * {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      background: rgba(var(--cochineal-rgb), 0.04);
+    }
+    .compare-row.compare-head .col-them { background: transparent; color: var(--ink-3); }
+    .compare-row > .yes,
+    .compare-row > .no {
+      position: relative;
+      padding-left: 50px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .compare-row > .yes { color: var(--ink); background: rgba(var(--cochineal-rgb), 0.03); }
+    .compare-row > .no  { color: var(--ink-3); border-left: 1px solid var(--rule-soft); }
+    .compare-row > .yes::before,
+    .compare-row > .no::before {
+      content: '';
+      position: absolute;
+      left: 22px; top: 22px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .compare-row > .yes::before {
+      background:
+        radial-gradient(circle at 35% 35%, rgba(244, 236, 216, 0.45) 0%, transparent 50%),
+        radial-gradient(circle at center, var(--cochineal) 0%, var(--cochineal-deep) 100%);
+      box-shadow: 0 0 12px rgba(var(--cochineal-rgb), 0.45);
+    }
+    .compare-row > .yes::after {
+      content: '';
+      position: absolute;
+      left: 26px; top: 27px;
+      width: 8px; height: 4px;
+      border-left: 1.5px solid #F4ECD8;
+      border-bottom: 1.5px solid #F4ECD8;
+      transform: rotate(-45deg);
+    }
+    .compare-row > .no::before {
+      background: transparent;
+      border: 1px solid var(--rule);
+    }
+    .compare-row > .no::after {
+      content: '';
+      position: absolute;
+      left: 28px; top: 28px;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--ink-4);
+    }
+    .compare-row:hover > * {
+      background: rgba(var(--cochineal-rgb), 0.05);
+    }
+    .compare-row:hover > .col-them { background: transparent; }
+    .compare-row.compare-head:hover > * { background: rgba(var(--cochineal-rgb), 0.04); }
+
+    @media (max-width: 720px) {
+      .compare-row { grid-template-columns: 1fr; }
+      .compare-row > [role="rowheader"] {
+        border-right: 0;
+        border-bottom: 1px solid var(--rule-soft);
+        background: rgba(var(--cochineal-rgb), 0.04);
+      }
+      .compare-row > .no { border-left: 0; border-top: 1px solid var(--rule-soft); }
+      .compare-row .col-them { border-left: 0; }
+      .compare-row.compare-head { display: none; }
+      .compare-row > .yes::before,
+      .compare-row > .yes::after,
+      .compare-row > .no::before,
+      .compare-row > .no::after { top: 22px; }
+    }
+
+    /* FAQ accordion */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 880px;
+    }
+    .faq-item {
+      border: 1px solid var(--rule-soft);
+      background: var(--surface);
+      transition:
+        border-color 0.32s var(--ease-editorial),
+        background-color 0.32s var(--ease-editorial);
+    }
+    .faq-item[open] {
+      border-color: rgba(var(--cochineal-rgb), 0.32);
+      background: var(--surface);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      transition: padding 0.32s var(--ease-editorial);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-q {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(18px, 2.2vw, 22px);
+      line-height: 1.3;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+    .faq-icon {
+      position: relative;
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      transition: transform 0.4s var(--ease-anticipate);
+    }
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      background: var(--cochineal);
+      transition: transform 0.4s var(--ease-anticipate), opacity 0.4s var(--ease-editorial);
+    }
+    .faq-icon::before {
+      width: 12px; height: 1.5px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-icon::after {
+      width: 1.5px; height: 12px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item[open] .faq-icon { transform: rotate(180deg); }
+    .faq-item[open] .faq-icon::after { transform: translate(-50%, -50%) scaleY(0); opacity: 0; }
+    .faq-a {
+      padding: 0 26px 24px 26px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      max-width: 740px;
+      animation: faq-open 0.45s var(--ease-editorial);
+    }
+    .faq-a code {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 1px 6px;
+      background: rgba(var(--cochineal-rgb), 0.08);
+      color: var(--cochineal);
+      border: 1px solid rgba(var(--cochineal-rgb), 0.25);
+    }
+    @keyframes faq-open {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-a { animation: none; }
+      .faq-icon { transition: none; }
+    }
+
+    /* Greca dividers as scroll markers — light up when in viewport */
+    .greca-divider .seal-dot {
+      transition: filter 0.6s var(--ease-editorial), transform 0.6s var(--ease-anticipate);
+    }
+    .greca-divider.lit .seal-dot {
+      filter: drop-shadow(0 0 14px rgba(var(--cochineal-rgb), 0.85));
+      transform: translate(-50%, -50%) scale(1.18);
+    }
+    .greca-divider svg .grecaTeeth {
+      transition: opacity 0.6s var(--ease-editorial);
+    }
+    .greca-divider.lit svg .grecaTeeth { opacity: 1; }
   </style>
 </head>
-<body>
+<body class="page-loading">
 
+  <a class="skip-link" href="#mission">Skip to content</a>
   <div class="vignette" aria-hidden="true"></div>
   <div class="aurora" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-light" aria-hidden="true" id="cursorLight"></div>
+  <div class="custom-cursor" aria-hidden="true" id="customCursor">
+    <span class="cc-dot"></span>
+    <span class="cc-ring"></span>
+  </div>
+  <div class="theme-wipe" aria-hidden="true" id="themeWipe"></div>
   <div class="scroll-progress" aria-hidden="true" id="scrollProgress"></div>
 
   <div id="introOverlay" class="intro-overlay">
-    <video id="introVideo" autoplay muted playsinline preload="auto">
+    <video id="introVideo" autoplay muted playsinline preload="metadata" disableremoteplayback>
       <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
     </video>
     <div class="intro-controls">
@@ -2267,10 +2894,11 @@
         <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
-      <nav class="header-nav">
-        <a href="#mission">Mission</a>
-        <a href="#features">Architecture</a>
-        <a href="#memory">Memory</a>
+      <nav class="header-nav" id="primaryNav">
+        <a href="#mission" data-nav-section="mission">Mission</a>
+        <a href="#features" data-nav-section="features">Architecture</a>
+        <a href="#memory" data-nav-section="memory">Memory</a>
+        <a href="#faq" data-nav-section="faq">FAQ</a>
       </nav>
     </div>
   </header>
@@ -2326,6 +2954,24 @@
             </g>
 
             <circle cx="300" cy="300" r="100" fill="url(#sigilGlow)"/>
+
+            <!-- Reasoning graph: three pulse rays from sigil out to seats,
+                 then a triangular connecting line between the seats. -->
+            <g class="reasoning-graph" stroke="#D14F35" fill="none" stroke-linecap="round">
+              <g stroke-width="1" opacity="0.45">
+                <path class="rg-tri" d="M 300 56 L 522 426 L 78 426 Z" stroke-dasharray="800" stroke-dashoffset="800"/>
+              </g>
+              <g stroke-width="1.6" stroke-dasharray="6 8">
+                <line class="rg-ray rg-r1" x1="300" y1="300" x2="300" y2="56"/>
+                <line class="rg-ray rg-r2" x1="300" y1="300" x2="522" y2="426"/>
+                <line class="rg-ray rg-r3" x1="300" y1="300" x2="78"  y2="426"/>
+              </g>
+              <g fill="#D14F35" stroke="none">
+                <circle class="rg-node rg-n1" cx="300" cy="56"  r="3"/>
+                <circle class="rg-node rg-n2" cx="522" cy="426" r="3"/>
+                <circle class="rg-node rg-n3" cx="78"  cy="426" r="3"/>
+              </g>
+            </g>
 
             <g class="wax-sigil">
               <circle cx="300" cy="300" r="52" fill="none" stroke="#D14F35" stroke-width="1.6"/>
@@ -2679,7 +3325,7 @@
       </div>
       <h2 class="section-title reveal">See it think<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges with full attribution.</p>
-      <div class="console-frame reveal reveal-d2">
+      <div class="console-frame reveal reveal-d2" id="liveConsole">
         <div class="console-titlebar">
           <span class="ts-mark">ZOTHEOS<span class="sub">Console</span></span>
           <span class="ts-meta">FUSION &middot; v0.9.4</span>
@@ -2692,14 +3338,33 @@
             <span>AEGIS: <span class="on">active</span></span>
           </div>
           <div class="console-query">
-            <span class="prompt">&rsaquo;</span>How can AI systems be designed to promote universal peace while protecting individual rights?
+            <span class="prompt">&rsaquo;</span><span class="typed" id="typedQuery" data-final="How can AI systems be designed to promote universal peace while protecting individual rights?"></span><span class="caret" id="typedCaret">&#9608;</span>
           </div>
-          <div class="console-verdict">
+
+          <div class="core-think" id="coreThink" aria-hidden="true">
+            <div class="ct-row" data-core="A">
+              <span class="ct-name">Analyst</span>
+              <span class="ct-bar"><span class="ct-fill"></span></span>
+              <span class="ct-state">queued</span>
+            </div>
+            <div class="ct-row" data-core="H">
+              <span class="ct-name">Humanist</span>
+              <span class="ct-bar"><span class="ct-fill"></span></span>
+              <span class="ct-state">queued</span>
+            </div>
+            <div class="ct-row" data-core="S">
+              <span class="ct-name">Skeptic</span>
+              <span class="ct-bar"><span class="ct-fill"></span></span>
+              <span class="ct-state">queued</span>
+            </div>
+          </div>
+
+          <div class="console-verdict" id="verdictBlock">
             <div class="verdict-header">
               <span class="verdict-label">Fused answer</span>
-              <span class="confidence-badge">CONFIDENCE 0.78</span>
+              <span class="confidence-badge" id="confidenceBadge">CONFIDENCE 0.00</span>
             </div>
-            <p>AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally, not as policy afterthoughts, with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals.</p>
+            <p id="verdictText" data-final="AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally, not as policy afterthoughts, with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals."></p>
           </div>
           <div class="console-meta">
             <div class="meta-tag is-core"><span class="name">Analyst</span> &middot; Qwen 14B</div>
@@ -2722,6 +3387,136 @@
         <p style="font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 16px; letter-spacing: 0.10em;">
           Hosted on personal hardware via Tailscale Funnel &middot; may be offline
         </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="compare">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Comparison</span>
+      </div>
+      <h2 class="section-title reveal">A different posture entirely<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">Most assistants are products of an ad model, a surveillance model, or both. ZOTHEOS is a tool, built to one purpose.</p>
+
+      <div class="compare-table reveal reveal-d2" role="table" aria-label="ZOTHEOS compared with typical cloud AI assistants">
+        <div class="compare-row compare-head" role="row">
+          <div role="columnheader">&nbsp;</div>
+          <div role="columnheader" class="col-z"><span class="col-logo"><img src="/static/zotheos_logo.png" alt="" onerror="this.style.display='none'"/></span><span>ZOTHEOS</span></div>
+          <div role="columnheader" class="col-them">Cloud AI assistants</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Inference location</div>
+          <div role="cell" class="yes">On your hardware</div>
+          <div role="cell" class="no">Vendor servers</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Account required</div>
+          <div role="cell" class="yes">No</div>
+          <div role="cell" class="no">Yes</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Data used for training</div>
+          <div role="cell" class="yes">Never collected</div>
+          <div role="cell" class="no">Often, by default</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Reasoning method</div>
+          <div role="cell" class="yes">Three independent cores, synthesized</div>
+          <div role="cell" class="no">Single model, averaged biases</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Citations</div>
+          <div role="cell" class="yes">Enforced per claim</div>
+          <div role="cell" class="no">Optional / hallucinated</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Calibration disclosed</div>
+          <div role="cell" class="yes">Per response, three signals</div>
+          <div role="cell" class="no">Hidden</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Works offline</div>
+          <div role="cell" class="yes">Always</div>
+          <div role="cell" class="no">Never</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Funding model</div>
+          <div role="cell" class="yes">Independent, no investors</div>
+          <div role="cell" class="no">VC / ads / API revenue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Frequently asked</span>
+      </div>
+      <h2 class="section-title reveal">Questions worth asking<span class="seal">.</span></h2>
+
+      <div class="faq-list reveal reveal-d1">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">Does ZOTHEOS actually work offline?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">Yes, completely. Inference runs locally via llama.cpp. Once the models are on disk, your machine can be air-gapped and ZOTHEOS still reasons across all three cores, queries the local vault, and synthesizes a fused answer.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">Why three models instead of one larger one?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">A single model averages over its own biases and presents the result as a single voice. Three cores with distinct roles, Analyst, Humanist, and Skeptic, reason independently. The synthesizer then attributes claims and surfaces disagreement, so you see the structure of the answer, not just its surface.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">What hardware do I need?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">A modern CPU with 16 GB RAM runs the smaller core profile usably. A discrete GPU with 12 GB or more VRAM unlocks the full Qwen 14B + Gemma 9B + Qwen 7B trio at conversational speed. Apple Silicon with 24 GB unified memory or better is also a strong target.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">Is any of my data collected?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">No accounts, no telemetry, no usage analytics. The only point of contact is the waitlist form, which collects an email solely for launch notifications. Same privacy posture as the product itself.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">How is ZOTHEOS funded?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">Independently. No venture capital, no investors, no advertising. Development is self-funded by the founder with optional supporter donations via PayPal, Stripe, or Gumroad. The architecture choice is the funding choice; the product cannot become a surveillance vehicle later because there is no investor pressure to make it one.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">What is the "evidence vault"?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">A local, tiered knowledge base the three cores can cite. Sources are reranked by a cross-encoder and citations are enforced in the response as <code>[Vault:Source]</code> tags. Strict mode rejects answers that cannot be grounded.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -2817,6 +3612,8 @@
         <a href="#features">Architecture</a>
         <a href="#memory">Memory</a>
         <a href="#console">Console</a>
+        <a href="#compare">Comparison</a>
+        <a href="#faq">FAQ</a>
         <a href="#waitlist">Early access</a>
         <a href="#support">Support</a>
       </div>
@@ -3240,6 +4037,270 @@
           history.replaceState(null, '', href);
         });
       });
+    })();
+
+    /* Custom cursor — pointer device + non-touch + non-reduced-motion */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var coarse = window.matchMedia('(hover: none)').matches;
+      if (reduce || coarse) return;
+      var c = document.getElementById('customCursor');
+      if (!c) return;
+      document.body.classList.add('has-custom-cursor');
+      var tx = -100, ty = -100, cx = -100, cy = -100;
+      var raf = null;
+      function loop() {
+        cx += (tx - cx) * 0.30;
+        cy += (ty - cy) * 0.30;
+        c.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+        raf = requestAnimationFrame(loop);
+      }
+      document.addEventListener('mousemove', function (e) {
+        tx = e.clientX; ty = e.clientY;
+        c.classList.add('ready');
+        if (!raf) loop();
+      }, { passive: true });
+      document.addEventListener('mousedown', function () { c.classList.add('down'); });
+      document.addEventListener('mouseup',   function () { c.classList.remove('down'); });
+      document.addEventListener('mouseleave', function () { c.classList.remove('ready'); });
+
+      function applyState(target) {
+        c.classList.remove('hover-link', 'hover-text');
+        if (!target) return;
+        if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
+          c.classList.add('hover-link');
+        } else if (target.closest('p, h1, h2, h3, h4, span, li, code, .faq-q, .console-verdict p')) {
+          c.classList.add('hover-text');
+        }
+      }
+      document.addEventListener('mouseover', function (e) { applyState(e.target); });
+    })();
+
+    /* Theme picker — animated cochineal wipe from swatch */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var wipe = document.getElementById('themeWipe');
+      var swatches = document.querySelectorAll('.theme-swatch');
+      if (!wipe || !swatches.length) return;
+      swatches.forEach(function (sw) {
+        sw.addEventListener('click', function (e) {
+          if (reduce) return;
+          var r = sw.getBoundingClientRect();
+          wipe.style.left = (r.left + r.width / 2) + 'px';
+          wipe.style.top  = (r.top + r.height / 2) + 'px';
+          wipe.classList.remove('active');
+          // Force reflow for restart
+          void wipe.offsetWidth;
+          wipe.classList.add('active');
+          setTimeout(function () { wipe.classList.remove('active'); }, 900);
+        });
+      });
+    })();
+
+    /* prefers-color-scheme — first-visit default (only when user has not chosen) */
+    (function () {
+      try {
+        if (localStorage.getItem('zotheos_landing_theme') !== null) return;
+      } catch (e) { return; }
+      var mql = window.matchMedia('(prefers-color-scheme: light)');
+      if (mql.matches) {
+        document.documentElement.setAttribute('data-theme', 'codex');
+        var btns = document.querySelectorAll('.theme-swatch');
+        btns.forEach(function (b) {
+          b.setAttribute('aria-pressed', (b.getAttribute('data-set') || '') === 'codex' ? 'true' : 'false');
+        });
+      }
+    })();
+
+    /* Page-load reveal — drop the .page-loading class once everything painted */
+    (function () {
+      function release() {
+        // wait one frame so transitions can attach cleanly
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            document.body.classList.remove('page-loading');
+          });
+        });
+      }
+      var overlay = document.getElementById('introOverlay');
+      if (overlay && !overlay.classList.contains('dismissed')) {
+        // release after the intro is dismissed
+        var obs = new MutationObserver(function () {
+          if (overlay.classList.contains('dismissed')) {
+            release();
+            obs.disconnect();
+          }
+        });
+        obs.observe(overlay, { attributes: true, attributeFilter: ['class'] });
+        // safety net
+        setTimeout(release, 9500);
+      } else {
+        release();
+      }
+    })();
+
+    /* Scroll-spy nav — aria-current + visual active state */
+    (function () {
+      var links = document.querySelectorAll('.header-nav a[data-nav-section]');
+      if (!links.length) return;
+      var sections = [];
+      links.forEach(function (link) {
+        var id = link.getAttribute('data-nav-section');
+        var sec = document.getElementById(id);
+        if (sec) sections.push({ id: id, el: sec, link: link });
+      });
+      if (!sections.length) return;
+      var current = null;
+      function update() {
+        var y = window.scrollY + 120;
+        var hit = null;
+        for (var i = 0; i < sections.length; i++) {
+          var s = sections[i];
+          var top = s.el.offsetTop;
+          if (y >= top) hit = s;
+        }
+        if (hit !== current) {
+          sections.forEach(function (s) {
+            var on = (s === hit);
+            s.link.classList.toggle('is-active', on);
+            if (on) s.link.setAttribute('aria-current', 'true');
+            else    s.link.removeAttribute('aria-current');
+          });
+          current = hit;
+        }
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    /* Greca dividers — light up when crossing into the viewport */
+    (function () {
+      var gs = document.querySelectorAll('.greca-divider');
+      if (!gs.length || !('IntersectionObserver' in window)) return;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          e.target.classList.toggle('lit', e.isIntersecting);
+        });
+      }, { threshold: 0.5 });
+      gs.forEach(function (g) { obs.observe(g); });
+    })();
+
+    /* Live console — typed query, sequential core thinking, fused answer */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var frame = document.getElementById('liveConsole');
+      if (!frame) return;
+      var typedEl = document.getElementById('typedQuery');
+      var caretEl = document.getElementById('typedCaret');
+      var thinkEl = document.getElementById('coreThink');
+      var verdictEl = document.getElementById('verdictText');
+      var badgeEl = document.getElementById('confidenceBadge');
+      if (!typedEl || !verdictEl) return;
+
+      var query = typedEl.getAttribute('data-final') || '';
+      var verdict = verdictEl.getAttribute('data-final') || '';
+
+      function runReduced() {
+        typedEl.textContent = query;
+        verdictEl.textContent = verdict;
+        badgeEl.textContent = 'CONFIDENCE 0.78';
+        frame.classList.add('answered');
+      }
+      if (reduce) { runReduced(); return; }
+
+      // start in live mode
+      frame.classList.add('is-live');
+      typedEl.textContent = '';
+      verdictEl.textContent = '';
+      badgeEl.textContent = 'CONFIDENCE 0.00';
+
+      var started = false;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !started) {
+            started = true;
+            io.disconnect();
+            runDemo();
+          }
+        });
+      }, { threshold: 0.35 });
+      io.observe(frame);
+
+      function typeOut(target, text, perChar, done) {
+        var i = 0;
+        function step() {
+          target.textContent = text.slice(0, i++);
+          if (i <= text.length) {
+            var jitter = perChar + (Math.random() * perChar * 0.6 - perChar * 0.3);
+            setTimeout(step, Math.max(8, jitter));
+          } else if (done) {
+            done();
+          }
+        }
+        step();
+      }
+
+      function animateCore(row, duration, cb) {
+        row.classList.remove('done');
+        row.classList.add('thinking');
+        var fill = row.querySelector('.ct-fill');
+        var state = row.querySelector('.ct-state');
+        state.textContent = 'reasoning';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / duration);
+          fill.style.width = (t * 100).toFixed(1) + '%';
+          if (t < 1) requestAnimationFrame(tick);
+          else {
+            row.classList.remove('thinking');
+            row.classList.add('done');
+            state.textContent = 'committed';
+            if (cb) cb();
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+
+      function streamVerdict(cb) {
+        // stream tokens (chunks of 2-5 chars) instead of single chars
+        var i = 0;
+        function step() {
+          var jump = 2 + Math.floor(Math.random() * 4);
+          i = Math.min(verdict.length, i + jump);
+          verdictEl.textContent = verdict.slice(0, i);
+          // animate confidence climbing
+          var pct = i / verdict.length;
+          var conf = Math.min(0.78, 0.18 + pct * 0.62);
+          badgeEl.textContent = 'CONFIDENCE ' + conf.toFixed(2);
+          if (i < verdict.length) {
+            setTimeout(step, 28 + Math.random() * 24);
+          } else {
+            badgeEl.textContent = 'CONFIDENCE 0.78';
+            if (cb) cb();
+          }
+        }
+        step();
+      }
+
+      function runDemo() {
+        if (caretEl) caretEl.classList.add('live');
+        typeOut(typedEl, query, 32, function () {
+          if (caretEl) caretEl.classList.remove('live');
+          setTimeout(function () {
+            thinkEl.classList.add('active');
+            var rows = thinkEl.querySelectorAll('.ct-row');
+            animateCore(rows[0], 1100, function () {
+              animateCore(rows[1], 1200, function () {
+                animateCore(rows[2], 1400, function () {
+                  frame.classList.add('answered');
+                  streamVerdict();
+                });
+              });
+            });
+          }, 420);
+        });
+      }
     })();
 
     /* Waitlist */
