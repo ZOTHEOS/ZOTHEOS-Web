@@ -2672,23 +2672,28 @@
       border-right: 1px solid var(--rule-soft);
     }
     .compare-row .col-z {
-      font-family: var(--sans);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--ink);
       background: rgba(var(--cochineal-rgb), 0.06);
       display: flex; align-items: center; gap: 12px;
     }
-    .col-z .col-logo {
-      display: inline-flex; align-items: center;
-      width: 24px; height: 24px;
+    .col-z-logo {
+      height: 22px; width: auto;
+      filter: drop-shadow(0 0 10px rgba(var(--cochineal-rgb), 0.35));
     }
-    .col-z .col-logo img {
-      width: 100%; height: auto;
-      filter: drop-shadow(0 0 8px rgba(var(--cochineal-rgb), 0.32));
+    /* The wordmark ships pure white; on the light Codex parchment it
+       must be darkened to stay legible. */
+    [data-theme="codex"] .col-z-logo {
+      filter: brightness(0) opacity(0.86) drop-shadow(0 0 6px rgba(139, 34, 34, 0.22));
     }
+    .col-z-text {
+      display: none;
+      font-family: var(--sans);
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .col-z.img-failed .col-z-logo { display: none; }
+    .col-z.img-failed .col-z-text { display: inline; }
     .compare-row .col-them {
       font-family: var(--sans);
       font-size: 11px;
@@ -4000,7 +4005,10 @@
       <div class="compare-table reveal reveal-d2" role="table" aria-label="ZOTHEOS compared with typical cloud AI assistants">
         <div class="compare-row compare-head" role="row">
           <div role="columnheader">&nbsp;</div>
-          <div role="columnheader" class="col-z"><span class="col-logo"><img src="/static/zotheos_logo.png" alt="" onerror="this.style.display='none'"/></span><span>ZOTHEOS</span></div>
+          <div role="columnheader" class="col-z">
+            <img src="/static/zotheos_logo.png" alt="ZOTHEOS" class="col-z-logo" onerror="this.closest('.col-z').classList.add('img-failed')" />
+            <span class="col-z-text">ZOTHEOS</span>
+          </div>
           <div role="columnheader" class="col-them">Cloud AI assistants</div>
         </div>
         <div class="compare-row" role="row">
