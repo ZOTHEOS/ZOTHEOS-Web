@@ -896,6 +896,20 @@
       height: 100%;
     }
 
+    /* Codex theme: pills sit on dark basalt-red, so text/glyph must be
+       light to read against it (default --ink is near-black here). */
+    [data-theme="codex"] .council-pill {
+      color: #F8EFDB;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    [data-theme="codex"] .council-pill .pill-glyph {
+      color: #F0A988;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+    }
+    [data-theme="codex"] .council-pill:hover {
+      border-color: #F0A988;
+    }
+
     @media (max-width: 640px) {
       .council-pill {
         padding: 5px 11px;
@@ -3246,6 +3260,77 @@
       .mobile-cta { display: block; }
       body { /* ensure footer/scroll content not hidden behind bar handled by JS hide near waitlist */ }
     }
+
+    /* ============================================================
+       CLICK RIPPLE — an Aztec sun-stone burst: concentric rings
+       (the disc), the ZOTHEOS wax sigil blooming, and three sparks
+       firing toward the council angles (-90, 30, 150). Cochineal
+       throughout, so it adapts to every theme.
+    ============================================================ */
+    .zripple {
+      position: fixed;
+      z-index: 9001;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      width: 0; height: 0;
+      color: var(--cochineal);
+      mix-blend-mode: screen;
+    }
+    [data-theme="codex"] .zripple { mix-blend-mode: normal; }
+    .zr-ring {
+      position: absolute; left: 0; top: 0;
+      width: 18px; height: 18px;
+      margin: -9px 0 0 -9px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+      opacity: 0.9;
+      animation: zr-ring 0.72s var(--ease-ceremony) forwards;
+    }
+    .zr-ring.r2 {
+      animation-duration: 0.95s;
+      animation-delay: 0.06s;
+      border-width: 1px;
+      opacity: 0.55;
+    }
+    @keyframes zr-ring {
+      0%   { transform: scale(0.25); opacity: 0.9; }
+      60%  { opacity: 0.35; }
+      100% { transform: scale(6.2); opacity: 0; }
+    }
+    .zr-sigil {
+      position: absolute; left: 0; top: 0;
+      width: 52px; height: 52px;
+      margin: -26px 0 0 -26px;
+      opacity: 0;
+      transform-origin: center;
+      animation: zr-sigil 0.78s var(--ease-anticipate) forwards;
+      filter: drop-shadow(0 0 6px rgba(var(--cochineal-rgb), 0.5));
+    }
+    .zr-sigil svg { width: 100%; height: 100%; display: block; }
+    @keyframes zr-sigil {
+      0%   { transform: scale(0.2) rotate(-40deg); opacity: 0; }
+      35%  { opacity: 0.9; }
+      100% { transform: scale(1.55) rotate(12deg); opacity: 0; }
+    }
+    .zr-spark {
+      position: absolute; left: 0; top: 0;
+      width: 5px; height: 5px;
+      margin: -2.5px 0 0 -2.5px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.8);
+      animation: zr-spark 0.8s var(--ease-editorial) forwards;
+    }
+    .zr-spark.s1 { --tx: 0px;   --ty: -52px; }
+    .zr-spark.s2 { --tx: 45px;  --ty: 26px;  }
+    .zr-spark.s3 { --tx: -45px; --ty: 26px;  }
+    @keyframes zr-spark {
+      0%   { transform: translate(0, 0) scale(1.1); opacity: 1; }
+      100% { transform: translate(var(--tx), var(--ty)) scale(0.3); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .zripple { display: none; }
+    }
   </style>
 </head>
 <body class="page-loading">
@@ -4921,6 +5006,46 @@
       window.addEventListener('scroll', update, { passive: true });
       window.addEventListener('resize', update);
       update();
+    })();
+
+    /* Click ripple — Aztec sun-stone burst with the ZOTHEOS sigil */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var SIGIL =
+        '<svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.3">' +
+        '<circle cx="26" cy="26" r="22"/>' +
+        '<circle cx="26" cy="26" r="17"/>' +
+        '<circle cx="26" cy="15" r="2.2" fill="currentColor" stroke="none"/>' +
+        '<circle cx="16.5" cy="31" r="2.2" fill="currentColor" stroke="none"/>' +
+        '<circle cx="35.5" cy="31" r="2.2" fill="currentColor" stroke="none"/>' +
+        '</svg>';
+      var last = 0;
+      var live = 0;
+      function burst(x, y) {
+        var c = document.createElement('div');
+        c.className = 'zripple';
+        c.style.left = x + 'px';
+        c.style.top = y + 'px';
+        c.innerHTML =
+          '<span class="zr-ring"></span>' +
+          '<span class="zr-ring r2"></span>' +
+          '<span class="zr-sigil">' + SIGIL + '</span>' +
+          '<i class="zr-spark s1"></i>' +
+          '<i class="zr-spark s2"></i>' +
+          '<i class="zr-spark s3"></i>';
+        document.body.appendChild(c);
+        live++;
+        setTimeout(function () { c.remove(); live--; }, 1000);
+      }
+      document.addEventListener('pointerdown', function (e) {
+        // skip text-entry fields so the flourish never fights typing
+        var t = e.target;
+        if (t && t.closest && t.closest('input, textarea, select')) return;
+        var now = Date.now();
+        if (now - last < 70 || live > 6) return;   // throttle + cap
+        last = now;
+        burst(e.clientX, e.clientY);
+      }, { passive: true });
     })();
 
     /* Waitlist */
