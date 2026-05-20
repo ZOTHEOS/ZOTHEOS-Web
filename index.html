@@ -2855,6 +2855,397 @@
       transition: opacity 0.6s var(--ease-editorial);
     }
     .greca-divider.lit svg .grecaTeeth { opacity: 1; }
+
+    /* ============================================================
+       UPGRADE PACK 3 — council scroll story, social proof strip,
+       founder note, sticky mobile CTA. Theme tokens untouched.
+    ============================================================ */
+
+    /* Social proof band */
+    .proof-band {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid var(--rule-soft);
+      border-bottom: 1px solid var(--rule-soft);
+      background:
+        linear-gradient(180deg,
+          rgba(var(--cochineal-rgb), 0.03) 0%,
+          transparent 50%,
+          rgba(var(--cochineal-rgb), 0.03) 100%);
+      overflow: hidden;
+    }
+    .proof-track {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      animation: proof-marquee 38s linear infinite;
+      will-change: transform;
+    }
+    .proof-band:hover .proof-track { animation-play-state: paused; }
+    .proof-group {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .proof-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 34px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      white-space: nowrap;
+    }
+    .proof-item strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .proof-item .proof-mark {
+      color: var(--cochineal);
+      font-size: 9px;
+      transform: translateY(-1px);
+    }
+    @keyframes proof-marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .proof-track { animation: none; flex-wrap: wrap; width: 100%; justify-content: center; }
+    }
+
+    /* ============================================================
+       COUNCIL SCROLL STORY — vertical scroll drives a pinned
+       horizontal pan across three full-bleed core panels.
+    ============================================================ */
+    .council-scroll {
+      position: relative;
+      z-index: 2;
+      height: 340vh;            /* scroll runway: ~3 panels + buffer */
+    }
+    .council-scroll-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .css-prog {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      z-index: 6;
+      background: var(--rule-soft);
+    }
+    .css-prog-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg,
+        rgba(var(--cochineal-rgb), 0.5),
+        var(--cochineal));
+      box-shadow: 0 0 12px rgba(var(--cochineal-rgb), 0.5);
+      transition: width 0.1s linear;
+    }
+    .council-scroll-head {
+      position: absolute;
+      top: clamp(64px, 11vh, 110px);
+      left: 0; right: 0;
+      z-index: 5;
+      text-align: center;
+      pointer-events: none;
+      padding: 0 24px;
+    }
+    .council-scroll-head .section-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .council-scroll-head h2 {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(28px, 4vw, 52px);
+      color: var(--ink);
+      letter-spacing: -0.012em;
+      line-height: 1.05;
+    }
+    .council-scroll-head .seal { color: var(--cochineal); }
+    .council-scroll-hint {
+      margin-top: 12px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .council-scroll-hint::after {
+      content: '';
+      width: 28px; height: 1px;
+      background: linear-gradient(90deg, var(--cochineal), transparent);
+      animation: hint-slide 2.2s ease-in-out infinite;
+    }
+    @keyframes hint-slide {
+      0%, 100% { transform: translateX(0); opacity: 0.4; }
+      50%      { transform: translateX(6px); opacity: 1; }
+    }
+    .council-track {
+      display: flex;
+      height: 100%;
+      width: 300%;
+      will-change: transform;
+    }
+    .council-panel {
+      width: 100vw;
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 8vw 80px;
+      position: relative;
+    }
+    .council-panel-inner {
+      max-width: 720px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+    .cp-glyphwrap {
+      position: relative;
+      width: 160px; height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cp-glyphwrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at center,
+        rgba(var(--cochineal-rgb), 0.16) 0%,
+        transparent 68%);
+    }
+    .cp-glyphwrap::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      border: 1px solid rgba(var(--cochineal-rgb), 0.30);
+      animation: cp-ring 14s linear infinite;
+    }
+    @keyframes cp-ring { to { transform: rotate(360deg); } }
+    .cp-glyph {
+      width: 84px; height: 84px;
+      color: var(--ink);
+      position: relative;
+      z-index: 1;
+    }
+    .cp-glyph.is-cochineal { color: var(--cochineal); }
+    .cp-glyph svg { width: 100%; height: 100%; }
+    .cp-numeral {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.30em;
+      color: var(--cochineal);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .cp-role {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 0.96;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .cp-verb {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--cochineal);
+      margin-bottom: 20px;
+    }
+    .cp-desc {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(18px, 2.4vw, 24px);
+      line-height: 1.5;
+      color: var(--ink-2);
+      margin-bottom: 22px;
+    }
+    .cp-asks {
+      padding: 16px 20px;
+      border: 1px solid var(--rule-soft);
+      border-left: 3px solid var(--cochineal);
+      background: var(--surface);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .cp-asks .cp-asks-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      margin-bottom: 6px;
+    }
+    .cp-model {
+      margin-top: 18px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+    }
+    .cp-model b { color: var(--ink-3); font-weight: 500; }
+
+    /* Mobile / reduced-motion fallback: stack panels vertically */
+    .council-scroll.no-pin { height: auto; }
+    .council-scroll.no-pin .council-scroll-sticky {
+      position: relative;
+      height: auto;
+      overflow: visible;
+    }
+    .council-scroll.no-pin .css-prog { display: none; }
+    .council-scroll.no-pin .council-scroll-head {
+      position: relative;
+      top: auto;
+      padding: 72px 24px 8px;
+    }
+    .council-scroll.no-pin .council-scroll-hint { display: none; }
+    .council-scroll.no-pin .council-track {
+      flex-direction: column;
+      width: 100%;
+      transform: none !important;
+      height: auto;
+    }
+    .council-scroll.no-pin .council-panel {
+      width: 100%;
+      height: auto;
+      padding: 44px 22px;
+      border-top: 1px solid var(--rule-soft);
+    }
+    @media (max-width: 760px) {
+      .council-panel-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+        justify-items: center;
+      }
+      .cp-glyphwrap { width: 120px; height: 120px; }
+      .cp-glyph { width: 60px; height: 60px; }
+      .cp-asks { text-align: left; }
+    }
+
+    /* Founder note */
+    .founder-note {
+      position: relative;
+      z-index: 2;
+    }
+    .founder-card {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: clamp(36px, 6vw, 64px);
+      border: 1px solid var(--rule);
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+    .founder-card::before {
+      content: '\201C';
+      position: absolute;
+      top: -24px; left: 20px;
+      font-family: var(--serif);
+      font-size: 180px;
+      line-height: 1;
+      color: rgba(var(--cochineal-rgb), 0.12);
+      pointer-events: none;
+    }
+    .founder-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(20px, 2.8vw, 30px);
+      line-height: 1.5;
+      color: var(--ink);
+      letter-spacing: -0.008em;
+      position: relative;
+      z-index: 1;
+    }
+    .founder-quote p + p { margin-top: 20px; }
+    .founder-quote em { color: var(--cochineal); font-style: italic; }
+    .founder-sign {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 36px;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .founder-seal {
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+      color: var(--cochineal);
+      filter: drop-shadow(0 0 10px rgba(var(--cochineal-rgb), 0.4));
+    }
+    .founder-seal svg { width: 100%; height: 100%; }
+    .founder-who strong {
+      display: block;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .founder-who span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      margin-top: 4px;
+    }
+
+    /* Sticky mobile CTA */
+    .mobile-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 180;
+      display: none;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(2, 16, 30, 0.6) 40%, rgba(2, 16, 30, 0.92) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid var(--rule-soft);
+      transform: translateY(120%);
+      transition: transform 0.5s var(--ease-ceremony);
+    }
+    [data-theme="codex"] .mobile-cta {
+      background: linear-gradient(180deg, transparent 0%, rgba(232, 219, 192, 0.7) 40%, rgba(232, 219, 192, 0.94) 100%);
+    }
+    [data-theme="skeleton"] .mobile-cta {
+      background: linear-gradient(180deg, transparent 0%, rgba(5, 5, 7, 0.7) 40%, rgba(5, 5, 7, 0.95) 100%);
+    }
+    .mobile-cta.visible { transform: translateY(0); }
+    .mobile-cta .btn { width: 100%; justify-content: center; }
+    @media (max-width: 640px) {
+      .mobile-cta { display: block; }
+      body { /* ensure footer/scroll content not hidden behind bar handled by JS hide near waitlist */ }
+    }
   </style>
 </head>
 <body class="page-loading">
@@ -3067,6 +3458,27 @@
     </div>
   </section>
 
+  <div class="proof-band reveal" aria-label="At a glance">
+    <div class="proof-track" id="proofTrack">
+      <div class="proof-group">
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>22+ months</strong> in development</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores, locally</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> offline inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
+      </div>
+      <div class="proof-group" aria-hidden="true">
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>22+ months</strong> in development</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores, locally</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> offline inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
+      </div>
+    </div>
+  </div>
+
   <div class="council-strip reveal">
     <span>IN&nbsp;XOCHITL&nbsp;&middot;&nbsp;IN&nbsp;CUICATL</span>
     <span class="center">flower and song</span>
@@ -3165,6 +3577,98 @@
     <span class="center">three wise voices</span>
     <span>CONSEJO&nbsp;DE&nbsp;TRES</span>
   </div>
+
+  <section class="council-scroll" id="council-story" aria-label="The council, in depth">
+    <div class="council-scroll-sticky">
+      <div class="css-prog" aria-hidden="true"><div class="css-prog-fill" id="councilProg"></div></div>
+      <div class="council-scroll-head">
+        <span class="section-label">The council</span>
+        <h2>Three voices, in turn<span class="seal">.</span></h2>
+        <span class="council-scroll-hint">Scroll to convene</span>
+      </div>
+      <div class="council-track" id="councilTrack">
+
+        <article class="council-panel" data-core="analyst">
+          <div class="council-panel-inner">
+            <div class="cp-glyphwrap">
+              <div class="cp-glyph">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                  <path d="M 3 36 L 3 32 L 8 32 L 8 25 L 13 25 L 13 18 L 16 18 L 16 10 L 24 10 L 24 18 L 27 18 L 27 25 L 32 25 L 32 32 L 37 32 L 37 36 Z"/>
+                  <line x1="20" y1="10" x2="20" y2="36" stroke-width="1.3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cp-body">
+              <span class="cp-numeral">I.</span>
+              <div class="cp-role">Analyst</div>
+              <div class="cp-verb">Measures</div>
+              <p class="cp-desc">Counts what can be counted, and weighs what holds. The Analyst pins claims to evidence and refuses to round up.</p>
+              <div class="cp-asks">
+                <span class="cp-asks-label">It asks</span>
+                What does the data actually say, and how confident can we honestly be?
+              </div>
+              <div class="cp-model">Core &middot; <b>Qwen 14B</b></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="council-panel" data-core="humanist">
+          <div class="council-panel-inner">
+            <div class="cp-glyphwrap">
+              <div class="cp-glyph is-cochineal">
+                <svg viewBox="0 0 40 40" fill="currentColor" stroke="currentColor">
+                  <circle cx="20" cy="20" r="6"/>
+                  <g stroke-width="2.2" stroke-linecap="round" fill="none">
+                    <line x1="20" y1="4" x2="20" y2="10"/><line x1="20" y1="30" x2="20" y2="36"/>
+                    <line x1="4" y1="20" x2="10" y2="20"/><line x1="30" y1="20" x2="36" y2="20"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/><line x1="28" y1="12" x2="32" y2="8"/>
+                    <line x1="8" y1="32" x2="12" y2="28"/><line x1="28" y1="28" x2="32" y2="32"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="cp-body">
+              <span class="cp-numeral">II.</span>
+              <div class="cp-role">Humanist</div>
+              <div class="cp-verb">Witnesses</div>
+              <p class="cp-desc">Reads what is felt and what matters. The Humanist keeps the human stakes in frame when the numbers try to flatten them.</p>
+              <div class="cp-asks">
+                <span class="cp-asks-label">It asks</span>
+                Who is affected, and what does this mean for the people living it?
+              </div>
+              <div class="cp-model">Core &middot; <b>Gemma 9B</b></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="council-panel" data-core="skeptic">
+          <div class="council-panel-inner">
+            <div class="cp-glyphwrap">
+              <div class="cp-glyph">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                  <circle cx="20" cy="6" r="1.8" fill="currentColor"/>
+                  <line x1="20" y1="9" x2="9" y2="34"/>
+                  <line x1="20" y1="9" x2="31" y2="34"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cp-body">
+              <span class="cp-numeral">III.</span>
+              <div class="cp-role">Skeptic</div>
+              <div class="cp-verb">Doubts</div>
+              <p class="cp-desc">Hunts what is silenced and what hides. The Skeptic argues against the strongest emerging consensus, not against you, so easy agreement gets tested.</p>
+              <div class="cp-asks">
+                <span class="cp-asks-label">It asks</span>
+                Where are the other two quietly agreeing without checking each other?
+              </div>
+              <div class="cp-model">Core &middot; <b>Qwen 7B</b></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
 
   <section id="mission">
     <div class="section-inner">
@@ -3529,6 +4033,44 @@
     <span class="seal-dot"></span>
   </div>
 
+  <section class="founder-note" id="founder">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">From the founder</span>
+      </div>
+      <div class="founder-card reveal reveal-d1">
+        <div class="founder-quote">
+          <p>I built ZOTHEOS because I was tired of tools that treat attention as the product and truth as optional. The internet learned to keep us scrolling; I wanted something that helps people <em>think</em> instead.</p>
+          <p>So I gave it three minds that disagree on purpose, a memory that teaches rather than hoards, and a hard rule: it runs on your machine, and your data stays there. No investors to please, no ad model to feed. Just the work, done right.</p>
+        </div>
+        <div class="founder-sign">
+          <span class="founder-seal" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+              <circle cx="24" cy="24" r="20"/>
+              <circle cx="24" cy="24" r="14"/>
+              <circle cx="24" cy="13" r="2.4" fill="currentColor" stroke="none"/>
+              <circle cx="14.5" cy="29" r="2.4" fill="currentColor" stroke="none"/>
+              <circle cx="33.5" cy="29" r="2.4" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <div class="founder-who">
+            <strong>David Garcia</strong>
+            <span>Founder &middot; USMC Veteran &middot; ZOTHEOS LLC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
   <section id="waitlist">
     <div class="section-inner">
       <div class="section-head reveal">
@@ -3608,12 +4150,14 @@
         </div>
       </div>
       <div class="footer-links">
+        <a href="#council-story">The council</a>
         <a href="#mission">Mission</a>
         <a href="#features">Architecture</a>
         <a href="#memory">Memory</a>
         <a href="#console">Console</a>
         <a href="#compare">Comparison</a>
         <a href="#faq">FAQ</a>
+        <a href="#founder">Founder</a>
         <a href="#waitlist">Early access</a>
         <a href="#support">Support</a>
       </div>
@@ -3629,6 +4173,10 @@
       <span class="version">ZTHS &middot; 026</span>
     </div>
   </footer>
+
+  <div class="mobile-cta" id="mobileCta" aria-hidden="true">
+    <a class="btn btn-primary" href="#waitlist">Get early access <span class="arrow">&rarr;</span></a>
+  </div>
 
   <button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -4301,6 +4849,78 @@
           }, 420);
         });
       }
+    })();
+
+    /* Council scroll story — pinned horizontal pan driven by scroll */
+    (function () {
+      var section = document.getElementById('council-story');
+      if (!section) return;
+      var track = document.getElementById('councilTrack');
+      var fill = document.getElementById('councilProg');
+      if (!track) return;
+
+      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var ticking = false;
+
+      function shouldPin() {
+        return window.innerWidth > 760 && !reduceMQ.matches;
+      }
+      function applyMode() {
+        if (shouldPin()) {
+          section.classList.remove('no-pin');
+        } else {
+          section.classList.add('no-pin');
+          track.style.transform = '';
+          if (fill) fill.style.width = '0%';
+        }
+      }
+
+      function onScroll() {
+        if (!shouldPin()) return;
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+          ticking = false;
+          var rect = section.getBoundingClientRect();
+          var total = section.offsetHeight - window.innerHeight;
+          if (total <= 0) return;
+          // progress through the pinned runway: 0 at top entry, 1 at exit
+          var progress = Math.min(1, Math.max(0, (-rect.top) / total));
+          var sticky = section.querySelector('.council-scroll-sticky');
+          var maxShift = track.scrollWidth - (sticky ? sticky.clientWidth : window.innerWidth);
+          track.style.transform = 'translate3d(' + (-progress * maxShift).toFixed(1) + 'px,0,0)';
+          if (fill) fill.style.width = (progress * 100).toFixed(1) + '%';
+        });
+      }
+
+      applyMode();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () { applyMode(); onScroll(); });
+      if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', applyMode);
+      onScroll();
+    })();
+
+    /* Sticky mobile CTA — appears past the hero, hides over the ask */
+    (function () {
+      var cta = document.getElementById('mobileCta');
+      if (!cta) return;
+      var waitlist = document.getElementById('waitlist');
+      var footer = document.querySelector('footer');
+      function update() {
+        var pastHero = window.scrollY > window.innerHeight * 0.85;
+        var overAsk = false;
+        [waitlist, footer].forEach(function (el) {
+          if (!el) return;
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) overAsk = true;
+        });
+        var show = pastHero && !overAsk;
+        cta.classList.toggle('visible', show);
+        cta.setAttribute('aria-hidden', show ? 'false' : 'true');
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
     })();
 
     /* Waitlist */
