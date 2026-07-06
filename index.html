@@ -7,18 +7,18 @@
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
   <link rel="shortcut icon" href="/zotheos_icon.ico?v=3" />
   <link rel="apple-touch-icon" href="/zotheos_icon.ico?v=3" />
-  <meta name="description" content="Three local AI cores reason independently, then synthesize one grounded answer. Offline-first. Private by default. Built independently." />
+  <meta name="description" content="Three local AI cores reason independently, then synthesize one grounded answer. Offline first. Private by default. Built to be checked." />
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta property="og:description" content="Three perspectives. One grounded answer. Private by default." />
+  <meta property="og:description" content="Three perspectives. One grounded answer. Built to be checked." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zotheos.org" />
   <meta property="og:image" content="https://zotheos.org/static/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ZOTHEOS — three minds reason, you decide." />
+  <meta property="og:image:alt" content="ZOTHEOS: three minds reason, you decide." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta name="twitter:description" content="Three perspectives. One grounded answer. Private by default." />
+  <meta name="twitter:description" content="Three perspectives. One grounded answer. Built to be checked." />
   <meta name="twitter:image" content="https://zotheos.org/static/og.png" />
   <meta name="theme-color" content="#02101E" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#E8DBC0" media="(prefers-color-scheme: light)" />
@@ -52,7 +52,7 @@
         "name": "ZOTHEOS",
         "applicationCategory": "AIApplication",
         "operatingSystem": "Windows, macOS, Linux",
-        "description": "Three local AI cores reason independently, then synthesize one grounded answer. Offline-first, private by default.",
+        "description": "Three local AI cores reason independently, then synthesize one grounded answer. Offline first, private by default, built to be checked.",
         "url": "https://zotheos.org",
         "image": "https://zotheos.org/static/og.png",
         "publisher": { "@id": "https://zotheos.org/#org" },
@@ -63,11 +63,17 @@
           "availability": "https://schema.org/PreOrder"
         },
         "featureList": [
-          "Fusion architecture: Analyst, Humanist, Skeptic",
+          "Fusion council: Analyst, Humanist, Skeptic",
           "Local-first inference via llama.cpp",
           "Evidence vault with citation enforcement",
           "Anti-consensus Skeptic core",
-          "Calibration measured per response"
+          "Calibration measured per response",
+          "Signed result receipts, verifiable offline",
+          "Prediction ledger with scored forecasts",
+          "Belief drift log with evidence chains",
+          "Corrections reviewed in the open",
+          "Provable offline mode with network ledger and canary",
+          "Device-tier council, pocket to workstation"
         ]
       },
       {
@@ -94,7 +100,7 @@
             "name": "What hardware do I need?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ZOTHEOS targets consumer machines. A modern CPU with 16 GB RAM runs the smaller core profile; a discrete GPU with 12 GB or more VRAM unlocks the full Qwen 14B + Gemma 9B + Qwen 7B trio."
+              "text": "Almost any machine. ZOTHEOS measures your hardware and seats the council it can honestly run: a full council on a 16GB+ VRAM workstation, a mid council on a 6GB+ VRAM laptop, a light council on an 8GB CPU-only laptop, and a single small voice on pocket-class devices, honestly labeled as one mind rather than a council."
             }
           },
           {
@@ -111,6 +117,46 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Independently. No VC funding, no investors, no advertising. Optional supporter donations via PayPal, Stripe, or Gumroad keep the project moving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know it is really offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can watch it prove itself. ZOTHEOS keeps a network ledger and includes a canary that attempts an outbound call in front of you so you can watch it get refused. Signed result receipts can also be verified with no connection at all."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens when ZOTHEOS is wrong?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Corrections are first-class. Every user-flagged correction is persisted with provenance in an immutable log and approved or rejected in the open. When the council changes its mind, the full belief-drift chain is kept with the evidence that moved it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can kids use ZOTHEOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kids Mode ships with age bands, and the same privacy posture applies: everything stays on the device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Smart Board?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An infinite offline AI whiteboard. Ask the council on the canvas, drop in a document, chart data, use your voice, and save the board as a conversation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the evidence vault?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A local, tiered knowledge base the three cores can cite. Sources are reranked by a cross-encoder and citations are enforced in the response, with a strict mode that rejects answers that cannot be grounded."
             }
           }
         ]
@@ -3344,6 +3390,253 @@
     @media (prefers-reduced-motion: reduce) {
       .zripple { display: none; }
     }
+
+    /* ============================================================
+       UPGRADE PACK 4 — proof instruments, workspace wall, device
+       tier ladder, Maya bar numerals. Styled as instruments: mono
+       type, thin rules, seal dots. Theme tokens untouched.
+    ============================================================ */
+
+    /* Maya numerals: a bar is five. Bars first, then dots. */
+    .maya-num .b {
+      width: 20px; height: 5px;
+      border-radius: 2.5px;
+      background: var(--cochineal);
+    }
+
+    /* Instrument cards */
+    .instrument-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 1080px) { .instrument-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 720px)  { .instrument-grid { grid-template-columns: 1fr; } }
+    .instrument-card {
+      position: relative;
+      padding: 24px 20px 22px;
+      border: 1px solid var(--rule-soft);
+      border-top: 2px solid rgba(var(--cochineal-rgb), 0.55);
+      background: var(--surface);
+      transition:
+        border-color 0.32s var(--ease-editorial),
+        transform 0.4s var(--ease-editorial);
+    }
+    .instrument-card:hover {
+      border-color: rgba(var(--cochineal-rgb), 0.35);
+      transform: translateY(-3px);
+    }
+    .instrument-card .ic-index {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      color: var(--ink-4);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .instrument-card .ic-dot {
+      position: absolute;
+      top: 24px; right: 20px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--cochineal);
+      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.55);
+    }
+    .instrument-card h3 {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 21px;
+      color: var(--ink);
+      margin-bottom: 10px;
+      letter-spacing: -0.005em;
+    }
+    .instrument-card p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--ink-2);
+    }
+    .proof-epigram {
+      margin: 44px auto 0;
+      max-width: 640px;
+      text-align: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(20px, 2.6vw, 28px);
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .proof-note {
+      margin: 18px auto 0;
+      max-width: 640px;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      line-height: 1.7;
+      color: var(--ink-3);
+    }
+
+    /* Workspace wall */
+    .ws-wall {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1.25fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    @media (max-width: 860px) { .ws-wall { grid-template-columns: 1fr; } }
+    .ws-zone {
+      border: 1px solid var(--rule-soft);
+      background: var(--surface-2);
+      padding: 20px;
+    }
+    .ws-zone.is-trust {
+      border-top: 2px solid rgba(var(--cochineal-rgb), 0.55);
+      background: var(--surface);
+    }
+    .ws-zone-head {
+      display: flex; align-items: baseline; gap: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .ws-zone-name {
+      font-family: var(--sans);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .ws-zone-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--ink-3);
+    }
+    .ws-tiles { display: flex; flex-wrap: wrap; gap: 7px; }
+    .ws-tile {
+      padding: 7px 12px;
+      border: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      transition:
+        border-color 0.28s var(--ease-editorial),
+        color 0.28s var(--ease-editorial),
+        transform 0.28s var(--ease-anticipate);
+    }
+    .ws-tile:hover {
+      border-color: var(--cochineal);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+    .ws-tile.is-more { border-style: dashed; color: var(--ink-4); }
+    .ws-note {
+      margin-top: 22px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--ink-3);
+      max-width: 660px;
+    }
+
+    /* Device tier ladder */
+    .tier-ladder {
+      border: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    .tier-row {
+      display: grid;
+      grid-template-columns: 56px 1.1fr 1.3fr 1.4fr;
+      gap: 18px;
+      align-items: center;
+      padding: 22px 26px;
+    }
+    .tier-row + .tier-row { border-top: 1px solid var(--rule-soft); }
+    .tier-code {
+      font-family: var(--mono);
+      font-size: 15px;
+      letter-spacing: 0.14em;
+      color: var(--cochineal);
+    }
+    .tier-info { display: flex; flex-direction: column; gap: 3px; }
+    .tier-name {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink);
+    }
+    .tier-hw {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+    }
+    .tier-council {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      color: var(--ink-2);
+    }
+    .tier-row.is-t0 .tier-council { color: var(--ink-3); }
+    .tier-meter {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tier-bar {
+      position: relative;
+      flex: 1;
+      height: 6px;
+      background: var(--rule-soft);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .tier-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 0;
+      border-radius: 3px;
+      background: linear-gradient(90deg,
+        rgba(var(--cochineal-rgb), 0.5),
+        var(--cochineal));
+      transition: width 1.1s var(--ease-ceremony);
+    }
+    .tier-ladder.visible .tier-fill { width: var(--w); }
+    .tier-ladder.visible .tier-row:nth-child(2) .tier-fill { transition-delay: 0.15s; }
+    .tier-ladder.visible .tier-row:nth-child(3) .tier-fill { transition-delay: 0.30s; }
+    .tier-ladder.visible .tier-row:nth-child(4) .tier-fill { transition-delay: 0.45s; }
+    .tier-foot {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.10em;
+      color: var(--ink-3);
+      flex-shrink: 0;
+      min-width: 58px;
+      text-align: right;
+    }
+    .tier-note {
+      margin-top: 18px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ink-2);
+    }
+    @media (max-width: 760px) {
+      .tier-row {
+        grid-template-columns: 44px 1fr;
+        gap: 10px 14px;
+        padding: 18px;
+      }
+      .tier-council { grid-column: 2; }
+      .tier-meter { grid-column: 1 / -1; margin-top: 6px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tier-fill { transition: none; width: var(--w); }
+    }
   </style>
 </head>
 <body class="page-loading">
@@ -3384,9 +3677,11 @@
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav" id="primaryNav">
-        <a href="#mission" data-nav-section="mission">Mission</a>
         <a href="#features" data-nav-section="features">Architecture</a>
+        <a href="#proof" data-nav-section="proof">Proof</a>
+        <a href="#workspace" data-nav-section="workspace">Workspace</a>
         <a href="#memory" data-nav-section="memory">Memory</a>
+        <a href="#mission" data-nav-section="mission">Mission</a>
         <a href="#faq" data-nav-section="faq">FAQ</a>
       </nav>
     </div>
@@ -3526,7 +3821,7 @@
       </h1>
 
       <p class="hero-sub">
-        Three local AI cores reason independently, then synthesize one grounded answer. Offline-first. Private by default.
+        Three local AI cores reason independently, then synthesize one grounded answer. Offline first. Private by default. Built to be checked.
       </p>
 
       <!-- Three CTAs only. Primary = Early access (cochineal halo). -->
@@ -3544,7 +3839,7 @@
 
       <div class="hero-stats stagger reveal">
         <div class="hero-stat"><div class="num" data-count="3">3</div><div class="label">Reasoning cores</div></div>
-        <div class="hero-stat"><div class="num" data-count="878" data-suffix="+">878+</div><div class="label">Knowledge chunks</div></div>
+        <div class="hero-stat"><div class="num" data-count="30">30</div><div class="label">Workspace tools</div></div>
         <div class="hero-stat"><div class="num" data-count="100" data-suffix="%">100%</div><div class="label">Local inference</div></div>
         <div class="hero-stat"><div class="num" data-count="0">0</div><div class="label">Data collected</div></div>
       </div>
@@ -3555,20 +3850,24 @@
   <div class="proof-band reveal" aria-label="At a glance">
     <div class="proof-track" id="proofTrack">
       <div class="proof-group">
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>22+ months</strong> in development</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores, locally</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> offline inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>30</strong> tools in one workspace</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> local inference</span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>4</strong> device tiers, pocket to workstation</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> In development since <strong>January 2024</strong></span>
       </div>
       <div class="proof-group" aria-hidden="true">
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>22+ months</strong> in development</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores, locally</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> offline inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>30</strong> tools in one workspace</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> local inference</span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>4</strong> device tiers, pocket to workstation</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> In development since <strong>January 2024</strong></span>
       </div>
     </div>
   </div>
@@ -3701,7 +4000,7 @@
                 <span class="cp-asks-label">It asks</span>
                 What does the data actually say, and how confident can we honestly be?
               </div>
-              <div class="cp-model">Core &middot; <b>Qwen 14B</b></div>
+              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
             </div>
           </div>
         </article>
@@ -3730,7 +4029,7 @@
                 <span class="cp-asks-label">It asks</span>
                 Who is affected, and what does this mean for the people living it?
               </div>
-              <div class="cp-model">Core &middot; <b>Gemma 9B</b></div>
+              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
             </div>
           </div>
         </article>
@@ -3755,7 +4054,7 @@
                 <span class="cp-asks-label">It asks</span>
                 Where are the other two quietly agreeing without checking each other?
               </div>
-              <div class="cp-model">Core &middot; <b>Qwen 7B</b></div>
+              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
             </div>
           </div>
         </article>
@@ -3764,46 +4063,10 @@
     </div>
   </section>
 
-  <section id="mission">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span></span>
-        <span class="section-label">Mission</span>
-      </div>
-      <div class="mission-grid">
-        <div>
-          <h2 class="section-title reveal">
-            The internet became a casino.<br/>This is the library<span class="seal">.</span>
-          </h2>
-          <p class="section-desc reveal reveal-d1">
-            Algorithms reward what keeps you scrolling, not what helps you understand. ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and solve problems without surveillance, manipulation, or paywalls shaping the outcome.
-          </p>
-          <div class="mission-quote reveal reveal-d2">
-            Keep knowledge accessible. Keep privacy intact. Keep the tool reliable even when the internet isn't.
-          </div>
-        </div>
-        <div class="mission-values">
-          <div class="value-item reveal"><strong>Private by default</strong><span>No accounts required. No data harvested as the price of help.</span></div>
-          <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
-          <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
-          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="greca-divider">
-    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
-      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
-    </svg>
-    <span class="seal-dot"></span>
-  </div>
-
   <section id="features">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="d"></span></span>
         <span class="section-label">Architecture</span>
       </div>
       <h2 class="section-title reveal">Three minds. One grounded answer<span class="seal">.</span></h2>
@@ -3848,10 +4111,196 @@
     <span class="seal-dot"></span>
   </div>
 
-  <section id="memory">
+  <section id="proof">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Proof</span>
+      </div>
+      <h2 class="section-title reveal">Built to be checked<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">
+        Most AI asks for trust. ZOTHEOS keeps receipts: signed results, a local track record, a log of every mind-change, and an offline mode you can watch prove itself. All of it lives in the product, not in a press release.
+      </p>
+      <div class="instrument-grid">
+        <div class="instrument-card reveal">
+          <span class="ic-index">01</span>
+          <span class="ic-dot" aria-hidden="true"></span>
+          <h3>Signed receipts</h3>
+          <p>Download a signed receipt for a result and verify it offline. No account, no server, no trust required.</p>
+        </div>
+        <div class="instrument-card reveal reveal-d1">
+          <span class="ic-index">02</span>
+          <span class="ic-dot" aria-hidden="true"></span>
+          <h3>Prediction ledger</h3>
+          <p>Forecasts the system logged, scored against what actually happened. A local track record with a reliability diagram.</p>
+        </div>
+        <div class="instrument-card reveal reveal-d2">
+          <span class="ic-index">03</span>
+          <span class="ic-dot" aria-hidden="true"></span>
+          <h3>Belief drift</h3>
+          <p>When the council changes its mind, the full chain stays: v1 to v2 to v3, with the evidence that moved it. No memory-holing.</p>
+        </div>
+        <div class="instrument-card reveal reveal-d3">
+          <span class="ic-index">04</span>
+          <span class="ic-dot" aria-hidden="true"></span>
+          <h3>Corrections in the open</h3>
+          <p>Every flagged correction is kept with provenance in an immutable log, and approved or rejected where you can see it.</p>
+        </div>
+        <div class="instrument-card reveal reveal-d4">
+          <span class="ic-index">05</span>
+          <span class="ic-dot" aria-hidden="true"></span>
+          <h3>Provable offline</h3>
+          <p>Not a toggle and a promise. A network ledger, plus a canary that attempts an outbound call in front of you so you can watch it get refused.</p>
+        </div>
+      </div>
+      <div class="proof-epigram reveal reveal-d3">
+        Ask any AI if it is trustworthy and it will say yes.<br/>ZOTHEOS would rather show you the ledger.
+      </div>
+      <p class="proof-note reveal reveal-d4">ZOTHEOS also measures its own catch rate. The method is published; the numbers print when they are ready, not before.</p>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="workspace">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Workspace</span>
+      </div>
+      <h2 class="section-title reveal">One workspace, thirty tools<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">
+        Everything lives in one overlay: a fuzzy command palette, keyboard driven, arranged in three zones. A search that matches nothing offers to run itself as a fact-check, a memory search, or an investigation. No dead ends.
+      </p>
+      <div class="ws-wall reveal reveal-d2">
+        <div class="ws-zone">
+          <div class="ws-zone-head">
+            <span class="ws-zone-name">Work</span>
+            <span class="ws-zone-sub">create and transform</span>
+          </div>
+          <div class="ws-tiles">
+            <span class="ws-tile">Smart Board</span>
+            <span class="ws-tile">Planner</span>
+            <span class="ws-tile">Ideas</span>
+            <span class="ws-tile is-more">&hellip;</span>
+          </div>
+        </div>
+        <div class="ws-zone is-trust">
+          <div class="ws-zone-head">
+            <span class="ws-zone-name">Trust</span>
+            <span class="ws-zone-sub">verify and measure</span>
+          </div>
+          <div class="ws-tiles">
+            <span class="ws-tile">Trust Center</span>
+            <span class="ws-tile">Sovereignty</span>
+            <span class="ws-tile">Prediction Ledger</span>
+            <span class="ws-tile">Belief Drift</span>
+            <span class="ws-tile">Corrections Review</span>
+            <span class="ws-tile">Accountability Cockpit</span>
+            <span class="ws-tile">Fact Check</span>
+            <span class="ws-tile">What ZOTHEOS Remembers</span>
+          </div>
+        </div>
+        <div class="ws-zone">
+          <div class="ws-zone-head">
+            <span class="ws-zone-name">Library &amp; settings</span>
+            <span class="ws-zone-sub">look back and configure</span>
+          </div>
+          <div class="ws-tiles">
+            <span class="ws-tile">Timeline</span>
+            <span class="ws-tile">Search</span>
+            <span class="ws-tile">Memory Dashboard</span>
+            <span class="ws-tile">Knowledge Map</span>
+            <span class="ws-tile">Theme Studio</span>
+            <span class="ws-tile">Kids Mode</span>
+            <span class="ws-tile">Model Setup</span>
+            <span class="ws-tile">Device Health</span>
+            <span class="ws-tile is-more">&hellip;</span>
+          </div>
+        </div>
+      </div>
+      <p class="ws-note reveal reveal-d3">A selection of the thirty. The Ethics Sentinel runs underneath them all: it refuses to help build systems of control, and it always answers fact-seeking accountability questions.</p>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="devices">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Any device</span>
+      </div>
+      <h2 class="section-title reveal">One download. Four honest tiers<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">
+        You do not shop for models. ZOTHEOS measures your machine and seats the council it can honestly run, from workstation to pocket. The three roles stay the same; only their size changes.
+      </p>
+      <div class="tier-ladder reveal reveal-d2">
+        <div class="tier-row">
+          <span class="tier-code">T3</span>
+          <div class="tier-info">
+            <span class="tier-name">Workstation</span>
+            <span class="tier-hw">16GB+ VRAM</span>
+          </div>
+          <div class="tier-council">Full council &middot; 14B / 9B / 3B</div>
+          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 100%"></span></span><span class="tier-foot">~15.5 GB</span></div>
+        </div>
+        <div class="tier-row">
+          <span class="tier-code">T2</span>
+          <div class="tier-info">
+            <span class="tier-name">Laptop, GPU</span>
+            <span class="tier-hw">6GB+ VRAM</span>
+          </div>
+          <div class="tier-council">Council &middot; 8B / 7B / 3B</div>
+          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 84%"></span></span><span class="tier-foot">~13 GB</span></div>
+        </div>
+        <div class="tier-row">
+          <span class="tier-code">T1</span>
+          <div class="tier-info">
+            <span class="tier-name">Laptop, CPU</span>
+            <span class="tier-hw">8GB+ RAM, no GPU</span>
+          </div>
+          <div class="tier-council">Light council &middot; 3B / 3B / 1.5B</div>
+          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 32%"></span></span><span class="tier-foot">~5 GB</span></div>
+        </div>
+        <div class="tier-row is-t0">
+          <span class="tier-code">T0</span>
+          <div class="tier-info">
+            <span class="tier-name">Pocket</span>
+            <span class="tier-hw">small devices</span>
+          </div>
+          <div class="tier-council">A single voice &middot; 1.5B, no council</div>
+          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 10%"></span></span><span class="tier-foot">~1.5 GB</span></div>
+        </div>
+      </div>
+      <p class="tier-note reveal reveal-d3">On T0 the app says so out loud: one mind, not a council. Honesty is part of the interface.</p>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="memory">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="b"></span></span>
         <span class="section-label">Memory awareness</span>
       </div>
       <h2 class="section-title reveal">Help people remember better, not remember <em>for</em> them<span class="seal">.</span></h2>
@@ -3902,6 +4351,10 @@
             <strong>Outside projects, forgets cleanly</strong>
             <span>No global memory creep. ZOTHEOS doesn't accumulate context about you across casual sessions, only in territories you explicitly commit to.</span>
           </div>
+          <div class="memory-point">
+            <strong>What ZOTHEOS Remembers</strong>
+            <span>Every durable fact it has learned about you, on one screen: visible, searchable, and deletable.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -3918,7 +4371,7 @@
   <section id="console">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="d"></span></span>
         <span class="section-label">Console</span>
       </div>
       <h2 class="section-title reveal">See it think<span class="seal">.</span></h2>
@@ -3926,7 +4379,7 @@
       <div class="console-frame reveal reveal-d2" id="liveConsole">
         <div class="console-titlebar">
           <span class="ts-mark">ZOTHEOS<span class="sub">Console</span></span>
-          <span class="ts-meta">FUSION &middot; v0.9.4</span>
+          <span class="ts-meta">FUSION</span>
         </div>
         <div class="console-body">
           <div class="console-status">
@@ -3934,6 +4387,7 @@
             <span>Evidence: <span class="on">on</span></span>
             <span>Offline: <span class="on">on</span></span>
             <span>AEGIS: <span class="on">active</span></span>
+            <span>Workspace: <span class="on">30 tools</span></span>
           </div>
           <div class="console-query">
             <span class="prompt">&rsaquo;</span><span class="typed" id="typedQuery" data-final="How can AI systems be designed to promote universal peace while protecting individual rights?"></span><span class="caret" id="typedCaret">&#9608;</span>
@@ -3965,14 +4419,15 @@
             <p id="verdictText" data-final="AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally, not as policy afterthoughts, with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals."></p>
           </div>
           <div class="console-meta">
-            <div class="meta-tag is-core"><span class="name">Analyst</span> &middot; Qwen 14B</div>
-            <div class="meta-tag is-core"><span class="name">Humanist</span> &middot; Gemma 9B</div>
-            <div class="meta-tag is-core"><span class="name">Skeptic</span> &middot; Qwen 7B</div>
+            <div class="meta-tag is-core"><span class="name">Analyst</span> &middot; measures</div>
+            <div class="meta-tag is-core"><span class="name">Humanist</span> &middot; witnesses</div>
+            <div class="meta-tag is-core"><span class="name">Skeptic</span> &middot; doubts</div>
           </div>
           <div class="console-meta">
             <div class="meta-tag">Consensus: nuanced</div>
             <div class="meta-tag">Bias: 8/100</div>
             <div class="meta-tag">Reliability: 82/100</div>
+            <div class="meta-tag">Receipt: signed &middot; verify offline</div>
             <div class="meta-tag">Runtime: 9.2s</div>
           </div>
           <div class="console-footer-note">Three perspectives. One synthesis. Every claim attributed.</div>
@@ -3997,10 +4452,46 @@
     <span class="seal-dot"></span>
   </div>
 
+  <section id="mission">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span></span>
+        <span class="section-label">Mission</span>
+      </div>
+      <div class="mission-grid">
+        <div>
+          <h2 class="section-title reveal">
+            The internet became a casino.<br/>This is the library<span class="seal">.</span>
+          </h2>
+          <p class="section-desc reveal reveal-d1">
+            Algorithms reward what keeps you scrolling, not what helps you understand. ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and solve problems without surveillance, manipulation, or paywalls shaping the outcome.
+          </p>
+          <div class="mission-quote reveal reveal-d2">
+            Keep knowledge accessible. Keep privacy intact. Keep the tool reliable even when the internet isn't.
+          </div>
+        </div>
+        <div class="mission-values">
+          <div class="value-item reveal"><strong>Private by default</strong><span>No accounts required. No data harvested as the price of help.</span></div>
+          <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
+          <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
+          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
   <section id="compare">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Comparison</span>
       </div>
       <h2 class="section-title reveal">A different posture entirely<span class="seal">.</span></h2>
@@ -4055,6 +4546,31 @@
           <div role="cell" class="yes">Independent, no investors</div>
           <div role="cell" class="no">VC / ads / API revenue</div>
         </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Proof of offline</div>
+          <div role="cell" class="yes">A ledger and a live canary</div>
+          <div role="cell" class="no">Trust us</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Track record</div>
+          <div role="cell" class="yes">Public prediction ledger, scored</div>
+          <div role="cell" class="no">None</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">When it changes its mind</div>
+          <div role="cell" class="yes">Logged, with the evidence</div>
+          <div role="cell" class="no">Silent updates</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">When it is wrong</div>
+          <div role="cell" class="yes">Corrections with provenance</div>
+          <div role="cell" class="no">Thumbs-down into the void</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="rowheader">Receipts</div>
+          <div role="cell" class="yes">Signed, offline-verifiable</div>
+          <div role="cell" class="no">None</div>
+        </div>
       </div>
     </div>
   </section>
@@ -4070,7 +4586,7 @@
   <section id="faq">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Frequently asked</span>
       </div>
       <h2 class="section-title reveal">Questions worth asking<span class="seal">.</span></h2>
@@ -4095,7 +4611,7 @@
             <span class="faq-q">What hardware do I need?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">A modern CPU with 16 GB RAM runs the smaller core profile usably. A discrete GPU with 12 GB or more VRAM unlocks the full Qwen 14B + Gemma 9B + Qwen 7B trio at conversational speed. Apple Silicon with 24 GB unified memory or better is also a strong target.</div>
+          <div class="faq-a">Almost any machine. ZOTHEOS measures your hardware and seats the council it can honestly run: a full council on a 16GB+ VRAM workstation, a mid council on a 6GB+ VRAM laptop, a light council on an 8GB CPU-only laptop, and a single small voice on pocket-class devices, honestly labeled as one mind rather than a council.</div>
         </details>
         <details class="faq-item">
           <summary>
@@ -4118,6 +4634,34 @@
           </summary>
           <div class="faq-a">A local, tiered knowledge base the three cores can cite. Sources are reranked by a cross-encoder and citations are enforced in the response as <code>[Vault:Source]</code> tags. Strict mode rejects answers that cannot be grounded.</div>
         </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">How do I know it is really offline?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">You can watch it prove itself. ZOTHEOS keeps a network ledger and includes a canary that attempts an outbound call in front of you so you can watch it get refused. Signed result receipts can also be verified with no connection at all.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">What happens when ZOTHEOS is wrong?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">Corrections are first-class. Every user-flagged correction is persisted with provenance in an immutable log and approved or rejected in the open. When the council changes its mind, the full belief-drift chain is kept with the evidence that moved it. Nothing is memory-holed.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">Can kids use ZOTHEOS?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">Yes. Kids Mode ships with age bands, and the same privacy posture applies: everything stays on the device.</div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q">What is the Smart Board?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">An infinite offline AI whiteboard. Ask the council on the canvas, drop in a document, chart data, use your voice, and save the board as a conversation.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -4133,7 +4677,7 @@
   <section class="founder-note" id="founder">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="b"></span></span>
         <span class="section-label">From the founder</span>
       </div>
       <div class="founder-card reveal reveal-d1">
@@ -4171,7 +4715,7 @@
   <section id="waitlist">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span></span>
         <span class="section-label">Be among the first</span>
       </div>
       <div class="waitlist-card reveal reveal-d1">
@@ -4199,7 +4743,7 @@
   <section id="support">
     <div class="section-inner">
       <div class="section-head reveal">
-        <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
+        <span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Support</span>
       </div>
       <h2 class="section-title reveal">Fund the mission<span class="seal">.</span></h2>
@@ -4248,10 +4792,13 @@
       </div>
       <div class="footer-links">
         <a href="#council-story">The council</a>
-        <a href="#mission">Mission</a>
         <a href="#features">Architecture</a>
+        <a href="#proof">Proof</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#devices">Any device</a>
         <a href="#memory">Memory</a>
         <a href="#console">Console</a>
+        <a href="#mission">Mission</a>
         <a href="#compare">Comparison</a>
         <a href="#faq">FAQ</a>
         <a href="#founder">Founder</a>
