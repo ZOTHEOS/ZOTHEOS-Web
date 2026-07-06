@@ -3876,6 +3876,222 @@
       color: var(--cochineal);
       font-weight: 500;
     }
+
+    /* ============================================================
+       UPGRADE PACK 6 — PURE SMOOTHNESS
+       Inertial scrolling, floating instrument header, kinetic
+       headline, living cursor, hero depth parallax, copal embers.
+       Theme tokens untouched; everything honors reduced motion.
+    ============================================================ */
+
+    /* Typography refinement */
+    body {
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+      font-optical-sizing: auto;
+    }
+    .section-title, .hero-headline, .waitlist-card h3, .faq-q { text-wrap: balance; }
+    .hero-sub, .section-desc { text-wrap: pretty; }
+    .hero-stat .num, .meta-tag, .ts-meta, .tier-council, .tier-foot {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Floating instrument header: full-width bar at rest, a glass
+       pill once scrolling; slips away scrolling down, returns up. */
+    header {
+      transition:
+        top 0.5s var(--ease-ceremony),
+        left 0.5s var(--ease-ceremony),
+        right 0.5s var(--ease-ceremony),
+        transform 0.55s var(--ease-ceremony),
+        background 0.4s var(--ease-ceremony),
+        border-radius 0.5s var(--ease-ceremony),
+        border-color 0.4s var(--ease-ceremony),
+        box-shadow 0.4s var(--ease-ceremony);
+    }
+    header.scrolled {
+      top: 12px;
+      left: 16px;
+      right: 16px;
+      border-radius: 100px;
+      border: 1px solid var(--rule-soft);
+      box-shadow:
+        0 10px 32px -14px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(244, 236, 216, 0.05);
+    }
+    header.scrolled .header-inner { height: 58px; }
+    header.header-hidden {
+      transform: translateY(-160%);
+      pointer-events: none;
+    }
+    @media (max-width: 720px) {
+      header.scrolled { top: 8px; left: 10px; right: 10px; }
+      header.scrolled .header-inner { height: 52px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      header { transition: background 0.4s, border-color 0.4s; }
+    }
+
+    /* Day-sign chip in the header: today's tonalpohualli, and a
+       doorway to the mirror. */
+    .day-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 6px;
+      padding: 7px 14px;
+      border: 1px solid var(--rule-soft);
+      border-radius: 100px;
+      background: var(--surface);
+      color: var(--ink-3);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        border-color 0.3s var(--ease-editorial),
+        color 0.3s var(--ease-editorial),
+        transform 0.3s var(--ease-anticipate);
+      white-space: nowrap;
+    }
+    .day-chip::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--cochineal);
+      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.55);
+      flex-shrink: 0;
+    }
+    .day-chip:hover {
+      border-color: rgba(var(--cochineal-rgb), 0.55);
+      color: var(--ink);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 960px) { .day-chip { display: none; } }
+
+    /* Kinetic headline: each letter of "You decide" is its own
+       body, rising into place, then breathing near the cursor. */
+    .hero-headline .hl {
+      display: inline-block;
+      will-change: transform;
+    }
+    .hero-headline.split:not(.kinetic) .hl {
+      opacity: 0;
+      transform: translateY(0.45em) rotate(5deg) scale(0.94);
+    }
+    .hero-headline.kinetic .hl {
+      opacity: 1;
+      transform: none;
+      transition:
+        opacity 0.7s var(--ease-editorial),
+        transform 0.95s var(--ease-anticipate);
+      transition-delay: calc(var(--i) * 55ms);
+    }
+    .hero-headline.settled .hl {
+      transition: transform 0.3s var(--ease-editorial);
+      transition-delay: 0s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-headline.split .hl {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Living cursor: the ring stretches with velocity like a comet,
+       becomes a rotating dashed instrument bezel over the disc, and
+       pings a cochineal ripple on release. */
+    .custom-cursor .cc-ring { will-change: transform; }
+    .custom-cursor.over-disc .cc-ring {
+      border-style: dashed;
+      border-color: #D14F35;
+      width: 40px; height: 40px;
+      animation: cc-bezel 7s linear infinite;
+    }
+    .custom-cursor.over-disc .cc-dot { background: #D14F35; }
+    @keyframes cc-bezel {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .custom-cursor .cc-ring.ping {
+      animation: cc-ping 0.45s var(--ease-editorial);
+    }
+    @keyframes cc-ping {
+      0%   { box-shadow: 0 0 0 0 rgba(209, 79, 53, 0.55); }
+      100% { box-shadow: 0 0 0 22px rgba(209, 79, 53, 0); }
+    }
+
+    /* Hero depth: the disc and headline sink at different rates as
+       you scroll away; a whisper of skew rides scroll velocity. */
+    .hero-disc-wrap, .hero-headline { will-change: transform; }
+    .hero-inner { will-change: transform, opacity; }
+
+    /* Copal embers: sparks rising through the hero like incense. */
+    .hero-embers {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero { position: relative; }
+    .hero-embers span {
+      position: absolute;
+      bottom: -12px;
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--cochineal);
+      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.6);
+      opacity: 0;
+      animation: ember-rise linear infinite;
+    }
+    .hero-embers span:nth-child(1) { left: 8%;  animation-duration: 13s; animation-delay: 0s; }
+    .hero-embers span:nth-child(2) { left: 18%; animation-duration: 17s; animation-delay: 3.2s; }
+    .hero-embers span:nth-child(3) { left: 29%; animation-duration: 11s; animation-delay: 6.1s; }
+    .hero-embers span:nth-child(4) { left: 42%; animation-duration: 19s; animation-delay: 1.4s; }
+    .hero-embers span:nth-child(5) { left: 55%; animation-duration: 14s; animation-delay: 8.3s; }
+    .hero-embers span:nth-child(6) { left: 67%; animation-duration: 16s; animation-delay: 4.7s; }
+    .hero-embers span:nth-child(7) { left: 78%; animation-duration: 12s; animation-delay: 9.6s; }
+    .hero-embers span:nth-child(8) { left: 88%; animation-duration: 18s; animation-delay: 2.5s; }
+    .hero-embers span:nth-child(9) { left: 95%; animation-duration: 15s; animation-delay: 7.2s; }
+    @keyframes ember-rise {
+      0%   { transform: translate3d(0, 0, 0) scale(1);        opacity: 0; }
+      8%   { opacity: 0.75; }
+      50%  { transform: translate3d(14px, -46vh, 0) scale(0.8); opacity: 0.45; }
+      100% { transform: translate3d(-10px, -92vh, 0) scale(0.3); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-embers { display: none; }
+    }
+
+    /* A lone green satellite circles the council: the live signal. */
+    .disc-orbiter {
+      position: absolute;
+      inset: 4.5%;
+      pointer-events: none;
+      animation: orbiter-spin 26s linear infinite;
+      z-index: 3;
+    }
+    .disc-orbiter span {
+      position: absolute;
+      top: -2px; left: 50%;
+      width: 5px; height: 5px;
+      margin-left: -2.5px;
+      border-radius: 50%;
+      background: var(--pulse-green);
+      box-shadow:
+        0 0 10px rgba(var(--pulse-green-rgb), 0.85),
+        0 0 22px rgba(var(--pulse-green-rgb), 0.35);
+    }
+    @keyframes orbiter-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .disc-orbiter { display: none; }
+    }
   </style>
 </head>
 <body class="page-loading">
@@ -3916,6 +4132,7 @@
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav" id="primaryNav">
+        <button class="day-chip" id="dayChip" type="button" title="The obsidian mirror" aria-label="Open the obsidian mirror"></button>
         <a href="#features" data-nav-section="features">Architecture</a>
         <a href="#proof" data-nav-section="proof">Proof</a>
         <a href="#workspace" data-nav-section="workspace">Workspace</a>
@@ -3927,6 +4144,10 @@
   </header>
 
   <section class="hero" id="top">
+    <div class="hero-embers" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
     <div class="hero-inner">
 
       <!-- Council disc -->
@@ -4052,6 +4273,8 @@
             </div>
           </div>
         </div>
+
+        <div class="disc-orbiter" aria-hidden="true"><span></span></div>
       </div>
 
       <h1 class="hero-headline">
@@ -5276,14 +5499,24 @@
       v.play().catch(function () {});
     })();
 
-    /* Header scroll state + scroll-to-top */
+    /* Header scroll state + scroll-to-top + direction-aware hiding:
+       the bar slips away while you read downward and returns the
+       moment you look back up. */
     (function () {
       var h = document.getElementById('header');
       var st = document.getElementById('scrollTop');
+      var lastY = window.scrollY;
       function onScroll() {
         var y = window.scrollY;
         h.classList.toggle('scrolled', y > 40);
         if (st) st.classList.toggle('visible', y > 360);
+        var delta = y - lastY;
+        if (y > 420 && delta > 6) {
+          h.classList.add('header-hidden');
+        } else if (delta < -6 || y <= 420) {
+          h.classList.remove('header-hidden');
+        }
+        lastY = y;
       }
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
@@ -5294,7 +5527,11 @@
       if (!btn) return;
       btn.addEventListener('click', function () {
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        if (window.zSmoothTo && !reduce) {
+          window.zSmoothTo(0);
+        } else {
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        }
       });
     })();
 
@@ -5495,26 +5732,105 @@
           if (!target) return;
           e.preventDefault();
           var top = target.getBoundingClientRect().top + window.scrollY - 72;
-          window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+          if (window.zSmoothTo && !reduce) {
+            window.zSmoothTo(top);
+          } else {
+            window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+          }
           history.replaceState(null, '', href);
         });
       });
     })();
 
-    /* Custom cursor — pointer device + non-touch + non-reduced-motion */
+    /* Inertial scroll — a lightweight lerp over native scrolling.
+       Wheel input feeds a target; a rAF loop eases the real scroll
+       position toward it, so sticky and fixed elements keep working.
+       Keyboard, scrollbar, and touch stay native and resync it. */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var fine = window.matchMedia('(pointer: fine)').matches;
+      if (reduce || !fine) return;
+      // The engine does its own easing; CSS smooth scrolling would
+      // fight the per-frame scrollTo calls and freeze the page.
+      document.documentElement.style.scrollBehavior = 'auto';
+      var target = window.scrollY;
+      var current = target;
+      var animating = false;
+      var lastT = null;
+      function maxScroll() {
+        return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      }
+      function loop(t) {
+        if (lastT === null) lastT = t;
+        var dt = Math.min((t - lastT) / 1000, 0.1);
+        lastT = t;
+        // Time-based easing: identical feel at 60Hz, 120Hz, or a
+        // throttled tab. ~7.5/s decay reads as calm inertia.
+        var alpha = 1 - Math.exp(-dt * 7.5);
+        current += (target - current) * alpha;
+        if (Math.abs(target - current) < 0.4) {
+          current = target;
+          animating = false;
+          lastT = null;
+        }
+        window.scrollTo(0, current);
+        if (animating) requestAnimationFrame(loop);
+      }
+      function kick() {
+        if (!animating) {
+          animating = true;
+          lastT = null;
+          current = window.scrollY;
+          requestAnimationFrame(loop);
+        }
+      }
+      window.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) return;
+        if (document.body.classList.contains('mirror-open')) return;
+        e.preventDefault();
+        var d = e.deltaY * (e.deltaMode === 1 ? 16 : 1);
+        target = Math.max(0, Math.min(maxScroll(), target + d));
+        kick();
+      }, { passive: false });
+      window.addEventListener('scroll', function () {
+        if (!animating) { target = window.scrollY; current = target; }
+      }, { passive: true });
+      window.zSmoothTo = function (y) {
+        target = Math.max(0, Math.min(maxScroll(), y));
+        kick();
+      };
+    })();
+
+    /* Custom cursor v2 — the ring stretches with velocity like a
+       comet, turns into a rotating instrument bezel over the disc,
+       and pings on release. */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var coarse = window.matchMedia('(hover: none)').matches;
       if (reduce || coarse) return;
       var c = document.getElementById('customCursor');
       if (!c) return;
+      var ring = c.querySelector('.cc-ring');
       document.body.classList.add('has-custom-cursor');
       var tx = -100, ty = -100, cx = -100, cy = -100;
       var raf = null;
       function loop() {
-        cx += (tx - cx) * 0.30;
-        cy += (ty - cy) * 0.30;
+        var dx = tx - cx, dy = ty - cy;
+        cx += dx * 0.30;
+        cy += dy * 0.30;
         c.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+        if (ring) {
+          if (c.classList.contains('over-disc') || c.classList.contains('hover-link') || c.classList.contains('hover-text')) {
+            ring.style.transform = '';
+          } else {
+            var sp = Math.min(Math.sqrt(dx * dx + dy * dy), 56);
+            var s = 1 + sp / 120;
+            var ang = Math.atan2(dy, dx) * 180 / Math.PI;
+            ring.style.transform =
+              'translate(-50%, -50%) rotate(' + ang.toFixed(1) + 'deg) scale(' +
+              s.toFixed(3) + ',' + (1 / Math.sqrt(s)).toFixed(3) + ')';
+          }
+        }
         raf = requestAnimationFrame(loop);
       }
       document.addEventListener('mousemove', function (e) {
@@ -5523,19 +5839,125 @@
         if (!raf) loop();
       }, { passive: true });
       document.addEventListener('mousedown', function () { c.classList.add('down'); });
-      document.addEventListener('mouseup',   function () { c.classList.remove('down'); });
+      document.addEventListener('mouseup', function () {
+        c.classList.remove('down');
+        if (ring) {
+          ring.classList.remove('ping');
+          void ring.offsetWidth;
+          ring.classList.add('ping');
+          setTimeout(function () { ring.classList.remove('ping'); }, 500);
+        }
+      });
       document.addEventListener('mouseleave', function () { c.classList.remove('ready'); });
 
       function applyState(target) {
-        c.classList.remove('hover-link', 'hover-text');
-        if (!target) return;
-        if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
+        c.classList.remove('hover-link', 'hover-text', 'over-disc');
+        if (!target || !target.closest) return;
+        if (target.closest('.hero-disc-wrap')) {
+          c.classList.add('over-disc');
+        } else if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
           c.classList.add('hover-link');
         } else if (target.closest('p, h1, h2, h3, h4, span, li, code, .faq-q, .console-verdict p')) {
           c.classList.add('hover-text');
         }
       }
       document.addEventListener('mouseover', function (e) { applyState(e.target); });
+    })();
+
+    /* Kinetic headline — split "You decide" into letters that rise
+       into place after the intro, then lean toward the cursor. */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var head = document.querySelector('.hero-headline');
+      var glow = head ? head.querySelector('.glow') : null;
+      if (!head || !glow) return;
+      var text = glow.textContent;
+      glow.textContent = '';
+      var letters = [];
+      for (var i = 0; i < text.length; i++) {
+        var s = document.createElement('span');
+        s.className = 'hl';
+        s.style.setProperty('--i', String(i));
+        s.innerHTML = text[i] === ' ' ? '&nbsp;' : text[i];
+        glow.appendChild(s);
+        letters.push(s);
+      }
+      head.classList.add('split');
+      function arm() {
+        head.classList.add('kinetic');
+        setTimeout(function () { head.classList.add('settled'); }, text.length * 55 + 1100);
+      }
+      if (reduce) { arm(); return; }
+      if (!document.body.classList.contains('page-loading')) {
+        arm();
+      } else {
+        var mo = new MutationObserver(function () {
+          if (!document.body.classList.contains('page-loading')) {
+            arm();
+            mo.disconnect();
+          }
+        });
+        mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        setTimeout(arm, 11000);
+      }
+      // Proximity lean: letters lift as the cursor passes over them.
+      if (window.matchMedia('(hover: none)').matches) return;
+      var raf = null;
+      head.addEventListener('mousemove', function (e) {
+        if (!head.classList.contains('settled') || raf) return;
+        raf = requestAnimationFrame(function () {
+          raf = null;
+          for (var i = 0; i < letters.length; i++) {
+            var r = letters[i].getBoundingClientRect();
+            var d = Math.abs(e.clientX - (r.left + r.width / 2));
+            var lift = Math.max(0, 12 - d / 14);
+            letters[i].style.transform = lift > 0.5 ? 'translateY(' + (-lift).toFixed(1) + 'px)' : '';
+          }
+        });
+      });
+      head.addEventListener('mouseleave', function () {
+        letters.forEach(function (l) { l.style.transform = ''; });
+      });
+    })();
+
+    /* Hero depth — the disc and headline sink at different speeds
+       as you scroll away; scroll velocity adds a whisper of skew. */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      var wrap = document.querySelector('.hero-disc-wrap');
+      var head = document.querySelector('.hero-headline');
+      var inner = document.querySelector('.hero-inner');
+      if (!wrap || !inner) return;
+      var lastY = window.scrollY;
+      var vel = 0;
+      var running = false;
+      function tick() {
+        var y = window.scrollY;
+        vel += ((y - lastY) - vel) * 0.14;
+        lastY = y;
+        var vh = window.innerHeight;
+        if (y < vh * 1.25 && !document.body.classList.contains('page-loading')) {
+          wrap.style.transitionDelay = '0s';
+          wrap.style.transform = 'translate3d(0,' + (y * 0.30).toFixed(1) + 'px,0)';
+          if (head) {
+            head.style.transitionDelay = '0s';
+            head.style.transform = 'translate3d(0,' + (y * 0.12).toFixed(1) + 'px,0)';
+          }
+          inner.style.opacity = Math.max(0, 1 - y / (vh * 0.95)).toFixed(3);
+          var sk = Math.max(-1.1, Math.min(1.1, vel * 0.018));
+          inner.style.transform = 'skewY(' + sk.toFixed(3) + 'deg)';
+        }
+        if (Math.abs(vel) > 0.05 || y !== window.scrollY) {
+          requestAnimationFrame(tick);
+        } else {
+          running = false;
+          inner.style.transform = '';
+        }
+      }
+      window.addEventListener('scroll', function () {
+        if (!running) { running = true; requestAnimationFrame(tick); }
+      }, { passive: true });
     })();
 
     /* Theme picker — animated cochineal wipe from swatch */
@@ -5905,6 +6327,10 @@
       if (mday) {
         mday.innerHTML = 'tonalpohualli &middot; today is <b>' + number + ' ' + sign[0] + '</b>, ' + sign[1];
       }
+      var chip = document.getElementById('dayChip');
+      if (chip) {
+        chip.textContent = number + ' ' + sign[0];
+      }
     })();
 
     /* The Obsidian Mirror */
@@ -6012,6 +6438,8 @@
       }
 
       btn.addEventListener('click', openMirror);
+      var chip = document.getElementById('dayChip');
+      if (chip) chip.addEventListener('click', openMirror);
       ov.addEventListener('click', closeMirror);
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeMirror();
