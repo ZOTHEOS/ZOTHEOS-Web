@@ -3943,6 +3943,113 @@
     }
 
     /* ============================================================
+       UPGRADE PACK 7 — TLALOC'S RAIN + CINEMATIC MODE
+       Two-layer parallax rain (far behind content, near on the
+       glass), plus a master effects toggle that governs every
+       ambient layer. Rain is theme-aware and stays behind text.
+    ============================================================ */
+
+    /* Rain canvases: back sits behind content, front reads as drops
+       on glass in front of it. Both ignore pointer input. */
+    .rain-layer {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .rain-back  { z-index: 1;  opacity: 0.9; }
+    .rain-front { z-index: 49; opacity: 0.5; }
+    [data-theme="codex"] .rain-back  { opacity: 0.7; }
+    [data-theme="codex"] .rain-front { opacity: 0.4; }
+
+    /* A wet mist gradient pooling at the foot of the hero. */
+    .hero-mist {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 30%;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(2, 16, 30, 0.0) 40%,
+        rgba(2, 16, 30, 0.28) 100%);
+    }
+    [data-theme="codex"] .hero-mist {
+      background: linear-gradient(180deg, transparent 0%, rgba(120, 90, 50, 0.10) 100%);
+    }
+    [data-theme="skeleton"] .hero-mist {
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 100%);
+    }
+
+    /* Effects toggle — grouped with the theme picker. A small glass
+       control whose two drops fall while effects are live. */
+    .fx-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      margin-left: 8px;
+      border-radius: 50%;
+      border: 1px solid var(--rule-soft);
+      background: var(--surface);
+      color: var(--ink-3);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition:
+        border-color 0.3s var(--ease-editorial),
+        color 0.3s var(--ease-editorial),
+        transform 0.3s var(--ease-anticipate);
+    }
+    .fx-toggle:hover {
+      border-color: rgba(var(--cochineal-rgb), 0.55);
+      color: var(--ink);
+      transform: scale(1.06);
+    }
+    .fx-toggle svg { width: 15px; height: 15px; display: block; }
+    .fx-toggle .fx-drop {
+      transform-origin: center;
+    }
+    body:not(.fx-off) .fx-toggle {
+      color: var(--cochineal);
+      border-color: rgba(var(--cochineal-rgb), 0.40);
+    }
+    body:not(.fx-off) .fx-toggle .fx-drop-a { animation: fx-fall 1.6s linear infinite; }
+    body:not(.fx-off) .fx-toggle .fx-drop-b { animation: fx-fall 1.6s linear infinite 0.8s; }
+    @keyframes fx-fall {
+      0%   { transform: translateY(-4px); opacity: 0; }
+      30%  { opacity: 1; }
+      100% { transform: translateY(6px); opacity: 0; }
+    }
+    /* Struck-through slash when effects are off. */
+    .fx-toggle .fx-slash {
+      opacity: 0;
+      transition: opacity 0.3s var(--ease-editorial);
+    }
+    body.fx-off .fx-toggle .fx-slash { opacity: 1; }
+    body.fx-off .fx-toggle .fx-drop { opacity: 0.45; }
+    @media (prefers-reduced-motion: reduce) {
+      .fx-toggle .fx-drop { animation: none !important; }
+    }
+
+    /* Cinematic mode gate — one switch quiets every ambient layer. */
+    body.fx-off .rain-layer,
+    body.fx-off .aurora,
+    body.fx-off .cursor-light,
+    body.fx-off .hero-embers,
+    body.fx-off .disc-orbiter,
+    body.fx-off .hero-mist {
+      display: none !important;
+    }
+    body.fx-off .disc-outer { animation: none !important; }
+    body.fx-off .grain { opacity: 0.08; }
+
+    @media (max-width: 720px) {
+      .rain-front { display: none; }
+    }
+
+    /* ============================================================
        UPGRADE PACK 6 — PURE SMOOTHNESS
        Inertial scrolling, floating instrument header, kinetic
        headline, living cursor, hero depth parallax, copal embers.
@@ -4164,6 +4271,8 @@
   <a class="skip-link" href="#features">Skip to content</a>
   <div class="vignette" aria-hidden="true"></div>
   <div class="aurora" aria-hidden="true"></div>
+  <canvas class="rain-layer rain-back" id="rainBack" aria-hidden="true"></canvas>
+  <canvas class="rain-layer rain-front" id="rainFront" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-light" aria-hidden="true" id="cursorLight"></div>
   <div class="custom-cursor" aria-hidden="true" id="customCursor">
@@ -4191,6 +4300,13 @@
           <button class="theme-swatch" type="button" data-set="codex" aria-pressed="false" aria-label="Codex parchment" title="Codex parchment"></button>
           <button class="theme-swatch" type="button" data-set="skeleton" aria-pressed="false" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
         </div>
+        <button class="fx-toggle" id="fxToggle" type="button" aria-pressed="true" aria-label="Toggle motion and rain effects" title="Motion & rain effects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path class="fx-drop fx-drop-a" d="M8 4 C8 4 5.5 7.5 5.5 9.4 A2.5 2.5 0 0 0 10.5 9.4 C10.5 7.5 8 4 8 4 Z" fill="currentColor" stroke="none"/>
+            <path class="fx-drop fx-drop-b" d="M16 6 C16 6 13.5 9.5 13.5 11.4 A2.5 2.5 0 0 0 18.5 11.4 C18.5 9.5 16 6 16 6 Z" fill="currentColor" stroke="none"/>
+            <line class="fx-slash" x1="4" y1="20" x2="20" y2="4" stroke-width="1.8"/>
+          </svg>
+        </button>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
         <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
@@ -4213,6 +4329,7 @@
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span>
     </div>
+    <div class="hero-mist" aria-hidden="true"></div>
     <div class="hero-inner">
 
       <!-- Council disc -->
@@ -6538,6 +6655,142 @@
           disc.style.setProperty('--sy', Math.max(-30, Math.min(130, y)) + '%');
         });
       }
+    })();
+
+    /* Effects manager + Tlaloc's rain.
+       One master switch governs every ambient layer. Rain is two
+       parallax canvases, theme-aware, paused when hidden or off. */
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var btn = document.getElementById('fxToggle');
+      var back = document.getElementById('rainBack');
+      var front = document.getElementById('rainFront');
+      var bctx = back ? back.getContext('2d') : null;
+      var fctx = front ? front.getContext('2d') : null;
+      // The near layer is CSS-hidden below 720px; mirror that in JS so
+      // narrow screens never simulate or draw an invisible canvas.
+      var frontOn = true;
+
+      var KEY = 'zotheos_fx';
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      // Default ON, unless the OS asks for reduced motion and the
+      // visitor has not chosen otherwise.
+      var on = stored ? (stored === 'on') : !reduce;
+
+      var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      var W = 0, H = 0;
+      var backDrops = [], frontDrops = [];
+      var raf = null, running = false;
+
+      function themeTint() {
+        var t = document.documentElement.getAttribute('data-theme') || '';
+        // cool silver on dark worlds, warm shadow on parchment
+        return t === 'codex' ? [70, 55, 42] : [190, 206, 222];
+      }
+      var COCH = [209, 79, 53];
+
+      function makeDrops(n, cfg) {
+        var arr = [];
+        for (var i = 0; i < n; i++) {
+          arr.push(spawn(cfg, true));
+        }
+        return arr;
+      }
+      function spawn(cfg, anywhere) {
+        return {
+          x: Math.random() * (W + 200) - 100,
+          y: anywhere ? Math.random() * H : -20 - Math.random() * 120,
+          len: cfg.len[0] + Math.random() * (cfg.len[1] - cfg.len[0]),
+          spd: cfg.spd[0] + Math.random() * (cfg.spd[1] - cfg.spd[0]),
+          w: cfg.w[0] + Math.random() * (cfg.w[1] - cfg.w[0]),
+          a: cfg.a[0] + Math.random() * (cfg.a[1] - cfg.a[0]),
+          coch: Math.random() < 0.07
+        };
+      }
+      var BACK_CFG  = { len: [14, 30], spd: [7, 12], w: [0.6, 1.1], a: [0.14, 0.34] };
+      var FRONT_CFG = { len: [26, 52], spd: [14, 22], w: [1.1, 2.0], a: [0.10, 0.24] };
+      var WIND = 1.7;
+
+      function resize() {
+        W = window.innerWidth; H = window.innerHeight;
+        frontOn = W > 720;
+        [back, front].forEach(function (c) {
+          if (!c) return;
+          c.width = Math.floor(W * dpr);
+          c.height = Math.floor(H * dpr);
+        });
+        if (bctx) bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (fctx) { fctx.setTransform(dpr, 0, 0, dpr, 0, 0); fctx.clearRect(0, 0, W, H); }
+        var backN = Math.round(Math.min(240, W / 7));
+        backDrops = makeDrops(backN, BACK_CFG);
+        frontDrops = frontOn ? makeDrops(Math.round(Math.min(70, W / 26)), FRONT_CFG) : [];
+      }
+
+      function drawLayer(ctx, drops, cfg, tint) {
+        ctx.clearRect(0, 0, W, H);
+        ctx.lineCap = 'round';
+        for (var i = 0; i < drops.length; i++) {
+          var d = drops[i];
+          d.y += d.spd;
+          d.x += WIND * (d.spd / 12);
+          if (d.y - d.len > H || d.x - 100 > W) {
+            drops[i] = spawn(cfg, false);
+            continue;
+          }
+          var col = d.coch ? COCH : tint;
+          ctx.strokeStyle = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',' + d.a + ')';
+          ctx.lineWidth = d.w;
+          ctx.beginPath();
+          ctx.moveTo(d.x, d.y);
+          ctx.lineTo(d.x - WIND * (d.len / 6), d.y - d.len);
+          ctx.stroke();
+        }
+      }
+
+      function loop() {
+        var tint = themeTint();
+        if (bctx) drawLayer(bctx, backDrops, BACK_CFG, tint);
+        if (fctx && frontOn) drawLayer(fctx, frontDrops, FRONT_CFG, tint);
+        if (running) raf = requestAnimationFrame(loop);
+      }
+      function start() {
+        if (running || !bctx) return;
+        if (document.hidden) return;
+        running = true;
+        // Always re-init so a resize that happened while off is picked
+        // up, never leaving the canvas at stale dimensions.
+        resize();
+        raf = requestAnimationFrame(loop);
+      }
+      function stop() {
+        running = false;
+        if (raf) { cancelAnimationFrame(raf); raf = null; }
+        if (bctx) bctx.clearRect(0, 0, W, H);
+        if (fctx) fctx.clearRect(0, 0, W, H);
+      }
+
+      function apply(next) {
+        on = next;
+        document.body.classList.toggle('fx-off', !on);
+        if (btn) btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        if (on) start(); else stop();
+      }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          apply(!on);
+          try { localStorage.setItem(KEY, on ? 'on' : 'off'); } catch (e) {}
+        });
+      }
+      window.addEventListener('resize', function () { if (running) resize(); });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop();
+        else if (on) start();
+      });
+      // Rain reads the theme fresh each frame, so theme switches just work.
+
+      apply(on);
     })();
 
     /* Waitlist */
