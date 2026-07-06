@@ -6662,12 +6662,14 @@
        parallax canvases, theme-aware, paused when hidden or off. */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
       var btn = document.getElementById('fxToggle');
       var back = document.getElementById('rainBack');
       var front = document.getElementById('rainFront');
       var bctx = back ? back.getContext('2d') : null;
       var fctx = front ? front.getContext('2d') : null;
+      // The near layer is CSS-hidden below 720px; mirror that in JS so
+      // narrow screens never simulate or draw an invisible canvas.
+      var frontOn = true;
 
       var KEY = 'zotheos_fx';
       var stored = null;
@@ -6712,17 +6714,17 @@
 
       function resize() {
         W = window.innerWidth; H = window.innerHeight;
+        frontOn = W > 720;
         [back, front].forEach(function (c) {
           if (!c) return;
           c.width = Math.floor(W * dpr);
           c.height = Math.floor(H * dpr);
         });
         if (bctx) bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        if (fctx) fctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (fctx) { fctx.setTransform(dpr, 0, 0, dpr, 0, 0); fctx.clearRect(0, 0, W, H); }
         var backN = Math.round(Math.min(240, W / 7));
-        var frontN = Math.round(Math.min(70, W / 26));
         backDrops = makeDrops(backN, BACK_CFG);
-        frontDrops = makeDrops(frontN, FRONT_CFG);
+        frontDrops = frontOn ? makeDrops(Math.round(Math.min(70, W / 26)), FRONT_CFG) : [];
       }
 
       function drawLayer(ctx, drops, cfg, tint) {
@@ -6749,14 +6751,16 @@
       function loop() {
         var tint = themeTint();
         if (bctx) drawLayer(bctx, backDrops, BACK_CFG, tint);
-        if (fctx) drawLayer(fctx, frontDrops, FRONT_CFG, tint);
+        if (fctx && frontOn) drawLayer(fctx, frontDrops, FRONT_CFG, tint);
         if (running) raf = requestAnimationFrame(loop);
       }
       function start() {
         if (running || !bctx) return;
         if (document.hidden) return;
         running = true;
-        if (!W) resize();
+        // Always re-init so a resize that happened while off is picked
+        // up, never leaving the canvas at stale dimensions.
+        resize();
         raf = requestAnimationFrame(loop);
       }
       function stop() {
