@@ -3636,12 +3636,14 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .tier-fill { transition: none; width: var(--w); }
+      .instrument-card, .ws-tile { transition: none; }
+      .instrument-card:hover, .ws-tile:hover { transform: none; }
     }
   </style>
 </head>
 <body class="page-loading">
 
-  <a class="skip-link" href="#mission">Skip to content</a>
+  <a class="skip-link" href="#features">Skip to content</a>
   <div class="vignette" aria-hidden="true"></div>
   <div class="aurora" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
@@ -4188,7 +4190,7 @@
             <span class="ws-tile">Smart Board</span>
             <span class="ws-tile">Planner</span>
             <span class="ws-tile">Ideas</span>
-            <span class="ws-tile is-more">&hellip;</span>
+            <span class="ws-tile is-more" aria-hidden="true">&hellip;</span>
           </div>
         </div>
         <div class="ws-zone is-trust">
@@ -4221,7 +4223,7 @@
             <span class="ws-tile">Kids Mode</span>
             <span class="ws-tile">Model Setup</span>
             <span class="ws-tile">Device Health</span>
-            <span class="ws-tile is-more">&hellip;</span>
+            <span class="ws-tile is-more" aria-hidden="true">&hellip;</span>
           </div>
         </div>
       </div>
@@ -4625,7 +4627,7 @@
             <span class="faq-q">How is ZOTHEOS funded?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Independently. No venture capital, no investors, no advertising. Development is self-funded by the founder with optional supporter donations via PayPal, Stripe, or Gumroad. The architecture choice is the funding choice; the product cannot become a surveillance vehicle later because there is no investor pressure to make it one.</div>
+          <div class="faq-a">Independently. No venture capital, no investors, no advertising. Development is self-funded by the founder with optional supporter donations via PayPal, Stripe, or Gumroad. The architecture choice is the funding choice; there is no investor pressure pushing the product toward surveillance.</div>
         </details>
         <details class="faq-item">
           <summary>
