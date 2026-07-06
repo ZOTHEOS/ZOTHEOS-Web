@@ -841,11 +841,45 @@
       position: relative;
       aspect-ratio: 1 / 1;
       width: 100%;
-      max-width: 380px;
-      margin: 0 auto 28px;
+      max-width: 340px;
+      margin: 0 auto 30px;
     }
     @media (max-width: 640px) {
-      .hero-disc-wrap { max-width: 280px; margin-bottom: 20px; }
+      .hero-disc-wrap { max-width: 250px; margin-bottom: 22px; }
+    }
+
+    /* Hero eyebrow — a thin editorial rule with the site's promise,
+       giving the composition a top line above the headline. */
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 auto 20px;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      width: 34px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(var(--cochineal-rgb), 0.7));
+    }
+    .hero-eyebrow::after {
+      background: linear-gradient(90deg, rgba(var(--cochineal-rgb), 0.7), transparent);
+    }
+    .hero-eyebrow .he-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--cochineal);
+      box-shadow: 0 0 10px rgba(var(--cochineal-rgb), 0.7);
+    }
+    @media (max-width: 480px) {
+      .hero-eyebrow { font-size: 8.5px; letter-spacing: 0.30em; gap: 10px; }
+      .hero-eyebrow::before, .hero-eyebrow::after { width: 20px; }
     }
     .hero-disc { width: 100%; height: 100%; }
     .hero-disc svg { width: 100%; height: 100%; display: block; }
@@ -983,7 +1017,7 @@
        the whole viewport; tightened margin below for closer CTAs.
     ============================================================ */
     .hero-headline {
-      margin: 0 0 22px 0;
+      margin: 0 0 24px 0;
       font-family: var(--serif);
       font-weight: 400;
       font-style: italic;
@@ -993,16 +1027,16 @@
     }
     .hero-headline .l1 {
       display: block;
-      font-size: clamp(28px, 4.4vw, 50px);
-      color: var(--ink-2);
-      opacity: 0.86;
-      line-height: 1.1;
-      margin-bottom: 6px;
+      font-size: clamp(30px, 4.6vw, 54px);
+      color: var(--ink);
+      opacity: 0.95;
+      line-height: 1.08;
+      margin-bottom: 2px;
     }
     .hero-headline .l2 {
       display: block;
-      font-size: clamp(58px, 10vw, 120px);
-      line-height: 0.96;
+      font-size: clamp(62px, 10.6vw, 128px);
+      line-height: 0.94;
       margin-top: 0;
     }
     .hero-headline .glow {
@@ -1027,6 +1061,42 @@
       color: var(--ink-2);
       max-width: 580px;
       margin: 0 auto 30px;
+    }
+
+    /* Descend cue — an editorial doorway into the council story. */
+    .hero-descend {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 46px;
+      color: var(--ink-3);
+      transition: color 0.3s var(--ease-editorial);
+    }
+    .hero-descend:hover { color: var(--ink); }
+    .hero-descend .hd-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+    }
+    .hero-descend .hd-glyph {
+      width: 22px; height: 28px;
+      display: inline-flex;
+      color: var(--cochineal);
+      animation: descend-bob 2.4s var(--ease-ceremony) infinite;
+    }
+    .hero-descend:hover .hd-glyph { color: var(--cochineal); }
+    .hero-descend .hd-glyph svg { width: 100%; height: 100%; }
+    @keyframes descend-bob {
+      0%, 100% { transform: translateY(0); opacity: 0.55; }
+      50%      { transform: translateY(6px); opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-descend .hd-glyph { animation: none !important; }
+    }
+    @media (max-width: 640px) {
+      .hero-descend { margin-top: 34px; }
     }
 
     /* ============================================================
@@ -2111,35 +2181,28 @@
       }
     }
 
-    /* Section-title letter shimmer on first reveal */
-    .section-title.visible .seal,
-    .hero-headline .glow {
-      position: relative;
+    /* Headline glow breathes via text-shadow only — no bounding box,
+       so it never renders as a panel behind the letters. */
+    .hero-headline .glow { position: relative; }
+    .hero-headline.settled .glow {
+      animation: glow-breathe 5.5s var(--ease-ceremony) infinite;
     }
-    .hero-headline .glow::after {
-      content: '';
-      position: absolute;
-      left: -6%; right: -6%; top: 0; bottom: 0;
-      background: linear-gradient(110deg,
-        transparent 30%,
-        rgba(244, 236, 216, 0.45) 50%,
-        transparent 70%);
-      background-size: 250% 100%;
-      background-position: 200% 0;
-      mix-blend-mode: overlay;
-      pointer-events: none;
-      animation: glow-sweep 6.5s ease-in-out 1.2s infinite;
-      border-radius: 6px;
-    }
-    [data-theme="codex"] .hero-headline .glow::after { mix-blend-mode: multiply; }
-    @keyframes glow-sweep {
-      0%   { background-position: 200% 0; opacity: 0; }
-      20%  { opacity: 0.9; }
-      60%  { background-position: -100% 0; opacity: 0; }
-      100% { background-position: -100% 0; opacity: 0; }
+    @keyframes glow-breathe {
+      0%, 100% {
+        text-shadow:
+          0 0 80px rgba(var(--cochineal-rgb), 0.55),
+          0 0 32px rgba(var(--cochineal-rgb), 0.48),
+          0 0 12px rgba(var(--cochineal-rgb), 0.40);
+      }
+      50% {
+        text-shadow:
+          0 0 110px rgba(var(--cochineal-rgb), 0.85),
+          0 0 44px rgba(var(--cochineal-rgb), 0.62),
+          0 0 16px rgba(var(--cochineal-rgb), 0.52);
+      }
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-headline .glow::after { animation: none !important; }
+      .hero-headline.settled .glow { animation: none !important; }
     }
 
     /* Hero stats — animated counters with separator hairlines    */
@@ -2524,10 +2587,12 @@
     }
     body:not(.page-loading) header { transition-delay: 0.0s; }
     body:not(.page-loading) .hero-disc-wrap   { transition-delay: 0.15s; }
-    body:not(.page-loading) .hero-headline    { transition-delay: 0.30s; }
-    body:not(.page-loading) .hero-sub         { transition-delay: 0.45s; }
-    body:not(.page-loading) .hero-actions     { transition-delay: 0.55s; }
-    body:not(.page-loading) .hero-stats       { transition-delay: 0.70s; }
+    body:not(.page-loading) .hero-eyebrow     { transition-delay: 0.28s; }
+    body:not(.page-loading) .hero-headline    { transition-delay: 0.38s; }
+    body:not(.page-loading) .hero-sub         { transition-delay: 0.52s; }
+    body:not(.page-loading) .hero-actions     { transition-delay: 0.62s; }
+    body:not(.page-loading) .hero-stats       { transition-delay: 0.76s; }
+    body:not(.page-loading) .hero-descend     { transition-delay: 0.90s; }
     @media (prefers-reduced-motion: reduce) {
       body.page-loading .hero-inner > *,
       body.page-loading header { opacity: 1; transform: none; }
@@ -4277,6 +4342,11 @@
         <div class="disc-orbiter" aria-hidden="true"><span></span></div>
       </div>
 
+      <div class="hero-eyebrow reveal">
+        <span class="he-dot" aria-hidden="true"></span>
+        Offline ethical intelligence
+      </div>
+
       <h1 class="hero-headline">
         <span class="l1">Three minds reason.</span>
         <span class="l2"><span class="glow">You decide</span><span class="seal">.</span></span>
@@ -4305,6 +4375,16 @@
         <div class="hero-stat"><div class="num" data-count="100" data-suffix="%">100%</div><div class="label">Local inference</div></div>
         <div class="hero-stat"><div class="num" data-count="0">0</div><div class="label">Data collected</div></div>
       </div>
+
+      <a class="hero-descend reveal" href="#council-story" aria-label="Descend to the council">
+        <span class="hd-label">Convene the council</span>
+        <span class="hd-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 L12 21" />
+            <path d="M5 14 L12 21 L19 14" />
+          </svg>
+        </span>
+      </a>
 
     </div>
   </section>
