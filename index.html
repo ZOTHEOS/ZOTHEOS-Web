@@ -4049,6 +4049,42 @@
       .rain-front { display: none; }
     }
 
+    /* Rain-amount control — a signal-strength stepper next to the
+       master toggle. Three bars; lit count is the intensity. */
+    .rain-amount {
+      display: inline-flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 2px;
+      width: 30px; height: 30px;
+      margin-left: 6px;
+      padding: 0 7px;
+      border-radius: 50%;
+      border: 1px solid var(--rule-soft);
+      background: var(--surface);
+      cursor: pointer;
+      transition:
+        border-color 0.3s var(--ease-editorial),
+        transform 0.3s var(--ease-anticipate),
+        opacity 0.3s var(--ease-editorial);
+    }
+    .rain-amount:hover {
+      border-color: rgba(var(--cochineal-rgb), 0.55);
+      transform: scale(1.06);
+    }
+    .rain-amount .ra-bar {
+      width: 3px;
+      border-radius: 1px;
+      background: var(--ink-4);
+      transition: background-color 0.25s var(--ease-editorial), height 0.25s var(--ease-anticipate);
+    }
+    .rain-amount .ra-bar:nth-child(1) { height: 5px; }
+    .rain-amount .ra-bar:nth-child(2) { height: 8px; }
+    .rain-amount .ra-bar:nth-child(3) { height: 11px; }
+    .rain-amount .ra-bar.lit { background: var(--cochineal); }
+    /* When effects are off, the intensity control is inert. */
+    body.fx-off .rain-amount { opacity: 0.4; pointer-events: none; }
+
     /* ============================================================
        UPGRADE PACK 6 — PURE SMOOTHNESS
        Inertial scrolling, floating instrument header, kinetic
@@ -4306,6 +4342,11 @@
             <path class="fx-drop fx-drop-b" d="M16 6 C16 6 13.5 9.5 13.5 11.4 A2.5 2.5 0 0 0 18.5 11.4 C18.5 9.5 16 6 16 6 Z" fill="currentColor" stroke="none"/>
             <line class="fx-slash" x1="4" y1="20" x2="20" y2="4" stroke-width="1.8"/>
           </svg>
+        </button>
+        <button class="rain-amount" id="rainAmount" type="button" aria-label="Rain intensity" title="Rain intensity">
+          <span class="ra-bar" aria-hidden="true"></span>
+          <span class="ra-bar" aria-hidden="true"></span>
+          <span class="ra-bar" aria-hidden="true"></span>
         </button>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
@@ -5750,18 +5791,16 @@
     (function () {
       var bar = document.getElementById('scrollProgress');
       if (!bar) return;
-      function update() {
-        var h = document.documentElement;
-        var scrollable = (h.scrollHeight - window.innerHeight);
-        if (scrollable <= 0) {
-          bar.style.width = '0%';
-          bar.classList.remove('active');
-          return;
-        }
+      var raf = null;
+      function paint() {
+        raf = null;
+        var scrollable = (window.zMetrics && window.zMetrics.max) || 0;
+        if (scrollable <= 0) { bar.style.width = '0%'; bar.classList.remove('active'); return; }
         var p = (window.scrollY / scrollable) * 100;
         bar.style.width = Math.max(0, Math.min(100, p)) + '%';
         bar.classList.toggle('active', window.scrollY > 60);
       }
+      function update() { if (raf == null) raf = requestAnimationFrame(paint); }
       window.addEventListener('scroll', update, { passive: true });
       window.addEventListener('resize', update);
       update();
@@ -5939,31 +5978,59 @@
       });
     })();
 
-    /* Inertial scroll — a lightweight lerp over native scrolling.
-       Wheel input feeds a target; a rAF loop eases the real scroll
-       position toward it, so sticky and fixed elements keep working.
-       Keyboard, scrollbar, and touch stay native and resync it. */
+    /* Shared layout-metrics cache — geometry read once here (on load,
+       resize, and content-size changes) so no scroll handler forces a
+       synchronous reflow per frame. This is the core of the no-lag
+       pass: scroll listeners do math on cached numbers, not the DOM. */
+    (function () {
+      var m = { max: 0, vh: 0 };
+      window.zMetrics = m;
+      var pending = false;
+      function measure() {
+        pending = false;
+        m.vh = window.innerHeight;
+        m.max = Math.max(0, document.documentElement.scrollHeight - m.vh);
+      }
+      function schedule() {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(measure);
+      }
+      window.zRemeasure = schedule;
+      window.addEventListener('resize', schedule, { passive: true });
+      window.addEventListener('load', schedule);
+      if (window.ResizeObserver) {
+        // Sections using content-visibility change height as they render;
+        // this keeps max in sync without touching the DOM on scroll.
+        new ResizeObserver(schedule).observe(document.body);
+      }
+      measure();
+    })();
+
+    /* Inertial scroll — a snappy lerp over native scrolling. Tuned for
+       immediacy: it tracks wheel input within a couple of frames, only
+       smoothing the discrete steps. Bails entirely when effects are off
+       (fx-off) so that mode is pure native, zero-latency scrolling. */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var fine = window.matchMedia('(pointer: fine)').matches;
       if (reduce || !fine) return;
-      // The engine does its own easing; CSS smooth scrolling would
-      // fight the per-frame scrollTo calls and freeze the page.
       document.documentElement.style.scrollBehavior = 'auto';
       var target = window.scrollY;
       var current = target;
       var animating = false;
       var lastT = null;
       function maxScroll() {
-        return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        return (window.zMetrics && window.zMetrics.max) ||
+          Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
       }
       function loop(t) {
         if (lastT === null) lastT = t;
-        var dt = Math.min((t - lastT) / 1000, 0.1);
+        var dt = Math.min((t - lastT) / 1000, 0.05);
         lastT = t;
-        // Time-based easing: identical feel at 60Hz, 120Hz, or a
-        // throttled tab. ~7.5/s decay reads as calm inertia.
-        var alpha = 1 - Math.exp(-dt * 7.5);
+        // ~19/s decay: closes the gap in ~2-3 frames — smooth but with
+        // no perceptible lag between input and motion.
+        var alpha = 1 - Math.exp(-dt * 19);
         current += (target - current) * alpha;
         if (Math.abs(target - current) < 0.4) {
           current = target;
@@ -5984,6 +6051,8 @@
       window.addEventListener('wheel', function (e) {
         if (e.ctrlKey) return;
         if (document.body.classList.contains('mirror-open')) return;
+        // Effects off => hands scrolling back to the compositor.
+        if (document.body.classList.contains('fx-off')) return;
         e.preventDefault();
         var d = e.deltaY * (e.deltaMode === 1 ? 16 : 1);
         target = Math.max(0, Math.min(maxScroll(), target + d));
@@ -6220,39 +6289,41 @@
       }
     })();
 
-    /* Scroll-spy nav — aria-current + visual active state */
+    /* Scroll-spy nav — IntersectionObserver, zero per-frame layout
+       reads. A band near the top of the viewport is the "active line";
+       the lowest section currently crossing it wins. */
     (function () {
       var links = document.querySelectorAll('.header-nav a[data-nav-section]');
-      if (!links.length) return;
-      var sections = [];
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      var map = [];
       links.forEach(function (link) {
-        var id = link.getAttribute('data-nav-section');
-        var sec = document.getElementById(id);
-        if (sec) sections.push({ id: id, el: sec, link: link });
+        var sec = document.getElementById(link.getAttribute('data-nav-section'));
+        if (sec) map.push({ el: sec, link: link });
       });
-      if (!sections.length) return;
-      var current = null;
-      function update() {
-        var y = window.scrollY + 120;
-        var hit = null;
-        for (var i = 0; i < sections.length; i++) {
-          var s = sections[i];
-          var top = s.el.offsetTop;
-          if (y >= top) hit = s;
-        }
-        if (hit !== current) {
-          sections.forEach(function (s) {
-            var on = (s === hit);
-            s.link.classList.toggle('is-active', on);
-            if (on) s.link.setAttribute('aria-current', 'true');
-            else    s.link.removeAttribute('aria-current');
-          });
-          current = hit;
-        }
+      if (!map.length) return;
+      var visible = {};
+      function refresh() {
+        var winner = null, best = -Infinity;
+        map.forEach(function (s, i) {
+          if (visible[i] && s.el.__top > best) { best = s.el.__top; winner = s; }
+        });
+        map.forEach(function (s) {
+          var on = (s === winner);
+          s.link.classList.toggle('is-active', on);
+          if (on) s.link.setAttribute('aria-current', 'true');
+          else s.link.removeAttribute('aria-current');
+        });
       }
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', update);
-      update();
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var i = map.findIndex(function (s) { return s.el === e.target; });
+          if (i < 0) return;
+          visible[i] = e.isIntersecting;
+          e.target.__top = e.boundingClientRect.top;
+        });
+        refresh();
+      }, { rootMargin: '-12% 0px -80% 0px', threshold: 0 });
+      map.forEach(function (s) { io.observe(s.el); });
     })();
 
     /* Greca dividers — light up when crossing into the viewport */
@@ -6394,13 +6465,21 @@
 
       var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
       var ticking = false;
+      var stickyEl = section.querySelector('.council-scroll-sticky');
+      // Static geometry cached on resize; only rect.top is read per frame.
+      var total = 0, maxShift = 0;
 
       function shouldPin() {
         return window.innerWidth > 760 && !reduceMQ.matches;
       }
+      function remeasure() {
+        total = section.offsetHeight - window.innerHeight;
+        maxShift = track.scrollWidth - (stickyEl ? stickyEl.clientWidth : window.innerWidth);
+      }
       function applyMode() {
         if (shouldPin()) {
           section.classList.remove('no-pin');
+          remeasure();
         } else {
           section.classList.add('no-pin');
           track.style.transform = '';
@@ -6409,18 +6488,12 @@
       }
 
       function onScroll() {
-        if (!shouldPin()) return;
-        if (ticking) return;
+        if (!shouldPin() || ticking) return;
         ticking = true;
         requestAnimationFrame(function () {
           ticking = false;
-          var rect = section.getBoundingClientRect();
-          var total = section.offsetHeight - window.innerHeight;
           if (total <= 0) return;
-          // progress through the pinned runway: 0 at top entry, 1 at exit
-          var progress = Math.min(1, Math.max(0, (-rect.top) / total));
-          var sticky = section.querySelector('.council-scroll-sticky');
-          var maxShift = track.scrollWidth - (sticky ? sticky.clientWidth : window.innerWidth);
+          var progress = Math.min(1, Math.max(0, (-section.getBoundingClientRect().top) / total));
           track.style.transform = 'translate3d(' + (-progress * maxShift).toFixed(1) + 'px,0,0)';
           if (fill) fill.style.width = (progress * 100).toFixed(1) + '%';
         });
@@ -6433,27 +6506,33 @@
       onScroll();
     })();
 
-    /* Sticky mobile CTA — appears past the hero, hides over the ask */
+    /* Sticky mobile CTA — driven by IntersectionObserver, no scroll
+       handler at all. Shows once the hero has left, hides over the
+       waitlist/footer so it never covers the ask. */
     (function () {
       var cta = document.getElementById('mobileCta');
-      if (!cta) return;
+      if (!cta || !('IntersectionObserver' in window)) return;
+      var hero = document.getElementById('top');
       var waitlist = document.getElementById('waitlist');
       var footer = document.querySelector('footer');
-      function update() {
-        var pastHero = window.scrollY > window.innerHeight * 0.85;
-        var overAsk = false;
-        [waitlist, footer].forEach(function (el) {
-          if (!el) return;
-          var r = el.getBoundingClientRect();
-          if (r.top < window.innerHeight && r.bottom > 0) overAsk = true;
-        });
-        var show = pastHero && !overAsk;
+      var heroVisible = true, overAsk = false;
+      function apply() {
+        var show = !heroVisible && !overAsk;
         cta.classList.toggle('visible', show);
         cta.setAttribute('aria-hidden', show ? 'false' : 'true');
       }
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', update);
-      update();
+      if (hero) {
+        new IntersectionObserver(function (es) {
+          heroVisible = es[0].isIntersecting; apply();
+        }, { threshold: 0, rootMargin: '-15% 0px 0px 0px' }).observe(hero);
+      }
+      var askIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.target.__over = e.isIntersecting; });
+        overAsk = (waitlist && waitlist.__over) || (footer && footer.__over) || false;
+        apply();
+      }, { threshold: 0 });
+      if (waitlist) askIO.observe(waitlist);
+      if (footer) askIO.observe(footer);
     })();
 
     /* Click ripple — Aztec sun-stone burst with the ZOTHEOS sigil */
@@ -6678,7 +6757,25 @@
       // visitor has not chosen otherwise.
       var on = stored ? (stored === 'on') : !reduce;
 
-      var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      // Rain intensity: light / medium / heavy. Default medium, which
+      // is markedly lighter than the old fixed density.
+      var RKEY = 'zotheos_rain';
+      var DENS = { light: 0.4, medium: 0.65, heavy: 1.0 };
+      var LEVELS = ['light', 'medium', 'heavy'];
+      var level = 'medium';
+      try { var rl = localStorage.getItem(RKEY); if (DENS[rl]) level = rl; } catch (e) {}
+      var amtBtn = document.getElementById('rainAmount');
+
+      // Adaptive perf guard: if the device shows sustained slow frames,
+      // rain thins itself (drop the near layer, then reduce density) so
+      // it never keeps the page laggy. Recovers on resize / user change.
+      var guardMult = 1, guardFront = true, ema = 16, drawCount = 0;
+
+      // Rain draws at 1x device pixels: streaks are soft and
+      // atmospheric, so hi-DPI crispness buys nothing and doubles the
+      // per-frame fill cost. This is a large fluidity win on 2x/3x
+      // displays and software renderers.
+      var dpr = 1;
       var W = 0, H = 0;
       var backDrops = [], frontDrops = [];
       var raf = null, running = false;
@@ -6703,18 +6800,19 @@
           y: anywhere ? Math.random() * H : -20 - Math.random() * 120,
           len: cfg.len[0] + Math.random() * (cfg.len[1] - cfg.len[0]),
           spd: cfg.spd[0] + Math.random() * (cfg.spd[1] - cfg.spd[0]),
-          w: cfg.w[0] + Math.random() * (cfg.w[1] - cfg.w[0]),
-          a: cfg.a[0] + Math.random() * (cfg.a[1] - cfg.a[0]),
-          coch: Math.random() < 0.07
+          b: (Math.random() * 3) | 0,     // alpha bucket, for batching
+          coch: Math.random() < 0.06
         };
       }
-      var BACK_CFG  = { len: [14, 30], spd: [7, 12], w: [0.6, 1.1], a: [0.14, 0.34] };
-      var FRONT_CFG = { len: [26, 52], spd: [14, 22], w: [1.1, 2.0], a: [0.10, 0.24] };
+      // Fixed width + a few alpha buckets per layer so the whole layer
+      // draws in ~4 stroke() calls instead of one per drop.
+      var BACK_CFG  = { len: [14, 30], spd: [7, 12], width: 0.9, alphas: [0.14, 0.22, 0.30] };
+      var FRONT_CFG = { len: [26, 52], spd: [14, 22], width: 1.5, alphas: [0.10, 0.16, 0.22] };
       var WIND = 1.7;
 
       function resize() {
         W = window.innerWidth; H = window.innerHeight;
-        frontOn = W > 720;
+        frontOn = (W > 720) && guardFront;
         [back, front].forEach(function (c) {
           if (!c) return;
           c.width = Math.floor(W * dpr);
@@ -6722,42 +6820,86 @@
         });
         if (bctx) bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         if (fctx) { fctx.setTransform(dpr, 0, 0, dpr, 0, 0); fctx.clearRect(0, 0, W, H); }
-        var backN = Math.round(Math.min(240, W / 7));
+        var mult = (DENS[level] || 0.65) * guardMult;
+        var backN = Math.round(Math.min(180, W / 9) * mult);
         backDrops = makeDrops(backN, BACK_CFG);
-        frontDrops = frontOn ? makeDrops(Math.round(Math.min(70, W / 26)), FRONT_CFG) : [];
+        frontDrops = frontOn
+          ? makeDrops(Math.round(Math.min(60, W / 30) * mult), FRONT_CFG)
+          : [];
       }
 
       function drawLayer(ctx, drops, cfg, tint) {
         ctx.clearRect(0, 0, W, H);
         ctx.lineCap = 'round';
-        for (var i = 0; i < drops.length; i++) {
-          var d = drops[i];
+        ctx.lineWidth = cfg.width;
+        var i, d;
+        // Pass 1: advance + recycle.
+        for (i = 0; i < drops.length; i++) {
+          d = drops[i];
           d.y += d.spd;
           d.x += WIND * (d.spd / 12);
-          if (d.y - d.len > H || d.x - 100 > W) {
-            drops[i] = spawn(cfg, false);
-            continue;
-          }
-          var col = d.coch ? COCH : tint;
-          ctx.strokeStyle = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',' + d.a + ')';
-          ctx.lineWidth = d.w;
+          if (d.y - d.len > H || d.x - 100 > W) drops[i] = spawn(cfg, false);
+        }
+        // Pass 2: one batched stroke per alpha bucket (non-cochineal).
+        var tintCss = 'rgb(' + tint[0] + ',' + tint[1] + ',' + tint[2] + ')';
+        for (var b = 0; b < 3; b++) {
+          ctx.globalAlpha = cfg.alphas[b];
+          ctx.strokeStyle = tintCss;
           ctx.beginPath();
-          ctx.moveTo(d.x, d.y);
-          ctx.lineTo(d.x - WIND * (d.len / 6), d.y - d.len);
+          for (i = 0; i < drops.length; i++) {
+            d = drops[i];
+            if (d.b !== b || d.coch) continue;
+            ctx.moveTo(d.x, d.y);
+            ctx.lineTo(d.x - WIND * (d.len / 6), d.y - d.len);
+          }
           ctx.stroke();
         }
+        // One more pass for the rare cochineal drops.
+        ctx.globalAlpha = 0.30;
+        ctx.strokeStyle = 'rgb(' + COCH[0] + ',' + COCH[1] + ',' + COCH[2] + ')';
+        ctx.beginPath();
+        for (i = 0; i < drops.length; i++) {
+          d = drops[i];
+          if (!d.coch) continue;
+          ctx.moveTo(d.x, d.y);
+          ctx.lineTo(d.x - WIND * (d.len / 6), d.y - d.len);
+        }
+        ctx.stroke();
+        ctx.globalAlpha = 1;
       }
 
-      function loop() {
+      var lastT = 0, guardKilled = false;
+      function resetGuard() { guardMult = 1; guardFront = true; guardKilled = false; ema = 16; }
+      function guard() {
+        // Steps down under sustained slow frames; a healthy GPU
+        // (sub-millisecond frames) never trips the 40ms threshold.
+        // Severely slow => stand down at once. Otherwise thin one tier
+        // at a time. A user action (toggle, intensity, resize) revives.
+        if (ema >= 70) { guardKilled = true; stop(); return; }
+        if (ema < 40) return;
+        if (guardFront) { guardFront = false; resize(); }
+        else if (guardMult > 0.5) { guardMult = 0.5; resize(); }
+        else { guardKilled = true; stop(); }
+      }
+      function loop(t) {
+        // Cap rain at ~32fps: falling rain needs no more, and it halves
+        // the per-frame cost, keeping the main thread free for scroll.
+        if (lastT && t - lastT < 30) { if (running) raf = requestAnimationFrame(loop); return; }
+        if (lastT) { ema = ema * 0.9 + (t - lastT) * 0.1; }
+        lastT = t;
+        // Evaluate often so weak devices recover within a second, not
+        // after minutes of dropped frames.
+        if (++drawCount % 12 === 0) guard();
         var tint = themeTint();
         if (bctx) drawLayer(bctx, backDrops, BACK_CFG, tint);
         if (fctx && frontOn) drawLayer(fctx, frontDrops, FRONT_CFG, tint);
         if (running) raf = requestAnimationFrame(loop);
       }
       function start() {
-        if (running || !bctx) return;
+        if (running || !bctx || guardKilled) return;
         if (document.hidden) return;
         running = true;
+        lastT = 0; ema = 16;
         // Always re-init so a resize that happened while off is picked
         // up, never leaving the canvas at stale dimensions.
         resize();
@@ -6777,19 +6919,43 @@
         if (on) start(); else stop();
       }
 
+      function paintLevel() {
+        if (!amtBtn) return;
+        var lit = LEVELS.indexOf(level) + 1;
+        var bars = amtBtn.querySelectorAll('.ra-bar');
+        for (var i = 0; i < bars.length; i++) bars[i].classList.toggle('lit', i < lit);
+        amtBtn.setAttribute('aria-label', 'Rain intensity: ' + level);
+        amtBtn.setAttribute('title', 'Rain intensity: ' + level);
+      }
+
       if (btn) {
         btn.addEventListener('click', function () {
+          if (!on) resetGuard();   // turning on earns a fresh chance
           apply(!on);
           try { localStorage.setItem(KEY, on ? 'on' : 'off'); } catch (e) {}
         });
       }
-      window.addEventListener('resize', function () { if (running) resize(); });
+      if (amtBtn) {
+        amtBtn.addEventListener('click', function () {
+          level = LEVELS[(LEVELS.indexOf(level) + 1) % LEVELS.length];
+          try { localStorage.setItem(RKEY, level); } catch (e) {}
+          paintLevel();
+          // A deliberate choice earns a fresh chance at full fidelity.
+          resetGuard();
+          if (on) { if (running) resize(); else start(); }
+        });
+      }
+      window.addEventListener('resize', function () {
+        resetGuard();
+        if (on) { if (running) resize(); else start(); }
+      });
       document.addEventListener('visibilitychange', function () {
         if (document.hidden) stop();
         else if (on) start();
       });
       // Rain reads the theme fresh each frame, so theme switches just work.
 
+      paintLevel();
       apply(on);
     })();
 
