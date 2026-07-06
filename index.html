@@ -6007,63 +6007,16 @@
       measure();
     })();
 
-    /* Inertial scroll — a snappy lerp over native scrolling. Tuned for
-       immediacy: it tracks wheel input within a couple of frames, only
-       smoothing the discrete steps. Bails entirely when effects are off
-       (fx-off) so that mode is pure native, zero-latency scrolling. */
+    /* Scrolling is native — the browser's compositor handles it, which
+       is smoother and lower-latency than any JS wheel engine (a JS
+       engine fights trackpad momentum and adds a frame of lag). We only
+       provide a helper for programmatic smooth scroll (anchors, top). */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var fine = window.matchMedia('(pointer: fine)').matches;
-      if (reduce || !fine) return;
-      document.documentElement.style.scrollBehavior = 'auto';
-      var target = window.scrollY;
-      var current = target;
-      var animating = false;
-      var lastT = null;
-      function maxScroll() {
-        return (window.zMetrics && window.zMetrics.max) ||
-          Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-      }
-      function loop(t) {
-        if (lastT === null) lastT = t;
-        var dt = Math.min((t - lastT) / 1000, 0.05);
-        lastT = t;
-        // ~19/s decay: closes the gap in ~2-3 frames — smooth but with
-        // no perceptible lag between input and motion.
-        var alpha = 1 - Math.exp(-dt * 19);
-        current += (target - current) * alpha;
-        if (Math.abs(target - current) < 0.4) {
-          current = target;
-          animating = false;
-          lastT = null;
-        }
-        window.scrollTo(0, current);
-        if (animating) requestAnimationFrame(loop);
-      }
-      function kick() {
-        if (!animating) {
-          animating = true;
-          lastT = null;
-          current = window.scrollY;
-          requestAnimationFrame(loop);
-        }
-      }
-      window.addEventListener('wheel', function (e) {
-        if (e.ctrlKey) return;
-        if (document.body.classList.contains('mirror-open')) return;
-        // Effects off => hands scrolling back to the compositor.
-        if (document.body.classList.contains('fx-off')) return;
-        e.preventDefault();
-        var d = e.deltaY * (e.deltaMode === 1 ? 16 : 1);
-        target = Math.max(0, Math.min(maxScroll(), target + d));
-        kick();
-      }, { passive: false });
-      window.addEventListener('scroll', function () {
-        if (!animating) { target = window.scrollY; current = target; }
-      }, { passive: true });
       window.zSmoothTo = function (y) {
-        target = Math.max(0, Math.min(maxScroll(), y));
-        kick();
+        var max = (window.zMetrics && window.zMetrics.max) ||
+          Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        window.scrollTo({ top: Math.max(0, Math.min(max, y)), behavior: reduce ? 'auto' : 'smooth' });
       };
     })();
 
@@ -6186,43 +6139,33 @@
       });
     })();
 
-    /* Hero depth — the disc and headline sink at different speeds
-       as you scroll away; scroll velocity adds a whisper of skew. */
+    /* Hero depth — the disc and headline sink at gentle, different
+       rates as you scroll away. Transform + opacity only (compositor
+       friendly); one rAF-coalesced write per scroll, no layout reads,
+       no skew. Disabled under reduced motion and on coarse pointers. */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
+      var coarse = window.matchMedia('(hover: none)').matches;
+      if (reduce || coarse) return;
       var wrap = document.querySelector('.hero-disc-wrap');
       var head = document.querySelector('.hero-headline');
-      var inner = document.querySelector('.hero-inner');
-      if (!wrap || !inner) return;
-      var lastY = window.scrollY;
-      var vel = 0;
-      var running = false;
-      function tick() {
+      if (!wrap) return;
+      var queued = false;
+      function paint() {
+        queued = false;
         var y = window.scrollY;
-        vel += ((y - lastY) - vel) * 0.14;
-        lastY = y;
         var vh = window.innerHeight;
-        if (y < vh * 1.25 && !document.body.classList.contains('page-loading')) {
-          wrap.style.transitionDelay = '0s';
-          wrap.style.transform = 'translate3d(0,' + (y * 0.30).toFixed(1) + 'px,0)';
-          if (head) {
-            head.style.transitionDelay = '0s';
-            head.style.transform = 'translate3d(0,' + (y * 0.12).toFixed(1) + 'px,0)';
-          }
-          inner.style.opacity = Math.max(0, 1 - y / (vh * 0.95)).toFixed(3);
-          var sk = Math.max(-1.1, Math.min(1.1, vel * 0.018));
-          inner.style.transform = 'skewY(' + sk.toFixed(3) + 'deg)';
-        }
-        if (Math.abs(vel) > 0.05 || y !== window.scrollY) {
-          requestAnimationFrame(tick);
-        } else {
-          running = false;
-          inner.style.transform = '';
+        if (y > vh * 1.25 || document.body.classList.contains('page-loading')) return;
+        wrap.style.transitionDelay = '0s';
+        wrap.style.transform = 'translate3d(0,' + (y * 0.28).toFixed(1) + 'px,0)';
+        wrap.style.opacity = Math.max(0, 1 - y / (vh * 0.9)).toFixed(3);
+        if (head) {
+          head.style.transitionDelay = '0s';
+          head.style.transform = 'translate3d(0,' + (y * 0.12).toFixed(1) + 'px,0)';
         }
       }
       window.addEventListener('scroll', function () {
-        if (!running) { running = true; requestAnimationFrame(tick); }
+        if (!queued) { queued = true; requestAnimationFrame(paint); }
       }, { passive: true });
     })();
 
