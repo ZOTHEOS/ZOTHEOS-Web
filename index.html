@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-y2SZqJBoF7RoqDR2l3QNr2/cb8Qum4NHmz0AiQ4zaJw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
   <link rel="shortcut icon" href="/zotheos_icon.ico?v=3" />
   <link rel="apple-touch-icon" href="/zotheos_icon.ico?v=3" />
-  <meta name="description" content="Three local AI cores reason independently, then synthesize one grounded answer. Offline first. Private by default. Built to be checked." />
+  <meta name="description" content="A local AI council with Analyst, Humanist and Skeptic roles. Offline first. Private by default. Windows desktop validation is in progress." />
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta property="og:description" content="Three perspectives. One grounded answer. Built to be checked." />
+  <meta property="og:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zotheos.org" />
   <meta property="og:image" content="https://zotheos.org/static/og.png" />
@@ -18,7 +20,7 @@
   <meta property="og:image:alt" content="ZOTHEOS: three minds reason, you decide." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta name="twitter:description" content="Three perspectives. One grounded answer. Built to be checked." />
+  <meta name="twitter:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." />
   <meta name="twitter:image" content="https://zotheos.org/static/og.png" />
   <meta name="theme-color" content="#02101E" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#E8DBC0" media="(prefers-color-scheme: light)" />
@@ -31,138 +33,149 @@
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://zotheos.org/#org",
-        "name": "ZOTHEOS LLC",
-        "url": "https://zotheos.org",
-        "logo": "https://zotheos.org/static/zotheos_logo.png",
-        "founder": {
-          "@type": "Person",
-          "name": "David Garcia",
-          "description": "United States Marine Corps Veteran"
-        },
-        "foundingDate": "2025-03",
-        "description": "Independent builder of offline ethical intelligence."
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zotheos.org/#org",
+      "name": "ZOTHEOS LLC",
+      "url": "https://zotheos.org",
+      "logo": "https://zotheos.org/static/zotheos_logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "David Garcia",
+        "description": "United States Marine Corps Veteran"
       },
-      {
-        "@type": "SoftwareApplication",
-        "name": "ZOTHEOS",
-        "applicationCategory": "AIApplication",
-        "operatingSystem": "Windows, macOS, Linux",
-        "description": "Three local AI cores reason independently, then synthesize one grounded answer. Offline first, private by default, built to be checked.",
-        "url": "https://zotheos.org",
-        "image": "https://zotheos.org/static/og.png",
-        "publisher": { "@id": "https://zotheos.org/#org" },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/PreOrder"
-        },
-        "featureList": [
-          "Fusion council: Analyst, Humanist, Skeptic",
-          "Local-first inference via llama.cpp",
-          "Evidence vault with citation enforcement",
-          "Anti-consensus Skeptic core",
-          "Calibration measured per response",
-          "Signed result receipts, verifiable offline",
-          "Prediction ledger with scored forecasts",
-          "Belief drift log with evidence chains",
-          "Corrections reviewed in the open",
-          "Provable offline mode with network ledger and canary",
-          "Device-tier council, pocket to workstation"
-        ]
+      "foundingDate": "2025-03",
+      "description": "Independent builder of offline ethical intelligence."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ZOTHEOS",
+      "applicationCategory": "AIApplication",
+      "operatingSystem": "Windows x64 (desktop candidate in validation)",
+      "description": "A local AI council with Analyst, Humanist and Skeptic roles. The Windows desktop is built for internal testing; setup, installation and clean-machine checks remain in progress before a public download.",
+      "url": "https://zotheos.org",
+      "image": "https://zotheos.org/static/og.png",
+      "publisher": {
+        "@id": "https://zotheos.org/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does ZOTHEOS work offline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Inference runs locally on your hardware via llama.cpp. No cloud dependency. Your conversations and vault never leave your device."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why three models instead of one?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A single model averages over its biases. Three cores with distinct roles, Analyst, Humanist, and Skeptic, examine the question from different angles, and a synthesizer produces one fused answer with each claim attributed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What hardware do I need?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Almost any machine. ZOTHEOS measures your hardware and seats the council it can honestly run: a full council on a 16GB+ VRAM workstation, a mid council on a 6GB+ VRAM laptop, a light council on an 8GB CPU-only laptop, and a single small voice on pocket-class devices, honestly labeled as one mind rather than a council."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my data collected?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No accounts are required and no usage data is harvested. The waitlist form is the only point of contact, and it is used only for launch notifications."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is ZOTHEOS funded?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Independently. No VC funding, no investors, no advertising. Optional supporter donations via PayPal, Stripe, or Gumroad keep the project moving."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I know it is really offline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can watch it prove itself. ZOTHEOS keeps a network ledger and includes a canary that attempts an outbound call in front of you so you can watch it get refused. Signed result receipts can also be verified with no connection at all."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens when ZOTHEOS is wrong?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Corrections are first-class. Every user-flagged correction is persisted with provenance in an immutable log and approved or rejected in the open. When the council changes its mind, the full belief-drift chain is kept with the evidence that moved it."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can kids use ZOTHEOS?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Kids Mode ships with age bands, and the same privacy posture applies: everything stays on the device."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the Smart Board?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An infinite offline AI whiteboard. Ask the council on the canvas, drop in a document, chart data, use your voice, and save the board as a conversation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the evidence vault?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A local, tiered knowledge base the three cores can cite. Sources are reranked by a cross-encoder and citations are enforced in the response, with a strict mode that rejects answers that cannot be grounded."
-            }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "featureList": [
+        "Fusion council: Analyst, Humanist, Skeptic",
+        "Local-first inference via llama.cpp",
+        "Evidence vault with citation enforcement",
+        "Anti-consensus Skeptic core",
+        "Confidence signals exposed when available",
+        "Signed result receipts, verifiable offline",
+        "Prediction ledger with scored forecasts",
+        "Belief drift log with evidence chains",
+        "Corrections reviewed in the open",
+        "Backend network ledger and canary check",
+        "Hardware-aware model recommendations; compact-system startup in development",
+        "Hugging Face browsing and compatible local GGUF model import"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does ZOTHEOS work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local inference runs via llama.cpp once the required models are available. Model downloads and optional network features need a connection. The local edition stores conversations and vault files on your device."
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "@type": "Question",
+          "name": "Why three models instead of one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Analyst, Humanist, and Skeptic examine questions from different angles, then synthesize an answer that can expose evidence and disagreement. Multiple models can share the same error, so agreement is not proof."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What hardware do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ZOTHEOS is being developed for broad hardware access, including desktops, laptops, mini PCs, older computers and kiosks. Current desktop release testing focuses on Windows x64. Processor support, memory, storage and model compatibility still matter; compact-system startup and other platforms remain in development."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data collected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Local inference and website processing are separate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is ZOTHEOS funded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Development is independent and self-funded, with optional support. The local edition is free for individual use. Support does not unlock features, access, priority or influence. Institutional deployment and support may be paid; they are not required for individual local use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know it is really offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The backend includes a network ledger and a canary check for its network controls. Those checks cover backend activity, not every shell or WebView2 connection. Receipt signatures can be checked offline, separately from network behavior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when ZOTHEOS is wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flagged corrections are recorded with provenance for review. Belief-drift records retain evidence linked to a change. These records make changes inspectable; they do not prove that an answer is correct."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can kids use ZOTHEOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kids Mode is not enabled in the current product. Age-band support remains planned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Smart Board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI whiteboard with council prompts, document tools, charts, voice and conversation saving. Available functions depend on the configured models and tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the evidence vault?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A local, tiered knowledge base the council can cite. Retrieval can rerank sources, and strict mode checks grounding and citation tags. A citation still needs to be inspected against its source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose my own models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Model Setup browses Hugging Face and imports local GGUF files, so starter packs are a beginning rather than a fixed catalog. Compatible chat models can be assigned to the council roles. Each model retains its own license, and runtime support plus available memory determine what can run. GitHub files can be imported locally when compatible; an integrated GitHub downloader is not established."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <style>
@@ -1198,6 +1211,10 @@
       .council-strip { font-size: 9px; letter-spacing: 0.32em; }
       .council-strip .center { font-size: 11px; }
     }
+    @media (max-width: 480px) {
+      .council-strip { flex-wrap: wrap; justify-content: center; gap: 8px 16px; padding-inline: 22px; }
+      .council-strip .center { width: 100%; text-align: center; order: 1; }
+    }
 
     .council-section {
       position: relative;
@@ -1900,6 +1917,14 @@
       color: var(--ink-2);
       font-weight: 500;
     }
+    .website-privacy { max-width: 1280px; margin: 30px auto 0; padding: 22px 0; border-top: 1px solid var(--rule-soft); }
+    .website-privacy summary { font-family: var(--serif); font-size: 21px; color: var(--ink); cursor: pointer; }
+    .website-privacy summary:focus-visible { outline: 2px solid var(--cochineal); outline-offset: 5px; }
+    .privacy-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 36px; margin: 24px 0; }
+    .privacy-grid strong { color: var(--ink); font-size: 14px; font-weight: 500; }
+    .website-privacy p { color: var(--ink-2); font-size: 13px; line-height: 1.8; margin-top: 8px; overflow-wrap: anywhere; }
+    .website-privacy a { color: var(--cochineal); }
+    @media (max-width: 760px) { .privacy-grid { grid-template-columns: minmax(0, 1fr); } }
     .footer-epigraph {
       max-width: 1280px;
       margin: 36px auto 0;
@@ -3607,6 +3632,109 @@
       max-width: 660px;
     }
 
+    /* Native example prompts: existing palette, no scripted results. */
+    .workspace-examples { margin-top: 38px; }
+    .workspace-examples h3 {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    .example-intro {
+      margin: 0 0 20px;
+      max-width: 660px;
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      align-items: start;
+    }
+    .example-card {
+      min-width: 0;
+      border: 1px solid var(--rule);
+      border-top: 2px solid rgba(var(--cochineal-rgb), 0.55);
+      background: var(--surface);
+      overflow-wrap: anywhere;
+    }
+    .example-card summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+      padding: 20px;
+      list-style: none;
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.35;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .example-card summary::-webkit-details-marker { display: none; }
+    .example-card summary:focus-visible {
+      outline: 2px solid var(--cochineal);
+      outline-offset: 4px;
+    }
+    .example-open {
+      flex: 0 0 20px;
+      color: var(--cochineal);
+      font-family: var(--mono);
+      font-size: 18px;
+      text-align: center;
+    }
+    .example-open::before { content: '+'; }
+    .example-card[open] .example-open::before { content: '-'; }
+    .example-body {
+      margin: 0 20px;
+      padding: 16px 0 20px;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .example-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--ink-2);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .example-body blockquote {
+      margin: 0;
+      padding-left: 14px;
+      border-left: 2px solid var(--cochineal);
+      color: var(--ink-2);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    @media (max-width: 820px) {
+      .example-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+
+    /* Hardware and model choice extend the existing editorial design. */
+    .tier-info, .tier-council { min-width: 0; }
+    .tier-hw { line-height: 1.7; }
+    .model-choice { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); margin-top: 52px; padding: clamp(22px, 4vw, 42px); border: 1px solid var(--rule); background: var(--surface); scroll-margin-top: 100px; }
+    .model-choice h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(28px, 3.5vw, 42px); color: var(--ink); line-height: 1.1; margin: 18px 0; }
+    .model-choice p { font-size: 14px; color: var(--ink-2); line-height: 1.8; margin-bottom: 14px; }
+    .model-choice-notes details { border-top: 1px solid var(--rule-soft); }
+    .model-choice-notes details:last-child { border-bottom: 1px solid var(--rule-soft); }
+    .model-choice-notes summary { font-family: var(--serif); font-size: 20px; color: var(--ink); padding: 18px 0; cursor: pointer; }
+    .model-choice-notes summary:focus-visible { outline: 2px solid var(--cochineal); outline-offset: 4px; }
+    .model-choice-notes a { display: inline-block; color: var(--cochineal); font-size: 13px; padding-bottom: 18px; }
+    .local-journey { padding-left: 20px; margin-bottom: 18px; color: var(--ink-2); font-size: 14px; }
+    .local-journey li { padding: 8px 0; line-height: 1.6; }
+    .local-journey strong, .local-journey span { display: block; }
+    .local-journey strong { color: var(--ink); font-weight: 500; }
+    @media (max-width: 760px) { .model-choice { grid-template-columns: 1fr; } }
+
     /* Device tier ladder */
     .tier-ladder {
       border: 1px solid var(--rule);
@@ -4105,7 +4233,7 @@
     }
 
     /* Floating instrument header: full-width bar at rest, a glass
-       pill once scrolling; slips away scrolling down, returns up. */
+       pill once scrolling. Navigation stays available throughout. */
     header {
       transition:
         top 0.5s var(--ease-ceremony),
@@ -4128,10 +4256,6 @@
         inset 0 1px 0 rgba(244, 236, 216, 0.05);
     }
     header.scrolled .header-inner { height: 58px; }
-    header.header-hidden {
-      transform: translateY(-160%);
-      pointer-events: none;
-    }
     @media (max-width: 720px) {
       header.scrolled { top: 8px; left: 10px; right: 10px; }
       header.scrolled .header-inner { height: 52px; }
@@ -4300,7 +4424,39 @@
     @media (prefers-reduced-motion: reduce) {
       .disc-orbiter { display: none; }
     }
+
+
+    /* The existing calm switch and OS preference are a motion floor. */
+    html.fx-off { scroll-behavior: auto !important; }
+    body.fx-off *, body.fx-off *::before, body.fx-off *::after {
+      animation: none !important; transition: none !important;
+    }
+    body.fx-off .custom-cursor { opacity: 0 !important; }
+    body.fx-off, body.fx-off a, body.fx-off button, body.fx-off input {
+      cursor: auto !important;
+    }
+    body.fx-off .proof-track { animation: none; flex-wrap: wrap; width: 100%; justify-content: center; }
+    body.motion-page-hidden *, body.motion-page-hidden *::before,
+    body.motion-page-hidden *::after, .motion-area-hidden *,
+    .motion-area-hidden *::before, .motion-area-hidden *::after {
+      animation-play-state: paused !important;
+    }
+    .scroll-top { animation: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      #introOverlay { display: none !important; }
+    }
   </style>
+
+  <noscript><style>
+    .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur,
+    .stagger > * { opacity: 1 !important; transform: none !important; filter: none !important; }
+    body.page-loading .hero-inner > *, body.page-loading header {
+      opacity: 1 !important; transform: none !important;
+    }
+    #introOverlay { display: none !important; }
+  </style></noscript>
 </head>
 <body class="page-loading">
 
@@ -4319,7 +4475,7 @@
   <div class="scroll-progress" aria-hidden="true" id="scrollProgress"></div>
 
   <div id="introOverlay" class="intro-overlay">
-    <video id="introVideo" autoplay muted playsinline preload="metadata" disableremoteplayback>
+    <video id="introVideo" muted playsinline preload="metadata" disableremoteplayback>
       <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
     </video>
     <div class="intro-controls">
@@ -4350,7 +4506,7 @@
         </button>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
-        <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
+        <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" data-logo-fallback="parent" />
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav" id="primaryNav">
@@ -4511,16 +4667,17 @@
       </h1>
 
       <p class="hero-sub">
-        Three local AI cores reason independently, then synthesize one grounded answer. Offline first. Private by default. Built to be checked.
+        A private, local AI council to help you examine evidence, understand human consequences and decide for yourself. Three perspectives. Your judgment.
       </p>
 
+      <p class="proof-note" id="development-status"><strong>Development update: October 4, 2026.</strong> The updated Windows desktop has been built for internal testing. First-run setup, installation and clean-machine checks are still in progress before a public download. <a href="/download.html">Release status</a>.</p>
       <!-- Three CTAs only. Primary = Early access (cochineal halo). -->
       <div class="hero-actions stagger reveal">
-        <a class="btn btn-primary" href="#waitlist" data-magnetic>
-          Early access <span class="arrow">&rarr;</span>
+        <a class="btn btn-primary" href="/download.html" data-magnetic>
+          Download status <span class="arrow">&rarr;</span>
         </a>
-        <a class="btn-ghost" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">
-          Try the live beta <span class="arrow">&rarr;</span>
+        <a class="btn-ghost" href="#model-choice">
+          Explore model choice <span class="arrow">&rarr;</span>
         </a>
         <a class="btn-ghost" href="#support">
           Support the mission <span class="arrow">&rarr;</span>
@@ -4529,9 +4686,9 @@
 
       <div class="hero-stats stagger reveal">
         <div class="hero-stat"><div class="num" data-count="3">3</div><div class="label">Reasoning cores</div></div>
-        <div class="hero-stat"><div class="num" data-count="30">30</div><div class="label">Workspace tools</div></div>
-        <div class="hero-stat"><div class="num" data-count="100" data-suffix="%">100%</div><div class="label">Local inference</div></div>
-        <div class="hero-stat"><div class="num" data-count="0">0</div><div class="label">Data collected</div></div>
+        <div class="hero-stat"><div class="num">Tools</div><div class="label">One workspace</div></div>
+        <div class="hero-stat"><div class="num">Local</div><div class="label">Model inference</div></div>
+        <div class="hero-stat"><div class="num">Private</div><div class="label">Local edition</div></div>
       </div>
 
       <a class="hero-descend reveal" href="#council-story" aria-label="Descend to the council">
@@ -4551,21 +4708,21 @@
     <div class="proof-track" id="proofTrack">
       <div class="proof-group">
         <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>30</strong> tools in one workspace</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> local inference</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>4</strong> device tiers, pocket to workstation</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Tools</strong> in one workspace</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Local</strong> model inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Private</strong> local edition</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>No</strong> investors &middot; <strong>No</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Hardware-aware</strong> design, built toward broader access</span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> In development since <strong>January 2024</strong></span>
       </div>
       <div class="proof-group" aria-hidden="true">
         <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>3</strong> reasoning cores</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>30</strong> tools in one workspace</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>100%</strong> local inference</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> data collected</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>0</strong> investors &middot; <strong>0</strong> ads</span>
-        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>4</strong> device tiers, pocket to workstation</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Tools</strong> in one workspace</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Local</strong> model inference</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Private</strong> local edition</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>No</strong> investors &middot; <strong>No</strong> ads</span>
+        <span class="proof-item"><span class="proof-mark">&#9670;</span> <strong>Hardware-aware</strong> design, built toward broader access</span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> Built by a <strong>Marine Corps veteran</strong></span>
         <span class="proof-item"><span class="proof-mark">&#9670;</span> In development since <strong>January 2024</strong></span>
       </div>
@@ -4700,7 +4857,7 @@
                 <span class="cp-asks-label">It asks</span>
                 What does the data actually say, and how confident can we honestly be?
               </div>
-              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
+              <div class="cp-model">Role-specific model choices &middot; <b>Model Setup</b></div>
             </div>
           </div>
         </article>
@@ -4729,7 +4886,7 @@
                 <span class="cp-asks-label">It asks</span>
                 Who is affected, and what does this mean for the people living it?
               </div>
-              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
+              <div class="cp-model">Role-specific model choices &middot; <b>Model Setup</b></div>
             </div>
           </div>
         </article>
@@ -4754,7 +4911,7 @@
                 <span class="cp-asks-label">It asks</span>
                 Where are the other two quietly agreeing without checking each other?
               </div>
-              <div class="cp-model">Core sized to your device &middot; <b>1.5B to 14B</b></div>
+              <div class="cp-model">Role-specific model choices &middot; <b>Model Setup</b></div>
             </div>
           </div>
         </article>
@@ -4777,12 +4934,12 @@
         <div class="bento-card span-2 reveal">
           <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><line x1="16" y1="3" x2="16" y2="29"/><line x1="3" y1="16" x2="29" y2="16"/></svg></div>
           <h3>Fusion architecture</h3>
-          <p>Three local GGUF models, Analyst, Humanist, Skeptic, each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer with a parsed self-reported confidence tag for every response.</p>
+          <p>Three local GGUF models, Analyst, Humanist, Skeptic, each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer. Model-stated confidence is exposed when available.</p>
         </div>
         <div class="bento-card reveal reveal-d1">
           <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="6" width="20" height="20"/><circle cx="16" cy="16" r="3"/></svg></div>
           <h3>Local-first</h3>
-          <p>Runs on your hardware via llama.cpp. No cloud dependency. Your conversations, vault, and persistent memory never leave your device.</p>
+          <p>Local inference runs on your hardware via llama.cpp. Conversations, vault and memory are stored on the device running the local edition. Model downloads and optional network tools have separate network requirements.</p>
         </div>
         <div class="bento-card reveal reveal-d1">
           <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 8 L 16 4 L 26 8 L 26 22 L 16 28 L 6 22 Z"/><line x1="16" y1="4" x2="16" y2="28"/></svg></div>
@@ -4796,8 +4953,8 @@
         </div>
         <div class="bento-card span-2 reveal reveal-d2">
           <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="6" y1="26" x2="26" y2="26"/><line x1="10" y1="26" x2="10" y2="18"/><line x1="16" y1="26" x2="16" y2="10"/><line x1="22" y1="26" x2="22" y2="14"/></svg></div>
-          <h3>Calibration measured</h3>
-          <p>Every response carries three confidence signals, heuristic (evidence-derived), model-stated (parsed from the synthesizer), and blended. The system is honest about how confident it has the right to be.</p>
+          <h3>Confidence made visible</h3>
+          <p>Confidence signals can include evidence-derived estimates, model-stated confidence and a blended value, when available. They help inspect an answer; they are not proof that it is correct.</p>
         </div>
       </div>
     </div>
@@ -4819,14 +4976,14 @@
       </div>
       <h2 class="section-title reveal">Built to be checked<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
-        Most AI asks for trust. ZOTHEOS keeps receipts: signed results, a local track record, a log of every mind-change, and an offline mode you can watch prove itself. All of it lives in the product, not in a press release.
+        ZOTHEOS includes signed result receipts, local forecast records, evidence-linked corrections and backend network checks. They make the work inspectable, and their desktop integration is part of the current validation.
       </p>
       <div class="instrument-grid">
         <div class="instrument-card reveal">
           <span class="ic-index">01</span>
           <span class="ic-dot" aria-hidden="true"></span>
           <h3>Signed receipts</h3>
-          <p>Download a signed receipt for a result and verify it offline. No account, no server, no trust required.</p>
+          <p>Verify result-receipt signatures offline. A signature check establishes whether the receipt matches its signing key; it does not prove the answer is correct.</p>
         </div>
         <div class="instrument-card reveal reveal-d1">
           <span class="ic-index">02</span>
@@ -4849,12 +5006,12 @@
         <div class="instrument-card reveal reveal-d4">
           <span class="ic-index">05</span>
           <span class="ic-dot" aria-hidden="true"></span>
-          <h3>Provable offline</h3>
-          <p>Not a toggle and a promise. A network ledger, plus a canary that attempts an outbound call in front of you so you can watch it get refused.</p>
+          <h3>Backend network checks</h3>
+          <p>A backend network ledger and canary check make backend controls inspectable. They do not establish that every desktop-shell or WebView2 connection is blocked.</p>
         </div>
       </div>
       <div class="proof-epigram reveal reveal-d3">
-        Ask any AI if it is trustworthy and it will say yes.<br/>ZOTHEOS would rather show you the ledger.
+        Trust needs evidence.<br/>ZOTHEOS would rather show you the ledger.
       </div>
       <p class="proof-note reveal reveal-d4">ZOTHEOS also measures its own catch rate. The method is published; the numbers print when they are ready, not before.</p>
     </div>
@@ -4874,7 +5031,7 @@
         <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Workspace</span>
       </div>
-      <h2 class="section-title reveal">One workspace, thirty tools<span class="seal">.</span></h2>
+      <h2 class="section-title reveal">One workspace, many tools<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
         Everything lives in one overlay: a fuzzy command palette, keyboard driven, arranged in three zones. A search that matches nothing offers to run itself as a fact-check, a memory search, or an investigation. No dead ends.
       </p>
@@ -4918,14 +5075,41 @@
             <span class="ws-tile">Memory Dashboard</span>
             <span class="ws-tile">Knowledge Map</span>
             <span class="ws-tile">Theme Studio</span>
-            <span class="ws-tile">Kids Mode</span>
+            <span class="ws-tile">Kids Mode (planned)</span>
             <span class="ws-tile">Model Setup</span>
             <span class="ws-tile">Device Health</span>
             <span class="ws-tile is-more" aria-hidden="true">&hellip;</span>
           </div>
         </div>
       </div>
-      <p class="ws-note reveal reveal-d3">A selection of the thirty. The Ethics Sentinel runs underneath them all: it refuses to help build systems of control, and it always answers fact-seeking accountability questions.</p>
+      <p class="ws-note reveal reveal-d3">A selection of the workspace tools. The Ethics Sentinel is designed to refuse help building systems of control while allowing fact-seeking accountability questions. Guardrails remain inspectable and subject to testing.</p>
+      <div class="workspace-examples reveal" aria-labelledby="example-prompts-title">
+        <h3 id="example-prompts-title">Start with a question that matters.</h3>
+        <p class="example-intro">Open an example prompt. These illustrate what to ask, not recorded answers or measured results.</p>
+        <div class="example-grid">
+          <details class="example-card">
+            <summary><span>Think through a decision</span><span class="example-open" aria-hidden="true"></span></summary>
+            <div class="example-body">
+              <span class="example-label">Example prompt</span>
+              <blockquote>I am deciding whether to repair or replace my old computer. Help me compare the costs, the useful life and the environmental tradeoffs. What assumptions should I check before deciding?</blockquote>
+            </div>
+          </details>
+          <details class="example-card">
+            <summary><span>Question a document</span><span class="example-open" aria-hidden="true"></span></summary>
+            <div class="example-body">
+              <span class="example-label">Example prompt</span>
+              <blockquote>Help me examine this document's main claim. Which statements have supporting evidence, which are assumptions, and what would change the conclusion?</blockquote>
+            </div>
+          </details>
+          <details class="example-card">
+            <summary><span>Learn a difficult concept</span><span class="example-open" aria-hidden="true"></span></summary>
+            <div class="example-body">
+              <span class="example-label">Example prompt</span>
+              <blockquote>Explain how an AI model can sound confident and still be wrong. Start with an everyday analogy, show where the analogy breaks down, and help me check my understanding.</blockquote>
+            </div>
+          </details>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -4941,51 +5125,65 @@
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
-        <span class="section-label">Any device</span>
+        <span class="section-label">The hardware you already have</span>
       </div>
-      <h2 class="section-title reveal">One download. Four honest tiers<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">
-        You do not shop for models. ZOTHEOS measures your machine and seats the council it can honestly run, from workstation to pocket. The three roles stay the same; only their size changes.
-      </p>
-      <div class="tier-ladder reveal reveal-d2">
+      <h2 class="section-title reveal">Your hardware. Your intelligence<span class="seal">.</span></h2>
+      <p class="section-desc reveal reveal-d1">The direction is broad access: use the computing power already around us, from workstations and everyday computers to older PCs and kiosks. Fit the model to the machine and the task. Current desktop release testing focuses on Windows x64.</p>
+      <div class="tier-ladder reveal reveal-d2" aria-label="Hardware families in the development direction">
         <div class="tier-row">
-          <span class="tier-code">T3</span>
-          <div class="tier-info">
-            <span class="tier-name">Workstation</span>
-            <span class="tier-hw">16GB+ VRAM</span>
-          </div>
-          <div class="tier-council">Full council &middot; 14B / 9B / 3B</div>
-          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 100%"></span></span><span class="tier-foot">~15.5 GB</span></div>
+          <span class="tier-code">MAX</span>
+          <div class="tier-info"><span class="tier-name">High-capacity computers</span><span class="tier-hw">Workstations &middot; desktops &middot; larger laptops</span></div>
+          <div class="tier-council">Larger compatible models</div>
+          <div class="tier-meter"><span class="tier-foot">Room to explore</span></div>
         </div>
         <div class="tier-row">
-          <span class="tier-code">T2</span>
-          <div class="tier-info">
-            <span class="tier-name">Laptop, GPU</span>
-            <span class="tier-hw">6GB+ VRAM</span>
-          </div>
-          <div class="tier-council">Council &middot; 8B / 7B / 3B</div>
-          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 84%"></span></span><span class="tier-foot">~13 GB</span></div>
+          <span class="tier-code">FIT</span>
+          <div class="tier-info"><span class="tier-name">Everyday computers</span><span class="tier-hw">Laptops &middot; desktops &middot; mini PCs</span></div>
+          <div class="tier-council">Balanced model choices</div>
+          <div class="tier-meter"><span class="tier-foot">Fit the task</span></div>
         </div>
         <div class="tier-row">
-          <span class="tier-code">T1</span>
-          <div class="tier-info">
-            <span class="tier-name">Laptop, CPU</span>
-            <span class="tier-hw">8GB+ RAM, no GPU</span>
-          </div>
-          <div class="tier-council">Light council &middot; 3B / 3B / 1.5B</div>
-          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 32%"></span></span><span class="tier-foot">~5 GB</span></div>
+          <span class="tier-code">CPU</span>
+          <div class="tier-info"><span class="tier-name">Older hardware</span><span class="tier-hw">Older PCs &middot; refurbished machines &middot; kiosks</span></div>
+          <div class="tier-council">CPU-first development</div>
+          <div class="tier-meter"><span class="tier-foot">Reuse what exists</span></div>
         </div>
         <div class="tier-row is-t0">
-          <span class="tier-code">T0</span>
-          <div class="tier-info">
-            <span class="tier-name">Pocket</span>
-            <span class="tier-hw">small devices</span>
-          </div>
-          <div class="tier-council">A single voice &middot; 1.5B, no council</div>
-          <div class="tier-meter"><span class="tier-bar"><span class="tier-fill" style="--w: 10%"></span></span><span class="tier-foot">~1.5 GB</span></div>
+          <span class="tier-code">MIN</span>
+          <div class="tier-info"><span class="tier-name">Compact systems</span><span class="tier-hw">Small PCs &middot; compact and embedded hardware</span></div>
+          <div class="tier-council">Small-model direction</div>
+          <div class="tier-meter"><span class="tier-foot">Small footprint</span></div>
         </div>
       </div>
-      <p class="tier-note reveal reveal-d3">On T0 the app says so out loud: one mind, not a council. Honesty is part of the interface.</p>
+      <p class="tier-note reveal reveal-d3">These are hardware families we aim to serve, not a verified compatibility list. A supported operating system and processor, enough memory and storage, and a compatible model still matter. Compact-system startup and other platforms remain in development.</p>
+
+      <div class="model-choice reveal" id="model-choice">
+        <div>
+          <span class="section-label">Model freedom</span>
+          <h3>Your council.<br/>Your choice of models<span class="seal">.</span></h3>
+          <p>Explore an expanding ecosystem of compatible local models. Browse Hugging Face or import GGUF files you already have. Starter packs are a beginning, not a fixed catalog.</p>
+          <p>Choose the models behind Analyst, Humanist and Skeptic while keeping the same local workspace. Each model retains its own license.</p>
+        </div>
+        <div class="model-choice-notes">
+          <details>
+            <summary>What can I bring?</summary>
+            <p>Compatible chat models in GGUF format. GGUF is the model-file format used by the local engine. Supported model architecture, available memory and the model's license determine what can run.</p>
+          </details>
+          <details>
+            <summary>Hugging Face, GitHub or elsewhere?</summary>
+            <p>Model Setup searches Hugging Face. A compatible file obtained from GitHub or another legitimate source can be imported locally. The built-in browser is not a general GitHub downloader.</p>
+          </details>
+          <details>
+            <summary>How does local setup work?</summary>
+            <ol class="local-journey">
+              <li><strong>Install the app.</strong><span>The Windows package follows release validation.</span></li>
+              <li><strong>Choose compatible models.</strong><span>Download or import files that fit your machine and their licenses.</span></li>
+              <li><strong>Work locally.</strong><span>Inference runs on your device after setup. Optional network tools remain separate choices.</span></li>
+            </ol>
+            <a href="/download.html">Read the current release status &rarr;</a>
+          </details>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -5005,7 +5203,7 @@
       </div>
       <h2 class="section-title reveal">Help people remember better, not remember <em>for</em> them<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
-        Most AI memory tools remember <em>for</em> you, they keep your context, you stay passive. ZOTHEOS does the opposite. Memory awareness activates only inside Projects. Inside one, ZOTHEOS stays focused on the facets you're exploring and quietly teaches you how to organize what you learn.
+        Project memory awareness keeps the facets you choose in view and offers techniques for organizing what you learn. Project guidance is distinct from conversation history and the local memory controls.
       </p>
       <div class="memory-callout reveal reveal-d2">
         <div class="memory-vis">
@@ -5022,7 +5220,7 @@
               </svg>
             </span>
             <span class="mv-label">Memory awareness &middot; <strong>Investing</strong></span>
-            <span class="mv-meta">3 facets &middot; 5 conversations</span>
+            <span class="mv-meta">Illustrative project &middot; chosen facets</span>
           </div>
           <div class="mv-facets">
             <span class="mv-chip">compounding</span>
@@ -5041,15 +5239,15 @@
           </div>
           <div class="memory-point">
             <strong>Periodic recap</strong>
-            <span>One click, what's been covered, what's recurring, what's still open, what to explore next. Pulls across the entire project history.</span>
+            <span>Build a recap prompt from recent conversations in this project. Review it, then send it to explore recurring themes and what remains open.</span>
           </div>
           <div class="memory-point">
             <strong>Memory techniques</strong>
             <span>Five built-in techniques, Feynman, spaced repetition, chunking, dual coding, method of loci. Suggested when the content type warrants it.</span>
           </div>
           <div class="memory-point">
-            <strong>Outside projects, forgets cleanly</strong>
-            <span>No global memory creep. ZOTHEOS doesn't accumulate context about you across casual sessions, only in territories you explicitly commit to.</span>
+            <strong>Project awareness stays scoped</strong>
+            <span>Project facets apply inside the project. Conversation history and local memory have separate controls; leaving a project does not erase them.</span>
           </div>
           <div class="memory-point">
             <strong>What ZOTHEOS Remembers</strong>
@@ -5075,7 +5273,7 @@
         <span class="section-label">Console</span>
       </div>
       <h2 class="section-title reveal">See it think<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">A real query through the ZOTHEOS fusion pipeline. Three cores reason independently, then one synthesized answer emerges with full attribution.</p>
+      <p class="section-desc reveal reveal-d1">An illustration of the council flow: separate roles, then a synthesized answer. This animation is not a live query, performance measurement or signed result.</p>
       <div class="console-frame reveal reveal-d2" id="liveConsole">
         <div class="console-titlebar">
           <span class="ts-mark">ZOTHEOS<span class="sub">Console</span></span>
@@ -5083,11 +5281,11 @@
         </div>
         <div class="console-body">
           <div class="console-status">
-            <span>Cores: <span class="on">3 online</span></span>
-            <span>Evidence: <span class="on">on</span></span>
-            <span>Offline: <span class="on">on</span></span>
-            <span>AEGIS: <span class="on">active</span></span>
-            <span>Workspace: <span class="on">30 tools</span></span>
+            <span>Roles: <span class="on">Analyst, Humanist, Skeptic</span></span>
+            <span>Evidence: <span class="on">illustrated</span></span>
+            <span>Inference: <span class="on">local design</span></span>
+            <span>AEGIS: <span class="on">guardrail design</span></span>
+            <span>Workspace: <span class="on">tools</span></span>
           </div>
           <div class="console-query">
             <span class="prompt">&rsaquo;</span><span class="typed" id="typedQuery" data-final="How can AI systems be designed to promote universal peace while protecting individual rights?"></span><span class="caret" id="typedCaret">&#9608;</span>
@@ -5114,7 +5312,7 @@
           <div class="console-verdict" id="verdictBlock">
             <div class="verdict-header">
               <span class="verdict-label">Fused answer</span>
-              <span class="confidence-badge" id="confidenceBadge">CONFIDENCE 0.00</span>
+              <span class="confidence-badge" id="confidenceBadge">ILLUSTRATION</span>
             </div>
             <p id="verdictText" data-final="AI systems designed to promote universal peace must balance collective security with individual liberty through transparent, accountable architectures. This requires embedding ethical guardrails structurally, not as policy afterthoughts, with decentralized governance to prevent any single entity from weaponizing the technology. Privacy-preserving design, open-source auditability, and cross-cultural consultation are essential pillars. Individual data sovereignty must remain non-negotiable, even in pursuit of collective goals."></p>
           </div>
@@ -5124,21 +5322,21 @@
             <div class="meta-tag is-core"><span class="name">Skeptic</span> &middot; doubts</div>
           </div>
           <div class="console-meta">
-            <div class="meta-tag">Consensus: nuanced</div>
-            <div class="meta-tag">Bias: 8/100</div>
-            <div class="meta-tag">Reliability: 82/100</div>
-            <div class="meta-tag">Receipt: signed &middot; verify offline</div>
-            <div class="meta-tag">Runtime: 9.2s</div>
+            <div class="meta-tag">Agreement: inspect, do not assume</div>
+            <div class="meta-tag">Evidence: inspect the sources</div>
+            <div class="meta-tag">Confidence: when available</div>
+            <div class="meta-tag">Receipts: verified separately</div>
+            <div class="meta-tag">Timing: illustrative animation</div>
           </div>
-          <div class="console-footer-note">Three perspectives. One synthesis. Every claim attributed.</div>
+          <div class="console-footer-note">Three perspectives. One illustrative synthesis. Inspect evidence and uncertainty.</div>
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;" class="reveal reveal-d3">
-        <a class="btn" href="https://zotheos.tail3dde14.ts.net" target="_blank" rel="noopener">
-          Try the live console <span class="arrow">&rarr;</span>
+        <a class="btn" href="/download.html">
+          Explore local setup <span class="arrow">&rarr;</span>
         </a>
         <p style="font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 16px; letter-spacing: 0.10em;">
-          Hosted on personal hardware via Tailscale Funnel &middot; may be offline
+          Your own workspace. Your chosen models. The Windows desktop is in release validation.
         </p>
       </div>
     </div>
@@ -5164,17 +5362,20 @@
             The internet became a casino.<br/>This is the library<span class="seal">.</span>
           </h2>
           <p class="section-desc reveal reveal-d1">
-            Algorithms reward what keeps you scrolling, not what helps you understand. ZOTHEOS is a calm, reliable alternative: a tool that helps people learn and solve problems without surveillance, manipulation, or paywalls shaping the outcome.
+            ZOTHEOS is built to strengthen human judgment, to guide rather than govern. The Analyst examines evidence, the Humanist keeps human consequences in view, and the Skeptic checks assumptions. You remain free to question the answer, disagree and decide.
           </p>
           <div class="mission-quote reveal reveal-d2">
-            Keep knowledge accessible. Keep privacy intact. Keep the tool reliable even when the internet isn't.
+            Keep knowledge accessible. Keep privacy intact. Keep human agency at the center.
           </div>
+          <p class="proof-note">Universal peace is a moral horizon: knowledge, empathy and cultural memory in service of human dignity. It is not a promise that software can impose peace or make people obey.</p>
+          <p class="proof-note">Evolved Intelligence is a research direction toward accountable learning, useful self-correction and understanding. It is not a claim of consciousness, infallibility or absolute truth.</p>
+          <p class="proof-note">Responsible computation means making useful use of existing models and hardware, choosing appropriate workloads and measuring resource costs. Local AI still has an energy and hardware footprint; environmental benefit must be measured, not assumed.</p>
         </div>
         <div class="mission-values">
           <div class="value-item reveal"><strong>Private by default</strong><span>No accounts required. No data harvested as the price of help.</span></div>
           <div class="value-item reveal reveal-d1"><strong>Built for real decisions</strong><span>Learning, planning, and problem-solving without noise or manipulation.</span></div>
           <div class="value-item reveal reveal-d2"><strong>Independent by design</strong><span>No VC funding, no corporate agenda. Built by one veteran with a mission.</span></div>
-          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Structural constraints, not just policy promises. The architecture enforces integrity.</span></div>
+          <div class="value-item reveal reveal-d3"><strong>Ethical guardrails</strong><span>Guardrails, evidence and provenance make conduct inspectable. They remain subject to testing and correction.</span></div>
         </div>
       </div>
     </div>
@@ -5195,81 +5396,81 @@
         <span class="section-label">Comparison</span>
       </div>
       <h2 class="section-title reveal">A different posture entirely<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">Most assistants are products of an ad model, a surveillance model, or both. ZOTHEOS is a tool, built to one purpose.</p>
+      <p class="section-desc reveal reveal-d1">ZOTHEOS is built around local control and inspectable evidence. Hosted services differ in their policies and capabilities; compare the specific service you use.</p>
 
-      <div class="compare-table reveal reveal-d2" role="table" aria-label="ZOTHEOS compared with typical cloud AI assistants">
+      <div class="compare-table reveal reveal-d2" role="table" aria-label="Local ZOTHEOS design and cloud-service considerations">
         <div class="compare-row compare-head" role="row">
           <div role="columnheader">&nbsp;</div>
           <div role="columnheader" class="col-z">
-            <img src="/static/zotheos_logo.png" alt="ZOTHEOS" class="col-z-logo" onerror="this.closest('.col-z').classList.add('img-failed')" />
+            <img src="/static/zotheos_logo.png" alt="ZOTHEOS" class="col-z-logo" data-logo-fallback=".col-z" />
             <span class="col-z-text">ZOTHEOS</span>
           </div>
-          <div role="columnheader" class="col-them">Cloud AI assistants</div>
+          <div role="columnheader" class="col-them">Cloud services vary</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Inference location</div>
           <div role="cell" class="yes">On your hardware</div>
-          <div role="cell" class="no">Vendor servers</div>
+          <div role="cell" class="no">Remote host hardware</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Account required</div>
           <div role="cell" class="yes">No</div>
-          <div role="cell" class="no">Yes</div>
+          <div role="cell" class="no">Check access requirements</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Data used for training</div>
-          <div role="cell" class="yes">Never collected</div>
-          <div role="cell" class="no">Often, by default</div>
+          <div role="cell" class="yes">Local edition stores data locally</div>
+          <div role="cell" class="no">Check the provider policy</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Reasoning method</div>
           <div role="cell" class="yes">Three independent cores, synthesized</div>
-          <div role="cell" class="no">Single model, averaged biases</div>
+          <div role="cell" class="no">Provider-specific architecture</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Citations</div>
-          <div role="cell" class="yes">Enforced per claim</div>
-          <div role="cell" class="no">Optional / hallucinated</div>
+          <div role="cell" class="yes">Strict-mode grounding checks</div>
+          <div role="cell" class="no">Check citation behavior</div>
         </div>
         <div class="compare-row" role="row">
-          <div role="rowheader">Calibration disclosed</div>
-          <div role="cell" class="yes">Per response, three signals</div>
-          <div role="cell" class="no">Hidden</div>
+          <div role="rowheader">Confidence disclosed</div>
+          <div role="cell" class="yes">Signals when available</div>
+          <div role="cell" class="no">Check available signals</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Works offline</div>
-          <div role="cell" class="yes">Always</div>
-          <div role="cell" class="no">Never</div>
+          <div role="cell" class="yes">Local inference after setup</div>
+          <div role="cell" class="no">Remote features need network</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Funding model</div>
           <div role="cell" class="yes">Independent, no investors</div>
-          <div role="cell" class="no">VC / ads / API revenue</div>
+          <div role="cell" class="no">Provider-specific funding</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Proof of offline</div>
-          <div role="cell" class="yes">A ledger and a live canary</div>
-          <div role="cell" class="no">Trust us</div>
+          <div role="cell" class="yes">Backend ledger and canary</div>
+          <div role="cell" class="no">Check network controls</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Track record</div>
-          <div role="cell" class="yes">Public prediction ledger, scored</div>
-          <div role="cell" class="no">None</div>
+          <div role="cell" class="yes">Local forecast records</div>
+          <div role="cell" class="no">Check provider records</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">When it changes its mind</div>
           <div role="cell" class="yes">Logged, with the evidence</div>
-          <div role="cell" class="no">Silent updates</div>
+          <div role="cell" class="no">Check change records</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">When it is wrong</div>
           <div role="cell" class="yes">Corrections with provenance</div>
-          <div role="cell" class="no">Thumbs-down into the void</div>
+          <div role="cell" class="no">Check correction process</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Receipts</div>
           <div role="cell" class="yes">Signed, offline-verifiable</div>
-          <div role="cell" class="no">None</div>
+          <div role="cell" class="no">Check provider records</div>
         </div>
       </div>
     </div>
@@ -5297,70 +5498,74 @@
             <span class="faq-q">Does ZOTHEOS actually work offline?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Yes, completely. Inference runs locally via llama.cpp. Once the models are on disk, your machine can be air-gapped and ZOTHEOS still reasons across all three cores, queries the local vault, and synthesizes a fused answer.</div>
+          <div class="faq-a">Local inference runs via llama.cpp once the required models are available. Model downloads and optional network features need a connection. The local edition stores conversations and vault files on your device.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">Why three models instead of one larger one?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">A single model averages over its own biases and presents the result as a single voice. Three cores with distinct roles, Analyst, Humanist, and Skeptic, reason independently. The synthesizer then attributes claims and surfaces disagreement, so you see the structure of the answer, not just its surface.</div>
+          <div class="faq-a">Analyst, Humanist, and Skeptic examine questions from different angles, then synthesize an answer that can expose evidence and disagreement. Multiple models can share the same error, so agreement is not proof.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">What hardware do I need?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Almost any machine. ZOTHEOS measures your hardware and seats the council it can honestly run: a full council on a 16GB+ VRAM workstation, a mid council on a 6GB+ VRAM laptop, a light council on an 8GB CPU-only laptop, and a single small voice on pocket-class devices, honestly labeled as one mind rather than a council.</div>
+          <div class="faq-a">ZOTHEOS is being developed for broad hardware access, including desktops, laptops, mini PCs, older computers and kiosks. Current desktop release testing focuses on Windows x64. Processor support, memory, storage and model compatibility still matter; compact-system startup and other platforms remain in development.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">Is any of my data collected?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">No accounts, no telemetry, no usage analytics. The only point of contact is the waitlist form, which collects an email solely for launch notifications. Same privacy posture as the product itself.</div>
+          <div class="faq-a">The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Local inference and website processing are separate.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">How is ZOTHEOS funded?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Independently. No venture capital, no investors, no advertising. Development is self-funded by the founder with optional supporter donations via PayPal, Stripe, or Gumroad. The architecture choice is the funding choice; there is no investor pressure pushing the product toward surveillance.</div>
+          <div class="faq-a">Development is independent and self-funded, with optional support. The local edition is free for individual use. Support does not unlock features, access, priority or influence. Institutional deployment and support may be paid; they are not required for individual local use.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">What is the "evidence vault"?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">A local, tiered knowledge base the three cores can cite. Sources are reranked by a cross-encoder and citations are enforced in the response as <code>[Vault:Source]</code> tags. Strict mode rejects answers that cannot be grounded.</div>
+          <div class="faq-a">A local, tiered knowledge base the council can cite. Retrieval can rerank sources, and strict mode checks grounding and citation tags. A citation still needs to be inspected against its source.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">How do I know it is really offline?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">You can watch it prove itself. ZOTHEOS keeps a network ledger and includes a canary that attempts an outbound call in front of you so you can watch it get refused. Signed result receipts can also be verified with no connection at all.</div>
+          <div class="faq-a">The backend includes a network ledger and a canary check for its network controls. Those checks cover backend activity, not every shell or WebView2 connection. Receipt signatures can be checked offline, separately from network behavior.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">What happens when ZOTHEOS is wrong?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Corrections are first-class. Every user-flagged correction is persisted with provenance in an immutable log and approved or rejected in the open. When the council changes its mind, the full belief-drift chain is kept with the evidence that moved it. Nothing is memory-holed.</div>
+          <div class="faq-a">Flagged corrections are recorded with provenance for review. Belief-drift records retain evidence linked to a change. These records make changes inspectable; they do not prove that an answer is correct.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">Can kids use ZOTHEOS?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">Yes. Kids Mode ships with age bands, and the same privacy posture applies: everything stays on the device.</div>
+          <div class="faq-a">Kids Mode is not enabled in the current product. Age-band support remains planned.</div>
         </details>
         <details class="faq-item">
           <summary>
             <span class="faq-q">What is the Smart Board?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">An infinite offline AI whiteboard. Ask the council on the canvas, drop in a document, chart data, use your voice, and save the board as a conversation.</div>
+          <div class="faq-a">An AI whiteboard with council prompts, document tools, charts, voice and conversation saving. Available functions depend on the configured models and tools.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I choose my own models?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a">Yes. Model Setup browses Hugging Face and imports local GGUF files, so starter packs are a beginning rather than a fixed catalog. Compatible chat models can be assigned to the council roles. Each model retains its own license, and runtime support plus available memory determine what can run. GitHub files can be imported locally when compatible; an integrated GitHub downloader is not established.</div>
         </details>
       </div>
     </div>
@@ -5419,8 +5624,8 @@
         <span class="section-label">Be among the first</span>
       </div>
       <div class="waitlist-card reveal reveal-d1">
-        <h3>ZOTHEOS launches publicly when the platform is stable, calibrated, and ready.</h3>
-        <p>Drop your email to get the invite ahead of public launch. We'll only email you about ZOTHEOS milestones. No newsletter spam, no third-party sharing. Same privacy posture as the product.</p>
+        <h3>The local Windows download follows setup, installation and clean-machine validation.</h3>
+        <p>Join for ZOTHEOS development and release updates. This form sends your email to Formspree, our form processor. Early access is not a promise of an immediate invitation or a finished download.</p>
         <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mrejgqyb" method="POST">
           <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" class="waitlist-input" aria-label="Email address" />
           <input type="hidden" name="_subject" value="New ZOTHEOS waitlist signup" />
@@ -5447,22 +5652,22 @@
         <span class="section-label">Support</span>
       </div>
       <h2 class="section-title reveal">Fund the mission<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">Support funds development, testing, and releases, and keeps ZOTHEOS permanently independent. No investors. No ads. Just the work.</p>
+      <p class="section-desc reveal reveal-d1">Support funds independent development, testing and releases. The local edition is free for individual use. Support is voluntary and does not unlock features, access, priority or influence.</p>
       <div class="support-grid">
         <div class="support-card reveal">
           <h3>PayPal</h3>
           <p>One-time support to keep the build moving.</p>
-          <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener">Donate via PayPal <span class="arrow">&rarr;</span></a>
+          <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=GMEA5YYQ3QJGG" target="_blank" rel="noopener noreferrer">Donate via PayPal <span class="arrow">&rarr;</span></a>
         </div>
         <div class="support-card reveal reveal-d1">
           <h3>Stripe</h3>
           <p>Card-based support, processed securely.</p>
-          <a class="btn" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener">Donate via Stripe <span class="arrow">&rarr;</span></a>
+          <a class="btn" href="https://donate.stripe.com/7sY6oI6wc7HygIuadCbMQ00" target="_blank" rel="noopener noreferrer">Donate via Stripe <span class="arrow">&rarr;</span></a>
         </div>
         <div class="support-card reveal reveal-d2">
           <h3>Gumroad</h3>
-          <p>Supporter packs and future early access.</p>
-          <a class="btn" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener">Support on Gumroad <span class="arrow">&rarr;</span></a>
+          <p>Voluntary support for independent development.</p>
+          <a class="btn" href="https://zotheos.gumroad.com/l/jibfv" target="_blank" rel="noopener noreferrer">Support on Gumroad <span class="arrow">&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -5479,7 +5684,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">
-          <img src="/static/zotheos_logo.png" alt="" class="footer-logo-img" onerror="this.parentNode.classList.add('img-failed')" />
+          <img src="/static/zotheos_logo.png" alt="" class="footer-logo-img" data-logo-fallback="parent" />
           <span class="footer-brand-text">ZOTHEOS</span>
         </div>
         <div class="footer-tagline">Offline ethical intelligence. Private by default. Built independently.</div>
@@ -5495,7 +5700,10 @@
         <a href="#features">Architecture</a>
         <a href="#proof">Proof</a>
         <a href="#workspace">Workspace</a>
-        <a href="#devices">Any device</a>
+        <a href="#devices">Hardware</a>
+        <a href="#model-choice">Model choice</a>
+        <a href="/download.html">Download status</a>
+        <a href="#site-privacy">Website privacy</a>
         <a href="#memory">Memory</a>
         <a href="#console">Console</a>
         <a href="#mission">Mission</a>
@@ -5512,6 +5720,16 @@
         Offline &middot; Private &middot; Independent
       </div>
     </div>
+    <details class="website-privacy" id="site-privacy">
+      <summary>Website privacy and connections</summary>
+      <div class="privacy-grid">
+        <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p></div>
+        <div><strong>Website connections</strong><p>This page loads hosted images and video, plus fonts from Google Fonts. Those providers handle the associated requests. Local inference and loading this website are different activities.</p></div>
+        <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, our form processor. Support links open separate payment services with their own policies. Neither is required for individual local use.</p></div>
+        <div><strong>What the mirror can show</strong><p>The mirror reads page-accessible cookies and a saved theme setting. It cannot read HttpOnly cookies or establish what a hosting provider logs or retains.</p></div>
+      </div>
+      <p>For privacy or security concerns, contact <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
+    </details>
     <div class="footer-epigraph">
       <span class="nahuatl">in xochitl, in cuicatl<span class="gloss">flower and song, the way truth is told</span></span>
       <span class="tonal-seal" id="tonalSeal"></span>
@@ -5538,15 +5756,15 @@
       </div>
       <div class="m-stage" data-stage="3">
         <div class="mirror-rows">
-          <div class="mirror-row"><span>Cookies set by this page</span><span class="mr-val" id="mrCookies">0</span></div>
-          <div class="mirror-row"><span>Analytics and trackers</span><span class="mr-val">0</span></div>
-          <div class="mirror-row"><span>Your browsing, recorded</span><span class="mr-val">nothing</span></div>
-          <div class="mirror-row"><span>Kept on your device</span><span class="mr-val" id="mrLocal">your theme choice</span></div>
+          <div class="mirror-row"><span>Page-readable cookies</span><span class="mr-val" id="mrCookies">0</span></div>
+          <div class="mirror-row"><span>Hosting activity</span><span class="mr-val">not measured here</span></div>
+          <div class="mirror-row"><span>Email signup</span><span class="mr-val">Formspree, when submitted</span></div>
+          <div class="mirror-row"><span>Saved theme setting</span><span class="mr-val" id="mrLocal">not read yet</span></div>
         </div>
-        <div class="mirror-note">Measured on your machine, just now.</div>
+        <div class="mirror-note">The cookie count excludes HttpOnly cookies. This page loads hosted fonts and media; email signup sends data to Formspree. Server logs are not measured here.</div>
       </div>
       <div class="m-stage" data-stage="4">
-        <div class="mirror-seal-line">ZOTHEOS keeps <em>no reflection</em> of you.</div>
+        <div class="mirror-seal-line">Know what is <em>local</em>. Know what connects.</div>
         <div class="mirror-day" id="mirrorDay"></div>
         <div class="mirror-hint">Click anywhere to close</div>
       </div>
@@ -5562,6 +5780,44 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Registered image fallbacks. */
+    (function () {
+      document.querySelectorAll('img[data-logo-fallback]').forEach(function (img) {
+        function failed() {
+          var mode = img.getAttribute('data-logo-fallback');
+          var target = mode === 'parent' ? img.parentNode : img.closest(mode);
+          if (target) target.classList.add('img-failed');
+        }
+        img.addEventListener('error', failed);
+        if (img.complete && img.naturalWidth === 0) failed();
+      });
+    })();
+
+    /* Motion floor and lifecycle: retain the existing effects control. */
+    (function () {
+      var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var stored = null;
+      try { stored = localStorage.getItem('zotheos_fx'); } catch (e) {}
+      document.body.classList.toggle('fx-off', mq.matches || stored === 'off');
+      document.documentElement.classList.toggle('fx-off', mq.matches || stored === 'off');
+      window.zMotionAllowed = function () {
+        return !document.hidden && !mq.matches && !document.body.classList.contains('fx-off');
+      };
+      function visibility() {
+        document.body.classList.toggle('motion-page-hidden', document.hidden);
+      }
+      document.addEventListener('visibilitychange', visibility);
+      visibility();
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            entry.target.classList.toggle('motion-area-hidden', !entry.isIntersecting);
+          });
+        });
+        document.querySelectorAll('section').forEach(function (section) { observer.observe(section); });
+      }
+    })();
 
     /* Theme picker */
     (function () {
@@ -5719,42 +5975,39 @@
       var s = document.getElementById('skipIntro');
       var t = document.getElementById('togglePlay');
       if (!o || !v) return;
-      var d = false;
+      var d = false, timer = null;
       function dismiss() {
         if (d) return;
         d = true;
+        if (timer != null) clearTimeout(timer);
         o.classList.add('dismissed');
         try { v.pause(); } catch (e) {}
       }
+      function checkMotion() { if (!window.zMotionAllowed()) dismiss(); }
+      document.addEventListener('visibilitychange', checkMotion);
+      window.addEventListener('zotheos:effectschange', checkMotion);
       v.addEventListener('error', dismiss);
       v.addEventListener('ended', dismiss);
-      setTimeout(dismiss, 9000);
-      s.addEventListener('click', dismiss);
-      t.addEventListener('click', function () {
-        if (v.paused) { v.play().catch(function () {}); t.textContent = 'Pause'; }
+      if (s) s.addEventListener('click', dismiss);
+      if (t) t.addEventListener('click', function () {
+        if (!window.zMotionAllowed()) { dismiss(); return; }
+        if (v.paused) { v.play().catch(dismiss); t.textContent = 'Pause'; }
         else { v.pause(); t.textContent = 'Play'; }
       });
-      v.play().catch(function () {});
+      if (!window.zMotionAllowed()) { dismiss(); return; }
+      timer = setTimeout(dismiss, 9000);
+      v.play().catch(dismiss);
     })();
 
-    /* Header scroll state + scroll-to-top + direction-aware hiding:
-       the bar slips away while you read downward and returns the
-       moment you look back up. */
+    /* Header scroll state + scroll-to-top. Keep the fixed navigation
+       available while the bar adopts its compact glass appearance. */
     (function () {
       var h = document.getElementById('header');
       var st = document.getElementById('scrollTop');
-      var lastY = window.scrollY;
       function onScroll() {
         var y = window.scrollY;
         h.classList.toggle('scrolled', y > 40);
         if (st) st.classList.toggle('visible', y > 360);
-        var delta = y - lastY;
-        if (y > 420 && delta > 6) {
-          h.classList.add('header-hidden');
-        } else if (delta < -6 || y <= 420) {
-          h.classList.remove('header-hidden');
-        }
-        lastY = y;
       }
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
@@ -5776,13 +6029,22 @@
     /* Reveal-on-scroll */
     (function () {
       var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur, .stagger');
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            obs.unobserve(e.target);
-          }
-        });
+      var obs = null;
+      function reveal(el) {
+        el.classList.add('visible');
+        if (obs) obs.unobserve(el);
+      }
+      function revealAll() { els.forEach(reveal); }
+      document.addEventListener('focusin', function (event) {
+        els.forEach(function (el) { if (el.contains(event.target)) reveal(el); });
+      });
+      window.addEventListener('zotheos:effectschange', function () {
+        if (!window.zMotionAllowed()) revealAll();
+      });
+      if (!('IntersectionObserver' in window) || document.body.classList.contains('fx-off') ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) { revealAll(); return; }
+      obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) { if (entry.isIntersecting) reveal(entry.target); });
       }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
       els.forEach(function (el) { obs.observe(el); });
     })();
@@ -5815,20 +6077,30 @@
       if (!el) return;
       var tx = -300, ty = -300, cx = -300, cy = -300;
       var raf = null;
+      function stop() {
+        if (raf != null) cancelAnimationFrame(raf);
+        raf = null; el.classList.remove('active');
+      }
+      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
+      document.addEventListener('visibilitychange', checkMotion);
+      window.addEventListener('zotheos:effectschange', checkMotion);
       function loop() {
+        raf = null;
+        if (!window.zMotionAllowed()) { stop(); return; }
         cx += (tx - cx) * 0.18;
         cy += (ty - cy) * 0.18;
         el.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
-        raf = requestAnimationFrame(loop);
+        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(loop);
       }
       document.addEventListener('mousemove', function (e) {
+        if (!window.zMotionAllowed()) return;
         tx = e.clientX;
         ty = e.clientY;
         el.classList.add('active');
         if (raf == null) loop();
       }, { passive: true });
       document.addEventListener('mouseleave', function () {
-        el.classList.remove('active');
+        stop();
       });
     })();
 
@@ -5858,29 +6130,52 @@
       var orbit = document.getElementById('councilOrbit');
       if (!wrap || !disc) return;
       var tx = 0, ty = 0, cx = 0, cy = 0;
-      var active = false;
+      var active = false, raf = null;
+      var initialRect = wrap.getBoundingClientRect();
+      var inView = initialRect.bottom > 0 && initialRect.top < window.innerHeight;
+      function stop() {
+        active = false;
+        if (raf != null) cancelAnimationFrame(raf);
+        raf = null; tx = 0; ty = 0;
+        disc.style.transform = '';
+        if (orbit) orbit.style.transform = '';
+      }
+      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
+      document.addEventListener('visibilitychange', checkMotion);
+      window.addEventListener('zotheos:effectschange', checkMotion);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          inView = entries[0].isIntersecting;
+          if (!inView) stop();
+        }).observe(wrap);
+      }
       function loop() {
+        raf = null;
+        if (!active || !inView || !window.zMotionAllowed()) { stop(); return; }
         cx += (tx - cx) * 0.08;
         cy += (ty - cy) * 0.08;
         var rx = (-cy * 6).toFixed(2);
         var ry = (cx * 6).toFixed(2);
         disc.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
         if (orbit) orbit.style.transform = 'translate3d(' + (cx * 8).toFixed(1) + 'px,' + (cy * 8).toFixed(1) + 'px,0)';
-        if (active) requestAnimationFrame(loop);
+        if (active && (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001)) raf = requestAnimationFrame(loop);
+        else active = false;
       }
       function onMove(e) {
+        if (!inView || !window.zMotionAllowed()) return;
         var r = wrap.getBoundingClientRect();
         // viewport-relative offset normalized to disc area
         var dx = (e.clientX - (r.left + r.width / 2)) / window.innerWidth;
         var dy = (e.clientY - (r.top + r.height / 2)) / window.innerHeight;
         tx = Math.max(-1, Math.min(1, dx * 2));
         ty = Math.max(-1, Math.min(1, dy * 2));
-        if (!active) { active = true; requestAnimationFrame(loop); }
+        if (!active) { active = true; raf = requestAnimationFrame(loop); }
       }
       function onLeave() {
+        if (!inView || !window.zMotionAllowed()) { stop(); return; }
         tx = 0; ty = 0;
         setTimeout(function () { active = false; }, 800);
-        if (!active) { active = true; requestAnimationFrame(loop); }
+        if (!active) { active = true; raf = requestAnimationFrame(loop); }
       }
       window.addEventListener('mousemove', onMove, { passive: true });
       window.addEventListener('mouseleave', onLeave);
@@ -6014,6 +6309,7 @@
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.zSmoothTo = function (y) {
+        reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.body.classList.contains('fx-off');
         var max = (window.zMetrics && window.zMetrics.max) ||
           Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
         window.scrollTo({ top: Math.max(0, Math.min(max, y)), behavior: reduce ? 'auto' : 'smooth' });
@@ -6033,7 +6329,16 @@
       document.body.classList.add('has-custom-cursor');
       var tx = -100, ty = -100, cx = -100, cy = -100;
       var raf = null;
+      function stop() {
+        if (raf != null) cancelAnimationFrame(raf);
+        raf = null; c.classList.remove('ready');
+      }
+      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
+      document.addEventListener('visibilitychange', checkMotion);
+      window.addEventListener('zotheos:effectschange', checkMotion);
       function loop() {
+        raf = null;
+        if (!window.zMotionAllowed()) { stop(); return; }
         var dx = tx - cx, dy = ty - cy;
         cx += dx * 0.30;
         cy += dy * 0.30;
@@ -6050,9 +6355,10 @@
               s.toFixed(3) + ',' + (1 / Math.sqrt(s)).toFixed(3) + ')';
           }
         }
-        raf = requestAnimationFrame(loop);
+        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(loop);
       }
       document.addEventListener('mousemove', function (e) {
+        if (!window.zMotionAllowed()) return;
         tx = e.clientX; ty = e.clientY;
         c.classList.add('ready');
         if (!raf) loop();
@@ -6067,7 +6373,7 @@
           setTimeout(function () { ring.classList.remove('ping'); }, 500);
         }
       });
-      document.addEventListener('mouseleave', function () { c.classList.remove('ready'); });
+      document.addEventListener('mouseleave', stop);
 
       function applyState(target) {
         c.classList.remove('hover-link', 'hover-text', 'over-disc');
@@ -6097,7 +6403,7 @@
         var s = document.createElement('span');
         s.className = 'hl';
         s.style.setProperty('--i', String(i));
-        s.innerHTML = text[i] === ' ' ? '&nbsp;' : text[i];
+        s.textContent = text[i] === ' ' ? '\u00a0' : text[i];
         glow.appendChild(s);
         letters.push(s);
       }
@@ -6299,7 +6605,7 @@
       function runReduced() {
         typedEl.textContent = query;
         verdictEl.textContent = verdict;
-        badgeEl.textContent = 'CONFIDENCE 0.78';
+        badgeEl.textContent = 'ILLUSTRATION';
         frame.classList.add('answered');
       }
       if (reduce) { runReduced(); return; }
@@ -6308,7 +6614,7 @@
       frame.classList.add('is-live');
       typedEl.textContent = '';
       verdictEl.textContent = '';
-      badgeEl.textContent = 'CONFIDENCE 0.00';
+      badgeEl.textContent = 'ILLUSTRATION';
 
       var started = false;
       var io = new IntersectionObserver(function (entries) {
@@ -6364,14 +6670,12 @@
           var jump = 2 + Math.floor(Math.random() * 4);
           i = Math.min(verdict.length, i + jump);
           verdictEl.textContent = verdict.slice(0, i);
-          // animate confidence climbing
-          var pct = i / verdict.length;
-          var conf = Math.min(0.78, 0.18 + pct * 0.62);
-          badgeEl.textContent = 'CONFIDENCE ' + conf.toFixed(2);
+          // The streamed text is an illustration, not a confidence reading.
+          badgeEl.textContent = 'ILLUSTRATION';
           if (i < verdict.length) {
             setTimeout(step, 28 + Math.random() * 24);
           } else {
-            badgeEl.textContent = 'CONFIDENCE 0.78';
+            badgeEl.textContent = 'ILLUSTRATION';
             if (cb) cb();
           }
         }
@@ -6578,7 +6882,7 @@
         if (l) {
           var has = false;
           try { has = localStorage.getItem('zotheos_landing_theme') !== null; } catch (e) {}
-          l.textContent = has ? 'your theme choice' : 'nothing yet';
+          l.textContent = has ? 'saved' : 'not saved';
         }
       }
 
@@ -6683,7 +6987,8 @@
        One master switch governs every ambient layer. Rain is two
        parallax canvases, theme-aware, paused when hidden or off. */
     (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var reduce = reduceMQ.matches;
       var btn = document.getElementById('fxToggle');
       var back = document.getElementById('rainBack');
       var front = document.getElementById('rainFront');
@@ -6696,9 +7001,9 @@
       var KEY = 'zotheos_fx';
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      // Default ON, unless the OS asks for reduced motion and the
-      // visitor has not chosen otherwise.
-      var on = stored ? (stored === 'on') : !reduce;
+      // Keep the visitor's choice, with the OS preference as the floor.
+      var chosen = stored ? (stored === 'on') : true;
+      var on = chosen && !reduce;
 
       // Rain intensity: light / medium / heavy. Default medium, which
       // is markedly lighter than the old fixed density.
@@ -6856,10 +7161,12 @@
       }
 
       function apply(next) {
-        on = next;
+        on = !!next && !reduceMQ.matches;
+        document.documentElement.classList.toggle('fx-off', !on);
         document.body.classList.toggle('fx-off', !on);
         if (btn) btn.setAttribute('aria-pressed', on ? 'true' : 'false');
         if (on) start(); else stop();
+        window.dispatchEvent(new Event('zotheos:effectschange'));
       }
 
       function paintLevel() {
@@ -6873,8 +7180,10 @@
 
       if (btn) {
         btn.addEventListener('click', function () {
+          if (reduceMQ.matches) return;
           if (!on) resetGuard();   // turning on earns a fresh chance
-          apply(!on);
+          chosen = !on;
+          apply(chosen);
           try { localStorage.setItem(KEY, on ? 'on' : 'off'); } catch (e) {}
         });
       }
@@ -6898,6 +7207,9 @@
       });
       // Rain reads the theme fresh each frame, so theme switches just work.
 
+      function preferenceChanged() { apply(chosen); }
+      if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', preferenceChanged);
+      else if (reduceMQ.addListener) reduceMQ.addListener(preferenceChanged);
       paintLevel();
       apply(on);
     })();
@@ -6907,12 +7219,20 @@
       var f = document.getElementById('waitlistForm');
       var status = document.getElementById('waitlistStatus');
       if (!f) return;
+      var pending = false;
       f.addEventListener('submit', async function (e) {
         e.preventDefault();
+        if (pending) return;
+        pending = true;
+        var submitters = Array.from(f.querySelectorAll('button[type="submit"], input[type="submit"]'));
+        var priorDisabled = submitters.map(function (button) { return button.disabled; });
+        var priorBusy = f.getAttribute('aria-busy');
+        submitters.forEach(function (button) { button.disabled = true; });
+        f.setAttribute('aria-busy', 'true');
         status.classList.remove('error');
         status.textContent = 'Sending...';
-        var fd = new FormData(f);
         try {
+          var fd = new FormData(f);
           var res = await fetch(f.action, {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
@@ -6928,6 +7248,11 @@
         } catch (err) {
           status.classList.add('error');
           status.textContent = 'Network issue. Please try again, or email contact@zotheos.org';
+        } finally {
+          pending = false;
+          submitters.forEach(function (button, index) { button.disabled = priorDisabled[index]; });
+          if (priorBusy === null) f.removeAttribute('aria-busy');
+          else f.setAttribute('aria-busy', priorBusy);
         }
       });
     })();

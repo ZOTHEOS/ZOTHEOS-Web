@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Windows Release Status | ZOTHEOS</title>
+  <link rel="icon" href="/zotheos_icon.ico?v=3" />
+  <meta name="description" content="October 4, 2026: the updated Windows desktop is built for internal testing. Setup, installation and clean-machine checks remain in progress before a public download." />
+  <meta property="og:title" content="ZOTHEOS Windows Release Status" />
+  <meta property="og:description" content="The local Windows x64 desktop is in validation. Model choice and broad hardware access remain central to development." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#02101E" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    /* Same design language as index: Maya Blue cosmic surface, cochineal
+       as the single brave color, editorial serif, mono for evidence. */
+    :root {
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+      --mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+
+      --bg-floor: #02101E;
+      --bg-mid:   #04162A;
+      --bg-deep:  #0A2E48;
+      --ink:   #F4ECD8;
+      --ink-2: #B5C4D0;
+      --ink-3: #8FA5B5;
+      --ink-4: #6E8294;
+      --cochineal:      #D14F35;
+      --cochineal-deep: #A03520;
+      --cochineal-rgb:  209, 79, 53;
+      --pulse-green: #5EBE6A;
+      --rule:      rgba(244, 236, 216, 0.16);
+      --rule-soft: rgba(244, 236, 216, 0.08);
+      --surface:   rgba(244, 236, 216, 0.04);
+      --surface-2: rgba(244, 236, 216, 0.02);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background:
+        radial-gradient(ellipse 90% 60% at 50% 0%, var(--bg-deep) 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-floor) 100%);
+      background-attachment: fixed;
+      color: var(--ink-2);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* top bar */
+    .bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 0;
+    }
+    .bar a.home {
+      font-family: var(--serif); font-style: italic; font-size: 1.15rem;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .bar a.home .dot { color: var(--cochineal); }
+    .bar .crumb {
+      font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--ink-4);
+    }
+
+    /* greca divider, same glyph rhythm as index */
+    .greca {
+      display: flex; align-items: center; gap: 10px;
+      margin: 44px 0; color: var(--ink-4);
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.3em;
+      text-transform: uppercase; white-space: nowrap;
+    }
+    .greca::before, .greca::after {
+      content: ""; height: 1px; background: var(--rule-soft); flex: 1;
+    }
+
+    /* hero */
+    .hero { padding: 56px 0 8px; }
+    .hero h1 {
+      font-family: var(--serif); font-style: italic; font-weight: 400;
+      font-size: clamp(2.4rem, 6.5vw, 4rem); line-height: 1.06;
+      color: var(--ink); text-wrap: balance; margin-bottom: 18px;
+    }
+    .hero h1 em { color: var(--cochineal); font-style: italic; }
+    .hero p.lede { font-size: 1.05rem; max-width: 56ch; color: var(--ink-2); }
+
+    /* CTA card: the page's fork. Exactly one state renders. */
+    .cta-card {
+      margin: 36px 0 8px; padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+    }
+    .cta-card .state-label {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--ink-4); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .state-label .live {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--pulse-green); display: inline-block;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--serif); font-style: italic; font-size: 1rem;
+      letter-spacing: 0.06em; color: var(--ink);
+      background: linear-gradient(180deg, rgba(var(--cochineal-rgb), 0.22), rgba(var(--cochineal-rgb), 0.10));
+      border: 1px solid rgba(var(--cochineal-rgb), 0.55);
+      border-radius: 10px; padding: 14px 26px;
+      text-decoration: none; cursor: pointer;
+      transition: box-shadow 220ms var(--ease-editorial), transform 220ms var(--ease-editorial);
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(var(--cochineal-rgb), 0.22); }
+    .btn .arrow { font-family: var(--sans); font-style: normal; }
+    .meta-row {
+      display: flex; gap: 18px; flex-wrap: wrap; margin-top: 14px;
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em;
+      color: var(--ink-3);
+    }
+    .gate-form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .gate-input {
+      flex: 1 1 260px; padding: 13px 16px; border-radius: 10px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--rule); color: var(--ink);
+      font-family: var(--sans); font-size: 0.95rem;
+    }
+    .gate-input:focus { outline: none; border-color: var(--cochineal); }
+    .gate-input::placeholder { color: var(--ink-4); }
+    .gate-status { margin-top: 10px; font-size: 0.85rem; color: var(--pulse-green); min-height: 1.2em; }
+    .gate-status.error { color: var(--cochineal); }
+    .cta-note { margin-top: 14px; font-size: 0.85rem; color: var(--ink-3); max-width: 60ch; }
+
+    /* sections */
+    section { padding: 8px 0 12px; }
+    h2 {
+      font-family: var(--serif); font-style: italic; font-weight: 400;
+      font-size: clamp(1.5rem, 3.4vw, 2rem); color: var(--ink);
+      margin-bottom: 12px; text-wrap: balance;
+    }
+    section p { max-width: 62ch; margin-bottom: 12px; }
+    .steps { counter-reset: s; list-style: none; margin: 14px 0; }
+    .steps li {
+      counter-increment: s; position: relative;
+      padding: 10px 0 10px 46px; max-width: 62ch;
+    }
+    .steps li::before {
+      content: counter(s);
+      position: absolute; left: 0; top: 8px;
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 0.72rem; color: var(--ink);
+      border: 1px solid rgba(var(--cochineal-rgb), 0.5);
+      background: rgba(var(--cochineal-rgb), 0.10);
+    }
+    code.inline {
+      font-family: var(--mono); font-size: 0.85em;
+      background: rgba(0, 0, 0, 0.35); border: 1px solid var(--rule-soft);
+      border-radius: 6px; padding: 2px 7px; color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+    .codeblock {
+      font-family: var(--mono); font-size: 0.78rem; line-height: 1.6;
+      background: rgba(0, 0, 0, 0.4); border: 1px solid var(--rule-soft);
+      border-left: 3px solid var(--cochineal);
+      border-radius: 10px; padding: 16px 18px; margin: 14px 0;
+      color: var(--ink); overflow-x: auto; white-space: pre;
+    }
+    .hash { color: var(--pulse-green); overflow-wrap: anywhere; white-space: normal; }
+
+    /* the warning card: honesty about SmartScreen */
+    .warn-card {
+      margin: 16px 0; padding: 20px 22px;
+      border: 1px solid rgba(var(--cochineal-rgb), 0.4);
+      border-radius: 12px; background: rgba(var(--cochineal-rgb), 0.06);
+      max-width: 66ch;
+    }
+    .warn-card b { color: var(--ink); }
+
+    /* measured table */
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+    th {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--ink-4); font-weight: 500;
+    }
+    td { color: var(--ink-2); }
+    td.mono { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); }
+    .provenance-note { font-size: 0.78rem; color: var(--ink-4); max-width: 66ch; }
+
+    .footer {
+      margin-top: 40px; padding: 26px 0 40px; border-top: 1px solid var(--rule-soft);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 0.8rem; color: var(--ink-4);
+    }
+    .footer a { color: var(--ink-3); text-decoration: none; }
+    .footer a:hover { color: var(--ink); }
+    @media (max-width: 560px) { .hero { padding-top: 30px; } }
+  </style>
+  <style>
+    a { color: var(--ink); }
+    a:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
+    .status-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .status-date { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); }
+    .status-card { padding: 24px; border: 1px solid var(--rule); border-radius: 14px; background: var(--surface); margin: 16px 0; }
+    .status-list { margin: 10px 0 18px 20px; }
+    .status-list li { padding: 5px 0; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <a class="home" href="/">ZOTHEOS<span class="dot">.</span></a>
+      <span class="crumb">Release status</span>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="status-date">Development update: October 4, 2026</p>
+        <h1>Run your <em>own</em> ZOTHEOS.</h1>
+        <p class="lede">The updated Windows desktop has been built for internal testing. First-run setup, installation and clean-machine checks are still in progress before a public download.</p>
+        <div class="cta-card">
+          <div class="state-label">Windows desktop: validation in progress</div>
+          <p>No replacement installer is available from this page yet. The release filename, checksum and instructions will be published together when that candidate is ready.</p>
+          <div class="status-actions">
+            <a class="btn" href="/#waitlist">Get development updates <span class="arrow">&rarr;</span></a>
+            <a class="btn" href="/#model-choice">Explore model choice <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <p class="cta-note">The goal is broad access using the hardware people already own. Current installer validation is for Windows x64. Older computers, kiosks and compact systems still need compatible processors, enough memory and a supported runtime.</p>
+      </section>
+      <div class="greca">where development stands</div>
+      <section id="progress">
+        <h2>Built, then checked.</h2>
+        <div class="status-card">
+          <p>Security and three-role model-persistence repairs are accepted in source. The updated backend and desktop shell were built internally. A packaged-test process-tracking correction is also committed.</p>
+          <p>Those source and build milestones do not establish a finished installer or a complete runtime pass. Desktop validation continues from the corrected test helper.</p>
+        </div>
+        <h2>What still needs to work.</h2>
+        <ul class="status-list">
+          <li>First-run Model Setup, saved models returning after reopening, and recovery when setup is incomplete.</li>
+          <li>Complete split-model downloads and a working single-voice startup path for smaller machines.</li>
+          <li>Installation, upgrade, data preservation and tests on a clean machine.</li>
+          <li>Desktop network observations and checks of the actual WebView2 window.</li>
+        </ul>
+      </section>
+      <div class="greca">local control</div>
+      <section id="setup">
+        <h2>Models are a separate choice.</h2>
+        <p>The intended baseline is Windows x64 with a CPU engine. Model Setup recommends packs using hardware readings, browses Hugging Face and imports compatible local GGUF files. Council downloads require an explicit choice. Starter packs are a beginning rather than a fixed catalog; each model retains its own license.</p>
+        <p>Initial setup can use the internet for model and helper files. Local inference works after the required files are available. Optional network tools have separate requirements. GPU acceleration and other desktop platforms remain future work; universal hardware compatibility is not established.</p>
+        <p>The <a href="/#devices">hardware families</a> describe our development direction, including everyday computers and reused machines. They are not a verified compatibility list. Explore <a href="/#model-choice">model choice</a> to understand formats, available memory and licensing.</p>
+      </section>
+      <section id="installation">
+        <h2>Your data stays yours.</h2>
+        <p>The desktop uninstaller is designed to remove the application while preserving personal data. Data deletion is a separate decision, not an uninstall step. The replacement candidate's upgrade and preservation route is still being checked.</p>
+        <p>The internal Windows candidate is unsigned. Windows security checks and release-specific installation instructions will be documented with the published artifact. Signing alone does not complete setup, portability or release validation.</p>
+      </section>
+      <section id="access">
+        <h2>Access is not rented.</h2>
+        <p>The local edition is free for individual use. Voluntary support funds development and testing; it does not unlock features, access, priority or influence. Institutional deployment and support may be paid, but they are not required for individual local use.</p>
+        <p>The website waitlist sends your email to Formspree for development and release updates. Joining is not a promise of an immediate invitation or a finished download.</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>ZOTHEOS &middot; Offline Ethical Intelligence</span>
+      <span><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/#site-privacy">Website privacy</a> &nbsp;&middot;&nbsp; <a href="/#support">Support independent development</a></span>
+    </footer>
+  </div>
+</body>
+</html>
