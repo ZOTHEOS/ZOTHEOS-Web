@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-y2SZqJBoF7RoqDR2l3QNr2/cb8Qum4NHmz0AiQ4zaJw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-v66L1MzjDESzSthDkXnSnals9M1LvCRRdGcqB+kkNlg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -796,17 +796,68 @@
     .intro-overlay.dismissed {
       opacity: 0; visibility: hidden; pointer-events: none;
     }
-    .intro-overlay video {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: contain;
-      display: block;
-    }
+    .intro-stage { position: absolute; inset: 0; }
     .intro-overlay::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.7));
+      background: linear-gradient(180deg, transparent 74%, rgba(0, 0, 0, 0.7));
       pointer-events: none;
+    }
+    .intro-controls button[aria-pressed="true"] { border-color: var(--cochineal); }
+
+    /* ZOTHEOS mark assembly intro (pairs with zth-intro.js). The host provides the dark ground and the overlay;
+       this only styles the stage inside it. Class prefix zi- to stay clear of console and landing styles. */
+    /* The host sizes and positions the root (absolute inset:0 inside an overlay, or a fixed-height box);
+       zth-intro.js only adds position: relative when the root is still static. */
+    .zi-root { overflow: hidden; }
+    .zi-field { position: absolute; inset: 0; }
+    .zi-dust { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+    .zi-scene { position: absolute; inset: 0; transition: opacity .9s ease; }
+    .zi-release .zi-scene { opacity: 0; transition: opacity 1.1s cubic-bezier(.7,0,.2,1); }
+
+    /* The wordmark: six letter layers of the shipped logo, the icon slot left empty. */
+    .zi-word { position: absolute; left: 50%; top: 50%; max-width: 100%; aspect-ratio: 3878 / 814; transform: translate(-50%, -50%); }
+    .zi-letter { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; clip-path: inset(0 var(--r) 0 var(--l)); }
+    .zi-letter.zi-in { animation: zi-stamp .7s cubic-bezier(.16,1,.3,1) forwards; animation-delay: var(--d, 0ms); }
+    @keyframes zi-stamp { from { opacity: 0; transform: translateY(5%) scale(1.06); } 60% { opacity: 1; } to { opacity: 1; transform: none; } }
+
+    /* The mark: four clipped layers of the shipped icon. */
+    .zi-mark { position: absolute; left: 50%; top: 50%; aspect-ratio: 4180 / 6054; transform: translate(-50%, -50%); transform-origin: center; user-select: none; -webkit-user-select: none; touch-action: none; }
+    .zi-mark--interactive { cursor: grab; }
+    .zi-mark--interactive:active { cursor: grabbing; }
+    .zi-mark--interactive:focus-visible { outline: 2px solid #F4ECD8; outline-offset: 10px; border-radius: 6px; }
+    .zi-part { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transform: var(--zi-from); pointer-events: none; }
+    .zi-part--top    { --zi-from: translateY(-70vh) rotate(9deg);   clip-path: inset(0 0 73% 0); }
+    .zi-part--bottom { --zi-from: translateY(70vh) rotate(-9deg);   clip-path: inset(73% 0 0 0); }
+    .zi-part--left   { --zi-from: translateX(-85vw) rotate(-28deg); clip-path: inset(27% 50% 27% 0); }
+    .zi-part--right  { --zi-from: translateX(85vw) rotate(28deg);   clip-path: inset(27% 0 27% 50%); }
+    .zi-part.zi-in { animation: zi-arrive 2.1s cubic-bezier(.16,1,.3,1) forwards; }
+    .zi-part--right.zi-in { animation-delay: 120ms; }
+    .zi-part--top.zi-in, .zi-part--bottom.zi-in { animation-delay: 420ms; }
+    @keyframes zi-arrive { from { opacity: 0; transform: var(--zi-from); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
+    .zi-part.zi-placed { animation: none; opacity: 1; transform: none; transition: transform .5s cubic-bezier(.2,.8,.2,1), filter .9s; }
+    .zi-lit .zi-part { filter: drop-shadow(0 0 14px rgba(255,250,236,.85)); transition: filter .05s; }
+    .zi-open .zi-part--left.zi-placed   { transform: translateX(-17%); }
+    .zi-open .zi-part--right.zi-placed  { transform: translateX(17%); }
+    .zi-open .zi-part--top.zi-placed    { transform: translateY(-9%); }
+    .zi-open .zi-part--bottom.zi-placed { transform: translateY(9%); }
+    .zi-release .zi-part--left.zi-placed   { transform: translateX(-12%); }
+    .zi-release .zi-part--right.zi-placed  { transform: translateX(12%); }
+    .zi-release .zi-part--top.zi-placed    { transform: translateY(-8%); }
+    .zi-release .zi-part--bottom.zi-placed { transform: translateY(8%); }
+    .zi-release .zi-part.zi-placed { transition: transform 1.1s cubic-bezier(.7,0,.2,1); }
+
+    /* The link is negative space; light it only when the halves meet. */
+    .zi-pulse, .zi-ring { position: absolute; left: 17%; top: 37%; width: 66%; height: 26%; border-radius: 999px; opacity: 0; pointer-events: none; }
+    .zi-pulse { background: radial-gradient(closest-side, rgba(255,250,236,.85), transparent 72%); }
+    .zi-ring  { border: 2px solid rgba(255,250,236,.85); }
+    .zi-pulse.zi-go { animation: zi-bloom .9s ease-out forwards; }
+    .zi-ring.zi-go  { animation: zi-ripple 1.1s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes zi-bloom  { from { opacity: .95; transform: scale(.55); } to { opacity: 0; transform: scale(1.9); } }
+    @keyframes zi-ripple { from { opacity: .9; transform: scale(.7); } to { opacity: 0; transform: scale(3.2); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .zi-part, .zi-part.zi-in, .zi-letter.zi-in, .zi-pulse.zi-go, .zi-ring.zi-go { animation: none !important; }
+      .zi-scene { transition: none; }
     }
     .intro-controls {
       position: absolute; bottom: 40px; left: 50%;
@@ -4475,12 +4526,13 @@
   <div class="scroll-progress" aria-hidden="true" id="scrollProgress"></div>
 
   <div id="introOverlay" class="intro-overlay">
-    <video id="introVideo" muted playsinline preload="metadata" disableremoteplayback>
-      <source src="/static/zotheos_intro1.mp4" type="video/mp4" />
-    </video>
+    <div id="introStage" class="intro-stage" aria-hidden="true"></div>
+    <audio id="introAudio" preload="auto">
+      <source src="/static/zotheos_intro.mp3" type="audio/mpeg" />
+    </audio>
     <div class="intro-controls">
-      <button id="togglePlay">Pause</button>
-      <button id="skipIntro">Enter ZOTHEOS &rarr;</button>
+      <button id="introSound" type="button" aria-pressed="false">Sound off</button>
+      <button id="skipIntro" type="button">Enter ZOTHEOS &rarr;</button>
     </div>
   </div>
 
@@ -5779,6 +5831,214 @@
   </button>
 
   <script>
+/* ZOTHEOS mark assembly intro. One module, used by the public landing page (inline) and the console
+   startup screen (static file). Plain ES5, no dependencies, no inline event handlers (CSP safe).
+
+   var intro = ZTH_INTRO.mount(rootElement, {
+     iconSrc: '/static/zotheos_icon.png',   // the shipped icon, white on transparent
+     logoSrc: '/static/zotheos_logo.png',   // the shipped wordmark, white on transparent
+     loop: false,                           // true: assemble, hold, release, repeat (8.4 s cycle)
+     dust: true,                            // the particle field (off automatically under reduced motion)
+     interactive: true                      // hold the mark to open it (once mode)
+   });
+   intro.on('phase', function (name) {});   // parts, link, name, done, release, cycle
+   intro.elapsed()                          // ms since the current cycle started (for audio sync)
+   intro.play(); intro.stop(); intro.destroy();
+
+   Timeline (ms from cycle start), shared with the sound design:
+     0 left half starts, 120 right half, 420 glyphs, 2300 LOCK, 2950..3310 letters Z O T H E (90 ms apart),
+     3350..4500 the mark travels to its seat, 4250 S, 4650 done; loop mode: 7200 release, 8400 next cycle. */
+(function () {
+  'use strict';
+  var SLOT_CX = 0.79115;          // center of the icon slot as a fraction of the wordmark width
+  var LETTERS = [                 // left and right insets of each letter in the shipped wordmark
+    ['0%', '87.83%', 0], ['14.08%', '73.49%', 90], ['28.26%', '59.41%', 180],
+    ['43.17%', '44.40%', 270], ['59.15%', '30.38%', 360]
+  ];
+  var S_LETTER = ['87.57%', '0%', 0];
+  var T = { parts: 0, placed: 2600, lock: 2300, name: 2950, seat: 3350, s: 4250, done: 4650, release: 7200, cycle: 8400 };
+
+  function el(tag, cls, parent) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function img(src, cls, parent) {
+    var i = el('img', cls, parent);
+    i.alt = ''; i.draggable = false; i.setAttribute('aria-hidden', 'true'); i.src = src;
+    return i;
+  }
+
+  function mount(root, opts) {
+    opts = opts || {};
+    var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var loop = !!opts.loop, interactive = opts.interactive !== false && !loop;
+    var handlers = {}, timers = [], seated = false, cycleStart = 0, destroyed = false, raf = 0;
+
+    root.classList.add('zi-root');
+    if (window.getComputedStyle(root).position === 'static') root.style.position = 'relative';
+    var field = el('div', 'zi-field', root);
+    var canvas = el('canvas', 'zi-dust', field); canvas.setAttribute('aria-hidden', 'true');
+    var scene = el('div', 'zi-scene', field);
+    var word = el('div', 'zi-word', scene);
+    word.setAttribute('role', 'img'); word.setAttribute('aria-label', 'ZOTHEOS');
+    var letters = [];
+    LETTERS.concat([S_LETTER]).forEach(function (L, i) {
+      var l = img(opts.logoSrc, 'zi-letter', word);
+      l.style.setProperty('--l', L[0]); l.style.setProperty('--r', L[1]); l.style.setProperty('--d', L[2] + 'ms');
+      letters.push(l);
+    });
+    var letterS = letters[letters.length - 1];
+    var mark = el('div', 'zi-mark', scene);
+    mark.setAttribute('role', 'img'); mark.setAttribute('aria-label', 'ZOTHEOS mark');
+    var parts = ['left', 'right', 'top', 'bottom'].map(function (n) { return img(opts.iconSrc, 'zi-part zi-part--' + n, mark); });
+    var pulse = el('div', 'zi-pulse', mark), ring = el('div', 'zi-ring', mark);
+    if (interactive) { mark.tabIndex = 0; mark.classList.add('zi-mark--interactive'); }
+
+    function emit(name) { (handlers[name] || []).forEach(function (fn) { try { fn(); } catch (e) {} }); if (name !== 'phase') emit2(name); }
+    function emit2(name) { (handlers.phase || []).forEach(function (fn) { try { fn(name); } catch (e) {} }); }
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+    function size() {
+      var h = root.clientHeight || window.innerHeight, w = root.clientWidth || window.innerWidth;
+      mark.style.height = Math.round(Math.max(150, Math.min(h * 0.36, 420))) + 'px';
+      word.style.width = Math.round(Math.min(w * 0.92, 1040)) + 'px';
+    }
+
+    function flash() {
+      mark.classList.add('zi-lit');
+      setTimeout(function () { mark.classList.remove('zi-lit'); }, 160);
+      [pulse, ring].forEach(function (x) { x.classList.remove('zi-go'); void x.offsetWidth; x.classList.add('zi-go'); });
+    }
+
+    function seat(animate) {
+      var prev = mark.style.transform;
+      mark.style.transition = 'none'; mark.style.transform = '';
+      var m = mark.getBoundingClientRect(), w = word.getBoundingClientRect();
+      if (!m.height || !w.height) { mark.style.transform = prev; return; }
+      var dx = (w.left + SLOT_CX * w.width) - (m.left + m.width / 2);
+      var dy = (w.top + w.height / 2) - (m.top + m.height / 2);
+      var s = w.height / m.height;
+      if (animate) { mark.style.transform = prev; void mark.offsetWidth; mark.style.transition = 'transform 1.15s cubic-bezier(.7,0,.2,1)'; }
+      mark.style.transform = 'translate(calc(-50% + ' + dx.toFixed(1) + 'px), calc(-50% + ' + dy.toFixed(1) + 'px)) scale(' + s.toFixed(4) + ')';
+      seated = true;
+    }
+
+    function reset() {
+      clearTimers();
+      seated = false;
+      root.classList.remove('zi-release', 'zi-done');
+      mark.classList.remove('zi-open', 'zi-lit');
+      mark.style.transition = 'none'; mark.style.transform = '';
+      parts.forEach(function (p) { p.classList.remove('zi-in', 'zi-placed'); });
+      letters.forEach(function (l) { l.classList.remove('zi-in'); });
+      [pulse, ring].forEach(function (x) { x.classList.remove('zi-go'); });
+      void mark.offsetWidth;
+    }
+
+    function play() {
+      if (destroyed) return;
+      reset();
+      size();
+      cycleStart = Date.now();
+      if (reduce) {
+        parts.forEach(function (p) { p.classList.add('zi-placed'); });
+        letters.forEach(function (l) { l.classList.add('zi-in'); });
+        seat(false);
+        root.classList.add('zi-done');
+        dust.mode = 'calm';
+        emit('done');
+        return;
+      }
+      emit('parts');
+      dust.mode = 'converge';
+      parts.forEach(function (p) { p.classList.add('zi-in'); });
+      later(function () { emit('link'); flash(); dust.mode = 'burst'; }, T.lock);
+      later(function () { parts.forEach(function (p) { p.classList.add('zi-placed'); }); }, T.placed);
+      later(function () { emit('name'); letters.forEach(function (l) { if (l !== letterS) l.classList.add('zi-in'); }); }, T.name);
+      later(function () { seat(true); }, T.seat);
+      later(function () { letterS.classList.add('zi-in'); }, T.s);
+      later(function () { root.classList.add('zi-done'); dust.mode = 'calm'; emit('done'); }, T.done);
+      if (loop) {
+        later(function () { root.classList.add('zi-release'); dust.mode = 'drift'; emit('release'); }, T.release);
+        later(function () { emit('cycle'); play(); }, T.cycle);
+      }
+    }
+
+    function stop() { clearTimers(); }
+    function elapsed() { return cycleStart ? Date.now() - cycleStart : 0; }
+    function on(name, fn) { (handlers[name] = handlers[name] || []).push(fn); return api; }
+
+    /* Hold to open: the halves part and the glyphs lift; release snaps them shut with light. */
+    function open(e) { if (!interactive || !parts[0].classList.contains('zi-placed')) return; mark.classList.add('zi-open'); if (e.cancelable) e.preventDefault(); }
+    function close() { if (!mark.classList.contains('zi-open')) return; mark.classList.remove('zi-open'); setTimeout(flash, 380); }
+    function key(e) { if (e.key === ' ' || e.key === 'Enter') { if (e.type === 'keydown') open(e); else close(); } }
+    if (interactive) {
+      mark.addEventListener('pointerdown', open);
+      window.addEventListener('pointerup', close);
+      window.addEventListener('pointercancel', close);
+      mark.addEventListener('keydown', key); mark.addEventListener('keyup', key);
+    }
+    var resizeT;
+    function onResize() { clearTimeout(resizeT); resizeT = setTimeout(function () { size(); if (seated) seat(false); dust.resize(); }, 120); }
+    window.addEventListener('resize', onResize);
+
+    /* Dust: small points drawn into orbit while the parts converge, thrown outward at the lock, then calm. */
+    var dust = (function () {
+      var ctx = canvas.getContext('2d'), pts = [], N = 360, W = 0, H = 0, enabled = opts.dust !== false && !reduce;
+      var a = { mode: 'drift', resize: resize };
+      function resize() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2), r = canvas.getBoundingClientRect();
+        W = r.width; H = r.height; canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      function spawn(p) {
+        p.x = Math.random() * W; p.y = Math.random() * H; p.vx = (Math.random() - 0.5) * 0.15; p.vy = (Math.random() - 0.5) * 0.15;
+        p.a = 0.08 + Math.random() * 0.26; p.s = 0.6 + Math.random() * 1.3; p.ring = 0.85 + Math.random() * 0.5; return p;
+      }
+      function frame() {
+        if (destroyed) return;
+        ctx.clearRect(0, 0, W, H);
+        var m = mark.getBoundingClientRect(), f = canvas.getBoundingClientRect();
+        var cx = m.left + m.width / 2 - f.left, cy = m.top + m.height / 2 - f.top, R = m.height * 0.62;
+        for (var i = 0; i < pts.length; i++) {
+          var p = pts[i], dx = cx - p.x, dy = cy - p.y, d = Math.sqrt(dx * dx + dy * dy) || 1;
+          if (a.mode === 'converge') { var pull = (d - R * p.ring) * 0.012; p.vx += dx / d * pull - dy / d * 0.02; p.vy += dy / d * pull + dx / d * 0.02; }
+          else if (a.mode === 'burst') { var k = 1.6 * (1 - Math.min(d / (R * 3), 1)); p.vx -= dx / d * k; p.vy -= dy / d * k; }
+          var damp = a.mode === 'converge' ? 0.94 : 0.985; p.vx *= damp; p.vy *= damp; p.x += p.vx; p.y += p.vy;
+          if (p.x < -10 || p.x > W + 10 || p.y < -10 || p.y > H + 10) spawn(p);
+          ctx.fillStyle = 'rgba(244,236,216,' + (a.mode === 'calm' ? p.a * 0.45 : p.a).toFixed(3) + ')';
+          ctx.fillRect(p.x, p.y, p.s, p.s);
+        }
+        if (a.mode === 'burst') { a._b = (a._b || 0) + 1; if (a._b > 20) { a._b = 0; a.mode = 'drift'; } }
+        raf = requestAnimationFrame(frame);
+      }
+      if (enabled) { resize(); for (var i = 0; i < N; i++) pts.push(spawn({})); raf = requestAnimationFrame(frame); }
+      else canvas.style.display = 'none';
+      return a;
+    })();
+
+    function destroy() {
+      destroyed = true; clearTimers(); cancelAnimationFrame(raf);
+      window.removeEventListener('resize', onResize); window.removeEventListener('pointerup', close); window.removeEventListener('pointercancel', close);
+      if (field.parentNode) field.parentNode.removeChild(field);
+      root.classList.remove('zi-root', 'zi-done', 'zi-release');
+    }
+
+    var api = { play: play, stop: stop, destroy: destroy, on: on, elapsed: elapsed, timeline: T, reduced: reduce };
+    /* Start when both images are usable, so the first frame is never a broken image. */
+    var pending = 2, started = false;
+    function ready() { if (--pending > 0 || started) return; started = true; play(); }
+    [opts.iconSrc, opts.logoSrc].forEach(function (src) { var i = new Image(); i.onload = ready; i.onerror = ready; i.src = src; });
+    return api;
+  }
+
+  window.ZTH_INTRO = { mount: mount, timeline: T };
+})();
+  </script>
+
+  <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     /* Registered image fallbacks. */
@@ -5968,35 +6228,103 @@
       }
     })();
 
-    /* Intro overlay */
+    /* Intro overlay: the mark assembles from its four parts, then the page reveals.
+       Sound starts only from the Sound button (an explicit press); it then doubles as the mute control. The sound
+       is static/zotheos_intro.mp3; while that file is missing the Sound button stays hidden.
+       Safe by default: if the module is missing or mounting throws, the overlay is dismissed at once, and any
+       audio work still in flight is cancelled when the overlay leaves or sound is switched off. */
     (function () {
       var o = document.getElementById('introOverlay');
-      var v = document.getElementById('introVideo');
+      var stage = document.getElementById('introStage');
       var s = document.getElementById('skipIntro');
-      var t = document.getElementById('togglePlay');
-      if (!o || !v) return;
-      var d = false, timer = null;
+      var snd = document.getElementById('introSound');
+      var audio = document.getElementById('introAudio');
+      if (!o) return;
+      var d = false, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0;
+      var pending = { token: 0, timeout: null, listeners: [] };   /* audio work that may still be in flight */
+      var animStarted = false, onParts = null;   /* audio waits for the animation's first frame (images may still load) */
+      function label() {
+        if (!snd) return;
+        snd.textContent = soundOn ? 'Sound on' : 'Sound off';
+        snd.setAttribute('aria-pressed', soundOn ? 'true' : 'false');
+      }
+      function cancelPending() {
+        pending.token++; onParts = null;
+        if (pending.timeout) { clearTimeout(pending.timeout); pending.timeout = null; }
+        pending.listeners.forEach(function (l) { audio.removeEventListener(l[0], l[1]); });
+        pending.listeners = [];
+      }
+      function stopAudio() {
+        cancelPending();
+        if (!audio || audio.paused) return;
+        if (fade) clearInterval(fade);
+        var n = 0;
+        fade = setInterval(function () {   /* bounded: iOS ignores volume writes */
+          audio.volume = Math.max(0, audio.volume - 0.1);
+          if (++n >= 11 || audio.volume <= 0.01) { clearInterval(fade); fade = null; try { audio.pause(); } catch (e) {} }
+        }, 60);
+      }
       function dismiss() {
         if (d) return;
         d = true;
         if (timer != null) clearTimeout(timer);
         o.classList.add('dismissed');
-        try { v.pause(); } catch (e) {}
+        stopAudio();
+        if (intro) setTimeout(function () { try { intro.destroy(); } catch (e) {} }, 1200);
       }
       function checkMotion() { if (!window.zMotionAllowed()) dismiss(); }
       document.addEventListener('visibilitychange', checkMotion);
       window.addEventListener('zotheos:effectschange', checkMotion);
-      v.addEventListener('error', dismiss);
-      v.addEventListener('ended', dismiss);
       if (s) s.addEventListener('click', dismiss);
-      if (t) t.addEventListener('click', function () {
-        if (!window.zMotionAllowed()) { dismiss(); return; }
-        if (v.paused) { v.play().catch(dismiss); t.textContent = 'Pause'; }
-        else { v.pause(); t.textContent = 'Play'; }
+      /* No playable sound file (missing or unsupported): hide the button rather than offer a dead control. */
+      function noAudio() { cancelPending(); soundOn = false; label(); if (snd) snd.style.display = 'none'; }
+      var lastSrc = audio ? audio.querySelector('source:last-of-type') : null;
+      if (lastSrc) lastSrc.addEventListener('error', noAudio);
+      /* A failure that happened before this script ran shows as NETWORK_NO_SOURCE (3) with no data. Read it only at
+         window load: while the element is still choosing its source it also reports 3 for a moment. */
+      window.addEventListener('load', function () { if (audio && audio.networkState === 3 && audio.readyState === 0) noAudio(); });
+      if (snd && audio) snd.addEventListener('click', function () {
+        var now = Date.now(); if (now - lastPress < 250) return; lastPress = now;   /* one press, one toggle */
+        soundOn = !soundOn; label();
+        if (!soundOn) { cancelPending(); audio.muted = true; return; }
+        if (d) return;
+        if (fade) { clearInterval(fade); fade = null; }
+        audio.volume = 1; audio.muted = false;
+        if (!audio.paused) { try { audio.currentTime = intro ? intro.elapsed() / 1000 : 0; } catch (e) {} return; }   /* already running: just line it up */
+        cancelPending();
+        var token = pending.token;
+        var live = function () { return !d && soundOn && token === pending.token; };   /* still wanted? */
+        var on = function (ev, fn) { pending.listeners.push([ev, fn]); audio.addEventListener(ev, fn); };
+        var go = function () {
+          if (!live()) return;                              /* recheck right before anything is heard */
+          cancelPending();
+          audio.play().catch(function () { soundOn = false; label(); });
+        };
+        var start = function () {
+          if (!live()) return;
+          if (!animStarted) { onParts = start; return; }
+          var at = intro ? intro.elapsed() / 1000 : 0;
+          /* Seek to where the animation is, then play once the seek has landed (a play() issued while a seek is
+             still pending can restart from 0 on servers without range support). */
+          if (Math.abs(audio.currentTime - at) < 0.05) { go(); return; }
+          on('seeked', go);
+          pending.timeout = setTimeout(function () { if (live() && audio.paused) go(); }, 600);
+          try { audio.currentTime = at; } catch (e) { go(); }
+        };
+        if (audio.readyState >= 1) start();
+        else { on('loadedmetadata', start); audio.load(); }
       });
       if (!window.zMotionAllowed()) { dismiss(); return; }
       timer = setTimeout(dismiss, 9000);
-      v.play().catch(dismiss);
+      if (!stage || !window.ZTH_INTRO) { dismiss(); return; }
+      try {
+        intro = window.ZTH_INTRO.mount(stage, {
+          iconSrc: '/static/zotheos_icon.png', logoSrc: '/static/zotheos_logo.png',
+          loop: false, dust: true, interactive: false
+        });
+        intro.on('parts', function () { animStarted = true; var f = onParts; onParts = null; if (f) f(); });
+        intro.on('done', function () { setTimeout(dismiss, 1400); });
+      } catch (e) { dismiss(); }
     })();
 
     /* Header scroll state + scroll-to-top. Keep the fixed navigation
