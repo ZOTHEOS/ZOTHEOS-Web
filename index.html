@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-Ob6dns9sppql351ul1ZX1C4RDqZnJvVTBK55mY774Hs='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-Kf8HBaprxhHrOEHdXyOKNkdJSbygrZZD/KPab6I4P4g='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -977,15 +977,86 @@
       .hero { padding: 72px 22px 24px; }
     }
 
-    .hero-disc-wrap {
+    /* ============================================================
+       THE FORGED MARK: the hero centrepiece. The ZOTHEOS mark alone,
+       drawn live as a liquid chrome relief (WebGL, see the script
+       "The forged mark"). --fh is the stage height; the canvas is
+       0.82 of it wide and the mark fills 0.86 of its height, so the
+       four corner labels are placed in the notches beside the top
+       and bottom glyphs from the same numbers.
+       The plain PNG (.forge-still) is the fallback: no script, no
+       WebGL, or no image.
+    ============================================================ */
+    .hero-forge {
+      --fh: clamp(300px, 50vh, 500px);
+      --fx: calc(var(--fh) * 0.201);
       position: relative;
-      aspect-ratio: 1 / 1;
       width: 100%;
-      max-width: 340px;
-      margin: 0 auto 30px;
+      height: var(--fh);
+      margin: 0 auto 22px;
     }
     @media (max-width: 640px) {
-      .hero-disc-wrap { max-width: 250px; margin-bottom: 22px; }
+      .hero-forge { --fh: clamp(260px, 44vh, 340px); margin-bottom: 16px; }
+    }
+    .forge-canvas,
+    .forge-still {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .forge-canvas {
+      width: calc(var(--fh) * 0.82);
+      height: var(--fh);
+      display: block;
+      opacity: 0;
+      transition: opacity 1.4s var(--ease-editorial);
+    }
+    .forge-still {
+      top: calc(var(--fh) * 0.07);
+      width: auto;
+      height: calc(var(--fh) * 0.86);
+      max-width: none;
+      opacity: 0.92;
+      filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.10));
+      transition: opacity 0.6s var(--ease-editorial);
+    }
+    [data-theme="codex"] .forge-still { filter: brightness(0); opacity: 0.86; }
+    .hero-forge.is-pending .forge-still { opacity: 0.12; }   /* a faint unforged ghost while the relief is built */
+    .hero-forge.is-live .forge-still { opacity: 0; }
+    .hero-forge.is-live .forge-canvas { opacity: 1; }
+
+    /* The three minds (and, at the moment the three lights agree, you).
+       Quiet mono captions; --lit (0..1) is written by the script as
+       each mind's own light speaks. */
+    .forge-mind {
+      position: absolute;
+      top: 0;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--ink);
+      opacity: calc(0.42 + 0.58 * var(--lit, 0));
+      text-shadow: 0 0 14px color-mix(in srgb, currentColor calc(var(--lit, 0) * 55%), transparent);
+      transform: translateY(-50%);
+      pointer-events: none;
+      user-select: none;
+    }
+    .fm-tl, .fm-bl { right: calc(50% + var(--fx)); margin-right: -0.34em; text-align: right; }
+    .fm-tr, .fm-br { left: calc(50% + var(--fx)); }
+    .fm-tl, .fm-tr { top: calc(var(--fh) * 0.1684); }
+    .fm-bl, .fm-br { top: calc(var(--fh) * 0.8313); }
+    .forge-you { opacity: calc(0.9 * var(--lit, 0)); }
+    .hero-forge:not(.is-live) .forge-mind { opacity: 0.5; }
+    .hero-forge:not(.is-live) .forge-you { opacity: 0; }
+    @media (max-width: 640px) {
+      .forge-mind { font-size: 8.5px; letter-spacing: 0.26em; }
+      .fm-tl, .fm-bl { margin-right: -0.26em; }
     }
 
     /* Hero eyebrow — a thin editorial rule with the site's promise,
@@ -1020,137 +1091,6 @@
       .hero-eyebrow { font-size: 8.5px; letter-spacing: 0.30em; gap: 10px; }
       .hero-eyebrow::before, .hero-eyebrow::after { width: 20px; }
     }
-    .hero-disc { width: 100%; height: 100%; }
-    .hero-disc svg { width: 100%; height: 100%; display: block; }
-
-    .disc-outer {
-      transform-origin: 50% 50%;
-      animation: disc-rotate 240s linear infinite;
-    }
-    @keyframes disc-rotate {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-
-    .wax-sigil {
-      transform-origin: 50% 50%;
-      transform-box: fill-box;
-      animation: wax-breathe 5s var(--ease-ceremony) infinite;
-    }
-    @keyframes wax-breathe {
-      0%, 100% { transform: scale(1);     opacity: 0.92; }
-      50%      { transform: scale(1.03);  opacity: 1; }
-    }
-    /* ZOTHEOS icon at the disc center — white glyph, glows on the
-       always-dark disc interior across every theme. */
-    .zotheos-core {
-      filter:
-        drop-shadow(0 0 10px rgba(var(--cochineal-rgb), 0.45))
-        drop-shadow(0 0 22px rgba(94, 190, 106, 0.18));
-    }
-
-    /* ============================================================
-       COUNCIL ORBIT — pills positioned via JS using cos/sin from
-       the disc's actual rendered radius. No rotation animation,
-       so labels always read upright. Each pill now has a small
-       status dot matching the live console's pill style.
-    ============================================================ */
-    .council-orbit {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 4;
-    }
-
-    .council-seat {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      pointer-events: auto;
-    }
-    .council-seat-inner {
-      position: absolute;
-      transform: translate(calc(-50% + var(--seat-x, 0px)), calc(-50% + var(--seat-y, 0px)));
-    }
-
-    .council-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(244, 236, 216, 0.025) 0%, transparent 6%),
-        radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 8%),
-        linear-gradient(180deg, rgba(244, 236, 216, 0.06) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.42) 100%),
-        linear-gradient(135deg, var(--basalt-1) 0%, var(--basalt-2) 50%, var(--basalt-3) 100%);
-      border: 1px solid rgba(var(--cochineal-rgb), 0.55);
-      border-radius: 999px;
-      color: var(--ink);
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
-      box-shadow:
-        inset 0 1px 0 rgba(244, 236, 216, 0.10),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.45),
-        inset 0 0 18px rgba(var(--cochineal-rgb), 0.15),
-        0 3px 10px rgba(0, 0, 0, 0.40);
-      white-space: nowrap;
-      transition: all 0.28s var(--ease-ceremony);
-    }
-    .council-pill:hover {
-      border-color: var(--cochineal);
-      box-shadow:
-        inset 0 1px 0 rgba(244, 236, 216, 0.14),
-        inset 0 0 28px rgba(var(--cochineal-rgb), 0.30),
-        0 4px 14px rgba(var(--cochineal-rgb), 0.32);
-      transform: scale(1.04);
-    }
-    .council-pill .pill-glyph {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 14px;
-      height: 14px;
-      color: var(--cochineal);
-      flex-shrink: 0;
-    }
-    .council-pill .pill-glyph svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Codex theme: pills sit on dark basalt-red, so text/glyph must be
-       light to read against it (default --ink is near-black here). */
-    [data-theme="codex"] .council-pill {
-      color: #F8EFDB;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    }
-    [data-theme="codex"] .council-pill .pill-glyph {
-      color: #F0A988;
-      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
-    }
-    [data-theme="codex"] .council-pill:hover {
-      border-color: #F0A988;
-    }
-
-    @media (max-width: 640px) {
-      .council-pill {
-        padding: 5px 11px;
-        font-size: 9px;
-        letter-spacing: 0.16em;
-        gap: 6px;
-      }
-      .council-pill .pill-glyph { width: 11px; height: 11px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .disc-outer, .wax-sigil { animation: none !important; }
-    }
-
     /* ============================================================
        HEADLINE — slightly smaller on mobile so it doesn't dominate
        the whole viewport; tightened margin below for closer CTAs.
@@ -2362,33 +2302,6 @@
       filter: drop-shadow(0 0 12px rgba(var(--cochineal-rgb), 0.35));
     }
 
-    /* Hero disc parallax — subtle 3D tilt on mouse */
-    .hero-disc-wrap {
-      transition: transform 0.6s var(--ease-editorial);
-      transform-style: preserve-3d;
-      will-change: transform;
-    }
-    .hero-disc, .council-orbit {
-      transition: transform 0.6s var(--ease-editorial);
-      will-change: transform;
-    }
-
-    /* Council pill — subtle float */
-    .council-pill {
-      animation: pill-float 7s ease-in-out infinite;
-      will-change: transform;
-    }
-    .council-seat[data-angle="-90"] .council-pill { animation-delay: 0s; }
-    .council-seat[data-angle="30"]  .council-pill { animation-delay: 2.3s; }
-    .council-seat[data-angle="150"] .council-pill { animation-delay: 4.6s; }
-    @keyframes pill-float {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-4px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .council-pill { animation: none !important; }
-    }
-
     /* Primary CTA — magnetic + shimmer sheen */
     .btn-primary { overflow: hidden; }
     .btn-primary::after {
@@ -2699,7 +2612,7 @@
       transition: opacity 0.9s var(--ease-editorial), transform 0.9s var(--ease-editorial);
     }
     body:not(.page-loading) header { transition-delay: 0.0s; }
-    body:not(.page-loading) .hero-disc-wrap   { transition-delay: 0.15s; }
+    body:not(.page-loading) .hero-forge       { transition-delay: 0.15s; }
     body:not(.page-loading) .hero-eyebrow     { transition-delay: 0.28s; }
     body:not(.page-loading) .hero-headline    { transition-delay: 0.38s; }
     body:not(.page-loading) .hero-sub         { transition-delay: 0.52s; }
@@ -2723,49 +2636,6 @@
       background: var(--cochineal);
       transform: scaleX(1);
       transform-origin: left;
-    }
-
-    /* Reasoning graph */
-    .reasoning-graph .rg-ray {
-      stroke-dasharray: 6 10;
-      stroke-dashoffset: 0;
-      animation: rg-flow 4s linear infinite;
-      opacity: 0;
-    }
-    .reasoning-graph .rg-ray.rg-r1 { animation-delay: 0s; }
-    .reasoning-graph .rg-ray.rg-r2 { animation-delay: 1.2s; }
-    .reasoning-graph .rg-ray.rg-r3 { animation-delay: 2.4s; }
-    .reasoning-graph .rg-node {
-      opacity: 0;
-      transform-origin: center;
-      transform-box: fill-box;
-    }
-    .reasoning-graph .rg-n1 { animation: rg-pulse 4s ease-in-out 0.8s infinite; }
-    .reasoning-graph .rg-n2 { animation: rg-pulse 4s ease-in-out 2.0s infinite; }
-    .reasoning-graph .rg-n3 { animation: rg-pulse 4s ease-in-out 3.2s infinite; }
-    .reasoning-graph .rg-tri {
-      animation: rg-tri 8s ease-in-out infinite;
-    }
-    @keyframes rg-flow {
-      0%   { opacity: 0; stroke-dashoffset: 0; }
-      30%  { opacity: 0.7; }
-      80%  { opacity: 0.7; stroke-dashoffset: -160; }
-      100% { opacity: 0; stroke-dashoffset: -180; }
-    }
-    @keyframes rg-pulse {
-      0%, 100% { opacity: 0; transform: scale(1); }
-      20%      { opacity: 1; transform: scale(1.4); }
-      40%      { opacity: 0.6; transform: scale(1); }
-    }
-    @keyframes rg-tri {
-      0%, 100% { stroke-dashoffset: 800; opacity: 0; }
-      45%      { stroke-dashoffset: 0;   opacity: 0.5; }
-      65%      { stroke-dashoffset: 0;   opacity: 0.5; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reasoning-graph .rg-ray,
-      .reasoning-graph .rg-node,
-      .reasoning-graph .rg-tri { animation: none !important; opacity: 0.3; }
     }
 
     /* Live console: typed query (the caret is the typed text's own last glyph while typing, W1-09) */
@@ -4182,11 +4052,9 @@
     body.fx-off .aurora,
     body.fx-off .cursor-light,
     body.fx-off .hero-embers,
-    body.fx-off .disc-orbiter,
     body.fx-off .hero-mist {
       display: none !important;
     }
-    body.fx-off .disc-outer { animation: none !important; }
     body.fx-off .grain { opacity: 0.08; }
 
     @media (max-width: 720px) {
@@ -4350,21 +4218,9 @@
       }
     }
 
-    /* Living cursor: the ring stretches with velocity like a comet,
-       becomes a rotating dashed instrument bezel over the disc, and
-       pings a cochineal ripple on release. */
+    /* Living cursor: the ring stretches with velocity like a comet
+       and pings a cochineal ripple on release. */
     .custom-cursor .cc-ring { will-change: transform; }
-    .custom-cursor.over-disc .cc-ring {
-      border-style: dashed;
-      border-color: #D14F35;
-      width: 40px; height: 40px;
-      animation: cc-bezel 7s linear infinite;
-    }
-    .custom-cursor.over-disc .cc-dot { background: #D14F35; }
-    @keyframes cc-bezel {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to   { transform: translate(-50%, -50%) rotate(360deg); }
-    }
     .custom-cursor .cc-ring.ping {
       animation: cc-ping 0.45s var(--ease-editorial);
     }
@@ -4373,9 +4229,9 @@
       100% { box-shadow: 0 0 0 22px rgba(209, 79, 53, 0); }
     }
 
-    /* Hero depth: the disc and headline sink at different rates as
+    /* Hero depth: the mark and headline sink at different rates as
        you scroll away; a whisper of skew rides scroll velocity. */
-    .hero-disc-wrap, .hero-headline { will-change: transform; }
+    .hero-forge, .hero-headline { will-change: transform; }
     .hero-inner { will-change: transform, opacity; }
 
     /* Copal embers: sparks rising through the hero like incense. */
@@ -4414,33 +4270,6 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .hero-embers { display: none; }
-    }
-
-    /* A lone green satellite circles the council: the live signal. */
-    .disc-orbiter {
-      position: absolute;
-      inset: 4.5%;
-      pointer-events: none;
-      animation: orbiter-spin 26s linear infinite;
-      z-index: 3;
-    }
-    .disc-orbiter span {
-      position: absolute;
-      top: -2px; left: 50%;
-      width: 5px; height: 5px;
-      margin-left: -2.5px;
-      border-radius: 50%;
-      background: var(--pulse-green);
-      box-shadow:
-        0 0 10px rgba(var(--pulse-green-rgb), 0.85),
-        0 0 22px rgba(var(--pulse-green-rgb), 0.35);
-    }
-    @keyframes orbiter-spin {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .disc-orbiter { display: none; }
     }
 
 
@@ -4494,7 +4323,6 @@
     @property --zs { syntax: '<percentage>'; inherits: false; initial-value: -40%; }
     @property --zh { syntax: '<number>'; inherits: false; initial-value: 0; }
     @property --zt { syntax: '<length>'; inherits: true; initial-value: 0px; }
-    @property --za { syntax: '<angle>'; inherits: false; initial-value: 210deg; }
     @property --zc { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 
     :root:not([data-theme]) {
@@ -4668,16 +4496,6 @@
     html:not([data-theme]) .confidence-badge::before {
       background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.28) 50%, transparent 70%);
     }
-    html:not([data-theme]) .council-pill {
-      border: 1px solid transparent;
-      background:
-        linear-gradient(180deg, #1D1D1D 0%, #0B0B0B 55%, #050505 100%) padding-box,
-        linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.12) 55%, rgba(255, 255, 255, 0.34) 100%) border-box;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 6px 18px rgba(0, 0, 0, 0.7);
-    }
-    html:not([data-theme]) .council-pill:hover {
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 6px 18px rgba(0, 0, 0, 0.7);
-    }
 
     /* ---------- Buttons ---------- */
     html:not([data-theme]) :is(.btn, .btn-ghost) {
@@ -4811,45 +4629,6 @@
     html:not([data-theme]) .section-title .seal,
     html:not([data-theme]) .council-scroll-head .seal { text-shadow: none; }
 
-    /* Council disc: an obsidian lens with white instrument marks. */
-    /* translucent on purpose: the hero tilt is 3D and the Analyst
-       seat can sit behind the lens plane; it must show through */
-    html:not([data-theme]) #diskFill stop { stop-color: #FFFFFF; }
-    html:not([data-theme]) #diskFill stop:nth-child(1) { stop-opacity: 0.09; }
-    html:not([data-theme]) #diskFill stop:nth-child(2) { stop-opacity: 0.045; }
-    html:not([data-theme]) #diskFill stop:nth-child(3) { stop-opacity: 0.02; }
-    html:not([data-theme]) #sigilGlow stop { stop-color: #FFFFFF; }
-    html:not([data-theme]) #sigilGlow stop:nth-child(1) { stop-opacity: 0.16; }
-    html:not([data-theme]) #sigilGlow stop:nth-child(2) { stop-opacity: 0.06; }
-    html:not([data-theme]) .hero-disc [fill="#D14F35"] { fill: #FFFFFF; }
-    html:not([data-theme]) .hero-disc [stroke="#D14F35"] { stroke: #FFFFFF; }
-    html:not([data-theme]) .hero-disc .reasoning-graph { stroke: rgba(255, 255, 255, 0.8); }
-    html:not([data-theme]) .zotheos-core {
-      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.30));
-    }
-    html:not([data-theme]) .hero-disc-wrap::before {
-      /* chrome rim around the lens */
-      content: '';
-      position: absolute;
-      inset: 1.6%;
-      border-radius: 50%;
-      pointer-events: none;
-      padding: 1px;
-      background: conic-gradient(from var(--za, 210deg), rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.06) 20%, rgba(255, 255, 255, 0.26) 50%, rgba(255, 255, 255, 0.05) 78%, rgba(255, 255, 255, 0.62));
-      animation: z-orbit 36s linear infinite;
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-              mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-              mask-composite: exclude;
-    }
-    @keyframes z-orbit {
-      from { --za: 210deg; }
-      to   { --za: 570deg; }
-    }
-    html:not([data-theme]) .disc-orbiter span {
-      background: #FFFFFF;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 18px rgba(255, 255, 255, 0.25);
-    }
     html:not([data-theme]) .hero-embers { display: none; }   /* W1-03: no specks in mono */
     html:not([data-theme]) .hero-stat:hover .num { filter: none; }
     html:not([data-theme]) .header-logo-img,
@@ -4939,9 +4718,7 @@
     }
 
     /* ---------- Small instruments ---------- */
-    html:not([data-theme]) .custom-cursor.over-disc .cc-ring,
     html:not([data-theme]) .custom-cursor.hover-link .cc-ring { border-color: #FFFFFF; }
-    html:not([data-theme]) .custom-cursor.over-disc .cc-dot,
     html:not([data-theme]) .custom-cursor .cc-dot { background: #FFFFFF; }
     html:not([data-theme]) .custom-cursor .cc-ring { border-color: #FFFFFF; }
     html:not([data-theme]) .theme-wipe {
@@ -5068,8 +4845,7 @@
     /* Without @property the keyframes above would jump between values: hold everything still instead. */
     html:not(.zm-fluid):not([data-theme]) :is(.bento-card, .support-card, .value-item, .waitlist-card,
       .memory-vis, .console-frame, .instrument-card, .founder-card, .faq-item, .example-card, .ws-zone,
-      .model-choice, .compare-table, .tier-ladder, .btn, .btn-ghost, .hero-headline .glow),
-    html:not(.zm-fluid):not([data-theme]) .hero-disc-wrap::before { animation: none; }
+      .model-choice, .compare-table, .tier-ladder, .btn, .btn-ghost, .hero-headline .glow) { animation: none; }
 
     /* Phones: the scroll-to-top orb docks inside the bottom action bar, left of the button, instead of covering it. */
     @media (max-width: 640px) {
@@ -5785,7 +5561,7 @@
         <button class="day-chip" id="dayChip" type="button" title="The obsidian mirror" aria-label="Open the obsidian mirror"></button>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
-        <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" data-logo-fallback="parent" />
+        <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" data-logo-fallback="parent" data-fx-avoid />
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav" id="primaryNav" aria-label="Primary">
@@ -5835,131 +5611,14 @@
     <div class="hero-mist" aria-hidden="true"></div>
     <div class="hero-inner">
 
-      <!-- Council disc -->
-      <div class="hero-disc-wrap">
-        <div class="hero-disc">
-          <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
-            <defs>
-              <radialGradient id="diskWash" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
-                <stop offset="65%"  stop-color="#000" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#000" stop-opacity="0.45"/>
-              </radialGradient>
-              <radialGradient id="diskFill" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#15506F" stop-opacity="0.30"/>
-                <stop offset="60%"  stop-color="#0A2E48" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#02101E" stop-opacity="0.10"/>
-              </radialGradient>
-              <radialGradient id="sigilGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#5EBE6A" stop-opacity="0.40"/>
-                <stop offset="40%"  stop-color="#5EBE6A" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#5EBE6A" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-
-            <circle cx="300" cy="300" r="290" fill="url(#diskFill)"/>
-            <circle cx="300" cy="300" r="290" fill="url(#diskWash)"/>
-
-            <g class="disc-outer">
-              <circle cx="300" cy="300" r="265" fill="none" stroke="rgba(244,236,216,0.28)" stroke-width="1.2"/>
-              <circle cx="300" cy="300" r="248" fill="none" stroke="rgba(244,236,216,0.14)" stroke-width="0.6"/>
-              <g id="tickRing"></g>
-            </g>
-
-            <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(244,236,216,0.22)" stroke-width="1"/>
-            <circle cx="300" cy="300" r="184" fill="none" stroke="rgba(244,236,216,0.12)" stroke-width="0.6"/>
-            <circle cx="300" cy="300" r="148" fill="none" stroke="rgba(244,236,216,0.08)" stroke-width="0.5"/>
-
-            <g stroke="rgba(244,236,216,0.20)" stroke-width="1" fill="none" stroke-linecap="round">
-              <line x1="300" y1="300" x2="300" y2="100"/>
-              <line x1="300" y1="300" x2="473" y2="400"/>
-              <line x1="300" y1="300" x2="127" y2="400"/>
-            </g>
-
-            <g transform="translate(300, 552)" fill="#D14F35">
-              <circle cx="-14" cy="0" r="3.5"/>
-              <circle cx="0"   cy="0" r="3.5"/>
-              <circle cx="14"  cy="0" r="3.5"/>
-            </g>
-
-            <circle cx="300" cy="300" r="100" fill="url(#sigilGlow)"/>
-
-            <!-- Reasoning graph: three pulse rays from sigil out to seats,
-                 then a triangular connecting line between the seats. -->
-            <g class="reasoning-graph" stroke="#D14F35" fill="none" stroke-linecap="round">
-              <g stroke-width="1" opacity="0.45">
-                <path class="rg-tri" d="M 300 56 L 522 426 L 78 426 Z" stroke-dasharray="800" stroke-dashoffset="800"/>
-              </g>
-              <g stroke-width="1.6" stroke-dasharray="6 8">
-                <line class="rg-ray rg-r1" x1="300" y1="300" x2="300" y2="56"/>
-                <line class="rg-ray rg-r2" x1="300" y1="300" x2="522" y2="426"/>
-                <line class="rg-ray rg-r3" x1="300" y1="300" x2="78"  y2="426"/>
-              </g>
-              <g fill="#D14F35" stroke="none">
-                <circle class="rg-node rg-n1" cx="300" cy="56"  r="3"/>
-                <circle class="rg-node rg-n2" cx="522" cy="426" r="3"/>
-                <circle class="rg-node rg-n3" cx="78"  cy="426" r="3"/>
-              </g>
-            </g>
-
-            <!-- ZOTHEOS icon at the heart of the council -->
-            <image class="wax-sigil zotheos-core" href="/static/zotheos_icon_disc.png" xlink:href="/static/zotheos_icon_disc.png"
-                   x="252" y="227" width="96" height="146" preserveAspectRatio="xMidYMid meet" />
-          </svg>
-        </div>
-
-        <div class="council-orbit" aria-hidden="true" id="councilOrbit">
-          <div class="council-seat" data-angle="-90">
-            <div class="council-seat-inner">
-              <div class="council-pill">
-                <span class="pill-glyph">
-                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square">
-                    <path d="M 1 12 L 1 11 L 3 11 L 3 9 L 5 9 L 5 6 L 6 6 L 6 3 L 8 3 L 8 6 L 9 6 L 9 9 L 11 9 L 11 11 L 13 11 L 13 12 Z" fill="currentColor"/>
-                  </svg>
-                </span>
-                <span>Analyst</span>
-              </div>
-            </div>
-          </div>
-          <div class="council-seat" data-angle="30">
-            <div class="council-seat-inner">
-              <div class="council-pill">
-                <span class="pill-glyph">
-                  <svg viewBox="0 0 14 14" fill="currentColor">
-                    <circle cx="7" cy="7" r="2.2"/>
-                    <g stroke="currentColor" stroke-width="0.9" stroke-linecap="round" fill="none">
-                      <line x1="7" y1="1.6" x2="7" y2="3.4"/>
-                      <line x1="7" y1="10.6" x2="7" y2="12.4"/>
-                      <line x1="1.6" y1="7" x2="3.4" y2="7"/>
-                      <line x1="10.6" y1="7" x2="12.4" y2="7"/>
-                      <line x1="3" y1="3" x2="4.2" y2="4.2"/>
-                      <line x1="9.8" y1="4.2" x2="11" y2="3"/>
-                      <line x1="3" y1="11" x2="4.2" y2="9.8"/>
-                      <line x1="9.8" y1="9.8" x2="11" y2="11"/>
-                    </g>
-                  </svg>
-                </span>
-                <span>Humanist</span>
-              </div>
-            </div>
-          </div>
-          <div class="council-seat" data-angle="150">
-            <div class="council-seat-inner">
-              <div class="council-pill">
-                <span class="pill-glyph">
-                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-                    <circle cx="7" cy="2.2" r="0.9" fill="currentColor"/>
-                    <line x1="7" y1="3.2" x2="3" y2="12"/>
-                    <line x1="7" y1="3.2" x2="11" y2="12"/>
-                  </svg>
-                </span>
-                <span>Skeptic</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="disc-orbiter" aria-hidden="true"><span></span></div>
+      <!-- The forged mark: the ZOTHEOS mark alone, a live chrome relief lit by the three minds -->
+      <div class="hero-forge" id="heroForge" role="img" aria-label="The ZOTHEOS mark, lit in turn by the Analyst, the Humanist and the Skeptic, then by all three at once">
+        <img class="forge-still" src="/static/zotheos_icon.png" alt="" width="4180" height="6054" decoding="async">
+        <canvas class="forge-canvas" id="forgeCanvas"></canvas>
+        <span class="forge-mind fm-tl" data-mind="analyst">Analyst</span>
+        <span class="forge-mind fm-tr" data-mind="skeptic">Skeptic</span>
+        <span class="forge-mind fm-bl" data-mind="humanist">Humanist</span>
+        <span class="forge-mind fm-br forge-you">You</span>
       </div>
 
       <div class="hero-eyebrow reveal">
@@ -7362,35 +7021,6 @@
       }
     })();
 
-    /* Council seat positioning */
-    (function () {
-      function positionCouncilSeats() {
-        var wrap = document.querySelector('.hero-disc-wrap');
-        if (!wrap) return;
-        var rect = wrap.getBoundingClientRect();
-        var radius = rect.width * 0.42;
-        var seats = document.querySelectorAll('.council-seat');
-        seats.forEach(function (seat) {
-          var angle = parseFloat(seat.getAttribute('data-angle')) || 0;
-          var rad = angle * Math.PI / 180;
-          var x = Math.cos(rad) * radius;
-          var y = Math.sin(rad) * radius;
-          var inner = seat.querySelector('.council-seat-inner');
-          if (inner) {
-            inner.style.setProperty('--seat-x', x.toFixed(1) + 'px');
-            inner.style.setProperty('--seat-y', y.toFixed(1) + 'px');
-          }
-        });
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', positionCouncilSeats);
-      } else {
-        positionCouncilSeats();
-      }
-      window.addEventListener('resize', positionCouncilSeats);
-      window.addEventListener('load', positionCouncilSeats);
-    })();
-
     /* Floral xochitl band */
     (function () {
       var ns = 'http://www.w3.org/2000/svg';
@@ -7444,34 +7074,6 @@
           if (!placed) break;
         }
       });
-    })();
-
-    /* Sun Stone tick ring */
-    (function () {
-      var ring = document.getElementById('tickRing');
-      if (!ring) return;
-      var ns = 'http://www.w3.org/2000/svg';
-      var cx = 300, cy = 300;
-      var rOuter = 264;
-      var hour = new Date().getHours();
-      for (var i = 0; i < 60; i++) {
-        var angle = (i * 6 - 90) * Math.PI / 180;
-        var isMajor = (i % 5 === 0);
-        var inner = isMajor ? 244 : 252;
-        var x1 = cx + inner * Math.cos(angle);
-        var y1 = cy + inner * Math.sin(angle);
-        var x2 = cx + rOuter * Math.cos(angle);
-        var y2 = cy + rOuter * Math.sin(angle);
-        var line = document.createElementNS(ns, 'line');
-        line.setAttribute('x1', x1.toFixed(2));
-        line.setAttribute('y1', y1.toFixed(2));
-        line.setAttribute('x2', x2.toFixed(2));
-        line.setAttribute('y2', y2.toFixed(2));
-        line.setAttribute('stroke', i === (hour % 24) ? '#D14F35' : (isMajor ? 'rgba(244,236,216,0.32)' : 'rgba(244,236,216,0.18)'));
-        line.setAttribute('stroke-width', i === (hour % 24) ? '2.4' : (isMajor ? '1.2' : '0.7'));
-        line.setAttribute('stroke-linecap', 'round');
-        ring.appendChild(line);
-      }
     })();
 
     /* Intro overlay: the mark assembles from its four parts, then the page reveals.
@@ -7810,67 +7412,6 @@
       }, { passive: true });
     })();
 
-    /* Hero disc parallax — gentle 3D tilt that follows the cursor */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
-      if (reduce || coarse) return;
-      var wrap = document.querySelector('.hero-disc-wrap');
-      var disc = document.querySelector('.hero-disc');
-      var orbit = document.getElementById('councilOrbit');
-      if (!wrap || !disc) return;
-      var tx = 0, ty = 0, cx = 0, cy = 0;
-      var active = false, raf = null;
-      var initialRect = wrap.getBoundingClientRect();
-      var inView = initialRect.bottom > 0 && initialRect.top < window.innerHeight;
-      function stop() {
-        active = false;
-        if (raf != null) cancelAnimationFrame(raf);
-        raf = null; tx = 0; ty = 0;
-        disc.style.transform = '';
-        if (orbit) orbit.style.transform = '';
-      }
-      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
-      document.addEventListener('visibilitychange', checkMotion);
-      window.addEventListener('zotheos:effectschange', checkMotion);
-      if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (entries) {
-          inView = entries[0].isIntersecting;
-          if (!inView) stop();
-        }).observe(wrap);
-      }
-      function loop() {
-        raf = null;
-        if (!active || !inView || !window.zMotionAllowed()) { stop(); return; }
-        cx += (tx - cx) * 0.08;
-        cy += (ty - cy) * 0.08;
-        var rx = (-cy * 6).toFixed(2);
-        var ry = (cx * 6).toFixed(2);
-        disc.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
-        if (orbit) orbit.style.transform = 'translate3d(' + (cx * 8).toFixed(1) + 'px,' + (cy * 8).toFixed(1) + 'px,0)';
-        if (active && (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001)) raf = requestAnimationFrame(loop);
-        else active = false;
-      }
-      function onMove(e) {
-        if (!inView || !window.zMotionAllowed()) return;
-        var r = wrap.getBoundingClientRect();
-        // viewport-relative offset normalized to disc area
-        var dx = (e.clientX - (r.left + r.width / 2)) / window.innerWidth;
-        var dy = (e.clientY - (r.top + r.height / 2)) / window.innerHeight;
-        tx = Math.max(-1, Math.min(1, dx * 2));
-        ty = Math.max(-1, Math.min(1, dy * 2));
-        if (!active) { active = true; raf = requestAnimationFrame(loop); }
-      }
-      function onLeave() {
-        if (!inView || !window.zMotionAllowed()) { stop(); return; }
-        tx = 0; ty = 0;
-        setTimeout(function () { active = false; }, 800);
-        if (!active) { active = true; raf = requestAnimationFrame(loop); }
-      }
-      window.addEventListener('mousemove', onMove, { passive: true });
-      window.addEventListener('mouseleave', onLeave);
-    })();
-
     /* Magnetic primary CTA — gentle pull toward the cursor */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -8126,7 +7667,7 @@
         cy += dy * 0.30;
         c.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
         if (ring) {
-          if (c.classList.contains('over-disc') || c.classList.contains('hover-link') || c.classList.contains('hover-text')) {
+          if (c.classList.contains('hover-link') || c.classList.contains('hover-text')) {
             ring.style.transform = '';
           } else {
             var sp = Math.min(Math.sqrt(dx * dx + dy * dy), 56);
@@ -8158,11 +7699,9 @@
       document.addEventListener('mouseleave', stop);
 
       function applyState(target) {
-        c.classList.remove('hover-link', 'hover-text', 'over-disc');
+        c.classList.remove('hover-link', 'hover-text');
         if (!target || !target.closest) return;
-        if (target.closest('.hero-disc-wrap')) {
-          c.classList.add('over-disc');
-        } else if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
+        if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
           c.classList.add('hover-link');
         } else if (target.closest('p, h1, h2, h3, h4, span, li, code, .faq-q, .console-verdict p')) {
           c.classList.add('hover-text');
@@ -8236,7 +7775,7 @@
       });
     })();
 
-    /* Hero depth — the disc and headline sink at gentle, different
+    /* Hero depth — the mark and headline sink at gentle, different
        rates as you scroll away. Transform + opacity only (compositor
        friendly); one rAF-coalesced write per scroll, no layout reads,
        no skew. Disabled under reduced motion and on coarse pointers. */
@@ -8244,7 +7783,7 @@
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var coarse = window.matchMedia('(hover: none)').matches;
       if (reduce || coarse) return;
-      var wrap = document.querySelector('.hero-disc-wrap');
+      var wrap = document.querySelector('.hero-forge');
       var head = document.querySelector('.hero-headline');
       if (!wrap) return;
       var queued = false;
@@ -8825,19 +8364,26 @@
       }
     })();
 
-    /* ZTH_FX: the default theme's WebGL effect host (WebGL1, one draw per frame, alpha so it only adds light).
-       Driven by the effects manager below: window.ZTH_FX = { mounted, start(), stop(), setIntensity(0|1|2|null), level() }.
-       W1-01: the topographic contour field (the fragment shader below) is retired, so mounted is false and the
-       manager never starts it: the default theme stays pure black. The renderer, its resolution tiers, frame-time
-       governor and context-loss handling stay for the edge effect (W2-15), which mounts by supplying its own
-       fragment shader and setting api.mounted = true.
-       Quiet behind the hero text (its real rect), quieter once the hero scrolls away, half rate when it is gone,
-       a frame-time governor that steps down on slow devices, and nothing at all without WebGL. */
+    /* The forged mark: the hero centrepiece. The ZOTHEOS mark alone, drawn live in WebGL as a liquid chrome relief
+       whose mirror faces reflect a slow molten field made from the same domain-warped noise as the page's obsidian
+       layer (two smooth octaves here, so there is no grain). Three lights are the three minds. Each in turn rakes its
+       own side of the bevels (the Analyst a clear key from above left, the Humanist a soft fill from below left, the
+       Skeptic a grazing light from the right that sweeps against the others), then all three converge in front and
+       light the whole mark at once, hold, and part again: one calm 16 s cycle. Each caption brightens while its own
+       light speaks; at the convergence all of them do, and a fourth appears: you.
+       The relief comes from the shipped icon: an exact Euclidean distance transform over its alpha gives a signed
+       distance field (a razor anti-aliased edge at any scale), a rounded bevel and its normals, built once into one
+       texture. Native resolution (devicePixelRatio up to 2), one rAF loop, no per-frame allocation, paused offscreen
+       and while the page is hidden. Without WebGL or the image the plain PNG stays; reduced motion and the calm
+       switch get one still frame (the moment of agreement). */
     (function () {
-      var cv = document.getElementById('zthFx');
-      var api = { mounted: false, start: function () {}, stop: function () {}, setIntensity: function () {}, level: function () { return 1; } };
-      window.ZTH_FX = api;
-      if (!cv) return;
+      var box = document.getElementById('heroForge');
+      var cv = document.getElementById('forgeCanvas');
+      if (!box || !cv) return;
+      var caps = [box.querySelector('[data-mind="analyst"]'), box.querySelector('[data-mind="humanist"]'),
+                  box.querySelector('[data-mind="skeptic"]'), box.querySelector('.forge-you')];
+      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
       var VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
       var FS = [
@@ -8846,186 +8392,752 @@
         '#else',
         'precision mediump float;',
         '#endif',
-        'uniform vec2 uR;uniform vec4 uD;uniform vec4 uM;uniform vec4 uP;uniform vec4 uH;uniform vec2 uC;',
+        'uniform vec2 uR;uniform sampler2D uT;uniform mat3 uRot;',
+        'uniform vec4 uK;uniform vec4 uG;uniform vec4 uL0;uniform vec4 uL1;uniform vec4 uL2;uniform vec4 uQ;uniform vec4 uE;uniform vec4 uD;uniform vec4 uC;',
         'float hs(vec2 p){vec3 q=fract(vec3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}',
         'float ns(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*f*(f*(f*6.-15.)+10.);',
         'return mix(mix(hs(i),hs(i+vec2(1.,0.)),u.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),u.x),u.y);}',
-        'const mat2 RM=mat2(.8,.6,-.6,.8);',
-        'float fb(vec2 p){float s=0.,a=.5;for(int i=0;i<3;i++){s+=a*ns(p);p=RM*p*2.03;a*=.5;}return s*1.0714;}',
-        'float fld(vec2 p,out float qq){',
-        ' vec2 q=vec2(fb(p+uD.xy),fb(p+vec2(5.2,1.3)-uD.xy));',
-        ' vec2 r=vec2(fb(p+2.5*q+vec2(1.7,9.2)+uD.zw),fb(p+2.5*q+vec2(8.3,2.8)-uD.zw));',
-        ' qq=dot(q,q);return fb(p+2.6*r);}',
-        'float gp(vec2 p){vec2 d=p-uM.xy;float r2=dot(d,d),r=sqrt(r2);',
-        ' return -.16*uM.z*exp(-r2*10.)+.03*uM.w*sin(r*30.-uP.z*2.)*exp(-r*4.);}',
+        'float fb(vec2 p){return .64*ns(p)+.36*ns(mat2(.8,.6,-.6,.8)*p*1.87+vec2(3.1,7.7));}',
+        'float fld(vec2 p){vec2 q=vec2(fb(p+uD.xy),fb(p+vec2(5.2,1.3)-uD.xy));return fb(p+1.6*q+uD.zw);}',
+        // a mind's light as the mirror sees it: a soft-edged disc (c = cosines of its outer and inner radius) plus a
+        // faint halo; chrome has no diffuse, so a light only shows where the surface reflects it. The molten field (w)
+        // ripples the disc's edge, so even full light keeps the liquid alive on the faces
+        'vec2 lt(vec3 rf,vec3 X,vec4 L,vec2 c,float w){',
+        ' vec3 d=L.xyz-X;float r2=dot(d,d);float k=dot(rf,d*inversesqrt(r2))+w*.05;',
+        ' return vec2(smoothstep(c.x,c.y,k),pow(max(k,0.),6.))*(L.w/(1.+r2));}',
         'void main(){',
-        ' vec2 uv=gl_FragCoord.xy/uR;float as=uR.x/uR.y;',
-        ' vec2 p=(uv-.5)*vec2(as,1.);',
-        ' vec2 P=p*uP.w+vec2(0.,uP.y);',
-        ' float px=uP.w/uR.y,e=1.5*px,q0,q1;',
-        ' float h=fld(P,q0)+gp(p);',
-        ' float hx=fld(P+vec2(e,0.),q1)+gp(p+vec2(e/uP.w,0.));',
-        ' float hy=fld(P+vec2(0.,e),q1)+gp(p+vec2(0.,e/uP.w));',
-        ' vec2 g=vec2(hx-h,hy-h)/e;',
-        ' float v=h*uC.x,gv=length(g)*uC.x*px+1e-5;',
-        ' float dist=(.5-abs(fract(v)-.5))/gv;',
-        ' float line=(1.-smoothstep(uC.y*.3,uC.y,dist))*(1.-smoothstep(.2,.45,gv));',
-        ' float major=step(mod(floor(v+.5),4.),.5);',
-        ' vec3 n=normalize(vec3(-g*.075,1.));',
-        ' vec3 L=normalize(vec3(-.35,.55,.75));',
-        ' float lam=max(dot(n,L),0.);',
-        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),24.);',
-        ' float c=line*(.1+.48*lam*lam+.85*sp)*(.38+.62*major);',
-        ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.55);',
-        ' float vg=1.-smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.4)));',
-        ' c*=uP.x*(.4+.6*vg)*(1.-.88*rd);',
-        ' c=clamp(c,0.,1.);',
-        ' gl_FragColor=vec4(vec3(c),c);}'
+        ' float hb=uR.y*.5;',
+        ' vec2 s=(gl_FragCoord.xy-uR*.5)/hb;',
+        ' vec3 cam=vec3(0.,0.,6.),dr=vec3(s,-6.),np=uRot[2];',
+        ' vec3 X=cam+dr*(-dot(cam,np)/dot(dr,np));',
+        ' vec3 lc=X*uRot;',
+        ' vec2 tc=vec2(uG.x+(lc.x/uK.y*.5+.5)*uG.z,uG.y+(.5-lc.y/uK.x*.5)*uG.w);',
+        ' vec4 tx=texture2D(uT,tc);',
+        ' vec2 ib=step(vec2(0.),tc)*step(tc,vec2(1.));float inb=ib.x*ib.y;',
+        ' float sd=mix(-40.,(tx.b*255.-128.)/6.,inb);',
+        ' float cov=clamp(sd*uK.z+.5,0.,1.);',
+        ' float dz=(hs(gl_FragCoord.xy)-.5)/255.;',
+        ' vec3 mc=vec3(0.);',
+        ' if(cov>0.){',
+        '  vec2 en=tx.rg*2.-1.;',
+        '  vec3 nl=vec3(en*abs(en),0.);nl.y=-nl.y;nl.z=sqrt(max(1.-dot(nl.xy,nl.xy),0.));',
+        '  vec3 n=uRot*nl;',
+        '  vec3 V=normalize(cam-X);',
+        '  vec3 rf=reflect(-V,n);',
+        // studio around the mark: an overhead softbox, two side strips, a dark floor; the horizon ripples with
+        // the molten field, and the dark glass in front carries slow liquid veins of light
+        // (veins and pools only on the near-flat faces: across a bevel the reflection sweeps too fast for them)
+        '  float w=fld(rf.xy*.3+lc.xy*.95)-.5;',
+        '  float fl=1.-smoothstep(.01,.07,1.-nl.z);',
+        '  float sky=smoothstep(.05,.8,rf.y+w*.35);',
+        '  float strip=smoothstep(.55,.95,abs(rf.x+w*.3))*(1.-sky);',
+        '  float vein=exp(-w*w*380.)*fl;',
+        '  float env=.06+.5*sky*sky+.2*strip+.06*(1.-sky)*smoothstep(-.2,-.8,rf.y)+(.4*vein+.09*smoothstep(.08,.24,w))*fl;',
+        '  vec2 a=lt(rf,X,uL0,uQ.xy,w)+lt(rf,X,uL1,uQ.zw,w)+lt(rf,X,uL2,uE.xy,w);',
+        '  float bev=clamp((1.-nl.z)*4.,0.,1.);',
+        '  float lum=env*(1.+.6*uE.z)+a.x+a.y*.22*mix(bev,1.,.5*uE.z);',
+        '  vec3 ch=(1.-exp(-lum*1.4))*mix(uC.rgb,vec3(1.),.3);',
+        '  vec3 dk=uC.rgb*.85+(1.-exp(-lum*1.1))*vec3(.78,.68,.56);',
+        '  mc=clamp(mix(ch,dk,uC.w)+dz,0.,1.);',
+        ' }',
+        ' float g=tx.a*inb*(.07+.07*uE.z);',
+        ' vec2 e=s/vec2(.62,1.02);',
+        ' float au=exp(-dot(e,e)*2.2)*.06*uE.z*smoothstep(uK.w,uK.w*.7,abs(s.x))*smoothstep(1.,.8,abs(s.y));',
+        ' float gs=g+au;',
+        ' float ga=clamp(gs*(1.-cov)+dz*step(.002,gs),0.,1.);',
+        ' gl_FragColor=vec4(mc*cov+uC.rgb*ga,cov+ga);',
+        '}'
       ].join('\n');
 
-      var gl = null, prog = null, U = {}, failed = false, scheduled = false, lost = false;
-      var raf = 0, wanted = false, level = 1, chosen = null, last = 0, T = 0, tick = 0;
-      var GAIN = [0.7, 1, 1.3], DENS_FX = [10, 13, 17];   // intensity: line brightness and contour density
-      // Render quality is automatic and separate from intensity: the internal resolution starts near the device's
-      // own pixels and steps down only if this device cannot hold the display's frame rate.
-      var TIER = [1.0, 0.8, 0.62, 0.48, 0.36], TCAP = [8.3e6, 4.2e6, 2.4e6, 1.3e6, 0.6e6], tier = 1;
-      var mx = 0.18, my = 0, tmx = 0.18, tmy = 0, press = 0, rip = 0, lastMove = -1e9, sc = 0, w = 0, h = 0;
-      var hero = document.querySelector('.hero'), heroText = [], H = [0.5, 0.52, 0.3, 0.2], vis = 1, gview = 1, dirty = true;
-      ['.hero-eyebrow', '.hero-headline', '.hero-sub', '.hero-actions'].forEach(function (s) { var el = document.querySelector(s); if (el) heroText.push(el); });
-      var fast = 16.7, slow = 0, calm = 0, throttled = false;
-      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var MARK = 0.86;                  // mark half-height, in canvas half-heights (matches the CSS label geometry)
+      var CYCLE = 16, U0 = 0.44;        // seconds per cycle; the first visit starts just before an agreement
+      var STILL_U = 0.76, STILL_T = 3;  // the still frame: the three lights in agreement
+      var DIST = 2.6, DEG = Math.PI / 180, TAU = 6.2831853;
+      // The minds, in order Analyst, Humanist, Skeptic: home azimuth and elevation (deg), how far each light sweeps
+      // while it speaks (deg) and which way (the Skeptic against the others); then its wander period (s), its apparent
+      // radius and edge softness as the mirror sees it (deg), and when in the cycle it speaks.
+      var L_AZ = [138, 218, 18], L_EL = [26, 36, 7], L_SW = [26, 22, 30], L_DIR = [1, 1, -1];
+      var L_WP = [10.3, 12.7, 9.1], L_RAD = [22, 32, 16], L_SOFT = [12, 18, 9], L_TURN = [0.14, 0.31, 0.48];
+      // Where they agree: three large lights evenly around the line of sight, so every face and every bevel is lit.
+      var C_EL = 78 * DEG, C_RAD = 16, C_SOFT = 15, C_DIST = 4.2, C_AZ = [90, 210, 330];
+      var CV = [];
+      for (var c = 0; c < 3; c++) CV.push(Math.cos(C_EL) * Math.cos(C_AZ[c] * DEG), Math.cos(C_EL) * Math.sin(C_AZ[c] * DEG), Math.sin(C_EL));
 
-      // A light default on phones and modest machines, unless the visitor picked a level.
-      var lowEnd = false;
-      try {
-        lowEnd = window.matchMedia('(pointer: coarse)').matches || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4;
-      } catch (e) {}
-      level = lowEnd ? 0 : 1;
-      tier = lowEnd ? 3 : ((navigator.hardwareConcurrency || 8) >= 8 ? 0 : 1);
+      var gl = null, U = {}, field = null, failed = false, live = false;
+      var W = 0, H = 0, raf = 0, last = 0, T = 0, inView = true, ink = [1, 1, 1], dark = 0;
+      var rx = 0, ry = 0, trx = 0, tryy = 0, px = 0, py = 0, hasPtr = false, bx = 0, by = 0, sizeDirty = true;
+      var ROT = new Float32Array([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+      var LP = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], LC = [0, 0, 0, 0, 0, 0], lit = [0, 0, 0, 0];
+      var LIT = [], litq = [-1, -1, -1, -1];
+      for (var k = 0; k <= 50; k++) LIT.push((k / 50).toFixed(2));
 
-      function sh(type, src) {
-        var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
-        return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
-      }
-      function init() {
-        try {
-          var o = { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'low-power' };
-          gl = cv.getContext('webgl', o) || cv.getContext('experimental-webgl', o);
-          if (!gl) { failed = true; return false; }
-          if (gl.isContextLost && gl.isContextLost()) { gl = null; lost = true; return false; }   // wait for restore
-          var v = sh(gl.VERTEX_SHADER, VS), f = sh(gl.FRAGMENT_SHADER, FS);
-          if (!v || !f) { gl = null; failed = true; return false; }
-          prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
-          if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { gl = null; failed = true; return false; }
-          gl.useProgram(prog);
-          gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
-          var loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-          U.R = gl.getUniformLocation(prog, 'uR'); U.D = gl.getUniformLocation(prog, 'uD');
-          U.M = gl.getUniformLocation(prog, 'uM'); U.P = gl.getUniformLocation(prog, 'uP'); U.H = gl.getUniformLocation(prog, 'uH'); U.C = gl.getUniformLocation(prog, 'uC');
-          gl.clearColor(0, 0, 0, 0);
-          return true;
-        } catch (e) { gl = null; failed = true; return false; }
-      }
+      function sm(a, b, x) { var t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
+      function speaks(u, c) { var d = Math.abs(u - c); d = Math.min(d, 1 - d) / 0.075; return Math.exp(-d * d); }
 
-      function size() {
-        var iw = window.innerWidth, ih = window.innerHeight;
-        var k = Math.min(TIER[tier] * Math.min(window.devicePixelRatio || 1, 2), Math.sqrt(TCAP[tier] / Math.max(1, iw * ih)));
-        var nw = Math.max(64, Math.round(iw * k)), nh = Math.max(64, Math.round(ih * k));
-        if (nw !== w || nh !== h) { w = nw; h = nh; cv.width = w; cv.height = h; gl.viewport(0, 0, w, h); }
-      }
-      function measure() {
-        dirty = false;
-        var iw = Math.max(1, window.innerWidth), ih = Math.max(1, window.innerHeight);
-        if (hero) { var hb = hero.getBoundingClientRect(); vis = Math.max(0, Math.min(1, hb.bottom / ih)); }
-        if (!heroText.length) return;
-        var l = 1e9, t = 1e9, r = -1e9, b = -1e9;
-        for (var i = 0; i < heroText.length; i++) {
-          var q = heroText[i].getBoundingClientRect();
-          if (!q.width && !q.height) continue;
-          l = Math.min(l, q.left); t = Math.min(t, q.top); r = Math.max(r, q.right); b = Math.max(b, q.bottom);
+      function lights(u, t) {
+        var conv = sm(0.60, 0.72, u) * (1 - sm(0.82, 0.96, u));
+        for (var i = 0; i < 3; i++) {
+          var sp = speaks(u, L_TURN[i]);
+          var az = (L_AZ[i] + L_DIR[i] * (L_SW[i] * Math.sin(TAU * (u - L_TURN[i])) + 9 * Math.sin(t * TAU / L_WP[i] + i * 2.1))) * DEG;
+          var el = (L_EL[i] + 5 * Math.sin(t * TAU / (L_WP[i] * 0.77) + i)) * DEG;
+          var x = Math.cos(el) * Math.cos(az), y = Math.cos(el) * Math.sin(az), z = Math.sin(el);
+          x += (CV[i * 3] - x) * conv; y += (CV[i * 3 + 1] - y) * conv; z += (CV[i * 3 + 2] - z) * conv;
+          var d = DIST + (C_DIST - DIST) * conv, s = d / Math.sqrt(x * x + y * y + z * z);
+          LP[i * 4] = x * s; LP[i * 4 + 1] = y * s; LP[i * 4 + 2] = z * s;
+          LP[i * 4 + 3] = (0.3 + 1.35 * sp + 0.08 * conv) * (1 + d * d);   // intensity at the mark's centre
+          var rad = L_RAD[i] + (C_RAD - L_RAD[i]) * conv, soft = L_SOFT[i] + (C_SOFT - L_SOFT[i]) * conv;
+          LC[i * 2] = Math.cos((rad + soft) * DEG); LC[i * 2 + 1] = Math.cos(Math.max(0, rad - soft) * DEG);
+          lit[i] = Math.max(sp, conv);
         }
-        if (r < l) return;
-        H[0] = (l + r) / 2 / iw; H[1] = 1 - (t + b) / 2 / ih; H[2] = (r - l) / 2 / iw + 0.04; H[3] = (b - t) / 2 / ih + 0.05;
+        lit[3] = conv;
+        return conv;
       }
 
-      function draw(dt) {
-        size();
-        if (dirty) measure();
-        T += dt;
-        var a = T * 0.0075, b = T * 0.005 + 1.7;
-        var k = 1 - Math.exp(-dt * 2.2);
-        mx += (tmx - mx) * k; my += (tmy - my) * k;
-        var tp = (T - lastMove) < 2.5 ? 1 : 0;
-        press += (tp - press) * (1 - Math.exp(-dt * (tp ? 1.6 : 0.6)));
-        rip *= Math.exp(-dt * 0.9);
-        var ts = (window.pageYOffset || 0) / Math.max(1, window.innerHeight) * 0.22;
-        sc += (ts - sc) * (1 - Math.exp(-dt * 3));
-        gview += ((0.35 + 0.65 * vis) - gview) * (1 - Math.exp(-dt * 2.5));   // quieter once the hero has gone
-        gl.uniform2f(U.R, w, h);
-        gl.uniform4f(U.D, 2.6 * Math.cos(a), 2.6 * Math.sin(a * 0.83), 1.9 * Math.cos(b * 1.21), 1.9 * Math.sin(b));
-        gl.uniform4f(U.M, mx, my, press, Math.min(rip, 1));
-        gl.uniform4f(U.P, GAIN[level] * gview, sc, (T * 1.9) % 6.2831853, w < h ? 1.55 : 1.0);
-        gl.uniform4f(U.H, H[0], H[1], H[2], H[3]);
-        gl.uniform2f(U.C, DENS_FX[level], 1.15 * Math.max(1, w / Math.max(1, window.innerWidth)));   // ~1.15 CSS px lines
+      function rot(a, b) {   // tilt: a about x (cursor below = positive), b about y (cursor right = positive)
+        var ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b);
+        ROT[0] = cb; ROT[1] = 0; ROT[2] = -sb;
+        ROT[3] = sb * sa; ROT[4] = ca; ROT[5] = cb * sa;
+        ROT[6] = sb * ca; ROT[7] = -sa; ROT[8] = cb * ca;
+      }
+
+      function setLit(i, v) {
+        var q = Math.round(v * 50);
+        if (q !== litq[i] && caps[i]) { litq[i] = q; caps[i].style.setProperty('--lit', LIT[q]); }
+      }
+
+      function render(u, t) {
+        var conv = lights(u, t);
+        gl.uniform2f(U.R, W, H);
+        gl.uniform4f(U.K, MARK, MARK * field.asp, MARK * H / field.mh, W / H);
+        gl.uniformMatrix3fv(U.Rot, false, ROT);
+        gl.uniform4f(U.L0, LP[0], LP[1], LP[2], LP[3]);
+        gl.uniform4f(U.L1, LP[4], LP[5], LP[6], LP[7]);
+        gl.uniform4f(U.L2, LP[8], LP[9], LP[10], LP[11]);
+        gl.uniform4f(U.Q, LC[0], LC[1], LC[2], LC[3]);
+        gl.uniform4f(U.E, LC[4], LC[5], conv, 0);
+        var a = t * 0.045, b = t * 0.032 + 1.7;
+        gl.uniform4f(U.D, 2.2 * Math.cos(a), 2.2 * Math.sin(a * 0.83), 1.6 * Math.cos(b * 1.21), 1.6 * Math.sin(b));
+        gl.uniform4f(U.C, ink[0], ink[1], ink[2], dark);
         gl.clear(gl.COLOR_BUFFER_BIT);
         gl.drawArrays(gl.TRIANGLES, 0, 3);
-        if (!cv.classList.contains('is-on')) cv.classList.add('is-on');
+        for (var i = 0; i < 4; i++) setLit(i, lit[i]);
       }
 
+      /* ---- the relief: signed distance field, bevel and normals from the icon's alpha ---- */
+      var INF = 1e20;
+      function edt1d(g, off, stride, len, f, v, z) {
+        var q, k = 0, s, r;
+        v[0] = 0; z[0] = -INF; z[1] = INF;
+        for (q = 0; q < len; q++) f[q] = g[off + q * stride];
+        for (q = 1; q < len; q++) {
+          do {
+            r = v[k];
+            s = (f[q] - f[r] + q * q - r * r) / (q - r) / 2;
+          } while (s <= z[k] && --k > -1);
+          k++; v[k] = q; z[k] = s; z[k + 1] = INF;
+        }
+        for (q = 0, k = 0; q < len; q++) {
+          while (z[k + 1] < q) k++;
+          r = v[k];
+          g[off + q * stride] = f[r] + (q - r) * (q - r);
+        }
+      }
+      function edt(g, w, h, f, v, z) {
+        var i;
+        for (i = 0; i < w; i++) edt1d(g, i, w, h, f, v, z);
+        for (i = 0; i < h; i++) edt1d(g, i * w, 1, w, f, v, z);
+      }
+      function boxBlur(a, t, w, h, r) {   // one box-blur pass each way (running sums, edges clamped)
+        var x, y, o, acc, inv = 1 / (2 * r + 1);
+        for (y = 0; y < h; y++) {
+          o = y * w; acc = 0;
+          for (x = -r; x <= r; x++) acc += a[o + Math.min(w - 1, Math.max(0, x))];
+          for (x = 0; x < w; x++) { t[o + x] = acc * inv; acc += a[o + Math.min(w - 1, x + r + 1)] - a[o + Math.max(0, x - r)]; }
+        }
+        for (x = 0; x < w; x++) {
+          acc = 0;
+          for (y = -r; y <= r; y++) acc += t[Math.min(h - 1, Math.max(0, y)) * w + x];
+          for (y = 0; y < h; y++) { a[y * w + x] = acc * inv; acc += t[Math.min(h - 1, y + r + 1) * w + x] - t[Math.max(0, y - r) * w + x]; }
+        }
+      }
+      // Built in short steps (one per task) so no single task blocks the page for long; the icon arrives already
+      // decoded and resized off the main thread where the browser can (createImageBitmap), else via img.decode().
+      function build(src, asp, mw, mh, done) {
+        var pad = Math.round(mh * 0.045), gw = mw + pad * 2, gh = mh + pad * 2, n = gw * gh;
+        var B = mh * 0.017, K = 1.5 * B, G = mh * 0.011, P = pad * 0.95;
+        var go, gi, sd, gx, gy, dm, tmp, out, L = Math.max(gw, gh);
+        var f = new Float64Array(L), v = new Uint16Array(L), z = new Float64Array(L + 1);
+        function row(y0, y1) {   // pack normals (square-root encoded), distance and glow for rows y0..y1
+          for (var y = y0; y < y1; y++) {
+            for (var x = 0; x < gw; x++) {
+              var i = y * gw + x, s = sd[i], t = s / B;
+              var sl = t <= 0 ? 2 / B : (t >= 1 ? 0 : (2 - 2 * t) / B);   // d(height)/d(distance)
+              var gl2 = Math.sqrt(gx[i] * gx[i] + gy[i] * gy[i]) || 1;
+              var dx = (dm[x < gw - 1 ? i + 1 : i] - dm[x > 0 ? i - 1 : i]) * 0.5;
+              var dy = (dm[y < gh - 1 ? i + gw : i] - dm[y > 0 ? i - gw : i]) * 0.5;
+              var nx = -(sl * gx[i] / gl2 + 0.16 * dx) * K, ny = -(sl * gy[i] / gl2 + 0.16 * dy) * K;
+              var il = 1 / Math.sqrt(nx * nx + ny * ny + 1);
+              nx *= il; ny *= il;
+              out[i * 4] = Math.round(127.5 + (nx < 0 ? -Math.sqrt(-nx) : Math.sqrt(nx)) * 127.5);
+              out[i * 4 + 1] = Math.round(127.5 + (ny < 0 ? -Math.sqrt(-ny) : Math.sqrt(ny)) * 127.5);
+              out[i * 4 + 2] = Math.max(0, Math.min(255, Math.round(128 + s * 6)));
+              out[i * 4 + 3] = s >= 0 ? 255 : Math.round(255 * Math.exp(s / G) * Math.max(0, Math.min(1, (P + s) / (P * 0.5))));
+            }
+          }
+        }
+        var steps = [
+          function () {
+            var c = document.createElement('canvas');
+            c.width = gw; c.height = gh;
+            var cx = c.getContext('2d');
+            cx.imageSmoothingEnabled = true;
+            try { cx.imageSmoothingQuality = 'high'; } catch (e) {}
+            cx.drawImage(src, pad, pad, mw, mh);
+            if (src.close) src.close();
+            var px = cx.getImageData(0, 0, gw, gh).data;
+            go = new Float64Array(n); gi = new Float64Array(n);
+            for (var i = 0; i < n; i++) {
+              var al = px[i * 4 + 3] / 255;
+              if (al < 0.004) { go[i] = INF; gi[i] = 0; }
+              else if (al > 0.996) { go[i] = 0; gi[i] = INF; }
+              else { var dd = 0.5 - al; go[i] = dd > 0 ? dd * dd : 0; gi[i] = dd < 0 ? dd * dd : 0; }
+            }
+          },
+          function () { edt(go, gw, gh, f, v, z); },
+          function () { edt(gi, gw, gh, f, v, z); },
+          // Bevel: a rounded shoulder B texels wide (height t(2 - t), t = distance / B), then a faint dome so the
+          // mirror faces are not dead flat. The distance of a pixel grid is exact in value but its gradient direction
+          // snaps between neighbouring boundary pixels, which would streak a mirror; so the slope comes from the
+          // exact distance and the direction from a blurred gradient field, and the dome from a blurred coverage.
+          function () {
+            sd = new Float32Array(n); gx = new Float32Array(n); gy = new Float32Array(n); dm = new Float32Array(n); tmp = new Float32Array(n);
+            var i, x, y;
+            for (i = 0; i < n; i++) { sd[i] = Math.sqrt(gi[i]) - Math.sqrt(go[i]); dm[i] = Math.max(0, Math.min(1, sd[i] + 0.5)); }
+            go = gi = null;
+            for (y = 0; y < gh; y++) {
+              for (x = 0; x < gw; x++) {
+                i = y * gw + x;
+                gx[i] = (sd[x < gw - 1 ? i + 1 : i] - sd[x > 0 ? i - 1 : i]) * 0.5;
+                gy[i] = (sd[y < gh - 1 ? i + gw : i] - sd[y > 0 ? i - gw : i]) * 0.5;
+              }
+            }
+          },
+          function () { var r = Math.max(2, Math.round(mh / 340)); for (var k = 0; k < 3; k++) boxBlur(gx, tmp, gw, gh, r); },
+          function () { var r = Math.max(2, Math.round(mh / 340)); for (var k = 0; k < 3; k++) boxBlur(gy, tmp, gw, gh, r); },
+          function () { var r = Math.round(B * 0.8); for (var k = 0; k < 3; k++) boxBlur(dm, tmp, gw, gh, r); tmp = null; },
+          function () { out = new Uint8Array(n * 4); row(0, gh >> 1); },
+          function () { row(gh >> 1, gh); }
+        ];
+        var k = 0;
+        (function next() {
+          if (failed) return;
+          try { steps[k++](); } catch (e) { done(null); return; }
+          if (k < steps.length) { setTimeout(next, 0); return; }
+          done({ w: gw, h: gh, data: out, pad: pad, mw: mw, mh: mh, asp: asp });
+        })();
+      }
+
+      /* ---- GL ---- */
+      function context() {
+        if (gl) return true;
+        var o = { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'low-power' };
+        try { gl = cv.getContext('webgl', o) || cv.getContext('experimental-webgl', o); } catch (e) { gl = null; }
+        if (gl && gl.isContextLost && gl.isContextLost()) gl = null;
+        return !!gl;
+      }
+      var prog = null, vsh = null, fsh = null;
+      function compile() {   // start compiling; with KHR_parallel_shader_compile the driver works while we wait
+        vsh = gl.createShader(gl.VERTEX_SHADER); gl.shaderSource(vsh, VS); gl.compileShader(vsh);
+        fsh = gl.createShader(gl.FRAGMENT_SHADER); gl.shaderSource(fsh, FS); gl.compileShader(fsh);
+        prog = gl.createProgram(); gl.attachShader(prog, vsh); gl.attachShader(prog, fsh); gl.linkProgram(prog);
+      }
+      function setup() {
+        try {
+          if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return false;
+          var p = prog;
+          gl.useProgram(p);
+          gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+          var loc = gl.getAttribLocation(p, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+          ['R', 'T', 'Rot', 'K', 'G', 'L0', 'L1', 'L2', 'Q', 'E', 'D', 'C'].forEach(function (k) { U[k] = gl.getUniformLocation(p, 'u' + k); });
+          gl.activeTexture(gl.TEXTURE0);
+          gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+          gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+          gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
+          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, field.w, field.h, 0, gl.RGBA, gl.UNSIGNED_BYTE, field.data);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+          gl.uniform1i(U.T, 0);
+          gl.uniform4f(U.G, field.pad / field.w, field.pad / field.h, field.mw / field.w, field.mh / field.h);
+          gl.clearColor(0, 0, 0, 0);
+          W = H = 0;
+          return !gl.isContextLost();
+        } catch (e) { return false; }
+      }
+      function size() {   // canvas at native resolution (DPR up to 2); also caches the stage centre in page space
+        sizeDirty = false;
+        var r = cv.getBoundingClientRect();
+        bx = r.left + r.width / 2 + (window.pageXOffset || 0); by = r.top + r.height / 2 + (window.pageYOffset || 0);
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var nw = Math.max(2, Math.round(r.width * dpr)), nh = Math.max(2, Math.round(r.height * dpr));
+        if (nw === W && nh === H) return false;
+        W = nw; H = nh; cv.width = W; cv.height = H; gl.viewport(0, 0, W, H);
+        return true;
+      }
+      function readInk() {
+        var m = caps[0] ? getComputedStyle(caps[0]).color.match(/[\d.]+/g) : null;
+        if (m && m.length >= 3) { ink[0] = m[0] / 255; ink[1] = m[1] / 255; ink[2] = m[2] / 255; }
+        dark = (0.2126 * ink[0] + 0.7152 * ink[1] + 0.0722 * ink[2]) < 0.35 ? 1 : 0;
+      }
+
+      /* ---- lifecycle ---- */
+      function motionOK() { return !reduceMQ.matches && (!window.zMotionAllowed || window.zMotionAllowed()); }
+      function want() { return live && inView && !document.hidden && motionOK(); }
+      function still() { rx = ry = 0; rot(0, 0); render(STILL_U, STILL_T); }
+      function redraw() {
+        if (!live || !gl) return;
+        if (!motionOK()) still(); else render(((T / CYCLE) + U0) % 1, T);
+      }
       function frame(now) {
         raf = 0;
-        if (!wanted || document.hidden) return;
-        var dt = last ? Math.min((now - last) / 1000, 0.1) : 0.016; last = now;
-        // Governor: a frame is slow only against the display's own cadence (so a 30 Hz cap is not slowness).
-        // Sustained slowness lowers the internal resolution a tier at a time, then halves the rate; intensity is the
-        // visitor's and is never touched.
-        var ms = dt * 1000;
-        fast = Math.min(fast * 1.002, Math.max(ms, 4));
-        if (ms > fast * 1.6) { calm = 0; if (++slow > 45) { slow = 0; if (tier < TIER.length - 1) { tier++; w = 0; } else throttled = true; } }
-        else { slow = 0; if (throttled && ++calm > 600) { throttled = false; calm = 0; } }
-        tick++;
-        var halfRate = vis <= 0 || throttled;
-        if (!halfRate || tick % 2 === 0) draw(halfRate ? dt * 2 : dt);
+        if (!want()) return;
+        var dt = last ? Math.min((now - last) / 1000, 0.1) : 0.016;
+        last = now; T += dt;
+        if (sizeDirty) size();
+        if (fine) {
+          var hw = Math.max(1, window.innerWidth * 0.5), hh = Math.max(1, window.innerHeight * 0.5);
+          tryy = hasPtr ? Math.max(-1, Math.min(1, (px - bx + (window.pageXOffset || 0)) / hw)) * 5 * DEG : 0;
+          trx = hasPtr ? Math.max(-1, Math.min(1, (py - by + (window.pageYOffset || 0)) / hh)) * 4 * DEG : 0;
+          var e = 1 - Math.exp(-dt * 2.4);
+          rx += (trx - rx) * e; ry += (tryy - ry) * e;
+          rot(rx, ry);
+        }
+        render(((T / CYCLE) + U0) % 1, T);
         raf = requestAnimationFrame(frame);
       }
-      function run() {
-        if (failed || lost || !wanted) return;
-        if (!gl) {
-          if (scheduled) return;
-          scheduled = true;
-          var go = function () { setTimeout(function () { scheduled = false; if (wanted && init()) run(); }, 80); };
-          if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
-          return;
+      function sync() {
+        if (!live) return;
+        if (want()) { if (!raf) { last = 0; raf = requestAnimationFrame(frame); } return; }
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        if (!motionOK()) still();
+      }
+      function fail() {
+        failed = true; live = false;
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        box.classList.remove('is-pending', 'is-live');
+      }
+      function goLive() {   // context, compile, then upload and first frame: each in its own task
+        if (failed) return;
+        if (!context()) { fail(); return; }
+        setTimeout(function () {
+          if (failed || !gl) return;
+          try { compile(); } catch (e) { fail(); return; }
+          var ext = gl.getExtension('KHR_parallel_shader_compile'), tries = 0;
+          (function ready() {
+            if (failed || !gl) return;
+            if (ext && ++tries < 120 && !gl.getProgramParameter(prog, ext.COMPLETION_STATUS_KHR)) { setTimeout(ready, 16); return; }
+            if (!setup()) { fail(); return; }
+            readInk(); size();
+            live = true;
+            redraw();
+            box.classList.add('is-live');
+            box.classList.remove('is-pending');
+            sync();
+          })();
+        }, 0);
+      }
+      function start(img) {
+        if (failed) return;
+        var asp = img.naturalWidth / img.naturalHeight;
+        var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var mh = Math.max(640, Math.min(1024, Math.round(r.height * dpr * MARK * 1.3))), mw = Math.round(mh * asp);
+        function go(src) {
+          build(src, asp, mw, mh, function (fd) {
+            field = fd;
+            if (!field) { fail(); return; }
+            goLive();
+          });
         }
-        if (reduceMQ.matches) { T = 40; press = 0; rip = 0; draw(0); return; }
-        if (!raf && !document.hidden) { last = 0; raf = requestAnimationFrame(frame); }
+        function viaDecode() { if (img.decode) img.decode().then(function () { go(img); }, function () { go(img); }); else go(img); }
+        if (window.createImageBitmap) {
+          try {
+            createImageBitmap(img, { resizeWidth: mw, resizeHeight: mh, resizeQuality: 'high' }).then(go, viaDecode);
+          } catch (e) { viaDecode(); }
+        } else viaDecode();
       }
-      function halt() { if (raf) cancelAnimationFrame(raf); raf = 0; }
-      function notify() { try { window.dispatchEvent(new Event('zotheos:fxlevel')); } catch (e) {} }
 
-      function onMove(x, y) {
-        var ih = Math.max(1, window.innerHeight), nx = (x / ih) - 0.5 * window.innerWidth / ih, ny = 0.5 - y / ih;
-        var dx = nx - tmx, dy = ny - tmy;
-        rip = Math.min(1.4, rip + Math.sqrt(dx * dx + dy * dy) * 1.4);
-        tmx = nx; tmy = ny; lastMove = T;
-      }
-      window.addEventListener('pointermove', function (e) { if (wanted && e.pointerType === 'mouse') onMove(e.clientX, e.clientY); }, { passive: true });
-      window.addEventListener('scroll', function () { dirty = true; }, { passive: true });
-      window.addEventListener('resize', function () { dirty = true; if (wanted && gl && reduceMQ.matches) draw(0); }, { passive: true });
-      document.addEventListener('visibilitychange', function () { if (document.hidden) halt(); else if (wanted) run(); });
-      cv.addEventListener('webglcontextlost', function (e) { e.preventDefault(); halt(); gl = null; lost = true; scheduled = false; w = h = 0; }, false);
-      cv.addEventListener('webglcontextrestored', function () { lost = false; if (wanted) run(); }, false);
-
-      api.start = function () { wanted = true; dirty = true; run(); };
-      api.stop = function () { wanted = false; halt(); cv.classList.remove('is-on'); };
-      api.setIntensity = function (l) {
-        chosen = (l === null || l === undefined) ? null : Math.max(0, Math.min(2, l | 0));
-        level = chosen === null ? (lowEnd ? 0 : 1) : chosen;
-        w = 0; slow = 0; calm = 0; throttled = false; fast = 16.7;
-        if (gl && wanted && reduceMQ.matches) draw(0);
+      if (!window.WebGLRenderingContext) return;   // no WebGL: the plain mark stays (a failed context later also falls back)
+      box.classList.add('is-pending');
+      var img = new Image();
+      img.decoding = 'async';
+      img.onerror = fail;
+      img.onload = function () {
+        // Build once the page has revealed (the intro may still be animating); the work is a single short task.
+        var go = function () { setTimeout(function () { start(img); }, 30); };
+        if (!document.body.classList.contains('page-loading')) { go(); return; }
+        var mo = new MutationObserver(function () {
+          if (document.body.classList.contains('page-loading')) return;
+          mo.disconnect(); go();
+        });
+        mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
       };
-      api.level = function () { return level; };
+      img.src = '/static/zotheos_icon.png';
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (en) { inView = en[0].isIntersecting; sync(); }).observe(box);
+      }
+      document.addEventListener('visibilitychange', sync);
+      window.addEventListener('zotheos:effectschange', sync);
+      if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', sync); else if (reduceMQ.addListener) reduceMQ.addListener(sync);
+      window.addEventListener('resize', function () { sizeDirty = true; if (live && !raf && size()) redraw(); }, { passive: true });
+      if (fine) {
+        window.addEventListener('pointermove', function (e) {
+          if (e.pointerType && e.pointerType !== 'mouse') return;
+          px = e.clientX; py = e.clientY; hasPtr = true;
+        }, { passive: true });
+        document.documentElement.addEventListener('mouseleave', function () { hasPtr = false; });
+      }
+      new MutationObserver(function () {
+        readInk(); redraw();
+        setTimeout(function () { readInk(); redraw(); }, 600);
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      cv.addEventListener('webglcontextlost', function (e) {
+        e.preventDefault();
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        live = false; box.classList.remove('is-live');
+      }, false);
+      cv.addEventListener('webglcontextrestored', function () { if (field && !failed) goLive(); }, false);
+    })();
+
+    /* Xicalcoliuhqui in water, shipping version.
+       One carved step-fret band at each screen edge: obsidian body, one narrow specular ridge on the lit shoulder,
+       a thin selvedge rail, Mitla panel rhythm (three fret pairs, then a short plain panel). The band centreline drifts
+       and snakes; every fret is built in the band's local frame (rotation only), so the stairs stay true. The water
+       lives in the light: a twist of at most 0.45 rad moves the shading along the band, never the geometry.
+       Composition is point symmetric like the motif itself: the left band springs from a capped end under the wordmark
+       and flows down, the right band springs from a capped end at the bottom and flows up. One slow glint travels the
+       circuit. ES5, no libraries, no per-frame allocations, only the two edge strips are rasterised. */
+    (function () {
+      'use strict';
+      var TW = 480;          /* every time term is periodic in 480 s, so the clock wraps without a seam */
+      var T_STILL = 17.5;    /* still frame: composed, glint at rest */
+      var T_START = 3.0;     /* first frame: glint a fifth of the way down the left band */
+      var canvas = document.getElementById('zthFx');
+      var gl = null, prog = null, buf = null, loc = {}, deriv = false;
+      var raf = 0, running = false, wanted = false, frozen = false, cleared = false, userLevel = null, autoLvl = 1;
+      var t = T_START, lastT = 0;
+      var W = 1, H = 1, dpr = 1, dprCap = 2, cssW = 1, cssH = 1, mob = 0;
+      var uDev = 10, cxU = 10, ampU = 1, capU = 8, fadeA = 0, fadeB = 1, flowK = 1, phaseU = 0;
+      var mx = 0.5, smx = 0.5;
+      var verts = new Float32Array(24), px1 = new Uint8Array(4), perf = new Float64Array(60), perfN = 0, perfSkip = 6, perfDone = false;
+      var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+      var reduce = !!(mq && mq.matches);
+
+      /* ---------- motif: unit A on a pitch-2 grid (stroke centre lines). A rises from the outer rail as a stair and
+         closes in a square spiral; B is A turned 180 degrees about (1,0). Pair period 18. ---------- */
+      var R = 0.6; /* stroke half width, units */
+      var A = [[-10,-7],[-10,-3],[-8,-3],[-8,-1],[-6,-1],[-6,1],[-4,1],[-4,3],[-2,3],[-2,5],[6,5],[6,1],[2,1],[2,3],[4,3]];
+      function fx(v) { var s = v.toFixed(2); return s.indexOf('.') < 0 ? s + '.0' : s; }
+      function boxes(i0, i1) {
+        var s = '', i, a, b;
+        for (i = i0; i < i1; i++) {
+          a = A[i]; b = A[i + 1];
+          s += '  bx(p,vec2(' + fx((a[0] + b[0]) / 2) + ',' + fx((a[1] + b[1]) / 2) + '),vec2(' +
+               fx(Math.abs(b[0] - a[0]) / 2 + R) + ',' + fx(Math.abs(b[1] - a[1]) / 2 + R) + '),bd,bb);\n';
+        }
+        return s;
+      }
+
+      var VS = 'attribute vec2 aP; void main(){ gl_Position = vec4(aP, 0.0, 1.0); }';
+      function fsSource(withDeriv) {
+        return [
+          withDeriv ? '#extension GL_OES_standard_derivatives : enable' : '',
+          '#ifdef GL_FRAGMENT_PRECISION_HIGH',
+          'precision highp float;',
+          '#else',
+          'precision mediump float;',
+          '#endif',
+          withDeriv ? '#define FW(x) fwidth(x)' : '#define FW(x) uPx',
+          'uniform vec2 uRes; uniform float uT; uniform float uU; uniform float uPx; uniform float uCx; uniform float uAmp;',
+          'uniform float uCap; uniform vec2 uFade; uniform vec4 uL; uniform float uGain; uniform vec2 uFl;',
+          'const float TAU = 6.2831853; const float W0 = 0.01308997; const float RC = 0.22;',
+          /* rounded box, keeps the winner so its gradient is computed once */
+          'void bx(vec2 p, vec2 c, vec2 h, inout float bd, inout vec4 bb){',
+          '  vec2 d = abs(p - c) - h + RC;',
+          '  float s = length(max(d, 0.0)) + min(max(d.x, d.y), 0.0) - RC;',
+          '  if (s < bd) { bd = s; bb = vec4(c, h); } }',
+          'vec2 bxg(vec2 p, vec4 bb){',
+          '  vec2 q = p - bb.xy; vec2 sg = vec2(q.x < 0.0 ? -1.0 : 1.0, q.y < 0.0 ? -1.0 : 1.0);',
+          '  vec2 d = abs(q) - bb.zw + RC;',
+          '  if (d.x > 0.0 && d.y > 0.0) return sg * d / length(d);',
+          '  return d.x > d.y ? vec2(sg.x, 0.0) : vec2(0.0, sg.y); }',
+          'void mP(vec2 p, inout float bd, inout vec4 bb){', boxes(0, 6), '}',
+          'void mA(vec2 p, inout float bd, inout vec4 bb){', '  mP(p, bd, bb);', boxes(6, 14), '}',
+          /* material hierarchy: obsidian body, darker shadow shoulder, lit chamfer, one narrow specular ridge */
+          'float lit(float e, vec2 g, float px, vec3 L3, vec2 Ll, float ct, float st, float body, float gw){',
+          '  vec3 nc = vec3(g * 0.81, 0.58);',
+          '  nc = vec3(nc.x, nc.y * ct + nc.z * st, nc.z * ct - nc.y * st);',
+          '  float f = dot(nc, L3), kf = max(f, 0.0);',
+          '  float wc = max(0.06, 1.5 * px);',
+          '  float tC = smoothstep(0.30 - wc, 0.30 + wc, e);',
+          '  float val = mix(0.018 + 0.30 * kf * kf, body, tC);',
+          '  float wr = max(0.08, 1.5 * px);',
+          '  float rg = 1.0 - smoothstep(0.0, wr, abs(e - 0.17));',
+          '  val += rg * (0.92 * smoothstep(0.12, 0.78, f) + 0.07 * smoothstep(0.35, 0.95, dot(nc, vec3(-Ll * 0.96, 0.28))));',
+          '  return val + gw * (rg * 0.9 + 0.22 * (1.0 - tC) + 0.02 * tC); }',
+          'void main(){',
+          '  vec2 fc = gl_FragCoord.xy;',
+          '  float side = fc.x < uRes.x * 0.5 ? 0.0 : 1.0;',
+          /* canonical frame: the right band is the left band turned 180 degrees about the screen centre */
+          '  vec2 q = side < 0.5 ? vec2(fc.x, uRes.y - fc.y) : vec2(uRes.x - fc.x, fc.y);',
+          '  float X = q.x / uU, Y = q.y / uU;',
+          '  float t = uT + side * 37.0;',
+          '  vec2 Lc = side < 0.5 ? uL.xy : uL.zw;',
+          /* centreline: slow drift plus a long snake; max in-plane rotation about 0.09 rad */
+          '  float A1 = 0.85 * uAmp, A2 = 0.22 * uAmp, k1 = TAU / 90.0, k2 = TAU / 48.0;',
+          '  float c0 = uCx + 0.35 * uAmp * sin(2.0 * W0 * t + side * 2.1);',
+          '  float yy = Y, ph1 = 0.0, ph2 = 0.0, cy = 0.0, sl = 0.0;',
+          '  for (int i = 0; i < 3; i++) {',
+          '    ph1 = k1 * yy - 5.0 * W0 * t; ph2 = k2 * yy + 9.0 * W0 * t + 1.7;',
+          '    cy = c0 + A1 * sin(ph1) + A2 * sin(ph2);',
+          '    sl = A1 * k1 * cos(ph1) + A2 * k2 * cos(ph2);',
+          '    if (i < 2) yy = Y + (X - cy) * sl;',
+          '  }',
+          '  float Ln = sqrt(1.0 + sl * sl);',
+          '  float s = ((X - cy) - (Y - yy) * sl) / Ln;',          /* across, + toward the screen centre */
+          '  float a = yy;',                                        /* along, + away from the capped end */
+          '  float ua = a - uCap;',
+          /* selvedge: one thin rail on the outline of the band, which closes in a rounded cap */
+          '  float as = abs(s);',
+          '  vec2 qo = vec2(2.0 - ua, as - 5.0);',
+          '  float dOut = length(max(qo, 0.0)) + min(max(qo.x, qo.y), 0.0) - 2.0;',
+          '  vec2 gOut;',
+          '  if (qo.x > 0.0 && qo.y > 0.0) { vec2 nq = normalize(qo); gOut = vec2(-nq.x, nq.y * sign(s)); }',
+          '  else gOut = qo.x > qo.y ? vec2(-1.0, 0.0) : vec2(0.0, s < 0.0 ? -1.0 : 1.0);',
+          /* motif, flowing along the band; superperiod 66 = three pairs plus a short plain panel */
+          '  float m = a - 0.4125 * t * uFl.x + uFl.y;',
+          '  float mm = mod(m - 51.05, 66.0) - 14.95;',
+          '  vec2 p = vec2(mm, s);',
+          '  float sdM = 1e3; vec2 gM = vec2(0.0, 1.0); float bd; vec4 bb = vec4(0.0); vec2 lp;',
+          '  float kA = floor((mm + 10.9) / 18.0);',
+          '  if (kA >= 0.0 && kA <= 2.0 && mm <= 18.0 * kA + 6.9) {',
+          '    bd = 1e3; lp = p - vec2(18.0 * kA, 0.0); mA(lp, bd, bb);',
+          '    if (bd < sdM) { sdM = bd; gM = bxg(lp, bb); } }',
+          '  float kB = floor((mm + 4.9) / 18.0);',
+          '  if (kB >= 0.0 && kB <= 2.0 && mm <= 18.0 * kB + 12.9) {',
+          '    bd = 1e3; lp = vec2(2.0 - (mm - 18.0 * kB), -s); mA(lp, bd, bb);',
+          '    if (bd < sdM) { sdM = bd; gM = -bxg(lp, bb); } }',
+          '  if (mm > 43.1) {',                                     /* run end: a stair turns into the panel bar */
+          '    bd = 1e3; lp = p - vec2(54.0, 0.0); mP(lp, bd, bb);',
+          '    if (bd < sdM) { sdM = bd; gM = bxg(lp, bb); } }',
+          '  if (mm < -5.1) {',                                     /* run start: the partner stair leaves the bar */
+          '    bd = 1e3; lp = vec2(2.0 - (mm + 18.0), -s); mP(lp, bd, bb);',
+          '    if (bd < sdM) { sdM = bd; gM = -bxg(lp, bb); } }',
+          '  if (mm > 49.1 || mm < -11.1) {',                       /* panel bars */
+          '    bd = 1e3; lp = vec2(mm > 0.0 ? mm - 50.0 : mm + 12.0, s); bx(lp, vec2(0.0), vec2(0.6, 7.0), bd, bb);',
+          '    if (bd < sdM) { sdM = bd; gM = bxg(lp, bb); } }',
+          '  if (mm < -13.2) {',                                    /* chalchihuitl in the plain panel */
+          '    float sc = 3.0 * clamp(floor(s / 3.0), -2.0, 1.0) + 1.5;',
+          '    vec2 dv = vec2(mm + 14.0, s - sc); float dl = length(dv);',
+          '    if (dl - 0.5 < sdM) { sdM = dl - 0.5; gM = dv / max(dl, 1e-4); } }',
+          '  float clipC = 1.16 - ua;',                             /* keep the fret clear of the cap and inside the rail */
+          '  if (dOut > sdM || clipC > sdM) { if (dOut > clipC) { sdM = dOut; gM = gOut; } else { sdM = clipC; gM = vec2(-1.0, 0.0); } }',
+          /* light in the local frame of the band (rotation only); the twist of the cloth lives in the shading */
+          '  vec2 T2 = vec2(sl, 1.0) / Ln, N2 = vec2(1.0, -sl) / Ln;',
+          '  vec2 Ll = normalize(vec2(dot(Lc, T2), dot(Lc, N2)));',
+          '  vec3 L3 = vec3(Ll * 0.9, 0.436);',
+          '  float tw = 0.30 * sin(0.105 * a - 11.0 * W0 * t) + 0.14 * sin(0.231 * a + 7.0 * W0 * t + 0.6);',
+          '  float ct = cos(tw), st = sin(tw);',
+          '  float body = 0.040 + 0.10 * max(0.9 * Ll.y * st + 0.436 * ct, 0.0);',
+          /* the one moment: a slow diagonal glint, down the left band, then up the right one */
+          '  float ph = fract(uT / 40.0 - side * 0.5);',
+          '  float gw = 0.0;',
+          '  if (ph < 0.4) { float yg = mix(uCap - 12.0, uFade.y + 12.0, ph / 0.4); float dy = (a - yg + 0.45 * s) / 5.5; gw = exp(-dy * dy); }',
+          /* selvedge and fret are lit separately and the rail is laid over the fret, so the cord stays continuous */
+          '  float eR = -(abs(dOut) - 0.36), eM = -sdM;',
+          '  float pxR = clamp(FW(eR), 0.5 * uPx, 2.0 * uPx), pxM = clamp(FW(eM), 0.5 * uPx, 2.0 * uPx);',
+          '  float aR = clamp(eR / pxR + 0.5, 0.0, 1.0), aM = clamp(eM / pxM + 0.5, 0.0, 1.0);',
+          '  float vR = lit(eR, dOut > 0.0 ? gOut : -gOut, pxR, L3, Ll, ct, st, body, gw);',
+          '  float shade = smoothstep(1.2, 6.0, ua); shade *= shade;',   /* the fret emerges from the shade of the cap */
+          '  float vM = lit(eM, gM, pxM, L3, Ll, ct, st, body, gw) * shade;',
+          '  float k = (1.0 - 0.22 * smoothstep(-6.0, 7.0, s)) * uGain;',  /* text-facing side a little quieter */
+          '  float fade = 1.0 - smoothstep(uFade.x, uFade.y, a);',
+          '  float al = (aR + aM * (1.0 - aR)) * fade;',
+          '  float v = (min(vR * k, 1.0) * aR + min(vM * k, 1.0) * aM * (1.0 - aR)) * fade;',
+          '  gl_FragColor = vec4(v, v, v, al);',
+          '}'
+        ].join('\n');
+      }
+
+      function compile(type, src) {
+        var sh = gl.createShader(type); gl.shaderSource(sh, src); gl.compileShader(sh);
+        if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) { if (window.console) console.warn('zth fx shader: ' + gl.getShaderInfoLog(sh)); gl.deleteShader(sh); return null; }
+        return sh;
+      }
+      function link(fsrc) {
+        var vs = compile(gl.VERTEX_SHADER, VS), fs = vs && compile(gl.FRAGMENT_SHADER, fsrc);
+        if (!vs || !fs) return null;
+        var pr = gl.createProgram(); gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.linkProgram(pr);
+        if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { gl.deleteProgram(pr); return null; }
+        return pr;
+      }
+      function init() {
+        gl = null;
+        try { gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'low-power' }); } catch (e) { gl = null; }
+        if (!gl) return false;
+        deriv = !!gl.getExtension('OES_standard_derivatives');
+        prog = deriv ? link(fsSource(true)) : null;
+        if (!prog) { deriv = false; prog = link(fsSource(false)); }   /* fixed-width AA variant */
+        if (!prog) { gl = null; return false; }
+        gl.useProgram(prog);
+        buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        var ap = gl.getAttribLocation(prog, 'aP'); gl.enableVertexAttribArray(ap); gl.vertexAttribPointer(ap, 2, gl.FLOAT, false, 0, 0);
+        var names = ['uRes', 'uT', 'uU', 'uPx', 'uCx', 'uAmp', 'uCap', 'uFade', 'uL', 'uGain', 'uFl'], i;
+        for (i = 0; i < names.length; i++) loc[names[i]] = gl.getUniformLocation(prog, names[i]);
+        gl.disable(gl.BLEND); gl.clearColor(0, 0, 0, 0);
+        cleared = false;
+        return true;
+      }
+      function quad(o, x0, x1, y0, y1) { /* clip-space rectangle, two triangles */
+        verts[o] = x0; verts[o + 1] = y0; verts[o + 2] = x1; verts[o + 3] = y0; verts[o + 4] = x0; verts[o + 5] = y1;
+        verts[o + 6] = x0; verts[o + 7] = y1; verts[o + 8] = x1; verts[o + 9] = y0; verts[o + 10] = x1; verts[o + 11] = y1;
+      }
+      function autoLevel() {
+        var nav = navigator, mm = window.matchMedia, sc = window.screen || {};
+        var coarse = !!(mm && mm('(pointer: coarse)').matches);
+        var small = Math.min(sc.width || 9999, sc.height || 9999) < 600 || window.innerWidth < 600;
+        var phone = (coarse && small) || /iPhone|iPod|Android.+Mobile|Mobi/i.test(nav.userAgent || '');
+        var modest = (nav.hardwareConcurrency || 8) <= 4 || (nav.deviceMemory || 8) <= 4 || !!(nav.connection && nav.connection.saveData);
+        return (phone || modest) ? 0 : 1;
+      }
+      function levelNow() { if (!gl) return 0; return userLevel === null ? autoLvl : userLevel; }
+      function gainOf(l) { return l === 0 ? 0 : (l === 2 ? 1.12 : 1.0); }
+      function speedOf(l) { return l === 2 ? 1.3 : 1.0; }
+
+      function layout() {
+        var rc = canvas.getBoundingClientRect();
+        cssW = rc.width || window.innerWidth; cssH = rc.height || window.innerHeight;
+        var d = window.devicePixelRatio || 1;
+        d = Math.min(d, dprCap);
+        if (window.innerWidth * d > 3000) d = Math.min(d, 1.5);
+        dpr = d;
+        W = Math.max(1, Math.round(cssW * dpr)); H = Math.max(1, Math.round(cssH * dpr));
+        canvas.width = W; canvas.height = H;
+        mob = cssW < 900 ? 1 : 0;
+        var u, margin, amp, cap, fa, fb;
+        if (mob) {
+          /* phones and narrow windows: two corner pieces, one clear step-fret each (top-right, bottom-left) */
+          u = 10; margin = 1.0; amp = 0.5;
+          var len = Math.min(205, cssH * 0.245);
+          cap = cssH - len;                      /* canonical frame: the bottom-left piece, cap on its inner end */
+          fa = cssH - 30; fb = cssH + 4;
+          flowK = 0;                             /* the fret holds still so each piece frames one stair and its hooks */
+        } else {
+          flowK = 1;
+          u = Math.max(7, Math.min(13.5, cssW * 0.0066)); margin = 1.6; amp = 1.0;
+          var el = document.querySelector('[data-fx-avoid]') || document.querySelector('header img, header svg, .wordmark');
+          var bot = 44;
+          if (el) { var r = el.getBoundingClientRect(); if (r.height > 0 && r.left < 240) bot = r.bottom; }
+          cap = Math.max(72, Math.min(cssH * 0.3, bot + 48));
+          fa = cssH * 0.62; fb = cssH * 1.0;
+        }
+        uDev = u * dpr;
+        cxU = margin + 7.5; ampU = amp; capU = cap / u; fadeA = fa / u; fadeB = fb / u;
+        phaseU = flowK ? 0 : 9 - capU;
+        var stripCss = (cxU + 7.5 + 1.42 * amp + 0.4) * u;
+        var sx = Math.min(1, stripCss / cssW * 2);
+        var top = Math.max(0, (cap - 1.5 * u) / cssH);         /* canonical y fraction from the top */
+        /* left strip: x in [0, strip], y from the cap down; the right strip is its point reflection */
+        quad(0, -1, -1 + sx, -1, 1 - 2 * top);
+        quad(12, 1 - sx, 1, -1 + 2 * top, 1);
+        if (gl) { gl.viewport(0, 0, W, H); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW); }
+        cleared = false;
+      }
+
+      var A0 = Math.atan2(-0.73, 0.68); /* one key light, upper right, screen y down: it runs along the upper side of every stair */
+      function draw(tt) {
+        if (!gl) return;
+        var g = gainOf(levelNow());
+        if (g === 0) { if (!cleared) { gl.clear(gl.COLOR_BUFFER_BIT); cleared = true; } return; }
+        cleared = false;
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        var aL = A0 + (smx - 0.5) * 0.22;
+        gl.uniform2f(loc.uRes, W, H); gl.uniform1f(loc.uT, tt); gl.uniform1f(loc.uU, uDev); gl.uniform1f(loc.uPx, 1 / uDev);
+        gl.uniform1f(loc.uCx, cxU); gl.uniform1f(loc.uAmp, ampU); gl.uniform1f(loc.uCap, capU); gl.uniform2f(loc.uFade, fadeA, fadeB);
+        gl.uniform4f(loc.uL, Math.cos(aL), Math.sin(aL), -Math.cos(aL), -Math.sin(aL)); gl.uniform1f(loc.uGain, g); gl.uniform2f(loc.uFl, flowK, phaseU);
+        gl.drawArrays(gl.TRIANGLES, 0, 12);
+      }
+      function halt() { running = false; if (raf) cancelAnimationFrame(raf); raf = 0; }
+      function still() { draw(reduce || frozen ? T_STILL : t); }
+      function perfSample(ms) {
+        if (perfSkip > 0) { perfSkip--; return; }
+        perf[perfN++] = ms;
+        if (perfN < 60) return;
+        var i, j, v;                                            /* in-place insertion sort, no allocation */
+        for (i = 1; i < 60; i++) { v = perf[i]; j = i - 1; while (j >= 0 && perf[j] > v) { perf[j + 1] = perf[j]; j--; } perf[j + 1] = v; }
+        var med = 0.5 * (perf[29] + perf[30]);
+        perfN = 0;
+        if (med > 12 && dprCap > 1.25 && dpr > 1.25) { dprCap = 1.25; layout(); perfSkip = 3; return; }  /* lighter first, then judge again */
+        perfDone = true;
+        if (med > 18) { frozen = true; halt(); draw(T_STILL); }
+      }
+      function frame(now) {
+        raf = 0;
+        if (!running) return;
+        var dt = (now - lastT) / 1000; lastT = now;
+        if (!(dt > 0)) dt = 0; else if (dt > 0.05) dt = 0.05;
+        t += dt * speedOf(levelNow());
+        if (t >= TW) t -= TW;
+        smx += (mx - smx) * 0.03;
+        if (!perfDone) {
+          var c0 = performance.now();
+          draw(t);
+          gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px1);  /* sync once per sample: the real cost of the pass */
+          perfSample(performance.now() - c0);
+        } else draw(t);
+        if (running) raf = requestAnimationFrame(frame);
+      }
+
+      var api = {
+        start: function () {
+          wanted = true;
+          if (canvas) canvas.classList.add('is-on');
+          if (!gl) return;
+          if (levelNow() === 0) { halt(); draw(t); return; }
+          if (reduce || frozen || document.hidden) { if (!document.hidden) still(); return; }
+          if (running) return;
+          running = true; lastT = performance.now(); raf = requestAnimationFrame(frame);
+        },
+        stop: function () { wanted = false; halt(); if (canvas) canvas.classList.remove('is-on'); },
+        setIntensity: function (l) {
+          userLevel = (l === 0 || l === 1 || l === 2) ? l : null;
+          if (!gl) return;
+          if (levelNow() === 0) { halt(); draw(t); return; }
+          if (wanted) { api.start(); if (!running) still(); } else still();
+        },
+        level: function () { return levelNow(); }
+      };
+      window.ZTH_FX = api;
+      if (!canvas) return;
+      canvas.style.pointerEvents = 'none';
+      autoLvl = autoLevel();
+      if (!init()) return;
+      api.mounted = true;   /* the effects manager runs a mounted effect in the default theme */
+      layout();
+      still();
+      window.addEventListener('resize', function () { layout(); if (!running) still(); });
+      window.addEventListener('pointermove', function (e) { mx = e.clientX / Math.max(1, window.innerWidth); }, { passive: true });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) halt(); else if (wanted) api.start();
+      });
+      if (mq) {
+        var onMotion = function (e) { reduce = !!e.matches; if (reduce) { halt(); still(); } else if (wanted) api.start(); };
+        if (mq.addEventListener) mq.addEventListener('change', onMotion); else if (mq.addListener) mq.addListener(onMotion);
+      }
+      canvas.addEventListener('webglcontextlost', function (e) { e.preventDefault(); halt(); gl = null; });
+      canvas.addEventListener('webglcontextrestored', function () { if (init()) { layout(); if (wanted) api.start(); else still(); } });
     })();
 
     /* Effects manager + Tlaloc's rain.
