@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-v66L1MzjDESzSthDkXnSnals9M1LvCRRdGcqB+kkNlg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-o9Fw/i1QTJHJQqS8bKg8ECYlm+EWDAS5K3kP45qPhbo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -22,8 +22,19 @@
   <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
   <meta name="twitter:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." />
   <meta name="twitter:image" content="https://zotheos.org/static/og.png" />
-  <meta name="theme-color" content="#02101E" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#E8DBC0" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" id="themeColorMeta" />
+  <script>
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists. */
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+      } catch (e) {}
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
   <link rel="canonical" href="https://zotheos.org" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -580,6 +591,11 @@
         inset 0 -1px 1px rgba(0, 0, 0, 0.20);
     }
     .theme-swatch[data-set=""]::before {
+      background:
+        radial-gradient(circle at 34% 28%, #FFFFFF 0%, rgba(255, 255, 255, 0) 38%),
+        linear-gradient(135deg, #E6E6E6 0%, #7A7A7A 38%, #141414 62%, #000000 100%);
+    }
+    .theme-swatch[data-set="maya"]::before {
       background: linear-gradient(135deg, #2F7693 0%, #15506F 50%, #02101E 100%);
     }
     .theme-swatch[data-set="codex"]::before {
@@ -4508,12 +4524,648 @@
     }
     #introOverlay { display: none !important; }
   </style></noscript>
+  <style>
+    /* ============================================================
+       OBSIDIAN MONO: the default theme (no data-theme attribute).
+       Direction "liquid chrome / polished obsidian": a flat pure
+       black page, pure white type, neutral greys; every gradient
+       lives on the boxes as polished black glass with crisp 1px
+       chrome edge light and a slow specular sheen.
+
+       Everything here is scoped to html:not([data-theme]) so the
+       selectable themes (data-theme="maya" = the original Maya Blue
+       cosmic, "codex", "skeleton") keep every original rule as is.
+       Motion: @property-driven sheen positions, pointer-lit edges
+       (--mx/--my from the rAF card tracker), one scroll-driven
+       divider draw. All of it stops under prefers-reduced-motion,
+       body.fx-off, motion-page-hidden and motion-area-hidden through
+       the page's existing global gates.
+    ============================================================ */
+    @property --zs { syntax: '<percentage>'; inherits: false; initial-value: -40%; }
+    @property --zh { syntax: '<number>'; inherits: false; initial-value: 0; }
+    @property --zt { syntax: '<length>'; inherits: true; initial-value: 0px; }
+    @property --za { syntax: '<angle>'; inherits: false; initial-value: 210deg; }
+    @property --zpx { syntax: '<percentage>'; inherits: false; initial-value: 50%; }
+    @property --zpy { syntax: '<percentage>'; inherits: false; initial-value: -12%; }
+    @property --zc { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+
+    :root:not([data-theme]) {
+      color-scheme: dark;
+      --bg-floor:   #000000;
+      --bg-mid:     #000000;
+      --bg-deep:    #000000;
+      --bg-warm:    #000000;
+      --bg-halo:    #000000;
+
+      --ink:        #FFFFFF;
+      --ink-2:      #C8C8C8;
+      --ink-3:      #A3A3A3;
+      --ink-4:      #8A8A8A;
+      --ink-5:      #4D4D4D;
+
+      /* Emphasis is white, luminance and motion: the accent slots
+         resolve to white and neutral greys, never a hue. */
+      --cochineal:        #FFFFFF;
+      --cochineal-deep:   #9C9C9C;
+      --cochineal-rgb:    255, 255, 255;
+      --pulse-green:      #E6E6E6;
+      --pulse-green-rgb:  230, 230, 230;
+
+      --basalt-1: #1F1F1F;
+      --basalt-2: #080808;
+      --basalt-3: #141414;
+
+      --rule:        rgba(255, 255, 255, 0.16);
+      --rule-soft:   rgba(255, 255, 255, 0.09);
+      /* Every "background: var(--surface)" box becomes a gradient. */
+      --surface:     linear-gradient(170deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.025) 46%, rgba(255, 255, 255, 0.012) 100%);
+      --surface-2:   linear-gradient(170deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.010) 100%);
+
+      background: #000000;
+    }
+
+    /* ---------- Page floor: flat pure black ---------- */
+    html:not([data-theme]) body { background: #000000; }
+    html:not([data-theme]) .vignette,
+    html:not([data-theme]) .aurora,
+    html:not([data-theme]) .cursor-light,
+    html:not([data-theme]) .hero-mist { display: none; }
+    html:not([data-theme]) .grain {
+      /* neutral noise: invisible on the black floor (overlay of black
+         is black), a faint brushed texture on the glass boxes */
+      background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.7' numOctaves='2' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.12;
+    }
+    html:not([data-theme]) ::selection { background: #FFFFFF; color: #000000; }
+    html:not([data-theme]) :focus-visible { outline-color: #FFFFFF; }
+
+    /* ---------- Header and picker ---------- */
+    html:not([data-theme]) header.scrolled {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, rgba(30, 30, 30, 0.90) 0%, rgba(10, 10, 10, 0.92) 100%) padding-box,
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.30) 50%, rgba(255, 255, 255, 0.06) 100%) border-box;
+      box-shadow:
+        0 14px 34px -18px rgba(0, 0, 0, 1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+    html:not([data-theme]) .theme-picker,
+    html:not([data-theme]) .fx-toggle,
+    html:not([data-theme]) .rain-amount,
+    html:not([data-theme]) .day-chip {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, #171717 0%, #070707 100%) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.07) 60%, rgba(255, 255, 255, 0.14) 100%) border-box;
+    }
+    html:not([data-theme]) .theme-swatch[aria-pressed="true"] { box-shadow: 0 0 0 2px #000000, 0 0 0 3.5px #FFFFFF; }
+    html:not([data-theme]) .theme-swatch:focus-visible { outline: none; box-shadow: 0 0 0 2px #000000, 0 0 0 4px #FFFFFF; }
+    html:not([data-theme]) .day-chip::before,
+    html:not([data-theme]) .hero-eyebrow .he-dot { box-shadow: 0 0 6px rgba(255, 255, 255, 0.45); }
+    html:not([data-theme]) .scroll-progress {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.55) 30%, #FFFFFF 100%);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+    }
+
+    /* ---------- Shared motion: the specular sheen ---------- */
+    @keyframes z-sheen {
+      0%, 6%    { --zs: -40%; }
+      46%, 100% { --zs: 140%; }
+    }
+
+    /* ---------- Glass boxes: polished obsidian + chrome edge ----------
+       Layers (top to bottom): pointer bloom, drifting specular band,
+       top light pool, obsidian body (all clipped to the padding box);
+       pointer-lit edge and the static top-lit chrome rim on the
+       1px transparent border. */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item,
+      .waitlist-card, .memory-vis, .console-frame, .instrument-card,
+      .founder-card, .faq-item, .example-card, .ws-zone, .model-choice,
+      .compare-table, .tier-ladder) {
+      --mx: 50%;
+      --my: 0%;
+      border: 1px solid transparent;
+      background:
+        radial-gradient(560px circle at var(--mx) var(--my), rgba(255, 255, 255, calc(0.06 * var(--zh, 0))) 0%, transparent 60%) padding-box,
+        linear-gradient(104deg,
+          transparent calc(var(--zs, -40%) - 18%),
+          rgba(255, 255, 255, 0.035) calc(var(--zs, -40%) - 6%),
+          rgba(255, 255, 255, 0.075) var(--zs, -40%),
+          rgba(255, 255, 255, 0.035) calc(var(--zs, -40%) + 6%),
+          transparent calc(var(--zs, -40%) + 18%)) padding-box,
+        radial-gradient(130% 80% at var(--zpx, 50%) var(--zpy, -12%), rgba(255, 255, 255, 0.075) 0%, transparent 62%) padding-box,
+        linear-gradient(180deg, #121212 0%, #0A0A0A 42%, #050505 100%) padding-box,
+        radial-gradient(320px circle at var(--mx) var(--my), rgba(255, 255, 255, calc(0.75 * var(--zh, 0))) 0%, transparent 72%) border-box,
+        radial-gradient(55% 140px at 50% 0%, rgba(255, 255, 255, 0.42) 0%, transparent 100%) border-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.09) 24%, rgba(255, 255, 255, 0.05) 72%, rgba(255, 255, 255, 0.12) 100%) border-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 30px 60px -36px rgba(0, 0, 0, 1);
+      transition:
+        transform 0.5s var(--ease-editorial),
+        --zh 0.5s var(--ease-editorial),
+        opacity 0.9s var(--ease-editorial);
+      animation: z-sheen 13s cubic-bezier(0.45, 0.05, 0.25, 1) infinite;
+    }
+    /* Stagger: the light reaches neighbouring boxes one after another. */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(2) { animation-delay: 1.1s; }
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(3) { animation-delay: 2.2s; }
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(4) { animation-delay: 3.3s; }
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(5) { animation-delay: 4.4s; }
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(6) { animation-delay: 5.5s; }
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .instrument-card, .faq-item, .example-card, .ws-zone):nth-child(n+7) { animation-delay: 6.6s; }
+    html:not([data-theme]) .console-frame { animation-delay: 2s; }
+    html:not([data-theme]) .compare-table { animation-duration: 16s; }
+    /* Hover: a calm luminance lift (edge brightens near the pointer). */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item,
+      .waitlist-card, .memory-vis, .console-frame, .instrument-card,
+      .founder-card, .faq-item, .example-card, .ws-zone, .model-choice,
+      .compare-table, .tier-ladder):hover { --zh: 1; }
+    html:not([data-theme]) .faq-item[open] { --zh: 0.55; }
+    /* The pointer bloom replaces the old per-card spotlight layer. */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item)::after { display: none; }
+    html:not([data-theme]) .bento-card::before,
+    html:not([data-theme]) .support-card::before {
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7) 50%, transparent);
+    }
+    html:not([data-theme]) .value-item::before {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), #FFFFFF 50%, rgba(255, 255, 255, 0.15));
+    }
+    html:not([data-theme]) .waitlist-card::before { display: none; }
+    html:not([data-theme]) .waitlist-card {
+      /* the form is the page's destination: a brighter chrome rim */
+      background:
+        radial-gradient(560px circle at var(--mx) var(--my), rgba(255, 255, 255, calc(0.06 * var(--zh, 0))) 0%, transparent 60%) padding-box,
+        linear-gradient(104deg,
+          transparent calc(var(--zs, -40%) - 18%),
+          rgba(255, 255, 255, 0.04) calc(var(--zs, -40%) - 6%),
+          rgba(255, 255, 255, 0.085) var(--zs, -40%),
+          rgba(255, 255, 255, 0.04) calc(var(--zs, -40%) + 6%),
+          transparent calc(var(--zs, -40%) + 18%)) padding-box,
+        radial-gradient(120% 70% at var(--zpx, 50%) var(--zpy, -12%), rgba(255, 255, 255, 0.10) 0%, transparent 62%) padding-box,
+        linear-gradient(180deg, #151515 0%, #0A0A0A 45%, #040404 100%) padding-box,
+        radial-gradient(320px circle at var(--mx) var(--my), rgba(255, 255, 255, calc(0.8 * var(--zh, 0))) 0%, transparent 72%) border-box,
+        conic-gradient(from 210deg at 50% 50%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.10) 22%, rgba(255, 255, 255, 0.32) 48%, rgba(255, 255, 255, 0.08) 74%, rgba(255, 255, 255, 0.55)) border-box;
+    }
+
+    /* Inner surfaces inside the glass: quieter graphite gradients */
+    html:not([data-theme]) :is(.console-verdict, .console-query, .cp-asks, .mv-tech) {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+    }
+    html:not([data-theme]) :is(.console-query, .cp-asks) { border-left-color: #FFFFFF; }
+    html:not([data-theme]) .waitlist-input {
+      background: linear-gradient(180deg, #000000 0%, #0B0B0B 100%);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+    html:not([data-theme]) .waitlist-input:focus {
+      border-color: #FFFFFF;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.08);
+    }
+
+    /* Chips, tags and pills: small chrome capsules */
+    html:not([data-theme]) :is(.mv-chip, .meta-tag, .ws-tile, .confidence-badge) {
+      border-color: rgba(255, 255, 255, 0.20);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.02) 100%);
+    }
+    html:not([data-theme]) .meta-tag.is-core { border-color: rgba(255, 255, 255, 0.42); }
+    html:not([data-theme]) :is(.mv-chip, .ws-tile):hover { border-color: rgba(255, 255, 255, 0.6); }
+    html:not([data-theme]) .ws-tile.is-more { background: none; }
+    html:not([data-theme]) .confidence-badge::before {
+      background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.28) 50%, transparent 70%);
+    }
+    html:not([data-theme]) .council-pill {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, #1D1D1D 0%, #0B0B0B 55%, #050505 100%) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.12) 55%, rgba(255, 255, 255, 0.34) 100%) border-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 6px 18px rgba(0, 0, 0, 0.7);
+    }
+    html:not([data-theme]) .council-pill:hover {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 6px 18px rgba(0, 0, 0, 0.7);
+    }
+
+    /* ---------- Buttons ---------- */
+    html:not([data-theme]) :is(.btn, .btn-ghost) {
+      --zh: 0;
+      color: #FFFFFF;
+      text-shadow: none;
+      border: 1px solid transparent;
+      transition:
+        transform 0.3s var(--ease-ceremony),
+        --zh 0.35s var(--ease-editorial),
+        box-shadow 0.35s var(--ease-editorial);
+      animation: z-sheen 9s cubic-bezier(0.45, 0.05, 0.25, 1) 1.5s infinite;
+    }
+    html:not([data-theme]) .btn {
+      background:
+        linear-gradient(104deg, transparent calc(var(--zs, -40%) - 14%), rgba(255, 255, 255, 0.13) var(--zs, -40%), transparent calc(var(--zs, -40%) + 14%)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, calc(0.07 * var(--zh, 0))) 0%, rgba(255, 255, 255, calc(0.03 * var(--zh, 0))) 100%) padding-box,
+        linear-gradient(180deg, #2A2A2A 0%, #161616 46%, #0A0A0A 54%, #111111 100%) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.22) 46%, rgba(255, 255, 255, 0.12) 56%, rgba(255, 255, 255, 0.42) 100%) border-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 10px 26px -14px rgba(0, 0, 0, 1);
+    }
+    html:not([data-theme]) .btn-ghost {
+      background:
+        linear-gradient(104deg, transparent calc(var(--zs, -40%) - 14%), rgba(255, 255, 255, 0.07) var(--zs, -40%), transparent calc(var(--zs, -40%) + 14%)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, calc(0.06 * var(--zh, 0))) 0%, transparent 100%) padding-box,
+        linear-gradient(180deg, #121212 0%, #050505 100%) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.09) 55%, rgba(255, 255, 255, 0.20) 100%) border-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      animation-delay: 2.6s;
+    }
+    html:not([data-theme]) .hero-actions .btn-ghost + .btn-ghost { animation-delay: 3.4s; }
+    html:not([data-theme]) :is(.btn, .btn-ghost):hover {
+      --zh: 1;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 26px -14px rgba(0, 0, 0, 1);
+    }
+    html:not([data-theme]) :is(.btn, .btn-ghost) .arrow { color: #FFFFFF; }
+
+    /* The one primary CTA: a liquid-silver face, black type. */
+    html:not([data-theme]) .btn-primary {
+      color: #000000;
+      background:
+        linear-gradient(104deg, transparent calc(var(--zs, -40%) - 16%), rgba(255, 255, 255, 0.55) var(--zs, -40%), transparent calc(var(--zs, -40%) + 16%)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, calc(0.25 * var(--zh, 0))), rgba(255, 255, 255, 0)) padding-box,
+        linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 34%, #BEBEBE 68%, #EFEFEF 100%) padding-box,
+        linear-gradient(180deg, #FFFFFF 0%, #8C8C8C 50%, #E2E2E2 100%) border-box;
+      box-shadow:
+        inset 0 1px 0 #FFFFFF,
+        inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 10px 26px -14px rgba(0, 0, 0, 1);
+      animation: z-sheen 7s cubic-bezier(0.45, 0.05, 0.25, 1) 0.8s infinite;
+    }
+    html:not([data-theme]) .btn-primary:hover {
+      box-shadow:
+        inset 0 1px 0 #FFFFFF,
+        inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.14),
+        0 10px 26px -14px rgba(0, 0, 0, 1);
+    }
+    html:not([data-theme]) .btn-primary .arrow { color: #000000; }
+    html:not([data-theme]) .btn-primary { font-weight: 600; }   /* thin 11px tracking read grey on silver */
+    html:not([data-theme]) .btn-primary::after {
+      background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.85) 50%, transparent 70%);
+    }
+    html:not([data-theme]) .btn-primary:focus-visible { outline-color: #FFFFFF; }
+
+    /* ---------- Round floating controls ---------- */
+    html:not([data-theme]) .scroll-top,
+    html:not([data-theme]) .mirror-btn {
+      color: #FFFFFF;
+      border: 1px solid transparent;
+      background:
+        radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.24) 0%, transparent 42%) padding-box,
+        linear-gradient(180deg, #1E1E1E 0%, #050505 100%) padding-box,
+        conic-gradient(from 200deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.10) 25%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.08) 75%, rgba(255, 255, 255, 0.75)) border-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 8px 22px rgba(0, 0, 0, 0.85);
+    }
+    html:not([data-theme]) .scroll-top svg { filter: none; }
+    html:not([data-theme]) .scroll-top:hover,
+    html:not([data-theme]) .mirror-btn:hover {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.12), 0 8px 22px rgba(0, 0, 0, 0.85);
+    }
+    html:not([data-theme]) .mirror-btn { animation: none; }
+    html:not([data-theme]) .mirror-btn::after { border-color: rgba(255, 255, 255, 0.12); }
+    html:not([data-theme]) .mobile-cta {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 40%, #000000 100%);
+    }
+    html:not([data-theme]) .mobile-cta:not(.visible) .btn { animation-play-state: paused; }
+    html:not([data-theme]) .mobile-cta .btn { animation-iteration-count: 2; }
+
+    /* ---------- Hero ---------- */
+    /* "You decide." in liquid silver: a vertical chrome body with a
+       highlight that flows through every letter. The JS records each
+       letter's offset (--hx) so the gradient stays continuous. */
+    html:not([data-theme]) .hero-headline .glow,
+    html:not([data-theme]) .hero-headline .glow .hl {
+      color: #FFFFFF;
+      text-shadow: none;
+      background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 66%, rgba(255, 255, 255, 0) 100%),
+        linear-gradient(180deg, #F4F4F4 0%, #DCDCDC 30%, #8E8E8E 54%, #B6B6B6 68%, #F6F6F6 100%);
+      background-size: 7em 100%, 100% 100%;
+      background-repeat: repeat-x, no-repeat;
+      background-position: calc(var(--zt, 0px) - var(--hx, 0px)) 0, 0 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* italic overhangs: pad each letter box so the clipped gradient
+       covers the whole glyph, then pull the spacing back */
+    html:not([data-theme]) .hero-headline .glow .hl {
+      padding: 0.08em 0.16em 0.12em;
+      margin: -0.08em -0.16em -0.12em;
+    }
+    html:not([data-theme]) .hero-headline .glow:has(.hl) { background: none; }
+    html:not([data-theme]) .hero-headline .glow,
+    html:not([data-theme]) .hero-headline.settled .glow {
+      animation: z-liquid 8s linear infinite;
+    }
+    @keyframes z-liquid {
+      from { --zt: 0em; }
+      to   { --zt: 7em; }
+    }
+    html:not([data-theme]) .hero-headline .seal {
+      color: #FFFFFF;
+      text-shadow: none;
+    }
+    html:not([data-theme]) .section-title .seal,
+    html:not([data-theme]) .council-scroll-head .seal { text-shadow: none; }
+
+    /* Council disc: an obsidian lens with white instrument marks. */
+    /* translucent on purpose: the hero tilt is 3D and the Analyst
+       seat can sit behind the lens plane; it must show through */
+    html:not([data-theme]) #diskFill stop { stop-color: #FFFFFF; }
+    html:not([data-theme]) #diskFill stop:nth-child(1) { stop-opacity: 0.09; }
+    html:not([data-theme]) #diskFill stop:nth-child(2) { stop-opacity: 0.045; }
+    html:not([data-theme]) #diskFill stop:nth-child(3) { stop-opacity: 0.02; }
+    html:not([data-theme]) #sigilGlow stop { stop-color: #FFFFFF; }
+    html:not([data-theme]) #sigilGlow stop:nth-child(1) { stop-opacity: 0.16; }
+    html:not([data-theme]) #sigilGlow stop:nth-child(2) { stop-opacity: 0.06; }
+    html:not([data-theme]) .hero-disc [fill="#D14F35"] { fill: #FFFFFF; }
+    html:not([data-theme]) .hero-disc [stroke="#D14F35"] { stroke: #FFFFFF; }
+    html:not([data-theme]) .hero-disc .reasoning-graph { stroke: rgba(255, 255, 255, 0.8); }
+    html:not([data-theme]) .zotheos-core {
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.30));
+    }
+    html:not([data-theme]) .hero-disc-wrap::before {
+      /* chrome rim around the lens */
+      content: '';
+      position: absolute;
+      inset: 1.6%;
+      border-radius: 50%;
+      pointer-events: none;
+      padding: 1px;
+      background: conic-gradient(from var(--za, 210deg), rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.06) 20%, rgba(255, 255, 255, 0.26) 50%, rgba(255, 255, 255, 0.05) 78%, rgba(255, 255, 255, 0.62));
+      animation: z-orbit 36s linear infinite;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+              mask-composite: exclude;
+    }
+    @keyframes z-orbit {
+      from { --za: 210deg; }
+      to   { --za: 570deg; }
+    }
+    html:not([data-theme]) .disc-orbiter span {
+      background: #FFFFFF;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 18px rgba(255, 255, 255, 0.25);
+    }
+    html:not([data-theme]) .hero-embers span {
+      background: #D9D9D9;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+    }
+    html:not([data-theme]) .hero-stat:hover .num { filter: none; }
+    html:not([data-theme]) .header-logo-img,
+    html:not([data-theme]) .footer-logo-img { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.08)); }
+    html:not([data-theme]) .header-mark:hover .header-logo-img { filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.16)); }
+
+    /* ---------- Sections ---------- */
+    html:not([data-theme]) .council-strip {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 50%, rgba(255, 255, 255, 0.05) 100%);
+    }
+    html:not([data-theme]) .council-section { background: none; box-shadow: none; }
+    html:not([data-theme]) .council-pillar:hover { filter: none; }
+    html:not([data-theme]) .proof-band {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 50%, rgba(255, 255, 255, 0.05) 100%);
+    }
+    html:not([data-theme]) .css-prog-fill,
+    html:not([data-theme]) .tier-fill {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), #FFFFFF);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+    html:not([data-theme]) .cp-glyphwrap::before {
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.10) 0%, transparent 70%);
+    }
+    html:not([data-theme]) .founder-seal { filter: none; }
+    html:not([data-theme]) .faq-a code {
+      background: rgba(255, 255, 255, 0.07);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+    html:not([data-theme]) :is(.instrument-card, .example-card) { border-top-width: 1px; }
+    html:not([data-theme]) .ws-zone.is-trust { border-top-width: 1px; }
+    html:not([data-theme]) .instrument-card .ic-dot { box-shadow: 0 0 6px rgba(255, 255, 255, 0.4); }
+
+    /* Comparison table: chrome check beads, graphite ZOTHEOS column */
+    html:not([data-theme]) .compare-row .col-z,
+    html:not([data-theme]) .compare-row > .yes {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    }
+    html:not([data-theme]) .compare-row.compare-head > * { background: rgba(255, 255, 255, 0.035); }
+    html:not([data-theme]) .compare-row.compare-head .col-them { background: transparent; }
+    html:not([data-theme]) .compare-row:hover > * { background: rgba(255, 255, 255, 0.045); }
+    html:not([data-theme]) .compare-row:hover > .col-them { background: transparent; }
+    html:not([data-theme]) .compare-row > .yes::before {
+      background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #DADADA 38%, #8E8E8E 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.18);
+    }
+    html:not([data-theme]) .compare-row > .yes::after { border-color: #000000; }
+    html:not([data-theme]) .col-z-logo { filter: none; }
+    @media (max-width: 720px) {
+      html:not([data-theme]) .compare-row > [role="rowheader"] { background: rgba(255, 255, 255, 0.04); }
+    }
+
+    /* Dividers: a chrome hairline that fades to black at both ends,
+       drawn open from the centre as it scrolls into view. */
+    html:not([data-theme]) .greca-divider svg g:first-child { opacity: 0 !important; }
+    html:not([data-theme]) .greca-divider svg .grecaTeeth { color: #8C8C8C !important; }
+    html:not([data-theme]) .greca-divider svg {
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+              mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+    }
+    html:not([data-theme]) .greca-divider::before {
+      content: '';
+      position: absolute;
+      left: 32px; right: 32px; top: 50%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.18) 20%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.18) 80%, transparent 100%);
+      pointer-events: none;
+    }
+    html:not([data-theme]) .seal-dot { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.35)); }
+    html:not([data-theme]) .greca-divider.lit .seal-dot { filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.55)); }
+    @supports (animation-timeline: view()) {
+      html:not([data-theme]) .greca-divider::before,
+      html:not([data-theme]) .greca-divider svg {
+        animation: z-draw linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+      }
+      @keyframes z-draw {
+        from { clip-path: inset(0 44% 0 44%); opacity: 0.2; }
+        to   { clip-path: inset(0 0 0 0);     opacity: 1; }
+      }
+    }
+
+    /* ---------- Small instruments ---------- */
+    html:not([data-theme]) .custom-cursor.over-disc .cc-ring,
+    html:not([data-theme]) .custom-cursor.hover-link .cc-ring { border-color: #FFFFFF; }
+    html:not([data-theme]) .custom-cursor.over-disc .cc-dot,
+    html:not([data-theme]) .custom-cursor .cc-dot { background: #FFFFFF; }
+    html:not([data-theme]) .custom-cursor .cc-ring { border-color: #FFFFFF; }
+    html:not([data-theme]) .theme-wipe {
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 60%, transparent 100%);
+    }
+    html:not([data-theme]) .mirror-disc {
+      background:
+        radial-gradient(circle at var(--sx, 32%) var(--sy, 26%), rgba(255, 255, 255, 0.14) 0%, transparent 36%),
+        radial-gradient(circle at center, #121212 0%, #060606 62%, #000000 100%);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 2px 18px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 0 60px rgba(0, 0, 0, 0.6);
+    }
+    html:not([data-theme]) .mirror-overlay { background: rgba(0, 0, 0, 0.94); }
+    html:not([data-theme]) .mirror-row { color: #A3A3A3; border-bottom-color: rgba(255, 255, 255, 0.10); }
+    html:not([data-theme]) .mirror-row .mr-val { color: #FFFFFF; }
+    html:not([data-theme]) .mirror-note { color: #8A8A8A; }
+
+    /* ---------- Signature effect: liquid obsidian (replaces the rain in the default theme) ----------
+       A WebGL surface of slow molten black glass with sparse chrome ridges, drawn with alpha so it can only add
+       light. Same layer as the far rain canvas; the colour themes keep their rain. */
+    .fx-layer {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      display: none;
+      opacity: 0;
+      transition: opacity 1.6s var(--ease-editorial);
+    }
+    html:not([data-theme]) .fx-layer { display: block; }
+    html:not([data-theme]) .fx-layer.is-on { opacity: 1; }
+    html:not([data-theme]) .rain-layer { display: none; }
+    body.fx-off .fx-layer { display: none !important; }
+
+    /* ---------- Integration: the review panel's grafts and fixes ---------- */
+    /* White where the old cream and red only showed on interaction. */
+    html:not([data-theme]) .intro-controls button { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.34); }
+    html:not([data-theme]) .intro-controls button:hover { border-color: rgba(255, 255, 255, 0.7); }
+    html:not([data-theme]) :is(.mirror-copy, .mirror-verdict) { color: #FFFFFF; }
+    html:not([data-theme]) .mirror-kicker { color: #A3A3A3; }
+    html:not([data-theme]) :is(.mirror-lore, .mirror-seal-line) { color: #C8C8C8; }
+    html:not([data-theme]) :is(.mirror-seal-line em, .mirror-day b) { color: #FFFFFF; }
+    html:not([data-theme]) :is(.mirror-day, .mirror-hint) { color: #8A8A8A; }
+    html:not([data-theme]) .zi-lit .zi-part { filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.85)); }
+    html:not([data-theme]) .zi-pulse { background: radial-gradient(closest-side, rgba(255, 255, 255, 0.85), transparent 72%); }
+    html:not([data-theme]) .zi-ring { border-color: rgba(255, 255, 255, 0.85); }
+    html:not([data-theme]) .zi-mark--interactive:focus-visible { outline-color: #FFFFFF; }
+    html:not([data-theme]) .zi-dust { filter: grayscale(1); }   /* the shared intro module draws warm dust */
+    html:not([data-theme]) .mirror-disc::after { border-color: rgba(255, 255, 255, 0.08); }
+    html:not([data-theme]) .custom-cursor .cc-ring.ping { animation-name: z-ping; }
+    @keyframes z-ping {
+      0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+      100% { box-shadow: 0 0 0 22px rgba(255, 255, 255, 0); }
+    }
+    /* Focus and links: a clear white ring everywhere; links that relied on the red accent get an underline. */
+    html:not([data-theme]) a:focus-visible,
+    html:not([data-theme]) button:focus-visible,
+    html:not([data-theme]) summary:focus-visible,
+    html:not([data-theme]) .waitlist-input:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    html:not([data-theme]) .skip-link { background: #FFFFFF; color: #000000; }
+    html:not([data-theme]) .website-privacy a,
+    html:not([data-theme]) .model-choice-notes a,
+    html:not([data-theme]) .proof-note a {
+      color: #FFFFFF;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      text-underline-offset: 3px;
+    }
+
+    /* Small labels inside the glass keep their contrast over the top light pool. */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item, .waitlist-card, .memory-vis,
+      .console-frame, .instrument-card, .founder-card, .faq-item, .example-card, .ws-zone,
+      .model-choice, .compare-table, .tier-ladder) { --ink-3: #B3B3B3; --ink-4: #A3A3A3; }
+
+    /* Section titles: white to silver. */
+    html:not([data-theme]) .section-title,
+    html:not([data-theme]) .council-scroll-head h2,
+    html:not([data-theme]) .cp-role,
+    html:not([data-theme]) .waitlist-card h3 {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F4F4F4 45%, #B4B4B4 100%);
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html:not([data-theme]) .section-title .seal,
+    html:not([data-theme]) .council-scroll-head .seal { color: inherit; }
+
+    /* The big containers hold still (the sheen stays on cards and buttons): less repaint, calmer reading. */
+    html:not([data-theme]) :is(.compare-table, .console-frame, .tier-ladder, .model-choice, .faq-item,
+      .example-card, .instrument-card, .ws-zone, .memory-vis) { animation: none; }
+
+    /* Featured boxes breathe: their light pool drifts slowly along the top edge, away from the text. */
+    @keyframes z-pool {
+      0%   { --zpx: 22%; --zpy: -18%; }
+      50%  { --zpx: 62%; --zpy: -6%; }
+      100% { --zpx: 84%; --zpy: -16%; }
+    }
+    html.zm-fluid:not([data-theme]) :is(.waitlist-card, .founder-card, .bento-card.span-2) {
+      animation-name: z-sheen, z-pool;
+      animation-duration: 13s, 24s;
+      animation-timing-function: cubic-bezier(0.45, 0.05, 0.25, 1), ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: normal, alternate;
+    }
+
+    /* Edge light that carries meaning: on the live console only while it is thinking, and on an open answer. */
+    @keyframes z-comet { to { --zc: 360deg; } }
+    html:not([data-theme]) .console-frame,
+    html:not([data-theme]) .faq-item { position: relative; }
+    html.zm-fluid:not([data-theme]) .console-frame::before,
+    html.zm-fluid:not([data-theme]) .faq-item[open]::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 2;
+      background: conic-gradient(from var(--zc, 0deg),
+        rgba(255, 255, 255, 0) 0deg 170deg,
+        rgba(255, 255, 255, 0.16) 270deg,
+        rgba(255, 255, 255, 0.95) 346deg,
+        rgba(255, 255, 255, 0) 360deg);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+              mask-composite: exclude;
+      animation: z-comet 3.2s linear infinite;
+    }
+    html.zm-fluid:not([data-theme]) .console-frame::before { opacity: 0; animation-play-state: paused; transition: opacity 0.9s var(--ease-editorial); }
+    html.zm-fluid:not([data-theme]) .console-frame.is-live:not(.answered)::before { opacity: 1; animation-play-state: running; }
+    html.zm-fluid:not([data-theme]) .faq-item[open]::before { animation-duration: 9s; opacity: 0.75; }
+
+    /* Without @property the keyframes above would jump between values: hold everything still instead. */
+    html:not(.zm-fluid):not([data-theme]) :is(.bento-card, .support-card, .value-item, .waitlist-card,
+      .memory-vis, .console-frame, .instrument-card, .founder-card, .faq-item, .example-card, .ws-zone,
+      .model-choice, .compare-table, .tier-ladder, .btn, .btn-ghost, .hero-headline .glow),
+    html:not(.zm-fluid):not([data-theme]) .hero-disc-wrap::before { animation: none; }
+
+    /* Phones: the scroll-to-top orb docks inside the bottom action bar, left of the button, instead of covering it. */
+    @media (max-width: 640px) {
+      html:not([data-theme]) .mobile-cta { padding-left: 76px; }
+      html:not([data-theme]) .scroll-top { bottom: calc(11px + env(safe-area-inset-bottom, 0px)); }
+    }
+
+    /* All themes: four swatches on a narrow phone header. Targets stay 20px with 24px spacing (WCAG 2.5.8);
+       only the frame around them tightens. */
+    @media (max-width: 420px) {
+      .theme-picker { padding: 2px; margin-left: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html:not([data-theme]) .greca-divider::before,
+      html:not([data-theme]) .greca-divider svg { animation: none !important; clip-path: none; opacity: 1; }
+    }
+  </style>
 </head>
 <body class="page-loading">
 
   <a class="skip-link" href="#features">Skip to content</a>
   <div class="vignette" aria-hidden="true"></div>
   <div class="aurora" aria-hidden="true"></div>
+  <canvas class="fx-layer" id="zthFx" aria-hidden="true"></canvas>
   <canvas class="rain-layer rain-back" id="rainBack" aria-hidden="true"></canvas>
   <canvas class="rain-layer rain-front" id="rainFront" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
@@ -4540,7 +5192,8 @@
     <div class="header-inner">
       <div class="header-left">
         <div class="theme-picker" role="radiogroup" aria-label="Page theme">
-          <button class="theme-swatch" type="button" data-set="" aria-pressed="true" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
+          <button class="theme-swatch" type="button" data-set="" aria-pressed="true" aria-label="Obsidian mono" title="Obsidian mono"></button>
+          <button class="theme-swatch" type="button" data-set="maya" aria-pressed="false" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
           <button class="theme-swatch" type="button" data-set="codex" aria-pressed="false" aria-label="Codex parchment" title="Codex parchment"></button>
           <button class="theme-swatch" type="button" data-set="skeleton" aria-pressed="false" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
         </div>
@@ -6084,12 +6737,14 @@
       var KEY = 'zotheos_landing_theme';
       var root = document.documentElement;
       function apply(theme) {
-        if (theme === 'codex' || theme === 'skeleton') {
+        if (theme === 'maya' || theme === 'codex' || theme === 'skeleton') {
           root.setAttribute('data-theme', theme);
         } else {
           root.removeAttribute('data-theme');
           theme = '';
         }
+        var tc = document.getElementById('themeColorMeta');
+        if (tc) tc.setAttribute('content', { maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' }[theme] || '#000000');
         var btns = document.querySelectorAll('.theme-swatch');
         for (var i = 0; i < btns.length; i++) {
           var t = btns[i].getAttribute('data-set') || '';
@@ -6432,20 +7087,33 @@
       });
     })();
 
-    /* Card spotlight — cursor-tracked radial glow on cards */
+    /* Card spotlight: cursor-tracked light inside the boxes (the mono default also reads --mx/--my for its
+       pointer-lit glass edges). One delegated pointermove, one write per frame, mouse and fine pointers only. */
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
-      var cards = document.querySelectorAll('.bento-card, .support-card, .value-item');
-      cards.forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          var r = card.getBoundingClientRect();
-          var x = ((e.clientX - r.left) / r.width) * 100;
-          var y = ((e.clientY - r.top) / r.height) * 100;
-          card.style.setProperty('--mx', x + '%');
-          card.style.setProperty('--my', y + '%');
-        });
-      });
+      var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (reduce || !fine) return;
+      var SEL = '.bento-card, .support-card, .value-item, .waitlist-card, .memory-vis, .console-frame, ' +
+                '.instrument-card, .founder-card, .faq-item, .example-card, .ws-zone, .model-choice, ' +
+                '.compare-table, .tier-ladder';
+      var card = null, px = 0, py = 0, queued = false;
+      function paint() {
+        queued = false;
+        if (!card) return;
+        var r = card.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        card.style.setProperty('--mx', ((px - r.left) / r.width * 100).toFixed(2) + '%');
+        card.style.setProperty('--my', ((py - r.top) / r.height * 100).toFixed(2) + '%');
+      }
+      document.addEventListener('pointermove', function (e) {
+        if (e.pointerType && e.pointerType !== 'mouse') return;
+        if (window.zMotionAllowed && !window.zMotionAllowed()) return;   // calm switch, reduced motion, hidden page
+        var t = e.target;
+        card = t && t.closest ? t.closest(SEL) : null;
+        if (!card) return;
+        px = e.clientX; py = e.clientY;
+        if (!queued) { queued = true; requestAnimationFrame(paint); }
+      }, { passive: true });
     })();
 
     /* Hero disc parallax — gentle 3D tilt that follows the cursor */
@@ -6736,6 +7404,15 @@
         letters.push(s);
       }
       head.classList.add('split');
+      function measureHx() {
+        var x0 = letters.length ? letters[0].offsetLeft : 0;
+        for (var j = 0; j < letters.length; j++) {
+          letters[j].style.setProperty('--hx', (letters[j].offsetLeft - x0) + 'px');
+        }
+      }
+      measureHx();
+      window.addEventListener('resize', measureHx, { passive: true });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureHx);
       function arm() {
         head.classList.add('kinetic');
         setTimeout(function () { head.classList.add('settled'); }, text.length * 55 + 1100);
@@ -6822,21 +7499,6 @@
           setTimeout(function () { wipe.classList.remove('active'); }, 900);
         });
       });
-    })();
-
-    /* prefers-color-scheme — first-visit default (only when user has not chosen) */
-    (function () {
-      try {
-        if (localStorage.getItem('zotheos_landing_theme') !== null) return;
-      } catch (e) { return; }
-      var mql = window.matchMedia('(prefers-color-scheme: light)');
-      if (mql.matches) {
-        document.documentElement.setAttribute('data-theme', 'codex');
-        var btns = document.querySelectorAll('.theme-swatch');
-        btns.forEach(function (b) {
-          b.setAttribute('aria-pressed', (b.getAttribute('data-set') || '') === 'codex' ? 'true' : 'false');
-        });
-      }
     })();
 
     /* Page-load reveal — drop the .page-loading class once everything painted */
@@ -7234,14 +7896,15 @@
         function loop(t) {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.globalCompositeOperation = 'lighter';
+          var smoke = document.documentElement.getAttribute('data-theme') ? '140, 160, 175, ' : '150, 150, 150, ';
           for (var i = 0; i < parts.length; i++) {
             var p = parts[i];
             p.y += p.vy;
             p.x += p.vx + Math.sin((t - t0) / 1900 + p.ph) * 0.28;
             if (p.y < -p.r) { p.y = canvas.height + p.r; p.x = Math.random() * canvas.width; }
             var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-            g.addColorStop(0, 'rgba(140, 160, 175, ' + p.a + ')');
-            g.addColorStop(1, 'rgba(140, 160, 175, 0)');
+            g.addColorStop(0, 'rgba(' + smoke + p.a + ')');
+            g.addColorStop(1, 'rgba(' + smoke + '0)');
             ctx.fillStyle = g;
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, 6.29);
@@ -7311,6 +7974,200 @@
       }
     })();
 
+    /* Liquid obsidian: the default theme's signature effect. A domain-warped fractal-noise surface shaded as slow
+       molten black glass with sparse chrome ridges (WebGL1, one draw per frame, alpha so it only adds light).
+       Driven by the effects manager below: window.ZTH_FX = { start(), stop(), setIntensity(0|1|2|null), level() }.
+       Quiet behind the hero text (its real rect), quieter once the hero scrolls away, half rate when it is gone,
+       a frame-time governor that steps down on slow devices, and nothing at all without WebGL. */
+    (function () {
+      var cv = document.getElementById('zthFx');
+      var api = { start: function () {}, stop: function () {}, setIntensity: function () {}, level: function () { return 1; } };
+      window.ZTH_FX = api;
+      if (!cv) return;
+
+      var VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+      var FS = [
+        '#ifdef GL_FRAGMENT_PRECISION_HIGH',
+        'precision highp float;',
+        '#else',
+        'precision mediump float;',
+        '#endif',
+        'uniform vec2 uR;uniform vec4 uD;uniform vec4 uM;uniform vec4 uP;uniform vec4 uH;',
+        'float hs(vec2 p){vec3 q=fract(vec3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}',
+        'float ns(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*f*(f*(f*6.-15.)+10.);',
+        'return mix(mix(hs(i),hs(i+vec2(1.,0.)),u.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),u.x),u.y);}',
+        'const mat2 RM=mat2(.8,.6,-.6,.8);',
+        'float fb(vec2 p){float s=0.,a=.5;for(int i=0;i<4;i++){s+=a*ns(p);p=RM*p*2.03;a*=.5;}return s;}',
+        'float fld(vec2 p,out float qq){',
+        ' vec2 q=vec2(fb(p+uD.xy),fb(p+vec2(5.2,1.3)-uD.xy));',
+        ' vec2 r=vec2(fb(p+2.5*q+vec2(1.7,9.2)+uD.zw),fb(p+2.5*q+vec2(8.3,2.8)-uD.zw));',
+        ' qq=dot(q,q);return fb(p+2.6*r);}',
+        'float gp(vec2 p){vec2 d=p-uM.xy;float r2=dot(d,d),r=sqrt(r2);',
+        ' return -.16*uM.z*exp(-r2*10.)+.03*uM.w*sin(r*30.-uP.z*2.)*exp(-r*4.);}',
+        'void main(){',
+        ' vec2 uv=gl_FragCoord.xy/uR;float as=uR.x/uR.y;',
+        ' vec2 p=(uv-.5)*vec2(as,1.);',
+        ' vec2 dm=p-uM.xy;float ln=exp(-dot(dm,dm)*7.)*uM.z;',
+        ' p-=dm*ln*.28;',
+        ' vec2 P=p*uP.w+vec2(0.,uP.y);',
+        ' float e=.006,q0,q1;',
+        ' float h0=fld(P,q0),h=h0+gp(p);',
+        ' float hx=fld(P+vec2(e,0.),q1)+gp(p+vec2(e/uP.w,0.));',
+        ' float hy=fld(P+vec2(0.,e),q1)+gp(p+vec2(0.,e/uP.w));',
+        ' vec3 n=normalize(vec3((h-hx)/e*.075,(h-hy)/e*.075,1.));',
+        ' vec3 L=normalize(vec3(-.35,.55,.75));',
+        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),90.);',
+        ' vec3 rf=reflect(vec3(0.,0.,-1.),n);',
+        ' float env=exp(-pow((rf.y-.42)*5.,2.))*smoothstep(-.6,.2,rf.x);',
+        ' float crest=smoothstep(.42,.8,h0);',
+        ' float pool=.25+.75*smoothstep(.2,.9,q0);',
+        ' float gl=fb(P*2.2+n.xy*1.2)*.5;',
+        ' float c=gl*gl*.08*(1.-crest)+(sp*.9+env*.38)*crest*pool;',
+        ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.85);',
+        ' float rr=length(dm),ad=max(dot(dm/(rr+1e-4),vec2(.53,-.85)),0.);',
+        ' float arc=uM.z*exp(-pow((rr-.13)*26.,2.))*ad*ad*ad*(1.-rd);',
+        ' c=c*(1.-.45*ln)+arc*.2;',
+        ' float v=1.-smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.4)));',
+        ' c*=uP.x*(.35+.65*v)*(1.-.62*rd);',
+        ' c=1.-exp(-c*1.6);',
+        ' c=clamp(c+(hs(gl_FragCoord.xy)-.5)*.5/255.,0.,1.);',
+        ' gl_FragColor=vec4(vec3(c),c);}'
+      ].join('\n');
+
+      var gl = null, prog = null, U = {}, failed = false, scheduled = false;
+      var raf = 0, wanted = false, level = 1, chosen = null, last = 0, T = 0, tick = 0;
+      var SCALE = [0.34, 0.42, 0.5], GAIN = [0.6, 1, 1.4], BUDGET = 350000;
+      var mx = 0.18, my = 0, tmx = 0.18, tmy = 0, press = 0, rip = 0, lastMove = -1e9, sc = 0, w = 0, h = 0;
+      var hero = document.querySelector('.hero'), heroText = [], H = [0.5, 0.52, 0.3, 0.2], vis = 1, gview = 1, dirty = true;
+      ['.hero-eyebrow', '.hero-headline', '.hero-sub', '.hero-actions'].forEach(function (s) { var el = document.querySelector(s); if (el) heroText.push(el); });
+      var ema = 16, slow = 0;
+      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      // A light default on phones and modest machines, unless the visitor picked a level.
+      var lowEnd = false;
+      try {
+        lowEnd = window.matchMedia('(pointer: coarse)').matches || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4;
+      } catch (e) {}
+      level = lowEnd ? 0 : 1;
+
+      function sh(type, src) {
+        var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+        return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
+      }
+      function init() {
+        try {
+          var o = { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'low-power' };
+          gl = cv.getContext('webgl', o) || cv.getContext('experimental-webgl', o);
+          if (!gl) { failed = true; return false; }
+          var v = sh(gl.VERTEX_SHADER, VS), f = sh(gl.FRAGMENT_SHADER, FS);
+          if (!v || !f) { gl = null; failed = true; return false; }
+          prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
+          if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { gl = null; failed = true; return false; }
+          gl.useProgram(prog);
+          gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+          var loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+          U.R = gl.getUniformLocation(prog, 'uR'); U.D = gl.getUniformLocation(prog, 'uD');
+          U.M = gl.getUniformLocation(prog, 'uM'); U.P = gl.getUniformLocation(prog, 'uP'); U.H = gl.getUniformLocation(prog, 'uH');
+          gl.clearColor(0, 0, 0, 0);
+          return true;
+        } catch (e) { gl = null; failed = true; return false; }
+      }
+
+      function size() {
+        var iw = window.innerWidth, ih = window.innerHeight;
+        var k = Math.min(SCALE[level] * Math.min(window.devicePixelRatio || 1, 1.25), Math.sqrt(BUDGET / Math.max(1, iw * ih)));
+        var nw = Math.max(64, Math.round(iw * k)), nh = Math.max(64, Math.round(ih * k));
+        if (nw !== w || nh !== h) { w = nw; h = nh; cv.width = w; cv.height = h; gl.viewport(0, 0, w, h); }
+      }
+      function measure() {
+        dirty = false;
+        var iw = Math.max(1, window.innerWidth), ih = Math.max(1, window.innerHeight);
+        if (hero) { var hb = hero.getBoundingClientRect(); vis = Math.max(0, Math.min(1, hb.bottom / ih)); }
+        if (!heroText.length) return;
+        var l = 1e9, t = 1e9, r = -1e9, b = -1e9;
+        for (var i = 0; i < heroText.length; i++) {
+          var q = heroText[i].getBoundingClientRect();
+          if (!q.width && !q.height) continue;
+          l = Math.min(l, q.left); t = Math.min(t, q.top); r = Math.max(r, q.right); b = Math.max(b, q.bottom);
+        }
+        if (r < l) return;
+        H[0] = (l + r) / 2 / iw; H[1] = 1 - (t + b) / 2 / ih; H[2] = (r - l) / 2 / iw + 0.04; H[3] = (b - t) / 2 / ih + 0.05;
+      }
+
+      function draw(dt) {
+        size();
+        if (dirty) measure();
+        T += dt;
+        var a = T * 0.0075, b = T * 0.005 + 1.7;
+        var k = 1 - Math.exp(-dt * 2.2);
+        mx += (tmx - mx) * k; my += (tmy - my) * k;
+        var tp = (T - lastMove) < 2.5 ? 1 : 0;
+        press += (tp - press) * (1 - Math.exp(-dt * (tp ? 1.6 : 0.6)));
+        rip *= Math.exp(-dt * 0.9);
+        var ts = (window.pageYOffset || 0) / Math.max(1, window.innerHeight) * 0.22;
+        sc += (ts - sc) * (1 - Math.exp(-dt * 3));
+        gview += ((0.35 + 0.65 * vis) - gview) * (1 - Math.exp(-dt * 2.5));   // quieter once the hero has gone
+        gl.uniform2f(U.R, w, h);
+        gl.uniform4f(U.D, 2.6 * Math.cos(a), 2.6 * Math.sin(a * 0.83), 1.9 * Math.cos(b * 1.21), 1.9 * Math.sin(b));
+        gl.uniform4f(U.M, mx, my, press, Math.min(rip, 1));
+        gl.uniform4f(U.P, GAIN[level] * gview, sc, (T * 1.9) % 6.2831853, w < h ? 1.55 : 1.0);
+        gl.uniform4f(U.H, H[0], H[1], H[2], H[3]);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+        if (!cv.classList.contains('is-on')) cv.classList.add('is-on');
+      }
+
+      function frame(now) {
+        raf = 0;
+        if (!wanted || document.hidden) return;
+        var dt = last ? Math.min((now - last) / 1000, 0.1) : 0.016; last = now;
+        // Governor: sustained slow frames step the level down (and finally to half rate).
+        ema += (dt * 1000 - ema) * 0.05;
+        if (ema > 22) { if (++slow > 120) { slow = 0; ema = 16; if (level > 0) { level--; w = 0; } } } else slow = 0;
+        tick++;
+        var halfRate = vis <= 0 || (level === 0 && ema > 22);
+        if (!halfRate || tick % 2 === 0) draw(halfRate ? dt * 2 : dt);
+        raf = requestAnimationFrame(frame);
+      }
+      function run() {
+        if (failed || !wanted) return;
+        if (!gl) {
+          if (scheduled) return;
+          scheduled = true;
+          var go = function () { setTimeout(function () { scheduled = false; if (wanted && init()) run(); }, 80); };
+          if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
+          return;
+        }
+        if (reduceMQ.matches) { T = 40; press = 0; rip = 0; draw(0); return; }
+        if (!raf && !document.hidden) { last = 0; raf = requestAnimationFrame(frame); }
+      }
+      function halt() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+      function onMove(x, y) {
+        var ih = Math.max(1, window.innerHeight), nx = (x / ih) - 0.5 * window.innerWidth / ih, ny = 0.5 - y / ih;
+        var dx = nx - tmx, dy = ny - tmy;
+        rip = Math.min(1.4, rip + Math.sqrt(dx * dx + dy * dy) * 1.4);
+        tmx = nx; tmy = ny; lastMove = T;
+      }
+      window.addEventListener('pointermove', function (e) { if (wanted && e.pointerType === 'mouse') onMove(e.clientX, e.clientY); }, { passive: true });
+      window.addEventListener('scroll', function () { dirty = true; }, { passive: true });
+      window.addEventListener('resize', function () { dirty = true; if (wanted && gl && reduceMQ.matches) draw(0); }, { passive: true });
+      document.addEventListener('visibilitychange', function () { if (document.hidden) halt(); else if (wanted) run(); });
+      cv.addEventListener('webglcontextlost', function (e) { e.preventDefault(); halt(); gl = null; w = h = 0; }, false);
+      cv.addEventListener('webglcontextrestored', function () { if (wanted) run(); }, false);
+
+      api.start = function () { wanted = true; dirty = true; run(); };
+      api.stop = function () { wanted = false; halt(); cv.classList.remove('is-on'); };
+      api.setIntensity = function (l) {
+        chosen = (l === null || l === undefined) ? null : Math.max(0, Math.min(2, l | 0));
+        level = chosen === null ? (lowEnd ? 0 : 1) : chosen;
+        w = 0; slow = 0; ema = 16;
+        if (gl && wanted && reduceMQ.matches) draw(0);
+      };
+      api.level = function () { return level; };
+    })();
+
     /* Effects manager + Tlaloc's rain.
        One master switch governs every ambient layer. Rain is two
        parallax canvases, theme-aware, paused when hidden or off. */
@@ -7339,7 +8196,8 @@
       var DENS = { light: 0.4, medium: 0.65, heavy: 1.0 };
       var LEVELS = ['light', 'medium', 'heavy'];
       var level = 'medium';
-      try { var rl = localStorage.getItem(RKEY); if (DENS[rl]) level = rl; } catch (e) {}
+      var levelChosen = false;
+      try { var rl = localStorage.getItem(RKEY); if (DENS[rl]) { level = rl; levelChosen = true; } } catch (e) {}
       var amtBtn = document.getElementById('rainAmount');
 
       // Adaptive perf guard: if the device shows sustained slow frames,
@@ -7358,10 +8216,17 @@
 
       function themeTint() {
         var t = document.documentElement.getAttribute('data-theme') || '';
-        // cool silver on dark worlds, warm shadow on parchment
+        // neutral silver on the mono default, cool silver on the other
+        // dark worlds, warm shadow on parchment
+        if (!t) return [214, 214, 214];
         return t === 'codex' ? [70, 55, 42] : [190, 206, 222];
       }
-      var COCH = [209, 79, 53];
+      // Rare accent drops: cochineal in the coloured themes, a bright
+      // white glint in the mono default.
+      var COCH_RED = [209, 79, 53], COCH_MONO = [255, 255, 255];
+      function cochTint() {
+        return document.documentElement.getAttribute('data-theme') ? COCH_RED : COCH_MONO;
+      }
 
       function makeDrops(n, cfg) {
         var arr = [];
@@ -7432,7 +8297,8 @@
         }
         // One more pass for the rare cochineal drops.
         ctx.globalAlpha = 0.30;
-        ctx.strokeStyle = 'rgb(' + COCH[0] + ',' + COCH[1] + ',' + COCH[2] + ')';
+        var coch = cochTint();
+        ctx.strokeStyle = 'rgb(' + coch[0] + ',' + coch[1] + ',' + coch[2] + ')';
         ctx.beginPath();
         for (i = 0; i < drops.length; i++) {
           d = drops[i];
@@ -7471,7 +8337,18 @@
         if (fctx && frontOn) drawLayer(fctx, frontDrops, FRONT_CFG, tint);
         if (running) raf = requestAnimationFrame(loop);
       }
+      function mono() { return !document.documentElement.getAttribute('data-theme'); }
+      var FX = window.ZTH_FX;
       function start() {
+        if (mono()) {
+          // the default theme's signature layer replaces the rain
+          if (running) { running = false; if (raf) { cancelAnimationFrame(raf); raf = null; } }
+          if (bctx) bctx.clearRect(0, 0, W, H);
+          if (fctx) fctx.clearRect(0, 0, W, H);
+          if (FX) { FX.setIntensity(levelChosen ? LEVELS.indexOf(level) : null); FX.start(); }
+          return;
+        }
+        if (FX) FX.stop();
         if (running || !bctx || guardKilled) return;
         if (document.hidden) return;
         running = true;
@@ -7484,6 +8361,7 @@
       function stop() {
         running = false;
         if (raf) { cancelAnimationFrame(raf); raf = null; }
+        if (FX) FX.stop();
         if (bctx) bctx.clearRect(0, 0, W, H);
         if (fctx) fctx.clearRect(0, 0, W, H);
       }
@@ -7499,11 +8377,13 @@
 
       function paintLevel() {
         if (!amtBtn) return;
-        var lit = LEVELS.indexOf(level) + 1;
+        var m = mono();
+        var lit = (m && FX && !levelChosen ? FX.level() : LEVELS.indexOf(level)) + 1;
         var bars = amtBtn.querySelectorAll('.ra-bar');
         for (var i = 0; i < bars.length; i++) bars[i].classList.toggle('lit', i < lit);
-        amtBtn.setAttribute('aria-label', 'Rain intensity: ' + level);
-        amtBtn.setAttribute('title', 'Rain intensity: ' + level);
+        var name = m ? 'Effect intensity: ' + ['low', 'medium', 'high'][lit - 1] : 'Rain intensity: ' + LEVELS[lit - 1];
+        amtBtn.setAttribute('aria-label', name);
+        amtBtn.setAttribute('title', name);
       }
 
       if (btn) {
@@ -7517,8 +8397,11 @@
       }
       if (amtBtn) {
         amtBtn.addEventListener('click', function () {
-          level = LEVELS[(LEVELS.indexOf(level) + 1) % LEVELS.length];
+          var cur = (mono() && FX && !levelChosen) ? FX.level() : LEVELS.indexOf(level);
+          level = LEVELS[(cur + 1) % LEVELS.length];
+          levelChosen = true;
           try { localStorage.setItem(RKEY, level); } catch (e) {}
+          if (mono() && FX) FX.setIntensity(LEVELS.indexOf(level));
           paintLevel();
           // A deliberate choice earns a fresh chance at full fidelity.
           resetGuard();
@@ -7533,7 +8416,13 @@
         if (document.hidden) stop();
         else if (on) start();
       });
-      // Rain reads the theme fresh each frame, so theme switches just work.
+      // Rain reads the theme fresh each frame; switching to or from the default swaps the layer itself.
+      if (window.MutationObserver) {
+        new MutationObserver(function () {
+          if (on) { stop(); start(); }
+          paintLevel();
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
 
       function preferenceChanged() { apply(chosen); }
       if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', preferenceChanged);
