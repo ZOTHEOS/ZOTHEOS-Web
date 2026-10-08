@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-orTQjOzApT70Wxn/dsr8UUIm0thj+p3aBWINxPBWxso='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-1NFUWGXu//jqmGB9gj8lTfeCF2uSz2ToM68HOA0KDfU='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -8039,7 +8039,10 @@
 
       var gl = null, prog = null, U = {}, failed = false, scheduled = false, lost = false;
       var raf = 0, wanted = false, level = 1, chosen = null, last = 0, T = 0, tick = 0;
-      var SCALE = [0.34, 0.42, 0.5], GAIN = [0.6, 1, 1.4], BUDGET = 350000;
+      var GAIN = [0.6, 1, 1.4];
+      // Render quality is automatic and separate from intensity: the internal resolution starts near the device's
+      // own pixels and steps down only if this device cannot hold the display's frame rate.
+      var TIER = [1.0, 0.8, 0.62, 0.48, 0.36], TCAP = [8.3e6, 4.2e6, 2.4e6, 1.3e6, 0.6e6], tier = 1;
       var mx = 0.18, my = 0, tmx = 0.18, tmy = 0, press = 0, rip = 0, lastMove = -1e9, sc = 0, w = 0, h = 0;
       var hero = document.querySelector('.hero'), heroText = [], H = [0.5, 0.52, 0.3, 0.2], vis = 1, gview = 1, dirty = true;
       ['.hero-eyebrow', '.hero-headline', '.hero-sub', '.hero-actions'].forEach(function (s) { var el = document.querySelector(s); if (el) heroText.push(el); });
@@ -8052,6 +8055,7 @@
         lowEnd = window.matchMedia('(pointer: coarse)').matches || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4;
       } catch (e) {}
       level = lowEnd ? 0 : 1;
+      tier = lowEnd ? 3 : 1;
 
       function sh(type, src) {
         var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
@@ -8080,7 +8084,7 @@
 
       function size() {
         var iw = window.innerWidth, ih = window.innerHeight;
-        var k = Math.min(SCALE[level] * Math.min(window.devicePixelRatio || 1, 1.25), Math.sqrt(BUDGET / Math.max(1, iw * ih)));
+        var k = Math.min(TIER[tier] * Math.min(window.devicePixelRatio || 1, 2), Math.sqrt(TCAP[tier] / Math.max(1, iw * ih)));
         var nw = Math.max(64, Math.round(iw * k)), nh = Math.max(64, Math.round(ih * k));
         if (nw !== w || nh !== h) { w = nw; h = nh; cv.width = w; cv.height = h; gl.viewport(0, 0, w, h); }
       }
@@ -8127,10 +8131,11 @@
         if (!wanted || document.hidden) return;
         var dt = last ? Math.min((now - last) / 1000, 0.1) : 0.016; last = now;
         // Governor: a frame is slow only against the display's own cadence (so a 30 Hz cap is not slowness).
-        // Sustained slowness steps the automatic level down, then to half rate; it never overrides a chosen level.
+        // Sustained slowness lowers the internal resolution a tier at a time, then halves the rate; intensity is the
+        // visitor's and is never touched.
         var ms = dt * 1000;
         fast = Math.min(fast * 1.002, Math.max(ms, 4));
-        if (ms > fast * 1.6) { calm = 0; if (++slow > 120) { slow = 0; if (chosen === null && level > 0) { level--; w = 0; notify(); } else throttled = true; } }
+        if (ms > fast * 1.6) { calm = 0; if (++slow > 45) { slow = 0; if (tier < TIER.length - 1) { tier++; w = 0; } else throttled = true; } }
         else { slow = 0; if (throttled && ++calm > 600) { throttled = false; calm = 0; } }
         tick++;
         var halfRate = vis <= 0 || throttled;
