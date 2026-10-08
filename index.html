@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-1NFUWGXu//jqmGB9gj8lTfeCF2uSz2ToM68HOA0KDfU='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-XBZrXIe3Ai4P2vcY4QRJenbtDkaeHsZ8Gnest9tjluo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -3623,6 +3623,7 @@
       line-height: 1.45;
       color: var(--ink);
     }
+    .hero #development-status { margin: 30px auto 40px; line-height: 1.9; }
     .proof-note {
       margin: 18px auto 0;
       max-width: 640px;
@@ -4590,7 +4591,8 @@
     html:not([data-theme]) .aurora,
     html:not([data-theme]) .cursor-light,
     html:not([data-theme]) .hero-mist { display: none; }
-    html:not([data-theme]) .grain {
+    html:not([data-theme]) .grain { display: none; }   /* over the liquid silk the grain read as pixel noise */
+    html:not([data-theme]) .grain-unused {
       /* neutral noise: invisible on the black floor (overlay of black
          is black), a faint brushed texture on the glass boxes */
       background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.7' numOctaves='2' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -8025,7 +8027,7 @@
         ' float crest=smoothstep(.42,.8,h0);',
         ' float pool=.25+.75*smoothstep(.2,.9,q0);',
         ' float gl=fb(P*2.2+n.xy*1.2)*.5;',
-        ' float c=gl*gl*.08*(1.-crest)+(sp*.9+env*.38)*crest*pool;',
+        ' float c=gl*gl*.03*(1.-crest)+(sp*.9+env*.38)*crest*pool;',
         ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.85);',
         ' float rr=length(dm),ad=max(dot(dm/(rr+1e-4),vec2(.53,-.85)),0.);',
         ' float arc=uM.z*exp(-pow((rr-.13)*26.,2.))*ad*ad*ad*(1.-rd);',
@@ -8055,7 +8057,7 @@
         lowEnd = window.matchMedia('(pointer: coarse)').matches || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4;
       } catch (e) {}
       level = lowEnd ? 0 : 1;
-      tier = lowEnd ? 3 : 1;
+      tier = lowEnd ? 3 : ((navigator.hardwareConcurrency || 8) >= 8 ? 0 : 1);
 
       function sh(type, src) {
         var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
