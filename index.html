@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-o9Fw/i1QTJHJQqS8bKg8ECYlm+EWDAS5K3kP45qPhbo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-orTQjOzApT70Wxn/dsr8UUIm0thj+p3aBWINxPBWxso='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -5145,7 +5145,10 @@
     /* Phones: the scroll-to-top orb docks inside the bottom action bar, left of the button, instead of covering it. */
     @media (max-width: 640px) {
       html:not([data-theme]) .mobile-cta { padding-left: 76px; }
-      html:not([data-theme]) .scroll-top { bottom: calc(11px + env(safe-area-inset-bottom, 0px)); }
+      html:not([data-theme]) .scroll-top { bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (max-width: 380px) {
+      html:not([data-theme]) .mobile-cta .btn { white-space: nowrap; letter-spacing: 0.24em; }
     }
 
     /* All themes: four swatches on a narrow phone header. Targets stay 20px with 24px spacing (WCAG 2.5.8);
@@ -8034,13 +8037,13 @@
         ' gl_FragColor=vec4(vec3(c),c);}'
       ].join('\n');
 
-      var gl = null, prog = null, U = {}, failed = false, scheduled = false;
+      var gl = null, prog = null, U = {}, failed = false, scheduled = false, lost = false;
       var raf = 0, wanted = false, level = 1, chosen = null, last = 0, T = 0, tick = 0;
       var SCALE = [0.34, 0.42, 0.5], GAIN = [0.6, 1, 1.4], BUDGET = 350000;
       var mx = 0.18, my = 0, tmx = 0.18, tmy = 0, press = 0, rip = 0, lastMove = -1e9, sc = 0, w = 0, h = 0;
       var hero = document.querySelector('.hero'), heroText = [], H = [0.5, 0.52, 0.3, 0.2], vis = 1, gview = 1, dirty = true;
       ['.hero-eyebrow', '.hero-headline', '.hero-sub', '.hero-actions'].forEach(function (s) { var el = document.querySelector(s); if (el) heroText.push(el); });
-      var ema = 16, slow = 0;
+      var fast = 16.7, slow = 0, calm = 0, throttled = false;
       var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
 
       // A light default on phones and modest machines, unless the visitor picked a level.
@@ -8059,6 +8062,7 @@
           var o = { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'low-power' };
           gl = cv.getContext('webgl', o) || cv.getContext('experimental-webgl', o);
           if (!gl) { failed = true; return false; }
+          if (gl.isContextLost && gl.isContextLost()) { gl = null; lost = true; return false; }   // wait for restore
           var v = sh(gl.VERTEX_SHADER, VS), f = sh(gl.FRAGMENT_SHADER, FS);
           if (!v || !f) { gl = null; failed = true; return false; }
           prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
@@ -8122,16 +8126,19 @@
         raf = 0;
         if (!wanted || document.hidden) return;
         var dt = last ? Math.min((now - last) / 1000, 0.1) : 0.016; last = now;
-        // Governor: sustained slow frames step the level down (and finally to half rate).
-        ema += (dt * 1000 - ema) * 0.05;
-        if (ema > 22) { if (++slow > 120) { slow = 0; ema = 16; if (level > 0) { level--; w = 0; } } } else slow = 0;
+        // Governor: a frame is slow only against the display's own cadence (so a 30 Hz cap is not slowness).
+        // Sustained slowness steps the automatic level down, then to half rate; it never overrides a chosen level.
+        var ms = dt * 1000;
+        fast = Math.min(fast * 1.002, Math.max(ms, 4));
+        if (ms > fast * 1.6) { calm = 0; if (++slow > 120) { slow = 0; if (chosen === null && level > 0) { level--; w = 0; notify(); } else throttled = true; } }
+        else { slow = 0; if (throttled && ++calm > 600) { throttled = false; calm = 0; } }
         tick++;
-        var halfRate = vis <= 0 || (level === 0 && ema > 22);
+        var halfRate = vis <= 0 || throttled;
         if (!halfRate || tick % 2 === 0) draw(halfRate ? dt * 2 : dt);
         raf = requestAnimationFrame(frame);
       }
       function run() {
-        if (failed || !wanted) return;
+        if (failed || lost || !wanted) return;
         if (!gl) {
           if (scheduled) return;
           scheduled = true;
@@ -8143,6 +8150,7 @@
         if (!raf && !document.hidden) { last = 0; raf = requestAnimationFrame(frame); }
       }
       function halt() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+      function notify() { try { window.dispatchEvent(new Event('zotheos:fxlevel')); } catch (e) {} }
 
       function onMove(x, y) {
         var ih = Math.max(1, window.innerHeight), nx = (x / ih) - 0.5 * window.innerWidth / ih, ny = 0.5 - y / ih;
@@ -8154,15 +8162,15 @@
       window.addEventListener('scroll', function () { dirty = true; }, { passive: true });
       window.addEventListener('resize', function () { dirty = true; if (wanted && gl && reduceMQ.matches) draw(0); }, { passive: true });
       document.addEventListener('visibilitychange', function () { if (document.hidden) halt(); else if (wanted) run(); });
-      cv.addEventListener('webglcontextlost', function (e) { e.preventDefault(); halt(); gl = null; w = h = 0; }, false);
-      cv.addEventListener('webglcontextrestored', function () { if (wanted) run(); }, false);
+      cv.addEventListener('webglcontextlost', function (e) { e.preventDefault(); halt(); gl = null; lost = true; scheduled = false; w = h = 0; }, false);
+      cv.addEventListener('webglcontextrestored', function () { lost = false; if (wanted) run(); }, false);
 
       api.start = function () { wanted = true; dirty = true; run(); };
       api.stop = function () { wanted = false; halt(); cv.classList.remove('is-on'); };
       api.setIntensity = function (l) {
         chosen = (l === null || l === undefined) ? null : Math.max(0, Math.min(2, l | 0));
         level = chosen === null ? (lowEnd ? 0 : 1) : chosen;
-        w = 0; slow = 0; ema = 16;
+        w = 0; slow = 0; calm = 0; throttled = false; fast = 16.7;
         if (gl && wanted && reduceMQ.matches) draw(0);
       };
       api.level = function () { return level; };
@@ -8345,7 +8353,7 @@
           if (running) { running = false; if (raf) { cancelAnimationFrame(raf); raf = null; } }
           if (bctx) bctx.clearRect(0, 0, W, H);
           if (fctx) fctx.clearRect(0, 0, W, H);
-          if (FX) { FX.setIntensity(levelChosen ? LEVELS.indexOf(level) : null); FX.start(); }
+          if (FX) { FX.setIntensity(levelChosen ? LEVELS.indexOf(level) : null); FX.start(); paintLevel(); }
           return;
         }
         if (FX) FX.stop();
@@ -8378,12 +8386,16 @@
       function paintLevel() {
         if (!amtBtn) return;
         var m = mono();
-        var lit = (m && FX && !levelChosen ? FX.level() : LEVELS.indexOf(level)) + 1;
+        var lit = (m && FX ? FX.level() : LEVELS.indexOf(level)) + 1;
         var bars = amtBtn.querySelectorAll('.ra-bar');
         for (var i = 0; i < bars.length; i++) bars[i].classList.toggle('lit', i < lit);
         var name = m ? 'Effect intensity: ' + ['low', 'medium', 'high'][lit - 1] : 'Rain intensity: ' + LEVELS[lit - 1];
         amtBtn.setAttribute('aria-label', name);
         amtBtn.setAttribute('title', name);
+        if (btn) {
+          btn.setAttribute('aria-label', m ? 'Toggle motion and ambient effects' : 'Toggle motion and rain effects');
+          btn.setAttribute('title', m ? 'Motion and ambient effects' : 'Motion & rain effects');
+        }
       }
 
       if (btn) {
@@ -8397,7 +8409,7 @@
       }
       if (amtBtn) {
         amtBtn.addEventListener('click', function () {
-          var cur = (mono() && FX && !levelChosen) ? FX.level() : LEVELS.indexOf(level);
+          var cur = (mono() && FX) ? FX.level() : LEVELS.indexOf(level);
           level = LEVELS[(cur + 1) % LEVELS.length];
           levelChosen = true;
           try { localStorage.setItem(RKEY, level); } catch (e) {}
@@ -8416,6 +8428,7 @@
         if (document.hidden) stop();
         else if (on) start();
       });
+      window.addEventListener('zotheos:fxlevel', paintLevel);
       // Rain reads the theme fresh each frame; switching to or from the default swaps the layer itself.
       if (window.MutationObserver) {
         new MutationObserver(function () {

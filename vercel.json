@@ -29,7 +29,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-o9Fw/i1QTJHJQqS8bKg8ECYlm+EWDAS5K3kP45qPhbo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-orTQjOzApT70Wxn/dsr8UUIm0thj+p3aBWINxPBWxso='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-o9Fw/i1QTJHJQqS8bKg8ECYlm+EWDAS5K3kP45qPhbo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-orTQjOzApT70Wxn/dsr8UUIm0thj+p3aBWINxPBWxso='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
         }
       ]
     },
@@ -47,7 +47,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-o9Fw/i1QTJHJQqS8bKg8ECYlm+EWDAS5K3kP45qPhbo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-orTQjOzApT70Wxn/dsr8UUIm0thj+p3aBWINxPBWxso='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'"
         }
       ]
     },
