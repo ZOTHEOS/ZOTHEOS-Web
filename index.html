@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-jukHxqlp5AHCvfccPINqD+z/RuQdqQi0hTgdmvjHj/8='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-p+jJQzD3MqvxF18Rmk/j5eRNl8bE/L4U8aJia3e3SLk='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -7997,7 +7997,7 @@
         '#else',
         'precision mediump float;',
         '#endif',
-        'uniform vec2 uR;uniform vec4 uD;uniform vec4 uM;uniform vec4 uP;uniform vec4 uH;',
+        'uniform vec2 uR;uniform vec4 uD;uniform vec4 uM;uniform vec4 uP;uniform vec4 uH;uniform vec2 uC;',
         'float hs(vec2 p){vec3 q=fract(vec3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}',
         'float ns(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*f*(f*(f*6.-15.)+10.);',
         'return mix(mix(hs(i),hs(i+vec2(1.,0.)),u.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),u.x),u.y);}',
@@ -8012,35 +8012,31 @@
         'void main(){',
         ' vec2 uv=gl_FragCoord.xy/uR;float as=uR.x/uR.y;',
         ' vec2 p=(uv-.5)*vec2(as,1.);',
-        ' vec2 dm=p-uM.xy;float ln=exp(-dot(dm,dm)*7.)*uM.z;',
-        ' p-=dm*ln*.28;',
         ' vec2 P=p*uP.w+vec2(0.,uP.y);',
-        ' float e=.011,q0,q1;',
-        ' float h0=fld(P,q0),h=h0+gp(p);',
+        ' float px=uP.w/uR.y,e=1.5*px,q0,q1;',
+        ' float h=fld(P,q0)+gp(p);',
         ' float hx=fld(P+vec2(e,0.),q1)+gp(p+vec2(e/uP.w,0.));',
         ' float hy=fld(P+vec2(0.,e),q1)+gp(p+vec2(0.,e/uP.w));',
-        ' vec3 n=normalize(vec3((h-hx)/e*.075,(h-hy)/e*.075,1.));',
+        ' vec2 g=vec2(hx-h,hy-h)/e;',
+        ' float v=h*uC.x,gv=length(g)*uC.x*px+1e-5;',
+        ' float dist=(.5-abs(fract(v)-.5))/gv;',
+        ' float line=(1.-smoothstep(uC.y*.3,uC.y,dist))*(1.-smoothstep(.2,.45,gv));',
+        ' float major=step(mod(floor(v+.5),4.),.5);',
+        ' vec3 n=normalize(vec3(-g*.075,1.));',
         ' vec3 L=normalize(vec3(-.35,.55,.75));',
-        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),52.);',
-        ' vec3 rf=reflect(vec3(0.,0.,-1.),n);',
-        ' float env=exp(-pow((rf.y-.42)*5.,2.))*smoothstep(-.6,.2,rf.x);',
-        ' float crest=smoothstep(.43,.82,h0);',
-        ' float pool=.25+.75*smoothstep(.2,.9,q0);',
-        ' float c=(sp*.9+env*.38)*crest*pool;',
-        ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.85);',
-        ' float rr=length(dm),ad=max(dot(dm/(rr+1e-4),vec2(.53,-.85)),0.);',
-        ' float arc=uM.z*exp(-pow((rr-.13)*26.,2.))*ad*ad*ad*(1.-rd);',
-        ' c=c*(1.-.45*ln)+arc*.2;',
-        ' float v=1.-smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.4)));',
-        ' c*=uP.x*(.35+.65*v)*(1.-.62*rd);',
-        ' c=1.-exp(-c*2.);',
+        ' float lam=max(dot(n,L),0.);',
+        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),24.);',
+        ' float c=line*(.1+.48*lam*lam+.85*sp)*(.38+.62*major);',
+        ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.55);',
+        ' float vg=1.-smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.4)));',
+        ' c*=uP.x*(.4+.6*vg)*(1.-.88*rd);',
         ' c=clamp(c,0.,1.);',
         ' gl_FragColor=vec4(vec3(c),c);}'
       ].join('\n');
 
       var gl = null, prog = null, U = {}, failed = false, scheduled = false, lost = false;
       var raf = 0, wanted = false, level = 1, chosen = null, last = 0, T = 0, tick = 0;
-      var GAIN = [0.6, 1, 1.4];
+      var GAIN = [0.7, 1, 1.3], DENS_FX = [10, 13, 17];   // intensity: line brightness and contour density
       // Render quality is automatic and separate from intensity: the internal resolution starts near the device's
       // own pixels and steps down only if this device cannot hold the display's frame rate.
       var TIER = [1.0, 0.8, 0.62, 0.48, 0.36], TCAP = [8.3e6, 4.2e6, 2.4e6, 1.3e6, 0.6e6], tier = 1;
@@ -8077,7 +8073,7 @@
           gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
           var loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
           U.R = gl.getUniformLocation(prog, 'uR'); U.D = gl.getUniformLocation(prog, 'uD');
-          U.M = gl.getUniformLocation(prog, 'uM'); U.P = gl.getUniformLocation(prog, 'uP'); U.H = gl.getUniformLocation(prog, 'uH');
+          U.M = gl.getUniformLocation(prog, 'uM'); U.P = gl.getUniformLocation(prog, 'uP'); U.H = gl.getUniformLocation(prog, 'uH'); U.C = gl.getUniformLocation(prog, 'uC');
           gl.clearColor(0, 0, 0, 0);
           return true;
         } catch (e) { gl = null; failed = true; return false; }
@@ -8122,6 +8118,7 @@
         gl.uniform4f(U.M, mx, my, press, Math.min(rip, 1));
         gl.uniform4f(U.P, GAIN[level] * gview, sc, (T * 1.9) % 6.2831853, w < h ? 1.55 : 1.0);
         gl.uniform4f(U.H, H[0], H[1], H[2], H[3]);
+        gl.uniform2f(U.C, DENS_FX[level], 1.15 * Math.max(1, w / Math.max(1, window.innerWidth)));   // ~1.15 CSS px lines
         gl.clear(gl.COLOR_BUFFER_BIT);
         gl.drawArrays(gl.TRIANGLES, 0, 3);
         if (!cv.classList.contains('is-on')) cv.classList.add('is-on');
