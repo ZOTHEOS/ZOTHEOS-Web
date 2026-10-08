@@ -129,30 +129,44 @@
     .hero h1 em { font-style: italic; }
     .hero p.lede { font-size: 1.0625rem; max-width: 60ch; color: var(--ink-2); text-wrap: pretty; }
 
-    /* Glass boxes: the chrome lives on the 1px rim, the body is flat black, and one narrow specular band
-       travels across it. The page has no script, so the band is a pseudo-element moved by transform alone
-       (composited: no style recalculation per frame while it idles). */
+    /* Glass boxes: the chrome lives on the 1px rim, the body is flat black, and one narrow specular glint
+       travels along the rim. QA1: the glint is confined to the rim (a ring mask on a layer the size of the
+       border box), so it never passes under the copy: on a display that lifts near-black, a band under the text
+       turned grey and erased letters. */
     .cta-card, .status-card {
       position: relative;
-      isolation: isolate;   /* the band paints over the black body and under the text */
-      overflow: hidden;     /* clipped to the padding box, so it never crosses the rim */
+      isolation: isolate;   /* the glint paints over the rim's chrome and under the text */
       border: 1px solid transparent;
       border-radius: 2px;
       background:
         linear-gradient(#000000, #000000) padding-box,
-        var(--chrome-rim) border-box;
+        linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.62) 26%, rgba(255, 255, 255, 0.55) 72%, rgba(255, 255, 255, 0.66) 100%) border-box;
     }
-    .cta-card::before, .status-card::before {
-      content: "";
-      position: absolute; inset: 0;
+    /* The glint: a ring (the rim, masked) that clips a wide band moved by transform alone, so the band runs on the
+       compositor and the two cards are not repainted every frame. The cards' rim is a little lower than the
+       page's chrome so the glint has headroom to read (the top stays brightest, nothing under 0.55). */
+    .rim-glint {
+      position: absolute; inset: -1px;
       z-index: -1;
       pointer-events: none;
-      background: linear-gradient(104deg in oklab, transparent 47.5%, rgba(255, 255, 255, 0.20) 50%, transparent 52.5%);
-      transform: translateX(-90%);
-      animation: z-sheen-x 13s cubic-bezier(0.45, 0.05, 0.25, 1) 1.2s infinite;
+      padding: 1px;
+      border-radius: inherit;
+      overflow: hidden;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
     }
-    .status-card::before { animation-delay: 4s; }
-    @keyframes z-sheen-x { 0%, 6% { transform: translateX(-90%); } 46%, 100% { transform: translateX(90%); } }
+    .rim-glint::before {
+      content: "";
+      position: absolute; top: 0; bottom: 0; left: 0;
+      width: 200%;   /* the band sits at its middle: it runs from just off the left rim to just off the right one */
+      background: linear-gradient(104deg, transparent 46.5%, rgba(255, 255, 255, 0.95) 50%, transparent 53.5%);
+      transform: translateX(-57%);
+      will-change: transform;
+      animation: z-sheen-x 13s cubic-bezier(0.4, 0, 0.6, 1) 1.2s infinite;
+    }
+    .status-card .rim-glint::before { animation-delay: 4s; }
+    @keyframes z-sheen-x { 0%, 4% { transform: translateX(-57%); } 64%, 100% { transform: translateX(7%); } }
 
     /* The page's fork: exactly one state renders. */
     .cta-card { margin: 40px 0 8px; padding: 28px; }
@@ -234,7 +248,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .cta-card::before, .status-card::before { animation: none; display: none; }
+      .rim-glint { display: none; }
       .btn, .btn .arrow { transition: none; }
     }
   </style>
@@ -253,7 +267,7 @@
         <p class="status-date">Development update: October 4, 2026</p>
         <h1>Run your <em>own</em> ZOTHEOS.</h1>
         <p class="lede">The updated Windows desktop has been built for internal testing. First-run setup, installation and clean-machine checks are still in progress before a public download.</p>
-        <div class="cta-card">
+        <div class="cta-card"><span class="rim-glint" aria-hidden="true"></span>
           <div class="state-label">Windows desktop: validation in progress</div>
           <p>No replacement installer is available from this page yet. The release filename, checksum and instructions will be published together when that candidate is ready.</p>
           <div class="status-actions">
@@ -266,7 +280,7 @@
       <div class="greca">where development stands</div>
       <section id="progress">
         <h2>Built, then checked.</h2>
-        <div class="status-card">
+        <div class="status-card"><span class="rim-glint" aria-hidden="true"></span>
           <p>Security and three-role model-persistence repairs are accepted in source. The updated backend and desktop shell were built internally. A packaged-test process-tracking correction is also committed.</p>
           <p>Those source and build milestones do not establish a finished installer or a complete runtime pass. Desktop validation continues from the corrected test helper.</p>
         </div>

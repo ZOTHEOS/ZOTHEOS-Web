@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-ZEm5Gk8onogyp+rAvJ37fGv3Ec3rcUfHjo+S24/1XJ4=' 'sha256-dwjpEy0NYb4UgtSRX9EFHqahd2CRAUCekxoP5a1c+6w='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-8yZNCYydZi5gXgaWMidS5FFjePJNmBd6JSQYgjgvorY=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -3781,18 +3781,19 @@
       .mirror-btn { animation: none !important; }
     }
 
+    /* QA1: a flat opaque black scrim (no blur, so the page behind can never ghost through or posterize), and
+       'safe' centring: on a short window the column starts at the top and scrolls, never cut off above. */
     .mirror-overlay {
       position: fixed; inset: 0;
       z-index: 9500;
       display: flex;
       align-items: center;
       justify-content: center;
+      justify-content: safe center;
       flex-direction: column;
       gap: 34px;
       padding: 32px 22px;
-      background: rgba(2, 4, 6, 0.92);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: #000000;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -3807,27 +3808,21 @@
       transition: opacity 0.7s var(--ease-ceremony), visibility 0s;   /* visible at once, so focus can land in it */
     }
     body.mirror-open { overflow: hidden; }
-    .mirror-smoke {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-    }
+    /* The obsidian itself, lift-safe in every theme: a flat #000 face, the chrome on the 1px rim, and one small
+       crisp specular glint that follows the cursor (no broad dim dome for a lifted display to turn grey). */
     .mirror-disc {
       position: relative;
-      width: min(46vw, 300px);
+      width: min(46vw, 300px, 30vh);
+      min-width: 120px;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       flex-shrink: 0;
+      border: 1px solid transparent;
       background:
-        radial-gradient(circle at var(--sx, 32%) var(--sy, 26%), rgba(180, 200, 220, 0.13) 0%, transparent 36%),
-        radial-gradient(circle at 70% 78%, rgba(var(--cochineal-rgb), 0.06) 0%, transparent 45%),
-        radial-gradient(circle at center, #100e0c 0%, #060507 62%, #010102 100%);
-      border: 1px solid rgba(244, 236, 216, 0.20);
-      box-shadow:
-        inset 0 2px 18px rgba(0, 0, 0, 0.8),
-        inset 0 -1px 0 rgba(244, 236, 216, 0.05),
-        0 0 60px rgba(0, 0, 0, 0.6),
-        0 0 90px rgba(140, 160, 175, 0.07);
+        radial-gradient(ellipse 26px 9px at var(--sx, 32%) var(--sy, 26%), rgba(255, 255, 255, 0.82) 0 55%, rgba(255, 255, 255, 0) 90%) padding-box,
+        linear-gradient(#000000, #000000) padding-box,
+        conic-gradient(from 200deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.22) 25%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.20) 75%, rgba(255, 255, 255, 0.78)) border-box;
+      box-shadow: none;
       z-index: 2;
     }
     .mirror-disc::after {
@@ -3835,7 +3830,7 @@
       position: absolute;
       inset: 10px;
       border-radius: 50%;
-      border: 1px solid rgba(244, 236, 216, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.24);
     }
     .mirror-copy {
       position: relative;
@@ -3897,7 +3892,7 @@
       min-width: min(74vw, 400px);
     }
     .mirror-row .mr-val {
-      color: #5EBE6A;
+      color: #EDE4D3;   /* QA1: disclosures, not live statuses, so no status green (G1); the mirror stays black in every theme */
       text-transform: none;
       letter-spacing: 0.06em;
       text-align: right;
@@ -3906,7 +3901,7 @@
       font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 0.14em;
-      color: #5a5247;
+      color: #8A7F6E;
       text-transform: uppercase;
       margin-bottom: 24px;
     }
@@ -3932,11 +3927,14 @@
       font-size: 9px;
       letter-spacing: 0.30em;
       text-transform: uppercase;
-      color: #3a342d;
+      color: #8A7F6E;
     }
     @media (max-width: 720px) {
       .mirror-overlay { gap: 22px; }
-      .mirror-disc { width: min(50vw, 190px); }
+      .mirror-disc { width: min(50vw, 190px, 24vh); }
+    }
+    @media (max-height: 820px) {
+      .mirror-overlay { gap: 22px; padding-block: 24px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .mirror-overlay { transition: none; }
@@ -4562,20 +4560,21 @@
     html:not([data-theme]) .btn-primary:focus-visible { outline-color: #FFFFFF; }
 
     /* ---------- Round floating controls ---------- */
+    /* QA1 (G2): a flat #000 face like .btn; the chrome lives on the conic rim only, so the white arrow keeps its
+       contrast and a lifted display shows no grey dome. */
     html:not([data-theme]) .scroll-top,
     html:not([data-theme]) .mirror-btn {
       color: #FFFFFF;
       border: 1px solid transparent;
       background:
-        radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.24) 0%, transparent 42%) padding-box,
-        linear-gradient(180deg, #1E1E1E 0%, #050505 100%) padding-box,
+        linear-gradient(#000000, #000000) padding-box,
         conic-gradient(from 200deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.10) 25%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.08) 75%, rgba(255, 255, 255, 0.75)) border-box;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 8px 22px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.85);
     }
     html:not([data-theme]) .scroll-top svg { filter: none; }
     html:not([data-theme]) .scroll-top:hover,
     html:not([data-theme]) .mirror-btn:hover {
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.12), 0 8px 22px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 8px 22px rgba(0, 0, 0, 0.85);
     }
     html:not([data-theme]) .mirror-btn { animation: none; }
     html:not([data-theme]) .mirror-btn::after { border-color: rgba(255, 255, 255, 0.12); }
@@ -4717,14 +4716,7 @@
     html:not([data-theme]) .custom-cursor.hover-link .cc-ring { border-color: #FFFFFF; }
     html:not([data-theme]) .custom-cursor .cc-dot { background: #FFFFFF; }
     html:not([data-theme]) .custom-cursor .cc-ring { border-color: #FFFFFF; }
-    html:not([data-theme]) .mirror-disc {
-      background:
-        radial-gradient(circle at var(--sx, 32%) var(--sy, 26%), rgba(255, 255, 255, 0.14) 0%, transparent 36%),
-        radial-gradient(circle at center, #121212 0%, #060606 62%, #000000 100%);
-      border-color: rgba(255, 255, 255, 0.22);
-      box-shadow: inset 0 2px 18px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 0 60px rgba(0, 0, 0, 0.6);
-    }
-    html:not([data-theme]) .mirror-overlay { background: rgba(0, 0, 0, 0.94); }
+    html:not([data-theme]) .mirror-overlay { background: #000000; }
     html:not([data-theme]) .mirror-row { color: #A3A3A3; border-bottom-color: rgba(255, 255, 255, 0.10); }
     html:not([data-theme]) .mirror-row .mr-val { color: #FFFFFF; }
     html:not([data-theme]) .mirror-note { color: #8A8A8A; }
@@ -4764,7 +4756,7 @@
     html:not([data-theme]) .zi-ring { border-color: rgba(255, 255, 255, 0.85); }
     html:not([data-theme]) .zi-mark--interactive:focus-visible { outline-color: #FFFFFF; }
     html:not([data-theme]) .zi-dust { filter: grayscale(1); }   /* the shared intro module draws warm dust */
-    html:not([data-theme]) .mirror-disc::after { border-color: rgba(255, 255, 255, 0.08); }
+
     html:not([data-theme]) .custom-cursor .cc-ring.ping { animation-name: z-ping; }
     @keyframes z-ping {
       0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
@@ -6486,10 +6478,9 @@
        by the effect from its own geometry). The label and the strip's rims stay clear of them: the inset is how far
        a band reaches past the column edge, plus a 16px breath ((100vw - 100%) / 2 is the column margin, a few px
        generous where a scrollbar takes width). Zero where the column is clear of the bands (1920 and up). */
+    /* QA1: the bands fade out before the first section after the hero, so they never reach #proof; the inset is
+       zero in every motion mode (the receipt sits flush with the grid, and nothing shifts with the Motion choice). */
     .proof-clear { --fx-clear: 0px; }
-    html.has-mono-fx:not([data-theme]) body:not(.fx-off) .proof-clear {
-      --fx-clear: max(0px, calc(var(--fx-reach, 0px) + 16px - (100vw - 100%) / 2));
-    }
     .spec-label {
       margin: 14px 0 0;
       padding-inline-end: var(--fx-clear);
@@ -6645,11 +6636,115 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0.58) 60%, rgba(255, 255, 255, 0.68) 100%) border-box;
     }
     /* ==== end W2-01 / W2-08 / W2-06 ==== */
+
+    /* ==== QA1: the verified QA findings ==== */
+    /* The intro's Sound control ships hidden until the sound file is deployed (see SOUND_FILE_DEPLOYED). */
+    .intro-controls button[hidden] { display: none; }
+
+    /* Floating orbs (right and left, 24px in, 54px wide) never cover a resting control or the page's last line:
+       keyboard focus scrolls clear of them, and the footer's end rises above them where the column reaches the
+       orbs (phones dock them in the bottom bar, handled in W1-15). */
+    @media (min-width: 641px) {
+      html { scroll-padding-bottom: 96px; }
+    }
+    @media (min-width: 641px) and (max-width: 1440px) {
+      footer { padding-bottom: 96px; }
+    }
+    /* The specimen label stays clear of the mirror orb where the column reaches it (the gap from the column edge
+       to the window edge is (100vw - 100%) / 2; the orb's inner edge sits 78px in, plus a 16px breath). */
+    @media (min-width: 721px) {
+      .spec-label { padding-inline-end: max(0px, calc(94px - (100vw - 100%) / 2)); }
+    }
+
+    /* Phone comparison: each stacked answer names its column (the header row stays for screen readers). */
+    .cc-col { display: none; }
+    @media (max-width: 720px) {
+      .compare-row.compare-head {
+        display: grid; position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip-path: inset(50%); white-space: nowrap; border: 0;
+      }
+      .compare-row.compare-head + .compare-row { border-top: 0; }
+      .compare-table { position: relative; }
+      .compare-row > :is(.yes, .no) .cc-col {
+        display: block;
+        margin-bottom: 8px;
+        font-family: var(--mono); font-size: 10px; font-weight: 500; line-height: 14px;
+        letter-spacing: 0.2em; text-transform: uppercase;
+        color: var(--ink-3);
+      }
+      .compare-row > :is(.yes, .no) .cc-col { color: var(--ink-2); }   /* 4.5:1 in every theme (Codex --ink-3 was 3.7) */
+      /* the mark sits on the answer's line, under the column name */
+      .compare-row > .yes::before, .compare-row > .no::before { top: 44px; }
+      .compare-row > .yes::after { top: 49px; }
+      .compare-row > .no::after { top: 50px; }
+    }
+
+    /* Workspace palette. No match: the three offers lie over the tool list (every tool is dimmed then), so the
+       box keeps one height and nothing below it moves. */
+    .ws-pal-list { position: relative; }
+    .ws-pal-fb { position: absolute; top: 20px; left: 20px; right: 20px; grid-column: auto; order: 0; margin: 0; z-index: 1; }
+    .ws-pal-list.is-none > .ws-pal-group:not(.ws-pal-fb) { visibility: hidden; }
+    .ws-pal-fb .ws-pal-text { flex: none; white-space: nowrap; }
+    @media (max-width: 860px) {
+      /* One column (tall list): the overlay would leave a screen of empty box below the offers, and the status line
+         already sits under the field here, so the offers take the list's place and the tools step out. */
+      .ws-pal-fb { position: static; margin: 0 0 4px; }
+      .ws-pal-list.is-none > .ws-pal-group:not(.ws-pal-fb) { display: none; }
+    }
+    .ws-pal-opt.is-miss { cursor: pointer; }   /* a dimmed tool still answers a press (it clears the query) */
+    @media (max-width: 860px) {
+      /* One column: the answer line sits right under the field, where the pressed tool is, never far below. */
+      .ws-pal { display: flex; flex-direction: column; }
+      .ws-pal-bar { order: 0; }
+      .ws-pal-field { order: 1; }
+      .ws-pal-foot { order: 2; margin-top: 0; padding-top: 12px; padding-bottom: 0; border-top: 0; }
+      .ws-pal-list { order: 3; }
+      .ws-pal-status {
+        flex: 1 1 100%; text-align: left; line-height: 1.4; min-height: 2.8em;
+        display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+      }
+    }
+    @media (max-width: 520px) {
+      .ws-pal-fb { left: 14px; right: 14px; }
+      .ws-pal-foot:has(.ws-pal-status:empty) { margin-top: 0; padding: 12px 14px 0; border-top-color: transparent; }
+      .ws-pal-status { min-height: 2.8em; }
+      .ws-pal-fb .ws-pal-opt { flex-wrap: wrap; column-gap: 12px; row-gap: 2px; padding-block: 8px; }
+      .ws-pal-fb .ws-pal-opt[aria-selected="true"]::after { order: 1; }
+      .ws-pal-fb .ws-pal-echo { order: 2; flex: 1 1 100%; white-space: normal; overflow-wrap: anywhere; }
+    }
+
+    /* Memory card on phones: the scope label lines up with the field keys under it. */
+    @media (max-width: 480px) {
+      .mv-bound-label { left: 14px; }
+    }
+
+    /* Waitlist on phones: one full-width button, its label on one line. */
+    @media (max-width: 640px) {
+      .waitlist-form .btn { flex: 1 1 100%; justify-content: center; padding-inline: 20px; letter-spacing: 0.28em; }
+      .waitlist-form .btn .bl { white-space: nowrap; }
+      .waitlist-form .waitlist-input { min-width: 0; flex-basis: 100%; }
+    }
+    @media (max-width: 359px) {
+      .waitlist-form .btn { padding-inline: 10px; gap: 10px; letter-spacing: 0.14em; }
+    }
+
+    /* The console's status values are illustrative, not live: theme ink, never status green. */
+    [data-theme] .console-status .on { color: var(--ink-2); }
+    [data-theme] .console-status .on::before { background: currentColor; }
+    [data-theme] .console-titlebar .ts-meta::before { background: var(--ink-3); }   /* nothing here is live */
+
+    /* Small labels in the colour themes read at 4.5:1 or better against what is really behind them. */
+    [data-theme] :is(.council-scroll-hint, .council-scroll-head .section-label, .cp-model, .cp-model b,
+      .instrument-card .ic-index, .spec-label, .council-strip > span:not(.center), .pm-cap, .proof-item, .cp-asks .cp-asks-label) { color: var(--ink-2); }
+    [data-theme="codex"] .section-label, [data-theme="skeleton"] .section-label { color: var(--ink-2); }
+    /* Maya's story head sits on the bright aurora: only the full ink reads there. */
+    :root[data-theme="maya"] :is(.council-scroll-hint, .council-scroll-head .section-label) { color: var(--ink); }
+    /* ==== end QA1 ==== */
   </style>
 </head>
 <body class="page-loading">
 
-  <a class="skip-link" href="#features">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <svg class="zth-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <!-- G6: the canonical council glyphs, drawn once and reused (pillars, story, bento) -->
     <symbol id="fret-mini" viewBox="0 0 10 10"><!-- separator: three steps and a hook (xicalcoliuhqui grammar) -->
@@ -6698,7 +6793,7 @@
     <!-- W1-08: no request until the visitor presses Sound; the script attaches this source on that first press. -->
     <audio id="introAudio" preload="none" data-src="/static/zotheos_intro.mp3" data-type="audio/mpeg"></audio>
     <div class="intro-controls">
-      <button id="introSound" type="button" aria-pressed="false">Sound off</button>
+      <button id="introSound" type="button" aria-pressed="false" hidden>Sound off</button>
       <button id="skipIntro" type="button">Enter ZOTHEOS &rarr;</button>
     </div>
   </div>
@@ -6786,6 +6881,8 @@
     </div>
   </nav>
 
+  <!-- QA1: the page's one main landmark, from the hero to the support section; the skip link lands here. -->
+  <main id="main" tabindex="-1" data-anchor-target>
   <section class="hero" id="top">
     <div class="hero-embers" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
@@ -7699,68 +7796,68 @@
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Inference location</div>
-          <div role="cell" class="yes">On your hardware</div>
-          <div role="cell" class="no">Remote host hardware</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>On your hardware</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Remote host hardware</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Account required</div>
-          <div role="cell" class="yes">No</div>
-          <div role="cell" class="no">Check access requirements</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>No</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check access requirements</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Data used for training</div>
-          <div role="cell" class="yes">Local edition stores data locally</div>
-          <div role="cell" class="no">Check the provider policy</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Local edition stores data locally</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check the provider policy</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Reasoning method</div>
-          <div role="cell" class="yes">Three independent cores, synthesized</div>
-          <div role="cell" class="no">Provider-specific architecture</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Three independent cores, synthesized</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Provider-specific architecture</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Citations</div>
-          <div role="cell" class="yes">Strict-mode grounding checks</div>
-          <div role="cell" class="no">Check citation behavior</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Strict-mode grounding checks</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check citation behavior</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Confidence disclosed</div>
-          <div role="cell" class="yes">Signals when available</div>
-          <div role="cell" class="no">Check available signals</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Signals when available</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check available signals</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Works offline</div>
-          <div role="cell" class="yes">Local inference after setup</div>
-          <div role="cell" class="no">Remote features need network</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Local inference after setup</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Remote features need network</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Funding model</div>
-          <div role="cell" class="yes">Independent, no investors</div>
-          <div role="cell" class="no">Provider-specific funding</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Independent, no investors</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Provider-specific funding</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Proof of offline</div>
-          <div role="cell" class="yes">Backend ledger and canary</div>
-          <div role="cell" class="no">Check network controls</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Backend ledger and canary</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check network controls</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Track record</div>
-          <div role="cell" class="yes">Local forecast records</div>
-          <div role="cell" class="no">Check provider records</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Local forecast records</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check provider records</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">When it changes its mind</div>
-          <div role="cell" class="yes">Logged, with the evidence</div>
-          <div role="cell" class="no">Check change records</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Logged, with the evidence</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check change records</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">When it is wrong</div>
-          <div role="cell" class="yes">Corrections with provenance</div>
-          <div role="cell" class="no">Check correction process</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Corrections with provenance</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check correction process</div>
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Receipts</div>
-          <div role="cell" class="yes">Signed, offline-verifiable</div>
-          <div role="cell" class="no">Check provider records</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Signed, offline-verifiable</div>
+          <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Check provider records</div>
         </div>
       </div>
     </div>
@@ -7822,7 +7919,7 @@
         </details>
         <details class="faq-item">
           <summary>
-            <span class="faq-q">What is the "evidence vault"?</span>
+            <span class="faq-q">What is the &ldquo;evidence vault&rdquo;?</span>
             <span class="zd-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-a">A local, tiered knowledge base the council can cite. Retrieval can rerank sources, and strict mode checks grounding and citation tags. A citation still needs to be inspected against its source.</div>
@@ -7964,6 +8061,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="greca-divider" style="margin-bottom: 36px;">
@@ -8045,7 +8143,7 @@
   <button class="mirror-btn" id="mirrorBtn" type="button" aria-label="Open the obsidian mirror" title="The obsidian mirror"></button>
 
   <div class="mirror-overlay" id="mirrorOverlay" role="dialog" aria-modal="true" aria-label="The obsidian mirror" aria-hidden="true">
-    <canvas class="mirror-smoke" id="mirrorSmoke" aria-hidden="true"></canvas>
+
     <div class="mirror-disc" id="mirrorDisc" aria-hidden="true"></div>
     <div class="mirror-copy">
       <div class="m-stage" data-stage="1">
@@ -8454,6 +8552,15 @@
           try { btn.focus({ preventScroll: true }); } catch (err) { btn.focus(); }
         }
       });
+      /* QA1: a Tab out of the panel or of its button, either way, closes it (as the section sheet does), so it
+         never stays open over the hero while focus walks the page behind it. */
+      var tabOut = function (e) {
+        var to = e.relatedTarget;
+        if (!to || pop.contains(to) || to === btn || !pop.matches(':popover-open')) return;
+        try { pop.hidePopover(); } catch (x) {}
+      };
+      pop.addEventListener('focusout', tabOut);
+      btn.addEventListener('focusout', tabOut);
       if (window.CSS && CSS.supports && CSS.supports('position-area: bottom span-right')) return;
       function place() {
         if (!pop.matches(':popover-open')) return;
@@ -8535,6 +8642,13 @@
       var snd = document.getElementById('introSound');
       var audio = document.getElementById('introAudio');
       if (!o) return;
+      /* QA1 sound switch. The intro sound file (static/zotheos_intro.mp3) is not deployed yet, so the Sound button
+         stays hidden (it ships with the hidden attribute) and the file is never requested. To turn sound on once
+         the file is live, change this one line to true: the button then shows and fetches the file on its first
+         press, exactly as before. */
+      var SOUND_FILE_DEPLOYED = false;
+      if (SOUND_FILE_DEPLOYED && snd && audio) snd.hidden = false;
+      else { snd = null; audio = null; }
       var d = false, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0;
       var pending = { token: 0, timeout: null, listeners: [] };   /* audio work that may still be in flight */
       var animStarted = false, onParts = null;   /* audio waits for the animation's first frame (images may still load) */
@@ -9028,6 +9142,17 @@
         }
         setTimeout(check, 120);
       }
+      // QA1: a link to a closed disclosure (footer "Website privacy", or /#site-privacy from the release page)
+      // opens it before the jump, so the visitor lands on its content rather than a collapsed row.
+      function openFor(target) {
+        var d = target && target.closest ? target.closest('details') : null;
+        while (d) { d.open = true; d = d.parentElement ? d.parentElement.closest('details') : null; }
+      }
+      window.addEventListener('hashchange', function () {
+        var t = null;
+        try { t = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) {}
+        if (t) openFor(t);
+      });
       // Move keyboard focus with the jump (skip link, nav), without a second scroll.
       function focusTarget(target) {
         if (!target.matches('a[href], button, input, select, textarea, [tabindex]')) {
@@ -9042,6 +9167,7 @@
         var deep = null;
         try { deep = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) {}
         if (deep) {
+          openFor(deep);
           window.addEventListener('load', function () { setTimeout(function () { settle(deep, 3); }, 200); }, { once: true });
           window.addEventListener('zotheos:cvwarm', function () { settle(deep, 3); }, { once: true });
         }
@@ -9053,6 +9179,7 @@
           var target = document.querySelector(href);
           if (!target) return;
           e.preventDefault();
+          openFor(target);
           var top = aimY(target);
           if (window.zSmoothTo && !reduce) {
             window.zSmoothTo(top);
@@ -9268,35 +9395,9 @@
       // loop), so the words hold still.
     })();
 
-    /* Hero depth — the mark and headline sink at gentle, different
-       rates as you scroll away. Transform + opacity only (compositor
-       friendly); one rAF-coalesced write per scroll, no layout reads,
-       no skew. Disabled under reduced motion and on coarse pointers. */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
-      if (reduce || coarse) return;
-      var wrap = document.querySelector('.hero-forge');
-      var head = document.querySelector('.hero-headline');
-      if (!wrap) return;
-      var queued = false;
-      function paint() {
-        queued = false;
-        var y = window.scrollY;
-        var vh = window.innerHeight;
-        if (y > vh * 1.25 || document.body.classList.contains('page-loading')) return;
-        wrap.style.transitionDelay = '0s';
-        wrap.style.transform = 'translate3d(0,' + (y * 0.28).toFixed(1) + 'px,0)';
-        wrap.style.opacity = Math.max(0, 1 - y / (vh * 0.9)).toFixed(3);
-        if (head) {
-          head.style.transitionDelay = '0s';
-          head.style.transform = 'translate3d(0,' + (y * 0.12).toFixed(1) + 'px,0)';
-        }
-      }
-      window.addEventListener('scroll', function () {
-        if (!queued) { queued = true; requestAnimationFrame(paint); }
-      }, { passive: true });
-    })();
+    /* QA1: the hero's scroll parallax (the mark and headline sinking at different rates) is retired. Moving at
+       different rates, the headline slid over the subtitle and the mark's captions over the eyebrow, and it ran in
+       Still too. The hero now scrolls as one locked piece (W1-05), so nothing in it can collide. */
 
     /* Page-load reveal — drop the .page-loading class once everything painted */
     (function () {
@@ -9463,7 +9564,8 @@
         thinkEl.classList.add('active');
         rows.forEach(function (r) { setRow(r, 'committed', 1); });
         frame.classList.remove('is-thinking');
-        frame.classList.add('answered', 'replayable');
+        frame.classList.add('answered');
+        frame.classList.toggle('replayable', !stillNow());   /* QA1: no Replay in Still, as under reduced motion */
         announce();
       }
       function later(fn, ms) { var my = run; setTimeout(function () { if (my === run) fn(); }, ms); }
@@ -9575,6 +9677,7 @@
       window.addEventListener('zotheos:effectschange', function () {
         if (stillNow() && !done) endState();
         else if (!stillNow() && !started && done) reset();   // back to Living before it was ever seen: it will play
+        if (done) frame.classList.toggle('replayable', !stillNow());   // Replay shows only where it can play
       });
     })();
 
@@ -9642,8 +9745,10 @@
       var total = 0, stageW = 0, lastF = -1, lastIn = false, cur = -1, floor = false;
       var REST = [0.3, 1.3, 2.3];   /* where a seat jump lands, in segments: well inside each plateau */
 
+      /* QA1: Still is treated exactly like reduced motion here: the story stacks and nothing pans with the scroll. */
       function shouldPin() {
-        return window.innerWidth > 760 && !reduceMQ.matches;
+        return window.innerWidth > 760 && !reduceMQ.matches && !document.body.classList.contains('fx-off') &&
+          document.documentElement.getAttribute('data-motion') !== 'still';
       }
       // The scrolls draw (and undraw) only while motion is allowed; otherwise they are simply drawn.
       function syncLive() {
@@ -9778,7 +9883,7 @@
       applyMode();
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', function () { applyMode(); onScroll(); });
-      window.addEventListener('zotheos:effectschange', syncLive);
+      window.addEventListener('zotheos:effectschange', function () { syncLive(); applyMode(); onScroll(); });
       window.addEventListener('zotheos:cvwarm', function () { if (shouldPin()) { remeasure(); onScroll(); } });
       if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', function () { syncLive(); applyMode(); onScroll(); });
       onScroll();
@@ -9888,6 +9993,8 @@
       var chip = document.getElementById('dayChip');
       if (chip) {
         chip.textContent = number + ' ' + sign[0];
+        /* QA1 (WCAG 2.5.3): the accessible name begins with the visible text. */
+        chip.setAttribute('aria-label', number + ' ' + sign[0] + ', open the obsidian mirror');
       }
     })();
 
@@ -9896,14 +10003,15 @@
       var btn = document.getElementById('mirrorBtn');
       var ov = document.getElementById('mirrorOverlay');
       if (!btn || !ov) return;
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+      /* QA1: Still (the Motion choice) is read when the mirror opens, like the OS setting: everything at once. */
+      function stillNow() {
+        return reduceMQ.matches || document.body.classList.contains('fx-off') ||
+          document.documentElement.getAttribute('data-motion') === 'still';
+      }
       var disc = document.getElementById('mirrorDisc');
-      var canvas = document.getElementById('mirrorSmoke');
-      var ctx = canvas ? canvas.getContext('2d') : null;
       var stages = ov.querySelectorAll('.m-stage');
       var timers = [];
-      var raf = null;
-      var parts = [];
       var isOpen = false;
       var lastFocus = null;
 
@@ -9921,44 +10029,8 @@
         }
       }
 
-      function startSmoke() {
-        if (reduce || !ctx) return;
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        parts = [];
-        for (var i = 0; i < 34; i++) {
-          parts.push({
-            x: Math.random() * canvas.width,
-            y: canvas.height * 0.4 + Math.random() * canvas.height * 0.7,
-            r: 50 + Math.random() * 110,
-            vy: -(0.12 + Math.random() * 0.30),
-            vx: (Math.random() - 0.5) * 0.18,
-            a: 0.015 + Math.random() * 0.035,
-            ph: Math.random() * 6.28
-          });
-        }
-        var t0 = performance.now();
-        function loop(t) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.globalCompositeOperation = 'lighter';
-          var smoke = document.documentElement.getAttribute('data-theme') ? '140, 160, 175, ' : '150, 150, 150, ';
-          for (var i = 0; i < parts.length; i++) {
-            var p = parts[i];
-            p.y += p.vy;
-            p.x += p.vx + Math.sin((t - t0) / 1900 + p.ph) * 0.28;
-            if (p.y < -p.r) { p.y = canvas.height + p.r; p.x = Math.random() * canvas.width; }
-            var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-            g.addColorStop(0, 'rgba(' + smoke + p.a + ')');
-            g.addColorStop(1, 'rgba(' + smoke + '0)');
-            ctx.fillStyle = g;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, 6.29);
-            ctx.fill();
-          }
-          if (isOpen) raf = requestAnimationFrame(loop);
-        }
-        raf = requestAnimationFrame(loop);
-      }
+      /* QA1: the smoke particles are retired. Soft grey discs on a dim field are exactly what the owner's display
+         lifts into blobs and banding; the scrim is now flat opaque black and nothing animates behind the copy. */
 
       function openMirror() {
         if (isOpen) return;
@@ -9968,9 +10040,9 @@
         ov.classList.add('open');
         ov.setAttribute('aria-hidden', 'false');
         document.body.classList.add('mirror-open');
-        startSmoke();
+        ov.scrollTop = 0;
         stages.forEach(function (s) { s.classList.remove('show'); });
-        if (reduce) {
+        if (stillNow()) {
           stages.forEach(function (s) { s.classList.add('show'); });
         } else {
           [400, 1600, 2900, 4400].forEach(function (d, i) {
@@ -9991,8 +10063,6 @@
         document.body.classList.remove('mirror-open');
         timers.forEach(clearTimeout);
         timers = [];
-        if (raf) { cancelAnimationFrame(raf); raf = null; }
-        if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
         if (lastFocus && lastFocus.focus) lastFocus.focus();
       }
 
@@ -10004,13 +10074,18 @@
         if (e.key === 'Escape') closeMirror();
         else if (e.key === 'Tab' && isOpen) { e.preventDefault(); ov.focus({ preventScroll: true }); }   /* a modal: nothing to tab to inside, nothing behind it */
       });
-      window.addEventListener('resize', function () {
-        if (isOpen && ctx) { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+      // Still chosen while the mirror is open: show what is still waiting at once.
+      window.addEventListener('zotheos:effectschange', function () {
+        if (!isOpen || !stillNow()) return;
+        timers.forEach(clearTimeout);
+        timers = [];
+        stages.forEach(function (s) { s.classList.add('show'); });
       });
 
-      // The specular highlight on the obsidian follows the cursor.
-      if (!reduce && disc) {
+      // The specular highlight on the obsidian follows the cursor (not in Still or under reduced motion).
+      if (disc) {
         ov.addEventListener('mousemove', function (e) {
+          if (stillNow()) return;
           var r = disc.getBoundingClientRect();
           var x = ((e.clientX - r.left) / r.width) * 100;
           var y = ((e.clientY - r.top) / r.height) * 100;
@@ -10538,7 +10613,8 @@
       var raf = 0, running = false, wanted = false, frozen = false, held = false, cleared = false, userLevel = null, autoLvl = 1;
       var t = T_START, lastT = 0;
       var W = 1, H = 1, dpr = 1, dprCap = 2, cssW = 1, cssH = 1, mob = 0;
-      var uDev = 10, cxU = 10, ampU = 1, capU = 8, fadeA = 0, fadeB = 1, flowK = 1, phaseU = 0;
+      var uDev = 10, cxU = 10, ampU = 1, capU = 8, endU = 1e4, fadeA = 0, fadeB = 1, flowK = 1, phaseU = 0;
+      var mvN = 0, shR = 0, fadeR = 1, gL = 1, gR = 1, reachPx = 0, pcL0 = 0, pcL1 = 0, pcR0 = 0, pcR1 = 0, hasR = 1;
       var mx = 0.5, smx = 0.5;
       var verts = new Float32Array(24), px1 = new Uint8Array(4), perf = new Float64Array(60), perfN = 0, perfSkip = 6, perfDone = false;
       var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
@@ -10570,7 +10646,7 @@
           '#endif',
           withDeriv ? '#define FW(x) fwidth(x)' : '#define FW(x) uPx',
           'uniform vec2 uRes; uniform float uT; uniform float uU; uniform float uPx; uniform float uCx; uniform float uAmp;',
-          'uniform float uCap; uniform vec2 uFade; uniform vec4 uL; uniform float uGain; uniform vec2 uFl;',
+          'uniform float uCap; uniform vec2 uFade; uniform vec4 uL; uniform float uGain; uniform vec2 uFl; uniform float uEnd; uniform vec4 uR;',
           'const float TAU = 6.2831853; const float W0 = 0.01308997; const float RC = 0.22;',
           /* rounded box, keeps the winner so its gradient is computed once */
           'void bx(vec2 p, vec2 c, vec2 h, inout float bd, inout vec4 bb){',
@@ -10601,7 +10677,9 @@
           '  float side = fc.x < uRes.x * 0.5 ? 0.0 : 1.0;',
           /* canonical frame: the right band is the left band turned 180 degrees about the screen centre */
           '  vec2 q = side < 0.5 ? vec2(fc.x, uRes.y - fc.y) : vec2(uRes.x - fc.x, fc.y);',
-          '  float X = q.x / uU, Y = q.y / uU;',
+          /* uR: x moves the right piece rigidly toward its near cap (narrow windows: below the header), y turns its
+             far-end fade on or off, z and w are the per-side gains (a corner piece steps aside when text comes near) */
+          '  float X = q.x / uU, Y = q.y / uU + side * uR.x;',
           '  float t = uT + side * 37.0;',
           '  vec2 Lc = side < 0.5 ? uL.xy : uL.zw;',
           /* centreline: slow drift plus a long snake; max in-plane rotation about 0.09 rad */
@@ -10618,13 +10696,18 @@
           '  float s = ((X - cy) - (Y - yy) * sl) / Ln;',          /* across, + toward the screen centre */
           '  float a = yy;',                                        /* along, + away from the capped end */
           '  float ua = a - uCap;',
+          /* QA1: the right band also closes in a cap at its far end (uEnd), below the header, so it never runs
+             under the header controls; the left band's far end lies past the screen (uEnd is huge there) */
+          '  float ue = (side < 0.5 ? 1e4 : uEnd) - a;',
+          '  float sa = ue < ua ? 1.0 : -1.0;',                  /* which cap is nearer: the along-gradient flips */
+          '  float uc = min(ua, ue);',
           /* selvedge: one thin rail on the outline of the band, which closes in a rounded cap */
           '  float as = abs(s);',
-          '  vec2 qo = vec2(2.0 - ua, as - 5.0);',
+          '  vec2 qo = vec2(2.0 - uc, as - 5.0);',
           '  float dOut = length(max(qo, 0.0)) + min(max(qo.x, qo.y), 0.0) - 2.0;',
           '  vec2 gOut;',
-          '  if (qo.x > 0.0 && qo.y > 0.0) { vec2 nq = normalize(qo); gOut = vec2(-nq.x, nq.y * sign(s)); }',
-          '  else gOut = qo.x > qo.y ? vec2(-1.0, 0.0) : vec2(0.0, s < 0.0 ? -1.0 : 1.0);',
+          '  if (qo.x > 0.0 && qo.y > 0.0) { vec2 nq = normalize(qo); gOut = vec2(sa * nq.x, nq.y * sign(s)); }',
+          '  else gOut = qo.x > qo.y ? vec2(sa, 0.0) : vec2(0.0, s < 0.0 ? -1.0 : 1.0);',
           /* motif, flowing along the band; superperiod 66 = three pairs plus a short plain panel */
           '  float m = a - 0.4125 * t * uFl.x + uFl.y;',
           '  float mm = mod(m - 51.05, 66.0) - 14.95;',
@@ -10651,8 +10734,8 @@
           '    float sc = 3.0 * clamp(floor(s / 3.0), -2.0, 1.0) + 1.5;',
           '    vec2 dv = vec2(mm + 14.0, s - sc); float dl = length(dv);',
           '    if (dl - 0.5 < sdM) { sdM = dl - 0.5; gM = dv / max(dl, 1e-4); } }',
-          '  float clipC = 1.16 - ua;',                             /* keep the fret clear of the cap and inside the rail */
-          '  if (dOut > sdM || clipC > sdM) { if (dOut > clipC) { sdM = dOut; gM = gOut; } else { sdM = clipC; gM = vec2(-1.0, 0.0); } }',
+          '  float clipC = 1.16 - uc;',                             /* keep the fret clear of the caps and inside the rail */
+          '  if (dOut > sdM || clipC > sdM) { if (dOut > clipC) { sdM = dOut; gM = gOut; } else { sdM = clipC; gM = vec2(sa, 0.0); } }',
           /* light in the local frame of the band (rotation only); the twist of the cloth lives in the shading */
           '  vec2 T2 = vec2(sl, 1.0) / Ln, N2 = vec2(1.0, -sl) / Ln;',
           '  vec2 Ll = normalize(vec2(dot(Lc, T2), dot(Lc, N2)));',
@@ -10669,10 +10752,11 @@
           '  float pxR = clamp(FW(eR), 0.5 * uPx, 2.0 * uPx), pxM = clamp(FW(eM), 0.5 * uPx, 2.0 * uPx);',
           '  float aR = clamp(eR / pxR + 0.5, 0.0, 1.0), aM = clamp(eM / pxM + 0.5, 0.0, 1.0);',
           '  float vR = lit(eR, dOut > 0.0 ? gOut : -gOut, pxR, L3, Ll, ct, st, body, gw);',
-          '  float shade = smoothstep(1.2, 6.0, ua); shade *= shade;',   /* the fret emerges from the shade of the cap */
+          '  float shade = smoothstep(1.2, 6.0, uc); shade *= shade;',   /* the fret emerges from the shade of the cap */
           '  float vM = lit(eM, gM, pxM, L3, Ll, ct, st, body, gw) * shade;',
           '  float k = (1.0 - 0.22 * smoothstep(-6.0, 7.0, s)) * uGain;',  /* text-facing side a little quieter */
-          '  float fade = 1.0 - smoothstep(uFade.x, uFade.y, a);',
+          '  float fade = (side < 0.5 || uR.y > 0.5) ? 1.0 - smoothstep(uFade.x, uFade.y, a) : 1.0;',
+          '  fade *= side < 0.5 ? uR.z : uR.w;',
           '  float al = (aR + aM * (1.0 - aR)) * fade;',
           '  float v = (min(vR * k, 1.0) * aR + min(vM * k, 1.0) * aM * (1.0 - aR)) * fade;',
           '  gl_FragColor = vec4(v, v, v, al);',
@@ -10703,7 +10787,7 @@
         gl.useProgram(prog);
         buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
         var ap = gl.getAttribLocation(prog, 'aP'); gl.enableVertexAttribArray(ap); gl.vertexAttribPointer(ap, 2, gl.FLOAT, false, 0, 0);
-        var names = ['uRes', 'uT', 'uU', 'uPx', 'uCx', 'uAmp', 'uCap', 'uFade', 'uL', 'uGain', 'uFl'], i;
+        var names = ['uRes', 'uT', 'uU', 'uPx', 'uCx', 'uAmp', 'uCap', 'uFade', 'uL', 'uGain', 'uFl', 'uEnd', 'uR'], i;
         for (i = 0; i < names.length; i++) loc[names[i]] = gl.getUniformLocation(prog, names[i]);
         gl.disable(gl.BLEND); gl.clearColor(0, 0, 0, 0);
         cleared = false;
@@ -10753,16 +10837,42 @@
           fa = cssH * 0.62; fb = cssH * 1.0;
         }
         uDev = u * dpr;
+        /* QA1: the right band ends in a cap below the header (at least as far down as the left band's cap), so the
+           header's controls (FAQ, Menu) never sit on the carved fret. */
+        var hdrEl = document.getElementById('header');
+        var hdrB = hdrEl ? Math.max(0, hdrEl.getBoundingClientRect().bottom) : 72;
+        var capR = Math.max(mob ? 0 : cap, hdrB + 16);
         cxU = margin + 7.5; ampU = amp; capU = cap / u; fadeA = fa / u; fadeB = fb / u;
         phaseU = flowK ? 0 : 9 - capU;
         var stripCss = (cxU + 7.5 + 1.42 * amp + 0.4) * u;
+        reachPx = stripCss;
         /* the band's whole drawable width, read by the proof label and receipt strip (phones: corner pieces, no inset) */
         document.documentElement.style.setProperty('--fx-reach', mob ? '0px' : stripCss.toFixed(1) + 'px');
         var sx = Math.min(1, stripCss / cssW * 2);
         var top = Math.max(0, (cap - 1.5 * u) / cssH);         /* canonical y fraction from the top */
-        /* left strip: x in [0, strip], y from the cap down; the right strip is its point reflection */
+        var rTop, rBot;                                         /* the right piece's screen extent, px from the top */
+        if (mob) {
+          /* narrow windows: the top-right corner piece keeps its whole length and moves down, rigidly, so it hangs
+             below the header and closes in a second cap there (a short piece cut by the header read as an empty pill) */
+          var lenR = (cssH - cap) + 4 * u;                      /* the left piece's length plus room for the far cap */
+          shR = (capR + lenR - (cssH - cap)) / u;
+          endU = (cssH - capR) / u + shR; fadeR = 0;
+          rTop = capR - 1.5 * u; rBot = capR + lenR + 1.5 * u;
+          hasR = rBot <= cssH - 8 ? 1 : 0;
+        } else {
+          /* wide windows: the right band runs up from its cap at the bottom and closes below the header; when the
+             window is too short to leave it a real length, it is not drawn at all (never a stub) */
+          shR = 0; fadeR = 1;
+          endU = (cssH - capR) / u;
+          rTop = capR - 1.5 * u; rBot = cssH - cap + 1.5 * u;
+          hasR = (cssH - cap) - capR >= Math.max(140, 24 * u) ? 1 : 0;
+        }
+        pcL0 = cap - u; pcL1 = cssH; pcR0 = rTop; pcR1 = rBot;
+        /* left strip: x in [0, strip], y from the cap down; the right strip is its point reflection, cut to its piece */
         quad(0, -1, -1 + sx, -1, 1 - 2 * top);
-        quad(12, 1 - sx, 1, -1 + 2 * top, 1);
+        if (hasR) quad(12, 1 - sx, 1, 1 - 2 * rBot / cssH, 1 - 2 * Math.max(0, rTop) / cssH);
+        else quad(12, 1, 1, 1, 1);
+        visDirty = true;
         if (gl) { gl.viewport(0, 0, W, H); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW); }
         cleared = false;
       }
@@ -10772,12 +10882,13 @@
         if (!gl) return;
         if (visDirty) measureVis();
         var g = gainOf(levelNow()) * heroVis;
-        if (g < 0.004) { if (!cleared) { gl.clear(gl.COLOR_BUFFER_BIT); cleared = true; } return; }
+        if (g < 0.004 || (gL < 0.004 && gR < 0.004)) { if (!cleared) { gl.clear(gl.COLOR_BUFFER_BIT); cleared = true; } return; }
         cleared = false;
         gl.clear(gl.COLOR_BUFFER_BIT);
         var aL = A0 + (smx - 0.5) * 0.22;
         gl.uniform2f(loc.uRes, W, H); gl.uniform1f(loc.uT, tt); gl.uniform1f(loc.uU, uDev); gl.uniform1f(loc.uPx, 1 / uDev);
         gl.uniform1f(loc.uCx, cxU); gl.uniform1f(loc.uAmp, ampU); gl.uniform1f(loc.uCap, capU); gl.uniform2f(loc.uFade, fadeA, fadeB);
+        gl.uniform1f(loc.uEnd, endU); gl.uniform4f(loc.uR, shR, fadeR, gL, gR);
         gl.uniform4f(loc.uL, Math.cos(aL), Math.sin(aL), -Math.cos(aL), -Math.sin(aL)); gl.uniform1f(loc.uGain, g); gl.uniform2f(loc.uFl, flowK, phaseU);
         gl.drawArrays(gl.TRIANGLES, 0, 12);
       }
@@ -10785,8 +10896,39 @@
          the viewport bottom to 72% up), so they never cross body text; at zero nothing is drawn. */
       var heroNext = (function () { var hr = document.querySelector('.hero'); return hr ? hr.nextElementSibling : null; })();
       var heroVis = 1, visDirty = true;
+      /* Narrow windows only: the hero's text, measured as text (a Range per text node, since a block's box spans the
+         column even where its centred lines do not) plus the hero buttons' boxes, so a corner piece can step aside
+         when hero text sits on it or scrolls under it. Wide windows keep their bands clear by layout. */
+      var avoidRange = document.createRange ? document.createRange() : null, avoid = [];
+      (function () {
+        var roots = document.querySelectorAll('.hero-inner > :not(.hero-forge):not(.hero-actions), .hero-forge .forge-mind'), i, w, n;
+        for (i = 0; i < roots.length; i++) {
+          w = document.createTreeWalker(roots[i], 4, null, false);
+          while ((n = w.nextNode())) if (/\S/.test(n.nodeValue)) avoid.push(n);
+        }
+        roots = document.querySelectorAll('.hero-actions > a');
+        for (i = 0; i < roots.length; i++) avoid.push(roots[i]);
+      })();
+      function sideGain(x0, x1, y0, y1) {
+        var g = 1, i, r, gap, v, n;
+        for (i = 0; i < avoid.length; i++) {
+          n = avoid[i];
+          if (n.nodeType === 3) { avoidRange.selectNodeContents(n); r = avoidRange.getBoundingClientRect(); }
+          else r = n.getBoundingClientRect();
+          if (!(r.width > 0 && r.height > 0) || r.right < x0 || r.left > x1 || r.top >= cssH || r.bottom <= 0) continue;  /* off screen: no matter */
+          gap = Math.max(r.top - y1, y0 - r.bottom);
+          v = Math.max(0, Math.min(1, gap / 32));
+          v = v * v * (3 - 2 * v);
+          if (v < g) g = v;
+        }
+        return g;
+      }
       function measureVis() {
         visDirty = false;
+        if (mob && avoidRange) {
+          gL = sideGain(0, reachPx + 8, pcL0, pcL1);
+          gR = hasR ? sideGain(cssW - reachPx - 8, cssW, pcR0, pcR1) : 0;
+        } else { gL = 1; gR = hasR; }
         if (!heroNext) { heroVis = 1; return; }
         var ih = Math.max(1, window.innerHeight), top = heroNext.getBoundingClientRect().top;
         var v = Math.max(0, Math.min(1, (top - ih * 0.72) / (ih * 0.28)));
@@ -10819,6 +10961,7 @@
         t += dt * speedOf(levelNow());
         if (t >= TW) t -= TW;
         smx += (mx - smx) * 0.03;
+        if (mob && ++mvN >= 30) { mvN = 0; visDirty = true; }   /* narrow: re-check the hero text twice a second */
         if (!perfDone) {
           var c0 = performance.now();
           draw(t);
@@ -10830,7 +10973,7 @@
 
       var api = {
         start: function () {
-          wanted = true;
+          wanted = true; visDirty = true;
           if (held) { held = false; if (canvas) canvas.classList.remove('is-held'); }
           if (canvas) canvas.classList.add('is-on');
           if (!gl) return;
@@ -10843,7 +10986,7 @@
         /* W2-03 Calm and Still: the effect stays on screen as one composed frame (the glint at rest), never a frozen
            mid-motion frame and never a sudden absence. */
         hold: function () {
-          wanted = true; held = true; halt();
+          wanted = true; held = true; halt(); visDirty = true;
           if (canvas) canvas.classList.add('is-on', 'is-held');
           if (gl && !document.hidden) still();
         },
@@ -10864,6 +11007,11 @@
       api.mounted = true;   /* the effects manager runs a mounted effect in the default theme */
       layout();
       still();
+      /* web fonts and the hero's entrance move its text after the first layout: measure the corner pieces' clearance
+         again once they have settled (a running effect also re-checks twice a second on narrow windows) */
+      var remeasure = function () { visDirty = true; if (!running && gl && wanted) still(); };
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+      window.addEventListener('load', function () { setTimeout(remeasure, 1200); setTimeout(remeasure, 3500); });
       window.addEventListener('resize', function () { layout(); if (!running) still(); });
       window.addEventListener('pointermove', function (e) { mx = e.clientX / Math.max(1, window.innerWidth); }, { passive: true });
       document.addEventListener('visibilitychange', function () {
@@ -11401,6 +11549,7 @@
           });
           var none = !!q && total === 0;
           fb.el.hidden = !none;
+          list.classList.toggle('is-none', none);   // the offers lie over the (all dimmed) tools: no height change
           fb.items.forEach(function (it) {
             it.echo.textContent = none ? '“' + raw.trim() + '”' : '';
             it.el.setAttribute('aria-label', it.label + (none ? ' ' + it.echo.textContent : ''));
@@ -11451,10 +11600,17 @@
         list.addEventListener('mousedown', function (e) {
           if (e.target.closest('[role="option"]')) e.preventDefault();   // keep the caret in the field
         });
+        // A press on a dimmed tool (left dim by the idle demo's query, or by the visitor's own) clears the query
+        // and opens that tool: no tool name on the wall is ever a dead control.
         list.addEventListener('click', function (e) {
           var o = e.target.closest('[role="option"]');
-          if (!o || o.classList.contains('is-miss')) return;
+          if (!o) return;
           stopDemo();
+          if (o.classList.contains('is-miss')) {
+            pal.classList.remove('is-demoed');
+            input.value = '';
+            render(true);
+          }
           setActive(o, false);
           activate(o);
         });
