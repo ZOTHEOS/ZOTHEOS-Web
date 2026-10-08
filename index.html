@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-XBZrXIe3Ai4P2vcY4QRJenbtDkaeHsZ8Gnest9tjluo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Zj7um3sl+PrvmGG//xqvQN1Ynshj4YVvcgYeWOMrFco=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-jukHxqlp5AHCvfccPINqD+z/RuQdqQi0hTgdmvjHj/8='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -8002,7 +8002,7 @@
         'float ns(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*f*(f*(f*6.-15.)+10.);',
         'return mix(mix(hs(i),hs(i+vec2(1.,0.)),u.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),u.x),u.y);}',
         'const mat2 RM=mat2(.8,.6,-.6,.8);',
-        'float fb(vec2 p){float s=0.,a=.5;for(int i=0;i<4;i++){s+=a*ns(p);p=RM*p*2.03;a*=.5;}return s;}',
+        'float fb(vec2 p){float s=0.,a=.5;for(int i=0;i<3;i++){s+=a*ns(p);p=RM*p*2.03;a*=.5;}return s*1.0714;}',
         'float fld(vec2 p,out float qq){',
         ' vec2 q=vec2(fb(p+uD.xy),fb(p+vec2(5.2,1.3)-uD.xy));',
         ' vec2 r=vec2(fb(p+2.5*q+vec2(1.7,9.2)+uD.zw),fb(p+2.5*q+vec2(8.3,2.8)-uD.zw));',
@@ -8015,27 +8015,26 @@
         ' vec2 dm=p-uM.xy;float ln=exp(-dot(dm,dm)*7.)*uM.z;',
         ' p-=dm*ln*.28;',
         ' vec2 P=p*uP.w+vec2(0.,uP.y);',
-        ' float e=.006,q0,q1;',
+        ' float e=.011,q0,q1;',
         ' float h0=fld(P,q0),h=h0+gp(p);',
         ' float hx=fld(P+vec2(e,0.),q1)+gp(p+vec2(e/uP.w,0.));',
         ' float hy=fld(P+vec2(0.,e),q1)+gp(p+vec2(0.,e/uP.w));',
         ' vec3 n=normalize(vec3((h-hx)/e*.075,(h-hy)/e*.075,1.));',
         ' vec3 L=normalize(vec3(-.35,.55,.75));',
-        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),90.);',
+        ' float sp=pow(max(dot(n,normalize(L+vec3(0.,0.,1.))),0.),52.);',
         ' vec3 rf=reflect(vec3(0.,0.,-1.),n);',
         ' float env=exp(-pow((rf.y-.42)*5.,2.))*smoothstep(-.6,.2,rf.x);',
-        ' float crest=smoothstep(.42,.8,h0);',
+        ' float crest=smoothstep(.43,.82,h0);',
         ' float pool=.25+.75*smoothstep(.2,.9,q0);',
-        ' float gl=fb(P*2.2+n.xy*1.2)*.5;',
-        ' float c=gl*gl*.03*(1.-crest)+(sp*.9+env*.38)*crest*pool;',
+        ' float c=(sp*.9+env*.38)*crest*pool;',
         ' vec2 hd=(uv-uH.xy)/max(uH.zw,vec2(.05));float rd=exp(-dot(hd,hd)*.85);',
         ' float rr=length(dm),ad=max(dot(dm/(rr+1e-4),vec2(.53,-.85)),0.);',
         ' float arc=uM.z*exp(-pow((rr-.13)*26.,2.))*ad*ad*ad*(1.-rd);',
         ' c=c*(1.-.45*ln)+arc*.2;',
         ' float v=1.-smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.4)));',
         ' c*=uP.x*(.35+.65*v)*(1.-.62*rd);',
-        ' c=1.-exp(-c*1.6);',
-        ' c=clamp(c+(hs(gl_FragCoord.xy)-.5)*.5/255.,0.,1.);',
+        ' c=1.-exp(-c*2.);',
+        ' c=clamp(c,0.,1.);',
         ' gl_FragColor=vec4(vec3(c),c);}'
       ].join('\n');
 
