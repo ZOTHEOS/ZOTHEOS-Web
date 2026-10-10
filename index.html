@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-release="prerelease">
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-zd94RHZEUVhXSuv/CwAO6kydWuQTqrjZcuMcrN/Q60o=' 'sha256-8yZNCYydZi5gXgaWMidS5FFjePJNmBd6JSQYgjgvorY=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-L3VuGSX2v0/Hq0xOQnWNv2rEdQ+jQ9/PEI11PmW2uRk=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
   <link rel="shortcut icon" href="/zotheos_icon.ico?v=3" />
   <link rel="apple-touch-icon" href="/zotheos_icon.ico?v=3" />
-  <meta name="description" content="A local AI council with Analyst, Humanist and Skeptic roles. Offline first. Private by default. Windows desktop validation is in progress." />
+  <!-- Release switch: tags with data-rs-pre / data-rs-avail carry both variants; tools/release_switch.py copies the
+       current one into content ({version} and {size} are filled in). Edit the variants, not content. -->
+  <meta name="description" content="A local AI council with Analyst, Humanist and Skeptic roles. Offline first. Private by default. Windows desktop validation is in progress." data-rs-pre="A local AI council with Analyst, Humanist and Skeptic roles. Offline first. Private by default. Windows desktop validation is in progress." data-rs-avail="A local AI council with Analyst, Humanist and Skeptic roles. Offline first. Private by default. The Windows desktop {version} is available to download." />
   <meta property="og:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta property="og:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." />
+  <meta property="og:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-pre="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-avail="A local AI council. The Windows desktop {version} is available. Built to be checked." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zotheos.org" />
   <meta property="og:image" content="https://zotheos.org/static/og.png" />
@@ -20,7 +22,7 @@
   <meta property="og:image:alt" content="ZOTHEOS: three minds reason, you decide." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
-  <meta name="twitter:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." />
+  <meta name="twitter:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-pre="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-avail="A local AI council. The Windows desktop {version} is available. Built to be checked." />
   <meta name="twitter:image" content="https://zotheos.org/static/og.png" />
   <meta name="theme-color" content="#000000" id="themeColorMeta" />
   <script>
@@ -49,10 +51,44 @@
   {"prerender": [{"where": {"or": [{"href_matches": "/download"}, {"href_matches": "/download.html"}]}, "eagerness": "moderate"}]}
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="/static/zotheos_logo.png" fetchpriority="high" />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fonts are self-hosted from static/fonts (SIL Open Font License 1.1, see static/fonts/OFL.txt), so the page
+       makes no request to another site. Latin and Latin Extended subsets: Spanish and Nahuatl letters such as
+       n with tilde and the macron vowels render in the brand faces. tools/fonts_check.py keeps both pages in step;
+       docs/FONTS.md says how to update a face. -->
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-italic-latin.woff2" crossorigin />
+  <style id="zth-fonts">
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -887,6 +923,9 @@
       pointer-events: none;
     }
     .intro-controls button[aria-pressed="true"] { border-color: var(--cochineal); }
+    /* PAT-1: the Sound control keeps one name; its state is the mark, filled while sound is on. */
+    #introSound .snd-mark { display: inline-block; box-sizing: border-box; width: 7px; height: 7px; margin-right: 10px; border: 1px solid currentColor; border-radius: 50%; vertical-align: 0.05em; }
+    #introSound[aria-pressed="true"] .snd-mark { background: currentColor; }
 
     /* ZOTHEOS mark assembly intro (pairs with zth-intro.js). The host provides the dark ground and the overlay;
        this only styles the stage inside it. Class prefix zi- to stay clear of console and landing styles. */
@@ -1188,8 +1227,8 @@
     }
 
     /* ============================================================
-       HERO ACTIONS — three CTAs in a row on desktop, stacked on
-       mobile. Primary "Early access" is the visual focus.
+       HERO ACTIONS — one primary (the release switch decides which)
+       and one quiet text link; stacked on mobile.
     ============================================================ */
     .hero-actions {
       display: flex; gap: 12px; flex-wrap: wrap;
@@ -1214,42 +1253,7 @@
       }
     }
 
-    .hero-stats {
-      display: flex; gap: 48px; flex-wrap: wrap;
-      justify-content: center;
-      padding-top: 28px;
-      position: relative;
-    }
-    .hero-stats::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%; transform: translateX(-50%);
-      width: 320px; height: 1px;
-      background: linear-gradient(90deg,
-        transparent 0%,
-        var(--rule) 50%,
-        transparent 100%);
-    }
-    .hero-stat .num {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 38px;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      line-height: 1;
-    }
-    .hero-stat .label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-      margin-top: 8px;
-    }
-    @media (max-width: 640px) {
-      .hero-stats { gap: 28px; }
-      .hero-stat .num { font-size: 30px; }
-    }
+    /* (D3: the hero stats row is retired; the proof band is the single home for those facts.) */
 
     /* COUNCIL PILLARS */
     .council-strip {
@@ -1443,7 +1447,7 @@
     html.cv-warm section:not(#top):not(#council-story) { content-visibility: visible; }
     [data-anchor-target]:focus { outline: none; }
     #council-pillars { --cis: 301px; }   /* W2-05: pillar arrows and fret rules (was 269) */
-    #features { --cis: 1061px; }
+    #features { --cis: 977px; }   /* W2-07 re-measured (mechanism figure, footnotes, specimen) */
     #proof { --cis: 910px; }   /* W2-08 re-measured (specimens, label, receipt strip) */
     #workspace { --cis: 1124px; }   /* W2-09/10/11 re-measured (palette, platforms + seat figure, memory card tail) */
     #devices { --cis: 1432px; }
@@ -1457,7 +1461,7 @@
     #support { --cis: 459px; }
     @media (max-width: 1099px) {
       #council-pillars { --cis: 301px; }   /* the row layout holds down to 861px; stacked below, see the 860px band */
-      #features { --cis: 1310px; }
+      #features { --cis: 1262px; }
       #proof { --cis: 1126px; }   /* the receipt strip's edge-band inset wraps its line once here */
       #workspace { --cis: 1131px; }
       #devices { --cis: 1472px; }
@@ -1473,7 +1477,7 @@
     @media (max-width: 860px) { #council-pillars { --cis: 915px; } }   /* pillars stack at 860px (measured 915 at 860 and 390) */
     @media (max-width: 640px) {
       #council-pillars { --cis: 915px; }
-      #features { --cis: 1890px; }
+      #features { --cis: 1785px; }
       #proof { --cis: 2046px; }
       #workspace { --cis: 1871px; }
       #devices { --cis: 2067px; }
@@ -2183,36 +2187,10 @@
       .aurora { animation: none !important; }
     }
 
-    /* Cursor light — follows the mouse on capable devices.       */
-    .cursor-light {
-      position: fixed; top: 0; left: 0;
-      width: 520px; height: 520px;
-      margin: -260px 0 0 -260px;
-      z-index: 49; pointer-events: none;
-      background: radial-gradient(circle at center,
-        rgba(var(--cochineal-rgb), 0.12) 0%,
-        rgba(var(--cochineal-rgb), 0.05) 30%,
-        transparent 60%);
-      filter: blur(12px);
-      mix-blend-mode: screen;
-      opacity: 0;
-      transform: translate3d(-100vw, -100vh, 0);
-      transition: opacity 0.6s var(--ease-editorial);
-      will-change: transform;
-    }
-    [data-theme="codex"] .cursor-light {
-      mix-blend-mode: multiply;
-      background: radial-gradient(circle at center,
-        rgba(139, 34, 34, 0.08) 0%,
-        rgba(139, 34, 34, 0.03) 30%,
-        transparent 60%);
-    }
-    .cursor-light.active { opacity: 1; }
-    @media (hover: none), (prefers-reduced-motion: reduce) {
-      .cursor-light { display: none; }
-    }
+    /* (D1: the roaming cursor light is retired; the native pointer is the only cursor.) */
 
-    /* Spotlight on interactive cards — cursor-tracked highlight */
+    /* Spotlight on interactive cards: a cursor-tracked highlight in the colour themes. D1: it is the theme's own
+       ink at a low strength (hover stays neutral; colour is kept for meaning) and it answers at hover speed. */
     .bento-card, .support-card, .value-item {
       --mx: 50%;
       --my: 50%;
@@ -2222,19 +2200,11 @@
       position: absolute; inset: 0;
       pointer-events: none;
       background: radial-gradient(380px circle at var(--mx) var(--my),
-        rgba(var(--cochineal-rgb), 0.10) 0%,
-        rgba(var(--cochineal-rgb), 0.04) 30%,
+        color-mix(in oklab, var(--ink) 7%, transparent) 0%,
+        color-mix(in oklab, var(--ink) 3%, transparent) 30%,
         transparent 60%);
       opacity: 0;
-      transition: opacity 0.4s var(--ease-editorial);
-    }
-    [data-theme="codex"] .bento-card::after,
-    [data-theme="codex"] .support-card::after,
-    [data-theme="codex"] .value-item::after {
-      background: radial-gradient(380px circle at var(--mx) var(--my),
-        rgba(139, 34, 34, 0.10) 0%,
-        rgba(139, 34, 34, 0.04) 30%,
-        transparent 60%);
+      transition: opacity 0.18s var(--ease-out);
     }
     .bento-card:hover::after,
     .support-card:hover::after,
@@ -2243,9 +2213,9 @@
     /* W1-10: cards are not links, so hover never moves them; only a calm edge step remains */
     .bento-card, .support-card {
       transition:
-        border-color 0.45s var(--ease-ceremony),
-        background-color 0.45s var(--ease-ceremony),
-        box-shadow 0.45s var(--ease-ceremony);
+        border-color 0.2s var(--ease-out),
+        background-color 0.2s var(--ease-out),
+        box-shadow 0.2s var(--ease-out);
     }
     .bento-card:hover,
     .support-card:hover { box-shadow: 0 0 0 1px rgba(var(--cochineal-rgb), 0.18); }
@@ -2293,25 +2263,7 @@
       .hero-headline.settled .glow { animation: none !important; }
     }
 
-    /* Hero stats — animated counters with separator hairlines    */
-    .hero-stat {
-      position: relative;
-      padding: 0 8px;
-      transition: transform 0.4s var(--ease-anticipate);
-    }
-    .hero-stat:hover { transform: translateY(-3px); }
-    .hero-stat .num {
-      background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: filter 0.4s var(--ease-editorial);
-    }
-    .hero-stat:hover .num {
-      filter: drop-shadow(0 0 12px rgba(var(--cochineal-rgb), 0.35));
-    }
-
-    /* Primary CTA — magnetic + shimmer sheen */
+    /* Primary CTA — shimmer sheen */
     .btn-primary { overflow: hidden; }
     .btn-primary::after {
       content: '';
@@ -2504,7 +2456,7 @@
 
     /* ============================================================
        UPGRADE PACK 2 — live console, reasoning graph, compare,
-       FAQ, custom cursor, theme wipe, skip link, page-load reveal.
+       FAQ, theme wipe, skip link, page-load reveal.
        Theme tokens untouched.
     ============================================================ */
 
@@ -2521,75 +2473,14 @@
       text-transform: uppercase;
       border: none;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-      transition: top 0.3s var(--ease-anticipate);
+      transition: top 0.18s var(--ease-out);
     }
     .skip-link:focus { top: 16px; outline: none; }
 
-    /* Custom cursor */
-    .custom-cursor {
-      position: fixed; top: 0; left: 0;
-      z-index: 10001; pointer-events: none;
-      width: 0; height: 0;
-      opacity: 0;
-      mix-blend-mode: difference;
-      transition: opacity 0.4s var(--ease-editorial);
-      will-change: transform;
-    }
-    .custom-cursor.ready { opacity: 1; }
-    .custom-cursor .cc-dot,
-    .custom-cursor .cc-ring {
-      position: absolute;
-      left: 0; top: 0;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition:
-        width 0.25s var(--ease-anticipate),
-        height 0.25s var(--ease-anticipate),
-        background-color 0.25s var(--ease-editorial),
-        border-color 0.25s var(--ease-editorial),
-        opacity 0.25s var(--ease-editorial);
-    }
-    .custom-cursor .cc-dot {
-      width: 6px; height: 6px;
-      background: #F4ECD8;
-    }
-    .custom-cursor .cc-ring {
-      width: 28px; height: 28px;
-      border: 1px solid #F4ECD8;
-    }
-    .custom-cursor.hover-link .cc-ring {
-      width: 44px; height: 44px;
-      border-color: #D14F35;
-    }
-    .custom-cursor.hover-link .cc-dot {
-      width: 0; height: 0;
-    }
-    .custom-cursor.hover-text .cc-ring {
-      width: 4px; height: 28px;
-      border-radius: 1px;
-    }
-    .custom-cursor.hover-text .cc-dot { opacity: 0; }
-    .custom-cursor.down .cc-ring {
-      width: 18px; height: 18px;
-    }
-    @media (hover: none), (prefers-reduced-motion: reduce) {
-      .custom-cursor { display: none; }
-    }
-    body.has-custom-cursor,
-    body.has-custom-cursor a,
-    body.has-custom-cursor button {
-      cursor: none;
-    }
-    /* The ring is drawn in the page, under the top layer: while a popover is open, and while the theme iris covers
-       the page with its snapshot, the native pointer comes back and the ring steps aside. */
-    body.has-custom-cursor:has(:popover-open),
-    body.has-custom-cursor:has(:popover-open) :is(a, button),
-    html.zt-iris body.has-custom-cursor,
-    html.zt-iris body.has-custom-cursor :is(a, button) { cursor: revert; }
-    body.has-custom-cursor :popover-open :is(button, [role="radio"]):not([aria-disabled="true"]) { cursor: pointer; }
-    body.has-custom-cursor :popover-open [aria-disabled="true"] { cursor: default; }
-    body.has-custom-cursor:has(:popover-open) .custom-cursor,
-    html.zt-iris .custom-cursor { opacity: 0 !important; }
+    /* (D1: the custom cursor ring is retired. The native cursor returns everywhere; buttons and links show the
+       pointer, a disabled option shows the default arrow.) */
+    :popover-open :is(button, [role="radio"]):not([aria-disabled="true"]) { cursor: pointer; }
+    :popover-open [aria-disabled="true"] { cursor: default; }
 
     /* (W2-04: the theme wipe is retired; the theme now opens through a view-transition iris.) */
 
@@ -2613,8 +2504,21 @@
     body:not(.page-loading) .hero-headline    { transition-delay: 0.38s; }
     body:not(.page-loading) .hero-sub         { transition-delay: 0.52s; }
     body:not(.page-loading) .hero-actions     { transition-delay: 0.62s; }
-    body:not(.page-loading) .hero-stats       { transition-delay: 0.76s; }
-    body:not(.page-loading) .hero-descend     { transition-delay: 0.90s; }
+    /* D1: these two are links with a hover state, so their quick colour step rides next to the entrance; the
+       entrance properties keep the delay and the hover properties answer at once. */
+    body:not(.page-loading) .hero-inner > .hero-status {
+      transition:
+        opacity 0.9s var(--ease-editorial) 0.76s,
+        transform 0.9s var(--ease-editorial) 0.76s,
+        color var(--dur-1) var(--ease-out) 0s,
+        border-color var(--dur-1) var(--ease-out) 0s;
+    }
+    body:not(.page-loading) .hero-inner > .hero-descend {
+      transition:
+        opacity 0.9s var(--ease-editorial) 0.9s,
+        transform 0.9s var(--ease-editorial) 0.9s,
+        color var(--dur-1) var(--ease-out) 0s;
+    }
     @media (prefers-reduced-motion: reduce) {
       body.page-loading .hero-inner > *,
       body.page-loading header { opacity: 1; transform: none; }
@@ -3347,77 +3251,6 @@
     }
 
     /* ============================================================
-       CLICK RIPPLE — an Aztec sun-stone burst: concentric rings
-       (the disc), the ZOTHEOS wax sigil blooming, and three sparks
-       firing toward the council angles (-90, 30, 150). Cochineal
-       throughout, so it adapts to every theme.
-    ============================================================ */
-    .zripple {
-      position: fixed;
-      z-index: 9001;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      width: 0; height: 0;
-      color: var(--cochineal);
-      mix-blend-mode: screen;
-    }
-    [data-theme="codex"] .zripple { mix-blend-mode: normal; }
-    .zr-ring {
-      position: absolute; left: 0; top: 0;
-      width: 18px; height: 18px;
-      margin: -9px 0 0 -9px;
-      border-radius: 50%;
-      border: 1.5px solid currentColor;
-      opacity: 0.9;
-      animation: zr-ring 0.72s var(--ease-ceremony) forwards;
-    }
-    .zr-ring.r2 {
-      animation-duration: 0.95s;
-      animation-delay: 0.06s;
-      border-width: 1px;
-      opacity: 0.55;
-    }
-    @keyframes zr-ring {
-      0%   { transform: scale(0.25); opacity: 0.9; }
-      60%  { opacity: 0.35; }
-      100% { transform: scale(6.2); opacity: 0; }
-    }
-    .zr-sigil {
-      position: absolute; left: 0; top: 0;
-      width: 52px; height: 52px;
-      margin: -26px 0 0 -26px;
-      opacity: 0;
-      transform-origin: center;
-      animation: zr-sigil 0.78s var(--ease-anticipate) forwards;
-      filter: drop-shadow(0 0 6px rgba(var(--cochineal-rgb), 0.5));
-    }
-    .zr-sigil svg { width: 100%; height: 100%; display: block; }
-    @keyframes zr-sigil {
-      0%   { transform: scale(0.2) rotate(-40deg); opacity: 0; }
-      35%  { opacity: 0.9; }
-      100% { transform: scale(1.55) rotate(12deg); opacity: 0; }
-    }
-    .zr-spark {
-      position: absolute; left: 0; top: 0;
-      width: 5px; height: 5px;
-      margin: -2.5px 0 0 -2.5px;
-      border-radius: 50%;
-      background: currentColor;
-      box-shadow: 0 0 8px rgba(var(--cochineal-rgb), 0.8);
-      animation: zr-spark 0.8s var(--ease-editorial) forwards;
-    }
-    .zr-spark.s1 { --tx: 0px;   --ty: -52px; }
-    .zr-spark.s2 { --tx: 45px;  --ty: 26px;  }
-    .zr-spark.s3 { --tx: -45px; --ty: 26px;  }
-    @keyframes zr-spark {
-      0%   { transform: translate(0, 0) scale(1.1); opacity: 1; }
-      100% { transform: translate(var(--tx), var(--ty)) scale(0.3); opacity: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .zripple { display: none; }
-    }
-
-    /* ============================================================
        UPGRADE PACK 4 — proof instruments, workspace wall, device
        tier ladder, Maya bar numerals. Styled as instruments: mono
        type, thin rules, seal dots. Theme tokens untouched.
@@ -3486,7 +3319,6 @@
       line-height: 1.45;
       color: var(--ink);
     }
-    .hero #development-status { margin: 30px auto 40px; line-height: 1.9; }
     .proof-note {
       margin: 18px auto 0;
       max-width: 640px;
@@ -3720,8 +3552,8 @@
 
     /* ============================================================
        THE OBSIDIAN MIRROR — Tezcatlipoca's glass, inverted.
-       The old mirror showed kings the secrets of others; this one
-       is dark because ZOTHEOS keeps no reflection of you. The
+       In ancient Mexico obsidian was cut and polished into mirrors;
+       this one is dark because ZOTHEOS keeps no reflection of you. The
        mirror is a physical obsidian object, so it stays black in
        every theme by design.
     ============================================================ */
@@ -3953,6 +3785,9 @@
       color: var(--cochineal);
       font-weight: 500;
     }
+    /* W2-13: the seal and the mirror write the number as the codices do, dots only (no rings), grouped in fives. */
+    .tonal-seal .cd-dots, .mirror-day .cd-dots { color: inherit; gap: 6px; margin-right: 0.6em; vertical-align: 0.1em; }
+    .tonal-seal .cd-dots i, .mirror-day .cd-dots i { width: 4px; height: 4px; opacity: 1; background: currentColor; }
 
     /* ============================================================
        UPGRADE PACK 7 — TLALOC'S RAIN + CINEMATIC MODE
@@ -4044,7 +3879,6 @@
     /* Cinematic mode gate — one switch quiets every ambient layer. */
     body.fx-off .rain-layer,
     body.fx-off .aurora,
-    body.fx-off .cursor-light,
     body.fx-off .hero-embers,
     body.fx-off .hero-mist {
       display: none !important;
@@ -4097,7 +3931,7 @@
     /* ============================================================
        UPGRADE PACK 6 — PURE SMOOTHNESS
        Inertial scrolling, floating instrument header, kinetic
-       headline, living cursor, hero depth parallax, copal embers.
+       headline, hero depth parallax, copal embers.
        Theme tokens untouched; everything honors reduced motion.
     ============================================================ */
 
@@ -4109,7 +3943,7 @@
     }
     .section-title, .hero-headline, .waitlist-card h3, .faq-q { text-wrap: balance; }
     .hero-sub, .section-desc { text-wrap: pretty; }
-    .hero-stat .num, .meta-tag, .ts-meta, .tier-council, .tier-foot {
+    .meta-tag, .ts-meta, .tier-council, .tier-foot {
       font-variant-numeric: tabular-nums;
     }
 
@@ -4212,17 +4046,6 @@
       }
     }
 
-    /* Living cursor: the ring stretches with velocity like a comet
-       and pings a cochineal ripple on release. */
-    .custom-cursor .cc-ring { will-change: transform; }
-    .custom-cursor .cc-ring.ping {
-      animation: cc-ping 0.45s var(--ease-editorial);
-    }
-    @keyframes cc-ping {
-      0%   { box-shadow: 0 0 0 0 rgba(209, 79, 53, 0.55); }
-      100% { box-shadow: 0 0 0 22px rgba(209, 79, 53, 0); }
-    }
-
     /* Hero depth: the mark and headline sink at different rates as
        you scroll away; a whisper of skew rides scroll velocity. */
     .hero-forge, .hero-headline { will-change: transform; }
@@ -4271,10 +4094,6 @@
     html.fx-off { scroll-behavior: auto !important; }
     body.fx-off *, body.fx-off *::before, body.fx-off *::after {
       animation: none !important; transition: none !important;
-    }
-    body.fx-off .custom-cursor { opacity: 0 !important; }
-    body.fx-off, body.fx-off a, body.fx-off button, body.fx-off input {
-      cursor: auto !important;
     }
     body.fx-off .proof-track { animation: none; flex-wrap: wrap; width: 100%; justify-content: center; }
     body.motion-page-hidden *, body.motion-page-hidden *::before,
@@ -4359,7 +4178,6 @@
     html:not([data-theme]) body { background: #000000; }
     html:not([data-theme]) .vignette,
     html:not([data-theme]) .aurora,
-    html:not([data-theme]) .cursor-light,
     html:not([data-theme]) .hero-mist { display: none; }
     html:not([data-theme]) .grain { display: none; }   /* over the liquid silk the grain read as pixel noise */
     html:not([data-theme]) .grain-unused {
@@ -4523,7 +4341,6 @@
       box-shadow: none;
       animation-delay: 2.6s;
     }
-    html:not([data-theme]) .hero-actions .btn-ghost + .btn-ghost { animation-delay: 3.4s; }
     html:not([data-theme]) :is(.btn, .btn-ghost):hover {
       --zh: 1;
       box-shadow: none;
@@ -4625,7 +4442,6 @@
     html:not([data-theme]) .council-scroll-head .seal { text-shadow: none; }
 
     html:not([data-theme]) .hero-embers { display: none; }   /* W1-03: no specks in mono */
-    html:not([data-theme]) .hero-stat:hover .num { filter: none; }
     html:not([data-theme]) .header-logo-img,
     html:not([data-theme]) .footer-logo-img,
     html:not([data-theme]) .header-mark:hover .header-logo-img { filter: none; }
@@ -4713,9 +4529,6 @@
     }
 
     /* ---------- Small instruments ---------- */
-    html:not([data-theme]) .custom-cursor.hover-link .cc-ring { border-color: #FFFFFF; }
-    html:not([data-theme]) .custom-cursor .cc-dot { background: #FFFFFF; }
-    html:not([data-theme]) .custom-cursor .cc-ring { border-color: #FFFFFF; }
     html:not([data-theme]) .mirror-overlay { background: #000000; }
     html:not([data-theme]) .mirror-row { color: #A3A3A3; border-bottom-color: rgba(255, 255, 255, 0.10); }
     html:not([data-theme]) .mirror-row .mr-val { color: #FFFFFF; }
@@ -4757,11 +4570,6 @@
     html:not([data-theme]) .zi-mark--interactive:focus-visible { outline-color: #FFFFFF; }
     html:not([data-theme]) .zi-dust { filter: grayscale(1); }   /* the shared intro module draws warm dust */
 
-    html:not([data-theme]) .custom-cursor .cc-ring.ping { animation-name: z-ping; }
-    @keyframes z-ping {
-      0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
-      100% { box-shadow: 0 0 0 22px rgba(255, 255, 255, 0); }
-    }
     /* Focus and links: a clear white ring everywhere; links that relied on the red accent get an underline. */
     html:not([data-theme]) a:focus-visible,
     html:not([data-theme]) button:focus-visible,
@@ -4836,9 +4644,6 @@
     @media (max-width: 640px) {
       html:not([data-theme]) .mobile-cta { padding-left: 76px; }
       html:not([data-theme]) .scroll-top { bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
-    }
-    @media (max-width: 380px) {
-      html:not([data-theme]) .mobile-cta .btn { white-space: nowrap; letter-spacing: 0.24em; }
     }
 
     /* All themes: four swatches on a narrow phone header. Targets stay 20px with 24px spacing (WCAG 2.5.8);
@@ -5179,11 +4984,15 @@
       html { scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
       .mobile-cta.dock-only { pointer-events: none; }
     }
-    @media (max-width: 359px) {
-      /* Smallest phones: smaller orbs, a tighter label, no arrow, so the button keeps its whole rim. */
-      .mobile-cta, html:not([data-theme]) .mobile-cta { padding-left: 64px; padding-right: 64px; }
+    @media (max-width: 420px) {
+      /* Common phone widths (320 to 420px): a tighter label and no arrow, so either release label sits inside the
+         button's rim with its padding clear ("Join the release list" and "Download for Windows" alike). */
       .mobile-cta .btn, html:not([data-theme]) .mobile-cta .btn { padding-inline: 8px; letter-spacing: 0.14em; }
       .mobile-cta .btn .arrow { display: none; }
+    }
+    @media (max-width: 359px) {
+      /* Smallest phones: smaller orbs as well. */
+      .mobile-cta, html:not([data-theme]) .mobile-cta { padding-left: 64px; padding-right: 64px; }
       .scroll-top, .mirror-btn, html:not([data-theme]) .scroll-top { width: 44px; height: 44px; bottom: calc(19px + env(safe-area-inset-bottom, 0px)); }
       .scroll-top { left: 12px; }
       .mirror-btn { right: 12px; }
@@ -5464,6 +5273,9 @@
     @media (prefers-reduced-motion: no-preference) {
       @view-transition { navigation: auto; }
       body:not(.page-loading) .header-mark { view-transition-name: zt-mark; }
+      /* Replay intro: the page is already revealed, so the header mark holds the name; it lets go of it for the old
+         frame of the intro's hand-off (the intro wordmark carries it there) and takes it back in the new frame. */
+      html.zt-replay .header-mark { view-transition-name: none !important; }
       ::view-transition-group(zt-mark) { animation-duration: 0.6s; animation-timing-function: var(--ease-out); }
     }
     /* ==== end batch H ==== */
@@ -5653,7 +5465,7 @@
     .ap-opt[aria-checked="true"] { color: var(--ink); border-color: var(--ink); }
     .ap-opt:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
     /* The site-wide focus rule squares a focused button's corners (2px); pills keep their shape, so the ring hugs them. */
-    :is(.appearance-btn, .ap-opt, .nav-menu-btn, .ns-close, .day-chip):focus-visible { border-radius: 100px; }
+    :is(.appearance-btn, .ap-opt, .ap-replay, .nav-menu-btn, .ns-close, .day-chip):focus-visible { border-radius: 100px; }
     .ap-opt[aria-disabled="true"] { cursor: default; color: var(--ink-4); border-color: transparent; }
     .ap-opt[aria-disabled="true"][aria-checked="true"] { border-color: var(--rule); }
     html:not([data-theme]) .ap-opt { color: #A3A3A3; }
@@ -5671,6 +5483,22 @@
       color: var(--ink-3);
     }
     .ap-note[hidden] { display: none; }
+    .ap-row[hidden] { display: none; }
+    /* Replay intro: one quiet pill; hover stays neutral. */
+    .ap-replay {
+      min-height: 44px; width: 100%;
+      padding: 0 16px;
+      border: 1px solid var(--rule); border-radius: 100px;
+      background: transparent; color: var(--ink-2);
+      font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 1;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      cursor: pointer;
+      transition: color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out);
+    }
+    .ap-replay:hover { color: var(--ink); border-color: var(--ink-3); }
+    .ap-replay:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    html:not([data-theme]) .ap-replay { color: #C8C8C8; border-color: rgba(255, 255, 255, 0.55); }
+    html:not([data-theme]) .ap-replay:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.85); }
     html:not([data-theme]) .ap-note { color: #A3A3A3; }
     /* The default theme shows the intensity row only once its edge effect is mounted. */
     html:not([data-theme]):not(.has-mono-fx) .ap-row-fx { display: none; }
@@ -5720,8 +5548,8 @@
       transform: none;
       clip-path: inset(0 0 32% 0);
       transition-property: opacity, clip-path, border-color, background-color, box-shadow;
-      transition-duration: var(--dur-3), var(--dur-3), 0.45s, 0.45s, 0.45s;
-      transition-timing-function: var(--ease-out), var(--ease-out), var(--ease-ceremony), var(--ease-ceremony), var(--ease-ceremony);
+      transition-duration: var(--dur-3), var(--dur-3), 0.2s, 0.2s, 0.2s;   /* D1: the edge step answers at hover speed */
+      transition-timing-function: var(--ease-out), var(--ease-out), var(--ease-out), var(--ease-out), var(--ease-out);
       transition-delay: var(--zr-delay, 0s), var(--zr-delay, 0s), 0s, 0s, 0s;
     }
     .reveal-d1 { --zr-delay: 0.10s; --zr-at: 24px; }
@@ -5734,8 +5562,8 @@
       .instrument-card, .founder-card, .faq-item, .example-card, .ws-zone, .model-choice, .compare-table,
       .tier-ladder).reveal:not(.hero-inner > *) {
       transition-property: transform, --zh, opacity, clip-path;
-      transition-duration: 0.5s, 0.5s, var(--dur-3), var(--dur-3);
-      transition-timing-function: var(--ease-editorial), var(--ease-editorial), var(--ease-out), var(--ease-out);
+      transition-duration: 0.5s, 0.2s, var(--dur-3), var(--dur-3);   /* D1: the hover rim (--zh) answers at hover speed */
+      transition-timing-function: var(--ease-editorial), var(--ease-out), var(--ease-out), var(--ease-out);
       transition-delay: 0s, 0s, var(--zr-delay, 0s), var(--zr-delay, 0s);
     }
     .reveal.visible:not(.hero-inner > *) { transform: none !important; clip-path: inset(-48px); }
@@ -6740,6 +6568,519 @@
     /* Maya's story head sits on the bright aurora: only the full ink reads there. */
     :root[data-theme="maya"] :is(.council-scroll-hint, .council-scroll-head .section-label) { color: var(--ink); }
     /* ==== end QA1 ==== */
+
+    /* ============================================================
+       D1-D3 (Wave 3): the release switch, the hero's one ask and status line, and the interaction tempo.
+    ============================================================ */
+
+    /* ---------- D3 release switch ----------
+       html[data-release] is "prerelease" (or absent) until the installer ships, then "available". Each ask carries
+       both variants and CSS shows one: .rs-pre while in development, .rs-avail once available. display:none takes
+       the hidden variant out of the Tab order and the accessibility tree. tools/release_switch.py flips the
+       attribute and fills the version, size and installer link (data-rs, data-rs-href). No script decides this. */
+    html:not([data-release="available"]) .rs-avail,
+    html[data-release="available"] .rs-pre { display: none !important; }
+    .rs-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: none;
+      opacity: 0.72;
+      white-space: nowrap;
+    }
+
+    /* ---------- D3 the hero's quiet second link ---------- */
+    .hero-actions { align-items: center; column-gap: 28px; }
+    .hero-link {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.2;
+      color: var(--ink-2);
+      text-decoration: none;
+      padding: 10px 2px;
+      background: linear-gradient(currentColor, currentColor) no-repeat 0 calc(100% - 8px) / 100% 1px;
+      transition: color var(--dur-1) var(--ease-out), opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial);
+    }
+    .hero-actions.stagger.visible > .hero-link { transition-delay: 0s, 0.15s, 0.15s; }
+    .hero-link:hover { color: var(--ink); }
+    .hero-link:focus-visible { color: var(--ink); outline: 2px solid currentColor; outline-offset: 4px; }
+    @media (max-width: 640px) {
+      .hero-link { align-self: center; padding-block: 12px; }
+    }
+
+    /* ---------- D3 the hero status line ----------
+       The development update, compressed to one quiet line that links to the release page: no frame, small mono,
+       the lower ink at rest and full ink on hover, so it never reads as a second button. The dot is live status (its
+       meaning: in development), so it is the one thing here allowed to pulse; Still, effects-off and reduced motion
+       hold it lit. The text is underlined in every theme, so the link never rests on colour alone. On phones the
+       line drops its wide words (.hs-wide) and stays on one line. */
+    .hero-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 auto;
+      padding: 8px 4px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--ink-3);
+      text-decoration: none;
+      transition: color var(--dur-1) var(--ease-out);
+    }
+    .hero-inner > .hero-status { display: flex; width: fit-content; max-width: 100%; }
+    .hs-text {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      text-decoration-color: color-mix(in oklab, currentColor 45%, transparent);
+      min-width: 0;
+      /* a status too long for the smallest phones ends in an ellipsis instead of running under the arrow; the
+         padding keeps the underline inside the clip and the negative margin keeps the line where it was */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-bottom: 6px;
+      margin-bottom: -6px;
+    }
+    .hero-status [data-rs] { text-transform: none; letter-spacing: 0.02em; }   /* the version reads v1.0.0, never V1.0.0 */
+    .hero-status:hover { color: var(--ink); }
+    .hero-status:focus-visible { color: var(--ink); outline: 2px solid currentColor; outline-offset: 3px; }
+    .hs-dot {
+      flex: none;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--ink);
+      animation: hs-live 2.4s var(--ease-out) infinite;
+    }
+    @keyframes hs-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.32; } }
+    @media (prefers-reduced-motion: reduce) { .hs-dot { animation: none; } }
+    .hs-arrow { font-family: var(--sans); transition: translate var(--dur-1) var(--ease-out); }
+    .hero-status:hover .hs-arrow { translate: 3px 0; }
+    @media (max-width: 640px) {
+      .hs-wide { display: none; }
+      .mobile-cta .rs-meta { display: none; }
+      /* the hero's download label stays on one line; the version and size take the line under it */
+      .hero-actions .btn-primary.rs-avail { flex-wrap: wrap; row-gap: 6px; }
+      .hero-actions .btn-primary.rs-avail .bl { white-space: nowrap; }
+      .hero-actions .btn-primary.rs-avail .rs-meta { order: 3; flex-basis: 100%; text-align: center; }
+    }
+
+    /* Read by assistive technology, not shown. */
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ---------- D3 the first screen on short desktop windows ----------
+       On a window 1000px tall or less (a 1080p screen with browser chrome, a 1366x768 laptop, the owner's
+       1600x993) the forge is sized to the window and the gaps tighten, so the one ask and the quiet link sit above
+       the fold and the status line meets it. Taller windows keep the full composition. */
+    @media (min-width: 900px) and (max-height: 1000px) {
+      .hero { padding-top: 80px; padding-bottom: 28px; }
+      .hero-forge { --fh: clamp(240px, 36vh, 480px); margin-bottom: 14px; }
+      .hero-eyebrow { margin-bottom: 14px; }
+      .hero-headline { margin-bottom: 16px; }
+      .hero-headline .l2 { font-size: clamp(62px, min(10.6vw, 12.4vh), 128px); }
+      .hero-sub { margin-bottom: 22px; }
+      .hero-actions { margin-bottom: 18px; }
+      .hero-descend { margin-top: 28px; }
+    }
+
+    /* ---------- D1 interaction tempo ----------
+       The custom cursor and the cursor light are gone; the native pointer is the cursor. Every hover, press and
+       focus answers in 120 to 200 ms on the out curve: no overshoot, no 'all', no wait before a response.
+       Entrance and reveal timings are untouched. */
+    .btn, .btn-ghost {
+      transition:
+        color var(--dur-1) var(--ease-out),
+        background-color var(--dur-1) var(--ease-out),
+        border-color var(--dur-1) var(--ease-out),
+        box-shadow var(--dur-1) var(--ease-out),
+        transform var(--dur-1) var(--ease-out),
+        opacity var(--dur-1) var(--ease-out),
+        scale 0.12s var(--ease-out);
+    }
+    html:not([data-theme]) :is(.btn, .btn-ghost) {
+      transition:
+        transform var(--dur-1) var(--ease-out),
+        --zh var(--dur-1) var(--ease-out),
+        box-shadow var(--dur-1) var(--ease-out),
+        scale 0.12s var(--ease-out);
+    }
+    /* The hero's entrance is carried by its row; a delay on each button only made hover answer late. */
+    .stagger.visible > :is(.btn, .btn-ghost):nth-child(n),
+    html:not([data-theme]) .stagger.visible > :is(.btn, .btn-ghost):nth-child(n) { transition-delay: 0s; }
+    .btn .arrow, .btn-ghost .arrow { transition: transform var(--dur-1) var(--ease-out); }
+    .btn-primary::after { transition: left 0.5s var(--ease-out); }
+    html:not([data-theme]) .hero.lw .hero-actions .btn-primary::after { transition: background-position 0.5s var(--ease-out); }
+
+    .header-nav a { transition: color 0.15s var(--ease-out); }
+    .header-nav a.nav-cta { transition: color 0.15s var(--ease-out), background-color 0.15s var(--ease-out), border-color 0.15s var(--ease-out); }
+    .header-nav a:not(.nav-cta)::after,
+    .footer-links a::after { transition: transform 0.2s var(--ease-out); }
+    .footer-links a { transition: color 0.15s var(--ease-out); }
+    .intro-controls button { transition: color 0.15s var(--ease-out), border-color 0.15s var(--ease-out), background-color 0.15s var(--ease-out); }
+    .waitlist-input { transition: border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out), background-color 0.15s var(--ease-out); }
+    .faq-item { transition: border-color var(--dur-1) var(--ease-out), background-color var(--dur-1) var(--ease-out); }
+    .faq-item summary { transition: padding var(--dur-1) var(--ease-out); }
+    .compare-row > * { transition: background-color var(--dur-1) var(--ease-out); }
+    .theme-swatch { transition: scale 0.12s var(--ease-out); }
+    .day-chip {
+      transition:
+        border-color 0.15s var(--ease-out),
+        color 0.15s var(--ease-out),
+        scale 0.12s var(--ease-out);
+    }
+    /* The press scales on the small controls (menu, close, replay, pause, chips) used the damped spring, which
+       peaks about 5% past its target. D1 settles them on the out curve: a press reads as a press, never a wobble. */
+    :root { --ease-spring: var(--ease-out); }
+    .fx-toggle { transition: border-color 0.15s var(--ease-out), color 0.15s var(--ease-out), transform 0.15s var(--ease-out); }
+    .fx-amount { transition: border-color 0.15s var(--ease-out), transform 0.15s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .mirror-btn { transition: opacity 0.3s var(--ease-out), visibility 0.3s var(--ease-out), border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out); }
+    .scroll-top { transition: opacity 0.3s var(--ease-out), visibility 0.3s var(--ease-out), transform var(--dur-1) var(--ease-out), border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out); }
+    .pillar-go { transition: transform var(--dur-1) var(--ease-out); }
+    .cs-seat { transition: color var(--dur-1) var(--ease-out); }
+    .cs-seat::before { transition: opacity var(--dur-1) var(--ease-out); }
+    .mc-cart { transition: translate 0.2s var(--ease-out), border-color 0.2s var(--ease-out), color 0.2s var(--ease-out); }
+    /* The glass boxes keep their slow reveal; only the hover rim step is quick. */
+    html:not([data-theme]) :is(.bento-card, .support-card, .value-item,
+      .waitlist-card, .memory-vis, .console-frame, .instrument-card,
+      .founder-card, .faq-item, .example-card, .ws-zone, .model-choice,
+      .compare-table, .tier-ladder) {
+      transition:
+        transform 0.5s var(--ease-editorial),
+        --zh 0.2s var(--ease-out),
+        opacity 0.9s var(--ease-editorial);
+    }
+    /* Taps answer at once on touch screens: no grey flash, no double-tap zoom wait. */
+    a, button, summary, [role="button"], label, input, select, textarea { touch-action: manipulation; }
+    a, button, summary, [role="button"] { -webkit-tap-highlight-color: transparent; }
+  </style>
+  <style id="zt-w3-r">
+    /* ============================================================
+       Wave 3 batch R: the features as mechanism (W2-07), the day chip written as the codex writes it (W2-13),
+       the intro handing off into the page (W2-02), and roots and gratitude in the footer. Line ink on the page
+       black only (G2): no fills behind text, no glow, nothing lifted.
+    ============================================================ */
+
+    /* ---------- W2-07 features: one claim per card, a mono footnote, the Fusion card drawn ---------- */
+    .bento-card .card-foot {
+      margin-top: 16px;
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.55;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    /* overflow: clip, not hidden: a hidden box is a scroll container, and the drawing's view timeline must read the page scroll */
+    .fusion-card { display: grid; gap: 28px; align-content: start; overflow: clip; }
+    .fc-copy { min-width: 0; }
+    .fusion-fig { margin: 0; min-width: 0; max-width: 620px; display: grid; gap: 14px; }
+    @media (min-width: 1140px) {
+      .fusion-card { grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); align-items: center; column-gap: 40px; }
+    }
+    .fusion-diagram { display: block; width: 100%; height: auto; overflow: visible; color: var(--ink); }
+    .fusion-diagram .fd-s {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1 1;     /* pathLength="1": one dash is the whole stroke, so the offset draws it */
+      stroke-dashoffset: 0;      /* the resting state is drawn (reduced motion, Still, any engine without view()) */
+    }
+    .fusion-diagram .fd-p { stroke-width: 1; stroke-opacity: 0.7; }
+    .fusion-diagram .fd-agree { stroke-width: 1.8; stroke-opacity: 1; }
+    .fusion-diagram :is(.fd-n, .fd-m) { fill: currentColor; stroke: none; }
+    .fd-key { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, max-content); gap: 8px 28px; }
+    .fd-key li {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.4;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+    }
+    .fd-k { display: inline-flex; gap: 2px; color: var(--ink); }
+    .fd-k i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+    .fig-label {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.4;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    @media (max-width: 640px) {
+      .fusion-diagram .fd-s { stroke-width: 2.6; }
+      .fusion-diagram .fd-p { stroke-width: 1.5; }
+      .fusion-diagram .fd-agree { stroke-width: 2.6; }
+      .fusion-diagram :is(.fd-n, .fd-m) circle { r: 3.4px; }
+    }
+    /* The drawing plays once, in time, when the figure is mostly in view (the script arms it only when motion is
+       allowed, 641px and wider): lanes, then the cross-probes, then the challenge, then synthesis and confidence,
+       about one second in all. Once drawn it stays drawn, so a figure at rest in view, or landed on from the nav on
+       a short laptop screen, is never left half drawn. Without the script, under reduced motion or in Still it is
+       simply drawn. The dash is a hair longer than the path so no end cap shows while undrawn. */
+    .fusion-fig.fd-armed .fusion-diagram .fd-s { stroke-dasharray: 1 1.04; stroke-dashoffset: 1.02; }
+    .fusion-fig.fd-armed .fusion-diagram :is(.fd-n, .fd-m) { opacity: 0; }
+    .fusion-diagram .fd-s, .fusion-diagram :is(.fd-n, .fd-m) { --fd-at: 0s; }
+    .fusion-diagram :is(.fd-p, .fd-np, .fd-m1) { --fd-at: 0.2s; }
+    .fusion-diagram :is(.fd-c, .fd-m2) { --fd-at: 0.4s; }
+    .fusion-diagram :is(.fd-o, .fd-no, .fd-m3, .fd-m4) { --fd-at: 0.55s; }
+    .fusion-fig.fd-armed.fd-drawn .fusion-diagram .fd-s {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.45s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) var(--fd-at);
+    }
+    .fusion-fig.fd-armed.fd-drawn .fusion-diagram :is(.fd-n, .fd-m) {
+      opacity: 1;
+      transition: opacity 0.3s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) calc(var(--fd-at) + 0.15s);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fusion-fig.fd-armed .fusion-diagram .fd-s { stroke-dashoffset: 0; transition: none; }
+      .fusion-fig.fd-armed .fusion-diagram :is(.fd-n, .fd-m) { opacity: 1; transition: none; }
+    }
+    body.fx-off .fusion-fig.fd-armed .fusion-diagram .fd-s { stroke-dashoffset: 0; }
+    body.fx-off .fusion-fig.fd-armed .fusion-diagram :is(.fd-n, .fd-m) { opacity: 1; }
+    /* The Confidence card's specimen: three thin meters, labelled as a specimen (no theater). */
+    .conf-spec { margin-top: 20px; display: grid; gap: 10px; }
+    .cf-row { display: grid; grid-template-columns: 108px minmax(0, 1fr); align-items: center; gap: 12px; }
+    .cf-k {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.4;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+    }
+    .cf-bar { position: relative; height: 5px; color: var(--ink); }
+    .cf-bar::before { content: ''; position: absolute; left: 0; right: 0; top: 2px; height: 1px; background: currentColor; opacity: 0.55; }
+    .cf-bar i { position: absolute; left: 0; top: 1px; height: 3px; width: var(--v, 50%); background: currentColor; }
+    .cf-row:nth-child(1) { --v: 72%; }
+    .cf-row:nth-child(2) { --v: 58%; }
+    .cf-row:nth-child(3) { --v: 66%; }
+    .conf-spec + .card-foot { margin-top: 14px; }
+    /* Phones: compact cards, the icon inline with its title. */
+    @media (max-width: 640px) {
+      .bento-card { padding: 22px; }
+      .bento-card:not(.fusion-card) { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 14px; align-items: center; }
+      .bento-card:not(.fusion-card) > .card-glyph { width: 24px; height: 24px; margin: 0; }
+      .bento-card:not(.fusion-card) > h3 { margin: 0; }
+      .bento-card:not(.fusion-card) > :not(.card-glyph):not(h3) { grid-column: 1 / -1; }
+      .bento-card:not(.fusion-card) > p:not(.card-foot) { margin-top: 12px; }
+      .fusion-card { gap: 22px; }
+      .fd-key { gap: 8px 20px; }
+    }
+    html:not([data-theme]) .fusion-diagram, html:not([data-theme]) .fd-k, html:not([data-theme]) .cf-bar { color: #FFFFFF; }
+    html:not([data-theme]) :is(.fd-key li, .cf-k) { color: #C8C8C8; }
+    html:not([data-theme]) :is(.bento-card .card-foot, .fig-label) { color: #A3A3A3; }
+
+    /* ---------- W2-13 the day chip, as the codex writes it ---------- */
+    .day-chip::before, html:not([data-theme]) .day-chip::before { display: none; }
+    .day-chip { gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; color: var(--ink-2); }
+    .cd-dots { display: inline-flex; align-items: center; gap: 4px; color: var(--ink); }
+    .cd-g { display: inline-flex; align-items: center; gap: 2px; }
+    .cd-dots i, .dp-dots i {
+      display: block;
+      width: 4px; height: 4px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+      opacity: 0.6;              /* a place not yet counted: a ring (line ink stays at 0.55 or more) */
+    }
+    .cd-dots i.on, .dp-dots i.on { background: currentColor; opacity: 1; }
+    .cd-name { margin-right: -0.2em; }   /* the trailing tracking, so the name sits centred in its rim */
+    .day-chip:hover, :root:has(#dayPop:popover-open) .day-chip { color: var(--ink); }
+    html:not([data-theme]) .day-chip { color: #C8C8C8; }
+    html:not([data-theme]) .day-chip:hover, :root:not([data-theme]):has(#dayPop:popover-open) .day-chip { color: #FFFFFF; }
+
+    .day-pop {
+      position: fixed;
+      inset: auto;
+      top: 72px; left: 16px;              /* replaced by anchor positioning where supported */
+      margin: 0;
+      width: 400px;
+      max-width: calc(100vw - 32px);
+      max-height: calc(100svh - 96px);
+      overflow-y: auto;
+      padding: 22px 24px 18px;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      background: var(--hdr-band);
+      color: var(--ink);
+      box-shadow: none;
+      text-align: left;
+      opacity: 0;
+      translate: 0 -6px;
+      transition:
+        opacity var(--dur-1) var(--ease-out),
+        translate var(--dur-1) var(--ease-out),
+        overlay var(--dur-1) allow-discrete,
+        display var(--dur-1) allow-discrete;
+    }
+    .day-pop:popover-open { display: grid; gap: 12px; opacity: 1; translate: none; }
+    @starting-style { .day-pop:popover-open { opacity: 0; translate: 0 -6px; } }
+    .day-pop::backdrop { background: transparent; }
+    @supports (position-area: bottom span-right) {
+      .day-chip { anchor-name: --zt-day; }
+      .day-pop {
+        position-anchor: --zt-day;
+        top: auto; left: auto;
+        position-area: bottom span-right;
+        margin: 8px 0 0;
+        position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+      }
+    }
+    @media (max-width: 720px) {   /* phones: a sheet at the foot of the screen, wherever the chip sits */
+      .day-pop {
+        position-area: none;
+        position-try-fallbacks: none;
+        inset: auto 16px calc(16px + env(safe-area-inset-bottom, 0px)) 16px;
+        margin: 0;
+        width: auto;
+        max-width: none;
+      }
+    }
+    html:not([data-theme]) .day-pop {   /* lifted-black law: flat #000 body, the chrome lives on the rim */
+      border: 1px solid transparent;
+      background:
+        linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(180deg in oklab, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.28) 55%, rgba(255, 255, 255, 0.44) 100%) border-box;
+    }
+    :is([data-theme="maya"], [data-theme="skeleton"]) .day-pop {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(180deg in oklab,
+          color-mix(in oklab, var(--ink) 58%, transparent) 0%,
+          color-mix(in oklab, var(--ink) 30%, transparent) 55%,
+          color-mix(in oklab, var(--ink) 44%, transparent) 100%) border-box;
+    }
+    .dp-kicker {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.2;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    .dp-day { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 2px 0 2px; }
+    .dp-dots { align-self: center; display: inline-flex; align-items: center; gap: 7px; color: var(--ink); }
+    .dp-dots .cd-g { gap: 3px; }
+    .dp-dots i { width: 7px; height: 7px; }
+    .dp-name { font-family: var(--serif); font-style: italic; font-size: 32px; line-height: 1; color: var(--ink); }
+    .dp-gloss { font-family: var(--sans); font-size: 15px; color: var(--ink-2); }
+    .dp-text { font-family: var(--sans); font-size: 15px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; }
+    .dp-text i { font-family: var(--serif); font-size: 1.12em; color: var(--ink); }
+    .dp-note { font-family: var(--sans); font-size: 14px; line-height: 1.6; color: var(--ink-3); text-wrap: pretty; }
+    .dp-actions {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 0 18px;
+      margin-top: 2px; padding-top: 6px;
+      border-top: 1px solid var(--rule);
+    }
+    .dp-link, .dp-mirror {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 44px;
+      color: var(--ink);
+      font-size: 15px;
+      transition: color var(--dur-1) var(--ease-out);
+    }
+    .dp-link { font-family: var(--sans); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.3em; }
+    .dp-mirror { padding: 0; border: 0; background: none; cursor: pointer; font-family: var(--serif); font-style: italic; font-size: 18px; }
+    .dp-mirror span { display: inline-block; transition: transform var(--dur-1) var(--ease-out); }
+    .dp-mirror:hover span { transform: translateX(4px); }
+    .dp-mirror:active { scale: 0.985; }
+    :is(.dp-link, .dp-mirror):focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
+    html:not([data-theme]) .day-pop { color: #FFFFFF; }
+    html:not([data-theme]) :is(.dp-kicker, .dp-note) { color: #A3A3A3; }
+    html:not([data-theme]) :is(.dp-gloss, .dp-text) { color: #C8C8C8; }
+    html:not([data-theme]) .dp-actions { border-top-color: rgba(255, 255, 255, 0.55); }
+
+    /* ---------- W2-02 the intro hands off into the page ---------- */
+    /* During the one hand-off step the overlay leaves and the header and the hero's stage arrive at once, so the
+       new snapshot holds them at rest; the stage shows the plain mark (the flight's landing), and once the step is
+       done the live forged relief fades in over it as it always has. */
+    html.zt-handoff .intro-overlay,
+    html.zt-handoff header,
+    html.zt-handoff .hero-forge { transition: none !important; }
+    html.zt-handoff-icon .forge-still { view-transition-name: zt-icon; opacity: 1 !important; transition: none !important; }
+    html.zt-handoff-icon .forge-canvas { opacity: 0 !important; transition: none !important; }
+    html.zt-handoff::view-transition-group(zt-mark),
+    html.zt-handoff::view-transition-group(zt-icon) { animation-duration: 0.9s; animation-timing-function: var(--ease-out); }
+    html.zt-handoff::view-transition-old(root),
+    html.zt-handoff::view-transition-new(root) { animation-duration: 0.6s; animation-timing-function: var(--ease-out); }
+    /* Like the W2-04 iris: presses should go through to the live page during the flight. Where the engine still
+       hit-tests the snapshot, handoff() ends the flight on the press and replays it on the live page. */
+    html.zt-handoff::view-transition { pointer-events: none; }
+
+    /* ---------- Roots and gratitude (footer) ---------- */
+    .footer-roots {
+      max-width: 1280px;
+      margin: 30px auto 0;
+      padding: 26px 0 0;
+      border-top: 1px solid var(--rule-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    @media (min-width: 900px) {   /* quiet: the label holds the left, the words take one calm measure on the right */
+      .footer-roots { grid-template-columns: minmax(0, 260px) minmax(0, 1fr); column-gap: 48px; }
+      .footer-roots > .fr-label { grid-row: 1 / span 2; align-self: start; margin-top: 6px; }
+      .footer-roots > :not(.fr-label) { grid-column: 2; }
+      .footer-roots > .fr-text { margin-top: 0; }
+    }
+    .fr-label {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500; line-height: 1.2;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    .fr-fret { width: 10px; height: 10px; flex: none; color: var(--ink-2); }
+    .fr-text {
+      margin-top: 14px;
+      max-width: 72ch;
+      font-family: var(--serif);
+      font-size: 18px; line-height: 1.55;
+      color: var(--ink-2);
+      text-wrap: pretty;
+    }
+    .fr-sources { margin-top: 14px; }
+    .fr-sources summary {
+      display: inline-flex; align-items: center; gap: 14px;
+      min-height: 44px;
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .fr-sources summary::-webkit-details-marker { display: none; }
+    .fr-sources summary:focus-visible { outline: 2px solid var(--cochineal); outline-offset: 4px; }
+    .fr-body { max-width: 76ch; padding: 2px 0 6px; }
+    .fr-body p { margin-top: 10px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+    .fr-body a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
+    .fr-terms { margin: 14px 0 6px; display: grid; gap: 10px; }
+    .fr-terms > div { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 2px 24px; align-items: baseline; }
+    .fr-terms dt { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink); }
+    .fr-terms dd { margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+    @media (max-width: 640px) {
+      .fr-text { font-size: 17px; }
+      .fr-terms > div { grid-template-columns: minmax(0, 1fr); }
+    }
+    html:not([data-theme]) .fr-label { color: #A3A3A3; }
+    html:not([data-theme]) :is(.fr-text, .fr-body p, .fr-terms dd) { color: #C8C8C8; }
+    html:not([data-theme]) :is(.fr-fret, .fr-terms dt, .fr-sources summary, .fr-body a) { color: #FFFFFF; }
+    html:not([data-theme]) .fr-sources .zd-icon { color: #FFFFFF; }
   </style>
 </head>
 <body class="page-loading">
@@ -6781,20 +7122,16 @@
   <canvas class="rain-layer rain-back" id="rainBack" aria-hidden="true"></canvas>
   <canvas class="rain-layer rain-front" id="rainFront" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="cursor-light" aria-hidden="true" id="cursorLight"></div>
-  <div class="custom-cursor" aria-hidden="true" id="customCursor">
-    <span class="cc-dot"></span>
-    <span class="cc-ring"></span>
-  </div>
   <div class="scroll-progress" aria-hidden="true" id="scrollProgress"></div>
 
   <div id="introOverlay" class="intro-overlay">
     <div id="introStage" class="intro-stage" aria-hidden="true"></div>
-    <!-- W1-08: no request until the visitor presses Sound; the script attaches this source on that first press. -->
+    <!-- The owner's intro sound. On by default: the script attaches this source when the full intro starts (a visitor's
+         own mute is remembered, and then nothing is requested); the short return lock never requests it. -->
     <audio id="introAudio" preload="none" data-src="/static/zotheos_intro.mp3" data-type="audio/mpeg"></audio>
     <div class="intro-controls">
-      <button id="introSound" type="button" aria-pressed="false" hidden>Sound off</button>
-      <button id="skipIntro" type="button">Enter ZOTHEOS &rarr;</button>
+      <button id="introSound" type="button" aria-pressed="false" hidden><span class="snd-mark" aria-hidden="true"></span>Sound</button>
+      <button id="skipIntro" type="button">Enter ZOTHEOS <span aria-hidden="true">&rarr;</span></button>
     </div>
   </div>
 
@@ -6835,8 +7172,13 @@
             </div>
             <p class="ap-note" id="apFxNote" hidden>Applies while Motion is Living</p>
           </div>
+          <div class="ap-row" id="apReplayRow">
+            <button class="ap-replay" id="replayIntro" type="button">Replay intro</button>
+          </div>
         </div>
-        <button class="day-chip" id="dayChip" type="button" title="The obsidian mirror" aria-label="Open the obsidian mirror"></button>
+        <!-- W2-13: today in the count of days, written as the codex writes it (one dot per count). It opens a note on
+             the tonalpohualli (a declarative popover, no script); the note holds the way into the obsidian mirror. -->
+        <button class="day-chip" id="dayChip" type="button" popovertarget="dayPop" aria-label="In the count of days"></button>
       </div>
       <a class="header-mark" href="#top" aria-label="ZOTHEOS">
         <img src="/static/zotheos_logo.png" alt="" class="header-logo-img" data-logo-fallback="parent" data-fx-avoid />
@@ -6877,9 +7219,24 @@
       <li style="--i:12"><a href="#support"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Support</span></a></li>
     </ul>
     <div class="ns-foot" id="navSheetFoot">
-      <a class="ns-dl" href="/download.html">Download status <span aria-hidden="true">&rarr;</span></a>
+      <a class="ns-dl" href="/download.html"><span class="rs-pre">Download status</span><span class="rs-avail">Download for Windows</span> <span aria-hidden="true">&rarr;</span></a>
     </div>
   </nav>
+
+  <!-- W2-13: what the day chip means. Shown as a calendar only (the boundary is on the site, not on the tradition);
+       the correlation is stated. The script fills the
+       day (dpDots, dpName, dpGloss) from the same computation as the chip. -->
+  <div class="day-pop" id="dayPop" popover role="dialog" aria-labelledby="dpKicker">
+    <p class="dp-kicker" id="dpKicker">In the count of days</p>
+    <p class="dp-day"><span class="dp-dots" id="dpDots" aria-hidden="true"></span><span class="dp-name" id="dpName" lang="nah"></span><span class="dp-gloss" id="dpGloss"></span></p>
+    <p class="dp-text">Today in the <i lang="nah">tonalpohualli</i>, the count of days. Its 260 days turn 13 numbers with 20 day signs, so each pairing returns once in every 260 days.</p>
+    <p class="dp-text">The count is a living tradition: K&rsquo;iche&rsquo; Maya daykeepers in highland Guatemala keep their own 260-day count, the <i lang="quc">cholq&rsquo;ij</i>, today. Here it is shown only as a calendar; ZOTHEOS does not read fortunes from it.</p>
+    <p class="dp-note">The number is written with dots, as the codices write it, one dot for each count. The rings are added here to show the rest of the thirteen, and the dots are grouped in fives for reading. Computed in your browser with the Caso correlation, in which 13 August 1521 (Julian; 23 August in today&rsquo;s calendar) was 1 <span lang="nah">Coatl</span>, Serpent. The day turns at your local midnight.</p>
+    <div class="dp-actions">
+      <a class="dp-link" href="#roots">Roots and sources</a>
+      <button class="dp-mirror" id="dayPopMirror" type="button">Look into the obsidian mirror <span aria-hidden="true">&rarr;</span></button>
+    </div>
+  </div>
 
   <!-- QA1: the page's one main landmark, from the hero to the support section; the skip link lands here. -->
   <main id="main" tabindex="-1" data-anchor-target>
@@ -6915,26 +7272,26 @@
         A private, local AI council to help you examine evidence, understand human consequences and decide for yourself. Three perspectives. Your judgment.
       </p>
 
-      <p class="proof-note" id="development-status"><strong>Development update: October 4, 2026.</strong> The updated Windows desktop has been built for internal testing. First-run setup, installation and clean-machine checks are still in progress before a public download. <a href="/download.html">Release status</a>.</p>
-      <!-- Three CTAs only. Primary = Early access (cochineal halo). -->
+      <!-- D3: one primary action, behind the release switch (html[data-release]: "prerelease" or "available";
+           tools/release_switch.py flips it and fills the version, size and installer link). One quiet link beside it. -->
       <div class="hero-actions stagger reveal">
-        <a class="btn btn-primary" href="/download.html" data-magnetic>
-          <span class="bl">Download status</span> <span class="arrow">&rarr;</span>
+        <a class="btn btn-primary rs-pre" href="#waitlist">
+          <span class="bl">Join the release list</span> <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a class="btn-ghost" href="#model-choice">
-          <span class="bl">Explore model choice</span> <span class="arrow">&rarr;</span>
+        <a class="btn btn-primary rs-avail" href="/download.html" data-rs-href>
+          <span class="bl">Download for Windows</span> <span class="rs-meta"><span data-rs="version">v0.0.0</span> &middot; <span data-rs="size">0 MB</span></span> <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a class="btn-ghost" href="#support">
-          <span class="bl">Support the mission</span> <span class="arrow">&rarr;</span>
-        </a>
+        <a class="hero-link" href="#model-choice">Explore model choice</a>
       </div>
 
-      <div class="hero-stats stagger reveal">
-        <div class="hero-stat"><div class="num" data-count="3">3</div><div class="label">Reasoning cores</div></div>
-        <div class="hero-stat"><div class="num">Tools</div><div class="label">One workspace</div></div>
-        <div class="hero-stat"><div class="num">Local</div><div class="label">Model inference</div></div>
-        <div class="hero-stat"><div class="num">Private</div><div class="label">Local edition</div></div>
-      </div>
+      <!-- D3: the development update as one status line; the full update lives on /download.html.
+           tools/release.py status / log rewrite data-rel="status" and data-rel="date"; edit them with the tool. -->
+      <a class="hero-status reveal" id="development-status" href="/download.html">
+        <span class="hs-dot" aria-hidden="true"></span>
+        <span class="hs-text rs-pre"><span class="sr-only">Release status: </span><span class="hs-wide">Windows desktop: </span><span data-rel="status">internal testing</span> &middot; <span class="hs-wide">Updated </span><time data-rel="date" data-fmt="short" datetime="2026-10-04">Oct 4, 2026</time></span>
+        <span class="hs-text rs-avail"><span class="sr-only">Release page: </span><span class="hs-wide">Windows desktop </span><span data-rs="version">v0.0.0</span> &middot; installer and checksum</span>
+        <span class="hs-arrow" aria-hidden="true">&rarr;</span>
+      </a>
 
       <a class="hero-descend reveal" href="#council-story" aria-label="Descend to the council">
         <span class="hd-label">Convene the council</span>
@@ -7033,9 +7390,9 @@
   </section>
 
   <div class="council-strip reveal">
-    <span>EYI&nbsp;TLAMATINIME</span>
+    <span lang="nah">Eyi&nbsp;tlamatinime</span>
     <span class="center">three wise voices</span>
-    <span>CONSEJO&nbsp;DE&nbsp;TRES</span>
+    <span lang="es">Consejo&nbsp;de&nbsp;tres</span>
   </div>
 
   <section class="council-scroll" id="council-story" aria-label="The council, in depth">
@@ -7144,35 +7501,87 @@
         <span class="maya-num"><span class="d"></span></span>
         <span class="section-label">Architecture</span>
       </div>
-      <h2 class="section-title reveal">Three minds. One grounded answer<span class="seal">.</span></h2>
+      <h2 class="section-title reveal">How one answer is forged<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
-        Like a medical conference, three specialists examine the question from different angles, then deliver one careful synthesis. Analyst checks the facts. Humanist reads the room. Skeptic asks what's missing.
+        Three local models take the same question. The Analyst measures, the Humanist witnesses, the Skeptic doubts. Their claims are tested against each other before one answer is written, and the decision stays with you.
       </p>
+      <!-- W2-07: one claim per card, a mono footnote under each, and the Fusion card drawn as its mechanism (an
+           illustration, labelled as one). Icons follow G6: stroke only, built from the fret grid. -->
       <div class="bento">
-        <div class="bento-card span-2 reveal">
-          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><line x1="16" y1="3" x2="16" y2="29"/><line x1="3" y1="16" x2="29" y2="16"/></svg></div>
-          <h3>Fusion architecture</h3>
-          <p>Three local GGUF models, Analyst, Humanist, Skeptic, each examine your query from a different angle. Their perspectives are scored by core weights derived from query type, cross-probed against each other for weak claims, then synthesized into one answer. Model-stated confidence is exposed when available.</p>
+        <div class="bento-card span-2 fusion-card reveal">
+          <div class="fc-copy">
+            <h3>Fusion architecture</h3>
+            <p>Each mind answers from its own angle. Their claims are cross-probed, the strongest agreement is challenged, and one answer is synthesized, weighted by the kind of question.</p>
+            <p class="card-foot">Three local GGUF models &middot; core weights by query type</p>
+          </div>
+          <figure class="fusion-fig">
+            <svg class="fusion-diagram" viewBox="0 0 560 240" role="img" aria-labelledby="fdTitle" focusable="false">
+              <title id="fdTitle">Illustration of one answer being forged. The Analyst, Humanist and Skeptic each run in their own lane. One: the lanes cross-probe each other. Two: the Skeptic challenges the point where the other two agree. Three: the lanes meet in one synthesis. Four: a confidence reading follows.</title>
+              <g class="fd-minds">
+                <use href="#glyph-analyst" x="0" y="30" width="36" height="36"/>
+                <use href="#glyph-humanist" x="0" y="102" width="36" height="36"/>
+                <use href="#glyph-skeptic" x="0" y="174" width="36" height="36" stroke-width="2.2"/>
+              </g>
+              <path class="fd-s fd-l" pathLength="1" d="M48 48H250C312 48 322 120 374 120"/>
+              <path class="fd-s fd-l" pathLength="1" d="M48 120H374"/>
+              <path class="fd-s fd-l" pathLength="1" d="M48 192H250C312 192 322 120 374 120"/>
+              <path class="fd-s fd-p" pathLength="1" d="M100 48C118 72 118 96 100 120"/>
+              <path class="fd-s fd-p" pathLength="1" d="M100 120C118 144 118 168 100 192"/>
+              <path class="fd-s fd-p" pathLength="1" d="M142 48C180 96 180 144 142 192"/>
+              <path class="fd-s fd-p fd-agree" pathLength="1" d="M212 48V120"/>
+              <g class="fd-n fd-np">
+                <circle cx="100" cy="48" r="2.6"/><circle cx="100" cy="120" r="2.6"/><circle cx="100" cy="192" r="2.6"/>
+                <circle cx="142" cy="48" r="2.6"/><circle cx="142" cy="192" r="2.6"/>
+                <circle cx="212" cy="48" r="2.6"/><circle cx="212" cy="120" r="2.6"/>
+              </g>
+              <path class="fd-s fd-c" pathLength="1" d="M182 192C182 150 190 100 212 84"/>
+              <path class="fd-s fd-c" pathLength="1" d="M202 76L222 92"/>
+              <path class="fd-s fd-o" pathLength="1" d="M390 104L406 120L390 136L374 120Z"/>
+              <path class="fd-s fd-o" pathLength="1" d="M406 120H452"/>
+              <path class="fd-s fd-o" pathLength="1" d="M458 136H514M464 136V126H476V136M480 136V114H492V136M496 136V102H508V136"/>
+              <circle class="fd-n fd-no" cx="390" cy="120" r="3"/>
+              <g class="fd-m fd-m1"><circle cx="121" cy="30" r="2.6"/></g>
+              <g class="fd-m fd-m2"><circle cx="198" cy="150" r="2.6"/><circle cx="206" cy="150" r="2.6"/></g>
+              <g class="fd-m fd-m3"><circle cx="382" cy="88" r="2.6"/><circle cx="390" cy="88" r="2.6"/><circle cx="398" cy="88" r="2.6"/></g>
+              <g class="fd-m fd-m4"><circle cx="474" cy="84" r="2.6"/><circle cx="482" cy="84" r="2.6"/><circle cx="490" cy="84" r="2.6"/><circle cx="498" cy="84" r="2.6"/></g>
+            </svg>
+            <ol class="fd-key">
+              <li><span class="fd-k" aria-hidden="true"><i></i></span>Cross-probe</li>
+              <li><span class="fd-k" aria-hidden="true"><i></i><i></i></span>Challenge</li>
+              <li><span class="fd-k" aria-hidden="true"><i></i><i></i><i></i></span>Synthesis</li>
+              <li><span class="fd-k" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Confidence</li>
+            </ol>
+            <figcaption class="fig-label">Illustration</figcaption>
+          </figure>
         </div>
         <div class="bento-card reveal reveal-d1">
-          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="6" width="20" height="20"/><circle cx="16" cy="16" r="3"/></svg></div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M4 27H28M6 27V16H10V12H14V8H18V12H22V16H26V27M13 27V21H19V27" vector-effect="non-scaling-stroke"/></svg></div>
           <h3>Local-first</h3>
-          <p>Local inference runs on your hardware via llama.cpp. Conversations, vault and memory are stored on the device running the local edition. Model downloads and optional network tools have separate network requirements.</p>
+          <p>Inference runs on your hardware through llama.cpp, and conversations, vault and memory are stored on the device running the local edition.</p>
+          <p class="card-foot">Connection needed for model downloads and optional tools</p>
         </div>
         <div class="bento-card reveal reveal-d1">
-          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 8 L 16 4 L 26 8 L 26 22 L 16 28 L 6 22 Z"/><line x1="16" y1="4" x2="16" y2="28"/></svg></div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 14H27V27H5ZM5 14V10H9V7H23V10H27V14M14 18H18V22H14Z" vector-effect="non-scaling-stroke"/></svg></div>
           <h3>Evidence vault</h3>
-          <p>Local knowledge base with tiered sourcing. Cross-encoder reranking. Citations enforced as <code>[Vault:Source]</code> with strict-mode checking.</p>
+          <p>Your sources become a local knowledge base, and answers cite them as <code>[Vault:Source]</code>, checked in strict mode.</p>
+          <p class="card-foot">Tiered sourcing &middot; cross-encoder reranking</p>
         </div>
         <div class="bento-card reveal reveal-d2">
-          <div class="card-glyph"><svg viewBox="0 0 40 40" stroke-width="2" aria-hidden="true"><use href="#glyph-skeptic"/></svg></div>
+          <div class="card-glyph"><svg viewBox="0 0 40 40" stroke-width="2" aria-hidden="true" focusable="false"><use href="#glyph-skeptic"/></svg></div>
           <h3>Anti-consensus Skeptic</h3>
-          <p>The Skeptic argues against the strongest emerging consensus between the other two cores, not against the user. Catches the place where smart panelists agree without checking each other.</p>
+          <p>The Skeptic argues against the strongest agreement between the other two minds, not against you.</p>
+          <p class="card-foot">Aimed at consensus, by design</p>
         </div>
         <div class="bento-card reveal reveal-d2">
-          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="6" y1="26" x2="26" y2="26"/><line x1="10" y1="26" x2="10" y2="18"/><line x1="16" y1="26" x2="16" y2="10"/><line x1="22" y1="26" x2="22" y2="14"/></svg></div>
+          <div class="card-glyph"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M4 27H28M7 27V21H12V27M14 27V15H19V27M21 27V9H26V27" vector-effect="non-scaling-stroke"/></svg></div>
           <h3>Confidence made visible</h3>
-          <p>Confidence signals can include evidence-derived estimates, model-stated confidence and a blended value, when available. They help inspect an answer; they are not proof that it is correct.</p>
+          <p>Evidence-derived, model-stated and blended signals appear when available. They help you inspect an answer; they are not proof that it is correct.</p>
+          <div class="conf-spec" role="img" aria-label="Specimen, not a live score: three confidence meters, evidence-derived, model-stated and blended">
+            <div class="cf-row"><span class="cf-k">Evidence</span><span class="cf-bar"><i></i></span></div>
+            <div class="cf-row"><span class="cf-k">Model-stated</span><span class="cf-bar"><i></i></span></div>
+            <div class="cf-row"><span class="cf-k">Blended</span><span class="cf-bar"><i></i></span></div>
+          </div>
+          <p class="card-foot">Specimen, not a live score</p>
         </div>
       </div>
     </div>
@@ -7194,7 +7603,7 @@
       </div>
       <h2 class="section-title reveal">Built to be checked<span class="seal">.</span></h2>
       <p class="section-desc reveal reveal-d1">
-        ZOTHEOS includes signed result receipts, local forecast records, evidence-linked corrections and backend network checks. They make the work inspectable, and their desktop integration is part of the current validation.
+        ZOTHEOS includes signed result receipts, local forecast records, evidence-linked corrections and backend network checks. They make the work inspectable<span class="rs-pre">, and their desktop integration is part of the current validation</span>.
       </p>
       <!-- W2-08: each instrument carries a small stroke specimen of what it keeps (drawn in turn as the grid arrives);
            the group is labelled as specimens. Pure illustration: no value here is read from anything. -->
@@ -7376,7 +7785,6 @@
             <span class="ws-tile">Memory Dashboard</span>
             <span class="ws-tile">Knowledge Map</span>
             <span class="ws-tile">Theme Studio</span>
-            <span class="ws-tile is-planned">Kids Mode (planned)</span>
             <span class="ws-tile">Model Setup</span>
             <span class="ws-tile">Device Health</span>
             <span class="ws-tile is-more" aria-hidden="true">&hellip;</span>
@@ -7495,7 +7903,7 @@
           <details>
             <summary><span>How does local setup work?</span><span class="zd-icon" aria-hidden="true"></span></summary>
             <ol class="local-journey">
-              <li><strong>Install the app.</strong><span>The Windows package follows release validation.</span></li>
+              <li><strong>Install the app.</strong><span class="rs-pre">The Windows package follows release validation.</span><span class="rs-avail">The Windows installer and its checksum are on the <a href="/download.html">release page</a>.</span></li>
               <li><strong>Choose compatible models.</strong><span>Download or import files that fit your machine and their licenses.</span></li>
               <li><strong>Work locally.</strong><span>Inference runs on your device after setup. Optional network tools remain separate choices.</span></li>
             </ol>
@@ -7723,7 +8131,7 @@
           <span class="bl">Explore local setup</span> <span class="arrow">&rarr;</span>
         </a>
         <p class="console-cta-note">
-          Your own workspace. Your chosen models. The Windows desktop is in release validation.
+          Your own workspace. Your chosen models. <span class="rs-pre">The Windows desktop is in release validation.</span><span class="rs-avail">The Windows desktop is available to download.</span>
         </p>
       </div>
     </div>
@@ -8013,13 +8421,14 @@
         <span class="section-label">Be among the first</span>
       </div>
       <div class="waitlist-card reveal reveal-d1">
-        <h3>The local Windows download follows setup, installation and clean-machine validation.</h3>
+        <h3 class="rs-pre">The local Windows download follows setup, installation and clean-machine validation.</h3>
+        <h3 class="rs-avail">The Windows download is on the <a href="/download.html">release page</a>. Join the list for release updates.</h3>
         <p>Join for ZOTHEOS development and release updates. This form sends your email to Formspree, our form processor. Early access is not a promise of an immediate invitation or a finished download.</p>
         <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mrejgqyb" method="POST">
           <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" class="waitlist-input" aria-label="Email address" />
           <input type="hidden" name="_subject" value="New ZOTHEOS waitlist signup" />
           <input type="text" name="_gotcha" style="display: none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn"><span class="bl">Join the waitlist</span> <span class="arrow">&rarr;</span></button>
+          <button type="submit" class="btn"><span class="bl">Join the release list</span> <span class="arrow" aria-hidden="true">&rarr;</span></button>
         </form>
         <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
       </div>
@@ -8104,7 +8513,7 @@
         </div>
         <div class="footer-col" role="group" aria-labelledby="fcol-release">
           <span class="footer-col-label" id="fcol-release">Release</span>
-          <a href="/download.html">Download status</a>
+          <a href="/download.html"><span class="rs-pre">Download status</span><span class="rs-avail">Download for Windows</span></a>
           <a href="#waitlist">Early access</a>
           <a href="#faq">FAQ</a>
           <a href="#founder">Founder</a>
@@ -8123,21 +8532,41 @@
       <summary><span>Website privacy and connections</span><span class="zd-icon" aria-hidden="true"></span></summary>
       <div class="privacy-grid">
         <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p></div>
-        <div><strong>Website connections</strong><p>This page loads hosted images and video, plus fonts from Google Fonts. Those providers handle the associated requests. Local inference and loading this website are different activities.</p></div>
+        <div><strong>Website connections</strong><p>This page loads its images, video and fonts from this site's own host. The hosting provider handles those requests. Local inference and loading this website are different activities.</p></div>
         <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, our form processor. Support links open separate payment services with their own policies. Neither is required for individual local use.</p></div>
         <div><strong>What the mirror can show</strong><p>The mirror reads page-accessible cookies and a saved theme setting. It cannot read HttpOnly cookies or establish what a hosting provider logs or retains.</p></div>
       </div>
       <p>For privacy or security concerns, contact <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
     </details>
+    <!-- Roots: where the visual language comes from, said once, quietly, beside the day seal. G7: every Nahuatl word is
+         glossed, one orthography, sources named. -->
+    <div class="footer-roots" id="roots" tabindex="-1" role="region" aria-labelledby="frLabel" data-anchor-target>
+      <p class="fr-label" id="frLabel"><svg class="fr-fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Roots and gratitude</p>
+      <p class="fr-text">ZOTHEOS draws its visual language from ancient Mesoamerica: the stepped fret, the fine black line of the painted codices, the count of days. It honors the Indigenous peoples of the Americas: the Nahua, Maya, Zapotec and many other peoples of Mexico and Central America, and the Native nations further north. They are distinct peoples with connected roots that are still living, and many Mexican and Mexican American families carry those roots too. As the project grows, it intends to work with Indigenous scholars and community members, so that every symbol here is used accurately and with permission. Any wider work with the traditions of other peoples is meant to follow the same rule: their guidance, their permission.</p>
+      <details class="fr-sources">
+        <summary><span>Sources and orthography</span><span class="zd-icon" aria-hidden="true"></span></summary>
+        <div class="fr-body">
+          <p>Nahuatl is a living language, spoken today in Nahua communities across Mexico. Words on this site use one spelling, the classical unmarked orthography, written without vowel-length or saltillo marks (<span lang="nah">Quiahuitl</span>, Rain; <span lang="nah">Ollin</span>, Movement; <span lang="nah">Ozomatli</span>, Monkey); modern Nahua writers often use other conventions. Each word is glossed in English where it appears.</p>
+          <dl class="fr-terms">
+            <div><dt lang="nah">in xochitl, in cuicatl</dt><dd>flower and song: poetry; read by some scholars as the way truth is spoken</dd></div>
+            <div><dt lang="nah">eyi tlamatinime</dt><dd>three who know (three wise ones); a <span lang="nah">tlamatini</span> is one who knows</dd></div>
+            <div><dt lang="nah">tonalpohualli</dt><dd>the count of days: 260 days, 13 numbers turning with 20 day signs</dd></div>
+          </dl>
+          <p>The day in the header and below is computed in your browser with the Caso correlation, in which 13 August 1521 (Julian; 23 August in today&rsquo;s calendar) was 1 <span lang="nah">Coatl</span>, Serpent. It is shown as a date only, never as a horoscope.</p>
+          <p>The stepped fret, <span lang="nah">xicalcoliuhqui</span> (&ldquo;twisted gourd&rdquo;), appears in the Zapotec stone mosaics of Mitla and on the shields painted in the Codex Mendoza; the version here is redrawn from its construction, not traced from any single work. The line follows the fine black contour line of the painted codices. For the language itself, see the <a href="https://nahuatl.wired-humanities.org/" target="_blank" rel="noopener noreferrer">Online Nahuatl Dictionary</a> (Wired Humanities Projects).</p>
+        </div>
+      </details>
+    </div>
     <div class="footer-epigraph">
-      <span class="nahuatl">in xochitl, in cuicatl<span class="gloss">flower and song, the way truth is told</span></span>
+      <span class="nahuatl"><span lang="nah">in xochitl, in cuicatl</span><span class="gloss">flower and song, poetry</span></span>
       <span class="tonal-seal" id="tonalSeal"></span>
       <span class="version">ZTHS &middot; 026</span>
     </div>
   </footer>
 
-  <div class="mobile-cta" id="mobileCta" aria-hidden="true">
-    <a class="btn btn-primary" href="#waitlist"><span class="bl">Get early access</span> <span class="arrow">&rarr;</span></a>
+  <div class="mobile-cta" id="mobileCta" aria-hidden="true" inert>
+    <a class="btn btn-primary rs-pre" href="#waitlist"><span class="bl">Join the release list</span> <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    <a class="btn btn-primary rs-avail" href="/download.html" data-rs-href><span class="bl">Download for Windows</span> <span class="rs-meta"><span data-rs="version">v0.0.0</span> &middot; <span data-rs="size">0 MB</span></span> <span class="arrow" aria-hidden="true">&rarr;</span></a>
   </div>
 
   <button class="mirror-btn" id="mirrorBtn" type="button" aria-label="Open the obsidian mirror" title="The obsidian mirror"></button>
@@ -8148,7 +8577,7 @@
     <div class="mirror-copy">
       <div class="m-stage" data-stage="1">
         <div class="mirror-kicker">The obsidian mirror</div>
-        <p class="mirror-lore">In the old world, kings looked into smoking obsidian to see the secrets of others.</p>
+        <p class="mirror-lore">In ancient Mexico, obsidian was cut and polished into mirrors.</p>
       </div>
       <div class="m-stage" data-stage="2">
         <div class="mirror-verdict">This mirror is dark.</div>
@@ -8185,6 +8614,7 @@
      iconSrc: '/static/zotheos_icon.png',   // the shipped icon, white on transparent
      logoSrc: '/static/zotheos_logo.png',   // the shipped wordmark, white on transparent
      loop: false,                           // true: assemble, hold, release, repeat (8.4 s cycle)
+     quick: false,                          // true: the short return lock (mark already whole, one flash, done at 700 ms)
      dust: true,                            // the particle field (off automatically under reduced motion)
      interactive: true                      // hold the mark to open it (once mode)
    });
@@ -8194,7 +8624,7 @@
 
    Timeline (ms from cycle start), shared with the sound design:
      0 left half starts, 120 right half, 420 glyphs, 2300 LOCK, 2950..3310 letters Z O T H E (90 ms apart),
-     3350..4500 the mark travels to its seat, 4250 S, 4650 done; loop mode: 7200 release, 8400 next cycle. */
+     3350..4500 the mark travels to its seat, 4250 S, 4650 done; loop mode: 7200 release, 8400 next cycle (the owner scored his sound to this 8.4 s loop). */
 (function () {
   'use strict';
   var SLOT_CX = 0.79115;          // center of the icon slot as a fraction of the wordmark width
@@ -8204,6 +8634,7 @@
   ];
   var S_LETTER = ['87.57%', '0%', 0];
   var T = { parts: 0, placed: 2600, lock: 2300, name: 2950, seat: 3350, s: 4250, done: 4650, release: 7200, cycle: 8400 };
+  var QUICK = { lock: 160, done: 700 };   // quick mode: the return-visit lock
 
   function el(tag, cls, parent) {
     var e = document.createElement(tag);
@@ -8220,7 +8651,7 @@
   function mount(root, opts) {
     opts = opts || {};
     var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-    var loop = !!opts.loop, interactive = opts.interactive !== false && !loop;
+    var loop = !!opts.loop, quick = !!opts.quick && !loop, interactive = opts.interactive !== false && !loop;
     var handlers = {}, timers = [], seated = false, cycleStart = 0, destroyed = false, raf = 0;
 
     root.classList.add('zi-root');
@@ -8296,6 +8727,14 @@
         root.classList.add('zi-done');
         dust.mode = 'calm';
         emit('done');
+        return;
+      }
+      if (quick) {   /* the return-visit lock: the mark already whole, one flash, then rest */
+        parts.forEach(function (p) { p.classList.add('zi-placed'); });
+        emit('parts');
+        dust.mode = 'calm';
+        later(function () { emit('link'); flash(); dust.mode = 'burst'; }, QUICK.lock);
+        later(function () { root.classList.add('zi-done'); dust.mode = 'calm'; emit('done'); }, QUICK.done);
         return;
       }
       emit('parts');
@@ -8642,20 +9081,24 @@
       var snd = document.getElementById('introSound');
       var audio = document.getElementById('introAudio');
       if (!o) return;
-      /* QA1 sound switch. The intro sound file (static/zotheos_intro.mp3) is not deployed yet, so the Sound button
-         stays hidden (it ships with the hidden attribute) and the file is never requested. To turn sound on once
-         the file is live, change this one line to true: the button then shows and fetches the file on its first
-         press, exactly as before. */
-      var SOUND_FILE_DEPLOYED = false;
-      if (SOUND_FILE_DEPLOYED && snd && audio) snd.hidden = false;
-      else { snd = null; audio = null; }
-      var d = false, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0;
+      /* QA1 sound switch. static/zotheos_intro.mp3 is the owner's sound, taken from his scored 4K loop
+         (ZOTHEOS_mark_assembly_loop_4K60_WITHSOUND) and lined up with this animation exactly as in that video, with
+         1 dB of headroom. Set SOUND_FILE_DEPLOYED false to hide the Sound button again.
+         Sound is on by default (the owner's choice): the full intro starts it on its own, and a visitor's own mute is
+         remembered on this device (localStorage zotheos_intro_sound). Browsers that hold sound until the first
+         interaction keep it off, and the Sound button then starts it with one press. The short return lock is silent. */
+      var SOUND_FILE_DEPLOYED = true, SOUND_GAIN = 1;
+      if (!(SOUND_FILE_DEPLOYED && snd && audio)) { snd = null; audio = null; }
+      var SOUND_KEY = 'zotheos_intro_sound', SEEN_KEY = 'zotheos_intro_seen';
+      function soundPref() { try { return window.localStorage.getItem(SOUND_KEY) !== 'off'; } catch (e) { return true; } }
+      function setSoundPref(on) { try { window.localStorage.setItem(SOUND_KEY, on ? 'on' : 'off'); } catch (e) {} }
+      var d = true, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0, quick = false, returnTo = null;
       var pending = { token: 0, timeout: null, listeners: [] };   /* audio work that may still be in flight */
       var animStarted = false, onParts = null;   /* audio waits for the animation's first frame (images may still load) */
       var inerted = [];   /* W1-08: the page behind the overlay, made inert while it is up */
+      /* PAT-1: one constant name ("Sound"); the state is aria-pressed and the filled mark. */
       function label() {
         if (!snd) return;
-        snd.textContent = soundOn ? 'Sound on' : 'Sound off';
         snd.setAttribute('aria-pressed', soundOn ? 'true' : 'false');
       }
       function cancelPending() {
@@ -8674,24 +9117,88 @@
           if (++n >= 11 || audio.volume <= 0.01) { clearInterval(fade); fade = null; try { audio.pause(); } catch (e) {} }
         }, 60);
       }
+      /* W2-02: the intro hands off into the page. Once the mark is whole, entering the page is one view transition:
+         the assembled mark flies into the hero's stage (as the plain mark, which then gives way to the live forged
+         relief) and the wordmark settles into the header's. The hero is revealed inside the same step, so there is
+         no double exposure. Only when motion is allowed and the browser has same-document view transitions; the
+         intro's timing and how often it plays are unchanged, and otherwise the overlay fades as before (W1-08). */
+      function handoff() {
+        if (typeof document.startViewTransition !== 'function' || !window.zMotionAllowed() || !stage) return false;
+        var mark = stage.querySelector('.zi-mark'), word = stage.querySelector('.zi-word');
+        if (!mark || !word || !stage.querySelector('.zi-part.zi-placed')) return false;
+        var root = document.documentElement;
+        var forge = document.getElementById('heroForge');
+        var fr = forge && forge.querySelector('.forge-still') ? forge.getBoundingClientRect() : null;
+        var toForge = !!(fr && fr.height && fr.bottom > 0 && fr.top < window.innerHeight);   /* the stage is on screen */
+        function unname() { word.style.viewTransitionName = ''; mark.style.viewTransitionName = ''; }
+        function done() { root.classList.remove('zt-handoff', 'zt-handoff-icon', 'zt-replay'); }
+        if (!document.body.classList.contains('page-loading')) root.classList.add('zt-replay');   /* Replay intro: see the zt-replay rule */
+        word.style.viewTransitionName = 'zt-mark';           /* lands on the header mark (named once the page shows) */
+        if (toForge) mark.style.viewTransitionName = 'zt-icon';
+        root.classList.add('zt-handoff');
+        var vt;
+        try {
+          vt = document.startViewTransition(function () {
+            root.classList.remove('zt-replay');
+            unname();
+            if (toForge) root.classList.add('zt-handoff-icon');   /* names the stage only in the new state */
+            o.classList.add('dismissed');
+            document.body.classList.remove('page-loading');
+          });
+        } catch (e) { unname(); done(); return false; }
+        vt.finished.then(done, done);
+        /* Safety net: the step takes about a second. If the engine stalls it (it otherwise waits up to 4 s on a
+           frozen snapshot), skip straight to the revealed page. */
+        var guard = setTimeout(function () { try { vt.skipTransition(); } catch (e) {} }, 1800);
+        vt.finished.then(function () { clearTimeout(guard); }, function () { clearTimeout(guard); });
+        /* A press during the flight is never lost. Chromium hit-tests the whole snapshot as the root element while
+           the step runs (pointer-events: none on the pseudo does not pass presses through), so a click that lands on
+           the root ends the flight at once and is replayed on whatever sits under the pointer in the live page. */
+        function onPress(e) {
+          if (e.target !== root || !e.isTrusted) return;
+          var x = e.clientX, y = e.clientY;
+          e.preventDefault();
+          e.stopPropagation();
+          document.removeEventListener('click', onPress, true);
+          function replay() {
+            var el = document.elementFromPoint(x, y);
+            var t = el && el.closest('a[href], button, summary, label, input, select, textarea, [role="button"], [tabindex]');
+            if (!t || t === root) return;
+            try { t.focus({ preventScroll: true }); } catch (err) {}
+            t.click();
+          }
+          vt.finished.then(replay, replay);
+          try { vt.skipTransition(); } catch (err) {}
+        }
+        document.addEventListener('click', onPress, true);
+        vt.finished.then(function () { document.removeEventListener('click', onPress, true); },
+          function () { document.removeEventListener('click', onPress, true); });
+        return true;
+      }
       function dismiss() {
         if (d) return;
         d = true;
         if (timer != null) clearTimeout(timer);
         var hadFocus = o.contains(document.activeElement);
-        o.classList.add('dismissed');
+        if (!handoff()) o.classList.add('dismissed');
         document.removeEventListener('keydown', onKey);
         inerted.forEach(function (el) { el.inert = false; });
         inerted = [];
         /* Focus was on Enter: put the sequential-focus starting point back at the top of the document, so the
            first Tab after the intro reaches "Skip to content" again. */
-        if (hadFocus) {
-          var b = document.body;
-          try { b.setAttribute('tabindex', '-1'); b.focus({ preventScroll: true }); } catch (e) {}
-          b.removeAttribute('tabindex');
+        if (hadFocus || returnTo) {
+          var back = returnTo && returnTo.offsetParent !== null ? returnTo : null;   /* Replay intro: back where it was asked for */
+          if (back) { try { back.focus({ preventScroll: true }); } catch (e) {} }
+          else {
+            var b = document.body;
+            try { b.setAttribute('tabindex', '-1'); b.focus({ preventScroll: true }); } catch (e) {}
+            b.removeAttribute('tabindex');
+          }
         }
+        returnTo = null;
         stopAudio();
-        if (intro) setTimeout(function () { try { intro.destroy(); } catch (e) {} }, 1200);
+        var leaving = intro;
+        if (leaving) setTimeout(function () { try { leaving.destroy(); } catch (e) {} if (intro === leaving) intro = null; }, 1200);
       }
       /* W1-08: a proper modal moment. Everything behind the overlay is inert (Tab cannot reach invisible
          controls), and Escape, Enter, Space or a press anywhere on the overlay enters the page. Enter and Space
@@ -8705,12 +9212,6 @@
           dismiss();
         }
       }
-      Array.prototype.forEach.call(document.body.children, function (el) {
-        if (el === o || el.tagName === 'SCRIPT' || el.inert) return;
-        el.inert = true;
-        inerted.push(el);
-      });
-      document.addEventListener('keydown', onKey);
       o.addEventListener('click', function (e) { if (snd && snd.contains(e.target)) return; dismiss(); });
       function checkMotion() { if (!window.zMotionAllowed()) dismiss(); }
       document.addEventListener('visibilitychange', checkMotion);
@@ -8724,8 +9225,8 @@
           snd.style.display = 'none';
         }
       }
-      /* The sound file is requested only on the first Sound press (W1-08: no request, and no 404, on a visit
-         that never asks for sound). */
+      /* The sound file is requested only when sound is wanted: the full intro with sound on (the default), or a
+         Sound press. A visitor who muted it, and the short return lock, request nothing. */
       function attachSource() {
         if (!audio || audio.querySelector('source')) return;
         var src = audio.getAttribute('data-src');
@@ -8742,29 +9243,38 @@
       /* A failure that happened before this script ran shows as NETWORK_NO_SOURCE (3) with no data. Read it only at
          window load: while the element is still choosing its source it also reports 3 for a moment. */
       window.addEventListener('load', function () { if (audio && audio.networkState === 3 && audio.readyState === 0) noAudio(); });
-      if (snd && audio) snd.addEventListener('click', function () {
-        var now = Date.now(); if (now - lastPress < 250) return; lastPress = now;   /* one press, one toggle */
-        soundOn = !soundOn; label();
-        if (!soundOn) { cancelPending(); audio.muted = true; return; }
-        if (d) return;
+      /* Start the sound in step with the animation: wait for its first frame, seek to where it is, and play once the
+         seek has landed (a play() issued while a seek is still pending can restart from 0 on servers without range
+         support). A browser that refuses (sound held until an interaction) leaves it off; one Sound press starts it. */
+      function begin() {
+        if (d || !audio || !soundOn) return;
         if (fade) { clearInterval(fade); fade = null; }
-        audio.volume = 1; audio.muted = false;
+        audio.volume = SOUND_GAIN; audio.muted = false;
         if (!audio.paused) { try { audio.currentTime = intro ? intro.elapsed() / 1000 : 0; } catch (e) {} return; }   /* already running: just line it up */
         cancelPending();
         var token = pending.token;
         var live = function () { return !d && soundOn && token === pending.token; };   /* still wanted? */
         var on = function (ev, fn) { pending.listeners.push([ev, fn]); audio.addEventListener(ev, fn); };
+        var refused = function () { soundOn = false; label(); };
+        /* A quarter second after it starts, a late start (the seek plus the device starting up) is pulled back to the
+           animation's time once. It never moves the sound ahead of the picture. */
+        var lineUp = function () {
+          setTimeout(function () {
+            if (d || !intro || audio.paused) return;
+            var now = intro.elapsed() / 1000, lag = now - audio.currentTime;
+            if (lag > 0.06 && lag < 1) { try { audio.currentTime = now; } catch (e) {} }
+          }, 250);
+        };
         var go = function () {
           if (!live()) return;                              /* recheck right before anything is heard */
           cancelPending();
-          audio.play().catch(function () { soundOn = false; label(); });
+          var p = audio.play();
+          if (p && typeof p.then === 'function') p.then(lineUp, refused);
         };
         var start = function () {
           if (!live()) return;
           if (!animStarted) { onParts = start; return; }
           var at = intro ? intro.elapsed() / 1000 : 0;
-          /* Seek to where the animation is, then play once the seek has landed (a play() issued while a seek is
-             still pending can restart from 0 on servers without range support). */
           if (Math.abs(audio.currentTime - at) < 0.05) { go(); return; }
           on('seeked', go);
           pending.timeout = setTimeout(function () { if (live() && audio.paused) go(); }, 600);
@@ -8773,25 +9283,68 @@
         attachSource();
         if (audio.readyState >= 1) start();
         else { on('loadedmetadata', start); audio.load(); }
+      }
+      if (snd && audio) snd.addEventListener('click', function () {
+        var now = Date.now(); if (now - lastPress < 250) return; lastPress = now;   /* one press, one toggle */
+        soundOn = !soundOn; label(); setSoundPref(soundOn);
+        if (!soundOn) { cancelPending(); audio.muted = true; return; }
+        begin();
       });
-      if (!window.zMotionAllowed()) { dismiss(); return; }
-      timer = setTimeout(dismiss, 9000);
-      if (!stage || !window.ZTH_INTRO) { dismiss(); return; }
-      if (s) { try { s.focus({ preventScroll: true }); } catch (e) {} }
-      try {
-        intro = window.ZTH_INTRO.mount(stage, {
-          iconSrc: '/static/zotheos_icon.png', logoSrc: '/static/zotheos_logo.png',
-          loop: false, dust: true, interactive: false
+      /* One intro run. full: the whole assembly (the first visit in a browser session, or Replay intro). Otherwise the
+         short return lock: about a second, the mark already whole, one flash, then the same hand-off; silent. */
+      function run(full, from) {
+        d = false; quick = !full; returnTo = from || null;
+        animStarted = false; onParts = null; soundOn = false; label();
+        if (timer != null) { clearTimeout(timer); timer = null; }
+        o.classList.remove('dismissed', 'zi-timing');
+        o.classList.toggle('intro-quick', quick);
+        if (snd) snd.hidden = quick;
+        Array.prototype.forEach.call(document.body.children, function (el) {
+          if (el === o || el.tagName === 'SCRIPT' || el.inert) return;
+          el.inert = true;
+          inerted.push(el);
         });
-        intro.on('parts', function () {
-          animStarted = true; var f = onParts; onParts = null; if (f) f();
-          /* The hairline under Enter fills over the time left: assembly until 'done', then the 1.4 s hold. */
-          var t = window.ZTH_INTRO.timeline || {};
-          o.style.setProperty('--intro-ms', ((t.done || 4650) + 1400) + 'ms');
-          o.classList.add('zi-timing');
-        });
-        intro.on('done', function () { setTimeout(dismiss, 1400); });
-      } catch (e) { dismiss(); }
+        document.addEventListener('keydown', onKey);
+        if (!window.zMotionAllowed()) { dismiss(); return; }
+        timer = setTimeout(dismiss, quick ? 2500 : 9000);
+        if (!stage || !window.ZTH_INTRO) { dismiss(); return; }
+        if (s) {   /* on a replay the overlay is still becoming visible, so try again a moment later */
+          var focusSkip = function () { if (!d) { try { s.focus({ preventScroll: true }); } catch (e) {} } };
+          focusSkip();
+          if (document.activeElement !== s) setTimeout(focusSkip, 60);
+        }
+        if (intro) { try { intro.destroy(); } catch (e) {} intro = null; }
+        try {
+          intro = window.ZTH_INTRO.mount(stage, {
+            iconSrc: '/static/zotheos_icon.png', logoSrc: '/static/zotheos_logo.png',
+            loop: false, dust: true, interactive: false, quick: quick
+          });
+          intro.on('parts', function () {
+            animStarted = true; var f = onParts; onParts = null; if (f) f();
+            /* The hairline under Enter fills over the time left: the assembly until 'done', then the hold. */
+            var t = window.ZTH_INTRO.timeline || {};
+            o.style.setProperty('--intro-ms', (quick ? 950 : (t.done || 4650) + 1400) + 'ms');
+            o.classList.add('zi-timing');
+          });
+          intro.on('done', function () { setTimeout(dismiss, quick ? 250 : 1400); });
+        } catch (e) { dismiss(); return; }
+        if (full && snd && audio && soundPref()) { soundOn = true; label(); begin(); }
+      }
+      /* Replay intro (in Appearance): the full intro again, on request. Hidden while motion is off. */
+      var replayBtn = document.getElementById('replayIntro'), replayRow = document.getElementById('apReplayRow');
+      function syncReplay() { if (replayRow) replayRow.hidden = !window.zMotionAllowed(); }
+      syncReplay();
+      window.addEventListener('zotheos:effectschange', syncReplay);
+      if (replayBtn) replayBtn.addEventListener('click', function () {
+        var pop = document.getElementById('appearancePop');
+        try { if (pop && pop.matches(':popover-open')) pop.hidePopover(); } catch (e) {}
+        if (!d || !window.zMotionAllowed()) return;
+        run(true, document.getElementById('appearanceBtn'));
+      });
+      /* The full intro once per visit (browser session); later loads in the same session get the short lock. */
+      var firstVisit = true;
+      try { firstVisit = window.sessionStorage.getItem(SEEN_KEY) !== '1'; window.sessionStorage.setItem(SEEN_KEY, '1'); } catch (e) {}
+      run(firstVisit);
     })();
 
     /* Header scroll state + scroll-to-top. Keep the fixed navigation
@@ -8817,17 +9370,20 @@
       var inner = document.querySelector('.header-inner');
       var left = inner ? inner.querySelector('.header-left') : null;
       if (!sheet || !foot || !inner || !left || typeof sheet.hidePopover !== 'function') return;
-      /* Capture phase: the sheet closes (focus returns to Menu) before the day chip opens the mirror, so the
-         mirror remembers the visible Menu button as the place to hand focus back to. */
+      /* Capture phase: a section link closes the sheet before the jump. The day chip (in the sheet's foot on
+         phones) keeps it open: its count-of-days note opens nested above the sheet, and the note closes both
+         when it hands over to the mirror. */
       sheet.addEventListener('click', function (e) {
-        var t = e.target && e.target.closest ? e.target.closest('a[href], #dayChip') : null;
+        var t = e.target && e.target.closest ? e.target.closest('a[href]') : null;
         if (t && sheet.matches(':popover-open')) { try { sheet.hidePopover(); } catch (x) {} }
       }, true);
-      /* A Tab past the last item leaves the sheet: close it, so focus never lands on content hidden under it. */
+      /* A Tab past the last item leaves the sheet: close it, so focus never lands on content hidden under it.
+         Focus moving into the day note (nested above the sheet) is not leaving. */
       var menuBtn = document.getElementById('navMenuBtn');
+      var dayNote = document.getElementById('dayPop');
       sheet.addEventListener('focusout', function (e) {
         var to = e.relatedTarget;
-        if (!to || sheet.contains(to) || to === menuBtn || !sheet.matches(':popover-open')) return;
+        if (!to || sheet.contains(to) || to === menuBtn || (dayNote && dayNote.contains(to)) || !sheet.matches(':popover-open')) return;
         try { sheet.hidePopover(); } catch (x) {}
       });
       /* Phones carry the whole appearance group into the foot; tablets (where the bar hides the day chip)
@@ -8963,42 +9519,6 @@
       update();
     })();
 
-    /* Cursor light — disabled on touch & reduced motion */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
-      if (reduce || coarse) return;
-      var el = document.getElementById('cursorLight');
-      if (!el) return;
-      var tx = -300, ty = -300, cx = -300, cy = -300;
-      var raf = null;
-      function stop() {
-        if (raf != null) cancelAnimationFrame(raf);
-        raf = null; el.classList.remove('active');
-      }
-      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
-      document.addEventListener('visibilitychange', checkMotion);
-      window.addEventListener('zotheos:effectschange', checkMotion);
-      function loop() {
-        raf = null;
-        if (!window.zMotionAllowed()) { stop(); return; }
-        cx += (tx - cx) * 0.18;
-        cy += (ty - cy) * 0.18;
-        el.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
-        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(loop);
-      }
-      document.addEventListener('mousemove', function (e) {
-        if (!window.zMotionAllowed()) return;
-        tx = e.clientX;
-        ty = e.clientY;
-        el.classList.add('active');
-        if (raf == null) loop();
-      }, { passive: true });
-      document.addEventListener('mouseleave', function () {
-        stop();
-      });
-    })();
-
     /* Card spotlight: cursor-tracked light inside the boxes of the colour themes only (mono has no spotlight,
        so the handler returns early there, checked live because the theme can change). One delegated
        pointermove, one write per frame, mouse and fine pointers only. */
@@ -9026,76 +9546,6 @@
         px = e.clientX; py = e.clientY;
         if (!queued) { queued = true; requestAnimationFrame(paint); }
       }, { passive: true });
-    })();
-
-    /* Magnetic primary CTA — gentle pull toward the cursor */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
-      if (reduce || coarse) return;
-      var els = document.querySelectorAll('[data-magnetic]');
-      els.forEach(function (el) {
-        var raf = null, tx = 0, ty = 0, cx = 0, cy = 0, active = false;
-        function loop() {
-          cx += (tx - cx) * 0.18;
-          cy += (ty - cy) * 0.18;
-          el.style.transform = 'translate(' + cx.toFixed(2) + 'px,' + cy.toFixed(2) + 'px)';
-          if (active || Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) {
-            raf = requestAnimationFrame(loop);
-          } else {
-            raf = null;
-            el.style.transform = '';
-          }
-        }
-        el.addEventListener('mousemove', function (e) {
-          var r = el.getBoundingClientRect();
-          tx = (e.clientX - (r.left + r.width / 2)) * 0.22;
-          ty = (e.clientY - (r.top + r.height / 2)) * 0.22;
-          active = true;
-          if (!raf) loop();
-        });
-        el.addEventListener('mouseleave', function () {
-          tx = 0; ty = 0; active = false;
-          if (!raf) loop();
-        });
-      });
-    })();
-
-    /* Counter animation on hero stats */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var nums = document.querySelectorAll('[data-count]');
-      if (!nums.length) return;
-      function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
-      function animate(el) {
-        var target = parseFloat(el.getAttribute('data-count')) || 0;
-        var suffix = el.getAttribute('data-suffix') || '';
-        if (reduce || target === 0) {
-          el.textContent = (target === 0 ? '0' : target.toString()) + suffix;
-          return;
-        }
-        var start = performance.now();
-        var duration = 1600;
-        function tick(now) {
-          var t = Math.min(1, (now - start) / duration);
-          var v = Math.round(target * easeOutQuart(t));
-          el.textContent = v + suffix;
-          if (t < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            animate(e.target);
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.4 });
-      nums.forEach(function (n) {
-        n.textContent = (n.getAttribute('data-suffix') === '%' ? '0%' : '0');
-        obs.observe(n);
-      });
     })();
 
     /* Anchor links — interruptible smooth scroll with offset */
@@ -9273,77 +9723,6 @@
       };
     })();
 
-    /* Custom cursor v2 — the ring stretches with velocity like a
-       comet, turns into a rotating instrument bezel over the disc,
-       and pings on release. */
-    (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var coarse = window.matchMedia('(hover: none)').matches;
-      if (reduce || coarse) return;
-      var c = document.getElementById('customCursor');
-      if (!c) return;
-      var ring = c.querySelector('.cc-ring');
-      document.body.classList.add('has-custom-cursor');
-      var tx = -100, ty = -100, cx = -100, cy = -100;
-      var raf = null;
-      function stop() {
-        if (raf != null) cancelAnimationFrame(raf);
-        raf = null; c.classList.remove('ready');
-      }
-      function checkMotion() { if (!window.zMotionAllowed()) stop(); }
-      document.addEventListener('visibilitychange', checkMotion);
-      window.addEventListener('zotheos:effectschange', checkMotion);
-      function loop() {
-        raf = null;
-        if (!window.zMotionAllowed()) { stop(); return; }
-        var dx = tx - cx, dy = ty - cy;
-        cx += dx * 0.30;
-        cy += dy * 0.30;
-        c.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
-        if (ring) {
-          if (c.classList.contains('hover-link') || c.classList.contains('hover-text')) {
-            ring.style.transform = '';
-          } else {
-            var sp = Math.min(Math.sqrt(dx * dx + dy * dy), 56);
-            var s = 1 + sp / 120;
-            var ang = Math.atan2(dy, dx) * 180 / Math.PI;
-            ring.style.transform =
-              'translate(-50%, -50%) rotate(' + ang.toFixed(1) + 'deg) scale(' +
-              s.toFixed(3) + ',' + (1 / Math.sqrt(s)).toFixed(3) + ')';
-          }
-        }
-        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(loop);
-      }
-      document.addEventListener('mousemove', function (e) {
-        if (!window.zMotionAllowed()) return;
-        tx = e.clientX; ty = e.clientY;
-        c.classList.add('ready');
-        if (!raf) loop();
-      }, { passive: true });
-      document.addEventListener('mousedown', function () { c.classList.add('down'); });
-      document.addEventListener('mouseup', function () {
-        c.classList.remove('down');
-        if (ring) {
-          ring.classList.remove('ping');
-          void ring.offsetWidth;
-          ring.classList.add('ping');
-          setTimeout(function () { ring.classList.remove('ping'); }, 500);
-        }
-      });
-      document.addEventListener('mouseleave', stop);
-
-      function applyState(target) {
-        c.classList.remove('hover-link', 'hover-text');
-        if (!target || !target.closest) return;
-        if (target.closest('a, button, .theme-swatch, summary, [role="button"], input, .btn, .btn-ghost')) {
-          c.classList.add('hover-link');
-        } else if (target.closest('p, h1, h2, h3, h4, span, li, code, .faq-q, .console-verdict p')) {
-          c.classList.add('hover-text');
-        }
-      }
-      document.addEventListener('mouseover', function (e) { applyState(e.target); });
-    })();
-
     /* Kinetic headline — split "You decide" into letters that rise
        into place after the intro, then hold still (W2-01: the light answers the pointer, not the letters). */
     (function () {
@@ -9359,9 +9738,14 @@
         s.className = 'hl';
         s.style.setProperty('--i', String(i));
         s.textContent = text[i] === ' ' ? '\u00a0' : text[i];
+        s.setAttribute('aria-hidden', 'true');   /* PAT-2: the letters are drawing; the words are read once, below */
         glow.appendChild(s);
         letters.push(s);
       }
+      var whole = document.createElement('span');
+      whole.className = 'sr-only';
+      whole.textContent = text;
+      glow.appendChild(whole);
       head.classList.add('split');
       function measureHx() {
         var x0 = letters.length ? letters[0].offsetLeft : 0, end = letters[letters.length - 1];
@@ -9715,6 +10099,24 @@
       });
     })();
 
+    /* W2-07 the Fusion figure draws once, in time, when it is mostly in view (see the fd-armed CSS). Armed only when
+       motion is allowed, the observer exists and the screen is 641px or wider; phones show it drawn. */
+    (function () {
+      var fig = document.querySelector('.fusion-fig');
+      if (!fig || !('IntersectionObserver' in window) || !window.zMotionAllowed || !window.zMotionAllowed() ||
+          !window.matchMedia('(min-width: 641px)').matches) return;
+      fig.classList.add('fd-armed');
+      var io = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting) return;
+        io.disconnect();
+        fig.classList.add('fd-drawn');
+      }, { threshold: 0.5 });
+      io.observe(fig);
+      window.addEventListener('zotheos:effectschange', function () {
+        if (!window.zMotionAllowed()) { io.disconnect(); fig.classList.add('fd-drawn'); }
+      });
+    })();
+
     /* Ticker pause (W1-12, WCAG 2.2.2): a real control for keyboard and touch, not only hover. */
     (function () {
       var band = document.querySelector('.proof-band');
@@ -9906,6 +10308,7 @@
         cta.classList.toggle('visible', !heroVisible);
         cta.classList.toggle('dock-only', !heroVisible && overAsk);
         cta.setAttribute('aria-hidden', show ? 'false' : 'true');
+        cta.inert = !show;   /* D3: a hidden bar is out of the Tab order too, not only out of the accessibility tree */
         document.body.classList.toggle('hero-in', heroVisible);
       }
       if (hero) {
@@ -9922,80 +10325,79 @@
       if (footer) askIO.observe(footer);
     })();
 
-    /* Click ripple — Aztec sun-stone burst with the ZOTHEOS sigil */
-    (function () {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var SIGIL =
-        '<svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.3">' +
-        '<circle cx="26" cy="26" r="22"/>' +
-        '<circle cx="26" cy="26" r="17"/>' +
-        '<circle cx="26" cy="15" r="2.2" fill="currentColor" stroke="none"/>' +
-        '<circle cx="16.5" cy="31" r="2.2" fill="currentColor" stroke="none"/>' +
-        '<circle cx="35.5" cy="31" r="2.2" fill="currentColor" stroke="none"/>' +
-        '</svg>';
-      var last = 0;
-      var live = 0;
-      function burst(x, y) {
-        var c = document.createElement('div');
-        c.className = 'zripple';
-        c.style.left = x + 'px';
-        c.style.top = y + 'px';
-        c.innerHTML =
-          '<span class="zr-ring"></span>' +
-          '<span class="zr-ring r2"></span>' +
-          '<span class="zr-sigil">' + SIGIL + '</span>' +
-          '<i class="zr-spark s1"></i>' +
-          '<i class="zr-spark s2"></i>' +
-          '<i class="zr-spark s3"></i>';
-        document.body.appendChild(c);
-        live++;
-        setTimeout(function () { c.remove(); live--; }, 1000);
-      }
-      document.addEventListener('pointerdown', function (e) {
-        // skip text-entry fields so the flourish never fights typing
-        var t = e.target;
-        if (t && t.closest && t.closest('input, textarea, select')) return;
-        var now = Date.now();
-        if (now - last < 70 || live > 6) return;   // throttle + cap
-        last = now;
-        burst(e.clientX, e.clientY);
-      }, { passive: true });
-    })();
-
-    /* Tonalpohualli — the 260-day count of days, computed live.
+    /* Tonalpohualli: the 260-day count of days, computed live.
        Anchor (Caso correlation): 13 August 1521 Julian, the fall of
-       Tenochtitlan, was 1-Coatl. That is 23 August 1521 Gregorian. */
+       Tenochtitlan, was 1-Coatl. That is 23 August 1521 Gregorian.
+       G7: one orthography, the traditional unmarked spelling (Ozomatli, Ollin, Quiahuitl). */
     (function () {
       var SIGNS = [
         ['Cipactli', 'Crocodile'], ['Ehecatl', 'Wind'], ['Calli', 'House'],
         ['Cuetzpalin', 'Lizard'], ['Coatl', 'Serpent'], ['Miquiztli', 'Death'],
         ['Mazatl', 'Deer'], ['Tochtli', 'Rabbit'], ['Atl', 'Water'],
-        ['Itzcuintli', 'Dog'], ['Ozomahtli', 'Monkey'], ['Malinalli', 'Grass'],
+        ['Itzcuintli', 'Dog'], ['Ozomatli', 'Monkey'], ['Malinalli', 'Grass'],
         ['Acatl', 'Reed'], ['Ocelotl', 'Jaguar'], ['Cuauhtli', 'Eagle'],
         ['Cozcacuauhtli', 'Vulture'], ['Ollin', 'Movement'], ['Tecpatl', 'Flint'],
         ['Quiahuitl', 'Rain'], ['Xochitl', 'Flower']
       ];
       var anchor = Date.UTC(1521, 7, 23);
-      var now = new Date();
-      var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-      var days = Math.round((today - anchor) / 86400000);
-      var number = ((days % 13) + 13) % 13 + 1;
-      var sign = SIGNS[(((days % 20) + 20) % 20 + 4) % 20];
+      var WORDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen'];
+      /* W2-13: the number as the codices write it, one dot per count, in groups of five so the eye reads 12 as two
+         full fives and two. The chip and the popover also draw the rest of the 13 places as rings (a reading aid the
+         popover names); the seal and the mirror draw the dots alone. */
+      function dots(n, all) {
+        var h = '';
+        for (var g = 0; g < (all ? 13 : n); g += 5) {
+          h += '<span class="cd-g">';
+          for (var i = g; i < Math.min(all ? 13 : n, g + 5); i++) h += '<i' + (i < n ? ' class="on"' : '') + '></i>';
+          h += '</span>';
+        }
+        return h;
+      }
+      function render() {
+        var now = new Date();
+        var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+        var days = Math.round((today - anchor) / 86400000);
+        var number = ((days % 13) + 13) % 13 + 1;
+        var sign = SIGNS[(((days % 20) + 20) % 20 + 4) % 20];
+        /* the dots are hidden from assistive tech; the digit beside them is read instead */
+        var numHtml = '<span class="cd-dots" aria-hidden="true">' + dots(number, false) + '</span><span class="sr-only">' + number + ' </span>';
+        var nameHtml = '<span lang="nah">' + sign[0] + '</span>';
 
-      var seal = document.getElementById('tonalSeal');
-      if (seal) {
-        seal.innerHTML = 'in the count of days &middot; <b>' + number + ' ' + sign[0] + '</b> &middot; ' + sign[1];
+        var seal = document.getElementById('tonalSeal');
+        if (seal) {
+          seal.innerHTML = 'in the count of days &middot; <b>' + numHtml + nameHtml + '</b> &middot; ' + sign[1];
+        }
+        var mday = document.getElementById('mirrorDay');
+        if (mday) {
+          mday.innerHTML = '<span lang="nah">tonalpohualli</span>, the count of days &middot; today is <b>' + numHtml + nameHtml + '</b>, ' + sign[1];
+        }
+        var said = WORDS[number - 1] + ' ' + sign[1];
+        var chip = document.getElementById('dayChip');
+        if (chip) {
+          chip.innerHTML = '<span class="cd-dots" aria-hidden="true">' + dots(number, true) + '</span><span class="cd-name" lang="nah">' + sign[0] + '</span>';
+          /* QA1 (WCAG 2.5.3): the accessible name begins with the visible text (the dots are hidden from it). */
+          chip.setAttribute('aria-label', sign[0] + ', ' + said + ', in the count of days');
+        }
+        var dpDots = document.getElementById('dpDots');
+        if (dpDots) dpDots.innerHTML = dots(number, true);
+        var dpName = document.getElementById('dpName');
+        if (dpName) dpName.textContent = sign[0];
+        var dpGloss = document.getElementById('dpGloss');
+        if (dpGloss) dpGloss.textContent = said;
       }
-      var mday = document.getElementById('mirrorDay');
-      if (mday) {
-        mday.innerHTML = 'tonalpohualli &middot; today is <b>' + number + ' ' + sign[0] + '</b>, ' + sign[1];
+      /* The day turns at local midnight: re-render then (and on return to a tab whose timers were throttled). */
+      var timer;
+      function schedule() {
+        clearTimeout(timer);
+        var now = new Date();
+        var next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 1);
+        timer = setTimeout(function () { render(); schedule(); }, Math.max(1000, next - now));
       }
-      var chip = document.getElementById('dayChip');
-      if (chip) {
-        chip.textContent = number + ' ' + sign[0];
-        /* QA1 (WCAG 2.5.3): the accessible name begins with the visible text. */
-        chip.setAttribute('aria-label', number + ' ' + sign[0] + ', open the obsidian mirror');
-      }
+      render();
+      schedule();
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') { render(); schedule(); }
+      });
     })();
 
     /* The Obsidian Mirror */
@@ -10067,8 +10469,30 @@
       }
 
       btn.addEventListener('click', openMirror);
-      var chip = document.getElementById('dayChip');
-      if (chip) chip.addEventListener('click', openMirror);
+      /* W2-13: the day chip opens the count-of-days note (a declarative popover); the note's own button opens the
+         mirror once the note, and the phone section sheet that may hold the chip, have closed (popovers sit in the
+         top layer, above the mirror). A link in the note closes it too. */
+      var dayPop = document.getElementById('dayPop');
+      var navSheet = document.getElementById('navSheet');
+      function closePops() {
+        [dayPop, navSheet].forEach(function (p) {
+          try { if (p && p.matches(':popover-open')) p.hidePopover(); } catch (e) {}
+        });
+      }
+      var dayMirror = document.getElementById('dayPopMirror');
+      if (dayMirror) dayMirror.addEventListener('click', function () {
+        /* From the phone sheet the chip is about to be hidden with it: hand the mirror the visible Menu button as
+           the place to return focus to. */
+        var fromSheet = false;
+        try { fromSheet = !!(navSheet && navSheet.matches(':popover-open')); } catch (e) {}
+        closePops();
+        var menu = document.getElementById('navMenuBtn');
+        if (fromSheet && menu) { try { menu.focus({ preventScroll: true }); } catch (e) {} }
+        openMirror();
+      });
+      if (dayPop) dayPop.addEventListener('click', function (e) {
+        if (e.target && e.target.closest && e.target.closest('a[href]')) closePops();
+      });
       ov.addEventListener('click', closeMirror);
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeMirror();
@@ -10118,7 +10542,7 @@
       // W2-01: the same three lights also fall on the headline and on the primary action (see world() below)
       var hero = box.closest('.hero');
       var glowEl = hero ? hero.querySelector('.hero-headline .glow') : null;
-      var ctaEl = hero ? hero.querySelector('.hero-actions .btn-primary') : null;
+      var ctaEl = hero ? hero.querySelector('.hero-actions') : null;   /* D3: --rim/--rc inherit to the visible primary */
 
       var VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
       var FS = [
