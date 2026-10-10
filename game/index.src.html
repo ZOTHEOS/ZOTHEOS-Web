@@ -4,31 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ollamaliztli</title>
+<meta name="description" content="Ollamaliztli, the ballgame of Mesoamerica: two modes, Drop and Echo, with Indigenous nations of today and their cited facts.">
 <style>
 html,body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif}
 #zgOpen{position:fixed;left:24px;top:50%;width:44px;height:44px;margin-top:-22px;border:0;background:transparent;cursor:pointer;padding:0}
 #zgOpen span{display:block;width:14px;height:14px;margin:auto;border-radius:50%;background:#fff;box-shadow:inset -2px -2px 0 #b8b8b8}
 #zgOpen:focus-visible{outline:2px solid #fff;outline-offset:2px}
+#zgBack{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);padding:12px 16px;color:#a3a3a3;font:12px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+#zgBack:hover{color:#fff}
+#zgBack:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style>
 </head>
-<body>
+<body data-autoopen="1">
+<a id="zgBack" href="/">Back to ZOTHEOS</a>
 <button id="zgOpen" type="button" aria-label="Play ollamaliztli, the ballgame"><span></span></button>
 <script>
 (function () {
 'use strict';
-// Terms used, with gloss and source, for a future community advisor. Visible forms derive from here.
+// Math.imul for the few old engines without it (the seeds and the hash use it).
+if (!Math.imul) Math.imul = function (a, b) {
+  var ah = (a >>> 16) & 65535, al = a & 65535, bh = (b >>> 16) & 65535, bl = b & 65535;
+  return (al * bl + (((ah * bl + al * bh) << 16) >>> 0)) | 0;
+};
+// Terms used, with gloss and source, for a future community advisor. Visible forms derive from here and pass through
+// plain(), so every screen follows one convention: no vowel length marks. The marked dictionary forms stay here as the record.
 var TERMS = {
-  ollamaliztli: ['ōllamalīztli', 'the ballgame', 'Nahuatl'],
-  olli: ['ōlli', 'rubber, the ball', 'Nahuatl'],
-  tlachtli: ['tlachtli', 'the court', 'Nahuatl'],
-  tlachtemalacatl: ['tlachtemalacatl', 'the stone ring of the court', 'Nahuatl'],
-  xicalcoliuhqui: ['xicalcoliuhqui', 'step-fret, twisted gourd', 'Nahuatl'],
-  xayacatl: ['xāyacatl', 'face; mask', 'Molina 1571 f. 158r; Karttunen 1992 p. 322; Online Nahuatl Dictionary'],
+  ollamaliztli: ['Ōllamaliztli', 'the ballgame', 'Online Nahuatl Dictionary, entry ollamaliztli; Molina 1571, pt. 2, f. 76r (ollamaliztli) and f. 158v (ullamaliztli); Sahagún, Primeros Memoriales, ed. Sullivan 1997, p. 200'],
+  olli: ['ōlli', 'rubber, the ball', 'Online Nahuatl Dictionary, entry olli; Molina 1571, pt. 2, f. 76r col. 2 (olli) and f. 158v col. 2 (ulli)'],
+  tlachtli: ['tlachtli', 'the court', 'Online Nahuatl Dictionary, entry tlachtli; Molina 1571, pt. 2, f. 117v col. 2; Lockhart 2001, p. 236'],
+  tlachtemalacatl: ['tlachtemalacatl', 'the stone ring of the court', 'Online Nahuatl Dictionary, entry tlachtemalacatl; Sahagún, Primeros Memoriales, ed. Sullivan 1997, p. 200'],
+  xicalcoliuhqui: ['xicalcoliuhqui', 'step-fret, twisted gourd', 'Online Nahuatl Dictionary, entry xicalcoliuhqui; Sahagún, Primeros Memoriales, ed. Sullivan 1997, p. 99'],
+  xayacatl: ['xāyacatl', 'face; mask', 'Online Nahuatl Dictionary, entry xayacatl; Molina 1571, pt. 2, f. 158r; Karttunen 1992, p. 322'],
   ocotl: ['ocotl', 'pine, fatwood, a pine torch', 'Online Nahuatl Dictionary, entry ocotl']
 };
 function up1(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function plain(s) { return s.normalize ? s.normalize('NFD').replace(/[̀-ͯ]/g, '') : s; }
-var NAME = TERMS.ollamaliztli[0], OLLI = TERMS.olli[0];
+var NAME = plain(TERMS.ollamaliztli[0]), OLLI = plain(TERMS.olli[0]);
 // All visible words live here so an advisor can change them without touching code.
 var TEXT = {
   title: up1(plain(NAME)),
@@ -73,6 +84,7 @@ var TEXT = {
   silentOne: 'A ring fell silent.', silentAll: 'The rings fell silent.',
   letPass: 'The Stone Face lets you pass.', unseen: 'Unseen.',
   tessera: 'A tessera clicked. It heard that.',
+  half: 'One stone lit. Pass the ring once more to claim it.',
   echoDone: 'The labyrinth lets you pass.',
   rings: 'Rings', silence: 'Silence', markedSr: 'Marked',
   natLabel: 'Indigenous nations today', also: 'Also known as', sayIt: 'Say it:', pronFrom: 'Pronunciation from', asOf: 'As of',
@@ -80,12 +92,13 @@ var TEXT = {
   prev: 'Previous', next: 'Next', site: "Nation's site", cont: 'Continue', another: 'Another fact', met: 'Nations you met this run',
   natFail: 'The nations list could not load. Nothing is shown rather than something unchecked.',
   contact: 'To correct or remove an entry, write to', fullList: 'The full list, with every source',
+  termsHead: 'Nahuatl words used here, with their sources. Vowel length marks are left off the screens; the sources keep them.',
   aboutLines: [
     up1(NAME) + ' is the Nahuatl name for the Mesoamerican ballgame, played for more than three thousand years from Mexico to Central America, with ballcourts as far north as present-day Arizona.',
     'Ulama, its descendant, is still played today in Sinaloa, Mexico.',
     'The step-fret, ' + TERMS.xicalcoliuhqui[0] + ' in Nahuatl, is carved and woven by many peoples, from Mitla in Oaxaca to the Pueblos of the Southwest, each with its own names.',
     'The Stone Face in Echo is an original design made for this game. It draws on the stone masks of Teotihuacan, which were not made to be worn and whose eyes and teeth were once inlaid with shell and bone, and on the obsidian and pyrite that Mesoamerican artists used for shining pupils. It stands for no god, no person and no living tradition. It keeps the labyrinth, and the trial is to pass it.',
-    up1(TERMS.xayacatl[0]) + ' is a Nahuatl word for face and for mask.',
+    up1(plain(TERMS.xayacatl[0])) + ' is a Nahuatl word for face and for mask.',
     'Ocote, the resinous pine that lights the courts, takes its name from the Nahuatl ' + TERMS.ocotl[0] + '.',
     'Mask making is a living art in Mexico today, from the dance masks of Guerrero to the carved wooden masks of the Parachicos of Chiapa de Corzo, which UNESCO added to its list of intangible cultural heritage in 2010. The Stone Face copies none of them.',
     'Indigenous nations today: each card shows one fact with its source and the date it was checked. Facts come from each nation\'s own published sources where possible, and from public records otherwise. Corrections are welcome.',
@@ -105,7 +118,7 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg [aria-pressed=true],#zg [aria-checked=true]{background:#fff;color:#000}' +
   '#zg .hud{position:absolute;left:0;right:0;top:0;height:52px;background:#000;display:flex;align-items:center;gap:18px;padding:0 6px 0 16px;font-size:15px;letter-spacing:.1em;pointer-events:none;font-variant-numeric:tabular-nums}' +
   '#zg .hud b{font-weight:600}#zg .hud button{pointer-events:auto;margin-left:auto;border-color:#b8b8b8;padding:0}' +
-  '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}' +
+  '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}#zg .dot.half{background:linear-gradient(90deg,#fff 50%,#000 50%)}' +
   '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
   '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
   '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan>:last-child{margin-bottom:auto}#zg .solid{background:#000}' +
@@ -146,15 +159,16 @@ function dec(s) { s = String(s || '').toUpperCase().replace(/[^0-9A-Z]/g, ''); i
 function pretty(n) { var c = enc(n); return c.slice(0, 3) + '-' + c.slice(3); }
 function hashStr(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return mix(h >>> 0, 7); }
 function p2(n) { return (n < 10 ? '0' : '') + n; }
-function today(m) { var d = new Date(); return hashStr(d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate()) + m) % SPACE; }
+// Today's court is the UTC day, the same for everyone on Earth at the same moment.
+function today(m) { var d = new Date(); return hashStr(d.getUTCFullYear() + '-' + p2(d.getUTCMonth() + 1) + '-' + p2(d.getUTCDate()) + m) % SPACE; }
 function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
 function num(n) { return String(RND(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
 function mmq(q) { try { return window.matchMedia(q).matches; } catch (e) { return false; } }
 function store(k, v) { try { if (v === undefined) return +localStorage.getItem(k) || 0; localStorage.setItem(k, v); } catch (e) {} return 0; }
 
-var API = window.ZTH_GAME = { version: '2.0.0', onClose: null, onSound: null };
+var API = window.ZTH_GAME = { version: '2.1.0', onClose: null, onSound: null };
 var root, sty, cv, ctx, E = {}, W, H, DPR, raf = 0, last = 0, acc = 0, ls = [], opts = {}, rzT = 0, capT = 0, IN = [], SC = {};
-var scr = '', mode = 'drop', calm = false, assist = false, RM = false, coarse = false, court = 'today', runSeed = 0, G = null, beat = null, told = 0, ET = 0;
+var scr = '', mode = 'drop', lastM = '', calm = false, assist = false, RM = false, coarse = false, court = 'today', runSeed = 0, G = null, beat = null, told = 0, ET = 0;
 var inp = { l: 0, r: 0, u: 0, d: 0, sb: 0, pt: 0, st: 0, sx: 0, sy: 0, sox: 0, soy: 0, md: 0, mdT: 0, mw: 0, ph: 0, px: 0, py: 0, sa: 0, sax: 0, say: 0 }, ptrs = {};
 
 function snd(n, d) { if (API.onSound) { try { API.onSound(n, d); } catch (e) {} } }
@@ -170,7 +184,8 @@ function row(h) { return '<div class="row">' + h + '</div>'; }
 function mbtn(id, t, d, n) { return btn(id, '<b>' + t + '</b><span>' + d + '</span>' + (n ? '<span class="sub">' + n + '</span>' : ''), 'mode'); }
 function abtn(id, t) { return '<a class="btn" id="zg' + id + '" target="_blank" rel="noopener noreferrer" hidden>' + t + '</a>'; }
 function build() {
-  var T = TEXT, d = document.createElement('div');
+  var T = TEXT, d = document.createElement('div'), k, tl = '';
+  for (k in TERMS) tl += '<p class="sub">' + up1(plain(TERMS[k][0])) + ', ' + TERMS[k][1] + '. ' + T.source + ' ' + TERMS[k][2] + '.</p>';
   sty = document.createElement('style'); sty.id = 'zgS'; if (opts.nonce) sty.nonce = opts.nonce; sty.textContent = CSS;
   document.head.appendChild(sty);
   d.innerHTML = '<div id="zg" role="dialog" aria-modal="true" aria-labelledby="zgT" tabindex="-1">' +
@@ -191,14 +206,14 @@ function build() {
       row(btn('Rc', T.replay) + btn('Ag', T.fresh)) + row(btn('Om', T.other) + btn('X3', T.close)) + '</div>' +
     '<div class="pan solid" id="zgNp" hidden><p id="zgNpm"></p><div class="nh"><div class="nc" id="zgNpc"></div></div>' +
       row(btn('Nk', T.cont) + btn('Na', T.another)) + row(abtn('Nps', T.site) + btn('X4', T.close)) + '</div>' +
-    '<div class="pan solid" id="zgAp" hidden><h2>' + T.title + '</h2><p>' + T.aboutLines.join('</p><p>') + '</p>' +
+    '<div class="pan solid" id="zgAp" hidden><h2>' + T.title + '</h2><p>' + T.aboutLines.join('</p><p>') + '</p><p class="sub">' + T.termsHead + '</p>' + tl +
       '<section class="nh" id="zgAn" hidden><p class="sub">' + T.natLabel + '</p><div class="row" id="zgAl"></div><div class="nc" id="zgAc" hidden></div>' + btn('Ab3', T.back, '', ' hidden') +
         '<p class="sub" id="zgAm"></p>' + abtn('Ap2', T.fullList) + '</section>' + btn('Bk', T.back) + '</div>' +
     '<div class="sr" id="zgLive" aria-live="polite"></div></div>';
   root = d.firstChild;
   (opts.parent || document.body).appendChild(root);
   if (opts.font) root.style.fontFamily = opts.font;
-  'C Hud Lv Sc Tm Pa Cap Ti Pp Ps Rp Rh Rm Rn Ri Ap Live Ca Ca2 As Ct Cn Code Cm Nh Nc Nz Ns Nu Np Npm Npc Nps Rx Rl Rc Rb An Al Ac Ab3 Am Ap2'.split(' ').forEach(function (k) { E[k] = root.querySelector('#zg' + k); });
+  'Md C Hud Lv Sc Tm Pa Cap Ti Pp Ps Rp Rh Rm Rn Ri Ap Live Ca Ca2 As Ct Cn Code Cm Nh Nc Nz Ns Nu Np Npm Npc Nps Rx Rl Rc Rb An Al Ac Ab3 Am Ap2'.split(' ').forEach(function (k) { E[k] = root.querySelector('#zg' + k); });
   E.live = E.Live; E.cap = E.Cap; E.capS = E.Cap.firstChild;
   cv = E.C; ctx = cv.getContext('2d');
   var c = function (i, f) { on(root.querySelector('#zg' + i), 'click', f); };
@@ -249,6 +264,8 @@ function panel(p) {
 // open(mode, opts): mode 'drop', 'echo' (or 'run', kept for old links, which opens Echo) or none for the title.
 // opts: seed, calm, returnFocus, parent, font, nonce, nations (array or same-origin URL), nationsUrl, nationsUpdated,
 // nationCards (false keeps nation cards off the level breaks), contact, nationsPage.
+// CSP: the overlay injects its styles as <style id="zgS">. Under a strict style-src, pass the page's nonce as
+// opts.nonce, or allow the hash of the injected CSS that build.py prints on every build ('sha256-...').
 API.open = function (m, o) {
   var rf = (o && o.returnFocus) || (root ? opts.returnFocus : document.activeElement), k;
   if (root) teardown();
@@ -256,11 +273,12 @@ API.open = function (m, o) {
   if (m === 'run') m = 'echo';
   RM = mmq('(prefers-reduced-motion: reduce)'); coarse = mmq('(pointer: coarse)');
   calm = opts.calm != null ? !!opts.calm : RM; assist = false;
+  ET = 0; told = 0; // the one-time captions return on every open
   var hs = /olli=([0-9A-Za-z-]+)/.exec(location.hash || ''), n = dec(opts.seed || (hs && hs[1]));
   court = n >= 0 ? 'code' : 'today'; runSeed = n >= 0 ? n : 0;
   // a visit cursor, so each visit continues to new nations (the order itself is the same for everyone on a day)
   natV = store('zth_olli_nv'); store('zth_olli_nv', natV + 1);
-  NAT = null; NP = []; NATst = 0; natP = 0; natIn = 0; NMET = []; natCur = null;
+  NAT = null; NP = []; NATst = 0; natP = 0; natIn = 0; NMET = []; natCur = null; NSD = {}; NHL = {};
   build(); bind(); resize();
   k = document.body.children;
   for (var i = 0; i < k.length; i++) if (!k[i].contains(root) && !k[i].hasAttribute('inert') && k[i].tagName !== 'SCRIPT') { k[i].setAttribute('inert', ''); IN.push(k[i]); }
@@ -323,7 +341,7 @@ function key(e) {
   if (scr === 'pause') { if (k === 'KeyP' || k === 'Escape') { e.preventDefault(); resume(); } else if (k === 'KeyR') restartLevel(); return; }
   if (scr === 'result' && k === 'KeyR') { start(mode, runSeed); return; }
   if (scr === 'card' && k === 'Escape') { e.preventDefault(); level(G.L + 1); panel('play'); return; }
-  if (k === 'Enter' && e.target === E.Code) { e.preventDefault(); start('drop'); return; }
+  if (k === 'Enter' && e.target === E.Code) { e.preventDefault(); if (lastM) start(lastM); else E.Md.focus(); return; } // the last mode played, or the choice
   if (k === 'Escape') { e.preventDefault(); if (scr === 'about') panel(G ? 'pause' : 'title'); else close(); }
 }
 function trap(e) {
@@ -374,7 +392,7 @@ function inp0() { inp.l = inp.r = inp.u = inp.d = inp.sb = inp.pt = inp.st = inp
 // ---------- flow ----------
 function start(m, seed) {
   if (m === 'run') m = 'echo';
-  mode = m;
+  mode = lastM = m;
   if (seed != null && seed >= 0) runSeed = seed;
   else if (court === 'new') runSeed = FLR(Math.random() * SPACE);
   else if (court !== 'code') runSeed = today(m === 'drop' ? 'D' : 'E');
@@ -457,10 +475,11 @@ function frame(ts) {
 }
 function hud() {
   var g = G, d = '', i, k;
-  if (mode === 'echo') { // rebuilt only when something shown changes
-    k = g.score * 64 + g.lives * 16 + g.L + (g.p.mk ? 8 : 0); for (i = 0; i < g.rings.length; i++) k = k * 4 + (g.rings[i].c ? 1 : 0) + (g.rings[i].sil ? 2 : 0); k += g.fin ? .5 : 0;
-    if (k === g.hk) return; g.hk = k;
-  }
+  // rebuilt only when something shown changes (both modes)
+  if (mode === 'echo') { k = g.score * 64 + g.lives * 16 + g.L + (g.p.mk ? 8 : 0); for (i = 0; i < g.rings.length; i++) k = k * 8 + (g.rings[i].c ? 1 : 0) + (g.rings[i].sil ? 2 : 0) + (g.rings[i].h && !g.rings[i].c ? 4 : 0); k += g.fin ? .5 : 0; }
+  else k = g.score * 4096 + g.lives * 1024 + g.L * 128 + (g.inCourt ? 64 : 0) + MAX(0, CEIL(g.inCourt ? g.rt : g.t));
+  k += assist ? .25 : 0;
+  if (k === g.hk) return; g.hk = k;
   for (i = 0; i < 3; i++) d += '<i class="dot' + (i < g.lives ? ' on' : '') + '"></i>';
   set(E.Lv, TEXT.level + ' <b>' + (g.L + 1) + '</b>/5');
   set(E.Sc, '<b>' + num(g.score) + '</b>');
@@ -511,7 +530,7 @@ function band(x, y0, y1, u, sh) { // vertical step-fret band, motifs alternate l
 }
 // A band is cached once per size as a strip one period taller than the screen, then blitted at a whole-pixel offset.
 function drawBand(x, u, off) {
-  var h = cv.height, key = u + ':' + h, c = SC[key], p = 14 * u, pd = u + LW;
+  var h = cv.height, key = u * 100000 + h, c = SC[key], p = 14 * u, pd = u + LW; // a numeric key: no string built per frame
   if (!c) { var o = ctx; c = SC[key] = document.createElement('canvas'); c.width = 6 * u + 2 * pd; c.height = h + p; ctx = c.getContext('2d'); groove(band(pd, 0, c.height, u, 0), u * 0.42); ctx = o; }
   ctx.drawImage(c, RND(x) - pd, ((RND(off) % p) + p) % p - p);
 }
@@ -776,12 +795,13 @@ function drawRing(g, q, S, part) {
 /*L*/
 // [walk, patrol, invest, rush, corner, Tn, S, sight, hearX, wakeMin, wakeMax, strike, wait, silence,
 //  rings, w, h, braid, slotSide, slotGreat, playT, lost]
+// Revision 2.1: boards one size up, a third side ring on level 2, investigate faster than your walk on levels 4 and 5.
 var MPAR = [
-  [3.6, 2.2, 2.9, 4.1, .32, .75, 7, 3.5, 1.00, 9, 11, 9.0, 4.0, 14, 2, 21, 29, .50, 2.5, 2.2, 1.2, .12],
-  [3.8, 2.4, 3.1, 4.4, .30, .68, 7, 3.5, 1.05, 8, 10, 9.3, 3.6, 12, 2, 23, 31, .45, 2.35, 2.1, 1.1, .135],
-  [4.0, 2.6, 3.4, 4.7, .28, .62, 8, 3.25, 1.10, 7, 9, 9.6, 3.2, 11, 3, 25, 33, .40, 2.2, 1.95, 1.0, .15],
-  [4.2, 2.8, 3.6, 5.0, .25, .56, 8, 3.0, 1.15, 6, 8, 9.9, 2.8, 10, 3, 27, 35, .35, 2.05, 1.8, .9, .165],
-  [4.4, 3.0, 3.8, 5.3, .22, .50, 9, 3.0, 1.20, 5, 7, 10.2, 2.5, 9, 4, 27, 37, .30, 1.9, 1.7, .8, .18]
+  [3.6, 2.2, 2.9, 4.1, .32, .75, 7, 3.5, 1.00, 9, 11, 9.0, 4.0, 14, 2, 23, 31, .50, 2.5, 2.2, 1.2, .12],
+  [3.8, 2.4, 3.1, 4.4, .30, .68, 7, 3.5, 1.05, 8, 10, 9.3, 3.6, 12, 3, 25, 33, .45, 2.35, 2.1, 1.1, .135],
+  [4.0, 2.6, 3.4, 4.7, .28, .62, 8, 3.25, 1.10, 7, 9, 9.6, 3.2, 11, 3, 27, 35, .40, 2.2, 1.95, 1.0, .15],
+  [4.2, 2.8, 4.5, 5.0, .25, .56, 8, 3.0, 1.15, 6, 8, 9.9, 2.8, 10, 3, 27, 37, .35, 2.05, 1.8, .9, .165],
+  [4.4, 3.0, 4.9, 5.3, .22, .50, 9, 3.0, 1.20, 5, 7, 10.2, 2.5, 9, 4, 27, 37, .30, 1.9, 1.7, .8, .18]
 ];
 var NM = 999, EW = 21, EH = 29, EN = 609, BLK = -1, GR, ZN, LC, MEM, FB, JP, RS, SF, VIS, LIT, DT, DF, DP, D2, BQ, STK, WV, RAY, RAYN, BXS, BXK, OP, JL;
 var Q8 = .7071067811865476, V8X = [0, Q8, 1, Q8, 0, -Q8, -1, -Q8], V8Y = [-1, -Q8, 0, Q8, 1, Q8, 0, -Q8];
@@ -1070,7 +1090,8 @@ function E_new(L) {
     o = R[i];
     if (o.k === 2) { g.post = at(o, 1, 1); g.pm = o.m; continue; }
     var sd = rb() < .5 ? -1 : 1, gr = o.k === 1, vr = gr ? 6 : 4, uc = gr ? 3 : 2, w = (gr ? P[19] : P[18]) * .36;
-    var q = { z: o.z, o: o, hz: o.hz, gr: gr, s: sd, w: w, off: 0, ao: 0, open: 1, live: 1, c: 0, sil: 0, sn: 0,
+    // np: passes to claim a side ring (two on levels 4 and 5); h: passes made
+    var q = { z: o.z, o: o, hz: o.hz, gr: gr, s: sd, w: w, off: 0, ao: 0, open: 1, live: 1, c: 0, sil: 0, sn: 0, h: 0, np: !gr && L > 2 ? 2 : 1,
       a0: o.hz ? o.x0 + vr : o.y0 + vr, lc: o.hz ? o.y0 + uc : o.x0 + uc };
     if (gr) {
       q.per = 1; q.ph = rb();
@@ -1096,6 +1117,7 @@ function E_new(L) {
   for (i = 0; i < g.rings.length; i++) g.rz[g.rings[i].z] = g.rings[i];
   for (i = 1; i < R.length - 1; i++) g.wp.push(R[i].m[1], R[i].m[3]), g.wz.push(R[i].z, R[i].z);
   g.wp.push(g.ent); g.wz.push(0); // the Entry too, so standing still at the start is not a hiding place
+  if (L) E_corr(g, R, L + 1); // from level 2: the longest corridors between courts are watched too
   for (i = g.wp.length - 1; i > 0; i--) { j = FLR(g.fr() * (i + 1)); t = g.wp[i]; g.wp[i] = g.wp[j]; g.wp[j] = t; t = g.wz[i]; g.wz[i] = g.wz[j]; g.wz[j] = t; }
   // Dmax for the silence step, and par from a greedy route through every court
   var gm = R[0].m, dm = 0, cur = g.ent, left = [], route = 0;
@@ -1127,6 +1149,23 @@ function E_new(L) {
   E_reset(g, 0);
   return g;
 }
+// Patrol waypoints on the open ground between courts: the midpoint of each of the `want` longest mouth-to-mouth paths
+// (side courts and the Great Court), snapped to a junction when one lies within three tiles. Never retired.
+function E_corr(g, R, want) {
+  var i, j, a, b, t, n, k, m, d, best, bd, P = [], pi;
+  for (i = 0; i < R.length - 1; i++) for (j = i + 1; j < R.length - 1; j++) for (a = 1; a < R[i].m.length; a += 2) for (b = 1; b < R[j].m.length; b += 2) {
+    bfs(R[i].m[a], D2, 0); d = D2[R[j].m[b]]; if (d < 9999) P.push(d, R[i].m[a], R[j].m[b]);
+  }
+  for (i = 0; i < P.length; i += 3) for (j = i + 3; j < P.length; j += 3) if (P[j] > P[i]) for (k = 0; k < 3; k++) { t = P[i + k]; P[i + k] = P[j + k]; P[j + k] = t; }
+  for (pi = 0; pi < P.length && want > 0; pi += 3) {
+    bfs(P[pi + 1], D2, 0); t = P[pi + 2]; n = 0;
+    while (D2[t] > 0 && n < NM) { STK[n++] = t; for (k = 1; k <= 4; k++) { m = nbr(t, k); if (m >= 0 && D2[m] === D2[t] - 1) { t = m; break; } } }
+    best = -1; bd = 9;
+    for (k = -3; k <= 3; k++) { m = (n >> 1) + k; if (m < 0 || m >= n) continue; t = STK[m]; if (ZN[t] || FB[t]) continue; d = ABS(k) - (deg(t) >= 3 ? 4 : 0); if (d < bd) { bd = d; best = t; } }
+    if (best < 0 || g.wp.indexOf(best) >= 0) continue;
+    g.wp.push(best); g.wz.push(0); want--;
+  }
+}
 // Where you start again: the court claimed last (its first end zone), or the Entry.
 function E_home(g) {
   var o = g.cl ? g.rooms[g.cl] : null;
@@ -1135,19 +1174,21 @@ function E_home(g) {
 function E_reset(g, why) {
   var p, b, F, i, h = E_home(g), d, t, best, bi;
   if (why === 'silence') { for (i = 0; i < g.rings.length; i++) if (!g.rings[i].gr) { g.rings[i].sil = 0; SF[g.rings[i].z] = 1; } g.nsil = 0; g.silT = 3 + g.silS; }
+  if (why === 'caught' && g.fin) g.silT = MAX(g.silT, 3 + .75 * g.silS); // a turn-back in the finale gives the clock back a fair fraction
   g.p = p = { x: h % EW, y: h / EW | 0, fx: 0, fy: -1, mk: 0, bst: 0, prot: why ? 3 : 0, cd: 0, hit: 0, still: 9, ax: 0, ay: -1, unm: 0 };
   for (d = 1; d <= 4; d++) { t = nbr(h, [0, 1, 2, 4, 3][d]); if (t >= 0 && (GR[t] & 1)) break; }
   d = [0, 1, 2, 4, 3][d] || 1;
   g.b = b = { x: p.x + DX[d] * .6, y: p.y + DY[d] * .6, vx: 0, vy: 0, held: 0, rest: 1, kx: 0, ky: 0, pk: 0 };
   b.kx = b.x; b.ky = b.y; p.fx = DX[d]; p.fy = DY[d]; p.ax = p.fx; p.ay = p.fy;
   g.pt = -1; g.done = 0; g.why = 0; g.lei = 0; g.ctl = 0; g.patT = 0; g.kn = -99; g.band = 0; g.bandT = 0; g.ghT = 0; g.cu = 0; g.tick = 0;
+  g.sfE = g.sfQ = SF[ZN[h]] ? 1 : 0; g.sfQT = 0; g.mvT = 9; g.silH = 0; g.lpT = -9;
   for (i = 0; i < 8; i++) g.wf[i] = 0;
   for (i = 0; i < EN; i++) { JP[i] = 0; if (!why) LIT[i] = -999; }
   g.jn = 0; BLK = -1; g.dtd = 1; g.f = null;
   E_ptile(g);
   F = g.f = { x: 0, y: 0, t: 0, n: -1, d: 0, f: 4, ft: 4, tt: 0, st: 0, s: g.wake * (why ? .5 : 1), m: 0, sees: 0, sT: 9, raw: 0, step: 0, tg: -1, pz: 0, cyc: 0,
     hd: -1, hdT: 99, lk: -1, lkT: 99, ls: -1, lost: 0, lm: 0, ramp: 0, rT: 0, nsT: 0, cn: 0, hunt: 0, huntT: 0, pcd: 0, np: 0, lb: new Int8Array(4), ln: 0, li: 0,
-    jc: 0, jn: 3, wi: 0, wpo: -1, rd: 0, blkT: 0, dist: 99, sxw: 1, eyT: 0, after: 0, free: 0, ball: 0, gd: -1, gs: 0, wt: -1, sayT: -9, nearT: -99 };
+    jc: 0, jn: 3, wi: 0, wpo: -1, rd: 0, blkT: 0, dist: 99, sxw: 1, eyT: -99, wT: -99, hsT: -99, after: 0, free: 0, ball: 0, gd: -1, gs: 0, wt: -1, sayT: -9, nearT: -99 };
   // the post, unless that is too near you or in your sight: then the waypoint farthest from you that is not
   t = g.post;
   if (DP[t] < 6 || VIS[t] === g.vs) { best = -1; bi = t; for (i = 0; i < g.wp.length; i++) if (DP[g.wp[i]] < 9999 && DP[g.wp[i]] > best && VIS[g.wp[i]] !== g.vs) { best = DP[g.wp[i]]; bi = g.wp[i]; } t = bi; }
@@ -1157,7 +1198,7 @@ function E_reset(g, why) {
 }
 function E_tm(g) {
   var s = '', i, n = 0, k = 0, q;
-  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.gr) continue; n++; if (g.fin ? q.c && !q.sil : q.c) k++; s += '<i class="dot' + ((g.fin ? q.c && !q.sil : q.c) ? ' on' : '') + '"></i>'; }
+  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.gr) continue; n++; if (g.fin ? q.c && !q.sil : q.c) k++; s += '<i class="dot' + ((g.fin ? q.c && !q.sil : q.c) ? ' on' : q.h && !q.c ? ' half' : '') + '"></i>'; }
   return '<span>' + (g.fin ? TEXT.silence : TEXT.rings) + ' <span aria-label="' + k + ' ' + TEXT.of + ' ' + n + '">' + s + '</span></span>' + (g.p.mk ? '<i class="yk" aria-hidden="true"></i><span class="sr">' + TEXT.markedSr + '</span>' : '');
 }
 
@@ -1206,8 +1247,7 @@ function E_vis(g) {
 function E_ptile(g) {
   var p = g.p, t = tOf(p.x, p.y);
   if (t === g.pt) { if (g.vd) E_vis(g); return; }
-  var was = g.pt; g.pt = t; E_vis(g); bfs(t, DP, 0);
-  if (was >= 0 && SF[ZN[t]] !== SF[ZN[was]]) snd(SF[ZN[t]] ? 'safe-enter' : 'safe-leave');
+  g.pt = t; E_vis(g); bfs(t, DP, 0); // safe-enter and safe-leave are debounced in E_step
   // loop reversal counts junction passes during a chase
   if (g.f && g.f.hunt && g.L !== 2 && deg(t) >= 3) { if (!JP[t]) JL[g.jn++ & 63] = t; if (++JP[t] >= 3) E_cut(g); }
 }
@@ -1277,7 +1317,8 @@ function cbox(b, k, e) {
 }
 
 // ---------- you and the ōlli ----------
-function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); emit(g, t, 5, 0); b.pk = .15; E_snd(g, 'pat', t); }
+// a hip touch, heard: pats carry farther on later levels, and come at most one per 0.45 s however control flickers
+function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); if (g.time - g.lpT < .45) return; g.lpT = g.time; emit(g, t, 5 + .5 * g.L, 0); b.pk = .15; E_snd(g, 'pat', t); }
 function rtile(q) { return q.hz ? q.lc * EW + q.a0 : q.a0 * EW + q.lc; }
 function E_strike(g, ax, ay) {
   var p = g.p, b = g.b, F = g.f, dx = b.x - p.x, dy = b.y - p.y, k, q, d, ex, ey, al, qc, s;
@@ -1315,22 +1356,25 @@ function P_step(g, dt) {
     if (d > .3) { m = d > 1 ? 1 : .35 + .65 * (d - .3) / .7; mx = tx / d * m; my = ty / d * m; }
   }
   m = SQRT(mx * mx + my * my);
+  if (m > .2) g.mvT = 0; else g.mvT += dt; // time since the move vector dropped
   sp = g.walk * (g.ctl ? .85 : 1) * (p.bst > 0 ? 1.4 : 1); vx = mx * sp; vy = my * sp;
   bl = bodyMove(p, vx * dt, vy * dt, .28);
-  // corner slide: never snag a thumb on a corner
-  if ((bl & 1) && ABS(mx) > ABS(my)) { ty = RND(p.y); if (GR[ty * EW + RND(p.x) + (mx > 0 ? 1 : -1)] & 1) bodyMove(p, 0, clamp(ty - p.y, -sp * dt, sp * dt), .28); }
-  if ((bl & 2) && ABS(my) > ABS(mx)) { tx = RND(p.x); if (GR[(RND(p.y) + (my > 0 ? 1 : -1)) * EW + tx] & 1) bodyMove(p, clamp(tx - p.x, -sp * dt, sp * dt), 0, .28); }
+  // corner slide: never snag a thumb on a corner. The slide goes the way you press; with no press across, to the centre line.
+  if ((bl & 1) && ABS(mx) > ABS(my)) { ty = RND(p.y + (my ? (my < 0 ? -.5 : .5) : 0)); if (GR[ty * EW + RND(p.x) + (mx > 0 ? 1 : -1)] & 1) bodyMove(p, 0, clamp(ty - p.y, -sp * dt, sp * dt), .28); }
+  if ((bl & 2) && ABS(my) > ABS(mx)) { tx = RND(p.x + (mx ? (mx < 0 ? -.5 : .5) : 0)); if (GR[(RND(p.y) + (my > 0 ? 1 : -1)) * EW + tx] & 1) bodyMove(p, clamp(tx - p.x, -sp * dt, sp * dt), 0, .28); }
   if (m > .2) { p.fx = mx / m; p.fy = my / m; }
   p.still = m < .05 ? p.still + dt : 0;
   if (b.held) { b.x = F.x; b.y = F.y + .3; return; }
-  // the dribble: soft hip touches keep the ball just ahead of you
+  // the dribble: soft hip touches keep the ball just ahead of you. Control holds for 0.2 s after you stop, and a slow
+  // ball at the feet of a standing player is damped to the spot ahead instead of rolling on.
   dx = b.x - p.x; dy = b.y - p.y; d = SQRT(dx * dx + dy * dy) || 1e-6; bs = SQRT(b.vx * b.vx + b.vy * b.vy);
-  ctl = m > .2 && d <= .75 && (dx * mx + dy * my) / (d * m) >= -.5 && bs <= 1.6 * sp;
+  ctl = d <= .9 && bs <= 1.6 * sp && (m > .2 ? (dx * mx + dy * my) / (d * m) >= -.5 : g.mvT < .2 || (m < .05 && bs <= 2.5));
   if (ctl) {
-    b.vx = vx + (p.x + p.fx * .55 - b.x) * 6; b.vy = vy + (p.y + p.fy * .55 - b.y) * 6;
-    bs = SQRT(b.vx * b.vx + b.vy * b.vy); if (bs > 1.4 * g.walk) { b.vx *= 1.4 * g.walk / bs; b.vy *= 1.4 * g.walk / bs; }
-    if (!g.ctl) { g.patT = 0; E_pat(g); }
-    g.patT += dt; if (g.patT >= .45) { g.patT -= .45; E_pat(g); }
+    k = m > .2 ? 9 : 4; v = m > .2 ? 1.4 * g.walk : 2; // standing, the ball is eased to the spot, never kicked
+    b.vx = vx + (p.x + p.fx * .55 - b.x) * k; b.vy = vy + (p.y + p.fy * .55 - b.y) * k;
+    bs = SQRT(b.vx * b.vx + b.vy * b.vy); if (bs > v) { b.vx *= v / bs; b.vy *= v / bs; }
+    if (!g.ctl) { g.patT = 0; if (m > .2) E_pat(g); } // a ball eased to a standing player's feet is no hip touch
+    if (m > .2) { g.patT += dt; if (g.patT >= .45) { g.patT -= .45; E_pat(g); } }
   } else if (d < .46 && p.cd <= 0) { // a struck ball passes the striker's own hip
     tx = dx / d; ty = dy / d; v = vx * tx + vy * ty; b.x = p.x + tx * .46; b.y = p.y + ty * .46;
     if (v > 0) { b.vx += 1.3 * v * tx; b.vy += 1.3 * v * ty; }
@@ -1341,7 +1385,7 @@ function P_step(g, dt) {
   if (!ctl) { b.vx *= FR; b.vy *= FR; }
   bs = SQRT(b.vx * b.vx + b.vy * b.vy);
   if (bs > 12) { b.vx *= 12 / bs; b.vy *= 12 / bs; }
-  if (bs < .25 && !ctl) { b.vx = b.vy = 0; if (!b.rest) { b.rest = 1; snd('ball-rest'); } } else b.rest = 0;
+  if (bs < .25 && (!ctl || m < .05)) { b.vx = b.vy = 0; if (!b.rest) { b.rest = 1; snd('ball-rest'); } } else b.rest = 0;
   ox = b.x; oy = b.y; b.x += b.vx * dt; b.y += b.vy * dt;
   n = nearB(b.x - .2, b.y - .2, b.x + .2, b.y + .2, 0);
   for (k = 0; k < n; k += 4) { v = cbox(b, k, .72); if (v > .6 && !ctl) { c = BXK[k >> 2]; knock(g, b.x, b.y, v, c ? (g.rings[c - 1].gr ? 2 : 1) : 0); } }
@@ -1364,7 +1408,7 @@ function P_step(g, dt) {
     if ((a0 < 0) === (a1 < 0)) continue;
     c = rq(q, b.x, b.y);
     if (c < q.off + .35 || c > q.off + .35 + q.w || ABS(ral(q, b.x, b.y)) > .5) continue;
-    if (ABS(q.hz ? b.vx : b.vy) >= 1.5) { if (q.gr) return E_clear(g); E_claim(g, q); }
+    if (ABS(q.hz ? b.vx : b.vy) >= 1.5) { if (q.gr) return E_clear(g); if (++q.h >= q.np) E_claim(g, q); else E_half(g, q); }
     else if (g.n - (g.sft || -999) > 360) { g.sft = g.n; cap(TEXT.soft, 1.6); snd('ring-soft'); }
   }
   // level 2: loose tesserae click when touched
@@ -1381,7 +1425,7 @@ function E_tclick(g, k) {
 }
 function E_claim(g, q) {
   var o = q.o, F = g.f, x, y, t, i, n = 0, k = 0, rt = rtile(q);
-  q.c = 1; q.sn = 1; SF[q.z] = 1; g.cl = q.z; g.ord.push(q); addPts(1000 * (g.L + 1));
+  q.c = 1; q.h = q.np; q.sn = 1; SF[q.z] = 1; g.cl = q.z; g.ord.push(q); addPts(1000 * (g.L + 1));
   for (i = 0; i < g.rings.length; i++) if (!g.rings[i].gr) { n++; if (g.rings[i].c) k++; }
   for (y = o.y0 - 1; y <= o.y0 + o.fh; y++) for (x = o.x0 - 1; x <= o.x0 + o.fw; x++) lit1(y * EW + x, g.n, g.n + g.lh);
   klight(g, rt, 4.5); emit(g, rt, 999, 5);
@@ -1390,6 +1434,13 @@ function E_claim(g, q) {
   E_snd(g, 'ring-claim', rt, 'n', k, 'of', n);
   if (ZN[tOf(F.x, F.y)] === q.z || (F.n >= 0 && ZN[F.n] === q.z)) { F.free = 1; E_wait(g, F, q.z); }
   if (k === n) E_finale(g);
+}
+// Levels 4 and 5: a side ring takes two passes. The first lights one stone and is heard; the second claims.
+function E_half(g, q) {
+  var rt = rtile(q);
+  klight(g, rt, 3); emit(g, rt, 14, 1);
+  cap(TEXT.half, 2.6); say(TEXT.half);
+  E_snd(g, 'ring-half', rt, 'n', q.h, 'of', q.np);
 }
 function E_finale(g) {
   var F = g.f, rt = rtile(g.gc);
@@ -1458,22 +1509,23 @@ function E_inv(g, F, t, rd) {
   F.st = 3; F.hd = t; F.rd = rd; F_go(g, F, t);
   if (DT[F.t] >= 9999 && F.n < 0) { E_search(g, F); return; }
   if (F.n < 0) { d = fNext(g, F); if (d) F.ft = 2 * d - 2; }
-  E_snd(g, 'face-hear', tOf(F.x, F.y));
+  if (g.time - F.hsT >= .25) { F.hsT = g.time; E_snd(g, 'face-hear', tOf(F.x, F.y)); } // the hook at most four times a second
 }
 function hear(g, t, base) {
-  var F = g.f, i = (g.lei = (g.lei + 1) & 7) * 3;
+  var F = g.f, i = (g.lei = (g.lei + 1) & 7) * 3, rd;
   g.le[i] = t; g.le[i + 1] = base; g.le[i + 2] = g.n;
   if (g.done) return;
   if (!F.st) { if (base >= 10) E_wake(g, F, 0); return; }
   F.lk = t; F.lkT = 0;
   if (F.step >= 1 || (F.st >= 5 && F.st !== 8)) return;
+  rd = F.st === 3 && F.hdT >= .5 ? .2 : 0; // a newer sound retargets after a 0.2 s pause, but a stream of sounds cannot freeze it
   F.hd = t; F.hdT = 0;
-  if (g.L !== 2) E_inv(g, F, t, F.st === 3 ? .2 : 0);
+  if (g.L !== 2) E_inv(g, F, t, rd);
 }
 function E_wait(g, F, z) {
   var o = g.rooms[z], j, b = -1, bv = 1e9;
   for (j = 1; j < o.m.length; j += 2) if (DF[o.m[j]] < bv) { bv = DF[o.m[j]]; b = j; }
-  F.st = 8; F.wt = o.m[b]; F.wm = o.m[b - 1]; F.s = g.wait; F.wz = z;
+  F.st = 8; F.wt = o.m[b]; F.wm = o.m[b - 1]; F.s = g.wait; F.wz = z; F.wT = g.time;
   snd('face-wait'); if (!(ET & 16)) { ET |= 16; cap(TEXT.waits, 3); }
 }
 function E_nextWp(g, F, far) {
@@ -1510,7 +1562,7 @@ function F_step(g, dt) {
   if (ft !== F.ftl) { F.ftl = ft; bfs(ft, DF, 0); }
   F.dist = DF[pt];
   F.pcd -= dt; F.sT += dt; F.hdT += dt; F.lkT += dt; F.arr = 0;
-  if (F.huntT > 0 && (F.huntT -= dt) <= 0 && L === 2) F.hunt = 0;
+  if (F.huntT > 0 && (F.huntT -= dt) <= 0 && L === 2) { F.hunt = 0; if (F.st === 5) { F.st = 1; F.cyc = 0; } } // the hunt over, it patrols (and hears) again
   if (F.blkT > 0 && (F.blkT -= dt) <= 0) { BLK = -1; g.dtd = 1; }
   // stone turns in hard eighth-steps
   et = L === 2 && g.still ? .25 * g.kt : g.et;
@@ -1525,16 +1577,18 @@ function F_step(g, dt) {
   }
   // the eyes: on and off at most twice a second
   if (raw ? !F.sees && F.sT >= .5 : F.sees && F.sT >= .5) {
-    F.sees = raw; F.sT = 0;
+    F.sees = raw; F.sT = 0; if (raw) F.eyT = g.time; // when the eyes first showed: contact waits Tn from here
     if (raw && !(ET & 4)) { ET |= 4; cap(TEXT.law, 3.4); }
   }
   F.raw = raw;
   if (F.st !== 6 && F.st !== 7 && F.st !== 9 && F.st) {
     if (F.sees && raw) { S2 = p.still >= 1 && !lit ? 3 : S; F.m += dt / (d <= S2 / 2 ? tn : d <= S2 ? 1.5 * tn : 3 * tn); }
-    else F.m -= dt / (2 * tn);
+    else { F.m -= dt / (2 * tn); if (F.m < 1 / 3) F.m = 0; } // drained below a third, the notice is gone: the next fill starts over
     F.m = F.m < 0 ? 0 : F.m > 1 ? 1 : F.m;
   }
   if (F.sees) p.unm = 0; else if ((p.unm += dt) >= 30 && p.mk) p.mk = 0;
+  // the chase is over once its notice has fully drained outside a rush (level 3 hunts run on their own timer)
+  if (F.hunt && F.m === 0 && F.st !== 5 && F.st !== 7 && L !== 2) E_endChase(g, F);
   k = F.m >= 1 ? 3 : F.m >= 2 / 3 ? 2 : F.m >= 1 / 3 ? 1 : 0;
   if (k !== F.step) {
     if (k > F.step) { E_sndD('face-eyes', 'step', k); if (k === 1 && g.time - (F.seeT || -99) >= 8) { F.seeT = g.time; E_say(g, TEXT.sees); } }
@@ -1626,8 +1680,9 @@ function F_step(g, dt) {
       }
       break;
   }
-  // a touch: only in a full rush (or a level 3 hunt), never on safe ground, never through stone
-  if (p.prot <= 0 && !safe && d < .55 && F.hunt && ((F.st === 5 && F.m >= 1) || (L === 2 && !g.still && F.huntT > 0)) && los(ft, pt)) E_contact(g, F);
+  // a touch: only in a full rush (or a level 3 hunt), never on safe ground, never through stone, never while it
+  // recovers or plays, and never within Tn of its eyes first showing
+  if (p.prot <= 0 && !safe && d < .55 && F.hunt && F.st !== 6 && F.st !== 7 && g.time - F.eyT >= tn && ((F.st === 5 && F.m >= 1) || (L === 2 && !g.still && F.huntT > 0)) && los(ft, pt)) E_contact(g, F);
 }
 // direction from tile a toward its neighbour tile b (or from the mouth outward when o is given)
 function E_dirTo(a, o) {
@@ -1644,7 +1699,7 @@ function E_contact(g, F) {
 }
 // Level 3: it turns on a rhythm. While it faces it cannot move; while it moves it cannot see.
 function E_turnFace(g, F, dt, d, ux, uy) {
-  var u, still, tl, r, hunt;
+  var u, still, tl, r, hunt, safe;
   g.tc += dt; u = (g.tc / g.tper + g.tph) % 1; still = u < g.tsf;
   tl = (still ? g.tsf - u : 1 - u) * g.tper;
   if (tl <= .6 * g.kt && !g.tlt) { g.tlt = 1; snd('turn-tell'); }
@@ -1655,12 +1710,15 @@ function E_turnFace(g, F, dt, d, ux, uy) {
     else if (F.f === F.ft && (F.s -= dt) <= 0) { F.s = .5; F.ft = (F.ft + 2) % 8; }
     return;
   }
-  hunt = F.hunt && F.huntT > 0;
+  hunt = F.hunt && F.huntT > 0; safe = SF[ZN[g.pt]];
+  // hunting you onto safe ground, it waits at the mouth as on every other level, instead of staring in place
+  // (not again within 3 s of its last wait, so a player straddling the court's edge cannot flip it every tick)
+  if (safe && hunt && g.time - F.wT >= 3) { E_wait(g, F, ZN[g.pt]); return; }
   if (!hunt && F.hdT > 12) { if (F.wt < 0) E_nextWp(g, F, -1); F.hd = -1; }
   F_go(g, F, hunt ? F.ls : F.hd >= 0 ? F.hd : F.wt);
   r = fMove(g, F, hunt ? g.rush : 1.3 * g.inv, dt);
   if (r) { if (!hunt && F.hd < 0) F.wt = -1; F.hd = -1; }
-  if (!hunt && d <= 1) { g.tph = (1 - (g.tc / g.tper) % 1) % 1; g.still = 1; g.tlt = 0; E_sndD('turn', 'still', true); }
+  if (!hunt && d <= 1 && !safe) { g.tph = (1 - (g.tc / g.tper) % 1) % 1; g.still = 1; g.tlt = 0; E_sndD('turn', 'still', true); }   /* never the stare lock on a sheltering player (M3) */
 }
 // Level 2: tesserae come loose while it patrols
 function E_tdrop(g, F, dt) {
@@ -1725,12 +1783,19 @@ function E_step(g, dt) {
   }
   P_step(g, dt); if (scr !== 'play' || beat || g.done) return;
   E_ptile(g);
+  // safe-enter and safe-leave fire once the new footing has held for 0.25 s (no chatter at a court boundary)
+  i = SF[ZN[g.pt]] ? 1 : 0;
+  if (i !== g.sfQ) { g.sfQ = i; g.sfQT = g.time; }
+  if (i !== g.sfE && g.time - g.sfQT >= .25) { g.sfE = i; snd(i ? 'safe-enter' : 'safe-leave'); }
   E_waves(g);
   F_step(g, dt); if (beat || g.done) return;
   if (g.L === 3) E_slabs(g);
   if (g.fin) {
     g.ftm += dt;
-    if ((g.silT -= dt) <= 0) {
+    // the silence clock holds while it waits at your court, or guards a Great Court mouth (within 2 tiles of one)
+    b = tOf(F.x, F.y); q = g.gc.o.m;
+    g.silH = (F.st === 8 && F.wz === ZN[g.pt] && SF[ZN[g.pt]]) || cheb(b, q[1]) <= 2 || cheb(b, q[3]) <= 2 ? 1 : 0;
+    if (!g.silH && (g.silT -= dt) <= 0) {
       for (i = 0; i < g.ord.length; i++) if (!g.ord[i].sil) break;
       q = g.ord[i]; q.sil = 1; SF[q.z] = 0; g.nsil++; g.silT = g.silS; g.dtd = 1; g.vd = 1;
       b = g.ord.length - g.nsil;
@@ -1789,6 +1854,7 @@ function E_lay(g) {
   g.cg = !port && !cs;
   if (port) capAt(16, 16, top + vh + 4); else if (g.cg) capAt(12, W - gut + 12, top + 12); else capAt(16, 16, top);
   g.DS = [4 * DPR, 4 * DPR]; g.DD = [2 * DPR, 3 * DPR]; g.D0 = []; g.cmx = null;
+  if (!g.al) g.al = new Float64Array(7); // the aim line's points, allocated once per level
 }
 // render state for this frame, and short path helpers (device pixels, snapped)
 var OX = 0, OY = 0, TT = 1, VS = 0, NN = 0, FX = 0, FY = 0, FW = 1, FS = 1;
@@ -1843,7 +1909,7 @@ function E_ring(g, q) {
   sh = q.gr ? ringShut(g, q) : q.sil;
   col = solid ? INK.w : on ? (q.gr ? INK.e : INK.s) : INK.m;
   ctx.lineWidth = LW;
-  for (k = 0; k < 2; k++) { rbox(q, k ? a + q.w : 0, k ? e : a, 0, 0); E_box(solid ? INK.w : '#000', col); }
+  for (k = 0; k < 2; k++) { rbox(q, k ? a + q.w : 0, k ? e : a, 0, 0); E_box(solid || (!q.gr && !q.sil && q.h > k) ? INK.w : '#000', col); } // a two-pass ring lights one stone per pass
   rbox(q, a, a + q.w, 0, 0); c = (BXS[0] + BXS[2]) / 2; m = (BXS[1] + BXS[3]) / 2;
   if (sh) { // the slot drawn closed; a silent ring's slot is broken
     bp(); k = q.sil ? .3 : 1;
@@ -2080,9 +2146,12 @@ function E_draw(g) {
 // ---------- NATIONS OF TODAY ----------
 // No nation data lives in this file. It comes from the host (opts.nations) or a same-origin JSON, is checked
 // entry by entry, and appears only on calm static panels: never during play, never with the Stone Face.
-var NAT = null, NP = [], NATst = 0, NATupd = '', xhr = null, natH = 0, natB = 0, natT = 0, natF = 0, natP = 0, natIn = 0, natV = 0, NMET = [], NSD = {}, natCur = null;
-function natDay() { var d = new Date(); return RND((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(2026, 0, 1)) / 864e5); }
-function ymd(d) { return d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate()); }
+var NAT = null, NP = [], NATst = 0, NATupd = '', xhr = null, natH = 0, natB = 0, natT = 0, natF = 0, natP = 0, natIn = 0, natV = 0, NMET = [], NSD = {}, NHL = {}, natCur = null;
+// Test entries (ids starting 'test-', facts of kind 'test') never show in a release build; the dev build keeps them for the layout fixture.
+var devNat = 0; /*T*/devNat = 1;/*T*/
+// the UTC day, like today's court
+function natDay() { var d = new Date(); return RND((Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - Date.UTC(2026, 0, 1)) / 864e5); }
+function ymd(d) { return d.getUTCFullYear() + '-' + p2(d.getUTCMonth() + 1) + '-' + p2(d.getUTCDate()); }
 function okS(s, a, b) { return typeof s === 'string' && s.length >= a && s.length <= b; }
 function okU(u) { return typeof u === 'string' && /^https:\/\/[^\s"<>]+$/.test(u) && u.length < 600; }
 function okD(s) { return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
@@ -2094,7 +2163,7 @@ function natValid(a) {
   if (!(a instanceof Array)) return out;
   for (i = 0; i < a.length && out.length < 600; i++) {
     n = a[i];
-    if (!n || !/^[a-z0-9-]{1,64}$/.test(n.id || '') || !okS(n.name, 1, 80) || !okS(n.lands, 1, 200) || !(n.countries instanceof Array) || n.countries.length < 1 || n.countries.length > 6) continue;
+    if (!n || !/^[a-z0-9-]{1,64}$/.test(n.id || '') || (!devNat && /^test-/.test(n.id)) || !okS(n.name, 1, 80) || !okS(n.lands, 1, 200) || !(n.countries instanceof Array) || n.countries.length < 1 || n.countries.length > 6) continue;
     ok = 1; for (j = 0; j < n.countries.length; j++) if (!okS(n.countries[j], 1, 60)) ok = 0;
     al = n.also == null ? [] : n.also;
     if (!(al instanceof Array) || al.length > 6) ok = 0; else for (j = 0; j < al.length; j++) if (!okS(al[j], 1, 80)) ok = 0;
@@ -2102,7 +2171,7 @@ function natValid(a) {
     fs = [];
     for (j = 0; n.facts instanceof Array && j < n.facts.length; j++) {
       f = n.facts[j]; s = f && f.source;
-      if (!f || !okS(f.text, 1, 300) || !s || !okU(s.url) || !okS(s.publisher, 1, 120) || (s.title != null && !okS(s.title, 0, 200)) || !okD(s.accessed) || s.accessed > tm) continue;
+      if (!f || (!devNat && f.kind === 'test') || !okS(f.text, 1, 300) || !s || !okU(s.url) || !okS(s.publisher, 1, 120) || (s.title != null && !okS(s.title, 0, 200)) || !okD(s.accessed) || s.accessed > tm) continue;
       if ((f.kind != null && !okS(f.kind, 0, 24)) || (f.as_of != null && !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(f.as_of)))) continue;
       fs.push({ text: dash(f.text), kind: f.kind ? dash(f.kind) : '', as_of: f.as_of ? String(f.as_of) : '', title: s.title ? dash(s.title) : '', pub: dash(s.publisher), url: s.url, acc: s.accessed });
     }
@@ -2158,26 +2227,27 @@ function el(p, tag, cls, txt) { var e = document.createElement(tag); if (cls) e.
 function lnk(p, txt, url, cls) { var a = el(p, 'a', cls || '', txt); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; return a; }
 // One card, the same everywhere: our label, the nation's own name first, other names, lands, one fact, its source and checked date.
 function natCard(box, n, k, where) {
-  var f = n.facts[(natDay() + k + natSeen(n.id)) % n.facts.length], p, h, old;
+  // the herald redrawn with the same nation keeps its fact and fires no hook; anything else is a new card
+  var same = where === 'title' && NHL.id === n.id, fi = same ? NHL.fi : (natDay() + k + natSeen(n.id)) % n.facts.length, f = n.facts[fi], p, h, old;
+  if (where === 'title') { NHL.id = n.id; NHL.fi = fi; }
   box.textContent = ''; natCur = n;
   el(box, 'p', 'nl', TEXT.natLabel);
   el(box, 'h3', 'nn', n.name);
   if (n.also.length) el(box, 'p', 'na', TEXT.also + ' ' + n.also.join(', '));
   if (n.say) { p = el(box, 'p', 'na', TEXT.sayIt + ' ' + n.say.text + '. '); h = document.createElement('a'); h.href = n.say.url; lnk(p, TEXT.pronFrom + ' ' + h.hostname + '.', n.say.url); }
   el(box, 'p', 'na', n.lands + '. ' + n.countries.join(', ') + '.');
-  p = el(box, 'p', 'nf'); if (f.kind) el(p, 'span', 'nk', f.kind); p.appendChild(document.createTextNode(f.text));
+  p = el(box, 'p', 'nf'); if (f.kind) { el(p, 'span', 'nk', f.kind); el(p, 'span', 'sr', ': '); } p.appendChild(document.createTextNode(f.text));
   if (f.as_of) el(box, 'p', 'na', TEXT.asOf + ' ' + f.as_of + '.');
   p = el(box, 'p', 'ns'); lnk(p, TEXT.source + ' ' + f.pub + (f.title ? ', ' + f.title : '') + '.', f.url); p.appendChild(document.createTextNode(' ' + TEXT.checked + ' ' + f.acc + '.'));
   old = ymd(new Date(Date.now() - 365 * 864e5)); if (f.acc < old) el(box, 'p', 'ns', TEXT.stale);
-  natSeen(n.id, 1);
-  NSD.id = n.id; NSD.where = where; snd('nation-card', NSD);
+  if (!same) { natSeen(n.id, 1); NSD.id = n.id; NSD.where = where; snd('nation-card', NSD); }
   return f;
 }
 function natSite(a, n) { a.hidden = !n || !n.site; if (n && n.site) a.href = n.site; }
 // the title herald: Previous, Next, Pause; it advances on its own every 14 s unless paused, hovered, focused or reduced motion
 function herald(step, user) {
   clearTimeout(natT); clearTimeout(natF);
-  if (!E.Nh) return;
+  if (!E.Nh || scr !== 'title') return; // the herald lives on the title only: never during play
   E.Nh.hidden = !NAT; if (!NAT) return;
   natH = (natH + step + NP.length) % NP.length;
   var n = NP[natH], go = function () {
@@ -2186,8 +2256,7 @@ function herald(step, user) {
     if (user) say(n.name + '. ' + n.lands + '.');
     natSched();
   };
-  E.Nh.setAttribute('aria-live', user ? 'polite' : 'off');
-  if (step && !RM) { E.Nc.style.opacity = 0; natF = setTimeout(go, 150); } else go();
+  if (step && !RM) { E.Nc.style.opacity = 0; natF = setTimeout(go, 150); } else go(); // one announcement channel: the live region in go()
 }
 function natSched() { clearTimeout(natT); if (NAT && scr === 'title' && !natP && !natIn && !RM) natT = setTimeout(function () { herald(1, 0); }, 14000); }
 function natPause() { natP = !natP; E.Nz.setAttribute('aria-pressed', natP); E.Nz.textContent = natP ? TEXT.play : TEXT.pause; natSched(); }
@@ -2232,7 +2301,9 @@ function natBetween() {
 
 // Standalone page: the resting ball opens the game. A host page calls ZTH_GAME.open() itself.
 var ob = document.getElementById('zgOpen');
-if (ob) ob.addEventListener('click', function () { API.open(undefined, { returnFocus: ob }); });
+var GO = { returnFocus: ob, nationsUrl: '/game/nations.json' };   /* the game edition of the verified registry */
+if (ob) ob.addEventListener('click', function () { API.open(undefined, GO); });
+if (ob && document.body.getAttribute('data-autoopen') === '1') API.open(undefined, GO);
 })();
 </script>
 </body>
