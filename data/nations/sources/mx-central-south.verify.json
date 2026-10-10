@@ -1,0 +1,621 @@
+{
+  "region": "mx-central-south",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "nahua-mx-central-south",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INEGI press release 472/24 (curl + pdftotext; WebFetch cannot parse the PDF). Evidence verbatim; 7.4 million speakers aged 3+ in 2023 (ENADID 2023) and nahuatl 23.6% first in list."
+    },
+    {
+      "id": "nahua-mx-central-south",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page: 700 festivities a year in CDMX, most honor patron saints, and their organization is in charge of mayordomias. Original said 'most of them run by' and then 'behind each celebration' (internally inconsistent, mixed up the 'most' clause). Tightened to the page.",
+      "text": "In Mexico City alone, Nahua towns organize 700 festivities a year, most honoring the patron saints of towns and neighborhoods, and mayordomías are in charge of organizing them.",
+      "evidence": "los pueblos organizan 700 festividades a lo largo de un año"
+    },
+    {
+      "id": "nahua-mx-central-south",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI/SRCI station in Zongolica, Veracruz, serves the Nahua population; migrants in the US hear family on its programs via their cell phones. Evidence verbatim."
+    },
+    {
+      "id": "maya-yucatan-peninsula-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INEGI 472/24: maya 12.4%, second in the ordered list. Evidence verbatim."
+    },
+    {
+      "id": "maya-yucatan-peninsula-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "INPI station in Peto, Yucatan, on air since 29 Nov 1982, 677 localities in Yucatan, Quintana Roo and Campeche, Maya y espanol. Evidence verbatim."
+    },
+    {
+      "id": "maya-yucatan-peninsula-mx",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page says the council is 25 people from 20 communities of the municipality's 4 regions; it does not say the 20 communities are Maya. Dropped the inference.",
+      "text": "In Felipe Carrillo Puerto, Quintana Roo, the INPI station La Voz del Gran Pueblo builds its programming with a citizen council of 25 people from 20 communities.",
+      "evidence": "Consejo Ciudadano integrado por 25 personas de 20 comunidades"
+    },
+    {
+      "id": "tseltal-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INEGI 472/24: tzeltal 7.9%, third in list. Evidence verbatim."
+    },
+    {
+      "id": "tseltal-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Backstrap loom textiles with traditional Maya symbols such as the rombo; an artistic huipil takes at least six months of daily work. Evidence verbatim."
+    },
+    {
+      "id": "tseltal-chiapas-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Station in Ocosingo transmits in Spanish and Tseltal; operated by Chiapas state government. Publisher field should drop 'with station information from INPI': this is a Chiapas state station (Sistema Chiapaneco de Radio, Television y Cinematografia), not INPI. Fact text itself is correct."
+    },
+    {
+      "id": "tsotsil-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Chamula women make wool chamarros, Zinacantan finely embroidered ponchos; women described as extraordinary artisans. Evidence verbatim."
+    },
+    {
+      "id": "tsotsil-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Carnival stages origin of identity, relation with other peoples, history, and their wish to keep their own culture. Evidence verbatim."
+    },
+    {
+      "id": "tsotsil-chiapas-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI/SRCI station XECOPA in Copainala; languages Zoque, tzotzil y espanol. Evidence verbatim."
+    },
+    {
+      "id": "nuu-savi-mixtec-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "SEP page: fourth most numerous after nahuas, mayas, zapotecos; call themselves nuu savi, 'pueblo de la lluvia'. Evidence verbatim. Note: page is dated 6 Feb 2025, so as_of should be 2025, not 2022."
+    },
+    {
+      "id": "nuu-savi-mixtec-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "INPI station in Tlaxiaco serves Mixteco, Triqui, Chocholteco (and a small Nahuatl group); Internet since 2006; serves migrants mainly toward the United States. Evidence verbatim."
+    },
+    {
+      "id": "nuu-savi-mixtec-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Palm craft deserves special mention for its regional economic importance; hats, petates, purses, toys, brooms; children begin learning near age six. Evidence verbatim."
+    },
+    {
+      "id": "binniza-zapotec-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INEGI 472/24: zapoteco 7.2%, fourth in list. Evidence verbatim. Scope note: this is Zapotec as a whole, broader than Binniza (see names)."
+    },
+    {
+      "id": "binniza-zapotec-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Velas are classed by anthropologists as a central institution of binniza culture; honor patron saints of surnames, groups or trades and places; about 24 in Juchitan. Evidence verbatim."
+    },
+    {
+      "id": "binniza-zapotec-mx",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Founded 17 Nov 1990, broadcasts Zapotec, Mixe, Chinantec; archive has about 1,200 open reel tapes of the communities' cultural contributions (music, composers, painters, artisans), not only 'regional music'. Narrowed to what the page states. Scope note: Sierra Juarez Zapotec, not Isthmus Binniza.",
+      "text": "Since 1990, La Voz de la Sierra Juárez in Guelatao de Juárez, Oaxaca has broadcast in Zapotec, Mixe and Chinantec, and its sound archive holds about 1,200 open reel tapes.",
+      "evidence": "Transmite en las lenguas zapoteco, mixe y chinanteco de la parte alta"
+    },
+    {
+      "id": "ayuuk-mixe-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Fiesta is xeew in the Mixe language; also means dia, sol, tiempo, nombre. Evidence verbatim."
+    },
+    {
+      "id": "ayuuk-mixe-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Festivals in the upper and middle region ayuuk feature confrontation between bands in musical duels. Evidence verbatim."
+    },
+    {
+      "id": "ayuuk-mixe-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Backstrap loom weaving maintained in Tamazulapam, Tlahuitoltepec and Cotzocon; mural and canvas painting being developed by young people. Evidence verbatim. Page last modified 2019."
+    },
+    {
+      "id": "hnahnu-otomi-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Page: Otomi of the Valle del Mezquital self-name hnahnu (spelled with final u-umlaut 'hñähñü' on this page), 'those who speak the nasal language or those who speak two languages'. Evidence verbatim. Spelling variant only; INPI station page uses 'Hñähñu'."
+    },
+    {
+      "id": "hnahnu-otomi-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "INPI station in Cardonal, Hidalgo; test broadcasts 1998, officially inaugurated 12 Jan 1999; objective is spreading and revitalizing original languages; Hñä-hñu, nahuatl y espanol. Evidence verbatim."
+    },
+    {
+      "id": "hnahnu-otomi-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Wool rugs, black stone molcajetes and metates, palm hats, maguey fiber ayates, backstrap loom textiles. Evidence verbatim."
+    },
+    {
+      "id": "purhepecha-michoacan-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "UNESCO ICH (WebFetch; curl blocked by bot challenge): inscribed 2010 (5.COM) on the Representative List; P'urhepecha communities of the State of Michoacan. Evidence verbatim (curly apostrophe)."
+    },
+    {
+      "id": "purhepecha-michoacan-mx",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page says each of the four sub-regions (not each community) has its own way of electing civil and communal authorities and the Consejos mayores de gobierno, governed by custom, with political parties excluded. Rephrased to match.",
+      "text": "Each of the four P'urhépecha sub-regions has its own way of electing civil and communal authorities and Consejos Mayores, by custom and without political parties.",
+      "evidence": "se excluyen a los partidos políticos para elegir a sus autoridades"
+    },
+    {
+      "id": "purhepecha-michoacan-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI station in Cheran changes its program schedule every 2 February to begin the P'urhepecha new year. Evidence verbatim."
+    },
+    {
+      "id": "totonaco-veracruz-puebla-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "UNESCO BSP page (WebFetch): 'Selected in 2012 (7.COM) on the Register of Good Safeguarding Practices'. Evidence verbatim."
+    },
+    {
+      "id": "totonaco-veracruz-puebla-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "UNESCO page: Totonac language as the vehicle for teaching; centre structured as a traditional settlement of house-schools, each House specialized in one art. Evidence verbatim; paraphrase is own words."
+    },
+    {
+      "id": "totonaco-veracruz-puebla-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI station in Cuetzalan founded 21 Aug 1994 after social and community groups requested service to Nahua and Totonac peoples in their own languages. Evidence verbatim."
+    },
+    {
+      "id": "ha-shuta-enima-mazatec-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Page and INPI Atlas: 'los que trabajamos el monte, humildes, gente de costumbre'. Evidence verbatim."
+    },
+    {
+      "id": "ha-shuta-enima-mazatec-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Textiles in black, light blue or red with birds, flowers and trees; embroidered blouses, tablecloths and huipiles. Evidence verbatim."
+    },
+    {
+      "id": "ha-shuta-enima-mazatec-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI station in San Lucas Ojitlan; sound register of more than 5 mil pieces of music, including Huehuentones (musicos mazatecos). Evidence verbatim."
+    },
+    {
+      "id": "chol-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Maize central to the culture; many festivals are rites tied to maize and the agricultural cycle from field preparation through sowing to harvest. Evidence verbatim. Fact correctly omits ritual detail."
+    },
+    {
+      "id": "chol-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Carnival in Tumbala between 2 and 8 February with the Danza del Tigre. Evidence verbatim."
+    },
+    {
+      "id": "chol-chiapas-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "XHSDM-FM on air 25 Jan 2000 in Santo Domingo, Ocosingo; Spanish, tseltal, chol, lacandon. Evidence verbatim. Publisher field should drop 'with station information from INPI': this is a Chiapas state station (Sistema Chiapaneco de Radio, Television y Cinematografia), not INPI. Fact text itself is correct."
+    },
+    {
+      "id": "tojolabal-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INPI station XEVFS in Las Margaritas; 'La Xuxepil, como se le reconoce en las comunidades tojol-ab'al'; archive of more than 6,500 sound documents. Evidence verbatim."
+    },
+    {
+      "id": "tojolabal-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Romerias are the most important and distinctive ritual celebrations among the Tojolabal and help delimit Tojolabal territory. Evidence verbatim."
+    },
+    {
+      "id": "tojolabal-chiapas-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "XHCTN-FM in La Trinitaria transmits in Spanish, tojolabal, cakchiquel, kanjobal. Evidence verbatim. Publisher field should drop 'with station information from INPI': this is a Chiapas state station (Sistema Chiapaneco de Radio, Television y Cinematografia), not INPI. Fact text itself is correct."
+    },
+    {
+      "id": "tsa-ju-jmi-chinantec-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Self-name tsa ju jmi', gente de palabra antigua; each town has its own name preceded by tsa, dsa or alla (gente). Confirmed also by INPI Atlas. Evidence verbatim."
+    },
+    {
+      "id": "tsa-ju-jmi-chinantec-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Huipil making is the main craft; whole family obtains raw material through spinning; afterwards the work is exclusively women's. Evidence verbatim."
+    },
+    {
+      "id": "tsa-ju-jmi-chinantec-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "XEOJN began 18 Nov 1991 with bilingual Chinantec, Mazatec and Cuicatec staff; INPI; San Lucas Ojitlan. Evidence verbatim."
+    },
+    {
+      "id": "triqui-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "triqui is a deformation of driqui: dri from dre (padre) and qui (grande o superior). Evidence verbatim."
+    },
+    {
+      "id": "triqui-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Women weave on backstrap loom and four-stake horizontal loom. Evidence verbatim."
+    },
+    {
+      "id": "triqui-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Languages line 'Mixteco, triqui y espanol.' INPI, Tlaxiaco. Evidence verbatim."
+    },
+    {
+      "id": "jnatjo-mazahua-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "INPI station inaugurated 12 Mar 1998 for Mazahua and Otomi; events include poetry recital and rock concert 'en nuestra lengua'. Evidence verbatim."
+    },
+    {
+      "id": "jnatjo-mazahua-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Normative systems guide faena (shared work), forest care, election of community authorities, festivals, land tenure. Evidence verbatim."
+    },
+    {
+      "id": "jnatjo-mazahua-mx",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page lists fajas, cobijas, cojines, manteles, tapetes, chalecos, gabanes, morrales y quexquemitl de lana; it does not clearly say sashes and blankets are wool, nor that they are woven. Temascalcingo produces red clay pots, Atlacomulco straw hats. Tightened.",
+      "text": "Mazahua crafts include sashes, blankets, rugs and wool quexquémitl; Temascalcingo makes red clay pots and Atlacomulco makes straw hats.",
+      "evidence": "en Temascalcingo producen ollas, cazuelas y macetas de barro rojo"
+    },
+    {
+      "id": "kitse-chatnio-chatino-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Vestiges of Chatino culture in the coastal zone dating to 400 a.C. Evidence verbatim."
+    },
+    {
+      "id": "kitse-chatnio-chatino-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Weaving and embroidery produced in Yaitepec, Quiahije and Nopala: blouses, morrales, ceñidores, servilletas, manteles. Evidence verbatim."
+    },
+    {
+      "id": "kitse-chatnio-chatino-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "INPI station in Santiago Jamiltepec officially began 5 May 1994; Mixteco, amuzgo, chatino, tacuate y espanol. Evidence verbatim."
+    },
+    {
+      "id": "ikoots-huave-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Men make nets and atarrayas; women make huipiles, tablecloths and napkins with thread dyed with sea snail secretions. Evidence verbatim."
+    },
+    {
+      "id": "ikoots-huave-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "San Mateo: Candelaria early February, Corpus Christi midyear, San Mateo 19 September. Evidence verbatim."
+    },
+    {
+      "id": "zoque-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Copainala's Zoque name is Pokioma; XECOPA part of Copainala since 1997; INPI; Zoque, tzotzil y espanol. Evidence verbatim."
+    },
+    {
+      "id": "zoque-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Ocotepec wacas (vine baskets for washing coffee and cacao beans) sold through the Casa de las Artesanias de Chiapas. Evidence verbatim."
+    },
+    {
+      "id": "zoque-chiapas-mx",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page compares urban vs rural ('con mayor suntuosidad ... en las areas urbanas ... que en las rurales') because of more resources; it does not say 'now' or 'greatest'. Rephrased as the comparison the page makes.",
+      "text": "Zoque festivals are held with more splendor in cities such as Tuxtla Gutiérrez and Ocozocoautla than in rural areas, since more resources are available there.",
+      "evidence": "con mayor suntuosidad y organización en las áreas urbanas"
+    },
+    {
+      "id": "popoluca-veracruz-mx",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page: locally they keep a compact character ('caracter compacto'), expressed in neighborhood layout (Soteapan) or block layout (Sayula). 'Close-knit local identity' over-reads it. Rephrased.",
+      "text": "At the local level, Popoluca towns keep a compact character, organized by neighborhoods in Soteapan and by blocks in Sayula.",
+      "evidence": "su configuración barrial (Soteapan) o de manzana (Sayula)"
+    },
+    {
+      "id": "popoluca-veracruz-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Main celebrations are Christmas and Easter, plus the traditional Danza de la Malinche. Evidence verbatim."
+    },
+    {
+      "id": "mephaa-guerrero-mx",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page lists 'Tlapaneco o me'phaa (Lengua unica del estado de Guerrero)' = a language unique to Guerrero. 'Spoken only in Guerrero' overstates it; the SIC Tlapanecos page lists speakers in Sinaloa and Morelos too.",
+      "text": "Me'phaa, also called Tlapaneco, is a language unique to the state of Guerrero.",
+      "evidence": "Lengua única del estado de Guerrero"
+    },
+    {
+      "id": "mephaa-guerrero-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "'mano de vuelta': without pay a community brings musicians to another town, which must repay the work the same way. Evidence verbatim."
+    },
+    {
+      "id": "mephaa-guerrero-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "XEZV inaugurated 10 Mar 1979 in Tlapa; keeps at least 60 percent of airtime in original languages; me'phaa among them. Evidence verbatim."
+    },
+    {
+      "id": "amuzgo-guerrero-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Oral history: came from the sea, from islands they call 'las tierras de en medio': ndyuaa xenncue. Evidence verbatim."
+    },
+    {
+      "id": "amuzgo-guerrero-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Struggle began 1920; restored as ejido 25 Aug 1933; 6,384 hectares. Evidence verbatim."
+    },
+    {
+      "id": "amuzgo-guerrero-oaxaca-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Men make bamboo and palm basketry; women weave huipiles, rebozos and tablecloths on backstrap loom. Evidence verbatim."
+    },
+    {
+      "id": "cuicateco-oaxaca-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Northeast Oaxaca, zone also known as Canada; approx 8,400 km2; ten municipalities. Evidence verbatim."
+    },
+    {
+      "id": "cuicateco-oaxaca-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "XEOJN since 18 Nov 1991 with bilingual Chinantec, Mazatec and Cuicatec staff; records music, oral tradition and life testimonies. Evidence verbatim."
+    },
+    {
+      "id": "yokotan-tabasco-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Station run by Chontal staff: Yokot'an 'en nuestra cultura significa la lengua verdadera'. Evidence verbatim."
+    },
+    {
+      "id": "yokotan-tabasco-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "INPI station in Nacajuca inaugurated 28 Feb 2020; seeks to strengthen the Yokot'an language. Evidence verbatim."
+    },
+    {
+      "id": "yokotan-tabasco-mx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Tamborileros (drum and flute players) are 'el alma de las comunidades' in festivals. Evidence verbatim."
+    },
+    {
+      "id": "popoloca-puebla-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Each community has historically specialized in a type of craft; pottery, palm weaving, maguey and izote fiber rope, cotton spinning and weaving. Evidence verbatim."
+    },
+    {
+      "id": "popoloca-puebla-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Mayordomia is important for cohesion and cultural reproduction; organizes festivals, defends common interests, marks belonging, basis of Popoloca identity. Evidence verbatim."
+    },
+    {
+      "id": "hach-winik-lacandon-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "XHSDM-FM transmits in Spanish, tseltal, chol and lacandon. Evidence verbatim. Publisher field should drop 'with station information from INPI': this is a Chiapas state station (Sistema Chiapaneco de Radio, Television y Cinematografia), not INPI. Fact text itself is correct."
+    },
+    {
+      "id": "hach-winik-lacandon-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Crafts sold in tourist centers of the state: reed flutes, seed necklaces, clay or wood figures, decorated gourds, hammocks. Evidence verbatim."
+    },
+    {
+      "id": "hach-winik-lacandon-chiapas-mx",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page: outside-promoted change 'seems to have produced a strong impact' on Lacandon culture, but this influence 'also generated' a strong sense of community and a new awareness of the environment. Original said 'pressures ... strengthened', with a dangling 'also'. Rephrased to match.",
+      "text": "Outside-driven change seems to have strongly affected Hach Winik culture, but it has also generated a strong sense of community and a new awareness of their environment.",
+      "evidence": "ha generado un fuerte sentido de comunidad"
+    },
+    {
+      "id": "mam-chiapas-mx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "1882 definitive boundary treaty; 'los mames quedaron divididos ambos paises'. Evidence verbatim."
+    },
+    {
+      "id": "mam-chiapas-mx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Crafts vary by community: baskets, pottery, wool mantillones, palm hats, wooden toys, gourds. Evidence verbatim."
+    }
+  ],
+  "names": [
+    {
+      "id": "nahua-mx-central-south",
+      "ok": true,
+      "note": "SIC 'Pueblos Nahuas' page uses nahuas; also mentions macehuale and lengua mexicana. OK."
+    },
+    {
+      "id": "maya-yucatan-peninsula-mx",
+      "ok": true,
+      "note": "SIC 'Mayas'; INPI Atlas says there is no common self-name in the language and people generally self-identify as mayas. OK."
+    },
+    {
+      "id": "tseltal-chiapas-mx",
+      "ok": true,
+      "note": "SIC page title 'Tseltales'. OK."
+    },
+    {
+      "id": "tsotsil-chiapas-mx",
+      "ok": true,
+      "note": "SIC page title 'Tsotsiles'. OK."
+    },
+    {
+      "id": "nuu-savi-mixtec-mx",
+      "ok": true,
+      "note": "SEP page: 'se llaman a si mismos en su idioma nuu savi' (also nuu davi). OK."
+    },
+    {
+      "id": "binniza-zapotec-mx",
+      "ok": false,
+      "note": "Name appears on the SIC page only as 'cultura binniza' in the Isthmus velas context; Binniza is the Isthmus Zapotec self-name, but this entry's lands also cover the Central Valleys and Sierra Norte, whose Zapotec communities use other self-names (not verified this pass), and facts 0 and 2 are about Zapotec generally and the Sierra Juarez. Either narrow lands to the Isthmus of Tehuantepec (and re-scope facts 0 and 2), or split the entry. INPI Atlas zapotecos page gives no single self-name.",
+      "name": "Binnizá"
+    },
+    {
+      "id": "ayuuk-mixe-oaxaca-mx",
+      "ok": true,
+      "note": "SIC Mixes page refers to 'la region ayuuk'. OK."
+    },
+    {
+      "id": "hnahnu-otomi-mx",
+      "ok": true,
+      "note": "radi14 body text uses 'Hñähñu' verbatim; SIC Otomies page spells 'hñähñü'. Both forms in INPI-derived sources; Hñähñü already in also. OK."
+    },
+    {
+      "id": "purhepecha-michoacan-mx",
+      "ok": true,
+      "note": "UNESCO page title 'Pirekua, traditional song of the P'urhépecha'. OK."
+    },
+    {
+      "id": "totonaco-veracruz-puebla-mx",
+      "ok": true,
+      "note": "SIC and INPI Atlas use totonacos/totonacas and give no self-name. Name matches government usage. Note: Tutunakú appears in search results as the INALI language name, not verified from a fetched official page this pass; worth a follow-up before leading with Totonaco."
+    },
+    {
+      "id": "ha-shuta-enima-mazatec-oaxaca-mx",
+      "ok": true,
+      "note": "SIC and INPI Atlas: 'Los mazatecos se autodenominan ha shuta enima'. OK."
+    },
+    {
+      "id": "chol-chiapas-mx",
+      "ok": true,
+      "note": "SIC page title 'Ch'oles'. OK."
+    },
+    {
+      "id": "tojolabal-chiapas-mx",
+      "ok": true,
+      "note": "radi2 uses 'tojol-ab'al' for the communities. OK."
+    },
+    {
+      "id": "tsa-ju-jmi-chinantec-oaxaca-mx",
+      "ok": true,
+      "note": "SIC 'tsa ju jmí´' and INPI Atlas 'tsa ju jmí’'. OK."
+    },
+    {
+      "id": "triqui-oaxaca-mx",
+      "ok": true,
+      "note": "SIC 'Triquis'; name derives from Triqui 'driqui'. INPI Atlas gives no other self-name. OK."
+    },
+    {
+      "id": "jnatjo-mazahua-mx",
+      "ok": false,
+      "note": "name_source_url is Native Land Digital, which itself says its maps are not official sources. Official INPI Atlas (atlas.inpi.gob.mx/mazahuas-etnografia/, fetched via curl; WebFetch fails on its TLS cert) says: in the Estado de Mexico they self-name jñatrjo, in Michoacan ñatjo. About 97% of Mazahua live in the Estado de Mexico (SIC: 199,097 of 206,065). Suggest leading with Jñatrjo, keep Jñatjo and Ñatjo in also, and use the INPI Atlas page as name_source_url.",
+      "name": "Jñatrjo"
+    },
+    {
+      "id": "kitse-chatnio-chatino-oaxaca-mx",
+      "ok": true,
+      "note": "Native Land shows 'Kitsé Cha'tnio (Chatino)'; confirmed by official INPI Atlas chatinos page: 'Se autodenominan kitsé cha'tnio, kitse cha'tña y kitse tsa'jnya'. Prefer INPI Atlas (atlas.inpi.gob.mx/chatinos-etnografia/) as name_source_url."
+    },
+    {
+      "id": "ikoots-huave-oaxaca-mx",
+      "ok": true,
+      "note": "Native Land shows 'Ikoots/Kunajts/Ikoojts (Huave)'; INPI Atlas: ikoots in San Mateo, kunajts in San Francisco, ikoojts in San Dionisio. Add Kunajts to also; prefer INPI Atlas (atlas.inpi.gob.mx/huaves-etnografia/) as name_source_url."
+    },
+    {
+      "id": "zoque-chiapas-mx",
+      "ok": true,
+      "note": "SIC page title 'Zoques'. Matches government usage; no self-name verified this pass."
+    },
+    {
+      "id": "popoluca-veracruz-mx",
+      "ok": true,
+      "note": "SIC page title 'Popolucas'. Matches government usage; Popoluca is of Nahuatl origin and no self-name was verified this pass."
+    },
+    {
+      "id": "mephaa-guerrero-mx",
+      "ok": true,
+      "note": "SIC Tlapanecos page refers to 'los me'phaa' throughout. OK."
+    },
+    {
+      "id": "amuzgo-guerrero-oaxaca-mx",
+      "ok": false,
+      "note": "Amuzgo is the Nahuatl-derived name used by SIC. Official INPI Atlas (atlas.inpi.gob.mx/amuzgos-etnografia/, curl) states: 'Se autodenominan nn´anncue, que significa las personas de en medio'; language ñomnda. Lead with the self-name; keep Amuzgo in also; use the INPI Atlas page as name_source_url.",
+      "name": "Nn'anncue"
+    },
+    {
+      "id": "cuicateco-oaxaca-mx",
+      "ok": false,
+      "note": "Cuicateco is Nahuatl in origin (INPI Atlas says so). Official INPI Atlas (atlas.inpi.gob.mx/cuicatecos-etnografia/, curl) states: 'Se autodenominan dibaku'. Lead with the self-name; keep Cuicateco in also; use the INPI Atlas page as name_source_url.",
+      "name": "Dibaku"
+    },
+    {
+      "id": "yokotan-tabasco-mx",
+      "ok": true,
+      "note": "SIC Chontales de Tabasco: 'Se autodenominan yokot´anob o yokot´an'; INPI Atlas same. OK."
+    },
+    {
+      "id": "popoloca-puebla-mx",
+      "ok": true,
+      "note": "SIC 'Popolocas' matches government usage, but the same page says popoloca was a Nahua catch-all term for non-Nahua speakers. INPI Atlas gives no self-name. Ngiwa/Ngigua appears only in non-official sources found this pass; follow up before leading with Popoloca."
+    },
+    {
+      "id": "hach-winik-lacandon-chiapas-mx",
+      "ok": true,
+      "note": "Native Land shows 'Hach Winik (Lacandon)'; confirmed by official INPI Atlas: 'se autodenominan hach winik, que significa verdaderos hombres'. Prefer INPI Atlas (atlas.inpi.gob.mx/lacandones-etnografia/) as name_source_url."
+    },
+    {
+      "id": "mam-chiapas-mx",
+      "ok": true,
+      "note": "SIC 'Mames'. INPI Atlas: officially identified as mam or mame; language to qyool; 'como pueblo indigena se autonombran winaq qo'', meaning 'nuestra gente'. Mam kept as an accepted name; suggest adding Winaq qo' to also."
+    }
+  ]
+}

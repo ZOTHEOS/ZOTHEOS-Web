@@ -1,0 +1,99 @@
+{
+  "region": "gap-south-asia",
+  "items": [
+    { "id": "in-gond", "fact": null, "action": "keep", "reason": "Gond is the name used by the Odisha state source and by Gond organizations; OSTM page lists Gondo and Rajgond as other names and gives no other self-designation, so no rename. No deficit framing, no sacred content." },
+    { "id": "in-gond", "fact": 0, "action": "keep", "reason": "Living language and script, present-day. Verifier note: the fetched Unicode page reads 'Presently, Masaram Gondi is used in handwritten and printed materials', so the evidence phrase may not be verbatim." },
+    { "id": "in-gond", "fact": 1, "action": "keep", "reason": "Achievement fact, present-day livelihood, calm register. 'tribal families' mirrors the source and India's official usage." },
+    { "id": "in-gond", "fact": 2, "action": "keep", "reason": "Population fact; the OSTM page gives 8,88,581 as Census 2011 Scheduled Tribe population. Neutral." },
+
+    { "id": "in-bhil", "fact": null, "action": "keep", "reason": "Bhil is the people's own and official name. Two of three facts center one artist; acceptable, but the compiler may later add a community-level strengths fact." },
+    { "id": "in-bhil", "fact": 0, "action": "edit", "reason": "Credit where due: the source names the artist (Bhuri Bai) and the owner asked for credits; anonymizing a living, celebrated artist withholds that credit. Source says she 'now works as an artist in the Adivasi Lok Kala Academy in Bhopal'.", "text": "Bhuri Bai of Pitol village, Madhya Pradesh, was the first Bhil artist to paint on paper and canvas; she now works as an artist at the Adivasi Lok Kala Academy in Bhopal." },
+    { "id": "in-bhil", "fact": 1, "action": "edit", "reason": "Same credit reason; name the artist. Subjects limited to those the source lists (attire, ornaments and gudna tattoos, huts and granaries, the haat, festivals and dances, oral narratives).", "text": "Bhuri Bai's paintings show Bhil life: attire, ornaments and tattoos, huts and granaries, the haat market, festivals, dances and oral stories." },
+    { "id": "in-bhil", "fact": 2, "action": "keep", "reason": "History fact, neutral, government source names the Bhil among freedom-struggle communities." },
+
+    { "id": "in-munda", "fact": null, "action": "keep", "reason": "Munda with self-name Hodoko in also; fine." },
+    { "id": "in-munda", "fact": 0, "action": "keep", "reason": "Self-naming fact in the people's own words; respectful." },
+    { "id": "in-munda", "fact": 1, "action": "keep", "reason": "Living script, community-led reform; strengths-based." },
+    { "id": "in-munda", "fact": 2, "action": "keep", "reason": "Social dance and song at public festivals; not ceremonial or restricted." },
+
+    { "id": "in-kurukh", "fact": null, "action": "keep", "reason": "Leads with Kurukh, the people's own name; the Jharkhand source calls Oraon an exonym and lists Dhangar as a Maharashtra regional name, so the also list is documented and neutral. Keep Dhangar last as it is." },
+    { "id": "in-kurukh", "fact": 0, "action": "keep", "reason": "Language strength: own alphabet, state recognition, Unicode." },
+    { "id": "in-kurukh", "fact": 1, "action": "keep", "reason": "Governance fact confirmed on the fetched page; present tense, calm." },
+    { "id": "in-kurukh", "fact": 2, "action": "keep", "reason": "Population plus present-day livelihoods; no stereotype." },
+
+    { "id": "in-ho", "fact": null, "action": "keep", "reason": "Ho is the self-name; Hodoko and Horo also self-names; Kolha is a neutral administrative name in Odisha." },
+    { "id": "in-ho", "fact": 0, "action": "keep", "reason": "Self-naming fact; respectful." },
+    { "id": "in-ho", "fact": 1, "action": "edit", "reason": "The fetched Unicode page calls Warang Citi 'a recently devised left-to-right alphabet' and names no creator, so 'devised by a Ho community leader' is not in the cited source; keep to what the source says.", "text": "The Ho language has its own recently devised alphabet, Warang Citi, which is encoded in the Unicode Standard and used by a yearly and a biweekly publication." },
+    { "id": "in-ho", "fact": 2, "action": "keep", "reason": "Present-day farming and forest knowledge, calm register." },
+
+    { "id": "in-mizo", "fact": null, "action": "keep", "reason": "Mizo is the self-name; lands and sources fine." },
+    { "id": "in-mizo", "fact": 0, "action": "keep", "reason": "Governance milestone, neutral, official source." },
+    { "id": "in-mizo", "fact": 1, "action": "keep", "reason": "Marked as history and framed as such; not a vanished-people framing. A present-day governance fact (village councils) would be a good later addition." },
+    { "id": "in-mizo", "fact": 2, "action": "keep", "reason": "Neutral history fact from a government source; avoids the contested insurgency period." },
+
+    { "id": "in-bodo", "fact": null, "action": "keep", "reason": "Bodo with Boro in also. 'Bodoland Territorial Region' is the official administrative name, so the lands string is neutral." },
+    { "id": "in-bodo", "fact": 0, "action": "keep", "reason": "Language recognition; strengths-based." },
+    { "id": "in-bodo", "fact": 1, "action": "keep", "reason": "Community institution; strengths-based." },
+    { "id": "in-bodo", "fact": 2, "action": "keep", "reason": "Present-day language status, dated 2022, official source." },
+
+    { "id": "in-santal", "fact": null, "action": "keep", "reason": "Santal with Santhal and Santali in also; common and respectful usage. Name source is a rights NGO rather than an official body, acceptable." },
+    { "id": "in-santal", "fact": 0, "action": "keep", "reason": "Major present-day language milestone, official source." },
+    { "id": "in-santal", "fact": 1, "action": "keep", "reason": "Everyday visual culture, not restricted." },
+    { "id": "in-santal", "fact": 2, "action": "keep", "reason": "Population and settlement fact, neutral." },
+
+    { "id": "in-garo", "fact": null, "action": "keep", "reason": "The official body (Garo Hills Autonomous District Council) uses Garo; the self-names A·chik and A·chik Mande and the Bangladesh self-name Mandi are already in also. No rename." },
+    { "id": "in-garo", "fact": 0, "action": "keep", "reason": "Internal diversity stated plainly; 'sub-groups' is a gentler word than the source's 'sub-tribes', fine." },
+    { "id": "in-garo", "fact": 1, "action": "keep", "reason": "Wangala is a public harvest festival the state promotes openly; the fact describes only its public face, no ritual detail." },
+    { "id": "in-garo", "fact": 2, "action": "keep", "reason": "Language recognition fact, neutral." },
+
+    { "id": "np-magar", "fact": null, "action": "keep", "reason": "Magar is the self-name used by NFDIN; fine." },
+    { "id": "np-magar", "fact": 0, "action": "keep", "reason": "Census population with year; neutral." },
+    { "id": "np-magar", "fact": 1, "action": "keep", "reason": "Living customary governance; not sacred." },
+    { "id": "np-magar", "fact": 2, "action": "keep", "reason": "Language status recommendation, dated; neutral." },
+
+    { "id": "np-tamu", "fact": null, "action": "keep", "reason": "Fetched Tamu Hyul Chhonj Dhin site writes the people as 'Tamu (Gurung)', so leading with Tamu and listing Gurung in also matches their own usage." },
+    { "id": "np-tamu", "fact": 0, "action": "keep", "reason": "Fetched NFDIN page confirms the Khema script is in use and recognized by the Language Commission; the fact is supported." },
+    { "id": "np-tamu", "fact": 1, "action": "keep", "reason": "Rodhi is a social learning institution, described respectfully without restricted detail." },
+    { "id": "np-tamu", "fact": 2, "action": "edit", "reason": "Consistency with self-naming: the entry leads with Tamu, so say that Gurung is the Tamu language (NFDIN gives the language as Tamu Kyui). No new claim.", "text": "In 2021 Nepal's Language Commission recommended Gurung, the Tamu language, as an official language of Gandaki Province." },
+
+    { "id": "np-yakthung", "fact": null, "action": "keep", "reason": "Kirat Yakthung Chumlung uses Yakthung in its own name and Limbu for language and region; leading with Yakthung and keeping Limbu in also is right." },
+    { "id": "np-yakthung", "fact": 0, "action": "keep", "reason": "Language vitality with census year; strengths-based." },
+    { "id": "np-yakthung", "fact": 1, "action": "keep", "reason": "Cross-border language recognition; neutral." },
+    { "id": "np-yakthung", "fact": 2, "action": "keep", "reason": "Uses the 2021 name 'Province 1', which sidesteps the later contested renaming; neutral." },
+
+    { "id": "np-rai", "fact": null, "action": "keep", "reason": "Rai with Kirat Rai in also, as the people's own federation (Kirat Rai Yayokkha) uses it." },
+    { "id": "np-rai", "fact": 0, "action": "keep", "reason": "Homeland named in the people's own terms; neutral." },
+    { "id": "np-rai", "fact": 1, "action": "keep", "reason": "Linguistic diversity as a strength, community-registered." },
+    { "id": "np-rai", "fact": 2, "action": "keep", "reason": "Own representative body; strengths-based." },
+
+    { "id": "np-sherpa", "fact": null, "action": "keep", "reason": "official_url is Nepal Sherpa Sangh, a Kathmandu-based Sherpa community organization; acceptable as a representative body. Facts avoid the mountaineering-porter stereotype." },
+    { "id": "np-sherpa", "fact": 0, "action": "keep", "reason": "Language vitality with census year." },
+    { "id": "np-sherpa", "fact": 1, "action": "keep", "reason": "Customary resource governance, living practice." },
+    { "id": "np-sherpa", "fact": 2, "action": "keep", "reason": "Strength fact from UNESCO, present-day." },
+
+    { "id": "np-newa", "fact": null, "action": "keep", "reason": "Newa Dey Daboo, the national forum, uses Newa in its name; Newar kept in also." },
+    { "id": "np-newa", "fact": 0, "action": "keep", "reason": "Language and script strength." },
+    { "id": "np-newa", "fact": 1, "action": "keep", "reason": "Homeland in the people's own name plus census figure." },
+    { "id": "np-newa", "fact": 2, "action": "keep", "reason": "Language status recommendation, dated." },
+
+    { "id": "pk-kalasha", "fact": null, "action": "keep", "reason": "Kalasha is the self-name; Kalash in also. Facts avoid religion and tourism-gaze stereotypes. All three facts concern Suri Jagek; a later pass could diversify, not a respect failure." },
+    { "id": "pk-kalasha", "fact": 0, "action": "keep", "reason": "Knowledge system described in UNESCO's public terms; no restricted detail." },
+    { "id": "pk-kalasha", "fact": 1, "action": "keep", "reason": "Present-day practical use; strengths-based." },
+    { "id": "pk-kalasha", "fact": 2, "action": "keep", "reason": "Place fact from a government source; neutral." },
+
+    { "id": "lk-wanniyala-aetto", "fact": null, "action": "keep", "reason": "Leads with the self-name, Vedda in also. The entry has no strengths fact (one origin fact, one survey, one land loss); the compiler should add a present-day strength when a source can be fetched." },
+    { "id": "lk-wanniyala-aetto", "fact": 0, "action": "keep", "reason": "Self-name meaning plus deep ancestry, stated neutrally with a strong source; 'still here' framing." },
+    { "id": "lk-wanniyala-aetto", "fact": 1, "action": "remove", "reason": "Deficit framing: a percentage who 'wish to keep to their Indigenous roots' implies the remainder do not and measures the people by assimilation pressure; it comes from a rights-violations shadow report and reads as a loss statistic on a herald card. Replace with a strengths fact (language, leadership, community institutions) once sourced." },
+    { "id": "lk-wanniyala-aetto", "fact": 2, "action": "keep", "reason": "Land history stated neutrally with a strong source; acceptable under the contested-matters rule." },
+
+    { "id": "bd-tripura", "fact": null, "action": "keep", "reason": "Tripura/Tripuri is the usage in the Bangladesh source and in India; the fetched Banglapedia page gives no other self-name, so no rename. Kokborok speakers' own terms (Borok, Tiprasa) could be added to also if an official source is found." },
+    { "id": "bd-tripura", "fact": 0, "action": "keep", "reason": "Language recognition; strengths-based." },
+    { "id": "bd-tripura", "fact": 1, "action": "keep", "reason": "Present-day higher education in the language." },
+    { "id": "bd-tripura", "fact": 2, "action": "keep", "reason": "Present-day lands, matches the fetched source's district list." },
+
+    { "id": "bd-mru", "fact": null, "action": "keep", "reason": "Mru with self-name Marucha and exonyms Mro and Murong in also; fine." },
+    { "id": "bd-mru", "fact": 0, "action": "keep", "reason": "Self-naming fact; respectful." },
+    { "id": "bd-mru", "fact": 1, "action": "keep", "reason": "Present-day education in the language." },
+    { "id": "bd-mru", "fact": 2, "action": "keep", "reason": "Script as a strength; describes the alphabet only, no religious detail." }
+  ]
+}

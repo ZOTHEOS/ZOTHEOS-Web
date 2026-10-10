@@ -1,0 +1,864 @@
+{
+  "region": "us-east-southeast",
+  "compiled": "2026-10-08",
+  "nations": [
+    {
+      "id": "seneca-nation-us-ny",
+      "name": "Seneca Nation",
+      "also": ["Seneca Nation of Indians", "Onöndowa’ga:’", "Keepers of the Western Door"],
+      "pronounce": { "text": "SEN-i-ka", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Allegany, Cattaraugus and Oil Spring territories in Western New York, United States",
+      "countries": ["US"],
+      "official_url": "https://sni.org/",
+      "name_source_url": "https://sni.org/",
+      "facts": [
+        {
+          "text": "More than 8,500 Seneca citizens and their families carry the Nation forward today, living on and around the Allegany, Cattaraugus and Oil Spring territories in Western New York.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "History - SNI", "publisher": "Seneca Nation of Indians", "url": "https://sni.org/culture/history/", "accessed": "2026-10-08" },
+          "evidence": "more than 8,500 Seneca citizens and their families"
+        },
+        {
+          "text": "The Seneca Nation governs itself under a constitution established in 1848, with a 16-member Tribal Council drawn equally from the Cattaraugus and Allegany territories.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Seneca Nation of Indians - Official Website", "publisher": "Seneca Nation of Indians", "url": "https://sni.org/", "accessed": "2026-10-08" },
+          "evidence": "a true democracy whose constitution was established in 1848"
+        },
+        {
+          "text": "The Seneca Nation runs a language immersion program so students can hold conversations in Onöndowa’ga:’ Gawë:nö’, the Seneca language, alongside classes and online learning.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Seneca Language - SNI", "publisher": "Seneca Nation of Indians", "url": "https://sni.org/education/seneca-language-departments/", "accessed": "2026-10-08" },
+          "evidence": "Immersion Program is to enable students to converse in"
+        }
+      ]
+    },
+    {
+      "id": "onondaga-nation-us-ny",
+      "name": "Onondaga Nation",
+      "also": ["Onundagaono", "People of the Hills", "Keepers of the Central Fire"],
+      "pronounce": { "text": "on-nen-DA-ga", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Onondaga Nation territory south of Syracuse, central New York, United States",
+      "countries": ["US"],
+      "official_url": "https://www.onondaganation.org/",
+      "name_source_url": "https://www.onondaganation.org/aboutus/",
+      "facts": [
+        {
+          "text": "The Onondaga Nation is still governed by its traditional government, with fourteen Chiefs and their Clan Mothers serving as caretakers of the land.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "About Us - Onondaga Nation", "publisher": "Onondaga Nation", "url": "https://www.onondaganation.org/aboutus/", "accessed": "2026-10-08" },
+          "evidence": "Onondaga is still governed by our traditional government"
+        },
+        {
+          "text": "Located south of present-day Syracuse, the Onondaga Nation sits at the middle of Haudenosaunee territory and is known as the Central Fire of the Confederacy.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "About Us - Onondaga Nation", "publisher": "Onondaga Nation", "url": "https://www.onondaganation.org/aboutus/", "accessed": "2026-10-08" },
+          "evidence": "lies in the middle of the Haudenosaunee territory"
+        },
+        {
+          "text": "In council, the Onondaga Fire Keepers present an issue and discussion continues until they can announce that everyone is of One Mind, a decision by consensus.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Government - Onondaga Nation", "publisher": "Onondaga Nation", "url": "https://www.onondaganation.org/government/", "accessed": "2026-10-08" },
+          "evidence": "we are of One Mind of the issue"
+        }
+      ]
+    },
+    {
+      "id": "saint-regis-mohawk-akwesasne-us-ny",
+      "name": "Saint Regis Mohawk Tribe",
+      "also": ["Akwesasne Mohawk", "Kanien’kehaka", "People of the Flint", "Mohawk", "Keepers of the Eastern Door"],
+      "pronounce": { "text": "MO-hawk", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Akwesasne, on the St. Lawrence River in northern New York, United States; the wider Akwesasne community extends into Canada",
+      "countries": ["US"],
+      "official_url": "https://www.srmt-nsn.gov/",
+      "name_source_url": "https://www.srmt-nsn.gov/",
+      "facts": [
+        {
+          "text": "The Saint Regis Mohawk Tribal Council is made up of three Chiefs, three Sub-Chiefs and a Tribal Clerk, with elections scheduled each year and set terms of office.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "History of Tribal Government | SRMT - NSN", "publisher": "Saint Regis Mohawk Tribe", "url": "https://www.srmt-nsn.gov/about/history-of-tribal-government", "accessed": "2026-10-08" },
+          "evidence": "comprised of three Chiefs, three Sub-Chiefs and a Tribal Clerk"
+        },
+        {
+          "text": "Akwesasne, home of the Saint Regis Mohawk Tribe, has a Mohawk name that translates roughly to Land where the partridge drums.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "History of Tribal Government | SRMT - NSN", "publisher": "Saint Regis Mohawk Tribe", "url": "https://www.srmt-nsn.gov/about/history-of-tribal-government", "accessed": "2026-10-08" },
+          "evidence": "Land where the partridge drums"
+        },
+        {
+          "text": "The Tribe describes its original homeland as northeastern New York State, reaching into southern Canada and Vermont.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "History of Tribal Government | SRMT - NSN", "publisher": "Saint Regis Mohawk Tribe", "url": "https://www.srmt-nsn.gov/about/history-of-tribal-government", "accessed": "2026-10-08" },
+          "evidence": "north eastern region of New York State extending into southern Canada"
+        }
+      ]
+    },
+    {
+      "id": "oneida-indian-nation-us-ny",
+      "name": "Oneida Indian Nation",
+      "also": ["Onayotekaono", "People of the Standing Stone", "Oneida"],
+      "pronounce": { "text": "o-NY-da", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Central New York, United States",
+      "countries": ["US"],
+      "official_url": "https://www.oneidaindiannation.com/",
+      "name_source_url": "https://www.oneidaindiannation.com/about-us",
+      "facts": [
+        {
+          "text": "The Oneida Indian Nation is governed by a Nation Council of clan representatives, with each clan choosing who will join the governing body.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "About Us", "publisher": "Oneida Indian Nation", "url": "https://www.oneidaindiannation.com/about-us", "accessed": "2026-10-08" },
+          "evidence": "governed by a Nation Council of clan representatives"
+        },
+        {
+          "text": "Oneida Nation Members learn Onyota’a:ká:, the Oneida language, through intensive courses, a preschool curriculum, e-books, smartphone apps and an Oneida language keyboard.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language Preservation", "publisher": "Oneida Indian Nation", "url": "https://www.oneidaindiannation.com/language-preservation", "accessed": "2026-10-08" },
+          "evidence": "Nation Members participate in intense language courses"
+        },
+        {
+          "text": "During the American Revolution, Oneidas fought alongside the colonists and carried corn to feed General Washington's starving soldiers; the Nation honors them as America's first allies.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "America's First Allies", "publisher": "Oneida Indian Nation", "url": "https://www.oneidaindiannation.com/americas-first-allies", "accessed": "2026-10-08" },
+          "evidence": "when Oneidas fought alongside the colonists in the battle"
+        }
+      ]
+    },
+    {
+      "id": "cayuga-nation-us-ny",
+      "name": "Cayuga Nation",
+      "also": ["Guyohkohnyoh", "People of the Great Swamp", "Cayuga"],
+      "pronounce": { "text": "ka-YOO-ga", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Around Cayuga Lake in the Finger Lakes region of New York, United States",
+      "countries": ["US"],
+      "official_url": "https://cayuganation-nsn.gov/",
+      "name_source_url": "https://www.cayuganation-nsn.gov/",
+      "facts": [
+        {
+          "text": "Every citizen of the Cayuga Nation belongs to one of the Nation's five clans.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "History & Culture - Cayuga Nation", "publisher": "Cayuga Nation", "url": "https://cayuganation-nsn.gov/history-culture/", "accessed": "2026-10-08" },
+          "evidence": "The Cayuga Nation has five clans"
+        },
+        {
+          "text": "Cayuga Nation citizens have returned to live on their ancestral homeland in the Finger Lakes for the first time in over 200 years.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "History & Culture - Cayuga Nation", "publisher": "Cayuga Nation", "url": "https://cayuganation-nsn.gov/history-culture/", "accessed": "2026-10-08" },
+          "evidence": "returned to live on our ancestral homeland for the first time"
+        },
+        {
+          "text": "The 1794 Treaty of Canandaigua, which secured peace between the United States and the Haudenosaunee, is still in effect today.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "History & Culture - Cayuga Nation", "publisher": "Cayuga Nation", "url": "https://cayuganation-nsn.gov/history-culture/", "accessed": "2026-10-08" },
+          "evidence": "This historic agreement, still in effect today, secured peace"
+        }
+      ]
+    },
+    {
+      "id": "tuscarora-nation-us-ny",
+      "name": "Tuscarora Nation",
+      "also": ["Skaruhreh", "The Shirt Wearing People", "Tuscarora"],
+      "pronounce": { "text": "tus-ka-ROR-a", "source_url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf" },
+      "lands": "Tuscarora Nation territory near Lewiston, western New York, United States; earlier homelands in what is now North Carolina",
+      "countries": ["US"],
+      "official_url": "https://www.tuscaroranation.org/",
+      "name_source_url": "https://www.tuscaroranation.org/",
+      "facts": [
+        {
+          "text": "The Tuscarora Language Program works with one clear mission: to revive a community of Tuscarora speakers.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Tuscarora Nation", "publisher": "Tuscarora Nation", "url": "https://www.tuscaroranation.org/", "accessed": "2026-10-08" },
+          "evidence": "to revive a Tuscarora speaking community"
+        },
+        {
+          "text": "In 1722 Tuscarora people living in what is now North Carolina traveled north, were invited into the Haudenosaunee Confederacy, and became its sixth nation.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "Haudenosaunee Guide for Educators", "publisher": "Smithsonian National Museum of the American Indian", "url": "https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf", "accessed": "2026-10-08" },
+          "evidence": "invited to join the Haudenosaunee Confederacy, becoming its sixth nation"
+        },
+        {
+          "text": "The Tuscarora Environment Program, set up in 1992 by the Grand Council, works as part of the Haudenosaunee Environmental Task Force.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Tuscarora Nation", "publisher": "Tuscarora Nation", "url": "https://www.tuscaroranation.org/", "accessed": "2026-10-08" },
+          "evidence": "established in 1992 by the Grand Council"
+        }
+      ]
+    },
+    {
+      "id": "cherokee-nation-us-ok",
+      "name": "Cherokee Nation",
+      "also": ["ᏣᎳᎩ", "Cherokee"],
+      "pronounce": null,
+      "lands": "Tahlequah and a 14-county reservation area in Oklahoma, United States; original homelands in the Southeast",
+      "countries": ["US"],
+      "official_url": "https://www.cherokee.gov/",
+      "name_source_url": "https://www.cherokee.gov/about-the-nation/",
+      "facts": [
+        {
+          "text": "Cherokee Nation, with its capital in Tahlequah, Oklahoma, is the largest tribal nation in the United States.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "About The Nation", "publisher": "Cherokee Nation", "url": "https://www.cherokee.gov/about-the-nation/", "accessed": "2026-10-08" },
+          "evidence": "is the largest tribal nation in the country"
+        },
+        {
+          "text": "Cherokee Nation governs through legislative, executive and judicial branches and serves people across a 14-county reservation area.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "About The Nation", "publisher": "Cherokee Nation", "url": "https://www.cherokee.gov/about-the-nation/", "accessed": "2026-10-08" },
+          "evidence": "consists of three branches: legislative, executive and judicial"
+        },
+        {
+          "text": "Written Cherokee uses a syllabary, not an alphabet, with 85 distinct characters; Cherokee Nation teaches it through an immersion school and a master-apprentice program.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language Department", "publisher": "Cherokee Nation", "url": "https://language.cherokee.gov/", "accessed": "2026-10-08" },
+          "evidence": "It is not an alphabet, but instead contains 85 distinct characters"
+        }
+      ]
+    },
+    {
+      "id": "eastern-band-cherokee-us-nc",
+      "name": "Eastern Band of Cherokee Indians",
+      "also": ["EBCI", "Cherokee"],
+      "pronounce": null,
+      "lands": "The Qualla Boundary in western North Carolina, United States, beside the Great Smoky Mountains",
+      "countries": ["US"],
+      "official_url": "https://www.ebci.gov/",
+      "name_source_url": "https://ebci.gov/",
+      "facts": [
+        {
+          "text": "The Eastern Band of Cherokee Indians makes its home on the 56,000-acre Qualla Boundary, next to Great Smoky Mountains National Park.",
+          "kind": "land",
+          "as_of": "2026",
+          "source": { "title": "NC Tribal Communities | NC DOA", "publisher": "North Carolina Department of Administration, Commission of Indian Affairs", "url": "https://doa.nc.gov/divisions/american-indian-affairs/tribes", "accessed": "2026-10-08" },
+          "evidence": "makes its home on the 56,000-acre Qualla Boundary"
+        },
+        {
+          "text": "The Eastern Band has more than 16,000 enrolled members, and over 60 percent of them live on the Qualla Boundary.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "NC Tribal Communities | NC DOA", "publisher": "North Carolina Department of Administration, Commission of Indian Affairs", "url": "https://doa.nc.gov/divisions/american-indian-affairs/tribes", "accessed": "2026-10-08" },
+          "evidence": "more than 16,000 enrolled members with over 60% living"
+        },
+        {
+          "text": "Cherokee in North Carolina is a sovereign nation with its own laws, elections, government and institutions.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Home - Eastern Band of Cherokee Indians", "publisher": "Eastern Band of Cherokee Indians", "url": "https://ebci.gov/", "accessed": "2026-10-08" },
+          "evidence": "has its own laws, elections, government, institutions"
+        }
+      ]
+    },
+    {
+      "id": "united-keetoowah-band-us-ok",
+      "name": "United Keetoowah Band of Cherokee Indians in Oklahoma",
+      "also": ["UKB", "Keetoowah", "Kituwah", "Anigiduwagi", "Western Cherokee", "Old Settlers"],
+      "pronounce": { "text": "Keetoowah: Kih-too-wah", "source_url": "https://www.ukb-nsn.gov/about-us" },
+      "lands": "Tahlequah, Oklahoma, United States",
+      "countries": ["US"],
+      "official_url": "https://www.ukb-nsn.gov/",
+      "name_source_url": "https://www.ukb-nsn.gov/",
+      "facts": [
+        {
+          "text": "The United Keetoowah Band numbers more than 14,000 tribal members today.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "About Us | United Keetoowah Band | Tahlequah", "publisher": "United Keetoowah Band of Cherokee Indians in Oklahoma", "url": "https://www.ukb-nsn.gov/about-us", "accessed": "2026-10-08" },
+          "evidence": "Today we number more than 14,000 tribal members strong"
+        },
+        {
+          "text": "Also known as the Western Cherokee or Old Settlers, the Keetoowahs were the first Cherokees to move west, first by choice to avoid encroachment.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "About Us | United Keetoowah Band | Tahlequah", "publisher": "United Keetoowah Band of Cherokee Indians in Oklahoma", "url": "https://www.ukb-nsn.gov/about-us", "accessed": "2026-10-08" },
+          "evidence": "The Keetoowahs were the first Cherokees to move west"
+        },
+        {
+          "text": "The UKB Tribal Council is made up of four officers and nine district representatives, governing from Tahlequah, Oklahoma.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "United Keetoowah Band | Home | Tahlequah, OK", "publisher": "United Keetoowah Band of Cherokee Indians in Oklahoma", "url": "https://www.ukb-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "comprised of four officers and nine district representatives"
+        }
+      ]
+    },
+    {
+      "id": "muscogee-creek-nation-us-ok",
+      "name": "Muscogee (Creek) Nation",
+      "also": ["Mvskoke", "Muscogee Nation", "Creek"],
+      "pronounce": null,
+      "lands": "Okmulgee and the Muscogee reservation in eastern Oklahoma, United States; original homelands in present-day Georgia and Alabama",
+      "countries": ["US"],
+      "official_url": "https://www.muscogeenation.com/",
+      "name_source_url": "https://www.muscogeenation.com/",
+      "facts": [
+        {
+          "text": "The Muscogee (Creek) Nation counts about 100,000 citizens and is still growing.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "Home | MuscogeeNation.com", "publisher": "Muscogee (Creek) Nation", "url": "https://www.muscogeenation.com/", "accessed": "2026-10-08" },
+          "evidence": "100K CITIZENS AND GROWING"
+        },
+        {
+          "text": "Seated in Okmulgee, Oklahoma, the Muscogee (Creek) Nation is self-governed and organized by its Constitution into three branches of government.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Home | MuscogeeNation.com", "publisher": "Muscogee (Creek) Nation", "url": "https://www.muscogeenation.com/", "accessed": "2026-10-08" },
+          "evidence": "organized, by Constitution, into three branches of government"
+        },
+        {
+          "text": "The Mvskoke Language Program offers classes and learning resources so Mvskoke people can keep their language, culture and sovereignty strong.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Mvskoke Language Program", "publisher": "Muscogee (Creek) Nation", "url": "https://www.muscogeenation.com/det/mlp/", "accessed": "2026-10-08" },
+          "evidence": "to preserve our language, culture, and sovereignty"
+        }
+      ]
+    },
+    {
+      "id": "seminole-tribe-florida-us-fl",
+      "name": "Seminole Tribe of Florida",
+      "also": ["Seminole"],
+      "pronounce": null,
+      "lands": "Big Cypress, Brighton, Fort Pierce, Hollywood, Immokalee and Tampa reservations in Florida, United States",
+      "countries": ["US"],
+      "official_url": "https://www.semtribe.com/",
+      "name_source_url": "https://www.semtribe.com/",
+      "facts": [
+        {
+          "text": "The Seminole Tribe of Florida describes itself as the only tribe in America that never signed a peace treaty.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "Seminole Tribe of Florida", "publisher": "Seminole Tribe of Florida", "url": "https://www.semtribe.com/", "accessed": "2026-10-08" },
+          "evidence": "The only Tribe in America who never signed a peace treaty"
+        },
+        {
+          "text": "Seminole federal trust holdings in Florida now total more than 90,000 acres across the Tribe's reservations.",
+          "kind": "land",
+          "as_of": "2026",
+          "source": { "title": "Seminoles Today", "publisher": "Seminole Tribe of Florida", "url": "https://www.semtribe.com/history/seminoles-today", "accessed": "2026-10-08" },
+          "evidence": "Seminole federal trust holdings in Florida to more than 90,000 acres"
+        },
+        {
+          "text": "The Seminole Tribal Council, led by a Chairman and Vice-Chairman, is the Tribe's chief governing body, working alongside the Tribal Board.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Seminoles Today", "publisher": "Seminole Tribe of Florida", "url": "https://www.semtribe.com/history/seminoles-today", "accessed": "2026-10-08" },
+          "evidence": "the Tribal Council is the chief governing body"
+        }
+      ]
+    },
+    {
+      "id": "seminole-nation-oklahoma-us-ok",
+      "name": "Seminole Nation of Oklahoma",
+      "also": ["The Great Seminole Nation of Oklahoma", "Seminole"],
+      "pronounce": null,
+      "lands": "Wewoka and Seminole County, Oklahoma, United States; earlier homelands in Florida",
+      "countries": ["US"],
+      "official_url": "https://www.sno-nsn.gov/",
+      "name_source_url": "https://www.sno-nsn.gov/",
+      "facts": [
+        {
+          "text": "The Seminole Nation of Oklahoma is made up of fourteen bands, and its General Council seats two representatives from each band rather than from districts.",
+          "kind": "governance",
+          "as_of": "2022",
+          "source": { "title": "The Great Seminole Nation of Oklahoma: Written Testimony to the Senate Committee on Indian Affairs", "publisher": "Seminole Nation of Oklahoma, via U.S. Senate Committee on Indian Affairs", "url": "https://www.indian.senate.gov/sites/default/files/Revised%20Seminole%20Nation%20Written%20Testimony%20for%20Senate%20Committee%20on%20Indian%20Affairs.pdf", "accessed": "2026-10-08" },
+          "evidence": "made up of two (2) representatives from each Band"
+        },
+        {
+          "text": "Seminole society is matrilineal: a Seminole child is generally enrolled into the band of their mother.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "The Great Seminole Nation of Oklahoma: Written Testimony to the Senate Committee on Indian Affairs", "publisher": "Seminole Nation of Oklahoma, via U.S. Senate Committee on Indian Affairs", "url": "https://www.indian.senate.gov/sites/default/files/Revised%20Seminole%20Nation%20Written%20Testimony%20for%20Senate%20Committee%20on%20Indian%20Affairs.pdf", "accessed": "2026-10-08" },
+          "evidence": "the Seminole Nation is a matrilineal society"
+        },
+        {
+          "text": "The Seminole Nation Language Program works to maintain, revitalize and carry forward the language and traditional ways of the Seminole people.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language Program Landing 1", "publisher": "Seminole Nation of Oklahoma", "url": "https://www.sno-nsn.gov/getpage.php?name=Language_Program_Landing_1", "accessed": "2026-10-08" },
+          "evidence": "maintain, revitalize and perpetuate the linguistic and cultural aspects"
+        }
+      ]
+    },
+    {
+      "id": "choctaw-nation-oklahoma-us-ok",
+      "name": "Choctaw Nation of Oklahoma",
+      "also": ["Chahta", "Choctaw"],
+      "pronounce": null,
+      "lands": "Durant and a reservation of eight whole and five partial counties in southeastern Oklahoma, United States; original homelands in present-day Mississippi",
+      "countries": ["US"],
+      "official_url": "https://www.choctawnation.com/",
+      "name_source_url": "https://www.choctawnation.com/about/",
+      "facts": [
+        {
+          "text": "The Choctaw Nation of Oklahoma has more than 225,000 tribal members.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "About - Choctaw Nation of Oklahoma", "publisher": "Choctaw Nation of Oklahoma", "url": "https://www.choctawnation.com/about/", "accessed": "2026-10-08" },
+          "evidence": "with over 225,000 tribal members and 12,000-plus associates"
+        },
+        {
+          "text": "The Choctaw Nation reservation covers 10,864 square miles in southeastern Oklahoma, taking in eight whole counties and parts of five more.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "About - Choctaw Nation of Oklahoma", "publisher": "Choctaw Nation of Oklahoma", "url": "https://www.choctawnation.com/about/", "accessed": "2026-10-08" },
+          "evidence": "Covering 10,864 square miles, encompassing eight whole counties"
+        },
+        {
+          "text": "Chahta Anumpa Aiikhvna, the School of Choctaw Language, offers classes for every skill level plus a Speak Choctaw app.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language - Choctaw Nation of Oklahoma", "publisher": "Choctaw Nation of Oklahoma", "url": "https://www.choctawnation.com/about/language/", "accessed": "2026-10-08" },
+          "evidence": "the School of Choctaw Language, offers a wide variety of ways"
+        }
+      ]
+    },
+    {
+      "id": "mississippi-band-choctaw-us-ms",
+      "name": "Mississippi Band of Choctaw Indians",
+      "also": ["MBCI", "Chahta", "Choctaw"],
+      "pronounce": null,
+      "lands": "Choctaw communities in east-central Mississippi, United States",
+      "countries": ["US"],
+      "official_url": "https://www.choctaw.org/",
+      "name_source_url": "https://www.choctaw.org/",
+      "facts": [
+        {
+          "text": "The Mississippi Band of Choctaw Indians has more than 11,000 tribal members.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "Home Page - Mississippi Band of Choctaw Indians", "publisher": "Mississippi Band of Choctaw Indians", "url": "https://www.choctaw.org/", "accessed": "2026-10-08" },
+          "evidence": "more than 11,000 Tribal members"
+        },
+        {
+          "text": "The Tribe ratified its Constitution in 1945, establishing a government of its own apart from the state of Mississippi.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "About Us - Mississippi Band of Choctaw Indians", "publisher": "Mississippi Band of Choctaw Indians", "url": "https://www.choctaw.org/about-us/", "accessed": "2026-10-08" },
+          "evidence": "Ratified in 1945, the Constitution authorized the"
+        },
+        {
+          "text": "Every year the Choctaw Indian Fair brings the community together, and stickball played with handmade balls remains part of Choctaw life.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "About Us - Mississippi Band of Choctaw Indians", "publisher": "Mississippi Band of Choctaw Indians", "url": "https://www.choctaw.org/about-us/", "accessed": "2026-10-08" },
+          "evidence": "on the first night of the Choctaw Indian Fair"
+        }
+      ]
+    },
+    {
+      "id": "chickasaw-nation-us-ok",
+      "name": "The Chickasaw Nation",
+      "also": ["Chickasaw"],
+      "pronounce": null,
+      "lands": "Thirteen counties in south-central Oklahoma, United States; original homelands in present-day Mississippi, Alabama and Tennessee",
+      "countries": ["US"],
+      "official_url": "https://www.chickasaw.net/",
+      "name_source_url": "https://www.chickasaw.net/our-nation.aspx",
+      "facts": [
+        {
+          "text": "The Chickasaw Nation's three-department government was reestablished with the ratification of its 1983 Constitution.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Present Day", "publisher": "The Chickasaw Nation", "url": "https://chickasaw.net/Our-Nation/History/Present-Day.aspx", "accessed": "2026-10-08" },
+          "evidence": "with the ratification of the 1983 Chickasaw Nation Constitution"
+        },
+        {
+          "text": "The Chickasaw language revitalization program began in 2007, and its master-apprentice program pairs learners with fluent Chickasaw speakers.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language | Chickasaw Nation", "publisher": "The Chickasaw Nation", "url": "https://chickasaw.net/Our-Nation/Culture/Language.aspx", "accessed": "2026-10-08" },
+          "evidence": "The Chickasaw language revitalization program began in 2007"
+        },
+        {
+          "text": "The 13 counties of the Chickasaw Nation hold five distinct ecoregions.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Our Nation | Chickasaw Nation", "publisher": "The Chickasaw Nation", "url": "https://www.chickasaw.net/our-nation.aspx", "accessed": "2026-10-08" },
+          "evidence": "five distinct ecoregions within our 13 counties"
+        }
+      ]
+    },
+    {
+      "id": "catawba-nation-us-sc",
+      "name": "Catawba Nation",
+      "also": ["Catawba Indian Nation", "yeh is-WAH h'reh", "People of the River"],
+      "pronounce": null,
+      "lands": "York County, South Carolina, near Rock Hill, with a service area that includes North Carolina, United States",
+      "countries": ["US"],
+      "official_url": "https://www.catawba.com/",
+      "name_source_url": "https://www.catawba.com/",
+      "facts": [
+        {
+          "text": "Catawba pottery is shaped completely by hand, and after a period of decline the tradition was revived and is still passed down today.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "About The Nation", "publisher": "Catawba Nation", "url": "https://www.catawba.com/about-the-nation", "accessed": "2026-10-08" },
+          "evidence": "the tradition has been revived and is still passed down today"
+        },
+        {
+          "text": "The Catawba Nation has over 3,300 enrolled citizens and continues to grow.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "About The Nation", "publisher": "Catawba Nation", "url": "https://www.catawba.com/about-the-nation", "accessed": "2026-10-08" },
+          "evidence": "There are currently over 3300 enrolled members of the Nation"
+        },
+        {
+          "text": "After a 20-year effort, a land claim settlement on November 20, 1993 brought the Catawba Indian Nation federal recognition.",
+          "kind": "governance",
+          "as_of": "1993",
+          "source": { "title": "About The Nation", "publisher": "Catawba Nation", "url": "https://www.catawba.com/about-the-nation", "accessed": "2026-10-08" },
+          "evidence": "the Catawba Indian Nation received federal recognition"
+        }
+      ]
+    },
+    {
+      "id": "lumbee-tribe-us-nc",
+      "name": "Lumbee Tribe of North Carolina",
+      "also": ["Lumbee", "People of the Dark Water"],
+      "pronounce": null,
+      "lands": "Along the Lumbee River in Robeson, Hoke, Cumberland and Scotland counties, North Carolina, United States, centered on Pembroke",
+      "countries": ["US"],
+      "official_url": "https://www.lumbeetribe.com/",
+      "name_source_url": "https://www.lumbeetribe.com/",
+      "facts": [
+        {
+          "text": "The Lumbee Tribe became fully federally recognized by the United States on December 18, 2025.",
+          "kind": "today",
+          "as_of": "2025",
+          "source": { "title": "History and Culture | lumbee-tribe-of-nc", "publisher": "Lumbee Tribe of North Carolina", "url": "https://www.lumbeetribe.com/history-and-culture", "accessed": "2026-10-08" },
+          "evidence": "The Lumbee were federally recognized fully by the United States"
+        },
+        {
+          "text": "The Lumbee Tribe has more than 55,000 members, living mostly in Robeson, Hoke, Cumberland and Scotland counties of North Carolina.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "NC Tribal Communities | NC DOA", "publisher": "North Carolina Department of Administration, Commission of Indian Affairs", "url": "https://doa.nc.gov/divisions/american-indian-affairs/tribes", "accessed": "2026-10-08" },
+          "evidence": "The more than 55,000 members of the Lumbee Tribe"
+        },
+        {
+          "text": "The Lumbee, the People of the Dark Water, are known for their entrepreneurial spirit and their focus on education.",
+          "kind": "achievement",
+          "as_of": null,
+          "source": { "title": "Lumbee Tribe of North Carolina", "publisher": "Lumbee Tribe of North Carolina", "url": "https://www.lumbeetribe.com/", "accessed": "2026-10-08" },
+          "evidence": "known for their entrepreneurial spirit and their focus on education"
+        }
+      ]
+    },
+    {
+      "id": "mashpee-wampanoag-us-ma",
+      "name": "Mashpee Wampanoag Tribe",
+      "also": ["People of the First Light", "Wampanoag"],
+      "pronounce": null,
+      "lands": "Mashpee on Cape Cod, Massachusetts, United States; Wampanoag homelands across present-day Massachusetts and eastern Rhode Island",
+      "countries": ["US"],
+      "official_url": "https://mashpeewampanoagtribe-nsn.gov/",
+      "name_source_url": "https://mashpeewampanoagtribe-nsn.gov/",
+      "facts": [
+        {
+          "text": "The Mashpee Wampanoag Tribe, the People of the First Light, has about 3,200 enrolled citizens.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "Mashpee Wampanoag Tribe | People of the First Light", "publisher": "Mashpee Wampanoag Tribe", "url": "https://mashpeewampanoagtribe-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "currently has approximately 3,200 enrolled citizens"
+        },
+        {
+          "text": "The Mashpee Wampanoag were re-acknowledged as a federally recognized tribe in 2007.",
+          "kind": "governance",
+          "as_of": "2007",
+          "source": { "title": "Mashpee Wampanoag Tribe | People of the First Light", "publisher": "Mashpee Wampanoag Tribe", "url": "https://mashpeewampanoagtribe-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "were re-acknowledged as a federally recognized tribe in 2007"
+        },
+        {
+          "text": "Children in a Mashpee program built with the Wôpanâak Language Reclamation Project could be the first in centuries to grow up proficient in Wôpanâak.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Language - Mashpee Wampanoag Tribe", "publisher": "Mashpee Wampanoag Tribe", "url": "https://mashpeewampanoagtribe-nsn.gov/language", "accessed": "2026-10-08" },
+          "evidence": "could be the first to grow up with a proficiency in"
+        }
+      ]
+    },
+    {
+      "id": "aquinnah-wampanoag-us-ma",
+      "name": "Wampanoag Tribe of Gay Head (Aquinnah)",
+      "also": ["Aquinnah Wampanoag", "Wampanoag"],
+      "pronounce": null,
+      "lands": "Aquinnah, on the western end of Martha's Vineyard (Noepe), Massachusetts, United States",
+      "countries": ["US"],
+      "official_url": "https://wampanoagtribe-nsn.gov/",
+      "name_source_url": "https://wampanoagtribe-nsn.gov/",
+      "facts": [
+        {
+          "text": "Ancestors of the Wampanoag people have lived at Aquinnah for at least 10,000 years, as the first people of Noepe, now Martha's Vineyard.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "Wampanoag History", "publisher": "Wampanoag Tribe of Gay Head (Aquinnah)", "url": "https://wampanoagtribe-nsn.gov/wampanoag-history", "accessed": "2026-10-08" },
+          "evidence": "have lived for at least 10,000 years at Aquinnah"
+        },
+        {
+          "text": "The Aquinnah Wampanoag care for 477 acres of their ancestral lands on Martha's Vineyard.",
+          "kind": "land",
+          "as_of": "2026",
+          "source": { "title": "Wampanoag History", "publisher": "Wampanoag Tribe of Gay Head (Aquinnah)", "url": "https://wampanoagtribe-nsn.gov/wampanoag-history", "accessed": "2026-10-08" },
+          "evidence": "We proudly care for 477 acres of our ancestral lands"
+        },
+        {
+          "text": "In 1998 the town of Gay Head returned to its former Wampanoag name, Aquinnah.",
+          "kind": "history",
+          "as_of": "1998",
+          "source": { "title": "Wampanoag History", "publisher": "Wampanoag Tribe of Gay Head (Aquinnah)", "url": "https://wampanoagtribe-nsn.gov/wampanoag-history", "accessed": "2026-10-08" },
+          "evidence": "its former Wampanoag name of Aquinnah"
+        }
+      ]
+    },
+    {
+      "id": "penobscot-nation-us-me",
+      "name": "Penobscot Nation",
+      "also": ["Penobscot"],
+      "pronounce": null,
+      "lands": "Indian Island and the Penobscot River region of Maine, United States",
+      "countries": ["US"],
+      "official_url": "https://www.penobscotnation.org/",
+      "name_source_url": "https://www.penobscotnation.org/",
+      "facts": [
+        {
+          "text": "The Penobscot Nation's cultural office works to revitalize, sustain and encourage use of the Penobscot language through continuing education.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Cultural & Historic Preservation - Penobscot Nation", "publisher": "Penobscot Nation", "url": "https://www.penobscotnation.org/departments/cultural-historic-preservation/", "accessed": "2026-10-08" },
+          "evidence": "Revitalize, sustain, and encourage the use of the Penobscot language"
+        },
+        {
+          "text": "The Penobscot Nation's Water Resources Program monitors rivers, streams, lakes and wetlands to protect citizens and the ways they use their waters.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Water (nə̀pi) Resources - Penobscot Nation", "publisher": "Penobscot Nation", "url": "https://www.penobscotnation.org/departments/department-of-natural-resources/water-n%c9%99pi-resources/", "accessed": "2026-10-08" },
+          "evidence": "protect the health of Penobscot citizens and how they use their waters"
+        },
+        {
+          "text": "Based on Indian Island, Maine, the Penobscot Nation sets its mission as protecting Penobscot people, culture and territory through the wise exercise of its sovereign powers.",
+          "kind": "governance",
+          "as_of": null,
+          "source": { "title": "Penobscot Nation | Departments & Info | Indian Island, Maine", "publisher": "Penobscot Nation", "url": "https://www.penobscotnation.org/", "accessed": "2026-10-08" },
+          "evidence": "by the wise exercise of our Sovereign Powers"
+        }
+      ]
+    },
+    {
+      "id": "passamaquoddy-peskotomuhkati-us-me",
+      "name": "Passamaquoddy (Peskotomuhkati)",
+      "also": ["Peskotomuhkati", "Passamaquoddy Tribe", "Sipayik (Pleasant Point)", "Motahkomikuk (Indian Township)"],
+      "pronounce": null,
+      "lands": "Sipayik (Pleasant Point) and Motahkomikuk (Indian Township) in Maine, United States, and a community in New Brunswick, Canada",
+      "countries": ["US", "CA"],
+      "official_url": "https://www.wabanaki.com/",
+      "name_source_url": "https://www.wabanaki.com/",
+      "facts": [
+        {
+          "text": "Over 3,000 Passamaquoddy citizens belong to three self-governing communities, two in Maine and one in New Brunswick, linked by political, cultural and kinship ties.",
+          "kind": "today",
+          "as_of": "2026",
+          "source": { "title": "Home - Sipayik Tribal Government", "publisher": "Passamaquoddy Tribe at Sipayik (Pleasant Point)", "url": "https://www.wabanaki.com/", "accessed": "2026-10-08" },
+          "evidence": "over 3,000 Passamaquoddy citizens belong to three self-governing communities"
+        },
+        {
+          "text": "Sipayik (Pleasant Point) has long been a seasonal fishing village and remains central to Passamaquoddy identity and way of life.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Home - Sipayik Tribal Government", "publisher": "Passamaquoddy Tribe at Sipayik (Pleasant Point)", "url": "https://www.wabanaki.com/", "accessed": "2026-10-08" },
+          "evidence": "has long been a seasonal fishing village"
+        },
+        {
+          "text": "The Maliseet-Passamaquoddy Dictionary holds over 19,000 entries, and the language is still spoken fluently by many older tribal members.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Passamaquoddy Language", "publisher": "Passamaquoddy Tribe at Sipayik (Pleasant Point)", "url": "https://wabanaki.com/language-2/", "accessed": "2026-10-08" },
+          "evidence": "Dictionary contains over 19,000 entries"
+        }
+      ]
+    },
+    {
+      "id": "narragansett-indian-tribe-us-ri",
+      "name": "Narragansett Indian Tribe",
+      "also": ["Narragansett"],
+      "pronounce": null,
+      "lands": "Rhode Island, United States",
+      "countries": ["US"],
+      "official_url": "https://narragansettindiannation.org/",
+      "name_source_url": "https://narragansettindiannation.org/",
+      "facts": [
+        {
+          "text": "The Narragansett Indian Tribe received federal recognition and acknowledgement on April 11, 1983.",
+          "kind": "governance",
+          "as_of": "1983",
+          "source": { "title": "Perseverance", "publisher": "Narragansett Indian Tribe", "url": "https://narragansettindiannation.org/history/perseverance/", "accessed": "2026-10-08" },
+          "evidence": "received federal recognition and acknowledgement on April 11, 1983"
+        },
+        {
+          "text": "Each August the Narragansett gather for their August Meeting, an annual ceremony the Tribe has kept going for centuries and continues to this day.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Perseverance", "publisher": "Narragansett Indian Tribe", "url": "https://narragansettindiannation.org/history/perseverance/", "accessed": "2026-10-08" },
+          "evidence": "the annual ceremony continues to this day"
+        },
+        {
+          "text": "A land claim brought by the Tribe ended in a 1978 out-of-court settlement of about 1,800 acres.",
+          "kind": "land",
+          "as_of": "1978",
+          "source": { "title": "Perseverance", "publisher": "Narragansett Indian Tribe", "url": "https://narragansettindiannation.org/history/perseverance/", "accessed": "2026-10-08" },
+          "evidence": "out-of-court settlement in 1978 of approximately 1,800 acres"
+        }
+      ]
+    },
+    {
+      "id": "shinnecock-indian-nation-us-ny",
+      "name": "Shinnecock Indian Nation",
+      "also": ["Shinnecock Nation", "People of the Stony Shore"],
+      "pronounce": null,
+      "lands": "In and around the Town of Southampton on the eastern end of Long Island, New York, United States",
+      "countries": ["US"],
+      "official_url": "https://www.shinnecock-nsn.gov/",
+      "name_source_url": "https://www.shinnecock-nsn.gov/",
+      "facts": [
+        {
+          "text": "On October 1, 2010, the Shinnecock Indian Nation was formally recognized by the United States as the 565th federally recognized tribe.",
+          "kind": "governance",
+          "as_of": "2010",
+          "source": { "title": "Shinnecock Nation", "publisher": "Shinnecock Indian Nation", "url": "https://www.shinnecock-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "the 565th federally recognized tribe on October 1, 2010"
+        },
+        {
+          "text": "The Shinnecock Indian Nation has over 1,589 enrolled tribal members.",
+          "kind": "population",
+          "as_of": "2026",
+          "source": { "title": "Shinnecock Nation", "publisher": "Shinnecock Indian Nation", "url": "https://www.shinnecock-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "There are currently over 1,589 enrolled tribal members"
+        },
+        {
+          "text": "Shinnecock people have lived on Long Island for about 13,000 years, were master whalers, and keep their history and culture very much alive today.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "WHO WE ARE | Shinnecock Nation", "publisher": "Shinnecock Indian Nation", "url": "https://www.shinnecock-nsn.gov/who-we-are", "accessed": "2026-10-08" },
+          "evidence": "have been living on Long Island for approximately 13,000 years"
+        }
+      ]
+    },
+    {
+      "id": "delaware-tribe-of-indians-lenape-us-ok",
+      "name": "Delaware Tribe of Indians",
+      "also": ["Lenape", "Delaware"],
+      "pronounce": { "text": "Lenape: len-NAH-pay", "source_url": "https://www.delawaretribe.org/" },
+      "lands": "Bartlesville, Oklahoma, United States; homelands along the Delaware River",
+      "countries": ["US"],
+      "official_url": "https://www.delawaretribe.org/",
+      "name_source_url": "https://www.delawaretribe.org/",
+      "facts": [
+        {
+          "text": "The Delaware Tribe of Indians is a federally recognized tribe of the Lenape people, headquartered in Bartlesville, Oklahoma.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Home - Delaware Tribe of Indians", "publisher": "Delaware Tribe of Indians", "url": "https://www.delawaretribe.org/", "accessed": "2026-10-08" },
+          "evidence": "a federally recognized tribe of the Lenape people headquartered in Bartlesville"
+        },
+        {
+          "text": "The Tribe's online Lenape Talking Dictionary holds about 15,380 words, along with recorded stories and songs, and is still growing.",
+          "kind": "language",
+          "as_of": "2026",
+          "source": { "title": "Language Revitalization - Delaware Tribe of Indians", "publisher": "Delaware Tribe of Indians", "url": "https://delawaretribe.org/language-revitalization/", "accessed": "2026-10-08" },
+          "evidence": "the number of Lenape words in the Dictionary is about 15,380"
+        },
+        {
+          "text": "On September 17, 1778, Delaware people signed the first Indian treaty with the newly formed United States.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "About Us - Delaware Tribe of Indians", "publisher": "Delaware Tribe of Indians", "url": "https://delawaretribe.org/about-us/", "accessed": "2026-10-08" },
+          "evidence": "signed the first Indian treaty with the newly formed United States"
+        }
+      ]
+    },
+    {
+      "id": "delaware-nation-lenape-us-ok",
+      "name": "Delaware Nation",
+      "also": ["Lenape", "Lenni-Lenape", "the Grandfathers", "Delaware"],
+      "pronounce": null,
+      "lands": "Anadarko, Oklahoma, United States; Lenape homelands on the Eastern Seaboard",
+      "countries": ["US"],
+      "official_url": "https://www.delawarenation-nsn.gov/",
+      "name_source_url": "https://www.delawarenation-nsn.gov/",
+      "facts": [
+        {
+          "text": "Delaware Nation is a federally recognized tribe based in Anadarko, Oklahoma.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Delaware Nation | Official Website", "publisher": "Delaware Nation", "url": "https://www.delawarenation-nsn.gov/", "accessed": "2026-10-08" },
+          "evidence": "a federally recognized tribe based in Anadarko, Oklahoma"
+        },
+        {
+          "text": "The Delaware Nation's own name is Lenape or Lenni-Lenape, and the people are also known as the Grandfathers.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "About Us | Delaware Nation", "publisher": "Delaware Nation", "url": "https://www.delawarenation-nsn.gov/about-us/", "accessed": "2026-10-08" },
+          "evidence": "also known as the Grandfathers"
+        },
+        {
+          "text": "In December 2022 Delaware Nation re-established its Tribal Historic Preservation Office to identify and protect cultural resources in Lenape homelands.",
+          "kind": "land",
+          "as_of": "2022",
+          "source": { "title": "Delaware Nation Re-Established THPO Status with the National Park Services and US Department of Interior", "publisher": "Delaware Nation", "url": "https://www.delawarenation-nsn.gov/delaware-nation-re-established-thpo-status-with-the-national-park-services-and-us-department-of-interior/", "accessed": "2026-10-08" },
+          "evidence": "identify and protect historic and cultural resources in Lenape homelands"
+        }
+      ]
+    },
+    {
+      "id": "pamunkey-indian-tribe-us-va",
+      "name": "Pamunkey Indian Tribe",
+      "also": ["Pamunkey"],
+      "pronounce": null,
+      "lands": "Pamunkey Reservation on the Pamunkey River, King William County, Virginia, United States",
+      "countries": ["US"],
+      "official_url": "https://www.pamunkey.org/",
+      "name_source_url": "https://www.pamunkey.org/",
+      "facts": [
+        {
+          "text": "The Pamunkey reservation sits on the northern bank of the Pamunkey River in King William County, Virginia.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Pamunkey Indian Tribe", "publisher": "Pamunkey Indian Tribe", "url": "https://www.pamunkey.org/", "accessed": "2026-10-08" },
+          "evidence": "nestled on the northern bank of the Pamunkey River"
+        },
+        {
+          "text": "The U.S. Department of the Interior acknowledged the Pamunkey Indian Tribe as federally recognized, effective January 28, 2016.",
+          "kind": "governance",
+          "as_of": "2016",
+          "source": { "title": "Pamunkey Indian Tribe", "publisher": "Pamunkey Indian Tribe", "url": "https://www.pamunkey.org/", "accessed": "2026-10-08" },
+          "evidence": "to acknowledge the Pamunkey Indian Tribe"
+        },
+        {
+          "text": "Guided by the idea that if you take fish from the river you put some back, the Pamunkey started an indoor fish hatchery in 1918.",
+          "kind": "achievement",
+          "as_of": null,
+          "source": { "title": "Natural Resources | Pamunkey Indian Tribe", "publisher": "Pamunkey Indian Tribe", "url": "https://www.pamunkey.org/natural-resource", "accessed": "2026-10-08" },
+          "evidence": "We started an indoor fish hatchery in 1918"
+        }
+      ]
+    }
+  ]
+}

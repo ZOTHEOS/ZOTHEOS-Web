@@ -1,0 +1,1096 @@
+{
+  "_doc": [
+    "Assembler decisions for round 1, read by merge.py.",
+    "fact_edits: one entry for EVERY fact-level respect 'edit'. use = respect (apply the respect text: it only reorders, attributes, narrows, renames or removes, so the verified meaning is unchanged), verified (keep the verifier-supported text: the edit adds a claim the verifier never checked), drop (the respect pass found the verified text inaccurate or in breach of an ARCHITECTURE 9.1 rule, and its fix adds an unchecked claim, so neither version is double-checked; queued for round 2).",
+    "fact_drops: extra drops decided by the assembler (ARCHITECTURE 9.1 ranking of peoples, scope mismatch).",
+    "rank_allow: superlatives the ranking lint may pass because they describe a place, a tract of land, an organization, an agreement or antiquity, not the size or power of a people.",
+    "nations: one entry for EVERY nation-level respect 'edit' plus assembler fixes. Ops are applied after verify.names and respect structured fields, in this order: name, also, also_remove, also_add, also_search, lands, pronounce, official_url, name_source_url, new_id. A key that is present with null sets null.",
+    "url_map: exact URL rewrites applied to every URL field (only where the https page was confirmed live).",
+    "Round 2 (2026-10-10): gap-africa, gap-caribbean-guianas, gap-pacific, gap-south-asia folded in. region_map renames the workflow keys gap-* to published geographic keys (ARCHITECTURE 2.6); a nations entry may set 'region' for one nation. Four gap-africa lead names were flagged by the verifier as not shown on the cited name source: where a citable page fetched by the assembler shows the endonym it stays (Ishelhiyen, Britannica); otherwise the lead falls back to the exonym the cited page does show and the endonym is kept first in also, to be promoted when a source is found (Kabyles, Mozabite, Siwans). Sources: Wikipedia and Wikipedia imports (museum-digital actor text) were not used."
+  ],
+  "url_map": {
+    "http://www.saulttribe.com/about-us": "https://www.saulttribe.com/about-us"
+  },
+  "fact_edits": {
+    "africa|san-juhoansi-namibia-botswana|2": {
+      "use": "verified",
+      "why": "Verifier fix already states the cooperative sequence; the edit adds the term rada, which the verifier did not check."
+    },
+    "africa|nama-namibia-south-africa|0": {
+      "use": "verified",
+      "why": "Edit adds the communal ownership claim (enrichment, not a correction)."
+    },
+    "africa|khoikhoi-south-africa|2": {
+      "use": "verified",
+      "why": "Edit adds the court's finding on consultation; verified text is literally accurate. Round 2: re-verify the respect wording."
+    },
+    "africa|ovahimba-namibia-angola|2": {
+      "use": "verified",
+      "why": "Edit adds 'long been central to Ovahimba life'; verified text matches the evidence tense ('has led to')."
+    },
+    "africa|maasai-kenya-tanzania|1": {
+      "use": "verified",
+      "why": "Edit adds the reason for census non-participation; verified text is accurate."
+    },
+    "africa|maasai-kenya-tanzania|2": {
+      "use": "respect",
+      "why": "Attributes the interpretation to IWGIA; no new claim."
+    },
+    "africa|batwa-great-lakes|0": {
+      "use": "verified",
+      "why": "Edit adds the cultural-identity claim."
+    },
+    "africa|baaka-car-congo|2": {
+      "use": "respect",
+      "why": "Attribution to the protected area; no new claim."
+    },
+    "africa|kel-tamasheq-sahara-sahel|2": {
+      "use": "respect",
+      "why": "Uses the card's own lead name; drops region labels; no new claim."
+    },
+    "alaska-hawaii-pacific-us|yupik-central-alaska|2": {
+      "use": "verified",
+      "why": "Verifier fix already centers the people ('part of who people are')."
+    },
+    "alaska-hawaii-pacific-us|denaina-cook-inlet-alaska|0": {
+      "use": "respect",
+      "why": "Removes an editorial word; no new claim."
+    },
+    "alaska-hawaii-pacific-us|lower-tanana-dene-alaska|0": {
+      "use": "respect",
+      "why": "Reorders the verifier's own text so the place leads."
+    },
+    "alaska-hawaii-pacific-us|eyak-cordova-alaska|2": {
+      "use": "respect",
+      "why": "Removes the past-tense range clause; the rest is entailed by the verified text."
+    },
+    "alaska-hawaii-pacific-us|samoans-american-samoa|1": {
+      "use": "respect",
+      "why": "Reorder only."
+    },
+    "amazon-lowland-sa|yanomami-br-ve|1": {
+      "use": "verified",
+      "as_of": "2019",
+      "why": "Respect wanted only the as_of fix (research dated 2019); wording kept as verified."
+    },
+    "amazon-lowland-sa|munduruku-br|2": {
+      "use": "verified",
+      "why": "Edit adds the association's purposes."
+    },
+    "amazon-lowland-sa|auwe-xavante-br|0": {
+      "use": "verified",
+      "why": "Edit adds a place clause."
+    },
+    "amazon-lowland-sa|tupinamba-br|1": {
+      "use": "verified",
+      "why": "Edit adds a claim about identity; verified text states the official act. Round 2: re-verify the respect wording."
+    },
+    "amazon-lowland-sa|macuxi-br-gy-ve|1": {
+      "use": "verified",
+      "why": "Edit adds 'home to the Macuxi and other peoples'."
+    },
+    "amazon-lowland-sa|kaapor-br|1": {
+      "use": "respect",
+      "as_of": "1998",
+      "why": "Tense narrowed to the dated source; no new claim."
+    },
+    "amazon-lowland-sa|awajun-pe|2": {
+      "use": "verified",
+      "why": "Verifier fix already removed 'Awajun women founded'."
+    },
+    "amazon-lowland-sa|sapara-ec-pe|1": {
+      "use": "respect",
+      "why": "Untangles the same two claims; nothing added."
+    },
+    "amazon-lowland-sa|wichi-ar-bo|1": {
+      "use": "drop",
+      "why": "Respect: 'being spoken again' implies the language had stopped and is not in the source; the fix adds an unchecked claim (teenagers)."
+    },
+    "andes|quechua-andes-pe-bo|1": {
+      "use": "respect",
+      "why": "Attributes the 'vital' rating to the Ministry; no new claim."
+    },
+    "andes|aymara-altiplano-bo-pe-cl|0": {
+      "use": "verified",
+      "why": "Edit adds a ranking ('two largest'), which ARCHITECTURE 9.1 bans."
+    },
+    "andes|uro-titicaca-pe-bo|0": {
+      "use": "verified",
+      "why": "Verifier fix already dropped 'Most'."
+    },
+    "andes|kichwa-otavalo-imbabura-ec|0": {
+      "use": "drop",
+      "why": "Respect: the verified text misreads the label (the association's first loom built in the US, not the first ever); the fix adds the association name, unchecked."
+    },
+    "andes|kichwa-saraguro-loja-ec|1": {
+      "use": "verified",
+      "why": "Verifier fix already dates it to 2019."
+    },
+    "andes|iku-arhuaco-sierra-nevada-co|0": {
+      "use": "respect",
+      "why": "Replaces the rejected name with Arhuaco; same claim."
+    },
+    "andes|diaguita-norte-chico-cl-ar|1": {
+      "use": "respect",
+      "why": "'Most' weakened to 'Many'."
+    },
+    "arctic-europe-russia|inughuit-avanersuaq-greenland|2": {
+      "use": "respect",
+      "why": "Removes named individuals (ARCHITECTURE 9.1); same claims."
+    },
+    "arctic-europe-russia|nenets-arctic-russia|0": {
+      "use": "respect",
+      "why": "Narrows the claim to herders."
+    },
+    "arctic-europe-russia|yupik-chukotka|0": {
+      "use": "verified",
+      "why": "Edit adds the ICC founding members."
+    },
+    "arctic-europe-russia|koryak-kamchatka|2": {
+      "use": "verified",
+      "why": "Verifier fix already removed the 'protections' claim."
+    },
+    "arctic-europe-russia|itelmen-kamchatka|0": {
+      "use": "respect",
+      "why": "Continuity framing and removal of the Kamchadal clause; evidence still supports it."
+    },
+    "arctic-europe-russia|ket-yenisei|2": {
+      "use": "respect",
+      "why": "Reframes occupation as tradition, as the source does."
+    },
+    "asia|tw-atayal|2": {
+      "use": "verified",
+      "why": "Edit adds 'a mark of adulthood'."
+    },
+    "asia|tw-pinuyumayan|1": {
+      "use": "verified",
+      "why": "Verifier fix already uses the source's broader framing."
+    },
+    "asia|tw-tao|1": {
+      "use": "verified",
+      "why": "Edit adds the cultural exchanges claim."
+    },
+    "asia|tw-truku|2": {
+      "use": "respect",
+      "why": "Tradition framing and the source's own gloss of gaya; no new claim."
+    },
+    "asia|tw-hlaalua|0": {
+      "use": "verified",
+      "why": "Edit adds the name-rectification application."
+    },
+    "asia|tw-kanakanavu|0": {
+      "use": "verified",
+      "why": "Edit adds the name-rectification application."
+    },
+    "asia|ph-ibaloi|2": {
+      "use": "respect",
+      "why": "Tense fix to the source's present perfect; 'of Benguet' matches the card's lands."
+    },
+    "asia|ph-lumad|1": {
+      "use": "verified",
+      "why": "Edit adds what the provisions protect."
+    },
+    "asia|my-orang-asli|0": {
+      "use": "respect",
+      "why": "'Collective' is entailed by 'covers 18 groups'."
+    },
+    "asia|id-dayak|0": {
+      "use": "respect",
+      "why": "Narrows 'the many' to 'many'."
+    },
+    "asia|in-khasi|1": {
+      "use": "verified",
+      "why": "Verifier fix already carries the Shillong exception."
+    },
+    "asia|in-naga|0": {
+      "use": "respect",
+      "why": "Clarifies that the 17 tribes live in the state, not that all are Naga."
+    },
+    "asia|mm-karen|2": {
+      "use": "drop",
+      "why": "Respect: the law does not name the Karen; the fix adds an unchecked advocacy claim."
+    },
+    "asia|th-akha|2": {
+      "use": "drop",
+      "why": "Respect: the law does not name the Akha; the fix adds an unchecked advocacy claim."
+    },
+    "canada|eeyou-istchee-cree-qc-ca|2": {
+      "use": "respect",
+      "why": "Self-name swap as on the cited page."
+    },
+    "canada|muskeg-lake-cree-nation-sk-ca|1": {
+      "use": "respect",
+      "why": "Tense: the event was announced, now past."
+    },
+    "canada|six-nations-grand-river-on-ca|2": {
+      "use": "verified",
+      "why": "Edit adds own-language names with special characters the verifier did not check."
+    },
+    "canada|kahnawake-mohawk-qc-ca|2": {
+      "use": "verified",
+      "why": "Edit adds 'fewer do so today'."
+    },
+    "canada|atikamekw-nitaskinan-qc-ca|2": {
+      "use": "verified",
+      "why": "Edit adds the kekekw example."
+    },
+    "canada|tsuutina-ab-ca|2": {
+      "use": "respect",
+      "why": "Fixes garbled grammar as an attributed self-description."
+    },
+    "canada|squamish-bc-ca|0": {
+      "use": "verified",
+      "why": "Verifier fix already removed the unsourced language name."
+    },
+    "canada|syilx-okanagan-bc-wa|0": {
+      "use": "verified",
+      "why": "Verifier fix already removed 'Syilx-led'."
+    },
+    "canada|syilx-okanagan-bc-wa|1": {
+      "use": "verified",
+      "why": "Verifier fix already says 'Historically'; edit adds the six current members."
+    },
+    "canada|syilx-okanagan-bc-wa|2": {
+      "use": "respect",
+      "why": "Same claim, clearer wording about the border."
+    },
+    "canada|gitxsan-bc-ca|2": {
+      "use": "verified",
+      "why": "Verifier fix removed the overstatement; edit adds colonization and restoration claims."
+    },
+    "canada|metis-nation-ca|1": {
+      "use": "respect",
+      "why": "Attributes a contested boundary to the source."
+    },
+    "central-america-caribbean|kiche-maya-guatemala|0": {
+      "use": "verified",
+      "why": "Verifier fix already dropped 'open'."
+    },
+    "central-america-caribbean|kaqchikel-maya-guatemala|0": {
+      "use": "verified",
+      "why": "Edit restates the right won as a different right."
+    },
+    "central-america-caribbean|kaqchikel-maya-guatemala|2": {
+      "use": "respect",
+      "why": "Removes the named individual; year equals as_of."
+    },
+    "central-america-caribbean|mopan-maya-belize-guatemala|1": {
+      "use": "verified",
+      "why": "Verifier fix already resolved who adopted it; edit adds months."
+    },
+    "central-america-caribbean|guna-gunayala-panama|2": {
+      "use": "verified",
+      "why": "Verifier fix already resolved the precision point."
+    },
+    "central-america-caribbean|embera-panama-colombia|2": {
+      "use": "respect",
+      "why": "Removes the ranking."
+    },
+    "central-america-caribbean|wounaan-panama-colombia|0": {
+      "use": "drop",
+      "why": "Verified text names an individual (ARCHITECTURE 9.1); the fix adds unchecked claims (young woman, role usually held by men)."
+    },
+    "central-america-caribbean|ngabe-panama-costa-rica|0": {
+      "use": "respect",
+      "why": "Removes the ranking."
+    },
+    "central-america-caribbean|bugle-panama|0": {
+      "use": "verified",
+      "why": "Verifier fix replaced the unsupported clauses with a checked one."
+    },
+    "central-america-caribbean|cabecar-costa-rica|0": {
+      "use": "respect",
+      "why": "Removes an ambiguous number and a rating; subset of the verified text."
+    },
+    "central-america-caribbean|cabecar-costa-rica|1": {
+      "use": "respect",
+      "why": "Removes the ranking; '2013 list' is the cited source's own title."
+    },
+    "central-america-caribbean|miskitu-nicaragua-honduras|0": {
+      "use": "verified",
+      "why": "Verifier fix already dates it to 2021."
+    },
+    "central-america-caribbean|kalinago-dominica|1": {
+      "use": "respect",
+      "why": "Removes the named individual; clarifies the vote share."
+    },
+    "central-america-caribbean|wayuu-guajira|2": {
+      "use": "respect",
+      "why": "Removes the ranking."
+    },
+    "central-america-caribbean|lokono-guianas|1": {
+      "use": "verified",
+      "why": "Verifier fix already says village representatives."
+    },
+    "mx-central-south|maya-yucatan-peninsula-mx|2": {
+      "use": "verified",
+      "why": "Edit adds 'serving Maya-speaking towns'."
+    },
+    "mx-central-south|jnatjo-mazahua-mx|0": {
+      "use": "respect",
+      "why": "Removes 'even'."
+    },
+    "mx-central-south|hach-winik-lacandon-chiapas-mx|2": {
+      "use": "verified",
+      "why": "Verifier fix already balances the impact."
+    },
+    "mx-north-us-southwest|wixarika-mx-jalisco-nayarit|2": {
+      "use": "respect",
+      "why": "Narrows to the source's own claim."
+    },
+    "mx-north-us-southwest|yoeme-mx-sonora-us-arizona|1": {
+      "use": "verified",
+      "why": "Edit adds the loss of two towns."
+    },
+    "mx-north-us-southwest|kumeyaay-us-ca-mx-bc|1": {
+      "use": "respect",
+      "why": "Identical to the verifier fix (Tipai spelling)."
+    },
+    "mx-north-us-southwest|warijo-mx-chihuahua-sonora|1": {
+      "use": "respect",
+      "why": "Both self-names, matching the nation edit; same claim as the verifier fix."
+    },
+    "mx-north-us-southwest|akimel-ootham-us-az|1": {
+      "use": "verified",
+      "why": "Edit adds the acreage."
+    },
+    "mx-north-us-southwest|hopi-us-az|1": {
+      "use": "verified",
+      "why": "Edit adds the selection methods."
+    },
+    "mx-north-us-southwest|haaku-acoma-us-nm|1": {
+      "use": "verified",
+      "why": "Edit adds the dictionary's name and audience."
+    },
+    "mx-north-us-southwest|jicarilla-apache-us-nm|2": {
+      "use": "verified",
+      "why": "Verifier fix already uses the source's moisture-content wording."
+    },
+    "oceania|noongar-au|2": {
+      "use": "verified",
+      "why": "Edit adds the Act's name and the native-title resolution."
+    },
+    "oceania|wiradjuri-au|1": {
+      "use": "respect",
+      "why": "Removes the ranking; 'a large part' is entailed by the verified text. Evidence kept as verified."
+    },
+    "oceania|meriam-au|0": {
+      "use": "drop",
+      "why": "Respect: 'granted' misstates the 1992 decision (title was recognised, not given); the fix adds unchecked claims."
+    },
+    "oceania|ngapuhi-nz|1": {
+      "use": "drop",
+      "why": "Verified text ranks iwi providers (ARCHITECTURE 9.1); the fix is a new claim with new evidence."
+    },
+    "oceania|te-arawa-nz|1": {
+      "use": "verified",
+      "why": "Verifier fix already corrected the order of events."
+    },
+    "oceania|ngati-porou-nz|0": {
+      "use": "drop",
+      "why": "Verified text ranks iwi ('second largest', ARCHITECTURE 9.1); the fix adds a claim and new evidence."
+    },
+    "us-east-southeast|onondaga-nation-us-ny|2": {
+      "use": "respect",
+      "why": "Names the council the source describes; same claim."
+    },
+    "us-east-southeast|oneida-indian-nation-us-ny|0": {
+      "use": "drop",
+      "why": "Respect: contested governance stated as settled (ARCHITECTURE 9.1); the fix adds an unchecked claim (seven generations)."
+    },
+    "us-east-southeast|oneida-indian-nation-us-ny|1": {
+      "use": "respect",
+      "why": "Full name to avoid confusion with the Wisconsin nation."
+    },
+    "us-east-southeast|tuscarora-nation-us-ny|1": {
+      "use": "verified",
+      "why": "Edit adds 'to seek refuge'."
+    },
+    "us-east-southeast|tuscarora-nation-us-ny|2": {
+      "use": "respect",
+      "why": "Puts the 1992 founding on the body the source names; nothing added."
+    },
+    "us-east-southeast|eastern-band-cherokee-us-nc|2": {
+      "use": "verified",
+      "why": "Verifier fix already leads with the nation's name."
+    },
+    "us-east-southeast|united-keetoowah-band-us-ok|1": {
+      "use": "drop",
+      "why": "Respect: disputed lineage stated as fact (ARCHITECTURE 9.1); the fix adds an unchecked removal clause."
+    },
+    "us-east-southeast|seminole-tribe-florida-us-fl|1": {
+      "use": "verified",
+      "as_of": null,
+      "why": "Verifier text is past narrative, so as_of 2026 is unsupported."
+    },
+    "us-east-southeast|seminole-tribe-florida-us-fl|2": {
+      "use": "verified",
+      "why": "Verifier fix already tightened to the source."
+    },
+    "us-east-southeast|mississippi-band-choctaw-us-ms|2": {
+      "use": "verified",
+      "why": "Verifier fix already replaced the unsupported fact."
+    },
+    "us-east-southeast|catawba-nation-us-sc|0": {
+      "use": "verified",
+      "why": "Edit is a new fact with new evidence."
+    },
+    "us-east-southeast|catawba-nation-us-sc|2": {
+      "use": "verified",
+      "why": "Edit adds the prior-recognition claim ('regained')."
+    },
+    "us-east-southeast|mashpee-wampanoag-us-ma|2": {
+      "use": "verified",
+      "why": "Edit is a new fact with new evidence."
+    },
+    "us-plains-midwest|sicangu-lakota-oyate-us-sd|2": {
+      "use": "verified",
+      "why": "Same as the verifier fix."
+    },
+    "us-plains-midwest|standing-rock-sioux-tribe-us-nd-sd|0": {
+      "use": "verified",
+      "why": "Same meaning as the verifier fix."
+    },
+    "us-plains-midwest|red-lake-nation-us-mn|2": {
+      "use": "verified",
+      "why": "Same as the verifier fix."
+    },
+    "us-plains-midwest|turtle-mountain-band-of-chippewa-us-nd|2": {
+      "use": "respect",
+      "why": "Same claim as the verifier fix with the source's Métis diacritic."
+    },
+    "us-plains-midwest|blackfeet-nation-us-mt|2": {
+      "use": "verified",
+      "why": "Same as the verifier fix."
+    },
+    "us-plains-midwest|apsaalooke-nation-us-mt|1": {
+      "use": "verified",
+      "as_of": null,
+      "why": "Edit adds a precise figure; respect's as_of point applied (the page gives no date)."
+    },
+    "us-plains-midwest|northern-cheyenne-tribe-us-mt|0": {
+      "use": "respect",
+      "why": "Attributes the translation to the state directory."
+    },
+    "us-plains-midwest|prairie-band-potawatomi-nation-us-ks|0": {
+      "use": "respect",
+      "why": "Attributes a jurisdiction position to the Nation."
+    },
+    "us-plains-midwest|prairie-band-potawatomi-nation-us-ks|2": {
+      "use": "verified",
+      "why": "Edit adds the removal-policy clause."
+    },
+    "us-plains-midwest|ho-chunk-nation-us-wi|2": {
+      "use": "drop",
+      "why": "Respect: the state gloss of the name conflicts with the Nation's own; the fix adds unchecked claims (1994 election)."
+    },
+    "us-plains-midwest|sac-and-fox-nation-us-ok|2": {
+      "use": "drop",
+      "why": "Respect: near word-for-word copy of the source (own-words rule); the fix adds an unchecked claim."
+    },
+    "us-west-pacific|yurok-tribe-us-ca|1": {
+      "use": "verified",
+      "why": "Verifier fix already gives the exact date; edit adds the recreation-area claim."
+    },
+    "us-west-pacific|tolowa-dee-ni-nation-us-ca|1": {
+      "use": "respect",
+      "why": "Removes a misspelled personal name."
+    },
+    "us-west-pacific|graton-rancheria-coast-miwok-southern-pomo-us-ca|1": {
+      "use": "verified",
+      "why": "Edit adds the purchase year."
+    },
+    "us-west-pacific|graton-rancheria-coast-miwok-southern-pomo-us-ca|2": {
+      "use": "verified",
+      "why": "Edit adds the year and services."
+    },
+    "us-west-pacific|tongva-us-ca|0": {
+      "use": "verified",
+      "why": "Edit adds the meaning of Huhuunga."
+    },
+    "us-west-pacific|cahuilla-band-of-indians-us-ca|0": {
+      "use": "verified",
+      "why": "Edit adds 'one of the original peoples'."
+    },
+    "us-west-pacific|morongo-band-of-mission-indians-us-ca|0": {
+      "use": "verified",
+      "why": "Verifier fix already removed the unsourced phrase."
+    },
+    "us-west-pacific|washoe-tribe-us-nv-ca|2": {
+      "use": "verified",
+      "why": "Edit adds the tradition clause."
+    },
+    "us-west-pacific|timbisha-shoshone-tribe-us-ca|0": {
+      "use": "verified",
+      "why": "Verifier fix already replaced the heat framing; edit is a new fact."
+    },
+    "us-west-pacific|pyramid-lake-paiute-tribe-us-nv|2": {
+      "use": "verified",
+      "why": "Edit adds the program's Paiute name, unchecked."
+    },
+    "us-west-pacific|yakama-nation-us-wa|1": {
+      "use": "verified",
+      "why": "Verifier fix already resolved the clarity point."
+    },
+    "us-west-pacific|confederated-tribes-of-warm-springs-us-or|0": {
+      "use": "verified",
+      "why": "Edit adds the language-to-tribe mapping."
+    },
+    "us-west-pacific|confederated-tribes-of-warm-springs-us-or|2": {
+      "use": "respect",
+      "why": "Identical to the verifier fix."
+    },
+    "us-west-pacific|tulalip-tribes-us-wa|2": {
+      "use": "drop",
+      "why": "Respect: grammar made Tulalip the signers and a contested successor claim is stated as fact; the fix adds 'descendants', unchecked."
+    },
+    "us-west-pacific|makah-tribe-us-wa|2": {
+      "use": "verified",
+      "why": "Edit adds the museum display claim."
+    },
+    "us-west-pacific|swinomish-indian-tribal-community-us-wa|0": {
+      "use": "verified",
+      "why": "Verifier fix already dropped the stale number."
+    },
+    "us-west-pacific|swinomish-indian-tribal-community-us-wa|1": {
+      "use": "verified",
+      "why": "Edit adds the AQS claim."
+    },
+    "us-west-pacific|confederated-tribes-of-siletz-indians-us-or|2": {
+      "use": "verified",
+      "why": "Same meaning as the verifier fix."
+    },
+    "gap-africa|benet-uganda|2": {
+      "use": "respect",
+      "why": "Removes the word 'raids' and spells out UWA; a removal, no claim added; the IWGIA evidence phrase still supports the text."
+    },
+    "gap-africa|haiom-namibia|2": {
+      "use": "respect",
+      "why": "Spelling normalised to the community's own form Hai//om inside one fact; no claim changed."
+    },
+    "gap-africa|korana-south-africa|0": {
+      "use": "respect",
+      "why": "Tense only. The SAHO page gives the self-name in past habitual ('would refer to themselves'); a people's own name is a standing statement, and fact 1 shows living Korana communities. No new claim."
+    },
+    "gap-africa|iqbayliyen-kabyles-algeria|0": {
+      "use": "verified",
+      "why": "This round the lead name falls back to Kabyles (no fetchable source shows Iqbayliyen: Inalco EN/FR, IWGIA 2024, CNRS pages 403, museum-digital text is a Wikipedia import). The respect text would put an unverified name into a fact; keep the verified text, which already matches the lead. Round 3: promote the endonym with a source."
+    },
+    "gap-africa|toubou-chad-libya-niger|0": {
+      "use": "respect",
+      "why": "Drops 'of Chad' after Tibesti on a contested belonging question; a removal. IWGIA still says 'originally from the Tibesti plateau'."
+    },
+    "gap-africa|samburu-kenya|1": {
+      "use": "respect",
+      "why": "Removes the literacy aside; the UNEP evidence phrase (constitutional rights, views to government) covers the whole remaining text."
+    },
+    "gap-africa|mbuti-drc|1": {
+      "use": "respect",
+      "why": "Reframed on the evidence phrase itself. Verifier quote of the WHC page: 'The primary management challenges ... are ... ensuring of the involvement of the indigenous populations, Mbuti and Efe pygmies, in the management of the Reserve.' 'Calls for ensuring the involvement ... in the management' restates that listed need without framing the peoples as the challenge; no claim beyond the quoted sentence."
+    },
+    "gap-caribbean-guianas|warao-orinoco-guyana-trinidad|1": {
+      "use": "respect",
+      "why": "Assembler fetch 2026-10-10: the Guyana Ministry page heads the entry 'WARRAUS'; naming the Guyanese spelling bridges to the lead name Warao. 'Wetlands' was already in the verified text; nothing added."
+    },
+    "gap-caribbean-guianas|tareno-trio-suriname-brazil|0": {
+      "use": "respect",
+      "why": "Reorders to the self-name first; every clause unchanged and verifier-confirmed on the ISA page."
+    },
+    "gap-pacific|i-kiribati-ki|0": {
+      "use": "respect",
+      "why": "Assembler extracted the Shima PDF (pypdf) 2026-10-10: 'an unimwane, a senior man in the village'. The gloss 'the senior men' is inside the cited text."
+    },
+    "gap-pacific|yapese-fm|2": {
+      "use": "respect",
+      "why": "Verifier and assembler fetch (2026-10-10) both confirm the two page sentences: 'The Yapese were seafaring people who sailed vast distances over the Pacific.' and 'Even in recent times, canoes from Yap have sailed to the Marianas, Okinawa, and Palau.' The continuity wording stays inside the page; 'across the Pacific' is the page's 'over the Pacific'."
+    },
+    "gap-pacific|nauruans-nr|1": {
+      "use": "respect",
+      "why": "The census report itself says the 12 clans or tribes 'are represented' in the flag star (verifier quote); present tense is the page's own."
+    },
+    "gap-south-asia|in-bhil|0": {
+      "use": "respect",
+      "why": "Credit where due. IGNCA page (verifier quote and assembler fetch 2026-10-10): 'Bhuri Bai of Pitol was the first Bhil artist to use paper and canvas for her painting'; 'Bhuri Bai now works as an artist in the Adivasi Lok Kala Academy in Bhopal'. Living artist named by a national cultural institution; the deceased-persons rule (AU) does not apply. First named individual in the set, deliberate."
+    },
+    "gap-south-asia|in-bhil|1": {
+      "use": "respect",
+      "why": "Same credit reason; subjects limited to the page's list (assembler fetch: 'attire, ornaments and gudna (tattoos), huts and granaries, the haat, festivals and dances and oral narratives'); 'the haat market' glosses haat."
+    },
+    "gap-south-asia|in-ho|1": {
+      "use": "respect",
+      "why": "Removes the creator clause (a removal); 'recently devised left-to-right alphabet' is on the Unicode chapter page (assembler fetch 2026-10-10); the two-publications clause is verifier-confirmed in 13.9."
+    },
+    "gap-south-asia|np-tamu|2": {
+      "use": "respect",
+      "why": "Gurung as the Tamu language is the entry's own verified naming (verify.names: NFDIN 'Gurung(Tamu)', body Tamu Hyul Chhonj Dhin Gurung Rashtriya Parishad); no new claim."
+    }
+  },
+  "fact_drops": {
+    "mx-central-south|binniza-zapotec-mx|0": "Scope: covers all Zapotec speakers while the card now names only the Isthmus Binnizá (verify.names note); also ranks languages.",
+    "andes|aymara-altiplano-bo-pe-cl|2": "ARCHITECTURE 9.1: ranks peoples ('second largest').",
+    "andes|kichwa-puruwa-chimborazo-ec|2": "ARCHITECTURE 9.1: ranks peoples ('largest Indigenous population').",
+    "andes|nasa-cauca-co|0": "ARCHITECTURE 9.1: ranks peoples ('four largest').",
+    "andes|pasto-narino-co-ec|0": "ARCHITECTURE 9.1: ranks peoples ('four largest').",
+    "andes|mapuche-cl-ar|0": "ARCHITECTURE 9.1: ranks peoples ('the largest').",
+    "andes|diaguita-norte-chico-cl-ar|0": "ARCHITECTURE 9.1: ranks peoples ('third largest').",
+    "asia|tw-pangcah|0": "ARCHITECTURE 9.1: ranks peoples ('the largest').",
+    "asia|in-santal|1": "ARCHITECTURE 9.1: ranks peoples ('most populous').",
+    "asia|bd-marma|0": "ARCHITECTURE 9.1: ranks peoples ('most populous').",
+    "asia|np-tharu|0": "ARCHITECTURE 9.1: ranks peoples ('one of the largest').",
+    "asia|np-tamang|0": "ARCHITECTURE 9.1: ranks peoples ('one of the largest').",
+    "alaska-hawaii-pacific-us|yupik-central-alaska|0": "ARCHITECTURE 9.1: ranks peoples by speakers ('second most spoken').",
+    "arctic-europe-russia|evenki-siberia|2": "ARCHITECTURE 9.1: ranks related peoples' languages ('the largest').",
+    "mx-central-south|nahua-mx-central-south|0": "ARCHITECTURE 9.1: ranks peoples by speakers ('most spoken').",
+    "mx-central-south|maya-yucatan-peninsula-mx|0": "ARCHITECTURE 9.1: ranks peoples by speakers ('second most spoken').",
+    "mx-central-south|nuu-savi-mixtec-mx|0": "ARCHITECTURE 9.1: ranks peoples ('fourth largest').",
+    "mx-north-us-southwest|nuche-ute-us-co-ut|0": "ARCHITECTURE 9.1: ranks peoples by precedence ('the oldest residents').",
+    "us-east-southeast|cherokee-nation-us-ok|0": "ARCHITECTURE 9.1: ranks nations ('the largest tribal nation').",
+    "us-west-pacific|yurok-tribe-us-ca|0": "ARCHITECTURE 9.1: ranks nations ('the largest tribe').",
+    "us-west-pacific|karuk-tribe-us-ca|0": "ARCHITECTURE 9.1: ranks nations ('one of the largest tribes')."
+  },
+  "rank_allow": {
+    "alaska-hawaii-pacific-us|koyukon-interior-alaska|1": "language territory (geography)",
+    "alaska-hawaii-pacific-us|samoans-american-samoa|2": "antiquity of a place",
+    "andes|kichwa-kanari-canar-ec|1": "an organization within the province",
+    "andes|mapuche-cl-ar|1": "where the people live (internal distribution)",
+    "arctic-europe-russia|evenki-siberia|1": "internal distribution",
+    "arctic-europe-russia|chukchi-luoravetlan-chukotka|2": "the people's own oldest documents",
+    "arctic-europe-russia|nivkh-amur-sakhalin|0": "antiquity of a language",
+    "asia|id-mentawai|1": "size of an island",
+    "canada|anishinabek-nation-on-ca|1": "age of an organization",
+    "canada|nuu-chah-nulth-bc-ca|1": "age of a newspaper",
+    "canada|nunavut-inuit-nu-ca|0": "size of an agreement",
+    "mx-north-us-southwest|white-mountain-apache-us-az|2": "size of a ski resort",
+    "oceania|larrakia-au|2": "an organization as an employer",
+    "oceania|gunditjmara-au|0": "an aquaculture system",
+    "us-plains-midwest|menominee-indian-tribe-us-wi|0": "a timber tract",
+    "us-west-pacific|tolowa-dee-ni-nation-us-ca|2": "historic size of a land base",
+    "us-west-pacific|muckleshoot-indian-tribe-us-wa|0": "an employer"
+  },
+  "nations": {
+    "amazon-lowland-sa|huni-kuin-br-pe": {
+      "also": [],
+      "also_search": [
+        "Kaxinawá",
+        "Cashinahua"
+      ],
+      "why": "Respect: Kaxinawá seems originally to have been an insult; keep for search only."
+    },
+    "amazon-lowland-sa|macuxi-br-gy-ve": {
+      "also": [
+        "Makuxi",
+        "Macushi"
+      ],
+      "why": "Respect: Pemon is a wider grouping, not another name for the Macuxi."
+    },
+    "amazon-lowland-sa|qom-ar-py": {
+      "also": [],
+      "also_search": [
+        "Toba"
+      ],
+      "why": "Respect: Toba is not neutral; keep for search only."
+    },
+    "amazon-lowland-sa|auwe-xavante-br": {
+      "also": [
+        "Xavante",
+        "A'uwe Uptabi"
+      ],
+      "why": "verify.names: lead with the source-backed spelling A'uwe (applied automatically); the tilde form is not on the cited page, so it is not carried into also."
+    },
+    "andes|kichwa-sierra-ec": {
+      "also": [
+        "Quichua"
+      ],
+      "why": "Respect: a description is not a name."
+    },
+    "andes|iku-arhuaco-sierra-nevada-co": {
+      "also": [
+        "Wíntukwa"
+      ],
+      "name_source_url": "https://confetayrona.com/conoce-al-pueblo-arhuaco-y-su-mision-sagrada/",
+      "new_id": "arhuaco-sierra-nevada-co",
+      "why": "Respect: the people's own organization says Iku is not their name; lead Arhuaco (structured), id no longer carries the rejected name."
+    },
+    "arctic-europe-russia|yupik-chukotka": {
+      "also_remove": [
+        "Эскимосы (Eskimosy, Russian official term)"
+      ],
+      "also_search": [
+        "Эскимосы (Eskimosy, Russian official term)"
+      ],
+      "why": "Respect: keep the Russian official term for search only, never shown."
+    },
+    "arctic-europe-russia|yukaghir-odul-kolyma": {
+      "ack": "Structured name and also applied."
+    },
+    "asia|ph-mangyan": {
+      "name_source_url": "https://minorityrights.org/communities/indigenous-peoples-5/",
+      "why": "verify.names: old name source is dead (nation drops this round: all three facts unreachable)."
+    },
+    "asia|np-tharu": {
+      "also_remove": [
+        "Rana Tharu"
+      ],
+      "why": "Respect and verifier: NFDIN lists Rana Tharu as a separate nationality."
+    },
+    "canada|six-nations-grand-river-on-ca": {
+      "also": [
+        "Six Nations"
+      ],
+      "why": "Respect: drop an alias that is not on the page and touches a contested governance question."
+    },
+    "canada|akwesasne-mohawk-on-qc-ny": {
+      "also_add": [
+        "Akwesasró:non"
+      ],
+      "why": "Respect: the people's own name from the cited page."
+    },
+    "canada|innu-labrador-quebec-ca": {
+      "also": [
+        "Innu Nation (Labrador)",
+        "Montagnais (older exonym)"
+      ],
+      "why": "Respect: the body represents the Innu of Labrador only."
+    },
+    "canada|atikamekw-nitaskinan-qc-ca": {
+      "also_add": [
+        "Atikamekw Nehirowisiw"
+      ],
+      "why": "Respect: the Nation's fuller self-designation."
+    },
+    "canada|musqueam-bc-ca": {
+      "pronounce": null,
+      "why": "Respect: guide not from the Nation and covers the English form."
+    },
+    "canada|tsleil-waututh-bc-ca": {
+      "pronounce": null,
+      "why": "Respect: guide not from the Nation and covers the English form."
+    },
+    "canada|ktunaxa-bc-ca": {
+      "lands": "ʔamakʔis Ktunaxa: the Kootenay region of southeastern British Columbia, Canada, with Kootenay Tribes also based today in Montana and Idaho, United States",
+      "why": "Respect: present tense; the people are still there."
+    },
+    "canada|metis-nation-ca": {
+      "lands": "The Métis Nation Homeland as described by the Métis National Council: Manitoba, Saskatchewan and Alberta, plus parts of Ontario, British Columbia, the Northwest Territories and the northern United States",
+      "why": "Respect: attribute a contested boundary."
+    },
+    "central-america-caribbean|mayangna-nicaragua-honduras": {
+      "also": [
+        "Mayagna"
+      ],
+      "why": "Respect: Sumu is rejected by the people."
+    },
+    "central-america-caribbean|kalinago-dominica": {
+      "also": [
+        "Carib (older name)"
+      ],
+      "why": "Respect: show Carib only labeled as an older name; a description is not a name."
+    },
+    "mx-central-south|binniza-zapotec-mx": {
+      "lands": "The Isthmus of Tehuantepec, Oaxaca, Mexico, including Juchitán and Tehuantepec",
+      "why": "Respect and verifier: Binnizá is the Isthmus self-name; other Zapotec peoples get their own entries later."
+    },
+    "mx-central-south|hnahnu-otomi-mx": {
+      "lands": "The Valle del Mezquital in Hidalgo, Mexico",
+      "name_source_url": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=2",
+      "why": "Respect: Hñähñu is the Valle del Mezquital self-name."
+    },
+    "mx-central-south|totonaco-veracruz-puebla-mx": {
+      "also": [
+        "Totonaco",
+        "Totonac",
+        "Totonacos"
+      ],
+      "name_source_url": "https://www.inali.gob.mx/pdf/CLIN_completo.pdf",
+      "why": "Respect: lead with Tutunakú (structured); INALI lists it."
+    },
+    "mx-central-south|jnatjo-mazahua-mx": {
+      "also": [
+        "Jñatjo",
+        "Ñatjo",
+        "Mazahua",
+        "Mazahuas"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/mazahuas-etnografia/",
+      "why": "verify.names: lead Jñatrjo (Estado de México self-name, about 97% of the people); respect preferred Jñatjo but gave no name field. Both forms shown."
+    },
+    "mx-central-south|kitse-chatnio-chatino-oaxaca-mx": {
+      "also_add": [
+        "Kitse Cha'tña",
+        "Kitse Tsa'jnya"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/chatinos-etnografia/",
+      "why": "Respect: official INPI name source and variants."
+    },
+    "mx-central-south|ikoots-huave-oaxaca-mx": {
+      "also_add": [
+        "Kunajts"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/huaves-etnografia/",
+      "why": "Respect: official INPI name source and variant."
+    },
+    "mx-central-south|zoque-chiapas-mx": {
+      "also": [
+        "Zoque",
+        "Zoques"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/zoques-de-chiapas-etnografia/",
+      "why": "Respect: lead with O' de püt (structured)."
+    },
+    "mx-central-south|popoluca-veracruz-mx": {
+      "also_add": [
+        "Nuntajɨyi'",
+        "Tɨkmaya'"
+      ],
+      "why": "Respect: add both peoples' self-names; split later."
+    },
+    "mx-central-south|amuzgo-guerrero-oaxaca-mx": {
+      "also": [
+        "Amuzgo",
+        "Amuzgos"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/amuzgos-etnografia/",
+      "why": "Respect and verifier: lead with Nn'anncue."
+    },
+    "mx-central-south|cuicateco-oaxaca-mx": {
+      "also": [
+        "Cuicateco",
+        "Cuicatecos",
+        "Cuicatec"
+      ],
+      "name_source_url": "https://atlas.inpi.gob.mx/cuicatecos-etnografia/",
+      "why": "Respect and verifier: lead with Dibaku."
+    },
+    "mx-central-south|popoloca-puebla-mx": {
+      "also": [
+        "Ngigua",
+        "Ngiba",
+        "Popoloca",
+        "Popolocas"
+      ],
+      "name_source_url": "https://www.inali.gob.mx/pdf/CLIN_completo.pdf",
+      "why": "Respect: lead with Ngiwa (structured)."
+    },
+    "mx-central-south|hach-winik-lacandon-chiapas-mx": {
+      "name_source_url": "https://atlas.inpi.gob.mx/lacandones-etnografia/",
+      "why": "Respect: official INPI name source."
+    },
+    "mx-central-south|mam-chiapas-mx": {
+      "also_add": [
+        "Winaq qo'"
+      ],
+      "why": "Respect and verifier: Mexico Mam self-name per INPI."
+    },
+    "mx-north-us-southwest|haaku-acoma-us-nm": {
+      "also": [
+        "Haak’u",
+        "Pueblo of Acoma",
+        "Acoma Sky City"
+      ],
+      "why": "verify.names: the official site calls the people Acoma; Haak'u kept in also."
+    },
+    "mx-north-us-southwest|southern-paiute-us-ut-az": {
+      "name": "Southern Paiute",
+      "name_source_url": "https://www.sanjuanpaiute-nsn.gov/",
+      "why": "verify.names offered two fixes; the second (keep Southern Paiute, cite the San Juan Southern Paiute Tribe's official site, checked 2026-10-09) avoids a bare 'Paiute' that would collide with Northern Paiute nations."
+    },
+    "mx-north-us-southwest|kumeyaay-us-ca-mx-bc": {
+      "ack": "Structured patch applied."
+    },
+    "mx-north-us-southwest|cocopah-cucapa-us-az-mx-bc": {
+      "ack": "Structured patch applied."
+    },
+    "mx-north-us-southwest|warijo-mx-chihuahua-sonora": {
+      "ack": "Structured name and patch applied."
+    },
+    "mx-north-us-southwest|ashiwi-zuni-us-nm": {
+      "ack": "Structured patch applied (official_url null while the site carries spam)."
+    },
+    "mx-north-us-southwest|yavapai-us-az": {
+      "ack": "Structured patch applied."
+    },
+    "mx-north-us-southwest|hualapai-us-az": {
+      "ack": "Structured patch applied."
+    },
+    "mx-north-us-southwest|white-mountain-apache-us-az": {
+      "official_url": null,
+      "why": "Assembler: the site answers only on http (https failed 2026-10-09); https-only rule."
+    },
+    "oceania|wiradjuri-au": {
+      "also": [
+        "Wiradyuri",
+        "Wiradjeri",
+        "Wiradhuri"
+      ],
+      "why": "Respect: Wiradyuri is a self-used spelling on the cited page."
+    },
+    "oceania|kanak-nc": {
+      "official_url": null,
+      "why": "Round 1 (kept): contested name left out of a plain-fact field. Round 2: the Senat coutumier site refused connections on 2026-10-10 (verifier: WebFetch, curl https and http, browser pane; assembler: ECONNREFUSED). No dead link on a live card; restore https://www.senat-coutumier.nc/ when it answers.",
+      "lands": "New Caledonia, including Grande Terre and the Loyalty Islands"
+    },
+    "oceania|maohi-pf": {
+      "also": [
+        "Maohi"
+      ],
+      "why": "Respect: Tahitians names one island's people."
+    },
+    "us-east-southeast|seneca-nation-us-ny": {
+      "ack": "Structured pronounce null applied."
+    },
+    "us-east-southeast|onondaga-nation-us-ny": {
+      "ack": "Structured pronounce null applied."
+    },
+    "us-east-southeast|saint-regis-mohawk-akwesasne-us-ny": {
+      "ack": "Structured also and pronounce null applied."
+    },
+    "us-east-southeast|oneida-indian-nation-us-ny": {
+      "ack": "Structured pronounce null applied."
+    },
+    "us-east-southeast|cayuga-nation-us-ny": {
+      "ack": "Structured pronounce null applied."
+    },
+    "us-east-southeast|tuscarora-nation-us-ny": {
+      "ack": "Structured pronounce null applied."
+    },
+    "us-east-southeast|united-keetoowah-band-us-ok": {
+      "ack": "Structured also applied."
+    },
+    "us-east-southeast|muscogee-creek-nation-us-ok": {
+      "ack": "Structured name and also applied."
+    },
+    "us-east-southeast|passamaquoddy-peskotomuhkati-us-me": {
+      "ack": "Structured also applied."
+    },
+    "us-plains-midwest|oglala-sioux-tribe-us-sd": {
+      "official_url": "https://www.oglala.gov/",
+      "why": "Respect: the tribe's own site."
+    },
+    "us-plains-midwest|cheyenne-river-sioux-tribe-us-sd": {
+      "ack": "Not applied: the reviewer asks to confirm the site is official before linking; official_url stays null."
+    },
+    "us-plains-midwest|spirit-lake-nation-us-nd": {
+      "official_url": "https://www.spiritlakenation.com/",
+      "also_remove": [
+        "Mni Wakan Oyate"
+      ],
+      "why": "Respect: the nation's own site; unsourced spelling dropped."
+    },
+    "us-plains-midwest|turtle-mountain-band-of-chippewa-us-nd": {
+      "official_url": "https://tmchippewa.com/",
+      "name_source_url": "https://tmchippewa.com/",
+      "why": "Respect: the band's official online home."
+    },
+    "us-plains-midwest|blackfeet-nation-us-mt": {
+      "pronounce": null,
+      "why": "Respect: guide from a state directory, not the Nation."
+    },
+    "us-plains-midwest|northern-cheyenne-tribe-us-mt": {
+      "pronounce": null,
+      "why": "Respect: guide from a state directory, not the tribe."
+    },
+    "us-plains-midwest|kiowa-tribe-us-ok": {
+      "pronounce": {
+        "text": "Gáuigú, as in Gáuigú bà dàu, We are Kiowa: Gkawy-goo",
+        "source_url": "https://www.kiowatribe.org/department/kiowa-language-department"
+      },
+      "also_add": [
+        "Gáuigú"
+      ],
+      "why": "Respect: lead the guide with the Language Department's own spelling."
+    },
+    "us-plains-midwest|forest-county-potawatomi-us-wi": {
+      "also": [
+        "Bodwéwadmi",
+        "Neshnabé",
+        "Forest County Potawatomi Community"
+      ],
+      "why": "Respect: lead with the displayed name (structured), keep the longer form in also."
+    },
+    "us-plains-midwest|ho-chunk-nation-us-wi": {
+      "also_add": [
+        "Hocąk"
+      ],
+      "why": "Respect: the homepage spelling."
+    },
+    "us-west-pacific|tongva-us-ca": {
+      "ack": "Structured also applied (Kizh removed: contested)."
+    },
+    "us-west-pacific|confederated-tribes-of-warm-springs-us-or": {
+      "also": [
+        "Warm Springs",
+        "Wasco",
+        "Paiute"
+      ],
+      "why": "verify.names: official form has 'the' (applied automatically); the old footer form is not kept as a near-duplicate alias."
+    },
+    "gap-africa|siwans-egypt": {
+      "name": "Siwans",
+      "also_add": [
+        "Isiwan",
+        "Siwan",
+        "Siwi"
+      ],
+      "why": "Respect asked for the self-name Isiwan but gave the fallback itself: no fetchable page shows Isiwan (CNRS page: 'Berbers, Siwans and Egyptians' only; Endangered Languages Project and Minority Rights Group 403; the rest is Wikipedia). Lead stays Siwans; Isiwan first in also. Round 3: promote with a source."
+    },
+    "gap-africa|ishelhin-morocco": {
+      "name": "Ishelhiyen",
+      "also": [
+        "Ishelhin",
+        "Chleuh",
+        "Shluh",
+        "Shilha"
+      ],
+      "name_source_url": "https://www.britannica.com/topic/Ishelhiyen",
+      "why": "verify.names: the Inalco page shows only 'Chleuh'. Encyclopaedia Britannica headword 'Ishelhiyen' ('Also known as: Chleuh, Shluh'), fetched 2026-10-10 with the project user agent (HTTP 200). The compiler's spelling Ishelhin stays first in also; id unchanged (ids are stable)."
+    },
+    "gap-africa|iqbayliyen-kabyles-algeria": {
+      "name": "Kabyles",
+      "also": [
+        "Iqbayliyen",
+        "Kabyle"
+      ],
+      "name_source_url": "https://www.inalco.fr/langues/kabyle-berbere",
+      "why": "verify.names: no fetchable page shows Iqbayliyen (Inalco EN 'Kabyle (taqbaylit, Algeria)', Inalco FR 'Les Kabyles', IWGIA 2024 'Kabyle/Kabyls', CNRS LGIDF 403; museum-digital text is a Wikipedia import). Inalco FR page fetched 2026-10-10 shows 'Les Kabyles'. Endonym kept first in also; promote when a source is found."
+    },
+    "gap-africa|irifiyen-morocco": {
+      "name": "Rifians",
+      "also": [
+        "Irifiyen",
+        "Riffians",
+        "Rif"
+      ],
+      "name_source_url": "https://static1.squarespace.com/static/6515b87f2af0cc4746f62fbc/t/65aaef8b85646b6267c70641/1705701259628/09-RamirezA-Fall2023.pdf",
+      "why": "verify.names: the HCP census PDF names only the language Tarifit. No fetchable page shows Irifiyen (Britannica 'Rif' page and Cambridge excerpt unreachable; HAL, Persee and Encyclopedie berbere results use Rifains). Ramirez Rodriguez, 'The Official Archaeological Perspective in Morocco and the Rif Heritage', Tamazgha Studies Journal vol. 1 (2023), fetched 2026-10-10 and text-extracted, uses 'the Rifians' for the people; the journal URL (tamazghastudiesjournal.org/s/09-RamirezA-Fall2023.pdf) 302s to this file, so the file read is cited. Endonym kept first in also; promote when a source is found."
+    },
+    "gap-africa|at-mzab-algeria": {
+      "name": "Mozabite",
+      "also": [
+        "At Mzab",
+        "Ath Mzab",
+        "Mozabites"
+      ],
+      "why": "verify.names: the UNESCO page (read by the verifier in the browser; 403 to fetch tools) uses 'Mozabite'; no fetchable page shows At Mzab (Persee shows only a 1986 book title 'At-Mzab'). Lead takes the page's exact token; endonym kept first in also."
+    },
+    "gap-caribbean-guianas|bari-catatumbo-co-ve": {
+      "also_remove": [
+        "Motilones"
+      ],
+      "why": "Respect: bare 'Motilones' is a colonial-era exonym applied to Bari and Yukpa alike; 'Motilon Bari' stays (official Colombian use)."
+    },
+    "gap-caribbean-guianas|xinka-southeast-guatemala": {
+      "region": "central-america-caribbean",
+      "why": "Geography: south-eastern Guatemala belongs with the existing Central America region, not the Caribbean and Guianas key."
+    },
+    "gap-caribbean-guianas|chorti-maya-guatemala-honduras": {
+      "region": "central-america-caribbean",
+      "why": "Geography: Guatemala and Honduras belong with the existing Central America region."
+    }
+  },
+  "region_map": {
+    "gap-africa": "africa",
+    "gap-pacific": "oceania",
+    "gap-south-asia": "asia",
+    "gap-caribbean-guianas": "caribbean-guianas"
+  }
+}

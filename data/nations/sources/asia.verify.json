@@ -1,0 +1,784 @@
+{
+ "region": "asia",
+ "checked": "2026-10-08",
+ "results": [
+  {
+   "id": "tw-pangcah",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Page states the Amis are the largest indigenous ethnic group in Taiwan and gives about 213,514 as of January 2020."
+  },
+  {
+   "id": "tw-pangcah",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-pangcah",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: 'As the most widespread ethnic group in Taiwan', in mountainous central and northern Taiwan."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: about 102,730 (January 2020); southern section of the Central Mountain Range across Pingtung and Taitung counties."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: first child, girl or boy, inherits family property and affairs."
+  },
+  {
+   "id": "tw-bunun",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: elevation of 500 to 1,500 m, highest of all Taiwan's indigenous peoples."
+  },
+  {
+   "id": "tw-bunun",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. 14,517 (January 2020) supported. 'Many now work in cities across Taiwan' overstates: page says many have moved away from eastern Taiwan for development in the city and are active in different fields. Text aligned; evidence unchanged.",
+   "text": "About 14,517 Pinuyumayan people were counted in January 2020, and many have moved from eastern Taiwan to cities, where they are active in many fields."
+  },
+  {
+   "id": "tw-rukai",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Content supported (lily symbolizes purity, bravery, courage and honor; right to wear lily ornaments is a core value). Second clause copied the source almost word for word; reworded. Evidence unchanged.",
+   "text": "For the Rukai, the lily stands for purity and courage, and the right to wear lily ornaments sits at the heart of their culture."
+  },
+  {
+   "id": "tw-rukai",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: Taitung (Eastern Rukai), Pingtung (Wutai) and Maolin District, Kaohsiung City."
+  },
+  {
+   "id": "tw-tsou",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-tsou",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-saisiyat",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-saisiyat",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page says Tao means 'man'; 'human' is a fair rendering."
+  },
+  {
+   "id": "tw-thao",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. 817 (January 2020) supported, but 'Most Thao people live in Ita Thao Village' overstates: page says they mainly reside in Ita Thao Village (Yuchi Township) and Dapinglin Settlement (Shuili Township), Nantou County. Evidence unchanged.",
+   "text": "Thao people live mainly in Ita Thao Village in Yuchi Township and in Dapinglin, Shuili Township, both in Nantou County. They numbered about 817 in January 2020."
+  },
+  {
+   "id": "tw-thao",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-sakizaya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-sakizaya",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Three self-names supported, but 'each naming itself in its own dialect' is not on the page (no mention of dialect or language for the subgroup names). Page says each subgroup formed its own group identity. Evidence unchanged.",
+   "text": "Three subgroups make up the Sediq, each with its own group identity: Seediq Tgdaya, Sediq Toda and Sejiq Truku."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Content supported, but the text reproduced the source sentence structure ('Sediq people uphold Gaya ... as their code of living'). Reworded in own words; evidence unchanged.",
+   "text": "For Sediq people, Gaya, the body of rules passed down from the ancestors, guides the way they live."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-hlaalua",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Cited Kanakanavu page states Hla'alua and Kanakanavu listed as 15th and 16th groups after the June 26, 2014 announcement."
+  },
+  {
+   "id": "tw-hlaalua",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Council of Indigenous Peoples, Taiwan, cip.gov.tw); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Japanese Law Translation, Ministry of Justice, Japan, japaneselawtranslation.go.jp); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Upopoy National Ainu Museum and Park, ainu-upopoy.go.jp); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page history: Shiraoi Town chosen June 2014; 'July 12, 2020 Upopoy opens to the public.'"
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Ainu Association of Hokkaido, ainu-assn.or.jp); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-ifugao",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (UNESCO World Heritage Centre, whc.unesco.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: Date of Inscription 1995; living cultural landscape."
+  },
+  {
+   "id": "ph-ifugao",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (UNESCO Intangible Cultural Heritage, ich.unesco.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: inscribed 2008 (proclaimed 2001); sung at rice sowing, harvest and funeral wakes; a complete recitation may last several days."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 0,
+   "verdict": "unreachable",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. https://www.mangyan.org/content/about now 301-redirects to mangyan.org/content/about/ which returns HTTP 404 ('Oops! That page can't be found'); the mangyan.org domain now serves an unrelated travel-booking template ('Popular destinations', 'Top Destinations'), not the Mangyan Heritage Center. Evidence cannot be found; source must be replaced (MRG Philippines page confirms only the collective name Mangyan)."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 1,
+   "verdict": "unreachable",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Same source as fact 0: HTTP 404 on a domain that now hosts an unrelated travel template. Claim about Hanunuo and Buhid scripts cannot be checked at this URL; needs a new, stable source (e.g. NCCA, UNESCO Memory of the World entry for the Hanunoo/Buhid scripts)."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 2,
+   "verdict": "unreachable",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. https://www.mangyan.org/content/mangyan-syllabic-script redirects to a 404 page on the same repurposed domain. Evidence phrase not retrievable; the domain no longer appears to belong to the Mangyan Heritage Center, so this source should not be relied on for weekly re-checks."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Provincial Government of Benguet, benguet.gov.ph); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Provincial Government of Benguet, benguet.gov.ph); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG page: Kankanay and Ibaloi of Benguet were wet-rice farmers working terraces for centuries."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Provincial Government of Benguet, benguet.gov.ph); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Provincial Government of Benguet, benguet.gov.ph); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-lumad",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "ph-lumad",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG: through efforts of the Lumad and lowland supporters, Art. XII(5) and XIV(17) of the 1987 Constitution."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Center for Orang Asli Concerns, coac.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Center for Orang Asli Concerns, coac.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Center for Orang Asli Concerns, coac.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 3,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Center for Orang Asli Concerns, coac.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-iban",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-iban",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Listing page gives 2011, compiled and published by the Tun Jugah Foundation, 1,392p, and the (truncated) blurb verbatim. The Foundation's item page https://tunjugahfoundation.org.my/publication-item/bup-sereba-reti-jaku-iban/ completes it: 'first monolingual dictionary ever been written in a Bornean language' and calls it an Iban language dictionary, which entails the fact. Recommend citing the item page."
+  },
+  {
+   "id": "my-iban",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Tun Jugah Foundation, tunjugahfoundation.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Kadazan Dusun Cultural Association Sabah, kdca.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Kadazan Dusun Cultural Association Sabah, kdca.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page explains Kaamatan as the annual paddy harvest festival; KDCA fosters unity through it."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Kadazan Dusun Cultural Association Sabah, kdca.org.my); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "id-dayak",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG Dayak page updated January 2018; 'by some estimates approximately 450 ethnolinguistic Dayak groups'."
+  },
+  {
+   "id": "id-dayak",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "id-mentawai",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (UNESCO Man and the Biosphere Programme, unesco.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MAB page shows 'Year of nomination 1981'."
+  },
+  {
+   "id": "id-mentawai",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (UNESCO Man and the Biosphere Programme, unesco.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "in-santal",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Department of Official Language, Ministry of Home Affairs, India, rajbhasha.gov.in); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page lists exactly 22 languages including 'Santhali'."
+  },
+  {
+   "id": "in-santal",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Page title is 'Elaka Administration: Khasi Hills Autonomous District Council' (source title slightly differs); content verbatim."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. 'Whole area' overstates: page says the entire area is governed by the Provisions of the Sixth Schedule except the Cantonment and Municipality of Shillong; page also does not use the phrase 'tribal self-rule'. Exception added; evidence unchanged.",
+   "text": "Apart from Shillong's municipality and cantonment, all of Meghalaya is governed under the Sixth Schedule, the only northeast state where this is so."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Khasi Hills Autonomous District Council, khadc.nic.in); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "in-garo",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Garo Hills Autonomous District Council, ghadc.nic.in); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "in-garo",
+   "fact": 1,
+   "verdict": "unsupported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. The MRG Bangladesh page does say the Mandi live in north-central Bangladesh, but it never mentions the Garo or links the Mandi to them (full-text search for 'Garo' and 'A·chik' finds nothing). The fact's core claim, that the Garo are known as Mandi in Bangladesh, needs a source that states it."
+  },
+  {
+   "id": "in-naga",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Nagaland State Portal, Government of Nagaland, nagaland.gov.in); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "in-naga",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Hornbill Festival, hornbillfestival.com); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. Page: first week of December, Naga Heritage Village Kisama about 12 km from Kohima; all tribes take part; organized by Government of Nagaland."
+  },
+  {
+   "id": "in-naga",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Content supported, but the text copied the source sentence nearly word for word ('Oral history travels through song, fables, and the beat of log drums'). Reworded; evidence unchanged.",
+   "text": "Naga peoples pass on their history orally, in songs and fables and to the rhythm of log drums."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG Bangladesh page updated July 2018."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "bd-marma",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "bd-marma",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG: figures follow its 2021 Census discussion; Magar 6.9, Tharu 6.2, Tamang 5.62 per cent."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (National Foundation for Development of Indigenous Nationalities, Nepal, nfdin.gov.np); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. NFDIN list (Devanagari) includes थारू verbatim."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (National Foundation for Development of Indigenous Nationalities, Nepal, nfdin.gov.np); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. NFDIN list (Devanagari) includes तामाङ verbatim."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. 12 related Karenic languages supported, but 'most of them in the S'gaw or Pwo branches' misreads the page: it is around 85 per cent of Karen people (not most languages) who belong to the S'ghaw or Pwo branches. Corrected; evidence unchanged.",
+   "text": "Karen is a name for several related peoples who speak 12 related Karenic languages; about 85 percent of Karen belong to the S'gaw or Pwo branches."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Page (updated March 2026): the 2025 Act on the protection and promotion of the way of life of ethnic groups affirms the rights of ethnic groups to preserve their languages, cultures and livelihoods. Page lists Karen among Thailand's peoples; applying the Act to Karen communities is a reasonable reading. Note the Act avoids the term 'indigenous'."
+  },
+  {
+   "id": "th-akha",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own."
+  },
+  {
+   "id": "th-akha",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Reachable (Minority Rights Group, minorityrights.org); evidence found verbatim; every number, year and name in the fact matches the page; wording is the researcher's own. MRG Thailand (updated March 2026): Akha arrived in the early twentieth century from neighbouring Myanmar."
+  },
+  {
+   "id": "th-akha",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Same passage as mm-karen fact 2; page lists the Akha among the groups covered. Act avoids the term 'indigenous'."
+  }
+ ],
+ "names": [
+  {
+   "id": "tw-pangcah",
+   "ok": true,
+   "note": "CIP Amis page: 'Amis people call themselves Pangcah'; CIP's official English heading is Amis."
+  },
+  {
+   "id": "tw-atayal",
+   "ok": true,
+   "note": "Name 'Atayal' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-paiwan",
+   "ok": true,
+   "note": "Name 'Paiwan' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-bunun",
+   "ok": true,
+   "note": "Name 'Bunun' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "ok": true,
+   "note": "Name 'Pinuyumayan' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-rukai",
+   "ok": true,
+   "note": "Name 'Rukai' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-tsou",
+   "ok": true,
+   "note": "CIP page heading is 'Cou'; text says the Tsou (Cou) people call themselves Tsou."
+  },
+  {
+   "id": "tw-saisiyat",
+   "ok": true,
+   "note": "Name 'Saisiyat' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-tao",
+   "ok": true,
+   "note": "CIP heading 'Yami'; page says the people call themselves Tao."
+  },
+  {
+   "id": "tw-thao",
+   "ok": true,
+   "note": "Name 'Thao' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-kavalan",
+   "ok": true,
+   "note": "Name 'Kavalan' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-truku",
+   "ok": true,
+   "note": "Name 'Truku' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-sakizaya",
+   "ok": true,
+   "note": "Name 'Sakizaya' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-sediq",
+   "ok": true,
+   "note": "Name 'Sediq' appears on the reachable name_source_url."
+  },
+  {
+   "id": "tw-hlaalua",
+   "ok": true,
+   "note": "CIP heading uses Hla’alua (curly apostrophe); same name."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "ok": true,
+   "note": "Name 'Kanakanavu' appears on the reachable name_source_url."
+  },
+  {
+   "id": "jp-ainu",
+   "ok": true,
+   "note": "Ainu Association of Hokkaido (official_url reachable): 'Ainu' is also the name of the Ainu as an ethnic group."
+  },
+  {
+   "id": "ph-ifugao",
+   "ok": true,
+   "note": "Name 'Ifugao' appears on the reachable name_source_url."
+  },
+  {
+   "id": "ph-mangyan",
+   "ok": false,
+   "note": "name_source_url is dead: mangyan.org now 404s on these paths and serves an unrelated travel template. The name Mangyan itself is correct and appears as a collective name on the MRG Philippines page (https://minorityrights.org/communities/indigenous-peoples-5/); replace the name source.",
+   "name": "Mangyan"
+  },
+  {
+   "id": "ph-kankanaey",
+   "ok": true,
+   "note": "Benguet provincial site uses 'Kankanaeys' and 'Kankana-ey'."
+  },
+  {
+   "id": "ph-ibaloi",
+   "ok": true,
+   "note": "Benguet provincial site uses 'Ibalois' and 'Ibaloi'."
+  },
+  {
+   "id": "ph-lumad",
+   "ok": true,
+   "note": "MRG: Lumad ('indigenous') used for Mindanao peoples. It is a collective umbrella term, not one nation's own name; respect review should confirm current self-identification preferences."
+  },
+  {
+   "id": "my-orang-asli",
+   "ok": true,
+   "note": "Name 'Orang Asli' appears on the reachable name_source_url."
+  },
+  {
+   "id": "my-iban",
+   "ok": true,
+   "note": "Name 'Iban' appears on the reachable name_source_url."
+  },
+  {
+   "id": "my-kadazandusun",
+   "ok": true,
+   "note": "Name 'Kadazandusun' appears on the reachable name_source_url and official_url."
+  },
+  {
+   "id": "id-dayak",
+   "ok": true,
+   "note": "Name 'Dayak' appears on the reachable name_source_url."
+  },
+  {
+   "id": "id-mentawai",
+   "ok": true,
+   "note": "Name 'Mentawai' appears on the reachable name_source_url."
+  },
+  {
+   "id": "in-santal",
+   "ok": true,
+   "note": "Name 'Santal' appears on the reachable name_source_url."
+  },
+  {
+   "id": "in-khasi",
+   "ok": true,
+   "note": "Name 'Khasi' appears on the reachable name_source_url and official_url."
+  },
+  {
+   "id": "in-garo",
+   "ok": true,
+   "note": "GHADC (Garo Hills ADC) uses 'Garo'. The self-name A·chik / A·chik Mande is not shown on the cited pages."
+  },
+  {
+   "id": "in-naga",
+   "ok": true,
+   "note": "Nagaland state portal; 'Naga' is the collective name, with 17 major tribes listed (Angami, Ao, Chakhesang and others)."
+  },
+  {
+   "id": "bd-chakma",
+   "ok": true,
+   "note": "Name 'Chakma' appears on the reachable name_source_url."
+  },
+  {
+   "id": "bd-marma",
+   "ok": true,
+   "note": "Name 'Marma' appears on the reachable name_source_url."
+  },
+  {
+   "id": "np-tharu",
+   "ok": true,
+   "note": "NFDIN list shows थारू (Tharu). Note: NFDIN lists रानाथारू (Rana Tharu) as a separate Adivasi Janajati, so 'Rana Tharu' should not be listed as an alternate name for Tharu."
+  },
+  {
+   "id": "np-tamang",
+   "ok": true,
+   "note": "NFDIN list shows तामाङ (Tamang)."
+  },
+  {
+   "id": "mm-karen",
+   "ok": true,
+   "note": "Name 'Karen' appears on the reachable name_source_url."
+  },
+  {
+   "id": "th-akha",
+   "ok": true,
+   "note": "Name 'Akha' appears on the reachable name_source_url."
+  }
+ ]
+}

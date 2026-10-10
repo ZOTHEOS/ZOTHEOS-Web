@@ -1,0 +1,851 @@
+{
+ "region": "canada",
+ "checked": "2026-10-08",
+ "results": [
+  {
+   "id": "eeyou-istchee-cree-qc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Page: \"We call ourselves Eeyou\"; eleven communities (the eleventh, MoCreebec, is on the Ontario side; page notes the territory reaches into Ontario)."
+  },
+  {
+   "id": "eeyou-istchee-cree-qc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "eeyou-istchee-cree-qc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "muskeg-lake-cree-nation-sk-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "City of Saskatoon page: Asimakeniseekan Askiy created by Muskeg Lake Cree Nation in 1988, first commercial urban reserve in Canada."
+  },
+  {
+   "id": "muskeg-lake-cree-nation-sk-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Site blocks curl (403) but WebFetch read it: \"From August 20-23, 2026, Muskeg Lake Cree Nation will be gathering to commemorate 150 years since the signing of Treaty 6.\" Event is now past (Aug 2026); wording still accurate."
+  },
+  {
+   "id": "muskeg-lake-cree-nation-sk-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch read it (curl 403): veterans sentence verbatim; page names WWI, WWII, the Korean conflict and peace-time service."
+  },
+  {
+   "id": "anishinabek-nation-on-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "anishinabek-nation-on-ca",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported, but the original reused a 12-word source run verbatim; reworded into own words.",
+   "text": "It is Ontario's oldest political organization, with roots in the Confederacy of Three Fires that long predates European contact.",
+   "evidence": "is the oldest political organization in Ontario"
+  },
+  {
+   "id": "anishinabek-nation-on-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Page says the Council \"first met under that name in 1870\" (older councils existed before) and that the UOI was established \"to replace\" it; precision fix.",
+   "text": "In 1949 the Nation set up the Union of Ontario Indians as its secretariat, replacing the Grand General Indian Council, which first met under that name in 1870.",
+   "evidence": "established the Union of Ontario Indians (UOI) as its secretariat in 1949"
+  },
+  {
+   "id": "mikmaq-mikmaki-ns-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Timeline 2006 (October): the 13 NS Mi'kmaq Chiefs establish the Assembly to direct negotiators and pass resolutions on rights and title."
+  },
+  {
+   "id": "mikmaq-mikmaki-ns-ca",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported, but 18 consecutive words were copied from the source; reworded.",
+   "text": "In 1999 the Marshall decision of the Supreme Court of Canada recognized the Treaties of 1760 and 1761, along with a right to hunt, fish and gather to earn a moderate livelihood.",
+   "evidence": "recognizing the Treaties of 1760 and 1761"
+  },
+  {
+   "id": "mikmaq-mikmaki-ns-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Timeline 2020 (October) entry supports it."
+  },
+  {
+   "id": "wolastoqiyik-nb-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "wolastoqiyik-nb-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported; WNNB formed 2017."
+  },
+  {
+   "id": "wolastoqiyik-nb-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "six-nations-grand-river-on-ca",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Supported, but the whole fact was the source sentence verbatim; reworded.",
+   "text": "No First Nation in Canada has a larger population than Six Nations of the Grand River.",
+   "evidence": "is the most populous First Nation in Canada"
+  },
+  {
+   "id": "six-nations-grand-river-on-ca",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported (page lists all six), but copied 11 words verbatim; reworded.",
+   "text": "It is the only First Nation community home to all six Haudenosaunee nations: Mohawk, Cayuga, Onondaga, Oneida, Seneca and Tuscarora.",
+   "evidence": "the only First Nation community that includes all six Haudenosaunee nations"
+  },
+  {
+   "id": "six-nations-grand-river-on-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "kahnawake-mohawk-qc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "kahnawake-mohawk-qc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "kahnawake-mohawk-qc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Supported; page adds the number has dropped very recently."
+  },
+  {
+   "id": "akwesasne-mohawk-on-qc-ny",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "akwesasne-mohawk-on-qc-ny",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported (MNCC, MCA, SRMT); original copied a 10-word run; reworded.",
+   "text": "Akwesasne spans lands in Quebec, Ontario and New York State, and three separate but linked political bodies govern it.",
+   "evidence": "governed by three distinct but connected political bodies"
+  },
+  {
+   "id": "akwesasne-mohawk-on-qc-ny",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "wendat-wendake-qc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "5 233 Wendat, 1 495 in Wendake, 3 738 elsewhere in Quebec, other provinces and countries."
+  },
+  {
+   "id": "wendat-wendake-qc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Langue page: dormancy began in the 19th century; Yawenda ran July 2007 to July 2012 and mobilized Iroquoian language specialists and many community members."
+  },
+  {
+   "id": "wendat-wendake-qc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "300+ businesses; 167 are artisans, artists and cultural businesses/organizations."
+  },
+  {
+   "id": "innu-labrador-quebec-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "innu-labrador-quebec-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Supported. Note: cited URL now redirects from /exec/iar/ to /exec/irr/ (same page, same publisher)."
+  },
+  {
+   "id": "innu-labrador-quebec-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Signed September 26, 2008. Same /iar/ to /irr/ redirect note."
+  },
+  {
+   "id": "atikamekw-nitaskinan-qc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "\"majeure partie (65 %)\" of the population is aged 0-35."
+  },
+  {
+   "id": "atikamekw-nitaskinan-qc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "atikamekw-nitaskinan-qc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Page: \"Il fallait dire et designer les elements tels qu'ils etaient reellement\" plus the evidence sentence."
+  },
+  {
+   "id": "dene-denendeh-nt-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "denenation.com blocks curl (403); WebFetch confirmed \"Dene means simply the people\" and that Denendeh is the homeland in the western NWT."
+  },
+  {
+   "id": "dene-denendeh-nt-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch confirmed the sentence and the intro list Gwich'in, Sahtu, Deh Cho, Tlicho, and Akaitcho Dene."
+  },
+  {
+   "id": "dene-denendeh-nt-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch confirmed July 1975, 300+ delegates, Fort Simpson, unanimously adopted; it asserted the Dene are a distinct nation."
+  },
+  {
+   "id": "tlicho-nt-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "GNWT EIA page: effective August 4, 2005 (signed Aug 25, 2003); first combined agreement in the NWT."
+  },
+  {
+   "id": "tlicho-nt-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "tlicho-nt-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Law-making authority includes education, adoption, child and family services, Tlicho language and culture."
+  },
+  {
+   "id": "vuntut-gwitchin-yt-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Official language sentence plus \"training language teachers and raising young Van Tat Gwich'in speaking the language\"."
+  },
+  {
+   "id": "vuntut-gwitchin-yt-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "vuntut-gwitchin-yt-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "siksika-blackfoot-ab-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "\"The language of Siksika Nation is Siksika (Blackfoot)\"."
+  },
+  {
+   "id": "siksika-blackfoot-ab-ca",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported (June 1992, Canadian Heraldic Authority); original copied 14 of 17 words; reworded and dated.",
+   "text": "Siksika's coat of arms, registered with the Canadian Heraldic Authority in June 1992, was the first registered by any Nation in Canada.",
+   "evidence": "to register its symbol as a Coat of Arms"
+  },
+  {
+   "id": "siksika-blackfoot-ab-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "\"1877 Treaty Number 7 was signed at Blackfoot Crossing in Siksika.\""
+  },
+  {
+   "id": "kainai-blood-tribe-ab-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "CIRNAC FNP: Official Name Blood, No. 435, Registered Population as of September, 2026, total 13,057."
+  },
+  {
+   "id": "kainai-blood-tribe-ab-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "bloodtribe.org blocks curl (403); WebFetch confirmed the headline verbatim (award received June 5, 2026)."
+  },
+  {
+   "id": "kainai-blood-tribe-ab-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch confirmed the mission statement verbatim."
+  },
+  {
+   "id": "piikani-ab-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "piikani-ab-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "Page also says presence known far west into the Rocky Mountains. Refers only to the source of knowledge, no ceremonial content."
+  },
+  {
+   "id": "piikani-ab-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "CIRNAC FNP: Piikani Nation No. 436, as of September, 2026, total 3,928."
+  },
+  {
+   "id": "tsuutina-ab-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Also: \"connected to the Dene Nation through our language (Athabaskan)\"."
+  },
+  {
+   "id": "tsuutina-ab-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "tsuutina-ab-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Supported; attributed self-description that reuses the Nation's own 8-word phrase, acceptable as attribution."
+  },
+  {
+   "id": "haida-gwaii-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Release dated April 14, 2024; Gaayhllxid / Rising Tide Haida Title Lands Agreement."
+  },
+  {
+   "id": "haida-gwaii-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "haida-gwaii-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "nuu-chah-nulth-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "nuu-chah-nulth-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "nuu-chah-nulth-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "musqueam-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "musqueam-bc-ca",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Supported; original copied 11 words verbatim; reworded.",
+   "text": "For thousands of years, Musqueam ancestors have lived in the Fraser River estuary, an area that takes in much of today's Metro Vancouver.",
+   "evidence": "have lived in the Fraser River estuary, including much of Metro Vancouver"
+  },
+  {
+   "id": "musqueam-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Page describes the plant as a flowering plant; no sacred story content included in the fact."
+  },
+  {
+   "id": "squamish-bc-ca",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Unsupported detail removed: the cited page never names the language with the term used in the original text (WebFetch confirmed the term is absent). Rest supported.",
+   "text": "The Squamish language is a sign of resilience: dozens of Nation members are learning it from their Elders as a second language.",
+   "evidence": "dozens of us learning it as a second language"
+  },
+  {
+   "id": "squamish-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "squamish-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "tsleil-waututh-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Page: \"We are selilwetal (Tsleil-Waututh Nation), People of the Inlet\" plus the language and name sentences."
+  },
+  {
+   "id": "tsleil-waututh-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "tsleil-waututh-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "secwepemc-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "secwepemc-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "secwepemc-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "tkemlups.ca blocks curl (403); WebFetch confirmed: \"To promote Secwepemctsin, as the primary language of communication, education, ceremony, government and businesses within the territory of TteS.\""
+  },
+  {
+   "id": "syilx-okanagan-bc-wa",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Page does not say who did the advocacy and planning, so \"Syilx-led\" was unsupported; attributed to the ONA as reporter instead.",
+   "text": "The Okanagan Nation Alliance reports that the new Okanagan Dam Fish Passage, after years of advocacy and planning, lets salmon reach Okanagan Lake for the first time in nearly 100 years.",
+   "evidence": "for the first time in nearly 100 years"
+  },
+  {
+   "id": "syilx-okanagan-bc-wa",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Page says \"Historically\" and \"in Canada\" (not BC); the ONA today lists six member communities, so the present-tense reading was misleading.",
+   "text": "Historically the Okanagan Nation Alliance represented eight member communities: seven in Canada and the Colville Confederated Tribes in Washington State.",
+   "evidence": "Historically, the ONA has represented 8 member communities"
+  },
+  {
+   "id": "syilx-okanagan-bc-wa",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "ktunaxa-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "ktunaxa-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "ktunaxa-bc-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Page lists four Ktunaxa First Nations but never says \"in Canada\", and says the KNC \"helps represent\" them; tightened to page wording.",
+   "text": "The Ktunaxa Nation Council helps represent the shared interests of four Ktunaxa First Nations within ʔamakʔis Ktunaxa, the Ktunaxa homelands.",
+   "evidence": "helps represent the shared interests of these Ktunaxa First Nations"
+  },
+  {
+   "id": "nisgaa-bc-ca",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Supported, but the whole fact was the source sentence verbatim; reworded.",
+   "text": "The Nisg̱a’a Final Agreement was the first modern treaty in British Columbia, and it recognizes both Nisg̱a’a Lands and the Nisg̱a’a Government.",
+   "evidence": "British Columbia’s first modern treaty, recognizes"
+  },
+  {
+   "id": "nisgaa-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "\"over 360 fluent Nisga'a speakers in our villages\" and \"Nisga'a is currently taught in our schools\"."
+  },
+  {
+   "id": "nisgaa-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "gitxsan-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "gitxsan-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "gitxsan-bc-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Page says the Gitxsan worked to restore their \"ancestral identity and strength\", not the language specifically; unsupported clause dropped.",
+   "text": "Gitxsanimaax, the traditional Gitxsan language, has two dialects: Giigeenix, spoken up river, and Gyeets, spoken down river.",
+   "evidence": "Gitxsanimaax is the traditional Gitxsan language"
+  },
+  {
+   "id": "heiltsuk-bc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "heiltsuk-bc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "2025 timeline entry verbatim."
+  },
+  {
+   "id": "heiltsuk-bc-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "1997 timeline entry."
+  },
+  {
+   "id": "inuit-nunangat-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "\"The majority of our population lives in 51 communities\"."
+  },
+  {
+   "id": "inuit-nunangat-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "inuit-nunangat-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Supported; original copied 13 words verbatim; reworded.",
+   "text": "Inuit Nunangat, the Canadian Inuit name for the homeland, takes in land, water and ice, which Inuit see as integral to their culture and way of life.",
+   "evidence": "is a Canadian Inuit term that includes land, water, and ice"
+  },
+  {
+   "id": "nunavut-inuit-nu-ca",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Supported; original copied a 10-word run; reworded.",
+   "text": "Signed on May 25, 1993, the Nunavut Agreement is the biggest Aboriginal land claims agreement ever made in Canada.",
+   "evidence": "is the largest Aboriginal land claims agreement in Canadian history"
+  },
+  {
+   "id": "nunavut-inuit-nu-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "nunavut-inuit-nu-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "ITK page: \"On April 1, 1999, Nunavut became Canada's newest territory\" and the official languages sentence."
+  },
+  {
+   "id": "nunavik-inuit-qc-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Supported; note Makivvik says the 10,000+ figure includes Inuit living in Chisasibi, outside Nunavik."
+  },
+  {
+   "id": "nunavik-inuit-qc-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "\"over 95% among Inuit. Inuktitut remains the dominant language spoken.\""
+  },
+  {
+   "id": "nunavik-inuit-qc-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Supported (page capitalizes \"To Rise Up\"); original copied 16 words verbatim; reworded.",
+   "text": "Makivvik, an Inuktitut name meaning 'to rise up', protects Nunavik Inuit rights under the 1975 James Bay and Northern Quebec Agreement, Canada's first comprehensive Inuit land claim.",
+   "evidence": "the first comprehensive Inuit land claim in Canada"
+  },
+  {
+   "id": "nunatsiavut-labrador-inuit-nl-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "ITK page sentence verbatim."
+  },
+  {
+   "id": "nunatsiavut-labrador-inuit-nl-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "ITK page sentence."
+  },
+  {
+   "id": "nunatsiavut-labrador-inuit-nl-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Online Inuttitut phrasebook app text verbatim."
+  },
+  {
+   "id": "inuvialuit-nt-ca",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "Supported; original copied 13 words verbatim; reworded and added the page's \"only the second in Canada at that time\".",
+   "text": "Signed on June 5, 1984, the Inuvialuit Final Agreement was the first comprehensive land claim agreement north of 60 degrees latitude, and only the second in Canada at the time.",
+   "evidence": "first comprehensive land claim agreement signed north of the 60th parallel"
+  },
+  {
+   "id": "inuvialuit-nt-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "inuvialuit-nt-ca",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Supported; original copied 12 words verbatim; reworded.",
+   "text": "One of the agreement's basic goals is keeping Inuvialuit cultural identity and values strong as northern society changes.",
+   "evidence": "Preserve Inuvialuit cultural identity and values within a changing northern society"
+  },
+  {
+   "id": "metis-nation-ca",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "MNC About page (cited /about redirects to /about/about-us/)."
+  },
+  {
+   "id": "metis-nation-ca",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  },
+  {
+   "id": "metis-nation-ca",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "WebFetch + direct fetch: page reachable, publisher confirmed, evidence verbatim, fact supported"
+  }
+ ],
+ "names": [
+  {
+   "id": "eeyou-istchee-cree-qc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "muskeg-lake-cree-nation-sk-ca",
+   "ok": true,
+   "note": "Site header (WebFetch): Muskeg Lake Cree Nation, Band No. 102, maskêko-sâkahikan plus syllabics."
+  },
+  {
+   "id": "anishinabek-nation-on-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "mikmaq-mikmaki-ns-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "wolastoqiyik-nb-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "six-nations-grand-river-on-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "kahnawake-mohawk-qc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "akwesasne-mohawk-on-qc-ny",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "wendat-wendake-qc-ca",
+   "ok": true,
+   "note": "Page uses \"Nation Wendat\"; \"Nation huronne-wendat\" does not appear on the cited page (alias only)."
+  },
+  {
+   "id": "innu-labrador-quebec-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "atikamekw-nitaskinan-qc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "dene-denendeh-nt-ca",
+   "ok": true,
+   "note": "Dene / Dene Nation confirmed via WebFetch (curl 403)."
+  },
+  {
+   "id": "tlicho-nt-ca",
+   "ok": true,
+   "note": "Name confirmed on the GNWT name_source page; official tlicho.ca blocks automated fetch (403)."
+  },
+  {
+   "id": "vuntut-gwitchin-yt-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "siksika-blackfoot-ab-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "kainai-blood-tribe-ab-ca",
+   "ok": true,
+   "note": "Site header \"Blood Tribe (Kainai)\", footer \"Kainaiwa\" (WebFetch)."
+  },
+  {
+   "id": "piikani-ab-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "tsuutina-ab-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "haida-gwaii-bc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "nuu-chah-nulth-bc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "musqueam-bc-ca",
+   "ok": true,
+   "note": "Name used on musqueam.bc.ca. Pronunciation muss-KWEE-um verified on the SFU Host Nations guide (a university source, not the Nation's own)."
+  },
+  {
+   "id": "squamish-bc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "tsleil-waututh-bc-ca",
+   "ok": true,
+   "note": "Name used on twnation.ca. Pronunciation SLAY-wha-tuth verified on the SFU guide (university source, not the Nation's own)."
+  },
+  {
+   "id": "secwepemc-bc-ca",
+   "ok": true,
+   "note": "Secwépemc used on tkemlups.ca; pronunciation \"suh-Wep-muhc\" verified there (WebFetch)."
+  },
+  {
+   "id": "syilx-okanagan-bc-wa",
+   "ok": true,
+   "note": "\"Syilx Okanagan Nation\" is the syilx.org page title."
+  },
+  {
+   "id": "ktunaxa-bc-ca",
+   "ok": true,
+   "note": "Ktunaxa; pronunciation k-too-nah-ha verified on ktunaxa.org/about/map/."
+  },
+  {
+   "id": "nisgaa-bc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "gitxsan-bc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "heiltsuk-bc-ca",
+   "ok": true,
+   "note": "Haíɫzaqv used on heiltsuk.ca (Heiltsuk Tribal Council). Note: heiltsuk.ca says it is a temporary landing page while heiltsuknation.ca is restored."
+  },
+  {
+   "id": "inuit-nunangat-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "nunavut-inuit-nu-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "nunavik-inuit-qc-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "nunatsiavut-labrador-inuit-nl-ca",
+   "ok": true,
+   "note": "nunatsiavut.com uses \"Labrador Inuit\"; \"Nunatsiavummiut\" is not on that page (alias only)."
+  },
+  {
+   "id": "inuvialuit-nt-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  },
+  {
+   "id": "metis-nation-ca",
+   "ok": true,
+   "note": "Name as published confirmed on name_source_url / official site."
+  }
+ ]
+}

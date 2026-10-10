@@ -1,0 +1,66 @@
+{
+  "updated": "2026-10-09",
+  "nations": [
+    {
+      "id": "test-nation-a",
+      "name": "Test Nation A",
+      "also": ["Test Name A2"],
+      "pronounce": null,
+      "lands": "Test lands for layout only",
+      "countries": ["Test Country"],
+      "official_url": "https://example.org/test-nation-a",
+      "region": "Test Region One",
+      "facts": [
+        {
+          "text": "Test fact, not for release.",
+          "kind": "test",
+          "as_of": "2026",
+          "source": { "title": "Test source A", "publisher": "Test Publisher", "url": "https://example.org/source-a", "accessed": "2026-10-09" },
+          "evidence": "Test evidence, never shown."
+        }
+      ]
+    },
+    {
+      "id": "test-nation-b",
+      "name": "Test Nation B",
+      "also": [],
+      "pronounce": { "text": "Test pronunciation B", "source_url": "https://example.org/say-b" },
+      "lands": "Test lands for layout only",
+      "countries": ["Test Country", "Test Country Two"],
+      "official_url": "https://example.org/test-nation-b",
+      "region": "Test Region Two",
+      "facts": [
+        {
+          "text": "Test fact, not for release.",
+          "kind": "test",
+          "source": { "title": "Test source B", "publisher": "Test Publisher", "url": "https://example.org/source-b", "accessed": "2026-10-09" },
+          "evidence": "Test evidence, never shown."
+        },
+        {
+          "text": "Test fact, not for release.",
+          "kind": "test",
+          "source": { "title": "Test source B2", "publisher": "Test Publisher", "url": "https://example.org/source-b2", "accessed": "2024-01-15" },
+          "evidence": "Test evidence, never shown."
+        }
+      ]
+    },
+    {
+      "id": "test-nation-c",
+      "name": "Test Nation C",
+      "also": ["Test Name C2", "Test Name C3"],
+      "pronounce": null,
+      "lands": "Test lands for layout only",
+      "countries": ["Test Country Three"],
+      "official_url": "",
+      "region": "Test Region Three",
+      "facts": [
+        {
+          "text": "Test fact, not for release.",
+          "kind": "test",
+          "source": { "title": "Test source C", "publisher": "Test Publisher", "url": "https://example.org/source-c", "accessed": "2026-10-09" },
+          "evidence": "Test evidence, never shown."
+        }
+      ]
+    }
+  ]
+}

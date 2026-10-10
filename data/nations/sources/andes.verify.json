@@ -1,0 +1,508 @@
+{
+  "region": "andes",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "quechua-andes-pe-bo",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. The page ties the 2017 census only to the preceding sentence (2,050,123 people in Quechua localities); the 5,179,774 sentence begins 'Asimismo, a nivel nacional' with no explicit census attribution. Removed the census attribution.",
+      "text": "Peru's Ministry of Culture reports that 5,179,774 people nationwide feel or consider themselves part of the Quechua peoples.",
+      "evidence": "personas se sienten o consideran parte de los pueblos Quechuas"
+    },
+    {
+      "id": "quechua-andes-pe-bo",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Lengua section: language 'se encuentra en estado vital'; Censos Nacionales 2017 indicate 3,805,531 people learned to speak Quechua in childhood."
+    },
+    {
+      "id": "quechua-andes-pe-bo",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. UNESCO ICH: inscribed 2013 (8.COM); rope suspension bridge over a gorge of the Apurimac River in the southern Andes, renewed every year with Inca techniques by four Quechua-speaking peasant communities. Fact avoids the sacred and ritual details."
+    },
+    {
+      "id": "aymara-altiplano-bo-pe-cl",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Bolivia press release (28 Aug 2025) on Censo 2024: Quechua and Aymara each have more than one million self-identification declarations."
+    },
+    {
+      "id": "aymara-altiplano-bo-pe-cl",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. BDPI Aimara: language 'se encuentra en estado vital'; Censos Nacionales 2017: 450,010 learned Aimara in childhood."
+    },
+    {
+      "id": "aymara-altiplano-bo-pe-cl",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Chile Censo 2024: Mapuche 8.8% (1,623,073), followed by Aymara 1% (178,637), so second largest."
+    },
+    {
+      "id": "uro-titicaca-pe-bo",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. The intro says the majority population settled for centuries on totora rafts ('islas flotantes'), but the same page later says most of the self-identified Uro population lives on dry land at the Uros Chulluni community. Rewrote to avoid the conflicting 'most' claim; the page also says a large number of Uro families still live on the floating islands.",
+      "text": "For centuries the Uro have lived on large rafts of totora reed, called floating islands, on Lake Titicaca in the Bay of Puno, and many Uro families still live on them.",
+      "evidence": "se ha asentado durante siglos en enormes balsas de totora"
+    },
+    {
+      "id": "uro-titicaca-pe-bo",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Page: initiatives in the Uro people to recover knowledge of their former language, with support from the Ministerio de Cultura. Fact correctly leaves out the page's 'extinta' framing."
+    },
+    {
+      "id": "uro-titicaca-pe-bo",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Censos Nacionales 2017: 681 people self-identified as part of the Uro people nationally."
+    },
+    {
+      "id": "uru-chipaya-oruro-bo",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Article dated 12 July 2017. The 2016 statute referendum is supported, but the referendum did not by itself make Uru Chipaya a self-government: the page says it would become Bolivia's third Indigenous self-government in July 2017 on electing its authorities (headline: first three autogobiernos). Rewrote the sequence and swapped the evidence to the self-government sentence.",
+      "text": "The Uru Chipaya nation approved its own autonomy statute by referendum in 2016 and in 2017 became one of Bolivia's first three Indigenous self-governments.",
+      "evidence": "Uru Chipaya se convertirá en el tercer autogobierno indígena de Bolivia"
+    },
+    {
+      "id": "uru-chipaya-oruro-bo",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. OEP Fuente Directa (24 Jul 2017): the statute includes recognition of the Uru Chipaya language as official of the autonomous government."
+    },
+    {
+      "id": "uru-chipaya-oruro-bo",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. OEP Fuente Directa (24 Jul 2017): the executive (Lanqsñi Paqh mä eph) is held by turns; Aranzaya first, then Manazaya, Wistrullani and Ayparavi."
+    },
+    {
+      "id": "kichwa-sierra-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Asamblea Nacional press item (3 Jun 2009) quotes Art. 2: castellano, kichwa and shuar are official languages of intercultural relations."
+    },
+    {
+      "id": "kichwa-sierra-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Same item (3 Jun 2009): Constitution translated into Kichwa; translation under review by five delegates of Indigenous communities of Imbabura, Loja, Cañar, Chimborazo and Pastaza."
+    },
+    {
+      "id": "kichwa-otavalo-imbabura-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Burke Museum object 2003-101/1, culture of origin 'Kichwa, Peguche': label says first traditional floor loom ever built in the US, by a group of Kichwa weavers from Peguche, near Otavalo."
+    },
+    {
+      "id": "kichwa-otavalo-imbabura-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Cultural Survival Bazaar page: 11 Cachimuel siblings; Kichwa Otavalo fusion; started 1984; original Indigenous rhythms on traditional Andean instruments; promotes conservation of Kichwa traditions."
+    },
+    {
+      "id": "kichwa-otavalo-imbabura-ec",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Cultural Survival (12 Oct 2022): Hampiriypacha, Association of Seed Guardians and Runa Health (Kichwa Otavalo), works to protect and reinforce ancestral knowledge that women have transmitted for generations."
+    },
+    {
+      "id": "kichwa-saraguro-loja-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Cultural Survival (17 Apr 2019): CORPUKIS (Coordinadora de Organizaciones del Pueblo Kichwa Saraguro) works with campesino and Indigenous grassroots organizations to advance civil, human and collective rights in their territory."
+    },
+    {
+      "id": "kichwa-saraguro-loja-ec",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. The page (17 Apr 2019) says Radio Kipa is 'one of the few radios' to secure a state license 'in the past couple of years', not 'community stations'; 'recently' also needed a time anchor for a 2019 statement. Tightened the wording; training 30 young people in community communication is supported.",
+      "text": "In 2019 Radio Kipa, a new community radio station in Saraguro, was one of the few radios to have won a license from Ecuador's state in recent years, and planned to train 30 young people.",
+      "evidence": "able to secure a radio license from the Ecuadorian State"
+    },
+    {
+      "id": "kichwa-puruwa-chimborazo-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MSP guide section 5.3: per the 2010 census the Kichwa Puruwá people number 136,141, 18.5% of the Kichwa nationality (INEC 2010)."
+    },
+    {
+      "id": "kichwa-puruwa-chimborazo-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. Same section: the communities of Cachas, Coltas, Lictos and Guamotes form part of this people, each with specific local characteristics."
+    },
+    {
+      "id": "kichwa-puruwa-chimborazo-ec",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. Same section: 'actualmente, los puruwá son la población indígena más grande de la Sierra del Ecuador'. Fact avoids the adjacent poverty framing."
+    },
+    {
+      "id": "kichwa-kanari-canar-ec",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. Page: 'mantiene vigorosa su identidad étnica. Tiene un sistema organizativo muy fuerte, las cooperativas y diferentes tipos de organizaciones son muy activas.' It says 'different types of organizations', not 'community organizations'. Corrected.",
+      "text": "The Kañari keep a vigorous ethnic identity and a very strong organizational system, in which cooperatives and many kinds of organizations are very active.",
+      "evidence": "el pueblo kañari mantiene vigorosa su identidad étnica"
+    },
+    {
+      "id": "kichwa-kanari-canar-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. Page: Cañar parish holds the province's largest Indigenous organizational network, bringing together 15 communities and 5 cooperatives."
+    },
+    {
+      "id": "kichwa-kanari-canar-ec",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. Page: food and seed exchanges happen between altitude levels; separately, the exchange networks work across regions, especially with the coast. The page does not say foods and seeds are traded with the coast. Separated the two claims.",
+      "text": "Kañari communities trade foods and seeds between higher and lower altitude zones, and their lively exchange networks also reach other regions, especially Ecuador's coast.",
+      "evidence": "la vitalidad con la que funcionan sus redes de intercambio"
+    },
+    {
+      "id": "kichwa-kayambi-cayambe-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Asamblea Nacional site, blog of Asambleísta Ricardo Ulcuango Farinango (7 Apr 2022): at the General Assembly of the Confederación del Pueblo Kayambi he received the proposals and demands of communities and organizations. Note: the publisher is an individual legislator's blog hosted on the Assembly site."
+    },
+    {
+      "id": "kichwa-kayambi-cayambe-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Same blog (8 Apr 2022): work meeting with representatives of Juntas de Agua, second-tier organizations, comunas and communities to discuss issues including a new Ley de Aguas."
+    },
+    {
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura Colombia: weaving is fundamental; besides producing mochilas, ruanas and clothing, weaving transmits thought, and with it tradition and cosmology."
+    },
+    {
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. CIT site: 'Organización del Pueblo Arhuaco', founded in 1976; featured project to revitalize the Guatapurí river basin, including planting 18,000 native trees (project runs 30 Oct 2025 to 20 Feb 2027)."
+    },
+    {
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. UNESCO decision 17.COM 7.B.3 (Rabat, 2022): 'Decides to inscribe Ancestral system of knowledge of the four indigenous peoples, Arhuaco, Kankuamo, Kogui and Wiwa' on the Representative List."
+    },
+    {
+      "id": "kaggaba-kogi-sierra-nevada-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. OGT official site header: the space for the Kággaba people, serving as the representative body of their Indigenous government."
+    },
+    {
+      "id": "kaggaba-kogi-sierra-nevada-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: the Kággabba share the Sierra with the Wiwa, Iku and Kankuamo and jointly exercise control over the Kogui-Malayo-Arhuaco resguardo; formalized 8 Oct 1980 by INCORA Resolución 0109."
+    },
+    {
+      "id": "kaggaba-kogi-sierra-nevada-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: the native language is called Kogui and belongs to the Chibcha language family."
+    },
+    {
+      "id": "wiwa-sierra-nevada-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: Damana is the mother tongue; they also know Kogui (Koggian); bilingualism with Spanish; 'actualmente, la mayoría de los jóvenes dominan las tres lenguas'."
+    },
+    {
+      "id": "wiwa-sierra-nevada-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: through education policies the Wiwa established an alphabet; reform of study programs is sought so Damana and Spanish can be learned in schools."
+    },
+    {
+      "id": "wiwa-sierra-nevada-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: mochilas duadu (pure cotton, for personal belongings) and suzu (fique fiber, colorful designs)."
+    },
+    {
+      "id": "kankuamo-sierra-nevada-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: since the late 1980s, supported by their Sierra Indigenous siblings and strong organizing, they began a process of ethnic reclamation, cultural survival and peaceful resistance."
+    },
+    {
+      "id": "kankuamo-sierra-nevada-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: Kankuamo resguardo near Valledupar, 24,212.206 ha, collectively titled by INCORA in 2003."
+    },
+    {
+      "id": "kankuamo-sierra-nevada-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. UNESCO decision 17.COM 7.B.3 (2022) inscribes the ancestral system of knowledge of the Arhuaco, Kankuamo, Kogui and Wiwa."
+    },
+    {
+      "id": "nasa-cauca-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. DANE CNPV 2018 press release: 'los cuatro pueblos indígenas más numerosos del país (Wayuu, Zenú, Nasa y Pastos)'."
+    },
+    {
+      "id": "nasa-cauca-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: native language Nasa Yuwe; 41.9% speakers (78,064) per a table based on the DANE 2005 census. Fact leaves out the source's 'risk of extinction' framing."
+    },
+    {
+      "id": "nasa-cauca-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: in 1971 the CRIC was born, with objectives including recovering resguardo lands, strengthening cabildos, and defending Indigenous history, language and customs."
+    },
+    {
+      "id": "misak-cauca-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: the Misak keep their mother tongue Wampi-misamerawam and consider it fundamental to their ethnic and cultural identity."
+    },
+    {
+      "id": "misak-cauca-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: in 2000 the first Indigenous person elected by popular vote as governor of Cauca, a Misak leader."
+    },
+    {
+      "id": "misak-cauca-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: Misak dress is a permanent symbol of resistance and of representation before the Western world and other peoples; men wear the lusi pal, a rectangular blue wrap."
+    },
+    {
+      "id": "pasto-narino-co-ec",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. DANE CNPV 2018: the four most numerous peoples are Wayuu, Zenú, Nasa and Pastos."
+    },
+    {
+      "id": "pasto-narino-co-ec",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: the Pasto live mainly in colonial resguardos, INCORA resguardos and individually owned plots in Nariño municipalities including Cumbal, Guachucal, Ipiales and Túquerres."
+    },
+    {
+      "id": "pasto-narino-co-ec",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: an ongoing process of reclamation; efforts to recover Pasto identity, oral tradition and ancestral customs and to strengthen own-law practices, represented through cabildos."
+    },
+    {
+      "id": "yanacona-macizo-co",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: Yanacona territory corresponds to a significant part of the Macizo Colombiano."
+    },
+    {
+      "id": "yanacona-macizo-co",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: the organizing process seeks recovery of identity and ancestral culture, including the traditional language Quechua, and strengthening of cabildo authorities."
+    },
+    {
+      "id": "yanacona-macizo-co",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl full-text (pdftotext) check; WebFetch cannot parse this PDF (returns binary) but the URL resolves (HTTP 200, application/pdf); publisher confirmed in document header; evidence phrase found verbatim. MinCultura: CRIC founded in 1971 by a union of leaders of several Cauca communities, among them Juan Gregorio Palechor, Yanacona of the Guachicono resguardo."
+    },
+    {
+      "id": "mapuche-cl-ar",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Chile Censo 2024: Mapuche 8.8% (1,623,073), the largest proportion."
+    },
+    {
+      "id": "mapuche-cl-ar",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museo Chileno de Arte Precolombino: today most Mapuche in Chile live in urban neighborhoods; the largest groups are in southern cities of Araucanía and in Santiago. Note: page copyright 2012."
+    },
+    {
+      "id": "mapuche-cl-ar",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museo Chileno de Arte Precolombino: Mapudungu/Mapudungun 'is still the most widely spoken aboriginal language in Chile today'. Note: page copyright 2012."
+    },
+    {
+      "id": "diaguita-norte-chico-cl-ar",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Chile Censo 2024: Diaguita 0.8% (153,231), third after Mapuche and Aymara."
+    },
+    {
+      "id": "diaguita-norte-chico-cl-ar",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museum page: most of the population that self-identifies as Diaguita lives in the Upper Huasco River basin, municipality of Alto del Carmen."
+    },
+    {
+      "id": "diaguita-norte-chico-cl-ar",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museum page: the first Diaguita community officially constituted under Indigenous Law 19.253 was Estancia Agrícola Diaguita de los Huascoaltinos, formed in 2006."
+    },
+    {
+      "id": "colla-atacama-cl-ar",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museum page: Colla communities in Potrerillos, Inca de Oro, Quebrada de Paipote, San Miguel, San Andrés and the Jorquera river, in Chañaral, Copiapó and Tierra Amarilla, Atacama Region."
+    },
+    {
+      "id": "colla-atacama-cl-ar",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museum page: the first Colla indigenous communities were officially constituted in the early 1990s."
+    },
+    {
+      "id": "colla-atacama-cl-ar",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Chile Censo 2024: Colla (0.1%)."
+    },
+    {
+      "id": "lickanantay-atacama-cl",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Ministerio de las Culturas (9 Mar 2026): Fondart Regional 2025 project 'Ckepnitur' in Chiu Chiu uses art and stop-motion animation to revitalize Ckunsa; the page also says Atacameño communities have been forging Ckunsa revitalization for years and names the Lickanantay culture."
+    },
+    {
+      "id": "lickanantay-atacama-cl",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. Museum page: Atacameño communities live in the oases and valleys of the Atacama salt flat and Loa river basins in Antofagasta Region."
+    },
+    {
+      "id": "lickanantay-atacama-cl",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WebFetch + curl full-text check: page reachable (HTTP 200), publisher confirmed; evidence phrase found verbatim. INE Chile Censo 2024: 'Atacameño o Lickanantay (0,2%)'."
+    }
+  ],
+  "names": [
+    {
+      "id": "quechua-andes-pe-bo",
+      "ok": true,
+      "note": "BDPI (Ministerio de Cultura del Perú) page titled 'Quechuas' uses 'pueblos Quechuas'."
+    },
+    {
+      "id": "aymara-altiplano-bo-pe-cl",
+      "ok": true,
+      "note": "INE Bolivia Censo 2024 page uses 'Aymara'; Peru's BDPI uses 'Aimara' (listed in also)."
+    },
+    {
+      "id": "uro-titicaca-pe-bo",
+      "ok": true,
+      "note": "BDPI page titled 'Uro', other name 'Uru'."
+    },
+    {
+      "id": "uru-chipaya-oruro-bo",
+      "ok": true,
+      "note": "OEP Fuente Directa uses 'Uru Chipaya' and 'nación Uru Chipaya'."
+    },
+    {
+      "id": "kichwa-sierra-ec",
+      "ok": true,
+      "note": "Asamblea Nacional page uses 'kichwa' (as the language of the nationalities); the MSP guide uses 'Nacionalidad Kichwa'. Acceptable."
+    },
+    {
+      "id": "kichwa-otavalo-imbabura-ec",
+      "ok": true,
+      "note": "Cultural Survival page uses '(Kichwa Otavalo)'."
+    },
+    {
+      "id": "kichwa-saraguro-loja-ec",
+      "ok": true,
+      "note": "Cultural Survival page uses 'Kichwa Saraguro' (CORPUKIS)."
+    },
+    {
+      "id": "kichwa-puruwa-chimborazo-ec",
+      "ok": true,
+      "note": "MSP guide uses 'Kichwa Puruwá' with the accent."
+    },
+    {
+      "id": "kichwa-kanari-canar-ec",
+      "ok": true,
+      "note": "MSP guide uses 'Kichwa Kañari'."
+    },
+    {
+      "id": "kichwa-kayambi-cayambe-ec",
+      "ok": true,
+      "note": "Asamblea Nacional page uses 'pueblo indígena Kichwa Kayambi' and 'Confederación del Pueblo Kayambi'."
+    },
+    {
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "ok": true,
+      "note": "MinCultura: the people 'se autoidentifica como Iku'. Note: the official CIT site uses 'Arhuaco' (listed in also)."
+    },
+    {
+      "id": "kaggaba-kogi-sierra-nevada-co",
+      "ok": true,
+      "note": "OGT official site spells 'Kággaba' (and KÁGGABA)."
+    },
+    {
+      "id": "wiwa-sierra-nevada-co",
+      "ok": true,
+      "note": "MinCultura: the census called them Arzario 'aunque ellos se auto reconozcan como Wiwas'."
+    },
+    {
+      "id": "kankuamo-sierra-nevada-co",
+      "ok": true,
+      "note": "MinCultura uses 'Kankuamo'/'Kankuamos'."
+    },
+    {
+      "id": "nasa-cauca-co",
+      "ok": true,
+      "note": "MinCultura: 'El pueblo Nasa Yuwe ... Paéz'; 'pueblo Nasa'."
+    },
+    {
+      "id": "misak-cauca-co",
+      "ok": true,
+      "note": "MinCultura: 'ellos se autoreconocen como pueblo Misak'."
+    },
+    {
+      "id": "pasto-narino-co-ec",
+      "ok": true,
+      "note": "MinCultura uses 'pueblo Pasto'."
+    },
+    {
+      "id": "yanacona-macizo-co",
+      "ok": true,
+      "note": "MinCultura uses 'pueblo Yanacona'."
+    },
+    {
+      "id": "mapuche-cl-ar",
+      "ok": true,
+      "note": "INE Chile uses 'pueblo Mapuche'."
+    },
+    {
+      "id": "diaguita-norte-chico-cl-ar",
+      "ok": true,
+      "note": "Museo Chileno de Arte Precolombino uses 'Diaguita'."
+    },
+    {
+      "id": "colla-atacama-cl-ar",
+      "ok": true,
+      "note": "Museo Chileno de Arte Precolombino uses 'Colla'."
+    },
+    {
+      "id": "lickanantay-atacama-cl",
+      "ok": true,
+      "note": "Ministerio de las Culturas page uses 'cultura Lickanantay'; INE Chile census uses 'Atacameño o Lickanantay'."
+    }
+  ]
+}

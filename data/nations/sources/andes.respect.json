@@ -1,0 +1,525 @@
+{
+ "region": "andes",
+ "items": [
+  {
+   "id": "quechua-andes-pe-bo",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead 'Quechua' matches the Peru Ministry of Culture BDPI page ('pueblos Quechuas'). No single body represents all Quechua peoples, so official_url null is honest."
+  },
+  {
+   "id": "quechua-andes-pe-bo",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-identification figure from the national culture ministry; the plural 'Quechua peoples' respects the many Quechua identities."
+  },
+  {
+   "id": "quechua-andes-pe-bo",
+   "fact": 1,
+   "action": "edit",
+   "reason": "The BDPI page says Quechua 'se encuentra en estado vital' but also notes that many of its varieties are endangered. Attributing the vital rating keeps the strength claim honest without adding a deficit clause. Evidence phrase still matches.",
+   "text": "Peru's Ministry of Culture lists Quechua as a vital language, and the 2017 census counted 3,805,531 people who learned to speak it in childhood."
+  },
+  {
+   "id": "quechua-andes-pe-bo",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living, present-day practice of four Quechua-speaking communities. UNESCO notes the bridge is sacred to them and the renewal has ritual ceremonies; the fact describes only the public rebuilding and names no ceremony, so nothing restricted is exposed."
+  },
+  {
+   "id": "aymara-altiplano-bo-pe-cl",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Aymara' leads, which is how the language itself writes the name; 'Aimara' (Peruvian Spanish form used by BDPI) is correctly in also."
+  },
+  {
+   "id": "aymara-altiplano-bo-pe-cl",
+   "fact": 0,
+   "action": "edit",
+   "reason": "On the Aymara card half the fact is about the Quechua. The INE Bolivia page says Quechua and Aymara each passed one million self-identifications, which supports a version centered on the Aymara. Evidence phrase still matches.",
+   "text": "In Bolivia's 2024 census, more than one million people self-identified as Aymara, one of the two largest self-identifications in the country along with Quechua."
+  },
+  {
+   "id": "aymara-altiplano-bo-pe-cl",
+   "fact": 1,
+   "action": "keep",
+   "reason": "BDPI says the Aimara language 'se encuentra en estado vital' with no qualifier; accurate strength fact."
+  },
+  {
+   "id": "aymara-altiplano-bo-pe-cl",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral census figure from Chile's INE; calm register."
+  },
+  {
+   "id": "uro-titicaca-pe-bo",
+   "fact": null,
+   "action": "keep",
+   "reason": "BDPI uses 'Uro' as the main name; 'Uru' and 'Uros' are fine in also. Uru Chipaya correctly has its own entry."
+  },
+  {
+   "id": "uro-titicaca-pe-bo",
+   "fact": 0,
+   "action": "edit",
+   "reason": "The BDPI page contradicts itself on 'Most': the intro says the majority settled on totora rafts, while a later section says most people who identify as Uro live on the mainland at the Comunidad Campesina Uros Chulluni. Dropping the quantifier keeps the fact true and avoids reducing the people to the floating-island tourist image. Evidence phrase still matches.",
+   "text": "For centuries, Uro families have made their homes on large rafts of totora reed, known as floating islands, in the Bay of Puno on Lake Titicaca."
+  },
+  {
+   "id": "uro-titicaca-pe-bo",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Good revitalization framing. The source calls the old language 'extinta'; the fact rightly avoids that word and says the people are recovering it with Ministry of Culture support, which the page confirms."
+  },
+  {
+   "id": "uro-titicaca-pe-bo",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral self-identification figure, not framed as decline."
+  },
+  {
+   "id": "uru-chipaya-oruro-bo",
+   "fact": null,
+   "action": "keep",
+   "reason": "The Organo Electoral Plurinacional pages use 'nación Uru Chipaya'; lead and also are right."
+  },
+  {
+   "id": "uru-chipaya-oruro-bo",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-government strength; matches the OEP article on the first three Indigenous autonomies."
+  },
+  {
+   "id": "uru-chipaya-oruro-bo",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Their language as an official language of their own government; strength."
+  },
+  {
+   "id": "uru-chipaya-oruro-bo",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Public civic structure published by the electoral body; ayllu names are not restricted knowledge."
+  },
+  {
+   "id": "kichwa-sierra-ec",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead 'Kichwa' is right. Remove 'Kichwa of the Ecuadorian highlands' from also: it is a description, not a name, and would display as if it were an alternate name. 'Quichua' (older Spanish spelling) can stay.",
+   "text": "also: [\"Quichua\"]"
+  },
+  {
+   "id": "kichwa-sierra-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Accurate to the Asamblea Nacional page; strength."
+  },
+  {
+   "id": "kichwa-sierra-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Achievement with Indigenous community review (the page names delegates from Imbabura, Loja, Cañar, Chimborazo and Pastaza); calm register."
+  },
+  {
+   "id": "kichwa-otavalo-imbabura-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Kichwa Otavalo' is the self-description used on both cited Cultural Survival pages (Hampiriypacha 'Kichwa Otavalo', Yarina 'Kichwa Otavalo fusion')."
+  },
+  {
+   "id": "kichwa-otavalo-imbabura-ec",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Overstated. The Burke label reads 'the first traditional floor loom ever built in the United States by Asociacion Artesanal Kurypachamama', meaning the association's first one built in the US, not the first floor loom ever made there. Naming the association also gives credit to the weavers. Evidence phrase still matches.",
+   "text": "Kichwa weavers of the Kurypachamama artisan association, from Peguche near Otavalo, built a traditional floor loom in the United States, their first there. The Burke Museum holds it."
+  },
+  {
+   "id": "kichwa-otavalo-imbabura-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Cultural Survival confirms the 1984 start, the Cachimuel family band, original Indigenous rhythms on Andean instruments, and the conservation mission. Living artists named only as a band."
+  },
+  {
+   "id": "kichwa-otavalo-imbabura-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day strength centered on women's knowledge; respectful and accurate."
+  },
+  {
+   "id": "kichwa-saraguro-loja-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Kichwa Saraguro' matches CORPUKIS's own name (Coordinadora de Organizaciones del Pueblo Kichwa Saraguro) on the cited page."
+  },
+  {
+   "id": "kichwa-saraguro-loja-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance strength; accurate to the page."
+  },
+  {
+   "id": "kichwa-saraguro-loja-ec",
+   "fact": 1,
+   "action": "edit",
+   "reason": "'Recently' is time-relative and will read wrong on cards shown from 2026 on; the 2019 page says the license came 'in the past couple of years'. Date it and keep the training as a plan, since the page only announces it. Kind could move to 'history'. Evidence phrase still matches.",
+   "text": "In 2019 Radio Kipa in Saraguro was one of the few community stations that had secured a license from Ecuador, and it planned to train 30 young people in community media."
+  },
+  {
+   "id": "kichwa-puruwa-chimborazo-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Kichwa Puruwá' is the form the Ministry of Public Health guide uses; 'Puruhá' in also is fine."
+  },
+  {
+   "id": "kichwa-puruwa-chimborazo-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral census figure."
+  },
+  {
+   "id": "kichwa-puruwa-chimborazo-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Accurate; neutral land fact."
+  },
+  {
+   "id": "kichwa-puruwa-chimborazo-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Accurate. The source paragraph continues into poverty framing; the fact correctly keeps only the population statement."
+  },
+  {
+   "id": "kichwa-kanari-canar-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Kichwa Kañari' with correct ñ matches the guide; 'Cañari' in also is fine."
+  },
+  {
+   "id": "kichwa-kanari-canar-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength, faithful to 'mantiene vigorosa su identidad étnica. Tiene un sistema organizativo muy fuerte'. The guide also names ritual sites and rites; the facts correctly leave those out."
+  },
+  {
+   "id": "kichwa-kanari-canar-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance strength; accurate."
+  },
+  {
+   "id": "kichwa-kanari-canar-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living exchange economy; accurate and respectful."
+  },
+  {
+   "id": "kichwa-kayambi-cayambe-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "The people's confederation uses 'Pueblo Kayambi'; lead 'Kichwa Kayambi' (nationality plus people, same pattern as the other Ecuadorian Kichwa entries) and the variants in also are fine."
+  },
+  {
+   "id": "kichwa-kayambi-cayambe-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-governance strength."
+  },
+  {
+   "id": "kichwa-kayambi-cayambe-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "The water law is debated in Ecuador, but the fact only says community water boards met to discuss it; neutral, no position taken. Do not add claims about the law."
+  },
+  {
+   "id": "iku-arhuaco-sierra-nevada-co",
+   "fact": null,
+   "action": "edit",
+   "reason": "The people's own organization rejects the lead name. Confederación Indígena Tayrona, 'Conoce al pueblo Arhuaco' (https://confetayrona.com/conoce-al-pueblo-arhuaco-y-su-mision-sagrada/, fetched 2026-10-09) says their name is Arhuaco, that they also accept Wíntukwa, that others have wrongly called them Ika, Iku or Ijku, and that Iku means 'human' and is not the name of their people. Lead with 'Arhuaco', set also to [\"Wíntukwa\"] and drop Iku, Ika and Ijka. Point name_source_url at that CIT page. Suggest renaming the id to 'arhuaco-sierra-nevada-co' before publish. UNESCO's decision page also uses 'Arhuaco'.",
+   "text": "also: [\"Wíntukwa\"]",
+   "name": "Arhuaco"
+  },
+  {
+   "id": "iku-arhuaco-sierra-nevada-co",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Text uses the rejected name 'Iku'. The cited Ministry document titles them 'Iku (Arhuacos)', so 'Arhuaco' stays within the source. Weaving as a way of passing on thought is general published content, not restricted knowledge. Evidence phrase still matches.",
+   "text": "For the Arhuaco, weaving mochilas, ruanas and clothing is also a way of passing on thought, tradition and their understanding of the world."
+  },
+  {
+   "id": "iku-arhuaco-sierra-nevada-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength from the people's own organization. CIT calls itself 'Organización del Pueblo Arhuaco', founded in 1976 by traditional authorities of the Arhuaco, Kogui and Wiwa; 'plans' matches 'Nos disponemos a revitalizar'."
+  },
+  {
+   "id": "iku-arhuaco-sierra-nevada-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "UNESCO describes the knowledge system as sacred mandates; the fact names only the inscription and describes none of its content, so nothing sacred is shown."
+  },
+  {
+   "id": "kaggaba-kogi-sierra-nevada-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "Confirmed on the Organización Gonawindúa Tayrona site: it consistently says 'Pueblo Kággaba' and uses 'Kogui' once in a news item without rejecting it. Lead and also are right."
+  },
+  {
+   "id": "kaggaba-kogi-sierra-nevada-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Accurate self-governance statement from the people's own organization."
+  },
+  {
+   "id": "kaggaba-kogi-sierra-nevada-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land-title fact; 'Kogui-Malayo-Arhuaco' is the legal name of the resguardo."
+  },
+  {
+   "id": "kaggaba-kogi-sierra-nevada-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral language fact."
+  },
+  {
+   "id": "wiwa-sierra-nevada-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name leads. The Ministry document lists 'Arzario, Damana, Saukas o Malayos' as other names and notes the 2005 census used 'arzario' although they call themselves Wiwa. A search found no source where the Wiwa reject these names, so they can stay in also as neutral exonyms."
+  },
+  {
+   "id": "wiwa-sierra-nevada-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength; accurate. Note for the verifier: the PDF text may extract with broken spacing, so the evidence match may need whitespace normalization."
+  },
+  {
+   "id": "wiwa-sierra-nevada-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength; accurate."
+  },
+  {
+   "id": "wiwa-sierra-nevada-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Material culture; describes only the two bags' materials and uses, not the meanings of designs."
+  },
+  {
+   "id": "kankuamo-sierra-nevada-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name leads; fine."
+  },
+  {
+   "id": "kankuamo-sierra-nevada-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Accurate to the Ministry text; strength framing of revitalization with no 'vanished' language."
+  },
+  {
+   "id": "kankuamo-sierra-nevada-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land-title fact."
+  },
+  {
+   "id": "kankuamo-sierra-nevada-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Same UNESCO inscription as the Arhuaco card; names the inscription only. Sharing a fact across cards is acceptable."
+  },
+  {
+   "id": "nasa-cauca-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Nasa' leads; 'Páez' as the older Spanish name in also is acceptable (the Ministry uses 'Nasa (Paez)')."
+  },
+  {
+   "id": "nasa-cauca-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral census standing."
+  },
+  {
+   "id": "nasa-cauca-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language fact with the self-name Nasa Yuwe; the 2005 date is shown in as_of."
+  },
+  {
+   "id": "nasa-cauca-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance strength; avoids the armed-conflict deficit framing common for Cauca."
+  },
+  {
+   "id": "misak-cauca-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Misak' leads; 'Guambiano' as an older name in also is acceptable (used by the Ministry)."
+  },
+  {
+   "id": "misak-cauca-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language strength; accurate."
+  },
+  {
+   "id": "misak-cauca-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Achievement; the source says that in 2000 the first Indigenous person elected governor of Cauca by popular vote was a Misak leader. Person unnamed, which is fine."
+  },
+  {
+   "id": "misak-cauca-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Source: 'símbolo permanente de resistencia y de representación'. Identity framing comes from the source, not exoticizing."
+  },
+  {
+   "id": "pasto-narino-co-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Pasto' leads with 'Los Pastos' in also; fine."
+  },
+  {
+   "id": "pasto-narino-co-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral census standing."
+  },
+  {
+   "id": "pasto-narino-co-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Accurate ('habita principalmente en resguardos coloniales')."
+  },
+  {
+   "id": "pasto-narino-co-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strength; accurate to 'Centra sus esfuerzos en recuperar la identidad Pasto, la tradición oral...'."
+  },
+  {
+   "id": "yanacona-macizo-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name leads; fine."
+  },
+  {
+   "id": "yanacona-macizo-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral land fact."
+  },
+  {
+   "id": "yanacona-macizo-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Accurate: the source lists recovery of their traditional language, Quechua, and strengthening of cabildo authorities. Revitalization framing."
+  },
+  {
+   "id": "yanacona-macizo-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Names a deceased leader with honor; the deceased-persons rule covers Aboriginal and Torres Strait Islander peoples only. Accurate to the source."
+  },
+  {
+   "id": "mapuche-cl-ar",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name leads and the colonial exonym 'Araucano' is correctly left out."
+  },
+  {
+   "id": "mapuche-cl-ar",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral census figure."
+  },
+  {
+   "id": "mapuche-cl-ar",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Accurate to the museum page; present-day and avoids the rural-only stereotype. The page's conquest context is correctly left out."
+  },
+  {
+   "id": "mapuche-cl-ar",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strength; the text rightly says 'Indigenous' where the source says 'aboriginal'. Land conflict is correctly left out."
+  },
+  {
+   "id": "diaguita-norte-chico-cl-ar",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name leads; fine. Recognition of the Diaguita is sensitive in Chile, and the facts stay neutral."
+  },
+  {
+   "id": "diaguita-norte-chico-cl-ar",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral census figure."
+  },
+  {
+   "id": "diaguita-norte-chico-cl-ar",
+   "fact": 1,
+   "action": "edit",
+   "reason": "The museum text's 'most' sits beside fact 0's 2024 count of 153,231 Diaguita, while Alto del Carmen is a small rural municipality, so the card would read as a contradiction and could seem to question people's self-identification. 'Many' keeps the source's point without the dated quantifier. Evidence phrase still matches.",
+   "text": "Many people who self-identify as Diaguita in Chile live in the upper Huasco River basin, in the municipality of Alto del Carmen."
+  },
+  {
+   "id": "diaguita-norte-chico-cl-ar",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance strength; neutral."
+  },
+  {
+   "id": "colla-atacama-cl-ar",
+   "fact": null,
+   "action": "keep",
+   "reason": "'Colla' (Chilean usage) leads with 'Kolla' in also, which suits this Chile-sourced entry. If Argentine Kolla facts are added later, consider leading with 'Kolla' for those or splitting the entry."
+  },
+  {
+   "id": "colla-atacama-cl-ar",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day communities; accurate."
+  },
+  {
+   "id": "colla-atacama-cl-ar",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance; neutral. The source's surrounding decline narrative is correctly left out."
+  },
+  {
+   "id": "colla-atacama-cl-ar",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral census figure."
+  },
+  {
+   "id": "lickanantay-atacama-cl",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name 'Lickanantay' leads over the legal 'Atacameño'; the Ministry of Culture page uses 'cultura Lickanantay'. Good."
+  },
+  {
+   "id": "lickanantay-atacama-cl",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strong revitalization framing; the page says Atacameño communities have been building Ckunsa revitalization for years. Avoids the 'extinct' label often attached to Ckunsa."
+  },
+  {
+   "id": "lickanantay-atacama-cl",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land fact; lithium and water disputes in the Salar are correctly left out."
+  },
+  {
+   "id": "lickanantay-atacama-cl",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral census figure."
+  }
+ ]
+}

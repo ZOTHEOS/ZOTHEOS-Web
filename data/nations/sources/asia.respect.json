@@ -1,0 +1,823 @@
+{
+ "region": "asia",
+ "items": [
+  {
+   "id": "tw-pangcah",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name first, as the CIP page states the people call themselves Pangcah; Amis and Ami stay in also."
+  },
+  {
+   "id": "tw-pangcah",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Supported: the CIP page says 'The Amis is the largest indigenous ethnic group in Taiwan'. Calm, present-day, number dated."
+  },
+  {
+   "id": "tw-pangcah",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-name meaning comes straight from the CIP page; the exonym's origin is stated neutrally."
+  },
+  {
+   "id": "tw-pangcah",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living culture with present-day continuity (an age class named for the computer era); 'some communities' matches the source's Farangaw scope."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it; Tayal in also is fine."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact, present tense, matches 'the most widespread ethnic group in Taiwan'."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-name meaning from the people's own language, per CIP."
+  },
+  {
+   "id": "tw-atayal",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Present-tense 'facial tattoos are hallmarks' reads as a current everyday practice and invites exoticizing in a game card; the CIP page ties the tattoo to adulthood and also to head-hunting and spirit beliefs. Frame it as a tradition with the meaning the source gives ('a symbol of being an adult') and keep the head-hunting and spirit detail out. Gaga as ancestral teachings is public and fine. Evidence phrase unchanged.",
+   "text": "Weaving and the face tattoo tradition, a mark of adulthood, are distinctive to Atayal culture, which follows gaga, the teachings handed down by the ancestors."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. Facts rightly leave out the five-year ritual."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population with date, plain register."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact on art, matches the source."
+  },
+  {
+   "id": "tw-paiwan",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Matches 'characterized by ... equal gender rights, and the first-child succession system'; social structure, not sacred."
+  },
+  {
+   "id": "tw-bunun",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. ADVISORY: both facts are land and population; a later pass could add a present-day strength fact, avoiding ceremonial songs and spirit (hanitu) material."
+  },
+  {
+   "id": "tw-bunun",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact matching the source (500 to 1,500 m, highest elevation)."
+  },
+  {
+   "id": "tw-bunun",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. ADVISORY: the same CIP page supports a present-day strength fact for a later pass (evidence 'Pinuyumayan music is still active and alive'); avoid the hunting and head-hunting ritual material on that page."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day homeland, matches the source."
+  },
+  {
+   "id": "tw-pinuyumayan",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Source says many 'have moved away from eastern Taiwan for development in the city and are active in different fields'; 'work in cities across Taiwan' narrows that to labour and adds 'across Taiwan'. Use the source's broader, strength-leaning framing. Evidence phrase unchanged.",
+   "text": "About 14,517 Pinuyumayan people were counted in January 2020, and many who have moved to cities are active in a wide range of fields."
+  },
+  {
+   "id": "tw-rukai",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it; Drekay and Ngudradrekai in also match the CIP page."
+  },
+  {
+   "id": "tw-rukai",
+   "fact": 0,
+   "action": "keep",
+   "reason": "The lily as a public symbol of purity and courage is how CIP and Rukai communities present themselves; not restricted knowledge. Fact stays away from the class-privilege ceremonies."
+  },
+  {
+   "id": "tw-rukai",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-tsou",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep Tsou: the CIP page text says the people call themselves Tsou, meaning people. The CIP page heading uses Cou, the spelling in the people's own orthography; it is the same name and sits in also, so a renderer may show Tsou (Cou). ADVISORY: avoid the Mayasvi war-merit ceremony on that page."
+  },
+  {
+   "id": "tw-tsou",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day homeland, matches the source."
+  },
+  {
+   "id": "tw-tsou",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-saisiyat",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. Facts correctly avoid the pas-ta'ay ritual for the little black spirits; keep it that way."
+  },
+  {
+   "id": "tw-saisiyat",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact with the people's own mountain name (Ngangihaw), matches the source."
+  },
+  {
+   "id": "tw-saisiyat",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-tao",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name first: CIP says the people call themselves Tao; Yami kept in also as the official name. Facts avoid the contested Lanyu nuclear waste issue, which is right for a herald card."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population with date; uses the self-name Tao though the source page uses Yami, which is correct self-naming."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Source calls this the 'migration legend', not documented history, and the same page adds a present-day strength: 'In recent years, the Yami (Tao) people started cultural exchanges and mutual visits with the people of Batanes'. Fold that in so the fact speaks of today, not only origins. Evidence phrase still matches.",
+   "text": "Tao migration stories trace the ancestors to the Batanes islands of the northern Philippines, and in recent years the two peoples have started cultural exchanges and visits."
+  },
+  {
+   "id": "tw-tao",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Self-name first. Source glosses Tao as 'man'; 'human' is a fair gender-neutral rendering."
+  },
+  {
+   "id": "tw-thao",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. Facts avoid the ancestral spirit basket and Lalu, which are sacred; keep it that way."
+  },
+  {
+   "id": "tw-thao",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population with date, present-day place."
+  },
+  {
+   "id": "tw-thao",
+   "fact": 1,
+   "action": "keep",
+   "reason": "A widely told, government-published origin story, not restricted knowledge, framed as the people's own oral history. Stays clear of Lalu and the spirit basket."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name as CIP gives it; Kebalan in also matches the page."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength framing: recognition followed the people's own name rectification movement. Leaves out the page's account of hiding among the Amis, appropriate for a herald card."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Living craft, strength fact."
+  },
+  {
+   "id": "tw-kavalan",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-truku",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name first, Taroko in also, as CIP publishes. Facts avoid naming the 1914 conflict and its leaders, fine."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Recognition fact, neutral, dated."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-truku",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Same issue as Atayal: present-tense 'values ... facial tattooing' reads as current everyday practice, while the CIP page says the tradition was banned under Japanese rule and disrupted. Frame as traditions and use the source's own gloss of gaya ('daily life norms passed down from ancestors'). Evidence phrase unchanged.",
+   "text": "Truku people value their weaving and face tattoo traditions and follow gaya, the daily life norms passed down from ancestors."
+  },
+  {
+   "id": "tw-sakizaya",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it. Facts avoid the fire god ritual and the 19th century conflict on the page, good."
+  },
+  {
+   "id": "tw-sakizaya",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength framing: community-led cultural revival leading to recognition, matches the source."
+  },
+  {
+   "id": "tw-sakizaya",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as CIP publishes it; the three self-names in fact 0 are the people's own."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 0,
+   "action": "keep",
+   "reason": "The people's own three self-names, from the source."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Gaya as ancestral code of living is public and how the people describe themselves; fact leaves out the tattoo and spirit-ritual material."
+  },
+  {
+   "id": "tw-sediq",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "tw-hlaalua",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name confirmed on the CIP page ('They call themselves Hla'alua'). CIP writes the glottal mark as a right single quotation mark (Hla’alua); the renderer should treat both forms as the same name. Facts avoid the sacred shell (Takiarʉ) ritual, keep it that way."
+  },
+  {
+   "id": "tw-hlaalua",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Supported but passive. The cited CIP page says recognition came after the Hla'alua and Kanakanavu peoples 'applied for name rectification'; credit the people's own initiative, as the Kavalan and Sakizaya facts do. Evidence phrase still matches.",
+   "text": "After applying for name rectification, the Hla'alua were officially recognized in 2014 as a distinct people, the 15th Indigenous people listed in Taiwan."
+  },
+  {
+   "id": "tw-hlaalua",
+   "fact": 1,
+   "action": "keep",
+   "reason": "The people's own community names, present day."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name confirmed on the CIP page ('they call themselves Kanakanavu')."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Supported but passive; the same CIP passage says the Kanakanavu 'applied for name rectification' before the 2014 announcement. Credit their initiative. Evidence phrase still matches.",
+   "text": "After the Kanakanavu applied for name rectification, Taiwan's government recognized them on June 26, 2014 as an independent people, the 16th on the official list."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Hedged as some people's understanding, exactly as the source hedges it."
+  },
+  {
+   "id": "tw-kanakanavu",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Population with date."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Ainu Association of Hokkaido, the people's own representative body, publishes it."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance fact from the law text itself; uses the law's own 'pride' language, calm."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day institution, dated."
+  },
+  {
+   "id": "jp-ainu",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Self-name meaning from the Ainu Association's own page."
+  },
+  {
+   "id": "ph-ifugao",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as UNESCO and the community use it. No pronunciation offered, correct."
+  },
+  {
+   "id": "ph-ifugao",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day continuity ('continues to occupy, use and maintain their ancestral lands'), strength framing."
+  },
+  {
+   "id": "ph-ifugao",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Public UNESCO-listed heritage; the fact names sowing and harvest and leaves out the funeral-wake context, appropriate."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": null,
+   "action": "keep",
+   "reason": "Mangyan is a collective name; the Mangyan Heritage Center itself says it does not refer to a single homogeneous group, and fact 0 says so. ADVISORY: 'also' holds constituent peoples (Iraya, Hanunuo, Buhid and others) rather than other names for one people; later passes should give each its own entry under its own name."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Collective name explained without erasing the distinct peoples."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact on Indigenous writing; matches the source, which notes it challenges 'pre-literate' stereotypes."
+  },
+  {
+   "id": "ph-mangyan",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day revitalization, strength fact."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Benguet provincial government uses it; the Kankana-ey spelling from the same page is in also. ADVISORY: facts 0 and 1 nearly duplicate the Ibaloi entry; a later pass should add a strength fact specific to the Kankanaey."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral, present-day, from the provincial government."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language fact; the Kankanaey words are given as published."
+  },
+  {
+   "id": "ph-kankanaey",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present perfect 'have worked' matches the source and keeps still-here framing."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Benguet provincial government uses it; Ibaloy in also. ADVISORY: same near-duplication with the Kankanaey entry."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral, present-day, from the provincial government."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language fact; the Ibaloi word is given as published."
+  },
+  {
+   "id": "ph-ibaloi",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Past tense 'worked' implies the practice ended; MRG says the Kankanay and Ibaloi 'have for centuries worked their elaborate rice terraces'. Use present perfect, matching the Kankanaey entry. Evidence phrase unchanged.",
+   "text": "Like their Kankanaey neighbours, Ibaloi farmers of Benguet have worked wet rice on terraced fields for centuries."
+  },
+  {
+   "id": "ph-lumad",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep for now, with care. Lumad is a collective term for many Mindanao peoples (MRG glosses it as 'indigenous'), and its use has been debated among Mindanao Indigenous leaders and agencies, some of whom prefer each people's own name. ADVISORY: 'also' lists constituent peoples, not alternative names; in a later pass give Manobo, Subanon, Teduray and others their own entries led by each people's own name. Keep facts away from the armed conflict, school closures and red-tagging disputes."
+  },
+  {
+   "id": "ph-lumad",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Collective term stated as a shared name, listing peoples by their own names."
+  },
+  {
+   "id": "ph-lumad",
+   "fact": 1,
+   "action": "edit",
+   "reason": "The current text is a strength fact but does not say what the provisions do, so a card reader learns little. The same MRG passage says the provisions protect Indigenous communities' rights to their ancestral lands and to preserve and develop their cultures. Say so. Evidence phrase still matches.",
+   "text": "Through the efforts of Lumad peoples and their allies, the 1987 Philippine Constitution gained provisions protecting Indigenous rights to ancestral lands and cultures."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep. COAC notes Orang Asli is a collective term introduced by anthropologists and administrators for 18 subgroups, and fact 1 rightly says each sees itself as distinct. ADVISORY: 'also' lists constituent peoples (Temiar, Semai, etc.), not alternative names; avoid the official Negrito, Senoi and Proto-Malay labels in any future text."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 0,
+   "action": "edit",
+   "reason": "COAC stresses that Orang Asli is a collective term; say 'collective' so the card does not present 18 distinct peoples as one. Evidence phrase unchanged.",
+   "text": "Orang Asli, a Malay collective term meaning original or first peoples, covers 18 officially listed groups of Peninsular Malaysia."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Affirms each people's distinct identity, matches the source."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day self-managed livelihoods, strength fact; 'families' is a fair rendering of the source's 'people'."
+  },
+  {
+   "id": "my-orang-asli",
+   "fact": 3,
+   "action": "keep",
+   "reason": "History of economic agency, strength framing; leaves out the slavery and hostility passages that follow it."
+  },
+  {
+   "id": "my-iban",
+   "fact": null,
+   "action": "keep",
+   "reason": "Self-name first. 'Sea Dayak' in also is a colonial-era exonym; acceptable there, never as a display name."
+  },
+  {
+   "id": "my-iban",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact on language, neutral."
+  },
+  {
+   "id": "my-iban",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Achievement by an Iban-led foundation."
+  },
+  {
+   "id": "my-iban",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living craft and its care, from the Tun Jugah Foundation."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as KDCA, the community's own cultural body, publishes it. Facts avoid the magavau rice-spirit ritual described on the KDCA site, keep it that way."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance and representation through the community's own body."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Public festival, community framing; the KDCA site places it after the May harvest, so 'harvest festival' is supported. Leaves out the magavau ritual."
+  },
+  {
+   "id": "my-kadazandusun",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language revitalization, strength fact."
+  },
+  {
+   "id": "id-dayak",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep as a collective name. ADVISORY: 'also' lists constituent peoples (Ngaju, Maanyan, Lawangan, Penan), not alternative names; Penan generally identify as Penan, so do not present Penan as an alias of Dayak. Facts avoid the MRG page's 'shamanic' and government-modernization framing, good. Indonesia uses masyarakat adat rather than Indigenous; self-identification is respected."
+  },
+  {
+   "id": "id-dayak",
+   "fact": 0,
+   "action": "edit",
+   "reason": "'the many Indigenous peoples of Borneo' implies every Indigenous Bornean people is Dayak, which conflicts with peoples in this same file (Kadazandusun, Iban) and others who identify by their own names. MRG says 'approximately 450 ethnolinguistic Dayak groups'; say 'many' and 'ethnolinguistic'. Evidence phrase unchanged.",
+   "text": "Dayak is a shared name for many Indigenous peoples of Borneo, by some estimates about 450 ethnolinguistic groups."
+  },
+  {
+   "id": "id-dayak",
+   "fact": 1,
+   "action": "keep",
+   "reason": "'Traditions of' matches 'most of these groups traditionally lived in longhouses'; adat is public customary law."
+  },
+  {
+   "id": "id-mentawai",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as used by the people and UNESCO. Facts avoid the much-exoticized tattoo and shaman imagery and the source's 'sub-economic' wording, good."
+  },
+  {
+   "id": "id-mentawai",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength framing on traditional knowledge and care for the forest."
+  },
+  {
+   "id": "id-mentawai",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land fact."
+  },
+  {
+   "id": "in-santal",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep. ADVISORY: 'Santali' in also is the language name, not a name for the people; remove it from also. Many Santal call themselves Hor; add that only if a Santal-run or official source shows it."
+  },
+  {
+   "id": "in-santal",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language recognition, strength fact."
+  },
+  {
+   "id": "in-santal",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population standing, neutral; follows self-identification despite Bangladesh's official stance."
+  },
+  {
+   "id": "in-khasi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Khasi Hills Autonomous District Council uses it."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Traditional governance (the Elakas) recognized today, strength fact."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Precision: the KHADC page says the Sixth Schedule covers all of Meghalaya 'except Cantonment and Municipality of Shillong'; 'whole area' overstates it. Evidence phrase still matches.",
+   "text": "Meghalaya is the only state in India's northeast where the Sixth Schedule's tribal self-rule provisions cover the entire area, apart from Shillong's municipality and cantonment."
+  },
+  {
+   "id": "in-khasi",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral land fact."
+  },
+  {
+   "id": "in-garo",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep Garo, the name the Garo Hills Autonomous District Council uses. Re-fetched 2026-10-09: the GHADC home page states no self-name, and its Tribes History page lists 'A•chik' as a separate tribe from the Garo, so it is not a reliable source on this point. ADVISORY: A·chik (A·chik Mande) is widely the people's own name and already sits in also; consider leading with it once a Garo-run language or literature body confirms it."
+  },
+  {
+   "id": "in-garo",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance through the people's own autonomous council, dated."
+  },
+  {
+   "id": "in-garo",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Uses Mandi, the name MRG gives for the people in Bangladesh, neutral."
+  },
+  {
+   "id": "in-naga",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep as a collective name used by the Government of Nagaland. ADVISORY: 'also' lists constituent Naga tribes, not alternative names. Facts rightly avoid the Naga political question."
+  },
+  {
+   "id": "in-naga",
+   "fact": 0,
+   "action": "edit",
+   "reason": "The portal's 17 major tribes of Nagaland include the Kuki and Kachari, who are not Naga; attached to the Naga entry the current text implies all 17 are Naga, which mislabels two peoples (and Kuki and Naga relations are a sensitive subject). Say the tribes live in the state. Evidence phrase unchanged.",
+   "text": "Nagaland's state portal lists 17 major tribes living in the state, each with its own language and festivals."
+  },
+  {
+   "id": "in-naga",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day shared festival where all of Nagaland's tribes take part."
+  },
+  {
+   "id": "in-naga",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living oral tradition, plain register."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as MRG uses it. Bangladesh officially rejects the term Indigenous; the entry follows the peoples' own self-identification, consistent with the rules."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population standing, neutral."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 1,
+   "action": "keep",
+   "reason": "The collective self-name Jumma explained neutrally from its source."
+  },
+  {
+   "id": "bd-chakma",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral historical self-governance fact; stays clear of the current Hill Tracts disputes."
+  },
+  {
+   "id": "bd-marma",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep. ADVISORY: both facts are population-only; a later pass should add a language or culture fact from a strong source to meet the strengths-first rule."
+  },
+  {
+   "id": "bd-marma",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population standing, neutral."
+  },
+  {
+   "id": "bd-marma",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population standing, neutral."
+  },
+  {
+   "id": "np-tharu",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on the NFDIN list. ADVISORY: remove 'Rana Tharu' from also. The NFDIN Adivasi Janajati list itself names रानाथारू (Ranatharu) as a separate nationality from थारू (Tharu), so it is not another name for all Tharu. Facts are population and listing only; add a strength fact later."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population with census year."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language vitality with census year."
+  },
+  {
+   "id": "np-tharu",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Official listing, neutral."
+  },
+  {
+   "id": "np-tamang",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on the NFDIN list. ADVISORY: facts are population and listing only; add a language, culture or governance strength fact later."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population with census year."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language vitality with census year."
+  },
+  {
+   "id": "np-tamang",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Official listing, neutral."
+  },
+  {
+   "id": "mm-karen",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep. Karen is the name used by many Karen organizations themselves; Kayin is the Burmese state term, and S'gaw (MRG spells S'ghaw) and Pwo are branches, not alternative names for all Karen. Facts avoid the Myanmar armed conflict, keep it that way."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language diversity, neutral; matches 'a number of ethnic groups' speaking 12 Karenic languages."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Long presence in northern Thailand, matches the source."
+  },
+  {
+   "id": "mm-karen",
+   "fact": 2,
+   "action": "edit",
+   "reason": "MRG says the 2025 Act covers 'ethnic groups' and 'avoids the term indigenous'; it does not name the Karen, so 'including Karen communities' goes beyond the source. The same page credits Indigenous advocacy (CIPT and allied networks) for its passage, a strength worth stating. Evidence phrase still matches.",
+   "text": "In Thailand, where many Karen live, Indigenous advocacy helped pass a 2025 law affirming ethnic groups' rights to their languages, cultures and livelihoods, though it avoids the term Indigenous."
+  },
+  {
+   "id": "th-akha",
+   "fact": null,
+   "action": "keep",
+   "reason": "Akha is the people's own name. One fact removed, two remain (see fact items)."
+  },
+  {
+   "id": "th-akha",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day standing among Thailand's highland peoples."
+  },
+  {
+   "id": "th-akha",
+   "fact": 1,
+   "action": "remove",
+   "reason": "Respect, not accuracy: the evidence phrase does appear in the MRG page's Historical context section. But the same page says Thai policy has portrayed highland peoples 'as transient or peripheral rather than indigenous inhabitants' and that this shapes citizenship policy. A rotating card that tells visitors the Akha 'came to Thailand' in the 20th century echoes that state framing on a contested recognition matter, and the page's own Profile section gives a broader account (from present-day China, Laos and Myanmar over the 19th and early 20th centuries). Leave it out under the contested-matters rule; the Akha keep two facts."
+  },
+  {
+   "id": "th-akha",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Same as Karen: the law covers 'ethnic groups' and does not name the Akha; credit the Indigenous advocacy the source names and keep the neutral caveat. Evidence phrase still matches.",
+   "text": "In Thailand, where many Akha live, Indigenous advocacy helped pass a 2025 law affirming ethnic groups' rights to their languages, cultures and livelihoods, though it avoids the term Indigenous."
+  }
+ ]
+}

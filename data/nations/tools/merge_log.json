@@ -1,0 +1,992 @@
+{
+  "generated": "2026-10-08",
+  "regions_read": [
+    "africa",
+    "alaska-hawaii-pacific-us",
+    "amazon-lowland-sa",
+    "andes",
+    "arctic-europe-russia",
+    "asia",
+    "canada",
+    "central-america-caribbean",
+    "gap-africa",
+    "gap-caribbean-guianas",
+    "gap-pacific",
+    "gap-south-asia",
+    "mx-central-south",
+    "mx-north-us-southwest",
+    "oceania",
+    "us-east-southeast",
+    "us-plains-midwest",
+    "us-west-pacific"
+  ],
+  "per_region": {
+    "africa": {
+      "nations_in": 23,
+      "nations_kept": 23
+    },
+    "alaska-hawaii-pacific-us": {
+      "nations_in": 21,
+      "nations_kept": 21
+    },
+    "amazon-lowland-sa": {
+      "nations_in": 30,
+      "nations_kept": 29,
+      "nations_removed": 1
+    },
+    "andes": {
+      "nations_in": 22,
+      "nations_kept": 22
+    },
+    "arctic-europe-russia": {
+      "nations_in": 20,
+      "nations_kept": 20
+    },
+    "asia": {
+      "nations_in": 37,
+      "nations_kept": 36,
+      "nations_zero": 1
+    },
+    "canada": {
+      "nations_in": 35,
+      "nations_kept": 35
+    },
+    "central-america-caribbean": {
+      "nations_in": 24,
+      "nations_kept": 24
+    },
+    "gap-africa": {
+      "nations_in": 24,
+      "nations_kept": 24
+    },
+    "gap-caribbean-guianas": {
+      "nations_in": 18,
+      "nations_kept": 18
+    },
+    "gap-pacific": {
+      "nations_in": 23,
+      "nations_kept": 23
+    },
+    "gap-south-asia": {
+      "nations_in": 19,
+      "nations_kept": 19
+    },
+    "mx-central-south": {
+      "nations_in": 27,
+      "nations_kept": 27
+    },
+    "mx-north-us-southwest": {
+      "nations_in": 26,
+      "nations_kept": 26
+    },
+    "oceania": {
+      "nations_in": 28,
+      "nations_kept": 27,
+      "nations_zero": 1
+    },
+    "us-east-southeast": {
+      "nations_in": 26,
+      "nations_kept": 25,
+      "nations_zero": 1
+    },
+    "us-plains-midwest": {
+      "nations_in": 35,
+      "nations_kept": 35
+    },
+    "us-west-pacific": {
+      "nations_in": 29,
+      "nations_kept": 29
+    }
+  },
+  "verify_verdicts": {
+    "supported": 1105,
+    "fixed": 195,
+    "unsupported": 3,
+    "unreachable": 5
+  },
+  "respect_fact_actions": {
+    "keep": 1150,
+    "edit": 152,
+    "remove": 6
+  },
+  "respect_nation_actions": {
+    "keep": 406,
+    "edit": 60,
+    "remove": 1
+  },
+  "edit_decisions": {
+    "verified": 78,
+    "respect": 61,
+    "drop": 13
+  },
+  "text_source": {
+    "raw": 1016,
+    "verifier": 183,
+    "respect": 61
+  },
+  "region_remaps": {
+    "gap-africa": "africa",
+    "gap-caribbean-guianas": "caribbean-guianas",
+    "gap-pacific": "oceania",
+    "gap-south-asia": "asia"
+  },
+  "field_overrides": [
+    {
+      "key": "andes|iku-arhuaco-sierra-nevada-co",
+      "field": "name_source_url",
+      "from": "https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Iku%20(Arhuaco).pdf",
+      "to": "https://confetayrona.com/conoce-al-pueblo-arhuaco-y-su-mision-sagrada/",
+      "why": "Respect: the people's own organization says Iku is not their name; lead Arhuaco (structured), id no longer carries the rejected name."
+    },
+    {
+      "key": "asia|ph-mangyan",
+      "field": "name_source_url",
+      "from": "https://www.mangyan.org/content/about",
+      "to": "https://minorityrights.org/communities/indigenous-peoples-5/",
+      "why": "verify.names: old name source is dead (nation drops this round: all three facts unreachable)."
+    },
+    {
+      "key": "canada|musqueam-bc-ca",
+      "field": "pronounce",
+      "from": {
+        "text": "Musqueam: muss-KWEE-um",
+        "source_url": "https://www.sfu.ca/about/truth-reconciliation/ways-to-learn/terminology-language/host-nations-pronunciation-guide.html"
+      },
+      "to": null,
+      "why": "Respect: guide not from the Nation and covers the English form."
+    },
+    {
+      "key": "canada|tsleil-waututh-bc-ca",
+      "field": "pronounce",
+      "from": {
+        "text": "Tsleil-Waututh: SLAY-wha-tuth",
+        "source_url": "https://www.sfu.ca/about/truth-reconciliation/ways-to-learn/terminology-language/host-nations-pronunciation-guide.html"
+      },
+      "to": null,
+      "why": "Respect: guide not from the Nation and covers the English form."
+    },
+    {
+      "key": "canada|ktunaxa-bc-ca",
+      "field": "lands",
+      "from": "ʔamakʔis Ktunaxa: the Kootenay region of southeastern British Columbia, Canada, historically also parts of Alberta, Montana, Idaho and Washington",
+      "to": "ʔamakʔis Ktunaxa: the Kootenay region of southeastern British Columbia, Canada, with Kootenay Tribes also based today in Montana and Idaho, United States",
+      "why": "Respect: present tense; the people are still there."
+    },
+    {
+      "key": "canada|metis-nation-ca",
+      "field": "lands",
+      "from": "The Métis Nation Homeland: Manitoba, Saskatchewan and Alberta, plus parts of Ontario, British Columbia, the Northwest Territories and the northern United States",
+      "to": "The Métis Nation Homeland as described by the Métis National Council: Manitoba, Saskatchewan and Alberta, plus parts of Ontario, British Columbia, the Northwest Territories and the northern United States",
+      "why": "Respect: attribute a contested boundary."
+    },
+    {
+      "key": "gap-africa|irifiyen-morocco",
+      "field": "name_source_url",
+      "from": "https://m.hcp.ma/file/244113",
+      "to": "https://static1.squarespace.com/static/6515b87f2af0cc4746f62fbc/t/65aaef8b85646b6267c70641/1705701259628/09-RamirezA-Fall2023.pdf",
+      "why": "verify.names: the HCP census PDF names only the language Tarifit. No fetchable page shows Irifiyen (Britannica 'Rif' page and Cambridge excerpt unreachable; HAL, Persee and Encyclopedie berbere result"
+    },
+    {
+      "key": "gap-africa|ishelhin-morocco",
+      "field": "name_source_url",
+      "from": "https://inalco.fr/en/languages/kabyle-berber",
+      "to": "https://www.britannica.com/topic/Ishelhiyen",
+      "why": "verify.names: the Inalco page shows only 'Chleuh'. Encyclopaedia Britannica headword 'Ishelhiyen' ('Also known as: Chleuh, Shluh'), fetched 2026-10-10 with the project user agent (HTTP 200). The compi"
+    },
+    {
+      "key": "gap-africa|iqbayliyen-kabyles-algeria",
+      "field": "name_source_url",
+      "from": "https://inalco.fr/en/languages/kabyle-berber",
+      "to": "https://www.inalco.fr/langues/kabyle-berbere",
+      "why": "verify.names: no fetchable page shows Iqbayliyen (Inalco EN 'Kabyle (taqbaylit, Algeria)', Inalco FR 'Les Kabyles', IWGIA 2024 'Kabyle/Kabyls', CNRS LGIDF 403; museum-digital text is a Wikipedia impor"
+    },
+    {
+      "key": "gap-caribbean-guianas|xinka-southeast-guatemala",
+      "field": "region",
+      "from": "caribbean-guianas",
+      "to": "central-america-caribbean",
+      "why": "Geography: south-eastern Guatemala belongs with the existing Central America region, not the Caribbean and Guianas key."
+    },
+    {
+      "key": "gap-caribbean-guianas|chorti-maya-guatemala-honduras",
+      "field": "region",
+      "from": "caribbean-guianas",
+      "to": "central-america-caribbean",
+      "why": "Geography: Guatemala and Honduras belong with the existing Central America region."
+    },
+    {
+      "key": "mx-central-south|binniza-zapotec-mx",
+      "field": "lands",
+      "from": "Oaxaca, Mexico: the Isthmus of Tehuantepec (Juchitán, Tehuantepec), the Central Valleys and the Sierra Norte",
+      "to": "The Isthmus of Tehuantepec, Oaxaca, Mexico, including Juchitán and Tehuantepec",
+      "why": "Respect and verifier: Binnizá is the Isthmus self-name; other Zapotec peoples get their own entries later."
+    },
+    {
+      "key": "mx-central-south|hnahnu-otomi-mx",
+      "field": "lands",
+      "from": "The Valle del Mezquital in Hidalgo and nearby parts of Querétaro, the State of Mexico, Veracruz and San Luis Potosí, Mexico",
+      "to": "The Valle del Mezquital in Hidalgo, Mexico",
+      "why": "Respect: Hñähñu is the Valle del Mezquital self-name."
+    },
+    {
+      "key": "mx-central-south|hnahnu-otomi-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=14",
+      "to": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=2",
+      "why": "Respect: Hñähñu is the Valle del Mezquital self-name."
+    },
+    {
+      "key": "mx-central-south|totonaco-veracruz-puebla-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=40",
+      "to": "https://www.inali.gob.mx/pdf/CLIN_completo.pdf",
+      "why": "Respect: lead with Tutunakú (structured); INALI lists it."
+    },
+    {
+      "key": "mx-central-south|jnatjo-mazahua-mx",
+      "field": "name_source_url",
+      "from": "https://native-land.ca/maps/territories/mazahua/",
+      "to": "https://atlas.inpi.gob.mx/mazahuas-etnografia/",
+      "why": "verify.names: lead Jñatrjo (Estado de México self-name, about 97% of the people); respect preferred Jñatjo but gave no name field. Both forms shown."
+    },
+    {
+      "key": "mx-central-south|kitse-chatnio-chatino-oaxaca-mx",
+      "field": "name_source_url",
+      "from": "https://native-land.ca/maps/territories/chatino/",
+      "to": "https://atlas.inpi.gob.mx/chatinos-etnografia/",
+      "why": "Respect: official INPI name source and variants."
+    },
+    {
+      "key": "mx-central-south|ikoots-huave-oaxaca-mx",
+      "field": "name_source_url",
+      "from": "https://native-land.ca/maps/territories/huave/",
+      "to": "https://atlas.inpi.gob.mx/huaves-etnografia/",
+      "why": "Respect: official INPI name source and variant."
+    },
+    {
+      "key": "mx-central-south|zoque-chiapas-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=39",
+      "to": "https://atlas.inpi.gob.mx/zoques-de-chiapas-etnografia/",
+      "why": "Respect: lead with O' de püt (structured)."
+    },
+    {
+      "key": "mx-central-south|amuzgo-guerrero-oaxaca-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=23",
+      "to": "https://atlas.inpi.gob.mx/amuzgos-etnografia/",
+      "why": "Respect and verifier: lead with Nn'anncue."
+    },
+    {
+      "key": "mx-central-south|cuicateco-oaxaca-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=5",
+      "to": "https://atlas.inpi.gob.mx/cuicatecos-etnografia/",
+      "why": "Respect and verifier: lead with Dibaku."
+    },
+    {
+      "key": "mx-central-south|popoloca-puebla-mx",
+      "field": "name_source_url",
+      "from": "https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=13",
+      "to": "https://www.inali.gob.mx/pdf/CLIN_completo.pdf",
+      "why": "Respect: lead with Ngiwa (structured)."
+    },
+    {
+      "key": "mx-central-south|hach-winik-lacandon-chiapas-mx",
+      "field": "name_source_url",
+      "from": "https://native-land.ca/maps/territories/lacandon/",
+      "to": "https://atlas.inpi.gob.mx/lacandones-etnografia/",
+      "why": "Respect: official INPI name source."
+    },
+    {
+      "key": "mx-north-us-southwest|white-mountain-apache-us-az",
+      "field": "official_url",
+      "from": "http://www.wmat.nsn.us/",
+      "to": null,
+      "why": "Assembler: the site answers only on http (https failed 2026-10-09); https-only rule."
+    },
+    {
+      "key": "mx-north-us-southwest|southern-paiute-us-ut-az",
+      "field": "name_source_url",
+      "from": "https://pitu.gov/bands/",
+      "to": "https://www.sanjuanpaiute-nsn.gov/",
+      "why": "verify.names offered two fixes; the second (keep Southern Paiute, cite the San Juan Southern Paiute Tribe's official site, checked 2026-10-09) avoids a bare 'Paiute' that would collide with Northern P"
+    },
+    {
+      "key": "oceania|kanak-nc",
+      "field": "lands",
+      "from": "New Caledonia, called Kanaky by many Kanak, including Grande Terre and the Loyalty Islands",
+      "to": "New Caledonia, including Grande Terre and the Loyalty Islands",
+      "why": "Round 1 (kept): contested name left out of a plain-fact field. Round 2: the Senat coutumier site refused connections on 2026-10-10 (verifier: WebFetch, curl https and http, browser pane; assembler: EC"
+    },
+    {
+      "key": "oceania|kanak-nc",
+      "field": "official_url",
+      "from": "https://www.senat-coutumier.nc/",
+      "to": null,
+      "why": "Round 1 (kept): contested name left out of a plain-fact field. Round 2: the Senat coutumier site refused connections on 2026-10-10 (verifier: WebFetch, curl https and http, browser pane; assembler: EC"
+    },
+    {
+      "key": "us-plains-midwest|oglala-sioux-tribe-us-sd",
+      "field": "official_url",
+      "from": null,
+      "to": "https://www.oglala.gov/",
+      "why": "Respect: the tribe's own site."
+    },
+    {
+      "key": "us-plains-midwest|spirit-lake-nation-us-nd",
+      "field": "official_url",
+      "from": null,
+      "to": "https://www.spiritlakenation.com/",
+      "why": "Respect: the nation's own site; unsourced spelling dropped."
+    },
+    {
+      "key": "us-plains-midwest|turtle-mountain-band-of-chippewa-us-nd",
+      "field": "official_url",
+      "from": null,
+      "to": "https://tmchippewa.com/",
+      "why": "Respect: the band's official online home."
+    },
+    {
+      "key": "us-plains-midwest|turtle-mountain-band-of-chippewa-us-nd",
+      "field": "name_source_url",
+      "from": "https://www.indianaffairs.nd.gov/turtle-mountain-band-chippewa-0",
+      "to": "https://tmchippewa.com/",
+      "why": "Respect: the band's official online home."
+    },
+    {
+      "key": "us-plains-midwest|blackfeet-nation-us-mt",
+      "field": "pronounce",
+      "from": {
+        "text": "Niitsitapi, the people's own name: nee-itsee-TAH-peh",
+        "source_url": "https://tribalnations.mt.gov/Directory/BlackfeetNation"
+      },
+      "to": null,
+      "why": "Respect: guide from a state directory, not the Nation."
+    },
+    {
+      "key": "us-plains-midwest|northern-cheyenne-tribe-us-mt",
+      "field": "pronounce",
+      "from": {
+        "text": "Tsis tsis'tas, the people's own name: Tse-TSES-tas",
+        "source_url": "https://tribalnations.mt.gov/Directory/NorthernCheyenneTribe"
+      },
+      "to": null,
+      "why": "Respect: guide from a state directory, not the tribe."
+    },
+    {
+      "key": "us-plains-midwest|kiowa-tribe-us-ok",
+      "field": "pronounce",
+      "from": {
+        "text": "Gkawy-goo, the Kiowa name for the people, as given by the tribe's language department",
+        "source_url": "https://www.kiowatribe.org/department/kiowa-language-department"
+      },
+      "to": {
+        "text": "Gáuigú, as in Gáuigú bà dàu, We are Kiowa: Gkawy-goo",
+        "source_url": "https://www.kiowatribe.org/department/kiowa-language-department"
+      },
+      "why": "Respect: lead the guide with the Language Department's own spelling."
+    }
+  ],
+  "name_changes": [
+    {
+      "region": "amazon-lowland-sa",
+      "id": "auwe-xavante-br",
+      "from": "A'uwẽ",
+      "to": "A'uwe",
+      "by": "verify"
+    },
+    {
+      "region": "andes",
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "from": "Iku",
+      "to": "Arhuaco",
+      "by": "respect"
+    },
+    {
+      "region": "andes",
+      "id": "iku-arhuaco-sierra-nevada-co",
+      "id_to": "arhuaco-sierra-nevada-co",
+      "by": "override"
+    },
+    {
+      "region": "arctic-europe-russia",
+      "id": "yukaghir-odul-kolyma",
+      "from": "Odul",
+      "to": "Odul, Wadul",
+      "by": "respect"
+    },
+    {
+      "region": "gap-africa",
+      "id": "irifiyen-morocco",
+      "from": "Irifiyen",
+      "to": "Rifians",
+      "by": "override"
+    },
+    {
+      "region": "gap-africa",
+      "id": "ishelhin-morocco",
+      "from": "Ishelhin",
+      "to": "Ishelhiyen",
+      "by": "override"
+    },
+    {
+      "region": "gap-africa",
+      "id": "iqbayliyen-kabyles-algeria",
+      "from": "Iqbayliyen",
+      "to": "Kabyles",
+      "by": "override"
+    },
+    {
+      "region": "gap-africa",
+      "id": "at-mzab-algeria",
+      "from": "At Mzab",
+      "to": "Mozabite",
+      "by": "override"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "totonaco-veracruz-puebla-mx",
+      "from": "Totonaco",
+      "to": "Tutunakú",
+      "by": "respect"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "jnatjo-mazahua-mx",
+      "from": "Jñatjo",
+      "to": "Jñatrjo",
+      "by": "verify"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "zoque-chiapas-mx",
+      "from": "Zoque",
+      "to": "O' de püt",
+      "by": "respect"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "amuzgo-guerrero-oaxaca-mx",
+      "from": "Amuzgo",
+      "to": "Nn'anncue",
+      "by": "respect"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "cuicateco-oaxaca-mx",
+      "from": "Cuicateco",
+      "to": "Dibaku",
+      "by": "respect"
+    },
+    {
+      "region": "mx-central-south",
+      "id": "popoloca-puebla-mx",
+      "from": "Popoloca",
+      "to": "Ngiwa",
+      "by": "respect"
+    },
+    {
+      "region": "mx-north-us-southwest",
+      "id": "warijo-mx-chihuahua-sonora",
+      "from": "Warihó",
+      "to": "Warihó and Macurawe",
+      "by": "respect"
+    },
+    {
+      "region": "mx-north-us-southwest",
+      "id": "haaku-acoma-us-nm",
+      "from": "Haak’u",
+      "to": "Acoma",
+      "by": "verify"
+    },
+    {
+      "region": "us-east-southeast",
+      "id": "muscogee-creek-nation-us-ok",
+      "from": "Muscogee (Creek) Nation",
+      "to": "Muscogee Nation",
+      "by": "respect"
+    },
+    {
+      "region": "us-plains-midwest",
+      "id": "forest-county-potawatomi-us-wi",
+      "from": "Forest County Potawatomi Community",
+      "to": "Forest County Potawatomi",
+      "by": "respect"
+    },
+    {
+      "region": "us-west-pacific",
+      "id": "confederated-tribes-of-warm-springs-us-or",
+      "from": "Confederated Tribes of Warm Springs",
+      "to": "Confederated Tribes of the Warm Springs",
+      "by": "verify"
+    }
+  ],
+  "merges": [
+    {
+      "into": "baka-cameroon-gabon",
+      "into_file": "africa|baka-cameroon-gabon",
+      "from": "baka-cameroon-gabon",
+      "from_file": "gap-africa|baka-cameroon-gabon",
+      "region": "africa",
+      "name": "Baka",
+      "facts_added": 2
+    },
+    {
+      "into": "khoikhoi-south-africa",
+      "into_file": "africa|khoikhoi-south-africa",
+      "from": "khoikhoi-south-africa",
+      "from_file": "gap-africa|khoikhoi-south-africa",
+      "region": "africa",
+      "name": "Khoikhoi",
+      "facts_added": 2
+    },
+    {
+      "into": "san-khwe-southern-africa",
+      "into_file": "africa|san-khwe-southern-africa",
+      "from": "san-khwe-southern-africa",
+      "from_file": "gap-africa|san-khwe-southern-africa",
+      "region": "africa",
+      "name": "Khwe",
+      "facts_added": 2
+    },
+    {
+      "into": "mbuti-drc",
+      "into_file": "africa|mbuti-drc",
+      "from": "mbuti-drc",
+      "from_file": "gap-africa|mbuti-drc",
+      "region": "africa",
+      "name": "Mbuti",
+      "facts_added": 2
+    },
+    {
+      "into": "samburu-kenya",
+      "into_file": "africa|samburu-kenya",
+      "from": "samburu-kenya",
+      "from_file": "gap-africa|samburu-kenya",
+      "region": "africa",
+      "name": "Samburu",
+      "facts_added": 2
+    },
+    {
+      "into": "san-xun-southern-africa",
+      "into_file": "africa|san-xun-southern-africa",
+      "from": "san-xun-southern-africa",
+      "from_file": "gap-africa|san-xun-southern-africa",
+      "region": "africa",
+      "name": "!Xun",
+      "facts_added": 2
+    },
+    {
+      "into": "in-garo",
+      "into_file": "asia|in-garo",
+      "from": "in-garo",
+      "from_file": "gap-south-asia|in-garo",
+      "region": "asia",
+      "name": "Garo",
+      "facts_added": 3
+    },
+    {
+      "into": "in-santal",
+      "into_file": "asia|in-santal",
+      "from": "in-santal",
+      "from_file": "gap-south-asia|in-santal",
+      "region": "asia",
+      "name": "Santal",
+      "facts_added": 3
+    },
+    {
+      "into": "mam-maya-guatemala-mexico",
+      "into_file": "central-america-caribbean|mam-maya-guatemala-mexico",
+      "from": "mam-chiapas-mx",
+      "from_file": "mx-central-south|mam-chiapas-mx",
+      "region": "central-america-caribbean",
+      "name": "Mam",
+      "facts_added": 2
+    },
+    {
+      "into": "itaukei-fj",
+      "into_file": "oceania|itaukei-fj",
+      "from": "itaukei-fj",
+      "from_file": "gap-pacific|itaukei-fj",
+      "region": "oceania",
+      "name": "iTaukei",
+      "facts_added": 2
+    },
+    {
+      "into": "kanak-nc",
+      "into_file": "oceania|kanak-nc",
+      "from": "kanak-nc",
+      "from_file": "gap-pacific|kanak-nc",
+      "region": "oceania",
+      "name": "Kanak",
+      "facts_added": 3
+    },
+    {
+      "into": "maohi-pf",
+      "into_file": "oceania|maohi-pf",
+      "from": "maohi-pf",
+      "from_file": "gap-pacific|maohi-pf",
+      "region": "oceania",
+      "name": "Mā'ohi",
+      "facts_added": 2
+    },
+    {
+      "into": "rapa-nui-cl",
+      "into_file": "oceania|rapa-nui-cl",
+      "from": "rapa-nui-cl",
+      "from_file": "gap-pacific|rapa-nui-cl",
+      "region": "oceania",
+      "name": "Rapa Nui",
+      "facts_added": 3
+    }
+  ],
+  "nations_dropped": [
+    {
+      "region": "amazon-lowland-sa",
+      "id": "xingu-peoples-br",
+      "name": "Associação Terra Indígena do Xingu",
+      "reason": "respect remove: Category and naming error. 'Associação Terra Indígena do Xingu' (Atix) is an organization, not a people, so the herald would announce 'Nation: Associação Terra "
+    },
+    {
+      "region": "asia",
+      "id": "ph-mangyan",
+      "name": "Mangyan",
+      "reason": "zero surviving facts"
+    },
+    {
+      "region": "oceania",
+      "id": "ngapuhi-nz",
+      "name": "Ngāpuhi",
+      "reason": "zero surviving facts"
+    },
+    {
+      "region": "us-east-southeast",
+      "id": "penobscot-nation-us-me",
+      "name": "Penobscot Nation",
+      "reason": "zero surviving facts"
+    }
+  ],
+  "facts_dropped": [
+    {
+      "key": "alaska-hawaii-pacific-us|yupik-central-alaska|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples by speakers ('second most spoken').",
+      "text": "Yugtun, the preferred name for the Yup'ik language in the Calista Region, ranked as the second most spoken Native language in the US in 2006 to 2010 survey data."
+    },
+    {
+      "key": "amazon-lowland-sa|ashaninka-pe|2",
+      "reason": "respect: remove",
+      "note": "Misreading, and a protection issue. Fetched 2026-10-09, the BDPI sentence behind the evidence phrase says families in isolation and initial contact may still exist in Otishi National Park and the Ashaninka Communal Reserve ('existirían aún familias en situación de aislamiento y contacto inicial'). I",
+      "text": "Most Asháninka live in the Junín, Ucayali, Pasco, Cusco, Huánuco and Ayacucho regions, along rivers such as the Pichis, Perené, Ene and Tambo."
+    },
+    {
+      "key": "amazon-lowland-sa|wichi-ar-bo|1",
+      "reason": "respect edit unresolved: Respect: 'being spoken again' implies the language had stopped and is not in the source; the fix adds an unchecked claim (teenagers).",
+      "text": "Wichí is passed down by elders to younger generations and is being spoken again from early childhood.",
+      "respect_text": "Elders pass Wichí on to younger generations, and a 2022 report says young children and teenagers are taking up the language."
+    },
+    {
+      "key": "amazon-lowland-sa|xingu-peoples-br|0",
+      "reason": "nation removed by respect review",
+      "text": "Sixteen Indigenous peoples make up what is known today as the Xingu Indigenous Territory in Mato Grosso, Brazil."
+    },
+    {
+      "key": "amazon-lowland-sa|xingu-peoples-br|1",
+      "reason": "nation removed by respect review",
+      "text": "The Xingu Indigenous Park, established in 1961, was the first large Indigenous land demarcated by Brazil's federal government."
+    },
+    {
+      "key": "amazon-lowland-sa|xingu-peoples-br|2",
+      "reason": "nation removed by respect review",
+      "text": "The Xingu Indigenous Park covers 2.8 million hectares and is home to about eight thousand people."
+    },
+    {
+      "key": "andes|aymara-altiplano-bo-pe-cl|2",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('second largest').",
+      "text": "Chile's 2024 census counted 178,637 Aymara people, the country's second largest Indigenous people after the Mapuche."
+    },
+    {
+      "key": "andes|kichwa-otavalo-imbabura-ec|0",
+      "reason": "respect edit unresolved: Respect: the verified text misreads the label (the association's first loom built in the US, not the first ever); the fix adds the association name, unchecked.",
+      "text": "Kichwa weavers from Peguche, near Otavalo, built the first traditional floor loom ever made in the United States. It is held by the Burke Museum.",
+      "respect_text": "Kichwa weavers of the Kurypachamama artisan association, from Peguche near Otavalo, built a traditional floor loom in the United States, their first there. The Burke Museum holds it."
+    },
+    {
+      "key": "andes|kichwa-puruwa-chimborazo-ec|2",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('largest Indigenous population').",
+      "text": "Ecuador's Ministry of Public Health describes the Puruwá as the largest Indigenous population of the Ecuadorian highlands."
+    },
+    {
+      "key": "andes|nasa-cauca-co|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('four largest').",
+      "text": "Colombia's 2018 census lists the Nasa among the four largest Indigenous peoples in the country."
+    },
+    {
+      "key": "andes|pasto-narino-co-ec|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('four largest').",
+      "text": "Colombia's 2018 census lists the Pastos among the four largest Indigenous peoples in the country."
+    },
+    {
+      "key": "andes|mapuche-cl-ar|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('the largest').",
+      "text": "Chile's 2024 census counted 1,623,073 Mapuche people, 8.8 percent of the population and the largest Indigenous people in the country."
+    },
+    {
+      "key": "andes|diaguita-norte-chico-cl-ar|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('third largest').",
+      "text": "Chile's 2024 census counted 153,231 Diaguita people, the country's third largest Indigenous people."
+    },
+    {
+      "key": "arctic-europe-russia|evenki-siberia|2",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks related peoples' languages ('the largest').",
+      "text": "Evenki is the largest language of the northern Tungusic (Manchu-Tungus) group and has northern, southern and eastern dialect groups."
+    },
+    {
+      "key": "arctic-europe-russia|nivkh-amur-sakhalin|1",
+      "reason": "verify: unsupported",
+      "note": "Misread. In the source, 'его' in 'некоторые нивхи стараются его возродить' refers to the bear festival ritual in the previous sentence, not the language (confirmed by WebFetch). The page mentions no language revival and says Nivkh is near extinction. Not redirected to the festival because it is cere",
+      "text": "Some Nivkh are now working to revive their language."
+    },
+    {
+      "key": "asia|tw-pangcah|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('the largest').",
+      "text": "The Pangcah, also called Amis, are the largest Indigenous people in Taiwan, numbering about 213,514 in January 2020."
+    },
+    {
+      "key": "asia|ph-mangyan|0",
+      "reason": "verify: unreachable",
+      "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. https://www.mangyan.org/content/about now 301-redirects to mangyan.org/content/about/ which returns HTTP 404 ('Oops! That page can't be found'); the mangyan.org domain now s",
+      "text": "Mangyan is a shared name for the Indigenous peoples of Mindoro, including the Iraya, Alangan, Tadyawan, Tau-buid, Bangon, Buhid, Hanunuo and Ratagnon."
+    },
+    {
+      "key": "asia|ph-mangyan|1",
+      "reason": "verify: unreachable",
+      "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. Same source as fact 0: HTTP 404 on a domain that now hosts an unrelated travel template. Claim about Hanunuo and Buhid scripts cannot be checked at this URL; needs a new, st",
+      "text": "The Hanunuo and Buhid keep Indigenous syllabic scripts, carved on bamboo to record poems, love songs and messages."
+    },
+    {
+      "key": "asia|ph-mangyan|2",
+      "reason": "verify: unreachable",
+      "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. https://www.mangyan.org/content/mangyan-syllabic-script redirects to a 404 page on the same repurposed domain. Evidence phrase not retrievable; the domain no longer appears ",
+      "text": "Today the Mangyan script also appears on paper, signs and teaching materials, helping younger people meet it in daily life."
+    },
+    {
+      "key": "asia|in-santal|1",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('most populous').",
+      "text": "The Santal are among the most populous Indigenous peoples in Bangladesh, living mainly in the northwest."
+    },
+    {
+      "key": "asia|in-garo|1",
+      "reason": "verify: unsupported",
+      "note": "Fetched directly (curl, 2026-10-09; WebFetch returned 403/429 on some hosts) and searched with whitespace/quote normalization. The MRG Bangladesh page does say the Mandi live in north-central Bangladesh, but it never mentions the Garo or links the Mandi to them (full-text search for 'Garo' and 'A·ch",
+      "text": "In Bangladesh, where the people are known as Mandi, they live mainly in the north-central region."
+    },
+    {
+      "key": "asia|bd-marma|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('most populous').",
+      "text": "The Marma are among the most populous Indigenous peoples in Bangladesh."
+    },
+    {
+      "key": "asia|np-tharu|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('one of the largest').",
+      "text": "The Tharu are about 6.2 percent of Nepal's people in the 2021 census, one of the country's largest Indigenous nationalities."
+    },
+    {
+      "key": "asia|np-tamang|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('one of the largest').",
+      "text": "The Tamang are about 5.62 percent of Nepal's people in the 2021 census, one of the country's largest Indigenous nationalities."
+    },
+    {
+      "key": "asia|mm-karen|2",
+      "reason": "respect edit unresolved: Respect: the law does not name the Karen; the fix adds an unchecked advocacy claim.",
+      "text": "A 2025 Thai law affirms the right of ethnic groups, including Karen communities, to keep their languages, cultures and livelihoods.",
+      "respect_text": "In Thailand, where many Karen live, Indigenous advocacy helped pass a 2025 law affirming ethnic groups' rights to their languages, cultures and livelihoods, though it avoids the term Indigenous."
+    },
+    {
+      "key": "asia|th-akha|1",
+      "reason": "respect: remove",
+      "note": "Respect, not accuracy: the evidence phrase does appear in the MRG page's Historical context section. But the same page says Thai policy has portrayed highland peoples 'as transient or peripheral rather than indigenous inhabitants' and that this shapes citizenship policy. A rotating card that tells v",
+      "text": "Many Akha communities came to Thailand from neighbouring Myanmar in the early twentieth century."
+    },
+    {
+      "key": "asia|th-akha|2",
+      "reason": "respect edit unresolved: Respect: the law does not name the Akha; the fix adds an unchecked advocacy claim.",
+      "text": "A 2025 Thai law affirms the right of ethnic groups, including the Akha, to keep their languages, cultures and livelihoods.",
+      "respect_text": "In Thailand, where many Akha live, Indigenous advocacy helped pass a 2025 law affirming ethnic groups' rights to their languages, cultures and livelihoods, though it avoids the term Indigenous."
+    },
+    {
+      "key": "central-america-caribbean|wounaan-panama-colombia|0",
+      "reason": "respect edit unresolved: Verified text names an individual (ARCHITECTURE 9.1); the fix adds unchecked claims (young woman, role usually held by men).",
+      "text": "In 2022 the National Congress of the Wounaan People, meeting in Taimatí, elected Aulina Ismare Opua as the people's national cacica, or leader.",
+      "respect_text": "In 2022 the National Congress of the Wounaan People elected a young woman as the people's national cacica, or leader, a role that men had usually held."
+    },
+    {
+      "key": "gap-south-asia|lk-wanniyala-aetto|1",
+      "reason": "respect: remove",
+      "note": "Deficit framing: a percentage who 'wish to keep to their Indigenous roots' implies the remainder do not and measures the people by assimilation pressure; it comes from a rights-violations shadow report and reads as a loss statistic on a herald card. Replace with a strengths fact (language, leadershi",
+      "text": "Research cited by Cultural Survival in 2017 found that 64 percent of Wanniyala-Aetto wish to keep to their Indigenous roots."
+    },
+    {
+      "key": "mx-central-south|nahua-mx-central-south|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples by speakers ('most spoken').",
+      "text": "In 2023 Nahuatl was the most spoken Indigenous language in Mexico, used by 23.6% of the 7.4 million people aged 3 and over who speak an Indigenous language."
+    },
+    {
+      "key": "mx-central-south|maya-yucatan-peninsula-mx|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples by speakers ('second most spoken').",
+      "text": "Maya is the second most spoken Indigenous language in Mexico, used by 12.4% of the country's Indigenous language speakers in 2023."
+    },
+    {
+      "key": "mx-central-south|nuu-savi-mixtec-mx|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples ('fourth largest').",
+      "text": "Ñuu Savi means people of the rain in their own language. They are the fourth largest Indigenous people in Mexico, after the Nahuas, Maya and Zapotecs."
+    },
+    {
+      "key": "mx-central-south|binniza-zapotec-mx|0",
+      "reason": "assembler: Scope: covers all Zapotec speakers while the card now names only the Isthmus Binnizá (verify.names note); also ranks languages.",
+      "text": "Zapotec is the fourth most spoken Indigenous language in Mexico, used by 7.2% of the country's Indigenous language speakers in 2023."
+    },
+    {
+      "key": "mx-central-south|binniza-zapotec-mx|2",
+      "reason": "respect: remove",
+      "note": "La Voz de la Sierra Juárez serves Sierra Norte Zapotec communities, who are not Binnizá (the Isthmus self-name). Showing this fact on the Binnizá card would label them with another people's name. Move it to a future Sierra Norte Zapotec entry.",
+      "text": "Since 1990, La Voz de la Sierra Juárez in Guelatao de Juárez, Oaxaca has broadcast in Zapotec, Mixe and Chinantec, and its sound archive holds about 1,200 open reel tapes."
+    },
+    {
+      "key": "mx-north-us-southwest|comcaac-mx-sonora|2",
+      "reason": "respect: remove",
+      "note": "Deficit-adjacent and government-centered. The bulletin is publicity for a federal program and frames Comcaac children as recipients of state meals; as the renewing fact on a herald or level card it honors the program more than the people. No edit within the source can turn it into a strength. Replac",
+      "text": "In December 2025 a children’s dining hall opened in Punta Chueca under the Comcaac Justice Plan, serving 136 students from preschool to high school."
+    },
+    {
+      "key": "mx-north-us-southwest|nuche-ute-us-co-ut|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks peoples by precedence ('the oldest residents').",
+      "text": "The Ute people are the oldest residents of Colorado, with homelands that once reached across Colorado, Utah and neighboring states."
+    },
+    {
+      "key": "oceania|meriam-au|0",
+      "reason": "respect edit unresolved: Respect: 'granted' misstates the 1992 decision (title was recognised, not given); the fix adds unchecked claims.",
+      "text": "A decision of the High Court of Australia granted native title to the Meriam people over Mer, also called Murray Island.",
+      "respect_text": "A 10-year court struggle by Meriam people discredited the idea of terra nullius; in 1992 the High Court of Australia recognised their native title over Mer, also called Murray Island."
+    },
+    {
+      "key": "oceania|ngapuhi-nz|0",
+      "reason": "respect: remove",
+      "note": "The fact only ranks Ngāpuhi as the largest iwi. Section 9.1 of ARCHITECTURE.md bans ranking nations and allows population only as a neutral number with as_of. Re-fetched 2026-10-09: the Te Ao Māori News article gives no number for Ngāpuhi or any other iwi, so the fact cannot be reworded into a neutr",
+      "text": "Ngāpuhi is the largest iwi in Aotearoa by population, according to iwi census data released in 2024."
+    },
+    {
+      "key": "oceania|ngapuhi-nz|1",
+      "reason": "respect edit unresolved: Verified text ranks iwi providers (ARCHITECTURE 9.1); the fix is a new claim with new evidence.",
+      "text": "Ngāpuhi Iwi Social Services, part of the Ngāpuhi Rūnanga group, describes itself as the largest iwi social service provider in New Zealand.",
+      "respect_text": "Ngāpuhi Iwi Social Services, part of the Ngāpuhi Rūnanga group, gives advice and support to Ngāpuhi whānau and tamariki across Taitokerau."
+    },
+    {
+      "key": "oceania|ngati-porou-nz|0",
+      "reason": "respect edit unresolved: Verified text ranks iwi ('second largest', ARCHITECTURE 9.1); the fix adds a claim and new evidence.",
+      "text": "Ngāti Porou counts 102,480 people, making it the second largest iwi in Aotearoa.",
+      "respect_text": "Ngāti Porou, the iwi of Te Tairāwhiti on the East Coast, has a population of 102,480."
+    },
+    {
+      "key": "us-east-southeast|oneida-indian-nation-us-ny|0",
+      "reason": "respect edit unresolved: Respect: contested governance stated as settled (ARCHITECTURE 9.1); the fix adds an unchecked claim (seven generations).",
+      "text": "The Oneida Indian Nation is governed by a Nation Council of clan representatives, with each clan choosing who will join the governing body.",
+      "respect_text": "The Oneida Indian Nation describes its government as a Nation Council of clan representatives, each chosen by a clan, planning for the next seven generations."
+    },
+    {
+      "key": "us-east-southeast|cherokee-nation-us-ok|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks nations ('the largest tribal nation').",
+      "text": "Cherokee Nation, with its capital in Tahlequah, Oklahoma, is the largest tribal nation in the United States."
+    },
+    {
+      "key": "us-east-southeast|united-keetoowah-band-us-ok|1",
+      "reason": "respect edit unresolved: Respect: disputed lineage stated as fact (ARCHITECTURE 9.1); the fix adds an unchecked removal clause.",
+      "text": "Also known as the Western Cherokee or Old Settlers, the Keetoowahs were the first Cherokees to move west, first by choice to avoid encroachment.",
+      "respect_text": "The UKB says the Keetoowahs, also called Western Cherokee or Old Settlers, were the first Cherokees to move west, first by choice and later by force after the Indian Removal Act."
+    },
+    {
+      "key": "us-east-southeast|penobscot-nation-us-me|0",
+      "reason": "verify: unreachable",
+      "note": "Cited URL https://www.penobscotnation.org/departments/cultural-historic-preservation/ returns HTTP 404 (WebFetch and curl). The same text is live at https://www.penobscotnation.org/services/cultural_historic_preservation/index.php ('Revitalize, sustain, and encourage the use of the Penobscot languag",
+      "text": "The Penobscot Nation's cultural office works to revitalize, sustain and encourage use of the Penobscot language through continuing education."
+    },
+    {
+      "key": "us-east-southeast|penobscot-nation-us-me|1",
+      "reason": "verify: unreachable",
+      "note": "Cited URL .../departments/department-of-natural-resources/water-n%c9%99pi-resources/ returns HTTP 404. Content is live at https://www.penobscotnation.org/services/natural_resources/water_resources/index.php (title 'Water (nə̀pi) Resources'): 'protect the health of Penobscot citizens and how they use",
+      "text": "The Penobscot Nation's Water Resources Program monitors rivers, streams, lakes and wetlands to protect citizens and the ways they use their waters."
+    },
+    {
+      "key": "us-east-southeast|penobscot-nation-us-me|2",
+      "reason": "verify: unsupported",
+      "note": "Cited page https://www.penobscotnation.org/ is reachable but does not contain 'by the wise exercise of our Sovereign Powers' (home has only 'We are committed to the health, education, and prosperity of our people...'). The mission is on https://www.penobscotnation.org/government/index.php (title 'Go",
+      "text": "Based on Indian Island, Maine, the Penobscot Nation sets its mission as protecting Penobscot people, culture and territory through the wise exercise of its sovereign powers."
+    },
+    {
+      "key": "us-plains-midwest|ho-chunk-nation-us-wi|2",
+      "reason": "respect edit unresolved: Respect: the state gloss of the name conflicts with the Nation's own; the fix adds unchecked claims (1994 election).",
+      "text": "Ho-Chunk, meaning People of the Big Voice, is the name the people have always called themselves, and it is now the nation's official name.",
+      "respect_text": "In 1994 a secretarial election restored Ho-Chunk, the name the people have always called themselves, as the nation's official name in place of Winnebago."
+    },
+    {
+      "key": "us-plains-midwest|sac-and-fox-nation-us-ok|2",
+      "reason": "respect edit unresolved: Respect: near word-for-word copy of the source (own-words rule); the fix adds an unchecked claim.",
+      "text": "Sac and Fox community life brings families, clans and social groups together often and with enthusiasm.",
+      "respect_text": "Sac and Fox families, clans and social groups gather often and eagerly, carrying the teachings of their ancestors into work and play."
+    },
+    {
+      "key": "us-west-pacific|yurok-tribe-us-ca|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks nations ('the largest tribe').",
+      "text": "The Yurok Tribe is the largest tribe in California, with more than 5,000 enrolled members."
+    },
+    {
+      "key": "us-west-pacific|karuk-tribe-us-ca|0",
+      "reason": "assembler: ARCHITECTURE 9.1: ranks nations ('one of the largest tribes').",
+      "text": "The Karuk Tribe is one of the largest tribes in California, with ancestral homelands along the Klamath River."
+    },
+    {
+      "key": "us-west-pacific|tulalip-tribes-us-wa|2",
+      "reason": "respect edit unresolved: Respect: grammar made Tulalip the signers and a contested successor claim is stated as fact; the fix adds 'descendants', unchecked.",
+      "text": "Tulalip are successors to the Snohomish, Snoqualmie, Skykomish and allied bands, and signers of the 1855 Treaty of Point Elliott.",
+      "respect_text": "The Tulalip Tribes describe themselves as descendants and successors of the Snohomish, Snoqualmie, Skykomish and allied bands that signed the 1855 Treaty of Point Elliott."
+    }
+  ],
+  "totals": {
+    "nations": 450,
+    "facts": 1260,
+    "regions": {
+      "africa": 41,
+      "alaska-hawaii-pacific-us": 21,
+      "amazon-lowland-sa": 29,
+      "andes": 22,
+      "arctic-europe-russia": 20,
+      "asia": 53,
+      "canada": 35,
+      "caribbean-guianas": 16,
+      "central-america-caribbean": 26,
+      "mx-central-south": 26,
+      "mx-north-us-southwest": 26,
+      "oceania": 46,
+      "us-east-southeast": 25,
+      "us-plains-midwest": 35,
+      "us-west-pacific": 29
+    },
+    "facts_by_region": {
+      "africa": 124,
+      "alaska-hawaii-pacific-us": 58,
+      "amazon-lowland-sa": 79,
+      "andes": 56,
+      "arctic-europe-russia": 58,
+      "asia": 141,
+      "canada": 105,
+      "caribbean-guianas": 48,
+      "central-america-caribbean": 68,
+      "mx-central-south": 69,
+      "mx-north-us-southwest": 75,
+      "oceania": 131,
+      "us-east-southeast": 72,
+      "us-plains-midwest": 97,
+      "us-west-pacific": 79
+    }
+  }
+}

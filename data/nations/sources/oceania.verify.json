@@ -1,0 +1,604 @@
+{
+  "region": "oceania",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "gadigal-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Page: about 29 clan groups referred to collectively as the Eora Nation; the Gadigal are a clan of the Eora Nation. Evidence verbatim."
+    },
+    {
+      "id": "gadigal-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page says the name Eora is proudly used today by the descendants and that descendants of the Eora still live in Sydney today. Evidence verbatim."
+    },
+    {
+      "id": "gadigal-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Page: The City acknowledges the Gadigal of the Eora Nation as the traditional custodians of this place we now call Sydney. Evidence verbatim."
+    },
+    {
+      "id": "wurundjeri-woi-wurrung-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Homepage states the corporation are the Traditional Custodians of Melbourne and surrounding lands. Evidence verbatim."
+    },
+    {
+      "id": "wurundjeri-woi-wurrung-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: Council established in 1985 by blood line descendants; gained Registered Aboriginal Party status, appointed August 2008 by the Victorian Aboriginal Heritage Council. Evidence verbatim."
+    },
+    {
+      "id": "wurundjeri-woi-wurrung-au",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page calls it a 2017 bill, the first legislation to go before the Victorian parliament with a dual Aboriginal language title; it never says the bill became law. Wilip-gin Birrarung murron = keep the Birrarung alive in Woi-wurrung is on the same page. Reworded from law to bill.",
+      "text": "In 2017 a Yarra River protection bill was the first legislation put before Victoria's parliament with a dual Aboriginal language title: Wilip-gin Birrarung murron, keep the Birrarung alive.",
+      "evidence": "with a dual Aboriginal language title"
+    },
+    {
+      "id": "yolngu-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Live page sits behind an Imperva bot challenge (HTTP 200 for browsers, blocked for curl and WebFetch); text verified verbatim from the Wayback Machine capture of this exact URL (20260123164414). Automated re-checks will likely fail here. Article: Yolngu elders founded Dhimurru Aboriginal Corporation to manage the land and visitors to it, around the Gove peninsula. Fact avoids naming the deceased founder, as required."
+    },
+    {
+      "id": "yolngu-au",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Live page sits behind an Imperva bot challenge (HTTP 200 for browsers, blocked for curl and WebFetch); text verified verbatim from the Wayback Machine capture of this exact URL (20260123164414). Automated re-checks will likely fail here. Facts check out (dedicated 2000, first IPA in the NT, first to include sea country), but the original text copied 14 consecutive words from the source; rewritten in own words.",
+      "text": "Dedicated in 2000, Dhimurru became the Northern Territory's first Indigenous Protected Area and the first IPA to cover sea country as well as land.",
+      "evidence": "first in the Northern Territory and the first to include sea country"
+    },
+    {
+      "id": "yolngu-au",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Live page sits behind an Imperva bot challenge (HTTP 200 for browsers, blocked for curl and WebFetch); text verified verbatim from the Wayback Machine capture of this exact URL (20260123164414). Automated re-checks will likely fail here. Meaning confirmed (Dhimurru means east wind, the wind that brings the monsoon, rain and new life to the land), but the original text copied 17 consecutive words; rewritten.",
+      "text": "The name Dhimurru means east wind, the wind that carries the monsoon rains and brings new life to the land.",
+      "evidence": "the wind that brings the monsoon, rain and new life"
+    },
+    {
+      "id": "noongar-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "SWALSC page: Noongar means a person of the south-west of Western Australia; archaeological evidence shows possession of land on our country for at least 45,000 years. Evidence verbatim."
+    },
+    {
+      "id": "noongar-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: settlement affects an estimated 40,000 Noongar people and encompasses approximately 200,000 square kilometres. Evidence verbatim."
+    },
+    {
+      "id": "noongar-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WA media statement (2018): settlement for about $1.3 billion in land and other benefits; as part of it the WA Parliament passed the Noongar Recognition Act recognising the Noongar people as traditional owners of the South-West. Evidence verbatim."
+    },
+    {
+      "id": "arrernte-au",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Content supported (Antulye, Irlpme and Mparntwe estate groups are traditional owners of land in and around Alice Springs), but original copied 21 consecutive words; rewritten.",
+      "text": "Arrernte people from three estate groups, Antulye, Irlpme and Mparntwe, are the traditional owners of Alice Springs and its surrounding land.",
+      "evidence": "The Arrernte people of the Antulye, Irlpme and Mparntwe estate groups"
+    },
+    {
+      "id": "arrernte-au",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Content supported (LAAC is the Registered Native Title Body Corporate; administers five ILUAs and a land release agreement), but original copied 15 consecutive words; rewritten.",
+      "text": "Lhere Artepe Aboriginal Corporation, their native title body, looks after five Indigenous Land Use Agreements plus a land release agreement.",
+      "evidence": "administers five Indigenous Land Use Agreements and a land release agreement"
+    },
+    {
+      "id": "anangu-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Parks Australia: handed back to its Traditional Owners in 1985, jointly managed by Anangu and the Australian Government ever since. Evidence verbatim."
+    },
+    {
+      "id": "anangu-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: the board is made up of 12 people, including eight Aboriginal members nominated by Traditional Owners. Evidence verbatim."
+    },
+    {
+      "id": "anangu-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Page: Tjukurpa, Anangu traditional law, knowledge and religious philosophy, guides everything that happens in the park. Publicly shared by the park; not restricted. Evidence verbatim."
+    },
+    {
+      "id": "wiradjuri-au",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page (via WebFetch): The Wiradjuri people were known as the people of the three rivers: Wambool (Macquarie), Kalari (Lachlan), Murrumbidjeri (Murrumbidgee). Source uses past tense 'were known'; tense corrected to match. curl gets HTTP 403 (bot block); page read via WebFetch, which returned the sentence verbatim. Automated re-checks may need a browser user agent.",
+      "text": "Wiradjuri people were known as the people of the three rivers: the Wambool (Macquarie), the Kalari (Lachlan) and the Murrumbidjeri (Murrumbidgee).",
+      "evidence": "known as the people of the three rivers"
+    },
+    {
+      "id": "wiradjuri-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page (via WebFetch): Wiradjuri country is the largest in NSW, stretching from the eastern boundary of the Great Dividing Range. curl gets HTTP 403 (bot block); page read via WebFetch, which returned the sentence verbatim. Automated re-checks may need a browser user agent."
+    },
+    {
+      "id": "wiradjuri-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Talloires page sits under 2019 MacJannet Prize Winners; curriculum centres the Elders; creating a living community of language speakers is central. Evidence verbatim."
+    },
+    {
+      "id": "kaurna-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "SLSA guide: Kaurna Aboriginal people are the Traditional Owners of the Adelaide plains in South Australia. Evidence verbatim."
+    },
+    {
+      "id": "kaurna-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "SANTS: on 21 March 2018 Kaurna recognised as native title holders around Adelaide, the first positive determination over a capital city area. Evidence verbatim."
+    },
+    {
+      "id": "kaurna-au",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page: Aboriginal corporation, Kaurna Warra Karrpanthi, which handles all requests for Kaurna names and translations. Page does not call it a Kaurna corporation and does not say 'as the language is revived'; those parts removed.",
+      "text": "Requests for Kaurna names and translations all go through Kaurna Warra Karrpanthi, an Aboriginal corporation.",
+      "evidence": "handles all requests for Kaurna names and translations"
+    },
+    {
+      "id": "larrakia-au",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Content supported (traditional owners of the Darwin region; country from Cox peninsula in the west to Gunn Point in the north), but original copied 14 consecutive words; rewritten.",
+      "text": "Larrakia are the traditional owners of the Darwin region, with country reaching from Cox Peninsula in the west up to Gunn Point in the north.",
+      "evidence": "Our country runs from Cox peninsula in the west to Gunn Point"
+    },
+    {
+      "id": "larrakia-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "About page: set up in 1997; today operates 40 programs under five managers; services include Larrakia Land and Sea Rangers; across the Darwin region. Evidence verbatim."
+    },
+    {
+      "id": "larrakia-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "About page: one of the largest private sector employers of Aboriginal people in Darwin. Evidence verbatim."
+    },
+    {
+      "id": "gamilaraay-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANU course page: Gamilaraay, a heritage Indigenous Australian language whose custodians are reviving it. Evidence verbatim."
+    },
+    {
+      "id": "gamilaraay-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: student work will contribute to materials for Gamilaraay/Yuwalaraay language revival; textbook Wiidhaa, free download from ANU Press. Page spells Yuwalaraay (and yuwaalaraay.com); acceptable variant. Evidence verbatim."
+    },
+    {
+      "id": "yawuru-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Yawuru page: in 2006 the Federal Court determined Yawuru are native title holders of approximately 530,000 hectares; lands and seas in and around Broome. Evidence verbatim."
+    },
+    {
+      "id": "yawuru-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: Broome primary schools (up to 1500 children) have Yawuru language programs. Evidence verbatim."
+    },
+    {
+      "id": "yawuru-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Page: inaugural Walalangga Yawuru Ngan-ga, a 2 year adult program; nine Yawuru adults completed the first fulltime course. Evidence verbatim."
+    },
+    {
+      "id": "meriam-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Tagai page: High Court decision to grant native title to the Meriam people over Mer Island (1992 case named on page). Fact correctly avoids naming the case's deceased namesake. Evidence verbatim."
+    },
+    {
+      "id": "meriam-au",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Content supported (Meriam Mir is the traditional language on Mer; eastern end of the Torres Strait, within sight of the Great Barrier Reef), but original copied 14 consecutive words; rewritten.",
+      "text": "Meriam Mir is the traditional language of Mer, an island in the far east of the Torres Strait from which the Great Barrier Reef can be seen.",
+      "evidence": "The traditional language spoken on Mer is Meriam Mir"
+    },
+    {
+      "id": "gunditjmara-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Glenelg Hopkins page: Budj Bim inscribed on UNESCO World Heritage List August 2019; Gunditjmara developed one of the largest and oldest aquaculture networks in the world. Evidence verbatim."
+    },
+    {
+      "id": "gunditjmara-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: All of the Budj Bim Cultural Landscape is Aboriginal-owned and/or managed. Evidence verbatim."
+    },
+    {
+      "id": "gunditjmara-au",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "GMTOAC homepage: established in 2005 to continue connection to Gunditjmara country and progress rights incl. native title. Evidence verbatim."
+    },
+    {
+      "id": "tiwi-au",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "TLC Land Ownership post: eight Landowning Groups; unbroken history of occupation and ownership by Tiwi people. Evidence verbatim."
+    },
+    {
+      "id": "tiwi-au",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "TLC Tiwi Islands post: approximately 80 km north of Darwin; population of just over 3000 is more than 90 per cent Tiwi. Evidence verbatim."
+    },
+    {
+      "id": "tiwi-au",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Homepage only announces 'Saturday 18 & Sunday 19 July 2026 Tiwi Cultural Festival and Football Grand Final' with a register-interest link; it does not confirm the event was held. Reworded and evidence changed to the dated line. Time-bound homepage item: will go stale when the banner changes, consider replacing with an evergreen fact.",
+      "text": "The Tiwi Land Council listed the 2026 Tiwi Cultural Festival and Football Grand Final for Saturday 18 and Sunday 19 July.",
+      "evidence": "Saturday 18 & Sunday 19 July 2026 Tiwi Cultural Festival"
+    },
+    {
+      "id": "ngai-tahu-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Te Runanga o Ngai Tahu page: Ngai Tahu means people of Tahu; whakapapa is the ancestral link which binds all Ngai Tahu whanau. Evidence verbatim."
+    },
+    {
+      "id": "ngai-tahu-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: There are 18 Papatipu Runanga spread throughout Te Waipounamu. Evidence verbatim."
+    },
+    {
+      "id": "waikato-tainui-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Homepage: Waikato is a growing tribe of over 90,000; voyagers and pioneers like our tuupuna. Evidence verbatim."
+    },
+    {
+      "id": "waikato-tainui-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Homepage: celebrations reaffirm our identity as Tainui waka and as protectors of the Kiingitanga movement. Evidence verbatim."
+    },
+    {
+      "id": "ngati-whatua-orakei-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Homepage: Ngati Whatua Orakei are the tangata whenua of Te Kahu Topuni o Tuperiri, central Tamaki Makaurau. Evidence verbatim."
+    },
+    {
+      "id": "ngati-whatua-orakei-nz",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page: collective affairs looked after by the Ngati Whatua Orakei Trust and subsidiaries Whai Maia (Social arm) and Whai Rawa (Commercial arm). Page does not say 'cultural' arm; removed.",
+      "text": "Ngāti Whātua Ōrākei's shared affairs are looked after by their Trust and two subsidiaries: Whai Māia, the social arm, and Whai Rawa, the commercial arm.",
+      "evidence": "Whai Māia (Social arm) and Whai Rawa (Commercial arm)"
+    },
+    {
+      "id": "ngapuhi-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Te Ao Maori News 26 Sep 2024: Ngapuhi becomes the largest iwi by population per newly released census data (Te Kahui Raraunga). Evidence verbatim."
+    },
+    {
+      "id": "ngapuhi-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Ngapuhi Runanga Group homepage: Ngapuhi Iwi Social Services, NZ's largest iwi social service provider. Evidence verbatim."
+    },
+    {
+      "id": "te-arawa-nz",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page: deed signed 18 December 2004; title to 13 lakebeds will be returned to Te Arawa. Page does not say 'in the Rotorua district' for the 13 lakebeds; replaced with the page's own description of Te Arawa. Note: te-kahui-whakatau URLs now redirect to whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/...; the page names the unit Te Tira Kurapounamu (Treaty Settlements) under Te Tari Whakatau, so url and publisher should be updated.",
+      "text": "The Te Arawa Lakes settlement, signed in 2004, provided for title to 13 lakebeds to be returned to Te Arawa, a large confederation of iwi and hapū.",
+      "evidence": "Title to 13 lakebeds will be returned to Te Arawa"
+    },
+    {
+      "id": "te-arawa-nz",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page: in 2017 Rotorua was declared the first district in NZ to become bilingual; SINCE the declaration Council has worked alongside Te Tatau o Te Arawa (e.g. bilingual road signs). Original implied the partnership produced the declaration; reordered.",
+      "text": "Rotorua was declared New Zealand's first bilingual district in 2017, and the council has since worked with Te Tatau o Te Arawa on changes like bilingual road signs.",
+      "evidence": "the first district in New Zealand to become bilingual"
+    },
+    {
+      "id": "ngai-tuhoe-nz",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page is the 2013 deed summary: Te Urewera WILL have its own legislation and exist as a separate legal identity, governed by Tuhoe and Crown nominees; deed signed 4 June 2013. Page does not confirm enactment, so 'gained' changed to 'provided for'. Note: te-kahui-whakatau URLs now redirect to whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/...; the page names the unit Te Tira Kurapounamu (Treaty Settlements) under Te Tari Whakatau, so url and publisher should be updated.",
+      "text": "A Treaty settlement signed in 2013 provided for Te Urewera, the Tūhoe homeland, to have its own law and a separate legal identity, governed by Tūhoe and Crown nominees.",
+      "evidence": "exist as a separate legal identity"
+    },
+    {
+      "id": "ngai-tuhoe-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Deed summary page: Tuhoe have approximately 9,300 registered members. Evidence verbatim. Note: te-kahui-whakatau URLs now redirect to whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/...; the page names the unit Te Tira Kurapounamu (Treaty Settlements) under Te Tari Whakatau, so url and publisher should be updated."
+    },
+    {
+      "id": "ngati-porou-nz",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Homepage: second largest iwi in Aotearoa, population 102,480. Original copied 15 consecutive words; rewritten. Page gives no year for the figure; as_of 2023 is the researcher's inference (likely 2023 census), not on the page.",
+      "text": "Ngāti Porou counts 102,480 people, making it the second largest iwi in Aotearoa.",
+      "evidence": "the second largest iwi in Aotearoa"
+    },
+    {
+      "id": "ngati-porou-nz",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Homepage: rohe stretches along Te Tairawhiti from Potikirua (Lottin Point) in the north to Te Toka-a-Taiau in the south. Original copied 20 consecutive words; rewritten.",
+      "text": "Ngāti Porou's tribal area runs down Te Tairāwhiti, between Pōtikirua (Lottin Point) in the north and Te Toka-a-Taiau in the south.",
+      "evidence": "from Pōtikirua (Lottin Point) in the north to Te Toka-a-Taiau"
+    },
+    {
+      "id": "ngati-porou-nz",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Homepage: Ko Hikurangi te maunga, Ko Waiapu te awa, Ko Ngati Porou te iwi. Evidence verbatim."
+    },
+    {
+      "id": "whanganui-iwi-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Nga Tangata Tiaki homepage: Ko au te Awa, ko te Awa ko au / I am the River and the River is me. Evidence verbatim."
+    },
+    {
+      "id": "whanganui-iwi-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "OsloMet page: March 2017 the Whanganui River (Te Awa Tupua) was declared to be a legal person; guardian Te Pou Tupua acts as the human face of the river. Evidence verbatim."
+    },
+    {
+      "id": "whanganui-iwi-nz",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Homepage: established 4 August 2014 with the signing of Ruruku Whakatupua and the deeds of settlement, on behalf of Whanganui Iwi; site lists its Trust Deeds. Evidence verbatim."
+    },
+    {
+      "id": "moriori-nz",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Hokotehi homepage: organisation that represents Moriori people, the Indigenous people of Rekohu and Rangihaute (Chatham Islands). Evidence verbatim."
+    },
+    {
+      "id": "moriori-nz",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Settlement page: Crown and Moriori signed a Deed of Settlement on 14 February 2020; 872 adult members and 860 children registered with Hokotehi Moriori Trust. Evidence verbatim."
+    },
+    {
+      "id": "moriori-nz",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Homepage: the trust is actively engaged in key sectors of Rekohu's economy, such as fishing, farming, and tourism. Evidence verbatim."
+    },
+    {
+      "id": "kanak-nc",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ALK homepage: eight regional sections installed in the eight customary areas. Evidence verbatim (French)."
+    },
+    {
+      "id": "kanak-nc",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ALK homepage: mission to promote and develop all Kanak languages and dialects, of the Austronesian family, Oceanic group. Evidence verbatim (French)."
+    },
+    {
+      "id": "rapa-nui-cl",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Ministerio del Interior, 23 Nov 2017: park administration conceded to the Ma'u Henua indigenous community, for 50 renewable years to the Rapa Nui themselves. Evidence verbatim (Spanish)."
+    },
+    {
+      "id": "rapa-nui-cl",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "MMA consultation report (Sept 2017), executive summary: 642 votes cast in three polling places; YES won all three questions (396-222, 377-233, 477-135). Evidence verbatim (Spanish), checked via pdftotext."
+    },
+    {
+      "id": "papuan-peoples-id",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Content supported (UNESCO inscribed 2012 on the Urgent Safeguarding list; bag knotted or woven from wood fibre or leaves by communities in Papua and West Papua provinces), but original copied 16 consecutive words from UNESCO; rewritten.",
+      "text": "The noken, a bag that communities in Papua knot or weave by hand from wood fibre or leaves, was inscribed on a UNESCO list for urgent safeguarding in 2012.",
+      "evidence": "a knotted net or woven bag handmade from wood fibre or leaves"
+    },
+    {
+      "id": "papuan-peoples-id",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "UNESCO page: men and women use it for carrying plantation produce; may be worn for traditional festivities or given as peace offerings. Evidence verbatim."
+    },
+    {
+      "id": "itaukei-fj",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "TLTB corporate profile: 91 percent of all the land in Fiji (iTaukei Land); owners are yavusa, mataqali, tokatoka. Evidence verbatim. Side note: the same page lists total iTaukei land (23,289 km2) larger than Fiji's landmass (18,272 km2), an internal inconsistency on the source, so keep 'about 91 percent' only."
+    },
+    {
+      "id": "itaukei-fj",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Page: statutory trust established in 1940 to control and administer itaukei land for its owners, whether Yavusa, Mataqali and Tokatoka. URL now redirects to tltb.com.fj/corporate-profile/. Evidence verbatim."
+    },
+    {
+      "id": "maohi-pf",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Heiva page: annual Festival of Polynesian Ma'ohi Culture; singing, dance, sporting feats, crafts village; from 1881 it became the Tiurai festival, which evolved into the Heiva i Tahiti. Evidence verbatim."
+    },
+    {
+      "id": "maohi-pf",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page (DGEN, published 2017-06-08) says a 31,000-word lexicon was published in Aug 2015 'in complement to' the Academy's publications; it does NOT say the Academy released it (context points to the translation service). It does say the Academy's new site interface adds French to Tahitian search. Rewritten to the supported part; evidence replaced; as_of should be 2017.",
+      "text": "A new website interface announced in 2017 by the Tahitian Academy, Fare Vāna'a, adds French to Tahitian search to its Tahitian to French dictionary.",
+      "evidence": "la consultation, en français-tahitien, sera aussi possible"
+    }
+  ],
+  "names": [
+    {
+      "id": "gadigal-au",
+      "ok": true,
+      "note": "Sydney Barani (City of Sydney) uses Gadigal and Gadi(gal). No official nation site given; acceptable."
+    },
+    {
+      "id": "wurundjeri-woi-wurrung-au",
+      "ok": true,
+      "note": "Matches the corporation's own name, Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation."
+    },
+    {
+      "id": "yolngu-au",
+      "ok": true,
+      "note": "ORIC page (Wayback capture; live page bot-blocked) consistently spells Yolŋu with eng. Government source, not the people's own site; Dhimurru's own site would be a stronger name source."
+    },
+    {
+      "id": "noongar-au",
+      "ok": true,
+      "note": "SWALSC (official) uses Noongar."
+    },
+    {
+      "id": "arrernte-au",
+      "ok": true,
+      "note": "Lhere Artepe uses Arrernte / Central Arrernte. Note the official_url body represents the Central Arrernte estate groups of Alice Springs, not all Arrernte."
+    },
+    {
+      "id": "anangu-au",
+      "ok": true,
+      "note": "uluru.gov.au uses Aṉangu. official_url anangu.com.au resolves to APY (Anangu Pitjantjatjara Yankunytjatjara), the land body for the APY Lands in South Australia; it does not cover Uluṟu-Kata Tjuṯa. Acceptable as a representative body, but not one body for all Aṉangu."
+    },
+    {
+      "id": "wiradjuri-au",
+      "ok": true,
+      "note": "Bathurst Regional Council uses Wiradjuri (read via WebFetch; curl gets 403). Council source, not the nation's own; page also lists a Wiradyuri Traditional Owners corporation, a spelling some Wiradjuri bodies use."
+    },
+    {
+      "id": "kaurna-au",
+      "ok": true,
+      "note": "State Library of SA uses Kaurna."
+    },
+    {
+      "id": "larrakia-au",
+      "ok": true,
+      "note": "Larrakia Nation (official) uses Larrakia; its mission text also spells Larakia."
+    },
+    {
+      "id": "gamilaraay-au",
+      "ok": true,
+      "note": "Spelling Gamilaraay is attested, but name_source_url (ANU course) uses it only as a LANGUAGE name, not as the people's self-name. The NSW native title claim group uses Gomeroi. Recommend a people-level name source (a Gomeroi/Gamilaraay community or native title body) before display."
+    },
+    {
+      "id": "yawuru-au",
+      "ok": true,
+      "note": "Nyamba Buru Yawuru (official) uses Yawuru."
+    },
+    {
+      "id": "meriam-au",
+      "ok": true,
+      "note": "Tagai State College page uses Meriam people. Government school source, not the community's own body."
+    },
+    {
+      "id": "gunditjmara-au",
+      "ok": true,
+      "note": "Gunditj Mirring (official) uses Gunditjmara."
+    },
+    {
+      "id": "tiwi-au",
+      "ok": true,
+      "note": "Tiwi Land Council uses Tiwi. Its page notes Tiwi consider themselves uniquely Tiwi rather than Aboriginal; display copy should not label them Aboriginal."
+    },
+    {
+      "id": "ngai-tahu-nz",
+      "ok": true,
+      "note": "Te Rūnanga o Ngāi Tahu uses Ngāi Tahu with macrons."
+    },
+    {
+      "id": "waikato-tainui-nz",
+      "ok": true,
+      "note": "Official site uses Waikato-Tainui."
+    },
+    {
+      "id": "ngati-whatua-orakei-nz",
+      "ok": true,
+      "note": "Official site uses Ngāti Whātua Ōrākei with macrons."
+    },
+    {
+      "id": "ngapuhi-nz",
+      "ok": true,
+      "note": "Te Rūnanga-Ā-Iwi-O-Ngāpuhi site uses Ngāpuhi."
+    },
+    {
+      "id": "te-arawa-nz",
+      "ok": true,
+      "note": "Government page uses Te Arawa and describes it as a large confederation of iwi and hapū; no official_url given."
+    },
+    {
+      "id": "ngai-tuhoe-nz",
+      "ok": true,
+      "note": "Settlement page uses Ngāi Tūhoe / Tūhoe; official_url is Tūhoe's own site (Te Uru Taumatua)."
+    },
+    {
+      "id": "ngati-porou-nz",
+      "ok": true,
+      "note": "Te Rūnanganui o Ngāti Porou uses Ngāti Porou."
+    },
+    {
+      "id": "whanganui-iwi-nz",
+      "ok": true,
+      "note": "Ngā Tāngata Tiaki o Whanganui uses Whanganui Iwi."
+    },
+    {
+      "id": "moriori-nz",
+      "ok": true,
+      "note": "Hokotehi Moriori Trust uses Moriori."
+    },
+    {
+      "id": "kanak-nc",
+      "ok": true,
+      "note": "ALK uses Kanak. official_url www.senat-coutumier.nc was unreachable (connection refused) on 2026-10-09; recheck or replace."
+    },
+    {
+      "id": "rapa-nui-cl",
+      "ok": true,
+      "note": "Chilean government page uses pueblo Rapa Nui."
+    },
+    {
+      "id": "papuan-peoples-id",
+      "ok": true,
+      "note": "Collective descriptor, not one nation's self-name; UNESCO page says 'the people of Papua' and 'communities in Papua and West Papua Provinces'. Consider listing specific peoples. 'West Papuans' in also carries political weight in a contested context; consider dropping it."
+    },
+    {
+      "id": "itaukei-fj",
+      "ok": true,
+      "note": "TLTB uses iTaukei."
+    },
+    {
+      "id": "maohi-pf",
+      "ok": true,
+      "note": "Heiva page uses Ma’ohi in English text and Mā’ohi elsewhere (e.g. Tū’aro Mā’ohi). Name fine; source uses a curly apostrophe."
+    }
+  ]
+}

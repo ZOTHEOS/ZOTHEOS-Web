@@ -1,0 +1,795 @@
+{
+  "region": "us-plains-midwest",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "oglala-sioux-tribe-us-sd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "BIA Pine Ridge Agency page (fetched 2026-10-09): tribe 'boasts an enrollment of 46,855 members'. Evidence verbatim."
+    },
+    {
+      "id": "oglala-sioux-tribe-us-sd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: reservation 'consists of approximately 2.1 million acres' and occupies Oglala Lakota, Jackson and Bennett counties. Evidence verbatim."
+    },
+    {
+      "id": "sicangu-lakota-oyate-us-sd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Tribe's History & Culture page: 'The Rosebud Sioux Tribe, more properly known as Sicangu Lakota Oyate, or Burnt Thigh People'. Evidence verbatim."
+    },
+    {
+      "id": "sicangu-lakota-oyate-us-sd",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Evidence verbatim and 20 communities supported, but the same page gives two different land figures (heritage text '922,759 acres' vs General Information 'Land Area: 882,416 acres'). Dropped the acreage; kept communities and headquarters (General Information also lists 'Tribal headquarters: Rosebud, South Dakota').",
+      "text": "The Rosebud Reservation takes in 20 communities, and the tribal headquarters is in the community of Rosebud, South Dakota.",
+      "evidence": "The tribal headquarters is located in the community of Rosebud"
+    },
+    {
+      "id": "sicangu-lakota-oyate-us-sd",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Misattribution: the page says the Lakota overall (about 70,000 today) have approximately 1/3 still speaking their ancestral language; it is not a figure for Rosebud members. Rewritten to match. Evidence verbatim.",
+      "text": "The tribe's history page says the Lakota number about 70,000 today, and that about a third of them still speak their ancestral language.",
+      "evidence": "approximately 1/3 still speak their ancestral language"
+    },
+    {
+      "id": "standing-rock-sioux-tribe-us-nd-sd",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "ND Indian Affairs Commission page: 'English is widely spoken, while Lakota is also used and actively being revitalized.' The page does not say Lakota is in daily use; removed that overstatement. Evidence verbatim.",
+      "text": "At Standing Rock, English is widely spoken, and the Lakota language is also used and is being actively revitalized.",
+      "evidence": "Lakota is also used and actively being revitalized"
+    },
+    {
+      "id": "standing-rock-sioux-tribe-us-nd-sd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: Chairman, Vice-Chairman, a Secretary and 14 council members (8 district, 6 at-large); 'Positions are elected by the tribal members and serve a term of four years.' Evidence verbatim."
+    },
+    {
+      "id": "standing-rock-sioux-tribe-us-nd-sd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Tribe's About page: Yanktonai live primarily on the North Dakota portion; 'Today the Lakota at Standing Rock live predominantly in communities located on the South Dakota portion'. Evidence verbatim."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "BIA Cheyenne River Agency page: tribe 'consisting predominantly of the Minneconjou, SiHaSapa, Oohenumpa, and Itazipco bands of the Lakota'. Evidence verbatim."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'Governing body is a Chairman, Vice-Chairman, Secretary, Treasurer and fifteen council members'; tribal office address and agency headquarters in Eagle Butte. Evidence verbatim."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: '1,450,644 trust acres in Ziebach and Dewey County in central South Dakota' (plus parts of other counties). Evidence verbatim."
+    },
+    {
+      "id": "sisseton-wahpeton-oyate-us-sd-nd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "SWO homepage: 'Our reservation boundaries span 7 counties, 2 in North Dakota and 5 in South Dakota.' Evidence verbatim."
+    },
+    {
+      "id": "sisseton-wahpeton-oyate-us-sd-nd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "SWO homepage: 'We have 14,000+ tribal members throughout the US and abroad in the Armed Forces.' Evidence verbatim."
+    },
+    {
+      "id": "sisseton-wahpeton-oyate-us-sd-nd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "SWO homepage says it represents the Dakota people of the Sisitunwan-Wahpetunwan Oyate; its Seven Districts menu lists Dakota names (Iyakaptapi, Canowanasapi, Toka Nuwan, Heipa, Bde Hdakinyan, Kaksiza Hanska, Ateyapi Tipi). Evidence verbatim."
+    },
+    {
+      "id": "spirit-lake-nation-us-nd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ND Indian Affairs Commission page: 'both English and the Dakota language (specifically the Eastern Dakota dialect) are spoken'. Evidence verbatim."
+    },
+    {
+      "id": "spirit-lake-nation-us-nd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: northeastern ND, primarily Benson County, about 405 square miles or about 259,000 acres. Evidence verbatim."
+    },
+    {
+      "id": "spirit-lake-nation-us-nd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'Cankdeska Cikana Community College offers 12 programs for associate degrees and certificates.' Evidence verbatim."
+    },
+    {
+      "id": "shakopee-mdewakanton-sioux-community-us-mn",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "SMSC Our History timeline: 'On November 28, 1969, the Shakopee Mdewakanton Sioux Community formally became a federally recognized Indian tribe'. Evidence verbatim."
+    },
+    {
+      "id": "shakopee-mdewakanton-sioux-community-us-mn",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'We are still here and continue to live our traditional Dakota lifeways that will be passed through future generations.' Evidence verbatim; the paraphrase is in the researcher's own words."
+    },
+    {
+      "id": "shakopee-mdewakanton-sioux-community-us-mn",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "SMSC homepage: 'Following the Dakota tradition of helping others, the SMSC donates millions of dollars each year to other tribes, organizations, and local governments.' Evidence verbatim."
+    },
+    {
+      "id": "red-lake-nation-us-mn",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "mn.gov blocks scripted fetches (bot check), but WebFetch of the page (title 'Miskwaagamiiwi-Zaagaiganing / Red Lake Nation', Minnesota Indian Affairs Council) returned 'All land is held in common by the members of the Band.' Evidence verbatim."
+    },
+    {
+      "id": "red-lake-nation-us-mn",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Red Lake Nation homepage: 'The tribal government has full sovereignty over the reservation, subject only to the federal government.' Evidence verbatim."
+    },
+    {
+      "id": "red-lake-nation-us-mn",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page (via WebFetch) says 'English is a second language to many Red Lake members middle-aged and older including some on the Tribal Council' and 'Ojibwe is spoken and/or understood by many others.' It does not say Ojibwe is their first language; rewritten to the page's own claims. Evidence verbatim.",
+      "text": "English is a second language for many Red Lake members who are middle-aged and older, including some on the Tribal Council, and many others speak or understand Ojibwe.",
+      "evidence": "English is a second language to many Red Lake members"
+    },
+    {
+      "id": "mille-lacs-band-of-ojibwe-us-mn",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Mille Lacs Band homepage: 'Our Band has a three-branch division-of-powers form of government, with an Executive Branch, Legislative Branch and Judicial Branch.' Evidence verbatim."
+    },
+    {
+      "id": "mille-lacs-band-of-ojibwe-us-mn",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: homelands of three Districts throughout East Central Minnesota; 'self-governing Indian nation of nearly 4800 enrolled Band Members'. Evidence verbatim."
+    },
+    {
+      "id": "turtle-mountain-band-of-chippewa-us-nd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ND Indian Affairs Commission page: 'Languages: English, Ojibwe, and Michif (language is a mix of French, Ojibwe, & Cree)'. Evidence verbatim."
+    },
+    {
+      "id": "turtle-mountain-band-of-chippewa-us-nd",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page: 'a total estimate of 33,276 members enrolled (7/10/24)'. The page belongs to the state commission and does not say the band made the estimate; reworded neutrally. Evidence verbatim.",
+      "text": "As of July 2024, an estimated 33,276 members were enrolled in the Turtle Mountain Band.",
+      "evidence": "a total estimate of 33,276 members enrolled"
+    },
+    {
+      "id": "turtle-mountain-band-of-chippewa-us-nd",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "The page text is the state commission's own and is not attributed to the band, so 'the band describes' is unsupported. Page: over the past two centuries a blended culture with Ojibwe and Metis influences created 'a unique heritage that is found nowhere else but here.' Reworded. Evidence verbatim.",
+      "text": "Over two centuries, Ojibwe and Metis influences blended at Turtle Mountain into a unique heritage found nowhere else.",
+      "evidence": "a unique heritage that is found nowhere else but here"
+    },
+    {
+      "id": "mha-nation-us-nd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "MHA Nation homepage: 'As of August 20, 2026, 17,825 members are currently enrolled in the Mandan, Hidatsa, and Arikara Nation'. Evidence verbatim."
+    },
+    {
+      "id": "mha-nation-us-nd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: Tribal Business Council of six Segment Representatives and the Chairman; Segments are White Shield, Parshall, New Town, Four Bears, Mandaree and Twin Buttes. Evidence verbatim."
+    },
+    {
+      "id": "mha-nation-us-nd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page header greets in Mandan, Hidatsa and Arikara; Mandan line reads 'Ráátinitak shí’sh. It is good that you all arrived' (diacritics match). Evidence verbatim."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Blackfeet Nation homepage: 'home to the 17,321-member Blackfeet Nation'. Evidence verbatim."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Montana Governor's Office of Indian Affairs directory: 'Its one-and-a-half million acres are bordered on the north by Canada and on the west by Glacier National Park.' Evidence verbatim."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page: 'There are three branches of the Blackfeet peoples-the Northern Blackfeet (Siksika), the Blood and the Piegan or Pikuni.' The page does not frame this as tradition; removed that framing. Evidence verbatim.",
+      "text": "The Blackfeet peoples have three branches: the Northern Blackfeet (Siksika), the Blood, and the Piegan or Pikuni.",
+      "evidence": "There are three branches of the Blackfeet"
+    },
+    {
+      "id": "apsaalooke-nation-us-mt",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Montana directory: tribe 'is originally called \"Apsaalooke,\" which means \"children of the large-beaked bird.\"' Evidence verbatim."
+    },
+    {
+      "id": "apsaalooke-nation-us-mt",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'Eighty-five percent speak Crow as their first language' and '85% of the tribe speaks Crow as their first language.' 'Most' is supported. Evidence verbatim."
+    },
+    {
+      "id": "apsaalooke-nation-us-mt",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Crow Tribe Executive Branch site: 'The Crow Constitution and By-Laws of 2001 established three branches of government, the Executive, Legislative, and Judicial branches.' Evidence verbatim."
+    },
+    {
+      "id": "northern-cheyenne-tribe-us-mt",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Montana directory: 'The tribe call themselves \"Tsis tsis'tas\" (Tse-TSES-tas) which means \"the beautiful people\".' Evidence verbatim."
+    },
+    {
+      "id": "northern-cheyenne-tribe-us-mt",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'approximately 444,000 acres in size with 99% tribal ownership', southeastern Montana. (Fast Facts on the same page rounds to 440,000; 'roughly' covers both.) Evidence verbatim."
+    },
+    {
+      "id": "northern-cheyenne-tribe-us-mt",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'Lame Deer is the tribal and government agency headquarters'; Tribal Council 'consists of members elected from each of the following districts: Ashland, Birney, Busby, Muddy, and Lame Deer.' Evidence verbatim."
+    },
+    {
+      "id": "fort-peck-assiniboine-sioux-us-mt",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Montana directory: 'home to two separate Indian nations, the Assiniboine & Sioux Tribes'; 'The Assiniboine refer to themselves as \"Nakona\" and the Sioux call themselves \"Dakota\".' Evidence verbatim."
+    },
+    {
+      "id": "fort-peck-assiniboine-sioux-us-mt",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'All members of the governing body, except the secretary-accountant are elected at-large every two years.' Evidence verbatim."
+    },
+    {
+      "id": "fort-peck-assiniboine-sioux-us-mt",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: reservation is in northeastern Montana; 'It includes more than two million acres of land.' Evidence verbatim."
+    },
+    {
+      "id": "northern-arapaho-tribe-us-wy",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page reachable (curl over https fails on a TLS renegotiation, but http and WebFetch both load 'About | Northern Arapaho Tribe'). Evidence verbatim. The page never says 'Wind River Reservation': it says the 2.2 million acre reserve lies between the Wind River Range and Owl Creek Mountains and is shared by Eastern Shoshone and Northern Arapaho, and it names the tribe 'Northern Arapaho Tribe of Wyoming'. Rewritten to those words; the new evidence ties in the acreage.",
+      "text": "The Northern Arapaho and the Eastern Shoshone share a 2.2 million acre reservation in Wyoming, between the Wind River Range and the Owl Creek Mountains.",
+      "evidence": "Owl Creek Mountains, the 2.2 million acre reserve is shared"
+    },
+    {
+      "id": "northern-arapaho-tribe-us-wy",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The Arapaho Flag was created in 1936 as a sign of respect and remembrance for the Arapaho War Veterans.' Evidence verbatim."
+    },
+    {
+      "id": "northern-arapaho-tribe-us-wy",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'one of four groups of Arapaho who originally occupied the headwaters of the Arkansas and Platte Rivers.' Evidence verbatim. Note: the page also has leftover lorem ipsum filler text below the facts."
+    },
+    {
+      "id": "cheyenne-and-arapaho-tribes-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Tribes' Language and Culture page: 'Tsistsistas, is the Cheyenne word meaning \"Human Beings\" or \"The People.\"' Evidence verbatim."
+    },
+    {
+      "id": "cheyenne-and-arapaho-tribes-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'an adult immersion Master Apprentice Program dedicated to producing functionally fluent speakers for both the Cheyenne and Arapaho languages.' Evidence verbatim."
+    },
+    {
+      "id": "cheyenne-and-arapaho-tribes-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'The Language Program offers classes throughout our communities and online for our tribal members.' Evidence verbatim."
+    },
+    {
+      "id": "comanche-nation-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Comanche Nation History page: 'The Tribal Council comprises all enrolled members over 18 and is the main governing body.' Evidence verbatim."
+    },
+    {
+      "id": "comanche-nation-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Comanche Nation Language page: mission 'to revitalize and reclaim the Comanche Language'; the page links an Online Learning resource. Evidence verbatim."
+    },
+    {
+      "id": "comanche-nation-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "History page: 'were once a part of the Shoshone Tribe. In the late 1600s and early 1700s, we moved from our Shoshone kinsmen onto the northern Plains'. Evidence verbatim."
+    },
+    {
+      "id": "kiowa-tribe-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Kiowa Language Department page: 'Register for the credentialed Kiowa language teacher training program for 2025-2026' under 'LEARN AND TEACH THE KIOWA LANGUAGE'. as_of 2025 is right (deadline March 2025); re-check for currency. Evidence verbatim."
+    },
+    {
+      "id": "kiowa-tribe-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Kiowa Tribe homepage: 'devoted to protect its sovereignty, preserve and advocate its rich Kiowa culture and language'. Evidence verbatim."
+    },
+    {
+      "id": "kiowa-tribe-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "About us page: Kiowa 'originated in the Kootenay Region of British Columbia, Canada' and the earliest written records place Kiowas 'in the northern basin of the Missouri River'. Evidence verbatim."
+    },
+    {
+      "id": "osage-nation-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Cited /who-we-are now redirects to /government (title 'Government | Osage Nation', matching the cited title): 'On June 5, 2006 ... constitutional government, consisting of separate executive, legislative, and judicial branches'. Evidence verbatim."
+    },
+    {
+      "id": "osage-nation-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Cited osageculture.com/node/371 redirects to an Osage Nation Language Department page (live title 'KILLERS OF THE FLOWER MOON | Osage Nation Language Department'). Its About Us block says 'Language revitalization is a foundational component of the Osage Nation's sovereignty' and 'Each year, the Osage Nation Language Department (ONLD) provides free classes'. Evidence verbatim."
+    },
+    {
+      "id": "osage-nation-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Osage Nation homepage: the Constitution vests the Osage Minerals Council, which 'consists of eight Council members that serve as the elected governing body for the mineral affairs'. Evidence verbatim."
+    },
+    {
+      "id": "pawnee-nation-of-oklahoma-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Pawnee History page lists four bands: 'the Čawî’ \"Grand,\" the Kitkahaki \"Republican,\" the Pitahawirata \"Tappage\" and the Skidi \"Wolf.\"' Diacritics match. Evidence verbatim."
+    },
+    {
+      "id": "pawnee-nation-of-oklahoma-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'Pawnees have served in all United States conflicts beginning with the Pawnee Scout Battalion in 1864' and 'Many of the Pawnees who served also used their once-forbidden language as Code Talkers.' Evidence verbatim."
+    },
+    {
+      "id": "pawnee-nation-of-oklahoma-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Government page: 'The Pawnee Business Council is the supreme governing body', subject to the Constitution and applicable federal law. Evidence verbatim."
+    },
+    {
+      "id": "citizen-potawatomi-nation-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "CPN Government page: 'a federally recognized tribe of more than 38,000 Tribal citizens around the world'; footer address Shawnee, OK. Evidence verbatim."
+    },
+    {
+      "id": "citizen-potawatomi-nation-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'In July 2026, CPN officially signed the articles of confederation for the Potawatomi Confederacy'. Evidence verbatim."
+    },
+    {
+      "id": "citizen-potawatomi-nation-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'Constitution was created in 1938, amended in 1985 and again in 2007'. Evidence verbatim."
+    },
+    {
+      "id": "prairie-band-potawatomi-nation-us-ks",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "PBPN Tribal History page: 'The Nation's Reservation remains the same as established by the Treaty of 1846.' Evidence verbatim."
+    },
+    {
+      "id": "prairie-band-potawatomi-nation-us-ks",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "PBPN Language page: 'Since 2007 language classes have been offered'; the main goal is 'to revitalize the language and culture'. Evidence verbatim."
+    },
+    {
+      "id": "prairie-band-potawatomi-nation-us-ks",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Tribal History page: 'originated in the Great Lakes area' and 'After 1846 the tribe moved to present-day Kansas'. Evidence verbatim. Note for respect review: the page frames this move as forced removal."
+    },
+    {
+      "id": "forest-county-potawatomi-us-wi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "FCP Language page: the department is 'dedicated to keeping the Bodwéwadmi language and traditions alive' and 'Language classes are held during the school year'. Diacritics match. Evidence verbatim."
+    },
+    {
+      "id": "forest-county-potawatomi-us-wi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "FCP homepage: 'have lived in Forest County, Wisconsin, since the late 1800s. Around 1880, groups settled in areas near Blackwell and Wabeno'. Evidence verbatim."
+    },
+    {
+      "id": "forest-county-potawatomi-us-wi",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page: 'The Cultural Center, Library and Museum provide an important link to the past'. 'Living link between Potawatomi people' overstates it, so the text is reworded to the page's meaning (the ceremony mention is left out on purpose). Evidence verbatim.",
+      "text": "The Forest County Potawatomi Cultural Center, Library and Museum provides an important link to the community's past.",
+      "evidence": "Cultural Center, Library and Museum provide an important link"
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Ho-Chunk About page: four branches (executive, legislative, judicial, general council); the Legislature is 'made up of 13 representatives called Legislators from four districts'. Evidence verbatim."
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The Ho-Chunk Nation also has a traditional government system based on a chief and clan system.' Evidence verbatim."
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "WI DPI page: the 1994 election approved 'the proper name of the nation reverting to the Ho-Chunk (People of the Big Voice) which they have always called themselves'. The nation's homepage also says 'Ho-Chunk or \"People of the Big Voice.\"' Evidence verbatim."
+    },
+    {
+      "id": "menominee-indian-tribe-us-wi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WI DPI page: the reservation is '235,524 acres', with forest 'representing the largest single tract of virgin timberland in Wisconsin'. Evidence verbatim."
+    },
+    {
+      "id": "menominee-indian-tribe-us-wi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The Menominee Tribal Legislature is composed of nine members.' Evidence verbatim."
+    },
+    {
+      "id": "menominee-indian-tribe-us-wi",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: the Restoration Act, signed December 22, 1973, 'provided for the federal recognition of the Menominee Indian Tribe of Wisconsin'; the Tribal Government was created through Section 5(c) of the Act. Evidence verbatim."
+    },
+    {
+      "id": "oneida-nation-us-wi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "WI DPI page: 'The Oneida Business Committee is composed of nine members ... decisions made by majority rule'; elections every three years. Evidence verbatim."
+    },
+    {
+      "id": "oneida-nation-us-wi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The Oneidas, along with the Mohawk, Seneca, Cayuga and Onondaga comprised the original Five Nations of the Iroquois Confederacy'. 'Haudenosaunee' is not on the page, but it is the Confederacy's own name, shown next to the page's term, and adds no factual claim. Evidence verbatim."
+    },
+    {
+      "id": "oneida-nation-us-wi",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: the reservation is 'located in Brown and Outagamie Counties' and 'located in northeast Wisconsin'. Evidence verbatim."
+    },
+    {
+      "id": "little-traverse-bay-bands-odawa-us-mi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "LTBB homepage: 'On Sept. 21, 1994, the Little Traverse Bay Bands of Odawa Indians (LTBB) was federally reaffirmed with the signing of Public Law 103-324.' Evidence verbatim."
+    },
+    {
+      "id": "little-traverse-bay-bands-odawa-us-mi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The Tribe is governed by a nine member Tribal Council who serve staggered terms.' Evidence verbatim."
+    },
+    {
+      "id": "little-traverse-bay-bands-odawa-us-mi",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page mission: 'a people who, with integrity and pride, still have and speak our own language'; the page gives an 'Anishinaabemowin Interpretation of LTBB Mission Statement'. Evidence verbatim."
+    },
+    {
+      "id": "sault-ste-marie-tribe-chippewa-us-mi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Sault Tribe About Us (updated 22 July 2026): 'Sault Tribe is a 44,000-strong federally recognized Indian tribe'. Evidence verbatim."
+    },
+    {
+      "id": "sault-ste-marie-tribe-chippewa-us-mi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page lists Chippewa, Luce, Mackinac, Schoolcraft, Alger, Delta and Marquette counties of the eastern Upper Peninsula. Evidence verbatim."
+    },
+    {
+      "id": "meskwaki-nation-us-ia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Meskwaki History page: 'On July 13, 1857, the Meskwaki formally purchased their first 80 acres in Tama County' and 'the Meskwaki Settlement is not an Indian Reservation ... It is privately purchased property'. Evidence verbatim."
+    },
+    {
+      "id": "meskwaki-nation-us-ia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'They have their own constitution, codified laws, 13 full-time police officers, and a fully functioning court system.' Evidence verbatim."
+    },
+    {
+      "id": "meskwaki-nation-us-ia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'The Meskwaki spoken language is of a similar dialect to the Sauk and Kickapoo, and our people are working hard to maintain it.' Evidence verbatim."
+    },
+    {
+      "id": "sac-and-fox-nation-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Sac and Fox Nation homepage: 'The Sac and Fox Nation was the first to go through self-governance in Indian Health Service'. Evidence verbatim."
+    },
+    {
+      "id": "sac-and-fox-nation-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page, Sac and Fox Language block: 'Interactive Sauk Language website and the CONCISE DICTIONARY OF THE SAUK LANGUAGE'. Evidence verbatim."
+    },
+    {
+      "id": "sac-and-fox-nation-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "About page: 'The community comes together as families, clans, and social groups often and with enthusiasm.' Evidence verbatim; the fact is a close paraphrase but reworded."
+    },
+    {
+      "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ITKN homepage: headquarters on the reservation; 'The reservation straddles the eastern borders of the lands now known as Kansas and Nebraska'. Evidence verbatim."
+    },
+    {
+      "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'The tribe is governed by two bodies, The General Council and The Executive Comittee' (sic). Evidence verbatim."
+    },
+    {
+      "id": "iowa-tribe-of-oklahoma-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Iowa Tribe of Oklahoma homepage: 'we call ourselves Baxoje (Bah Kho-je), meaning, \"People of the Grey Snow.\"' Evidence verbatim."
+    },
+    {
+      "id": "iowa-tribe-of-oklahoma-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'center of a Sovereign Nation located in Perkins, OK with inherent powers of self-government recognized as such by treaties and legislation.' Evidence verbatim."
+    },
+    {
+      "id": "omaha-tribe-of-nebraska-us-ne",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "BIA Winnebago Agency page: 'Estimated Tribal Enrollment: 5,427 members' under Omaha Tribe of Nebraska (the body text also says 'over 5427 members'). Evidence verbatim in the rendered text."
+    },
+    {
+      "id": "omaha-tribe-of-nebraska-us-ne",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: 'Trust Land Base: 27,828 acres' under Omaha Tribe of Nebraska. Evidence verbatim in the rendered text."
+    },
+    {
+      "id": "ponca-tribe-of-nebraska-us-ne",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Ponca Tribe homepage timeline: '1990 Restoration President George H.W. Bush signs the Ponca Restoration Act ... the Ponca Tribe of Nebraska is restored to federal recognition.' Evidence verbatim."
+    },
+    {
+      "id": "ponca-tribe-of-nebraska-us-ne",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Same page: '1879 Standing Bear v. Crook Chief Standing Bear wins a landmark federal case, becoming the first Native American declared a \"person\" under US law.' Evidence verbatim."
+    },
+    {
+      "id": "ponca-tribe-of-nebraska-us-ne",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Same page: 'the Ponca Restoration Act established our fifteen-county Service Delivery Area across Nebraska, Iowa and South Dakota.' Evidence verbatim."
+    }
+  ],
+  "names": [
+    {
+      "id": "oglala-sioux-tribe-us-sd",
+      "ok": true,
+      "note": "'Oglala Sioux Tribe' appears on the BIA Pine Ridge Agency page (name_source_url). This is the federal legal name; no official_url is given."
+    },
+    {
+      "id": "sicangu-lakota-oyate-us-sd",
+      "ok": true,
+      "note": "The tribe's own History & Culture page says it is 'more properly known as Sicangu Lakota Oyate'. The homepage uses 'Rosebud Sioux Tribe', which is listed in also."
+    },
+    {
+      "id": "standing-rock-sioux-tribe-us-nd-sd",
+      "ok": true,
+      "note": "Name appears on the tribe's own homepage and About page."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "ok": true,
+      "note": "Name appears on the BIA Cheyenne River Agency page; no official_url is given."
+    },
+    {
+      "id": "sisseton-wahpeton-oyate-us-sd-nd",
+      "ok": true,
+      "note": "Name appears on the SWO homepage (also styled 'SISSETON-WAHPETON OYATE')."
+    },
+    {
+      "id": "spirit-lake-nation-us-nd",
+      "ok": true,
+      "note": "Name appears 12 times on the ND Indian Affairs Commission page."
+    },
+    {
+      "id": "shakopee-mdewakanton-sioux-community-us-mn",
+      "ok": true,
+      "note": "Name appears on the SMSC's own site."
+    },
+    {
+      "id": "red-lake-nation-us-mn",
+      "ok": true,
+      "note": "Name appears on redlakenation.org; 'Miskwaagamiiwi-Zaagaiganing' is confirmed by the MIAC page title."
+    },
+    {
+      "id": "mille-lacs-band-of-ojibwe-us-mn",
+      "ok": true,
+      "note": "Name appears on the Band's own site."
+    },
+    {
+      "id": "turtle-mountain-band-of-chippewa-us-nd",
+      "ok": true,
+      "note": "name_source_url shows only the short form 'Turtle Mountain Band of Chippewa'. The full form is confirmed as 'Turtle Mountain Band of Chippewa Indians of North Dakota' (heading of the NARF tribal law index). The official site tmbci.org refused connections; a name_source_url that shows the full name would be better."
+    },
+    {
+      "id": "mha-nation-us-nd",
+      "ok": true,
+      "note": "Name appears on the nation's own homepage."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "ok": true,
+      "note": "Name appears on blackfeetnation.com. The pronunciation 'nee-itsee-TAH-peh' matches the Montana directory text."
+    },
+    {
+      "id": "apsaalooke-nation-us-mt",
+      "ok": true,
+      "note": "The Crow Tribe Executive Branch site shows 'Apsáalooke Nation' with the accent."
+    },
+    {
+      "id": "northern-cheyenne-tribe-us-mt",
+      "ok": true,
+      "note": "Name appears on cheyennenation.com. The pronunciation 'Tse-TSES-tas' matches the Montana directory."
+    },
+    {
+      "id": "fort-peck-assiniboine-sioux-us-mt",
+      "ok": true,
+      "note": "The official site says 'Welcome from the FORT PECK ASSINIBOINE and SIOUX TRIBES!' Only the capitalization differs."
+    },
+    {
+      "id": "northern-arapaho-tribe-us-wy",
+      "ok": true,
+      "note": "Name appears on northernarapaho.com, which loads over http and via WebFetch (curl over https fails on a TLS renegotiation)."
+    },
+    {
+      "id": "cheyenne-and-arapaho-tribes-us-ok",
+      "ok": true,
+      "note": "Name appears on the tribes' own site."
+    },
+    {
+      "id": "comanche-nation-us-ok",
+      "ok": true,
+      "note": "Name appears on comanchenation.com; 'Nʉmʉnʉʉ' (NUH-MUH-NUH) appears on the History page as given."
+    },
+    {
+      "id": "kiowa-tribe-us-ok",
+      "ok": true,
+      "note": "Name appears on kiowatribe.org; 'Cauigu' appears in the site menu. Pronunciation: the language page gives 'Gkawy-goo' as the sound of 'Gáuigú' in the phrase 'We are Kiowa', so the guide holds."
+    },
+    {
+      "id": "osage-nation-us-ok",
+      "ok": true,
+      "note": "Name appears on osagenation-nsn.gov."
+    },
+    {
+      "id": "pawnee-nation-of-oklahoma-us-ok",
+      "ok": true,
+      "note": "Name appears on pawneenation.org."
+    },
+    {
+      "id": "citizen-potawatomi-nation-us-ok",
+      "ok": true,
+      "note": "Name appears on potawatomi.org."
+    },
+    {
+      "id": "prairie-band-potawatomi-nation-us-ks",
+      "ok": true,
+      "note": "Name appears on pbpindiantribe.com."
+    },
+    {
+      "id": "forest-county-potawatomi-us-wi",
+      "ok": true,
+      "note": "The site uses 'Forest County Potawatomi' (title) and 'Forest County Potawatomi community'. The capital-C 'Community' is the federal-list form and is acceptable; leading with 'Forest County Potawatomi' would match the site."
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "ok": true,
+      "note": "Name appears on ho-chunknation.com. Minor: the homepage spells the language name 'Hocąk', while also lists 'Hoocąk'."
+    },
+    {
+      "id": "menominee-indian-tribe-us-wi",
+      "ok": true,
+      "note": "Name appears on menominee-nsn.gov."
+    },
+    {
+      "id": "oneida-nation-us-wi",
+      "ok": true,
+      "note": "Name appears on oneida-nsn.gov and its press kit."
+    },
+    {
+      "id": "little-traverse-bay-bands-odawa-us-mi",
+      "ok": true,
+      "note": "Name appears on ltbbodawa-nsn.gov."
+    },
+    {
+      "id": "sault-ste-marie-tribe-chippewa-us-mi",
+      "ok": true,
+      "note": "Name appears on saulttribe.com."
+    },
+    {
+      "id": "meskwaki-nation-us-ia",
+      "ok": true,
+      "note": "'Meskwaki Nation' appears on meskwaki.org (title: 'Meskwaki Nation | Sac & Fox Tribe of the Mississippi in Iowa')."
+    },
+    {
+      "id": "sac-and-fox-nation-us-ok",
+      "ok": true,
+      "note": "Name appears on sacandfoxnation-nsn.gov."
+    },
+    {
+      "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+      "ok": true,
+      "note": "Name appears on the tribe's site, which also says the tribe is known as the Ioway or Baxoje."
+    },
+    {
+      "id": "iowa-tribe-of-oklahoma-us-ok",
+      "ok": true,
+      "note": "Name appears on iowanation.org. The pronunciation 'Bah Kho-je' matches the homepage."
+    },
+    {
+      "id": "omaha-tribe-of-nebraska-us-ne",
+      "ok": true,
+      "note": "Name appears on omahatribe.com."
+    },
+    {
+      "id": "ponca-tribe-of-nebraska-us-ne",
+      "ok": true,
+      "note": "Name appears on poncatribe-ne.gov."
+    }
+  ]
+}

@@ -1,0 +1,685 @@
+{
+ "region": "us-east-southeast",
+ "items": [
+  {
+   "id": "seneca-nation-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name 'Seneca Nation' matches sni.org ('The Seneca Nation'); the self-name Onöndowa’ga:’ with diacritics is correct in also. Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "pronounce: null",
+   "pronounce": null
+  },
+  {
+   "id": "seneca-nation-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, strengths framing; supported ('more than 8,500 Seneca citizens and their families continue this legacy')."
+  },
+  {
+   "id": "seneca-nation-us-ny",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Supported by the sni.org home page ('16-member Tribal Council, comprised of an equal number of representatives from the Cattaraugus and Allegany territories'). Neutral governance fact."
+  },
+  {
+   "id": "seneca-nation-us-ny",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language revitalization, the Nation's own program, correct diacritics. Strong fact."
+  },
+  {
+   "id": "onondaga-nation-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches the Nation's own banner ('Onondaga Nation, People of the Hills'). Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "pronounce: null",
+   "pronounce": null
+  },
+  {
+   "id": "onondaga-nation-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Traditional governance in the Nation's own words; the source's mention of ceremonies is correctly left out."
+  },
+  {
+   "id": "onondaga-nation-us-ny",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral place fact from the Nation's own site."
+  },
+  {
+   "id": "onondaga-nation-us-ny",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'In council' is vague and can read as an Onondaga-only meeting. The source describes the Haudenosaunee Grand Council, where the Onondaga leaders are the Fire Keepers who present an issue and announce when all are of One Mind. Name the council correctly; this is public governance, not ceremony. Evidence phrase unchanged.",
+   "text": "In the Haudenosaunee Grand Council, the Onondaga Fire Keepers present an issue, and debate goes on until they can announce that all are of One Mind, a decision by consensus."
+  },
+  {
+   "id": "saint-regis-mohawk-akwesasne-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name 'Saint Regis Mohawk Tribe' matches srmt-nsn.gov, keep it. The also entry 'Kanien’kehaka' is the NMAI guide's spelling; the Tribe's own Cultural Preservation page (srmt-nsn.gov/about/cultural-preservation, fetched) publishes it as 'Kanienkehaka' ('The Kanienkehaka, or Mohawks as we are known in English'). Use the nation's own published spelling. Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "also: [\"Akwesasne Mohawk\", \"Kanienkehaka\", \"People of the Flint\", \"Mohawk\", \"Keepers of the Eastern Door\"]; pronounce: null",
+   "also": [
+    "Akwesasne Mohawk",
+    "Kanienkehaka",
+    "People of the Flint",
+    "Mohawk",
+    "Keepers of the Eastern Door"
+   ],
+   "pronounce": null
+  },
+  {
+   "id": "saint-regis-mohawk-akwesasne-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral governance fact."
+  },
+  {
+   "id": "saint-regis-mohawk-akwesasne-us-ny",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Place-name meaning from the Tribe's own page. The nearby oral history about ceremonial grounds is correctly not used."
+  },
+  {
+   "id": "saint-regis-mohawk-akwesasne-us-ny",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Attributed homeland description, neutral."
+  },
+  {
+   "id": "oneida-indian-nation-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches oneidaindiannation.com. Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "pronounce: null",
+   "pronounce": null
+  },
+  {
+   "id": "oneida-indian-nation-us-ny",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Supported by the page ('Each clan chooses a representative to join the governing body'), but whether this council is the traditional clan government is publicly disputed by Haudenosaunee traditional leadership. Under the neutrality rule, attribute it to the Nation (as the Seminole 'describes itself' fact already does) rather than state it as settled. Evidence phrase unchanged.",
+   "text": "The Oneida Indian Nation describes its government as a Nation Council of clan representatives, each chosen by a clan, planning for the next seven generations."
+  },
+  {
+   "id": "oneida-indian-nation-us-ny",
+   "fact": 1,
+   "action": "edit",
+   "reason": "'Oneida Nation Members' can be confused with the separate Oneida Nation in Wisconsin. Use the Nation's full name as its page does ('the Oneida Indian Nation Language Program'). Evidence phrase unchanged.",
+   "text": "Oneida Indian Nation Members learn Onyota’a:ká:, the Oneida language, through intensive courses, a preschool curriculum, e-books, smartphone apps and an Oneida language keyboard."
+  },
+  {
+   "id": "oneida-indian-nation-us-ny",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strengths history from the Nation's own page, framed the way the Nation frames it ('America's First Allies')."
+  },
+  {
+   "id": "cayuga-nation-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches cayuganation-nsn.gov. The Nation's well known leadership dispute is correctly left out of every fact; keep it that way. Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "pronounce: null",
+   "pronounce": null
+  },
+  {
+   "id": "cayuga-nation-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Living clan system, not restricted knowledge; stays clear of the governance dispute."
+  },
+  {
+   "id": "cayuga-nation-us-ny",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day return to homeland; strengths framing."
+  },
+  {
+   "id": "cayuga-nation-us-ny",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Treaty still in effect; neutral, well sourced."
+  },
+  {
+   "id": "tuscarora-nation-us-ny",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches tuscaroranation.org. Pronunciation comes from the Smithsonian NMAI educator guide, not from the nation's own site or language program, and it voices the English exonym rather than the nation's own name. The promise made to the owner is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null until a nation-published guide is found.",
+   "text": "pronounce: null",
+   "pronounce": null
+  },
+  {
+   "id": "tuscarora-nation-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language revitalization mission from the Nation's own page."
+  },
+  {
+   "id": "tuscarora-nation-us-ny",
+   "fact": 1,
+   "action": "edit",
+   "reason": "The source says Tuscarora people 'traveled north to seek refuge among the Haudenosaunee'. Dropping that turns a displacement into a neutral trip. Restore it plainly, with no war detail. Evidence phrase unchanged.",
+   "text": "In 1722 Tuscarora people living in what is now North Carolina traveled north to seek refuge among the Haudenosaunee, were invited to join the Confederacy, and became its sixth nation."
+  },
+  {
+   "id": "tuscarora-nation-us-ny",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Accuracy: the source reads 'TEP is a subsidiary of the Haudenosaunee Environmental Task Force (HETF), established in 1992 by the Grand Council'; the 1992 founding most naturally belongs to the Task Force, not the Tuscarora program. Keep the source's order so no founding date is moved onto the wrong body. Evidence phrase unchanged.",
+   "text": "The Tuscarora Environment Program works as part of the Haudenosaunee Environmental Task Force, established in 1992 by the Grand Council."
+  },
+  {
+   "id": "cherokee-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches cherokee.gov; the syllabary self-name ᏣᎳᎩ appears on the Nation's own page. No pronunciation, correctly."
+  },
+  {
+   "id": "cherokee-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-description from the Nation's own page. Ranking claims can shift with enrollment counts; the weekly re-check will catch a change."
+  },
+  {
+   "id": "cherokee-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral governance fact."
+  },
+  {
+   "id": "cherokee-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language strength; correctly chosen over the removal death toll that sits beside it on the page."
+  },
+  {
+   "id": "eastern-band-cherokee-us-nc",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches ebci.gov. No pronunciation, correctly."
+  },
+  {
+   "id": "eastern-band-cherokee-us-nc",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day land fact from a state government source."
+  },
+  {
+   "id": "eastern-band-cherokee-us-nc",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population fact, dated."
+  },
+  {
+   "id": "eastern-band-cherokee-us-nc",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'Cherokee in North Carolina' is vague and reads like the town of Cherokee. Lead with the nation's own name. The page says 'Cherokee is a sovereign nation, meaning it has its own laws, elections, government, institutions' and 'the Cherokees are self-governed and autonomous'. Evidence phrase unchanged.",
+   "text": "The Eastern Band of Cherokee Indians is a sovereign nation with its own laws, elections, government and institutions, and its people are self-governed."
+  },
+  {
+   "id": "united-keetoowah-band-us-ok",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches ukb-nsn.gov and the pronunciation 'Kih-too-wah' is the UKB's own (About page), so keep both. 'Western Cherokee' and 'Old Settlers' are UKB self-descriptions, but who carries the Old Settler and Western Cherokee lineage is part of a live dispute between the UKB and the Cherokee Nation; shown as bare alternate names they read as settled fact. Drop them from also and keep them only as an attributed statement in fact 1. The About page also states a 1/4 blood quantum enrollment rule and a sacred origin account of the name; both are correctly left out.",
+   "text": "also: [\"UKB\", \"Keetoowah\", \"Kituwah\", \"Anigiduwagi\"]",
+   "also": [
+    "UKB",
+    "Keetoowah",
+    "Kituwah",
+    "Anigiduwagi"
+   ]
+  },
+  {
+   "id": "united-keetoowah-band-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Population in the UKB's own words."
+  },
+  {
+   "id": "united-keetoowah-band-us-ok",
+   "fact": 1,
+   "action": "edit",
+   "reason": "States a disputed lineage claim as plain fact, and stops halfway through the source sentence, which continues 'and then involuntarily to Indian Territory after the Indian Removal Act'. That hides the removal. Attribute to the UKB and finish the sentence as the source does. Evidence phrase unchanged.",
+   "text": "The UKB says the Keetoowahs, also called Western Cherokee or Old Settlers, were the first Cherokees to move west, first by choice and later by force after the Indian Removal Act."
+  },
+  {
+   "id": "united-keetoowah-band-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral governance fact."
+  },
+  {
+   "id": "muscogee-creek-nation-us-ok",
+   "fact": null,
+   "action": "edit",
+   "reason": "The Nation's own home page uses 'Muscogee Nation' 27 times and 'Muscogee (Creek) Nation' once (counted on the fetched page), following its move away from the English exonym 'Creek'. Lead with 'Muscogee Nation'; keep the legal name 'Muscogee (Creek) Nation' first in also. The self-name Mvskoke stays in also.",
+   "text": "also: [\"Muscogee (Creek) Nation\", \"Mvskoke\", \"Creek\"]",
+   "name": "Muscogee Nation",
+   "also": [
+    "Muscogee (Creek) Nation",
+    "Mvskoke",
+    "Creek"
+   ]
+  },
+  {
+   "id": "muscogee-creek-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Supported. Uses the legal name, which stays accurate; the merger may shorten it to 'Muscogee Nation' to match the new lead name."
+  },
+  {
+   "id": "muscogee-creek-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Supported and neutral. Same note on the legal name as fact 0. The page's 'Five Civilized Tribes' label is correctly not repeated."
+  },
+  {
+   "id": "muscogee-creek-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language program in the Nation's own words."
+  },
+  {
+   "id": "seminole-tribe-florida-us-fl",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches semtribe.com."
+  },
+  {
+   "id": "seminole-tribe-florida-us-fl",
+   "fact": 0,
+   "action": "keep",
+   "reason": "A strong self-claim that others (for example the Miccosukee) also make; it is correctly attributed with 'describes itself as'. Keep the attribution."
+  },
+  {
+   "id": "seminole-tribe-florida-us-fl",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Accuracy: the source is past narrative from the James Billie era ('The addition of two new reservations (Tampa and Immokalee) brought Seminole federal trust holdings in Florida to more than 90,000 acres'). It does not say holdings 'now total' that, so as_of 2026 is unsupported. Restate as the source does and set as_of to null. Evidence phrase unchanged.",
+   "text": "Adding the Tampa and Immokalee reservations brought Seminole federal trust holdings in Florida to more than 90,000 acres.",
+   "as_of": null
+  },
+  {
+   "id": "seminole-tribe-florida-us-fl",
+   "fact": 2,
+   "action": "edit",
+   "reason": "The source says the Tribal Council is 'composed of a Chairman, a Vice-Chairman and Council Representatives from each reservation'. 'Led by' and 'working alongside the Tribal Board' are looser than the page. Tighten to the source. Evidence phrase unchanged.",
+   "text": "Under the Tribe's constitution, the Tribal Council, made up of a Chairman, a Vice-Chairman and representatives from each reservation, is the chief governing body."
+  },
+  {
+   "id": "seminole-nation-oklahoma-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches sno-nsn.gov; 'The Great Seminole Nation of Oklahoma' is the Nation's own phrasing in its testimony."
+  },
+  {
+   "id": "seminole-nation-oklahoma-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral governance fact from the Nation's own testimony. The fourteen bands include the two Freedmen bands; the fact correctly takes no side on the citizenship litigation."
+  },
+  {
+   "id": "seminole-nation-oklahoma-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Cultural fact in the Nation's own words ('Like many Native American cultures, the Seminole Nation is a matrilineal society'). Band enrollment through the mother is not blood quantum talk, and the fact stays clear of the Freedmen dispute."
+  },
+  {
+   "id": "seminole-nation-oklahoma-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language revitalization in the Nation's own words."
+  },
+  {
+   "id": "choctaw-nation-oklahoma-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches the heading of choctawnation.com/about (fetched); 'Chahta' is used on that page."
+  },
+  {
+   "id": "choctaw-nation-oklahoma-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Supported on the fetched About page ('over 225,000 tribal members'). Neutral."
+  },
+  {
+   "id": "choctaw-nation-oklahoma-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Supported on the fetched About page. Neutral land fact."
+  },
+  {
+   "id": "choctaw-nation-oklahoma-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language strength; respectful."
+  },
+  {
+   "id": "mississippi-band-choctaw-us-ms",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches choctaw.org; the site itself uses Chahta for the people."
+  },
+  {
+   "id": "mississippi-band-choctaw-us-ms",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Supported and neutral."
+  },
+  {
+   "id": "mississippi-band-choctaw-us-ms",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral governance fact. The page's 'near extinction' wording is correctly not used."
+  },
+  {
+   "id": "mississippi-band-choctaw-us-ms",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Unsupported: the page never says the Fair 'brings the community together', and the evidence phrase is about the Choctaw Princess crowning, not stickball. The same page has a strong living-culture passage ('Our traditions are alive and belong to the Chahta people ... or toss a handmade stickball down a field'). Use it. New evidence phrase, verbatim from the same page: 'toss a handmade stickball down a field'.",
+   "text": "Chahta traditions stay alive through social dances, beadwork, cane baskets, traditional food, Chahta clothing and handmade stickballs tossed down a field.",
+   "evidence": "toss a handmade stickball down a field"
+  },
+  {
+   "id": "chickasaw-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name 'The Chickasaw Nation' matches chickasaw.net."
+  },
+  {
+   "id": "chickasaw-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral governance fact."
+  },
+  {
+   "id": "chickasaw-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language strength. The page's statement of belief about the language's origin is correctly not used."
+  },
+  {
+   "id": "chickasaw-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Land fact from the Nation's own page."
+  },
+  {
+   "id": "catawba-nation-us-sc",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches catawba.com; 'yeh is-WAH h’reh, meaning people of the river' is the Nation's own published self-name."
+  },
+  {
+   "id": "catawba-nation-us-sc",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Fine as written, but it leads with decline. The same page gives a present-day strength: about 50 adult Catawbas make and sell pottery regularly, children learn in the Nation's programs and adults in classes at the Cultural Center. Prefer that. New evidence phrase, verbatim from the same page: 'About 50 adult Catawbas make and sell pottery on a regular basis'. Set as_of to 2026 for the number.",
+   "text": "Catawba pottery is formed completely by hand; about 50 adult Catawbas make and sell it regularly, and the Nation teaches the craft to children and adults.",
+   "evidence": "About 50 adult Catawbas make and sell pottery on a regular basis",
+   "as_of": "2026"
+  },
+  {
+   "id": "catawba-nation-us-sc",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day population in the Nation's own words."
+  },
+  {
+   "id": "catawba-nation-us-sc",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'Brought federal recognition' reads as if the Nation was never recognized before. The page says the Nation was terminated in 1959 and then fought 'to regain federal recognition', which the 1993 settlement achieved. Say 'regained'. Evidence phrase unchanged.",
+   "text": "After a 20-year effort, the Catawba Indian Nation regained federal recognition through a land claim settlement on November 20, 1993."
+  },
+  {
+   "id": "lumbee-tribe-us-nc",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches lumbeetribe.com; 'People of the Dark Water' is the Tribe's own phrase ('We are the People of the Dark Water')."
+  },
+  {
+   "id": "lumbee-tribe-us-nc",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Recognition was long contested, but this states an enacted federal outcome neutrally, from the Tribe's own page, with a date. Keep it plain like this."
+  },
+  {
+   "id": "lumbee-tribe-us-nc",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population fact from a state government source."
+  },
+  {
+   "id": "lumbee-tribe-us-nc",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Self-description of strengths in the Tribe's own words."
+  },
+  {
+   "id": "mashpee-wampanoag-us-ma",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches the Tribe's site; 'People of the First Light' is its own phrase."
+  },
+  {
+   "id": "mashpee-wampanoag-us-ma",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day population fact."
+  },
+  {
+   "id": "mashpee-wampanoag-us-ma",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral recognition fact; the contested reservation land-in-trust litigation is correctly left out."
+  },
+  {
+   "id": "mashpee-wampanoag-us-ma",
+   "fact": 2,
+   "action": "edit",
+   "reason": "The current wording comes from a January 2018 news blurb ('could be the first'), a dated prediction, and the blurb calls the language 'long-lost'. Use the present-day program fact on the same page instead. New evidence phrase, verbatim from the same page: 'Year round family and elders language classes'. as_of stays null.",
+   "text": "The Mashpee Wampanoag Tribal Language Department, set up in 2009 with the Wôpanâak Language Reclamation Project, offers year-round family and elder language classes.",
+   "evidence": "Year round family and elders language classes"
+  },
+  {
+   "id": "aquinnah-wampanoag-us-ma",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name is the Tribe's own legal name as published on wampanoagtribe-nsn.gov. The Moshup account on the history page is belief, correctly not used as a fact."
+  },
+  {
+   "id": "aquinnah-wampanoag-us-ma",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Long presence, present-day framing."
+  },
+  {
+   "id": "aquinnah-wampanoag-us-ma",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day stewardship; strengths."
+  },
+  {
+   "id": "aquinnah-wampanoag-us-ma",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Name restoration; a good honoring fact."
+  },
+  {
+   "id": "penobscot-nation-us-me",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches penobscotnation.org."
+  },
+  {
+   "id": "penobscot-nation-us-me",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language revitalization."
+  },
+  {
+   "id": "penobscot-nation-us-me",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day water stewardship; stays neutral on river litigation."
+  },
+  {
+   "id": "penobscot-nation-us-me",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Mission in the Nation's own words."
+  },
+  {
+   "id": "passamaquoddy-peskotomuhkati-us-me",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name matches the Sipayik government's own wording 'The Passamaquoddy (Peskotomuhkati) people'. But 'Sipayik (Pleasant Point)' and 'Motahkomikuk (Indian Township)' are names of two communities, not other names for the people; in also they would be shown as if they were the nation's name. They already appear in lands. Note official_url is the Sipayik community government only; Motahkomikuk and the New Brunswick community have their own governments.",
+   "text": "also: [\"Peskotomuhkati\", \"Passamaquoddy Tribe\"]",
+   "also": [
+    "Peskotomuhkati",
+    "Passamaquoddy Tribe"
+   ]
+  },
+  {
+   "id": "passamaquoddy-peskotomuhkati-us-me",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, from the Tribe's own site. The New Brunswick community's status with Canada is not raised, which is right."
+  },
+  {
+   "id": "passamaquoddy-peskotomuhkati-us-me",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Place and identity, present-day."
+  },
+  {
+   "id": "passamaquoddy-peskotomuhkati-us-me",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language strength."
+  },
+  {
+   "id": "narragansett-indian-tribe-us-ri",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches narragansettindiannation.org."
+  },
+  {
+   "id": "narragansett-indian-tribe-us-ri",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral recognition fact."
+  },
+  {
+   "id": "narragansett-indian-tribe-us-ri",
+   "fact": 1,
+   "action": "keep",
+   "reason": "The August Meeting is the Tribe's public annual gathering (its site lists 'Annual August Meeting (Powwow)'); the fact names it without describing any ceremonial content."
+  },
+  {
+   "id": "narragansett-indian-tribe-us-ri",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral land claim outcome with a date."
+  },
+  {
+   "id": "shinnecock-indian-nation-us-ny",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches shinnecock-nsn.gov; 'people of the stony shore' is the Nation's own translation."
+  },
+  {
+   "id": "shinnecock-indian-nation-us-ny",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral recognition fact."
+  },
+  {
+   "id": "shinnecock-indian-nation-us-ny",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Population in the Nation's own words ('over 1,589')."
+  },
+  {
+   "id": "shinnecock-indian-nation-us-ny",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strengths and 'still here' framing, written by a Shinnecock citizen historian on the Nation's own page."
+  },
+  {
+   "id": "delaware-tribe-of-indians-lenape-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches delawaretribe.org. Pronunciation is verified on the Tribe's own home page ('we call ourselves LENAPE (len-NAH-pay)'), exactly the nation-published guide the policy wants. Keep."
+  },
+  {
+   "id": "delaware-tribe-of-indians-lenape-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day self-description."
+  },
+  {
+   "id": "delaware-tribe-of-indians-lenape-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language revitalization; dated number."
+  },
+  {
+   "id": "delaware-tribe-of-indians-lenape-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Historic achievement in the Tribe's own words."
+  },
+  {
+   "id": "delaware-nation-lenape-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches the Nation's site; its own About page gives Lenape / Lenni-Lenape and 'the Grandfathers', all correctly in also."
+  },
+  {
+   "id": "delaware-nation-lenape-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day self-description."
+  },
+  {
+   "id": "delaware-nation-lenape-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-naming in the Nation's own words; good."
+  },
+  {
+   "id": "delaware-nation-lenape-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day heritage protection; the source's removal-pathway context is honest and not needed on the card."
+  },
+  {
+   "id": "pamunkey-indian-tribe-us-va",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches pamunkey.org ('We are the Pamunkey Indian Tribe')."
+  },
+  {
+   "id": "pamunkey-indian-tribe-us-va",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day place fact."
+  },
+  {
+   "id": "pamunkey-indian-tribe-us-va",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral recognition fact with a date."
+  },
+  {
+   "id": "pamunkey-indian-tribe-us-va",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strengths: a stewardship ethic in the Tribe's own words."
+  }
+ ]
+}

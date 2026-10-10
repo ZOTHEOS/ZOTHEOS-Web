@@ -1,0 +1,666 @@
+{
+  "region": "arctic-europe-russia",
+  "compiled": "2026-10-08",
+  "nations": [
+    {
+      "id": "sami-sapmi-nordic-russia",
+      "name": "Sámi",
+      "also": ["Saami", "Sami", "Saamy (Russian usage)"],
+      "pronounce": null,
+      "lands": "Sápmi, across northern Norway, Sweden and Finland and the Kola Peninsula of Russia",
+      "countries": ["NO", "SE", "FI", "RU"],
+      "official_url": "https://www.saamicouncil.net/",
+      "name_source_url": "https://sametinget.no/about-the-sami-parliament/",
+      "facts": [
+        {
+          "text": "Norway's Sámi Parliament is elected by and among the Sámi. First opened in Karasjok in 1989, it now has 39 representatives from seven constituencies.",
+          "kind": "governance",
+          "as_of": "2026",
+          "source": { "title": "About the Sámi Parliament", "publisher": "Sámediggi (Sámi Parliament of Norway)", "url": "https://sametinget.no/about-the-sami-parliament/", "accessed": "2026-10-08" },
+          "evidence": "representative elected assembly with 39 representatives elected by seven constituencies"
+        },
+        {
+          "text": "About 10,000 Sámi live in Finland, where three Sámi languages are spoken: Northern Sámi, Inari Sámi and Skolt Sámi.",
+          "kind": "language",
+          "as_of": "2026",
+          "source": { "title": "About us | The Sámi Parliament of Finland", "publisher": "Sámediggi (Sámi Parliament of Finland)", "url": "https://samediggi.fi/en/about-us/", "accessed": "2026-10-08" },
+          "evidence": "three Sámi languages are spoken: Northern Sámi, Inari Sámi, and Skolt Sámi"
+        },
+        {
+          "text": "February 6 is Sámi National Day, celebrated all over Sápmi. The Sámi flag and anthem were both adopted at the Saami Conference held in Åre, Sweden, in 1986.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "National symbols", "publisher": "Saami Council (Sámiráđđi)", "url": "https://www.saamicouncil.net/en/national-symbols", "accessed": "2026-10-08" },
+          "evidence": "February 6th is the National Day of the Saami People"
+        }
+      ]
+    },
+    {
+      "id": "kalaallit-greenland",
+      "name": "Kalaallit",
+      "also": ["Greenlandic Inuit", "Greenlanders"],
+      "pronounce": null,
+      "lands": "Kalaallit Nunaat (Greenland), which has self-government within the Kingdom of Denmark",
+      "countries": ["GL"],
+      "official_url": "https://naalakkersuisut.gl/",
+      "name_source_url": "https://www.inuitcircumpolar.com/about-icc/",
+      "facts": [
+        {
+          "text": "Under the Self-Government Act, in force since 21 June 2009, the people of Greenland are recognised as a people with the right to self-determination under international law.",
+          "kind": "governance",
+          "as_of": "2009",
+          "source": { "title": "Greenland", "publisher": "Prime Minister's Office of Denmark (Statsministeriet)", "url": "https://english.stm.dk/the-prime-ministers-office/the-unity-of-the-realm/greenland/", "accessed": "2026-10-08" },
+          "evidence": "the people of Greenland are a people with right to self-determination"
+        },
+        {
+          "text": "The Self-Government Act recognises Greenlandic (Kalaallisut) as the official language of Greenland.",
+          "kind": "language",
+          "as_of": "2009",
+          "source": { "title": "Greenland", "publisher": "Prime Minister's Office of Denmark (Statsministeriet)", "url": "https://english.stm.dk/the-prime-ministers-office/the-unity-of-the-realm/greenland/", "accessed": "2026-10-08" },
+          "evidence": "the Greenlandic language is recognised as the official language in Greenland"
+        },
+        {
+          "text": "Standard Greenlandic grew out of central West Greenland speech and is the written language every Greenlander shares, while anyone may speak in their own dialect.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "About Inuit dialects", "publisher": "Oqaasileriffik (Language Secretariat of Greenland)", "url": "https://oqaasileriffik.gl/en/2021/02/07/about-inuit-dialects/", "accessed": "2026-10-08" },
+          "evidence": "all Greenlanders, regardless of their dialect, use in writing"
+        }
+      ]
+    },
+    {
+      "id": "inughuit-avanersuaq-greenland",
+      "name": "Inughuit",
+      "also": ["Polar Inuit"],
+      "pronounce": null,
+      "lands": "Avanersuaq (the Thule region) in northwest Greenland, centred on the town of Qaanaaq",
+      "countries": ["GL"],
+      "official_url": null,
+      "name_source_url": "https://www.bowdoin.edu/arctic-museum/exhibits/2007/extraordinary-paradise.html",
+      "facts": [
+        {
+          "text": "The Inughuit have their own language, often described as a dialect, and a hunting culture that is distinctive in several ways.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Qaanaaq", "publisher": "Lex, Danmarks Nationalleksikon", "url": "https://lex.dk/Qaanaaq", "accessed": "2026-10-08" },
+          "evidence": "har deres eget sprog (dialekt) og en fangerkultur"
+        },
+        {
+          "text": "Hunting is still a significant part of the livelihood of several families in Qaanaaq, Greenland's youngest and northernmost town.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Qaanaaq", "publisher": "Lex, Danmarks Nationalleksikon", "url": "https://lex.dk/Qaanaaq", "accessed": "2026-10-08" },
+          "evidence": "Fangst er dog fortsat en væsentlig del af erhvervsgrundlaget for flere familier"
+        },
+        {
+          "text": "Inughuit skill and knowledge of the far north were vital to early 1900s Arctic expeditions, and Inughuit elders later helped a US museum document that history.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "This Extraordinary Paradise: Living in Northwest Greenland", "publisher": "Peary-MacMillan Arctic Museum, Bowdoin College", "url": "https://www.bowdoin.edu/arctic-museum/exhibits/2007/extraordinary-paradise.html", "accessed": "2026-10-08" },
+          "evidence": "Their skills and knowledge of life in the far north were vital"
+        }
+      ]
+    },
+    {
+      "id": "nenets-arctic-russia",
+      "name": "Nenets",
+      "also": ["Ненцы", "Tundra Nenets", "Forest Nenets"],
+      "pronounce": null,
+      "lands": "Tundra and forest-tundra from the Kola Peninsula to the Yenisei River, including the Nenets and Yamal-Nenets autonomous okrugs and Taimyr, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/nentsy/",
+      "facts": [
+        {
+          "text": "The Nenets are regarded today as the most mobile nomads in the world, with large-herd reindeer herding at the heart of their tundra economy.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Ненцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nentsy/", "accessed": "2026-10-08" },
+          "evidence": "В настоящее время ненцы считаются самыми подвижными кочевниками в мире"
+        },
+        {
+          "text": "In Yamal, a regional grant helps young Nenets, Khanty and other Indigenous nomadic families with three or more children equip a chum shelter. By 2024, 268 families had received it.",
+          "kind": "today",
+          "as_of": "2024",
+          "source": { "title": "Young indigenous families supported by chum capital", "publisher": "Fenno-Ugria Foundation", "url": "https://fennougria.ee/en/young-indigenous-families-supported-by-chum-capital/", "accessed": "2026-10-08" },
+          "evidence": "To date, 268 young families have benefited"
+        },
+        {
+          "text": "Nenets belongs to the Samoyedic branch of the Uralic languages and has two main dialects, Tundra and Forest.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "The Nenets", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/nenets.shtml", "accessed": "2026-10-08" },
+          "evidence": "belongs to the Samoyedic branch of the Uralic languages"
+        }
+      ]
+    },
+    {
+      "id": "khanty-west-siberia",
+      "name": "Khanty",
+      "also": ["Ханты", "Khant"],
+      "pronounce": null,
+      "lands": "River valleys of the Ob basin in western Siberia: Khanty-Mansi Autonomous Okrug (Yugra), Yamal-Nenets Autonomous Okrug and Tomsk Oblast, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/khanty/",
+      "facts": [
+        {
+          "text": "The first newspaper in the Khanty language in the okrug came out on 1 November 1957. Known today as Khanty Yasang, it is still published in Khanty-Mansiysk.",
+          "kind": "language",
+          "as_of": "2026",
+          "source": { "title": "Историческая справка", "publisher": "Khanty Mansi Mir (joint editorial office of the Khanty Yasang and Luima Seripos newspapers)", "url": "https://khanty-yasang.ru/pages/o-nas/67", "accessed": "2026-10-08" },
+          "evidence": "вышла в свет первая в истории округа газета на хантыйском языке"
+        },
+        {
+          "text": "Khanty is an Ugric language of the Finno-Ugric family. Its closest relatives are Mansi and Hungarian.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Khanty", "publisher": "Fenno-Ugria Foundation", "url": "https://fennougria.ee/en/peoples/khanty/", "accessed": "2026-10-08" },
+          "evidence": "belongs to the Ugric group of Finno-Ugric languages"
+        },
+        {
+          "text": "For many Khanty families, fishing and reindeer herding are closely intertwined, and family fishing hamlets on rivers like the Synia still carry clan surnames.",
+          "kind": "today",
+          "as_of": "2023",
+          "source": { "title": "Khanty fishing in the Ob' River system, West Siberia, 6 Sep 2023 Rovaniemi talk by Yuka Oishi", "publisher": "Arctic Anthropology blog, Arctic Centre, University of Lapland", "url": "https://arcticanthropology.org/2023/09/06/khanty-fishing-in-the-ob-river-system-west-siberia-6-sep-2023-rovaniemi-talk-by-yuka-oishi/", "accessed": "2026-10-08" },
+          "evidence": "fishing and reindeer herding are closely intertwined"
+        }
+      ]
+    },
+    {
+      "id": "mansi-west-siberia",
+      "name": "Mansi",
+      "also": ["Манси", "Mäńśi"],
+      "pronounce": null,
+      "lands": "Ob and Irtysh basin in western Siberia, mainly Khanty-Mansi Autonomous Okrug (Yugra), with small groups in Yamal-Nenets Autonomous Okrug and Sverdlovsk Oblast, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/mansi/",
+      "facts": [
+        {
+          "text": "Mansi rapper Yevgeny Anyamov, known as Bizzo, records his songs in Mansi and opened his own studio in his hometown of Ivdel to share his people's culture with youth.",
+          "kind": "achievement",
+          "as_of": "2024",
+          "source": { "title": "Mansi rapper opens studio", "publisher": "Fenno-Ugria Foundation", "url": "https://fennougria.ee/en/mansi-rapper-opens-studio/", "accessed": "2026-10-08" },
+          "evidence": "who records his songs in Mansi, has opened his own music studio"
+        },
+        {
+          "text": "Luima Seripos, a newspaper in the Mansi language, first came out on 11 February 1989 and is still produced in Khanty-Mansiysk alongside the Khanty paper.",
+          "kind": "language",
+          "as_of": "2026",
+          "source": { "title": "Историческая справка", "publisher": "Khanty Mansi Mir (joint editorial office of the Khanty Yasang and Luima Seripos newspapers)", "url": "https://khanty-yasang.ru/pages/o-nas/67", "accessed": "2026-10-08" },
+          "evidence": "11 февраля 1989 года в редакции «Ханты ясанг» вышел первый номер"
+        },
+        {
+          "text": "Russia's 2010 census counted 12,269 Mansi, up from 11,432 in 2002.",
+          "kind": "population",
+          "as_of": "2010",
+          "source": { "title": "Mansi", "publisher": "Fenno-Ugria Foundation", "url": "https://fennougria.ee/en/peoples/mansis/", "accessed": "2026-10-08" },
+          "evidence": "there were 12,269 Mansi, compared to 11,432 in 2002"
+        }
+      ]
+    },
+    {
+      "id": "evenki-siberia",
+      "name": "Evenki",
+      "also": ["Эвенки", "Evenk", "Ewenki", "Tungus (older exonym)"],
+      "pronounce": null,
+      "lands": "Siberian taiga from the Ob River to the Sea of Okhotsk, with the largest group in Sakha (Yakutia), also Krasnoyarsk and Khabarovsk krais, Buryatia, Amur, Irkutsk and Zabaykalsky regions of Russia, and in China and Mongolia",
+      "countries": ["RU", "CN", "MN"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/evenki/",
+      "facts": [
+        {
+          "text": "Evenki homelands span a huge part of the Siberian taiga, from the Ob River in the west to the Sea of Okhotsk in the east.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "The Evenks", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/evenks.shtml", "accessed": "2026-10-08" },
+          "evidence": "a huge territory of the Siberian taiga from the River Ob"
+        },
+        {
+          "text": "Evenki communities live across Russia, with the largest in Sakha (Yakutia), and Evenki also live in China and Mongolia.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Эвенки", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/evenki/", "accessed": "2026-10-08" },
+          "evidence": "Живут также в Китае и Монголии"
+        },
+        {
+          "text": "Evenki is the largest language of the northern Tungusic (Manchu-Tungus) group and has northern, southern and eastern dialect groups.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "The Evenks", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/evenks.shtml", "accessed": "2026-10-08" },
+          "evidence": "the largest of the northern group of the Manchu-Tungus languages"
+        }
+      ]
+    },
+    {
+      "id": "even-northeast-siberia",
+      "name": "Even",
+      "also": ["Эвены", "Evens", "Orochel", "Lamut (older exonym)"],
+      "pronounce": null,
+      "lands": "Northeastern Siberia: Sakha (Yakutia), Magadan Oblast, Kamchatka, Chukotka and Khabarovsk Krai, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/eveny/",
+      "facts": [
+        {
+          "text": "Sharing holds a valued place in Even life: the custom of dividing a catch, called nimat, has traditionally played an important role.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Эвены", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/eveny/", "accessed": "2026-10-08" },
+          "evidence": "Важную роль в жизни эвенов традиционно играл обычай дележа"
+        },
+        {
+          "text": "The Even language belongs to the Tungusic (Manchu-Tungus) branch and is close to Evenki. Even self-names include Even (local) and Orochel (reindeer people).",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Эвены", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/eveny/", "accessed": "2026-10-08" },
+          "evidence": "алтайской семьи языков и близок к эвенкийскому"
+        },
+        {
+          "text": "The 2002 census counted 11,657 Even living in the Republic of Sakha (Yakutia).",
+          "kind": "population",
+          "as_of": "2002",
+          "source": { "title": "Эвены", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/eveny/", "accessed": "2026-10-08" },
+          "evidence": "в Республике Саха (Якутия) проживает 11 657 эвенов"
+        }
+      ]
+    },
+    {
+      "id": "chukchi-luoravetlan-chukotka",
+      "name": "Luoravetlan",
+      "also": ["Chukchi", "Чукчи", "Chauchu (reindeer Chukchi)", "Ankalyn (coastal Chukchi)"],
+      "pronounce": null,
+      "lands": "Chukotka Autonomous Okrug, northern Kamchatka Krai and the Nizhnekolymsky District of Sakha (Yakutia), Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/chukchi/",
+      "facts": [
+        {
+          "text": "Carving bone and walrus ivory and embroidering with reindeer hair are long-standing Chukchi arts, practised alongside reindeer herding and hunting.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Чукчи", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/chukchi/", "accessed": "2026-10-08" },
+          "evidence": "чукчи занимались резьбой по кости и моржовому клыку, вышивкой оленьим волосом"
+        },
+        {
+          "text": "Researchers at Russia's Kunstkamera museum published a 2018 study on the mobile dwellings of Chukchi reindeer herders, covering both traditions and innovations.",
+          "kind": "today",
+          "as_of": "2018",
+          "source": { "title": "Arctic Research Center", "publisher": "Peter the Great Museum of Anthropology and Ethnography (Kunstkamera), Russian Academy of Sciences", "url": "https://www.kunstkamera.ru/en/museum_structure/research_departments/arctic_research_center/", "accessed": "2026-10-08" },
+          "evidence": "Mobile Dwelling of Chukchi Reindeer Herders: Traditions and Innovations"
+        },
+        {
+          "text": "Chukchi have used pictographs since ancient times, and their oldest known documents are inscribed walrus tusks.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "The Chukchis", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/chukchis.shtml", "accessed": "2026-10-08" },
+          "evidence": "their most ancient documents are inscribed walrus tusks"
+        }
+      ]
+    },
+    {
+      "id": "yupik-chukotka",
+      "name": "Yupik",
+      "also": ["Yupigyt", "Siberian Yupik", "Yuit", "Asiatic Eskimos (older official term)"],
+      "pronounce": null,
+      "lands": "Settlements on the eastern coast of the Chukchi Peninsula, Chukotka Autonomous Okrug, Russia, across the Bering Strait from Alaska",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/eskimosy/",
+      "facts": [
+        {
+          "text": "Inuit from Chukotka became part of the Inuit Circumpolar Council in 1992, a goal that was in ICC's vision from the very beginning.",
+          "kind": "governance",
+          "as_of": "1992",
+          "source": { "title": "About ICC", "publisher": "Inuit Circumpolar Council Canada", "url": "https://www.inuitcircumpolar.com/about-icc/", "accessed": "2026-10-08" },
+          "evidence": "Inuit from Chukotka, and this goal was realized in 1992"
+        },
+        {
+          "text": "Carving walrus ivory and whale baleen is a highly developed Yupik craft in Chukotka.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Эскимосы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/eskimosy/", "accessed": "2026-10-08" },
+          "evidence": "очень развита резьба по моржовой кости и по китовому усу"
+        },
+        {
+          "text": "Yupik hunters are regarded as originators of traditional whaling in the region, hunting walrus, seal and whale with harpoons.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Эскимосы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/eskimosy/", "accessed": "2026-10-08" },
+          "evidence": "Они считаются создателями традиционного китобойного промысла"
+        }
+      ]
+    },
+    {
+      "id": "koryak-kamchatka",
+      "name": "Koryak",
+      "also": ["Коряки", "Chavchyv (reindeer Koryak)", "Nymylan (coastal Koryak)"],
+      "pronounce": null,
+      "lands": "Mainly the north of Kamchatka Krai, Russian Far East",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/koryaki/",
+      "facts": [
+        {
+          "text": "Koryaks have no single self-name: nomadic reindeer-herding groups call themselves Chavchyv, meaning reindeer people, and settled coastal groups use Nymylan.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "The Koryaks", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/koryaks.shtml", "accessed": "2026-10-08" },
+          "evidence": "The Koryaks call themselves by two different names"
+        },
+        {
+          "text": "Reindeer herding was the main way of life for nomadic Koryaks, while settled Koryaks mostly fished and hunted sea mammals.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Коряки", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/koryaki/", "accessed": "2026-10-08" },
+          "evidence": "У кочевых коряков основным хозяйственным занятием было оленеводство"
+        },
+        {
+          "text": "Since a 2000 government decree, Russia has listed the Koryak as an Indigenous small-numbered people, a legal status with specific protections.",
+          "kind": "governance",
+          "as_of": "2000",
+          "source": { "title": "Коряки", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/koryaki/", "accessed": "2026-10-08" },
+          "evidence": "наделены статусом коренного малочисленного народа"
+        }
+      ]
+    },
+    {
+      "id": "itelmen-kamchatka",
+      "name": "Itelmen",
+      "also": ["Ительмены", "Itenme'n"],
+      "pronounce": null,
+      "lands": "Tigilsky District on the west coast of Kamchatka Krai, with smaller groups in Chukotka and Magadan Oblast, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/itelmeny/",
+      "facts": [
+        {
+          "text": "Of the Itelmen languages once spoken on Kamchatka, Western Itelmen is the one that has survived. It was formerly called Kamchadal.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Ительмены", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/itelmeny/", "accessed": "2026-10-08" },
+          "evidence": "сохранился лишь западный ительменский язык"
+        },
+        {
+          "text": "Fishing, above all for salmon, is the traditional Itelmen livelihood on Kamchatka's west coast.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Ительмены", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/itelmeny/", "accessed": "2026-10-08" },
+          "evidence": "рыболовство (главным образом промысел лососевых)"
+        },
+        {
+          "text": "The self-name Itelmen means an inhabitant of dry land, a human being.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "The Itelmens", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/itelmens.shtml", "accessed": "2026-10-08" },
+          "evidence": "an inhabitant of dry land, a human being"
+        }
+      ]
+    },
+    {
+      "id": "nanai-amur",
+      "name": "Nanai",
+      "also": ["Нанайцы", "Nani", "Hezhe (in China)", "Goldi (older exonym)"],
+      "pronounce": null,
+      "lands": "Lower Amur River valley in Khabarovsk Krai and Primorsky Krai, Russia, and the Sungari River area of northeast China",
+      "countries": ["RU", "CN"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/nanaytsy/",
+      "facts": [
+        {
+          "text": "Clothing sewn from fish skin is a hallmark of traditional Nanai craft, rooted in a life of fishing on the Amur River.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Нанайцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nanaytsy/", "accessed": "2026-10-08" },
+          "evidence": "из рыбьей кожи шили одежду"
+        },
+        {
+          "text": "Nanai decorative art is known for its richly developed ornament.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "The Nanais", "publisher": "The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)", "url": "https://arhiiv.eki.ee/books/redbook/nanais.shtml", "accessed": "2026-10-08" },
+          "evidence": "Nanai decorative art was extremely well developed, especially ornamentation"
+        },
+        {
+          "text": "Nanai communities also live in China, where about 4,600 Nanai were counted in 2000.",
+          "kind": "population",
+          "as_of": "2000",
+          "source": { "title": "Нанайцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nanaytsy/", "accessed": "2026-10-08" },
+          "evidence": "Также 4,6 тыс. нанайцев проживает в Китае (2000 г.)"
+        }
+      ]
+    },
+    {
+      "id": "udehe-khor-bikin",
+      "name": "Udehe",
+      "also": ["Udege", "Udihe", "Удэгейцы", "Ude"],
+      "pronounce": null,
+      "lands": "Villages on the Khor and Bikin rivers in Khabarovsk Krai and Primorsky Krai, and towns of both regions, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/udegeytsy/",
+      "facts": [
+        {
+          "text": "Most Udehe today live in villages on the Khor and Bikin rivers in Russia's Far East.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Удэгейцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/udegeytsy/", "accessed": "2026-10-08" },
+          "evidence": "Большинство удэгейцев в настоящее время проживают в селах на рр. Хор"
+        },
+        {
+          "text": "In the Udehe yearly cycle, taiga hunting was combined with fishing and gathering.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Удэгейцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/udegeytsy/", "accessed": "2026-10-08" },
+          "evidence": "охота сочеталась с рыболовством и собирательством"
+        },
+        {
+          "text": "The Udehe language belongs to the Amur group of the Tungusic (Manchu-Tungus) languages.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Удэгейцы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/udegeytsy/", "accessed": "2026-10-08" },
+          "evidence": "относящемся к амурской группе тунгусо-маньчжурской ветви алтайской семьи языков"
+        }
+      ]
+    },
+    {
+      "id": "dolgan-taimyr",
+      "name": "Dolgan",
+      "also": ["Долганы", "Dulgan"],
+      "pronounce": null,
+      "lands": "Taimyr Peninsula in Krasnoyarsk Krai (Taimyr Dolgan-Nenets District) and the Anabar District and city of Yakutsk in Sakha (Yakutia), Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/dolgany/",
+      "facts": [
+        {
+          "text": "In October 2026, the Dolgan dried-fish dish kerdiileek was recognised as intangible heritage of Taimyr after a folk culture expedition to Khatanga.",
+          "kind": "today",
+          "as_of": "2026",
+          "source": { "title": "Долганская юкола «кэрдиилээк» признана объектом нематериального наследия Таймыра", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/press-tsentr/novosti/dolganskaya-yukola-kerdiileek-priznana-obektom-nematerialnogo-naslediya-taymyra/", "accessed": "2026-10-08" },
+          "evidence": "Долганская юкола «кэрдиилээк» признана объектом нематериального наследия Таймыра"
+        },
+        {
+          "text": "Dolgan is a Turkic language, close to Sakha (Yakut), from which it separated through isolated development.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Долганы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/dolgany/", "accessed": "2026-10-08" },
+          "evidence": "Долганский язык относится к тюркской группе алтайской языковой семьи"
+        },
+        {
+          "text": "The Dolgan formed as a people in the north of the Yenisei region between the 17th and 19th centuries and took final shape in the early 20th century.",
+          "kind": "history",
+          "as_of": null,
+          "source": { "title": "Долганы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/dolgany/", "accessed": "2026-10-08" },
+          "evidence": "Окончательное оформление долган в качестве самостоятельной группы произошло в начале XX в."
+        }
+      ]
+    },
+    {
+      "id": "selkup-west-siberia",
+      "name": "Selkup",
+      "also": ["Селькупы", "Sölkup", "Shölkup", "Chumylkup"],
+      "pronounce": null,
+      "lands": "Between the middle Ob and Yenisei rivers: the Taz River area of Yamal-Nenets Autonomous Okrug and the Narym area of Tomsk Oblast, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/celkupy/",
+      "facts": [
+        {
+          "text": "Selkup belongs to the Samoyedic group of the Uralic language family.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Селькупы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/celkupy/", "accessed": "2026-10-08" },
+          "evidence": "Селькупский язык входит в самодийскую группу уральской языковой семьи"
+        },
+        {
+          "text": "Selkup self-names differ by river: sölkup or shölkup on the Taz and Turukhan, and chumylkup on the Vasyugan, Parabel and Tym.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Селькупы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/celkupy/", "accessed": "2026-10-08" },
+          "evidence": "солькуп или шолькуп (Таз или Турухан), чумылькуп (Васюган, Парабель, Тым)"
+        },
+        {
+          "text": "Since a 2000 government decree, Russia has listed the Selkup as an Indigenous small-numbered people.",
+          "kind": "governance",
+          "as_of": "2000",
+          "source": { "title": "Селькупы", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/celkupy/", "accessed": "2026-10-08" },
+          "evidence": "наделены статусом коренного малочисленного народа"
+        }
+      ]
+    },
+    {
+      "id": "nganasan-taimyr",
+      "name": "Nganasan",
+      "also": ["Нганасаны", "Nya"],
+      "pronounce": null,
+      "lands": "Southern and central Taimyr Peninsula, Krasnoyarsk Krai, including the villages of Ust-Avam, Volochanka and Novaya and the towns of Dudinka and Norilsk, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://fennougria.ee/en/peoples/samoyedic-peoples/nganasans/",
+      "facts": [
+        {
+          "text": "The Nganasan are the northernmost Indigenous people of Eurasia, living on the Taimyr Peninsula near the Arctic Ocean.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Nganasans", "publisher": "Fenno-Ugria Foundation", "url": "https://fennougria.ee/en/peoples/samoyedic-peoples/nganasans/", "accessed": "2026-10-08" },
+          "evidence": "Nganasans are the northernmost indigenous people of Eurasia"
+        },
+        {
+          "text": "Nganasan belongs to the Samoyedic branch of the Uralic-Yukaghir language family.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Нганасаны", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nganasany/", "accessed": "2026-10-08" },
+          "evidence": "Нганасанский язык относится к самодийской ветви уральско-юкагирской языковой семьи"
+        },
+        {
+          "text": "In October 2026, a state folk culture expedition in Taimyr met a knowledge keeper of Vadeyev Nganasan culture to record traditions, including Nganasan cuisine.",
+          "kind": "today",
+          "as_of": "2026",
+          "source": { "title": "Долганская юкола «кэрдиилээк» признана объектом нематериального наследия Таймыра", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/press-tsentr/novosti/dolganskaya-yukola-kerdiileek-priznana-obektom-nematerialnogo-naslediya-taymyra/", "accessed": "2026-10-08" },
+          "evidence": "Также состоялась встреча со знатоком культуры вадеевских нганасан"
+        }
+      ]
+    },
+    {
+      "id": "ket-yenisei",
+      "name": "Ket",
+      "also": ["Кеты", "Deng"],
+      "pronounce": null,
+      "lands": "Yenisei River basin, mainly Turukhansky District of Krasnoyarsk Krai, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/kety/",
+      "facts": [
+        {
+          "text": "Ket is the only living language of the Yeniseian language family.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Кеты", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/kety/", "accessed": "2026-10-08" },
+          "evidence": "единственный живой язык енисейской семьи языков"
+        },
+        {
+          "text": "A Cyrillic writing system that Ket speakers actually use came into being in the late 1980s.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Кеты", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/kety/", "accessed": "2026-10-08" },
+          "evidence": "Реально используемая письменность на основе кириллицы появилась в конце 1980-х гг."
+        },
+        {
+          "text": "The Ket are hunters and fishers; fish, moose, deer and wild birds have long sustained Ket life on the Yenisei.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Кеты", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/kety/", "accessed": "2026-10-08" },
+          "evidence": "Кеты являются охотниками и рыболовами"
+        }
+      ]
+    },
+    {
+      "id": "yukaghir-odul-kolyma",
+      "name": "Odul",
+      "also": ["Yukaghir", "Wadul", "Юкагиры"],
+      "pronounce": null,
+      "lands": "Kolyma River basin in the Republic of Sakha (Yakutia) and Magadan Oblast, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/yukagiry/",
+      "facts": [
+        {
+          "text": "Today the Yukaghir speak two languages: Northern (Tundra) Yukaghir and Southern (Kolyma) Yukaghir.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Юкагиры", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/yukagiry/", "accessed": "2026-10-08" },
+          "evidence": "Сегодня юкагиры говорят на северноюкагирском (тундровом) и южноюкагирском (колымском) языках"
+        },
+        {
+          "text": "Using dogs for transport is a widespread Yukaghir tradition, and the people were originally settled hunters and fishers.",
+          "kind": "culture",
+          "as_of": null,
+          "source": { "title": "Юкагиры", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/yukagiry/", "accessed": "2026-10-08" },
+          "evidence": "Традиционно распространено транспортное собаководство"
+        },
+        {
+          "text": "A Cyrillic-based writing system for Yukaghir was developed in the 1970s.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Юкагиры", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/yukagiry/", "accessed": "2026-10-08" },
+          "evidence": "Письменность на основе кириллицы разработана в 1970-е гг."
+        }
+      ]
+    },
+    {
+      "id": "nivkh-amur-sakhalin",
+      "name": "Nivkh",
+      "also": ["Нивхи", "Nivkhgu", "Gilyak (older exonym)"],
+      "pronounce": null,
+      "lands": "Lower Amur River in Khabarovsk Krai and Sakhalin Island, Russia",
+      "countries": ["RU"],
+      "official_url": null,
+      "name_source_url": "https://raipon.info/narody/nivkhi/",
+      "facts": [
+        {
+          "text": "The Nivkh speak a language isolate, not related to any other known language.",
+          "kind": "language",
+          "as_of": null,
+          "source": { "title": "Нивхи", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nivkhi/", "accessed": "2026-10-08" },
+          "evidence": "Нивхи говорят на изолированном языке"
+        },
+        {
+          "text": "Some Nivkh are now working to revive their language.",
+          "kind": "today",
+          "as_of": null,
+          "source": { "title": "Нивхи", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nivkhi/", "accessed": "2026-10-08" },
+          "evidence": "В настоящее время некоторые нивхи стараются его возродить"
+        },
+        {
+          "text": "Nivkh life was built on fishing and hunting, including sea mammals taken with spears or with nets woven from leather straps.",
+          "kind": "land",
+          "as_of": null,
+          "source": { "title": "Нивхи", "publisher": "RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)", "url": "https://raipon.info/narody/nivkhi/", "accessed": "2026-10-08" },
+          "evidence": "В основе хозяйства нивхов было рыболовство и охота"
+        }
+      ]
+    }
+  ]
+}

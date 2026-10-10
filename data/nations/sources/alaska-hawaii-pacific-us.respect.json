@@ -1,0 +1,490 @@
+{
+ "region": "alaska-hawaii-pacific-us",
+ "items": [
+  {
+   "id": "inupiat-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Iñupiat leads with correct diacritics, and NPS and Iḷisaġvik both publish this form for the people; Iñupiaq correctly marked as singular and language. official_url null is fair, since no single body speaks for all Iñupiat."
+  },
+  {
+   "id": "inupiat-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact from the college's own page, grounded in Iñupiaq heritage. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "inupiat-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization strength. The source's speaker-age deficit figures are rightly not used. Data note: the NPS page was last updated November 1, 2021, so as_of should read 2021, not 2026."
+  },
+  {
+   "id": "inupiat-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral, present-day figure from NANA's own release; shareholders are named as Iñupiat, matching the source."
+  },
+  {
+   "id": "yupik-central-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Yup'ik is the self-name; ANLC says the word names both the people and the language. Calista's preferred language name Yugtun is honored in fact 0. official_url null is fair, as Calista is a corporation, not a tribal government."
+  },
+  {
+   "id": "yupik-central-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact using the people's own preferred language name, with the 2006 to 2010 survey timeframe stated."
+  },
+  {
+   "id": "yupik-central-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-naming meaning from ANLC; respectful."
+  },
+  {
+   "id": "yupik-central-alaska",
+   "fact": 2,
+   "action": "edit",
+   "reason": "The source speaks in the people's own voice ('part of our identity'); 'the region's identity' shifts it from the people to a place. Re-centered on the people. The source's subsistence-rights advocacy is a contested matter and is rightly left out.",
+   "text": "Along the Yukon and Kuskokwim rivers, subsistence hunting, fishing and gathering hold communities together and are part of the people's identity."
+  },
+  {
+   "id": "cupik-chevak-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Leading with Cup'ik honors Chevak self-naming, which ANLC confirms is used in place of Yup'ik. Thin entry (two naming and dialect facts, both ANLC); a later pass could add a fact from the Chevak tribe's own source."
+  },
+  {
+   "id": "cupik-chevak-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Affirms Cup'ik and Nunivak Cup'ig self-naming."
+  },
+  {
+   "id": "cupik-chevak-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral. Use the verifier's corrected wording; no respect issue with it. (The raw 'language family branch' wording was inaccurate.)"
+  },
+  {
+   "id": "st-lawrence-island-yupik-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name matches ANLC's primary form; Siberian Yupik correctly kept as an also name. Optional later: a community source for the island self-name Sivuqaghmiit, not fetched here, so not added."
+  },
+  {
+   "id": "st-lawrence-island-yupik-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strong vitality fact; children learning the language at home is a strength."
+  },
+  {
+   "id": "st-lawrence-island-yupik-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral cross-border kinship fact. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "unangax-aleutian-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Unangax̂ leads; Aleut, an outside-introduced term per ANLC, is correctly kept only in also. APIA's own mission statement confirms the Unangan (Eastern) and Unangas (Atka) plurals."
+  },
+  {
+   "id": "unangax-aleutian-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-name meaning; respectful."
+  },
+  {
+   "id": "unangax-aleutian-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization strength. Use the verifier's corrected wording; no respect issue with it. The raw text said Elders lead the Anchorage community nights, which the page does not say."
+  },
+  {
+   "id": "unangax-aleutian-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral language fact."
+  },
+  {
+   "id": "alutiiq-sugpiaq-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Alutiiq/Sugpiaq matches how the Alutiiq Museum names the people in its own 'we' voice."
+  },
+  {
+   "id": "alutiiq-sugpiaq-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Continuity framing in the museum's own voice ('we are descended from seafaring people'); not vanished framing."
+  },
+  {
+   "id": "alutiiq-sugpiaq-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization strength."
+  },
+  {
+   "id": "alutiiq-sugpiaq-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Self-name meaning; the text rightly leaves out the source's passage about Russian invaders."
+  },
+  {
+   "id": "denaina-cook-inlet-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Dena'ina is the self-name and the Kenaitze Tribe's own site is the name source. Minor: Tanaina in also could carry '(older term)', as the Gwich'in entry does for Kutchin."
+  },
+  {
+   "id": "denaina-cook-inlet-alaska",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Drop the editorial word 'plainly' and the colon for the calm register; the tribe's vision speaks for itself. Builds on the verifier's text, which removed 'of the Kenai Peninsula'.",
+   "text": "The Kenaitze Indian Tribe states its vision as assuring that the Kahtnuht'ana Dena'ina thrive forever."
+  },
+  {
+   "id": "denaina-cook-inlet-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "In the tribe's own words about its fishery; salmon framed as culture and identity, not stereotype."
+  },
+  {
+   "id": "denaina-cook-inlet-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral, distinctive language fact."
+  },
+  {
+   "id": "ahtna-copper-river-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. Both facts come from ANLC and lean on documentation history; nothing disrespectful, but a later pass should add a present-day fact from an Ahtna tribal or Ahtna-owned source."
+  },
+  {
+   "id": "ahtna-copper-river-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral. Use the verifier's corrected wording; no respect issue with it. The source's small speaker count is rightly not used."
+  },
+  {
+   "id": "ahtna-copper-river-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral documentation fact; the outside linguist is not centered."
+  },
+  {
+   "id": "koyukon-interior-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Koyukon is an outside-derived name, but no fetched source gives a separate self-name for the people; the language self-name Denaakk'e is shown in the facts. Minor: 'Denaakk'e speakers' in also is a description, not a name."
+  },
+  {
+   "id": "koyukon-interior-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-name meaning ('like us'); respectful."
+  },
+  {
+   "id": "koyukon-interior-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land and language fact."
+  },
+  {
+   "id": "koyukon-interior-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Revitalization access fact. Use the verifier's corrected wording; no respect issue with it. Note: six Interior nations carry a near-identical Doyon Languages Online fact; a later pass should vary them so the cards do not read as templated."
+  },
+  {
+   "id": "gwichin-alaska-yukon-nwt",
+   "fact": null,
+   "action": "keep",
+   "reason": "Gwich'in leads, and Gwich'in Council International is the people's own representative body. Kutchin correctly labeled as an older term. Contested Arctic Refuge matters correctly left out."
+  },
+  {
+   "id": "gwichin-alaska-yukon-nwt",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance strength from the people's own council. Data note: the GCI page's latest dated update is 2021, so as_of 2026 may be generous."
+  },
+  {
+   "id": "gwichin-alaska-yukon-nwt",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral literacy fact; the missionaries the source credits are not centered. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "gwichin-alaska-yukon-nwt",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Revitalization access fact using the self-name Dinjii Zhuh K'yaa. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "deg-hitan-lower-yukon-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Deg Hit'an and Deg Xinag are the self-names. ANLC calls the old name Ingalik pejorative; it is correctly absent from also and must stay out."
+  },
+  {
+   "id": "deg-hitan-lower-yukon-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral; the source's small speaker count is rightly not used."
+  },
+  {
+   "id": "deg-hitan-lower-yukon-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Learning-resource strength."
+  },
+  {
+   "id": "deg-hitan-lower-yukon-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Revitalization access fact. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "lower-tanana-dene-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lower Tanana Dene follows the wording of UAF's own land acknowledgment. Facts are calm and present-day."
+  },
+  {
+   "id": "lower-tanana-dene-alaska",
+   "fact": 0,
+   "action": "edit",
+   "reason": "The verifier correctly narrowed this to the College of Indigenous Studies, but its wording leads with the college. Reordered so the Lower Tanana Dene place leads; no new claims. The acknowledgment's 'unceded' wording is a land-politics term and is fine to leave out.",
+   "text": "Troth Yeddha', a traditional gathering place of the Lower Tanana Dene, is where the University of Alaska Fairbanks College of Indigenous Studies has its offices."
+  },
+  {
+   "id": "lower-tanana-dene-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral resource fact; the source's 'now spoken only' deficit framing is rightly not used."
+  },
+  {
+   "id": "lower-tanana-dene-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Revitalization access fact using the self-name Benhti Kenaga'. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "han-eagle-alaska-dawson-yukon",
+   "fact": null,
+   "action": "keep",
+   "reason": "Hän with its diacritic leads. Thin entry (two facts); a later pass could cite Tr'ondëk Hwëch'in or Eagle Village sources, not fetched here."
+  },
+  {
+   "id": "han-eagle-alaska-dawson-yukon",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral, cross-border; the source's very small speaker count is rightly not used."
+  },
+  {
+   "id": "han-eagle-alaska-dawson-yukon",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization access fact. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "upper-tanana-alaska-yukon",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. The language self-name appears as Nee'aaneegn' (ANLC) and Née'aaneegn' (Doyon); each matches its own cited source."
+  },
+  {
+   "id": "upper-tanana-alaska-yukon",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-name for the language; respectful."
+  },
+  {
+   "id": "upper-tanana-alaska-yukon",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral land fact."
+  },
+  {
+   "id": "upper-tanana-alaska-yukon",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Revitalization access fact. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "tlingit-southeast-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Tlingit leads because the Central Council (official_url) publishes that form; Lingít and Łingít correctly in also."
+  },
+  {
+   "id": "tlingit-southeast-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance strength from the tribe's own site."
+  },
+  {
+   "id": "tlingit-southeast-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Resilience framing (nearly lost under oppression, now taught by young learners with Elders) is honest and strength-led. SHI states it jointly for Lingít, X̱aad Kíl and Sm'algya̱x, so it holds for Lingít too."
+  },
+  {
+   "id": "tlingit-southeast-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral language fact. Use the verifier's corrected wording; no respect issue with it."
+  },
+  {
+   "id": "haida-kaigani-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Haida is how the Organized Village of Kasaan names itself. official_url is one Haida tribe; the Central Council of Tlingit & Haida represents Alaska Haida more broadly. Not wrong, just narrow."
+  },
+  {
+   "id": "haida-kaigani-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral, distinctive language fact; the source's speaker-age deficit is rightly not used. X̱aad Kíl spelling matches the Native-led SHI page."
+  },
+  {
+   "id": "haida-kaigani-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-description from the tribe's own site."
+  },
+  {
+   "id": "haida-kaigani-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance and wellness strength in the tribe's own terms."
+  },
+  {
+   "id": "tsimshian-metlakatla-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. Facts correctly avoid centering the missionary founding story and the small elderly-speaker count that dominate the source pages."
+  },
+  {
+   "id": "tsimshian-metlakatla-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral land fact from the community's own site."
+  },
+  {
+   "id": "tsimshian-metlakatla-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization fact from the community's own site."
+  },
+  {
+   "id": "tsimshian-metlakatla-alaska",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Achievement framed around Metlakatla's own decision; outside linguist not centered."
+  },
+  {
+   "id": "eyak-cordova-alaska",
+   "fact": null,
+   "action": "keep",
+   "reason": "Eyak is the people's name and the Native Village of Eyak's own site is the name source. Fact 2 needs a wording fix to avoid vanished framing."
+  },
+  {
+   "id": "eyak-cordova-alaska",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Governance fact from the tribe's own page."
+  },
+  {
+   "id": "eyak-cordova-alaska",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Revitalization strength from the tribe's own page."
+  },
+  {
+   "id": "eyak-cordova-alaska",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'Was once spoken' leans toward vanished framing, and the same source page dwells on the last speaker's death. Keep the present-tense linguistic fact the evidence phrase supports and drop the past-tense range clause.",
+   "text": "Eyak is not an Athabascan language but its own branch beside the Athabascan languages, within the Athabascan-Eyak-Tlingit language family."
+  },
+  {
+   "id": "native-hawaiians-kanaka-maoli-hawaii",
+   "fact": null,
+   "action": "keep",
+   "reason": "Native Hawaiians leads, matching the OHA About page (WebFetch 2026-10-09), which uses Native Hawaiians, Hawaiians and lāhui and does not use Kānaka Maoli. Kānaka Maoli and Kānaka ʻŌiwi rightly kept in also. Overthrow and sovereignty matters correctly left out."
+  },
+  {
+   "id": "native-hawaiians-kanaka-maoli-hawaii",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact from the State constitution."
+  },
+  {
+   "id": "native-hawaiians-kanaka-maoli-hawaii",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral governance fact; nine trustees, statewide election, four-year terms and the 1978 vote confirmed on OHA's page via WebFetch. The contested trustee-eligibility history is rightly left out."
+  },
+  {
+   "id": "native-hawaiians-kanaka-maoli-hawaii",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strong revitalization achievement."
+  },
+  {
+   "id": "chamoru-guam",
+   "fact": null,
+   "action": "keep",
+   "reason": "CHamoru is Guam's adopted spelling (used by NPS on the name source); Chamorro correctly in also, since DCA still publishes that form. Gap: CHamoru are also Indigenous to the Northern Mariana Islands (MP), and the Refaluwasch (Carolinian) people there have no entry; a later sourced pass should cover both."
+  },
+  {
+   "id": "chamoru-guam",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact; the legislator is not named, which keeps the people central."
+  },
+  {
+   "id": "chamoru-guam",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Celebration fact; CHamoru Month framed as the people's own culture."
+  },
+  {
+   "id": "chamoru-guam",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance fact using the agency's published name."
+  },
+  {
+   "id": "samoans-american-samoa",
+   "fact": null,
+   "action": "keep",
+   "reason": "Samoans is how the people are named on the cited pages. Facts avoid the sacred site at Saua and the ceremonial uses the NPS page mentions, which is correct."
+  },
+  {
+   "id": "samoans-american-samoa",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Culture strength in the people's own term, fa'asamoa."
+  },
+  {
+   "id": "samoans-american-samoa",
+   "fact": 1,
+   "action": "edit",
+   "reason": "As written, the card leads with the National Park Service rather than the people. Reordered so Samoan communal land tenure under the matai leads; same source, no new claims.",
+   "text": "In American Samoa, land is held communally under the guidance of village chiefs, the matai, and the national park there sits on land leased from local villages."
+  },
+  {
+   "id": "samoans-american-samoa",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Continuity fact; does not use the source's romanticizing 'in harmony' phrasing."
+  }
+ ]
+}

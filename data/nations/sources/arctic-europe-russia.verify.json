@@ -1,0 +1,479 @@
+{
+  "region": "arctic-europe-russia",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "sami-sapmi-nordic-russia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Page says the Parliament is 'democratically elected by and among the Sámi', first opened 9 October 1989 in Karasjok, 39 representatives from seven constituencies. Evidence verbatim."
+    },
+    {
+      "id": "sami-sapmi-nordic-russia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "FAQ on page: 'About 10,000 Sámi live in Finland'; three languages sentence verbatim."
+    },
+    {
+      "id": "sami-sapmi-nordic-russia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Page: national day celebrated all over Sapmi; 13th Saami Conference in Åre, Sweden 1986 adopted the flag; anthem 'adopted by the Saami Conference held in Åre in 1986'. Evidence verbatim."
+    },
+    {
+      "id": "kalaallit-greenland",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Page: Self-Government Act came into force 21 June 2009; preamble recognises the people of Greenland as a people with right to self-determination under international law. Evidence verbatim."
+    },
+    {
+      "id": "kalaallit-greenland",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Evidence sentence verbatim on stm.dk page."
+    },
+    {
+      "id": "kalaallit-greenland",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "curl got HTTP 403 but WebFetch reached the Oqaasileriffik page: standard language 'originally originated in central West Greenland', 'all Greenlanders, regardless of their dialect, use in writing', 'Anyone can use their own dialect in speech'. Evidence verbatim."
+    },
+    {
+      "id": "inughuit-avanersuaq-greenland",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "lex.dk says 'har deres eget sprog (dialekt)': their own language (dialect). 'Often described as' is not on the page; reworded to what the page says.",
+      "text": "The Inughuit have their own language, or dialect, and a hunting culture that is distinctive in several ways."
+    },
+    {
+      "id": "inughuit-avanersuaq-greenland",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "lex.dk: 'Qaanaaq er Grønlands yngste og nordligste by' and the evidence sentence about hunting, both verbatim."
+    },
+    {
+      "id": "inughuit-avanersuaq-greenland",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Page says Inughuit skills were vital to the success of explorers such as Robert E. Peary and MacMillan, and a curator interviewed Inughuit elders to document the museum's photographs. 'Early 1900s expeditions' is not stated (Peary material dates from 1895). Reworded to what the page says.",
+      "text": "Inughuit skill and knowledge of the far north were vital to explorers such as Robert E. Peary and Donald MacMillan. Inughuit elders later helped a US museum document its historic photos."
+    },
+    {
+      "id": "nenets-arctic-russia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: 'most mobile nomads in the world' verbatim; large-herd reindeer herding (krupnotabunnoe olenevodstvo) came to dominate and met all needs of the Tundra Nenets."
+    },
+    {
+      "id": "nenets-arctic-russia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Fenno-Ugria 31.03.2024: grant for local Indigenous families of Nenets, Khanty and others with three or more children; '268 young families have benefited' verbatim."
+    },
+    {
+      "id": "nenets-arctic-russia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Red Book: Samoyedic branch verbatim; Tundra Dialect (about 95%) and Forest or Taiga Dialect."
+    },
+    {
+      "id": "khanty-west-siberia",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Page supports the 1 November 1957 first issue and the continuity 'Lenin pant khuvat - Khanty yasang', with the paper still produced (joint Khanty and Mansi newsroom, activity through September 2025). It does not state the city of publication, so 'in Khanty-Mansiysk' was removed. Latest dated item on the page is 2025, so as_of should be 2025, not 2026.",
+      "text": "The first newspaper in the Khanty language in the okrug came out on 1 November 1957. Known today as Khanty Yasang, it is still made by a joint Khanty and Mansi newsroom."
+    },
+    {
+      "id": "khanty-west-siberia",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Fenno-Ugria says Khanty is in the Ugric group 'along with the Mansi and Hungarian languages'; it does not use the words 'closest relatives'. Reworded to the page's claim.",
+      "text": "Khanty belongs to the Ugric group of the Finno-Ugric languages, together with Mansi and Hungarian."
+    },
+    {
+      "id": "khanty-west-siberia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Blog post (Arctic Centre talk): fishing and reindeer herding 'closely intertwined', most expressed among the Khanty; Synia fishing hamlets 'still find specific family surnames (clans)'. Evidence verbatim. Note: a blog is a weaker source tier."
+    },
+    {
+      "id": "mansi-west-siberia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Fenno-Ugria 13.03.2024: Yevgeny Anyamov, pen name Bizzo, records in Mansi, opened studio in hometown Ivdel to familiarise young people with his people's culture. Evidence verbatim."
+    },
+    {
+      "id": "mansi-west-siberia",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page supports first issue 11 February 1989 (evidence verbatim) and a joint editorial office with Khanty Yasang since 1991, with Luima Seripos journalists active in 2025. City of publication is not stated; removed 'in Khanty-Mansiysk'. as_of should be 2025.",
+      "text": "Luima Seripos, a newspaper in the Mansi language, first came out on 11 February 1989 and is still produced today in a joint newsroom with the Khanty paper."
+    },
+    {
+      "id": "mansi-west-siberia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Fenno-Ugria: 'according to Russia's 2010 census, there were 12,269 Mansi, compared to 11,432 in 2002' verbatim."
+    },
+    {
+      "id": "evenki-siberia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Red Book: 'inhabit a huge territory of the Siberian taiga from the River Ob in the west to the Okhotsk Sea in the east'."
+    },
+    {
+      "id": "evenki-siberia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: largest part of Evenki live in Yakutia (18.2 thousand); 'Живут также в Китае и Монголии' verbatim."
+    },
+    {
+      "id": "evenki-siberia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Red Book: largest of the northern group of Manchu-Tungus languages; three large dialect groups northern, southern, eastern."
+    },
+    {
+      "id": "even-northeast-siberia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: custom of dividing, nimat, traditionally played an important role; hunter kept hide and head and shared the rest. Evidence verbatim."
+    },
+    {
+      "id": "even-northeast-siberia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: self-names even (local) and orochel (reindeer); language in Tungus-Manchu branch, close to Evenki. Evidence verbatim."
+    },
+    {
+      "id": "even-northeast-siberia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: per 2002 census 11 657 Even in Sakha (Yakutia). Verbatim."
+    },
+    {
+      "id": "chukchi-luoravetlan-chukotka",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: besides reindeer herding and hunting, Chukchi carved bone and walrus tusk and embroidered with reindeer hair. Evidence verbatim."
+    },
+    {
+      "id": "chukchi-luoravetlan-chukotka",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Kunstkamera Arctic Research Center page lists Perevalova E.V., Kukanov D.A., 'Mobile Dwelling of Chukchi Reindeer Herders: Traditions and Innovations', Ural Historical Bulletin 2018; Perevalova is listed as department staff."
+    },
+    {
+      "id": "chukchi-luoravetlan-chukotka",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Red Book: 'from time immemorial, the Chukchis have used pictographs, and their most ancient documents are inscribed walrus tusks'."
+    },
+    {
+      "id": "yupik-chukotka",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ICC: 'From the beginning, ICC's vision included Inuit from Chukotka, and this goal was realized in 1992.' Verbatim."
+    },
+    {
+      "id": "yupik-chukotka",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON Eskimosy: carving of walrus ivory and whale baleen highly developed. Verbatim."
+    },
+    {
+      "id": "yupik-chukotka",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: main occupation harpoon hunting of walrus, seal, whale; 'regarded as creators of traditional whaling'. 'In the region' only narrows the claim."
+    },
+    {
+      "id": "koryak-kamchatka",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Red Book says Koryaks call themselves by two names: nomadic reindeer-herding tribes 'chavchu' (reindeer rearers, rich in reindeer) and resident tribes 'nymylan' (resident, settler). The spelling Chavchyv and 'coastal' are not on this page (Chavchyv is RAIPON's spelling). Reworded to the cited page.",
+      "text": "Koryaks call themselves by two names: nomadic reindeer-herding groups use Chavchu, meaning reindeer rearers, and settled groups use Nymylan, meaning settlers."
+    },
+    {
+      "id": "koryak-kamchatka",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: reindeer herding main occupation of nomadic Koryaks; fishing and sea-mammal hunting main occupations of most settled Koryaks. Evidence verbatim."
+    },
+    {
+      "id": "koryak-kamchatka",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "RAIPON only says that in 2000 a government decree gave them the status of an Indigenous small-numbered people. 'A legal status with specific protections' is not on the page; removed.",
+      "text": "In 2000, a Russian government decree gave the Koryak the status of an Indigenous small-numbered people."
+    },
+    {
+      "id": "itelmen-kamchatka",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: of three former groups only Western Itelmen language survives; the Itelmen language's obsolete name is Kamchadal language. Evidence verbatim."
+    },
+    {
+      "id": "itelmen-kamchatka",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "RAIPON: traditional occupation is fishing, mainly salmon (verbatim). The page places Itelmen in Tigilsky District but never says 'west coast'; removed that detail.",
+      "text": "Fishing, above all for salmon, is the traditional Itelmen livelihood on Kamchatka."
+    },
+    {
+      "id": "itelmen-kamchatka",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Red Book: self-designation itenmen-itelmen 'which means an inhabitant of dry land, a human being'. Verbatim."
+    },
+    {
+      "id": "nanai-amur",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: Amur Nanai mainly fished; clothing sewn from fish skin; Chinese chronicles called their ancestors 'fish-skin people'. Evidence verbatim."
+    },
+    {
+      "id": "nanai-amur",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Red Book: 'Nanai decorative art was extremely well developed, especially ornamentation.' Verbatim."
+    },
+    {
+      "id": "nanai-amur",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: 4.6 thousand Nanai live in China (2000). Verbatim."
+    },
+    {
+      "id": "udehe-khor-bikin",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: most Udehe now live in villages on the Khor and Bikin rivers. Verbatim."
+    },
+    {
+      "id": "udehe-khor-bikin",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: in the yearly cycle of Udehe and Taz, hunting combined with fishing and gathering; describes them as a forest people. Verbatim."
+    },
+    {
+      "id": "udehe-khor-bikin",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: Amur group of the Tungus-Manchu branch. Verbatim."
+    },
+    {
+      "id": "dolgan-taimyr",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "RAIPON news dated 7 October 2026 says the dish was entered into Taimyr's intangible ethnocultural heritage during an expedition that worked in August 2026 in Khatanga and Novaya. 'In October 2026 ... after' misstates the timing; corrected.",
+      "text": "During an August 2026 folk culture expedition to Khatanga, the Dolgan dried-fish dish kerdiileek was added to the list of Taimyr's intangible cultural heritage."
+    },
+    {
+      "id": "dolgan-taimyr",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: Turkic group; close to Yakut, separated through isolated development. Evidence verbatim."
+    },
+    {
+      "id": "dolgan-taimyr",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: formation in the north of Yenisei Governorate in the 17th to 19th centuries; final formation early 20th century. Evidence verbatim."
+    },
+    {
+      "id": "selkup-west-siberia",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON verbatim."
+    },
+    {
+      "id": "selkup-west-siberia",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON self-names list verbatim."
+    },
+    {
+      "id": "selkup-west-siberia",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: 2000 government decree gave Indigenous small-numbered people status. Verbatim."
+    },
+    {
+      "id": "nganasan-taimyr",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Fenno-Ugria: live in southern and central Taimyr near the Arctic Ocean; 'northernmost indigenous people of Eurasia' verbatim."
+    },
+    {
+      "id": "nganasan-taimyr",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON verbatim."
+    },
+    {
+      "id": "nganasan-taimyr",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "The expedition worked in August 2026 (article published 7 October 2026), organised by the State Russian House of Folk Art. The knowledge keeper showed traditional dishes and how Nganasan cuisine differs from Dolgan. Date corrected.",
+      "text": "In August 2026, a state folk culture expedition in Taimyr met a knowledge keeper of Vadeyev Nganasan culture, who showed traditional dishes and how Nganasan cuisine differs from Dolgan."
+    },
+    {
+      "id": "ket-yenisei",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON: only living language of the Yeniseian family. Verbatim."
+    },
+    {
+      "id": "ket-yenisei",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: actually used Cyrillic writing appeared in the late 1980s. Verbatim."
+    },
+    {
+      "id": "ket-yenisei",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: Ket are hunters and fishers; subsistence based on fishing, moose and deer hunting, waterfowl and upland game. Verbatim."
+    },
+    {
+      "id": "yukaghir-odul-kolyma",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "RAIPON verbatim."
+    },
+    {
+      "id": "yukaghir-odul-kolyma",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "RAIPON: originally settled hunters and fishers; dog transport traditionally widespread. Verbatim."
+    },
+    {
+      "id": "yukaghir-odul-kolyma",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON verbatim."
+    },
+    {
+      "id": "nivkh-amur-sakhalin",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "RAIPON: Nivkh speak an isolated language, probably one of the oldest in Eurasia; its connections are not established and no hypothesis is generally accepted. 'Not related to any other known language' overstates; reworded.",
+      "text": "The Nivkh speak a language isolate, probably one of the oldest languages of Eurasia. Its links to other languages have not been established."
+    },
+    {
+      "id": "nivkh-amur-sakhalin",
+      "fact": 1,
+      "verdict": "unsupported",
+      "note": "Misread. In the source, 'его' in 'некоторые нивхи стараются его возродить' refers to the bear festival ritual in the previous sentence, not the language (confirmed by WebFetch). The page mentions no language revival and says Nivkh is near extinction. Not redirected to the festival because it is ceremonial content excluded by the respect rules. Drop."
+    },
+    {
+      "id": "nivkh-amur-sakhalin",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "RAIPON: economy based on fishing and hunting, incl. sea mammals taken with spears or nets of leather straps. Evidence verbatim."
+    }
+  ],
+  "names": [
+    {
+      "id": "sami-sapmi-nordic-russia",
+      "ok": true,
+      "note": "sametinget.no uses 'Sámi' throughout ('elected by and among the Sámi')."
+    },
+    {
+      "id": "kalaallit-greenland",
+      "ok": true,
+      "note": "Kalaallit is the standard Greenlandic self-name. The ICC page shows it only inside 'Kalaallit Nunaat'; a source that uses Kalaallit for the people directly would be stronger."
+    },
+    {
+      "id": "inughuit-avanersuaq-greenland",
+      "ok": true,
+      "note": "Bowdoin page uses 'the Inughuit'; lex.dk: 'De definerer sig selv som inughuit'."
+    },
+    {
+      "id": "nenets-arctic-russia",
+      "ok": true,
+      "note": "RAIPON 'Ненцы'; self-name given as ненэдь / ненэй ненэць ('real person')."
+    },
+    {
+      "id": "khanty-west-siberia",
+      "ok": true,
+      "note": "RAIPON 'Ханты'; self-name хантэ."
+    },
+    {
+      "id": "mansi-west-siberia",
+      "ok": true,
+      "note": "RAIPON 'Манси'; self-name маньси ('person')."
+    },
+    {
+      "id": "evenki-siberia",
+      "ok": true,
+      "note": "RAIPON 'Эвенки'; self-name эвенкил."
+    },
+    {
+      "id": "even-northeast-siberia",
+      "ok": true,
+      "note": "RAIPON self-names эвен, орочел."
+    },
+    {
+      "id": "chukchi-luoravetlan-chukotka",
+      "ok": true,
+      "note": "RAIPON gives self-names луораветлан ('true people') and чаучу. Note: 'Ankalyn (coastal Chukchi)' in also is, per the RAIPON Eskimosy page, what Chukchi call the Yupik ('pomory'); recommend removing it from the Chukchi also list."
+    },
+    {
+      "id": "yupik-chukotka",
+      "ok": true,
+      "note": "RAIPON: self-name юпигыт (in Siberia)."
+    },
+    {
+      "id": "koryak-kamchatka",
+      "ok": true,
+      "note": "RAIPON: no single self-name; nomadic чав'чыв, settled нымылг'ын. Koryak is the common name."
+    },
+    {
+      "id": "itelmen-kamchatka",
+      "ok": true,
+      "note": "RAIPON 'Ительмены'; Red Book self-designation itenmen-itelmen."
+    },
+    {
+      "id": "nanai-amur",
+      "ok": true,
+      "note": "RAIPON self-names нанай, нани, киле, акани."
+    },
+    {
+      "id": "udehe-khor-bikin",
+      "ok": true,
+      "note": "RAIPON self-names удэ, удэхэ."
+    },
+    {
+      "id": "dolgan-taimyr",
+      "ok": true,
+      "note": "RAIPON: most call themselves долганы, долган, дулган."
+    },
+    {
+      "id": "selkup-west-siberia",
+      "ok": true,
+      "note": "RAIPON 'Селькупы' with self-names listed."
+    },
+    {
+      "id": "nganasan-taimyr",
+      "ok": true,
+      "note": "Fenno-Ugria 'Nganasans'; RAIPON self-name ня ('comrade'), so 'Nya' in also is supported."
+    },
+    {
+      "id": "ket-yenisei",
+      "ok": true,
+      "note": "RAIPON self-names кет (person), денг (people)."
+    },
+    {
+      "id": "yukaghir-odul-kolyma",
+      "ok": true,
+      "note": "RAIPON self-names одул, вадул."
+    },
+    {
+      "id": "nivkh-amur-sakhalin",
+      "ok": true,
+      "note": "RAIPON self-name нивхгу ('people')."
+    }
+  ]
+}

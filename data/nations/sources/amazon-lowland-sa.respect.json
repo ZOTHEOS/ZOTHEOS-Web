@@ -1,0 +1,701 @@
+{
+ "region": "amazon-lowland-sa",
+ "items": [
+  {
+   "id": "yanomami-br-ve",
+   "fact": null,
+   "action": "keep",
+   "reason": "Yanomami is the name on the cited Brazilian government page and the name Yanomami bodies use. Yanomamö in also is a neutral spelling variant. Keep official_url null: hutukara.org (the old Hutukara Associação Yanomami domain) was fetched 2026-10-09 and now serves a Portuguese online casino ranking page with no Yanomami content, so it must not be filled in. The gov.br page also mentions an isolated group inside the territory; the facts rightly say nothing about it. Facts avoid the health-crisis deficit framing, which fits the owner's intent."
+  },
+  {
+   "id": "yanomami-br-ve",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day population from SESAI (2023) via the gov.br page; neutral number with as_of. Fine."
+  },
+  {
+   "id": "yanomami-br-ve",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Wording is fine and unchanged; only as_of needs fixing. The gov.br page (published 2024-05-21, updated 2025-09-19) credits the six languages and sixteen dialects to the 'most recent research' by Ferreira, Machado and Senra, 2019, so set as_of to 2019, not 2025.",
+   "text": "The Yanomami language family is not related to any other known family, and it includes six languages and sixteen dialects."
+  },
+  {
+   "id": "yanomami-br-ve",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral official act with exact date, stated as settled fact by a strong source. Fine."
+  },
+  {
+   "id": "mebengokre-kayapo-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name confirmed on the people's own association site (florestaprotegida.org.br/sobre, fetched 2026-10-09): 'Chamamo-nos Mẽbêngôkre', glossed there as 'Povo da morada das águas'. The same page says Kayapó is the name non-Indigenous people popularized and that the people sometimes use it themselves, so Kayapó is fine in also. Tier A candidate."
+  },
+  {
+   "id": "mebengokre-kayapo-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "From the people's own association; the page ties the 11 million hectares to the six Indigenous lands where the Mẽbêngôkre-Kayapó live. Fine."
+  },
+  {
+   "id": "mebengokre-kayapo-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Confirmed on the AFP page: founded 1998, created by Mẽbêngôkre leaders, about 3 mil indígenas in 31 villages in the Kayapó, Mekragnoti and Las Casas lands. Strength-led governance fact."
+  },
+  {
+   "id": "mebengokre-kayapo-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "guarani-kaiowa-br-py",
+   "fact": null,
+   "action": "keep",
+   "reason": "Guarani Kaiowá is the name this people uses publicly in Brazil, with Paĩ Tavyterã (the Paraguay usage) in also. Land conflicts in Mato Grosso do Sul are rightly left out."
+  },
+  {
+   "id": "guarani-kaiowa-br-py",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact: the source's own words are about vigorous energy in keeping the language alive."
+  },
+  {
+   "id": "guarani-kaiowa-br-py",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Tekoha is a term the Guarani use publicly. ISA also describes it as a political and religious unit; the card keeps to the plain, physical sense, which is right."
+  },
+  {
+   "id": "guarani-mbya-br-py-ar-uy",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name fine. Note for the UI: the Comissão Guarani Yvyrupa (official_url) says on its own page that it brings together Guarani collectives of the South and Southeast of Brazil, without naming Mbya only, so label it as a Guarani representative body that includes the Mbya, not a Mbya-only government."
+  },
+  {
+   "id": "guarani-mbya-br-py-ar-uy",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "guarani-mbya-br-py-ar-uy",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Confirmed on the CGY page: founded 2006 at an assembly in the Peguaoty Indigenous Land; works across six states of the South and Southeast. Fine."
+  },
+  {
+   "id": "guarani-mbya-br-py-ar-uy",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Yvyrupa is explained by the Comissão Guarani Yvyrupa itself on its public 'about' page, including that it recalls Guarani living freely across their territory before borders divided them. The people's own public framing, not restricted."
+  },
+  {
+   "id": "ava-guarani-nandeva-br-py",
+   "fact": null,
+   "action": "keep",
+   "reason": "Avá Guarani leads, with Ñandeva (the usual Brazilian term) in also. Contested land matters in western Paraná are rightly left out."
+  },
+  {
+   "id": "ava-guarani-nandeva-br-py",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "ava-guarani-nandeva-br-py",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "munduruku-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "ISA gives the self-name as Wuy jugu (infobox spelling Wuyjuyu), already in also, and says Munduruku came from the Parintintin. Munduruku is the name Munduruku organizations and movements use in public today, so it can lead. The 'red ants' warrior etymology on the ISA page is rightly not used."
+  },
+  {
+   "id": "munduruku-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral official act. The source is a CIMI piece republished by IHU under a 'victory after years of struggle' headline; the card rightly does not take that tone, and wider demarcation politics are left out. A gov.br or Diário Oficial source would be stronger for a land status. No named individual, only the office."
+  },
+  {
+   "id": "munduruku-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "munduruku-br",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Accuracy. ISA says Pusuru was created 'para organizar as reivindicações voltadas para a demarcação da terra' and also to address environmental defense, education and health. 'A formal way to organize their communities' does not say that. The edit adds nothing beyond the page and keeps it strengths-led; evidence phrase unchanged.",
+   "text": "Munduruku of the upper Tapajós created the Pusuru Indigenous Association in 1991 to organize their work on land demarcation, the environment, education and health."
+  },
+  {
+   "id": "huni-kuin-br-pe",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name Huni Kuin is right (ISA: 'Cada um deles se autodenomina huni kuin'). But the same ISA page says 'O próprio nome Kaxinawá parece ter sido originalmente um insulto' and glosses kaxi as bat or cannibal. ARCHITECTURE.md shows 'Also known as' only when the name is neutral and not rejected, so Kaxinawá and its Spanish spelling Cashinahua should not be displayed on the herald or card. Keep them for search only, because they still appear in land names and Peru's registry, until a Huni Kuin source says otherwise.",
+   "text": "also: [\"Kaxinawá\", \"Cashinahua\"] search only; do not display on herald or card (ISA: the name seems originally to have been an insult)"
+  },
+  {
+   "id": "huni-kuin-br-pe",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day international achievement. ISA notes MAHKU paintings are mostly visual translations of ayahuasca songs; the card rightly says nothing about that and must not."
+  },
+  {
+   "id": "huni-kuin-br-pe",
+   "fact": 1,
+   "action": "keep",
+   "reason": "The meaning of the people's own name, from ISA. Strength-led and respectful."
+  },
+  {
+   "id": "huni-kuin-br-pe",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Kene is public art. ISA links design learning to a girls' ritual (Nixpupima); the card rightly leaves ritual detail out."
+  },
+  {
+   "id": "tikuna-maguta-br-pe-co",
+   "fact": null,
+   "action": "keep",
+   "reason": "ISA gives Magüta as the self-name, and it is in also. Tikuna/Ticuna is the name the people's own institutions use in public (for example the bilingual teachers' organization OGPTB in fact 1), so Tikuna can lead. A Tikuna organization could be asked whether it prefers Magüta on the card."
+  },
+  {
+   "id": "tikuna-maguta-br-pe-co",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "tikuna-maguta-br-pe-co",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact: Indigenous-led schooling in their own language."
+  },
+  {
+   "id": "tikuna-maguta-br-pe-co",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "baniwa-br-co-ve",
+   "fact": null,
+   "action": "keep",
+   "reason": "ISA gives Walimanai as the self-name and Baniwa as the name used in multiethnic and outside settings; Baniwa organizations use Baniwa publicly. The herald is an outside setting, so Baniwa leading with Walimanai in also is reasonable."
+  },
+  {
+   "id": "baniwa-br-co-ve",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "baniwa-br-co-ve",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day craft economy, a strength. Fine."
+  },
+  {
+   "id": "baniwa-br-co-ve",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "auwe-xavante-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Leading with the self-name is right; ISA says the people call themselves A´uwe and a'uwe uptabi and use Xavante with outsiders, so Xavante belongs in also. Spelling flag for the verifier: the cited ISA page writes 'A´uwe' (acute mark, no tilde). The tilde form A'uwẽ appears in academic and Xavante-language writing, but confirm it on a Xavante-run or Xavante-language source; otherwise fall back to A'uwe as the name source shows it. Never swap characters to suit a font."
+  },
+  {
+   "id": "auwe-xavante-br",
+   "fact": 0,
+   "action": "edit",
+   "reason": "Name consistency: the card leads with the self-name, so the fact should not switch to 'the Xavante' alone. The place clause comes from the same ISA sentence ('abrigadas em diversas Terras Indígenas' in eastern Mato Grosso). Evidence phrase unchanged; as_of stays 2020.",
+   "text": "The A'uwẽ (Xavante) numbered about 22,256 people in 2020, living in several Indigenous lands in eastern Mato Grosso."
+  },
+  {
+   "id": "auwe-xavante-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "terena-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. Facts are present-day (language, city life, farming) and calm."
+  },
+  {
+   "id": "terena-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "terena-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day urban life stated neutrally. Fine."
+  },
+  {
+   "id": "terena-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "pataxo-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. Facts lead with the Patxohã language rebuilding effort, a strength, framed as reconstruction rather than loss."
+  },
+  {
+   "id": "pataxo-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact: language rebuilding, framed as reconstruction rather than loss."
+  },
+  {
+   "id": "pataxo-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact: Pataxó researchers leading their own language work. No named individuals."
+  },
+  {
+   "id": "pataxo-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Fine, but it repeats the lands field almost word for word. A later pass could swap in a different present-day fact."
+  },
+  {
+   "id": "tupinamba-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. ISA records that local authorities still doubt the Tupinambá of Olivença's identity, fed by the stereotype of the 'pure, wild and extinct Indian'. The entry correctly avoids any 'extinct' framing. See the fact 1 edit, which keeps the identity with the people rather than the state."
+  },
+  {
+   "id": "tupinamba-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "tupinamba-br",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Respect for self-identification. As written, the card can read as if the state made them Indigenous in 2001. ISA says their use of 'caboclos' 'nunca significou um abandono de sua condição indígena'. The edit keeps the official act and adds only that, from the same page. Evidence phrase unchanged.",
+   "text": "In 2001 Funai, Brazil's Indigenous affairs agency, officially recognized the Tupinambá of Olivença, a people who had never given up their Indigenous identity."
+  },
+  {
+   "id": "wapichana-br-gy",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine for Brazil, with Wapichan (Guyana usage) in also. official_url cir.org.br is a council of several Roraima peoples, the same URL as the Macuxi entry; acceptable as a representative body, but the UI should label it as a multi-people council."
+  },
+  {
+   "id": "wapichana-br-gy",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "wapichana-br-gy",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "wapichana-br-gy",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Strength fact: a community-made map and land plan, stated neutrally without taking sides on Guyana land claims."
+  },
+  {
+   "id": "macuxi-br-gy-ve",
+   "fact": null,
+   "action": "edit",
+   "reason": "Drop 'Pemon' from also. ISA does give Pemon as the self-designation, but explains that the Macuxi, Taurepang, Arekuna and Kamarakoto 'Tomados em conjunto, formam uma unidade étnica mais abrangente, os Pemon'. Shown as 'Also known as Pemon', the card would tell readers that the Pemon peoples (including those of Venezuela) are the Macuxi. That relationship would be better as its own fact from the same ISA page. Same note as Wapichana: cir.org.br is a multi-people council.",
+   "text": "also: [\"Makuxi\", \"Macushi\"]"
+  },
+  {
+   "id": "macuxi-br-gy-ve",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day governance from the council's own site. Fine."
+  },
+  {
+   "id": "macuxi-br-gy-ve",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Neutral and well sourced, but as written it reads as if the land were Macuxi-only. ISA names the Macuxi 'e outros povos que a habitam'. The edit adds only that, from the same page, and keeps the 2005 ratification and 2009 Supreme Court confirmation as neutral official acts. Evidence phrase unchanged.",
+   "text": "Raposa Serra do Sol, an Indigenous land of 1,747,460 hectares home to the Macuxi and other peoples, was ratified in April 2005, and Brazil's Supreme Court confirmed it in 2009."
+  },
+  {
+   "id": "macuxi-br-gy-ve",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "kaapor-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine (ISA: self-name Ka'apor or Ka'apór, apostrophe marks a glottal stop). The name Urubu, which ISA says came from Luso-Brazilian enemies in the 19th century and which the people do not use with outsiders, is rightly absent from also. The ISA entry dates from 1998 with older field data, so a present-day fact from a Ka'apor-led or current source would strengthen the card."
+  },
+  {
+   "id": "kaapor-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Featherwork is a widely published art form. ISA says it is worn in full only at children's naming ceremonies; the card rightly does not describe the ceremony."
+  },
+  {
+   "id": "kaapor-br",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Time and framing. ISA describes this as the situation up to the mid-1980s ('até a metade dos anos 80'), in an entry first published 09/1998, so a bare present tense overclaims today's use; set as_of to 1998. ISA ties the deafness to neonatal yaws; the card rightly leaves that medical deficit detail out and keeps the sign language as a community strength. Evidence phrase unchanged.",
+   "text": "Ka'apor communities have had a shared, standard sign language for communicating with deaf members of the community."
+  },
+  {
+   "id": "kaapor-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "ashaninka-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine for Brazil. Same people as ashaninka-pe across the border; keep both entries and link them with a same_people_across relation so the hub does not present them as two peoples. The two spellings follow each country's usage."
+  },
+  {
+   "id": "ashaninka-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact: own association, founded and registered by the community."
+  },
+  {
+   "id": "ashaninka-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact: community-led environmental protection and restoration."
+  },
+  {
+   "id": "ashaninka-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Meaning of the people's own name. Respectful."
+  },
+  {
+   "id": "ashaninka-pe",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. The BDPI says the people began calling themselves Ashaninka from the mid-1970s to move away from names considered pejorative such as 'campas'; campa is rightly absent from also. Fact 2 must go (see below)."
+  },
+  {
+   "id": "ashaninka-pe",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-identification census figure with as_of. Neutral."
+  },
+  {
+   "id": "ashaninka-pe",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language vitality figure with as_of. Neutral strength fact."
+  },
+  {
+   "id": "ashaninka-pe",
+   "fact": 2,
+   "action": "remove",
+   "reason": "Misreading, and a protection issue. Fetched 2026-10-09, the BDPI sentence behind the evidence phrase says families in isolation and initial contact may still exist in Otishi National Park and the Ashaninka Communal Reserve ('existirían aún familias en situación de aislamiento y contacto inicial'). It does not describe Asháninka homelands, and 'next to' is not in the source. ARCHITECTURE.md 9.1 says never list or locate peoples in voluntary isolation, and a re-check would keep 'confirming' this card off a sentence about them. Remove; do not reword it."
+  },
+  {
+   "id": "shipibo-konibo-pe",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. The BDPI says the people accept the name Shipibo-Konibo 'sin considerarla como peyorativa y reivindicándola'. Joni is listed by the BDPI under other names, which suits also."
+  },
+  {
+   "id": "shipibo-konibo-pe",
+   "fact": 0,
+   "action": "keep",
+   "reason": "The BDPI ties kené to the people's worldview and to ayahuasca and the power of the anaconda. The card names only the 2008 national heritage declaration, which is right; future rewording must not add that sacred context."
+  },
+  {
+   "id": "shipibo-konibo-pe",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-identification census figure with as_of. Neutral."
+  },
+  {
+   "id": "shipibo-konibo-pe",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day urban life. The BDPI says 'más conocido y numeroso'; the card says only 'best known', describing a settlement, not ranking peoples. Fine."
+  },
+  {
+   "id": "awajun-pe",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. The BDPI says Aguaruna was imposed by the first outsiders and the people adopted Awajún as their self-name. Aguaruna stays in also as a secondary name because it remains in organization names such as FEMAAM. Aents is listed by the BDPI among other names."
+  },
+  {
+   "id": "awajun-pe",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-identification census figure with as_of. Neutral."
+  },
+  {
+   "id": "awajun-pe",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "awajun-pe",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Accuracy. Fetched 2026-10-09, the BDPI says only that FEMAAM was founded in 2002 (in Imaza, Bagua, Amazonas); it does not say who founded it, so 'Awajún women founded' goes beyond the source. The edit keeps the organization's own name and adds the people's own name in brackets. Evidence phrase unchanged.",
+   "text": "In 2002 the Federation of Aguaruna (Awajún) Women of the Upper Marañón, FEMAAM, was founded."
+  },
+  {
+   "id": "achuar-pe-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine; the BDPI gives Achuar as the self-name and Achual as another name. Prior consultations on oil block 192 and the Hidrovía Amazónica in the BDPI are rightly left out."
+  },
+  {
+   "id": "achuar-pe-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral and shows state support for the language, though a low-strength fact. The same BDPI page calls Achuar a vital language, which a later pass could use instead."
+  },
+  {
+   "id": "achuar-pe-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Self-identification census figure with as_of. Neutral."
+  },
+  {
+   "id": "achuar-pe-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "shuar-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. The cited ReVista article is written in the first person by an adviser to the Shuar Aratsim Center, so it is a Shuar voice. Its material on mining and oil threats is rightly left out of the card."
+  },
+  {
+   "id": "shuar-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "shuar-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact. 'One of the pioneering' is the source's wording and does not rank peoples."
+  },
+  {
+   "id": "shuar-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day self-governance in a Shuar author's own account. Fine."
+  },
+  {
+   "id": "waorani-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine, matching NAWE (Waorani Nationality of Ecuador) in fact 2. The old pejorative exonym is rightly absent from also. Peoples in voluntary isolation in and near Waorani lands are rightly not mentioned."
+  },
+  {
+   "id": "waorani-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "waorani-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral figures from a community-registered ICCA entry; states recognized and ancestral area side by side without taking a side. Fine."
+  },
+  {
+   "id": "waorani-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "sapara-ec-pe",
+   "fact": null,
+   "action": "keep",
+   "reason": "Sápara is the current spelling used by the people; UNESCO's older Zápara is in also. name_source_url is an NGO news page (lowest priority); a Sápara-run or Ecuadorian government page would be better. The UNESCO page dwells on 'very serious danger of disappearing' and 'near extinction'; the facts rightly do not repeat that framing, and must not in future."
+  },
+  {
+   "id": "sapara-ec-pe",
+   "fact": 0,
+   "action": "keep",
+   "reason": "UNESCO recognition (proclaimed 2001, inscribed on the Representative List 2008). Strength-led; does not repeat UNESCO's 'disappearing' framing. Fine."
+  },
+  {
+   "id": "sapara-ec-pe",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Accuracy. UNESCO says their knowledge of nature shows in 'the abundance of their vocabulary for the flora and fauna' and in their medicinal practices and knowledge of the forest's medicinal plants. The card says the language itself carries the medicinal knowledge, which runs the two together. The edit names only the knowledge, not any practice, so nothing restricted. Consider kind 'culture'. Evidence phrase unchanged.",
+   "text": "Sápara knowledge of the forest shows in their rich vocabulary for plants and animals and in their knowledge of the forest's medicinal plants."
+  },
+  {
+   "id": "sapara-ec-pe",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "kichwa-sarayaku-ec",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name taken from the people's own site, the best source. Sarayaku publishes a 'Statute of Governance of Image, Communication, and Digital Sovereignty' (fetched 2026-10-09) setting guidelines for visitors, researchers, press and commercial projects. ZOTHEOS must stay text only on this card (no Sarayaku photos, audio or video) and credit the Pueblo Originario Kichwa de Sarayaku as the source. The three facts are the people's own public statements and fit that statute."
+  },
+  {
+   "id": "kichwa-sarayaku-ec",
+   "fact": 0,
+   "action": "keep",
+   "reason": "From the people's own site. Present-day and calm."
+  },
+  {
+   "id": "kichwa-sarayaku-ec",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Kawsak Sacha is Sarayaku's own public proposal. The card states only the legal aim and none of its spiritual content, which is right."
+  },
+  {
+   "id": "kichwa-sarayaku-ec",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Accurate to the people's own page (guidelines for visitors, researchers, press and commercial projects; protocols for prior, free and informed consent). It also binds ZOTHEOS: text only, credited (see nation note)."
+  },
+  {
+   "id": "tsimane-bo",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine, with the apostrophe kept. Sources are academic (priority 4); a Gran Consejo Tsimane' or Bolivian government source would be stronger. Livelihoods are stated plainly, without romanticizing."
+  },
+  {
+   "id": "tsimane-bo",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "tsimane-bo",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact: a fully living language."
+  },
+  {
+   "id": "tsimane-bo",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Plain present-day livelihoods, not romanticized. Fine."
+  },
+  {
+   "id": "wichi-ar-bo",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine with the accent. The old pejorative exonym is rightly absent from also; Chaco's 2010 language law uses the people's own name."
+  },
+  {
+   "id": "wichi-ar-bo",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact: official provincial language status, from the law text."
+  },
+  {
+   "id": "wichi-ar-bo",
+   "fact": 1,
+   "action": "edit",
+   "reason": "'Being spoken again' implies the language had stopped, which the source does not say, and Wichí should not be framed as lost. The Unidiversidad/Télam piece (11 April 2022, fetched 2026-10-09) says elders pass Wichí and Qom to younger generations and that both 'comienzan a ser habladas' in early childhood and adolescence. The edit drops 'again', attributes the claim to the 2022 report, and mirrors the Qom card. Evidence phrase unchanged.",
+   "text": "Elders pass Wichí on to younger generations, and a 2022 report says young children and teenagers are taking up the language."
+  },
+  {
+   "id": "qom-ar-py",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name Qom is right. 'Toba' in also is not neutral: academic work indexed by CONICET describes it as a pejorative name of Guarani origin and not a self-designation, and a 2013 open letter written in the voice of Qom people (credited to the Consejo Carashé, republished by Rebelión) says Guarani speakers used 'toba' 'en forma de burla' and that 'una gran mayoría de hermanos hoy se definen así mismos como Qom'. Some communities use both words, and Toba is still the official registry term, so keep it for search, but do not display it as 'Also known as' on the herald or card.",
+   "text": "also: [\"Toba\"] search only; do not display on herald or card (name of Guarani origin used mockingly; most Qom define themselves as Qom)"
+  },
+  {
+   "id": "qom-ar-py",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact. The 2010 Chaco law uses the people's own name, not 'toba'."
+  },
+  {
+   "id": "qom-ar-py",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength fact: language recovery led in universities and community-run spaces. Fine."
+  },
+  {
+   "id": "kuikuro-br",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name fine. All facts center a strong living language and the shared Upper Xingu system. Good home for the Xingu territory facts removed from xingu-peoples-br (same ISA source)."
+  },
+  {
+   "id": "kuikuro-br",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength fact. 'Still' stresses that the language is fully alive, not that it is in decline."
+  },
+  {
+   "id": "kuikuro-br",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "kuikuro-br",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day or strengths-led, plain calm register, no sacred or restricted detail, no stereotype, no ranking, no dashes."
+  },
+  {
+   "id": "xingu-peoples-br",
+   "fact": null,
+   "action": "remove",
+   "reason": "Category and naming error. 'Associação Terra Indígena do Xingu' (Atix) is an organization, not a people, so the herald would announce 'Nation: Associação Terra Indígena do Xingu'. The cited 2018 ISA blog post names Atix only as ISA's partner in a small-grants program, not as the peoples' representative. Folding 16 peoples into one card also hides each people's own name, against the self-naming rule. Give the peoples their own entries; the page itself names the Yawalapiti, Wauja, Kisêdjê, Kawaiwete, Matipu, Ikpeng and Yudja."
+  },
+  {
+   "id": "xingu-peoples-br",
+   "fact": 0,
+   "action": "remove",
+   "reason": "Follows removal of the nation entry (an organization is not a people). The fact about 16 peoples belongs on a hub page about the Xingu territory, or on each Xingu people's own card."
+  },
+  {
+   "id": "xingu-peoples-br",
+   "fact": 1,
+   "action": "remove",
+   "reason": "Follows removal of the nation entry. It can move unchanged, with the same source and evidence, to the Kuikuro card (whose lands field names the Xingu Indigenous Territory) or to future per-people Xingu entries."
+  },
+  {
+   "id": "xingu-peoples-br",
+   "fact": 2,
+   "action": "remove",
+   "reason": "Follows removal of the nation entry. It can move unchanged, with the same source and evidence, to the Kuikuro card or to future per-people Xingu entries."
+  }
+ ]
+}

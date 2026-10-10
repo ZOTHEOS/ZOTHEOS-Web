@@ -1,0 +1,502 @@
+{
+  "region": "alaska-hawaii-pacific-us",
+  "checked": "2026-10-08",
+  "results": [
+    {
+      "id": "inupiat-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Phrase verbatim on Ilisagvik About page; page also says founders intended 'an education based on the Iñupiaq cultural heritage' and gives a Utqiaġvik address. Fully supported."
+    },
+    {
+      "id": "inupiat-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Phrase found verbatim; content supported. NPS page is 'Last updated: November 1, 2021', so 'today' and as_of 2026 overstate currency; removed 'today', as_of should be 2021.",
+      "text": "Iñupiaq is taught in colleges, communities, schools and online, and even in immersion classes for young children before kindergarten.",
+      "evidence": "and even in immersive pre-kindergarten classes",
+      "as_of": "2021"
+    },
+    {
+      "id": "inupiat-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Phrase verbatim; NANA page: '23-member board is elected by the corporation's more than 15,500 Iñupiat shareholders' (2025 board election release). Supported."
+    },
+    {
+      "id": "yupik-central-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Calista region page (redirects to /about-us/region/): Yugtun 'our preferred name for the Yup'ik language' is second-most common Native language per 2006-2010 ACS. Supported."
+    },
+    {
+      "id": "yupik-central-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC Central Yup'ik page: Yup'ik names both language and people, yuk 'person' plus pik 'real'. Supported."
+    },
+    {
+      "id": "yupik-central-alaska",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Supported (Calista: subsistence 'holds our communities together and is part of our identity'), but original text was a near pronoun swap of the source sentence; reworded into own words.",
+      "text": "In the Calista Region along the Yukon and Kuskokwim rivers, subsistence hunting, fishing and gathering bind communities together and are part of who people are.",
+      "evidence": "It holds our communities together and is part of our identity"
+    },
+    {
+      "id": "cupik-chevak-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: 'In Chevak the language is referred to as Cup'ik, and in Nunivak as Cup'ig', also used in place of Yup'ik for a person. Supported."
+    },
+    {
+      "id": "cupik-chevak-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Page lists General Central Yup'ik plus four other dialects including Hooper Bay-Chevak (five total). Original called Central Alaskan Yup'ik a 'language family branch'; the page treats it as a language, so corrected.",
+      "text": "Hooper Bay-Chevak is one of the five dialects of the Central Alaskan Yup'ik language.",
+      "evidence": "Norton Sound, Hooper Bay-Chevak, Nunivak, and Egegik"
+    },
+    {
+      "id": "st-lawrence-island-yupik-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC Siberian Yupik page, verbatim. Supported."
+    },
+    {
+      "id": "st-lawrence-island-yupik-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Supported, but original copied a 17-word run verbatim from ANLC; reworded into own words. Evidence phrase unchanged and verified verbatim.",
+      "text": "St. Lawrence Island Yupik is almost the same language as the one spoken just across the Bering Strait, at the tip of Siberia's Chukchi Peninsula.",
+      "evidence": "is nearly identical to the language spoken across the Bering Strait"
+    },
+    {
+      "id": "unangax-aleutian-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC Unangam Tunuu page: 'means person and probably derives from the root una, which refers to the seaside'. Supported."
+    },
+    {
+      "id": "unangax-aleutian-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "curl got 403; WebFetch read the page. Verbatim: 'Students of the 2025 Unangam Tunuu Summer Language Intensive learn from Unangax̂ Elders' and Community Night 'is held Tuesdays ... at APIA in Anchorage'. Original implied Elders teach the community nights; the page names other class leaders, so split the two claims.",
+      "text": "Students in APIA's 2025 Unangam Tunuu Summer Language Intensive learned from Unangax̂ Elders, and APIA holds a weekly Unangam Tunuu Community Night in Anchorage.",
+      "evidence": "Students of the 2025 Unangam Tunuu Summer Language Intensive"
+    },
+    {
+      "id": "unangax-aleutian-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC: 'a single language divided at Atka Island into eastern and the western dialects'. Supported."
+    },
+    {
+      "id": "alutiiq-sugpiaq-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Alutiiq Museum: 'over 7,800 years' in coastal south-central Alaska; 'We are descended from seafaring people.' Supported."
+    },
+    {
+      "id": "alutiiq-sugpiaq-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Alutiiq Museum language page: speakers, learners and linguists study, record, and 'teach the language to a new generation of speakers'; language also called Sugt'stun. Supported."
+    },
+    {
+      "id": "alutiiq-sugpiaq-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC: 'traditionally the people called themselves Sugpiaq (suk person plus -piaq real)'. Supported."
+    },
+    {
+      "id": "denaina-cook-inlet-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Kenaitze home page vision slide: 'To assure Kahtnuht'ana Dena'ina thrive forever'. Supported."
+    },
+    {
+      "id": "denaina-cook-inlet-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Supported, but original was a pronoun swap of the whole Kenaitze passage; reworded into own words. Evidence verified verbatim.",
+      "text": "Dena'ina families have fed themselves with fish from Tikahtnu, Cook Inlet, for thousands of years, and salmon is still at the heart of their culture and identity.",
+      "evidence": "Salmon remain central to our culture and identity."
+    },
+    {
+      "id": "denaina-cook-inlet-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC Dena'ina page, verbatim. Supported."
+    },
+    {
+      "id": "ahtna-copper-river-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: Ahtna is the language of the Copper River and upper Susitna and Nenana drainages 'in eight communities'. Supported (verbatim run is mostly place names, acceptable)."
+    },
+    {
+      "id": "ahtna-copper-river-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC: work begun 1973 by James Kari, comprehensive dictionary 1990. Supported."
+    },
+    {
+      "id": "koyukon-interior-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: denaa 'people' plus suffix -kk'e 'like, similar', 'thus literally meaning like us'. Supported."
+    },
+    {
+      "id": "koyukon-interior-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC: largest territory of any Alaska Athabascan language; Upper, Central, Lower dialects along Koyukuk and middle Yukon. Supported."
+    },
+    {
+      "id": "koyukon-interior-alaska",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Doyon Languages Online is creating introductory online lessons for Denaakk'e and nine other Doyon region languages; its first courses came out in summer 2019 and are free.",
+      "evidence": "Holikachuk, Denaakk’e (Koyukon), Benhti Kenaga’ (Lower Tanana), Hän"
+    },
+    {
+      "id": "gwichin-alaska-yukon-nwt",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "GCI About: 'represents 9,000 Gwich'in in the NWT, Yukon, and Alaska as a Permanent Participant in the Arctic Council'. Supported ('about' is a fair hedge)."
+    },
+    {
+      "id": "gwichin-alaska-yukon-nwt",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Supported (ANLC: written literature since the 1870s; modern writing system designed in the 1960s by Richard Mueller), but first clause was copied verbatim; reworded.",
+      "text": "Gwich'in literature has existed in written form since the 1870s, and a modern writing system for the language was designed in the 1960s.",
+      "evidence": "Gwich'in has had a written literature since the 1870s"
+    },
+    {
+      "id": "gwichin-alaska-yukon-nwt",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Dinjii Zhuh K'yaa, the Gwich'in language, is one of ten Doyon region languages for which Doyon Languages Online is creating introductory online lessons.",
+      "evidence": "Hän, Dinjii Zhuh K’yaa (Gwich’in), Deg Xinag"
+    },
+    {
+      "id": "deg-hitan-lower-yukon-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: language of Shageluk and Anvik and of the Athabascans at Holy Cross on the lower Yukon; Deg Hit'an people. Supported."
+    },
+    {
+      "id": "deg-hitan-lower-yukon-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC: 'Deg Xinag Learner's Dictionary, online free dictionary with sound', via Alaska Native Knowledge Network. Supported."
+    },
+    {
+      "id": "deg-hitan-lower-yukon-alaska",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Deg Xinag is one of ten Doyon region languages for which Doyon Languages Online is creating introductory online lessons.",
+      "evidence": "Dinjii Zhuh K’yaa (Gwich’in), Deg Xinag, Denak’i (Upper Kuskokwim)"
+    },
+    {
+      "id": "lower-tanana-dene-alaska",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Phrase found verbatim in the College of Indigenous Studies land acknowledgement on the ANLC page: 'our offices and facilities are located on Troth Yeddha''. The page does not say the whole UAF campus stands there, so narrowed to what it states.",
+      "text": "The University of Alaska Fairbanks College of Indigenous Studies notes that its offices and facilities stand on Troth Yeddha', a traditional gathering place of the Lower Tanana Dene.",
+      "evidence": "a traditional gathering place for the Lower Tanana Dene"
+    },
+    {
+      "id": "lower-tanana-dene-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC: spoken only at Nenana and Minto on the Tanana River; 'In 2009, a Lower Tanana pocket dictionary was published'. Supported."
+    },
+    {
+      "id": "lower-tanana-dene-alaska",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Benhti Kenaga', the Lower Tanana language, is one of ten Doyon region languages for which Doyon Languages Online is creating introductory online lessons.",
+      "evidence": "Denaakk’e (Koyukon), Benhti Kenaga’ (Lower Tanana), Hän"
+    },
+    {
+      "id": "han-eagle-alaska-dawson-yukon",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: spoken at Eagle (Alaska) and Dawson (Yukon); documentation at ANLC and Yukon Native Language Centre. Supported."
+    },
+    {
+      "id": "han-eagle-alaska-dawson-yukon",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Hän is one of ten Doyon region languages for which Doyon Languages Online is creating introductory online lessons.",
+      "evidence": "Benhti Kenaga’ (Lower Tanana), Hän, Dinjii Zhuh K’yaa"
+    },
+    {
+      "id": "upper-tanana-alaska-yukon",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: 'The indigenous name for the language is Nee'aaneegn''. Supported."
+    },
+    {
+      "id": "upper-tanana-alaska-yukon",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "ANLC: spoken mainly in Northway, Tetlin and Tok, small population across the border in Canada. Supported."
+    },
+    {
+      "id": "upper-tanana-alaska-yukon",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Doyon page (URL now redirects to https://doyonfoundation.com/language-programs/) says the project 'is creating introductory online lessons for ten of the 11' Doyon region languages and that only 'the first set' of courses (not identified by language) went live in summer 2019; WebFetch confirmed the page does not say every listed language is live. Rewrote 'taught in free lessons' to what the page supports. Consider updating source.url to the redirect target.",
+      "text": "Née'aaneegn', the Upper Tanana language, is one of ten Doyon region languages for which Doyon Languages Online is creating introductory online lessons.",
+      "evidence": "Nee’anděg’ (Tanacross) and Née’aaneegn’ (Upper Tanana)"
+    },
+    {
+      "id": "tlingit-southeast-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Tlingit & Haida home: 'tribal government representing over 38,000 Tlingit and Haida citizens worldwide'. Supported (verbatim run is mostly the proper name)."
+    },
+    {
+      "id": "tlingit-southeast-alaska",
+      "fact": 1,
+      "verdict": "fixed",
+      "note": "SHI statement covers Lingít, X̱aad Kíl and Sm'algyax together ('a number of young people have learned their ancient tongue and are now teaching it'); it does not single out Lingít learners. Reworded to match the page's scope.",
+      "text": "Sealaska Heritage Institute says young people who learned Lingít and other Southeast Alaska languages, once nearly lost to oppression, now teach them with help from fluent Elders.",
+      "evidence": "are now teaching it to others with assistance from fluent Elders"
+    },
+    {
+      "id": "tlingit-southeast-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC: language of coastal Southeastern Alaska from Yakutat south to Ketchikan; one branch of Athabascan-Eyak-Tlingit family. Supported."
+    },
+    {
+      "id": "haida-kaigani-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "ANLC: 'considered a linguistic isolate with no proven genetic relationship to any language family'. Supported. Note: ANLC page renders the name as 'Xaat Kíl'; the fact's spelling 'X̱aad Kíl' matches Sealaska Heritage Institute usage, acceptable."
+    },
+    {
+      "id": "haida-kaigani-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Organized Village of Kasaan (Tribal Government) home page mission, verbatim. Supported."
+    },
+    {
+      "id": "haida-kaigani-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Kasaan 'Láa Náay page: purpose is to maintain peace and promote wellness by addressing problems through culturally appropriate methods. Supported."
+    },
+    {
+      "id": "tsimshian-metlakatla-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Metlakatla home: MIC 'is located on the Annette Islands and is the only Indian Reserve in Alaska'. Supported."
+    },
+    {
+      "id": "tsimshian-metlakatla-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Metlakatla home: 'Keeping it alive and well ... how the Hyaak Foundation is working to keep the language alive' (Sm'algyax). Supported."
+    },
+    {
+      "id": "tsimshian-metlakatla-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC: 1977 standard practical orthography 'for use also by the Canadian Coast Tsimshians'. Supported."
+    },
+    {
+      "id": "eyak-cordova-alaska",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "NVE About: four peoples (Eyak, Chugach Region people, Tlingit, Athabaskan) 'organized together as a federally recognized tribe'; Cordova named. Supported."
+    },
+    {
+      "id": "eyak-cordova-alaska",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "NVE About, close to source wording but a factual list. Supported."
+    },
+    {
+      "id": "eyak-cordova-alaska",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "ANLC: 'a coordinate sub-branch to Athabascan as a whole'; spoken in 19th century from Yakutat to Eyak at the Copper River delta. Supported."
+    },
+    {
+      "id": "native-hawaiians-kanaka-maoli-hawaii",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "LRB constitution Art. XV sec. 4, '[Add Const Con 1978 and election Nov 7, 1978]'. Supported."
+    },
+    {
+      "id": "native-hawaiians-kanaka-maoli-hawaii",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "curl 403; WebFetch read oha.org/about: created at 1978 Constitutional Convention, passed by voters in 1978, 'Board of Trustees, made up of nine members who are elected statewide to serve four-year terms'. Supported."
+    },
+    {
+      "id": "native-hawaiians-kanaka-maoli-hawaii",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Aha Punana Leo history: first preschool Kekaha, Kaua'i, August 1984; 'a complete preschool through doctoral-level system of education ... taught entirely through Hawaiian'. Supported."
+    },
+    {
+      "id": "chamoru-guam",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Guampedia: 'Public Law 12-132, which made both English and Chamorro the official languages of Guam'. Supported."
+    },
+    {
+      "id": "chamoru-guam",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Guampedia: '[Update: Chamorro week has since been expanded into Chamorro Month.]' Supported."
+    },
+    {
+      "id": "chamoru-guam",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "DCA About: PL 25-69 purpose 'preservation, development and promotion of the Chamorro Heritage of Guam'; lists 'Division of Language & Culture'. Supported."
+    },
+    {
+      "id": "samoans-american-samoa",
+      "fact": 0,
+      "verdict": "fixed",
+      "note": "Supported (NPS: traits emerged 'over the centuries' known as fa'asamoa, 'which forms the foundation of Samoan identity and daily life'), but original closely copied the source clause; reworded.",
+      "text": "Fa'asamoa, the Samoan way of life, took shape over many centuries and remains the base of Samoan identity and everyday living.",
+      "evidence": "which forms the foundation of Samoan identity and daily life"
+    },
+    {
+      "id": "samoans-american-samoa",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "NPS NPSA: land leased from local villages; communal tenure 'under the guidance of village chiefs, or matai'. Supported."
+    },
+    {
+      "id": "samoans-american-samoa",
+      "fact": 2,
+      "verdict": "fixed",
+      "note": "Supported (NPS: inhabited for over 3,000 years, one of the oldest human settlements in Polynesia); reworded to reduce verbatim copying.",
+      "text": "People have lived in American Samoa for more than 3,000 years, making it one of Polynesia's oldest places of human settlement.",
+      "evidence": "American Samoa has been inhabited for over 3,000 years"
+    }
+  ],
+  "names": [
+    {
+      "id": "inupiat-alaska",
+      "ok": true,
+      "note": "NPS page uses 'Iñupiat' and 'Iñupiaq'; NANA and Ilisagvik also use Iñupiat."
+    },
+    {
+      "id": "yupik-central-alaska",
+      "ok": true,
+      "note": "Calista region page uses Yup'ik and gives Yugtun as preferred language name."
+    },
+    {
+      "id": "cupik-chevak-alaska",
+      "ok": true,
+      "note": "ANLC: Cup'ik used in Chevak in place of Yup'ik for language and people."
+    },
+    {
+      "id": "st-lawrence-island-yupik-alaska",
+      "ok": true,
+      "note": "ANLC uses 'St. Lawrence Island Yupik (also known as Siberian Yupik)'."
+    },
+    {
+      "id": "unangax-aleutian-alaska",
+      "ok": true,
+      "note": "APIA (WebFetch) uses 'Unangax̂' (singular/adjective) and 'Unangan/Unangas' (plurals); matches name and also list."
+    },
+    {
+      "id": "alutiiq-sugpiaq-alaska",
+      "ok": true,
+      "note": "Alutiiq Museum uses 'Alutiiq/Sugpiaq'."
+    },
+    {
+      "id": "denaina-cook-inlet-alaska",
+      "ok": true,
+      "note": "Kenaitze site uses Dena'ina and Kahtnuht'ana Dena'ina."
+    },
+    {
+      "id": "ahtna-copper-river-alaska",
+      "ok": true,
+      "note": "ANLC uses Ahtna / Ahtna Athabascan."
+    },
+    {
+      "id": "koyukon-interior-alaska",
+      "ok": true,
+      "note": "ANLC: 'Denaakk'e (also Koyukon)'; Koyukon names the people, Denaakk'e the language. Acceptable; no official tribal page cited."
+    },
+    {
+      "id": "gwichin-alaska-yukon-nwt",
+      "ok": true,
+      "note": "Gwich'in Council International uses Gwich'in."
+    },
+    {
+      "id": "deg-hitan-lower-yukon-alaska",
+      "ok": true,
+      "note": "ANLC: 'Deg Xinag (also Deg Hit'an ...)'; 'Deg Hit'an people'."
+    },
+    {
+      "id": "lower-tanana-dene-alaska",
+      "ok": true,
+      "note": "ANLC page uses 'Lower Tanana Dene'."
+    },
+    {
+      "id": "han-eagle-alaska-dawson-yukon",
+      "ok": true,
+      "note": "ANLC page uses 'Hän'."
+    },
+    {
+      "id": "upper-tanana-alaska-yukon",
+      "ok": true,
+      "note": "ANLC uses Upper Tanana; own language name Nee'aaneegn'."
+    },
+    {
+      "id": "tlingit-southeast-alaska",
+      "ok": true,
+      "note": "tlingitandhaida.gov uses Tlingit; SHI uses Lingít; ANLC Łingit."
+    },
+    {
+      "id": "haida-kaigani-alaska",
+      "ok": true,
+      "note": "Organized Village of Kasaan (Tribal Government) uses Haida."
+    },
+    {
+      "id": "tsimshian-metlakatla-alaska",
+      "ok": true,
+      "note": "ANLC uses Tsimshian; Metlakatla site reachable (Sm'algyax language)."
+    },
+    {
+      "id": "eyak-cordova-alaska",
+      "ok": true,
+      "note": "Native Village of Eyak About page uses Eyak."
+    },
+    {
+      "id": "native-hawaiians-kanaka-maoli-hawaii",
+      "ok": true,
+      "note": "OHA About (WebFetch) uses 'Native Hawaiians'; Kānaka Maoli / Kānaka ʻŌiwi not on that page but appropriate as also-names."
+    },
+    {
+      "id": "chamoru-guam",
+      "ok": true,
+      "note": "NPS War in the Pacific page uses 'CHamoru'; DCA uses older 'Chamorro' (in also list)."
+    },
+    {
+      "id": "samoans-american-samoa",
+      "ok": true,
+      "note": "NPS National Park of American Samoa uses Samoan/Samoans."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "region": "gap-pacific",
+  "items": [
+    { "id": "tongans-to", "fact": null, "action": "keep", "reason": "Name matches common self-reference in English; lands plain; no villain or object framing." },
+    { "id": "tongans-to", "fact": 0, "action": "keep", "reason": "Living national dance performed at present-day state occasions; public UNESCO description, nothing restricted." },
+    { "id": "tongans-to", "fact": 1, "action": "keep", "reason": "Strength framing (living creative role of the punake); present tense; calm register." },
+    { "id": "tongans-to", "fact": 2, "action": "keep", "reason": "Neutral census figure from Tonga's own statistics office; no deficit framing." },
+
+    { "id": "samoans-samoa", "fact": null, "action": "keep", "reason": "Self-name as used by the Government of Samoa in English; official site present." },
+    { "id": "samoans-samoa", "fact": 0, "action": "keep", "reason": "Living craft tradition described in plain words; exchange at weddings and funerals is public UNESCO text, not restricted knowledge." },
+    { "id": "samoans-samoa", "fact": 1, "action": "keep", "reason": "Present-day revitalization strength (committees, young weavers); no stereotype." },
+    { "id": "samoans-samoa", "fact": 2, "action": "keep", "reason": "Living governance system with women title-holders counted; neutral, from Samoa's own statistics bureau." },
+
+    { "id": "i-kiribati-ki", "fact": null, "action": "keep", "reason": "Leads with the people's own name I-Kiribati; Gilbertese given as neutral exonym." },
+    { "id": "i-kiribati-ki", "fact": 0, "action": "edit", "reason": "Living governance strength, but 'the old men' reads flat and age-marked in a game card. The same source also glosses unimwane as 'a senior man in the village', so 'the senior men' stays inside the cited text.", "text": "In Kiribati the mwaneaba, the traditional meeting house, is where village decisions are made by the unimwane, the senior men, whose seating shows their standing." },
+    { "id": "i-kiribati-ki", "fact": 1, "action": "keep", "reason": "Land and stewardship achievement stated as a dated historical fact; neutral, avoids the later fishing-policy debate." },
+
+    { "id": "tuvaluans-tv", "fact": null, "action": "keep", "reason": "Self-name in English; lands plain." },
+    { "id": "tuvaluans-tv", "fact": 0, "action": "keep", "reason": "Living governance institution; the gloss 'grey-hairs of the land' is the source's own respectful rendering." },
+    { "id": "tuvaluans-tv", "fact": 1, "action": "keep", "reason": "Language strength; plain and present tense." },
+    { "id": "tuvaluans-tv", "fact": 2, "action": "keep", "reason": "Living sport, light and accurate, good fit for a game herald." },
+
+    { "id": "marshallese-mh", "fact": null, "action": "keep", "reason": "Marshallese is how the RMI government names the people in English; Ri-Majel is listed as the own-language name. Optional later polish: diacritic form Ri-Majeḷ if a fetched official source shows it." },
+    { "id": "marshallese-mh", "fact": 0, "action": "keep", "reason": "Present-day community program described from its own site; strength framing." },
+    { "id": "marshallese-mh", "fact": 1, "action": "keep", "reason": "Living transmission of navigation knowledge, taught publicly by the program itself; not restricted knowledge." },
+    { "id": "marshallese-mh", "fact": 2, "action": "keep", "reason": "Public museum description of an instructional object; no sacred or family-restricted detail disclosed." },
+
+    { "id": "pohnpeians-fm", "fact": null, "action": "keep", "reason": "Self-name in English; lands plain." },
+    { "id": "pohnpeians-fm", "fact": 0, "action": "keep", "reason": "Living chiefly governance explicitly framed as continuing today; neutral." },
+    { "id": "pohnpeians-fm", "fact": 1, "action": "keep", "reason": "Historical achievement from public UNESCO text; balanced by two present-day governance facts in the same entry." },
+    { "id": "pohnpeians-fm", "fact": 2, "action": "keep", "reason": "Present-day constitutional protection of custom; strength framing." },
+
+    { "id": "yapese-fm", "fact": null, "action": "keep", "reason": "Self-name in English; lands correctly limited to the main islands. Note: the cited Yap Code page does not say which islands each council draws from, so no outer-islands nuance can be added without a new source." },
+    { "id": "yapese-fm", "fact": 0, "action": "keep", "reason": "Living constitutional role for traditional leaders; neutral and sourced to state law." },
+    { "id": "yapese-fm", "fact": 1, "action": "keep", "reason": "Present-day function of the councils; strength framing." },
+    { "id": "yapese-fm", "fact": 2, "action": "edit", "reason": "'Yapese were seafarers' is past-tense framing of a living people. The same source says canoes from Yap have sailed in recent times, so a continuity rewrite adds no new claim.", "text": "Yapese have long been seafarers who sailed vast distances across the Pacific, and in recent times canoes from Yap have sailed to the Marianas, Okinawa and Palau." },
+
+    { "id": "chuukese-fm", "fact": null, "action": "keep", "reason": "Self-name in English; Trukese listed as a neutral older exonym." },
+    { "id": "chuukese-fm", "fact": 0, "action": "keep", "reason": "Present-day constitutional respect for custom; neutral." },
+    { "id": "chuukese-fm", "fact": 1, "action": "keep", "reason": "Living land and sea rights stated from the constitution; neutral, no dispute framing." },
+    { "id": "chuukese-fm", "fact": 2, "action": "keep", "reason": "Plain geography of the people's lands." },
+
+    { "id": "kosraeans-fm", "fact": null, "action": "keep", "reason": "Self-name in English; official HPO site cited." },
+    { "id": "kosraeans-fm", "fact": 0, "action": "keep", "reason": "Present-day land stewardship led by elders; the Mahkontowe figure is published by Kosrae's own state heritage office, so not restricted." },
+    { "id": "kosraeans-fm", "fact": 1, "action": "keep", "reason": "Oral history as published by the Kosraean state heritage office itself; no ceremonial or restricted detail." },
+    { "id": "kosraeans-fm", "fact": 2, "action": "keep", "reason": "Present-day self-government; neutral." },
+
+    { "id": "palauans-pw", "fact": null, "action": "keep", "reason": "Self-name in English; official government site present." },
+    { "id": "palauans-pw", "fact": 0, "action": "keep", "reason": "Living traditional governance role; neutral." },
+    { "id": "palauans-pw", "fact": 1, "action": "keep", "reason": "Own-language name of the national congress with its meaning; respectful self-naming." },
+    { "id": "palauans-pw", "fact": 2, "action": "keep", "reason": "Explicit 'still use' continuity; land and governance strength." },
+
+    { "id": "refaluwasch-mp", "fact": null, "action": "keep", "reason": "Leads with the people's own name Refaluwasch; Carolinians given as the common exonym." },
+    { "id": "refaluwasch-mp", "fact": 0, "action": "keep", "reason": "Present-day constitutional office protecting culture; neutral." },
+    { "id": "refaluwasch-mp", "fact": 1, "action": "keep", "reason": "Recent cultural-program achievement by students; strength framing." },
+
+    { "id": "cook-islands-maori-ck", "fact": null, "action": "keep", "reason": "Self-name with correct macron; Cook Islanders as neutral alternate." },
+    { "id": "cook-islands-maori-ck", "fact": 0, "action": "keep", "reason": "Neutral census figure from the Cook Islands' own statistics office." },
+    { "id": "cook-islands-maori-ck", "fact": 1, "action": "keep", "reason": "Living national celebration; self-governance stated neutrally." },
+    { "id": "cook-islands-maori-ck", "fact": 2, "action": "keep", "reason": "Language recognition strength; neutral." },
+
+    { "id": "niueans-nu", "fact": null, "action": "keep", "reason": "Self-name in English; government heritage site cited." },
+    { "id": "niueans-nu", "fact": 0, "action": "keep", "reason": "Neutral census figure; small population stated without deficit framing." },
+    { "id": "niueans-nu", "fact": 1, "action": "keep", "reason": "Recent cultural achievement; present-day." },
+    { "id": "niueans-nu", "fact": 2, "action": "keep", "reason": "Language recognition strength; neutral." },
+
+    { "id": "tokelauans-tk", "fact": null, "action": "keep", "reason": "Self-name in English; official government site present." },
+    { "id": "tokelauans-tk", "fact": 0, "action": "keep", "reason": "Living governance with elders as ultimate authority; neutral on territorial status." },
+    { "id": "tokelauans-tk", "fact": 1, "action": "keep", "reason": "Present-day rotating leadership; neutral." },
+    { "id": "tokelauans-tk", "fact": 2, "action": "keep", "reason": "Living value system described from Tokelau's own constitution; calm register." },
+
+    { "id": "nauruans-nr", "fact": null, "action": "keep", "reason": "Self-name in English; lands field already carries the own-language styling Naoero; official site present." },
+    { "id": "nauruans-nr", "fact": 0, "action": "keep", "reason": "Language strength from Nauru's own census; present-day." },
+    { "id": "nauruans-nr", "fact": 1, "action": "edit", "reason": "'Traditionally had' implies the clans are gone. The source itself says the 12 clans or tribes 'are represented' in the flag star, so a present-tense rewrite adds no claim.", "text": "Nauru's 12 traditional clans, or tribes, are represented by the 12-pointed star on the national flag." },
+    { "id": "nauruans-nr", "fact": 2, "action": "keep", "reason": "Respects self-naming (Naoero) as the government presents it today; neutral." },
+
+    { "id": "ni-vanuatu-vu", "fact": null, "action": "keep", "reason": "Own national name ni-Vanuatu with its usual casing; lands plain." },
+    { "id": "ni-vanuatu-vu", "fact": 0, "action": "keep", "reason": "Living practice described generally; no specific restricted drawing meanings disclosed." },
+    { "id": "ni-vanuatu-vu", "fact": 1, "action": "keep", "reason": "Present-day community-nominated fieldworkers; strength framing. Source title refers to deceased scholars but the fact names no one, and the deceased-persons rule applies to Aboriginal and Torres Strait Islander peoples only." },
+    { "id": "ni-vanuatu-vu", "fact": 2, "action": "keep", "reason": "Community-led language and culture achievement; neutral." },
+
+    { "id": "gunantuna-tolai-pg", "fact": null, "action": "keep", "reason": "Leads with the people's own name Gunantuna; Tolai as the common alternate." },
+    { "id": "gunantuna-tolai-pg", "fact": 0, "action": "keep", "reason": "Living economic and cultural institution stated plainly; no exoticizing." },
+    { "id": "gunantuna-tolai-pg", "fact": 1, "action": "keep", "reason": "Present-day everyday use; strength framing." },
+    { "id": "gunantuna-tolai-pg", "fact": 2, "action": "keep", "reason": "Recent artistic achievement credited to the wider community; no individual named." },
+
+    { "id": "torres-strait-islanders-au", "fact": null, "action": "keep", "reason": "Name as the TSRA itself uses it; official site present. No deceased persons named anywhere in the entry." },
+    { "id": "torres-strait-islanders-au", "fact": 0, "action": "keep", "reason": "Present-day governance body with a duty to maintain Ailan Kastom; neutral." },
+    { "id": "torres-strait-islanders-au", "fact": 1, "action": "keep", "reason": "Living languages stated plainly; no deceased persons, no restricted knowledge." },
+    { "id": "torres-strait-islanders-au", "fact": 2, "action": "keep", "reason": "Living language with island variation; neutral." },
+
+    { "id": "rotumans-fj", "fact": null, "action": "keep", "reason": "Self-name in English; lands include both the island and diaspora communities, which honors the whole people." },
+    { "id": "rotumans-fj", "fact": 0, "action": "keep", "reason": "Living chiefly governance; neutral." },
+    { "id": "rotumans-fj", "fact": 1, "action": "keep", "reason": "Population from a Fiji Government speech; a living head of state is named only in the source title, which is acceptable." },
+    { "id": "rotumans-fj", "fact": 2, "action": "keep", "reason": "Distinct identity and language strength with correct diacritics; present-day." },
+
+    { "id": "itaukei-fj", "fact": null, "action": "keep", "reason": "Leads with the official own name iTaukei as used by the iTaukei Affairs Board." },
+    { "id": "itaukei-fj", "fact": 0, "action": "keep", "reason": "Living governance body; history of the name change stated neutrally." },
+    { "id": "itaukei-fj", "fact": 1, "action": "keep", "reason": "Cultural-mapping achievement stated at program level; no traditional knowledge content disclosed." },
+
+    { "id": "kanak-nc", "fact": null, "action": "keep", "reason": "Own name Kanak; Customary Senate given as the representative body. Entry stays clear of the independence question." },
+    { "id": "kanak-nc", "fact": 0, "action": "keep", "reason": "Living customary organisation; neutral." },
+    { "id": "kanak-nc", "fact": 1, "action": "keep", "reason": "Language strength from the official statistics institute; present-day." },
+    { "id": "kanak-nc", "fact": 2, "action": "keep", "reason": "Present-day education strength; neutral." },
+
+    { "id": "maohi-pf", "fact": null, "action": "keep", "reason": "Leads with the own name Mā'ohi with diacritics; plain alternate listed." },
+    { "id": "maohi-pf", "fact": 0, "action": "keep", "reason": "Public UNESCO recognition of a living civilization; no ceremonial detail of the marae disclosed." },
+    { "id": "maohi-pf", "fact": 1, "action": "keep", "reason": "Navigation achievement; strength framing." },
+
+    { "id": "rapa-nui-cl", "fact": null, "action": "keep", "reason": "Leads with the own name Rapa Nui; Easter Islanders as neutral exonym. Entry stays neutral on autonomy politics." },
+    { "id": "rapa-nui-cl", "fact": 0, "action": "keep", "reason": "Living festival with language and traditions; present-day strength." },
+    { "id": "rapa-nui-cl", "fact": 1, "action": "keep", "reason": "Public festival contest; participants explain their own designs, so nothing restricted is disclosed." },
+    { "id": "rapa-nui-cl", "fact": 2, "action": "keep", "reason": "Historical achievement from public UNESCO text, correctly labelled history and leading with the Indigenous name; balanced by two present-day facts." }
+  ]
+}

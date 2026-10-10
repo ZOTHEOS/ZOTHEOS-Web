@@ -1,0 +1,529 @@
+{
+ "region": "africa",
+ "checked": "2026-10-08",
+ "results": [
+  {
+   "id": "san-juhoansi-namibia-botswana",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "NJE abstract (curl, HTTP 200): Nyae Nyae Conservancy 'was the first communal conservancy of its kind in Namibia, established in 1998'; its communities 'largely consist of Ju|'hoansi San'. Evidence verbatim."
+  },
+  {
+   "id": "san-juhoansi-namibia-botswana",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Namibia (rendered in browser; plain fetch returns an empty JS shell): a May 2025 review of 14 schools found Ju/'hoansi, 'the only San language officially approved for instruction', is barely used in classrooms. Facts correct, but the original copied 7 consecutive source words; reworded.",
+   "text": "Ju|'hoansi is the one San language Namibia has approved for teaching in schools, but a 2025 review of 14 schools found it is seldom used in class."
+  },
+  {
+   "id": "san-juhoansi-namibia-botswana",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "Cultural Survival page: when forming the cooperative the Ju|'hoansi 'initially held open meetings' in the traditional consensus style, then soon elected two representatives (rada) per community, at least one female. Original implied consensus meetings simply carried on inside the cooperative; corrected to what the page says.",
+   "text": "When Ju|'hoansi formed their farmers' cooperative, they began with open consensus meetings, then elected two representatives per community, at least one of them a woman."
+  },
+  {
+   "id": "san-khwe-southern-africa",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "SABC media statement, Sept 2021 (curl): 'XK-FM is the only radio station in the country that supports the! Xu and Khe languages'; station is in Platfontein. Evidence verbatim (source typo 'Khe'). Status as of 2021."
+  },
+  {
+   "id": "san-khwe-southern-africa",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Namibia (browser): 'The Government of Namibia has yet to recognize the Khwe Traditional Authority, something that the Khwe people felt undermined their ability to resolve key land tenure and development issues.' Evidence verbatim; fact accurate."
+  },
+  {
+   "id": "san-xun-southern-africa",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "SABC 2021: maiden broadcast 18 August 2000; 'today's schedule which broadcasts for 15hrs a day in both languages from its current home in Platfontein'. Evidence verbatim. 'now' means as of 2021, matching as_of."
+  },
+  {
+   "id": "san-xun-southern-africa",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG 'San in South Africa' (curl): after years at Schmidtsdrift near Kimberley, 'in 1999, the government allocated 13,000 hectares for the !Xu and Khwe at nearby Platfontein'. Evidence verbatim."
+  },
+  {
+   "id": "san-khomani-south-africa",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "UNESCO WHC 1545 (curl): 'The ǂKhomani are actively reclaiming their knowledge, practices and traditions'; page shows 'Date of Inscription: 2017'. Evidence verbatim."
+  },
+  {
+   "id": "san-khomani-south-africa",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "UNESCO WHC 1545: 'The ǂKhomani have regained symbolic and cultural rights to that land, including resource use and traditional hunting rights in a large part of the park' (Kalahari Gemsbok National Park). Supported, but the original reused about 9 consecutive source words; reworded.",
+   "text": "ǂKhomani people have won back cultural rights in South Africa's Kalahari Gemsbok National Park, such as using its resources and hunting in traditional ways across much of it."
+  },
+  {
+   "id": "san-khomani-south-africa",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "UNESCO WHC 1545: Imbewu camp 'belongs to the ǂKhomani-Mier community'; veldskool lets young people 'learn from the elders about the plants, animals, and ecological interrelationships'. Evidence verbatim; fact accurate."
+  },
+  {
+   "id": "san-naro-botswana-namibia",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Botswana Daily News, 16 Dec 2021 (curl blocked; rendered in browser): government will introduce mother-tongue instruction in primary schools 'next year' and Naro, 'the major San language spoken in Ghanzi District', will be one of the languages. Evidence verbatim; fact matches as_of 2021 (planned start 2022)."
+  },
+  {
+   "id": "san-naro-botswana-namibia",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "Daily News page (browser): 'Naro is peculiar in that its alphabet originates in Botswana'; a church language project 'started ... in the 1980s when it created the Naro alphabet'; two Naro pioneers wrote songs and other material in the orthography; the project 'is headquartered in D'Kar'. The page does not say the writers were in D'Kar in the 1980s; corrected.",
+   "text": "Naro's alphabet was created in Botswana through a language project begun in the 1980s, and Naro pioneers wrote songs and other texts in it. The project is based in D'Kar."
+  },
+  {
+   "id": "san-naro-botswana-namibia",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Botswana (browser): in 2025 'the government also launched radio programs in several Indigenous languages, including Naro.' Supported, but the original copied the 9-word source phrase; reworded.",
+   "text": "In 2025 Botswana's government started radio programs in a number of Indigenous languages, Naro among them."
+  },
+  {
+   "id": "nama-namibia-south-africa",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "UNESCO WHC 1265 (curl): 'the only area where the Nama still construct portable rush-mat houses (haru om)' (French and Spanish versions: 'haru oms'), with seasonal migrations and grazing grounds. Evidence verbatim."
+  },
+  {
+   "id": "nama-namibia-south-africa",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 South Africa (browser): in Alexkor Ltd v Richtersveld (2003) the Constitutional Court 'recognised this Nama community's communal Indigenous right to the land of Richtersveld and to the resources found therein'. Evidence verbatim."
+  },
+  {
+   "id": "nama-namibia-south-africa",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Namibia (browser): 'Namibia held its first official Genocide Remembrance Day on 28 May, marking the atrocities committed during German colonial rule against the Herero and Nama peoples' (2025 per context). Evidence verbatim."
+  },
+  {
+   "id": "khoikhoi-south-africa",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 South Africa (browser): 'the groundbreaking Rooibos Benefit-Sharing Agreement in 2019' recognised Khoikhoi and San traditional knowledge and compensated holders; 'Starting in 2024, the community began to receive the financial benefits'. Evidence verbatim."
+  },
+  {
+   "id": "khoikhoi-south-africa",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 South Africa (browser): the levy funds 'additional funding to local schools, installing water pumps, opening an organic Rooibos nursery, funding local students' higher education'; recipient communities 'such as those in Wupperthal, Nieuwoudtville and Suid-Bokkeveld in the Cederberg region'. Evidence verbatim."
+  },
+  {
+   "id": "khoikhoi-south-africa",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 South Africa (browser): the 2019 Act aimed to 'formally recognise Khoi and San leadership structures alongside other traditional communities'; the Constitutional Court suspended its invalidity so it remains in force 'until 29 May 2027' to allow legislative reform. Evidence verbatim."
+  },
+  {
+   "id": "ovahimba-namibia-angola",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Namibia (browser): 'The Ovahimba, Ovatue (Ovatwa), and Ovazemba are largely pastoral people ... residing in the semi-arid mountains and steppes of north-west Namibia (Kunene region)'. Supported, but the original reused two source phrases nearly word for word; reworded.",
+   "text": "Ovahimba are mainly herders whose homes lie in the dry mountains and plains of north-west Namibia's Kunene Region."
+  },
+  {
+   "id": "ovahimba-namibia-angola",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG 'Himba in Namibia' (curl): 'Himba are Herero-speaking semi-nomadic pastoralists living in north-western Namibia and south-western Angola.' Evidence verbatim."
+  },
+  {
+   "id": "ovahimba-namibia-angola",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "MRG Himba: 'The Himba community's sophisticated cattle herding has led to relative prosperity by regional standards.' Supported, but the original mirrored the source sentence; reworded.",
+   "text": "Skilled cattle herding has made Ovahimba communities comparatively well off for their region."
+  },
+  {
+   "id": "maasai-kenya-tanzania",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "MRG 'Maasai in Kenya' (curl): 'The Maasai speak the Maa language, a member of the Nilotic language family, related to Dinka, Kalenjin and Nuer languages.' Evidence verbatim."
+  },
+  {
+   "id": "maasai-kenya-tanzania",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG: 'numbering 1,189,522 in Kenya in the 2019 census, compared to 377,089 in the 1989 census'; exact figure unknown as an unidentified number refuse to participate. Evidence verbatim."
+  },
+  {
+   "id": "maasai-kenya-tanzania",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Tanzania (browser), carbon projects in Maasai rangelands, 2025: 'In Simanjiro, the district has temporarily paused the signing process for 30 days to allow responses to community concerns, showing that community voices are beginning to have an impact.' Evidence verbatim."
+  },
+  {
+   "id": "samburu-kenya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "reteti.org (redirects to www.reteti.org, curl): 'The world's first Indigenous community-owned African elephant sanctuary'; 'established in response to demands from the local community' with 'the entire Samburu community in Namunyak Conservancy'. Evidence verbatim; self-description framing correct."
+  },
+  {
+   "id": "samburu-kenya",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "reteti.org: 'Our elephant keepers are all from the Indigenous Samburu community'; they 'have been formally trained in the care, rehabilitation and release of elephant calves'. The page does not say keepers are trained to rescue; corrected to the page's wording.",
+   "text": "All of Reteti's elephant keepers come from the Samburu community and are formally trained to care for, rehabilitate and release elephant calves."
+  },
+  {
+   "id": "ogiek-kenya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "ogiekpeoples.org (curl and WebFetch): 'THE 7TH ANNUAL OGIEK CULTURAL EVENT', Aug 14th 2026, Nkareta, Narok, theme on how Ogiek traditions thrive and adapt amid changing landscapes. Evidence verbatim. Note: the event date has now passed and the page does not confirm it was held; consider a refresh."
+  },
+  {
+   "id": "ogiek-kenya",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG 'Ogiek in Kenya' (curl): the May 2017 African Court ruling recognized 'the role that Ogiek and other indigenous groups in Africa play as guardians of local ecosystems'; 'the first time ... that the African Court ruled in favour of an indigenous people'. Evidence verbatim."
+  },
+  {
+   "id": "ogiek-kenya",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Kenya (browser): 'On 4 December 2025, the African Court ... delivered its compliance decision finding that the Kenyan government had failed to duly comply with its previous judgements. This ruling marks the court's first compliance decision'. Evidence verbatim."
+  },
+  {
+   "id": "sengwer-kenya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "MRG 'Sengwer in Kenya' (curl): living in 'the Cherangany Hills and the Embobut Forest' of Kenya's western highlands; 'estimated to be 10,729 according to the 2019 Housing Census'. Evidence verbatim."
+  },
+  {
+   "id": "sengwer-kenya",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG Sengwer: knowledge systems 'include sustainable practices for hunting, gathering, beekeeping and managing forest resources. This knowledge has been crucial for the conservation of biodiversity'. Evidence verbatim."
+  },
+  {
+   "id": "sengwer-kenya",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "MRG Sengwer: 'social structure is organized around clans, with each clan having specific roles and responsibilities. Elders play a central role in decision-making ... and the transmission of cultural knowledge'. Evidence verbatim."
+  },
+  {
+   "id": "endorois-kenya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "MRG 'Endorois in Kenya' (curl): 'more than 45,000 Endorois according to the 2019 Kenya government census'; they live around Lake Bogoria, Baringo, Nakuru and Laikipia in the Rift Valley. Evidence verbatim."
+  },
+  {
+   "id": "endorois-kenya",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "MRG press release 4 Feb 2010 (curl): the African Commission decision 'creates a major legal precedent by recognising, for the first time in Africa, indigenous peoples' rights over traditionally owned land'; it was 'approved by the African Union at its January 2010 meeting'. Supported, but the original copied about 12 consecutive source words; reworded and clarified that the ruling was the African Commission's.",
+   "text": "In 2010 the African Union approved an African Commission ruling in the Endorois case, the first in Africa to recognize Indigenous peoples' rights to land they traditionally owned."
+  },
+  {
+   "id": "endorois-kenya",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "endorois.org (official, curl): EWC 'established in 1995. It was founded by senior members of the Endorois indigenous minority community'; mission of social justice and sustainable development. Evidence verbatim."
+  },
+  {
+   "id": "hadzabe-tanzania",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "MRG 'Hadza/Hadzabe in Tanzania' (curl): 'They speak Hadzane, a language which was previously identified as a Khoisan language but is now considered an isolate, i.e. unrelated to any other.' Evidence verbatim."
+  },
+  {
+   "id": "hadzabe-tanzania",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "MRG Hadza: 'In 2011, the Tanzanian government issued communal land titles to the first Hadza communities'; Hadza are working with NGOs 'to secure communal land rights for all Hadza groups'. The original was the source sentence almost word for word; reworded with added context from the same page.",
+   "text": "In 2011 the first Hadza communities received communal land titles from Tanzania's government, and work continues to secure titles for all Hadza groups."
+  },
+  {
+   "id": "hadzabe-tanzania",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Tanzania (browser): 'while the community does not reject tourism, there is a strong call for a community-led model that ensures transparency, dignity, and fair benefit-sharing.' Evidence verbatim."
+  },
+  {
+   "id": "datooga-tanzania",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Tanzania (browser): population estimates 'put the Maasai in Tanzania at 430,000, the Datoga group to which the Barabaig belongs at 87,978'. Evidence verbatim. The estimate year is not given in the source."
+  },
+  {
+   "id": "datooga-tanzania",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "MRG Hadza page (updated Dec 2025, curl): the Yaeda-Eyasi Landscape project 'enabled the protection of more than 110,000 hectares of dryland forest owned by the Hadza and Datooga people'. Evidence verbatim."
+  },
+  {
+   "id": "datooga-tanzania",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "MRG 'Barabaig in Tanzania' (curl): 'Efforts by the NGO Ujamaa Community Resource Team helped to secure grazing land under communal title for Barabaig communities as well as other ethnic groups in northern Tanzania.' Supported, but the original copied 9 consecutive words; reworded and attributed.",
+   "text": "With help from the NGO Ujamaa Community Resource Team, Barabaig communities in northern Tanzania gained grazing land held under collective title."
+  },
+  {
+   "id": "batwa-great-lakes",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Rwanda (browser): Batwa are 'deeply knowledgeable on the forests and their resources, with pottery being their major socioeconomic activity.' Supported, but the original repeated the source phrase almost verbatim; reworded.",
+   "text": "Rwanda's Batwa hold deep knowledge of the forest and what it provides, and pottery is their main source of livelihood."
+  },
+  {
+   "id": "batwa-great-lakes",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2023 Burundi (browser): 'Since 2005, following the establishment of ethnic statistics, the Twa now enjoy representation in the country's main decision-making bodies.' Twa = Batwa. Evidence verbatim; as_of 2023 correct."
+  },
+  {
+   "id": "batwa-great-lakes",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "MRG statement 3 Sept 2021 (curl): Uganda's constitutional court directed 'a lower court to determine appropriate compensation for the Batwa', finding Batwa were evicted 'without prior consent' from ancestral lands. Evidence verbatim."
+  },
+  {
+   "id": "baka-cameroon-gabon",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Cameroon (browser): 'the Baka - estimated at around 40,000'; 'The Baka live above all in the eastern and southern regions of Cameroon.' Evidence verbatim."
+  },
+  {
+   "id": "baka-cameroon-gabon",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Cameroon (browser), civil society initiatives in 2025: 'The joint Association Sanguia Baka Buma'a Kpode (ASBABUK)/Ministry of Forestry and Wildlife (MINFOF) workshop held in Batouri focused on the full recognition of Baka Indigenous Peoples as legitimate stakeholders in forest resource management.' The page does not describe ASBABUK as Baka-run; corrected and year added.",
+   "text": "In 2025 a Batouri workshop run by the association ASBABUK and Cameroon's forestry ministry focused on fully recognizing Baka as rightful partners in managing forest resources."
+  },
+  {
+   "id": "baka-cameroon-gabon",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Gabon (browser): Indigenous peoples include the Baka among other groups; 'Their livelihoods and their cultures are inextricably linked to the forest, however, which covers 85% of Gabon.' Evidence verbatim."
+  },
+  {
+   "id": "baaka-car-congo",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "UNESCO ICH 00082 (curl): the Aka vocal tradition is 'contrapuntal polyphony based on four voices, mastered by all members of the Aka community'; 'Inscribed in 2008 ... (originally proclaimed in 2003)'. Evidence verbatim."
+  },
+  {
+   "id": "baaka-car-congo",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2021 CAR (browser): CAR 'ratified ILO Convention 169 in August 2010. It was the first and only African State to ratify this convention'; Aka live in Lobaye, Ombella Mpoko, Sangha-Mbaere and Mambere Kadei. Evidence verbatim."
+  },
+  {
+   "id": "baaka-car-congo",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Dzanga-Sangha site (curl): 'Because of their extraordinary knowledge about the forest, they play a fundamental role in all science, nature conservation and tourism projects'. Evidence verbatim."
+  },
+  {
+   "id": "mbuti-drc",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "IWGIA IW2024 DRC (browser): Law No. 22/030 enacted in 2022 'officially came into force in February 2023, and marked the recognition of the rights of Indigenous peoples ... as well as the exercise of rights to their lands, territories and resources'; the term covers 'the Mbuti, Baka and Batwa peoples'. Evidence verbatim."
+  },
+  {
+   "id": "mbuti-drc",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "UNESCO WHC 718 (curl): the Okapi Wildlife Reserve occupies about one-fifth of the Ituri forest; it contains 'the Mbuti and Efe pygmies, and the forest ecosystem is essential for both their economic and cultural requirements'. Evidence verbatim."
+  },
+  {
+   "id": "imazighen-north-africa",
+   "fact": 0,
+   "verdict": "fixed",
+   "note": "IWGIA IW2026 Morocco (browser): 'The 2011 Constitution officially recognizes the Amazigh identity and language'; the page calls the language Tamazight. Supported, but the original was the source sentence nearly word for word; reworded.",
+   "text": "Amazigh identity and the Amazigh language, Tamazight, have had official recognition in Morocco's Constitution since 2011."
+  },
+  {
+   "id": "imazighen-north-africa",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Algeria (browser): 'After decades of demands and popular struggles, the Amazigh language was finally recognized as a national and official language in Algeria's constitution in 2016.' Evidence verbatim."
+  },
+  {
+   "id": "imazighen-north-africa",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "Amazigh World Congress page 28 Aug 2026 (curl): 'Amazigh Flag Day falls on August 30th (18 Yuct) each year, marking the date the flag was adopted by Amazigh representatives from across Tamazgha (North Africa) and the diaspora' on 30 August 1997. Evidence verbatim."
+  },
+  {
+   "id": "kel-tamasheq-sahara-sahel",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "UNESCO ICH 00891 (curl): Imzad 'is performed by women on a single-stringed bowed instrument known as the Imzad'; 'Women craft the instrument from half a dried, hollowed-out gourd'; 'Inscribed in 2013'. Evidence verbatim."
+  },
+  {
+   "id": "kel-tamasheq-sahara-sahel",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Libya (browser): 'the Fezzan region is traditionally Kel-Tamasheq (Tuareg) territory, including the areas of Murzuq, Sebha, Ubari, Ghat and Ghadames. Libya's Kel-Tamasheq are naturally linked to other Kel-Tamasheq communities living across the borders with Niger and Algeria.' Evidence verbatim."
+  },
+  {
+   "id": "kel-tamasheq-sahara-sahel",
+   "fact": 2,
+   "verdict": "fixed",
+   "note": "IWGIA IW2020 Niger (browser): 'The Tuareg raise camels and goats and live in the north (Agadez and Tahoua) and west (Tillabery)'; 2009 estimate: '8.3%, or 1,219,528, were Tuareg'. The name 'Kel Tamajaq' does not appear on the page and the figures are estimates, not a count; corrected.",
+   "text": "In Niger, Tuareg herders raise camels and goats in the north (Agadez, Tahoua) and west (Tillabéry). A 2009 estimate put them at about 1.2 million, 8.3% of the population."
+  },
+  {
+   "id": "mbororo-cameroon-chad",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Cameroon (browser): 'The Mbororo people living in Cameroon are estimated to number over one million ... They live primarily along the borders with Nigeria, Chad and the Central African Republic.' Evidence verbatim."
+  },
+  {
+   "id": "mbororo-cameroon-chad",
+   "fact": 1,
+   "verdict": "supported",
+   "note": "IWGIA IW2026 Cameroon (browser): 'Three major groups of Mbororo are found in Cameroon: the Wodaabe in the northern region; the Jafun ...; and the Galegi, popularly known as the Aku'. Evidence verbatim."
+  },
+  {
+   "id": "mbororo-cameroon-chad",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "UN DESA UNPFII 'Previous Chairpersons' (curl): 'Ms. Hindou Oumarou Ibrahim | PFII 2024 Session ... is an Indigenous Mbororo woman from Chad'; she 'founded the Association for Indigenous Women and Peoples of Chad (AFPAT)'. Evidence verbatim."
+  },
+  {
+   "id": "yiaku-kenya",
+   "fact": 0,
+   "verdict": "supported",
+   "note": "Kenya News Agency, 12 Nov 2024 (curl and WebFetch): the community in Mukogodo Forest 'has developed an app to assist their upcoming generation in learning the Yiakunte language', with 'audio-based responses to questions in English, Swahili, or Yaiku'. Evidence verbatim."
+  },
+  {
+   "id": "yiaku-kenya",
+   "fact": 1,
+   "verdict": "fixed",
+   "note": "IIED page (curl): 'Since 2003, the Yiaku Laikipiak Trust (YLT) has worked to preserve Yiaku culture, protect Mukogodo Forest'. The IIED page does not call YLT 'community-based' (only the separate KNA article does); removed that word.",
+   "text": "Since 2003 the Yiaku Laikipiak Trust has worked to protect Mukogodo Forest and keep Yiaku culture alive."
+  },
+  {
+   "id": "yiaku-kenya",
+   "fact": 2,
+   "verdict": "supported",
+   "note": "IIED page: 'Women and elders now play a leading role in language instruction, cultural preservation and forest stewardship, while greater participation by young people has strengthened social cohesion'. Evidence verbatim."
+  }
+ ],
+ "names": [
+  {
+   "id": "san-juhoansi-namibia-botswana",
+   "ok": true,
+   "note": "Name source (NJE article) uses Ju|'hoansi throughout (8 occurrences)."
+  },
+  {
+   "id": "san-khwe-southern-africa",
+   "ok": true,
+   "note": "SABC statement uses Khwe in title and body."
+  },
+  {
+   "id": "san-xun-southern-africa",
+   "ok": true,
+   "note": "SABC statement uses '!Xun' once ('heritage of the !Xun and Khwe') and '!Xu' elsewhere; both are listed."
+  },
+  {
+   "id": "san-khomani-south-africa",
+   "ok": true,
+   "note": "UNESCO WHC 1545 uses ǂKhomani with the correct click letter."
+  },
+  {
+   "id": "san-naro-botswana-namibia",
+   "ok": true,
+   "note": "Botswana Daily News page (browser) uses Naro throughout."
+  },
+  {
+   "id": "nama-namibia-south-africa",
+   "ok": true,
+   "note": "UNESCO WHC 1265 uses Nama."
+  },
+  {
+   "id": "khoikhoi-south-africa",
+   "ok": true,
+   "note": "IWGIA IW2026 South Africa (browser) uses Khoikhoi ('Khoikhoi and San peoples')."
+  },
+  {
+   "id": "ovahimba-namibia-angola",
+   "ok": true,
+   "note": "IWGIA IW2026 Namibia (browser) uses Ovahimba."
+  },
+  {
+   "id": "maasai-kenya-tanzania",
+   "ok": true,
+   "note": "MRG page uses Maasai."
+  },
+  {
+   "id": "samburu-kenya",
+   "ok": true,
+   "note": "Reteti site uses Samburu."
+  },
+  {
+   "id": "ogiek-kenya",
+   "ok": true,
+   "note": "Official OPDP site uses Ogiek."
+  },
+  {
+   "id": "sengwer-kenya",
+   "ok": true,
+   "note": "MRG page uses Sengwer."
+  },
+  {
+   "id": "endorois-kenya",
+   "ok": true,
+   "note": "Official Endorois Welfare Council site uses Endorois."
+  },
+  {
+   "id": "hadzabe-tanzania",
+   "ok": true,
+   "note": "IWGIA IW2026 Tanzania (browser) uses Hadzabe."
+  },
+  {
+   "id": "datooga-tanzania",
+   "ok": true,
+   "note": "MRG Hadza page uses Datooga; IWGIA spelling Datoga is listed in also."
+  },
+  {
+   "id": "batwa-great-lakes",
+   "ok": true,
+   "note": "IWGIA IW2026 Rwanda (browser) uses Batwa."
+  },
+  {
+   "id": "baka-cameroon-gabon",
+   "ok": true,
+   "note": "IWGIA IW2026 Cameroon (browser) uses Baka."
+  },
+  {
+   "id": "baaka-car-congo",
+   "ok": true,
+   "note": "Dzanga-Sangha page uses BaAka (14 occurrences)."
+  },
+  {
+   "id": "mbuti-drc",
+   "ok": true,
+   "note": "UNESCO WHC 718 uses Mbuti."
+  },
+  {
+   "id": "imazighen-north-africa",
+   "ok": true,
+   "note": "Amazigh World Congress page writes the plural in Tifinagh (ⵉⵎⴰⵣⵉⵖⴻⵏ, Imaziɣen) and uses Amazigh/Amazighs in Latin script; Imazighen is the standard Latin transliteration of that plural, though the Latin spelling itself does not appear on the page."
+  },
+  {
+   "id": "kel-tamasheq-sahara-sahel",
+   "ok": true,
+   "note": "IWGIA IW2026 Libya (browser) uses Kel-Tamasheq (hyphenated); same name."
+  },
+  {
+   "id": "mbororo-cameroon-chad",
+   "ok": true,
+   "note": "IWGIA IW2026 Cameroon (browser) uses Mbororo."
+  },
+  {
+   "id": "yiaku-kenya",
+   "ok": true,
+   "note": "IIED page uses Yiaku."
+  }
+ ]
+}

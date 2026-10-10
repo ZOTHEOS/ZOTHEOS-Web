@@ -1,0 +1,2239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ollamaliztli</title>
+<style>
+html,body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif}
+#zgOpen{position:fixed;left:24px;top:50%;width:44px;height:44px;margin-top:-22px;border:0;background:transparent;cursor:pointer;padding:0}
+#zgOpen span{display:block;width:14px;height:14px;margin:auto;border-radius:50%;background:#fff;box-shadow:inset -2px -2px 0 #b8b8b8}
+#zgOpen:focus-visible{outline:2px solid #fff;outline-offset:2px}
+</style>
+</head>
+<body>
+<button id="zgOpen" type="button" aria-label="Play ollamaliztli, the ballgame"><span></span></button>
+<script>
+(function () {
+'use strict';
+// Terms used, with gloss and source, for a future community advisor. Visible forms derive from here.
+var TERMS = {
+  ollamaliztli: ['ōllamalīztli', 'the ballgame', 'Nahuatl'],
+  olli: ['ōlli', 'rubber, the ball', 'Nahuatl'],
+  tlachtli: ['tlachtli', 'the court', 'Nahuatl'],
+  tlachtemalacatl: ['tlachtemalacatl', 'the stone ring of the court', 'Nahuatl'],
+  xicalcoliuhqui: ['xicalcoliuhqui', 'step-fret, twisted gourd', 'Nahuatl'],
+  xayacatl: ['xāyacatl', 'face; mask', 'Molina 1571 f. 158r; Karttunen 1992 p. 322; Online Nahuatl Dictionary'],
+  ocotl: ['ocotl', 'pine, fatwood, a pine torch', 'Online Nahuatl Dictionary, entry ocotl']
+};
+function up1(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+function plain(s) { return s.normalize ? s.normalize('NFD').replace(/[̀-ͯ]/g, '') : s; }
+var NAME = TERMS.ollamaliztli[0], OLLI = TERMS.olli[0];
+// All visible words live here so an advisor can change them without touching code.
+var TEXT = {
+  title: up1(plain(NAME)),
+  gloss: 'The ballgame of Mesoamerica. ' + up1(OLLI) + ' is the rubber ball.',
+  drop: 'Drop', echo: 'Echo',
+  dropDesc: 'Guide the ' + OLLI + ' down the carved wall and strike it through the stone ring.',
+  echoDesc: 'Strike the ' + OLLI + ' to see the dark. The Stone Face hears every knock.',
+  echoNote: 'A tense chase in the dark. No gore.',
+  today: "Today's court", fresh: 'New court', code: 'Court code', calm: 'Calm pace', assist: 'Assist',
+  bad: "Code not found. Using today's court.",
+  firstRing: 'Strike with the hip. In the old game, a ring pass was rare and decisive.',
+  soft: 'Too soft. Strike it through.', nofoot: 'No footing. Strike when the ball touches stone.',
+  paused: 'Paused.', resume: 'Resume', restart: 'Restart level', close: 'Close', about: 'About', back: 'Back',
+  time: 'Time ran out.', left: 'The ball left the court.',
+  rare: 'A rare pass.', clear: 'Level clear.', cl: 'clear.', pass: 'Through the ring.',
+  replay: 'Replay this court', other: 'Other mode', best: 'Best', noBest: 'Assist run, not saved as best.',
+  done: 'The court is yours.', over: 'Rest now. The court will wait.',
+  dropHint: 'Left and right, or the mouse, to tilt. Space or click to drop and to strike.',
+  dropTouch: 'Hold left or right to tilt. Tap to drop and to strike.',
+  echoHint: 'Arrows or the mouse to walk. Space or click to strike.',
+  echoTouch: 'Drag anywhere to walk. Tap to strike. Flick a second finger to strike that way.',
+  pause: 'Pause', play: 'Play', level: 'Level', of: 'of', score: 'Score',
+  dropLv: ['The still ring', 'The sliding ring', 'The turning ring', 'The paired rings', 'The walking ring'],
+  echoLv: ['The stone face', 'Fallen tesserae', 'The turning face', 'The moving stones', 'The gathered face'],
+  echoTw: ['Every knock lights the stone around it. Every knock is heard.',
+    'Pieces of its mosaic come loose. If one is touched, it hears.',
+    'It turns on a rhythm. While it faces, it cannot move. While it moves, it cannot see.',
+    'Some stones slide open and shut. Your memory of them may be wrong.',
+    'It gathers where the loudest knock was. Watch for its outline.'],
+  temper: ['It listens.', 'It watches.', 'It waits.'],
+  law: 'The Stone Face. If you can see its eyes, it can see you.',
+  firstCourt: 'A lit court. Strike the ' + OLLI + ' through its stone ring.',
+  reach: 'The ' + OLLI + ' is out of reach.',
+  claimed: 'Ring claimed. This court is safe ground.',
+  sees: 'The Stone Face sees you.', lostYou: 'The Stone Face lost you.', wakes: 'The Stone Face wakes.', near: 'The Stone Face is near.',
+  corners: 'Turn corners. Corners slow the Stone Face.',
+  plays: 'It plays the ' + OLLI + ' back.',
+  waits: 'It will not enter a claimed court.',
+  marked: 'The Stone Face touched you. Once more and it turns you back.',
+  turned: 'The Stone Face turned you back.',
+  greatOpen: 'Every ring is claimed. The Great Ring is open. The rings will fall silent one by one.',
+  silentOne: 'A ring fell silent.', silentAll: 'The rings fell silent.',
+  letPass: 'The Stone Face lets you pass.', unseen: 'Unseen.',
+  tessera: 'A tessera clicked. It heard that.',
+  echoDone: 'The labyrinth lets you pass.',
+  rings: 'Rings', silence: 'Silence', markedSr: 'Marked',
+  natLabel: 'Indigenous nations today', also: 'Also known as', sayIt: 'Say it:', pronFrom: 'Pronunciation from', asOf: 'As of',
+  source: 'Source:', checked: 'Checked', stale: 'Checked over a year ago.', updated: 'List updated', nations: 'nations',
+  prev: 'Previous', next: 'Next', site: "Nation's site", cont: 'Continue', another: 'Another fact', met: 'Nations you met this run',
+  natFail: 'The nations list could not load. Nothing is shown rather than something unchecked.',
+  contact: 'To correct or remove an entry, write to', fullList: 'The full list, with every source',
+  aboutLines: [
+    up1(NAME) + ' is the Nahuatl name for the Mesoamerican ballgame, played for more than three thousand years from Mexico to Central America, with ballcourts as far north as present-day Arizona.',
+    'Ulama, its descendant, is still played today in Sinaloa, Mexico.',
+    'The step-fret, ' + TERMS.xicalcoliuhqui[0] + ' in Nahuatl, is carved and woven by many peoples, from Mitla in Oaxaca to the Pueblos of the Southwest, each with its own names.',
+    'The Stone Face in Echo is an original design made for this game. It draws on the stone masks of Teotihuacan, which were not made to be worn and whose eyes and teeth were once inlaid with shell and bone, and on the obsidian and pyrite that Mesoamerican artists used for shining pupils. It stands for no god, no person and no living tradition. It keeps the labyrinth, and the trial is to pass it.',
+    up1(TERMS.xayacatl[0]) + ' is a Nahuatl word for face and for mask.',
+    'Ocote, the resinous pine that lights the courts, takes its name from the Nahuatl ' + TERMS.ocotl[0] + '.',
+    'Mask making is a living art in Mexico today, from the dance masks of Guerrero to the carved wooden masks of the Parachicos of Chiapa de Corzo, which UNESCO added to its list of intangible cultural heritage in 2010. The Stone Face copies none of them.',
+    'Indigenous nations today: each card shows one fact with its source and the date it was checked. Facts come from each nation\'s own published sources where possible, and from public records otherwise. Corrections are welcome.',
+    'Sources: INAH; Saint Louis Art Museum; Karl Taube, The Iconography of Mirrors at Teotihuacan; UNESCO; Molina 1571 and Karttunen 1992 through the Online Nahuatl Dictionary, Wired Humanities Projects, University of Oregon.',
+    'Sound: David Alanzo Garcia.'
+  ]
+};
+// The overlay's own styles, injected on open and removed on close, so a host page can mount it as is.
+var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;color:#fff;z-index:2147483000;overflow:hidden;overscroll-behavior:contain;font-family:var(--zth-game-font,system-ui,sans-serif);-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%}' +
+  '#zg *{box-sizing:border-box}#zg:focus{outline:none}' +
+  '#zg canvas{position:absolute;left:0;top:0;display:block;touch-action:none;max-width:none}' +
+  '#zg button,#zg input,#zg a.btn{font:inherit;font-size:16px;color:#fff;background:#000;border:1.5px solid #e6e6e6;border-radius:0;min-height:44px;min-width:44px;padding:0 18px;margin:0;letter-spacing:.06em;cursor:pointer}' +
+  '#zg a.btn{display:inline-flex;align-items:center;text-decoration:none}#zg a{color:#fff}' +
+  '#zg input{cursor:text;width:9.5em;text-transform:uppercase;letter-spacing:.18em;text-align:center}' +
+  '#zg input::placeholder{color:#b8b8b8;opacity:1;letter-spacing:.04em;text-transform:none}' +
+  '#zg button:focus-visible,#zg input:focus-visible,#zg a:focus-visible{outline:2px solid #fff;outline-offset:2px}' +
+  '#zg [aria-pressed=true],#zg [aria-checked=true]{background:#fff;color:#000}' +
+  '#zg .hud{position:absolute;left:0;right:0;top:0;height:52px;background:#000;display:flex;align-items:center;gap:18px;padding:0 6px 0 16px;font-size:15px;letter-spacing:.1em;pointer-events:none;font-variant-numeric:tabular-nums}' +
+  '#zg .hud b{font-weight:600}#zg .hud button{pointer-events:auto;margin-left:auto;border-color:#b8b8b8;padding:0}' +
+  '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}' +
+  '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
+  '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
+  '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan>:last-child{margin-bottom:auto}#zg .solid{background:#000}' +
+  '#zg h1,#zg h2{margin:0;font:inherit;font-weight:300;color:#fff;text-transform:uppercase;letter-spacing:.24em}' +
+  '#zg h1{font-size:clamp(28px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}' +
+  '#zg p{margin:0;max-width:30em;font-size:16px;line-height:1.5;color:#fff}#zg .sub{color:#b8b8b8}' +
+  '#zg .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:stretch}' +
+  '#zg #zgTi{padding:24px 48px}' +
+  '#zg .mode{display:block;width:min(330px,100%);padding:14px 18px;text-align:left;min-height:64px}' +
+  '#zg .mode b{display:block;font-size:20px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:4px}' +
+  '#zg .mode span{display:block;font-size:15px;line-height:1.4;letter-spacing:.02em;color:#e6e6e6}#zg .mode .sub{font-size:13px;color:#b8b8b8;margin-top:4px}' +
+  '#zg .olli{display:block;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset -3px -3px 0 #b8b8b8;margin-bottom:6px}' +
+  '#zg .big{font-size:40px;letter-spacing:.08em;font-weight:300;font-variant-numeric:tabular-nums}' +
+  '#zg .cap{position:absolute;left:16px;right:16px;top:60px;text-align:center;font-size:16px;line-height:1.75;pointer-events:none;transition:opacity .15s;opacity:0}' +
+  '#zg .cap span{background:#000;padding:3px 10px;-webkit-box-decoration-break:clone;box-decoration-break:clone}' +
+  '#zg .nh{width:min(560px,100%);border:1.5px solid #b8b8b8;padding:14px 16px;text-align:left;display:flex;flex-direction:column;gap:10px}' +
+  '#zg .nh .row{justify-content:flex-start}#zg .nc{transition:opacity .15s}' +
+  '#zg .nc p{margin:0 0 6px;font-size:15px;color:#e6e6e6;max-width:none}' +
+  '#zg .nc .nl{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#b8b8b8}' +
+  '#zg .nn{margin:2px 0 6px;font:inherit;font-size:24px;font-weight:400;color:#fff;text-transform:none;letter-spacing:normal}' +
+  '#zg .nc .nf{font-size:16px;color:#fff}#zg .nk{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#b8b8b8;border:1px solid #8c8c8c;padding:0 6px;margin-right:8px}' +
+  '#zg .nc .ns,#zg .nc .ns a{font-size:14px;color:#b8b8b8}#zg .nb{font-size:15px;letter-spacing:normal}' +
+  '#zg .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
+  '#zg [hidden]{display:none!important}' +
+  '@media (max-height:520px){#zg .pan{gap:8px;padding:10px 16px}#zg #zgTi{padding:10px 40px}#zg h1{font-size:30px}#zg .mode{padding:8px 14px;min-height:0}#zg .mode b{font-size:17px}}' +
+  '@media (prefers-reduced-motion:reduce){#zg .cap,#zg .nc{transition:none}}';
+// The one ornament: a step-fret on a 6 unit grid (stairs then a square hook). Swap as data.
+var FRET = { grid: 6, pts: [[0,6],[0,4.5],[1.5,4.5],[1.5,3],[3,3],[3,0],[6,0],[6,4],[4.5,4],[4.5,1.8]] };
+// [gravity, tilt accel, max fall, rows, level time, ring time]
+var DPAR = [[820,620,520,12,40,30],[900,660,560,16,43,28],[990,700,600,20,46,26],[1080,740,640,24,50,24],[1180,780,680,28,54,22]];
+var RND = Math.round, ABS = Math.abs, MAX = Math.max, MIN = Math.min, FLR = Math.floor, SQRT = Math.sqrt, CEIL = Math.ceil;
+var ALPH = '23456789ABCDEFGHJKMNPQRSTUVWXYZ', SPACE = 887503681, BR = 9, STEP = 1 / 120;
+
+function mix(a, b) { var h = (a ^ Math.imul(b | 0, 0x9E3779B9)) >>> 0; h = Math.imul(h ^ (h >>> 16), 0x85EBCA6B); h = Math.imul(h ^ (h >>> 13), 0xC2B2AE35); return (h ^ (h >>> 16)) >>> 0; }
+function rng(s) { s >>>= 0; return function () { s = (s + 0x6D2B79F5) >>> 0; var t = Math.imul(s ^ (s >>> 15), s | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+function enc(n) { var s = ''; for (var i = 0; i < 6; i++) { s = ALPH.charAt(n % 31) + s; n = FLR(n / 31); } return s; }
+function dec(s) { s = String(s || '').toUpperCase().replace(/[^0-9A-Z]/g, ''); if (s.length !== 6) return -1; var n = 0; for (var i = 0; i < 6; i++) { var k = ALPH.indexOf(s.charAt(i)); if (k < 0) return -1; n = n * 31 + k; } return n; }
+function pretty(n) { var c = enc(n); return c.slice(0, 3) + '-' + c.slice(3); }
+function hashStr(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return mix(h >>> 0, 7); }
+function p2(n) { return (n < 10 ? '0' : '') + n; }
+function today(m) { var d = new Date(); return hashStr(d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate()) + m) % SPACE; }
+function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+function num(n) { return String(RND(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+function mmq(q) { try { return window.matchMedia(q).matches; } catch (e) { return false; } }
+function store(k, v) { try { if (v === undefined) return +localStorage.getItem(k) || 0; localStorage.setItem(k, v); } catch (e) {} return 0; }
+
+var API = window.ZTH_GAME = { version: '2.0.0', onClose: null, onSound: null };
+var root, sty, cv, ctx, E = {}, W, H, DPR, raf = 0, last = 0, acc = 0, ls = [], opts = {}, rzT = 0, capT = 0, IN = [], SC = {};
+var scr = '', mode = 'drop', calm = false, assist = false, RM = false, coarse = false, court = 'today', runSeed = 0, G = null, beat = null, told = 0, ET = 0;
+var inp = { l: 0, r: 0, u: 0, d: 0, sb: 0, pt: 0, st: 0, sx: 0, sy: 0, sox: 0, soy: 0, md: 0, mdT: 0, mw: 0, ph: 0, px: 0, py: 0, sa: 0, sax: 0, say: 0 }, ptrs = {};
+
+function snd(n, d) { if (API.onSound) { try { API.onSound(n, d); } catch (e) {} } }
+function on(t, e, f, o) { t.addEventListener(e, f, o || false); ls.push([t, e, f, o || false]); }
+function say(m) { if (E.live) { E.live.textContent = ''; setTimeout(function () { if (E.live) E.live.textContent = m; }, 30); } }
+function cap(m, t) { if (!E.cap) return; E.capS.textContent = m; E.cap.style.opacity = m ? 1 : 0; capT = m ? (t || 3.2) : 0; }
+function capAt(l, r, t) { if (!E.cap) return; var s = E.cap.style; s.left = l + 'px'; s.right = r + 'px'; s.top = t + 'px'; }
+
+// ---------- shell ----------
+function btn(id, t, c, x) { return '<button type="button" id="zg' + id + '"' + (c ? ' class="' + c + '"' : '') + (x || '') + '>' + t + '</button>'; }
+function sw(id, t) { return btn(id, t || (id === 'As' ? TEXT.assist : TEXT.calm), '', ' role="switch"'); }
+function row(h) { return '<div class="row">' + h + '</div>'; }
+function mbtn(id, t, d, n) { return btn(id, '<b>' + t + '</b><span>' + d + '</span>' + (n ? '<span class="sub">' + n + '</span>' : ''), 'mode'); }
+function abtn(id, t) { return '<a class="btn" id="zg' + id + '" target="_blank" rel="noopener noreferrer" hidden>' + t + '</a>'; }
+function build() {
+  var T = TEXT, d = document.createElement('div');
+  sty = document.createElement('style'); sty.id = 'zgS'; if (opts.nonce) sty.nonce = opts.nonce; sty.textContent = CSS;
+  document.head.appendChild(sty);
+  d.innerHTML = '<div id="zg" role="dialog" aria-modal="true" aria-labelledby="zgT" tabindex="-1">' +
+    '<canvas id="zgC" role="img" aria-label="' + T.title + '"></canvas>' +
+    '<div class="hud" id="zgHud" hidden><span id="zgLv"></span><span id="zgSc"></span><span id="zgTm"></span>' + btn('Pa', '<span aria-hidden="true">II</span><span class="sr">' + T.pause + '</span>') + '</div>' +
+    '<div class="cap" id="zgCap" aria-hidden="true"><span></span></div>' +
+    '<div class="pan" id="zgTi"><h1 id="zgT">' + T.title + '</h1><p class="sub">' + T.gloss + '</p>' +
+      row(mbtn('Md', T.drop, T.dropDesc) + mbtn('Me', T.echo, T.echoDesc, T.echoNote)) +
+      '<div class="row" role="group" aria-label="Court">' + btn('Ct', T.today) + btn('Cn', T.fresh) + '<input id="zgCode" aria-label="' + T.code + '" aria-describedby="zgCm" placeholder="' + T.code + '" maxlength="7" autocomplete="off" spellcheck="false" enterkeyhint="go"></div>' +
+      '<p class="sub" id="zgCm" hidden></p>' +
+      row(sw('Ca') + btn('Ab', T.about) + btn('X', T.close)) +
+      '<section class="nh" id="zgNh" aria-label="' + T.natLabel + '" hidden><div class="nc" id="zgNc"></div>' +
+        row(btn('Nv', T.prev) + btn('Nx', T.next) + btn('Nz', T.pause, '', ' aria-pressed="false"') + abtn('Ns', T.site)) + '<p class="sub" id="zgNu"></p></section></div>' +
+    '<div class="pan solid" id="zgPp" hidden><h2>' + T.paused + '</h2><p id="zgPs" class="sub"></p>' +
+      row(btn('Re', T.resume) + btn('Rs', T.restart)) + row(sw('Ca2') + sw('As') + btn('Ab2', T.about) + btn('X2', T.close)) + '</div>' +
+    '<div class="pan solid" id="zgRp" hidden><i class="olli" aria-hidden="true"></i><h2 id="zgRh"></h2><p id="zgRm"></p><div class="big" id="zgRn"></div><p id="zgRi" class="sub"></p>' +
+      '<div class="nh" id="zgRx" hidden><p class="sub">' + T.met + '</p><div class="row" id="zgRl"></div><div class="nc" id="zgRc" hidden></div>' + btn('Rb', T.back, '', ' hidden') + '</div>' +
+      row(btn('Rc', T.replay) + btn('Ag', T.fresh)) + row(btn('Om', T.other) + btn('X3', T.close)) + '</div>' +
+    '<div class="pan solid" id="zgNp" hidden><p id="zgNpm"></p><div class="nh"><div class="nc" id="zgNpc"></div></div>' +
+      row(btn('Nk', T.cont) + btn('Na', T.another)) + row(abtn('Nps', T.site) + btn('X4', T.close)) + '</div>' +
+    '<div class="pan solid" id="zgAp" hidden><h2>' + T.title + '</h2><p>' + T.aboutLines.join('</p><p>') + '</p>' +
+      '<section class="nh" id="zgAn" hidden><p class="sub">' + T.natLabel + '</p><div class="row" id="zgAl"></div><div class="nc" id="zgAc" hidden></div>' + btn('Ab3', T.back, '', ' hidden') +
+        '<p class="sub" id="zgAm"></p>' + abtn('Ap2', T.fullList) + '</section>' + btn('Bk', T.back) + '</div>' +
+    '<div class="sr" id="zgLive" aria-live="polite"></div></div>';
+  root = d.firstChild;
+  (opts.parent || document.body).appendChild(root);
+  if (opts.font) root.style.fontFamily = opts.font;
+  'C Hud Lv Sc Tm Pa Cap Ti Pp Ps Rp Rh Rm Rn Ri Ap Live Ca Ca2 As Ct Cn Code Cm Nh Nc Nz Ns Nu Np Npm Npc Nps Rx Rl Rc Rb An Al Ac Ab3 Am Ap2'.split(' ').forEach(function (k) { E[k] = root.querySelector('#zg' + k); });
+  E.live = E.Live; E.cap = E.Cap; E.capS = E.Cap.firstChild;
+  cv = E.C; ctx = cv.getContext('2d');
+  var c = function (i, f) { on(root.querySelector('#zg' + i), 'click', f); };
+  c('Md', function () { start('drop'); }); c('Me', function () { start('echo'); });
+  c('Ct', function () { pickCourt('today'); }); c('Cn', function () { pickCourt('new'); });
+  c('Ca', togCalm); c('Ca2', togCalm); c('As', function () { assist = !assist; syncT(); });
+  c('Ab', function () { panel('about'); }); c('Ab2', function () { panel('about'); });
+  c('Bk', function () { panel(G ? 'pause' : 'title'); });
+  c('X', close); c('X2', close); c('X3', close); c('X4', close);
+  c('Pa', pause); c('Re', resume); c('Rs', restartLevel);
+  c('Ag', function () { court = 'new'; start(mode); }); c('Rc', function () { start(mode, runSeed); });
+  c('Om', function () { start(mode === 'drop' ? 'echo' : 'drop'); });
+  c('Nv', function () { herald(-1, 1); }); c('Nx', function () { herald(1, 1); }); c('Nz', natPause);
+  c('Nk', function () { level(G.L + 1); panel('play'); }); c('Na', function () { if (natCur) natCard(E.Npc, natCur, G.L + 1, 'card'); });
+  c('Al', function (e) { natOpen(e, E.Al, E.Ac, E.Ab3, 'about'); }); c('Ab3', function () { natBack(E.Al, E.Ac, E.Ab3); });
+  c('Rl', function (e) { natOpen(e, E.Rl, E.Rc, E.Rb, 'result'); }); c('Rb', function () { natBack(E.Rl, E.Rc, E.Rb); });
+  on(E.Nh, 'mouseenter', function () { natIn |= 1; natSched(); }); on(E.Nh, 'mouseleave', function () { natIn &= 2; natSched(); });
+  on(E.Nh, 'focusin', function () { natIn |= 2; natSched(); }); on(E.Nh, 'focusout', function () { natIn &= 1; natSched(); });
+  on(E.Code, 'input', codeIn);
+}
+function pickCourt(k) { court = k; E.Code.value = ''; E.Cm.hidden = true; syncT(); }
+function codeIn() {
+  var v = E.Code.value.replace(/[^0-9A-Za-z]/g, ''), n = dec(v), m = '';
+  if (n >= 0) { court = 'code'; runSeed = n; m = TEXT.code + ' ' + pretty(n) + '.'; }
+  else { if (court === 'code') court = 'today'; if (v.length >= 6) m = TEXT.bad; }
+  E.Cm.textContent = m; E.Cm.hidden = !m; if (m) say(m);
+  syncT();
+}
+function togCalm() { calm = !calm; syncT(); if (G) cap(TEXT.calm + (calm ? ': on.' : ': off.') + ' Applies from the next level.', 2.4); }
+function syncT() {
+  E.Ct.setAttribute('aria-pressed', court === 'today'); E.Cn.setAttribute('aria-pressed', court === 'new');
+  E.Ca.setAttribute('aria-checked', calm); E.Ca2.setAttribute('aria-checked', calm); E.As.setAttribute('aria-checked', assist);
+}
+function panel(p) {
+  scr = p;
+  E.Ti.hidden = p !== 'title'; E.Pp.hidden = p !== 'pause'; E.Rp.hidden = p !== 'result'; E.Ap.hidden = p !== 'about'; E.Np.hidden = p !== 'card';
+  E.Hud.hidden = !(p === 'play' || p === 'pause'); E.Pa.hidden = p !== 'play';
+  syncT();
+  if (p === 'title') herald(0, 0); else { clearTimeout(natT); clearTimeout(natF); }
+  if (p === 'about') { E.Al.hidden = !NAT; E.Ac.hidden = E.Ab3.hidden = true; }
+  var f = { title: 'Md', pause: 'Re', result: 'Rc', about: 'Bk', card: 'Nk' }[p];
+  if (f) root.querySelector('#zg' + f).focus(); else root.focus();
+  cv.setAttribute('aria-label', p === 'play' ? TEXT.title + ': ' + (mode === 'drop' ? TEXT.drop + '. ' + TEXT.dropHint : TEXT.echo + '. ' + TEXT.echoHint) : TEXT.title);
+  kick();
+}
+
+// ---------- API ----------
+// open(mode, opts): mode 'drop', 'echo' (or 'run', kept for old links, which opens Echo) or none for the title.
+// opts: seed, calm, returnFocus, parent, font, nonce, nations (array or same-origin URL), nationsUrl, nationsUpdated,
+// nationCards (false keeps nation cards off the level breaks), contact, nationsPage.
+API.open = function (m, o) {
+  var rf = (o && o.returnFocus) || (root ? opts.returnFocus : document.activeElement), k;
+  if (root) teardown();
+  opts = {}; for (k in o) opts[k] = o[k]; opts.returnFocus = rf;
+  if (m === 'run') m = 'echo';
+  RM = mmq('(prefers-reduced-motion: reduce)'); coarse = mmq('(pointer: coarse)');
+  calm = opts.calm != null ? !!opts.calm : RM; assist = false;
+  var hs = /olli=([0-9A-Za-z-]+)/.exec(location.hash || ''), n = dec(opts.seed || (hs && hs[1]));
+  court = n >= 0 ? 'code' : 'today'; runSeed = n >= 0 ? n : 0;
+  // a visit cursor, so each visit continues to new nations (the order itself is the same for everyone on a day)
+  natV = store('zth_olli_nv'); store('zth_olli_nv', natV + 1);
+  NAT = null; NP = []; NATst = 0; natP = 0; natIn = 0; NMET = []; natCur = null;
+  build(); bind(); resize();
+  k = document.body.children;
+  for (var i = 0; i < k.length; i++) if (!k[i].contains(root) && !k[i].hasAttribute('inert') && k[i].tagName !== 'SCRIPT') { k[i].setAttribute('inert', ''); IN.push(k[i]); }
+  if (n >= 0) { E.Code.value = pretty(n); codeIn(); }
+  natLoad(); natUI();
+  if (m === 'drop' || m === 'echo') start(m, n >= 0 ? n : null); else panel('title');
+};
+API.isOpen = function () { return !!root; };
+function teardown() {
+  cancelAnimationFrame(raf); raf = 0; clearTimeout(rzT); clearTimeout(natT); clearTimeout(natF);
+  if (xhr) { try { xhr.abort(); } catch (e) {} xhr = null; }
+  for (var i = 0; i < ls.length; i++) ls[i][0].removeEventListener(ls[i][1], ls[i][2], ls[i][3]);
+  for (i = 0; i < IN.length; i++) IN[i].removeAttribute('inert');
+  if (root && root.parentNode) root.parentNode.removeChild(root);
+  if (sty && sty.parentNode) sty.parentNode.removeChild(sty);
+  ls = []; IN = []; SC = {}; BGr = -1; root = sty = cv = ctx = null; E = {}; G = null; ptrs = {}; beat = null; scr = ''; GR = null; NAT = null; NP = []; NMET = []; natCur = null;
+}
+function close() {
+  if (!root) return;
+  teardown();
+  if (opts.returnFocus && opts.returnFocus.focus) try { opts.returnFocus.focus(); } catch (e) {}
+  if (API.onClose) { try { API.onClose(); } catch (e) {} }
+}
+API.close = close;
+/*T*/API._lv = function (L) { level(L); };
+API._tick = function (n, bot) { for (var i = 0; i < n && scr === 'play'; i++) { if (bot) bot(G, inp); if (beat) { beat.t -= STEP; if (beat.t <= 0) { var f = beat.f; beat = null; f(); } } else G.step(STEP); if (inp.sb > 0 && mode === 'drop') inp.sb -= STEP; } return scr; }; API._inp = inp; API._fail = function (m) { fail(m); }; API._beat = function (v) { if (arguments.length) beat = v; return beat; }; API._lvl = API._lv;
+API._dbg = function () { return { scr: scr, mode: mode, G: G, seed: runSeed, ls: ls.length, raf: raf, beat: beat, xhr: !!xhr, nat: NAT ? NAT.length : 0, natSt: NATst }; };
+API._echo = function () { return G; };
+API._sim = function (m, seed, L, o) { opts = o || {}; mode = m; runSeed = typeof seed === 'number' ? seed : dec(seed); calm = !!opts.calm; assist = !!opts.assist; G = { score: 0, lives: 3 }; level(L || 0); scr = 'play'; return G; };
+API._ev = function (s) { return eval(s); };
+API._x = function () { return { GR: GR, ZN: ZN, FB: FB, LC: LC, MEM: MEM, VIS: VIS, LIT: LIT, DT: DT, DF: DF, DP: DP, WV: WV, JP: JP, SF: SF, EW: EW, EH: EH, EN: EN, BLK: BLK, genTry: genTry, validate: validate, bfs: bfs, los: los, mix: mix, rng: rng, label: label, runs: runs, cdeg: cdeg, deg: deg, tOf: tOf, at: at }; };/*T*/
+
+// ---------- input: handlers only fill inp; no game logic runs here ----------
+var KD = { ArrowLeft: 4, KeyA: 4, ArrowRight: 2, KeyD: 2, ArrowUp: 1, KeyW: 1, ArrowDown: 3, KeyS: 3 };
+function bind() {
+  on(window, 'resize', function () { clearTimeout(rzT); rzT = setTimeout(resize, 100); });
+  on(document, 'visibilitychange', function () { if (document.hidden) pause(); });
+  on(window, 'blur', pause);
+  on(document, 'keydown', key);
+  on(document, 'keyup', function (e) { var d = KD[e.code]; if (d === 4) inp.l = 0; if (d === 2) inp.r = 0; if (d === 1) inp.u = 0; if (d === 3) inp.d = 0; });
+  on(cv, 'pointerdown', pd); on(cv, 'pointermove', pm); on(cv, 'pointerup', pu); on(cv, 'pointercancel', pu);
+  on(cv, 'pointerleave', function (e) { if (e.pointerType === 'mouse') { inp.pt = 0; inp.ph = 0; } });
+  on(cv, 'contextmenu', function (e) { e.preventDefault(); });
+}
+function key(e) {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  var k = e.code, d = KD[k];
+  if (k === 'Tab') return trap(e);
+  if (scr === 'play') {
+    if (k === 'KeyP' || k === 'Escape') { e.preventDefault(); pause(); return; }
+    if (mode === 'echo') {
+      if (d) { e.preventDefault(); inp.mw = 0; if (d === 4) inp.l = 1; if (d === 2) inp.r = 1; if (d === 1) inp.u = 1; if (d === 3) inp.d = 1; }
+      if ((k === 'Space' || k === 'KeyJ' || k === 'KeyK') && !e.repeat) { e.preventDefault(); inp.sb = 1; inp.sa = 0; }
+      return;
+    }
+    if (d) { e.preventDefault(); inp.pt = 0; if (d === 4) inp.l = 1; if (d === 2) inp.r = 1; if (d === 1 && !e.repeat) inp.sb = 0.14; }
+    if (k === 'Space') { e.preventDefault(); if (!e.repeat) inp.sb = 0.14; }
+    return;
+  }
+  if (scr === 'pause') { if (k === 'KeyP' || k === 'Escape') { e.preventDefault(); resume(); } else if (k === 'KeyR') restartLevel(); return; }
+  if (scr === 'result' && k === 'KeyR') { start(mode, runSeed); return; }
+  if (scr === 'card' && k === 'Escape') { e.preventDefault(); level(G.L + 1); panel('play'); return; }
+  if (k === 'Enter' && e.target === E.Code) { e.preventDefault(); start('drop'); return; }
+  if (k === 'Escape') { e.preventDefault(); if (scr === 'about') panel(G ? 'pause' : 'title'); else close(); }
+}
+function trap(e) {
+  var f = [].filter.call(root.querySelectorAll('button,input,a[href]'), function (b) { return b.offsetParent !== null; });
+  if (!f.length) return;
+  var i = f.indexOf(document.activeElement);
+  if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+}
+function pd(e) {
+  if (scr !== 'play') return;
+  e.preventDefault(); try { cv.setPointerCapture(e.pointerId); } catch (x) {}
+  var n = 0, m = e.pointerType === 'mouse', k, p;
+  for (k in ptrs) n++;
+  p = ptrs[e.pointerId] = { x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t: Date.now(), m: m, sw: 0, lx: e.clientX, ly: e.clientY, lt: Date.now(), vx: 0, vy: 0, ro: '' };
+  if (mode === 'drop') { if (m || n) inp.sb = 0.14; if (!m) ptilt(); return; }
+  inp.px = e.clientX; inp.py = e.clientY;
+  if (m) { if (e.button === 2) { inp.sb = 1; inp.sa = 1; p.ro = 'x'; } else { p.ro = 'm'; inp.md = 1; inp.mdT = performance.now(); } return; }
+  if (!inp.st) { p.ro = 's'; inp.st = 1; inp.sox = e.clientX; inp.soy = e.clientY; inp.sx = inp.sy = 0; } else p.ro = 'a';
+}
+function pm(e) {
+  if (mode === 'drop' && e.pointerType === 'mouse') { if (scr === 'play') { var dm = e.clientX - W / 2; inp.pt = ABS(dm) < W * 0.03 ? 0 : clamp(dm / (W * 0.18), -1, 1); } return; }
+  if (mode === 'echo' && e.pointerType === 'mouse') { inp.px = e.clientX; inp.py = e.clientY; inp.ph = 1; }
+  var p = ptrs[e.pointerId], dx, dy, d, t = Date.now(); if (!p) return;
+  p.x = e.clientX; p.y = e.clientY;
+  if (t > p.lt) { p.vx = (p.x - p.lx) / (t - p.lt) * 1000; p.vy = (p.y - p.ly) / (t - p.lt) * 1000; p.lx = p.x; p.ly = p.y; p.lt = t; }
+  if (mode === 'drop') { ptilt(); return; }
+  dx = p.x - p.x0; dy = p.y - p.y0; d = SQRT(dx * dx + dy * dy);
+  if (d > (p.m ? 6 : 12)) p.sw = 1;
+  if (p.ro === 'm') { if (p.sw) inp.mw = 1; }
+  else if (p.ro === 's') { if (d < 8) inp.sx = inp.sy = 0; else { d = clamp((d - 8) / 32, .35, 1) / d; inp.sx = dx * d; inp.sy = dy * d; } }
+}
+function pu(e) {
+  var p = ptrs[e.pointerId], dt, fl, s; if (!p) return; delete ptrs[e.pointerId];
+  if (mode === 'drop') { if (!p.m) { if (Date.now() - p.t < 220 && ABS(p.x - p.x0) < 14) inp.sb = 0.14; ptilt(); } return; }
+  if (scr !== 'play') return;
+  dt = Date.now() - p.t; s = SQRT(p.vx * p.vx + p.vy * p.vy); fl = s > 600 && Date.now() - p.lt < 80;
+  if (p.ro === 'm') { inp.md = 0; inp.mw = 0; if (dt < 180 && !p.sw) { inp.sb = 1; inp.sa = 1; } }
+  else if (p.ro === 's') { inp.st = 0; inp.sx = inp.sy = 0; if (dt < 200 && !p.sw) { inp.sb = 1; inp.sa = 0; } }
+  else if (p.ro === 'a') { if (fl) { inp.sb = 1; inp.sa = 2; inp.sax = p.vx; inp.say = p.vy; } else if (dt < 200 && !p.sw) { inp.sb = 1; inp.sa = 0; } }
+}
+function ptilt() { // touch: hold the left or right side
+  var t = 0;
+  for (var k in ptrs) { var p = ptrs[k], d = p.x - W / 2; if (p.m) continue; t = ABS(d) < W * 0.05 ? 0 : d > 0 ? 1 : -1; break; }
+  inp.pt = t;
+}
+function inp0() { inp.l = inp.r = inp.u = inp.d = inp.sb = inp.pt = inp.st = inp.sx = inp.sy = inp.md = inp.mw = 0; ptrs = {}; }
+
+// ---------- flow ----------
+function start(m, seed) {
+  if (m === 'run') m = 'echo';
+  mode = m;
+  if (seed != null && seed >= 0) runSeed = seed;
+  else if (court === 'new') runSeed = FLR(Math.random() * SPACE);
+  else if (court !== 'code') runSeed = today(m === 'drop' ? 'D' : 'E');
+  G = { m: m, L: 0, score: 0, lives: 3 }; NMET = [];
+  inp0();
+  level(0); panel('play');
+}
+function level(L) {
+  var keep = { score: G.score, lives: G.lives }, T = TEXT, nm;
+  if (mode === 'drop') capAt(16, 16, 60);
+  G = mode === 'drop' ? D_new(L) : E_new(L);
+  G.score = keep.score; G.lives = keep.lives; G.L = L; G.ls = 0; G.clean = 1;
+  nm = T.level + ' ' + (L + 1) + ' ' + T.of + ' 5. ' + (mode === 'drop' ? T.dropLv : T.echoLv)[L] + '.' + (mode === 'echo' ? ' ' + T.temper[G.tp] : '');
+  cap(nm + (L ? '' : ' ' + (mode === 'drop' ? (coarse ? T.dropTouch : T.dropHint) : (coarse ? T.echoTouch : T.echoHint))), L ? 2.6 : 4.5);
+  if (mode === 'echo' && L) { G.cq = T.echoTw[L]; G.cqT = 2.6; }
+  say(nm);
+  beat = null; acc = 0;
+}
+function restartLevel() { if (!G) return; level(G.L); panel('play'); }
+function pause() { if (scr !== 'play') return; panel('pause'); E.Ps.textContent = TEXT.score + ' ' + num(G.score) + '. ' + TEXT.code + ' ' + pretty(runSeed) + '.' + (mode === 'echo' ? ' ' + TEXT.echoLv[G.L] + '. ' + TEXT.temper[G.tp] : ''); snd('pause'); inp0(); }
+function resume() { if (scr !== 'pause') return; panel('play'); snd('resume'); }
+function fail(msg) {
+  if (mode === 'drop') snd('ring-miss');
+  if (!assist) G.lives--;
+  G.clean = 0;
+  var left = G.lives;
+  cap(msg + (assist || left <= 0 ? '' : ' ' + left + ' left.'), 2.2);
+  say(msg + ' ' + left + ' left.');
+  beat = { t: RM ? 0.05 : 0.8, f: function () { if (G.lives <= 0) result(); else G.retry(); } };
+}
+function clearLevel(pts, note, post) {
+  var tot = G.ls + pts, nat = NAT && opts.nationCards !== false && root;
+  if (mode === 'echo' && G.clean) tot = RND(tot * 1.5);
+  G.score += tot - G.ls;
+  cap(mode === 'echo' ? note + ' ' + TEXT.clear + ' +' + num(tot) + '.' + (post ? ' ' + post : '') : TEXT.clear + ' +' + num(tot) + (note ? '. ' + note : ''), 2.4);
+  say(TEXT.clear + ' ' + TEXT.score + ' ' + num(G.score));
+  snd('level-clear');
+  beat = { t: 1.6, f: function () { if (G.L >= 4) result(true); else if (nat) natBetween(); else level(G.L + 1); } };
+}
+function addPts(n) { G.ls += n; G.score += n; }
+function result(won) {
+  /*T*/if (!root) { scr = 'result'; G.won = won; return; }/*T*/
+  if (won) G.score += G.lives * (mode === 'drop' ? 1500 : 2000);
+  var key = 'zth_olli_best_' + mode, best = store(key), info = [TEXT.level + ' ' + (G.L + 1) + ' ' + TEXT.of + ' 5.', TEXT.code + ' ' + pretty(runSeed) + '.'];
+  if (!assist && G.score > best) { store(key, G.score); best = G.score; }
+  if (assist) info.push(TEXT.noBest); else if (best) info.push(TEXT.best + ' ' + num(best) + '.');
+  snd('run-end');
+  E.Rh.textContent = mode === 'drop' ? TEXT.drop : TEXT.echo; E.Rm.textContent = won ? (mode === 'drop' ? TEXT.done : TEXT.echoDone) : TEXT.over;
+  E.Rn.textContent = num(G.score); E.Ri.textContent = info.join(' ');
+  E.Rx.hidden = !(won && NMET.length && NAT); E.Rc.hidden = E.Rb.hidden = true; E.Rl.hidden = false;
+  if (!E.Rx.hidden) natList(E.Rl, NMET, 'result');
+  say(E.Rh.textContent + '. ' + E.Rm.textContent + ' ' + TEXT.score + ' ' + num(G.score));
+  cap('');
+  panel('result');
+}
+
+// ---------- loop: runs only while playing; other screens draw once ----------
+function kick() { if (ctx && !raf) { last = 0; raf = requestAnimationFrame(frame); } }
+function frame(ts) {
+  raf = 0;
+  if (!ctx) return;
+  if (scr === 'play' && G) {
+    raf = requestAnimationFrame(frame);
+    var dt = last ? (ts - last) / 1000 : 0, n = 0; last = ts;
+    if (dt > 0.25) dt = 0.25;
+    if (capT > 0) { capT -= dt; if (capT <= 0) cap(''); }
+    if (inp.md && !inp.mw && ts - inp.mdT >= 180) inp.mw = 1;
+    acc += dt;
+    while (acc >= STEP && n < 8) {
+      if (beat) { beat.t -= STEP; if (beat.t <= 0) { var f = beat.f; beat = null; f(); } }
+      else G.step(STEP);
+      acc -= STEP; n++;
+      if (scr !== 'play') break;
+    }
+    if (n === 8) acc = 0;
+    if (inp.sb > 0 && mode === 'drop') inp.sb -= dt;
+    if (scr === 'play') hud();
+  }
+  draw();
+}
+function hud() {
+  var g = G, d = '', i, k;
+  if (mode === 'echo') { // rebuilt only when something shown changes
+    k = g.score * 64 + g.lives * 16 + g.L + (g.p.mk ? 8 : 0); for (i = 0; i < g.rings.length; i++) k = k * 4 + (g.rings[i].c ? 1 : 0) + (g.rings[i].sil ? 2 : 0); k += g.fin ? .5 : 0;
+    if (k === g.hk) return; g.hk = k;
+  }
+  for (i = 0; i < 3; i++) d += '<i class="dot' + (i < g.lives ? ' on' : '') + '"></i>';
+  set(E.Lv, TEXT.level + ' <b>' + (g.L + 1) + '</b>/5');
+  set(E.Sc, '<b>' + num(g.score) + '</b>');
+  set(E.Tm, g.tm() + ' ' + (assist ? '' : '<span aria-label="' + g.lives + ' left">' + d + '</span>'));
+}
+function set(e, h) { if (e._h !== h) { e.innerHTML = h; e._h = h; } }
+function resize() {
+  if (!root) return;
+  W = root.clientWidth; H = root.clientHeight; DPR = MIN(window.devicePixelRatio || 1, 2);
+  cv.width = RND(W * DPR); cv.height = RND(H * DPR); cv.style.width = W + 'px'; cv.style.height = H + 'px';
+  SC = {}; BGr = -1; if (G && G.lay) G.lay();
+  kick();
+}
+
+// ---------- drawing primitives (device pixels, snapped) ----------
+var LW = 2, OF = 0, MX = 0, MY = 0, MS = 1, BG = null, BGr = -1;
+function prim() { LW = MAX(1, RND(1.4 * DPR)); OF = (LW % 2) * 0.5; }
+function sn(v) { return RND(v) + OF; }
+// m: the list is in world units and maps through MX, MY, MS (no per-frame point arrays)
+function path(p, m) {
+  var s = m ? MS : 1, ax = m ? MX : 0, ay = m ? MY : 0;
+  ctx.beginPath(); ctx.moveTo(sn(ax + p[0][0] * s), sn(ay + p[0][1] * s));
+  for (var i = 1; i < p.length; i++) ctx.lineTo(sn(ax + p[i][0] * s), sn(ay + p[i][1] * s));
+}
+// A carved groove: two parallel lines around a black channel, the band's double-line language.
+function groove(list, hw, ml) {
+  hw = MAX(2, RND(hw));
+  ctx.lineJoin = 'miter'; ctx.lineCap = 'square';
+  for (var k = 0; k < 2; k++) {
+    ctx.strokeStyle = k ? '#000' : '#e6e6e6'; ctx.lineWidth = 2 * hw + (k ? -LW : LW);
+    for (var i = 0; i < list.length; i++) { path(list[i]); ctx.stroke(); }
+    if (ml) for (i = 0; i < ml.length; i++) { var y = MY + ml[i].ry * MS; if (y > -90 && y < cv.height + 90) { path(ml[i], 1); ctx.stroke(); } }
+  }
+}
+function line(p, c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.lineJoin = 'miter'; ctx.lineCap = 'butt'; path(p); ctx.stroke(); }
+function motif(x, y, u, fx, fy, rot) {
+  var o = [], g = FRET.grid;
+  for (var i = 0; i < FRET.pts.length; i++) {
+    var a = FRET.pts[i][0], b = FRET.pts[i][1]; if (fx) a = g - a; if (fy) b = g - b;
+    o.push(rot ? [x + b * u, y + a * u] : [x + a * u, y + b * u]);
+  }
+  return o;
+}
+function band(x, y0, y1, u, sh) { // vertical step-fret band, motifs alternate like a woven border
+  var out = [], st = 7 * u, k = FLR((y0 - sh) / st) - 1;
+  for (var y = sh + k * st; y < y1 + st; y += st, k++) out.push(motif(x, y, u, k & 1, k & 1, 1));
+  return out;
+}
+// A band is cached once per size as a strip one period taller than the screen, then blitted at a whole-pixel offset.
+function drawBand(x, u, off) {
+  var h = cv.height, key = u + ':' + h, c = SC[key], p = 14 * u, pd = u + LW;
+  if (!c) { var o = ctx; c = SC[key] = document.createElement('canvas'); c.width = 6 * u + 2 * pd; c.height = h + p; ctx = c.getContext('2d'); groove(band(pd, 0, c.height, u, 0), u * 0.42); ctx = o; }
+  ctx.drawImage(c, RND(x) - pd, ((RND(off) % p) + p) % p - p);
+}
+function ball(x, y, r, ang, out, hit) {
+  x = RND(x * 2) / 2; y = RND(y * 2) / 2;
+  ctx.translate(x, y);
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, 6.2832);
+  if (out) { ctx.fillStyle = '#000'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke(); }
+  else {
+    if (r !== BGr) { BGr = r; BG = ctx.createRadialGradient(-r * 0.35, -r * 0.4, r * 0.1, 0, 0, r); BG.addColorStop(0, '#fff'); BG.addColorStop(0.55, '#ececec'); BG.addColorStop(1, '#bdbdbd'); }
+    ctx.fillStyle = BG; ctx.fill();
+    ctx.strokeStyle = '#8c8c8c'; ctx.lineWidth = MAX(1, DPR * 0.75); ctx.stroke();
+    if (!RM && ang != null) { ctx.beginPath(); ctx.arc(0, 0, r * 0.58, ang, ang + 1.1); ctx.lineWidth = MAX(1, DPR); ctx.stroke(); }
+    if (hit != null) { ctx.beginPath(); ctx.arc(0, 0, r * 1.6, hit - 0.7, hit + 0.7); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke(); }
+  }
+  ctx.translate(-x, -y);
+}
+function draw() {
+  if (!ctx) return;
+  prim(); MX = MY = 0; MS = 1;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height);
+  if (scr === 'play' && G) G.draw();
+  else if (scr === 'title') titleArt();
+}
+function titleArt() {
+  var u = MAX(4, RND(MIN(W, H) * DPR / 120)), x0 = RND(14 * DPR), x1 = cv.width - x0 - 6 * u;
+  drawBand(x0, u, 0); drawBand(x1, u, 3.5 * u);
+  ball(x0 + 3 * u, RND(cv.height * 0.5 - 7 * u), 1.4 * u, null);
+}
+
+
+// ---------- DROP ----------
+function D_new(L) {
+  var P = DPAR[L], k = calm ? 0.7 : 1, kt = calm ? 1.4 : 1, lsd = mix(runSeed, L + 1), r = rng(mix(lsd, 0x4D41));
+  var g = { grav: P[0] * k, tilt: P[1] * k, vmax: P[2] * k, vxm: (250 + 25 * L) * k, T: P[4] * kt, RT: P[5] * kt, kt: kt, rows: [], ll: [], tl: 0, cam: 0 };
+  var gw = (2.6 - 0.15 * L) * 18, reach = 210 - 14 * L, y = 150, prev = [180], i, j;
+  for (i = 0; i < P[3]; i++) {
+    var land = i % 4 === 3 || i === P[3] - 1, gs;
+    gs = land ? [180] : gaps(prev, r() < 0.3 + 0.08 * L ? 2 : 1, gw, reach, r, i % 4 === 2 || i === P[3] - 2);
+    var R = drow(y, gs, gw, r); g.rows.push(R); prev = gs; y += 72;
+    for (j = 0; j < R.lines.length; j++) { R.lines[j].ry = R.y; g.ll.push(R.lines[j]); }
+  }
+  g.last = y - 72; g.floor = g.last + 400; g.wl = 0; g.wr = 360;
+  ring(g, L, rng(mix(lsd, 0xB055)));
+  g.retry = function () { D_reset(g, g.inCourt); };
+  g.step = function (dt) { D_step(g, dt); };
+  g.draw = function () { D_draw(g); };
+  g.tm = function () { var t = g.inCourt ? g.rt : g.t; return '<span>' + (g.inCourt ? 'Ring ' : '') + MAX(0, CEIL(t)) + 's</span>'; };
+  g.lay = function () {};
+  D_reset(g, false);
+  return g;
+}
+function gaps(prev, n, gw, reach, r, avoid) {
+  var lo = gw / 2 + 44, hi = 360 - lo;
+  for (var t = 0; t < 60; t++) {
+    var g = [], j, ok = true;
+    for (j = 0; j < n; j++) g.push(lo + r() * (hi - lo));
+    g.sort(function (a, b) { return a - b; });
+    if (n === 2 && g[1] - g[0] < gw + 80) continue;
+    for (j = 0; j < prev.length && ok; j++) {
+      var near = 1e9;
+      for (var q = 0; q < g.length; q++) { var d = ABS(g[q] - prev[j]); near = MIN(near, d); if (d < gw + 16) ok = false; }
+      if (near > reach) ok = false;
+    }
+    if (avoid) for (j = 0; j < g.length; j++) if (ABS(g[j] - 180) < gw + 20) ok = false;
+    if (ok) return g;
+  }
+  var p = prev[0], s = p < 180 ? 1 : -1;
+  return [clamp(p + s * (gw + 40), lo, hi)];
+}
+function drow(y, gs, gw, r) {
+  var R = { y: y, gs: gs, lines: [], segs: [], mk: null }, e = [0], i, k;
+  for (i = 0; i < gs.length; i++) e.push(gs[i] - gw / 2, gs[i] + gw / 2);
+  e.push(360);
+  for (i = 0; i < e.length; i += 2) {
+    var a = e[i], b = e[i + 1], lg = a > 0, rg = b < 360, len = b - a, p = [], n, w, yy;
+    if (lg) p.push([a + 10, y + 8], [a + 10, y + 15], [a, y + 15]);
+    if (lg && rg) {
+      n = MIN(2, FLR(len / 90)); w = len / (2 * n + 1); yy = y; p.push([a, y]);
+      for (k = 1; k <= n; k++) { p.push([a + k * w, yy]); yy -= 8; p.push([a + k * w, yy]); }
+      for (k = n; k >= 1; k--) { p.push([b - k * w, yy]); yy += 8; p.push([b - k * w, yy]); }
+    } else {
+      n = MIN(3, FLR(len / 56)); w = len / (n + 1); yy = lg ? y : y - 8 * n; p.push([a, yy]);
+      for (k = 1; k <= n; k++) { p.push([a + k * w, yy]); yy += lg ? -8 : 8; p.push([a + k * w, yy]); }
+    }
+    p.push([b, yy]);
+    if (rg) p.push([b, y + 15], [b - 10, y + 15], [b - 10, y + 8]);
+    R.lines.push(p);
+    for (k = 1; k < p.length; k++) R.segs.push([p[k - 1][0], p[k - 1][1], p[k][0], p[k][1]]);
+    if (!R.mk) for (k = 1; k < p.length; k++) if (p[k][1] === p[k - 1][1] && ABS(p[k][0] - p[k - 1][0]) >= 60 && p[k][1] <= y && r() < 0.45) { R.mk = { x: (p[k][0] + p[k - 1][0]) / 2, y: p[k][1] - 6, on: 1 }; break; }
+  }
+  return R;
+}
+function ring(g, L, r) {
+  var side = r() < 0.5 ? -1 : 1, H = 380, k = g.kt, q;
+  function mk(sd, ap, hf) { var a = ap * 13, R = a + 12; return { sd: sd, a: a, R: R, x: sd < 0 ? R + 24 : 336 - R, y0: g.floor - H * hf, y: 0, live: 1, open: 1, c: 1 }; }
+  g.ty = L; g.rings = [];
+  if (L === 0) g.rings.push(mk(side, 1.9 + 0.3 * r(), 0.32 + 0.16 * r()));
+  if (L === 1) { q = mk(side, 1.9 + 0.2 * r(), 0.42); q.amp = 30 + 30 * r(); q.per = (2.6 + r()) * k; q.ph = r() * 6.28; g.rings.push(q); }
+  if (L === 2) { q = mk(side, 1.9 + 0.2 * r(), 0.36 + 0.14 * r()); q.per = (3 + 1.2 * r()) * k; q.of = 0.35 + 0.1 * r(); q.ph = r(); g.rings.push(q); }
+  if (L === 3) { var ap = 1.8 + 0.2 * r(); g.rings.push(mk(-1, ap, 0.32 + 0.18 * r()), mk(1, ap, 0.32 + 0.18 * r())); g.per = (2.4 + r()) * k; g.first = r() < 0.5 ? 0 : 1; g.pits = 1; }
+  if (L === 4) { q = mk(side, 1.7 + 0.1 * r(), 0.44); q.fig = r() < 0.5; q.A = 60 + 30 * r(); q.B = 35 + 20 * r(); q.sp = (0.18 + 0.1 * r()) / k; q.x = 180; g.rings.push(q); g.wsd = r() < 0.5 ? -1 : 1; g.wc = (4 + 2 * r()) * k; g.pits = 1; }
+}
+function D_reset(g, inCourt) {
+  var b = g.b = { x: 180, y: 60, vx: 0, vy: 0, held: !inCourt, ct: 9, cd: 0, lg: 0, rot: 0, hit: 0, hs: 0, nf: 0 };
+  g.t0 = 0; g.ns = 0; g.wl = 0; g.wr = 360; g.ws = 0; g.sft = 0;
+  if (inCourt) { b.y = g.floor - 240; g.rt = g.RT; }
+  else { g.t = g.T; g.inCourt = false; g.cam = 0; for (var i = 0; i < g.rows.length; i++) if (g.rows[i].mk) g.rows[i].mk.on = 1; }
+}
+function cpt(g, cx, cy, rad, e) {
+  var b = g.b, dx = b.x - cx, dy = b.y - cy, d2 = dx * dx + dy * dy, rr = BR + rad;
+  if (d2 >= rr * rr) return;
+  var d = SQRT(d2), nx, ny;
+  if (d < 1e-4) { nx = 0; ny = -1; } else { nx = dx / d; ny = dy / d; }
+  b.x = cx + nx * rr; b.y = cy + ny * rr;
+  var vn = b.vx * nx + b.vy * ny;
+  if (vn < 0) { var kk = vn > -50 ? 1 : 1 + e; b.vx -= kk * vn * nx; b.vy -= kk * vn * ny; if (vn < -90) snd('bounce', MIN(1, -vn / 700)); }
+  b.ct = 0; b.lg = ny < -0.5 ? 1 : 0; if (!b.lg) b.wn = nx;
+}
+function cseg(g, x0, y0, x1, y1, e) {
+  cpt(g, x0 === x1 ? x0 : clamp(g.b.x, MIN(x0, x1), MAX(x0, x1)), y0 === y1 ? y0 : clamp(g.b.y, MIN(y0, y1), MAX(y0, y1)), 0, e);
+}
+function ringPos(g, q, t) {
+  if (g.ty === 1) q.y = q.y0 + q.amp * Math.sin(6.2832 * t / q.per + q.ph); else q.y = q.y0;
+  if (g.ty === 2) { var u = (t / q.per + q.ph) % 1; q.c = ABS(Math.cos(Math.PI * u)); q.open = u < q.of / 2 || u > 1 - q.of / 2; }
+  if (g.ty === 4) { var a = 6.2832 * q.sp * t, s = Math.sin(a), c = Math.cos(a), cx = (g.wl + g.wr) / 2;
+    if (q.fig) { q.x = cx + q.A * s; q.y = q.y0 + q.B * 0.8 * Math.sin(2 * a); } else { q.x = cx + q.A * (c < 0 ? -1 : 1) * SQRT(ABS(c)); q.y = q.y0 + q.B * (s < 0 ? -1 : 1) * SQRT(ABS(s)); } }
+}
+function D_step(g, dt) {
+  var b = g.b, want = (inp.r - inp.l) || inp.pt;
+  g.tl += (want - g.tl) * (1 - Math.exp(-dt / 0.08));
+  if (b.held) {
+    b.x = clamp(b.x + g.tl * 220 * dt, 24, 336);
+    if (inp.sb > 0) { inp.sb = 0; b.held = false; b.vy = 40; snd('drop'); }
+    return;
+  }
+  var t, i, j;
+  if (!g.inCourt) { g.t -= dt; if (g.t <= 0) return fail(TEXT.time); }
+  b.vy = MIN(b.vy + g.grav * dt, g.vmax);
+  b.vx += g.tilt * g.tl * dt;
+  b.vx *= Math.pow(b.ct < 0.04 ? 0.985 : 0.997, dt * 60);
+  b.vx = clamp(b.vx, -g.vxm, g.vxm);
+  var px = b.x;
+  b.x += b.vx * dt; b.y += b.vy * dt; b.ct += dt; b.cd -= dt; b.hit -= dt; b.nf -= dt;
+  b.rot += (b.x - px) / BR;
+  var ri = RND((b.y - 150) / 72);
+  for (i = ri - 1; i <= ri + 1; i++) {
+    var R = g.rows[i]; if (!R) continue;
+    for (j = 0; j < R.segs.length; j++) { var s = R.segs[j]; cseg(g, s[0], s[1], s[2], s[3], 0.62); }
+    if (R.mk && R.mk.on && ABS(b.x - R.mk.x) < 14 && ABS(b.y - R.mk.y) < 16) { R.mk.on = 0; addPts(100); g.t += 3; snd('marker'); }
+  }
+  if (b.y > g.last + 24 && !g.inCourt) {
+    g.inCourt = true; g.rt = g.RT; g.tb = MAX(0, CEIL(g.t)); g.t0 = 0; g.ns = 0;
+    if (g.L === 0) cap(TEXT.firstRing, 4);
+  }
+  if (g.inCourt) {
+    g.t0 += dt; g.rt -= dt; g.sft -= dt;
+    if (g.rt <= 0) return fail(TEXT.time);
+    if (g.ty === 4) { var st = MIN(3, FLR(g.t0 / g.wc)), s1 = CEIL(st / 2), s2 = FLR(st / 2); if (g.wsd > 0) { t = s1; s1 = s2; s2 = t; } g.wl = s1 * 12; g.wr = 360 - s2 * 12; }
+    var pit = g.pits ? 40 : 0, fl = g.floor;
+    cseg(g, g.wl + pit, fl, g.wr - pit, fl, 0.62);
+    if (pit) { cseg(g, g.wl + pit, fl, g.wl + pit, fl + 30, 0.45); cseg(g, g.wr - pit, fl, g.wr - pit, fl + 30, 0.45); }
+    for (i = 0; i < g.rings.length; i++) {
+      var q = g.rings[i]; ringPos(g, q, g.t0);
+      if (g.ty === 3) q.live = ((FLR(g.t0 / g.per) + g.first) & 1) === i ? 1 : 0;
+      var m = (q.a + q.R) / 2, th = (q.R - q.a) / 2, rx = q.x;
+      if (g.ty === 2 && !q.open) cseg(g, q.x, q.y - q.R, q.x, q.y + q.R, 0.45);
+      else { cpt(g, q.x, q.y - m, th, 0.5); cpt(g, q.x, q.y + m, th, 0.5); }
+      if (g.ty !== 4) cseg(g, q.sd < 0 ? g.wl : q.x, q.y - q.R, q.sd < 0 ? q.x : g.wr, q.y - q.R, 0.45);
+      if (q.live && (g.ty !== 2 || q.open) && (px - rx) * (b.x - rx) <= 0 && px !== b.x && ABS(b.y - q.y) < q.a) {
+        if (ABS(b.vx) > 25) {
+          snd('ring-pass'); say(TEXT.pass);
+          var L1 = g.L + 1;
+          return clearLevel(1000 * L1 + 2500 * L1 + 20 * g.tb, TEXT.pass + (g.ns <= 1 ? ' ' + TEXT.rare : ''));
+        }
+        if (g.sft <= 0) { cap(TEXT.soft, 1.6); g.sft = 3; }
+      }
+    }
+    if (b.y > fl + 70) return fail(TEXT.left);
+  }
+  var wl = g.inCourt ? g.wl : 0, wr = g.inCourt ? g.wr : 360;
+  if (b.x < wl + BR) { b.x = wl + BR; if (b.vx < 0) b.vx = -b.vx * 0.45; b.ct = 0; b.lg = 0; b.wn = 1; }
+  if (b.x > wr - BR) { b.x = wr - BR; if (b.vx > 0) b.vx = -b.vx * 0.45; b.ct = 0; b.lg = 0; b.wn = -1; }
+  if (inp.sb > 0 && b.cd <= 0) {
+    if (b.ct < 0.1) {
+      var imp = 330 * SQRT(g.grav / 820), sg = g.tl > 0.2 ? 1 : g.tl < -0.2 ? -1 : 0;
+      if (b.lg) b.vy = MIN(b.vy, 0) - imp; else { b.vy = MIN(b.vy, -imp * 0.85); if (!sg) sg = b.wn; }
+      b.vx += 160 * sg * SQRT(g.grav / 820);
+      b.cd = 0.5; b.hit = 0.2; b.hs = sg; b.nf = 0; inp.sb = 0; snd('strike');
+      if (g.inCourt) g.ns++;
+    } else if (b.ct > 0.2 && b.nf <= 0) { b.nf = 0.35; if (!told) { told = 1; cap(TEXT.nofoot, 2.6); } }
+  }
+}
+function wx(x) { return MX + x * MS; }
+function wy(y) { return MY + y * MS; }
+function D_draw(g) {
+  var cw = cv.width, ch = cv.height, S = MIN((W - 32) / 360, H / 640) * DPR, vh = ch / S, ox = RND((cw - 360 * S) / 2), b = g.b, i;
+  var pad = coarse ? 40 * DPR / S : 0, bot = g.floor + 70 + pad - vh;
+  var tgt = clamp(g.inCourt || b.y > g.last ? bot : b.y - vh * 0.42, -60, bot);
+  if (b.held) g.cam = tgt;
+  g.cam += (tgt - g.cam) * (RM ? 0.25 : 0.12);
+  var hw = 2.4 * S, u = MAX(3, RND(5 * S)), sh = -RND(g.cam * S);
+  MX = ox; MS = S; MY = sh;
+  // side frame: the wall itself carries the step-fret
+  if (ox > 9 * u) { drawBand(ox - 7.5 * u, u, sh); drawBand(ox + 360 * S + 1.5 * u, u, sh + 3.5 * u); }
+  var wy0 = MAX(wy(20), -20), wy1 = MIN(wy(g.floor + (g.pits ? 120 : 0)), ch + 20), lines = [];
+  var wl = g.inCourt ? g.wl : 0, wr = g.inCourt ? g.wr : 360, L0 = wx(0) - hw, R0 = wx(360) + hw;
+  if (wl > 0 || wr < 360) { var ct = wy(g.last + 48); lines.push([[L0, wy0], [L0, ct], [wx(wl) - hw, ct], [wx(wl) - hw, wy1]], [[R0, wy0], [R0, ct], [wx(wr) + hw, ct], [wx(wr) + hw, wy1]]); }
+  else lines.push([[L0, wy0], [L0, wy1]], [[R0, wy0], [R0, wy1]]);
+  lines.push([[L0, wy(20) - hw], [R0, wy(20) - hw]]); // top lintel where the ball waits
+  // court floor and pits
+  var pit = g.pits ? 40 : 0, fl = wy(g.floor) + hw, s8 = 8 * S, pa = wx(wl + pit), pb = wx(wr - pit);
+  if (pit) lines.push([[pa - s8 * 2, fl + 120 * S], [pa - s8 * 2, fl + s8 * 2], [pa - s8, fl + s8 * 2], [pa - s8, fl + s8], [pa, fl + s8], [pa, fl], [pb, fl], [pb, fl + s8], [pb + s8, fl + s8], [pb + s8, fl + s8 * 2], [pb + s8 * 2, fl + s8 * 2], [pb + s8 * 2, fl + 120 * S]]);
+  else lines.push([[wx(0), fl], [wx(360), fl]]);
+  MY = sh + hw; groove(lines, hw, g.ll); MY = sh;
+  // markers: carved floor discs
+  for (i = 0; i < g.rows.length; i++) {
+    var M = g.rows[i].mk; if (!M || !M.on) continue;
+    var mx = wx(M.x), my = wy(M.y), mr = 6 * S; if (my < -20 || my > ch + 20) continue;
+    ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.2832); ctx.fillStyle = '#000'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke();
+    ctx.beginPath(); ctx.arc(mx, my, mr * 0.45, 0, 6.2832); ctx.strokeStyle = '#b8b8b8'; ctx.stroke();
+  }
+  // rings: back half, then the ball, then the front half, so the ball threads through
+  var rv = g.inCourt || wy(g.floor) < ch + 300;
+  if (rv) for (i = 0; i < g.rings.length; i++) { if (!g.inCourt) ringPos(g, g.rings[i], 0); drawRing(g, g.rings[i], S, -1); }
+  var ballR = BR * S, bx = wx(b.x), by = wy(b.y);
+  ball(bx, by, ballR, b.rot, false, b.hit > 0 ? (b.hs > 0 ? 3.14 : b.hs < 0 ? 0 : 1.57) : null);
+  if (b.nf > 0) { ctx.beginPath(); ctx.arc(bx, by, ballR * 1.7, 1.1, 2.04); ctx.strokeStyle = '#8c8c8c'; ctx.lineWidth = LW; ctx.stroke(); }
+  if (rv) for (i = 0; i < g.rings.length; i++) drawRing(g, g.rings[i], S, 1);
+  if (b.held) { var ay = by + ballR + 10 * S; line([[bx - 5 * S, ay], [bx, ay + 6 * S], [bx + 5 * S, ay]], '#b8b8b8'); }
+  // tilt shown as a level, not by rotating the court: lines stay pixel-crisp
+  var tx = RND(cw / 2), ty = sn(66 * DPR), tw = 30 * DPR;
+  line([[tx - tw, ty], [tx + tw, ty]], '#8c8c8c');
+  ctx.beginPath(); ctx.arc(tx + RND(g.tl * tw), ty, 3.5 * DPR, 0, 6.2832); ctx.fillStyle = '#fff'; ctx.fill();
+}
+// The stone ring stands on its edge, opening sideways like the court rings: the ball must cross it.
+function annulus(x, y, wo, R, wi, a, s) {
+  var a0 = s > 0 ? -1.5708 : 1.5708, a1 = a0 + 3.1416;
+  wi = MAX(0.5, wi);
+  ctx.beginPath(); ctx.ellipse(x, y, wo, R, 0, a0, a1, false); ctx.ellipse(x, y, wi, a, 0, a1, a0, true); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(x, y, wo, R, 0, a0, a1, false); ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(x, y, wi, a, 0, a0, a1, false); ctx.stroke();
+}
+function drawRing(g, q, S, part) {
+  var x = wx(q.x), y = wy(q.y), R = q.R * S, a = q.a * S, w = 0.34;
+  if (g.ty === 2) w = MAX(w, SQRT(1 - q.c * q.c)); // turning: edge-on is open, face-on is closed
+  ctx.fillStyle = q.live ? '#fff' : '#000'; ctx.lineWidth = LW; ctx.strokeStyle = q.live ? '#8c8c8c' : '#b8b8b8';
+  if (part < 0) {
+    if (g.ty !== 4) { var tx = q.sd < 0 ? wx(g.wl) : wx(g.wr), ty = wy(q.y - q.R) - 2.4 * S; groove([[[tx, ty], [x, ty], [x, y - R]]], 2.4 * S); }
+    ctx.lineWidth = LW; ctx.strokeStyle = q.live ? '#8c8c8c' : '#b8b8b8';
+    annulus(x, y, R * w, R, a * w, a, -1);
+    return;
+  }
+  annulus(x, y, R * w, R, a * w, a, 1);
+  if (g.ty === 3 && q.live && g.inCourt) { var f = (g.t0 % g.per) / g.per, an = -1.5708 + f * 6.2832; line([[x, y], [x + Math.cos(an) * (R + 10 * S), y + Math.sin(an) * (R + 10 * S)]], '#fff', MAX(2, LW)); }
+  if (g.ty === 2) { var nx = x - 22 * S, ny = wy(g.floor) - 10 * S, nw = 44 * S; ctx.strokeStyle = '#b8b8b8'; ctx.strokeRect(sn(nx), sn(ny), RND(nw), RND(6 * S)); ctx.fillStyle = '#fff'; ctx.fillRect(nx, ny, nw * (q.open ? 1 : q.c * 0.8), 6 * S); }
+}
+
+// ---------- ECHO ----------
+// Game logic sits between the L marks: no trigonometry and no Math.random in it (the build checks).
+/*L*/
+// [walk, patrol, invest, rush, corner, Tn, S, sight, hearX, wakeMin, wakeMax, strike, wait, silence,
+//  rings, w, h, braid, slotSide, slotGreat, playT, lost]
+var MPAR = [
+  [3.6, 2.2, 2.9, 4.1, .32, .75, 7, 3.5, 1.00, 9, 11, 9.0, 4.0, 14, 2, 21, 29, .50, 2.5, 2.2, 1.2, .12],
+  [3.8, 2.4, 3.1, 4.4, .30, .68, 7, 3.5, 1.05, 8, 10, 9.3, 3.6, 12, 2, 23, 31, .45, 2.35, 2.1, 1.1, .135],
+  [4.0, 2.6, 3.4, 4.7, .28, .62, 8, 3.25, 1.10, 7, 9, 9.6, 3.2, 11, 3, 25, 33, .40, 2.2, 1.95, 1.0, .15],
+  [4.2, 2.8, 3.6, 5.0, .25, .56, 8, 3.0, 1.15, 6, 8, 9.9, 2.8, 10, 3, 27, 35, .35, 2.05, 1.8, .9, .165],
+  [4.4, 3.0, 3.8, 5.3, .22, .50, 9, 3.0, 1.20, 5, 7, 10.2, 2.5, 9, 4, 27, 37, .30, 1.9, 1.7, .8, .18]
+];
+var NM = 999, EW = 21, EH = 29, EN = 609, BLK = -1, GR, ZN, LC, MEM, FB, JP, RS, SF, VIS, LIT, DT, DF, DP, D2, BQ, STK, WV, RAY, RAYN, BXS, BXK, OP, JL;
+var Q8 = .7071067811865476, V8X = [0, Q8, 1, Q8, 0, -Q8, -1, -Q8], V8Y = [-1, -Q8, 0, Q8, 1, Q8, 0, -Q8];
+var DX = [0, 0, 1, 0, -1], DY = [0, -1, 0, 1, 0], OPP = [0, 3, 4, 1, 2], FR = .9935498190591483;
+// Face states: 0 asleep, 1 patrol, 2 listen, 3 investigate, 4 search, 5 rush, 6 play, 7 recover, 8 wait, 9 gathering.
+function E_alloc() {
+  if (GR) return;
+  var U = function () { return new Uint8Array(NM); }, I = function () { return new Int16Array(NM); }, i, k, x, y, n, dx, dy, d, sx, sy, tx, ty, ux, uy;
+  GR = U(); ZN = U(); LC = U(); MEM = U(); FB = U(); JP = U(); RS = U(); SF = new Uint8Array(11); OP = new Uint8Array(4);
+  VIS = new Uint16Array(NM); LIT = new Int32Array(NM); DT = I(); DF = I(); DP = I(); D2 = I(); BQ = I(); STK = I(); JL = I(); WV = [];
+  for (i = 0; i < 8; i++) WV.push(I());
+  BXS = new Float64Array(96); BXK = new Int8Array(24);
+  // Ray chains toward points on a square, normalized with sqrt only, walked tile by tile.
+  RAY = new Int8Array(128 * 60); RAYN = new Uint8Array(128);
+  for (i = 0; i < 128; i++) {
+    k = (i & 31) - 16; n = i >> 5;
+    dx = n === 0 ? k : n === 1 ? 16 : n === 2 ? -k : -16; dy = n === 0 ? -16 : n === 1 ? k : n === 2 ? 16 : -k;
+    d = SQRT(dx * dx + dy * dy); dx /= d; dy /= d;
+    sx = dx > 0 ? 1 : -1; sy = dy > 0 ? 1 : -1; ux = dx ? 1 / ABS(dx) : 1e9; uy = dy ? 1 / ABS(dy) : 1e9; tx = ux / 2; ty = uy / 2;
+    x = y = n = 0;
+    while (n < 30) { if (tx < ty) { if (tx > 12.5) break; x += sx; tx += ux; } else { if (ty > 12.5) break; y += sy; ty += uy; } RAY[i * 60 + 2 * n] = x; RAY[i * 60 + 2 * n + 1] = y; n++; }
+    RAYN[i] = n;
+  }
+}
+function nbr(t, d) { var x = t % EW + DX[d], y = (t / EW | 0) + DY[d]; return x < 0 || y < 0 || x >= EW || y >= EH ? -1 : y * EW + x; }
+function tOf(x, y) { return RND(y) * EW + RND(x); }
+function deg(t) { var n = 0, d, j; for (d = 1; d <= 4; d++) { j = nbr(t, d); if (j >= 0 && (GR[j] & 1)) n++; } return n; }
+function fpass(n) { return (GR[n] & 1) && !FB[n] && !SF[ZN[n]] && n !== BLK; }
+// Breadth-first path distances; fm applies the Stone Face's rules (ring footprints, claimed courts, the loop block).
+function bfs(s, D, fm, lim) {
+  var h = 0, e = 1, c, v = 0, n, k;
+  for (c = 0; c < EN; c++) D[c] = 9999;
+  if (s < 0) return 0;
+  D[s] = 0; BQ[0] = s; lim = lim || 9998;
+  while (h < e) {
+    c = BQ[h++]; v = D[c] + 1; if (v > lim) continue;
+    for (k = 1; k <= 4; k++) { n = nbr(c, k); if (n >= 0 && D[n] === 9999 && (fm ? fpass(n) : GR[n] & 1)) { D[n] = v; BQ[e++] = n; } }
+  }
+  return D[BQ[e - 1]];
+}
+// Grid line of sight between tile centres (supercover); a diagonal squeeze between two wall corners blocks.
+function los(a, b) {
+  var x = a % EW, y = a / EW | 0, x1 = b % EW, y1 = b / EW | 0, nx = ABS(x1 - x), ny = ABS(y1 - y), sx = x1 > x ? 1 : -1, sy = y1 > y ? 1 : -1, ix = 0, iy = 0, q;
+  while (ix < nx || iy < ny) {
+    q = (1 + 2 * ix) * ny - (1 + 2 * iy) * nx;
+    if (q === 0) { if (!(GR[y * EW + x + sx] & 1) && !(GR[(y + sy) * EW + x] & 1)) return false; x += sx; y += sy; ix++; iy++; }
+    else if (q < 0) { x += sx; ix++; } else { y += sy; iy++; }
+    if (!(GR[y * EW + x] & 1)) return false;
+  }
+  return true;
+}
+function best8(vx, vy, g) { var b = 0, bv = -9, i, v; for (i = 0; i < 8; i++) { v = vx * V8X[i] + vy * V8Y[i] + (g ? g.tb[i] : 0); if (v > bv) { bv = v; b = i; } } return b; }
+function wave(p) { p -= FLR(p); var t = 1 - ABS(2 * p - 1); return 2 * (3 * t * t - 2 * t * t * t) - 1; }
+
+// ---------- generation ----------
+function rodd(r, lo, hi) { return lo + 2 * FLR(r() * ((hi - lo >> 1) + 1)); }
+function room(k, hz) { var lw = [5, 7, 3][k], lh = [9, 13, 3][k]; return { k: k, hz: hz, lw: lw, lh: lh, fw: hz ? lh : lw, fh: hz ? lw : lh, x0: 0, y0: 0, m: [] }; }
+function turn(o) { o.hz = !o.hz; var t = o.fw; o.fw = o.fh; o.fh = t; }
+function fits(o, R, gap) {
+  var a0 = o.x0 - 1, a1 = o.x0 + o.fw, b0 = o.y0 - 1, b1 = o.y0 + o.fh, i, q;
+  if (a0 < 2 || b0 < 2 || a1 > EW - 3 || b1 > EH - 3) return false;
+  for (i = 0; i < R.length; i++) { q = R[i]; if (!(a1 + gap <= q.x0 - 1 || q.x0 + q.fw + gap <= a0 || b1 + gap <= q.y0 - 1 || q.y0 + q.fh + gap <= b0)) return false; }
+  return true;
+}
+function spots(o, R, gap, ok) { var L = [], x, y; for (y = 3; y + o.fh <= EH - 3; y += 2) for (x = 3; x + o.fw <= EW - 3; x += 2) { o.x0 = x; o.y0 = y; if (fits(o, R, gap) && (!ok || ok(o))) L.push(x, y); } return L; }
+function outs(q, t) { return at(q, 2, -2) === t || at(q, 2, 10) === t; }
+function at(o, u, v) { return o.hz ? (o.y0 + u) * EW + o.x0 + v : (o.y0 + v) * EW + o.x0 + u; }
+function cfloor(o, u, v) { return o.k === 0 ? v <= 1 || v >= 7 || (u >= 1 && u <= 3) : o.k === 1 ? v <= 2 || v >= 10 || (u >= 2 && u <= 4) : 1; }
+function E_gen(g, L, lsd) {
+  var ms = mix(lsd, 0x4D41), t, ok = 0, k = 0;
+  EW = MPAR[L][15]; EH = MPAR[L][16]; EN = EW * EH; BLK = -1;
+  for (t = 0; t < 11; t++) SF[t] = 0;
+  for (t = 0; t < 30 && !ok; t++) ok = genTry(g, L, rng(mix(ms, t)), 0);
+  // fallback: the pillar field, always connected; rooms keep trying seats until every check passes
+  for (; !ok && k < 200; k++) ok = genTry(g, L, rng(mix(ms, 100 + k)), 1);
+  g.tries = t; g.fb = k;
+}
+function genTry(g, L, r, pil) {
+  var P = MPAR[L], R = [], i, j, k, t, x, y, o, b, n, best, sc, S, cx, cy, xe, ent, fz = [], ok;
+  for (i = 0; i < EN; i++) GR[i] = ZN[i] = RS[i] = FB[i] = LC[i] = MEM[i] = 0;
+  xe = rodd(r, CEIL(EW * .2) | 1, (FLR(EW * .8) - 1) | 1); ent = (EH - 2) * EW + xe;
+  // the Great Court in the top 40% of rows; side courts far from rooms and the Entry; the post nearest the centre.
+  // If the courts cannot all be seated around one Great Court spot, the next spot is tried.
+  o = room(1, 0); ok = function (o) { return o.y0 + o.fh / 2 < .4 * EH; };
+  S = spots(o, R, 2, ok); turn(o); S = S.concat(spots(o, R, 2, ok).map(function (v, i) { return i & 1 ? v : -v; }));
+  for (var gi = 0; gi < 16 && S.length; gi++) {
+    k = FLR(r() * S.length / 2) * 2; o = room(1, S[k] < 0); o.x0 = ABS(S[k]); o.y0 = S[k + 1]; S.splice(k, 2); R = [o];
+    // side courts: centre and mouths away from the Entry, mouths away from every other court's mouths
+    ok = function (o) {
+      var m1 = at(o, 2, -2), m2 = at(o, 2, 10), i, j, q, t;
+      if (ABS(o.x0 + o.fw / 2 - xe) + ABS(o.y0 + o.fh / 2 - EH + 2) <= 8 || man(m1, ent) < 8 || man(m2, ent) < 8) return false;
+      for (i = 0; i < R.length; i++) { q = R[i]; for (j = 0; j < 4; j++) { t = q.k ? at(q, 2 + 2 * (j & 1), j & 2 ? 14 : -2) : at(q, 2, j & 2 ? 10 : -2); if (man(m1, t) < 6 || man(m2, t) < 6) return false; } }
+      return true;
+    };
+    for (i = 0; i < P[14]; i++) {
+      o = room(0, r() < .5); var Q = spots(o, R, 2, ok); if (!Q.length) { turn(o); Q = spots(o, R, 2, ok); } if (!Q.length) break;
+      best = -1; b = 0;
+      for (k = 0; k < 12; k++) {
+        j = FLR(r() * Q.length / 2) * 2; cx = Q[j] + o.fw / 2; cy = Q[j + 1] + o.fh / 2; sc = MAX(ABS(cx - xe), ABS(cy - EH + 2));
+        for (n = 0; n < R.length; n++) sc = MIN(sc, MAX(ABS(cx - R[n].x0 - R[n].fw / 2), ABS(cy - R[n].y0 - R[n].fh / 2)));
+        if (sc > best) { best = sc; b = j; }
+      }
+      o.x0 = Q[b]; o.y0 = Q[b + 1]; R.push(o);
+    }
+    if (R.length < P[14] + 1) continue;
+    o = room(2, 0);
+    for (n = 4; n >= 2; n -= 2) { Q = spots(o, R, n); if (Q.length) break; }
+    if (!Q.length) continue;
+    best = 1e9; b = 0;
+    for (k = 0; k < Q.length; k += 2) { x = Q[k] + 1 - EW / 2; y = Q[k + 1] + 1 - EH / 2; sc = x * x + y * y + r() * .5 + (ABS(Q[k] + 1 - xe) + ABS(Q[k + 1] + 1 - EH + 2) < 13 ? 999 : 0); if (sc < best) { best = sc; b = k; } }
+    o.x0 = Q[b]; o.y0 = Q[b + 1]; R.push(o); break;
+  }
+  if (R.length < P[14] + 2) return 0;
+  // reserve, carve the rooms, open the mouths; court plans start in memory
+  for (i = 0; i < R.length; i++) {
+    o = R[i]; o.z = o.k === 1 ? 8 : o.k === 2 ? 9 : i;
+    for (y = o.y0 - 1; y <= o.y0 + o.fh; y++) for (x = o.x0 - 1; x <= o.x0 + o.fw; x++) { t = y * EW + x; RS[t] = 1; MEM[t] = 1; if (o.k < 2) LC[t] = 1; }
+    for (j = 0; j < o.lh; j++) for (k = 0; k < o.lw; k++) if (cfloor(o, k, j)) { t = at(o, k, j); GR[t] = 1; ZN[t] = o.z; }
+    if (o.k === 0) o.m = [at(o, 2, -1), at(o, 2, -2), at(o, 2, 9), at(o, 2, 10)];
+    // (two separate draws, written differently: the minifier merges identical expressions)
+    else if (o.k === 1) { j = r() < .5 ? 2 : 4; k = r() >= .5 ? 4 : 2; if (taken(R, at(o, j, -2))) j = 6 - j; if (taken(R, at(o, k, 14))) k = 6 - k; o.m = [at(o, j, -1), at(o, j, -2), at(o, k, 13), at(o, k, 14)]; }
+    else {
+      var sd = FLR(r() * 4), s2, p2, mu, mv;
+      for (j = 0; j < (L > 1 ? 2 : 1); j++) {
+        s2 = j ? (sd + 1 + FLR(r() * 3)) % 4 : sd; p2 = r() < .5 ? 0 : 2;
+        mu = s2 === 1 ? 3 : s2 === 3 ? -1 : p2; mv = s2 === 0 ? -1 : s2 === 2 ? 3 : p2;
+        if (taken(R, at(o, mu + (s2 === 1 ? 1 : s2 === 3 ? -1 : 0), mv + (s2 === 0 ? -1 : s2 === 2 ? 1 : 0)))) { if (s2 & 1) mv = 2 - mv; else mu = 2 - mu; }
+        o.m.push(at(o, mu, mv), at(o, mu + (s2 === 1 ? 1 : s2 === 3 ? -1 : 0), mv + (s2 === 0 ? -1 : s2 === 2 ? 1 : 0)));
+      }
+    }
+    for (j = 0; j < o.m.length; j += 2) { GR[o.m[j]] = 1; ZN[o.m[j]] = o.z; }
+  }
+  if (pil) { for (y = 1; y < EH - 1; y++) for (x = 1; x < EW - 1; x++) { t = y * EW + x; if (!RS[t] && (x & 1 || y & 1)) GR[t] = 1; } }
+  else {
+    for (i = 0; i < EN; i++) D2[i] = 0;
+    for (i = 0; i < (L > 1 ? 3 : 2); i++) fz.push(rodd(r, 1, EW - 9), rodd(r, 1, EH - 9));
+    carve(r, ent, fz);
+    k = FLR(r() * EN);
+    for (j = 0; j < EN; j++) { t = (k + j) % EN; x = t % EW; y = t / EW | 0; if (x & 1 && y & 1 && x < EW - 1 && y < EH - 1 && !RS[t] && !D2[t]) carve(r, t, fz); }
+    // join the forest through single walls, in seeded order
+    for (n = 0; n < 400 && label() > 1; n++) {
+      k = FLR(r() * EN); b = 0;
+      for (j = 0; j < EN && !b; j++) {
+        t = (k + j) % EN; x = t % EW; y = t / EW | 0;
+        if (GR[t] || RS[t] || !x || !y || x === EW - 1 || y === EH - 1) continue;
+        if (((GR[t - 1] & 1) && (GR[t + 1] & 1) && DF[t - 1] !== DF[t + 1]) || ((GR[t - EW] & 1) && (GR[t + EW] & 1) && DF[t - EW] !== DF[t + EW])) { GR[t] = 1; b = 1; }
+      }
+      if (!b) return 0;
+    }
+    // braid dead ends into loops
+    for (j = 0; j < EN; j++) {
+      t = (k + j) % EN; x = t % EW; y = t / EW | 0;
+      if (!(x & 1 && y & 1) || RS[t] || !GR[t] || ZN[t] || deg(t) !== 1 || r() >= P[17]) continue;
+      opn(t, r);
+    }
+  }
+  // every mouth opens onto at least two corridor tiles
+  for (i = 0; i < R.length; i++) for (j = 1; j < R[i].m.length; j += 2) { t = R[i].m[j]; for (k = 0; k < 3 && cdeg(t) < 2; k++) if (!opn(t, r)) break; }
+  if (!pil) for (k = 0; k < 24 && runs(1); k++) {}
+  g.rooms = R; g.ent = ent;
+  // level 4: single wall stones between two corridors that slide open and shut, each a real shortcut
+  g.sl = [];
+  if (L === 3) {
+    var want = 5 + FLR(3 * r()), s1 = FLR(r() * EN), hzs, vts, f;
+    for (j = 0; j < EN && g.sl.length < want; j++) {
+      t = (s1 + j) % EN; x = t % EW; y = t / EW | 0;
+      if (GR[t] || RS[t] || x < 2 || y < 2 || x > EW - 3 || y > EH - 3) continue;
+      hzs = (GR[t - 1] & 1) && (GR[t + 1] & 1) && !ZN[t - 1] && !ZN[t + 1] && !GR[t - EW] && !GR[t + EW];
+      vts = (GR[t - EW] & 1) && (GR[t + EW] & 1) && !ZN[t - EW] && !ZN[t + EW] && !GR[t - 1] && !GR[t + 1];
+      if (!hzs && !vts) continue;
+      f = cheb(t, ent) <= 2;
+      for (i = 0; i < R.length && !f; i++) for (k = 1; k < R[i].m.length; k += 2) if (cheb(t, R[i].m[k]) <= 2) f = 1;
+      for (i = 0; i < g.sl.length && !f; i++) if (cheb(t, g.sl[i].t) < 5) f = 1;
+      if (f) continue;
+      bfs(hzs ? t - 1 : t - EW, D2, 0, 8);
+      if (D2[hzs ? t + 1 : t + EW] < 8) continue;
+      GR[t] = 2; g.sl.push({ t: t, v: vts ? 1 : 0, op: 0, w: 0 });
+    }
+  }
+  return validate(g, R, ent, pil);
+}
+function man(a, b) { return ABS(a % EW - b % EW) + ABS((a / EW | 0) - (b / EW | 0)); }
+function taken(R, t) { for (var i = 0; i < R.length; i++) for (var j = 1; j < R[i].m.length; j += 2) if (R[i].m[j] === t) return 1; return 0; }
+function cheb(s, t) { return MAX(ABS(s % EW - t % EW), ABS((s / EW | 0) - (t / EW | 0))); }
+function cdeg(t) { var n = 0, d, q; for (d = 1; d <= 4; d++) { q = nbr(t, d); if (q >= 0 && (GR[q] & 1) && !ZN[q]) n++; } return n; }
+// open one closed wall from cell t toward a free cell two tiles away, in seeded order
+function opn(t, r) {
+  var n = 0, d, w, c;
+  for (d = 1; d <= 4; d++) { w = nbr(t, d); c = w >= 0 ? nbr(w, d) : -1; if (c >= 0 && !GR[w] && !RS[w] && !RS[c] && (GR[c] & 1) && w % EW && w % EW < EW - 1 && w > EW && w < EN - EW) OP[n++] = d; }
+  if (!n) return 0;
+  GR[nbr(t, OP[FLR(r() * n)])] = 1; return 1;
+}
+function carve(r, s, fz) {
+  var sp = 1, c, d, k, j, n, cd, x, y, bias;
+  STK[0] = s; BQ[0] = 0; D2[s] = 1; GR[s] = 1;
+  while (sp) {
+    c = STK[sp - 1]; cd = BQ[sp - 1]; k = 0; x = c % EW; y = c / EW | 0;
+    for (d = 1; d <= 4; d++) { n = c + 2 * (DX[d] + DY[d] * EW); if (x + 2 * DX[d] >= 1 && y + 2 * DY[d] >= 1 && x + 2 * DX[d] <= EW - 2 && y + 2 * DY[d] <= EH - 2 && !RS[n] && !D2[n]) OP[k++] = d; }
+    if (!k) { sp--; continue; }
+    for (bias = .55, j = 0; j < fz.length; j += 2) if (x >= fz[j] && x < fz[j] + 8 && y >= fz[j + 1] && y < fz[j + 1] + 8) bias = .85;
+    for (j = 0; j < k && OP[j] !== cd; j++) {}
+    if (j < k && (k === 1 || r() >= bias)) d = cd;
+    else { if (j < k) { OP[j] = OP[k - 1]; k--; } d = OP[FLR(r() * k)]; }
+    GR[c + DX[d] + DY[d] * EW] = 1; n = c + 2 * (DX[d] + DY[d] * EW); GR[n] = 1; D2[n] = 1; STK[sp] = n; BQ[sp] = d; sp++;
+  }
+}
+function label() {
+  var c = 0, i, h, e, k, d, n;
+  for (i = 0; i < EN; i++) DF[i] = 0;
+  for (i = 0; i < EN; i++) if ((GR[i] & 1) && !DF[i]) {
+    c++; DF[i] = c; BQ[0] = i; h = 0; e = 1;
+    while (h < e) { k = BQ[h++]; for (d = 1; d <= 4; d++) { n = nbr(k, d); if (n >= 0 && (GR[n] & 1) && !DF[n]) { DF[n] = c; BQ[e++] = n; } } }
+  }
+  return c;
+}
+// Straight maze corridor runs over 7 tiles with no side opening. With fix, open a side wall near the middle of the
+// first one that can take an opening; a stretch with nothing to open into (a court wall, the outer wall) is let be.
+function runs(fix) {
+  var bad = 0, a, u, v, t, n, k, c, d, w, b, s, U, V, f;
+  for (a = 0; a < 2; a++) {
+    U = a ? EW : EH; V = a ? EH : EW;
+    for (u = 1; u < U - 1; u++) for (n = 0, v = 0; v <= V; v++) {
+      t = v < V ? (a ? v * EW + u : u * EW + v) : -1;
+      if (t >= 0 && (GR[t] & 1) && !ZN[t] && !(a ? (GR[t - 1] & 1) || (GR[t + 1] & 1) : (GR[t - EW] & 1) || (GR[t + EW] & 1))) { n++; continue; }
+      if (n > 7) for (f = 0, k = 0; k < n && !f; k++) {
+        s = v - 1 - (n >> 1) + (k & 1 ? (k + 1) >> 1 : -(k >> 1)); c = a ? s * EW + u : u * EW + s;
+        if (!((c % EW) & 1) || !(((c / EW) | 0) & 1)) continue;
+        for (d = 1; d <= 4 && !f; d++) {
+          if (a ? !DX[d] : !DY[d]) continue;
+          w = nbr(c, d); b = w >= 0 ? nbr(w, d) : -1;
+          if (b >= 0 && !GR[w] && !RS[w] && !RS[b] && (GR[b] & 1)) { f = 1; bad++; if (fix) { GR[w] = 1; return 1; } }
+        }
+      }
+      n = 0;
+    }
+  }
+  return bad;
+}
+function validate(g, R, ent, pil) {
+  var D = DP, i, j, k, t, n, mx = 0, cor = 0, two = 0, o, q, m;
+  bfs(ent, D, 0);
+  for (i = 0; i < EN; i++) if (GR[i] & 1) {
+    if (D[i] === 9999) return 0;
+    if (D[i] > mx) mx = D[i];
+    if (!ZN[i] && (i % EW & 1) && ((i / EW | 0) & 1) && deg(i) === 2) { two++; if (!(((GR[i - EW] & 1) && (GR[i + EW] & 1)) || ((GR[i - 1] & 1) && (GR[i + 1] & 1)))) cor++; }
+  }
+  if ((!pil && cor < .2 * two) || runs(0)) return 0;
+  for (i = 0; i < EN; i++) D2[i] = 0;
+  for (i = 0; i < R.length; i++) {
+    o = R[i]; o.de = 9999;
+    for (j = 1; j < o.m.length; j += 2) { t = o.m[j]; if (D2[t]) return 0; D2[t] = 1; o.de = MIN(o.de, D[t]); if (cdeg(t) < 2) return 0; }
+  }
+  // R: [Great Court, side courts..., post]
+  if (R[R.length - 1].de < 12 || R[0].de < .35 * mx || R[0].de < 14) return 0;
+  for (i = 1; i < R.length - 1; i++) if (R[i].de < 8) return 0;
+  for (i = 0; i < R.length - 1; i++) {
+    o = R[i];
+    for (t = 0; t < EN; t++) FB[t] = ZN[t] === o.z ? 1 : 0;
+    bfs(o.m[1], D2, 1); m = D2[o.m[3]];
+    for (t = 0; t < EN; t++) FB[t] = 0;
+    if (m === 9999) return 0;
+    for (j = 1; j < 4; j += 2) { bfs(o.m[j], D2, 0, 6); for (k = 0; k < R.length - 1; k++) if (k !== i) for (n = 1; n < 4; n += 2) if (D2[R[k].m[n]] < 6) return 0; }
+  }
+  return 1;
+}
+
+// ---------- level setup ----------
+function E_new(L) {
+  E_alloc();
+  var P = MPAR[L], lsd = mix(runSeed, L + 1), rb = rng(mix(lsd, 0xB055)), ra = rng(mix(lsd, 0xF4E7)), kc = calm ? .8 : 1, kt = calm ? 1.4 : 1, g, i, j, o, R, t, k, n, tp;
+  g = { m: 'echo', L: L, n: 0, time: 0, walk: P[0], pat: P[1] * kc, inv: P[2] * kc, rush: P[3] * kc, cp: P[4] * (calm ? 1.2 : 1), Tn: P[5] * kt, R: P[7] + (calm ? .5 : 0), kt: kt,
+    hx: P[8] * (calm ? .85 : 1), strk: P[11], silM: P[13] * kt, playT: P[20] * kt, et: calm ? .17 : .12, lh: calm ? 84 : 60, vs: 1, wn: 7,
+    ws: new Int16Array(8), wt: new Int32Array(8), wr: new Float32Array(8), wb: new Float32Array(8), wf: new Uint8Array(8), wm: new Int16Array(8),
+    tx: new Float32Array(14), ty: new Float32Array(14), tq: new Float32Array(14), tn: 0, le: new Int32Array(24), tb: new Float32Array(8), sd: {}, ord: [], cl: 0, unseen: 1, tw: 0, pts: 0 };
+  tp = L ? FLR(rb() * 3) : 0; g.tp = tp;
+  g.S = P[6] + (tp === 0 ? -1 : tp === 1 ? 2 : 0); if (tp === 0) g.hx *= 1.25; if (tp === 1) g.hx *= .8;
+  g.hold = tp === 2 ? .25 : .15; g.lhold = tp === 2 ? .6 : .4; g.wait = (P[12] + (tp === 2 ? 1.5 : 0)) * kt; g.jlo = tp === 2 ? 2 : 3; g.jhi = tp === 2 ? 3 : 5;
+  g.wake = (P[9] + (P[10] - P[9]) * rb()) * kt;
+  E_gen(g, L, lsd);
+  g.fr = rng(mix(lsd, 0xA417));
+  for (i = 0; i < 8; i++) g.tb[i] = g.fr() * 1e-6; // seeded tie-breaks for facing choices
+  g.fo = [1, 2, 3, 4]; for (i = 3; i > 0; i--) { j = FLR(g.fr() * (i + 1)); t = g.fo[i]; g.fo[i] = g.fo[j]; g.fo[j] = t; }
+  // rings: side rings jut from a seeded alley wall at row 4; the Great Ring is Drop's ring of the same level, seen from above
+  R = g.rooms; g.rings = []; g.post = 0;
+  for (i = 0; i < R.length; i++) {
+    o = R[i];
+    if (o.k === 2) { g.post = at(o, 1, 1); g.pm = o.m; continue; }
+    var sd = rb() < .5 ? -1 : 1, gr = o.k === 1, vr = gr ? 6 : 4, uc = gr ? 3 : 2, w = (gr ? P[19] : P[18]) * .36;
+    var q = { z: o.z, o: o, hz: o.hz, gr: gr, s: sd, w: w, off: 0, ao: 0, open: 1, live: 1, c: 0, sil: 0, sn: 0,
+      a0: o.hz ? o.x0 + vr : o.y0 + vr, lc: o.hz ? o.y0 + uc : o.x0 + uc };
+    if (gr) {
+      q.per = 1; q.ph = rb();
+      if (L === 1) { q.amp = MIN(.6 + .4 * rb(), 1.6 - w); q.per = (2.6 + rb()) * kt; }
+      if (L === 2) { q.per = (3 + 1.2 * rb()) * kt; q.of = .35 + .1 * rb(); }
+      if (L === 3) { q.per = (2.4 + rb()) * kt; q.first = rb() < .5 ? 0 : 1; q.s = -1; }
+      if (L === 4) { q.fig = rb() < .5; q.A = 1.5 + .5 * rb(); q.amp = MIN(.6 + .3 * rb(), 1.6 - w); q.sp = (.18 + .1 * rb()) / kt; }
+      g.gc = q;
+    }
+    g.rings.push(q);
+    if (gr && L === 3) { var q2 = {}; for (k in q) q2[k] = q[k]; q2.s = 1; q2.pair = 1; g.rings.push(q2); }
+  }
+  // the Stone Face may not stand on a ring's reach; tiles of the alley next to the ring wall in the ring row
+  for (i = 0; i < g.rings.length; i++) {
+    q = g.rings[i];
+    for (k = -(q.A ? 2 : 0); k <= (q.A ? 2 : 0); k++) for (j = 0; j < 2; j++) {
+      var a = q.a0 + k, l = q.lc + q.s * (1 - j);
+      t = q.hz ? l * EW + a : a * EW + l; FB[t] = 1;
+    }
+  }
+  // patrol waypoints: the outside tiles of every side court mouth
+  g.wp = []; g.wz = []; g.rz = [];
+  for (i = 0; i < g.rings.length; i++) g.rz[g.rings[i].z] = g.rings[i];
+  for (i = 1; i < R.length - 1; i++) g.wp.push(R[i].m[1], R[i].m[3]), g.wz.push(R[i].z, R[i].z);
+  g.wp.push(g.ent); g.wz.push(0); // the Entry too, so standing still at the start is not a hiding place
+  for (i = g.wp.length - 1; i > 0; i--) { j = FLR(g.fr() * (i + 1)); t = g.wp[i]; g.wp[i] = g.wp[j]; g.wp[j] = t; t = g.wz[i]; g.wz[i] = g.wz[j]; g.wz[j] = t; }
+  // Dmax for the silence step, and par from a greedy route through every court
+  var gm = R[0].m, dm = 0, cur = g.ent, left = [], route = 0;
+  bfs(gm[1], D2, 0); bfs(gm[3], DF, 0);
+  for (j = 1; j < R.length - 1; j++) dm = MAX(dm, MIN(D2[R[j].m[1]], D2[R[j].m[3]], DF[R[j].m[1]], DF[R[j].m[3]]) + 6);
+  g.dmax = dm;
+  for (i = 1; i < R.length - 1; i++) left.push(R[i]);
+  while (left.length) {
+    bfs(cur, D2, 0); k = 0; n = 1e9;
+    for (i = 0; i < left.length; i++) for (j = 1; j < 4; j += 2) if (D2[left[i].m[j]] < n) { n = D2[left[i].m[j]]; k = i * 4 + j; }
+    o = left[k >> 2]; route += n + 11; cur = o.m[(k & 3) === 1 ? 3 : 1]; left.splice(k >> 2, 1);
+  }
+  bfs(cur, D2, 0); route += MIN(D2[gm[1]], D2[gm[3]]) + 6;
+  g.par = 2.2 * route / g.walk;
+  g.silS = MAX(g.silM, 2 * dm / (.85 * g.walk) / P[14] * kt);
+  // trials
+  if (L === 1) { g.tdI = 3.5 + 1.5 * rb(); g.tdJ = rb() < .5; g.tcap = 10 + FLR(5 * rb()); g.tdT = g.tdI; }
+  if (L === 2) { g.tper = (3 + 1.2 * rb()) * kt; g.tsf = .5 + .1 * rb(); g.tph = rb(); g.tc = 0; g.still = 1; }
+  if (L === 3) for (i = 0; i < g.sl.length; i++) { o = g.sl[i]; o.per = 6 + 4 * rb(); o.of = .45 + .1 * rb(); o.ph = rb(); }
+  if (L === 4) { g.gcI = 10 + 4 * rb(); g.gcd = g.gcI; g.gT = (1.2 + .4 * rb()) * kt; g.R = MIN(g.R, calm ? 3.5 : 3); }
+  // the mosaic: a seeded jittered net, a level-dependent share of tesserae lost (render data only)
+  g.mos = E_mosaic(ra, P[21]);
+  g.sf = SF; for (i = 0; i < 11; i++) SF[i] = 0;
+  g.retry = function () { E_reset(g, g.why); };
+  g.step = function (dt) { E_step(g, dt); };
+  g.draw = function () { E_draw(g); };
+  g.tm = function () { return E_tm(g); };
+  g.lay = function () { E_lay(g); };
+  E_reset(g, 0);
+  return g;
+}
+// Where you start again: the court claimed last (its first end zone), or the Entry.
+function E_home(g) {
+  var o = g.cl ? g.rooms[g.cl] : null;
+  return o ? at(o, 2, 1) : g.ent;
+}
+function E_reset(g, why) {
+  var p, b, F, i, h = E_home(g), d, t, best, bi;
+  if (why === 'silence') { for (i = 0; i < g.rings.length; i++) if (!g.rings[i].gr) { g.rings[i].sil = 0; SF[g.rings[i].z] = 1; } g.nsil = 0; g.silT = 3 + g.silS; }
+  g.p = p = { x: h % EW, y: h / EW | 0, fx: 0, fy: -1, mk: 0, bst: 0, prot: why ? 3 : 0, cd: 0, hit: 0, still: 9, ax: 0, ay: -1, unm: 0 };
+  for (d = 1; d <= 4; d++) { t = nbr(h, [0, 1, 2, 4, 3][d]); if (t >= 0 && (GR[t] & 1)) break; }
+  d = [0, 1, 2, 4, 3][d] || 1;
+  g.b = b = { x: p.x + DX[d] * .6, y: p.y + DY[d] * .6, vx: 0, vy: 0, held: 0, rest: 1, kx: 0, ky: 0, pk: 0 };
+  b.kx = b.x; b.ky = b.y; p.fx = DX[d]; p.fy = DY[d]; p.ax = p.fx; p.ay = p.fy;
+  g.pt = -1; g.done = 0; g.why = 0; g.lei = 0; g.ctl = 0; g.patT = 0; g.kn = -99; g.band = 0; g.bandT = 0; g.ghT = 0; g.cu = 0; g.tick = 0;
+  for (i = 0; i < 8; i++) g.wf[i] = 0;
+  for (i = 0; i < EN; i++) { JP[i] = 0; if (!why) LIT[i] = -999; }
+  g.jn = 0; BLK = -1; g.dtd = 1; g.f = null;
+  E_ptile(g);
+  F = g.f = { x: 0, y: 0, t: 0, n: -1, d: 0, f: 4, ft: 4, tt: 0, st: 0, s: g.wake * (why ? .5 : 1), m: 0, sees: 0, sT: 9, raw: 0, step: 0, tg: -1, pz: 0, cyc: 0,
+    hd: -1, hdT: 99, lk: -1, lkT: 99, ls: -1, lost: 0, lm: 0, ramp: 0, rT: 0, nsT: 0, cn: 0, hunt: 0, huntT: 0, pcd: 0, np: 0, lb: new Int8Array(4), ln: 0, li: 0,
+    jc: 0, jn: 3, wi: 0, wpo: -1, rd: 0, blkT: 0, dist: 99, sxw: 1, eyT: 0, after: 0, free: 0, ball: 0, gd: -1, gs: 0, wt: -1, sayT: -9, nearT: -99 };
+  // the post, unless that is too near you or in your sight: then the waypoint farthest from you that is not
+  t = g.post;
+  if (DP[t] < 6 || VIS[t] === g.vs) { best = -1; bi = t; for (i = 0; i < g.wp.length; i++) if (DP[g.wp[i]] < 9999 && DP[g.wp[i]] > best && VIS[g.wp[i]] !== g.vs) { best = DP[g.wp[i]]; bi = g.wp[i]; } t = bi; }
+  F.t = t; F.x = t % EW; F.y = t / EW | 0;
+  bfs(F.t, DF, 0); F.ft = F.f = best8(p.x - F.x, p.y - F.y, g);
+  F.jn = g.jlo + FLR(g.fr() * (g.jhi - g.jlo + 1));
+}
+function E_tm(g) {
+  var s = '', i, n = 0, k = 0, q;
+  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.gr) continue; n++; if (g.fin ? q.c && !q.sil : q.c) k++; s += '<i class="dot' + ((g.fin ? q.c && !q.sil : q.c) ? ' on' : '') + '"></i>'; }
+  return '<span>' + (g.fin ? TEXT.silence : TEXT.rings) + ' <span aria-label="' + k + ' ' + TEXT.of + ' ' + n + '">' + s + '</span></span>' + (g.p.mk ? '<i class="yk" aria-hidden="true"></i><span class="sr">' + TEXT.markedSr + '</span>' : '');
+}
+
+// ---------- sound, light, sight ----------
+function E_snd(g, n, t, k, v, k2, v2) {
+  var d = g.sd;
+  d.v = d.great = d.step = d.n = d.of = d.left = d.still = d.open = d.band = d.period = undefined; if (k) d[k] = v; if (k2) d[k2] = v2;
+  d.pan = t >= 0 && g.T ? clamp((g.ox + (t % EW) * g.T - g.vx - g.vw / 2) / (g.vw / 2), -1, 1) : 0;
+  d.dist = t >= 0 ? MIN(1, DP[t] / 24) : 0;
+  snd(n, d);
+}
+function E_sndD(n, k, v) { E_snd(G, n, -1, k, v); }
+// A wave: one breadth-first field from the source, cut at the heard radius (fl: 1 drawn, 2 heard by you only, 4 the whole labyrinth)
+function emit(g, t, base, fl) {
+  if (t < 0) return;
+  var s = g.wn = (g.wn + 1) & 7, rad = fl & 4 ? 9998 : fl & 2 ? base : base * g.hx * (g.fin ? 1.25 : 1);
+  g.wm[s] = bfs(t, WV[s], 0, CEIL(rad));
+  g.ws[s] = t; g.wt[s] = g.n; g.wr[s] = rad; g.wb[s] = base; g.wf[s] = fl | 8;
+}
+// Knock light: tiles in clear line from the knock, out to r, for half a second; extends, never relights from dark.
+function klight(g, t0, r) {
+  var x0 = t0 % EW, y0 = t0 / EW | 0, i, k, x, y, t, r2 = r * r, n = g.n, e = n + g.lh;
+  for (i = 0; i < 128; i++) for (k = 0; k < RAYN[i]; k++) {
+    x = RAY[i * 60 + 2 * k]; y = RAY[i * 60 + 2 * k + 1]; if (x * x + y * y > r2) break;
+    x += x0; y += y0; if (x < 0 || y < 0 || x >= EW || y >= EH) break;
+    t = y * EW + x; lit1(t, n, e);
+    if (!(GR[t] & 1)) break;
+  }
+  lit1(t0, n, e);
+}
+function lit1(t, n, e) { if (LIT[t] >= n) { if (e > LIT[t]) LIT[t] = e; } else if (n - LIT[t] >= 60) LIT[t] = e; MEM[t] = 1; }
+// Your sight: per tile, recomputed only when your tile changes, a stone moves or a court is claimed.
+function E_vis(g) {
+  var pt = g.pt, x0 = pt % EW, y0 = pt / EW | 0, i, k, x, y, t, d2, R2 = g.R * g.R, st;
+  st = g.vs = (g.vs + 1) & 65535; if (!st) { for (i = 0; i < NM; i++) VIS[i] = 0; st = g.vs = 1; }
+  VIS[pt] = st; MEM[pt] = 1;
+  for (i = 0; i < 128; i++) for (k = 0; k < RAYN[i]; k++) {
+    x = RAY[i * 60 + 2 * k]; y = RAY[i * 60 + 2 * k + 1]; d2 = x * x + y * y;
+    x += x0; y += y0; if (x < 0 || y < 0 || x >= EW || y >= EH) break;
+    t = y * EW + x;
+    if (d2 <= R2 || (LC[t] && d2 <= 144)) { VIS[t] = st; MEM[t] = 1; if (ZN[t] && ZN[t] < 9) g.sawC = 1; } else if (d2 > 144) break;
+    if (!(GR[t] & 1)) break;
+  }
+  g.vd = 0;
+}
+function E_ptile(g) {
+  var p = g.p, t = tOf(p.x, p.y);
+  if (t === g.pt) { if (g.vd) E_vis(g); return; }
+  var was = g.pt; g.pt = t; E_vis(g); bfs(t, DP, 0);
+  if (was >= 0 && SF[ZN[t]] !== SF[ZN[was]]) snd(SF[ZN[t]] ? 'safe-enter' : 'safe-leave');
+  // loop reversal counts junction passes during a chase
+  if (g.f && g.f.hunt && g.L !== 2 && deg(t) >= 3) { if (!JP[t]) JL[g.jn++ & 63] = t; if (++JP[t] >= 3) E_cut(g); }
+}
+function knock(g, x, y, v, kind) {
+  var t = tOf(x, y), b = g.b;
+  if (g.n - g.kn < 12 && ABS(x - g.kx) + ABS(y - g.ky) < 1 && v <= g.kv) return;
+  g.kn = g.n; g.kx = x; g.ky = y; g.kv = v; b.kx = x; b.ky = y; b.kt = g.n;
+  klight(g, t, MIN(5, 1.5 + .35 * v));
+  if (kind) { emit(g, t, 14, 1); E_snd(g, 'ring-hit', t, 'great', kind > 1); return; }
+  if (v >= 1) emit(g, t, MIN(12, 2 + .9 * v), v >= 4.5 ? 1 : 0);
+  E_snd(g, 'bounce', t, 'v', MIN(1, v / 12));
+}
+
+// ---------- collision ----------
+function rq(q, x, y) { return 1.5 - q.s * ((q.hz ? y : x) - q.lc); } // across: 0 at the ring's wall face
+function ral(q, x, y) { return (q.hz ? x : y) - q.a0 - q.ao; }      // along: 0 at the ring plane
+function rbox(q, qa, qb, k, n) {
+  var a = q.a0 + q.ao, l1 = q.lc + q.s * (1.5 - qa), l2 = q.lc + q.s * (1.5 - qb), lo = MIN(l1, l2), hi = MAX(l1, l2);
+  if (q.hz) { BXS[n] = a - .15; BXS[n + 2] = a + .15; BXS[n + 1] = lo; BXS[n + 3] = hi; } else { BXS[n] = lo; BXS[n + 2] = hi; BXS[n + 1] = a - .15; BXS[n + 3] = a + .15; }
+  BXK[n >> 2] = k; return n + 4;
+}
+function ringShut(g, q) { return q.gr && (!g.fin || !q.open || !q.live); }
+// Solid boxes near an area: wall tiles and closed stones, then rings (whole reach for bodies, the two stones for the ball).
+function nearB(x0, y0, x1, y1, body) {
+  var n = 0, i, j, t, q, g = G, e;
+  for (j = FLR(y0 + .5); j <= FLR(y1 + .5); j++) for (i = FLR(x0 + .5); i <= FLR(x1 + .5); i++) {
+    if (i < 0 || j < 0 || i >= EW || j >= EH) continue;
+    t = j * EW + i; if (GR[t] & 1) continue;
+    BXS[n] = i - .5; BXS[n + 1] = j - .5; BXS[n + 2] = i + .5; BXS[n + 3] = j + .5; BXK[n >> 2] = 0; n += 4;
+  }
+  for (i = 0; i < g.rings.length && n < 80; i++) {
+    q = g.rings[i]; e = q.off + .7 + q.w;
+    e = rq(q, (x0 + x1) / 2, (y0 + y1) / 2) - e; if (ABS(ral(q, (x0 + x1) / 2, (y0 + y1) / 2)) > 1 || e > .8 || e < -q.off - 1.6 - q.w) continue;
+    e = q.off + .7 + q.w;
+    if (body || ringShut(g, q)) n = rbox(q, 0, e, i + 1, n);
+    else { n = rbox(q, 0, q.off + .35, i + 1, n); n = rbox(q, q.off + .35 + q.w, e, i + 1, n); }
+  }
+  return n;
+}
+function bodyMove(o, dx, dy, r) {
+  var n, k, bl = 0;
+  if (dx) { o.x += dx; n = nearB(o.x - r, o.y - r, o.x + r, o.y + r, 1); for (k = 0; k < n; k += 4) if (o.y + r > BXS[k + 1] && o.y - r < BXS[k + 3] && o.x + r > BXS[k] && o.x - r < BXS[k + 2]) { o.x = dx > 0 ? BXS[k] - r : BXS[k + 2] + r; bl |= 1; } }
+  if (dy) { o.y += dy; n = nearB(o.x - r, o.y - r, o.x + r, o.y + r, 1); for (k = 0; k < n; k += 4) if (o.y + r > BXS[k + 1] && o.y - r < BXS[k + 3] && o.x + r > BXS[k] && o.x - r < BXS[k + 2]) { o.y = dy > 0 ? BXS[k + 1] - r : BXS[k + 3] + r; bl |= 2; } }
+  // anything that moved into you (a walking ring) pushes you out the short way
+  n = nearB(o.x - r, o.y - r, o.x + r, o.y + r, 1);
+  for (k = 0; k < n; k += 4) {
+    var l = o.x + r - BXS[k], rr = BXS[k + 2] - (o.x - r), u = o.y + r - BXS[k + 1], w = BXS[k + 3] - (o.y - r), m;
+    if (l <= 0 || rr <= 0 || u <= 0 || w <= 0) continue;
+    m = MIN(l, rr, u, w);
+    if (m === l) o.x -= l; else if (m === rr) o.x += rr; else if (m === u) o.y -= u; else o.y += w;
+  }
+  return bl;
+}
+// The ball against one box, with corner caps; returns the impact speed along the normal.
+function cbox(b, k, e) {
+  var x0 = BXS[k], y0 = BXS[k + 1], x1 = BXS[k + 2], y1 = BXS[k + 3], cx = clamp(b.x, x0, x1), cy = clamp(b.y, y0, y1), dx = b.x - cx, dy = b.y - cy, d2 = dx * dx + dy * dy, nx, ny, d, vn;
+  if (d2 >= .0324) return 0;
+  if (d2 < 1e-12) {
+    var l = b.x - x0, r = x1 - b.x, u = b.y - y0, w = y1 - b.y, m = MIN(l, r, u, w);
+    nx = m === l ? -1 : m === r ? 1 : 0; ny = nx ? 0 : m === u ? -1 : 1;
+    if (nx) b.x = (nx < 0 ? x0 : x1) + nx * .18; else b.y = (ny < 0 ? y0 : y1) + ny * .18;
+  } else { d = SQRT(d2); nx = dx / d; ny = dy / d; b.x = cx + nx * .18; b.y = cy + ny * .18; }
+  vn = b.vx * nx + b.vy * ny;
+  if (vn >= 0) return 0;
+  b.vx = (b.vx - vn * nx) * .96 - e * vn * nx; b.vy = (b.vy - vn * ny) * .96 - e * vn * ny;
+  return -vn;
+}
+
+// ---------- you and the ōlli ----------
+function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); emit(g, t, 5, 0); b.pk = .15; E_snd(g, 'pat', t); }
+function rtile(q) { return q.hz ? q.lc * EW + q.a0 : q.a0 * EW + q.lc; }
+function E_strike(g, ax, ay) {
+  var p = g.p, b = g.b, F = g.f, dx = b.x - p.x, dy = b.y - p.y, k, q, d, ex, ey, al, qc, s;
+  if (p.cd > 0) return;
+  if (b.held || dx * dx + dy * dy > .49) { p.miss = .3; if (g.n - (g.rch || -9999) > 720) { g.rch = g.n; cap(TEXT.reach, 2); } return; }
+  d = SQRT(ax * ax + ay * ay) || 1; ax /= d; ay /= d;
+  // aim snap: the Stone Face first, then a ring of this court
+  ex = F.x - b.x; ey = F.y - b.y; d = SQRT(ex * ex + ey * ey);
+  if (F.st && d < 4 && d > .01 && (ax * ex + ay * ey) / d >= .9 && los(tOf(b.x, b.y), tOf(F.x, F.y))) { ax = ex / d; ay = ey / d; }
+  else for (k = 0; k < g.rings.length; k++) {
+    q = g.rings[k];
+    if (ZN[tOf(b.x, b.y)] !== q.z || (q.gr ? !g.fin || !q.live : q.c)) continue;
+    al = ral(q, b.x, b.y); s = al < 0 ? 1 : -1; qc = q.off + .35 + q.w / 2;
+    if ((q.hz ? ax : ay) * s < .82 || ABS(rq(q, b.x, b.y) - qc) > (assist ? 1 : .6)) continue;
+    ex = (q.hz ? q.a0 + q.ao : q.lc + q.s * (1.5 - qc)) - b.x; ey = (q.hz ? q.lc + q.s * (1.5 - qc) : q.a0 + q.ao) - b.y; d = SQRT(ex * ex + ey * ey) || 1;
+    ax = ex / d; ay = ey / d; break;
+  }
+  b.vx = ax * g.strk; b.vy = ay * g.strk; b.rest = 0; p.cd = .35; p.hit = .2; p.hx = ax; p.hy = ay; g.ctl = 0;
+  emit(g, g.pt, 8, 1); E_snd(g, 'strike', g.pt);
+  if (!(ET & 1)) { ET |= 1; cap(TEXT.echoTw[0], 3.4); }
+}
+function P_step(g, dt) {
+  var p = g.p, b = g.b, F = g.f, kx = inp.r - inp.l, ky = inp.d - inp.u, mx = 0, my = 0, m, sp, vx, vy, dx, dy, d, bs, ctl, tx, ty, n, k, v, q, ox, oy, a0, a1, c, s, bl;
+  p.cd -= dt; p.hit -= dt; p.bst -= dt; p.miss -= dt; b.pk -= dt; if (p.prot > 0) p.prot -= dt;
+  if (inp.sb > 0) {
+    inp.sb = 0; tx = p.fx; ty = p.fy;
+    if (inp.sa === 1 && g.T) { tx = (inp.px * DPR - g.ox) / g.T - p.x; ty = (inp.py * DPR - g.oy) / g.T - p.y; }
+    else if (inp.sa === 2) { tx = inp.sax; ty = inp.say; }
+    if (tx || ty) E_strike(g, tx, ty);
+  }
+  if (kx || ky) { mx = kx; my = ky; if (kx && ky) { mx *= Q8; my *= Q8; } }
+  else if (inp.st) { mx = inp.sx; my = inp.sy; }
+  else if (inp.mw && g.T) {
+    tx = (inp.px * DPR - g.ox) / g.T - p.x; ty = (inp.py * DPR - g.oy) / g.T - p.y; d = SQRT(tx * tx + ty * ty);
+    if (d > .3) { m = d > 1 ? 1 : .35 + .65 * (d - .3) / .7; mx = tx / d * m; my = ty / d * m; }
+  }
+  m = SQRT(mx * mx + my * my);
+  sp = g.walk * (g.ctl ? .85 : 1) * (p.bst > 0 ? 1.4 : 1); vx = mx * sp; vy = my * sp;
+  bl = bodyMove(p, vx * dt, vy * dt, .28);
+  // corner slide: never snag a thumb on a corner
+  if ((bl & 1) && ABS(mx) > ABS(my)) { ty = RND(p.y); if (GR[ty * EW + RND(p.x) + (mx > 0 ? 1 : -1)] & 1) bodyMove(p, 0, clamp(ty - p.y, -sp * dt, sp * dt), .28); }
+  if ((bl & 2) && ABS(my) > ABS(mx)) { tx = RND(p.x); if (GR[(RND(p.y) + (my > 0 ? 1 : -1)) * EW + tx] & 1) bodyMove(p, clamp(tx - p.x, -sp * dt, sp * dt), 0, .28); }
+  if (m > .2) { p.fx = mx / m; p.fy = my / m; }
+  p.still = m < .05 ? p.still + dt : 0;
+  if (b.held) { b.x = F.x; b.y = F.y + .3; return; }
+  // the dribble: soft hip touches keep the ball just ahead of you
+  dx = b.x - p.x; dy = b.y - p.y; d = SQRT(dx * dx + dy * dy) || 1e-6; bs = SQRT(b.vx * b.vx + b.vy * b.vy);
+  ctl = m > .2 && d <= .75 && (dx * mx + dy * my) / (d * m) >= -.5 && bs <= 1.6 * sp;
+  if (ctl) {
+    b.vx = vx + (p.x + p.fx * .55 - b.x) * 6; b.vy = vy + (p.y + p.fy * .55 - b.y) * 6;
+    bs = SQRT(b.vx * b.vx + b.vy * b.vy); if (bs > 1.4 * g.walk) { b.vx *= 1.4 * g.walk / bs; b.vy *= 1.4 * g.walk / bs; }
+    if (!g.ctl) { g.patT = 0; E_pat(g); }
+    g.patT += dt; if (g.patT >= .45) { g.patT -= .45; E_pat(g); }
+  } else if (d < .46 && p.cd <= 0) { // a struck ball passes the striker's own hip
+    tx = dx / d; ty = dy / d; v = vx * tx + vy * ty; b.x = p.x + tx * .46; b.y = p.y + ty * .46;
+    if (v > 0) { b.vx += 1.3 * v * tx; b.vy += 1.3 * v * ty; }
+    if (!g.nud) E_pat(g); g.nud = 1;
+  } else g.nud = 0;
+  g.ctl = ctl;
+  // rolling: a literal per-step friction factor, a cap that cannot tunnel
+  if (!ctl) { b.vx *= FR; b.vy *= FR; }
+  bs = SQRT(b.vx * b.vx + b.vy * b.vy);
+  if (bs > 12) { b.vx *= 12 / bs; b.vy *= 12 / bs; }
+  if (bs < .25 && !ctl) { b.vx = b.vy = 0; if (!b.rest) { b.rest = 1; snd('ball-rest'); } } else b.rest = 0;
+  ox = b.x; oy = b.y; b.x += b.vx * dt; b.y += b.vy * dt;
+  n = nearB(b.x - .2, b.y - .2, b.x + .2, b.y + .2, 0);
+  for (k = 0; k < n; k += 4) { v = cbox(b, k, .72); if (v > .6 && !ctl) { c = BXK[k >> 2]; knock(g, b.x, b.y, v, c ? (g.rings[c - 1].gr ? 2 : 1) : 0); } }
+  // a ball wedged against stone pushes you back rather than sitting inside you
+  dx = p.x - b.x; dy = p.y - b.y; d = SQRT(dx * dx + dy * dy);
+  if (d < .44 && d > 1e-6 && p.cd <= 0) bodyMove(p, dx / d * (.46 - d), dy / d * (.46 - d), .28);
+  // the Stone Face's body: a hard strike makes it play
+  dx = b.x - F.x; dy = b.y - F.y; d = dx * dx + dy * dy;
+  if (d < .3969 && F.st && F.st !== 6 && F.st !== 9 && !g.done) {
+    d = SQRT(d) || 1e-6; tx = dx / d; ty = dy / d; v = b.vx * tx + b.vy * ty;
+    if (bs >= 3 && F.pcd <= 0) { E_play(g, F); return; }
+    b.x = F.x + tx * .63; b.y = F.y + ty * .63;
+    if (v < 0) { b.vx -= 1.5 * v * tx; b.vy -= 1.5 * v * ty; if (-v > .6) knock(g, b.x, b.y, -v, 0); }
+  }
+  // ring passes: the ball crosses the ring plane inside the slot, moving along the alley
+  for (k = 0; k < g.rings.length; k++) {
+    q = g.rings[k];
+    if (q.gr ? ringShut(g, q) : q.c) continue;
+    a0 = ral(q, ox, oy); a1 = ral(q, b.x, b.y);
+    if ((a0 < 0) === (a1 < 0)) continue;
+    c = rq(q, b.x, b.y);
+    if (c < q.off + .35 || c > q.off + .35 + q.w || ABS(ral(q, b.x, b.y)) > .5) continue;
+    if (ABS(q.hz ? b.vx : b.vy) >= 1.5) { if (q.gr) return E_clear(g); E_claim(g, q); }
+    else if (g.n - (g.sft || -999) > 360) { g.sft = g.n; cap(TEXT.soft, 1.6); snd('ring-soft'); }
+  }
+  // level 2: loose tesserae click when touched
+  for (k = 0; k < g.tn; k++) {
+    tx = g.tx[k]; ty = g.ty[k];
+    if ((p.x - tx) * (p.x - tx) + (p.y - ty) * (p.y - ty) < .09 || (b.x - tx) * (b.x - tx) + (b.y - ty) * (b.y - ty) < .0625) { E_tclick(g, k); k--; }
+  }
+}
+function E_tclick(g, k) {
+  var t = tOf(g.tx[k], g.ty[k]), i;
+  for (i = k; i < g.tn - 1; i++) { g.tx[i] = g.tx[i + 1]; g.ty[i] = g.ty[i + 1]; g.tq[i] = g.tq[i + 1]; }
+  g.tn--; klight(g, t, 1.5); emit(g, t, 16, 1); E_snd(g, 'tessera-click', t);
+  if (!(ET & 64)) { ET |= 64; cap(TEXT.tessera, 3); }
+}
+function E_claim(g, q) {
+  var o = q.o, F = g.f, x, y, t, i, n = 0, k = 0, rt = rtile(q);
+  q.c = 1; q.sn = 1; SF[q.z] = 1; g.cl = q.z; g.ord.push(q); addPts(1000 * (g.L + 1));
+  for (i = 0; i < g.rings.length; i++) if (!g.rings[i].gr) { n++; if (g.rings[i].c) k++; }
+  for (y = o.y0 - 1; y <= o.y0 + o.fh; y++) for (x = o.x0 - 1; x <= o.x0 + o.fw; x++) lit1(y * EW + x, g.n, g.n + g.lh);
+  klight(g, rt, 4.5); emit(g, rt, 999, 5);
+  g.vd = 1; g.dtd = 1; g.p.mk = 0;
+  cap(TEXT.claimed, 3); say(TEXT.claimed + ' ' + (n - k) + ' left.');
+  E_snd(g, 'ring-claim', rt, 'n', k, 'of', n);
+  if (ZN[tOf(F.x, F.y)] === q.z || (F.n >= 0 && ZN[F.n] === q.z)) { F.free = 1; E_wait(g, F, q.z); }
+  if (k === n) E_finale(g);
+}
+function E_finale(g) {
+  var F = g.f, rt = rtile(g.gc);
+  g.fin = 1; g.ftm = 0; g.silT = 3 + g.silS; g.nsil = 0; // a 3 s grace, then one ring falls silent every step
+  cap(TEXT.greatOpen, 4); say(TEXT.greatOpen); E_snd(g, 'great-open', rt);
+  if (!F.st) E_wake(g, F, 0);
+  F.wt = -1;
+}
+function E_clear(g) {
+  var L1 = g.L + 1, rem = g.silT + g.silS * MAX(0, g.ord.length - g.nsil - 1), pts = 2500 * L1 + 20 * RND(rem) + 10 * MAX(0, RND(g.par - g.time)), note = TEXT.letPass;
+  g.done = 1; g.won = 1; snd('great-pass'); snd('face-rest');
+  if (g.unseen) pts += 500 * L1;
+  clearLevel(pts, note, g.unseen ? TEXT.unseen : '');
+}
+
+// ---------- the Stone Face ----------
+function F_go(g, F, t) { if (t !== F.tg || g.dtd) { F.tg = t; bfs(t, DT, F.free ? 0 : 1); g.dtd = 0; } }
+function fNext(g, F) {
+  var b = 0, bv = DT[F.t], d, n, i;
+  for (i = -1; i < 4; i++) {
+    d = i < 0 ? F.d : g.fo[i]; if (!d) continue;
+    n = nbr(F.t, d); if (n >= 0 && (F.free ? GR[n] & 1 : fpass(n)) && DT[n] < bv) { b = d; bv = DT[n]; }
+  }
+  return b;
+}
+// Tile centre to tile centre down the distance field; every 90 degree turn costs the corner pause, a reversal twice.
+function fMove(g, F, spd, dt) {
+  if (F.pz > 0) { F.pz -= dt; return 0; }
+  var dist = spd * dt, nd, tx, ty, r, k = 0;
+  while (dist > 1e-9 && k++ < 4) {
+    if (F.n < 0) {
+      if (DT[F.t] === 0) return 1;
+      nd = fNext(g, F); if (!nd) return 2;
+      F.n = nbr(F.t, nd);
+      if (F.d && nd !== F.d) { F.pz = g.cp * (nd === OPP[F.d] ? 2 : 1) * (F.hunt && F.cn > 8 ? MAX(.5, 1 - .06 * (F.cn - 8)) : 1); if (F.hunt) F.cn++; F.d = nd; F.ft = 2 * nd - 2; return 0; }
+      F.d = nd; F.ft = 2 * nd - 2;
+    }
+    tx = F.n % EW; ty = F.n / EW | 0; r = ABS(tx - F.x) + ABS(ty - F.y);
+    if (dist < r) { F.x += tx > F.x ? dist : tx < F.x ? -dist : 0; F.y += ty > F.y ? dist : ty < F.y ? -dist : 0; return 0; }
+    F.x = tx; F.y = ty; dist -= r; F.t = F.n; F.n = -1; F.arr = 1;
+    if (F.free && !SF[ZN[F.t]]) F.free = 0, g.dtd = 1;
+  }
+  return F.n < 0 && DT[F.t] === 0 ? 1 : 0;
+}
+function E_say(g, m) { if (g.time - (g.fsay || -9) >= 2) { g.fsay = g.time; say(m); } }
+function E_wake(g, F, nr) {
+  F.st = 1; F.wt = -1; E_snd(g, 'face-wake', tOf(F.x, F.y)); E_say(g, TEXT.wakes);
+  if (nr) F.ft = best8(g.p.x - F.x, g.p.y - F.y, g);
+}
+// Branches to face in turn (seeded order), for Listen, Search and the finale watch.
+function E_look(g, F, st, hold, max, out) {
+  var i, d, n, r = FLR(g.fr() * 4), t0 = F.n >= 0 ? tOf(F.x, F.y) : F.t;
+  F.ln = 0; F.li = 0; F.st = st; F.s = hold; F.lhd = hold;
+  if (out) F.lb[F.ln++] = out;
+  else for (i = 0; i < 4 && F.ln < max; i++) { d = g.fo[(r + i) & 3]; n = nbr(t0, d); if (n >= 0 && (GR[n] & 1)) F.lb[F.ln++] = d; }
+  if (F.ln) F.ft = 2 * F.lb[0] - 2;
+}
+function E_search(g, F) { E_look(g, F, 4, .5, 4); E_snd(g, 'face-search', F.t); }
+function E_endChase(g, F) {
+  var i;
+  F.hunt = 0; F.cn = 0; F.lm = 0; F.ramp = 0; BLK = -1; g.dtd = 1;
+  for (i = 0; i < MIN(g.jn, 64); i++) JP[JL[i]] = 0; g.jn = 0;
+}
+function E_inv(g, F, t, rd) {
+  var d;
+  F.st = 3; F.hd = t; F.rd = rd; F_go(g, F, t);
+  if (DT[F.t] >= 9999 && F.n < 0) { E_search(g, F); return; }
+  if (F.n < 0) { d = fNext(g, F); if (d) F.ft = 2 * d - 2; }
+  E_snd(g, 'face-hear', tOf(F.x, F.y));
+}
+function hear(g, t, base) {
+  var F = g.f, i = (g.lei = (g.lei + 1) & 7) * 3;
+  g.le[i] = t; g.le[i + 1] = base; g.le[i + 2] = g.n;
+  if (g.done) return;
+  if (!F.st) { if (base >= 10) E_wake(g, F, 0); return; }
+  F.lk = t; F.lkT = 0;
+  if (F.step >= 1 || (F.st >= 5 && F.st !== 8)) return;
+  F.hd = t; F.hdT = 0;
+  if (g.L !== 2) E_inv(g, F, t, F.st === 3 ? .2 : 0);
+}
+function E_wait(g, F, z) {
+  var o = g.rooms[z], j, b = -1, bv = 1e9;
+  for (j = 1; j < o.m.length; j += 2) if (DF[o.m[j]] < bv) { bv = DF[o.m[j]]; b = j; }
+  F.st = 8; F.wt = o.m[b]; F.wm = o.m[b - 1]; F.s = g.wait; F.wz = z;
+  snd('face-wait'); if (!(ET & 16)) { ET |= 16; cap(TEXT.waits, 3); }
+}
+function E_nextWp(g, F, far) {
+  var i, t, b = -1, bv = 1e9, n = g.wp.length, v, bi = F.wi;
+  if (g.fin) { F.gi = (F.gi || 0) ^ 1; F.wt = g.gc.o.m[F.gi * 2 + 1]; return; }
+  if (far >= 0) bfs(far, D2, 0); else if (F.lkT < 20 && F.lk >= 0) bfs(F.lk, D2, 0);
+  for (i = 0; i < n; i++) {
+    F.wi = (F.wi + 1) % n; t = g.wp[F.wi];
+    if ((g.wz[F.wi] && g.rz[g.wz[F.wi]].c) || t === F.wpo) continue;
+    v = far >= 0 ? -D2[t] : F.lkT < 20 && F.lk >= 0 ? D2[t] : i;
+    if (v < bv) { bv = v; b = t; bi = F.wi; }
+  }
+  F.wi = bi; F.wt = b >= 0 ? b : g.wp[0];
+}
+function E_play(g, F) {
+  var b = g.b;
+  F.st = 6; F.s = g.playT; F.pcd = 4; F.ramp = 0; b.held = 1; b.vx = b.vy = 0; g.ctl = 0;
+  F.ft = (best8(g.p.x - F.x, g.p.y - F.y, g) + 2) % 8;
+  E_snd(g, 'face-play', tOf(F.x, F.y));
+  if (F.np < 3) { F.np++; addPts(150); }
+  if (!(ET & 32)) { ET |= 32; cap(TEXT.plays, 3); }
+}
+function E_cut(g) {
+  var F = g.f, i, t, d;
+  for (i = 0; i < MIN(g.jn, 64); i++) JP[JL[i]] = 0; g.jn = 0;
+  if (F.st !== 5 || BLK >= 0) return;
+  if (F.n >= 0) { t = F.n; F.n = F.t; F.t = t; F.d = OPP[F.d]; BLK = t; }
+  else { d = fNext(g, F); if (!d) return; BLK = nbr(F.t, d); F.d = OPP[d]; }
+  F.pz = .3; F.ft = (F.f + 4) % 8; F.blkT = 6; g.dtd = 1; snd('face-cut');
+}
+function F_step(g, dt) {
+  var F = g.f, p = g.p, b = g.b, L = g.L, pt = g.pt, ft = tOf(F.x, F.y), dx = p.x - F.x, dy = p.y - F.y, d = SQRT(dx * dx + dy * dy) || 1e-6, ux = dx / d, uy = dy / d,
+    raw = 0, lit = LC[pt], S, E, S2, tn = g.Tn * (assist ? 1.5 : 1), r, k, t, safe = SF[ZN[pt]], blind, et;
+  if (ft !== F.ftl) { F.ftl = ft; bfs(ft, DF, 0); }
+  F.dist = DF[pt];
+  F.pcd -= dt; F.sT += dt; F.hdT += dt; F.lkT += dt; F.arr = 0;
+  if (F.huntT > 0 && (F.huntT -= dt) <= 0 && L === 2) F.hunt = 0;
+  if (F.blkT > 0 && (F.blkT -= dt) <= 0) { BLK = -1; g.dtd = 1; }
+  // stone turns in hard eighth-steps
+  et = L === 2 && g.still ? .25 * g.kt : g.et;
+  if (F.f === F.ft) F.tt = et;
+  else if ((F.tt -= dt) <= 0) { F.f = (F.f + ((F.ft - F.f + 8) % 8 < 4 ? 1 : 7)) % 8; F.tt += et; if (F.sees || VIS[ft] === g.vs) E_snd(g, 'face-turn', ft); }
+  // sight: a cone down the way it faces, a clear line, and range
+  blind = !F.st || F.st === 6 || F.st === 7 || F.st === 9 || g.done || (L === 2 && !g.still);
+  S = lit ? 12 : g.S + (L === 2 ? 3 : 0); E = lit ? 12 : S + 2;
+  if (!blind && (d <= E || d <= 1.5) && los(ft, pt)) {
+    if (d <= 1.5) F.f = F.ft = best8(ux, uy, g);
+    raw = d <= E && (d < .3 || ux * V8X[F.f] + uy * V8Y[F.f] >= .7) ? 1 : 0;
+  }
+  // the eyes: on and off at most twice a second
+  if (raw ? !F.sees && F.sT >= .5 : F.sees && F.sT >= .5) {
+    F.sees = raw; F.sT = 0;
+    if (raw && !(ET & 4)) { ET |= 4; cap(TEXT.law, 3.4); }
+  }
+  F.raw = raw;
+  if (F.st !== 6 && F.st !== 7 && F.st !== 9 && F.st) {
+    if (F.sees && raw) { S2 = p.still >= 1 && !lit ? 3 : S; F.m += dt / (d <= S2 / 2 ? tn : d <= S2 ? 1.5 * tn : 3 * tn); }
+    else F.m -= dt / (2 * tn);
+    F.m = F.m < 0 ? 0 : F.m > 1 ? 1 : F.m;
+  }
+  if (F.sees) p.unm = 0; else if ((p.unm += dt) >= 30 && p.mk) p.mk = 0;
+  k = F.m >= 1 ? 3 : F.m >= 2 / 3 ? 2 : F.m >= 1 / 3 ? 1 : 0;
+  if (k !== F.step) {
+    if (k > F.step) { E_sndD('face-eyes', 'step', k); if (k === 1 && g.time - (F.seeT || -99) >= 8) { F.seeT = g.time; E_say(g, TEXT.sees); } }
+    F.step = k;
+  }
+  if (raw) F.ls = pt;
+  if (k === 3 && F.st && F.st < 6 && !safe) {
+    if (L === 2) { F.hunt = 1; F.huntT = 8; g.unseen = 0; }
+    else if (!F.hunt || F.st !== 5) {
+      if (!F.hunt) { F.hunt = 1; F.cn = 0; F.ramp = 0; F.rT = 0; F.nsT = 0; g.unseen = 0; }
+      F.st = 5; F.lost = 0; F.lm = 0; snd('face-rush');
+      if (!(ET & 8)) { ET |= 8; cap(TEXT.corners, 3); }
+    }
+  }
+  if (L === 2 && F.st && F.st < 6) E_turnFace(g, F, dt, d, ux, uy);
+  else switch (F.st) {
+    case 0: // asleep at its post
+      F.s -= dt;
+      if ((F.s <= 0 && DP[ft] >= 6) || (d <= 3 && los(ft, pt))) E_wake(g, F, d <= 3);
+      break;
+    case 1: case 2: case 3: case 4:
+      if (F.step >= 1 && raw && !safe) { F.ft = best8(ux, uy, g); break; }
+      if (F.step >= 1 && F.st !== 3 && F.ls >= 0 && !safe) { E_inv(g, F, F.ls, 0); break; }
+      if (L === 4) E_gatherCheck(g, F);
+      if (F.st === 9) break;
+      if (F.st === 1) {
+        if (F.wt < 0) E_nextWp(g, F, -1);
+        F_go(g, F, F.wt);
+        F.cyc += dt; if (F.cyc >= .35 + g.hold) F.cyc -= .35 + g.hold;
+        if (F.cyc < .35) { if (F.cyc < dt && g.time - (F.stT || -9) >= .25) { F.stT = g.time; E_snd(g, 'face-step', ft); } r = fMove(g, F, g.pat / .7, dt); }
+        else r = F.n < 0 && DT[F.t] === 0 ? 1 : 0;
+        if (r) { F.wpo = F.wt; if (g.fin) E_look(g, F, 2, 2 * g.kt, 1, E_dirTo(F.wt, g.gc.o)); else E_look(g, F, 2, g.lhold, 3); F.wt = -1; snd('face-listen'); }
+        else if (F.arr && deg(F.t) >= 3 && ++F.jc >= F.jn) { F.jc = 0; F.jn = g.jlo + FLR(g.fr() * (g.jhi - g.jlo + 1)); E_look(g, F, 2, g.lhold, 3); snd('face-listen'); }
+        if (L === 1) E_tdrop(g, F, dt);
+      } else if (F.st === 3) {
+        if (F.rd > 0) { F.rd -= dt; break; }
+        F_go(g, F, F.hd); r = fMove(g, F, g.inv, dt);
+        if (r) E_search(g, F);
+      } else {
+        if (F.f === F.ft && (F.s -= dt) <= 0) {
+          if (++F.li >= F.ln) { if (F.st === 4) E_endChase(g, F); F.st = 1; F.cyc = 0; }
+          else { F.ft = 2 * F.lb[F.li] - 2; F.s = F.lhd; }
+        }
+      }
+      break;
+    case 5: // rush
+      if (safe) { E_wait(g, F, ZN[pt]); break; }
+      if (raw) {
+        F.lost = 0; F.nsT = 0; F.rT += dt; if (F.rT >= 4) { F.rT -= 4; F.ramp = MIN(.09, F.ramp + .015); }
+        if (F.lm && F.m >= 1) F.lm = 0;
+        if (BLK >= 0 && d <= 4) { BLK = -1; F.blkT = 0; g.dtd = 1; }
+      } else { F.lost += dt; F.nsT += dt; F.rT = 0; if (F.nsT >= 3) F.ramp = 0; if (F.lost >= .4 && !F.lm) { F.lm = 1; F.m = MIN(F.m, 2 / 3); } }
+      F_go(g, F, F.lm ? F.ls : pt);
+      r = fMove(g, F, g.rush * (1 + F.ramp), dt);
+      if (F.lm && r) { E_search(g, F); E_say(g, TEXT.lostYou); snd('face-lost'); }
+      break;
+    case 6: // play: the ball rests at its chin, then it plays it back toward your side
+      if ((F.s -= dt) <= 0) {
+        bfs(E_home(g), D2, 0); r = 0; t = tOf(F.x, F.y);
+        for (k = 1; k <= 4; k++) { var n = nbr(t, k); if (n >= 0 && (GR[n] & 1) && (!r || D2[n] < D2[nbr(t, r)])) r = k; }
+        r = r || 1; b.held = 0; b.x = F.x + DX[r] * .3; b.y = F.y + DY[r] * .3; b.vx = DX[r] * 5.5; b.vy = DY[r] * 5.5; b.rest = 0; b.kx = b.x; b.ky = b.y;
+        klight(g, t, 3); E_snd(g, 'face-return-strike', t);
+        F.st = 7; F.s = .6; F.after = 1;
+      }
+      break;
+    case 7: // recover: still, your window to slip past
+      if ((F.s -= dt) <= 0) {
+        if (F.after === 2 && F.m >= 1 && F.hunt) { F.st = 5; F.lost = 0; F.lm = 0; }
+        else { F.m = MIN(F.m, 2 / 3); E_search(g, F); }
+      }
+      break;
+    case 8: // wait at the mouth of a claimed court, staring in
+      if (!safe && !F.free) { if (F.m >= 1 && F.hunt) { F.st = 5; F.lost = 0; F.lm = 0; } else if (F.ls >= 0) E_inv(g, F, F.ls, 0); else E_search(g, F); break; }
+      if (F.step >= 1 && raw && !F.free && F.n < 0 && DT[F.t] === 0) F.ft = best8(ux, uy, g);
+      F_go(g, F, F.wt);
+      if (!(F.n < 0 && DT[F.t] === 0)) { if (fMove(g, F, F.hunt ? g.rush : g.inv, dt) === 2) E_search(g, F); }
+      else {
+        F.free = 0; if (!(F.step >= 1 && raw)) F.ft = 2 * E_dirTo(F.wm, null) - 2;
+        if ((F.s -= dt) <= 0) { E_endChase(g, F); F.st = 1; F.cyc = 0; E_nextWp(g, F, F.wt); F.wpo = F.wt; }
+      }
+      break;
+    case 9: // gathering: its outline builds where the loud knock was
+      F.s -= dt; F.gs = MIN(4, 1 + FLR((1 - F.s / g.gT) * 4));
+      if (F.s <= 0) {
+        t = F.gd;
+        if (DP[t] >= 6 && VIS[t] !== g.vs) { F.x = t % EW; F.y = t / EW | 0; F.t = t; F.n = -1; F.d = 0; F.ftl = -1; g.dtd = 1; E_look(g, F, 2, g.lhold, 3); E_snd(g, 'gather', t); }
+        else E_search(g, F);
+        F.gd = -1;
+      }
+      break;
+  }
+  // a touch: only in a full rush (or a level 3 hunt), never on safe ground, never through stone
+  if (p.prot <= 0 && !safe && d < .55 && F.hunt && ((F.st === 5 && F.m >= 1) || (L === 2 && !g.still && F.huntT > 0)) && los(ft, pt)) E_contact(g, F);
+}
+// direction from tile a toward its neighbour tile b (or from the mouth outward when o is given)
+function E_dirTo(a, o) {
+  var F = G.f, t = F.t, d, j;
+  if (o) { for (j = 1; j < o.m.length; j += 2) if (o.m[j] === a) { t = o.m[j - 1]; break; } for (d = 1; d <= 4; d++) if (nbr(t, d) === a) return d; return 1; }
+  for (d = 1; d <= 4; d++) if (nbr(t, d) === a) return d;
+  return F.d || 1;
+}
+function E_contact(g, F) {
+  var p = g.p;
+  G.clean = 0; F.ramp = 0;
+  if (!p.mk) { p.mk = 1; p.unm = 0; p.bst = 1.2; F.st = 7; F.s = 1; F.after = 2; snd('marked'); cap(TEXT.marked, 3); say(TEXT.marked); return; }
+  snd('caught'); g.why = 'caught'; g.done = 1; fail(TEXT.turned);
+}
+// Level 3: it turns on a rhythm. While it faces it cannot move; while it moves it cannot see.
+function E_turnFace(g, F, dt, d, ux, uy) {
+  var u, still, tl, r, hunt;
+  g.tc += dt; u = (g.tc / g.tper + g.tph) % 1; still = u < g.tsf;
+  tl = (still ? g.tsf - u : 1 - u) * g.tper;
+  if (tl <= .6 * g.kt && !g.tlt) { g.tlt = 1; snd('turn-tell'); }
+  if (still !== !!g.still) { g.still = still; g.tlt = 0; E_sndD('turn', 'still', still); }
+  if (still) {
+    if (F.step >= 1 && F.raw) F.ft = best8(ux, uy, g);
+    else if (F.hdT < 3 && F.hd >= 0) F.ft = best8(F.hd % EW - F.x, (F.hd / EW | 0) - F.y, g);
+    else if (F.f === F.ft && (F.s -= dt) <= 0) { F.s = .5; F.ft = (F.ft + 2) % 8; }
+    return;
+  }
+  hunt = F.hunt && F.huntT > 0;
+  if (!hunt && F.hdT > 12) { if (F.wt < 0) E_nextWp(g, F, -1); F.hd = -1; }
+  F_go(g, F, hunt ? F.ls : F.hd >= 0 ? F.hd : F.wt);
+  r = fMove(g, F, hunt ? g.rush : 1.3 * g.inv, dt);
+  if (r) { if (!hunt && F.hd < 0) F.wt = -1; F.hd = -1; }
+  if (!hunt && d <= 1) { g.tph = (1 - (g.tc / g.tper) % 1) % 1; g.still = 1; g.tlt = 0; E_sndD('turn', 'still', true); }
+}
+// Level 2: tesserae come loose while it patrols
+function E_tdrop(g, F, dt) {
+  var i;
+  if ((g.tdT -= dt) > 0 || (g.tdJ && !(F.arr && deg(F.t) >= 3))) return;
+  g.tdT = g.tdI;
+  if (g.tn >= g.tcap) { for (i = 0; i < g.tn - 1; i++) { g.tx[i] = g.tx[i + 1]; g.ty[i] = g.ty[i + 1]; g.tq[i] = g.tq[i + 1]; } g.tn--; }
+  g.tx[g.tn] = RND(F.x); g.ty[g.tn] = RND(F.y); g.tq[g.tn] = (mix(g.n, 7) & 255) / 162; g.tn++;
+  E_snd(g, 'tessera-drop', tOf(F.x, F.y));
+}
+// Level 5: it gathers where the loudest knock was, if that is far from it and far from you and out of your sight
+function E_gatherCheck(g, F) {
+  var i, t = -1, bv = 0;
+  if ((g.gcd -= STEP) > 0 || (F.st !== 1 && F.st !== 3 && F.st !== 4)) return;
+  g.gcd = g.gcI;
+  for (i = 0; i < 24; i += 3) if (g.n - g.le[i + 2] <= 360 && g.le[i + 1] > bv && g.le[i + 2]) { bv = g.le[i + 1]; t = g.le[i]; }
+  if (t < 0 || DF[t] < 8 || DF[t] >= 9999 || DP[t] < 6 || VIS[t] === g.vs || !fpass(t)) return;
+  F.st = 9; F.gd = t; F.s = g.gT; F.gs = 1; E_snd(g, 'gather-tell', t);
+}
+// Level 4: stones slide open and shut, warned 1.5 s ahead in three hard steps
+function E_slabs(g) {
+  var i, o, u, want, tl, wt = 1.5 * g.kt, p = g.p, b = g.b, F = g.f, x, y;
+  for (i = 0; i < g.sl.length; i++) {
+    o = g.sl[i]; u = (g.time / o.per + o.ph) % 1; want = u < o.of ? 1 : 0; tl = (want ? o.of - u : 1 - u) * o.per;
+    o.w = want !== o.op ? 1 : tl <= wt ? 1 - tl / wt : 0;
+    if (o.w > 0 && !o.ws) { o.ws = 1; E_snd(g, 'stone-warn', o.t, 'open', !o.op); } else if (!o.w) o.ws = 0;
+    if (want === o.op) continue;
+    x = o.t % EW; y = o.t / EW | 0;
+    if (!want && ((ABS(p.x - x) < .78 && ABS(p.y - y) < .78) || (ABS(b.x - x) < .68 && ABS(b.y - y) < .68) || F.t === o.t || F.n === o.t || tOf(F.x, F.y) === o.t)) continue;
+    o.op = want; o.w = 0; o.ws = 0; GR[o.t] = want ? 3 : 2; g.vd = 1; g.dtd = 1; F.ftl = -1; bfs(g.pt, DP, 0);
+    emit(g, o.t, 8, 3); E_snd(g, 'stone-move', o.t, 'open', !!want);
+  }
+}
+function E_waves(g) {
+  var s, fr, d, F = g.f, ft = tOf(F.x, F.y), f;
+  for (s = 0; s < 8; s++) {
+    f = g.wf[s]; if (!(f & 8)) continue;
+    fr = (g.n - g.wt[s]) * 14 / 120; d = WV[s][ft];
+    if (!(f & 18) && d <= g.wr[s] && fr >= d) { g.wf[s] |= 16; hear(g, g.ws[s], g.wb[s]); }
+    if ((f & 1) && !(f & 32) && d < 9999 && fr >= d) {
+      g.wf[s] |= 32;
+      if (VIS[ft] !== g.vs && LIT[ft] < g.n && g.ghT <= 0 && ABS(F.x - g.p.x) + ABS(F.y - g.p.y) <= 16 && F.st !== 9) { g.ghT = .6; g.ghx = F.x; g.ghy = F.y; g.ghs = E_sx(g); }
+    }
+    if (fr > MIN(g.wr[s], g.wm[s]) + 1) g.wf[s] = 0;
+  }
+}
+// how wide the face reads from where you stand: front, back, or a thin slab
+function E_sx(g) { var F = g.f, dx = g.p.x - F.x, dy = g.p.y - F.y, d = SQRT(dx * dx + dy * dy) || 1, s = (dx * V8X[F.f] + dy * V8Y[F.f]) / d; return s >= .12 ? s : s <= -.12 ? s : 0; }
+var TB = [20, 14, 9, 5];
+function E_step(g, dt) {
+  var F = g.f, p = g.p, i, q, b;
+  g.n++; g.time += dt; g.tick += dt;
+  if (g.tick >= .5) { g.tick -= .5; g.bn = (g.bn || 0) + 1; E_snd(g, 'beat', -1, 'n', g.bn, 'period', .5); }
+  if (g.cq && (g.cqT -= dt) <= 0) { cap(g.cq, 3.4); g.cq = 0; }
+  q = g.gc;
+  if (q && g.fin) {
+    i = g.ftm;
+    if (g.L === 1) q.off = q.amp * (.5 + .5 * wave(i / q.per + q.ph));
+    if (g.L === 2) q.open = (i / q.per + q.ph) % 1 < q.of;
+    if (g.L === 3) for (b = 0; b < g.rings.length; b++) if (g.rings[b].gr) g.rings[b].live = (FLR(i / q.per) + q.first + (g.rings[b].pair ? 1 : 0)) & 1;
+    if (g.L === 4) { q.ao = q.A * wave(q.sp * i); q.off = q.amp * (.5 + .5 * wave(q.fig ? 2 * q.sp * i + .25 : q.sp * i + .25)); }
+  }
+  P_step(g, dt); if (scr !== 'play' || beat || g.done) return;
+  E_ptile(g);
+  E_waves(g);
+  F_step(g, dt); if (beat || g.done) return;
+  if (g.L === 3) E_slabs(g);
+  if (g.fin) {
+    g.ftm += dt;
+    if ((g.silT -= dt) <= 0) {
+      for (i = 0; i < g.ord.length; i++) if (!g.ord[i].sil) break;
+      q = g.ord[i]; q.sil = 1; SF[q.z] = 0; g.nsil++; g.silT = g.silS; g.dtd = 1; g.vd = 1;
+      b = g.ord.length - g.nsil;
+      emit(g, rtile(q), 8, 3); E_sndD('ring-silent', 'left', b);
+      if (!b) { snd('rings-fell'); g.why = 'silence'; g.done = 1; fail(TEXT.silentAll); return; }
+      cap(TEXT.silentOne, 2.4); say(TEXT.silentOne + ' ' + b + ' left.');
+    }
+  }
+  // terror: the brackets step inward as its path to you shortens, never faster than every 0.6 s
+  g.bandT += dt; b = g.band; i = F.dist;
+  if (b < 4 && i <= TB[b]) b++; else if (b > 0 && i > TB[b - 1] + 1) b--;
+  if (b !== g.band && g.bandT >= .6) { g.band = b; g.bandT = 0; E_sndD('terror', 'band', b); if (b === 4 && g.time - (g.nearT || -99) >= 10) { g.nearT = g.time; E_say(g, TEXT.near); } }
+  if (g.ghT > 0) g.ghT -= dt;
+  if (g.sawC && !(ET & 2)) { ET |= 2; cap(TEXT.firstCourt, 3.4); }
+}
+/*L*/
+
+// ---------- ECHO drawing (render only) ----------
+// Ink in one place: if the owner's display mushes memory lines, raise m to '#b8b8b8' here.
+var INK = { w: '#fff', s: '#e6e6e6', e: '#b8b8b8', m: '#8c8c8c' };
+// The Stone Face: an original design, all geometry as data so an advisor-led change is a data change.
+// Units of the face width W; origin at the face centre, y down. Every x is multiplied by the turn factor sx.
+var FACE = {
+  outline: [-.40, -.50, .40, -.50, .46, -.44, .46, -.20, .53, -.20, .53, .08, .46, .08, .43, .18, .30, .42, .17, .50, -.17, .50, -.30, .42, -.43, .18, -.46, .08, -.53, .08, -.53, -.20, -.46, -.20, -.46, -.44],
+  ear: [.495, -.06], earR: .02,
+  band: { y0: -.46, y1: -.27, x0: -.38, x1: .38, units: 4 },
+  brow: [-.235, -.215],
+  eye: { inner: [.08, -.09], outer: [.30, -.115], up: [.19, -.19], lo: [.19, -.04], rim: 1.18, pr: [.034, .030, .024, .018], pdx: .055, pdy: .018 },
+  nose: [-.035, -.21, -.05, .08, -.10, .12, -.06, .14, .06, .14, .10, .12, .05, .08, .035, -.21],
+  mouth: { x0: -.15, x1: .15, up: .245, lo: .295, loOpen: .33, teeth: 11, tw: .018, th: .02 },
+  tess: { cell: .11, jit: .02, yTop: -.04 },
+  inset: .04
+};
+// A seeded jittered net over the lower face; lost cells are bare stone with no seams.
+function E_mosaic(r, lost) {
+  var c = FACE.tess.cell, j = FACE.tess.jit, e = FACE.eye, M = FACE.mouth, V = [], P = [], S = [], i, k, x, y, a;
+  for (k = 0; k < 66; k++) V.push(-.55 + k % 11 * c + (r() * 2 - 1) * j, FACE.tess.yTop + (k / 11 | 0) * c + (r() * 2 - 1) * j);
+  for (k = 0; k < 50; k++) { x = ABS(-.495 + k % 10 * c); y = FACE.tess.yTop + .055 + (k / 10 | 0) * c; P.push(r() >= lost && !((x > e.inner[0] - .03 && x < e.outer[0] + .03 && y < -.02) || (x < .12 && y < .16) || (x < M.x1 + .02 && y > M.up - .02 && y < M.loOpen + .02))); }
+  function on(i, k) { return i >= 0 && k >= 0 && i < 10 && k < 5 && P[k * 10 + i]; }
+  function add(a, b) { S.push(V[a], V[a + 1], V[b], V[b + 1]); }
+  for (k = 0; k < 6; k++) for (i = 0; i < 11; i++) {
+    a = (k * 11 + i) * 2;
+    // a seam lies between two tesserae that are both still there (the outer edge of the net counts as one)
+    if (i < 10 && (on(i, k - 1) && on(i, k) || (!k || k > 4) && (on(i, k - 1) || on(i, k)))) add(a, a + 2);
+    if (k < 5 && (on(i - 1, k) && on(i, k) || (!i || i > 9) && (on(i - 1, k) || on(i, k)))) add(a, a + 22);
+  }
+  return new Float32Array(S);
+}
+function E_lay(g) {
+  var port = H > W, top = 52, cs, vw, vh, T, gut;
+  T = clamp(RND(MIN(W - 32, H - top - (port ? 84 : 0)) / 15), 24, 52);
+  vw = MIN(W - 32, 25 * T); gut = (W - vw) / 2;
+  cs = port ? 84 : gut >= 140 ? 0 : 44; vh = H - top - cs;
+  g.T = T * DPR; g.vw = RND(vw * DPR); g.vh = RND(vh * DPR); g.vx = RND(gut * DPR); g.vy = RND((top + (!port && cs ? cs : 0)) * DPR);
+  // captions never cover the labyrinth: under it on portrait, in the left gutter when wide, else a strip under the HUD
+  g.cg = !port && !cs;
+  if (port) capAt(16, 16, top + vh + 4); else if (g.cg) capAt(12, W - gut + 12, top + 12); else capAt(16, 16, top);
+  g.DS = [4 * DPR, 4 * DPR]; g.DD = [2 * DPR, 3 * DPR]; g.D0 = []; g.cmx = null;
+}
+// render state for this frame, and short path helpers (device pixels, snapped)
+var OX = 0, OY = 0, TT = 1, VS = 0, NN = 0, FX = 0, FY = 0, FW = 1, FS = 1;
+function seen(t) { return VIS[t] === VS || LIT[t] >= NN; }
+function X_(x) { return OX + x * TT; }
+function Y_(y) { return OY + y * TT; }
+function bp() { ctx.beginPath(); }
+function mv(x, y) { ctx.moveTo(sn(x), sn(y)); }
+function ln(x, y) { ctx.lineTo(sn(x), sn(y)); }
+function seg(x0, y0, x1, y1) { mv(x0, y0); ln(x1, y1); }
+function wseg(x0, y0, x1, y1) { seg(X_(x0), Y_(y0), X_(x1), Y_(y1)); }
+function sk(c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.stroke(); }
+function circ(x, y, r) { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, 6.2832); }
+function rect(x0, y0, x1, y1, f, s) {
+  var a = sn(MIN(x0, x1)), b = sn(MIN(y0, y1)), w = RND(ABS(x1 - x0)), h = RND(ABS(y1 - y0));
+  if (f) { ctx.fillStyle = f; ctx.fillRect(a, b, w, h); }
+  if (s) { ctx.strokeStyle = s; ctx.strokeRect(a, b, w, h); }
+}
+function E_box(f, s) { rect(X_(BXS[0]), Y_(BXS[1]), X_(BXS[2]), Y_(BXS[3]), f, s); }
+// walls: seen stone is the carved double line, remembered stone a single grey line
+function wk(t) { var s = seen(t); return GR[t] === 2 && !s ? 0 : s ? 2 : MEM[t] ? 1 : 0; }
+function E_walls(k, i0, i1, j0, j1) {
+  var i, j, t, n, a, b, any, d, o, x, y;
+  bp();
+  for (j = j0; j <= j1; j++) for (i = i0; i <= i1; i++) {
+    t = j * EW + i; if (GR[t] & 1) continue;
+    a = wk(t); any = 0;
+    for (d = 0; d < 2; d++) {
+      n = d ? (j + 1 < EH ? t + EW : -1) : (i + 1 < EW ? t + 1 : -1);
+      if (n < 0 || GR[n] & 1) continue;
+      any = 1; o = d ? 1 : EW;
+      if (!(GR[t - o] || GR[n - o] || GR[t + o] || GR[n + o])) continue; // the joint faces no floor
+      b = wk(n); x = n % EW; y = n / EW | 0;
+      if (a === 2 && b === 2 ? k === 2 : a && b ? k === 1 : 0) wseg(i, j, x, y);
+      else if (!(a && b)) { if (a === k) wseg(i, j, (i + x) / 2, (j + y) / 2); else if (b === k) wseg(x, y, (i + x) / 2, (j + y) / 2); }
+    }
+    if (!any && a === k && (!i || GR[t - 1] & 1) && (!j || GR[t - EW] & 1)) wseg(i - .05, j, i + .05, j);
+  }
+  if (k > 1) { k = MAX(2, RND(TT * .2)); ctx.lineJoin = 'miter'; ctx.lineCap = 'square'; sk(INK.s, 2 * k + LW); sk('#000', 2 * k - LW); }
+  else { ctx.lineCap = 'butt'; sk(INK.m); }
+}
+// a mark across the edge between tile t and its neighbour in direction k: a line, or two hollow ticks
+function E_edge(i, j, k, f, hollow) {
+  var x = i + DX[k] * .5, y = j + DY[k] * .5, a = DY[k] * f, b = DX[k] * f;
+  if (hollow) { wseg(x - a, y - b, x - a * .56, y - b * .56); wseg(x + a * .56, y + b * .56, x + a, y + b); } else wseg(x - a, y - b, x + a, y + b);
+}
+function E_ring(g, q) {
+  var on = seen(rtile(q)), e = q.off + .7 + q.w, a = q.off + .35, solid, sh, col, k, c, m;
+  if (on) q.sn = 1;
+  solid = q.gr ? g.fin && q.live : q.c && !q.sil;
+  if (!solid && !q.sn) return;
+  sh = q.gr ? ringShut(g, q) : q.sil;
+  col = solid ? INK.w : on ? (q.gr ? INK.e : INK.s) : INK.m;
+  ctx.lineWidth = LW;
+  for (k = 0; k < 2; k++) { rbox(q, k ? a + q.w : 0, k ? e : a, 0, 0); E_box(solid ? INK.w : '#000', col); }
+  rbox(q, a, a + q.w, 0, 0); c = (BXS[0] + BXS[2]) / 2; m = (BXS[1] + BXS[3]) / 2;
+  if (sh) { // the slot drawn closed; a silent ring's slot is broken
+    bp(); k = q.sil ? .3 : 1;
+    if (q.hz) { wseg(c, BXS[1], c, BXS[1] + (BXS[3] - BXS[1]) * k); if (q.sil) wseg(c, BXS[3] - (BXS[3] - BXS[1]) * k, c, BXS[3]); }
+    else { wseg(BXS[0], m, BXS[0] + (BXS[2] - BXS[0]) * k, m); if (q.sil) wseg(BXS[2] - (BXS[2] - BXS[0]) * k, m, BXS[2], m); }
+    sk(col);
+  } else { ctx.lineWidth = q.aim ? 2 * LW : LW; E_box(0, q.aim ? INK.w : col); }
+  // level 4: a tick sweeps round the live ring like a clock hand, toward the next swap
+  if (q.gr && g.fin && q.live && g.L === 3) { k = (g.ftm % q.per) / q.per * 6.2832 - 1.5708; bp(); ctx.moveTo(X_(c), Y_(m)); ctx.lineTo(X_(c + Math.cos(k) * .7), Y_(m + Math.sin(k) * .7)); sk(INK.w); }
+}
+// aim: from the ball along the aim to the first wall, plus a short stub of the bounce, only over tiles you can see
+function E_aim(g) {
+  var p = g.p, b = g.b, ax = 0, ay = 0, x = b.x, y = b.y, i, t, k, q, a0, a1, c, d, ox, oy, bx = 0, by = 0, A = g.al;
+  for (k = 0; k < g.rings.length; k++) g.rings[k].aim = 0;
+  if (b.held || (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y) > .49) return 0;
+  if (inp.ph && !coarse) { ax = (inp.px * DPR - OX) / TT - p.x; ay = (inp.py * DPR - OY) / TT - p.y; }
+  d = SQRT(ax * ax + ay * ay); if (d < .01) return 0;
+  ax /= d; ay /= d; A[0] = X_(x); A[1] = Y_(y);
+  for (i = 0; i < 300; i++) {
+    ox = x; oy = y; x += ax * .05; y += ay * .05; t = tOf(x, y);
+    if (!seen(t)) break;
+    if (!(GR[t] & 1)) { bx = RND(ox) !== RND(x) ? -ax : ax; by = RND(oy) !== RND(y) ? -ay : ay; break; }
+    for (k = 0; k < g.rings.length; k++) { q = g.rings[k]; a0 = ral(q, ox, oy); a1 = ral(q, x, y); c = rq(q, x, y); if ((a0 < 0) !== (a1 < 0) && c >= q.off + .35 && c <= q.off + .35 + q.w && ABS(a1) < .5) q.aim = 1; }
+  }
+  A[2] = X_(x); A[3] = Y_(y); A[4] = A[2] + bx * 1.5 * TT; A[5] = A[3] + by * 1.5 * TT; A[6] = bx || by;
+  return 1;
+}
+// you: a black head inside the white hip yoke opening toward your facing; marked, a gap; protected, an outline
+function E_you(g) {
+  var p = g.p, x = X_(p.x), y = Y_(p.y), a = Math.atan2(p.fy, p.fx), r = .28 * TT, w = MAX(2, RND(2 * DPR)), k;
+  ctx.lineCap = 'butt';
+  for (k = p.prot > 0 ? 0 : 1; k < 2; k++) {
+    bp();
+    if (p.mk) { ctx.arc(x, y, r, a + .9, a + 2.25); ctx.moveTo(x + Math.cos(a + 3.12) * r, y + Math.sin(a + 3.12) * r); ctx.arc(x, y, r, a + 3.12, a + 5.38); }
+    else ctx.arc(x, y, r, a + .9, a + 5.38);
+    sk(p.prot > 0 && k ? '#000' : INK.w, p.prot > 0 ? (k ? w * .8 : w * 2.6) : w * 1.6);
+  }
+  bp(); circ(RND(x), RND(y), .16 * TT); ctx.fillStyle = '#000'; ctx.fill(); sk(INK.w);
+  if (p.hit > 0) { bp(); k = Math.atan2(p.hy, p.hx); ctx.arc(x, y, r * 1.55, k - .6, k + .6); sk(INK.w); }
+  if (p.miss > 0) { bp(); ctx.arc(x, y, r * 1.4, a + 2.4, a + 3.9); sk(INK.m); }
+}
+// face drawing: X = cx + x * sx * W, Y = cy + y * W, rounded to device pixels
+function fx(x) { return RND(FX + x * FS * FW) + OF; }
+function fy(y) { return RND(FY + y * FW) + OF; }
+function fpoly(a, close, sc) { sc = sc || 1; ctx.moveTo(fx(a[0] * sc), fy(a[1] * sc)); for (var i = 2; i < a.length; i += 2) ctx.lineTo(fx(a[i] * sc), fy(a[i + 1] * sc)); if (close) ctx.closePath(); }
+function fline(x0, y0, x1, y1) { ctx.moveTo(fx(x0), fy(y0)); ctx.lineTo(fx(x1), fy(y1)); }
+function almond(m, sc) {
+  var e = FACE.eye, cx = (e.inner[0] + e.outer[0]) / 2, cy = (e.inner[1] + e.outer[1]) / 2;
+  function X(v) { return fx(m * (cx + (v - cx) * sc)); } function Y(v) { return fy(cy + (v - cy) * sc); }
+  ctx.moveTo(X(e.inner[0]), Y(e.inner[1])); ctx.quadraticCurveTo(X(e.up[0]), Y(e.up[1]), X(e.outer[0]), Y(e.outer[1])); ctx.quadraticCurveTo(X(e.lo[0]), Y(e.lo[1]), X(e.inner[0]), Y(e.inner[1])); ctx.closePath();
+}
+function ears() { for (var i = -1; i <= 1; i += 2) circ(fx(i * FACE.ear[0]), fy(FACE.ear[1]), FACE.earR * FW); }
+// eyes: shell almonds always filled when open, solid obsidian pupils that shrink in three hard steps
+function E_eyes(st, ux, uy, glint) {
+  var e = FACE.eye, m, r = e.pr[st] * FW, k = st ? (st > 1 ? 1 : .7) : .4, px, py, q;
+  for (m = -1; m <= 1; m += 2) {
+    bp(); almond(m, 1); ctx.fillStyle = INK.w; ctx.fill();
+    ctx.save(); ctx.clip();
+    px = FX + m * (e.inner[0] + e.outer[0]) / 2 * FS * FW + ux * e.pdx * k * FW; py = FY + (e.inner[1] + e.outer[1]) / 2 * FW + uy * e.pdy * k * FW;
+    bp(); circ(px, py, MAX(1.5, r)); ctx.fillStyle = '#000'; ctx.fill();
+    ctx.restore();
+    if (glint) { q = MAX(2, RND(.014 * FW)); ctx.fillStyle = INK.w; ctx.fillRect(RND(px - .35 * r - q / 2), RND(py - .35 * r - q / 2), q, q); }
+  }
+}
+function E_lids() { var e = FACE.eye; bp(); for (var m = -1; m <= 1; m += 2) fline(m * e.inner[0], e.inner[1], m * e.outer[0], e.outer[1]); sk(INK.s); }
+// the brow: the game's own step-fret, four units meeting above the nose, over two straight rules
+function E_band(detail) {
+  var b = FACE.band, i, j, u, x, a, k, n = b.units;
+  bp(); fline(b.x0, b.y0, b.x1, b.y0); fline(b.x0, b.y1, b.x1, b.y1); fline(-.40, FACE.brow[0], .40, FACE.brow[0]); fline(-.40, FACE.brow[1], .40, FACE.brow[1]);
+  if (detail && n) {
+    u = (b.x1 - b.x0) / n / FRET.grid;
+    for (i = 0; i < n; i++) for (x = b.x0 + i * u * FRET.grid, j = 0; j < FRET.pts.length; j++) {
+      a = FRET.pts[j]; k = fx(x + (i >= n / 2 ? FRET.grid - a[0] : a[0]) * u); a = fy(b.y0 + (b.y1 - b.y0 - FRET.grid * u) / 2 + a[1] * u);
+      if (j) ctx.lineTo(k, a); else ctx.moveTo(k, a);
+    }
+  }
+  sk(INK.s, MAX(1, DPR));
+}
+// mode: 0 full, 1 outline only, 2 gathering steps (gs 1 to 4)
+function E_faceArt(g, cx, cy, W, s, eyes, st, ux, uy, mouth, detail, glint, mode, gs, col) {
+  var M = FACE.mouth, i, S = g.mos, lo = mouth ? M.loOpen : M.lo, a, b, h;
+  FX = cx; FY = cy; FW = W; FS = MAX(.12, ABS(s));
+  ctx.lineJoin = 'miter'; ctx.lineCap = 'butt';
+  bp(); fpoly(FACE.outline, 1);
+  if (mode !== 2) { ctx.fillStyle = '#000'; ctx.fill(); }
+  sk(col || INK.w, MAX(1, RND(1.5 * DPR)));
+  if (mode === 1 || (mode !== 2 && ABS(s) < .12)) return;
+  if (s < 0 && mode !== 2) { bp(); fpoly(FACE.outline, 1, 1 - 2 * FACE.inset); ears(); sk(INK.w, MAX(1, DPR)); return; } // a hollow carved shell
+  if (mode ? gs >= 3 : detail) { // mosaic seams, clipped to the face
+    ctx.save(); bp(); fpoly(FACE.outline, 1); ctx.clip();
+    bp(); for (i = 0; i < S.length; i += 4) fline(S[i], S[i + 1], S[i + 2], S[i + 3]);
+    sk(INK.m, MAX(1, DPR * .75)); ctx.restore();
+  }
+  if (mode && gs < 2) return;
+  E_band(detail || mode);
+  if (mode) { if (gs > 3) E_lids(); return; }
+  // closed eyes are a single lid line, never an empty almond, so the socket rims show only with the eyes open
+  if (detail) { bp(); ears(); if (eyes) { almond(-1, FACE.eye.rim); almond(1, FACE.eye.rim); } fpoly(FACE.nose); sk(INK.s, MAX(1, DPR)); }
+  if (eyes) E_eyes(st, ux, uy, glint); else E_lids();
+  // the mouth: two lips with corner ticks; open, it shows square shell teeth, never points
+  bp(); fline(M.x0, M.up, M.x1, M.up); fline(M.x0, lo, M.x1, lo); fline(M.x0, M.up - .015, M.x0, lo + .015); fline(M.x1, M.up - .015, M.x1, lo + .015); sk(INK.s, MAX(1, DPR));
+  if (mouth && detail) for (ctx.fillStyle = INK.w, h = MAX(1, RND(M.th * W)), i = 0; i < M.teeth; i++) {
+    a = fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth - M.tw / 2); b = MAX(1, ABS(fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth + M.tw / 2) - a));
+    ctx.fillRect(a, fy(M.up), b, h); ctx.fillRect(a, fy(lo) - h, b, h);
+  }
+}
+// four step-fret brackets in the view's corners: each band adds a stair and steps inward
+function E_brackets(g) {
+  var u = MAX(4, RND(TT * .22)), n = g.band + 1, m = RND(TT * .3) + g.band * u, c, k, x, y, s, t;
+  bp();
+  for (c = 0; c < 4; c++) {
+    s = c & 1 ? -1 : 1; t = c & 2 ? -1 : 1; x = (s > 0 ? g.vx : g.vx + g.vw) + s * m; y = (t > 0 ? g.vy : g.vy + g.vh) + t * m;
+    mv(x, y + t * (n + 1) * u);
+    for (k = n; k >= 0; k--) { ln(x + s * (n - k) * u, y + t * k * u); ln(x + s * (n - k + 1) * u, y + t * k * u); }
+  }
+  ctx.lineJoin = 'miter'; ctx.lineCap = 'square'; k = MAX(1, RND(u * .28));
+  sk(INK.s, 2 * k + LW); sk('#000', MAX(1, 2 * k - LW));
+}
+// a marker on the view edge toward a point off screen: a square for a court (double for the Great Court), a circle for the ball
+function E_mark(g, x, y, kind) {
+  var X = X_(x), Y = Y_(y), cx = g.vx + g.vw / 2, cy = g.vy + g.vh / 2, m = 10 * DPR, k, r = 5 * DPR;
+  if (X > g.vx + m && X < g.vx + g.vw - m && Y > g.vy + m && Y < g.vy + g.vh - m) return;
+  k = MIN(ABS((g.vw / 2 - m) / (X - cx || 1e-6)), ABS((g.vh / 2 - m) / (Y - cy || 1e-6)));
+  X = cx + (X - cx) * k; Y = cy + (Y - cy) * k; ctx.lineWidth = LW;
+  if (kind > 1) { bp(); circ(X, Y, r); sk(INK.e); return; }
+  rect(X - r, Y - r, X + r, Y + r, 0, INK.e);
+  if (kind) rect(X - r * 1.7, Y - r * 1.7, X + r * 1.7, Y + r * 1.7, 0, INK.e);
+}
+function E_draw(g) {
+  if (g.T == null) E_lay(g);
+  var T = g.T, p = g.p, b = g.b, F = g.f, la = RM ? 0 : 1.2, vwT = g.vw / T, vhT = g.vh / T, cx, cy, i, j, k, t, q, i0, i1, j0, j1, x, y, o, n, s, W, fr, u;
+  cx = p.x + p.fx * la - vwT / 2; cy = p.y + p.fy * la - vhT * (coarse && H > W ? .42 : .5);
+  cx = vwT >= EW + 2 ? (EW - 1 - vwT) / 2 : clamp(cx, -1.5, EW + .5 - vwT);
+  cy = vhT >= EH + 2 ? (EH - 1 - vhT) / 2 : clamp(cy, -1.5, EH + .5 - vhT);
+  if (g.cmx == null) { g.cmx = cx; g.cmy = cy; } else { g.cmx += (cx - g.cmx) * .2; g.cmy += (cy - g.cmy) * .2; }
+  OX = g.ox = RND(g.vx - g.cmx * T); OY = g.oy = RND(g.vy - g.cmy * T); TT = T; VS = g.vs; NN = g.n;
+  i0 = MAX(0, FLR(g.cmx)); i1 = MIN(EW - 1, CEIL(g.cmx + vwT)); j0 = MAX(0, FLR(g.cmy)); j1 = MIN(EH - 1, CEIL(g.cmy + vhT));
+  // the side bands in the gutters (the left one gives way to captions)
+  u = MAX(3, RND(T / 7));
+  if (g.vx > 9 * u) { if (!g.cg) drawBand(g.vx - 7.5 * u, u, OY); drawBand(g.vx + g.vw + 1.5 * u, u, OY + 3.5 * u); }
+  ctx.save(); bp(); ctx.rect(g.vx, g.vy, g.vw, g.vh); ctx.clip();
+  E_walls(1, i0, i1, j0, j1); E_walls(2, i0, i1, j0, j1);
+  // remembered moving stones are dotted: their state may have changed
+  ctx.setLineDash(g.DD); bp();
+  for (i = 0; i < g.sl.length; i++) { o = g.sl[i]; t = o.t; x = t % EW; y = t / EW | 0; if (MEM[t] && !seen(t)) { if (o.v) wseg(x - 1, y, x + 1, y); else wseg(x, y - 1, x, y + 1); } }
+  sk(INK.m); ctx.setLineDash(g.D0);
+  // the stepped edge of your sight
+  bp();
+  for (j = j0; j <= j1; j++) for (i = i0; i <= i1; i++) {
+    t = j * EW + i; if (!(GR[t] & 1) || VIS[t] !== VS) continue;
+    for (k = 1; k <= 4; k++) { n = nbr(t, k); if (n >= 0 && GR[n] & 1 && VIS[n] !== VS) E_edge(i, j, k, .5, 0); }
+  }
+  sk(INK.e, MAX(1, RND(DPR)));
+  // courts: one flame outline at each end wall (static, no halo); a carved disc on claimed floors; the level 3 notch bar
+  bp(); s = T * .12;
+  for (i = 0; i < g.rooms.length; i++) {
+    o = g.rooms[i]; if (o.k > 1) continue;
+    for (k = 0; k < 2; k++) {
+      t = at(o, 1, k ? o.lh - 1 : 0); if (!seen(t)) continue;
+      x = X_(t % EW); y = Y_(t / EW | 0); ctx.moveTo(x, y - s * 1.6); ctx.quadraticCurveTo(x + s, y, x, y + s * .8); ctx.quadraticCurveTo(x - s, y, x, y - s * 1.6);
+    }
+  }
+  for (i = 0; i < g.rings.length; i++) {
+    q = g.rings[i];
+    if (!q.gr && q.c && !q.sil) { x = q.hz ? q.a0 + 1.6 : q.lc; y = q.hz ? q.lc : q.a0 + 1.6; circ(X_(x), Y_(y), T * .3); circ(X_(x), Y_(y), T * .14); }
+  }
+  sk(INK.s);
+  q = g.gc;
+  if (g.L === 2 && seen(rtile(q))) { // the floor bar beside the turning ring fills as it opens
+    k = g.fin && q.open ? ((g.ftm / q.per + q.ph) % 1) / q.of : 0; x = q.hz ? q.a0 - .6 : q.lc - q.s * 1.1; y = q.hz ? q.lc - q.s * 1.1 : q.a0 - .6;
+    ctx.lineWidth = LW; o = q.hz ? 1 : 0;
+    rect(X_(x) - T * .06 * (1 - o), Y_(y) - T * .06 * o, X_(x + 1.2 * o) + T * .06 * (1 - o), Y_(y + 1.2 * (1 - o)) + T * .06 * o, 0, INK.e);
+    if (k) rect(X_(x) - T * .06 * (1 - o), Y_(y) - T * .06 * o, X_(x + 1.2 * o * k) + T * .06 * (1 - o), Y_(y + 1.2 * (1 - o) * k) + T * .06 * o, INK.w);
+  }
+  k = E_aim(g);
+  for (i = 0; i < g.rings.length; i++) E_ring(g, g.rings[i]);
+  // the Entry: a small stepped niche in the outer wall
+  t = g.ent; if (MEM[t]) { x = t % EW; y = (t / EW | 0) + .5; bp(); mv(X_(x - .5), Y_(y)); ln(X_(x - .35), Y_(y)); ln(X_(x - .35), Y_(y + .15)); ln(X_(x + .35), Y_(y + .15)); ln(X_(x + .35), Y_(y)); ln(X_(x + .5), Y_(y)); sk(INK.s); }
+  // tesserae and stone warnings, seen only
+  for (i = 0; i < g.tn; i++) {
+    if (!seen(tOf(g.tx[i], g.ty[i]))) continue;
+    x = X_(g.tx[i]); y = Y_(g.ty[i]); s = T * .085; cx = Math.cos(g.tq[i]) * s; cy = Math.sin(g.tq[i]) * s;
+    bp(); ctx.moveTo(x + cx, y + cy); ctx.lineTo(x - cy, y + cx); ctx.lineTo(x - cx, y - cy); ctx.lineTo(x + cy, y - cx); ctx.fillStyle = INK.w; ctx.fill();
+  }
+  for (i = 0; i < g.sl.length; i++) {
+    o = g.sl[i]; if (!o.w || !seen(o.t)) continue; n = MIN(3, CEIL(o.w * 3)); ctx.lineWidth = LW;
+    for (j = 0; j < 3; j++) { x = o.t % EW + (o.v ? (j - 1) * .3 : 0); y = (o.t / EW | 0) + (o.v ? 0 : (j - 1) * .3); rect(X_(x - .07), Y_(y - .07), X_(x + .07), Y_(y + .07), j < n ? INK.w : '#000', INK.w); }
+  }
+  // sound fronts: a crisp line across each tile edge where the wave stands now, bending round corners
+  bp();
+  for (s = 0; s < 8; s++) {
+    if ((g.wf[s] & 9) !== 9) continue;
+    fr = FLR((g.n - g.wt[s]) * 14 / 120); if (fr > g.wr[s]) continue;
+    W = WV[s];
+    for (j = j0; j <= j1; j++) for (i = i0; i <= i1; i++) {
+      t = j * EW + i; if (W[t] !== fr || !(MEM[t] || VIS[t] === VS)) continue;
+      for (n = 1; n <= 4; n++) { o = nbr(t, n); if (o >= 0 && W[o] === fr + 1) E_edge(i, j, n, .42, g.wf[s] & 2); }
+    }
+  }
+  sk(INK.s, MAX(1, RND(DPR)));
+  // the ōlli, or where you last saw or heard it
+  if (b.held || seen(tOf(b.x, b.y))) {
+    if (!b.held) { b.kx = b.x; b.ky = b.y; }
+    if (!b.held || seen(tOf(F.x, F.y))) ball(X_(b.x), Y_(b.y), .18 * T, RM ? null : (b.x + b.y) * 5.5, false, null);
+    if (b.pk > 0 && !b.held) { bp(); wseg(b.x - .1, b.y + .3, b.x + .1, b.y + .3); sk(INK.e); }
+  } else { bp(); circ(X_(b.kx), Y_(b.ky), .18 * T); sk(INK.e); }
+  if (k) { ctx.setLineDash(g.DS); bp(); ctx.moveTo(g.al[0], g.al[1]); ctx.lineTo(g.al[2], g.al[3]); if (g.al[6]) ctx.lineTo(g.al[4], g.al[5]); sk(INK.w); ctx.setLineDash(g.D0); }
+  E_you(g);
+  if (inp.st && coarse) { bp(); circ(inp.sox * DPR, inp.soy * DPR, 24 * DPR); sk(INK.m); }
+  // the Stone Face: whole when you see its tile; otherwise its eyes only, and only while it sees you
+  t = tOf(F.x, F.y); s = E_sx(g); W = 1.5 * T; x = X_(F.x); y = Y_(F.y);
+  cx = p.x - F.x; cy = p.y - F.y; n = SQRT(cx * cx + cy * cy) || 1; cx /= n; cy /= n;
+  o = F.st && !g.won && !(g.L === 2 && !g.still && F.st < 6) && F.st !== 9;
+  if (F.st === 9) {
+    if (seen(t)) E_faceArt(g, x, y, W, s, 0, 0, 0, 0, 0, 0, 0, 1, 0, INK.m);
+    E_faceArt(g, X_(F.gd % EW), Y_(F.gd / EW | 0), W, 1, 0, 0, 0, 0, 0, 1, 0, 2, F.gs, INK.s);
+  } else if (seen(t)) E_faceArt(g, x, y, W, s, o, F.step, cx, cy, F.m >= 1 || (F.st === 5 && !F.lm), W / DPR >= 48, 1, 0, 0);
+  else if (F.sees && o) { FX = x; FY = y; FW = W; FS = MAX(.12, ABS(s)); E_eyes(F.step, cx, cy, 0); }
+  if (g.ghT > 0) E_faceArt(g, X_(g.ghx), Y_(g.ghy), W, g.ghs || .12, 0, 0, 0, 0, 0, 0, 0, 1, 0, INK.e);
+  E_brackets(g);
+  // edge markers: unclaimed courts, the Great Court in the finale, the ball's last known place
+  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.pair || (q.gr ? !g.fin : q.c)) continue; o = q.o; E_mark(g, o.x0 + (o.fw - 1) / 2, o.y0 + (o.fh - 1) / 2, q.gr ? 1 : 0); }
+  if (!b.held) E_mark(g, b.kx, b.ky, 2);
+  // level 3: the turn clock, a notch bar that fills while it faces and shows ticks while it moves
+  if (g.L === 2) {
+    W = 120 * DPR; n = 8 * DPR; x = RND(g.vx + g.vw / 2 - W / 2); y = g.vy + 6 * DPR; ctx.lineWidth = LW;
+    rect(x, y, x + W, y + n, '#000', INK.s);
+    if (g.still) rect(x, y, x + W * MIN(1, ((g.tc / g.tper + g.tph) % 1) / g.tsf), y + n, INK.s);
+    else { bp(); for (k = 1; k < 12; k++) seg(x + k * W / 12, y + 2 * DPR, x + k * W / 12, y + n - 2 * DPR); sk(INK.s); }
+  }
+  ctx.restore();
+}
+
+// ---------- NATIONS OF TODAY ----------
+// No nation data lives in this file. It comes from the host (opts.nations) or a same-origin JSON, is checked
+// entry by entry, and appears only on calm static panels: never during play, never with the Stone Face.
+var NAT = null, NP = [], NATst = 0, NATupd = '', xhr = null, natH = 0, natB = 0, natT = 0, natF = 0, natP = 0, natIn = 0, natV = 0, NMET = [], NSD = {}, natCur = null;
+function natDay() { var d = new Date(); return RND((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(2026, 0, 1)) / 864e5); }
+function ymd(d) { return d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate()); }
+function okS(s, a, b) { return typeof s === 'string' && s.length >= a && s.length <= b; }
+function okU(u) { return typeof u === 'string' && /^https:\/\/[^\s"<>]+$/.test(u) && u.length < 600; }
+function okD(s) { return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
+// the last guard: en and em dashes in data become a comma
+var DSH = new RegExp('[' + String.fromCharCode(8211, 8212) + ']', 'g');
+function dash(s) { return s.replace(DSH, ', '); }
+function natValid(a) {
+  var out = [], tm = ymd(new Date(Date.now() + 864e5)), i, j, n, f, s, fs, al, ok;
+  if (!(a instanceof Array)) return out;
+  for (i = 0; i < a.length && out.length < 600; i++) {
+    n = a[i];
+    if (!n || !/^[a-z0-9-]{1,64}$/.test(n.id || '') || !okS(n.name, 1, 80) || !okS(n.lands, 1, 200) || !(n.countries instanceof Array) || n.countries.length < 1 || n.countries.length > 6) continue;
+    ok = 1; for (j = 0; j < n.countries.length; j++) if (!okS(n.countries[j], 1, 60)) ok = 0;
+    al = n.also == null ? [] : n.also;
+    if (!(al instanceof Array) || al.length > 6) ok = 0; else for (j = 0; j < al.length; j++) if (!okS(al[j], 1, 80)) ok = 0;
+    if (!ok) continue;
+    fs = [];
+    for (j = 0; n.facts instanceof Array && j < n.facts.length; j++) {
+      f = n.facts[j]; s = f && f.source;
+      if (!f || !okS(f.text, 1, 300) || !s || !okU(s.url) || !okS(s.publisher, 1, 120) || (s.title != null && !okS(s.title, 0, 200)) || !okD(s.accessed) || s.accessed > tm) continue;
+      if ((f.kind != null && !okS(f.kind, 0, 24)) || (f.as_of != null && !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(f.as_of)))) continue;
+      fs.push({ text: dash(f.text), kind: f.kind ? dash(f.kind) : '', as_of: f.as_of ? String(f.as_of) : '', title: s.title ? dash(s.title) : '', pub: dash(s.publisher), url: s.url, acc: s.accessed });
+    }
+    if (!fs.length) continue;
+    s = n.pronounce;
+    out.push({ id: n.id, name: dash(n.name), also: al.map(dash), lands: dash(n.lands), countries: n.countries.map(dash), facts: fs,
+      say: s && okS(s.text, 1, 80) && okU(s.source_url) ? { text: dash(s.text), url: s.source_url } : null,
+      site: okU(n.official_url) ? n.official_url : '', region: okS(n.region, 1, 60) ? n.region : n.countries[0] });
+  }
+  return out;
+}
+function natSet(a, upd) {
+  var L = natValid(a), r, i, j, t, by = {}, keys = [], k;
+  NATst = L.length ? 2 : 3; NAT = L.length ? L : null; NP = [];
+  if (NAT) {
+    NATupd = okD(upd) ? upd : '';
+    for (i = 0; i < L.length; i++) for (j = 0; j < L[i].facts.length; j++) if (L[i].facts[j].acc > NATupd && !okD(upd)) NATupd = L[i].facts[j].acc;
+    // a seeded shuffle, then round-robin by region so no region dominates; the same order for everyone on a day
+    r = rng(hashStr(okD(upd) ? upd : 'nations')); t = L.slice();
+    for (i = t.length - 1; i > 0; i--) { j = FLR(r() * (i + 1)); k = t[i]; t[i] = t[j]; t[j] = k; }
+    for (i = 0; i < t.length; i++) { k = t[i].region; if (!by[k]) { by[k] = []; keys.push(k); } by[k].push(t[i]); }
+    for (j = 0; NP.length < t.length; j++) for (i = 0; i < keys.length; i++) if (by[keys[i]][j]) NP.push(by[keys[i]][j]);
+    natB = natH = ((6 * natDay() + natV) % NP.length + NP.length) % NP.length;
+  }
+  natUI();
+}
+function natLoad() {
+  var o = opts.nations, a;
+  if (o instanceof Array) { natSet(o, opts.nationsUpdated); return; }
+  a = document.createElement('a'); a.href = typeof o === 'string' ? o : opts.nationsUrl || 'nations.json';
+  // same origin only, so visitors' browsers never contact anyone else
+  if (!/^https?:$/.test(a.protocol) || a.protocol + '//' + a.host !== location.protocol + '//' + location.host) { NATst = 3; return; }
+  try {
+    xhr = new XMLHttpRequest(); xhr.open('GET', a.href, true); xhr.timeout = 3000;
+    xhr.onload = function () {
+      var x = xhr, j; xhr = null; if (!root || !x) return;
+      if (x.status !== 200 || x.responseText.length > 524288) { NATst = 3; natUI(); return; }
+      try { j = JSON.parse(x.responseText); } catch (e) { j = null; }
+      natSet(j && j.nations, j && j.updated);
+    };
+    xhr.onerror = xhr.ontimeout = function () { xhr = null; if (root) { NATst = 3; natUI(); } };
+    NATst = 1; xhr.send();
+  } catch (e) { xhr = null; NATst = 3; }
+}
+function natSeen(id, inc) {
+  var o = {}, v, k;
+  try { o = JSON.parse(localStorage.getItem('zth_olli_seen') || '{}') || {}; } catch (e) { o = {}; }
+  v = +o[id] || 0;
+  if (inc) { o[id] = v + 1; k = Object.keys(o); if (k.length > 600) delete o[k[0]]; try { localStorage.setItem('zth_olli_seen', JSON.stringify(o)); } catch (e) {} }
+  return v;
+}
+function el(p, tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; p.appendChild(e); return e; }
+function lnk(p, txt, url, cls) { var a = el(p, 'a', cls || '', txt); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; return a; }
+// One card, the same everywhere: our label, the nation's own name first, other names, lands, one fact, its source and checked date.
+function natCard(box, n, k, where) {
+  var f = n.facts[(natDay() + k + natSeen(n.id)) % n.facts.length], p, h, old;
+  box.textContent = ''; natCur = n;
+  el(box, 'p', 'nl', TEXT.natLabel);
+  el(box, 'h3', 'nn', n.name);
+  if (n.also.length) el(box, 'p', 'na', TEXT.also + ' ' + n.also.join(', '));
+  if (n.say) { p = el(box, 'p', 'na', TEXT.sayIt + ' ' + n.say.text + '. '); h = document.createElement('a'); h.href = n.say.url; lnk(p, TEXT.pronFrom + ' ' + h.hostname + '.', n.say.url); }
+  el(box, 'p', 'na', n.lands + '. ' + n.countries.join(', ') + '.');
+  p = el(box, 'p', 'nf'); if (f.kind) el(p, 'span', 'nk', f.kind); p.appendChild(document.createTextNode(f.text));
+  if (f.as_of) el(box, 'p', 'na', TEXT.asOf + ' ' + f.as_of + '.');
+  p = el(box, 'p', 'ns'); lnk(p, TEXT.source + ' ' + f.pub + (f.title ? ', ' + f.title : '') + '.', f.url); p.appendChild(document.createTextNode(' ' + TEXT.checked + ' ' + f.acc + '.'));
+  old = ymd(new Date(Date.now() - 365 * 864e5)); if (f.acc < old) el(box, 'p', 'ns', TEXT.stale);
+  natSeen(n.id, 1);
+  NSD.id = n.id; NSD.where = where; snd('nation-card', NSD);
+  return f;
+}
+function natSite(a, n) { a.hidden = !n || !n.site; if (n && n.site) a.href = n.site; }
+// the title herald: Previous, Next, Pause; it advances on its own every 14 s unless paused, hovered, focused or reduced motion
+function herald(step, user) {
+  clearTimeout(natT); clearTimeout(natF);
+  if (!E.Nh) return;
+  E.Nh.hidden = !NAT; if (!NAT) return;
+  natH = (natH + step + NP.length) % NP.length;
+  var n = NP[natH], go = function () {
+    natCard(E.Nc, n, 0, 'title'); E.Nc.style.opacity = 1; natSite(E.Ns, n);
+    E.Nu.textContent = TEXT.updated + ' ' + NATupd + '. ' + NP.length + ' ' + TEXT.nations + '.';
+    if (user) say(n.name + '. ' + n.lands + '.');
+    natSched();
+  };
+  E.Nh.setAttribute('aria-live', user ? 'polite' : 'off');
+  if (step && !RM) { E.Nc.style.opacity = 0; natF = setTimeout(go, 150); } else go();
+}
+function natSched() { clearTimeout(natT); if (NAT && scr === 'title' && !natP && !natIn && !RM) natT = setTimeout(function () { herald(1, 0); }, 14000); }
+function natPause() { natP = !natP; E.Nz.setAttribute('aria-pressed', natP); E.Nz.textContent = natP ? TEXT.play : TEXT.pause; natSched(); }
+// the list in About (and the won result): names as buttons, each opening its card in place, with Back
+function natList(box, list, where) {
+  var i, b, s = list.slice().sort(function (a, c) { return a.name.localeCompare(c.name); });
+  box.textContent = '';
+  for (i = 0; i < s.length; i++) { b = el(box, 'button', 'nb', s[i].name); b.type = 'button'; b.setAttribute('data-n', s[i].id); }
+}
+function natFind(id) { for (var i = 0; NAT && i < NAT.length; i++) if (NAT[i].id === id) return NAT[i]; return null; }
+function natOpen(e, list, card, back, where) {
+  var t = e.target, n = t && t.getAttribute && natFind(t.getAttribute('data-n'));
+  if (!n) return;
+  list.hidden = true; card.hidden = false; back.hidden = false; back.setAttribute('data-r', n.id);
+  natCard(card, n, 0, where); back.focus();
+}
+function natBack(list, card, back) {
+  var id = back.getAttribute('data-r'), b;
+  card.hidden = true; back.hidden = true; list.hidden = false;
+  b = list.querySelector('[data-n="' + id + '"]'); if (b) b.focus();
+}
+function natUI() {
+  if (!root) return;
+  var A = E.An, ok = !!NAT;
+  herald(0, 0);
+  E.Al.hidden = !ok; E.Ac.hidden = true; E.Ab3.hidden = true;
+  if (ok) natList(E.Al, NAT, 'about');
+  E.Am.textContent = ok ? TEXT.updated + ' ' + NATupd + '. ' + NAT.length + ' ' + TEXT.nations + '.' + (opts.contact ? ' ' + TEXT.contact + ' ' + opts.contact + '.' : '') : NATst === 3 ? TEXT.natFail : '';
+  E.Ap2.hidden = !(ok && okU(opts.nationsPage)); if (ok && okU(opts.nationsPage)) E.Ap2.href = opts.nationsPage;
+  A.hidden = NATst < 2;
+}
+// the card between levels: no timer, the reader's own time; the next trial is named only after Continue
+function natBetween() {
+  var n = NP[(natB + G.L + 1) % NP.length], f;
+  E.Npm.textContent = TEXT.level + ' ' + (G.L + 1) + ' ' + TEXT.cl + ' ' + TEXT.score + ' ' + num(G.score) + '.';
+  panel('card');
+  f = natCard(E.Npc, n, G.L + 1, 'card'); natSite(E.Nps, n);
+  if (NMET.indexOf(n) < 0) NMET.push(n);
+  say(TEXT.natLabel + '. ' + n.name + '. ' + f.text + ' ' + TEXT.source + ' ' + f.pub + '. ' + TEXT.checked + ' ' + f.acc + '.');
+}
+
+
+// Standalone page: the resting ball opens the game. A host page calls ZTH_GAME.open() itself.
+var ob = document.getElementById('zgOpen');
+if (ob) ob.addEventListener('click', function () { API.open(undefined, { returnFocus: ob }); });
+})();
+</script>
+</body>
+</html>

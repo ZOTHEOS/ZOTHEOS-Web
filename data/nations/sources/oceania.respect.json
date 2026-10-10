@@ -1,0 +1,602 @@
+{
+ "region": "oceania",
+ "items": [
+  {
+   "id": "gadigal-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Gadigal is the name the City of Sydney uses; Cadigal and Gadi (the page writes 'Gadi (gal) people') are both on the cited page. ADVISORY: the Sydney Barani page names many deceased Aboriginal people and burial details. Linking to it is fine, but never pull quotes, names or images from it into a card."
+  },
+  {
+   "id": "gadigal-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral, matches 'about 29 clan groups of the Sydney metropolitan area, referred to collectively as the Eora Nation'."
+  },
+  {
+   "id": "gadigal-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day 'still here' fact, close to the page's 'proudly used today by the descendants'."
+  },
+  {
+   "id": "gadigal-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Recognition by a local government, stated as the City's own acknowledgement. Neutral."
+  },
+  {
+   "id": "wurundjeri-woi-wurrung-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Lead name matches the corporation's own header 'Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation'; the variant spellings in also appear on the same site."
+  },
+  {
+   "id": "wurundjeri-woi-wurrung-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-description from the nation's own site, present day."
+  },
+  {
+   "id": "wurundjeri-woi-wurrung-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance strength. The source says 'blood line descendants'; the fact rightly says 'descendants' and avoids blood talk. The page also names a minister and an Aunty nearby; the fact names nobody, keep it that way."
+  },
+  {
+   "id": "wurundjeri-woi-wurrung-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language strength (dual Woi-wurrung title). No people named."
+  },
+  {
+   "id": "yolngu-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Yolŋu with the eng letter is correct; Dhimurru's own site writes 'Yolŋu' throughout. Null official_url is right, since no single body speaks for all Yolŋu. ADVISORY: the cited ORIC page sits behind an Incapsula bot wall (automated fetch blocked on 2026-10-09), so weekly re-checks may fail. Dhimurru's own site (https://www.dhimurru.com.au/) supports fact 0 with 'established by Yolŋu landowners to lead the care and management of our own Country'."
+  },
+  {
+   "id": "yolngu-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Strength: self-governed land and sea care. No individuals named."
+  },
+  {
+   "id": "yolngu-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "A 'first' about a protected area, not a ranking of nations. Fine."
+  },
+  {
+   "id": "yolngu-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Public meaning of an organisation's name, not restricted knowledge."
+  },
+  {
+   "id": "noongar-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as SWALSC publishes it; Nyungar and Nyoongar are common variants."
+  },
+  {
+   "id": "noongar-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Close to the page: 'we Noongar have lived in the area and had possession of tracts of land on our country for at least 45,000 years'."
+  },
+  {
+   "id": "noongar-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral number. The page's ranking of the settlement as the largest in Australian history is correctly left out."
+  },
+  {
+   "id": "noongar-au",
+   "fact": 2,
+   "action": "edit",
+   "reason": "As written, the A$1.3 billion reads like a gift from the State, and the recognition is credited to 'the settlement'. The cited WA page (re-fetched 2026-10-09) says the Parliament of Western Australia 'passed the Noongar Recognition Act, recognising the Noongar people as the traditional owners of the South-West', and that the settlement 'will resolve all native title claims in the South-West in exchange for about $1.3 billion in land and other benefits'. Credit the recognition to the Act and state the exchange neutrally. Leave out the 2017 court challenge and the objectors the page mentions, and do not name the minister quoted on the page. Evidence phrase unchanged (still on the page).",
+   "text": "Western Australia's Noongar Recognition Act recognises the Noongar as traditional owners of the South-West; the settlement resolves native title claims for about A$1.3 billion in land and benefits."
+  },
+  {
+   "id": "arrernte-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as Lhere Artepe publishes it ('Arrernte', also 'Central Arrernte'). The lands field rightly stays with Alice Springs, matching the three estate groups the facts cover."
+  },
+  {
+   "id": "arrernte-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact in the native title body's own terms. Altyerre is mentioned on the page but correctly not explained in the fact."
+  },
+  {
+   "id": "arrernte-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance strength."
+  },
+  {
+   "id": "anangu-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Aṉangu, with the underlined n, is how Parks Australia writes it for the Uluṟu Traditional Owners. Pitjantjatjara and Yankunytjatjara are fine in also. ADVISORY: official_url (anangu.com.au) is the APY services site for the South Australian APY Lands, while all three facts are about Uluṟu-Kata Tjuṯa in the Northern Territory. Keep it, but a later pass should source one APY fact or note that the two bodies differ."
+  },
+  {
+   "id": "anangu-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land handback, plain and present-day ('jointly managed today')."
+  },
+  {
+   "id": "anangu-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance strength: a Traditional Owner majority on the board."
+  },
+  {
+   "id": "anangu-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Names Tjukurpa only as the governing law of the park, which Aṉangu share publicly through Parks Australia. It tells no stories and gives no restricted detail. Keep it at this general level, and never expand it into Tjukurpa narratives."
+  },
+  {
+   "id": "wiradjuri-au",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name Wiradjuri is fine. The cited Bathurst page (checked 2026-10-09) says 'The Wiradyuri Traditional Owners Central West Aboriginal Corporation are Bathurst's Traditional Owners', so Wiradyuri is a self-used spelling and belongs in also. ADVISORY: the same page names a deceased Wiradjuri leader of the 1820s resistance; link only, never excerpt. The page returns 403 to plain automated fetches, so the weekly re-check may need the human lane.",
+   "text": "also: [\"Wiradyuri\", \"Wiradjeri\", \"Wiradhuri\"]"
+  },
+  {
+   "id": "wiradjuri-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact, matches 'known as the people of the three rivers'."
+  },
+  {
+   "id": "wiradjuri-au",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Section 9.1 of ARCHITECTURE.md bans ranking nations, and 'the largest in NSW' ranks Wiradjuri country against its neighbours. Keep the scale without the superlative ('large' is entailed by the source's 'largest', so no new claim). Change the evidence to 'stretching from the eastern boundary of the Great Dividing Range' (9 words, verbatim on the page).",
+   "text": "Wiradjuri country covers a large part of New South Wales, reaching out from the Great Dividing Range."
+  },
+  {
+   "id": "wiradjuri-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language revival strength shaped by Elders, and no one is named. ADVISORY for the verify pass: the fetched page shows the MacJannet Prize only in a breadcrumb ('2019 MacJannet Prize Winners'). If the verifier will not accept that, drop the clause ', it won a 2019 MacJannet Prize' and set as_of to null."
+  },
+  {
+   "id": "kaurna-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the State Library and the native title body use it. The sources name living and possibly deceased Kaurna people, and the facts correctly name nobody."
+  },
+  {
+   "id": "kaurna-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral land fact."
+  },
+  {
+   "id": "kaurna-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "A 'first' determination, stated as a legal fact with a date. Not contested."
+  },
+  {
+   "id": "kaurna-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Language strength. The page frames it as language 'reclamation', the term Kaurna language work uses, so 'revived' is acceptable. 'reclaimed' would match the page more closely if the text is touched again."
+  },
+  {
+   "id": "larrakia-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as Larrakia Nation publishes it. ADVISORY: (1) The 'Larrakia People' page opens with a quotation from a named Larrakia man the page identifies as deceased. Linking is fine, but never excerpt it. (2) The same page supports a strength fact for a later pass: Larrakia are known for their skills in performance, music and art. Fetch it and take the exact evidence words from the page."
+  },
+  {
+   "id": "larrakia-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact in the nation's own words."
+  },
+  {
+   "id": "larrakia-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day governance and services."
+  },
+  {
+   "id": "larrakia-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Compares an organisation with Darwin employers, not nations with each other. An achievement in the corporation's own words."
+  },
+  {
+   "id": "gamilaraay-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Keep the lead name. Gamilaraay, Kamilaroi, Gomeroi and Gamilaroi are all used by community members (the native title claim uses Gomeroi), and Gamilaraay fits these language-centred facts. All forms are already in also, so no form is erased. ADVISORY: both facts are about a university course. A later pass should add one fact from a community or Gomeroi/Kamilaroi body so the people, not the institution, are at the centre."
+  },
+  {
+   "id": "gamilaraay-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Revival strength, credited to the custodians."
+  },
+  {
+   "id": "gamilaraay-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language strength; the free Wiidhaa textbook is confirmed on the page ('available as a free download from ANU Press')."
+  },
+  {
+   "id": "yawuru-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the nation's own site publishes it."
+  },
+  {
+   "id": "yawuru-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact from the nation's own site. The page records a 2008 State appeal, and the fact correctly states only the 2006 determination, neutrally. The judge named on the page is correctly left out."
+  },
+  {
+   "id": "yawuru-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language strength."
+  },
+  {
+   "id": "yawuru-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Achievement fact; nine adults are counted, not named."
+  },
+  {
+   "id": "meriam-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Meriam, with Meriam Le and Murray Islanders in also, is fine. Rule check passed: the case name carries a deceased Torres Strait Islander man's name, and neither the facts nor the fields use it. Keep it that way in any future edit."
+  },
+  {
+   "id": "meriam-au",
+   "fact": 0,
+   "action": "edit",
+   "reason": "'Granted' gets the 1992 decision backwards: the court recognised native title the Meriam people already held; it was not a gift. The same Tagai State College page (re-fetched 2026-10-09) also gives the strength behind it: 'the 10-year struggle in the courts by Meriam people that finally discredited the notion of terra nullius', dated 1992. Use that, in own words. Do NOT add the case name: it carries a deceased Torres Strait Islander man's name. Suggest kind achievement and evidence '10-year struggle in the courts by Meriam people that finally discredited' (11 words); the old evidence phrase also remains on the page.",
+   "text": "A 10-year court struggle by Meriam people discredited the idea of terra nullius; in 1992 the High Court of Australia recognised their native title over Mer, also called Murray Island."
+  },
+  {
+   "id": "meriam-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language and place, present tense."
+  },
+  {
+   "id": "gunditjmara-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as Gunditj Mirring publishes it."
+  },
+  {
+   "id": "gunditjmara-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Achievement (aquaculture engineering, World Heritage). It compares a site with the world, not nations with each other. No ceremonial content."
+  },
+  {
+   "id": "gunditjmara-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day land fact."
+  },
+  {
+   "id": "gunditjmara-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance in the nation's own words."
+  },
+  {
+   "id": "tiwi-au",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Tiwi Land Council publishes it. The council's pages quote named individuals, some historical. The facts correctly name nobody."
+  },
+  {
+   "id": "tiwi-au",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land fact. The page mentions ceremonies and important sites only in general terms, and the fact correctly leaves them out."
+  },
+  {
+   "id": "tiwi-au",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral population with as_of."
+  },
+  {
+   "id": "tiwi-au",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Living culture and sport, a strength. Confirmed on the home page ('Saturday 18 & Sunday 19 July 2026'). It is a dated event, so the refresh pass should replace it each year rather than let it read as upcoming."
+  },
+  {
+   "id": "ngai-tahu-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name with macron as Te Rūnanga o Ngāi Tahu publishes it. Kāi Tahu (the southern dialect form) is right to keep in also."
+  },
+  {
+   "id": "ngai-tahu-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-description from the iwi's own page."
+  },
+  {
+   "id": "ngai-tahu-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance fact."
+  },
+  {
+   "id": "waikato-tainui-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the iwi's own site leads with it. The double-vowel spelling (Kiingitanga) follows Waikato convention, so keep it."
+  },
+  {
+   "id": "waikato-tainui-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "A neutral number from the iwi's own words ('just like our tuupuna before us, we are voyagers and pioneers'). Attributed with 'describes itself'."
+  },
+  {
+   "id": "waikato-tainui-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Identity fact in the iwi's own terms."
+  },
+  {
+   "id": "ngati-whatua-orakei-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name with macrons matches the Trust's site."
+  },
+  {
+   "id": "ngati-whatua-orakei-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-description, close to the page. Te Kahu Tōpuni o Tuperiri is a place name (the area held under the ancestor's mantle), not a fact about a person, so the no-named-individuals rule is not engaged. Do not expand it into an ancestor story."
+  },
+  {
+   "id": "ngati-whatua-orakei-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance fact."
+  },
+  {
+   "id": "ngapuhi-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as the Rūnanga publishes it. The entry rightly leaves out the contested Ngāpuhi Treaty settlement process. ADVISORY: after fact 0 is removed the nation has one fact; add a strength fact from the Rūnanga home page (confirmed 2026-10-09: 'develops strategic partnerships, provide funding support and deliver important programmes and initiatives to enhance the well-being and cultural advancement of Ngāpuhi whānui throughout Taitokerau'). Suggested: 'Te Rūnanga-Ā-Iwi-O-Ngāpuhi funds and runs programmes for the well-being and cultural advancement of Ngāpuhi whānui across Taitokerau.' (kind governance, source https://www.ngapuhi.iwi.nz/, evidence 'enhance the well-being and cultural advancement of Ngāpuhi whānui')."
+  },
+  {
+   "id": "ngapuhi-nz",
+   "fact": 0,
+   "action": "remove",
+   "reason": "The fact only ranks Ngāpuhi as the largest iwi. Section 9.1 of ARCHITECTURE.md bans ranking nations and allows population only as a neutral number with as_of. Re-fetched 2026-10-09: the Te Ao Māori News article gives no number for Ngāpuhi or any other iwi, so the fact cannot be reworded into a neutral population. See the nation advisory for a replacement strength fact."
+  },
+  {
+   "id": "ngapuhi-nz",
+   "fact": 1,
+   "action": "edit",
+   "reason": "'NZ's largest iwi social service provider' ranks the iwi's provider against other iwi providers, which the no-ranking rule forbids, and 'describes itself' does not change that. Say what the service does, from the same page (re-fetched 2026-10-09: 'delivers programmes, provides advice and support for Ngāpuhi whānau and tamariki throughout Taitokerau'). New evidence: 'provides advice and support for Ngāpuhi whānau and tamariki'.",
+   "text": "Ngāpuhi Iwi Social Services, part of the Ngāpuhi Rūnanga group, gives advice and support to Ngāpuhi whānau and tamariki across Taitokerau."
+  },
+  {
+   "id": "te-arawa-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Te Arawa is the right lead. A null official_url is acceptable because Te Arawa is a confederation of iwi and hapū; the Te Kāhui Whakatau page names the Te Arawa Māori Trust Board as the historical negotiator. tearawa.iwi.nz refused connection on 2026-10-09, so it could not be checked."
+  },
+  {
+   "id": "te-arawa-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land return under a signed settlement (2004), stated as the Crown page states it."
+  },
+  {
+   "id": "te-arawa-nz",
+   "fact": 1,
+   "action": "edit",
+   "reason": "Two fixes. (1) Order of events: the council page (re-fetched 2026-10-09) says 'In 2017 Rotorua was officially declared the first district in New Zealand to become bilingual' and that since the declaration Council has worked alongside Te Tatau o Te Arawa on the changes; the fact credits Te Tatau with the declaration itself. (2) Te Tatau o Te Arawa's place in council decision-making is a subject of public political debate, so the language fact need not bring the board in. Use the page's own framing: 'the people of Te Arawa who are Tāngata Whenua (people of the land) of the Rotorua district'. Evidence phrase unchanged.",
+   "text": "In 2017 Rotorua, where the people of Te Arawa are tāngata whenua, became the first district in New Zealand to be declared bilingual."
+  },
+  {
+   "id": "ngai-tuhoe-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Ngāi Tūhoe matches the iwi site title ('Ngai Tuhoe Iwi', written without macrons). Tūhoe, the form the iwi uses most often, is in also."
+  },
+  {
+   "id": "ngai-tuhoe-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Accurate and neutral: the Crown page says the board starts with 'equal numbers of Crown and Tūhoe appointees', and Tūhoe later hold six seats to the Crown's three. A strength (Te Urewera as a legal identity)."
+  },
+  {
+   "id": "ngai-tuhoe-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral number with as_of 2013."
+  },
+  {
+   "id": "ngati-porou-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as Te Rūnanganui o Ngāti Porou publishes it."
+  },
+  {
+   "id": "ngati-porou-nz",
+   "fact": 0,
+   "action": "edit",
+   "reason": "'Second largest iwi' ranks nations, which section 9.1 of ARCHITECTURE.md bans; population is allowed only as a neutral number with as_of. The iwi's page (re-fetched 2026-10-09, now served at www.ngatiporou.com) says 'with a population of 102,480' and 'Our rohe stretches along Te Tairāwhiti'. Change the evidence to 'with a population of 102,480'. The page gives no year; as_of 2023 (census) is plausible, but the verify pass should confirm it or fall back to the access year.",
+   "text": "Ngāti Porou, the iwi of Te Tairāwhiti on the East Coast, has a population of 102,480."
+  },
+  {
+   "id": "ngati-porou-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Land fact in the iwi's own geography."
+  },
+  {
+   "id": "ngati-porou-nz",
+   "fact": 2,
+   "action": "keep",
+   "reason": "A public pepeha, the standard way the iwi introduces itself. Not restricted."
+  },
+  {
+   "id": "whanganui-iwi-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Whanganui Iwi is how Ngā Tāngata Tiaki o Whanganui names the people ('on behalf o Whanganui Iwi')."
+  },
+  {
+   "id": "whanganui-iwi-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "A public whakataukī that the iwi trust's own home page translates. Not restricted."
+  },
+  {
+   "id": "whanganui-iwi-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strength, stated neutrally. ADVISORY: this is a tier-4 university source. The verify or source pass could cite the Te Awa Tupua (Whanganui River Claims Settlement) Act 2017 or the Te Kāhui Whakatau page instead."
+  },
+  {
+   "id": "whanganui-iwi-nz",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Governance fact from the iwi trust (established 4 August 2014)."
+  },
+  {
+   "id": "moriori-nz",
+   "fact": null,
+   "action": "keep",
+   "reason": "Moriori is the self-name. The entry rightly speaks of Moriori in the present tense and steers clear of the old 'extinct' myth. ADVISORY: Moriori say imi (tribe), not iwi, and the Crown page writes 'Moriori is an imi (tribe)'. Use imi if a card ever needs the word. Leave out the 1835 history and the overlapping interests with Ngāti Mutunga o Wharekauri (shared redress was still under negotiation per the Crown page) unless a later pass sources them carefully."
+  },
+  {
+   "id": "moriori-nz",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Self-description from the Trust ('the INDIGENOUS PEOPLE of Rēkohu and Rangihaute (Chatham Islands)'). The Crown page agrees, calling Moriori the waina-pono (original inhabitants)."
+  },
+  {
+   "id": "moriori-nz",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Neutral settlement fact with numbers and as_of."
+  },
+  {
+   "id": "moriori-nz",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day economic strength."
+  },
+  {
+   "id": "kanak-nc",
+   "fact": null,
+   "action": "edit",
+   "reason": "The lands field says New Caledonia is 'called Kanaky by many Kanak'. That name sits at the centre of the contested independence question, and the cited ALK page (re-fetched 2026-10-09) never uses 'Kanaky'. Under the contested-politics rule, leave it out of a field shown as plain fact. Lead name Kanak and official_url (Sénat coutumier) are fine.",
+   "text": "lands: New Caledonia, including Grande Terre and the Loyalty Islands"
+  },
+  {
+   "id": "kanak-nc",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Language institution fact, neutral."
+  },
+  {
+   "id": "kanak-nc",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language family fact, neutral."
+  },
+  {
+   "id": "rapa-nui-cl",
+   "fact": null,
+   "action": "keep",
+   "reason": "Rapa Nui is the people's own name, and the Chilean government page uses 'pueblo Rapa Nui'. Easter Islanders is fine as an exonym in also."
+  },
+  {
+   "id": "rapa-nui-cl",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Land and governance strength. Confirmed: 'se entregará por 50 años renovables a los propios Rapa Nui'."
+  },
+  {
+   "id": "rapa-nui-cl",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Checked against the PDF text: question 1 had 396 SI and 222 NO, question 2 had 377 SI and 233 NO, question 3 had 477 SI and 135 NO. Yes did win all three, and the fact states the result neutrally without hiding that votes were split."
+  },
+  {
+   "id": "papuan-peoples-id",
+   "fact": null,
+   "action": "keep",
+   "reason": "Acceptable umbrella entry. Orang Asli Papua (the Indonesian legal term) and Indigenous Papuans respect self-identification where the state disputes the term Indigenous. 'West Papuans' is widely used by Papuans themselves and by IWGIA. As a plain alias it states no political claim, so keep it, but never use it in a fact. The lands field is neutral. ADVISORY: 'Papuan peoples' covers several hundred distinct peoples. Later passes should add individual peoples, each named in its own way, from strong sources, and keep the political conflict out unless it is sourced and neutral. Note: 'West Papua' (Papua Barat) is also the name of an official Indonesian province, so the alias is not solely a political marker; still, keep it in also only."
+  },
+  {
+   "id": "papuan-peoples-id",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Living craft heritage. UNESCO's urgent-safeguarding threats ('number of people making and using Noken is diminishing') are correctly left out, in favour of the strength."
+  },
+  {
+   "id": "papuan-peoples-id",
+   "fact": 1,
+   "action": "keep",
+   "reason": "A present-day cultural practice in UNESCO's own terms ('worn, often for traditional festivities, or given as peace offerings'). Not exoticized."
+  },
+  {
+   "id": "itaukei-fj",
+   "fact": null,
+   "action": "keep",
+   "reason": "iTaukei is the self-name in Fijian and is used in official names (iTaukei Land Trust Board). Indigenous Fijians in also is fine."
+  },
+  {
+   "id": "itaukei-fj",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral land fact from the statutory board. Fiji land politics are left out, correctly."
+  },
+  {
+   "id": "itaukei-fj",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Governance fact. Yavusa, mataqali and tokatoka are public kinship-unit terms."
+  },
+  {
+   "id": "maohi-pf",
+   "fact": null,
+   "action": "edit",
+   "reason": "Lead name Mā'ohi (macron) matches the cited Heiva page, which writes 'Nūna'a Mā'ohi' and 'te mau Mā'ohi' (checked 2026-10-09). Drop 'Tahitians' from also: it names the people of one island, this entry covers all five archipelagos, and the page itself never uses it; as an alias it would label every Mā'ohi person Tahitian. Do not swap in 'Polynesians' either (the page uses it, but it also covers Māori, Hawaiians, Samoans and others). Maohi stays as the plain-ASCII form.",
+   "text": "also: [\"Maohi\"]"
+  },
+  {
+   "id": "maohi-pf",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Living culture, a strength. Heiva i Tahiti is a public festival. Sport and dance are mentioned only as public performance."
+  },
+  {
+   "id": "maohi-pf",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Language strength (Fare Vāna'a lexicon). Confirmed: 'En août 2015, un lexique comprenant plus de 31 000 mots'."
+  }
+ ]
+}

@@ -1,0 +1,830 @@
+{
+ "region": "us-plains-midwest",
+ "items": [
+  {
+   "id": "oglala-sioux-tribe-us-sd",
+   "fact": null,
+   "action": "edit",
+   "reason": "Name is right: the tribe's own site oglala.gov titles itself Oglala Sioux Tribe. official_url is null; the tribe's site is https://www.oglala.gov/ . Never use oglalalakotanation.net, which now serves an unrelated gambling page. The also forms are not on oglala.gov but are in common neutral use.",
+   "text": "official_url: https://www.oglala.gov/"
+  },
+  {
+   "id": "oglala-sioux-tribe-us-sd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "oglala-sioux-tribe-us-sd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sicangu-lakota-oyate-us-sd",
+   "fact": null,
+   "action": "keep",
+   "reason": "Leading with Sicangu Lakota Oyate honors self-naming: the tribe's own history page says it is more properly known by that name. Rosebud Sioux Tribe correctly kept in also."
+  },
+  {
+   "id": "sicangu-lakota-oyate-us-sd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sicangu-lakota-oyate-us-sd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Respect-neutral. The acreage conflict on the page is an accuracy matter already fixed in verify.json; agree with that fix."
+  },
+  {
+   "id": "sicangu-lakota-oyate-us-sd",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Misattribution. The page says about 70,000 Lakota today across all Lakota peoples, with roughly a third still speaking the ancestral language; it does not say a third of this tribe's people. Same wording as the verifier's fix.",
+   "text": "The tribe's history page says the Lakota number about 70,000 today, and that roughly a third of them still speak their ancestral language."
+  },
+  {
+   "id": "standing-rock-sioux-tribe-us-nd-sd",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as used on standingrock.org; also list is neutral and accurate (Hunkpapa, Sihasapa, Yanktonai)."
+  },
+  {
+   "id": "standing-rock-sioux-tribe-us-nd-sd",
+   "fact": 0,
+   "action": "edit",
+   "reason": "'in daily use' overstates the source, which says only that Lakota is also used and actively being revitalized. Language claims should not be inflated.",
+   "text": "At Standing Rock, English is widely spoken and the Lakota language is also in use, with active revitalization under way."
+  },
+  {
+   "id": "standing-rock-sioux-tribe-us-nd-sd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "standing-rock-sioux-tribe-us-nd-sd",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-river-sioux-tribe-us-sd",
+   "fact": null,
+   "action": "edit",
+   "reason": "official_url is null. The tribe's own site appears to be cheyenneriversioux.com (footer: Cheyenne River Sioux Tribe copyright; tribal government pages), though it does not label itself official, so confirm before linking. Do not use cheyenneriversiouxtribe.org, which now redirects to an unrelated county site. Name is fine.",
+   "text": "official_url: https://www.cheyenneriversioux.com/"
+  },
+  {
+   "id": "cheyenne-river-sioux-tribe-us-sd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-river-sioux-tribe-us-sd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-river-sioux-tribe-us-sd",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sisseton-wahpeton-oyate-us-sd-nd",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name and Dakota form Sisitunwan-Wahpetunwan Oyate both used on the Oyate's own site."
+  },
+  {
+   "id": "sisseton-wahpeton-oyate-us-sd-nd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sisseton-wahpeton-oyate-us-sd-nd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sisseton-wahpeton-oyate-us-sd-nd",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Respect-neutral. The verifier's fix, naming two districts in Dakota with English glosses, honors the Dakota names and should stand."
+  },
+  {
+   "id": "spirit-lake-nation-us-nd",
+   "fact": null,
+   "action": "edit",
+   "reason": "official_url is null; the nation's own site https://www.spiritlakenation.com/ uses Spirit Lake Nation in its header (footer says Spirit Lake Tribe). Mni Wakan Oyate does not appear on that site or on the cited ND page; keep it in also only if a nation source spelling is found, otherwise drop it rather than risk a wrong spelling. Do not add Devils Lake Sioux: the ND page says that older name was correctly changed to Spirit Lake.",
+   "text": "official_url: https://www.spiritlakenation.com/ ; also: drop Mni Wakan Oyate unless sourced"
+  },
+  {
+   "id": "spirit-lake-nation-us-nd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "spirit-lake-nation-us-nd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "spirit-lake-nation-us-nd",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "shakopee-mdewakanton-sioux-community-us-mn",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as used on shakopeedakota.org."
+  },
+  {
+   "id": "shakopee-mdewakanton-sioux-community-us-mn",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "shakopee-mdewakanton-sioux-community-us-mn",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Strong present-day statement in the community's own words: still here, living Dakota lifeways."
+  },
+  {
+   "id": "shakopee-mdewakanton-sioux-community-us-mn",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Framed as the community frames it, as a Dakota tradition of helping others, not as wealth. The verifier's rewording for copying should stand."
+  },
+  {
+   "id": "red-lake-nation-us-mn",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as used on redlakenation.org (tagline Miskwaagamiiwi-Zaagaiganing). The MIAC page says the lake is held sacred; keep any future facts about the lake to that public statement and add nothing about ceremony."
+  },
+  {
+   "id": "red-lake-nation-us-mn",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "red-lake-nation-us-mn",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "red-lake-nation-us-mn",
+   "fact": 2,
+   "action": "edit",
+   "reason": "The source (re-fetched) says English is a second language to many members middle-aged and older, and that Ojibwe is spoken or understood by many others. It never says Ojibwe is a first language, so the claim must not be stretched. Same wording as the verifier's fix.",
+   "text": "English is a second language for many Red Lake members of middle age and older, including some on the Tribal Council, and many others speak or understand Ojibwe."
+  },
+  {
+   "id": "mille-lacs-band-of-ojibwe-us-mn",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as used on millelacsband.com. Misi-zaaga'iganiing in also is not on the cited pages; fine as a neutral alias but source it when possible."
+  },
+  {
+   "id": "mille-lacs-band-of-ojibwe-us-mn",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "mille-lacs-band-of-ojibwe-us-mn",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "turtle-mountain-band-of-chippewa-us-nd",
+   "fact": null,
+   "action": "edit",
+   "reason": "official_url is null. The band's own site https://tmchippewa.com/ titles itself Official Online Home of the Turtle Mountain Band of Chippewa Indians; use it as official_url and name_source_url. Name is correct.",
+   "text": "official_url: https://tmchippewa.com/"
+  },
+  {
+   "id": "turtle-mountain-band-of-chippewa-us-nd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "turtle-mountain-band-of-chippewa-us-nd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Respect-neutral. The estimate's attribution (ND Indian Affairs Commission, not the band) is fixed in verify.json; agree."
+  },
+  {
+   "id": "turtle-mountain-band-of-chippewa-us-nd",
+   "fact": 2,
+   "action": "edit",
+   "reason": "This puts words in the band's mouth: the 'found nowhere else' wording belongs to the ND Indian Affairs Commission, not the band. It also drops the diacritic in Métis, which the source keeps. Same wording as the verifier's fix.",
+   "text": "Two centuries of blended Ojibwe and Métis culture at Turtle Mountain have produced a heritage found nowhere else."
+  },
+  {
+   "id": "mha-nation-us-nd",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on mhanation.com; Nueta, Hidatsa, Sahnish in also honors each people's own name."
+  },
+  {
+   "id": "mha-nation-us-nd",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "mha-nation-us-nd",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "mha-nation-us-nd",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "blackfeet-nation-us-mt",
+   "fact": null,
+   "action": "edit",
+   "reason": "The pronunciation comes from the Montana Governor's Office directory, not the Nation. The Nation's own site gives no pronunciation (checked blackfeetnation.com). The owner's rule is that a pronunciation guide appears only where the nation's own sources give one, so set pronounce to null. Niitsitapi may stay in also.",
+   "text": "pronounce: null"
+  },
+  {
+   "id": "blackfeet-nation-us-mt",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "blackfeet-nation-us-mt",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "blackfeet-nation-us-mt",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'Blackfeet tradition recognizes' claims something about tradition that the state page does not say; it simply lists three branches. Do not speak for a people's tradition. The source gives only the exonym Blood, so Kainai cannot be added from it. Same wording as the verifier's fix.",
+   "text": "The Blackfeet peoples have three branches: the Northern Blackfeet, or Siksika; the Blood; and the Piegan, also called Pikuni."
+  },
+  {
+   "id": "apsaalooke-nation-us-mt",
+   "fact": null,
+   "action": "keep",
+   "reason": "Leading with Apsáalooke Nation matches the heading on the tribe's executive branch site crow-nsn.gov; Crow Tribe kept in also. Diacritic correct."
+  },
+  {
+   "id": "apsaalooke-nation-us-mt",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "apsaalooke-nation-us-mt",
+   "fact": 1,
+   "action": "edit",
+   "reason": "The Montana page states 85 percent but gives no date, and the figure may be old. Setting as_of to 2026 presents it as current. Keep the attribution, use the page's figure, and set as_of to null. Replace it with a dated figure from the tribe's own language program when one is available.",
+   "text": "Montana's state tribal directory says 85 percent of the tribe speaks Crow as a first language."
+  },
+  {
+   "id": "apsaalooke-nation-us-mt",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "northern-cheyenne-tribe-us-mt",
+   "fact": null,
+   "action": "edit",
+   "reason": "The pronunciation (Tse-TSES-tas) comes from the Montana Governor's Office directory, not the tribe; cheyennenation.com gives no Cheyenne self-name or pronunciation (checked). Per the owner's rule (guides only from the nation's own sources), set pronounce to null.",
+   "text": "pronounce: null"
+  },
+  {
+   "id": "northern-cheyenne-tribe-us-mt",
+   "fact": 0,
+   "action": "edit",
+   "reason": "The translation comes from a state directory, not the tribe. The Cheyenne and Arapaho Tribes' own site translates the same self-name as Human Beings or The People. Attribute the translation so the state's version is not presented as the people's own.",
+   "text": "Montana's state tribal directory says the Northern Cheyenne call themselves Tsis tsis'tas, a name it translates as the beautiful people."
+  },
+  {
+   "id": "northern-cheyenne-tribe-us-mt",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "northern-cheyenne-tribe-us-mt",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "fort-peck-assiniboine-sioux-us-mt",
+   "fact": null,
+   "action": "keep",
+   "reason": "Full name appears on fortpecktribes.org; Nakona and Dakota self-names in also match the cited page."
+  },
+  {
+   "id": "fort-peck-assiniboine-sioux-us-mt",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "fort-peck-assiniboine-sioux-us-mt",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Respect-neutral; verifier's rewording for copying should stand."
+  },
+  {
+   "id": "fort-peck-assiniboine-sioux-us-mt",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "northern-arapaho-tribe-us-wy",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on northernarapaho.com. Hinono'ei is the Arapaho self-name, also used on the Cheyenne and Arapaho Tribes' own site."
+  },
+  {
+   "id": "northern-arapaho-tribe-us-wy",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Respect-neutral; verifier's fix to the page's own wording (2.2 million acre reserve between the Wind River Range and Owl Creek Mountains) should stand."
+  },
+  {
+   "id": "northern-arapaho-tribe-us-wy",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Honors veterans as the tribe itself describes its flag; public, not ceremonial."
+  },
+  {
+   "id": "northern-arapaho-tribe-us-wy",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-and-arapaho-tribes-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name and both self-names (Tsistsistas, Hinono'ei) used on the tribes' own site."
+  },
+  {
+   "id": "cheyenne-and-arapaho-tribes-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-and-arapaho-tribes-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "cheyenne-and-arapaho-tribes-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "comanche-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name and Nʉmʉnʉʉ (NUH-MUH-NUH) both given on comanchenation.com, so the pronunciation comes from the nation's own source."
+  },
+  {
+   "id": "comanche-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "comanche-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "comanche-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Supported as written: the nation's history page says the people were once a part of the Shoshone Tribe and moved from their Shoshone kinsmen onto the northern Plains in the late 1600s and early 1700s. No edit needed. The page's 'Lords of the Plains' phrase is rightly not used."
+  },
+  {
+   "id": "kiowa-tribe-us-ok",
+   "fact": null,
+   "action": "edit",
+   "reason": "The pronunciation does come from the tribe's Language Department, but the guide should lead with the department's own spelling. The page writes Gáuigú bà dàu (Gkawy-goo bah-daw), We are Kiowa. Its orthography also puts a leading mark before the G that may not display in web fonts. Consider adding Gáuigú to also.",
+   "text": "pronounce.text: Gáuigú, as in Gáuigú bà dàu, We are Kiowa: Gkawy-goo"
+  },
+  {
+   "id": "kiowa-tribe-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "kiowa-tribe-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "kiowa-tribe-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "From the tribe's own history page; neutral migration history."
+  },
+  {
+   "id": "osage-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on osagenation-nsn.gov. Wahzhazhe and Wahzahzhe both appear on Osage Nation pages."
+  },
+  {
+   "id": "osage-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "osage-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "osage-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral governance fact from the Nation's own site; no reference to past violence or wealth stereotypes."
+  },
+  {
+   "id": "pawnee-nation-of-oklahoma-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on pawneenation.org. Chaticks si Chaticks appears on the site as the name of the nation's newspaper; fine as a self-designation."
+  },
+  {
+   "id": "pawnee-nation-of-oklahoma-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Band names keep the nation's own diacritics; good."
+  },
+  {
+   "id": "pawnee-nation-of-oklahoma-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Military service is a history the Pawnee Nation's own page presents with pride; the page also supports Code Talkers ('once-forbidden language as Code Talkers'). Neutral and source-backed."
+  },
+  {
+   "id": "pawnee-nation-of-oklahoma-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Respect-neutral; verifier's rewording for copying should stand."
+  },
+  {
+   "id": "citizen-potawatomi-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on potawatomi.org; Bodéwadmi with diacritic as the nation uses it."
+  },
+  {
+   "id": "citizen-potawatomi-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "citizen-potawatomi-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "citizen-potawatomi-nation-us-ok",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "prairie-band-potawatomi-nation-us-ks",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on pbpindiantribe.com."
+  },
+  {
+   "id": "prairie-band-potawatomi-nation-us-ks",
+   "fact": 0,
+   "action": "edit",
+   "reason": "The source presents this as the Nation's position in a jurisdiction question: it says Congress never disestablished the reservation, and it cites a 2023 council resolution reaffirming jurisdiction. Contested matters must be stated neutrally, so attribute it to the Nation. Same wording as the verifier's fix.",
+   "text": "The Prairie Band Potawatomi Nation says its Kansas reservation is unchanged from what the Treaty of 1846 established."
+  },
+  {
+   "id": "prairie-band-potawatomi-nation-us-ks",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "prairie-band-potawatomi-nation-us-ks",
+   "fact": 2,
+   "action": "edit",
+   "reason": "'moved to present-day Kansas' softens a forced removal. The same page names the 1830 Removal Act and says the circumstances of removal left the people little choice. State it plainly and neutrally, without adding claims.",
+   "text": "The Prairie Band Potawatomi Nation began in the Great Lakes region. US removal policy left the people little choice, and after 1846 they moved to present-day Kansas."
+  },
+  {
+   "id": "forest-county-potawatomi-us-wi",
+   "fact": null,
+   "action": "edit",
+   "reason": "The community's own site presents itself as Forest County Potawatomi (FCP) in its visible text; Community appears only in metadata and in lower-case phrases. Lead with the name it displays and keep the longer form in also.",
+   "text": "also: add Forest County Potawatomi Community",
+   "name": "Forest County Potawatomi"
+  },
+  {
+   "id": "forest-county-potawatomi-us-wi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "forest-county-potawatomi-us-wi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "forest-county-potawatomi-us-wi",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Mentions the cultural center's link to the past without describing the ceremonies the page says it hosts; correct restraint."
+  },
+  {
+   "id": "ho-chunk-nation-us-wi",
+   "fact": null,
+   "action": "edit",
+   "reason": "Name is right. The Nation's homepage writes the language name as Hocąk (Hocąk Wazijacira) and styles the people as People of the Sacred Voice. Include the Hocąk spelling as the homepage shows it (Hoocąk is also used in Ho-Chunk language materials). Winnebago is fine only as a labeled older name.",
+   "text": "also: add Hocąk (homepage spelling)"
+  },
+  {
+   "id": "ho-chunk-nation-us-wi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "ho-chunk-nation-us-wi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "States only that a traditional chief and clan system exists, as the Nation's public page says; no restricted detail."
+  },
+  {
+   "id": "ho-chunk-nation-us-wi",
+   "fact": 2,
+   "action": "edit",
+   "reason": "The state DPI gloss 'People of the Big Voice' conflicts with the Nation's own homepage, which styles the people as People of the Sacred Voice. Drop the state gloss and keep the supported 1994 name restoration; set as_of to 1994. Same wording as the verifier's fix.",
+   "text": "In 1994 a secretarial election restored Ho-Chunk, the name the people have always called themselves, as the nation's official name in place of Winnebago."
+  },
+  {
+   "id": "menominee-indian-tribe-us-wi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on menominee-nsn.gov. Mamaceqtaw in also is not on the cited pages; neutral, but source it when possible."
+  },
+  {
+   "id": "menominee-indian-tribe-us-wi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "menominee-indian-tribe-us-wi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "menominee-indian-tribe-us-wi",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Neutral and accurate; the page credits the persistence of tribal members in restoration."
+  },
+  {
+   "id": "oneida-nation-us-wi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on oneida-nsn.gov and its press kit."
+  },
+  {
+   "id": "oneida-nation-us-wi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "oneida-nation-us-wi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Adding the self-name Haudenosaunee beside the source's 'Iroquois' honors self-naming without adding a factual claim."
+  },
+  {
+   "id": "oneida-nation-us-wi",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "little-traverse-bay-bands-odawa-us-mi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on ltbbodawa-nsn.gov."
+  },
+  {
+   "id": "little-traverse-bay-bands-odawa-us-mi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "little-traverse-bay-bands-odawa-us-mi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Respect-neutral; verifier's rewording for copying should stand."
+  },
+  {
+   "id": "little-traverse-bay-bands-odawa-us-mi",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Supported: the same page names Anishinaabemowin and gives the mission statement in it."
+  },
+  {
+   "id": "sault-ste-marie-tribe-chippewa-us-mi",
+   "fact": null,
+   "action": "keep",
+   "reason": "Full name appears on saulttribe.com; Sault Tribe kept in also."
+  },
+  {
+   "id": "sault-ste-marie-tribe-chippewa-us-mi",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sault-ste-marie-tribe-chippewa-us-mi",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "meskwaki-nation-us-ia",
+   "fact": null,
+   "action": "keep",
+   "reason": "Meskwaki Nation is how the official site titles itself; the page also says the people have always identified themselves as Meskwaki, while Fox was a French label. Legal name kept in also."
+  },
+  {
+   "id": "meskwaki-nation-us-ia",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Supported: the page says that because the ancestors purchased the land, the Meskwaki Settlement is not an Indian Reservation. A strengths fact about self-determination."
+  },
+  {
+   "id": "meskwaki-nation-us-ia",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "meskwaki-nation-us-ia",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sac-and-fox-nation-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on sacandfoxnation-nsn.gov. Thâkîwaki in also is not on the pages checked; neutral, but source it when possible."
+  },
+  {
+   "id": "sac-and-fox-nation-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sac-and-fox-nation-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "sac-and-fox-nation-us-ok",
+   "fact": 2,
+   "action": "edit",
+   "reason": "Close to a word-for-word copy of the source sentence (8 consecutive words). Reworded in plain words, adding only the page's own next point (ancestral teachings at work and play). No new claims.",
+   "text": "Sac and Fox families, clans and social groups gather often and eagerly, carrying the teachings of their ancestors into work and play."
+  },
+  {
+   "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on the tribe's homepage, which says We are also known as the Ioway or Báxoje."
+  },
+  {
+   "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "iowa-tribe-of-kansas-and-nebraska-us-ks-ne",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "iowa-tribe-of-oklahoma-us-ok",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on iowanation.org; Baxoje (Bah Kho-je) pronunciation is given on the tribe's own homepage, so it meets the own-source rule."
+  },
+  {
+   "id": "iowa-tribe-of-oklahoma-us-ok",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "iowa-tribe-of-oklahoma-us-ok",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "omaha-tribe-of-nebraska-us-ne",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on omahatribe.com; Umoⁿhoⁿ self-name kept. Both facts are BIA figures; a later pass could add a strengths fact (language, culture) from the tribe's own site."
+  },
+  {
+   "id": "omaha-tribe-of-nebraska-us-ne",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "omaha-tribe-of-nebraska-us-ne",
+   "fact": 1,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  },
+  {
+   "id": "ponca-tribe-of-nebraska-us-ne",
+   "fact": null,
+   "action": "keep",
+   "reason": "Name as on poncatribe-ne.gov."
+  },
+  {
+   "id": "ponca-tribe-of-nebraska-us-ne",
+   "fact": 0,
+   "action": "keep",
+   "reason": "Neutral restoration fact from the tribe's own site. Optional: the site's timeline dates it to 1990, so as_of could be 1990."
+  },
+  {
+   "id": "ponca-tribe-of-nebraska-us-ne",
+   "fact": 1,
+   "action": "keep",
+   "reason": "A celebrated achievement the tribe itself features. The deceased-person rule applies only to Aboriginal and Torres Strait Islander peoples. Supported by the tribe's own timeline."
+  },
+  {
+   "id": "ponca-tribe-of-nebraska-us-ne",
+   "fact": 2,
+   "action": "keep",
+   "reason": "Present-day, neutral and source-backed; plain calm register; no sacred, deficit-only or stereotyped content."
+  }
+ ]
+}

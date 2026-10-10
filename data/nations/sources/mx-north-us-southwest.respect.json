@@ -1,0 +1,670 @@
+{
+  "region": "mx-north-us-southwest",
+  "items": [
+    {
+      "id": "raramuri-mx-chihuahua",
+      "fact": null,
+      "action": "keep",
+      "reason": "Leads with Rarámuri, the self-name used by the SIC record; Tarahumara kept as a neutral exonym in also."
+    },
+    {
+      "id": "raramuri-mx-chihuahua",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The ball race is a public sport and community event, not restricted knowledge. The fact rightly leaves out the betting and corn beer the source mentions, which would read as stereotype on a short card."
+    },
+    {
+      "id": "raramuri-mx-chihuahua",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-day craft and economy, a strength. Masks named only as a craft object, no ceremonial detail."
+    },
+    {
+      "id": "raramuri-mx-chihuahua",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Agency framing and accurate: the SIC page says 'Desde el siglo XVIII y hasta la fecha, los rarámuri mantuvieron una resistencia pasiva', so 'from the 1700s to today' is supported (an earlier review draft asked to drop 'to today'; the fetched source supports it). 'Keep their traditions' slightly simplifies 'parte de sus tradiciones' but is fair."
+    },
+    {
+      "id": "wixarika-mx-jalisco-nayarit",
+      "fact": null,
+      "action": "keep",
+      "reason": "Wixárika is the self-name (INAH uses it); Wixaritari plural and Huichol exonym in also. Correct."
+    },
+    {
+      "id": "wixarika-mx-jalisco-nayarit",
+      "fact": 0,
+      "action": "keep",
+      "reason": "A public UNESCO listing presented as the result of Wixaritari requests, which credits the people's own long effort. Names the route only, no description of ceremonies at the sacred sites."
+    },
+    {
+      "id": "wixarika-mx-jalisco-nayarit",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Art as strength. The source notes motifs are often sacred plants and deities; the fact correctly describes technique only, not sacred content."
+    },
+    {
+      "id": "wixarika-mx-jalisco-nayarit",
+      "fact": 2,
+      "action": "edit",
+      "reason": "Neutral on land, faithful to source. SIC says the titles 'definieron los límites de las comunidades actuales' and, just before, that Wixárika territory was once larger. 'Still mark the boundaries ... today' reads as if present boundaries are settled. Stay with the source's own claim. Evidence phrase unchanged.",
+      "text": "At the end of the 1700s Wixárika communities received land titles that defined the boundaries of their present-day communities."
+    },
+    {
+      "id": "yoeme-mx-sonora-us-arizona",
+      "fact": null,
+      "action": "keep",
+      "reason": "Yoeme leads, as the NPS article does; Yaqui and Hiaki in also. UI note: official_url is the Pascua Yaqui Tribe (US) only; Yoeme communities in Sonora have their own traditional authorities."
+    },
+    {
+      "id": "yoeme-mx-sonora-us-arizona",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Present-day and matches NPS ('the majority of Yoeme people live south of the US border in the Mexican states of Sonora and Sinaloa')."
+    },
+    {
+      "id": "yoeme-mx-sonora-us-arizona",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Neutral on contested land and water. The SIC page pairs the 1937 ratification with the loss of two traditional towns (Cócorit and Bácum); citing only the confirmation reads as a settled state grant, while Yoeme territory remains a live issue. Adds only what the same paragraph says, and uses the entry's lead name Yoeme. Evidence phrase unchanged.",
+      "text": "In 1937 agreements with President Lázaro Cárdenas confirmed Yoeme possession of 485,235 hectares in Sonora as exclusive territory, though two traditional towns were lost."
+    },
+    {
+      "id": "yoeme-mx-sonora-us-arizona",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Governance fact from the tribe's own enrollment page. Neutral and dated."
+    },
+    {
+      "id": "yoreme-mx-sonora-sinaloa",
+      "fact": null,
+      "action": "keep",
+      "reason": "Yoreme is the self-name; Mayo kept as exonym."
+    },
+    {
+      "id": "yoreme-mx-sonora-sinaloa",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Centers traditional governors as the authority the federal office met with; government plan stated neutrally. The bulletin also notes officials asked permission to visit communities, which fits this framing."
+    },
+    {
+      "id": "yoreme-mx-sonora-sinaloa",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Public patron saint fiestas framed as community and identity strength; no ceremonial detail."
+    },
+    {
+      "id": "yoreme-mx-sonora-sinaloa",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Craft list, a strength. Ceremonial masks in the source are correctly left out."
+    },
+    {
+      "id": "comcaac-mx-sonora",
+      "fact": null,
+      "action": "keep",
+      "reason": "Comcaac is the self-name (plural); Seri exonym in also."
+    },
+    {
+      "id": "comcaac-mx-sonora",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Land fact stated neutrally and close to source ('les otorgó simbólicamente como posesión comunal la isla Tiburón'); keeping 'symbolically' is honest."
+    },
+    {
+      "id": "comcaac-mx-sonora",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Craft as strength, present tense in source ('actualmente'). The special ceremony on completing a basket, mentioned in the source, is correctly left out."
+    },
+    {
+      "id": "comcaac-mx-sonora",
+      "fact": 2,
+      "action": "remove",
+      "reason": "Deficit-adjacent and government-centered. The bulletin is publicity for a federal program and frames Comcaac children as recipients of state meals; as the renewing fact on a herald or level card it honors the program more than the people. No edit within the source can turn it into a strength. Replace in a later pass with a present-day Comcaac strength from a strong source."
+    },
+    {
+      "id": "kumeyaay-us-ca-mx-bc",
+      "fact": null,
+      "action": "edit",
+      "reason": "Lead Kumeyaay is right (Sycuan uses it). In also, 'Ti’pai' does not match the cited SIC page, which spells the Baja California self-name 'tipai'. Self-names should match the source. Diegueño is a mission-era exonym, fine to keep in also. official_url null is reasonable: there are 12 separate bands.",
+      "patch": {
+        "also": [
+          "Kumiai",
+          "Tipai",
+          "Diegueño"
+        ]
+      }
+    },
+    {
+      "id": "kumeyaay-us-ca-mx-bc",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Present-day, from the band's own site, and the 'north of the border' scope matches the page."
+    },
+    {
+      "id": "kumeyaay-us-ca-mx-bc",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Self-name spelling: the cited SIC page says 'Los kumiai o kimiai se llaman a sí mismos tipai'. Use the source's spelling. Evidence phrase unchanged.",
+      "text": "In Baja California the Kumiai call themselves Tipai. Their communities sit on the coastal plateaus of Ensenada and Rosarito and in Tecate."
+    },
+    {
+      "id": "kumeyaay-us-ca-mx-bc",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Basketry and seasonal material knowledge, a strength."
+    },
+    {
+      "id": "cocopah-cucapa-us-az-mx-bc",
+      "fact": null,
+      "action": "edit",
+      "reason": "Lead Cocopah is right (the Cocopah Indian Tribe publishes it) and Es-pei is supported by SIC ('Los cucapá se autonombran es-pei'). But 'Xawiƚƚ Kwñchawaay' appears on neither cited page (cocopah.com, SIC Cucapás); an unsourced native-language name risks misspelling the people's own name. Drop it unless a tribal or language-program source is found. UI note: official_url is the Arizona tribe only; the Cucapá of El Mayor are separate communities.",
+      "patch": {
+        "also": [
+          "Cucapá",
+          "Es-pei"
+        ]
+      }
+    },
+    {
+      "id": "cocopah-cucapa-us-az-mx-bc",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The tribe's own words ('known as the River People'). Fine."
+    },
+    {
+      "id": "cocopah-cucapa-us-az-mx-bc",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-day, from the tribe's own homepage."
+    },
+    {
+      "id": "cocopah-cucapa-us-az-mx-bc",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Cross-border kinship gathering, a strength and present-day."
+    },
+    {
+      "id": "warijo-mx-chihuahua-sonora",
+      "fact": null,
+      "action": "edit",
+      "reason": "Self-name scope. SIC: 'Se autodenominan guarijíos (macurawe) en Sonora, y guarijós (warihó) en Chihuahua', and Sonora holds the larger share (1,058 of 1,833). This entry covers both branches, so leading with Warihó alone labels the Sonora communities with the Chihuahua name. Show both self-names; keep Guarijío and Guarijó in also and drop Macurawe from also since it moves into the name.",
+      "name": "Warihó and Macurawe",
+      "patch": {
+        "also": [
+          "Guarijío",
+          "Guarijó"
+        ]
+      }
+    },
+    {
+      "id": "warijo-mx-chihuahua-sonora",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Self-naming and language, faithful to source."
+    },
+    {
+      "id": "warijo-mx-chihuahua-sonora",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Accuracy: 'recae en la mujer' means the craft work falls to or rests with women, not that women lead it. Also names both self-names to match the nation edit. Evidence phrase unchanged.",
+      "text": "Warihó and Macurawe families weave baskets, mats and hats from palm and fiber and build harps, violins and guitars. Their craft work is family based and rests with women."
+    },
+    {
+      "id": "warijo-mx-chihuahua-sonora",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Historical, neutral; matches 'el grupo se dividió en dos núcleos'."
+    },
+    {
+      "id": "tohono-oodham-us-az-mx-son",
+      "fact": null,
+      "action": "keep",
+      "reason": "Tohono O’odham as the Nation publishes it. Pápago is a historical exonym; acceptable in also, but the UI should not display it as a current name."
+    },
+    {
+      "id": "tohono-oodham-us-az-mx-son",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Population and land from the Nation's own page, dated."
+    },
+    {
+      "id": "tohono-oodham-us-az-mx-son",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Language continuity in the Nation's words ('All of the groups still speak the O’odham language')."
+    },
+    {
+      "id": "tohono-oodham-us-az-mx-son",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Border division stated neutrally and paired with shared identity, as in the SIC source."
+    },
+    {
+      "id": "akimel-ootham-us-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "Akimel O’otham as the Gila River Indian Community publishes it; Pima exonym in also. UI note: GRIC is shared with the Pee Posh, who should not be read as a sub-name of this entry."
+    },
+    {
+      "id": "akimel-ootham-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Supported: the GRIC page says the Pee Posh came to ask permission to live among the Akimel O’otham and 'They were welcomed', and 'to this day we share'. Hospitality and present-day, a strength."
+    },
+    {
+      "id": "akimel-ootham-us-az",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Fidelity to the community's own words. Its History page says the reservation came 'In appreciation for the important role the Akimel O’otham played in America’s westward expansion' and gives 372,000 acres; 'westward travel' changes that meaning. Evidence phrase unchanged.",
+      "text": "In 1859 Congress set aside 372,000 acres along the Gila River as Arizona’s first reservation, in appreciation of the Akimel O’otham role in America’s westward expansion."
+    },
+    {
+      "id": "akimel-ootham-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Revival and heritage stewardship, a strength. Huhugam named only as the center's name."
+    },
+    {
+      "id": "dine-navajo-nation-us",
+      "fact": null,
+      "action": "keep",
+      "reason": "Diné leads, Navajo and Navajo Nation in also. Correct."
+    },
+    {
+      "id": "dine-navajo-nation-us",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Land fact in the Nation's own words."
+    },
+    {
+      "id": "dine-navajo-nation-us",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Governance, from the Council's own page."
+    },
+    {
+      "id": "dine-navajo-nation-us",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Language as achievement; no individuals named."
+    },
+    {
+      "id": "hopi-us-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "Hopi as the Tribe publishes it. Hopitutskwa for the homeland is a public term. Fine."
+    },
+    {
+      "id": "hopi-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Land and villages, from the Tribe's own homepage."
+    },
+    {
+      "id": "hopi-us-az",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Respect village autonomy and fidelity. The Tribe's page says representatives are selected by community election or by appointment from the village kikmongwi, and that some villages currently have no representative. 'A Tribal Council of village representatives' implies every village sits on a council holding all power. Say how villages choose, without naming internal disagreements. Evidence phrase unchanged.",
+      "text": "Hopi government is unicameral, with all powers vested in the Tribal Council. Villages choose their representatives by election or by appointment from the village leader, for two year terms."
+    },
+    {
+      "id": "hopi-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Agricultural science as strength, present tense."
+    },
+    {
+      "id": "ashiwi-zuni-us-nm",
+      "fact": null,
+      "action": "edit",
+      "reason": "Name A:shiwi is right: the Pueblo's own newsletter (A:shiwi A:wan Messenger) and museum use it, and ITCA writes Zuni (Ashiwi). But official_url https://www.ashiwi.org/ currently carries injected spam (casino, pokies and betting links in several languages, plus placeholder tel:+5555555555 and mailto:info@mydomain.com). Set official_url to null until the Pueblo's site is clean, so the game and hub never send people to gambling spam under the Pueblo's name. Re-check later.",
+      "patch": {
+        "official_url": null
+      }
+    },
+    {
+      "id": "ashiwi-zuni-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Population and land, neutral and dated."
+    },
+    {
+      "id": "ashiwi-zuni-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-pattern village life, neutral."
+    },
+    {
+      "id": "haaku-acoma-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Haak’u is published by the Pueblo itself as the name of their homeland; Pueblo of Acoma in also. Acceptable as lead. UI could show 'Haak’u (Pueblo of Acoma)' since the Pueblo's own English usage is Pueblo of Acoma."
+    },
+    {
+      "id": "haaku-acoma-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Continuity in the Pueblo's own words, crediting oral history alongside archaeology."
+    },
+    {
+      "id": "haaku-acoma-us-nm",
+      "fact": 1,
+      "action": "edit",
+      "reason": "Respect the Pueblo's stated intent. Its Language Program page says 'Our language has never been written', leaves culturally sensitive words out, and lists the objective 'To have an on-line dictionary available to tribal members'. Naming the dictionary as the Pueblo does and saying who it is for keeps readers from treating it as a public resource. Evidence phrase unchanged.",
+      "text": "Since 2017 the Acoma Language Program has been building the H’aakume Keres Dictionary for tribal members, with about 5,000 words and phrases being edited by fluent speakers."
+    },
+    {
+      "id": "haaku-acoma-us-nm",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Heritage stewardship, a strength."
+    },
+    {
+      "id": "taos-pueblo-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Taos Pueblo is how the Pueblo names itself on its site. 'Red Willow People' is a common English rendering but is not on the cited about page; fine in also, low priority to source it."
+    },
+    {
+      "id": "taos-pueblo-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Return of land and a self-determination precedent, in the Pueblo's own framing. No sacred detail about Blue Lake."
+    },
+    {
+      "id": "taos-pueblo-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "States only what the Pueblo says ('Tiwa is our native language'); no language content shared."
+    },
+    {
+      "id": "taos-pueblo-us-nm",
+      "fact": 2,
+      "action": "keep",
+      "reason": "World Heritage status, from the Pueblo's own page."
+    },
+    {
+      "id": "khapo-santa-clara-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Kha’P’o as the Pueblo's page writes it ('the people of Kha’P’o'). Correct."
+    },
+    {
+      "id": "khapo-santa-clara-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Language continuity, from the Pueblo."
+    },
+    {
+      "id": "khapo-santa-clara-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Land, from the Pueblo."
+    },
+    {
+      "id": "khapo-santa-clara-us-nm",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Tours the Pueblo itself offers of its ancestral village Puje (its spelling). Public, invited sharing."
+    },
+    {
+      "id": "ohkay-owingeh-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Ohkay Owingeh, the restored name; San Juan Pueblo in also as former name. Correct."
+    },
+    {
+      "id": "ohkay-owingeh-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Name restoration as self-determination; the memorial credits the pueblo members and tribal council."
+    },
+    {
+      "id": "ohkay-owingeh-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-day regional governance role."
+    },
+    {
+      "id": "ohkay-owingeh-us-nm",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Long continuity and irrigation farming, neutral."
+    },
+    {
+      "id": "white-mountain-apache-us-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "White Mountain Apache as the Tribe publishes it. official_url http://www.wmat.nsn.us/ checked: live, the Tribe's own site (greets 'Dagot’ee'); its casino mention is the Tribe's own Hon-Dah, not spam."
+    },
+    {
+      "id": "white-mountain-apache-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Ancestral homeland framing from ITCA, a strength."
+    },
+    {
+      "id": "white-mountain-apache-us-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Population and communities, dated."
+    },
+    {
+      "id": "white-mountain-apache-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Tribal enterprise and land stewardship, strengths."
+    },
+    {
+      "id": "san-carlos-apache-us-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "San Carlos Apache as the Tribe publishes it."
+    },
+    {
+      "id": "san-carlos-apache-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Land, neutral and dated. Contested matters correctly left out."
+    },
+    {
+      "id": "san-carlos-apache-us-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Telling their own story, a strength."
+    },
+    {
+      "id": "san-carlos-apache-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Land and wildlife, neutral."
+    },
+    {
+      "id": "mescalero-apache-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Mescalero Apache as the Tribe publishes it."
+    },
+    {
+      "id": "mescalero-apache-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "In the Tribe's words. The culture page also describes a sacred ceremony; none of it is used, correctly."
+    },
+    {
+      "id": "mescalero-apache-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Governance, from the Tribe."
+    },
+    {
+      "id": "mescalero-apache-us-nm",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Tribal enterprise, a strength."
+    },
+    {
+      "id": "jicarilla-apache-us-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "Jicarilla Apache as the Nation's name. official_url null is right for now: jicarilla.com is a parked domain for sale, not the Nation."
+    },
+    {
+      "id": "jicarilla-apache-us-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Land and community, neutral."
+    },
+    {
+      "id": "jicarilla-apache-us-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Agency in keeping lands together."
+    },
+    {
+      "id": "jicarilla-apache-us-nm",
+      "fact": 2,
+      "action": "edit",
+      "reason": "Center the elders' knowledge and keep the source's precision. The source says elders predict 'from the timing rather than the density of snowfall, closely reflecting what scientists today refer to as its moisture content'; 'matches modern moisture science' is vague and frames the knowledge as needing science's approval. Evidence phrase unchanged.",
+      "text": "Jicarilla elders still predict spring flows and summer water from the timing, not the density, of snowfall, a reading close to what scientists now call moisture content."
+    },
+    {
+      "id": "yavapai-us-az",
+      "fact": null,
+      "action": "edit",
+      "reason": "Two respect fixes. (1) also lists 'Yavapai-Apache Nation', which by its own name is a nation of two peoples, Yavapai and Apache; listing it as another name for 'Yavapai' erases its Apache people. Drop it from also, or give it its own entry later. (2) pronounce: YPIT writes 'pronounced yav, uh, pie' as separated syllables with no stress marking; 'YAV-uh-pie' adds a stress claim. Use the source's form.",
+      "patch": {
+        "also": [
+          "Fort McDowell Yavapai Nation",
+          "Yavapai-Prescott Indian Tribe"
+        ],
+        "pronounce": {
+          "text": "yav-uh-pie",
+          "source_url": "https://www.ypit.com/about_ypit.htm"
+        }
+      }
+    },
+    {
+      "id": "yavapai-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The community's own victory in its own words ('won two important victories that made history and reaffirmed our tribal sovereignty'). Strong, agency-centered."
+    },
+    {
+      "id": "yavapai-us-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-day, from the Nation's homepage (September 15, 2026; 950 members)."
+    },
+    {
+      "id": "yavapai-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Art and symbol, in the tribe's words."
+    },
+    {
+      "id": "hualapai-us-az",
+      "fact": null,
+      "action": "edit",
+      "reason": "pronounce: the Tribe's page writes '(pronounced Wal-lah-pie)'; 'WAL-lah-pie' in capitals adds a stress claim the source does not make. Use the Tribe's exact form, since pronunciation should come only from the nation's own source.",
+      "patch": {
+        "pronounce": {
+          "text": "Wal-lah-pie",
+          "source_url": "https://hualapai-nsn.gov/community/about_the_hualapai_tribe/index.php"
+        }
+      }
+    },
+    {
+      "id": "hualapai-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Name meaning in the Tribe's own words."
+    },
+    {
+      "id": "hualapai-us-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Land, from the Tribe."
+    },
+    {
+      "id": "hualapai-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Tribal enterprise, a strength."
+    },
+    {
+      "id": "havasu-baaja-havasupai-us-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "Havasu Baaja leads, as the Tribe's page does ('Havasu Baaja, People of the Blue Green Waters'). Correct."
+    },
+    {
+      "id": "havasu-baaja-havasupai-us-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Continuity, from the Tribe."
+    },
+    {
+      "id": "havasu-baaja-havasupai-us-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "From the Tribe's own page; notes remoteness without deficit framing."
+    },
+    {
+      "id": "havasu-baaja-havasupai-us-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Land restoration stated neutrally, from the Tribe."
+    },
+    {
+      "id": "nuche-ute-us-co-ut",
+      "fact": null,
+      "action": "keep",
+      "reason": "Nuche is used on the Southern Ute history page; the Ute Mountain Ute homepage writes Nuchu (already in also). Acceptable. UI note: three separate tribes; official_url is Southern Ute only."
+    },
+    {
+      "id": "nuche-ute-us-co-ut",
+      "fact": 0,
+      "action": "keep",
+      "reason": "In the Tribe's words. 'Once reached' is historical and neutral."
+    },
+    {
+      "id": "nuche-ute-us-co-ut",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Present-day; band names match the Ute Mountain Ute page ('the Mouache and the Capote became the Southern Ute Tribe')."
+    },
+    {
+      "id": "nuche-ute-us-co-ut",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Language revitalization, a strength."
+    },
+    {
+      "id": "southern-paiute-us-ut-az",
+      "fact": null,
+      "action": "keep",
+      "reason": "Southern Paiute as the umbrella; the three tribes in also. The cited bands page gives the Cedar Band's own name Suh'dutsing (Cedar People), a possible later addition."
+    },
+    {
+      "id": "southern-paiute-us-ut-az",
+      "fact": 0,
+      "action": "keep",
+      "reason": "Matches the page ('Formal federal recognition ... occurred on April 3, 1980'). The Act text quoted there says 'restored or confirmed', so 'brought' is fair and avoids asserting which applied to the Cedar Band."
+    },
+    {
+      "id": "southern-paiute-us-ut-az",
+      "fact": 1,
+      "action": "keep",
+      "reason": "Language sharing the Tribe itself offers publicly, a strength."
+    },
+    {
+      "id": "southern-paiute-us-ut-az",
+      "fact": 2,
+      "action": "keep",
+      "reason": "Partnership led by the Kaibab Band, a strength."
+    }
+  ]
+}
