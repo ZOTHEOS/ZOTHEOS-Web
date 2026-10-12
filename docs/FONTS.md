@@ -63,3 +63,15 @@ file's bytes no longer match its hash in `tools/fonts.sha256`. That last check i
 into a check: `--record` adds new files and drops deleted ones, but it never approves a changed file under an old name.
 The manifest lives in `tools/` rather than `static/fonts/` so the manifest itself is not served under the immutable
 rule.
+
+## The nations pages: a second block for letters the brand faces lack
+
+Every page under `/nations` carries the landing's `zth-fonts` block byte for byte, plus one more block,
+`<style id="zth-fonts-names">`, written by `tools/nations_fonts.py` (never by hand). It declares the ZN faces: subsets
+of OFL fonts vendored in `tools/fonts-src/` (Noto Sans and the Noto Sans Cherokee, Canadian Aboriginal, Devanagari and
+Tifinagh faces, with Tinos and Cousine standing in for Noto Serif and Noto Sans Mono until those are vendored), each
+named by content hash, with `unicode-range` from the subset's own cmap, `font-display: block` and `size-adjust` from
+measured x-heights. A nation's name renders whole in one face: the brand serif when it carries every letter, otherwise
+ZN Serif or the script's face. `tools/nations_lint.py` fails the build when any letter of any published string has no
+face; the fix is a face or a block in `nations_fonts.py`, never an edit to a name. `nations_build.py` runs the
+subsetting, then `fonts_check.py --record`.
