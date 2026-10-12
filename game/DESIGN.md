@@ -1,10 +1,19 @@
 # OLLAMALIZTLI: game design document
 
-A hidden mini-game for zotheos.org. Two modes, five seeded levels each, monochrome chrome on pure black, opened from the left Xicalcoliuhqui band.
+A live mini-game at zotheos.org/game, linked from the main page footer. Two modes, five seeded levels each, monochrome chrome on pure black.
 
-Target file: `game/index.html` (one file, inline CSS and JS, ES5, Canvas2D, no libraries, no network, about 30 KB of JS or less).
+Target file: `game/index.html` (one file, inline CSS and JS, ES5, Canvas2D, no libraries, same-origin educational JSON). The build warns above 92,000 bytes of minified JavaScript and fails above 100,000.
 
 Writing rule for every visible string: no em dash. Use a period, a comma or a colon.
+
+> **Revision 2.3 (2026-10-12).** Echo now displays its ring objective, ball possession and a pause legend; aiming uses one direction resolver for preview and strike. Cards can expand published history with canonical receipts. Replay uses its own identifier. The notes below supersede earlier gameplay and size statements.
+>
+> **Drop challenge pass (integrated, 2026-10-12).** This note supersedes older statements that Drop is unchanged. The ledge/gap and ring random streams retain their layout; row pitch is 88/92/96/100/104 logical units instead of 72, and the ring arena extends 480 units below the final row instead of 400. Strike forces, gravity, ring targets, timers and Assist are unchanged. More vertical room does not increase the ball's jump impulse.
+> - **Spikes.** An independent `0xD06B` stream places three-tooth traps on horizontal segments at least 56 units long, clear of the gap lips and markers. The first two rows, every central landing row and the final row stay clear. Nearby traps show hollow rising outlines for at least 0.95 s (1.33 s Calm), turn solid for 0.65 s (0.91 s Calm), then rest for a seeded 1.5 to 2.0 s (2.1 to 2.8 s Calm). Leaving proximity disarms them and requires a fresh full warning.
+> - **Original Stone Guardians.** From level 2, a court seed selects Prism, Rampart or Vault from an expandable catalog of original geometric profiles. These are fictional mechanical obstacles, with no deity, sacred depiction or living nation as an enemy. Their central patrol leaves wall ring approaches open. A hollow halo warns for at least 1.1 s (1.54 s Calm), solid contact lasts 0.85 s (1.19 s Calm), and rest lasts 1.8 s (2.52 s Calm). The round body defines contact; decorative rims are safe. Reduced motion suppresses decorative rotation.
+> - **Attempts.** Only solid-phase contact costs an attempt, using the existing single failure/retry path. Held balls do not arm hazards. Retries grant 1.0 s protection, then require the full proximity warning again. Assist retains unlimited attempts. Physics clocks advance at 120 Hz; drawing does not advance or mutate hazard state.
+> - **Isolated verification, not a human difficulty claim.** A Node VM simulation checked 640 generated courts, 1,935 spike placements and all three guardian profiles; gap/marker safety and the original layout/ring random streams held. With hazards disabled, the taller geometry descended on all 160 courts in a 32-seed x five-level sweep at normal pace and all 160 at Calm pace. A simple hazard-aware bot reached the ring arena on 144/160 normal and 146/160 Calm runs; failures were hazard contacts. A stationary-contact test measured earliest spike damage at 0.958 s normal and 1.333 s Calm. Guardian warning, single attempt loss, retry protection, Assist, and independent rendering schedules passed. Grounded strike rise was 64.965 logical units in one measured level-2 run.
+> - **Size.** The isolated Drop source adds 2,998 minified JS bytes to the 91,989-byte replay baseline. The full game must be rebuilt and verified against the unchanged 100,000-byte hard ceiling after the separate history and Echo patches are integrated. Browser feel, final combined minification and human difficulty remain for the integrating seat.
 
 > **Revision 2.2 (presence pass, 2026-10-11).** The Echo follow camera, the new scale, the `FACE` data changes, the terror brackets, the edge markers and the pause map are recorded at the top of `DESIGN_HUNT.md`, which wins on the chase mode. Version `2.2.0`; 91 989 bytes of minified JS, under the 92 000 budget. Drop is unchanged.
 

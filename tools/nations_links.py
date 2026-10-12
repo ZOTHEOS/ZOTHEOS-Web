@@ -5,7 +5,7 @@
     file, a landing page anchor that exists in index.html, or an anchor that exists on the target nations page
   - every external href is https, and appears in data/nations/nations.json (source URLs, official sites,
     pronunciation sources), in data/nations/universe.json (denominator and global-figure sources), in the visible
-    news shelf's headlines, or is the repository link when site.json repo_public is true
+    news shelf's headlines, in the curated resources catalog, or is the repository link when site.json repo_public is true
   - formspree.io is never linked; every external anchor carries rel="noopener noreferrer"
   - every mailto: uses site.json's contact address
 Usage: py -3.10 tools/nations_links.py [--root DIR]
@@ -73,6 +73,12 @@ def main(argv=None):
             allowed.add(c["source"]["url"])
         for g in u.get("global", []):
             allowed.add(g["url"])
+    rp = os.path.join(root, "data", "nations", "resources.json")
+    if os.path.isfile(rp):
+        catalog = json.load(open(rp, encoding="utf-8"))
+        for resource in catalog.get("resources", []):
+            allowed |= {link["url"] for link in resource.get("links", [])}
+            allowed |= {source["url"] for source in resource.get("sources", [])}
     np_ = os.path.join(root, "static", "nations", "news.json")
     if os.path.isfile(np_):
         news = json.load(open(np_, encoding="utf-8"))

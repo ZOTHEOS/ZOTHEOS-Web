@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "learn",
+      "title": "Start with film and teaching",
+      "intro": "Choose a short introduction or a longer story."
+    },
+    {
+      "id": "organizations",
+      "title": "Find organizations and directories",
+      "intro": "Each link has a different role and geographic focus."
+    },
+    {
+      "id": "rights",
+      "title": "Explore rights and safety resources",
+      "intro": "Read guidance from the organizations that publish it."
+    },
+    {
+      "id": "climate",
+      "title": "Follow Indigenous climate participation",
+      "intro": "Read statements and find the forum's regional structure."
+    }
+  ],
+  "resources": [
+    {
+      "id": "native-knowledge",
+      "group": "learn",
+      "title": "Native Knowledge 360",
+      "kind": "Museum education program",
+      "scope": "American Indian histories and contemporary lives",
+      "summary": "A Smithsonian framework developed with Native communities and educators. Start with its themes on continuity, governance and the diversity of Native peoples.",
+      "links": [
+        {
+          "label": "Read the essential understandings",
+          "url": "https://americanindian.si.edu/nk360/about/essential-understandings"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Smithsonian National Museum of the American Indian",
+          "title": "Essential Understandings",
+          "url": "https://americanindian.si.edu/nk360/about/essential-understandings",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "yanuni",
+      "group": "learn",
+      "title": "YANUNI",
+      "kind": "Documentary film, producer's page",
+      "scope": "Brazilian Amazon",
+      "summary": "A documentary following Indigenous leadership and rainforest defense in Brazil. The producer's page introduces the film and its makers.",
+      "links": [
+        {
+          "label": "Explore the film",
+          "url": "https://malaikapictures.com/portfolio/yanuni"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Malaika Pictures",
+          "title": "YANUNI",
+          "url": "https://malaikapictures.com/portfolio/yanuni",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "instituto-juma",
+      "group": "organizations",
+      "title": "Instituto Juma",
+      "kind": "Indigenous women-led organization",
+      "scope": "Brazilian Amazon",
+      "summary": "Read about the institute's work on forest and territory protection, cultural heritage, and opportunities for women and young people.",
+      "links": [
+        {
+          "label": "Visit Instituto Juma",
+          "url": "https://institutojuma.org/"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Instituto Juma",
+          "title": "Our work",
+          "url": "https://institutojuma.org/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "Instituto Juma",
+          "title": "About Us",
+          "url": "https://institutojuma.org/about-us/",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ncai",
+      "group": "organizations",
+      "title": "National Congress of American Indians",
+      "kind": "Tribal membership and advocacy organization",
+      "scope": "United States",
+      "summary": "Use NCAI's informational Tribal Directory as a starting point for finding Tribal Nations. NCAI states that the directory is not its membership list.",
+      "links": [
+        {
+          "label": "Open the Tribal Directory",
+          "url": "https://www.ncai.org/tribal-directory"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "National Congress of American Indians",
+          "title": "Tribal Directory",
+          "url": "https://www.ncai.org/tribal-directory",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "National Congress of American Indians",
+          "title": "About NCAI",
+          "url": "https://www.ncai.org/about-ncai",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cultural-survival",
+      "group": "organizations",
+      "title": "Cultural Survival",
+      "kind": "Nonprofit advocacy organization",
+      "scope": "International",
+      "summary": "Read reporting and publications about Indigenous rights, cultures and community self-determination.",
+      "links": [
+        {
+          "label": "Visit Cultural Survival",
+          "url": "https://www.culturalsurvival.org/"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Cultural Survival",
+          "title": "Mission and publications",
+          "url": "https://www.culturalsurvival.org/",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "narf",
+      "group": "rights",
+      "title": "Native American Rights Fund",
+      "kind": "Legal advocacy organization",
+      "scope": "United States",
+      "summary": "Browse publications on Native rights and Tribal legal issues. The help page explains available guides and the limits on the requests NARF can take.",
+      "links": [
+        {
+          "label": "Browse legal resources",
+          "url": "https://narf.org/resources/"
+        },
+        {
+          "label": "Read the help guidance",
+          "url": "https://narf.org/help/"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Native American Rights Fund",
+          "title": "Resources",
+          "url": "https://narf.org/resources/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "Native American Rights Fund",
+          "title": "Requests for Help",
+          "url": "https://narf.org/help/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "Native American Rights Fund",
+          "title": "About Us",
+          "url": "https://narf.org/about-us/",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "niwrc",
+      "group": "rights",
+      "title": "National Indigenous Women's Resource Center",
+      "kind": "Native-led nonprofit",
+      "scope": "Tribal Nations, programs and advocates in the United States",
+      "summary": "A library of training, publications and practical resources for people working to end violence against Native women, children and communities.",
+      "links": [
+        {
+          "label": "Browse the resource library",
+          "url": "https://www.niwrc.org/resources"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "National Indigenous Women's Resource Center",
+          "title": "Resource Library",
+          "url": "https://www.niwrc.org/resources",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "National Indigenous Women's Resource Center",
+          "title": "Who We Are",
+          "url": "https://www.niwrc.org/about",
+          "accessed": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "iipfcc",
+      "group": "climate",
+      "title": "International Indigenous Peoples' Forum on Climate Change",
+      "kind": "International Indigenous climate forum",
+      "scope": "International",
+      "summary": "Read the forum's climate-negotiation statements and position papers. Its regional pages explain how representatives are organized around the world.",
+      "links": [
+        {
+          "label": "Read statements and resources",
+          "url": "https://www.iipfcc.org/resources"
+        },
+        {
+          "label": "Explore the regions",
+          "url": "https://www.iipfcc.org/regions"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "International Indigenous Peoples' Forum on Climate Change",
+          "title": "Resources",
+          "url": "https://www.iipfcc.org/resources",
+          "accessed": "2026-10-12"
+        },
+        {
+          "publisher": "International Indigenous Peoples' Forum on Climate Change",
+          "title": "Regions",
+          "url": "https://www.iipfcc.org/regions",
+          "accessed": "2026-10-12"
+        }
+      ]
+    }
+  ]
+}

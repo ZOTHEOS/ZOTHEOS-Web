@@ -1,61 +1,133 @@
-"""Build game/nations.json, the game edition of the nations registry, from data/nations/nations.json.
+"""Build the game's quick cards and optional history from the canonical published nations view.
 
-Every nation that fits the game's data contract, up to two facts each (present-day kinds first), each with its
-source and checked date. Facts held for the owner's decision (named living individuals) are left out. The file must
-stay under the game's 512 KB read limit. Usage: py -3.10 tools/game_nations.py [--check]"""
-import json, os, sys
+Usage: py -3.10 tools/game_nations.py [--check]
+The quick file retains two facts per nation. History is a separate, bounded payload, with no new claims.
+"""
+import argparse
+import json
+import os
+
+from nations_lib import Model
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(ROOT, "data", "nations", "nations.json")
-OUT = os.path.join(ROOT, "game", "nations.json")
-HELD = ("Bhuri Bai",)                      # named living individuals: held until the owner decides
 ORDER = ["today", "governance", "language", "land", "achievement", "population", "culture", "history"]
-LIMIT = 512 * 1024 - 8 * 1024             # stay clear of the game's 524 288 character read limit
+LIMIT = 512 * 1024 - 8 * 1024
+HISTORY_LIMIT = 256 * 1024
+NAME_LIMIT = 120
+LANDS_LIMIT = 300
 
 
 def clip(s, n):
     return s if s is None or len(s) <= n else None
 
 
-def build():
-    d = json.load(open(SRC, encoding="utf-8"))
-    out, skipped = [], []
-    for n in d["nations"]:
-        name, lands, cs = n.get("name", ""), n.get("lands", ""), n.get("countries") or []
-        if not (1 <= len(name) <= 80 and 1 <= len(lands) <= 200 and 1 <= len(cs) <= 6):
-            skipped.append(n["id"]); continue
-        facts = []
-        for f in sorted(n["facts"], key=lambda f: ORDER.index(f["kind"]) if f["kind"] in ORDER else 99):
-            s = f["source"]
-            if any(h in f["text"] for h in HELD) or f.get("status") not in (None, "verified"):
+def fact_record(fact, raw_fact, *, full=False):
+    """Keep source access separate from the canonical displayed checking receipt."""
+    source = raw_fact["source"]
+    out = {
+        "text": fact["text"], "kind": fact["kind"], "as_of": fact.get("as_of"),
+        "source": {"title": source["title"] if full else clip(source.get("title"), 200),
+                   "publisher": source["publisher"], "url": source["url"], "accessed": source["accessed"]},
+        "checked": fact["date"], "state": fact["state"],
+    }
+    if full:
+        out["id"] = fact["id"]
+    if fact.get("note"):
+        # In the published model this is the date of the unsuccessful reachability check.
+        out["note"] = fact["note"]
+    return out
+
+
+def encode(doc, limit, label):
+    text = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
+    if "\u2014" in text or "\u2013" in text:
+        raise ValueError("dash in " + label)
+    size = len(text.encode("utf-8"))
+    if size >= limit:
+        raise ValueError("%s is %d UTF-8 bytes, over its %d-byte budget" % (label, size, limit))
+    return text
+
+
+def build(root=ROOT, model=None):
+    model = model if model is not None else Model(root)
+    if model.errors:
+        raise ValueError("invalid nations publication model: " + "; ".join(model.errors))
+    raw_facts = {f["id"]: f for n in model.raw["nations"] for f in n["facts"]}
+    out, skipped, histories = [], [], {}
+    for n in model.nations:
+        name, lands, countries = n["name"], n["lands"], n["countries"]
+        if not (1 <= len(name) <= NAME_LIMIT and 1 <= len(lands) <= LANDS_LIMIT and 1 <= len(countries) <= 6):
+            skipped.append(n["id"])
+            continue
+        quick = []
+        ordered = sorted(n["facts"], key=lambda f: ORDER.index(f["kind"]) if f["kind"] in ORDER else 99)
+        for f in ordered:
+            if not (1 <= len(f["text"]) <= 300 and f["url"].startswith("https://")
+                    and 1 <= len(f["publisher"]) <= 120):
                 continue
-            if not (len(f["text"]) <= 300 and s["url"].startswith("https://") and 1 <= len(s["publisher"]) <= 120):
-                continue
-            facts.append({"text": f["text"], "kind": f["kind"], "as_of": f.get("as_of"),
-                          "source": {"title": clip(s.get("title"), 200), "publisher": s["publisher"], "url": s["url"], "accessed": s["accessed"]}})
-            if len(facts) == 2:
+            quick.append(fact_record(f, raw_facts[f["id"]]))
+            if len(quick) == 2:
                 break
-        if not facts:
-            skipped.append(n["id"]); continue
-        also = [a for a in (n.get("also") or []) if 1 <= len(a) <= 80][:6]
-        e = {"id": n["id"], "name": name, "also": also, "lands": lands, "countries": cs, "region": n.get("region"), "facts": facts}
-        if n.get("official_url", "") and n["official_url"].startswith("https://"):
-            e["official_url"] = n["official_url"]
+        if not quick:
+            skipped.append(n["id"])
+            continue
+        entry = {
+            "id": n["id"], "name": name, "also": [a for a in n["also"] if 1 <= len(a) <= 80][:6],
+            "lands": lands, "countries": countries, "region": n["region"], "facts": quick,
+        }
+        if n.get("official_url") and n["official_url"].startswith("https://"):
+            entry["official_url"] = n["official_url"]
         if n.get("pronounce"):
-            e["pronounce"] = n["pronounce"]
-        out.append(e)
-    upd = max(f["source"]["accessed"] for e in out for f in e["facts"])
-    doc = {"updated": upd, "count": len(out), "source": "data/nations/nations.json", "nations": out}
-    txt = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
-    assert "—" not in txt and "–" not in txt, "dash in game nations data"
-    assert len(txt) < LIMIT, "game nations file is %d characters, over %d" % (len(txt), LIMIT)
-    return txt, out, skipped
+            p = n["pronounce"]
+            entry["pronounce"] = {"text": p["text"], "source_url": p["url"], "publisher": p["publisher"]}
+        out.append(entry)
+        history = [f for f in n["facts"] if f["kind"] == "history"]
+        if history:
+            histories[n["id"]] = {
+                "history": [fact_record(f, raw_facts[f["id"]], full=True) for f in history],
+                "context": [fact_record(f, raw_facts[f["id"]], full=True)
+                            for f in n["facts"] if f["kind"] != "history"],
+            }
+    dates = [f["checked"] for n in out for f in n["facts"]]
+    dates += [f["checked"] for n in histories.values() for section in n.values() for f in section]
+    updated = max(dates, default=model.compiled)
+    source = "data/nations/nations.json"
+    quick_doc = {"updated": updated, "count": len(out), "source": source, "nations": out}
+    history_doc = {"updated": updated, "count": len(histories), "source": source, "nations": histories}
+    return {
+        "game/nations.json": encode(quick_doc, LIMIT, "game/nations.json"),
+        "game/history.json": encode(history_doc, HISTORY_LIMIT, "game/history.json"),
+    }, out, skipped
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="check both generated files without writing")
+    parser.add_argument("--root", default=ROOT, help=argparse.SUPPRESS)
+    args = parser.parse_args(argv)
+    outputs, nations, skipped = build(args.root)
+    if args.check:
+        outdated = []
+        for rel, text in outputs.items():
+            path = os.path.join(args.root, rel)
+            with open(path, encoding="utf-8") if os.path.exists(path) else open(os.devnull) as f:
+                if f.read() != text:
+                    outdated.append(rel)
+        if outdated:
+            print("Out of date: %s. Run py -3.10 tools/game_nations.py" % ", ".join(outdated))
+            return 1
+        return 0
+    for rel, text in outputs.items():
+        path = os.path.join(args.root, rel)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(text)
+        print("%s: %d characters, %d UTF-8 bytes" % (rel, len(text), len(text.encode("utf-8"))))
+    history_doc = json.loads(outputs["game/history.json"])
+    print("%d nations, %d quick facts; %d nations with history; skipped %d: %s" %
+          (len(nations), sum(len(n["facts"]) for n in nations), history_doc["count"], len(skipped), skipped[:8]))
+    return 0
 
 
 if __name__ == "__main__":
-    txt, out, skipped = build()
-    if "--check" in sys.argv:
-        cur = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""
-        sys.exit(0 if cur == txt else "game/nations.json is out of date: run py -3.10 tools/game_nations.py")
-    open(OUT, "w", encoding="utf-8", newline="\n").write(txt)
-    print("game/nations.json: %d nations, %d facts, %d characters; skipped %d: %s" % (len(out), sum(len(e["facts"]) for e in out), len(txt), len(skipped), skipped[:8]))
+    raise SystemExit(main())
