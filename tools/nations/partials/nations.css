@@ -73,7 +73,8 @@ button { font: inherit; color: inherit; }
 .theme-swatch[data-set="skeleton"]::before { background: #2A2622; }
 .theme-swatch:hover::before { box-shadow: 0 0 0 1px var(--ink-2); }
 .theme-swatch[aria-checked="true"]::before { outline: 1.5px solid var(--ink); outline-offset: 3px; }
-.ap-theme-name { font: 400 15px/1.3 var(--sans); color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ap-theme-name { font: 400 15px/1.3 var(--sans); color: var(--ink-2); white-space: normal; text-transform: none; letter-spacing: normal; }
+.ap-theme-description { margin: 0; text-transform: none; }
 .ap-seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 100px; }
 .ap-opt { min-height: 44px; min-width: 0; padding: 0 6px 0 8px; border: 1px solid transparent; border-radius: 100px; background: transparent;
   color: var(--ink-3); font: 500 11px/1 var(--zn-mono); letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
@@ -351,3 +352,24 @@ html { scroll-padding-top: 88px; }
 .prose .open-rule { max-width: none; }
 .tbl th[scope="row"] { font: 400 15px/1.5 var(--zn-read); letter-spacing: 0; text-transform: none; color: var(--ink); }
 [data-theme="codex"] :is(.nh-mark, .ft-brand) img { filter: brightness(0); opacity: 0.88; }
+
+/* Maya Radiance uses the same gold pigment as the landing. Text keeps its meaning and existing choreography. */
+@keyframes nations-gold-flow { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+[data-theme="maya"] :is(.page-h, .n-h1, .hr-name) {
+  color: var(--cochineal);
+  background-image: var(--gold-gradient);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="maya"] #hrNext {
+  border-color: transparent;
+  background: linear-gradient(var(--page-bg), var(--page-bg)) padding-box, var(--gold-gradient) border-box;
+  background-size: 100% 100%, 200% 100%;
+  background-position: 0 0, 50% 50%;
+}
+html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: nations-gold-flow 16s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="maya"] :is(.page-h, .n-h1) { animation: none !important; }
+}

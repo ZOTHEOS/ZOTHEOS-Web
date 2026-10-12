@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-lF0MdEhgKomhi6GSKO0Wzi8TfJI3Tsevk//yanSFsow=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-RnPoT8egQHJv4X9p7JwKW5bih1UpxB/UAg1X2A6iBf4=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -262,10 +262,13 @@
       --ink-4:      #6E8294;
       --ink-5:      #3F5566;
 
-      --cochineal:        #8B1934;
-      --cochineal-deep:   #480D1B;
-      --cochineal-rgb:    139, 25, 52;
+      --cochineal:        #DEBF79;
+      --cochineal-deep:   #9A7138;
+      --cochineal-rgb:    222, 191, 121;
       --cochineal-text:   var(--ink);
+      --gold-shadow:      #C19A56;
+      --gold-highlight:   #F3DCAC;
+      --gold-gradient:    linear-gradient(105deg, var(--gold-shadow) 0%, var(--cochineal) 25%, var(--gold-highlight) 50%, var(--cochineal) 75%, var(--gold-shadow) 100%);
 
       --pulse-green:      #5EBE6A;
       --pulse-green-rgb:  94, 190, 106;
@@ -2668,7 +2671,7 @@
       height: 22px; width: auto;
       filter: drop-shadow(0 0 10px rgba(var(--cochineal-rgb), 0.35));
     }
-    /* The wordmark ships pure white; on the light Codex parchment it
+    /* The wordmark ships pure white; on the light Living Codex it
        must be darkened to stay legible. */
     [data-theme="codex"] .col-z-logo {
       filter: brightness(0) opacity(0.86) drop-shadow(0 0 6px rgba(113, 48, 61, 0.22));
@@ -5427,8 +5430,9 @@
       font-family: var(--sans);
       font-size: 15px; line-height: 1.3;
       color: var(--ink-2);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      white-space: normal; text-transform: none; letter-spacing: normal;
     }
+    .ap-theme-description { margin: 0; text-transform: none; }
     html:not([data-theme]) .ap-theme-name { color: #C8C8C8; }
     /* The swatches, moved in from the bar: 44px targets around the same flat 14px discs. */
     .appearance-pop .theme-picker,
@@ -5780,7 +5784,7 @@
     }
     .cs-seat svg { width: 20px; height: 20px; flex: none; }
     .cs-name { margin-right: -0.2em; }
-    /* Resting seats must still read as text (4.5:1): ink-4 holds in mono and Maya, not on Codex parchment or the
+    /* Resting seats must still read as text (4.5:1): ink-4 holds in mono and Maya, not on Living Codex or the
        Skeleton black, so those step up. The seat with the floor is full ink and carries a dot over its glyph, so it
        is marked by more than lightness. */
     [data-theme="skeleton"] .cs-seat { color: var(--ink-3); }
@@ -7064,6 +7068,46 @@
     html:not([data-theme]) :is(.fr-text, .fr-body p, .fr-terms dd) { color: #C8C8C8; }
     html:not([data-theme]) :is(.fr-fret, .fr-terms dt, .fr-sources summary, .fr-body a) { color: #FFFFFF; }
     html:not([data-theme]) .fr-sources .zd-icon { color: #FFFFFF; }
+
+    /* Maya Radiance: gold is the accent over the existing blue world. The other theme IDs and palettes stay intact. */
+    @property --maya-gold-travel { syntax: '<length>'; inherits: true; initial-value: 0px; }
+    [data-theme="maya"] { --cochineal-text: var(--cochineal); }
+    [data-theme="maya"] .hero-headline .glow,
+    [data-theme="maya"] .hero-headline .glow .hl {
+      color: var(--cochineal);
+      background-image: var(--gold-gradient);
+      background-size: 8em 100%;
+      background-repeat: repeat-x;
+      background-position: calc(var(--maya-gold-travel, 0px) - var(--hx, 0px)) 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+    [data-theme="maya"] .hero-headline .glow .hl {
+      padding: 0.08em 0.16em 0.12em;
+      margin: -0.08em -0.16em -0.12em;
+    }
+    [data-theme="maya"] .hero-headline .glow:has(.hl) { background: none; }
+    [data-theme="maya"] .hero-headline.settled .glow { animation: none; }
+    [data-theme="maya"] .hero-actions .btn-primary {
+      color: var(--ink);
+      border-color: transparent;
+      background: linear-gradient(var(--bg-mid), var(--bg-floor)) padding-box, var(--gold-gradient) border-box;
+      background-size: 100% 100%, 8em 100%;
+      background-position: 0 0, var(--maya-gold-travel, 0px) 0;
+      background-repeat: no-repeat, repeat-x;
+      box-shadow: inset 0 0 20px rgba(var(--cochineal-rgb), 0.08), 0 0 18px rgba(var(--cochineal-rgb), 0.12);
+      animation: none;
+    }
+    @keyframes maya-gold-flow { from { --maya-gold-travel: 0em; } to { --maya-gold-travel: -8em; } }
+    html.zm-fluid[data-theme="maya"][data-motion="living"] .hero-headline.settled .glow,
+    html.zm-fluid[data-theme="maya"][data-motion="living"] .hero-actions .btn-primary { animation: maya-gold-flow 16s linear infinite; }
+    [data-theme="maya"] .hero-actions .btn-primary:hover { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      [data-theme="maya"] .hero-headline.settled .glow,
+      [data-theme="maya"] .hero-actions .btn-primary { animation: none !important; }
+    }
   </style>
 </head>
 <body class="page-loading">
@@ -7135,14 +7179,15 @@
         <div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
           <div class="ap-row">
             <span class="ap-label" id="apThemeLabel">Theme</span>
+            <p class="ap-note ap-theme-description" id="apThemeDescription">Silver structure, a foundation for your own judgment.</p>
             <div class="ap-themes">
-              <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel">
-                <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Obsidian mono" title="Obsidian mono"></button>
-                <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
-                <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Codex parchment" title="Codex parchment"></button>
-                <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
+              <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel" aria-describedby="apThemeDescription">
+                <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Sovereign Skeleton" title="Sovereign Skeleton: Silver structure, a foundation for your own judgment."></button>
+                <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
+                <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
+                <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
               </div>
-              <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Obsidian mono</span>
+              <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
             </div>
           </div>
           <div class="ap-row" id="apMotionRow">
@@ -8931,7 +8976,8 @@
     (function () {
       var KEY = 'zotheos_landing_theme';
       var root = document.documentElement;
-      var NAMES = { '': 'Obsidian mono', maya: 'Maya Blue cosmic', codex: 'Codex parchment', skeleton: 'Skeleton obsidian' };
+      var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
+      var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
       var picker = document.querySelector('.theme-picker');
       var irisAnim = null;
       function apply(theme) {
@@ -8948,6 +8994,8 @@
         window.zRadioSet(picker, chosen);
         var nm = document.getElementById('apThemeName');
         if (nm) nm.textContent = NAMES[theme];
+        var description = document.getElementById('apThemeDescription');
+        if (description) description.textContent = DESCRIPTIONS[theme];
       }
       function instant() {
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

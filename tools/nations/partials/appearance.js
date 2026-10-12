@@ -3,7 +3,8 @@
   /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
      the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
   var d = document.documentElement;
-  var NAMES = { '': 'Obsidian mono', maya: 'Maya Blue cosmic', codex: 'Codex parchment', skeleton: 'Skeleton obsidian' };
+  var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
+  var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
   var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
   var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -40,6 +41,8 @@
     if (m) m.setAttribute('content', BG[t]);
     var n = document.getElementById('apThemeName');
     if (n) n.textContent = NAMES[t];
+    var description = document.getElementById('apThemeDescription');
+    if (description) description.textContent = DESCRIPTIONS[t];
     themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
     if (save) put('zotheos_landing_theme', t);
   }
