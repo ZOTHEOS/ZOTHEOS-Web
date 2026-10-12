@@ -1,4 +1,10 @@
+# Never deployed: sources, tools, records and notes (DESIGN_NATIONS 16.6). The game page itself (/game: index.html and
+# nations.json) is live and stays deployed; only its development files are ignored.
+data/
+tools/
+docs/
+.github/
+*.md
 game/index.dev.html
 game/index.src.html
 game/build.py
-**/__pycache__

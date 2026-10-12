@@ -5,6 +5,7 @@ Errors (exit 1): schema and types, em/en dashes in any string, fact text over 20
 characters, evidence outside 4 to 12 words, non-https or Wikipedia URLs, bad ISO
 country codes, bad kinds, dates or as_of, duplicate nation or fact ids, count
 mismatches, banned terms from ARCHITECTURE 9.1.
+last_verified, when present, must be a date not after checked.
 Warnings: superlatives (ranking review), a capitalized two-word name pattern in
 Australian facts (deceased-persons review), unknown keys, numbers without as_of.
 
@@ -31,6 +32,7 @@ TOP_KEYS = {"version", "generated", "count", "facts", "regions", "nations"}
 NATION_KEYS = {"id", "region", "name", "also", "also_search", "pronounce", "lands", "countries", "official_url",
                "name_source_url", "facts"}
 FACT_KEYS = {"id", "text", "kind", "as_of", "source", "evidence", "status", "checked"}
+OPTIONAL_FACT_KEYS = {"last_verified"}   # written by nations_refresh.py on a pass (DESIGN_NATIONS 9.2)
 SOURCE_KEYS = {"title", "publisher", "url", "accessed"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FACT_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9a-f]{8}$")
@@ -143,7 +145,7 @@ def main() -> int:
             continue
         for fi, f in enumerate(facts):
             fw = f"{w}.facts[{fi}]"
-            fextra, fmissing = set(f) - FACT_KEYS, FACT_KEYS - set(f)
+            fextra, fmissing = set(f) - FACT_KEYS - OPTIONAL_FACT_KEYS, FACT_KEYS - set(f)
             if fmissing:
                 errors.append(f"{fw}: missing keys {sorted(fmissing)}")
             if fextra:
@@ -185,6 +187,12 @@ def main() -> int:
                 errors.append(f"{fw}: bad status {f.get('status')!r}")
             if not DATE_RE.match(str(f.get("checked", ""))):
                 errors.append(f"{fw}: checked not YYYY-MM-DD")
+            if "last_verified" in f:
+                lv = f["last_verified"]
+                if not DATE_RE.match(str(lv)):
+                    errors.append(f"{fw}: last_verified not YYYY-MM-DD")
+                elif DATE_RE.match(str(f.get("checked", ""))) and lv > f["checked"]:
+                    errors.append(f"{fw}: last_verified {lv} is after checked {f['checked']}")
 
     for k, c in nids.items():
         if c > 1:

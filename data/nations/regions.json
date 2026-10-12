@@ -1,0 +1,22 @@
+{
+  "order": ["alaska-hawaii-pacific-us", "us-west-pacific", "us-plains-midwest", "us-east-southeast",
+            "mx-north-us-southwest", "canada", "mx-central-south", "central-america-caribbean",
+            "caribbean-guianas", "andes", "amazon-lowland-sa", "arctic-europe-russia", "africa", "asia", "oceania"],
+  "regions": {
+    "alaska-hawaii-pacific-us":  {"display": "Alaska, Hawaiʻi and the US Pacific", "merge_into": null},
+    "us-west-pacific":           {"display": "US West and Pacific Northwest", "merge_into": null},
+    "us-plains-midwest":         {"display": "US Plains and Midwest", "merge_into": null},
+    "us-east-southeast":         {"display": "US East and Southeast", "merge_into": null},
+    "mx-north-us-southwest":     {"display": "Northern Mexico and the US Southwest", "merge_into": null},
+    "canada":                    {"display": "Canada", "merge_into": null},
+    "mx-central-south":          {"display": "Central and Southern Mexico", "merge_into": null},
+    "central-america-caribbean": {"display": "Central America", "merge_into": null},
+    "caribbean-guianas":         {"display": "The Caribbean, Trinidad and the Guianas", "merge_into": null},
+    "andes":                     {"display": "The Andes", "merge_into": null},
+    "amazon-lowland-sa":         {"display": "Amazonia and lowland South America", "merge_into": null},
+    "arctic-europe-russia":      {"display": "The Arctic, northern Europe and Russia", "merge_into": null},
+    "africa":                    {"display": "Africa", "merge_into": null},
+    "asia":                      {"display": "Asia", "merge_into": null},
+    "oceania":                   {"display": "Oceania, Aotearoa and Australia", "merge_into": null}
+  }
+}

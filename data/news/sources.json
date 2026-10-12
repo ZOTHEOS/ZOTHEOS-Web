@@ -1,0 +1,32 @@
+{
+  "note": "Indigenous-led outlets whose own pages state Indigenous ownership, governance or leadership (ARCHITECTURE 6.2, 6.3). Feeds checked 2026-10-08. No outlet is polled while data/news/flags.json has shelf_visible false. Courtesy letters are owed before launch (open decision 4).",
+  "outlets": [
+    {"id": "ict", "name": "ICT", "label": "newsroom", "feed": "https://ictnews.org/feed", "allow": ["ictnews.org"],
+     "region": "us", "lang": "en", "enabled": true,
+     "leadership": {"url": "https://ictnews.org/about-us/", "evidence": "Native-led", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "native-news-online", "name": "Native News Online", "label": "newsroom", "feed": "https://nativenewsonline.net/rss",
+     "allow": ["nativenewsonline.net"], "region": "us", "lang": "en", "enabled": true,
+     "leadership": {"url": "https://nativenewsonline.net/about-us", "evidence": "the controlling shareholder", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "indiginews", "name": "IndigiNews", "label": "newsroom", "feed": "https://indiginews.com/feed", "allow": ["indiginews.com"],
+     "region": "canada", "lang": "en", "enabled": true,
+     "leadership": {"url": "https://indiginews.com/?p=5415", "evidence": "an independent, Indigenous-run newsroom", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "cultural-survival", "name": "Cultural Survival", "label": "Indigenous-led organization", "feed": "https://www.culturalsurvival.org/rss.xml",
+     "allow": ["culturalsurvival.org", "www.culturalsurvival.org"], "region": "global", "lang": "en", "enabled": true,
+     "leadership": {"url": "https://www.culturalsurvival.org/about", "evidence": "an Indigenous-led NGO", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "koori-mail", "name": "Koori Mail", "label": "newsroom", "feed": "https://koorimail.com/feed/", "allow": ["koorimail.com"],
+     "region": "oceania", "lang": "en", "enabled": true,
+     "leadership": {"url": "https://koorimail.com/about-koori-mail/", "evidence": "100% Aboriginal owned", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "apib", "name": "APIB", "label": "Indigenous-led organization", "feed": "https://apiboficial.org/feed/", "allow": ["apiboficial.org"],
+     "region": "amazon-lowland-sa", "lang": "pt", "enabled": true,
+     "leadership": {"url": "https://apiboficial.org/", "evidence": "Articulação dos Povos Indígenas do Brasil", "checked": "2026-10-08"}, "courtesy": null},
+    {"id": "aptn", "name": "APTN News", "label": "newsroom", "feed": "https://www.aptnnews.ca/feed/", "allow": ["aptnnews.ca", "www.aptnnews.ca"],
+     "region": "canada", "lang": "en", "enabled": false,
+     "leadership": null, "hold": "Leadership statement still to capture from the outlet's own page (about page refused the tool)", "courtesy": null},
+    {"id": "te-ao-maori-news", "name": "Te Ao Māori News", "label": "newsroom", "feed": "https://www.teaonews.co.nz/arc/outboundfeeds/rss/?outputType=xml",
+     "allow": ["teaonews.co.nz", "www.teaonews.co.nz"], "region": "oceania", "lang": "en", "enabled": false,
+     "leadership": null, "hold": "Leadership statement still to capture from the outlet's own page", "courtesy": null},
+    {"id": "waatea-news", "name": "Waatea News", "label": "newsroom", "feed": "https://waateanews.com/feed/", "allow": ["waateanews.com"],
+     "region": "oceania", "lang": "mi", "enabled": false,
+     "leadership": null, "hold": "Leadership statement still to capture from the outlet's own page", "courtesy": null}
+  ]
+}

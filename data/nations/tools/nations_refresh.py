@@ -13,7 +13,9 @@ For each unique source.url in nations.json:
     hyphen and zero-width characters, unify quotes and dashes, collapse whitespace,
     casefold) and test containment: pass 1 exact, pass 2 with diacritics stripped
     (comparison only), pass 3 with punctuation ignored;
-  * set each fact's status (verified | stale | unreachable) and checked date.
+  * set each fact's status (verified | stale | unreachable) and checked date; on a pass
+    also last_verified (left untouched on any other outcome, so a grace window can be
+    computed even though checked moves on every attempt).
 
   verified     evidence phrase found on the cited page
   stale        page answered but the phrase is gone, or 404/410, or the page now
@@ -410,6 +412,8 @@ def main() -> int:
             status_count[status] += 1
             f["status"] = status
             f["checked"] = args.run_date
+            if status == "verified":
+                f["last_verified"] = args.run_date   # only a pass moves it; the build's grace window reads it
         url_rows.append({"url": url, "http": res["http"], "outcome": res["outcome"], "note": res["note"],
                          "final_url": res["final_url"], "facts": len(items)})
         print(f"[{k}/{len(schedule)}] {res['outcome']:<11} {res['http'] or '-':>4} {url[:90]}", flush=True)

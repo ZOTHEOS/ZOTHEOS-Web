@@ -1,0 +1,39 @@
+{
+  "note": "Source priority from ARCHITECTURE 2.4. A domain that is any listed nation's official site is group 1 automatically. Explicit domains win over suffix rules; anything unmatched is listed as not yet classified.",
+  "groups": {
+    "1": "Nations' own sites, governments and representative bodies",
+    "2": "Governments, national registries and statistics offices",
+    "3": "UN bodies and international organizations",
+    "4": "Museums, universities and research",
+    "9": "Not yet classified"
+  },
+  "domains": {
+    "1": ["raipon.info", "sametinget.no", "samediggi.fi", "inuitcircumpolar.com", "nefin.org.np", "navajonationcouncil.org",
+          "itcaonline.com", "kenaitze.org", "utemountainutetribe.com", "tkemlups.ca", "ypit.com", "sycuantribe.com",
+          "osageculture.com", "tentribespartnership.org", "nwifc.org", "oqaasileriffik.gl", "alk.nc", "ahapunanaleo.org",
+          "sealaskaheritage.org", "nana.com", "calistacorp.com", "doyonfoundation.com", "tltb.com.fj", "tab.gov.fj",
+          "nativetitlesa.org", "tongva.land", "khanty-yasang.ru", "nwic.edu", "ilisagvik.edu"],
+    "2": ["inegi.org.mx", "hcp.ma", "isee.nc", "oep.org.bo", "fsmlaw.org", "niuestatistics.nu", "taoganiue.nu",
+          "service-public.pf", "heiva.org", "cnmileg.net", "rotorualakescouncil.nz", "saskatoon.ca", "nt.ca", "nl.ca",
+          "radionepalonline.com", "sabc.co.za", "nationaltrust.tt", "sydneybarani.com.au", "ccj.org",
+          "pristineparadisepalau.com", "cookislands.travel", "mptourism.com", "hornbillfestival.com", "agn.gt",
+          "almg.org.gt", "trijharkhand.in", "ostm.in", "mizoramassembly.in", "stm.dk", "parc-amazonien-guyane.fr"],
+    "3": ["un.org", "unesco.org", "ohchr.org", "ilo.org", "fao.org", "unep.org", "unicef.org", "cepal.org", "achpr.org",
+          "iwgia.org", "opendevelopmentmyanmar.net", "culturalsurvival.org", "minorityrights.org", "forestpeoples.org",
+          "iccaregistry.org", "iied.org", "socioambiental.org", "coac.org.my", "pastoralists.org", "clgf.org.uk",
+          "ecopoliticavenezuela.org", "canoesmarshallislands.com", "dzanga-sangha.org", "reteti.org"],
+    "4": ["si.edu", "americanindianmagazine.org", "smithsonianmag.com", "chileprecolombino.cl", "kunstkamera.ru",
+          "tepapa.govt.nz", "alutiiqmuseum.org", "ulaval.ca", "cnrs.fr", "openedition.org", "uni-bonn.de", "oslomet.no",
+          "unisinos.br", "unidiversidad.com.ar", "eki.ee", "fennougria.ee", "arcticanthropology.org", "shimajournal.org",
+          "pacificarchaeology.org", "nje.org.na", "banglapedia.org", "sahistory.org.za", "guampedia.com", "lex.dk",
+          "inalco.fr", "labiennale.org", "ainu-upopoy.go.jp", "memoriachilena.gob.cl", "ignca.gov.in", "inah.gob.mx",
+          "tunjugahfoundation.org.my", "unicode.org"]
+  },
+  "suffixes": {
+    "2": [".gov", ".gov.au", ".gov.br", ".gov.bw", ".gov.bz", ".gov.ck", ".gov.co", ".gov.dm", ".gov.fj", ".gov.fm",
+          ".gov.gy", ".gov.in", ".gov.mp", ".gov.np", ".gov.nr", ".gov.ph", ".gov.pk", ".gov.to", ".gov.tt", ".gov.tw",
+          ".gov.ws", ".gob.bo", ".gob.cl", ".gob.ec", ".gob.mx", ".gob.pa", ".gob.pe", ".govt.nz", ".gc.ca", ".go.jp",
+          ".go.ke", ".gouv.fr", ".nic.in", ".gov.za", ".gob.ar", ".gob.gt", ".gob.ve"],
+    "4": [".edu", ".ac.uk", ".ac.cr", ".ac.in", ".edu.au", ".edu.gt", ".edu.ar"]
+  }
+}
