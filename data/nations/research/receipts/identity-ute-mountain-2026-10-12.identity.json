@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "receipt_id": "identity-ute-mountain-2026-10-12-crosswalk",
+  "review_type": "government_identity_crosswalk",
+  "review_kind": "AI-assisted",
+  "reviewer": "Codex independent AI-assisted source review (/root/site_palette_review)",
+  "reviewed_at": "2026-10-12T08:42:21.359995+00:00",
+  "decision": "confirmed_same_governing_body",
+  "directory_id": "us-fed-32d69163a8c7",
+  "registry_id": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "registry_name": "Ute Mountain Ute Tribe",
+  "registry_snapshot_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+  "identity_unit": "specific_governing_body",
+  "federal_listing": {
+    "directory_name": "Ute Mountain Ute Tribe",
+    "publication_date": "2026-01-30",
+    "html_receipt": {
+      "id": "us-federal-register-2026",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-10-12T07:35:59.555738+00:00",
+      "http_status": 200,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "bytes": 27547
+    },
+    "structured_receipt": {
+      "id": "us-federal-register-2026-structured",
+      "url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml",
+      "final_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml",
+      "retrieved_at": "2026-10-12T07:37:12.787522+00:00",
+      "http_status": 200,
+      "sha256": "616e96f6288cc0bbcdfb947042b1402de8f8bc5e5e90bf49d6c84acdc9458dfa",
+      "bytes": 53665
+    }
+  },
+  "bia_directory": {
+    "receipt": {
+      "id": "us-bia-directory",
+      "url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&resultRecordCount=2000&f=json",
+      "final_url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&resultRecordCount=2000&f=json",
+      "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+      "http_status": 200,
+      "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+      "bytes": 181580
+    },
+    "record": {
+      "OBJECTID": 544,
+      "tribefullname": "Ute Mountain Ute Tribe",
+      "tribealternatename": null,
+      "tribeshortname": "Ute Mountain",
+      "tribalcomponent": "Tribe",
+      "tribalcomponentname": "Ute Mountain",
+      "website": "https://www.utemountainutetribe.com/",
+      "state": "Colorado",
+      "biaregion": "Southwest"
+    },
+    "scope": "The BIA website association corroborates government identity. It does not establish territory or ownership."
+  },
+  "nation_owned_evidence": {
+    "source_id": "priority-ute-mountain",
+    "source_title": "Ute Mountain Ute Tribe: Tribal Government",
+    "retrieval_receipt": {
+      "id": "identity-ute-mountain-2026-10-12",
+      "url": "https://www.utemountainutetribe.com/",
+      "final_url": "https://www.utemountainutetribe.com/",
+      "retrieved_at": "2026-10-12T08:34:03.893296+00:00",
+      "http_status": 200,
+      "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+      "hash_kind": "HTTP response body bytes",
+      "bytes": 38588,
+      "local_capture_id": "identity-ute-mountain-2026-10-12.html",
+      "capture_retention": "Local audit artifact only; not committed or served"
+    },
+    "evidence_phrase": "The governing body of the Ute Mountain Ute Tribe is the Tribal Council"
+  },
+  "reasoning": "The federal list, BIA record and registry profile use the same government name. The BIA official website is the exact registry official domain. The nation-owned page describes the Ute Mountain Ute Tribal Council and expressly distinguishes Southern Ute and northern Ute bands. The evidence confirms this government, not a broad shared Ute identity.",
+  "limitations": [
+    "The page has internally different council-term descriptions; no term length or current officeholder claim is approved by this identity review.",
+    "The relationship between broader Ute peoples and these three governments is not collapsed into a single record."
+  ],
+  "human_review_claimed": false,
+  "facts_reapproved": false,
+  "scope_note": "Identity link only. Existing fact source checks, publication holds, corrections and human-only restoration rules remain in force."
+}

@@ -7,7 +7,7 @@ import pytest
 from conftest import ROOT
 
 
-@pytest.mark.parametrize('runner', ['echo-acceptance.js', 'test_drop_challenge.js'])
+@pytest.mark.parametrize('runner', ['echo-acceptance.js', 'discovery-acceptance.js', 'test-label-bounds.js', 'test-label-actors.js', 'test-version-loader.js', 'test_drop_challenge.js'])
 def test_game_engine_acceptance(runner):
     node = shutil.which('node')
     if not node:

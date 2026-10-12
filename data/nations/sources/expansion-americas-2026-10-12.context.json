@@ -1,0 +1,111 @@
+{
+  "reviewed": "2026-10-12",
+  "receipt_definitions": {
+    "source.accessed": "Date the supporting research agent accessed the source with the web tool; it is not a publication date or a person-check receipt.",
+    "checked": "Date nations_refresh.py attempted the HTTP fetch and evidence-phrase check.",
+    "last_verified": "Date that verifier actually found the normalized evidence phrase on a successfully fetched page.",
+    "status_verified": "Phrase was found. This does not prove the full paraphrase, legal conclusion, present factual accuracy, or endorsement.",
+    "human": "No human-lane receipts were added; this is agent research and a machine check."
+  },
+  "relationships": [
+    {
+      "from": "nuche-ute-us-co-ut",
+      "to": [
+        "southern-ute-indian-tribe-us-co",
+        "ute-mountain-ute-tribe-us-co-ut-nm",
+        "ute-indian-tribe-uintah-ouray-us-ut"
+      ],
+      "relationship": "Ute peoples overview and distinct current tribal governments; not aliases or an exhaustive list of Ute-identifying communities"
+    },
+    {
+      "from": "fort-sill-apache-us-ok-nm",
+      "to": [
+        "mescalero-apache-us-nm",
+        "chiricahua-apache-nation-us-nm"
+      ],
+      "relationship": "Distinct records associated with Chiricahua people or self-identification; no merger, exclusive representative, legal equivalence, or common-government claim"
+    },
+    {
+      "from": "lipan-apache-tribe-us-tx",
+      "to": [
+        "mescalero-apache-us-nm"
+      ],
+      "relationship": "Separate Lipan Apache Tribe of Texas record; Mescalero also includes Lipan people, as stated by Mescalero itself"
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "fort-sill-apache-us-ok-nm",
+      "label": "Fort Sill Apache environmental programs",
+      "url": "https://fortsillapache-nsn.gov/programs/environmental-programs/",
+      "purpose": "The Tribe describes land stewardship and air and water monitoring programs. Program descriptions are not independent measurements of outcomes."
+    },
+    {
+      "nation": "southern-ute-indian-tribe-us-co",
+      "label": "Southern Ute Brunot Area rights guide",
+      "url": "https://www.southernute-nsn.gov/natural-resources/wildlife-resource-management/hunting/brunot-area-hunting-and-fishing/",
+      "purpose": "The Tribe explains its reserved hunting rights and regulation process. The page links an older annual proclamation; consult the Tribe for current requirements. This listing is not permission for public access or hunting."
+    },
+    {
+      "nation": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "label": "Ute Mountain Ute natural resources",
+      "url": "https://www.utemountainutetribe.com/natural%20resources.html",
+      "purpose": "Tribal land, environmental and resource programs."
+    },
+    {
+      "nation": "ute-indian-tribe-uintah-ouray-us-ut",
+      "label": "Ute Indian Tribe land appeal statement, April 2026",
+      "url": "https://utetribe.com/wp-content/uploads/2026/04/TribeAppealCourtDecisionOnSplitEstateLands.pdf",
+      "purpose": "Dated statement of the Tribe's intended appeal. It does not establish the appeal's current docket status or outcome."
+    },
+    {
+      "nation": "lipan-apache-tribe-us-tx",
+      "label": "Lipan Apache Tribe land transfer announcement, November 2021",
+      "url": "https://www.lipanapachetribe.gov/LAT/g-pcnews3.html",
+      "purpose": "The Tribe's public account of a donated cemetery parcel. No coordinates, burial details or named deceased individuals reproduced."
+    },
+    {
+      "nation": "chiricahua-apache-nation-us-nm",
+      "label": "Chiricahua Apache National Foundation",
+      "url": "https://chiricahuaapachenation.org/our-relations/chiricahua-apache-national-foundation.php",
+      "purpose": "Its own description of education, social welfare and self-determination work; not a claim that it represents every Chiricahua community."
+    }
+  ],
+  "integration_cautions": [
+    "This is a reviewed-source expansion, not complete global or Americas coverage. Seven new records do not necessarily represent seven disjoint peoples.",
+    "Keep data/nations/overrides.json, verify/human.json, and all existing takedowns unchanged. The two Bhil named-person holds remain in force.",
+    "The historical merge.py has GENERATED fixed at 2026-10-08 and expects raw/verify/respect files beside its supplied --dir and tools/merge_overrides.json. Do not blindly regenerate the live registry from it; integrate into the durable import pipeline and retain actual per-fact receipts.",
+    "The Tonto Apache ITCA page still contains old 85-acre and pending-land-legislation statements. Those were not used. Its dated historical removal account was used alongside the later BIA account of trust acquisition.",
+    "The Ute Mountain Ute homepage gives conflicting chairman term lengths. No officeholder, term-length or current population claim was imported.",
+    "Chiricahua Apache Nation is kept as its own named self-identifying community. No federal-recognition status, exclusive treaty succession, or territorial jurisdiction claim is inferred.",
+    "The generic Ute record remains a peoples overview; only three government-name aliases and its misleading single-government official_url were removed. Its existing fact receipts were preserved.",
+    "Source matching is separate from an integrating reviewer checking the meaning of each paraphrase. The research sidecars explicitly identify their agent authorship.",
+    "Resource links are research recommendations here; adding this context file alone does not create links in the public UI."
+  ],
+  "public_notes": [
+    {
+      "nation": "chiricahua-apache-nation-us-nm",
+      "text": "This entry follows this named community's own published account. It does not identify a single representative for all Chiricahua people or establish federal-recognition status."
+    },
+    {
+      "nation": "nuche-ute-us-co-ut",
+      "text": "This is a Ute peoples overview. The linked records describe distinct tribal governments; they are not aliases for one government or an exhaustive list of Ute-identifying communities."
+    },
+    {
+      "nation": "fort-sill-apache-us-ok-nm",
+      "text": "This record describes the Fort Sill Apache Tribe. Related Chiricahua records describe distinct communities or governments; this page does not merge them or claim exclusive representation."
+    },
+    {
+      "nation": "lipan-apache-tribe-us-tx",
+      "text": "This record describes the Lipan Apache Tribe in Texas. Mescalero's own account also includes Lipan people. The linked records are not treated as one government."
+    },
+    {
+      "nation": "ute-indian-tribe-uintah-ouray-us-ut",
+      "text": "The April 1, 2026 statement announced an intention to appeal. It is not a current docket record and does not establish an appeal filing or outcome."
+    },
+    {
+      "nation": "tonto-apache-tribe-us-az",
+      "text": "The ITCA page also includes older land-base and pending-legislation statements. The dated historical facts here do not state the Tribe's current acreage or current legislative status."
+    }
+  ]
+}

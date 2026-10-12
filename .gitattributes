@@ -1,0 +1,5 @@
+# Public-source captures retain the exact bytes measured in retrieval receipts.
+data/nations/research/receipts/*.html -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+data/nations/research/receipts/*.xml -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+data/nations/research/receipts/us-bia-directory.json -text
+data/nations/research/receipts/us-bia-metadata-directory.json -text

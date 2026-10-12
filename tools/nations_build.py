@@ -37,18 +37,20 @@ sys.dont_write_bytecode = True
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, TOOLS)
 import nations_lib as L  # noqa: E402
+import nations_directory as D  # noqa: E402
+from nations_context import Context  # noqa: E402
 from nations_fold import fold, js as fold_js  # noqa: E402
 
 SITE = "https://zotheos.org"
 URL_OK = re.compile(r'^https://[^\s"<>]+$')
 KIND_LABEL = {"today": "Today", "language": "Language", "land": "Land", "governance": "Governance",
               "culture": "Culture", "population": "Population", "history": "History", "achievement": "Achievement"}
-SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("coverage", "Where we are"), ("credits", "Credits"),
+SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Where we are"), ("credits", "Credits"),
            ("verification", "Verification"), ("for-nations", "For nations"), ("changes", "Corrections and removals")]
 NAV = [("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
        ("Coverage", "/nations/coverage", "coverage"), ("About", "/nations/about", "about"),
        ("For nations", "/nations/for-nations", "for-nations")]
-SHEET = NAV + [("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
+SHEET = NAV + [("Directory", "/nations/directory", "directory"), ("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
                ("Verification", "/nations/verification", "verification"), ("Changes", "/nations/changes", "changes")]
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
@@ -518,6 +520,14 @@ class Builder:
             "    </section>"])
 
     # ---- nation, region, country
+    def nation_context(self, n):
+        if not hasattr(self, "_nation_context"):
+            try:
+                self._nation_context = Context(self.root, self.m)
+            except (ValueError, OSError) as exc:
+                raise BuildError(str(exc)) from exc
+        return self._nation_context.page(n["id"])
+
     def nation_page(self, n):
         r = self.m.region_by_key[n["region"]]
         meta = []
@@ -553,6 +563,7 @@ class Builder:
             "name": n["name"], "meta": "\n".join(meta), "own": own, "lands": n["lands"],
             "lands_face": self.face_attr(n["lf"]), "countries": cs, "fact_dots": dots, "facts": "\n".join(facts),
             "counts": "\n".join(f'    <p class="counts">{esc(c)}</p>' for c in counts),
+            "context": self.nation_context(n),
             "mail_nation": mailto(self.contact, f"Nations correction: {n['id']}", body_n)})
         first = n["facts"][0]["text"] if n["facts"] else ""
         desc = L.cut_chars(f"{n['name']}: {n['lands']}. {first}".strip(), 155)
@@ -599,7 +610,7 @@ class Builder:
     # ---- support pages
     def support_pages(self):
         return {
-            "about": self.about(), "sources": self.sources(), "resources": self.resources(), "coverage": self.coverage_page(),
+            "about": self.about(), "sources": self.sources(), "resources": self.resources(), "directory": self.directory_page(), "coverage": self.coverage_page(),
             "credits": self.credits(), "verification": self.verification(), "for-nations": self.for_nations(),
             "changes": self.changes_page()}
 
@@ -717,7 +728,7 @@ class Builder:
                '<p class="lede">Follow official resources, then explore historical context from the nations in this growing list.</p>',
                f'<p class="lede">Our registry currently names {L.fmt_int(total)} nations. It is a growing starting point, '
                'not a complete list of the world\'s Indigenous peoples. '
-               '<a href="/nations/coverage">See what is covered and where the gaps are.</a></p>',
+               '<a href="/nations/coverage">See what is covered and where the gaps are.</a> <a href="/nations/directory">Search the broader directory of names.</a></p>',
                '<nav aria-label="On this page"><ul class="src-u">']
         for group in groups:
             out.append(f'<li><a href="#resource-{esc(group["id"])}">{esc(group["title"])}</a></li>')
@@ -785,6 +796,12 @@ class Builder:
         return self.sp("resources", "\n".join(out),
                        "Official learning, advocacy and climate resources, with sourced historical context from the growing nations registry.")
 
+    def directory_page(self):
+        try:
+            return D.page(self)
+        except (ValueError, KeyError, TypeError) as exc:
+            raise BuildError("directory: " + str(exc)) from exc
+
     def coverage_page(self):
         cov, lfc = self.coverage, self.m.last_full_check()
         last = L.fmt_date(lfc) if lfc else "not yet"
@@ -819,7 +836,7 @@ class Builder:
                 f"present-day countries, with {L.fmt_int(self.m.counts['shown'])} checked facts. Thin regions come first: "
                 "they are the work still to do. Tier A entries have the nation's own site and a fact from it; tier B entries "
                 "have at least one checked fact; tier C entries are listed by name while facts are compiled.")
-        return self.sp("coverage", render(self.tpl("coverage"), {"lede": esc(lede), "tables": t1 + "\n" + t2}),
+        return self.sp("coverage", render(self.tpl("coverage"), {"lede": esc(lede), "tables": D.coverage(self) + "\n" + t1 + "\n" + t2}),
                        f"Coverage of Indigenous nations today by region and country: {len(self.m.nations)} nations, "
                        "thin regions first, with denominators and their sources.")
 

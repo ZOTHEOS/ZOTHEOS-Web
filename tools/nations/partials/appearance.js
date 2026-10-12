@@ -72,3 +72,33 @@
   motion();
   if (mq) { if (mq.addEventListener) mq.addEventListener('change', motion); else if (mq.addListener) mq.addListener(motion); }
 })();
+
+(function () {
+  var input = document.getElementById('directoryQuery'), list = document.getElementById('directoryNames');
+  if (!input || !list) return;
+  var rows = list.querySelectorAll('[data-directory-name]'), groups = list.querySelectorAll('.directory-group');
+  var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
+  function fold(s) { return (s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s).toLowerCase(); }
+  var names = [], i;
+  for (i = 0; i < rows.length; i++) names.push(fold(rows[i].getAttribute('data-directory-name')));
+  function directoryMatches(name, words) {
+    for (var j = 0; j < words.length; j++) {
+      var word = words[j], at = -1;
+      do { at = name.indexOf(word, at + 1); if (at < 0) return false; }
+      while (/^[a-z0-9]/.test(word) && at > 0 && /[a-z0-9]/.test(name.charAt(at - 1)));
+    }
+    return true;
+  }
+  function filter() {
+    var words = fold(input.value).trim().split(/\s+/), count = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var match = directoryMatches(names[i], words);
+      rows[i].hidden = !match;
+      if (match) count++;
+    }
+    for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
+    status.textContent = count + ' of ' + rows.length + ' name records shown.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+  }
+  input.addEventListener('input', filter);
+  clear.addEventListener('click', function () { input.value = ''; filter(); input.focus(); });
+})();
