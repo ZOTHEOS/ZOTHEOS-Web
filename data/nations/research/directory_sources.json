@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "note": "Research allowlist only. It does not approve facts for publication or change source_priority.json. Exact listed hosts only; new domains require source review.",
+  "sources": [
+    {
+      "source_id": "us-fr-2026",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "federally_listed_tribal_entity",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "allowed_hosts": [
+        "www.govinfo.gov",
+        "www.federalregister.gov"
+      ],
+      "stated_count": 575,
+      "as_of": "2026-01-30",
+      "discovery_date": "2026-10-12",
+      "status": "source_retrieved",
+      "note": "577 published name records; count discrepancy remains unresolved."
+    },
+    {
+      "source_id": "us-bia-directory",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "directory_government_or_affiliate",
+      "url": "https://www.bia.gov/service/tribal-leaders-directory",
+      "allowed_hosts": [
+        "www.bia.gov",
+        "services1.arcgis.com",
+        "www.arcgis.com",
+        "opendata-1-bia-geospatial.hub.arcgis.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_retrieved",
+      "note": "Current downloaded directory has 602 rows: 577 classified Tribe and 25 classified Affiliate. Do not equate these rows with all Indigenous peoples or infer land title."
+    },
+    {
+      "source_id": "ca-first-nation-profiles",
+      "countries": [
+        "CA"
+      ],
+      "entity_unit": "first_nation_profile",
+      "url": "https://services.sac-isc.gc.ca/fnp/Main/Search/SearchFN.aspx?lang=eng",
+      "allowed_hosts": [
+        "services.sac-isc.gc.ca"
+      ],
+      "stated_count": 619,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "The profiles landing page states 619 First Nations. Enumeration is pending; Inuit and Metis require separate sources."
+    },
+    {
+      "source_id": "ca-indian-register-2024",
+      "countries": [
+        "CA"
+      ],
+      "entity_unit": "indian_register_group",
+      "url": "https://www.sac-isc.gc.ca/eng/1753213597358/1753213649039",
+      "allowed_hosts": [
+        "www.sac-isc.gc.ca"
+      ],
+      "stated_count": 634,
+      "as_of": "2024-12-31",
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Report distinguishes 619 bands from 634 registry groups. Neither is an all-Indigenous-peoples denominator."
+    },
+    {
+      "source_id": "ca-inuit-regions",
+      "countries": [
+        "CA"
+      ],
+      "entity_unit": "inuit_land_claim_region",
+      "url": "https://itk.ca/maps-of-inuit-nunangat/",
+      "allowed_hosts": [
+        "itk.ca",
+        "www.itk.ca"
+      ],
+      "stated_count": 4,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Four land-claim regions are not four Inuit communities. Research regional governments and communities separately."
+    },
+    {
+      "source_id": "ca-metis-governments",
+      "countries": [
+        "CA"
+      ],
+      "entity_unit": "metis_representative_government",
+      "url": "https://www.metisnation.ca/about/governance/",
+      "allowed_hosts": [
+        "www.metisnation.ca"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Council membership is not a complete inventory of Metis governments or rights-bearing communities. Enumerate multiple self-governing and representative sources."
+    },
+    {
+      "source_id": "mx-inpi-catalogue",
+      "countries": [
+        "MX"
+      ],
+      "entity_unit": "people_or_community",
+      "url": "https://catalogo.inpi.gob.mx/consulta-por-pueblo-2/",
+      "allowed_hosts": [
+        "catalogo.inpi.gob.mx",
+        "www.inpi.gob.mx",
+        "www.gob.mx"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Separate pueblo, Indigenous community, Afromexican community and pluricultural community units. Do not turn language counts into peoples counts."
+    },
+    {
+      "source_id": "gt-almg",
+      "countries": [
+        "GT"
+      ],
+      "entity_unit": "linguistic_community",
+      "url": "https://almg.org.gt/actividades-2/",
+      "allowed_hosts": [
+        "almg.org.gt"
+      ],
+      "stated_count": 22,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "22 Maya linguistic communities. This is not a denominator of all Indigenous peoples or governments; Xinka and Garifuna require separate research."
+    },
+    {
+      "source_id": "gt-ine-census",
+      "countries": [
+        "GT"
+      ],
+      "entity_unit": "census_self_identification_category",
+      "url": "https://censo2018.ine.gob.gt/explorador",
+      "allowed_hosts": [
+        "censo2018.ine.gob.gt",
+        "www.ine.gob.gt",
+        "datos.ine.gob.gt"
+      ],
+      "stated_count": null,
+      "as_of": "2018",
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Keep broad self-identification categories distinct from Maya linguistic communities and actual governing bodies."
+    },
+    {
+      "source_id": "central-america-source-discovery",
+      "countries": [
+        "BZ",
+        "HN",
+        "NI",
+        "CR",
+        "PA",
+        "SV"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.iwgia.org/en/regions/latin-america.html",
+      "allowed_hosts": [
+        "www.iwgia.org",
+        "www.ccj.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "enumeration_pending",
+      "note": "Use this as a source-discovery lane. Locate national official and Indigenous-led directories before enumerating entities or claiming coverage."
+    },
+    {
+      "source_id": "pe-bdpi",
+      "countries": [
+        "PE"
+      ],
+      "entity_unit": "indigenous_people",
+      "url": "https://bdpi.cultura.gob.pe/pueblos-indigenas",
+      "allowed_hosts": [
+        "bdpi.cultura.gob.pe",
+        "consultaprevia.cultura.gob.pe",
+        "www.gob.pe"
+      ],
+      "stated_count": 55,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "55 identified peoples. Localities are a separate directory and must not be added to this denominator."
+    },
+    {
+      "source_id": "br-ibge-census-2022",
+      "countries": [
+        "BR"
+      ],
+      "entity_unit": "census_ethnicity_people_or_group",
+      "url": "https://www.ibge.gov.br/brasil-indigena/",
+      "allowed_hosts": [
+        "www.ibge.gov.br",
+        "agenciadenoticias.ibge.gov.br"
+      ],
+      "stated_count": 391,
+      "as_of": "2022",
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "391 self-declared ethnicities, peoples or groups in Census 2022. Publication updated in 2025. Not 391 governments."
+    },
+    {
+      "source_id": "co-dane-census-2018",
+      "countries": [
+        "CO"
+      ],
+      "entity_unit": "census_indigenous_people",
+      "url": "https://www.dane.gov.co/files/investigaciones/boletines/grupos-etnicos/infograf%C3%ADa-grupos-etnicos-2019.pdf",
+      "allowed_hosts": [
+        "www.dane.gov.co",
+        "microdatos.dane.gov.co",
+        "geoportal.dane.gov.co"
+      ],
+      "stated_count": 115,
+      "as_of": "2018",
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "115 peoples recorded in the 2018 census. Cabildos and resguardos are distinct units and need their own sources."
+    },
+    {
+      "source_id": "ec-conaie",
+      "countries": [
+        "EC"
+      ],
+      "entity_unit": "people_or_nationality",
+      "url": "https://conaie.org/category/nacionalidades-sierra/",
+      "allowed_hosts": [
+        "conaie.org",
+        "sitio.conaie.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "An Indigenous-led source. Nationalities, peoples, communities and associations must retain their own entity types."
+    },
+    {
+      "source_id": "south-america-source-discovery",
+      "countries": [
+        "AR",
+        "BO",
+        "CL",
+        "PY",
+        "UY",
+        "VE",
+        "GY",
+        "SR",
+        "GF"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.iwgia.org/en/regions/latin-america.html",
+      "allowed_hosts": [
+        "www.iwgia.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "enumeration_pending",
+      "note": "Locate Indigenous-led and official country directories, and distinguish people, community, territorial body and legal registration."
+    },
+    {
+      "source_id": "africa-ipacc",
+      "countries": [],
+      "entity_unit": "representative_organization",
+      "url": "https://www.ipacc.org.za/",
+      "allowed_hosts": [
+        "www.ipacc.org.za",
+        "ipacc.org.za"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Membership organizations are not a complete inventory of African Indigenous peoples. Self-identification and Indigenous-led sources control identity review."
+    },
+    {
+      "source_id": "asia-source-discovery",
+      "countries": [],
+      "entity_unit": "source_discovery",
+      "url": "https://www.iwgia.org/en/regions/asia.html",
+      "allowed_hosts": [
+        "www.iwgia.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "enumeration_pending",
+      "note": "Locate Indigenous-led and national directories country by country. Do not treat national ethnic classifications as an exhaustive definition of Indigenous identity."
+    },
+    {
+      "source_id": "arctic-icc",
+      "countries": [
+        "US",
+        "CA",
+        "GL",
+        "RU"
+      ],
+      "entity_unit": "inuit_representative_body",
+      "url": "https://www.inuitcircumpolar.com/",
+      "allowed_hosts": [
+        "www.inuitcircumpolar.com",
+        "inuitcircumpolar.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "A circumpolar representative body, not a complete directory of governments, communities or peoples."
+    },
+    {
+      "source_id": "europe-source-discovery",
+      "countries": [
+        "NO",
+        "SE",
+        "FI",
+        "RU"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.iwgia.org/en/regions/arctic.html",
+      "allowed_hosts": [
+        "www.iwgia.org",
+        "sametinget.no",
+        "www.sametinget.no",
+        "samediggi.fi",
+        "www.samediggi.fi",
+        "sametinget.se",
+        "www.sametinget.se"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "enumeration_pending",
+      "note": "Research Sami parliamentary and community sources alongside other Indigenous-led Arctic directories. Representative parliaments are not separate peoples."
+    },
+    {
+      "source_id": "oceania-source-discovery",
+      "countries": [],
+      "entity_unit": "source_discovery",
+      "url": "https://www.iwgia.org/en/regions/pacific.html",
+      "allowed_hosts": [
+        "www.iwgia.org",
+        "aiatsis.gov.au",
+        "www.aiatsis.gov.au",
+        "www.tkm.govt.nz",
+        "tkm.govt.nz",
+        "www.nntt.gov.au"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "enumeration_pending",
+      "note": "Iwi, people, language group, land-rights corporation and representative body are different units. AIATSIS language mapping does not settle territorial boundaries."
+    },
+    {
+      "source_id": "priority-fort-sill",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://fortsillapache-nsn.gov/",
+      "allowed_hosts": [
+        "fortsillapache-nsn.gov",
+        "www.fortsillapache-nsn.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "Own-site name differs from current federal list styling. Preserve both and request identity/name review before a profile is written."
+    },
+    {
+      "source_id": "priority-southern-ute",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.southernute-nsn.gov/natural-resources/lands/",
+      "allowed_hosts": [
+        "www.southernute-nsn.gov",
+        "southernute-nsn.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources."
+    },
+    {
+      "source_id": "priority-ute-mountain",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.utemountainutetribe.com/",
+      "allowed_hosts": [
+        "www.utemountainutetribe.com",
+        "utemountainutetribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "A government distinct from Southern Ute and Uintah and Ouray governments. Current risks require dated source evidence."
+    },
+    {
+      "source_id": "priority-ute-indian",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://utetribe.com/water-resources/",
+      "allowed_hosts": [
+        "utetribe.com",
+        "www.utetribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_located",
+      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-08",
-  "count": 450,
-  "facts": 1260,
+  "generated": "2026-10-12",
+  "count": 457,
+  "facts": 1287,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -14,10 +14,10 @@
     "caribbean-guianas": 16,
     "central-america-caribbean": 26,
     "mx-central-south": 26,
-    "mx-north-us-southwest": 26,
+    "mx-north-us-southwest": 32,
     "oceania": 46,
     "us-east-southeast": 25,
-    "us-plains-midwest": 35,
+    "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
   "nations": [
@@ -19012,6 +19012,22 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        },
+        {
+          "id": "mescalero-apache-us-nm-d7ae29b8",
+          "text": "Chiricahua Apache families arrived at the Mescalero reservation in 1913 after imprisonment at Fort Sill, Oklahoma.",
+          "kind": "history",
+          "as_of": "1913",
+          "source": {
+            "title": "Our Culture",
+            "publisher": "Mescalero Apache Tribe",
+            "url": "https://mescaleroapachetribe.com/our-culture/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "In 1913, approximately 200 members of the Chiricahua band",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
         }
       ]
     },
@@ -19021,17 +19037,14 @@
       "name": "Nuche",
       "also": [
         "Nuchu",
-        "Ute",
-        "Southern Ute Indian Tribe",
-        "Ute Mountain Ute Tribe",
-        "Ute Indian Tribe of the Uintah and Ouray Reservation"
+        "Ute"
       ],
       "pronounce": null,
       "lands": "Southwestern Colorado (Ignacio, Towaoc), northeastern Utah (Uintah and Ouray) and nearby New Mexico and Utah lands, US",
       "countries": [
         "US"
       ],
-      "official_url": "https://www.southernute-nsn.gov/",
+      "official_url": null,
       "name_source_url": "https://www.southernute-nsn.gov/history/",
       "facts": [
         {
@@ -19860,6 +19873,443 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        }
+      ]
+    },
+    {
+      "id": "chiricahua-apache-nation-us-nm",
+      "region": "mx-north-us-southwest",
+      "name": "Chiricahua Apache Nation",
+      "also": [],
+      "pronounce": null,
+      "lands": "Headquarters in Santa Clara, New Mexico, United States; this record describes this named community, not every Chiricahua Apache person or government",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://chiricahuaapachenation.org/",
+      "name_source_url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+      "facts": [
+        {
+          "id": "chiricahua-apache-nation-us-nm-32706625",
+          "text": "The Chiricahua Apache Nation describes its governance through an Executive Council and National Council made up of citizen-descendants.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Governance",
+            "publisher": "Chiricahua Apache Nation",
+            "url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Executive Council and National Council are comprised of citizen-descendants",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "chiricahua-apache-nation-us-nm-6cdd699e",
+          "text": "The Chiricahua Apache Nation lists its tribal headquarters in Santa Clara, New Mexico.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Governance",
+            "publisher": "Chiricahua Apache Nation",
+            "url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Santa Clara, NM USA 88022",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "chiricahua-apache-nation-us-nm-bdaaaba1",
+          "text": "Its foundation's stated work includes education, social welfare and defending Chiricahua Apache self-determination.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Chiricahua Apache National Foundation",
+            "publisher": "Chiricahua Apache Nation",
+            "url": "https://chiricahuaapachenation.org/our-relations/chiricahua-apache-national-foundation.php",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Promote unity, solidarity, and social welfare",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "lipan-apache-tribe-us-tx",
+      "region": "mx-north-us-southwest",
+      "name": "Lipan Apache Tribe",
+      "also": [
+        "Lipan Apache Tribe of Texas"
+      ],
+      "pronounce": null,
+      "lands": "Texas, United States, with tribal administration in McAllen and historical homelands spanning Texas and northern Mexico",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.lipanapachetribe.gov/",
+      "name_source_url": "https://www.lipanapachetribe.gov/LAT/aboutus.html",
+      "facts": [
+        {
+          "id": "lipan-apache-tribe-us-tx-038652eb",
+          "text": "The Lipan Apache Tribe in Texas maintains a Tribal Council responsible for community welfare and protection of its heritage.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "About Us, Who We Are",
+            "publisher": "Lipan Apache Tribe",
+            "url": "https://www.lipanapachetribe.gov/LAT/aboutus.html",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "a governing body, the Tribal Council",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "lipan-apache-tribe-us-tx-41f90dcf",
+          "text": "The Tribe recounts that by 1880, Lipan communities lived along the Rio Grande on both sides of the United States-Mexico border.",
+          "kind": "history",
+          "as_of": "1880",
+          "source": {
+            "title": "About Us, Who We Are",
+            "publisher": "Lipan Apache Tribe",
+            "url": "https://www.lipanapachetribe.gov/LAT/aboutus.html",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "both sides of the border",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "lipan-apache-tribe-us-tx-1c2c30df",
+          "text": "In 2021, the City and County of Presidio donated a Lipan cemetery parcel to the Lipan Apache Tribe.",
+          "kind": "land",
+          "as_of": "2021",
+          "source": {
+            "title": "El Cementerio de los Lipanes Transferred to Tribe",
+            "publisher": "Lipan Apache Tribe",
+            "url": "https://www.lipanapachetribe.gov/LAT/g-pcnews3.html",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "donated by the City of Presidio and the County",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "southern-ute-indian-tribe-us-co",
+      "region": "mx-north-us-southwest",
+      "name": "Southern Ute Indian Tribe",
+      "also": [
+        "Southern Ute"
+      ],
+      "pronounce": null,
+      "lands": "Southern Ute Reservation around Ignacio, southwestern Colorado, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.southernute-nsn.gov/",
+      "name_source_url": "https://www.southernute-nsn.gov/history/",
+      "facts": [
+        {
+          "id": "southern-ute-indian-tribe-us-co-1beb59f6",
+          "text": "The Southern Ute Indian Tribe is made up of the Mouache and Caputa bands and is headquartered in Ignacio, Colorado.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "History",
+            "publisher": "Southern Ute Indian Tribe",
+            "url": "https://www.southernute-nsn.gov/history/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Mouache and Caputa bands comprise the Southern Ute Tribe",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "southern-ute-indian-tribe-us-co-eeab360c",
+          "text": "Southern Ute government is based on a constitution adopted in 1936 and revised in 1975.",
+          "kind": "history",
+          "as_of": "1975",
+          "source": {
+            "title": "History",
+            "publisher": "Southern Ute Indian Tribe",
+            "url": "https://www.southernute-nsn.gov/history/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Tribal Constitution adopted November 4, 1936",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "southern-ute-indian-tribe-us-co-679045d1",
+          "text": "An elected Tribal Council governs the Southern Ute Indian Tribe, which maintains its own constitution, laws and tribal courts.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Living in La Plata County",
+            "publisher": "Southern Ute Indian Tribe",
+            "url": "https://www.southernute-nsn.gov/natural-resources/lands/assignments/living-in-la-plata-county/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "constitution, code of laws, and a tribal court system",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "southern-ute-indian-tribe-us-co-68fe06d2",
+          "text": "The Tribe's Brunot Area guide explains the hunting right reserved in the 1873 agreement, despite the loss of reservation lands.",
+          "kind": "land",
+          "as_of": "1873",
+          "source": {
+            "title": "Brunot Area Hunting and Fishing",
+            "publisher": "Southern Ute Indian Tribe",
+            "url": "https://www.southernute-nsn.gov/natural-resources/wildlife-resource-management/hunting/brunot-area-hunting-and-fishing/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "an important provision reserving for the Utes the right",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tonto-apache-tribe-us-az",
+      "region": "mx-north-us-southwest",
+      "name": "Tonto Apache Tribe",
+      "also": [
+        "Tonto Apache"
+      ],
+      "pronounce": null,
+      "lands": "Payson, Gila County, Arizona, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": null,
+      "name_source_url": "https://itcaonline.com/member-tribes/tonto-apache-tribe/",
+      "facts": [
+        {
+          "id": "tonto-apache-tribe-us-az-0da0d207",
+          "text": "The Tonto Apache Tribe is based beside Payson in northwestern Gila County, Arizona.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Tonto Apache Tribe",
+            "publisher": "Inter Tribal Council of Arizona",
+            "url": "https://itcaonline.com/member-tribes/tonto-apache-tribe/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "located adjacent to the town of Payson",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "tonto-apache-tribe-us-az-99b44a44",
+          "text": "In 1875, Tonto and Yavapai people were forcibly moved from the Rio Verde Reserve to San Carlos. Some Tonto families later returned to Payson.",
+          "kind": "history",
+          "as_of": "1875",
+          "source": {
+            "title": "Tonto Apache Tribe",
+            "publisher": "Inter Tribal Council of Arizona",
+            "url": "https://itcaonline.com/member-tribes/tonto-apache-tribe/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "forcibly moved to the San Carlos Apache Reservation",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "tonto-apache-tribe-us-az-89e6a4ea",
+          "text": "In 2010, land for the Tonto Apache Tribe was acquired in trust following a land exchange with the U.S. Forest Service.",
+          "kind": "land",
+          "as_of": "2010",
+          "source": {
+            "title": "Reservation proclamation for trust land belonging to the Tonto Apache Tribe of Arizona",
+            "publisher": "Bureau of Indian Affairs",
+            "url": "https://www.bia.gov/as-ia/opa/online-press-release/assistant-secretary-washburn-issues-reservation-proclamation-trust",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "parcel was acquired in trust in 2010",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ute-indian-tribe-uintah-ouray-us-ut",
+      "region": "mx-north-us-southwest",
+      "name": "Ute Indian Tribe",
+      "also": [
+        "Ute Indian Tribe of the Uintah and Ouray Reservation",
+        "Northern Ute"
+      ],
+      "pronounce": null,
+      "lands": "Uintah and Ouray Reservation, northeastern Utah, with tribal government at Fort Duchesne, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://utetribe.com/",
+      "name_source_url": "https://utetribe.com/business-committee/",
+      "facts": [
+        {
+          "id": "ute-indian-tribe-uintah-ouray-us-ut-28836153",
+          "text": "The Ute Indian Tribe elects Business Committee representatives from the Uintah, Uncompahgre and Whiteriver bands.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Business Committee",
+            "publisher": "Ute Indian Tribe",
+            "url": "https://utetribe.com/business-committee/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "The Uintah, Uncompahgre and Whiteriver bands",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-indian-tribe-uintah-ouray-us-ut-ab8ef66b",
+          "text": "The Tribe delegates protection, restoration and management of Uintah and Ouray Reservation water resources to its Water Resources Department and Commission.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Water Resources",
+            "publisher": "Ute Indian Tribe",
+            "url": "https://utetribe.com/water-resources/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "protect, restore, develop, manage, and maintain the water resources",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-indian-tribe-uintah-ouray-us-ut-622f8fea",
+          "text": "In 1881, the United States forcibly removed White River Utes from Colorado to the Uintah Reservation.",
+          "kind": "history",
+          "as_of": "1881",
+          "source": {
+            "title": "Ute Indians",
+            "publisher": "Utah Division of State History, History to Go",
+            "url": "https://historytogo.utah.gov/post/ute-indians/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "from Colorado to the Uintah Reservation",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-indian-tribe-uintah-ouray-us-ut-9e8fe4f3",
+          "text": "In an April 2026 statement, the Ute Indian Tribe announced it would appeal a federal district court decision concerning split-estate reservation lands.",
+          "kind": "today",
+          "as_of": "2026",
+          "source": {
+            "title": "Tribe will appeal Utah Federal District Court decision on split estate lands",
+            "publisher": "Ute Indian Tribe",
+            "url": "https://utetribe.com/wp-content/uploads/2026/04/TribeAppealCourtDecisionOnSplitEstateLands.pdf",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "Tribe will appeal Utah Federal District Court",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "region": "mx-north-us-southwest",
+      "name": "Ute Mountain Ute Tribe",
+      "also": [
+        "Weenuche"
+      ],
+      "pronounce": null,
+      "lands": "Towaoc and reservation lands in southwestern Colorado and northwestern New Mexico; White Mesa, Utah, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.utemountainutetribe.com/",
+      "name_source_url": "https://www.utemountainutetribe.com/",
+      "facts": [
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-411bd3a9",
+          "text": "The Ute Mountain Ute Tribe identifies itself as the Weenuche band of the Ute Nation, with its tribal offices in Towaoc, Colorado.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Ute Mountain Ute Tribe",
+            "publisher": "Ute Mountain Ute Tribe",
+            "url": "https://www.utemountainutetribe.com/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "are the Weenuche band of the Ute Nation",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-2897055c",
+          "text": "The Weenuche Band organized a tribal government and adopted a constitution six years after the Indian Reorganization Act of 1934.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "Ute Mountain Ute Tribe",
+            "publisher": "Ute Mountain Ute Tribe",
+            "url": "https://www.utemountainutetribe.com/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "organized a tribal government and enacted a tribal constitution",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-57a203da",
+          "text": "The Ute Mountain Ute Tribal Council is elected by the tribal membership and governs the reservation.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Ute Mountain Ute Tribe",
+            "publisher": "Ute Mountain Ute Tribe",
+            "url": "https://www.utemountainutetribe.com/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "elected by popular vote of Tribal membership",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-55130244",
+          "text": "White Mesa Administration supports community members with employment, education and access to basic services in White Mesa, Utah.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "White Mesa Administration",
+            "publisher": "Ute Mountain Ute Tribe",
+            "url": "https://www.utemountainutetribe.com/white%20mesa%20administration.html",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "support to all White Mesa community members",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
         }
       ]
     },
@@ -26537,6 +26987,107 @@
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
         }
+      ]
+    },
+    {
+      "id": "fort-sill-apache-us-ok-nm",
+      "region": "us-plains-midwest",
+      "name": "Fort Sill Apache Tribe",
+      "also": [
+        "Fort Sill Apache"
+      ],
+      "pronounce": null,
+      "lands": "Apache and Fletcher, Oklahoma; reservation land in New Mexico, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://fortsillapache-nsn.gov/",
+      "name_source_url": "https://fortsillapache-nsn.gov/",
+      "facts": [
+        {
+          "id": "fort-sill-apache-us-ok-nm-c55fdeaf",
+          "text": "The Fort Sill Apache Tribe comprises descendants of Chiricahua and Warm Springs Apaches displaced from the Southwest and northern Mexico.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Fort Sill Apache Tribe",
+            "publisher": "Fort Sill Apache Tribe",
+            "url": "https://fortsillapache-nsn.gov/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "descendants of the Chiricahua and Warm Springs Apaches",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "fort-sill-apache-us-ok-nm-ac652fb5",
+          "text": "In 1894, Chiricahua Apache prisoners were moved to Oklahoma after imprisonment and exile in Florida and Alabama.",
+          "kind": "history",
+          "as_of": "1894",
+          "source": {
+            "title": "History",
+            "publisher": "Fort Sill Apache Tribe",
+            "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "was moved to Oklahoma in 1894",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "fort-sill-apache-us-ok-nm-e5114b96",
+          "text": "Apache families who remained at Fort Sill were released in 1914 and resettled on scattered farmland near Apache and Fletcher, Oklahoma.",
+          "kind": "history",
+          "as_of": "1914",
+          "source": {
+            "title": "History",
+            "publisher": "Fort Sill Apache Tribe",
+            "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "eventually released in 1914 and resettled",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "fort-sill-apache-us-ok-nm-1ba6514d",
+          "text": "The Tribe reports that its New Mexico reservation proclamation was issued in November 2011, following its efforts to regain a land base in its homeland.",
+          "kind": "land",
+          "as_of": "2011",
+          "source": {
+            "title": "History",
+            "publisher": "Fort Sill Apache Tribe",
+            "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "this was issued in November of 2011",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        },
+        {
+          "id": "fort-sill-apache-us-ok-nm-0f64a138",
+          "text": "The General Council, made up of adult tribal members, elects the Business Committee and approves the tribal operations budget.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Tribal Government",
+            "publisher": "Fort Sill Apache Tribe",
+            "url": "https://fortsillapache-nsn.gov/about/tribal-government/",
+            "accessed": "2026-10-12"
+          },
+          "evidence": "General Council votes to approve the tribal operations budget",
+          "status": "verified",
+          "checked": "2026-10-12",
+          "last_verified": "2026-10-12"
+        }
+      ],
+      "also_search": [
+        "Chiricahua",
+        "Warm Springs Apache"
       ]
     },
     {

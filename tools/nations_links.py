@@ -79,6 +79,21 @@ def main(argv=None):
         for resource in catalog.get("resources", []):
             allowed |= {link["url"] for link in resource.get("links", [])}
             allowed |= {source["url"] for source in resource.get("sources", [])}
+    cp = os.path.join(root, "data", "nations", "context_links.json")
+    if os.path.isfile(cp):
+        catalog = json.load(open(cp, encoding="utf-8"))
+        allowed |= {entry["url"] for entry in catalog.get("links", [])}
+    dp = os.path.join(root, "data", "nations", "research", "directory_sources.json")
+    if os.path.isfile(dp):
+        catalog = json.load(open(dp, encoding="utf-8"))
+        allowed |= {source["url"] for source in catalog.get("sources", [])}
+    fp = os.path.join(root, "data", "nations", "research", "us_federal_directory.json")
+    if os.path.isfile(fp):
+        directory = json.load(open(fp, encoding="utf-8"))
+        allowed.add(directory["source"]["url"])
+        for entry in directory.get("entities", []):
+            if entry.get("official_url") and entry.get("official_url_review", {}).get("status") == "verified":
+                allowed.add(entry["official_url"])
     np_ = os.path.join(root, "static", "nations", "news.json")
     if os.path.isfile(np_):
         news = json.load(open(np_, encoding="utf-8"))

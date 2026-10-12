@@ -25,10 +25,12 @@ import json
 import os
 import subprocess
 import sys
+from types import SimpleNamespace
 
 sys.dont_write_bytecode = True
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nations_lib as L  # noqa: E402
+import nations_directory as D  # noqa: E402
 
 BLOCKS_NAMES = [(0x0020, 0x007E), (0x00A0, 0x00FF), (0x0100, 0x017F), (0x0180, 0x024F), (0x0250, 0x02AF),
                 (0x02B0, 0x02FF), (0x0300, 0x036F), (0x0370, 0x03FF), (0x0400, 0x04FF), (0x1E00, 0x1EFF),
@@ -68,6 +70,23 @@ def role_sets(model):
     labels = set(LABEL_ASCII)
     for r in model.regions:
         labels |= {ord(c) for c in r["display"]}
+    # The directory is a separate published collection, not part of Model.nations.
+    # Reuse its actual publication filter so confirmed hide/takedown matches do
+    # not become a second route into this string inventory. Never alter spelling.
+    directory, _ = D.load(model.root)
+    for document in (directory, D.load_canada(model.root)):
+        for entry in D.visible_entries(SimpleNamespace(m=model), document["entities"]):
+            points = {ord(c) for c in entry["name"] + entry["directory_name"]}
+            names |= points
+            reading |= points
+            labels |= points
+        source = document["source"]
+        points = {ord(c) for c in source["title"] + source["publisher"]}
+        reading |= points
+        labels |= points
+    for _, label, note in D.LANES:
+        reading |= {ord(c) for c in label + note}
+        labels |= {ord(c) for c in label}
     return names, reading, labels
 
 

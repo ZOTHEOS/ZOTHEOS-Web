@@ -32,7 +32,9 @@ jobs:
         run: python data/nations/tools/nations_refresh.py --file data/nations/nations.json --run-date "$(date -u +%F)" --host-interval 3 --limit "${{ inputs.limit || 0 }}" --report-dir data/nations/tools
       - run: python data/nations/tools/validate.py
       - run: python tools/nations_history.py --append data/nations/tools/refresh_report.json
+      - run: python tools/game_nations.py
       - run: python tools/nations_build.py
+      - run: python tools/game_nations.py --check
       - name: Open a pull request if anything changed
         env:
           GH_TOKEN: ${{ github.token }}
@@ -41,7 +43,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$b"
-          git add data/nations nations nations.html static/nations static/fonts tools/fonts.sha256 tools/nations/partials/fonts-names.css vercel.json sitemap.xml
+          git add game/nations.json game/history.json
+          if [ -d game/data ] || [ -n "$(git ls-files game/data)" ]; then git add -A game/data; fi
+          git add -A data/nations nations nations.html static/nations static/fonts tools/fonts.sha256 tools/nations/partials/fonts-names.css vercel.json sitemap.xml
           if git diff --cached --quiet; then echo "No change this week"; exit 0; fi
           git commit -m "nations: weekly check $d" -m "$(python tools/nations_report_summary.py data/nations/tools/refresh_report.json)"
           git push -u origin "$b"

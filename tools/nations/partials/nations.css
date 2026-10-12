@@ -381,3 +381,14 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .resource-history summary .nm { font-size: 24px; line-height: 1.35; }
 .resource-history h4 { margin: var(--sp-5) 0 var(--sp-3); }
 .resource-history[open] { padding-bottom: var(--sp-5); }
+
+/* Source directory: names retain their case; the search stays readable in every theme. */
+.directory-search { margin: var(--sp-5) 0; }
+.directory-search label { display: block; margin-bottom: 8px; }
+.directory-inputs { display: flex; align-items: center; gap: 12px; }
+.directory-inputs input { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--page-bg); color: var(--ink); font: inherit; }
+.directory-inputs input::placeholder { color: var(--ink-3); opacity: 1; }
+.directory-list li { padding: 18px 0; border-top: 1px solid var(--rule); }
+.directory-list .directory-name { font-size: 25px; line-height: 1.3; overflow-wrap: anywhere; }
+.directory-list p { margin-top: 8px; }
+@media (max-width: 480px) { .directory-inputs { gap: 8px; } .directory-list .directory-name { font-size: 21px; } }
