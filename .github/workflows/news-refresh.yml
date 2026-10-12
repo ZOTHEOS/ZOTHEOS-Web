@@ -1,0 +1,37 @@
+# Headlines for the news shelf (DESIGN_NATIONS 19). Manual dispatch only: no outlet is polled until the owner decides
+# who signs the courtesy letters and flips data/news/flags.json shelf_visible to true. While the flag is false,
+# news_fetch.py polls nothing and the build keeps static/nations/news.json empty.
+name: news-refresh
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: news-refresh
+  cancel-in-progress: false
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683   # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b   # v5.3.0
+        with:
+          python-version: "3.10"
+      - run: pip install --require-hashes -r tools/requirements-nations.txt
+      - run: python tools/news_fetch.py
+      - run: python tools/nations_build.py
+      - name: Open a pull request if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          d="$(date -u +%F)"; b="nations/news-$d"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$b"
+          git add data/news nations.html static/nations vercel.json
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "nations: headlines $d"
+          git push -u origin "$b"
+          gh pr create --base main --head "$b" --title "Nations headlines $d" --body "Headlines gathered by tools/news_fetch.py from the outlets in data/news/sources.json." --label nations-refresh

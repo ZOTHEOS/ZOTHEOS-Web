@@ -1,0 +1,12 @@
+# Pinned for .github/workflows/nations-refresh.yml and news-refresh.yml (Python 3.10, ubuntu-latest).
+# pypdf reads PDF sources in the verifier; fonttools and brotli subset and read the woff2 faces in the build.
+#
+# OWED BY THE OWNER before the first run: the --hash lines. The workflow installs with --require-hashes, which
+# refuses to run until every requirement carries the sha256 of the files pip would download for Linux. Generate them
+# once on any machine with network access:
+#     pip download --only-binary=:all: --platform manylinux2014_x86_64 --python-version 3.10 -d wh fonttools==4.63.0 brotli==1.2.0 pypdf==6.4.0
+#     pip hash wh/*
+# and append each as "    --hash=sha256:<digest>" under its line (continue the line with a backslash).
+fonttools==4.63.0
+brotli==1.2.0
+pypdf==6.4.0

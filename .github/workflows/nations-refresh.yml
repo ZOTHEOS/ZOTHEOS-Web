@@ -1,0 +1,48 @@
+# Weekly re-check of every cited source, in pull-request mode (DESIGN_NATIONS 18). Scheduled workflows run only on the
+# default branch, so this does nothing until feat/nations is merged. Changes reach the site only when the pull
+# request is merged ("Changes from a check go live after review").
+# Owner, once: allow GitHub Actions to create pull requests (Settings, Actions); create the nations-refresh label;
+# confirm the two action SHAs below against their tags; add the --hash lines to tools/requirements-nations.txt.
+name: nations-refresh
+on:
+  schedule:
+    - cron: "17 9 * * 1"        # Mondays 09:17 UTC, off the top of the hour
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "URLs to check this run (0 = all)"
+        default: "0"
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: nations-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683   # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b   # v5.3.0
+        with:
+          python-version: "3.10"
+      - run: pip install --require-hashes -r tools/requirements-nations.txt
+      - name: Re-check every cited source
+        run: python data/nations/tools/nations_refresh.py --file data/nations/nations.json --run-date "$(date -u +%F)" --host-interval 3 --limit "${{ inputs.limit || 0 }}" --report-dir data/nations/tools
+      - run: python data/nations/tools/validate.py
+      - run: python tools/nations_history.py --append data/nations/tools/refresh_report.json
+      - run: python tools/nations_build.py
+      - name: Open a pull request if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          d="$(date -u +%F)"; b="nations/refresh-$d"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$b"
+          git add data/nations nations nations.html static/nations static/fonts tools/fonts.sha256 tools/nations/partials/fonts-names.css vercel.json sitemap.xml
+          if git diff --cached --quiet; then echo "No change this week"; exit 0; fi
+          git commit -m "nations: weekly check $d" -m "$(python tools/nations_report_summary.py data/nations/tools/refresh_report.json)"
+          git push -u origin "$b"
+          gh pr create --base main --head "$b" --title "Nations re-check $d: $(python tools/nations_report_summary.py --short data/nations/tools/refresh_report.json)" --body-file data/nations/tools/refresh_report.md --label nations-refresh
