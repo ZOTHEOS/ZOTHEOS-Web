@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-hew01rPVNN2f2OqV1Ct5Cdz26MSR8+so2fpdkb9O0t0=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-pKeInJJ5ruvv6ZRZyQ7NC3Y9xePKzH12U9eTckuB3zE=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -5368,7 +5368,10 @@
       background: var(--hdr-band);
       color: var(--ink);
       box-shadow: none;
-      overflow: visible;
+      max-height: calc(100vh - 32px);
+      max-height: calc(100dvh - 32px);
+      overflow: auto;
+      overscroll-behavior: contain;
       opacity: 0;
       translate: 0 -6px;
       transition:
@@ -5380,16 +5383,15 @@
     .appearance-pop:popover-open { display: grid; gap: 20px; opacity: 1; translate: none; }
     @starting-style { .appearance-pop:popover-open { opacity: 0; translate: 0 -6px; } }
     .appearance-pop::backdrop { background: transparent; }
-    @supports (position-area: bottom span-right) {
-      .appearance-btn { anchor-name: --zt-appearance; }
-      .appearance-pop {
-        position-anchor: --zt-appearance;
-        top: auto; left: auto;
-        position-area: bottom span-right;
-        margin: 8px 0 0;
-        position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
-      }
-    }
+    /* One measured placement keeps the phone menu's panel inside the viewport. */
+    .appearance-pop.is-fallback { display: none; z-index: 10000; }
+    .appearance-pop.is-fallback.is-open { display: grid; gap: 20px; opacity: 1; translate: none; }
+    .appearance-btn[aria-expanded="true"] { border-color: var(--ink); }
+    .appearance-btn[aria-expanded="true"] .ab-caret { rotate: 225deg; translate: 0 2px; }
+    .ap-translate { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
+    .ap-translate:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    #translateSection { display: block; width: 100%; min-height: 44px; margin: 8px 0; padding: 8px; background: var(--bg); color: var(--ink); border: 1px solid var(--rule); font: inherit; }
+    .ap-language-note { margin: 6px 0 0; font: 12px/1.6 monospace; color: var(--ink-2); }
     html:not([data-theme]) .appearance-pop {   /* lifted-black law: flat #000 body, the chrome lives on the rim */
       border: 1px solid transparent;
       background:
@@ -7194,6 +7196,11 @@
             </div>
             <p class="ap-note" id="apFxNote" hidden>Applies while Motion is Living</p>
           </div>
+          <div class="ap-row" id="apLanguageRow">
+            <span class="ap-label">Language</span>
+            <a class="ap-translate" href="#site-translation" aria-describedby="apLanguageNote">Language and translation <span aria-hidden="true">&#8595;</span></a>
+            <p class="ap-language-note" id="apLanguageNote">Translate the whole page with your browser, or choose a section to translate with Google.</p>
+          </div>
           <div class="ap-row" id="apReplayRow">
             <button class="ap-replay" id="replayIntro" type="button">Replay intro</button>
           </div>
@@ -8533,6 +8540,7 @@
           <a href="#devices">Hardware</a>
           <a href="#model-choice">Model choice</a>
           <a href="#site-privacy">Website privacy</a>
+          <a href="#site-translation">Language and translation</a>
         </div>
         <div class="footer-col" role="group" aria-labelledby="fcol-release">
           <span class="footer-col-label" id="fcol-release">Release</span>
@@ -8553,12 +8561,24 @@
         Offline &middot; Private &middot; Independent
       </div>
     </div>
+    <details class="website-privacy" id="site-translation">
+      <summary><span>Language and translation</span><span class="zd-icon" aria-hidden="true"></span></summary>
+      <div class="privacy-grid">
+        <div><strong>Translate the whole page</strong><p>Use your browser's Translate page option. In Chrome on a phone, open the browser menu and choose Translate. On desktop Chrome, right-click the page and choose Translate. Available languages depend on your browser.</p></div>
+        <div><strong>Translate a section</strong><p>Choose a section below, then choose your language in Google Translate.</p>
+          <label for="translateSection">Section</label>
+          <select id="translateSection" aria-describedby="translationNote"><option value="">Introduction</option></select>
+          <a class="ap-translate" id="translateText" href="https://translate.google.com/?sl=en&amp;tl=es&amp;op=translate" target="_blank" rel="noopener noreferrer">Choose language in Google Translate <span aria-hidden="true">&#8599;</span></a>
+          <p id="translationNote">This opens Google and sends only the selected public text when you press the link. Automatic translations may change names or meaning. The original English remains the reference.</p>
+        </div>
+      </div>
+    </details>
     <details class="website-privacy" id="site-privacy">
       <summary><span>Website privacy and connections</span><span class="zd-icon" aria-hidden="true"></span></summary>
       <div class="privacy-grid">
         <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p></div>
         <div><strong>Website connections</strong><p>This page loads its images, video and fonts from this site's own host. The hosting provider handles those requests. Local inference and loading this website are different activities.</p></div>
-        <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, our form processor. Support links open separate payment services with their own policies. Neither is required for individual local use.</p></div>
+        <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, our form processor. Choosing section translation sends that public text to Google Translate. Support links open separate payment services with their own policies. None of these services is required for individual local use.</p></div>
         <div><strong>What the mirror can show</strong><p>The mirror reads page-accessible cookies and a saved theme setting. It cannot read HttpOnly cookies or establish what a hosting provider logs or retains.</p></div>
       </div>
       <p>For privacy or security concerns, contact <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
@@ -8995,48 +9015,130 @@
       window.zRadios(picker, function (b) { choose(b.getAttribute('data-set') || '', b); });
     })();
 
-    /* Appearance popover (W2-03). It opens and closes itself; anchor positioning places it under its button. Where
-       anchor positioning does not exist, it is placed here from the button's box: below it, or above it when the
-       room below is short (the phone sheet's foot). */
+    /* Appearance: native popover with a toggle fallback and viewport-bounded placement. */
     (function () {
       var btn = document.getElementById('appearanceBtn');
       var pop = document.getElementById('appearancePop');
-      if (!btn || !pop || typeof pop.showPopover !== 'function') return;
-      /* Closing with focus inside (Esc, or a choice then Esc) returns focus to the button. Inside the phone's
-         section sheet the platform drops it to the body instead, so it is put back here. */
+      if (!btn || !pop) return;
+      var native = typeof pop.showPopover === 'function';
       var hadFocus = false;
-      pop.addEventListener('beforetoggle', function (e) {
-        if (e.newState === 'closed') hadFocus = pop.contains(document.activeElement);
-      });
-      pop.addEventListener('toggle', function (e) {
-        if (e.newState !== 'closed' || !hadFocus) return;
-        hadFocus = false;
-        var a = document.activeElement;
-        if (!a || a === document.body || pop.contains(a)) {
-          try { btn.focus({ preventScroll: true }); } catch (err) { btn.focus(); }
-        }
-      });
-      /* QA1: a Tab out of the panel or of its button, either way, closes it (as the section sheet does), so it
-         never stays open over the hero while focus walks the page behind it. */
-      var tabOut = function (e) {
+      btn.setAttribute('aria-controls', pop.id);
+      btn.setAttribute('aria-expanded', 'false');
+      if (!native) { pop.classList.add('is-fallback'); document.body.appendChild(pop); }
+      function open() { return native ? pop.matches(':popover-open') : pop.classList.contains('is-open'); }
+      function focusButton() { try { btn.focus({ preventScroll: true }); } catch (e) { btn.focus(); } }
+      function close(restore) {
+        if (!open()) return;
+        if (native) { try { pop.hidePopover(); } catch (e) {} }
+        else { pop.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); }
+        if (restore) focusButton();
+      }
+      function place() {
+        if (!open()) return;
+        var v = window.visualViewport;
+        var vx = v ? v.offsetLeft : 0, vy = v ? v.offsetTop : 0;
+        var vw = v ? v.width : document.documentElement.clientWidth;
+        var vh = v ? v.height : window.innerHeight;
+        pop.style.maxHeight = Math.max(1, vh - 32) + 'px';
+        pop.style.maxWidth = Math.max(1, vw - 32) + 'px';
+        var r = btn.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
+        var left = Math.max(vx + 16, Math.min(r.left, vx + vw - w - 16));
+        var above = vw <= 720 || r.bottom + 8 + h > vy + vh - 16;
+        var top = above ? r.top - h - 8 : r.bottom + 8;
+        top = Math.max(vy + 16, Math.min(top, vy + vh - h - 16));
+        pop.style.left = Math.round(left) + 'px';
+        pop.style.top = Math.round(top) + 'px';
+      }
+      if (native) {
+        pop.addEventListener('beforetoggle', function (e) {
+          if (e.newState === 'closed') hadFocus = pop.contains(document.activeElement);
+        });
+        pop.addEventListener('toggle', function (e) {
+          btn.setAttribute('aria-expanded', e.newState === 'open' ? 'true' : 'false');
+          if (e.newState === 'open') { place(); return; }
+          if (hadFocus) {
+            hadFocus = false;
+            var a = document.activeElement;
+            if (!a || a === document.body || pop.contains(a)) focusButton();
+          }
+        });
+      } else {
+        btn.addEventListener('click', function () {
+          if (open()) close(false);
+          else {
+            pop.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); place();
+            var first = pop.querySelector('[tabindex="0"], a[href], button:not([tabindex="-1"])');
+            if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
+          }
+        });
+        document.addEventListener('pointerdown', function (e) {
+          if (!pop.contains(e.target) && !btn.contains(e.target)) close(false);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && open()) { e.preventDefault(); close(true); }
+        });
+      }
+      function tabOut(e) {
         var to = e.relatedTarget;
-        if (!to || pop.contains(to) || to === btn || !pop.matches(':popover-open')) return;
-        try { pop.hidePopover(); } catch (x) {}
-      };
+        if (to && !pop.contains(to) && to !== btn) close(false);
+      }
       pop.addEventListener('focusout', tabOut);
       btn.addEventListener('focusout', tabOut);
-      if (window.CSS && CSS.supports && CSS.supports('position-area: bottom span-right')) return;
-      function place() {
-        if (!pop.matches(':popover-open')) return;
-        var r = btn.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
-        var vw = document.documentElement.clientWidth, vh = window.innerHeight;
-        var left = Math.max(16, Math.min(r.left, vw - w - 16));
-        var top = (r.bottom + 8 + h <= vh - 8 || r.top - 8 - h < 8) ? r.bottom + 8 : r.top - 8 - h;
-        pop.style.left = Math.round(left) + 'px';
-        pop.style.top = Math.round(Math.max(8, top)) + 'px';
-      }
-      pop.addEventListener('toggle', place);
       window.addEventListener('resize', place);
+      window.addEventListener('scroll', place, { passive: true });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', place);
+        window.visualViewport.addEventListener('scroll', place);
+      }
+    })();
+
+    /* Translation sends public reading text only after an explicit press. No translation script is loaded here. */
+    (function () {
+      var panel = document.getElementById('site-translation');
+      var select = document.getElementById('translateSection');
+      var link = document.getElementById('translateText');
+      if (!panel || !select || !link) return;
+      var sections = [
+        ['top', 'Introduction'], ['council-story', 'The council'], ['features', 'Architecture'],
+        ['proof', 'Proof'], ['workspace', 'Workspace'], ['devices', 'Hardware and model choice'],
+        ['memory', 'Memory'], ['console', 'Console'], ['mission', 'Mission'],
+        ['compare', 'Comparison'], ['faq', 'Questions'], ['founder', 'Founder'],
+        ['waitlist', 'Release list'], ['support', 'Support'], ['roots', 'Roots and gratitude']
+      ], texts = [];
+      select.textContent = '';
+      sections.forEach(function (item) {
+        var source = document.getElementById(item[0]);
+        if (!source) return;
+        var copy = source.cloneNode(true);
+        var inactive = document.documentElement.getAttribute('data-release') === 'available' ? '.rs-pre' : '.rs-avail';
+        Array.prototype.forEach.call(copy.querySelectorAll(inactive), function (node) { node.remove(); });
+        Array.prototype.forEach.call(copy.querySelectorAll('script, style, form, input, textarea, select, [contenteditable], [aria-hidden="true"], [hidden]'), function (node) { node.remove(); });
+        var text = copy.textContent.replace(/\s+/g, ' ').trim(), parts = [];
+        while (text.length > 4500) {
+          var end = text.lastIndexOf(' ', 4500); if (end < 1) end = 4500;
+          parts.push(text.slice(0, end)); text = text.slice(end).trim();
+        }
+        if (text) parts.push(text);
+        parts.forEach(function (part, i) {
+          var option = document.createElement('option'); option.value = String(texts.length);
+          option.textContent = item[1] + (parts.length > 1 ? ' (' + (i + 1) + ' of ' + parts.length + ')' : '');
+          texts.push(part); select.appendChild(option);
+        });
+      });
+      function update() {
+        link.href = 'https://translate.google.com/?sl=en&tl=es&op=translate&text=' + encodeURIComponent(texts[Number(select.value)] || '');
+      }
+      select.addEventListener('change', update); update();
+      document.querySelectorAll('a[href="#site-translation"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          panel.open = true;
+          var pop = document.getElementById('appearancePop');
+          if (pop) {
+            if (typeof pop.hidePopover === 'function') { try { pop.hidePopover(); } catch (e) {} }
+            else { pop.classList.remove('is-open'); document.getElementById('appearanceBtn').setAttribute('aria-expanded', 'false'); }
+          }
+        });
+      });
     })();
 
     /* Floral xochitl band */
@@ -11103,8 +11205,8 @@
        a thin selvedge rail, Mitla panel rhythm (three fret pairs, then a short plain panel). The band centreline drifts
        and snakes; every fret is built in the band's local frame (rotation only), so the stairs stay true. The water
        lives in the light: a twist of at most 0.45 rad moves the shading along the band, never the geometry.
-       Composition is point symmetric like the motif itself: the left band springs from a capped end under the wordmark
-       and flows down, the right band springs from a capped end at the bottom and flows up. One slow glint travels the
+       Both bands have finite rounded caps at both ends: the left flows down from under the wordmark,
+       the right flows up from the bottom. One slow glint travels the
        circuit. ES5, no libraries, no per-frame allocations, only the two edge strips are rasterised. */
     (function () {
       'use strict';
@@ -11116,7 +11218,7 @@
       var raf = 0, running = false, wanted = false, frozen = false, held = false, cleared = false, userLevel = null, autoLvl = 1;
       var t = T_START, lastT = 0;
       var W = 1, H = 1, dpr = 1, dprCap = 2, cssW = 1, cssH = 1, mob = 0;
-      var uDev = 10, cxU = 10, ampU = 1, capU = 8, endU = 1e4, fadeA = 0, fadeB = 1, flowK = 1, phaseU = 0;
+      var uDev = 10, cxU = 10, ampU = 1, capU = 8, endU = 1e4, leftEndU = 1e4, fadeA = 0, fadeB = 1, flowK = 1, phaseU = 0;
       var mvN = 0, shR = 0, fadeR = 1, gL = 1, gR = 1, reachPx = 0, pcL0 = 0, pcL1 = 0, pcR0 = 0, pcR1 = 0, hasR = 1;
       var mx = 0.5, smx = 0.5;
       var verts = new Float32Array(24), px1 = new Uint8Array(4), perf = new Float64Array(60), perfN = 0, perfSkip = 6, perfDone = false;
@@ -11149,7 +11251,7 @@
           '#endif',
           withDeriv ? '#define FW(x) fwidth(x)' : '#define FW(x) uPx',
           'uniform vec2 uRes; uniform float uT; uniform float uU; uniform float uPx; uniform float uCx; uniform float uAmp;',
-          'uniform float uCap; uniform vec2 uFade; uniform vec4 uL; uniform float uGain; uniform vec2 uFl; uniform float uEnd; uniform vec4 uR;',
+          'uniform float uCap; uniform vec2 uFade; uniform vec4 uL; uniform float uGain; uniform vec2 uFl; uniform float uEnd; uniform float uLeftEnd; uniform vec4 uR;',
           'const float TAU = 6.2831853; const float W0 = 0.01308997; const float RC = 0.22;',
           /* rounded box, keeps the winner so its gradient is computed once */
           'void bx(vec2 p, vec2 c, vec2 h, inout float bd, inout vec4 bb){',
@@ -11199,9 +11301,8 @@
           '  float s = ((X - cy) - (Y - yy) * sl) / Ln;',          /* across, + toward the screen centre */
           '  float a = yy;',                                        /* along, + away from the capped end */
           '  float ua = a - uCap;',
-          /* QA1: the right band also closes in a cap at its far end (uEnd), below the header, so it never runs
-             under the header controls; the left band's far end lies past the screen (uEnd is huge there) */
-          '  float ue = (side < 0.5 ? 1e4 : uEnd) - a;',
+          /* Each side closes at its measured far end, including the bottom-left corner piece. */
+          '  float ue = (side < 0.5 ? uLeftEnd : uEnd) - a;',
           '  float sa = ue < ua ? 1.0 : -1.0;',                  /* which cap is nearer: the along-gradient flips */
           '  float uc = min(ua, ue);',
           /* selvedge: one thin rail on the outline of the band, which closes in a rounded cap */
@@ -11290,7 +11391,7 @@
         gl.useProgram(prog);
         buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
         var ap = gl.getAttribLocation(prog, 'aP'); gl.enableVertexAttribArray(ap); gl.vertexAttribPointer(ap, 2, gl.FLOAT, false, 0, 0);
-        var names = ['uRes', 'uT', 'uU', 'uPx', 'uCx', 'uAmp', 'uCap', 'uFade', 'uL', 'uGain', 'uFl', 'uEnd', 'uR'], i;
+        var names = ['uRes', 'uT', 'uU', 'uPx', 'uCx', 'uAmp', 'uCap', 'uFade', 'uL', 'uGain', 'uFl', 'uEnd', 'uLeftEnd', 'uR'], i;
         for (i = 0; i < names.length; i++) loc[names[i]] = gl.getUniformLocation(prog, names[i]);
         gl.disable(gl.BLEND); gl.clearColor(0, 0, 0, 0);
         cleared = false;
@@ -11370,7 +11471,8 @@
           rTop = capR - 1.5 * u; rBot = cssH - cap + 1.5 * u;
           hasR = (cssH - cap) - capR >= Math.max(140, 24 * u) ? 1 : 0;
         }
-        pcL0 = cap - u; pcL1 = cssH; pcR0 = rTop; pcR1 = rBot;
+        leftEndU = mob ? Math.max(capU + 4, (cssH - 16) / u) : endU;
+        pcL0 = cap - u; pcL1 = Math.min(cssH, leftEndU * u + 1.5 * u); pcR0 = rTop; pcR1 = rBot;
         /* left strip: x in [0, strip], y from the cap down; the right strip is its point reflection, cut to its piece */
         quad(0, -1, -1 + sx, -1, 1 - 2 * top);
         if (hasR) quad(12, 1 - sx, 1, 1 - 2 * rBot / cssH, 1 - 2 * Math.max(0, rTop) / cssH);
@@ -11391,7 +11493,7 @@
         var aL = A0 + (smx - 0.5) * 0.22;
         gl.uniform2f(loc.uRes, W, H); gl.uniform1f(loc.uT, tt); gl.uniform1f(loc.uU, uDev); gl.uniform1f(loc.uPx, 1 / uDev);
         gl.uniform1f(loc.uCx, cxU); gl.uniform1f(loc.uAmp, ampU); gl.uniform1f(loc.uCap, capU); gl.uniform2f(loc.uFade, fadeA, fadeB);
-        gl.uniform1f(loc.uEnd, endU); gl.uniform4f(loc.uR, shR, fadeR, gL, gR);
+        gl.uniform1f(loc.uEnd, endU); gl.uniform1f(loc.uLeftEnd, leftEndU); gl.uniform4f(loc.uR, shR, fadeR, gL, gR);
         gl.uniform4f(loc.uL, Math.cos(aL), Math.sin(aL), -Math.cos(aL), -Math.sin(aL)); gl.uniform1f(loc.uGain, g); gl.uniform2f(loc.uFl, flowK, phaseU);
         gl.drawArrays(gl.TRIANGLES, 0, 12);
       }

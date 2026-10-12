@@ -78,16 +78,22 @@ def test_evidence_break_hides_the_fact_and_says_so(scratch):
 
 
 def test_news_shelf_hidden_then_shown(scratch):
-    news = json.load(open(os.path.join(ROOT, "static", "nations", "news.json"), encoding="utf-8"))
-    assert news == {"gathered": None, "items": [], "outlets": [], "shelf": False}
-    hub = open(os.path.join(ROOT, "nations.html"), encoding="utf-8").read()
-    assert "Indigenous-led newsrooms" not in hub and "Koori Mail" not in hub
-    with open(os.path.join(scratch, "data", "news", "flags.json"), "w") as f:
-        json.dump({"shelf_visible": True}, f)
     with open(os.path.join(scratch, "data", "news", "headlines.json"), "w", encoding="utf-8") as f:
         json.dump({"gathered": "12 Oct 2026, 13:41 UTC", "items": [
             {"title": "A headline - with a hyphen", "link": "https://ictnews.org/news/a-story", "outlet": "ICT",
              "date": "2026-10-12", "lang": "en", "region": "us"}]}, f, ensure_ascii=False)
+    # Test both states with the same populated news in a scratch build, independent of the live shelf setting.
+    with open(os.path.join(scratch, "data", "news", "flags.json"), "w") as f:
+        json.dump({"shelf_visible": False}, f)
+    code, out = run(scratch, "tools/nations_build.py")
+    assert code == 0, out[-2000:]
+    news = json.load(open(os.path.join(scratch, "static", "nations", "news.json"), encoding="utf-8"))
+    assert news == {"gathered": None, "items": [], "outlets": [], "shelf": False}
+    hub = open(os.path.join(scratch, "nations.html"), encoding="utf-8").read()
+    assert "Indigenous-led newsrooms" not in hub and "Koori Mail" not in hub
+    assert "A headline - with a hyphen" not in hub
+    with open(os.path.join(scratch, "data", "news", "flags.json"), "w") as f:
+        json.dump({"shelf_visible": True}, f)
     code, out = run(scratch, "tools/nations_build.py")
     assert code == 0, out[-2000:]
     hub = open(os.path.join(scratch, "nations.html"), encoding="utf-8").read()
