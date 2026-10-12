@@ -798,9 +798,10 @@ function drawRing(g, q, S, part) {
 // [walk, patrol, invest, rush, corner, Tn, S, sight, hearX, wakeMin, wakeMax, strike, wait, silence,
 //  rings, w, h, braid, slotSide, slotGreat, playT, lost]
 // Revision 2.1: boards one size up, a third side ring on level 2, investigate faster than your walk on levels 4 and 5.
+// Revision 2.3: a third side ring on level 1 (board 25 x 33), level 2 on 27 x 35, so levels take longer to clear.
 var MPAR = [
-  [3.6, 2.2, 2.9, 4.1, .32, .75, 7, 3.5, 1.00, 9, 11, 9.0, 4.0, 14, 2, 23, 31, .50, 2.5, 2.2, 1.2, .12],
-  [3.8, 2.4, 3.1, 4.4, .30, .68, 7, 3.5, 1.05, 8, 10, 9.3, 3.6, 12, 3, 25, 33, .45, 2.35, 2.1, 1.1, .135],
+  [3.6, 2.2, 2.9, 4.1, .32, .75, 7, 3.5, 1.00, 9, 11, 9.0, 4.0, 14, 3, 25, 33, .50, 2.5, 2.2, 1.2, .12],
+  [3.8, 2.4, 3.1, 4.4, .30, .68, 7, 3.5, 1.05, 8, 10, 9.3, 3.6, 12, 3, 27, 35, .45, 2.35, 2.1, 1.1, .135],
   [4.0, 2.6, 3.4, 4.7, .28, .62, 8, 3.25, 1.10, 7, 9, 9.6, 3.2, 11, 3, 27, 35, .40, 2.2, 1.95, 1.0, .15],
   [4.2, 2.8, 4.5, 5.0, .25, .56, 8, 3.0, 1.15, 6, 8, 9.9, 2.8, 10, 3, 27, 37, .35, 2.05, 1.8, .9, .165],
   [4.4, 3.0, 4.9, 5.3, .22, .50, 9, 3.0, 1.20, 5, 7, 10.2, 2.5, 9, 4, 27, 37, .30, 1.9, 1.7, .8, .18]
@@ -1091,8 +1092,8 @@ function E_new(L) {
     o = R[i];
     if (o.k === 2) { g.post = at(o, 1, 1); g.pm = o.m; continue; }
     var sd = rb() < .5 ? -1 : 1, gr = o.k === 1, vr = gr ? 6 : 4, uc = gr ? 3 : 2, w = (gr ? P[19] : P[18]) * .36;
-    // np: passes to claim a side ring (two on levels 4 and 5); h: passes made
-    var q = { z: o.z, o: o, hz: o.hz, gr: gr, s: sd, w: w, off: 0, ao: 0, open: 1, live: 1, c: 0, sil: 0, sn: 0, h: 0, np: !gr && L > 2 ? 2 : 1,
+    // np: passes to claim a side ring (two on levels 3 to 5); h: passes made
+    var q = { z: o.z, o: o, hz: o.hz, gr: gr, s: sd, w: w, off: 0, ao: 0, open: 1, live: 1, c: 0, sil: 0, sn: 0, h: 0, np: !gr && L > 1 ? 2 : 1,
       a0: o.hz ? o.x0 + vr : o.y0 + vr, lc: o.hz ? o.y0 + uc : o.x0 + uc };
     if (gr) {
       q.per = 1; q.ph = rb();
@@ -1118,7 +1119,7 @@ function E_new(L) {
   for (i = 0; i < g.rings.length; i++) g.rz[g.rings[i].z] = g.rings[i];
   for (i = 1; i < R.length - 1; i++) g.wp.push(R[i].m[1], R[i].m[3]), g.wz.push(R[i].z, R[i].z);
   g.wp.push(g.ent); g.wz.push(0); // the Entry too, so standing still at the start is not a hiding place
-  if (L) E_corr(g, R, L + 1); // from level 2: the longest corridors between courts are watched too
+  if (L) E_corr(g, R, 2 * L + 1); // from level 2: the longest corridors between courts are watched too (3, 5, 7, 9)
   for (i = g.wp.length - 1; i > 0; i--) { j = FLR(g.fr() * (i + 1)); t = g.wp[i]; g.wp[i] = g.wp[j]; g.wp[j] = t; t = g.wz[i]; g.wz[i] = g.wz[j]; g.wz[j] = t; }
   // Dmax for the silence step, and par from a greedy route through every court
   var gm = R[0].m, dm = 0, cur = g.ent, left = [], route = 0;
@@ -1175,7 +1176,9 @@ function E_home(g) {
 function E_reset(g, why) {
   var p, b, F, i, h = E_home(g), d, t, best, bi;
   if (why === 'silence') { for (i = 0; i < g.rings.length; i++) if (!g.rings[i].gr) { g.rings[i].sil = 0; SF[g.rings[i].z] = 1; } g.nsil = 0; g.silT = 3 + g.silS; }
-  if (why === 'caught' && g.fin) g.silT = MAX(g.silT, 3 + .75 * g.silS); // a turn-back in the finale gives the clock back a fair fraction
+  // a turn-back in the finale gives the clock back a fair fraction: at least half the rings voiced again, and 3 s plus
+  // three quarters of a step before the next falls
+  if (why === 'caught' && g.fin) { for (i = g.ord.length >> 1; g.nsil > i;) { b = g.ord[--g.nsil]; b.sil = 0; SF[b.z] = 1; } g.silT = MAX(g.silT, 3 + .75 * g.silS); }
   g.p = p = { x: h % EW, y: h / EW | 0, fx: 0, fy: -1, mk: 0, bst: 0, prot: why ? 3 : 0, cd: 0, hit: 0, still: 9, ax: 0, ay: -1, unm: 0 };
   for (d = 1; d <= 4; d++) { t = nbr(h, [0, 1, 2, 4, 3][d]); if (t >= 0 && (GR[t] & 1)) break; }
   d = [0, 1, 2, 4, 3][d] || 1;
@@ -1318,8 +1321,8 @@ function cbox(b, k, e) {
 }
 
 // ---------- you and the ōlli ----------
-// a hip touch, heard: pats carry farther on later levels, and come at most one per 0.45 s however control flickers
-function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); if (g.time - g.lpT < .45) return; g.lpT = g.time; emit(g, t, 5 + .5 * g.L, 0); b.pk = .15; E_snd(g, 'pat', t); }
+// a hip touch, heard: pats carry 5 to 9 tiles by level, and come at most one per 0.45 s however control flickers
+function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); if (g.time - g.lpT < .45) return; g.lpT = g.time; emit(g, t, 5 + g.L, 0); b.pk = .15; E_snd(g, 'pat', t); }
 function rtile(q) { return q.hz ? q.lc * EW + q.a0 : q.a0 * EW + q.lc; }
 function E_strike(g, ax, ay) {
   var p = g.p, b = g.b, F = g.f, dx = b.x - p.x, dy = b.y - p.y, k, q, d, ex, ey, al, qc, s;
@@ -1371,7 +1374,8 @@ function P_step(g, dt) {
   dx = b.x - p.x; dy = b.y - p.y; d = SQRT(dx * dx + dy * dy) || 1e-6; bs = SQRT(b.vx * b.vx + b.vy * b.vy);
   ctl = d <= .9 && bs <= 1.6 * sp && (m > .2 ? (dx * mx + dy * my) / (d * m) >= -.5 : g.mvT < .2 || (m < .05 && bs <= 2.5));
   if (ctl) {
-    k = m > .2 ? 9 : 4; v = m > .2 ? 1.4 * g.walk : 2; // standing, the ball is eased to the spot, never kicked
+    // the cap stays under the control limit (1.6 x your dribbling speed), so a turn never flings the ball out of control
+    k = m > .2 ? 9 : 4; v = m > .2 ? 1.275 * g.walk * (p.bst > 0 ? 1.4 : 1) : 2; // standing, the ball is eased to the spot, never kicked
     b.vx = vx + (p.x + p.fx * .55 - b.x) * k; b.vy = vy + (p.y + p.fy * .55 - b.y) * k;
     bs = SQRT(b.vx * b.vx + b.vy * b.vy); if (bs > v) { b.vx *= v / bs; b.vy *= v / bs; }
     if (!g.ctl) { g.patT = 0; if (m > .2) E_pat(g); } // a ball eased to a standing player's feet is no hip touch
@@ -1436,7 +1440,7 @@ function E_claim(g, q) {
   if (ZN[tOf(F.x, F.y)] === q.z || (F.n >= 0 && ZN[F.n] === q.z)) { F.free = 1; E_wait(g, F, q.z); }
   if (k === n) E_finale(g);
 }
-// Levels 4 and 5: a side ring takes two passes. The first lights one stone and is heard; the second claims.
+// Levels 3 to 5: a side ring takes two passes. The first lights one stone and is heard; the second claims.
 function E_half(g, q) {
   var rt = rtile(q);
   klight(g, rt, 3); emit(g, rt, 14, 1);
@@ -1448,7 +1452,7 @@ function E_finale(g) {
   g.fin = 1; g.ftm = 0; g.silT = 3 + g.silS; g.nsil = 0; // a 3 s grace, then one ring falls silent every step
   cap(TEXT.greatOpen, 4); say(TEXT.greatOpen); E_snd(g, 'great-open', rt);
   if (!F.st) E_wake(g, F, 0);
-  F.wt = -1;
+  if (F.st !== 8) F.wt = -1; // a face waiting at the court just claimed keeps its way out
 }
 function E_clear(g) {
   var L1 = g.L + 1, rem = g.silT + g.silS * MAX(0, g.ord.length - g.nsil - 1), pts = 2500 * L1 + 20 * RND(rem) + 10 * MAX(0, RND(g.par - g.time)), note = TEXT.letPass;
@@ -1499,6 +1503,8 @@ function E_look(g, F, st, hold, max, out) {
   else for (i = 0; i < 4 && F.ln < max; i++) { d = g.fo[(r + i) & 3]; n = nbr(t0, d); if (n >= 0 && (GR[n] & 1)) F.lb[F.ln++] = d; }
   if (F.ln) F.ft = 2 * F.lb[0] - 2;
 }
+// After searching where it heard (or lost) you, on levels 2 to 5 it looks round 1 or 2 more spots 2 to 3 tiles away.
+function E_poke(g) { var i, n = 0, k; for (i = 0; i < EN; i++) if (DF[i] > 1 && DF[i] < 4 && fpass(i)) n++; k = FLR(g.fr() * n); for (i = 0; i < EN; i++) if (DF[i] > 1 && DF[i] < 4 && fpass(i) && !k--) return i; return -1; }
 function E_search(g, F) { E_look(g, F, 4, .5, 4); E_snd(g, 'face-search', F.t); }
 function E_endChase(g, F) {
   var i;
@@ -1518,10 +1524,10 @@ function hear(g, t, base) {
   if (g.done) return;
   if (!F.st) { if (base >= 10) E_wake(g, F, 0); return; }
   F.lk = t; F.lkT = 0;
-  if (F.step >= 1 || (F.st >= 5 && F.st !== 8)) return;
+  if (F.step >= 1 || F.free || (F.st >= 5 && F.st !== 8)) return; // leaving a court just claimed, it hears nothing until outside
   rd = F.st === 3 && F.hdT >= .5 ? .2 : 0; // a newer sound retargets after a 0.2 s pause, but a stream of sounds cannot freeze it
   F.hd = t; F.hdT = 0;
-  if (g.L !== 2) E_inv(g, F, t, rd);
+  F.sw = (g.L + 1) >> 1; if (g.L !== 2) E_inv(g, F, t, rd);
 }
 function E_wait(g, F, z) {
   var o = g.rooms[z], j, b = -1, bv = 1e9;
@@ -1578,7 +1584,7 @@ function F_step(g, dt) {
   }
   // the eyes: on and off at most twice a second
   if (raw ? !F.sees && F.sT >= .5 : F.sees && F.sT >= .5) {
-    F.sees = raw; F.sT = 0; if (raw) F.eyT = g.time; // when the eyes first showed: contact waits Tn from here
+    F.sees = raw; F.sT = 0; if (raw && !F.hunt) F.eyT = g.time; // when the eyes first showed in this chase: contact waits Tn from here
     if (raw && !(ET & 4)) { ET |= 4; cap(TEXT.law, 3.4); }
   }
   F.raw = raw;
@@ -1595,7 +1601,7 @@ function F_step(g, dt) {
     if (k > F.step) { E_sndD('face-eyes', 'step', k); if (k === 1 && g.time - (F.seeT || -99) >= 8) { F.seeT = g.time; E_say(g, TEXT.sees); } }
     F.step = k;
   }
-  if (raw) F.ls = pt;
+  if (raw && !(F.st === 5 && F.lm)) F.ls = pt; // having lost you in a rush, it commits to where it last saw you (no endless rush on glimpses)
   if (k === 3 && F.st && F.st < 6 && !safe) {
     if (L === 2) { F.hunt = 1; F.huntT = 8; g.unseen = 0; }
     else if (!F.hunt || F.st !== 5) {
@@ -1630,7 +1636,7 @@ function F_step(g, dt) {
         if (r) E_search(g, F);
       } else {
         if (F.f === F.ft && (F.s -= dt) <= 0) {
-          if (++F.li >= F.ln) { if (F.st === 4) E_endChase(g, F); F.st = 1; F.cyc = 0; }
+          if (++F.li >= F.ln) { if (F.st === 4 && F.sw > 0 && (t = E_poke(g)) >= 0) { F.sw--; E_inv(g, F, t, 0); } else { if (F.st === 4) E_endChase(g, F); F.st = 1; F.cyc = 0; } }
           else { F.ft = 2 * F.lb[F.li] - 2; F.s = F.lhd; }
         }
       }
@@ -1641,10 +1647,10 @@ function F_step(g, dt) {
         F.lost = 0; F.nsT = 0; F.rT += dt; if (F.rT >= 4) { F.rT -= 4; F.ramp = MIN(.09, F.ramp + .015); }
         if (F.lm && F.m >= 1) F.lm = 0;
         if (BLK >= 0 && d <= 4) { BLK = -1; F.blkT = 0; g.dtd = 1; }
-      } else { F.lost += dt; F.nsT += dt; F.rT = 0; if (F.nsT >= 3) F.ramp = 0; if (F.lost >= .4 && !F.lm) { F.lm = 1; F.m = MIN(F.m, 2 / 3); } }
+      } else { F.lost += dt; F.nsT += dt; F.rT = 0; if (F.nsT >= 3) F.ramp = 0; if (F.lost >= .4 + .15 * L && !F.lm) { F.lm = 1; F.m = MIN(F.m, 2 / 3); } // it follows you round a corner 0.4 to 1.0 s by level }
       F_go(g, F, F.lm ? F.ls : pt);
       r = fMove(g, F, g.rush * (1 + F.ramp), dt);
-      if (F.lm && r) { E_search(g, F); E_say(g, TEXT.lostYou); snd('face-lost'); }
+      if (F.lm && r) { F.sw = (L + 1) >> 1; E_search(g, F); E_say(g, TEXT.lostYou); snd('face-lost'); }
       break;
     case 6: // play: the ball rests at its chin, then it plays it back toward your side
       if ((F.s -= dt) <= 0) {
@@ -1793,9 +1799,10 @@ function E_step(g, dt) {
   if (g.L === 3) E_slabs(g);
   if (g.fin) {
     g.ftm += dt;
-    // the silence clock holds while it waits at your court, or guards a Great Court mouth (within 2 tiles of one)
+    // the silence clock holds while it waits at your court, guards a Great Court mouth (within 2 tiles of one), or is
+    // within 5 path tiles of you (the brackets fully closed): the Stone Face, not the clock, is the threat then
     b = tOf(F.x, F.y); q = g.gc.o.m;
-    g.silH = (F.st === 8 && F.wz === ZN[g.pt] && SF[ZN[g.pt]]) || cheb(b, q[1]) <= 2 || cheb(b, q[3]) <= 2 ? 1 : 0;
+    g.silH = (F.st === 8 && F.wz === ZN[g.pt] && SF[ZN[g.pt]]) || cheb(b, q[1]) <= 2 || cheb(b, q[3]) <= 2 || g.band > 3 ? 1 : 0;
     if (!g.silH && (g.silT -= dt) <= 0) {
       for (i = 0; i < g.ord.length; i++) if (!g.ord[i].sil) break;
       q = g.ord[i]; q.sil = 1; SF[q.z] = 0; g.nsil++; g.silT = g.silS; g.dtd = 1; g.vd = 1;
