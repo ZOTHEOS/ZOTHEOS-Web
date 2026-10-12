@@ -28,10 +28,11 @@
   --ink-3: #8FA5B5;
   --ink-4: #6E8294;
   --ink-5: #3F5566;
-  --cochineal: #DEBF79;
-  --gold-shadow: #C19A56;
-  --gold-highlight: #F3DCAC;
-  --gold-gradient: linear-gradient(105deg, var(--gold-shadow) 0%, var(--cochineal) 25%, var(--gold-highlight) 50%, var(--cochineal) 75%, var(--gold-shadow) 100%);
+  --cochineal: #B4873C;
+  --gold-shadow: #9D6D31;
+  --gold-highlight: #F1DFB4;
+  --gold-mid: #CDA45E;
+  --gold-gradient: linear-gradient(112deg, var(--gold-shadow) 0%, var(--cochineal) 18%, var(--gold-highlight) 24%, var(--cochineal) 30%, var(--gold-shadow) 43%, var(--gold-mid) 60%, var(--gold-highlight) 66%, var(--cochineal) 73%, var(--gold-shadow) 86%, var(--gold-shadow) 100%);
   --rule: rgba(244, 236, 216, 0.16);
   --rule-soft: rgba(244, 236, 216, 0.08);
   --surface: rgba(244, 236, 216, 0.04);
