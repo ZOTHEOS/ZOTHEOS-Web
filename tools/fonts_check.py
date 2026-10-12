@@ -6,7 +6,11 @@ Usage (stdlib only):  python tools/fonts_check.py [--root DIR]      exit 1 on an
                       python tools/fonts_check.py --record          add new font files to tools/fonts.sha256
 
 Checked:
-  - index.html and download.html each carry exactly one <style id="zth-fonts"> block, and the two are identical
+  - index.html, download.html and every built nations page (nations.html, nations/**/*.html) each carry exactly one
+    <style id="zth-fonts"> block, and the blocks are identical
+  - every nations page also carries exactly one <style id="zth-fonts-names"> block (fallback faces for letters the
+    brand faces lack): identical across nations pages, absent from index.html and download.html, each face with
+    font-display block or swap; a font file counts as used when either block names it
   - every url(...) in that block, and the <link rel="preload" as="font"> href, points at a file under static/fonts/
   - the preloaded file is one the block actually uses, and the preload carries crossorigin (fonts are CORS fetches)
   - every .woff2 in static/fonts/ is named by the block (an orphan would still be published and cached for a year)
@@ -22,6 +26,7 @@ Checked:
 See docs/FONTS.md for how to add or update a face.
 """
 import argparse
+import glob
 import hashlib
 import json
 import os
@@ -30,6 +35,8 @@ import sys
 
 PAGES = ("index.html", "download.html")
 BLOCK_RE = re.compile(r'<style id="zth-fonts">(.*?)</style>', re.S)
+NAMES_RE = re.compile(r'<style id="zth-fonts-names">(.*?)</style>', re.S)
+DISPLAY_RE = re.compile(r"font-display:\s*([\w-]+)")
 URL_RE = re.compile(r"url\(\s*['\"]?([^'\")]+)['\"]?\s*\)")
 PRELOAD_RE = re.compile(r'<link\b[^>]*\brel="preload"[^>]*\bas="font"[^>]*>', re.I)
 META_RE = re.compile(r'<meta\b[^>]*http-equiv="Content-Security-Policy"[^>]*\bcontent="([^"]*)"', re.I)
@@ -90,13 +97,23 @@ def check_manifest(root, files, record):
     return bad
 
 
+def nations_pages(root):
+    """Built nations pages, relative to root (none in a checkout without a nations build)."""
+    out = ["nations.html"] if os.path.isfile(os.path.join(root, "nations.html")) else []
+    out += sorted(os.path.relpath(p, root).replace(os.sep, "/")
+                  for p in glob.glob(os.path.join(root, "nations", "**", "*.html"), recursive=True))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--root", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ap.add_argument("--record", action="store_true", help="add new font files to tools/fonts.sha256")
     args = ap.parse_args()
     root = args.root
-    bad, blocks = [], {}
+    bad, blocks, names_blocks = [], {}, {}
+    npages = nations_pages(root)
+    seen_names = set()
 
     def local(href, where):
         if not href.startswith("/static/fonts/"):
@@ -105,7 +122,7 @@ def main():
         if not os.path.isfile(os.path.join(root, href.lstrip("/"))):
             bad.append(f"{where}: {href} does not exist")
 
-    for page in PAGES:
+    for page in list(PAGES) + npages:
         p = os.path.join(root, page)
         if not os.path.isfile(p):
             bad.append(f"{page}: missing")
@@ -120,14 +137,42 @@ def main():
         urls = URL_RE.findall(block)
         if not urls:
             bad.append(f"{page}: the font block names no files")
-        for u in urls:
-            local(u, page)
+        if block not in seen_names:
+            for u in urls:
+                local(u, page)
+        nfound = NAMES_RE.findall(html)
+        if page in PAGES:
+            if nfound:
+                bad.append(f"{page}: carries a zth-fonts-names block, which belongs to the nations pages only")
+        elif len(nfound) != 1:
+            bad.append(f"{page}: expected one <style id=\"zth-fonts-names\"> block, found {len(nfound)}")
+        else:
+            nb = nfound[0]
+            names_blocks[page] = nb
+            nurls = URL_RE.findall(nb)
+            if nb not in seen_names:
+                if not nurls:
+                    bad.append(f"{page}: the names font block names no files")
+                for u in nurls:
+                    local(u, f"{page} names block")
+                    if not u.endswith(".woff2"):
+                        bad.append(f"{page}: names block file {u} is not .woff2")
+                shows = DISPLAY_RE.findall(nb)
+                for disp in shows:
+                    if disp not in ("block", "swap"):
+                        bad.append(f"{page}: names block uses font-display {disp} (block or swap only)")
+                if len(shows) != nb.count("@font-face"):
+                    bad.append(f"{page}: every face in the names block needs a font-display")
+            urls = urls + nurls
+        seen_names.add(block)
+        if nfound:
+            seen_names.add(nfound[0])
         for tag in PRELOAD_RE.findall(html):
             href = re.search(r'\bhref="([^"]+)"', tag)
             href = href.group(1) if href else ""
             local(href, f"{page} preload")
             if href not in urls:
-                bad.append(f"{page}: preload {href} is not used by the font block (a wasted download)")
+                bad.append(f"{page}: preload {href} is not used by a font block on this page (a wasted download)")
             if not re.search(r"\bcrossorigin\b", tag):
                 bad.append(f"{page}: font preload {href} lacks crossorigin, so the browser fetches it twice")
         for host in THIRD_PARTY:
@@ -140,17 +185,20 @@ def main():
             bad.append(f"{page}: meta CSP font-src must be exactly 'self'")
 
     if len(set(blocks.values())) > 1:
-        bad.append("index.html and download.html font blocks differ; copy one block to both pages")
+        odd = sorted(p for p, b in blocks.items() if b != blocks.get("index.html"))
+        bad.append("zth-fonts blocks differ from index.html on: " + ", ".join(odd[:5]) + (" ..." if len(odd) > 5 else ""))
+    if len(set(names_blocks.values())) > 1:
+        bad.append("zth-fonts-names blocks differ across nations pages; rebuild with tools/nations_build.py")
 
     fonts_dir = os.path.join(root, "static", "fonts")
     if not os.path.isfile(os.path.join(fonts_dir, "OFL.txt")):
         bad.append("static/fonts/OFL.txt is missing (the licence must travel with the fonts)")
 
     files = sorted(f for f in os.listdir(fonts_dir) if f.lower().endswith(".woff2")) if os.path.isdir(fonts_dir) else []
-    used = {os.path.basename(u) for b in blocks.values() for u in URL_RE.findall(b)}
+    used = {os.path.basename(u) for b in list(blocks.values()) + list(names_blocks.values()) for u in URL_RE.findall(b)}
     for f in files:
         if f not in used:
-            bad.append(f"static/fonts/{f} is not named in the zth-fonts block; delete it or use it")
+            bad.append(f"static/fonts/{f} is not named in the zth-fonts or zth-fonts-names block; delete it or use it")
     bad.extend(check_manifest(root, files, args.record))
 
     vp = os.path.join(root, "vercel.json")
@@ -176,7 +224,9 @@ def main():
     for b in bad:
         print("FONTS " + b)
     n = len(URL_RE.findall(next(iter(blocks.values()), "")))
-    print(f"fonts_check: {'FAIL' if bad else 'ok'} ({n} faces, {len(files)} files, {len(blocks)} pages)")
+    nn = len(URL_RE.findall(next(iter(names_blocks.values()), "")))
+    print(f"fonts_check: {'FAIL' if bad else 'ok'} ({n} brand faces, {nn} names faces, {len(files)} files, "
+          f"{len(blocks)} pages)")
     return 1 if bad else 0
 
 

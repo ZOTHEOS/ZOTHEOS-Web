@@ -1,0 +1,23 @@
+<style id="zth-fonts-names">
+    @font-face { font-family: 'ZN Serif'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 111.1%;
+      src: url(/static/fonts/zn-serif.d8d3ab76.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Sans'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-sans.4b953325.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03E1, U+03F0-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Mono'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 104.1%;
+      src: url(/static/fonts/zn-mono.066025d7.woff2) format('woff2');
+      unicode-range: U+02BB; }
+    @font-face { font-family: 'ZN Cherokee'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.3%;
+      src: url(/static/fonts/zn-cherokee.4a768fc6.woff2) format('woff2');
+      unicode-range: U+13A0-13F5, U+13F8-13FD, U+AB70-ABBF; }
+    @font-face { font-family: 'ZN Syllabics'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 105.2%;
+      src: url(/static/fonts/zn-syllabics.841c0d05.woff2) format('woff2');
+      unicode-range: U+1400-167F, U+18B0-18F5; }
+    @font-face { font-family: 'ZN Devanagari'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-devanagari.82b61ca2.woff2) format('woff2');
+      unicode-range: U+0900-097F, U+200C-200D, U+25CC, U+A8E0-A8FF; }
+    @font-face { font-family: 'ZN Tifinagh'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
+      unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
+  </style>

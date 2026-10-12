@@ -1,0 +1,68 @@
+{
+  "note": "Vendored font sources for tools/nations_fonts.py. Never deployed (.vercelignore drops tools/). nations_fonts.py refuses a file whose hash differs from this record. Downloading the official Noto Serif and Noto Sans Mono releases needs the owner; when they are added, record them here and point FACES in nations_fonts.py at them.",
+  "files": {
+    "tinos/Tinos-Regular.ttf": {
+      "family": "Tinos",
+      "version": "Version 1.33; ttfautohint (v1.8.2)",
+      "copyright": "Copyright 2010 Google Inc. All Rights Reserved.",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache (%LOCALAPPDATA%/camoufox/camoufox/Cache/fonts), Tinos 1.33 from the ChromeOS core fonts; stands in for Noto Serif, which is not on this machine",
+      "sha256": "cf264a22292950ca1679b2ade07e9e6ecb26c649ab70975d0e113f979efa827a",
+      "bytes": 535480
+    },
+    "cousine/Cousine-Regular.ttf": {
+      "family": "Cousine",
+      "version": "Version 1.23; ttfautohint (v1.8.2)",
+      "copyright": "Copyright 2010 Google Inc. All Rights Reserved.",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache, Cousine 1.23 from the ChromeOS core fonts; stands in for Noto Sans Mono, which is not on this machine",
+      "sha256": "829e776e4929eb6467838b92c7b700085fac2073801e6b54b224661affb34688",
+      "bytes": 296800
+    },
+    "noto-sans/NotoSans-Regular.ttf": {
+      "family": "Noto Sans",
+      "version": "Version 2.007",
+      "copyright": "Copyright 2015-2021 Google LLC. All Rights Reserved.",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "Noto Sans 2.007 static Regular, as bundled with CapCut (%LOCALAPPDATA%/CapCut/User Data/Resources/Font/SystemFont)",
+      "sha256": "2ec33f84606cbaa0a1a944488e14f97faf2f6a25ecdd8354f5358f06da13c7d9",
+      "bytes": 556216
+    },
+    "noto-sans-cherokee/NotoSansCherokee-Regular.ttf": {
+      "family": "Noto Sans Cherokee",
+      "version": "Version 2.001; ttfautohint (v1.8.4.7-5d5b)",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/cherokee)",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache, Noto Sans Cherokee 2.001",
+      "sha256": "c052352137ae8d283840a0e2991a675d47859d8fdbae5726d373d4f0d97a8c87",
+      "bytes": 94732
+    },
+    "noto-sans-canadian-aboriginal/NotoSansCanadianAboriginal-Regular.ttf": {
+      "family": "Noto Sans Canadian Aboriginal",
+      "version": "Version 2.003; ttfautohint (v1.8.4.7-5d5b)",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/canadian-aboriginal)",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache, Noto Sans Canadian Aboriginal 2.003",
+      "sha256": "0d188756c9c282bf31738af5373f2363cc8007bbbc8d5560fae5821ed4937611",
+      "bytes": 114300
+    },
+    "noto-sans-devanagari/NotoSansDevanagari-Regular.ttf": {
+      "family": "Noto Sans Devanagari",
+      "version": "Version 2.004; ttfautohint (v1.8.4.7-5d5b)",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/devanagari)",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache, Noto Sans Devanagari 2.004",
+      "sha256": "dc0eb899c5852c819bfb30482e6f2ee1e44a4c8cd28f6622a2d4561bf1e3e444",
+      "bytes": 234540
+    },
+    "noto-sans-tifinagh/NotoSansTifinagh-Regular.ttf": {
+      "family": "Noto Sans Tifinagh",
+      "version": "Version 2.006; ttfautohint (v1.8.4.7-5d5b)",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)",
+      "license": "SIL Open Font License 1.1 (name ID 13)",
+      "obtained_from": "camoufox font cache, Noto Sans Tifinagh 2.006",
+      "sha256": "8058054786bc572007193988654d1ded342bc2538c2d91c50d1a7238ea1a99cc",
+      "bytes": 79376
+    }
+  }
+}
