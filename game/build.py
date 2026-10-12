@@ -35,6 +35,7 @@ assert '—' not in html and '–' not in html, 'em or en dash in output'
 # The game loads only when a visitor opens it, so the budget was re-baselined from 72 000 / 90 000.
 if not dev and len(mjs.encode()) > 100000: sys.exit('minified js is %d bytes, over the 100 000 byte ceiling' % len(mjs.encode()))
 if not dev and len(mjs.encode()) > 92000: print('WARNING: minified js is %d bytes, over the 92 000 byte budget' % len(mjs.encode()))
-open(os.path.join(here, 'index.dev.html' if dev else 'index.html'), 'w', encoding='utf-8').write(html)
+# LF on every platform: the committed file is LF, and a Windows build must not rewrite every line.
+open(os.path.join(here, 'index.dev.html' if dev else 'index.html'), 'w', encoding='utf-8', newline='\n').write(html)
 print('js %d bytes (gz %d), page css %d, file %d, ES5 ok' % (len(mjs.encode()), len(gzip.compress(mjs.encode())), len(css), len(html.encode())))
 print("overlay css %d bytes; for a strict CSP without opts.nonce allow: style-src 'sha256-%s'" % (len(css_rt.encode('utf-8')), csp))

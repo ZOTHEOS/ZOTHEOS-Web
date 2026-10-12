@@ -122,7 +122,7 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}#zg .dot.half{background:linear-gradient(90deg,#fff 50%,#000 50%)}' +
   '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
   '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
-  '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan>:last-child{margin-bottom:auto}#zg .solid{background:#000}' +
+  '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan>:last-child{margin-bottom:auto}#zg .solid{background:#000}#zg .map>:last-child{margin-bottom:0}' +
   '#zg h1,#zg h2{margin:0;font:inherit;font-weight:300;color:#fff;text-transform:uppercase;letter-spacing:.24em}' +
   '#zg h1{font-size:clamp(28px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}' +
   '#zg p{margin:0;max-width:30em;font-size:16px;line-height:1.5;color:#fff}#zg .sub{color:#b8b8b8}' +
@@ -167,7 +167,7 @@ function num(n) { return String(RND(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
 function mmq(q) { try { return window.matchMedia(q).matches; } catch (e) { return false; } }
 function store(k, v) { try { if (v === undefined) return +localStorage.getItem(k) || 0; localStorage.setItem(k, v); } catch (e) {} return 0; }
 
-var API = window.ZTH_GAME = { version: '2.1.0', onClose: null, onSound: null };
+var API = window.ZTH_GAME = { version: '2.2.0', onClose: null, onSound: null };
 var root, sty, cv, ctx, E = {}, W, H, DPR, raf = 0, last = 0, acc = 0, ls = [], opts = {}, rzT = 0, capT = 0, IN = [], SC = {};
 var scr = '', mode = 'drop', lastM = '', calm = false, assist = false, RM = false, coarse = false, court = 'today', runSeed = 0, G = null, beat = null, told = 0, ET = 0;
 var inp = { l: 0, r: 0, u: 0, d: 0, sb: 0, pt: 0, st: 0, sx: 0, sy: 0, sox: 0, soy: 0, md: 0, mdT: 0, mw: 0, ph: 0, px: 0, py: 0, sa: 0, sax: 0, say: 0 }, ptrs = {};
@@ -250,7 +250,7 @@ function syncT() {
 }
 function panel(p) {
   scr = p;
-  E.Ti.hidden = p !== 'title'; E.Pp.hidden = p !== 'pause'; E.Rp.hidden = p !== 'result'; E.Ap.hidden = p !== 'about'; E.Np.hidden = p !== 'card';
+  E.Ti.hidden = p !== 'title'; E.Pp.hidden = p !== 'pause'; E.Pp.className = 'pan solid'; E.Rp.hidden = p !== 'result'; E.Ap.hidden = p !== 'about'; E.Np.hidden = p !== 'card';
   E.Hud.hidden = !(p === 'play' || p === 'pause'); E.Pa.hidden = p !== 'play';
   syncT();
   if (p === 'title') herald(0, 0); else { clearTimeout(natT); clearTimeout(natF); }
@@ -413,7 +413,7 @@ function level(L) {
   beat = null; acc = 0;
 }
 function restartLevel() { if (!G) return; level(G.L); panel('play'); }
-function pause() { if (scr !== 'play') return; panel('pause'); E.Ps.textContent = TEXT.score + ' ' + num(G.score) + '. ' + TEXT.code + ' ' + pretty(runSeed) + '.' + (mode === 'echo' ? ' ' + TEXT.echoLv[G.L] + '. ' + TEXT.temper[G.tp] : ''); snd('pause'); inp0(); }
+function pause() { if (scr !== 'play') return; cap(''); panel('pause'); E.Ps.textContent = TEXT.score + ' ' + num(G.score) + '. ' + TEXT.code + ' ' + pretty(runSeed) + '.' + (mode === 'echo' ? ' ' + TEXT.echoLv[G.L] + '. ' + TEXT.temper[G.tp] : ''); snd('pause'); inp0(); }
 function resume() { if (scr !== 'pause') return; panel('play'); snd('resume'); }
 function fail(msg) {
   if (mode === 'drop') snd('ring-miss');
@@ -495,7 +495,7 @@ function resize() {
   kick();
 }
 
-// ---------- drawing primitives (device pixels, snapped) ----------
+// ---------- drawing primitives (device pixels, snapped; joins stay the canvas default, miter) ----------
 var LW = 2, OF = 0, MX = 0, MY = 0, MS = 1, BG = null, BGr = -1;
 function prim() { LW = MAX(1, RND(1.4 * DPR)); OF = (LW % 2) * 0.5; }
 function sn(v) { return RND(v) + OF; }
@@ -508,14 +508,14 @@ function path(p, m) {
 // A carved groove: two parallel lines around a black channel, the band's double-line language.
 function groove(list, hw, ml) {
   hw = MAX(2, RND(hw));
-  ctx.lineJoin = 'miter'; ctx.lineCap = 'square';
+  ctx.lineCap = 'square';
   for (var k = 0; k < 2; k++) {
     ctx.strokeStyle = k ? '#000' : '#e6e6e6'; ctx.lineWidth = 2 * hw + (k ? -LW : LW);
     for (var i = 0; i < list.length; i++) { path(list[i]); ctx.stroke(); }
     if (ml) for (i = 0; i < ml.length; i++) { var y = MY + ml[i].ry * MS; if (y > -90 && y < cv.height + 90) { path(ml[i], 1); ctx.stroke(); } }
   }
 }
-function line(p, c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.lineJoin = 'miter'; ctx.lineCap = 'butt'; path(p); ctx.stroke(); }
+function line(p, c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.lineCap = 'butt'; path(p); ctx.stroke(); }
 function motif(x, y, u, fx, fy, rot) {
   var o = [], g = FRET.grid;
   for (var i = 0; i < FRET.pts.length; i++) {
@@ -556,6 +556,7 @@ function draw() {
   ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height);
   if (scr === 'play' && G) G.draw();
   else if (scr === 'title') titleArt();
+  else if (scr === 'pause' && mode === 'echo' && G && G.T) E_map(G);
 }
 function titleArt() {
   var u = MAX(4, RND(MIN(W, H) * DPR / 120)), x0 = RND(14 * DPR), x1 = cv.width - x0 - 6 * u;
@@ -868,7 +869,6 @@ function fits(o, R, gap) {
   return true;
 }
 function spots(o, R, gap, ok) { var L = [], x, y; for (y = 3; y + o.fh <= EH - 3; y += 2) for (x = 3; x + o.fw <= EW - 3; x += 2) { o.x0 = x; o.y0 = y; if (fits(o, R, gap) && (!ok || ok(o))) L.push(x, y); } return L; }
-function outs(q, t) { return at(q, 2, -2) === t || at(q, 2, 10) === t; }
 function at(o, u, v) { return o.hz ? (o.y0 + u) * EW + o.x0 + v : (o.y0 + v) * EW + o.x0 + u; }
 function cfloor(o, u, v) { return o.k === 0 ? v <= 1 || v >= 7 || (u >= 1 && u <= 3) : o.k === 1 ? v <= 2 || v >= 10 || (u >= 2 && u <= 4) : 1; }
 function E_gen(g, L, lsd) {
@@ -1823,10 +1823,10 @@ var FACE = {
   outline: [-.40, -.50, .40, -.50, .46, -.44, .46, -.20, .53, -.20, .53, .08, .46, .08, .43, .18, .30, .42, .17, .50, -.17, .50, -.30, .42, -.43, .18, -.46, .08, -.53, .08, -.53, -.20, -.46, -.20, -.46, -.44],
   ear: [.495, -.06], earR: .02,
   band: { y0: -.46, y1: -.27, x0: -.38, x1: .38, units: 4 },
-  brow: [-.235, -.215],
-  eye: { inner: [.08, -.09], outer: [.30, -.115], up: [.19, -.19], lo: [.19, -.04], rim: 1.18, pr: [.034, .030, .024, .018], pdx: .055, pdy: .018 },
+  brow: [-.24, -.205],
+  eye: { inner: [.07, -.085], outer: [.31, -.12], up: [.19, -.165], lo: [.19, -.02], rim: 1.18, pr: [.05, .042, .032, .023], pdx: .05, pdy: .012 },
   nose: [-.035, -.21, -.05, .08, -.10, .12, -.06, .14, .06, .14, .10, .12, .05, .08, .035, -.21],
-  mouth: { x0: -.15, x1: .15, up: .245, lo: .295, loOpen: .33, teeth: 11, tw: .018, th: .02 },
+  mouth: { x0: -.15, x1: .15, up: .245, lo: .29, loOpen: .345, teeth: 7, tw: .026, th: .032 },
   tess: { cell: .11, jit: .02, yTop: -.04 },
   inset: .04
 };
@@ -1845,20 +1845,40 @@ function E_mosaic(r, lost) {
   }
   return new Float32Array(S);
 }
+// Revision 2.2: a close follow view. The short side of the view holds about 8 tiles on a landscape screen and 7 on a
+// portrait phone, the long side caps it (13 and 12), and the tile is a whole number of device pixels. The Stone Face is
+// one tile wide (about 110 px on a 1600 x 993 window), your hip yoke 0.18 tile in radius, the ōlli 0.12.
+var LEADK = [1, 1, .8, .5, .3];
 function E_lay(g) {
-  var port = H > W, top = 52, cs, vw, vh, T, gut;
-  T = clamp(RND(MIN(W - 32, H - top - (port ? 84 : 0)) / 15), 24, 52);
-  vw = MIN(W - 32, 25 * T); gut = (W - vw) / 2;
-  cs = port ? 84 : gut >= 140 ? 0 : 44; vh = H - top - cs;
-  g.T = T * DPR; g.vw = RND(vw * DPR); g.vh = RND(vh * DPR); g.vx = RND(gut * DPR); g.vy = RND((top + (!port && cs ? cs : 0)) * DPR);
-  // captions never cover the labyrinth: under it on portrait, in the left gutter when wide, else a strip under the HUD
-  g.cg = !port && !cs;
-  if (port) capAt(16, 16, top + vh + 4); else if (g.cg) capAt(12, W - gut + 12, top + 12); else capAt(16, 16, top);
-  g.DS = [4 * DPR, 4 * DPR]; g.DD = [2 * DPR, 3 * DPR]; g.D0 = []; g.cmx = null;
+  var port = H > W, top = 52, u = MAX(3, RND(MIN(W, H) * DPR / 125)), gut = port || W < 700 ? 16 : MAX(16, CEIL(9.5 * u / DPR)), cs = port ? 84 : 44, vw = W - 2 * gut, vh = H - top - cs,
+    T = RND(clamp((port ? MIN(vw / 7, vh / 12) : MIN(vh / 8, vw / 13)) * DPR, 24 * DPR, 150 * DPR));
+  // captions never cover the labyrinth: a strip under it on portrait, under the HUD otherwise
+  g.T = T; g.u = u; g.vw = RND(vw * DPR); g.vh = RND(vh * DPR); g.vx = RND(gut * DPR); g.vy = RND((top + (port ? 0 : cs)) * DPR);
+  capAt(16, 16, port ? top + vh + 4 : top);
+  // device pixels: the Stone Face, your yoke, the ōlli, one terror stair, an edge marker, the carved line
+  g.fw = T; g.yr = RND(MAX(.18 * T, 11 * DPR)); g.br = RND(MAX(.12 * T, 6 * DPR));
+  g.bs = RND(MIN(g.vw, g.vh) * .055); g.ms = RND(clamp(T / 9, 6 * DPR, 10 * DPR)); g.lw = MAX(RND(1.4 * DPR), RND(T / 70));
+  g.DS = [4 * DPR, 4 * DPR]; g.DD = [2 * DPR, 3 * DPR]; g.D0 = []; g.cpx = 1e9; // the camera snaps on its next frame
   if (!g.al) g.al = new Float64Array(7); // the aim line's points, allocated once per level
 }
+// The follow camera (render only): a dead zone round the view centre and a lead in the way you move, eased by real time.
+// The lead shrinks as the terror brackets close, so what hunts you stays in view behind you. The offset is whole device
+// pixels: every line keeps its pixel row from one frame to the next.
+function E_cam(g) {
+  var p = g.p, T = g.T, w = g.vw / T, h = g.vh / T, dt = MIN(.1, (last - g.ct) / 1e3), mx = p.x - g.cpx, my = p.y - g.cpy, m = SQRT(mx * mx + my * my), lk = RM ? 0 : LEADK[g.band], k;
+  g.ct = last;
+  if (!(m < 2)) { g.lx = g.ly = 0; g.ccx = p.x; g.ccy = p.y; dt = 0; } // a new level or a turn back: no pan across the board
+  else if (dt && m > .5 * dt) { k = 1 - Math.exp(-dt / .35); g.lx += (mx / m * MIN(1.6, .16 * w) - g.lx) * k; g.ly += (my / m * MIN(1.6, .16 * h) - g.ly) * k; }
+  g.cpx = p.x; g.cpy = p.y; k = dt ? 1 - Math.exp(-dt / .12) : 1;
+  // on touch portrait you sit above the centre, clear of the thumbs
+  g.ccx = cam1(g.ccx, p.x + g.lx * lk, k, w, EW); g.ccy = cam1(g.ccy, p.y + g.ly * lk + (coarse && H > W ? .08 * h : 0), k, h, EH);
+  g.cmx = g.ccx - w / 2; g.cmy = g.ccy - h / 2;
+}
+// one axis of a view v tiles long: the centre c follows the focus f out of a dead zone 0.07 v either side (eased by k),
+// clamped to a board of n tiles plus one
+function cam1(c, f, k, v, n) { var d = .07 * v; c += ((f > c + d ? f - d : f < c - d ? f + d : c) - c) * k; return v >= n + 2 ? (n - 1) / 2 : clamp(c, v / 2 - 1.5, n + .5 - v / 2); }
 // render state for this frame, and short path helpers (device pixels, snapped)
-var OX = 0, OY = 0, TT = 1, VS = 0, NN = 0, FX = 0, FY = 0, FW = 1, FS = 1;
+var OX = 0, OY = 0, TT = 1, LZ = 1, VS = 0, NN = 0, FX = 0, FY = 0, FW = 1, FS = 1;
 function seen(t) { return VIS[t] === VS || LIT[t] >= NN; }
 function X_(x) { return OX + x * TT; }
 function Y_(y) { return OY + y * TT; }
@@ -1894,7 +1914,7 @@ function E_walls(k, i0, i1, j0, j1) {
     }
     if (!any && a === k && (!i || GR[t - 1] & 1) && (!j || GR[t - EW] & 1)) wseg(i - .05, j, i + .05, j);
   }
-  if (k > 1) { k = MAX(2, RND(TT * .2)); ctx.lineJoin = 'miter'; ctx.lineCap = 'square'; sk(INK.s, 2 * k + LW); sk('#000', 2 * k - LW); }
+  if (k > 1) { k = MAX(2, RND(TT * .35)); ctx.lineCap = 'square'; sk(INK.s, 2 * k + LZ); sk('#000', 2 * k - LZ); }
   else { ctx.lineCap = 'butt'; sk(INK.m); }
 }
 // a mark across the edge between tile t and its neighbour in direction k: a line, or two hollow ticks
@@ -1940,7 +1960,7 @@ function E_aim(g) {
 }
 // you: a black head inside the white hip yoke opening toward your facing; marked, a gap; protected, an outline
 function E_you(g) {
-  var p = g.p, x = X_(p.x), y = Y_(p.y), a = Math.atan2(p.fy, p.fx), r = .28 * TT, w = MAX(2, RND(2 * DPR)), k;
+  var p = g.p, x = X_(p.x), y = Y_(p.y), a = Math.atan2(p.fy, p.fx), r = g.yr, w = MAX(2, RND(2 * DPR), RND(r * .13)), k;
   ctx.lineCap = 'butt';
   for (k = p.prot > 0 ? 0 : 1; k < 2; k++) {
     bp();
@@ -1948,7 +1968,7 @@ function E_you(g) {
     else ctx.arc(x, y, r, a + .9, a + 5.38);
     sk(p.prot > 0 && k ? '#000' : INK.w, p.prot > 0 ? (k ? w * .8 : w * 2.6) : w * 1.6);
   }
-  bp(); circ(RND(x), RND(y), .16 * TT); ctx.fillStyle = '#000'; ctx.fill(); sk(INK.w);
+  bp(); circ(RND(x), RND(y), .57 * r); ctx.fillStyle = '#000'; ctx.fill(); sk(INK.w, MAX(LW, RND(w * .6)));
   if (p.hit > 0) { bp(); k = Math.atan2(p.hy, p.hx); ctx.arc(x, y, r * 1.55, k - .6, k + .6); sk(INK.w); }
   if (p.miss > 0) { bp(); ctx.arc(x, y, r * 1.4, a + 2.4, a + 3.9); sk(INK.m); }
 }
@@ -1972,14 +1992,25 @@ function E_eyes(st, ux, uy, glint) {
     px = FX + m * (e.inner[0] + e.outer[0]) / 2 * FS * FW + ux * e.pdx * k * FW; py = FY + (e.inner[1] + e.outer[1]) / 2 * FW + uy * e.pdy * k * FW;
     bp(); circ(px, py, MAX(1.5, r)); ctx.fillStyle = '#000'; ctx.fill();
     ctx.restore();
-    if (glint) { q = MAX(2, RND(.014 * FW)); ctx.fillStyle = INK.w; ctx.fillRect(RND(px - .35 * r - q / 2), RND(py - .35 * r - q / 2), q, q); }
+    if (glint) { q = MAX(1, RND(MIN(.018 * FW, .45 * r))); ctx.fillStyle = INK.w; ctx.fillRect(RND(px - .35 * r - q / 2), RND(py - .35 * r - q / 2), q, q); }
   }
 }
-function E_lids() { var e = FACE.eye; bp(); for (var m = -1; m <= 1; m += 2) fline(m * e.inner[0], e.inner[1], m * e.outer[0], e.outer[1]); sk(INK.s); }
+// Its eyes through the dark: the brightest mark on the screen, each shell in a hard white rim (an inlay's edge, never a
+// glow). Beyond the view they stand just inside its edge, toward the Stone Face: if you can see its eyes, it can see you.
+function E_dark(g, x, y, W, st, ux, uy) {
+  var e = FACE.eye, a = .4 * W + g.ms, b = .13 * W + g.ms; // the half extents of the pair at 1.3 times, plus a margin
+  x = clamp(x, g.vx + a, g.vx + g.vw - a); y = clamp(y - .1 * W, g.vy + b, g.vy + g.vh - b) + .13 * W;
+  FX = x; FY = y; FW = 1.3 * W; FS = 1;
+  bp(); almond(-1, e.rim); almond(1, e.rim); sk(INK.w, 2 * g.lw);
+  E_eyes(st, ux, uy, 0);
+}
+function E_lids() { var e = FACE.eye; bp(); for (var m = -1; m <= 1; m += 2) fline(m * e.inner[0], e.inner[1], m * e.outer[0], e.outer[1]); sk(INK.s, MAX(LW, RND(FW / 60))); }
 // the brow: the game's own step-fret, four units meeting above the nose, over two straight rules
 function E_band(detail) {
   var b = FACE.band, i, j, u, x, a, k, n = b.units;
-  bp(); fline(b.x0, b.y0, b.x1, b.y0); fline(b.x0, b.y1, b.x1, b.y1); fline(-.40, FACE.brow[0], .40, FACE.brow[0]); fline(-.40, FACE.brow[1], .40, FACE.brow[1]);
+  // the brow ledge: one solid carved bar, heavy over the eyes
+  ctx.fillStyle = INK.s; i = fx(-.40) - OF; j = fy(FACE.brow[0]) - OF; ctx.fillRect(i, j, fx(.40) - OF - i, fy(FACE.brow[1]) - OF - j);
+  bp(); fline(b.x0, b.y0, b.x1, b.y0); fline(b.x0, b.y1, b.x1, b.y1);
   if (detail && n) {
     u = (b.x1 - b.x0) / n / FRET.grid;
     for (i = 0; i < n; i++) for (x = b.x0 + i * u * FRET.grid, j = 0; j < FRET.pts.length; j++) {
@@ -1987,18 +2018,19 @@ function E_band(detail) {
       if (j) ctx.lineTo(k, a); else ctx.moveTo(k, a);
     }
   }
-  sk(INK.s, MAX(1, DPR));
+  sk(INK.s, MAX(RND(DPR), RND(FW / 90)));
 }
 // mode: 0 full, 1 outline only, 2 gathering steps (gs 1 to 4)
 function E_faceArt(g, cx, cy, W, s, eyes, st, ux, uy, mouth, detail, glint, mode, gs, col) {
   var M = FACE.mouth, i, S = g.mos, lo = mouth ? M.loOpen : M.lo, a, b, h;
   FX = cx; FY = cy; FW = W; FS = MAX(.12, ABS(s));
-  ctx.lineJoin = 'miter'; ctx.lineCap = 'butt';
+  ctx.lineCap = 'butt';
   bp(); fpoly(FACE.outline, 1);
   if (mode !== 2) { ctx.fillStyle = '#000'; ctx.fill(); }
-  sk(col || INK.w, MAX(1, RND(1.5 * DPR)));
+  sk(col || INK.w, MAX(RND(1.5 * DPR), RND(W / 50)));
   if (mode === 1 || (mode !== 2 && ABS(s) < .12)) return;
-  if (s < 0 && mode !== 2) { bp(); fpoly(FACE.outline, 1, 1 - 2 * FACE.inset); ears(); sk(INK.w, MAX(1, DPR)); return; } // a hollow carved shell
+  h = MAX(RND(DPR), RND(W / 80)); // feature lines
+  if (s < 0 && mode !== 2) { bp(); fpoly(FACE.outline, 1, 1 - 2 * FACE.inset); ears(); sk(INK.w, h); return; } // a hollow carved shell
   if (mode ? gs >= 3 : detail) { // mosaic seams, clipped to the face
     ctx.save(); bp(); fpoly(FACE.outline, 1); ctx.clip();
     bp(); for (i = 0; i < S.length; i += 4) fline(S[i], S[i + 1], S[i + 2], S[i + 3]);
@@ -2008,49 +2040,66 @@ function E_faceArt(g, cx, cy, W, s, eyes, st, ux, uy, mouth, detail, glint, mode
   E_band(detail || mode);
   if (mode) { if (gs > 3) E_lids(); return; }
   // closed eyes are a single lid line, never an empty almond, so the socket rims show only with the eyes open
-  if (detail) { bp(); ears(); if (eyes) { almond(-1, FACE.eye.rim); almond(1, FACE.eye.rim); } fpoly(FACE.nose); sk(INK.s, MAX(1, DPR)); }
+  if (detail) { bp(); ears(); if (eyes) { almond(-1, FACE.eye.rim); almond(1, FACE.eye.rim); } fpoly(FACE.nose); sk(INK.s, h); }
   if (eyes) E_eyes(st, ux, uy, glint); else E_lids();
   // the mouth: two lips with corner ticks; open, it shows square shell teeth, never points
-  bp(); fline(M.x0, M.up, M.x1, M.up); fline(M.x0, lo, M.x1, lo); fline(M.x0, M.up - .015, M.x0, lo + .015); fline(M.x1, M.up - .015, M.x1, lo + .015); sk(INK.s, MAX(1, DPR));
+  bp(); fline(M.x0, M.up, M.x1, M.up); fline(M.x0, lo, M.x1, lo); fline(M.x0, M.up - .015, M.x0, lo + .015); fline(M.x1, M.up - .015, M.x1, lo + .015); sk(INK.s, h);
   if (mouth && detail) for (ctx.fillStyle = INK.w, h = MAX(1, RND(M.th * W)), i = 0; i < M.teeth; i++) {
     a = fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth - M.tw / 2); b = MAX(1, ABS(fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth + M.tw / 2) - a));
     ctx.fillRect(a, fy(M.up), b, h); ctx.fillRect(a, fy(lo) - h, b, h);
   }
 }
-// four step-fret brackets in the view's corners: each band adds a stair and steps inward
+// Terror: four step-fret brackets close in from the view's corners, one stair per band, in hard steps. The stone they
+// cover is solid black and their edge is the carved double line: a change of shape, never of brightness.
 function E_brackets(g) {
-  var u = MAX(4, RND(TT * .22)), n = g.band + 1, m = RND(TT * .3) + g.band * u, c, k, x, y, s, t;
-  bp();
-  for (c = 0; c < 4; c++) {
-    s = c & 1 ? -1 : 1; t = c & 2 ? -1 : 1; x = (s > 0 ? g.vx : g.vx + g.vw) + s * m; y = (t > 0 ? g.vy : g.vy + g.vh) + t * m;
-    mv(x, y + t * (n + 1) * u);
-    for (k = n; k >= 0; k--) { ln(x + s * (n - k) * u, y + t * k * u); ln(x + s * (n - k + 1) * u, y + t * k * u); }
+  var n = g.band + 1, S = g.bs, c, k, s, t, X, Y, f;
+  for (f = 0; f < 2; f++) { // the covered stone (a closed shape round the corner), then the stair's edge alone
+    bp();
+    for (c = 0; c < 4; c++) {
+      s = c & 1 ? -1 : 1; t = c & 2 ? -1 : 1; X = c & 1 ? g.vx + g.vw : g.vx; Y = c & 2 ? g.vy + g.vh : g.vy;
+      mv(X - s * S, Y + t * n * S);
+      for (k = n; k > 0; k--) { ln(X + s * (n - k + 1) * S, Y + t * k * S); ln(X + s * (n - k + 1) * S, Y + t * (k - 1) * S); }
+      ln(X + s * n * S, Y - t * S); if (!f) ln(X - s * S, Y - t * S);
+    }
+    if (!f) { ctx.fillStyle = '#000'; ctx.fill(); }
   }
-  ctx.lineJoin = 'miter'; ctx.lineCap = 'square'; k = MAX(1, RND(u * .28));
-  sk(INK.s, 2 * k + LW); sk('#000', MAX(1, 2 * k - LW));
+  ctx.lineCap = 'butt'; k = MAX(1, RND(S * .12));
+  sk(INK.s, 2 * k + g.lw); sk('#000', MAX(1, 2 * k - g.lw));
 }
-// a marker on the view edge toward a point off screen: a square for a court (double for the Great Court), a circle for the ball
+// A marker just inside the view's edge toward something beyond it: a chevron pointing at it, behind a square for a court
+// (white and heavy for the Great Court in the finale) or a circle for the ball's last known place.
 function E_mark(g, x, y, kind) {
-  var X = X_(x), Y = Y_(y), cx = g.vx + g.vw / 2, cy = g.vy + g.vh / 2, m = 10 * DPR, k, r = 5 * DPR;
-  if (X > g.vx + m && X < g.vx + g.vw - m && Y > g.vy + m && Y < g.vy + g.vh - m) return;
-  k = MIN(ABS((g.vw / 2 - m) / (X - cx || 1e-6)), ABS((g.vh / 2 - m) / (Y - cy || 1e-6)));
-  X = cx + (X - cx) * k; Y = cy + (Y - cy) * k; ctx.lineWidth = LW;
-  if (kind > 1) { bp(); circ(X, Y, r); sk(INK.e); return; }
-  rect(X - r, Y - r, X + r, Y + r, 0, INK.e);
-  if (kind) rect(X - r * 1.7, Y - r * 1.7, X + r * 1.7, Y + r * 1.7, 0, INK.e);
+  var r = g.ms, a = g.vw / 2 - 4.2 * r, b = g.vh / 2 - 4.2 * r, X = X_(x) - g.vx - g.vw / 2, Y = Y_(y) - g.vy - g.vh / 2, k, u, v;
+  if (ABS(X) < g.vw / 2 && ABS(Y) < g.vh / 2) return;
+  k = MIN(ABS(a / (X || 1e-6)), ABS(b / (Y || 1e-6)));
+  if (ABS(X * k) >= a - 1) { u = X < 0 ? -r : r; v = 0; } else { u = 0; v = Y < 0 ? -r : r; } // which edge it rests on
+  X = RND(g.vx + g.vw / 2 + X * k); Y = RND(g.vy + g.vh / 2 + Y * k);
+  bp(); mv(X + 1.4 * u - v, Y + 1.4 * v - u); ln(X + 2.4 * u, Y + 2.4 * v); ln(X + 1.4 * u + v, Y + 1.4 * v + u);
+  if (kind > 1) circ(X, Y, r);
+  sk(kind === 1 ? INK.w : INK.e, kind === 1 ? 2 * LW : LW); // (the brackets just set butt caps)
+  if (kind < 2) rect(X - r, Y - r, X + r, Y + r, 0, ctx.strokeStyle);
+}
+// Pause: the whole board as memory lines, fitted above the pause panel and never under its words
+function E_map(g) {
+  var p = E.Pp, top = g.vy / DPR + 8, bot, T, i, o;
+  p.className = 'pan map'; bot = p.firstChild.getBoundingClientRect().top - 16;
+  T = FLR(MIN((W - 32) / (EW + 1), (bot - top) / (EH + 1)) * DPR);
+  if (T < 5 * DPR) { p.className = 'pan solid'; return; } // no room: the panel stays solid
+  OX = RND((W * DPR - (EW - 1) * T) / 2); OY = RND(((top + bot) * DPR - (EH - 1) * T) / 2); TT = T; VS = -1; NN = 2e9;
+  E_walls(1, 0, EW - 1, 0, EH - 1);
+  // claimed courts as white squares, you as a white disc
+  for (ctx.fillStyle = INK.w, i = 0; i < g.rings.length; i++) { o = g.rings[i]; if (o.c && !o.sil) { o = o.o; ctx.fillRect(RND(X_(o.x0 + o.fw / 2 - .9)), RND(Y_(o.y0 + o.fh / 2 - .9)), RND(.8 * T), RND(.8 * T)); } }
+  bp(); circ(X_(g.p.x), Y_(g.p.y), .45 * T); ctx.fill();
 }
 function E_draw(g) {
   if (g.T == null) E_lay(g);
-  var T = g.T, p = g.p, b = g.b, F = g.f, la = RM ? 0 : 1.2, vwT = g.vw / T, vhT = g.vh / T, cx, cy, i, j, k, t, q, i0, i1, j0, j1, x, y, o, n, s, W, fr, u;
-  cx = p.x + p.fx * la - vwT / 2; cy = p.y + p.fy * la - vhT * (coarse && H > W ? .42 : .5);
-  cx = vwT >= EW + 2 ? (EW - 1 - vwT) / 2 : clamp(cx, -1.5, EW + .5 - vwT);
-  cy = vhT >= EH + 2 ? (EH - 1 - vhT) / 2 : clamp(cy, -1.5, EH + .5 - vhT);
-  if (g.cmx == null) { g.cmx = cx; g.cmy = cy; } else { g.cmx += (cx - g.cmx) * .2; g.cmy += (cy - g.cmy) * .2; }
-  OX = g.ox = RND(g.vx - g.cmx * T); OY = g.oy = RND(g.vy - g.cmy * T); TT = T; VS = g.vs; NN = g.n;
+  E_cam(g);
+  var T = g.T, p = g.p, b = g.b, F = g.f, vwT = g.vw / T, vhT = g.vh / T, cx, cy, i, j, k, t, q, i0, i1, j0, j1, x, y, o, n, s, W, fr, u;
+  OX = g.ox = RND(g.vx - g.cmx * T); OY = g.oy = RND(g.vy - g.cmy * T); TT = T; LZ = g.lw; VS = g.vs; NN = g.n;
   i0 = MAX(0, FLR(g.cmx)); i1 = MIN(EW - 1, CEIL(g.cmx + vwT)); j0 = MAX(0, FLR(g.cmy)); j1 = MIN(EH - 1, CEIL(g.cmy + vhT));
-  // the side bands in the gutters (the left one gives way to captions)
-  u = MAX(3, RND(T / 7));
-  if (g.vx > 9 * u) { if (!g.cg) drawBand(g.vx - 7.5 * u, u, OY); drawBand(g.vx + g.vw + 1.5 * u, u, OY + 3.5 * u); }
+  // the side bands in the gutters, fixed in screen space
+  u = g.u;
+  if (g.vx >= 9 * u) { drawBand(g.vx - 7.5 * u, u, 0); drawBand(g.vx + g.vw + 1.5 * u, u, 3.5 * u); }
   ctx.save(); bp(); ctx.rect(g.vx, g.vy, g.vw, g.vh); ctx.clip();
   E_walls(1, i0, i1, j0, j1); E_walls(2, i0, i1, j0, j1);
   // remembered moving stones are dotted: their state may have changed
@@ -2081,9 +2130,9 @@ function E_draw(g) {
   q = g.gc;
   if (g.L === 2 && seen(rtile(q))) { // the floor bar beside the turning ring fills as it opens
     k = g.fin && q.open ? ((g.ftm / q.per + q.ph) % 1) / q.of : 0; x = q.hz ? q.a0 - .6 : q.lc - q.s * 1.1; y = q.hz ? q.lc - q.s * 1.1 : q.a0 - .6;
-    ctx.lineWidth = LW; o = q.hz ? 1 : 0;
-    rect(X_(x) - T * .06 * (1 - o), Y_(y) - T * .06 * o, X_(x + 1.2 * o) + T * .06 * (1 - o), Y_(y + 1.2 * (1 - o)) + T * .06 * o, 0, INK.e);
-    if (k) rect(X_(x) - T * .06 * (1 - o), Y_(y) - T * .06 * o, X_(x + 1.2 * o * k) + T * .06 * (1 - o), Y_(y + 1.2 * (1 - o) * k) + T * .06 * o, INK.w);
+    ctx.lineWidth = LW; o = q.hz ? 1 : 0; i = T * .06 * (1 - o); j = T * .06 * o;
+    rect(X_(x) - i, Y_(y) - j, X_(x + 1.2 * o) + i, Y_(y + 1.2 * (1 - o)) + j, 0, INK.e);
+    if (k) rect(X_(x) - i, Y_(y) - j, X_(x + 1.2 * o * k) + i, Y_(y + 1.2 * (1 - o) * k) + j, INK.w);
   }
   k = E_aim(g);
   for (i = 0; i < g.rings.length; i++) E_ring(g, g.rings[i]);
@@ -2114,21 +2163,24 @@ function E_draw(g) {
   // the ōlli, or where you last saw or heard it
   if (b.held || seen(tOf(b.x, b.y))) {
     if (!b.held) { b.kx = b.x; b.ky = b.y; }
-    if (!b.held || seen(tOf(F.x, F.y))) ball(X_(b.x), Y_(b.y), .18 * T, RM ? null : (b.x + b.y) * 5.5, false, null);
+    if (!b.held || seen(tOf(F.x, F.y))) ball(X_(b.x), Y_(b.y), g.br, RM ? null : (b.x + b.y) * 5.5, false, null);
     if (b.pk > 0 && !b.held) { bp(); wseg(b.x - .1, b.y + .3, b.x + .1, b.y + .3); sk(INK.e); }
-  } else { bp(); circ(X_(b.kx), Y_(b.ky), .18 * T); sk(INK.e); }
+  } else { bp(); circ(X_(b.kx), Y_(b.ky), g.br); sk(INK.e); }
   if (k) { ctx.setLineDash(g.DS); bp(); ctx.moveTo(g.al[0], g.al[1]); ctx.lineTo(g.al[2], g.al[3]); if (g.al[6]) ctx.lineTo(g.al[4], g.al[5]); sk(INK.w); ctx.setLineDash(g.D0); }
   E_you(g);
   if (inp.st && coarse) { bp(); circ(inp.sox * DPR, inp.soy * DPR, 24 * DPR); sk(INK.m); }
   // the Stone Face: whole when you see its tile; otherwise its eyes only, and only while it sees you
-  t = tOf(F.x, F.y); s = E_sx(g); W = 1.5 * T; x = X_(F.x); y = Y_(F.y);
+  t = tOf(F.x, F.y); s = E_sx(g); W = g.fw; x = X_(F.x); y = Y_(F.y);
   cx = p.x - F.x; cy = p.y - F.y; n = SQRT(cx * cx + cy * cy) || 1; cx /= n; cy /= n;
   o = F.st && !g.won && !(g.L === 2 && !g.still && F.st < 6) && F.st !== 9;
   if (F.st === 9) {
     if (seen(t)) E_faceArt(g, x, y, W, s, 0, 0, 0, 0, 0, 0, 0, 1, 0, INK.m);
     E_faceArt(g, X_(F.gd % EW), Y_(F.gd / EW | 0), W, 1, 0, 0, 0, 0, 0, 1, 0, 2, F.gs, INK.s);
-  } else if (seen(t)) E_faceArt(g, x, y, W, s, o, F.step, cx, cy, F.m >= 1 || (F.st === 5 && !F.lm), W / DPR >= 48, 1, 0, 0);
-  else if (F.sees && o) { FX = x; FY = y; FW = W; FS = MAX(.12, ABS(s)); E_eyes(F.step, cx, cy, 0); }
+  } else {
+    if (seen(t)) E_faceArt(g, x, y, W, s, o, F.step, cx, cy, F.m >= 1 || (F.st === 5 && !F.lm), W / DPR >= 48, 1, 0, 0);
+    // its eyes through the dark, or at the view's edge when it sees you from beyond the view
+    if (F.sees && o && (!seen(t) || x < g.vx || x > g.vx + g.vw || (n = y - .1 * W) < g.vy || n > g.vy + g.vh)) E_dark(g, x, y, W, F.step, cx, cy);
+  }
   if (g.ghT > 0) E_faceArt(g, X_(g.ghx), Y_(g.ghy), W, g.ghs || .12, 0, 0, 0, 0, 0, 0, 0, 1, 0, INK.e);
   E_brackets(g);
   // edge markers: unclaimed courts, the Great Court in the finale, the ball's last known place
