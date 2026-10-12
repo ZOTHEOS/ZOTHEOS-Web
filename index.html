@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-RnPoT8egQHJv4X9p7JwKW5bih1UpxB/UAg1X2A6iBf4=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-UFLz6EkSO/7YzkYhJEF8xyQH3Qxlgt56o/dCsjhsmhE=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -5267,7 +5267,7 @@
       transform: scaleX(0);
       transform-origin: left center;
     }
-    .intro-overlay.zi-timing #skipIntro::after { animation: zi-remaining var(--intro-ms, 6050ms) linear forwards; }
+    .intro-overlay.zi-timing #skipIntro::after { animation: zi-remaining var(--intro-ms, 8400ms) linear forwards; }
     @keyframes zi-remaining { to { transform: scaleX(1); } }
     /* No double exposure: the hero's .reveal children are marked visible by the scroll observer while the intro
        is still up, and .reveal.visible is !important, so hold them hidden until the page-loading release. */
@@ -8576,6 +8576,7 @@
           <a href="#mission">Mission</a>
           <a href="#support">Support</a>
           <a href="/game">Play Ollamaliztli</a>
+            <a href="/nations/resources">Histories And Resources</a>
         </div>
       </nav>
       <div class="footer-meta">
@@ -9242,12 +9243,12 @@
          remembered on this device (localStorage zotheos_intro_sound). Browsers hold sound until a visitor's first
          press, so when they would, the full intro waits on Enter with sound (pre-selected) or Enter quietly, and one
          press plays it with sound from the first frame. The short return lock is silent. */
-      var SOUND_FILE_DEPLOYED = true, SOUND_GAIN = 1;
+      var SOUND_FILE_DEPLOYED = true, SOUND_GAIN = 1, FULL_INTRO_MS = 8400;
       if (!(SOUND_FILE_DEPLOYED && snd && audio)) { snd = null; audio = null; }
       var SOUND_KEY = 'zotheos_intro_sound', SEEN_KEY = 'zotheos_intro_seen';
       function soundPref() { try { return window.localStorage.getItem(SOUND_KEY) !== 'off'; } catch (e) { return true; } }
       function setSoundPref(on) { try { window.localStorage.setItem(SOUND_KEY, on ? 'on' : 'off'); } catch (e) {} }
-      var d = true, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0, quick = false, returnTo = null;
+      var d = true, timer = null, intro = null, soundOn = false, fade = null, lastPress = 0, quick = false, returnTo = null, runToken = 0;
       var pending = { token: 0, timeout: null, listeners: [] };   /* audio work that may still be in flight */
       var animStarted = false, onParts = null;   /* audio waits for the animation's first frame (images may still load) */
       var inerted = [];   /* W1-08: the page behind the overlay, made inert while it is up */
@@ -9332,7 +9333,7 @@
       }
       function dismiss() {
         if (d) return;
-        d = true;
+        d = true; runToken++;
         if (timer != null) clearTimeout(timer);
         o.classList.remove('intro-gating'); if (gateEl) gateEl.hidden = true;
         var hadFocus = o.contains(document.activeElement);
@@ -9354,7 +9355,7 @@
         returnTo = null;
         stopAudio();
         var leaving = intro;
-        if (leaving) setTimeout(function () { try { leaving.destroy(); } catch (e) {} if (intro === leaving) intro = null; }, 1200);
+        if (leaving) setTimeout(function () { if (intro !== leaving) return; try { leaving.destroy(); } catch (e) {} intro = null; }, 1200);
       }
       /* W1-08: a proper modal moment. Everything behind the overlay is inert (Tab cannot reach invisible
          controls), and Escape, Enter, Space or a press anywhere on the overlay enters the page. Enter and Space
@@ -9417,22 +9418,22 @@
         audio.volume = SOUND_GAIN; audio.muted = false;
         if (!audio.paused) { try { audio.currentTime = intro ? intro.elapsed() / 1000 : 0; } catch (e) {} return; }   /* already running: just line it up */
         cancelPending();
-        var token = pending.token;
-        var live = function () { return !d && soundOn && token === pending.token; };   /* still wanted? */
+        var token = pending.token, audioRun = runToken, playToken = null;
+        var live = function () { return !d && soundOn && token === pending.token && audioRun === runToken; };   /* still wanted? */
         var on = function (ev, fn) { pending.listeners.push([ev, fn]); audio.addEventListener(ev, fn); };
-        var refused = function () { soundOn = false; label(); };
+        var refused = function () { if (!d && audioRun === runToken && playToken === pending.token) { soundOn = false; label(); } };
         /* A quarter second after it starts, a late start (the seek plus the device starting up) is pulled back to the
            animation's time once. It never moves the sound ahead of the picture. */
         var lineUp = function () {
           setTimeout(function () {
-            if (d || !intro || audio.paused) return;
+            if (d || !intro || audio.paused || audioRun !== runToken || playToken !== pending.token) return;
             var now = intro.elapsed() / 1000, lag = now - audio.currentTime;
             if (lag > 0.06 && lag < 1) { try { audio.currentTime = now; } catch (e) {} }
           }, 250);
         };
         var go = function () {
           if (!live()) return;                              /* recheck right before anything is heard */
-          cancelPending();
+          cancelPending(); playToken = pending.token;
           var p = audio.play();
           if (p && typeof p.then === 'function') p.then(lineUp, refused);
         };
@@ -9458,6 +9459,7 @@
       /* One intro run. full: the whole assembly (the first visit in a browser session, or Replay intro). Otherwise the
          short return lock: about a second, the mark already whole, one flash, then the same hand-off; silent. */
       function run(full, from) {
+        var thisRun = ++runToken;
         d = false; quick = !full; returnTo = from || null;
         animStarted = false; onParts = null; soundOn = false; label();
         if (timer != null) { clearTimeout(timer); timer = null; }
@@ -9473,11 +9475,12 @@
         document.addEventListener('keydown', onKey);
         if (!window.zMotionAllowed()) { dismiss(); return; }
         if (!stage || !window.ZTH_INTRO) { dismiss(); return; }
-        if (full && snd && audio && soundPref()) canSound(function (ok) { if (!d) { if (ok) playIntro(true); else showGate(); } });
+        if (full && snd && audio && soundPref()) canSound(function (ok) { if (!d && thisRun === runToken) { if (ok) playIntro(true); else showGate(); } });
         else playIntro(false);
       }
       function playIntro(withSound) {
-        timer = setTimeout(dismiss, quick ? 2500 : 9000);
+        var thisRun = runToken;
+        timer = setTimeout(dismiss, quick ? 2500 : FULL_INTRO_MS + 5000);
         if (s) {   /* on a replay the overlay is still becoming visible, so try again a moment later */
           var focusSkip = function () { if (!d) { try { s.focus({ preventScroll: true }); } catch (e) {} } };
           focusSkip();
@@ -9490,21 +9493,24 @@
             loop: false, dust: true, interactive: false, quick: quick
           });
           intro.on('parts', function () {
+            if (d || thisRun !== runToken) return;
             animStarted = true; var f = onParts; onParts = null; if (f) f();
-            /* The hairline under Enter fills over the time left: the assembly until 'done', then the hold. */
-            var t = window.ZTH_INTRO.timeline || {};
-            o.style.setProperty('--intro-ms', (quick ? 950 : (t.done || 4650) + 1400) + 'ms');
+            /* The hairline and exit share the clock from the animation's first frame, including slow image loads. */
+            var length = quick ? 950 : FULL_INTRO_MS;
+            o.style.setProperty('--intro-ms', length + 'ms');
             o.classList.add('zi-timing');
+            if (timer != null) clearTimeout(timer);
+            timer = setTimeout(dismiss, length);
           });
-          intro.on('done', function () { setTimeout(dismiss, quick ? 250 : 1400); });
+          /* The full run holds the seated mark until the owner's entire 8.4-second score has played. */
         } catch (e) { dismiss(); return; }
         if (withSound) { soundOn = true; label(); begin(); }
       }
       /* Will the browser play sound now? Where it says (getAutoplayPolicy), ask; after any press on the page, yes;
          otherwise try the sound at volume 0 (its first 0.14 s are silent) and stop it at once. */
       function canSound(cb) {
-        var settled = false, t = null;
-        var fin = function (ok) { if (settled) return; settled = true; if (t) clearTimeout(t); cb(ok); };
+        var settled = false, t = null, probeRun = runToken;
+        var fin = function (ok) { if (settled || d || probeRun !== runToken) return; settled = true; if (t) clearTimeout(t); cb(ok); };
         try {
           var pol = navigator.getAutoplayPolicy ? navigator.getAutoplayPolicy('mediaelement') : '';
           if (pol === 'allowed') return fin(true);
@@ -9516,7 +9522,7 @@
         var p; try { p = audio.play(); } catch (e) { return fin(false); }
         if (!p || typeof p.then !== 'function') { try { audio.pause(); } catch (e) {} return fin(false); }
         t = setTimeout(function () { fin(false); }, 1500);
-        p.then(function () { try { audio.pause(); audio.currentTime = 0; } catch (e) {} fin(true); }, function () { fin(false); });
+        p.then(function () { if (d || probeRun !== runToken) return; try { audio.pause(); audio.currentTime = 0; } catch (e) {} fin(true); }, function () { fin(false); });
       }
       function showGate() {
         if (!gateEl || !gateSnd) { playIntro(false); return; }
@@ -9531,7 +9537,8 @@
         o.classList.remove('intro-gating'); gateEl.hidden = true;
         if (!withSound) { playIntro(false); return; }
         attachSource(); audio.volume = 0; audio.muted = false;
-        var go = function () { try { audio.pause(); audio.currentTime = 0; } catch (e) {} if (!d) playIntro(true); };
+        var gateRun = runToken;
+        var go = function () { if (d || gateRun !== runToken) return; try { audio.pause(); audio.currentTime = 0; } catch (e) {} playIntro(true); };
         var p; try { p = audio.play(); } catch (e) { p = null; }
         if (p && typeof p.then === 'function') p.then(go, go); else go();
       }

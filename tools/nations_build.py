@@ -43,12 +43,12 @@ SITE = "https://zotheos.org"
 URL_OK = re.compile(r'^https://[^\s"<>]+$')
 KIND_LABEL = {"today": "Today", "language": "Language", "land": "Land", "governance": "Governance",
               "culture": "Culture", "population": "Population", "history": "History", "achievement": "Achievement"}
-SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("coverage", "Where we are"), ("credits", "Credits"),
+SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("coverage", "Where we are"), ("credits", "Credits"),
            ("verification", "Verification"), ("for-nations", "For nations"), ("changes", "Corrections and removals")]
 NAV = [("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
        ("Coverage", "/nations/coverage", "coverage"), ("About", "/nations/about", "about"),
        ("For nations", "/nations/for-nations", "for-nations")]
-SHEET = NAV + [("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
+SHEET = NAV + [("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
                ("Verification", "/nations/verification", "verification"), ("Changes", "/nations/changes", "changes")]
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
@@ -150,6 +150,9 @@ class Builder:
         if self.model.errors:
             raise BuildError("data: " + "; ".join(self.model.errors))
         self.m = self.model
+        collisions = {n["id"] for n in self.m.nations} & {key for key, _ in SUPPORT}
+        if collisions:
+            raise BuildError("nation ids collide with support pages: " + ", ".join(sorted(collisions)))
         self.brand = L.BrandCover(root)
         self.part = lambda n: rd(os.path.join(root, "tools", "nations", "partials", n))
         self.tpl = lambda n: rd(os.path.join(root, "tools", "nations", "templates", n + ".html"))
@@ -596,7 +599,7 @@ class Builder:
     # ---- support pages
     def support_pages(self):
         return {
-            "about": self.about(), "sources": self.sources(), "coverage": self.coverage_page(),
+            "about": self.about(), "sources": self.sources(), "resources": self.resources(), "coverage": self.coverage_page(),
             "credits": self.credits(), "verification": self.verification(), "for-nations": self.for_nations(),
             "changes": self.changes_page()}
 
@@ -696,6 +699,91 @@ class Builder:
         return self.sp("sources", render(self.tpl("sources"), {"lede": lede, "groups": "\n".join(out)}),
                        f"Every publisher and page cited on Indigenous nations today: {L.fmt_int(len(pubs))} publishers, "
                        f"{L.fmt_int(nurl)} pages, nations' own sites first.")
+
+    def resources(self):
+        catalog = json.loads(rd(os.path.join(self.root, "data", "nations", "resources.json")))
+        groups, items = catalog["groups"], catalog["resources"]
+        group_ids = [g["id"] for g in groups]
+        item_ids = [r["id"] for r in items]
+        if (len(set(group_ids)) != len(group_ids) or len(set(item_ids)) != len(item_ids)
+                or any(not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", k) for k in group_ids + item_ids)
+                or any(r["group"] not in group_ids or not r["links"] or not r["sources"] for r in items)):
+            raise BuildError("resources: invalid ids, group, links or sources")
+        histories = [n for n in self.m.nations if any(f["kind"] == "history" for f in n["facts"])]
+        history_count = sum(f["kind"] == "history" for n in histories for f in n["facts"])
+        total = len(self.m.nations)
+        out = ['<div class="read n-head prose">', '<p class="eyebrow">Resources</p>',
+               '<h1 class="page-h">Go further.</h1>',
+               '<p class="lede">Follow official resources, then explore historical context from the nations in this growing list.</p>',
+               f'<p class="lede">Our registry currently names {L.fmt_int(total)} nations. It is a growing starting point, '
+               'not a complete list of the world\'s Indigenous peoples. '
+               '<a href="/nations/coverage">See what is covered and where the gaps are.</a></p>',
+               '<nav aria-label="On this page"><ul class="src-u">']
+        for group in groups:
+            out.append(f'<li><a href="#resource-{esc(group["id"])}">{esc(group["title"])}</a></li>')
+        out += ['<li><a href="#history">Explore the histories already recorded</a></li>', '</ul></nav>',
+                '<p class="note">These are links to the publishers\' own pages. A listing does not imply a partnership. '
+                'External pages open only when you follow a link.</p>']
+        for group in groups:
+            gid = "resource-" + group["id"]
+            out.append(f'<section class="src-g" id="{esc(gid)}" aria-labelledby="{esc(gid)}-title">'
+                       f'<h2 id="{esc(gid)}-title">{esc(group["title"])}</h2><p>{esc(group["intro"])}</p>')
+            for item in (r for r in items if r["group"] == group["id"]):
+                out.append(f'<article class="src-p" id="resource-item-{esc(item["id"])}">'
+                           f'<h3>{esc(item["title"])}</h3><p class="row-m">{esc(item["kind"])} {DOT} '
+                           f'{esc(item["scope"])}</p><p>{esc(item["summary"])}</p><ul class="src-u">')
+                for link in item["links"]:
+                    out.append(f'<li>{ext(link["url"], esc(link["label"]))}</li>')
+                out.append('</ul><p class="rc">')
+                receipts = []
+                for source in item["sources"]:
+                    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", source["accessed"]):
+                        raise BuildError("resources: source reviewed date must be YYYY-MM-DD")
+                    try:
+                        datetime.date.fromisoformat(source["accessed"])
+                    except ValueError as exc:
+                        raise BuildError("resources: invalid source reviewed date") from exc
+                    receipts.append(ext(source["url"], esc(source["publisher"] + ", " + source["title"]))
+                                    + ", reviewed " + time_el(source["accessed"]))
+                out.append((f" {DOT} ").join(receipts) + '</p></article>')
+            out.append('</section>')
+        out += ['<section class="src-g" id="history" aria-labelledby="history-title">',
+                '<h2 id="history-title">Explore the histories already recorded</h2>',
+                f'<p>{L.fmt_int(history_count)} published historical facts across {L.fmt_int(len(histories))} '
+                'nations are collected below. Open a name for a short starting point, historical context and sources.</p>',
+                f'<p>{L.fmt_int(total - len(histories))} entries have no published fact tagged as history yet. '
+                'That is a gap in this collection, not a statement about their history. '
+                'Some facts in other categories also describe past events.</p>',
+                '<p>These are excerpts, not complete histories. Dates belong to the statements they accompany; '
+                'a past event does not establish the situation today. '
+                '<a href="/nations/verification">What our checks can and cannot tell you.</a></p>']
+        for region in self.m.regions:
+            members = [n for n in histories if n["region"] == region["key"]]
+            if not members:
+                continue
+            out.append(f'<section class="src-g" aria-labelledby="history-region-{esc(region["key"])}">'
+                       f'<h3 id="history-region-{esc(region["key"])}">{esc(region["display"])}</h3>')
+            for n in sorted(members, key=lambda n: (fold(n["name"]), n["id"])):
+                historical = [f for f in n["facts"] if f["kind"] == "history"]
+                context = [f for f in n["facts"] if f["kind"] != "history"]
+                out.append(f'<details class="src-p resource-history" id="history-{esc(n["id"])}"><summary>'
+                           + self.name_el(n, "span", "nm row-name") + '</summary>'
+                           + f'<p class="note"{self.face_attr(n["lf"])}>{esc(n["lands"])}</p>')
+                layers = ([('A starting point', context[:1])] if context else []) + [('Historical context', historical)]
+                if len(context) > 1:
+                    layers.append(('More from the record', context[1:]))
+                for label, facts in layers:
+                    out.append(f'<h4 class="kind">{esc(label)}</h4>')
+                    for f in facts:
+                        out.append(f'<article class="fact" id="history-fact-{esc(f["id"])}">'
+                                   f'<p class="fact-t"{self.face_attr(f["fc"])}>{esc(f["text"])}</p>'
+                                   f'<p class="rc">{self.receipt(f)}</p></article>')
+                out.append(f'<p><a href="/nations/{esc(n["id"])}">Open the full nation page</a></p></details>')
+            out.append('</section>')
+        out += ['</section>', '<p class="act"><a class="pill" href="/nations#find">Find another nation</a>'
+                '<a class="txt-link" href="/nations/for-nations">Corrections and additions from nations</a></p>', '</div>']
+        return self.sp("resources", "\n".join(out),
+                       "Official learning, advocacy and climate resources, with sourced historical context from the growing nations registry.")
 
     def coverage_page(self):
         cov, lfc = self.coverage, self.m.last_full_check()

@@ -47,21 +47,35 @@ var TEXT = {
   gloss: 'The ballgame of Mesoamerica. ' + up1(OLLI) + ' is the rubber ball.',
   drop: 'Drop', echo: 'Echo',
   dropDesc: 'Guide the ' + OLLI + ' down the carved wall and strike it through the stone ring.',
-  echoDesc: 'Strike the ' + OLLI + ' to see the dark. The Stone Face hears every knock.',
-  echoNote: 'A tense chase in the dark. No gore.',
+  echoDesc: 'Claim the side rings, then pass the Great Ring. Strike the ' + OLLI + ' to light the dark.',
+  echoNote: 'No gore. Pause for controls and symbols.',
   today: "Today's court", fresh: 'New court', code: 'Court code', calm: 'Calm pace', assist: 'Assist',
   bad: "Code not found. Using today's court.",
   firstRing: 'Strike with the hip. In the old game, a ring pass was rare and decisive.',
   soft: 'Too soft. Strike it through.', nofoot: 'No footing. Strike when the ball touches stone.',
   paused: 'Paused.', resume: 'Resume', restart: 'Restart level', close: 'Close', about: 'About', back: 'Back',
   time: 'Time ran out.', left: 'The ball left the court.',
+  spikeWarn: 'Hollow spikes warn before rising.',
+  guardWarn: 'Stone Guardian: ', guardTell: '. Halo warns before it strikes.', stoneHit: 'Stone struck the ball.',
   rare: 'A rare pass.', clear: 'Level clear.', cl: 'clear.', pass: 'Through the ring.',
   replay: 'Replay this court', other: 'Other mode', best: 'Best', noBest: 'Assist run, not saved as best.',
   done: 'The court is yours.', over: 'Rest now. The court will wait.',
   dropHint: 'Left and right, or the mouse, to tilt. Space or click to drop and to strike.',
   dropTouch: 'Hold left or right to tilt. Tap to drop and to strike.',
-  echoHint: 'Arrows or the mouse to walk. Space or click to strike.',
+  echoHint: 'Arrows to walk, mouse to aim. Space or click to strike.',
+  echoMouse: 'Hold and drag the mouse to walk.',
   echoTouch: 'Drag anywhere to walk. Tap to strike. Flick a second finger to strike that way.',
+  echoGoal: 'Goal: claim side rings, then the Great Ring.',
+  echoFinal: 'Goal: pass the Great Ring before darkness.',
+  ballReady: 'Ball in reach. The Stone Face can catch it.',
+  ballFar: 'Ball out of reach. Walk to its circle.',
+  ballHeld: 'Ball caught. Move away; it will return.',
+  ballBack: 'Ball returned. Follow its circle and strike a ring.',
+  echoHelp: 'Echo: controls and symbols',
+  echoLegend: ['U-shaped mark: you. Solid circle: ball. Hollow circle: its last seen position.',
+    'Stone slots: rings to pass, not items to collect. A claimed court is safe. Some rings need two passes.',
+    'Darkness hides the layout. Strike to reveal stone. Small diamonds are loose mosaic pieces: touching them makes noise.',
+    'The Stone Face can catch a fast ball, hold it, then throw it back. Move away during the catch, then follow the ball.'],
   pause: 'Pause', play: 'Play', level: 'Level', of: 'of', score: 'Score',
   dropLv: ['The still ring', 'The sliding ring', 'The turning ring', 'The paired rings', 'The walking ring'],
   echoLv: ['The stone face', 'Fallen tesserae', 'The turning face', 'The moving stones', 'The gathered face'],
@@ -87,7 +101,7 @@ var TEXT = {
   tessera: 'A tessera clicked. It heard that.',
   half: 'One stone lit. Pass the ring once more to claim it.',
   echoDone: 'The labyrinth lets you pass.',
-  rings: 'Rings', silence: 'Silence', markedSr: 'Marked',
+  rings: 'Rings', silence: 'Safe courts', markedSr: 'Marked',
   natLabel: 'Indigenous nations today', also: 'Also known as', sayIt: 'Say it:', pronFrom: 'Pronunciation from', asOf: 'As of',
   source: 'Source:', checked: 'Checked', stale: 'Checked over a year ago.', updated: 'List updated', nations: 'nations',
   prev: 'Previous', next: 'Next', site: "Nation's site", cont: 'Continue', another: 'Another fact', met: 'Nations you met this run',
@@ -102,7 +116,7 @@ var TEXT = {
     up1(plain(TERMS.xayacatl[0])) + ' is a Nahuatl word for face and for mask.',
     'Ocote, the resinous pine that lights the courts, takes its name from the Nahuatl ' + TERMS.ocotl[0] + '.',
     'Mask making is a living art in Mexico today, from the dance masks of Guerrero to the carved wooden masks of the Parachicos of Chiapa de Corzo, which UNESCO added to its list of intangible cultural heritage in 2010. The Stone Face copies none of them.',
-    'Indigenous nations today: each card shows one fact with its source and the date it was checked. Facts come from each nation\'s own published sources where possible, and from public records otherwise. Corrections are welcome.',
+    'Indigenous nations today: each card starts with a short fact. Open History And Context for published history, living context and dated sources, then follow the full record or resources guide. Facts come from each nation\'s own published sources where possible, and from public records otherwise. Corrections are welcome.',
     'Sources: INAH; Saint Louis Art Museum; Karl Taube, The Iconography of Mirrors at Teotihuacan; UNESCO; Molina 1571 and Karttunen 1992 through the Online Nahuatl Dictionary, Wired Humanities Projects, University of Oregon.',
     'Sound: David Alanzo Garcia.'
   ]
@@ -115,10 +129,11 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg a.btn{display:inline-flex;align-items:center;text-decoration:none}#zg a{color:#fff}' +
   '#zg input{cursor:text;width:9.5em;text-transform:uppercase;letter-spacing:.18em;text-align:center}' +
   '#zg input::placeholder{color:#b8b8b8;opacity:1;letter-spacing:.04em;text-transform:none}' +
-  '#zg button:focus-visible,#zg input:focus-visible,#zg a:focus-visible{outline:2px solid #fff;outline-offset:2px}' +
+  '#zg button:focus-visible,#zg input:focus-visible,#zg a:focus-visible,#zg summary:focus-visible{outline:2px solid #fff;outline-offset:2px}' +
   '#zg [aria-pressed=true],#zg [aria-checked=true]{background:#fff;color:#000}' +
   '#zg .hud{position:absolute;left:0;right:0;top:0;height:52px;background:#000;display:flex;align-items:center;gap:18px;padding:0 6px 0 16px;font-size:15px;letter-spacing:.1em;pointer-events:none;font-variant-numeric:tabular-nums}' +
   '#zg .hud b{font-weight:600}#zg .hud button{pointer-events:auto;margin-left:auto;border-color:#b8b8b8;padding:0}' +
+  '#zg .goal{background:#000;position:absolute;left:16px;right:16px;top:52px;height:76px;font-size:13px;line-height:18px;pointer-events:none}#zg .goal span{display:block}#zg .goal span+span{color:#b8b8b8}#zg .help{max-width:30em;text-align:left}#zg summary{min-height:44px;cursor:pointer;line-height:44px}#zg .help p{font-size:14px;margin-bottom:8px}' +
   '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}#zg .dot.half{background:linear-gradient(90deg,#fff 50%,#000 50%)}' +
   '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
   '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
@@ -142,8 +157,10 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg .nn{margin:2px 0 6px;font:inherit;font-size:24px;font-weight:400;color:#fff;text-transform:none;letter-spacing:normal}' +
   '#zg .nc .nf{font-size:16px;color:#fff}#zg .nk{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#b8b8b8;border:1px solid #8c8c8c;padding:0 6px;margin-right:8px}' +
   '#zg .nc .ns,#zg .nc .ns a{font-size:14px;color:#b8b8b8}#zg .nb{font-size:15px;letter-spacing:normal}' +
+  '#zg .nc details{border-top:1px solid #555;margin-top:12px;padding-top:10px}#zg .nc summary{cursor:pointer;min-height:44px;padding:10px 0;line-height:1.4}#zg .nc summary:focus-visible{outline:2px solid #fff;outline-offset:2px}#zg .nc h4{margin:14px 0 8px;font-size:16px}#zg .nc .hf{border-top:1px solid #333;padding:10px 0}#zg .nc .nl a{font:inherit}' +
   '#zg .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
   '#zg [hidden]{display:none!important}' +
+  '@media (max-width:400px){#zg .hud{gap:10px;padding-left:8px;font-size:13px}}' +
   '@media (max-height:520px){#zg .pan{gap:8px;padding:10px 16px}#zg #zgTi{padding:10px 40px}#zg h1{font-size:30px}#zg .mode{padding:8px 14px;min-height:0}#zg .mode b{font-size:17px}}' +
   '@media (prefers-reduced-motion:reduce){#zg .cap,#zg .nc{transition:none}}';
 // The one ornament: a step-fret on a 6 unit grid (stairs then a square hook). Swap as data.
@@ -167,7 +184,7 @@ function num(n) { return String(RND(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
 function mmq(q) { try { return window.matchMedia(q).matches; } catch (e) { return false; } }
 function store(k, v) { try { if (v === undefined) return +localStorage.getItem(k) || 0; localStorage.setItem(k, v); } catch (e) {} return 0; }
 
-var API = window.ZTH_GAME = { version: '2.2.0', onClose: null, onSound: null };
+var API = window.ZTH_GAME = { version: '2.3.0', onClose: null, onSound: null };
 var root, sty, cv, ctx, E = {}, W, H, DPR, raf = 0, last = 0, acc = 0, ls = [], opts = {}, rzT = 0, capT = 0, IN = [], SC = {};
 var scr = '', mode = 'drop', lastM = '', calm = false, assist = false, RM = false, coarse = false, court = 'today', runSeed = 0, G = null, beat = null, told = 0, ET = 0;
 var inp = { l: 0, r: 0, u: 0, d: 0, sb: 0, pt: 0, st: 0, sx: 0, sy: 0, sox: 0, soy: 0, md: 0, mdT: 0, mw: 0, ph: 0, px: 0, py: 0, sa: 0, sax: 0, say: 0 }, ptrs = {};
@@ -192,6 +209,7 @@ function build() {
   d.innerHTML = '<div id="zg" role="dialog" aria-modal="true" aria-labelledby="zgT" tabindex="-1">' +
     '<canvas id="zgC" role="img" aria-label="' + T.title + '"></canvas>' +
     '<div class="hud" id="zgHud" hidden><span id="zgLv"></span><span id="zgSc"></span><span id="zgTm"></span>' + btn('Pa', '<span aria-hidden="true">II</span><span class="sr">' + T.pause + '</span>') + '</div>' +
+    '<div class="goal" id="zgGoal" hidden><span id="zgObj"></span><span id="zgBall"></span></div>' +
     '<div class="cap" id="zgCap" aria-hidden="true"><span></span></div>' +
     '<div class="pan" id="zgTi"><h1 id="zgT">' + T.title + '</h1><p class="sub">' + T.gloss + '</p>' +
       row(mbtn('Md', T.drop, T.dropDesc) + mbtn('Me', T.echo, T.echoDesc, T.echoNote)) +
@@ -201,10 +219,11 @@ function build() {
       '<section class="nh" id="zgNh" aria-label="' + T.natLabel + '" hidden><div class="nc" id="zgNc"></div>' +
         row(btn('Nv', T.prev) + btn('Nx', T.next) + btn('Nz', T.pause, '', ' aria-pressed="false"') + abtn('Ns', T.site)) + '<p class="sub" id="zgNu"></p></section></div>' +
     '<div class="pan solid" id="zgPp" hidden><h2>' + T.paused + '</h2><p id="zgPs" class="sub"></p>' +
-      row(btn('Re', T.resume) + btn('Rs', T.restart)) + row(sw('Ca2') + sw('As') + btn('Ab2', T.about) + btn('X2', T.close)) + '</div>' +
+      row(btn('Re', T.resume) + btn('Rs', T.restart)) + row(sw('Ca2') + sw('As') + btn('Ab2', T.about) + btn('X2', T.close)) +
+      '<details class="help" id="zgHelp" hidden><summary>' + T.echoHelp + '</summary><p>' + T.echoHint + ' ' + T.echoMouse + ' ' + T.echoTouch + '</p><p>' + T.echoLegend.join('</p><p>') + '</p></details></div>' +
     '<div class="pan solid" id="zgRp" hidden><i class="olli" aria-hidden="true"></i><h2 id="zgRh"></h2><p id="zgRm"></p><div class="big" id="zgRn"></div><p id="zgRi" class="sub"></p>' +
       '<div class="nh" id="zgRx" hidden><p class="sub">' + T.met + '</p><div class="row" id="zgRl"></div><div class="nc" id="zgRc" hidden></div>' + btn('Rb', T.back, '', ' hidden') + '</div>' +
-      row(btn('Rc', T.replay) + btn('Ag', T.fresh)) + row(btn('Om', T.other) + btn('X3', T.close)) + '</div>' +
+      row(btn('Rr', T.replay) + btn('Ag', T.fresh)) + row(btn('Om', T.other) + btn('X3', T.close)) + '</div>' +
     '<div class="pan solid" id="zgNp" hidden><p id="zgNpm"></p><div class="nh"><div class="nc" id="zgNpc"></div></div>' +
       row(btn('Nk', T.cont) + btn('Na', T.another)) + row(abtn('Nps', T.site) + btn('X4', T.close)) + '</div>' +
     '<div class="pan solid" id="zgAp" hidden><h2>' + T.title + '</h2><p>' + T.aboutLines.join('</p><p>') + '</p><p class="sub">' + T.termsHead + '</p>' + tl +
@@ -214,7 +233,7 @@ function build() {
   root = d.firstChild;
   (opts.parent || document.body).appendChild(root);
   if (opts.font) root.style.fontFamily = opts.font;
-  'Md C Hud Lv Sc Tm Pa Cap Ti Pp Ps Rp Rh Rm Rn Ri Ap Live Ca Ca2 As Ct Cn Code Cm Nh Nc Nz Ns Nu Np Npm Npc Nps Rx Rl Rc Rb An Al Ac Ab3 Am Ap2'.split(' ').forEach(function (k) { E[k] = root.querySelector('#zg' + k); });
+  'Md C Hud Lv Sc Tm Pa Goal Obj Ball Help Cap Ti Pp Ps Rp Rh Rm Rn Ri Ap Live Ca Ca2 As Ct Cn Code Cm Nh Nc Nz Ns Nu Np Npm Npc Nps Rx Rl Rc Rb An Al Ac Ab3 Am Ap2'.split(' ').forEach(function (k) { E[k] = root.querySelector('#zg' + k); });
   E.live = E.Live; E.cap = E.Cap; E.capS = E.Cap.firstChild;
   cv = E.C; ctx = cv.getContext('2d');
   var c = function (i, f) { on(root.querySelector('#zg' + i), 'click', f); };
@@ -225,7 +244,7 @@ function build() {
   c('Bk', function () { panel(G ? 'pause' : 'title'); });
   c('X', close); c('X2', close); c('X3', close); c('X4', close);
   c('Pa', pause); c('Re', resume); c('Rs', restartLevel);
-  c('Ag', function () { court = 'new'; start(mode); }); c('Rc', function () { start(mode, runSeed); });
+  c('Ag', function () { court = 'new'; start(mode); }); c('Rr', function () { start(mode, runSeed); });
   c('Om', function () { start(mode === 'drop' ? 'echo' : 'drop'); });
   c('Nv', function () { herald(-1, 1); }); c('Nx', function () { herald(1, 1); }); c('Nz', natPause);
   c('Nk', function () { level(G.L + 1); panel('play'); }); c('Na', function () { if (natCur) natCard(E.Npc, natCur, G.L + 1, 'card'); });
@@ -234,6 +253,7 @@ function build() {
   on(E.Nh, 'mouseenter', function () { natIn |= 1; natSched(); }); on(E.Nh, 'mouseleave', function () { natIn &= 2; natSched(); });
   on(E.Nh, 'focusin', function () { natIn |= 2; natSched(); }); on(E.Nh, 'focusout', function () { natIn &= 1; natSched(); });
   on(E.Code, 'input', codeIn);
+  on(E.Help, 'toggle', kick);
 }
 function pickCourt(k) { court = k; E.Code.value = ''; E.Cm.hidden = true; syncT(); }
 function codeIn() {
@@ -252,10 +272,11 @@ function panel(p) {
   scr = p;
   E.Ti.hidden = p !== 'title'; E.Pp.hidden = p !== 'pause'; E.Pp.className = 'pan solid'; E.Rp.hidden = p !== 'result'; E.Ap.hidden = p !== 'about'; E.Np.hidden = p !== 'card';
   E.Hud.hidden = !(p === 'play' || p === 'pause'); E.Pa.hidden = p !== 'play';
+  E.Goal.hidden = p !== 'play' || mode !== 'echo'; E.Help.hidden = mode !== 'echo';
   syncT();
   if (p === 'title') herald(0, 0); else { clearTimeout(natT); clearTimeout(natF); }
   if (p === 'about') { E.Al.hidden = !NAT; E.Ac.hidden = E.Ab3.hidden = true; }
-  var f = { title: 'Md', pause: 'Re', result: 'Rc', about: 'Bk', card: 'Nk' }[p];
+  var f = { title: 'Md', pause: 'Re', result: 'Rr', about: 'Bk', card: 'Nk' }[p];
   if (f) root.querySelector('#zg' + f).focus(); else root.focus();
   cv.setAttribute('aria-label', p === 'play' ? TEXT.title + ': ' + (mode === 'drop' ? TEXT.drop + '. ' + TEXT.dropHint : TEXT.echo + '. ' + TEXT.echoHint) : TEXT.title);
   kick();
@@ -279,7 +300,7 @@ API.open = function (m, o) {
   court = n >= 0 ? 'code' : 'today'; runSeed = n >= 0 ? n : 0;
   // a visit cursor, so each visit continues to new nations (the order itself is the same for everyone on a day)
   natV = store('zth_olli_nv'); store('zth_olli_nv', natV + 1);
-  NAT = null; NP = []; NATst = 0; natP = 0; natIn = 0; NMET = []; natCur = null; NSD = {}; NHL = {};
+  HIST = null; HST = 0; hw = []; NAT = null; NP = []; NATst = 0; natP = 0; natIn = 0; NMET = []; natCur = null; NSD = {}; NHL = {};
   build(); bind(); resize();
   k = document.body.children;
   for (var i = 0; i < k.length; i++) if (!k[i].contains(root) && !k[i].hasAttribute('inert') && k[i].tagName !== 'SCRIPT') { k[i].setAttribute('inert', ''); IN.push(k[i]); }
@@ -291,6 +312,8 @@ API.isOpen = function () { return !!root; };
 function teardown() {
   cancelAnimationFrame(raf); raf = 0; clearTimeout(rzT); clearTimeout(natT); clearTimeout(natF);
   if (xhr) { try { xhr.abort(); } catch (e) {} xhr = null; }
+  if (hx) { try { hx.abort(); } catch (e) {} hx = null; }
+  hw = []; HIST = null; HST = 0;
   for (var i = 0; i < ls.length; i++) ls[i][0].removeEventListener(ls[i][1], ls[i][2], ls[i][3]);
   for (i = 0; i < IN.length; i++) IN[i].removeAttribute('inert');
   if (root && root.parentNode) root.parentNode.removeChild(root);
@@ -346,7 +369,7 @@ function key(e) {
   if (k === 'Escape') { e.preventDefault(); if (scr === 'about') panel(G ? 'pause' : 'title'); else close(); }
 }
 function trap(e) {
-  var f = [].filter.call(root.querySelectorAll('button,input,a[href]'), function (b) { return b.offsetParent !== null; });
+  var f = [].filter.call(root.querySelectorAll('button,input,a[href],summary'), function (b) { return b.offsetParent !== null; });
   if (!f.length) return;
   var i = f.indexOf(document.activeElement);
   if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
@@ -475,11 +498,15 @@ function frame(ts) {
   draw();
 }
 function hud() {
-  var g = G, d = '', i, k;
+  var g = G, d = '', i, k, bs;
   // rebuilt only when something shown changes (both modes)
   if (mode === 'echo') { k = g.score * 64 + g.lives * 16 + g.L + (g.p.mk ? 8 : 0); for (i = 0; i < g.rings.length; i++) k = k * 8 + (g.rings[i].c ? 1 : 0) + (g.rings[i].sil ? 2 : 0) + (g.rings[i].h && !g.rings[i].c ? 4 : 0); k += g.fin ? .5 : 0; }
   else k = g.score * 4096 + g.lives * 1024 + g.L * 128 + (g.inCourt ? 64 : 0) + MAX(0, CEIL(g.inCourt ? g.rt : g.t));
   k += assist ? .25 : 0;
+  if (mode === 'echo') {
+    bs = g.b.held ? TEXT.ballHeld : (g.b.x - g.p.x) * (g.b.x - g.p.x) + (g.b.y - g.p.y) * (g.b.y - g.p.y) > .49 ? TEXT.ballFar : TEXT.ballReady;
+    set(E.Obj, g.fin ? TEXT.echoFinal : TEXT.echoGoal); set(E.Ball, bs); k = String(k) + bs;
+  }
   if (k === g.hk) return; g.hk = k;
   for (i = 0; i < 3; i++) d += '<i class="dot' + (i < g.lives ? ' on' : '') + '"></i>';
   set(E.Lv, TEXT.level + ' <b>' + (g.L + 1) + '</b>/5');
@@ -566,18 +593,25 @@ function titleArt() {
 
 
 // ---------- DROP ----------
+// Original geometric Stone Guardians. This catalog does not depict nations or sacred beings.
+var D_GUARDS = [
+  ['Prism', [[0,-18],[18,0],[0,18],[-18,0]]],
+  ['Rampart', [[-16,-16],[16,-16],[16,16],[-16,16]]],
+  ['Vault', [[-10,-18],[10,-18],[18,0],[10,18],[-10,18],[-18,0]]]
+];
 function D_new(L) {
   var P = DPAR[L], k = calm ? 0.7 : 1, kt = calm ? 1.4 : 1, lsd = mix(runSeed, L + 1), r = rng(mix(lsd, 0x4D41));
-  var g = { grav: P[0] * k, tilt: P[1] * k, vmax: P[2] * k, vxm: (250 + 25 * L) * k, T: P[4] * kt, RT: P[5] * kt, kt: kt, rows: [], ll: [], tl: 0, cam: 0 };
+  var g = { grav: P[0] * k, tilt: P[1] * k, vmax: P[2] * k, vxm: (250 + 25 * L) * k, T: P[4] * kt, RT: P[5] * kt, kt: kt, pitch: 88 + 4 * L, rows: [], ll: [], tl: 0, cam: 0 };
   var gw = (2.6 - 0.15 * L) * 18, reach = 210 - 14 * L, y = 150, prev = [180], i, j;
   for (i = 0; i < P[3]; i++) {
     var land = i % 4 === 3 || i === P[3] - 1, gs;
     gs = land ? [180] : gaps(prev, r() < 0.3 + 0.08 * L ? 2 : 1, gw, reach, r, i % 4 === 2 || i === P[3] - 2);
-    var R = drow(y, gs, gw, r); g.rows.push(R); prev = gs; y += 72;
+    var R = drow(y, gs, gw, r); g.rows.push(R); prev = gs; y += g.pitch;
     for (j = 0; j < R.lines.length; j++) { R.lines[j].ry = R.y; g.ll.push(R.lines[j]); }
   }
-  g.last = y - 72; g.floor = g.last + 400; g.wl = 0; g.wr = 360;
+  g.last = y - g.pitch; g.floor = g.last + 480; g.wl = 0; g.wr = 360;
   ring(g, L, rng(mix(lsd, 0xB055)));
+  D_hazards(g, L, rng(mix(lsd, 0xD06B)));
   g.retry = function () { D_reset(g, g.inCourt); };
   g.step = function (dt) { D_step(g, dt); };
   g.draw = function () { D_draw(g); };
@@ -627,6 +661,56 @@ function drow(y, gs, gw, r) {
   }
   return R;
 }
+function D_hazards(g, L, r) {
+  var i, j, R, s, x, choices;
+  g.spikes = [];
+  for (i = 2; i < g.rows.length - 1; i++) {
+    if (i % 4 === 3 || r() > 0.45 + 0.09 * L) continue;
+    R = g.rows[i]; choices = [];
+    for (j = 0; j < R.segs.length; j++) {
+      s = R.segs[j]; x = (s[0] + s[2]) / 2;
+      if (s[1] === s[3] && s[1] <= R.y && ABS(s[2] - s[0]) >= 56 && (!R.mk || ABS(x - R.mk.x) > 42)) choices.push(s);
+    }
+    if (!choices.length) continue;
+    s = choices[FLR(r() * choices.length)];
+    g.spikes.push({x:(s[0]+s[2])/2,y:s[1],tn:0.95*g.kt,on:0.65*g.kt,rest:(1.5+r()*0.5)*g.kt});
+  }
+  g.guard = L ? {id:FLR(r()*D_GUARDS.length),x:180,y:g.floor-90,ph:r(),tn:1.1*g.kt,on:0.85*g.kt,rest:1.8*g.kt} : null;
+}
+function D_cycle(h, near, dt) {
+  // Fixed-step phases: 0 dormant, 1 hollow warning, 2 solid contact, 3 rest.
+  // Leaving proximity starts a full warning next time. Nothing arms offscreen.
+  if (!near) { h.t = h.state = 0; return; }
+  h.t += dt;
+  var u = h.t % (h.tn + h.on + h.rest);
+  h.state = u < h.tn ? 1 : u < h.tn + h.on ? 2 : 3;
+}
+function D_near(b, x0, y0, x1, y1) {
+  // Query only. Unlike cseg this must never grant footing or deflect the ball.
+  var dx=x1-x0,dy=y1-y0,u=clamp(((b.x-x0)*dx+(b.y-y0)*dy)/(dx*dx+dy*dy),0,1);
+  dx=b.x-x0-u*dx;dy=b.y-y0-u*dy;return dx*dx+dy*dy<BR*BR;
+}
+function D_hazardStep(g, dt) {
+  var b=g.b,i,h,hit=false,k,dx,dy;
+  g.hzTime += dt;g.hzGrace=MAX(0,g.hzGrace-dt);
+  for (i=0;i<g.spikes.length;i++) {
+    h=g.spikes[i];D_cycle(h,!g.hzGrace&&ABS(b.y-h.y)<140&&ABS(b.x-h.x)<120,dt);
+    if (h.state===1&&!g.hzTold) { g.hzTold=1;cap(TEXT.spikeWarn,3);say(TEXT.spikeWarn); }
+    if (h.state===2) for (k=-1;k<=1;k++) {
+      var x=h.x+k*10;
+      if (D_near(b,x-5,h.y,x,h.y-14)||D_near(b,x,h.y-14,x+5,h.y)) hit=true;
+    }
+  }
+  h=g.guard;
+  if (h) {
+    h.x=180+42*(1-4*ABS((g.hzTime/(4.6*g.kt)+h.ph)%1-0.5));h.angle=g.hzTime/(2*g.kt);
+    D_cycle(h,g.inCourt&&!g.hzGrace&&ABS(b.y-h.y)<145&&ABS(b.x-h.x)<145,dt);
+    if (h.state===1&&!g.guardTold) {g.guardTold=1;var msg=TEXT.guardWarn+D_GUARDS[h.id][0]+TEXT.guardTell;cap(msg,4);say(msg);}
+    dx=b.x-h.x;dy=b.y-h.y;if(h.state===2&&dx*dx+dy*dy<27*27)hit=true;
+  }
+  if(hit&&!g.hzFail){g.hzFail=1;fail(TEXT.stoneHit);return true;}
+  return false;
+}
 function ring(g, L, r) {
   var side = r() < 0.5 ? -1 : 1, H = 380, k = g.kt, q;
   function mk(sd, ap, hf) { var a = ap * 13, R = a + 12; return { sd: sd, a: a, R: R, x: sd < 0 ? R + 24 : 336 - R, y0: g.floor - H * hf, y: 0, live: 1, open: 1, c: 1 }; }
@@ -640,6 +724,11 @@ function ring(g, L, r) {
 function D_reset(g, inCourt) {
   var b = g.b = { x: 180, y: 60, vx: 0, vy: 0, held: !inCourt, ct: 9, cd: 0, lg: 0, rot: 0, hit: 0, hs: 0, nf: 0 };
   g.t0 = 0; g.ns = 0; g.wl = 0; g.wr = 360; g.ws = 0; g.sft = 0;
+  g.hzTime=g.hzFail=0;g.hzGrace=1;
+  // Retry protection is spent by physics, and held balls do not spend it.
+  var h;
+  for(var j=0;j<g.spikes.length;j++){h=g.spikes[j];h.t=h.state=0;}
+  h=g.guard;if(h){h.t=h.state=h.angle=0;h.x=180+42*(1-4*ABS(h.ph-0.5));}
   if (inCourt) { b.y = g.floor - 240; g.rt = g.RT; }
   else { g.t = g.T; g.inCourt = false; g.cam = 0; for (var i = 0; i < g.rows.length; i++) if (g.rows[i].mk) g.rows[i].mk.on = 1; }
 }
@@ -663,6 +752,7 @@ function ringPos(g, q, t) {
     if (q.fig) { q.x = cx + q.A * s; q.y = q.y0 + q.B * 0.8 * Math.sin(2 * a); } else { q.x = cx + q.A * (c < 0 ? -1 : 1) * SQRT(ABS(c)); q.y = q.y0 + q.B * (s < 0 ? -1 : 1) * SQRT(ABS(s)); } }
 }
 function D_step(g, dt) {
+  if(g.hzFail)return;
   var b = g.b, want = (inp.r - inp.l) || inp.pt;
   g.tl += (want - g.tl) * (1 - Math.exp(-dt / 0.08));
   if (b.held) {
@@ -679,7 +769,7 @@ function D_step(g, dt) {
   var px = b.x;
   b.x += b.vx * dt; b.y += b.vy * dt; b.ct += dt; b.cd -= dt; b.hit -= dt; b.nf -= dt;
   b.rot += (b.x - px) / BR;
-  var ri = RND((b.y - 150) / 72);
+  var ri = RND((b.y - 150) / g.pitch);
   for (i = ri - 1; i <= ri + 1; i++) {
     var R = g.rows[i]; if (!R) continue;
     for (j = 0; j < R.segs.length; j++) { var s = R.segs[j]; cseg(g, s[0], s[1], s[2], s[3], 0.62); }
@@ -689,6 +779,7 @@ function D_step(g, dt) {
     g.inCourt = true; g.rt = g.RT; g.tb = MAX(0, CEIL(g.t)); g.t0 = 0; g.ns = 0;
     if (g.L === 0) cap(TEXT.firstRing, 4);
   }
+  if(D_hazardStep(g,dt))return;
   if (g.inCourt) {
     g.t0 += dt; g.rt -= dt; g.sft -= dt;
     if (g.rt <= 0) return fail(TEXT.time);
@@ -727,6 +818,25 @@ function D_step(g, dt) {
     } else if (b.ct > 0.2 && b.nf <= 0) { b.nf = 0.35; if (!told) { told = 1; cap(TEXT.nofoot, 2.6); } }
   }
 }
+function D_hazardDraw(g, S, ch) {
+  var i,h,j,x,y,u,p;
+  for(i=0;i<g.spikes.length;i++) {
+    h=g.spikes[i];y=wy(h.y);if(y<-30||y>ch+30)continue;
+    u=h.state===2?14:h.state===1?3+11*(h.t%(h.tn+h.on+h.rest))/h.tn:3;
+    ctx.beginPath();
+    for(j=-1;j<=1;j++){x=wx(h.x+j*10);ctx.moveTo(x-5*S,y);ctx.lineTo(x,y-u*S);ctx.lineTo(x+5*S,y);ctx.closePath();}
+    ctx.lineWidth=LW;ctx.strokeStyle=h.state===1||h.state===2?'#fff':'#8c8c8c';
+    if(h.state===2){ctx.fillStyle='#fff';ctx.fill();}ctx.stroke();
+  }
+  h=g.guard;if(!h)return;x=wx(h.x);y=wy(h.y);if(y<-40||y>ch+40)return;
+  ctx.save();ctx.translate(x,y);ctx.rotate(RM?0:h.angle);
+  // The round body matches the contact radius. Polygon rims are safe ornaments.
+  ctx.beginPath();ctx.arc(0,0,18*S,0,6.2832);p=D_GUARDS[h.id][1];
+  for(i=0;i<p.length;i++){if(i)ctx.lineTo(p[i][0]*S,p[i][1]*S);else ctx.moveTo(p[i][0]*S,p[i][1]*S);}ctx.closePath();
+  ctx.lineWidth=LW;ctx.strokeStyle=h.state===1||h.state===2?'#fff':'#8c8c8c';ctx.fillStyle=h.state===2?'#fff':'#000';ctx.fill();ctx.stroke();
+  ctx.fillStyle=h.state===2?'#000':'#b8b8b8';ctx.fillRect(-8*S,-4*S,6*S,2*S);ctx.fillRect(2*S,-4*S,6*S,2*S);ctx.restore();
+  if(h.state===1){ctx.beginPath();ctx.arc(x,y,25*S,0,6.2832);ctx.strokeStyle='#fff';ctx.lineWidth=LW;ctx.stroke();}
+}
 function wx(x) { return MX + x * MS; }
 function wy(y) { return MY + y * MS; }
 function D_draw(g) {
@@ -756,6 +866,7 @@ function D_draw(g) {
     ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.2832); ctx.fillStyle = '#000'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke();
     ctx.beginPath(); ctx.arc(mx, my, mr * 0.45, 0, 6.2832); ctx.strokeStyle = '#b8b8b8'; ctx.stroke();
   }
+  D_hazardDraw(g,S,ch);
   // rings: back half, then the ball, then the front half, so the ball threads through
   var rv = g.inCourt || wy(g.floor) < ch + 300;
   if (rv) for (i = 0; i < g.rings.length; i++) { if (!g.inCourt) ringPos(g, g.rings[i], 0); drawRing(g, g.rings[i], S, -1); }
@@ -1198,9 +1309,9 @@ function E_reset(g, why) {
   F.jn = g.jlo + FLR(g.fr() * (g.jhi - g.jlo + 1));
 }
 function E_tm(g) {
-  var s = '', i, n = 0, k = 0, q;
-  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.gr) continue; n++; if (g.fin ? q.c && !q.sil : q.c) k++; s += '<i class="dot' + ((g.fin ? q.c && !q.sil : q.c) ? ' on' : q.h && !q.c ? ' half' : '') + '"></i>'; }
-  return '<span>' + (g.fin ? TEXT.silence : TEXT.rings) + ' <span aria-label="' + k + ' ' + TEXT.of + ' ' + n + '">' + s + '</span></span>' + (g.p.mk ? '<i class="yk" aria-hidden="true"></i><span class="sr">' + TEXT.markedSr + '</span>' : '');
+  var i, n = 0, k = 0, q;
+  for (i = 0; i < g.rings.length; i++) { q = g.rings[i]; if (q.gr) continue; n++; if (g.fin ? q.c && !q.sil : q.c) k++; }
+  return '<span>' + (g.fin ? TEXT.silence : TEXT.rings) + ' <b aria-label="' + k + ' ' + TEXT.of + ' ' + n + '">' + k + '/' + n + '</b></span>' + (g.p.mk ? '<i class="yk" aria-hidden="true"></i><span class="sr">' + TEXT.markedSr + '</span>' : '');
 }
 
 // ---------- sound, light, sight ----------
@@ -1321,10 +1432,9 @@ function cbox(b, k, e) {
 // a hip touch, heard: pats carry farther on later levels, and come at most one per 0.45 s however control flickers
 function E_pat(g) { var b = g.b, t = tOf(b.x, b.y); if (g.time - g.lpT < .45) return; g.lpT = g.time; emit(g, t, 5 + .5 * g.L, 0); b.pk = .15; E_snd(g, 'pat', t); }
 function rtile(q) { return q.hz ? q.lc * EW + q.a0 : q.a0 * EW + q.lc; }
-function E_strike(g, ax, ay) {
-  var p = g.p, b = g.b, F = g.f, dx = b.x - p.x, dy = b.y - p.y, k, q, d, ex, ey, al, qc, s;
-  if (p.cd > 0) return;
-  if (b.held || dx * dx + dy * dy > .49) { p.miss = .3; if (g.n - (g.rch || -9999) > 720) { g.rch = g.n; cap(TEXT.reach, 2); } return; }
+// Shared by the preview and the strike, so snap assistance never changes the shown direction.
+function E_direction(g, ax, ay) {
+  var b = g.b, F = g.f, k, q, d, ex, ey, al, qc, s, a = g.av || (g.av = [0, 0]);
   d = SQRT(ax * ax + ay * ay) || 1; ax /= d; ay /= d;
   // aim snap: the Stone Face first, then a ring of this court
   ex = F.x - b.x; ey = F.y - b.y; d = SQRT(ex * ex + ey * ey);
@@ -1337,6 +1447,13 @@ function E_strike(g, ax, ay) {
     ex = (q.hz ? q.a0 + q.ao : q.lc + q.s * (1.5 - qc)) - b.x; ey = (q.hz ? q.lc + q.s * (1.5 - qc) : q.a0 + q.ao) - b.y; d = SQRT(ex * ex + ey * ey) || 1;
     ax = ex / d; ay = ey / d; break;
   }
+  a[0] = ax; a[1] = ay; return a;
+}
+function E_strike(g, ax, ay) {
+  var p = g.p, b = g.b, dx = b.x - p.x, dy = b.y - p.y, a;
+  if (p.cd > 0) return;
+  if (b.held || dx * dx + dy * dy > .49) { p.miss = .3; if (g.n - (g.rch || -9999) > 720) { g.rch = g.n; cap(b.held ? TEXT.ballHeld : TEXT.reach, 2); } return; }
+  a = E_direction(g, ax, ay); ax = a[0]; ay = a[1];
   b.vx = ax * g.strk; b.vy = ay * g.strk; b.rest = 0; p.cd = .35; p.hit = .2; p.hx = ax; p.hy = ay; g.ctl = 0;
   emit(g, g.pt, 8, 1); E_snd(g, 'strike', g.pt);
   if (!(ET & 1)) { ET |= 1; cap(TEXT.echoTw[0], 3.4); }
@@ -1346,7 +1463,7 @@ function P_step(g, dt) {
   p.cd -= dt; p.hit -= dt; p.bst -= dt; p.miss -= dt; b.pk -= dt; if (p.prot > 0) p.prot -= dt;
   if (inp.sb > 0) {
     inp.sb = 0; tx = p.fx; ty = p.fy;
-    if (inp.sa === 1 && g.T) { tx = (inp.px * DPR - g.ox) / g.T - p.x; ty = (inp.py * DPR - g.oy) / g.T - p.y; }
+    if ((inp.sa === 1 || (!inp.sa && inp.ph && !coarse)) && g.T) { tx = (inp.px * DPR - g.ox) / g.T - p.x; ty = (inp.py * DPR - g.oy) / g.T - p.y; }
     else if (inp.sa === 2) { tx = inp.sax; ty = inp.say; }
     if (tx || ty) E_strike(g, tx, ty);
   }
@@ -1547,7 +1664,7 @@ function E_play(g, F) {
   F.ft = (best8(g.p.x - F.x, g.p.y - F.y, g) + 2) % 8;
   E_snd(g, 'face-play', tOf(F.x, F.y));
   if (F.np < 3) { F.np++; addPts(150); }
-  if (!(ET & 32)) { ET |= 32; cap(TEXT.plays, 3); }
+  cap(TEXT.ballHeld, 3); say(TEXT.ballHeld);
 }
 function E_cut(g) {
   var F = g.f, i, t, d;
@@ -1652,6 +1769,7 @@ function F_step(g, dt) {
         for (k = 1; k <= 4; k++) { var n = nbr(t, k); if (n >= 0 && (GR[n] & 1) && (!r || D2[n] < D2[nbr(t, r)])) r = k; }
         r = r || 1; b.held = 0; b.x = F.x + DX[r] * .3; b.y = F.y + DY[r] * .3; b.vx = DX[r] * 5.5; b.vy = DY[r] * 5.5; b.rest = 0; b.kx = b.x; b.ky = b.y;
         klight(g, t, 3); E_snd(g, 'face-return-strike', t);
+        cap(TEXT.ballBack, 3); say(TEXT.ballBack);
         F.st = 7; F.s = .6; F.after = 1;
       }
       break;
@@ -1850,7 +1968,7 @@ function E_mosaic(r, lost) {
 // one tile wide (about 110 px on a 1600 x 993 window), your hip yoke 0.18 tile in radius, the ōlli 0.12.
 var LEADK = [1, 1, .8, .5, .3];
 function E_lay(g) {
-  var port = H > W, top = 52, u = MAX(3, RND(MIN(W, H) * DPR / 125)), gut = port || W < 700 ? 16 : MAX(16, CEIL(9.5 * u / DPR)), cs = port ? 84 : 44, vw = W - 2 * gut, vh = H - top - cs,
+  var port = H > W, top = 128, u = MAX(3, RND(MIN(W, H) * DPR / 125)), gut = port || W < 700 ? 16 : MAX(16, CEIL(9.5 * u / DPR)), cs = port ? 84 : 44, vw = W - 2 * gut, vh = H - top - cs,
     T = RND(clamp((port ? MIN(vw / 7, vh / 12) : MIN(vh / 8, vw / 13)) * DPR, 24 * DPR, 150 * DPR));
   // captions never cover the labyrinth: a strip under it on portrait, under the HUD otherwise
   g.T = T; g.u = u; g.vw = RND(vw * DPR); g.vh = RND(vh * DPR); g.vx = RND(gut * DPR); g.vy = RND((top + (port ? 0 : cs)) * DPR);
@@ -1943,12 +2061,12 @@ function E_ring(g, q) {
 }
 // aim: from the ball along the aim to the first wall, plus a short stub of the bounce, only over tiles you can see
 function E_aim(g) {
-  var p = g.p, b = g.b, ax = 0, ay = 0, x = b.x, y = b.y, i, t, k, q, a0, a1, c, d, ox, oy, bx = 0, by = 0, A = g.al;
+  var p = g.p, b = g.b, ax = p.fx, ay = p.fy, x = b.x, y = b.y, i, t, k, q, a0, a1, c, d, ox, oy, bx = 0, by = 0, A = g.al, a;
   for (k = 0; k < g.rings.length; k++) g.rings[k].aim = 0;
   if (b.held || (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y) > .49) return 0;
   if (inp.ph && !coarse) { ax = (inp.px * DPR - OX) / TT - p.x; ay = (inp.py * DPR - OY) / TT - p.y; }
   d = SQRT(ax * ax + ay * ay); if (d < .01) return 0;
-  ax /= d; ay /= d; A[0] = X_(x); A[1] = Y_(y);
+  a = E_direction(g, ax, ay); ax = a[0]; ay = a[1]; A[0] = X_(x); A[1] = Y_(y);
   for (i = 0; i < 300; i++) {
     ox = x; oy = y; x += ax * .05; y += ay * .05; t = tOf(x, y);
     if (!seen(t)) break;
@@ -2199,6 +2317,7 @@ function E_draw(g) {
 // ---------- NATIONS OF TODAY ----------
 // No nation data lives in this file. It comes from the host (opts.nations) or a same-origin JSON, is checked
 // entry by entry, and appears only on calm static panels: never during play, never with the Stone Face.
+var HIST = null, HST = 0, hx = null, hw = [];
 var NAT = null, NP = [], NATst = 0, NATupd = '', xhr = null, natH = 0, natB = 0, natT = 0, natF = 0, natP = 0, natIn = 0, natV = 0, NMET = [], NSD = {}, NHL = {}, natCur = null;
 // Test entries (ids starting 'test-', facts of kind 'test') never show in a release build; the dev build keeps them for the layout fixture.
 var devNat = 0; /*T*/devNat = 1;/*T*/
@@ -2211,22 +2330,26 @@ function okD(s) { return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 // the last guard: en and em dashes in data become a comma
 var DSH = new RegExp('[' + String.fromCharCode(8211, 8212) + ']', 'g');
 function dash(s) { return s.replace(DSH, ', '); }
+function natFact(f, tm) {
+  var s = f && f.source, ck = f && f.checked, st = f && f.state;
+  if (!f || (!devNat && f.kind === 'test') || !okS(f.text, 1, 300) || !s || !okU(s.url) || !okS(s.publisher, 1, 120) || (s.title != null && !okS(s.title, 0, 240)) || !okD(s.accessed) || s.accessed > tm) return null;
+  if ((f.kind != null && !okS(f.kind, 0, 24)) || (f.as_of != null && !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(f.as_of)))) return null;
+  if ((ck != null && (!okD(ck) || ck > tm)) || (st != null && ['ok', 'grace', 'human'].indexOf(st) < 0) || (f.note != null && (!okD(f.note) || f.note > tm))) return null;
+  return { text: dash(f.text), kind: f.kind ? dash(f.kind) : '', as_of: f.as_of ? String(f.as_of) : '', title: s.title ? dash(s.title) : '', pub: dash(s.publisher), url: s.url, acc: s.accessed, ck: ck || '', st: st || '', note: f.note || '' };
+}
 function natValid(a) {
   var out = [], tm = ymd(new Date(Date.now() + 864e5)), i, j, n, f, s, fs, al, ok;
   if (!(a instanceof Array)) return out;
   for (i = 0; i < a.length && out.length < 600; i++) {
     n = a[i];
-    if (!n || !/^[a-z0-9-]{1,64}$/.test(n.id || '') || (!devNat && /^test-/.test(n.id)) || !okS(n.name, 1, 80) || !okS(n.lands, 1, 200) || !(n.countries instanceof Array) || n.countries.length < 1 || n.countries.length > 6) continue;
+    if (!n || !/^[a-z0-9-]{1,64}$/.test(n.id || '') || (!devNat && /^test-/.test(n.id)) || !okS(n.name, 1, 120) || !okS(n.lands, 1, 300) || !(n.countries instanceof Array) || n.countries.length < 1 || n.countries.length > 6) continue;
     ok = 1; for (j = 0; j < n.countries.length; j++) if (!okS(n.countries[j], 1, 60)) ok = 0;
     al = n.also == null ? [] : n.also;
     if (!(al instanceof Array) || al.length > 6) ok = 0; else for (j = 0; j < al.length; j++) if (!okS(al[j], 1, 80)) ok = 0;
     if (!ok) continue;
     fs = [];
     for (j = 0; n.facts instanceof Array && j < n.facts.length; j++) {
-      f = n.facts[j]; s = f && f.source;
-      if (!f || (!devNat && f.kind === 'test') || !okS(f.text, 1, 300) || !s || !okU(s.url) || !okS(s.publisher, 1, 120) || (s.title != null && !okS(s.title, 0, 200)) || !okD(s.accessed) || s.accessed > tm) continue;
-      if ((f.kind != null && !okS(f.kind, 0, 24)) || (f.as_of != null && !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(f.as_of)))) continue;
-      fs.push({ text: dash(f.text), kind: f.kind ? dash(f.kind) : '', as_of: f.as_of ? String(f.as_of) : '', title: s.title ? dash(s.title) : '', pub: dash(s.publisher), url: s.url, acc: s.accessed });
+      f = natFact(n.facts[j], tm); if (f) fs.push(f);
     }
     if (!fs.length) continue;
     s = n.pronounce;
@@ -2241,7 +2364,7 @@ function natSet(a, upd) {
   NATst = L.length ? 2 : 3; NAT = L.length ? L : null; NP = [];
   if (NAT) {
     NATupd = okD(upd) ? upd : '';
-    for (i = 0; i < L.length; i++) for (j = 0; j < L[i].facts.length; j++) if (L[i].facts[j].acc > NATupd && !okD(upd)) NATupd = L[i].facts[j].acc;
+    for (i = 0; i < L.length; i++) for (j = 0; j < L[i].facts.length; j++) { k = L[i].facts[j].ck || L[i].facts[j].acc; if (k > NATupd && !okD(upd)) NATupd = k; }
     // a seeded shuffle, then round-robin by region so no region dominates; the same order for everyone on a day
     r = rng(hashStr(okD(upd) ? upd : 'nations')); t = L.slice();
     for (i = t.length - 1; i > 0; i--) { j = FLR(r() * (i + 1)); k = t[i]; t[i] = t[j]; t[j] = k; }
@@ -2289,12 +2412,61 @@ function natCard(box, n, k, where) {
   if (n.also.length) el(box, 'p', 'na', TEXT.also + ' ' + n.also.join(', '));
   if (n.say) { p = el(box, 'p', 'na', TEXT.sayIt + ' ' + n.say.text + '. '); h = document.createElement('a'); h.href = n.say.url; lnk(p, TEXT.pronFrom + ' ' + h.hostname + '.', n.say.url); }
   el(box, 'p', 'na', n.lands + '. ' + n.countries.join(', ') + '.');
-  p = el(box, 'p', 'nf'); if (f.kind) { el(p, 'span', 'nk', f.kind); el(p, 'span', 'sr', ': '); } p.appendChild(document.createTextNode(f.text));
-  if (f.as_of) el(box, 'p', 'na', TEXT.asOf + ' ' + f.as_of + '.');
-  p = el(box, 'p', 'ns'); lnk(p, TEXT.source + ' ' + f.pub + (f.title ? ', ' + f.title : '') + '.', f.url); p.appendChild(document.createTextNode(' ' + TEXT.checked + ' ' + f.acc + '.'));
-  old = ymd(new Date(Date.now() - 365 * 864e5)); if (f.acc < old) el(box, 'p', 'ns', TEXT.stale);
+  el(box, 'p', 'nl', 'Quick Take'); natRenderFact(box, f);
+  var hd = el(box, 'details'), hb = el(hd, 'div'); hd.insertBefore(el(hd, 'summary', '', 'History And Context'), hb);
+  hd.addEventListener('toggle', function () { if (hd.open && !hb.childNodes.length) histLoad(hb, n); });
+  p = el(box, 'p', 'ns'); lnk(p, 'Read The Full Nation Record', '/nations/' + n.id + '.html');
+  p.appendChild(document.createTextNode(' / '));
+  lnk(p, 'Histories And Resources', '/nations/resources');
+
   if (!same) { natSeen(n.id, 1); NSD.id = n.id; NSD.where = where; snd('nation-card', NSD); }
   return f;
+}
+function natReceipt(f) {
+  return (f.ck ? (f.st === 'human' ? 'Checked By A Person ' : f.st === 'grace' ? 'Last Successful Check ' : TEXT.checked + ' ') + f.ck : 'Source Accessed ' + f.acc) + '.';
+}
+function natRenderFact(box, f) {
+  var p = el(box, 'p', 'nf');
+  if (f.kind) { el(p, 'span', 'nk', f.kind); el(p, 'span', 'sr', ': '); }
+  p.appendChild(document.createTextNode(f.text));
+  if (f.as_of) el(box, 'p', 'na', TEXT.asOf + ' ' + f.as_of + '.');
+  p = el(box, 'p', 'ns'); lnk(p, TEXT.source + ' ' + f.pub + (f.title ? ', ' + f.title : '') + '.', f.url);
+  p.appendChild(document.createTextNode(' ' + natReceipt(f)));
+  if (f.st === 'grace') el(box, 'p', 'ns', 'The source could not be reached' + (f.note ? ' on ' + f.note : '') + '. This fact retains its last successful check.');
+  if ((f.ck || f.acc) < ymd(new Date(Date.now() - 365 * 864e5))) el(box, 'p', 'ns', TEXT.stale);
+}
+// Extra history loads only when the reader opens a card, from this site's own data.
+function histShow(box, n) {
+  if (!root || !root.contains(box)) return;
+  box.textContent = '';
+  var d = HIST && HIST[n.id], i, j, f, fs, k, tm = ymd(new Date(Date.now() + 864e5)), total = 0;
+  if (HST === 3) { el(box, 'p', 'ns', 'History could not load. Use the full nation record below.'); return; }
+  if (d) for (i = 0; i < 2; i++) {
+    k = i ? 'context' : 'history'; fs = d[k];
+    if (!(fs instanceof Array)) continue;
+    var section = el(box, 'div'); el(section, 'h4', '', i ? 'Living Context' : 'Historical Context');
+    for (j = 0; j < fs.length && j < 12; j++) { f = natFact(fs[j], tm); if (f) { natRenderFact(el(section, 'div', 'hf'), f); total++; } }
+    if (section.childNodes.length === 1) box.removeChild(section);
+  }
+  if (!total) el(box, 'p', 'ns', "Historical context has not been published for this card yet. Explore the nation's own sources and full record below.");
+  else el(box, 'p', 'ns', 'A growing source-backed record, not a complete history. Dates describe each source check, not a guarantee of accuracy.');
+}
+function histLoad(box, n) {
+  if (HST === 2 || HST === 3) { histShow(box, n); return; }
+  hw.push([box, n]); el(box, 'p', 'ns', 'Loading History And Context...');
+  if (HST === 1) return;
+  HST = 1;
+  var a = document.createElement('a'); a.href = opts.historyUrl || '/game/history.json';
+  function done(j) {
+    hx = null; HIST = j && j.nations && typeof j.nations === 'object' ? j.nations : null; HST = HIST ? 2 : 3;
+    var pending = hw; hw = []; for (var i = 0; i < pending.length; i++) histShow(pending[i][0], pending[i][1]);
+  }
+  if (!/^https?:$/.test(a.protocol) || a.protocol + '//' + a.host !== location.protocol + '//' + location.host) { done(null); return; }
+  try {
+    hx = new XMLHttpRequest(); hx.open('GET', a.href, true); hx.timeout = 5000;
+    hx.onload = function () { var x = hx, j = null; if (x && x.status === 200 && x.responseText.length <= 262144) try { j = JSON.parse(x.responseText); } catch (e) {} done(j); };
+    hx.onerror = hx.ontimeout = function () { done(null); }; hx.send();
+  } catch (e) { done(null); }
 }
 function natSite(a, n) { a.hidden = !n || !n.site; if (n && n.site) a.href = n.site; }
 // the title herald: Previous, Next, Pause; it advances on its own every 14 s unless paused, hovered, focused or reduced motion
@@ -2348,13 +2520,13 @@ function natBetween() {
   panel('card');
   f = natCard(E.Npc, n, G.L + 1, 'card'); natSite(E.Nps, n);
   if (NMET.indexOf(n) < 0) NMET.push(n);
-  say(TEXT.natLabel + '. ' + n.name + '. ' + f.text + ' ' + TEXT.source + ' ' + f.pub + '. ' + TEXT.checked + ' ' + f.acc + '.');
+  say(TEXT.natLabel + '. ' + n.name + '. ' + f.text + ' ' + TEXT.source + ' ' + f.pub + '. ' + natReceipt(f));
 }
 
 
 // Standalone page: the resting ball opens the game. A host page calls ZTH_GAME.open() itself.
 var ob = document.getElementById('zgOpen');
-var GO = { returnFocus: ob, nationsUrl: '/game/nations.json' };   /* the game edition of the verified registry */
+var GO = { returnFocus: ob, nationsUrl: '/game/nations.json', historyUrl: '/game/history.json', nationsPage: 'https://zotheos.org/nations' };   /* the game edition of the verified registry */
 if (ob) ob.addEventListener('click', function () { API.open(undefined, GO); });
 if (ob && document.body.getAttribute('data-autoopen') === '1') API.open(undefined, GO);
 })();

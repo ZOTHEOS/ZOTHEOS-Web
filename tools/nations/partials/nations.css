@@ -374,3 +374,10 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 @media (prefers-reduced-motion: reduce) {
   [data-theme="maya"] :is(.page-h, .n-h1) { animation: none !important; }
 }
+
+/* Expandable source-backed histories on the resources page. */
+.resource-history summary { cursor: pointer; min-height: 44px; padding: 8px 0; }
+.resource-history summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.resource-history summary .nm { font-size: 24px; line-height: 1.35; }
+.resource-history h4 { margin: var(--sp-5) 0 var(--sp-3); }
+.resource-history[open] { padding-bottom: var(--sp-5); }

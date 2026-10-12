@@ -11,7 +11,7 @@ type="speculationrules" blocks, over the text exactly as the HTML parser sees it
 scripts are found with html.parser, so a '<script' inside an HTML comment is not mistaken for a tag). The script-src
 directive of the page's <meta http-equiv="Content-Security-Policy"> and of every vercel.json header entry whose
 source serves that page is rewritten to the hash list, or to 'none' when the page has no inline script
-(download.html stays script-src 'none'). Other directives are never touched, and each file keeps its own line endings.
+(download.html stays script-src 'none'). The game group also hashes its page and injected overlay styles. Other directives are never touched, and each file keeps its own line endings.
 
 Pages are grouped (GROUPS). Every file in a group must carry the same inline scripts (one hash list), or --check
 reports the odd file: the 450 generated nation pages come from one template, so a template edit that reached only
@@ -40,6 +40,7 @@ def groups(root):
     return [
         {"name": "index.html", "files": ["index.html"], "sources": ["/", "/index", "/index.html"], "strict": False},
         {"name": "download.html", "files": ["download.html"], "sources": ["/download", "/download.html"], "strict": False},
+        {"name": "game", "files": ["game/index.html"], "sources": ["/game", "/game/", "/game/index", "/game/index.html"], "strict": False, "meta": False, "styles": True},
         {"name": "nations hub", "files": ["nations.html"], "sources": ["/nations", "/nations.html"], "strict": True},
         {"name": "nations pages", "files": nat, "sources": ["/nations/(.*)"], "strict": True},
     ]
@@ -59,12 +60,13 @@ class _InlineScripts(HTMLParser):
     """Collects the raw text of every <script> without a src attribute. Script bodies are raw text to the parser
     (no character-reference decoding), and comments are skipped, as in a browser."""
 
-    def __init__(self):
+    def __init__(self, tag="script"):
+        self.tag = tag
         super().__init__(convert_charrefs=True)
         self.bodies, self.cur = [], None
 
     def handle_starttag(self, tag, attrs):
-        if tag == "script":
+        if tag == self.tag:
             self.cur = "skip" if any(k == "src" for k, _ in attrs) else []
 
     def handle_data(self, data):
@@ -72,7 +74,7 @@ class _InlineScripts(HTMLParser):
             self.cur.append(data)
 
     def handle_endtag(self, tag):
-        if tag == "script":
+        if tag == self.tag:
             if isinstance(self.cur, list):
                 self.bodies.append("".join(self.cur))
             self.cur = None
@@ -88,6 +90,27 @@ def page_hashes(html):
         digest = hashlib.sha256(body.encode("utf-8")).digest()
         out.append("'sha256-" + base64.b64encode(digest).decode("ascii") + "'")
     return out
+
+
+def game_style_hashes(root, html):
+    """Hash both page styles and the exact overlay CSS printed by game/build.py."""
+    parser = _InlineScripts("style")
+    parser.feed(html.replace("\r\n", "\n").replace("\r", "\n"))
+    parser.close()
+    source = read(os.path.join(root, "game", "index.src.html"))
+    block = re.search(r"var CSS = ((?:'(?:[^'\\]|\\.)*'\s*\+?\s*)+);", source, flags=re.S)
+    if not block:
+        raise SystemExit("game: injected CSS could not be found in the readable source")
+    css = ''.join(re.findall(r"'((?:[^'\\]|\\.)*)'", block.group(1))).replace("\\'", "'").replace('\\\\', '\\')
+    return ["'sha256-" + base64.b64encode(hashlib.sha256(body.encode("utf-8")).digest()).decode("ascii") + "'"
+            for body in parser.bodies + [css]]
+
+
+def fix_styles(policy, hashes):
+    pattern = re.compile(r"(?<![\w-])style-src(?![\w-])[^;]*")
+    if not pattern.search(policy):
+        raise SystemExit("game policy has no style-src directive")
+    return pattern.sub(lambda m: "style-src " + " ".join(hashes), policy, count=1)
 
 
 def directive(hashes):
@@ -124,7 +147,7 @@ def main():
     ap.add_argument("--root", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     a = ap.parse_args()
     root = a.root
-    drift, writes, hashes, metas = [], {}, {}, {}
+    drift, writes, hashes, metas, styles = [], {}, {}, {}, {}
     grps = [g for g in groups(root) if g["files"] and all(os.path.isfile(os.path.join(root, f)) for f in g["files"])]
 
     for g in grps:
@@ -137,6 +160,10 @@ def main():
                 ref = hs
             elif hs != ref:
                 drift.append(f"{page}: inline scripts differ from the group {g['name']}")
+                continue
+            if g.get("styles"):
+                styles[g["name"]] = game_style_hashes(root, html)
+            if not g.get("meta", True):
                 continue
             n = len(META_RE.findall(html))
             if n != 1:
@@ -163,8 +190,10 @@ def main():
                 if hd.get("key", "").lower() == "content-security-policy":
                     seen.add(name)
                     fixed = fix_policy(hd["value"], hashes[name])
+                    if name in styles:
+                        fixed = fix_styles(fixed, styles[name])
                     if fixed != hd["value"]:
-                        drift.append(f"vercel.json {entry['source']}: script-src is stale")
+                        drift.append(f"vercel.json {entry['source']}: script/style hashes are stale")
                         hd["value"] = fixed
                     g = next(x for x in grps if x["name"] == name)
                     if g["strict"]:
