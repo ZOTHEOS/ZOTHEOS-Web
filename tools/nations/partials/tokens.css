@@ -1,5 +1,5 @@
 /* Tokens copied by name and value from index.html (tools/nations_lint.py fails when any value drifts), then the
-   nations-only tokens. Maya Blue cosmic is the landing's :root; Obsidian mono is :root:not([data-theme]). */
+   nations-only tokens. Maya Radiance is the landing's :root; Sovereign Skeleton is :root:not([data-theme]). */
 :root {
   --serif: 'Instrument Serif', Georgia, serif;
   --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
@@ -28,7 +28,10 @@
   --ink-3: #8FA5B5;
   --ink-4: #6E8294;
   --ink-5: #3F5566;
-  --cochineal: #8B1934;
+  --cochineal: #DEBF79;
+  --gold-shadow: #C19A56;
+  --gold-highlight: #F3DCAC;
+  --gold-gradient: linear-gradient(105deg, var(--gold-shadow) 0%, var(--cochineal) 25%, var(--gold-highlight) 50%, var(--cochineal) 75%, var(--gold-shadow) 100%);
   --rule: rgba(244, 236, 216, 0.16);
   --rule-soft: rgba(244, 236, 216, 0.08);
   --surface: rgba(244, 236, 216, 0.04);

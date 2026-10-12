@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-f+hxFbCs1IVWPw9jc6aTKj/2p1RCcvdadavBi6pZCGw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-mZWk32Tc+86J0IKqTNuQrM2UsNndUzwwpxLCvAR1zqk='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Iñupiat | Indigenous nations today</title>
   <meta name="description" content="Iñupiat: Northwest and Arctic Alaska, from Norton Sound to the North Slope and the Canadian border, United States. NANA Regional Corporation in Northwest ...">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.33b9cde9.css">
+  <link rel="stylesheet" href="/static/nations/nations.c0ec3486.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -119,14 +119,15 @@
 <div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
   <div class="ap-row">
     <span class="ap-label" id="apThemeLabel">Theme</span>
+    <p class="ap-note ap-theme-description" id="apThemeDescription">Silver structure, a foundation for your own judgment.</p>
     <div class="ap-themes">
-      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel">
-        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Obsidian mono" title="Obsidian mono"></button>
-        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
-        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Codex parchment" title="Codex parchment"></button>
-        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel" aria-describedby="apThemeDescription">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Sovereign Skeleton" title="Sovereign Skeleton: Silver structure, a foundation for your own judgment."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
       </div>
-      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Obsidian mono</span>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
     </div>
   </div>
   <div class="ap-row" id="apMotionRow">
@@ -263,7 +264,8 @@
   /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
      the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
   var d = document.documentElement;
-  var NAMES = { '': 'Obsidian mono', maya: 'Maya Blue cosmic', codex: 'Codex parchment', skeleton: 'Skeleton obsidian' };
+  var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
+  var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
   var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
   var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -300,6 +302,8 @@
     if (m) m.setAttribute('content', BG[t]);
     var n = document.getElementById('apThemeName');
     if (n) n.textContent = NAMES[t];
+    var description = document.getElementById('apThemeDescription');
+    if (description) description.textContent = DESCRIPTIONS[t];
     themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
     if (save) put('zotheos_landing_theme', t);
   }
