@@ -262,13 +262,14 @@
       --ink-4:      #6E8294;
       --ink-5:      #3F5566;
 
-      --cochineal:        #DEBF79;
-      --cochineal-deep:   #9A7138;
-      --cochineal-rgb:    222, 191, 121;
+      --cochineal:        #B4873C;
+      --cochineal-deep:   #644017;
+      --cochineal-rgb:    180, 135, 60;
       --cochineal-text:   var(--ink);
-      --gold-shadow:      #C19A56;
-      --gold-highlight:   #F3DCAC;
-      --gold-gradient:    linear-gradient(105deg, var(--gold-shadow) 0%, var(--cochineal) 25%, var(--gold-highlight) 50%, var(--cochineal) 75%, var(--gold-shadow) 100%);
+      --gold-shadow:      #9D6D31;
+      --gold-highlight:   #F1DFB4;
+      --gold-mid:         #CDA45E;
+      --gold-gradient:    linear-gradient(112deg, var(--gold-shadow) 0%, var(--cochineal) 18%, var(--gold-highlight) 24%, var(--cochineal) 30%, var(--gold-shadow) 43%, var(--gold-mid) 60%, var(--gold-highlight) 66%, var(--cochineal) 73%, var(--gold-shadow) 86%, var(--gold-shadow) 100%);
 
       --pulse-green:      #5EBE6A;
       --pulse-green-rgb:  94, 190, 106;
@@ -7071,17 +7072,19 @@
 
     /* Maya Radiance: gold is the accent over the existing blue world. The other theme IDs and palettes stay intact. */
     @property --maya-gold-travel { syntax: '<length>'; inherits: true; initial-value: 0px; }
-    [data-theme="maya"] { --cochineal-text: var(--cochineal); }
+    [data-theme="maya"] { --cochineal-text: var(--ink); }
     [data-theme="maya"] .hero-headline .glow,
     [data-theme="maya"] .hero-headline .glow .hl {
       color: var(--cochineal);
       background-image: var(--gold-gradient);
-      background-size: 8em 100%;
+      --maya-gold-span: 3.6em;
+      background-size: var(--maya-gold-span) 100%;
       background-repeat: repeat-x;
       background-position: calc(var(--maya-gold-travel, 0px) - var(--hx, 0px)) 0;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 0.25px rgba(241, 223, 180, 0.38);
       text-shadow: none;
     }
     [data-theme="maya"] .hero-headline .glow .hl {
@@ -7094,15 +7097,16 @@
       color: var(--ink);
       border-color: transparent;
       background: linear-gradient(var(--bg-mid), var(--bg-floor)) padding-box, var(--gold-gradient) border-box;
-      background-size: 100% 100%, 8em 100%;
+      --maya-gold-span: 18em;
+      background-size: 100% 100%, var(--maya-gold-span) 100%;
       background-position: 0 0, var(--maya-gold-travel, 0px) 0;
       background-repeat: no-repeat, repeat-x;
       box-shadow: inset 0 0 20px rgba(var(--cochineal-rgb), 0.08), 0 0 18px rgba(var(--cochineal-rgb), 0.12);
       animation: none;
     }
-    @keyframes maya-gold-flow { from { --maya-gold-travel: 0em; } to { --maya-gold-travel: -8em; } }
+    @keyframes maya-gold-flow { from { --maya-gold-travel: 0px; } to { --maya-gold-travel: calc(0px - var(--maya-gold-span)); } }
     html.zm-fluid[data-theme="maya"][data-motion="living"] .hero-headline.settled .glow,
-    html.zm-fluid[data-theme="maya"][data-motion="living"] .hero-actions .btn-primary { animation: maya-gold-flow 16s linear infinite; }
+    html.zm-fluid[data-theme="maya"][data-motion="living"] .hero-actions .btn-primary { animation: maya-gold-flow 12s linear infinite; }
     [data-theme="maya"] .hero-actions .btn-primary:hover { animation-play-state: paused; }
     @media (prefers-reduced-motion: reduce) {
       [data-theme="maya"] .hero-headline.settled .glow,
