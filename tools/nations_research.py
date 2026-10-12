@@ -14,6 +14,8 @@ import re
 import sys
 import urllib.parse
 
+import nations_inventories as I
+
 DEFAULT_ROOT = Path(__file__).resolve().parent.parent
 DATA = Path('data/nations/research')
 TASK_STATUSES = {'pending', 'researching', 'needs_review', 'blocked'}
@@ -50,10 +52,18 @@ def paths(root):
     return folder / 'coverage_queue.json', folder / 'directory_sources.json', folder / 'us_federal_directory.json'
 
 
+def directory_entries(root):
+    entries = load(paths(root)[2])['entities'][:]
+    for doc in I.documents(root):
+        entries.extend(doc['entities'])
+    return entries
+
+
 def validate(root):
     qp, sp, dp = paths(root)
     queue, sources, directory = load(qp), load(sp), load(dp)
     errors = []
+    I.directory_holds(root)
     source_map = {s['source_id']: s for s in sources['sources']}
     registry_path = Path(root)/'data/nations/nations.json'
     registry_ids = {n['id'] for n in load(registry_path)['nations']} if registry_path.exists() else None
@@ -93,6 +103,21 @@ def validate(root):
             errors.append('Unreviewed candidate cannot become a confirmed profile link')
         if registry_ids is not None and any(c['registry_id'] not in registry_ids for c in crosswalk['candidates']):
             errors.append('Candidate crosswalk refers to an absent registry id')
+    extras = I.documents(root)
+    all_entries = entities + [e for doc in extras for e in doc['entities']]
+    ids = {e['directory_id'] for e in all_entries}
+    if len(ids) != len(all_entries):
+        errors.append('Directory inventory ids collide across source categories')
+    for doc in extras:
+        sid = doc['_display']['source_id']
+        if sid not in source_map or not source_allowed(doc['source']['url'], source_map[sid]):
+            errors.append('Inventory source is outside its exact host allowlist')
+        for e in doc['entities']:
+            crosswalk = e['registry_crosswalk']
+            if crosswalk['status'] == 'confirmed' and (registry_ids is None or crosswalk['registry_id'] not in registry_ids):
+                errors.append('Confirmed inventory crosswalk must point to an existing registry id')
+            if registry_ids is not None and any(c['registry_id'] not in registry_ids for c in crosswalk['candidates']):
+                errors.append('Inventory candidate refers to an absent registry id')
     task_ids = set()
     for task in queue['tasks']:
         if task['task_id'] in task_ids:
@@ -104,6 +129,10 @@ def validate(root):
             errors.append('Unknown task source id: '+task['task_id'])
         if task['entity_id'] and task['entity_id'] not in ids:
             errors.append('Unknown directory entity: '+task['task_id'])
+        elif task['entity_id']:
+            entry = next(e for e in all_entries if e['directory_id'] == task['entity_id'])
+            if task['entity_type'] != entry['entity_type'] or task['countries'] != entry['countries']:
+                errors.append('Task differs from its typed directory scope: '+task['task_id'])
         for signal in task['risk']['signals']:
             required = {'source_url', 'publication_date', 'event_date', 'receipt_id', 'review_status'}
             if not required <= signal.keys() or signal['review_status'] != 'pending':
@@ -130,6 +159,7 @@ def audit(root):
         'queue_by_status': dict(Counter(t['status'] for t in queue['tasks'])),
         'queue_by_region': dict(sorted(Counter(t['region'] for t in queue['tasks']).items())),
         'source_units': [{'source_id': s['source_id'], 'unit': s['entity_unit'], 'stated_count': s['stated_count'], 'as_of': s['as_of']} for s in sources['sources']],
+        'additional_inventories': [{'unit': d['entity_unit'], 'snapshot': d['as_of'], 'records': len(d['entities']), 'stated_count': d.get('stated_count'), 'count_discrepancy': d.get('count_discrepancy')} for d in I.documents(root)],
         'coverage_percent': None,
         'note': 'No government-coverage percentage is computed from the mixed registry. Exact-name candidates still need identity review.'
     }
@@ -148,7 +178,8 @@ def next_tasks(root, limit=3, now=None):
     queue = load(paths(root)[0])
     now = stamp(now)
     limit = min(max(limit, 0), queue['max_subjects_per_run'])
-    ready = [t for t in queue['tasks'] if due(t, now)]
+    held = I.directory_holds(root)
+    ready = [t for t in queue['tasks'] if due(t, now) and t.get('entity_id') not in held]
     ready.sort(key=lambda t: (-t['priority'], t['subject'].casefold(), t['task_id']))
     # At an equal priority, rotate among geographic lanes before a second task
     # from one lane. Explicit owner-priority work remains first.
@@ -182,7 +213,7 @@ def reconcile(root, now=None):
     if errors:
         raise ValueError('; '.join(errors))
     queue = load(paths(root)[0])
-    directory = {e['directory_id']:e for e in load(paths(root)[2])['entities']}
+    directory = {e['directory_id']:e for e in directory_entries(root)}
     registry_ids = {n['id'] for n in load(Path(root)/'data/nations/nations.json')['nations']}
     task_ids = {t['task_id'] for t in queue['tasks']}
     changed, added, resolved = [], [], []
@@ -261,6 +292,8 @@ def transition(root, task_id, action, now=None, note=None, receipt=None):
         raise ValueError('Unknown task id')
     current = stamp(now)
     if action == 'claim':
+        if task.get('entity_id') in I.directory_holds(root):
+            raise ValueError('Directory subject has a publication hold; do not research or restore it automatically')
         if not due(task, current):
             raise ValueError('Task is already leased or awaiting review')
         task['status'] = 'researching'

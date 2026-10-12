@@ -94,6 +94,12 @@ def main(argv=None):
         for entry in directory.get("entities", []):
             if entry.get("official_url") and entry.get("official_url_review", {}).get("status") == "verified":
                 allowed.add(entry["official_url"])
+    import nations_inventories as I
+    for document in I.documents(root):
+        allowed.add(document['source']['url'])
+        for item in document['entities']:
+            if item.get('official_url') and item.get('official_url_review', {}).get('status') == 'verified':
+                allowed.add(item['official_url'])
     np_ = os.path.join(root, "static", "nations", "news.json")
     if os.path.isfile(np_):
         news = json.load(open(np_, encoding="utf-8"))

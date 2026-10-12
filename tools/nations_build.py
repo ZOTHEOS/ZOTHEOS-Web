@@ -720,6 +720,14 @@ class Builder:
                 or any(not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", k) for k in group_ids + item_ids)
                 or any(r["group"] not in group_ids or not r["links"] or not r["sources"] for r in items)):
             raise BuildError("resources: invalid ids, group, links or sources")
+        known = {n['id'] for n in self.m.raw['nations']}
+        for item in items:
+            refs = item.get('nation_ids', [])
+            if (not isinstance(refs, list) or len(refs) > 16 or len(set(refs)) != len(refs)
+                    or any(not isinstance(nid, str) or nid not in known for nid in refs)):
+                raise BuildError('resources: invalid canonical nation references')
+        # A named composite resource must not bypass any participating nation's publication hold.
+        items = [item for item in items if set(item.get('nation_ids', [])) <= self.m.by_id.keys()]
         histories = [n for n in self.m.nations if any(f["kind"] == "history" for f in n["facts"])]
         history_count = sum(f["kind"] == "history" for n in histories for f in n["facts"])
         total = len(self.m.nations)

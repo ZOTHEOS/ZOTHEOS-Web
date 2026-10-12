@@ -1,0 +1,29 @@
+{
+  "original_policy_defect": "Original reads used a 1.1-second host minimum, below the repository minimum of three seconds. Original receipts are preserved.",
+  "correction": "Only Table20 and dashboard script reread with 3.1 seconds before every request. Existing same-day robots evidence reused.",
+  "comparisons": [
+    {
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Etnias_e_Linguas_Indigenas_principais_caracteristicas_sociodemograficas_Resultados_do_universo/Tabelas_complementares/xlsx/Tabela_complementar_20.xlsx",
+      "original_retrieved_at": "2026-10-12T14:14:10.554186+00:00",
+      "compliant_reread_at": "2026-10-12T14:24:44.794786+00:00",
+      "unchanged_sha256": "95fb57ddc07fef10e847cb95e5a3480664182fe4e61c34d319e627bf5fc3b212",
+      "minimum_pre_request_wait_seconds": 3.1
+    },
+    {
+      "url": "https://www.ibge.gov.br/brasil-indigena/static/js/main.53a003da.js",
+      "original_retrieved_at": "2026-10-12T14:14:11.448388+00:00",
+      "compliant_reread_at": "2026-10-12T14:24:49.165590+00:00",
+      "unchanged_sha256": "03744879a1ca2b3e78752657868a918ea899c05b9365cc07aa4311539a6a6e67",
+      "minimum_pre_request_wait_seconds": 3.1
+    }
+  ],
+  "extraction_rechecked": {
+    "named_leaf_categories": 391,
+    "source_rows": 404,
+    "subtotals_excluded": 12,
+    "residual_excluded": 1
+  },
+  "human_review": false,
+  "actor": "AI-assisted",
+  "recorded_at": "2026-10-12T14:25:31.825314+00:00"
+}

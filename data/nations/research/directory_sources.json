@@ -51,8 +51,8 @@
       "stated_count": 619,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "The profiles landing page states 619 First Nations. Enumeration is pending; Inuit and Metis require separate sources."
+      "status": "source_retrieved",
+      "note": "Wildcard search returned 638 distinct profile records on October 12, 2026; a fresh landing page still states 619. Difference unresolved. These rows are not equated to the 634 dated register groups or to all current governments."
     },
     {
       "source_id": "ca-indian-register-2024",
@@ -118,8 +118,8 @@
       "stated_count": null,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "Separate pueblo, Indigenous community, Afromexican community and pluricultural community units. Do not turn language counts into peoples counts."
+      "status": "source_retrieved",
+      "note": "N’dee people-level page and dated February 21, 2025 agreement read on October 12, 2026. Named communities and governing bodies are not enumerated or crosswalked. Preserve pueblo, Indigenous, Afromexican and pluricultural community units separately."
     },
     {
       "source_id": "gt-almg",
@@ -204,13 +204,14 @@
       "url": "https://www.ibge.gov.br/brasil-indigena/",
       "allowed_hosts": [
         "www.ibge.gov.br",
-        "agenciadenoticias.ibge.gov.br"
+        "agenciadenoticias.ibge.gov.br",
+        "ftp.ibge.gov.br"
       ],
       "stated_count": 391,
       "as_of": "2022",
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "391 self-declared ethnicities, peoples or groups in Census 2022. Publication updated in 2025. Not 391 governments."
+      "status": "source_retrieved",
+      "note": "Named 2022 census leaf categories from Table 20: 404 data rows minus 12 subtotal headings and one unspecified residual response yields 391 names. Census categories, not governments; 2026 table revision not established."
     },
     {
       "source_id": "co-dane-census-2018",
@@ -431,6 +432,38 @@
       "discovery_date": "2026-10-12",
       "status": "source_located",
       "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources."
+    },
+    {
+      "source_id": "priority-mescalero",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://mescaleroapachetribe.com/our-culture/",
+      "allowed_hosts": [
+        "mescaleroapachetribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_retrieved",
+      "note": "Own Tribe history and governance account; ceremonial material is not reproduced."
+    },
+    {
+      "source_id": "priority-chiricahua-nation",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+      "allowed_hosts": [
+        "chiricahuaapachenation.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-12",
+      "status": "source_retrieved",
+      "note": "Own account of this named community; does not establish recognition or exclusive representation."
     }
   ]
 }
