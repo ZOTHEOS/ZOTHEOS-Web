@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "receipt_id": "steward-independent-ai-review-2026-10-12",
+  "reviewed_at": "2026-10-12T14:48:25.316024+00:00",
+  "reviewer": "Codex independent reviewer (/root/site_palette_review)",
+  "review_kind": "AI-assisted source, semantic, respect and code review",
+  "machine": "MELLO-MOOSE",
+  "model": "Not reported to this reviewer; no model identity inferred",
+  "human_review_claimed": false,
+  "review_result": "passed within the defined scope",
+  "open_findings": [],
+  "severity_counts": {
+    "P1": 0,
+    "P2": 0
+  },
+  "scope": "October 12 research heartbeat: separate Canada profile-search and Brazil census inventories; bounded Chiricahua source guide; durable queue and publication holds",
+  "counts": {
+    "registry_contract_profiles": 457,
+    "registry_contract_facts": 1287,
+    "visible_profile_model_profiles": 457,
+    "visible_profile_model_facts": 1285,
+    "us_dated_federal_name_records": 577,
+    "us_notice_stated_count": 575,
+    "us_count_difference": "unresolved",
+    "canada_dated_administrative_groups": 634,
+    "canada_profile_search_records": 638,
+    "canada_landing_stated_count": 619,
+    "canada_profile_count_difference": "unresolved",
+    "brazil_named_2022_census_categories": 391,
+    "research_queue_tasks": 1712,
+    "queue_statuses": {
+      "pending": 1619,
+      "needs_review": 93
+    },
+    "new_inventory_name_candidates": 41,
+    "new_inventory_confirmed_crosswalks": 0,
+    "new_inventory_official_nation_websites_approved": 0,
+    "government_or_worldwide_coverage_percentage": null
+  },
+  "independent_source_checks": [
+    {
+      "subject": "Mexico INPI Ndee category",
+      "result": "Direct HTTPS read passed; broad people-level source, not an exclusively Chiricahua inventory",
+      "retrieval_receipt": {
+        "url": "https://catalogo.inpi.gob.mx/ndee/",
+        "retrieved_at": "2026-10-12T14:11:07.544587+00:00",
+        "final_url": "https://catalogo.inpi.gob.mx/ndee/",
+        "http_status": 200,
+        "bytes": 83107,
+        "sha256": "7f8849f3a316cbc970c7adf7f988d0a6f03fe7f7c0b8e84c524ba235e4edc0d1"
+      }
+    },
+    {
+      "subject": "Fort Sill History",
+      "result": "Own-site account supports a distinct government and historical Oklahoma resettlement account",
+      "retrieval_receipt": {
+        "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+        "retrieved_at": "2026-10-12T14:11:09.285050+00:00",
+        "final_url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+        "http_status": 200,
+        "bytes": 192112,
+        "sha256": "5cdda8bdea48e188b999fe7c957c9a279d6ddbb1a3d18f4ef4faf9cdc8d2a6de"
+      }
+    },
+    {
+      "subject": "Mescalero Our Culture",
+      "result": "Own-site account identifies Mescalero, Lipan and Chiricahua within its tribe; ceremonies are not reproduced",
+      "retrieval_receipt": {
+        "url": "https://mescaleroapachetribe.com/our-culture/",
+        "retrieved_at": "2026-10-12T14:11:09.790671+00:00",
+        "final_url": "https://mescaleroapachetribe.com/our-culture/",
+        "http_status": 200,
+        "bytes": 57487,
+        "sha256": "14dd5014ecd3bb07151d40e731d9f1fe498d790757eed10bbd2f10bf5b5c66af"
+      }
+    },
+    {
+      "subject": "Chiricahua Apache Nation Governance",
+      "result": "Read own-site council account; recognition and exclusive representation not inferred",
+      "url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+      "retrieval_method": "browser_tool",
+      "accessed": "2026-10-12",
+      "evidence": "Its Governance section describes an Executive Council and National Council; no HTTP status or body hash inferred for this browser read."
+    },
+    {
+      "subject": "Canada wildcard search extraction",
+      "result": {
+        "rows_verified": 638,
+        "unique_exact_names": 638,
+        "profile_number_range": [
+          1,
+          780
+        ],
+        "hash_verified": true,
+        "crosswalks_unreviewed": true,
+        "official_sites_unclaimed": true,
+        "source_question_mark_labels": [
+          "?Akisq'nuk First Nation",
+          "?Esdilagh First Nation",
+          "?aqam",
+          "Yaqit ?a·knuqli‘it First Nation"
+        ],
+        "duplicate_extraction_note_occurrences": 3,
+        "source_as_of": null,
+        "publication_date": null,
+        "record_as_of_scope": "retrieval snapshot date, not claimed legal effective date"
+      }
+    },
+    {
+      "subject": "Brazil workbook and dashboard extraction",
+      "result": {
+        "source_hash_verified": true,
+        "table_labels_matched": 391,
+        "dashboard_records": 404,
+        "independent_subtotal_count": 12,
+        "named_leaf_records": 391,
+        "unique_names": 391,
+        "crosswalks_unreviewed": true,
+        "countries_scope": "Brazil census enumeration, not exclusive homelands",
+        "notes": {
+          "A19": "(**) Embora entendido como família linguística, o dado está sendo divulgado como foi declarado, considerando seu acionamento na declaração de etnia.",
+          "A20": "(*) Etnias historicamente consideradas como desaparecidas e que apareceram na coleta a partir da autodeclaração."
+        },
+        "source_as_of": "2022",
+        "edition_note": "No revised 2026 edition is asserted"
+      }
+    }
+  ],
+  "resolved_review_findings": [
+    "Cross-government historical dates removed from each public note; its own date stays bound to its existing fact ID.",
+    "Canada outer-whitespace extraction note deduplicated and results-page hash URL recorded.",
+    "Canada literal question-mark labels are preserved and disclosed without invented preferred names.",
+    "Brazil single- and double-asterisk scope notes explain self-declared census categories without declaring peoples extinct or turning linguistic families into governments.",
+    "Named composite resource binds all participating profile IDs and is suppressed under their publication holds.",
+    "Directory-only holds apply to public entries and font roles, exclude automatic research planning and reject claim; no automatic restoration is added.",
+    "About, hub, credits and footer captions distinguish automated phrase matching, separate source/meaning review and person checks backed by dated receipts. No blanket human-check claim remains in these revised captions."
+  ],
+  "acceptance": {
+    "test_suites": [
+      "test_nations_directory.py",
+      "test_nations_inventories.py",
+      "test_nations_context.py",
+      "test_resources.py",
+      "test_nations_research.py"
+    ],
+    "tests_passed": 76,
+    "tests_failed": 0,
+    "independent_test_timing": "The 76 focused tests ran before the final navigation/public-note and four-caption copy refinements. Those final refinements were reviewed statically; no new broad test run is claimed.",
+    "runtime_note": "Installed Python ran code tests. Bundled Python analyzed the source workbook. The bundled runtime lacked pytest.",
+    "environment_note": "Initial Context fixtures failed because the Windows sandbox default temporary folder was not writable. Process-local scratch temp resolved that issue; final scoped run passed.",
+    "source_schema_and_queue_validate": "passed",
+    "new_mexican_community_research": "pending in identity-chiricahua-mexico-own-communities"
+  },
+  "caption_semantic_review": {
+    "result": "passed",
+    "files": [
+      "tools/nations/templates/about.html",
+      "tools/nations/templates/hub.html",
+      "tools/nations/templates/credits.html",
+      "tools/nations/partials/footer.html"
+    ],
+    "method": "Read exact four-file Git diffs and full changed captions. No network or broad test repetition.",
+    "source_honesty": "Automated phrase checks, separate source/meaning reviews and dated person-check receipts are distinguished. AI-assisted review is not claimed as a person check.",
+    "latest_backend_refinement": "Read latest nations_directory.py and nations_inventories.py. Inventory navigation is explicit, and the optional public_extraction_note is bounded, escaped and keeps source scope clear. Detailed extraction metadata is retained separately.",
+    "public_inventory_notes": "Canada preserves source names and profile numbers pending own-name/identity review. Brazil preserves named census categories while excluding subtotal headings and keeping source footnotes separate. No new identity or recognition claim is added."
+  },
+  "primary_agent_report": {
+    "provenance": "Reported by primary agent; not independently rerun or browser-observed by this reviewer",
+    "full_suite_tests_passed_before_copy_only_caption_changes": 125,
+    "browser_directory_rows": 2240,
+    "browser_typed_lists": 4,
+    "mobile_aqam_search_results": 2,
+    "mobile_note": "Same-name source records in different inventories intentionally remain separate. Primary reports readable dark input and no overflow.",
+    "final_generated_build": "Primary agent reported all gates running; no completion or production deployment inferred."
+  },
+  "limitations": [
+    "The two new inventories publish source names, not 1039 new researched nation profiles or governments.",
+    "Canada 619 versus 638 and US 575 versus 577 differences remain unresolved.",
+    "Brazil data is a 2022 census snapshot; a revised 2026 workbook edition is not established.",
+    "Named Mexican communities and their contemporary governing bodies remain unenumerated and unresolved.",
+    "This source/code review does not claim production deployment, browser visual verification, or research into every Indigenous people."
+  ],
+  "snapshot_type": "Current uncommitted source/data tree; generated pages and final publication are the primary agent responsibility",
+  "file_hashes": [
+    {
+      "path": "tools/nations_build.py",
+      "bytes": 79797,
+      "sha256": "2b951eb41942d01d1ea0585a65a6ec99128e06000049c590f98131ccfbbd2ab2"
+    },
+    {
+      "path": "tools/nations_directory.py",
+      "bytes": 21053,
+      "sha256": "feee99c234cdc5b73f4ff015be7c05848ad5dcbef8a44ec0b3d3e6501c3e23aa"
+    },
+    {
+      "path": "tools/nations_inventories.py",
+      "bytes": 7007,
+      "sha256": "7e082dcd4958419f4193a8c25e351d1f4b2688fea8459b959a036a618289d70f"
+    },
+    {
+      "path": "tools/nations_research.py",
+      "bytes": 21358,
+      "sha256": "d835542a17bbe45453da4c4b164c5ac000b5b7cf3ef691ad7b8e716806c90a98"
+    },
+    {
+      "path": "tools/nations_fonts.py",
+      "bytes": 10828,
+      "sha256": "6c95047ca8aeae78c60ed31d195f37cfecff589fd0eee2938b74dedb5e8b789c"
+    },
+    {
+      "path": "tools/nations_links.py",
+      "bytes": 8544,
+      "sha256": "3be25c81cb9b014bdc68d5a0b383bc22051188175b80201e06ce7c6b5229d303"
+    },
+    {
+      "path": "tools/nations_context.py",
+      "bytes": 8461,
+      "sha256": "3a3bf7a1f6a9137769d095135dd5aa7d9d21073c70a1a8bce7e111f4dd4234b2"
+    },
+    {
+      "path": "tools/tests/test_nations_directory.py",
+      "bytes": 6487,
+      "sha256": "77d0af484f5719e4fbf505bbbd0224600f25a6ff5d0314cb4f6684f43f58a2bc"
+    },
+    {
+      "path": "tools/tests/test_nations_inventories.py",
+      "bytes": 18109,
+      "sha256": "786182ced556767f3d4148268b79741f3c7b14b9438cd9f013b8eb65d97d90cb"
+    },
+    {
+      "path": "tools/tests/test_nations_context.py",
+      "bytes": 9394,
+      "sha256": "2324a54b4adb9d8b3a916b1d0ec42c1253a10b6054a1cc0a02ec9838d23627fc"
+    },
+    {
+      "path": "tools/tests/test_resources.py",
+      "bytes": 3688,
+      "sha256": "9f40ea55d785233b43220d17889bf0e0f51c859ef141d95ba00011db4c1b69a8"
+    },
+    {
+      "path": "tools/tests/test_nations_research.py",
+      "bytes": 12980,
+      "sha256": "e8dbce6c2684608c425a1f63dbbdbd458d0f33fd690925d2d9c1064cacf0bd10"
+    },
+    {
+      "path": "data/nations/context_links.json",
+      "bytes": 2699,
+      "sha256": "29e30bb4afbafd7031a5458e651e10a453199b8c6c0a8366e6f823a093165152"
+    },
+    {
+      "path": "data/nations/resources.json",
+      "bytes": 10887,
+      "sha256": "b79001e971403195cbae81310694d89e849ad133144e8a551af939439bf1c386"
+    },
+    {
+      "path": "data/nations/research/br_census_groups_2022.json",
+      "bytes": 266858,
+      "sha256": "33318c19d8af402356b328152cafe21ef5022f6386e5ee28ec31a473f055ef37"
+    },
+    {
+      "path": "data/nations/research/ca_fn_profiles_2026.json",
+      "bytes": 386042,
+      "sha256": "2a8bdbf085a9d3f1b98a1c7ab7b7325bdd34e5eb14a08c4f6b7b8b2f35fbbc85"
+    },
+    {
+      "path": "data/nations/research/coverage_queue.json",
+      "bytes": 1529791,
+      "sha256": "42da60def8b01d855763fdc04dd800f4de7c92a288b635a2fb18e922e0665f4c"
+    },
+    {
+      "path": "data/nations/research/directory_sources.json",
+      "bytes": 15661,
+      "sha256": "1afdaf1980da04f0935232eced05dce19ce7b1f8be39c3913e240432279177a1"
+    },
+    {
+      "path": "data/nations/research/publication_holds.json",
+      "bytes": 241,
+      "sha256": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263"
+    },
+    {
+      "path": "data/nations/sources/chiricahua-scope-2026-10-12.context.json",
+      "bytes": 3551,
+      "sha256": "d23da26a51de5c0a1159367419a477994b23bd973ac0a5517c7bd9592f351179"
+    },
+    {
+      "path": "data/nations/nations.json",
+      "bytes": 1208682,
+      "sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad"
+    },
+    {
+      "path": "data/nations/overrides.json",
+      "bytes": 340,
+      "sha256": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444"
+    },
+    {
+      "path": "data/nations/verify/human.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "tools/nations/templates/about.html",
+      "bytes": 2889,
+      "sha256": "2be800b918ea952eb782116efb9988aec3d4656bb36d7eea82549e2bfcefca89"
+    },
+    {
+      "path": "tools/nations/templates/hub.html",
+      "bytes": 5131,
+      "sha256": "21d4ea70e07f947ff228b8f3993f44306487f7b96f8ae3c148be6e4aa81c4376"
+    },
+    {
+      "path": "tools/nations/templates/credits.html",
+      "bytes": 972,
+      "sha256": "0d6790964b779be944f8a260e1ada17468b05ceb0744fdd09e1f41674b8e39e1"
+    },
+    {
+      "path": "tools/nations/partials/footer.html",
+      "bytes": 5223,
+      "sha256": "3d35bbc15c4ce159c1629d92d17e3a920763f51db19d5676f2f10e161aac4fc7"
+    }
+  ],
+  "actual_web_files_written_by_reviewer": false
+}

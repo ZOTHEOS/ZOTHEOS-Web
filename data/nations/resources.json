@@ -242,6 +242,73 @@
           "accessed": "2026-10-12"
         }
       ]
+    },
+    {
+      "id": "chiricahua-cross-border-starting-points",
+      "group": "learn",
+      "title": "Chiricahua histories across the border",
+      "kind": "Community histories and a Mexican public catalogue",
+      "scope": "United States and Mexico; distinct source categories",
+      "summary": "Start with Fort Sill and Mescalero's own histories, then read the Chiricahua Apache Nation's account of its councils. INPI's Mexican entry concerns a broader people. Related ancestry is not proof of one shared government or exclusive representation; named Mexican communities still need their own source review.",
+      "links": [
+        {
+          "label": "Fort Sill Apache history",
+          "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/"
+        },
+        {
+          "label": "Mescalero: Tribal History and Reservation History",
+          "url": "https://mescaleroapachetribe.com/our-culture/"
+        },
+        {
+          "label": "Chiricahua Apache Nation: Governance",
+          "url": "https://chiricahuaapachenation.org/who-we-are/governance.php"
+        },
+        {
+          "label": "INPI: a broader people-level account in Mexico",
+          "url": "https://catalogo.inpi.gob.mx/ndee/"
+        },
+        {
+          "label": "INPI catalogue update, February 21, 2025",
+          "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/2025_02_21_MAT_inpi.pdf"
+        }
+      ],
+      "sources": [
+        {
+          "title": "History",
+          "publisher": "Fort Sill Apache Tribe",
+          "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "title": "Our Culture",
+          "publisher": "Mescalero Apache Tribe",
+          "url": "https://mescaleroapachetribe.com/our-culture/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "title": "Governance",
+          "publisher": "Chiricahua Apache Nation",
+          "url": "https://chiricahuaapachenation.org/who-we-are/governance.php",
+          "accessed": "2026-10-12"
+        },
+        {
+          "title": "N’dee",
+          "publisher": "Instituto Nacional de los Pueblos Indígenas",
+          "url": "https://catalogo.inpi.gob.mx/ndee/",
+          "accessed": "2026-10-12"
+        },
+        {
+          "title": "Catalogue update, February 21, 2025",
+          "publisher": "Instituto Nacional de los Pueblos Indígenas",
+          "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/2025_02_21_MAT_inpi.pdf",
+          "accessed": "2026-10-12"
+        }
+      ],
+      "nation_ids": [
+        "fort-sill-apache-us-ok-nm",
+        "mescalero-apache-us-nm",
+        "chiricahua-apache-nation-us-nm"
+      ]
     }
   ]
 }

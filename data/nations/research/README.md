@@ -35,7 +35,7 @@ recognition finding, and the GIS data cannot establish land ownership.
 
 The captured registry has 143 US-associated entries, including governments and broader peoples. There are
 45 exact name/alias candidate rows in the federal-directory crosswalk and 532 without such a candidate.
-All candidate matches remain unreviewed. Neither 143 nor 45 is a count of confirmed federal-government profiles,
+Those initial candidate matches were unreviewed in that captured audit. Four government crosswalks were subsequently reviewed with AI assistance and linked by explicit receipts. Neither 143 nor 45 is a count of confirmed federal-government profiles,
 and 532 is not a proven count of absent nations. No government-coverage percentage is calculated.
 
 Canada's [First Nation Profiles](https://services.sac-isc.gc.ca/fnp/main/Index.aspx?lasng=eng) states 619 First
@@ -118,3 +118,44 @@ python -m unittest discover -s tools/tests -p test_nations_research.py
 
 If a restricted Windows sandbox cannot write its temporary directory, set `ZOTHEOS_TEST_TMP` to an explicitly
 owned scratch directory. Tests never alter the published registry.
+
+## Source inventories added in the October 12 steward cycle
+
+`ca_fn_profiles_2026.json` preserves 638 distinct First Nation Profile search records observed on
+October 12, 2026. A fresh landing page still states 619; the 19-record difference remains unresolved.
+The observation date is not an effective date for every record. These records are separate from the
+634 administrative register groups dated December 31, 2024. Four literal question-mark source labels
+remain visible and prioritized for review against the communities' own names. No inferred correction
+or cross-catalogue identity match was approved.
+
+`br_census_groups_2022.json` preserves 391 named leaf census categories. The source table has 404 data
+rows: 12 subtotal headings and one unspecified residual response are excluded. Eight named leaf
+categories under the other-Americas heading remain included. Source indicators are statistical IDs,
+not government identifiers. Asterisks remain in the original source labels and their meanings are
+explained publicly, including linguistic-family responses and self-declared names historically
+classified as having disappeared. The saved table is a 2022 census snapshot; a revised 2026 edition
+was not established. The original shorter fetch pacing is recorded as a policy defect, and both
+primary sources were reread with compliant pacing and identical body hashes.
+
+The two inventories create 1,029 pending per-record research tasks, not 1,029 new nation facts or
+government profiles. Exact-name candidates create separate identity-review tasks. The offline queue
+can validate and reconcile these typed IDs and still selects at most three subjects per run. A name
+that happens to match an existing broader people is not automatically the same government or census
+category. Preferred names, identity relationships and own-source histories remain research work.
+
+`sources/chiricahua-scope-2026-10-12.context.json` and the resources page provide a bounded source guide.
+Fort Sill, Mescalero and Chiricahua Apache Nation remain separate canonical records. INPI's N'dee
+account is broader than Chiricahua and does not establish a single government or an inventory of
+named Mexican communities. That unresolved work remains in a separate priority task.
+
+`publication_holds.json` can suppress a directory-only ID using a dated removal receipt. It does not
+replace canonical profile/fact overrides, approve restorations or create a removal request. It starts
+empty. Holds apply to all name inventories and their font input; no directory-only name is restored
+automatically. Composite named resource cards bind to canonical nation IDs and disappear when any
+referenced profile is held. Update an existing context item when only its review date changes;
+do not append duplicate cards in a new daily file.
+
+The batch record is `batches/2026-10-12-140316.json`. Full source captures stay in local research
+artifacts; public repository receipts exclude session headers and form state. Missing HTTP access
+remains a failure, not evidence. No new human verification, urgent risk signal, recognition finding
+or complete-coverage claim was created.

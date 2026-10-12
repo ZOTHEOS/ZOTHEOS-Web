@@ -127,7 +127,9 @@ def test_canadian_administrative_names_keep_their_dated_scope_and_unique_codes()
     assert 'not a count of current governments or all Indigenous peoples' in page
     assert '619 bands from 634 registry groups' in page
     assert 'December 31, 2024' in page
-    assert '1211 directory records in two differently scoped lists' in page
+    extra = D.inventories(ROOT)
+    total = 1211 + sum(d['enumerated_count'] for d in extra)
+    assert str(total) + ' directory records in ' + str(2 + len(extra)) + ' differently scoped lists' in page
 
 
 def test_all_directory_names_have_whole_glyphs_in_their_selected_face():
@@ -135,7 +137,7 @@ def test_all_directory_names_have_whole_glyphs_in_their_selected_face():
     b = builder()
     faces = Faces(ROOT)
     directory, _ = D.load(ROOT)
-    for e in directory['entities'] + D.load_canada(ROOT)['entities']:
+    for e in directory['entities'] + D.load_canada(ROOT)['entities'] + [e for d in D.inventories(ROOT) for e in d['entities']]:
         if b.brand.serif_ok(e['name']):
             assert not faces.miss(e['name'], 'brand-name'), e['name']
         else:

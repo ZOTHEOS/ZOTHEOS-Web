@@ -74,7 +74,7 @@ def role_sets(model):
     # Reuse its actual publication filter so confirmed hide/takedown matches do
     # not become a second route into this string inventory. Never alter spelling.
     directory, _ = D.load(model.root)
-    for document in (directory, D.load_canada(model.root)):
+    for document in (directory, D.load_canada(model.root), *D.inventories(model.root)):
         for entry in D.visible_entries(SimpleNamespace(m=model), document["entities"]):
             points = {ord(c) for c in entry["name"] + entry["directory_name"]}
             names |= points
