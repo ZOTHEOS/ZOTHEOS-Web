@@ -3,7 +3,7 @@
 
 fold(s) = NFKD -> drop Mn (combining marks) -> casefold
           -> drop  ' ʻ ʼ ’ ` ˊ · ‧ ʔ ǀ ǁ ǂ  and the digit 7 only when it stands between letters
-          -> map   ł->l ø->o æ->ae œ->oe ß->ss ŋ->ng ɨ->i ə->e ʉ->u ɬ->l ɫ->l ɓ->b ɗ->d θ->th ⁿ->n
+          -> map   ł->l ø->o æ->ae œ->oe ß->ss ŋ->ng ɨ->i ə->e ʉ->u ɬ->l ɫ->l ɓ->b ɗ->d θ->th ⁿ->n ı->i
           -> any other punctuation or symbol separates words; collapse whitespace; split into tokens
 
 Folding is for matching and sorting only. A displayed name is never folded or altered.
@@ -18,7 +18,8 @@ import unicodedata
 
 DROP = "'ʻʼ’`ˊ·‧ʔǀǁǂ"
 MAP = {"ł": "l", "ø": "o", "æ": "ae", "œ": "oe", "ß": "ss", "ŋ": "ng", "ɨ": "i", "ə": "e", "ʉ": "u",
-       "ɬ": "l", "ɫ": "l", "ɓ": "b", "ɗ": "d", "θ": "th", "ⁿ": "n"}
+       "ɬ": "l", "ɫ": "l", "ɓ": "b", "ɗ": "d", "θ": "th", "ⁿ": "n",
+       "ı": "i"}   # dotless i (in Tłı̨chǫ under its ogonek): added to the spec's table so "tlicho" finds it
 
 
 def _is_letter(c):

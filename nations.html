@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-f+hxFbCs1IVWPw9jc6aTKj/2p1RCcvdadavBi6pZCGw=' 'sha256-YgqBxxA7a1e5U9HI5pVU2G2AqBFJ/g+ExnGc7zQTPDM=' 'sha256-drPGulGOsLkCbOEd6OfBYRlRtqn9zkqvn3j5SPUfakQ='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Indigenous nations today | ZOTHEOS</title>
+  <meta name="description" content="One nation named at a time, as it names itself, with one checked fact and its source. 450 nations, 1,258 facts, re-checked weekly.">
+  <link rel="canonical" href="https://zotheos.org/nations">
+  <meta property="og:title" content="Indigenous nations today | ZOTHEOS">
+  <meta property="og:description" content="One nation named at a time, as it names itself, with one checked fact and its source. 450 nations, 1,258 facts, re-checked weekly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zotheos.org/nations">
+  <meta property="og:image" content="https://zotheos.org/static/og.png">
+  <meta name="theme-color" content="#000000" id="themeColorMeta">
+  <link rel="icon" href="/zotheos_icon.ico?v=3">
+  <script>
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
+  <!-- Fonts are self-hosted (SIL Open Font License, static/fonts/OFL.txt). zth-fonts is the landing's block, byte for
+       byte; zth-fonts-names holds the faces for letters the brand faces lack. tools/fonts_check.py keeps both in step. -->
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin>
+  <style id="zth-fonts">
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  </style>
+  <style id="zth-fonts-names">
+    @font-face { font-family: 'ZN Serif'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 111.1%;
+      src: url(/static/fonts/zn-serif.d8d3ab76.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Sans'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-sans.4b953325.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03E1, U+03F0-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Mono'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 104.1%;
+      src: url(/static/fonts/zn-mono.066025d7.woff2) format('woff2');
+      unicode-range: U+02BB; }
+    @font-face { font-family: 'ZN Cherokee'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.3%;
+      src: url(/static/fonts/zn-cherokee.4a768fc6.woff2) format('woff2');
+      unicode-range: U+13A0-13F5, U+13F8-13FD, U+AB70-ABBF; }
+    @font-face { font-family: 'ZN Syllabics'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 105.2%;
+      src: url(/static/fonts/zn-syllabics.841c0d05.woff2) format('woff2');
+      unicode-range: U+1400-167F, U+18B0-18F5; }
+    @font-face { font-family: 'ZN Devanagari'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-devanagari.82b61ca2.woff2) format('woff2');
+      unicode-range: U+0900-097F, U+200C-200D, U+25CC, U+A8E0-A8FF; }
+    @font-face { font-family: 'ZN Tifinagh'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
+      unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
+  </style>
+  <link rel="stylesheet" href="/static/nations/nations.f4f12d02.css">
+  <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nh" id="header">
+  <div class="nh-in">
+    <div class="nh-left">
+      <button class="appearance-btn pill" id="appearanceBtn" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span><span class="ab-caret" aria-hidden="true"></span></button>
+    </div>
+    <a class="nh-mark" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="143" height="30"></a>
+    <nav class="nh-nav" aria-label="Nations">
+      <a href="/nations#today" aria-current="page">Today</a>
+      <a href="/nations#find">Find</a>
+      <a href="/nations#regions">Regions</a>
+      <a href="/nations/coverage">Coverage</a>
+      <a href="/nations/about">About</a>
+      <a href="/nations/for-nations">For nations</a>
+      <button class="nav-menu-btn pill" id="navMenuBtn" type="button" popovertarget="navSheet"><span class="nm-bars" aria-hidden="true"></span><span class="nm-label">Menu</span></button>
+    </nav>
+  </div>
+</header>
+<!-- The Theme and Motion rows are copied from index.html; tools/nations_lint.py fails when they drift. -->
+<div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Obsidian mono" title="Obsidian mono"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Codex parchment" title="Codex parchment"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Obsidian mono</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
+<nav class="nav-sheet" id="navSheet" popover aria-label="Sections">
+  <div class="ns-top">
+    <span class="ap-label">Indigenous nations today</span>
+    <button class="ns-close pill" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
+  </div>
+  <ul class="ns-list">
+    <li><a href="/nations#today" aria-current="page"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span></span></span><span class="ns-name">Today</span></a></li>
+    <li><a href="/nations#find"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Find</span></a></li>
+    <li><a href="/nations#regions"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Regions</span></a></li>
+    <li><a href="/nations/coverage"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Coverage</span></a></li>
+    <li><a href="/nations/about"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span></span></span><span class="ns-name">About</span></a></li>
+    <li><a href="/nations/for-nations"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span></span></span><span class="ns-name">For nations</span></a></li>
+    <li><a href="/nations/sources"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Sources</span></a></li>
+    <li><a href="/nations/credits"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Credits</span></a></li>
+    <li><a href="/nations/verification"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Verification</span></a></li>
+    <li><a href="/nations/changes"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span></span></span><span class="ns-name">Changes</span></a></li>
+  </ul>
+  <div class="ns-foot">
+    <a class="pill" href="/">ZOTHEOS home</a>
+    <button class="pill ns-appearance" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span></button>
+  </div>
+</nav>
+
+
+<main id="main">
+  <section class="herald" id="today" aria-labelledby="heraldLabel">
+    <h1 class="hr-eyebrow" id="heraldLabel"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Indigenous nations today</h1>
+    <div class="hr-stage" id="heraldStage" data-state="in">
+      <article class="hr-card no-say" id="heraldCard">
+        <div class="hr-head">
+          <p class="hr-region">Alaska, Hawaiʻi and the US Pacific</p>
+          <h2 class="hr-name" dir="auto" data-size="xl" data-face="brand" data-script="latn">Cup&#x27;ik</h2>
+          <span class="hr-line" aria-hidden="true"></span>
+        </div>
+        <p class="hr-also"><span class="hr-k">Also known as</span> Chevak Cup&#x27;ik</p>
+        <p class="hr-lands"><span class="hr-k">Lands</span> Chevak and the nearby Bering Sea coast of southwest Alaska, United States</p>
+        <p class="hr-fact">In Chevak the people and their language are called Cup&#x27;ik, and on Nunivak Island the related form is Cup&#x27;ig, each used in place of the word Yup&#x27;ik.</p>
+        <p class="hr-receipt"><a href="https://uaf.edu/anlc/languages-move/centralakyupik.php" rel="noopener noreferrer" target="_blank">Source: Alaska Native Language Center, University of Alaska Fairbanks<span class="sr-only"> (opens in a new tab)</span></a> <span class="hr-dot" aria-hidden="true">&middot;</span> Checked <time datetime="2026-10-08">8 Oct 2026</time></p>
+        <p class="hr-more"><a href="/nations/cupik-chevak-alaska">Open this nation</a></p>
+      </article>
+    </div>
+    <div class="hr-controls" id="hrControls" role="group" aria-label="Herald controls">
+      <button type="button" class="hr-btn pill" id="hrPrev">Previous</button>
+      <button type="button" class="hr-btn pill" id="hrPause" aria-pressed="false">Pause</button>
+      <button type="button" class="hr-btn pill" id="hrNext">Next</button>
+      <span class="hr-ring" id="hrRing" aria-hidden="true"><span class="g"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="g"><i></i><i></i><i></i><i></i><i></i></span><span class="g"><i></i><i></i><i></i><i></i><i></i></span></span>
+      <p class="hr-status" id="hrStatus">1 of 15 in today&#x27;s ring · 450 nations · Compiled 8 Oct 2026</p>
+      <noscript><p class="hr-status">This page shows one nation. Every nation has its own page under By region.</p></noscript>
+    </div>
+    <p class="hr-lede">One nation at a time, named as it names itself, with one checked fact and its source.</p>
+    <div class="sr-only" aria-live="polite" id="heraldLive"></div>
+  </section>
+  <div class="wrap">
+    <div class="duo sec">
+      <section id="ring" aria-labelledby="ringH">
+        <h2 class="sec-h" id="ringH">Today's ring</h2>
+        <p class="lede">Fifteen nations, one from each region, the same for everyone today. Tomorrow the ring turns.</p>
+        <p class="note" id="ringNote">Ring for 8 Oct 2026</p>
+        <ul class="rows" id="ringList">
+          <li><a class="row" href="/nations/cupik-chevak-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Cup&#x27;ik</span><span class="row-m">Alaska, Hawaiʻi and the US Pacific</span><span class="row-l">Chevak and the nearby Bering Sea coast of ...</span></a></li>
+          <li><a class="row" href="/nations/te-moak-tribe-western-shoshone-us-nv"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Te-Moak Tribe of Western Shoshone Indians</span><span class="row-m">US West and Pacific Northwest</span><span class="row-l">Northeastern Nevada, in Battle Mountain, Elko, South Fork ...</span></a></li>
+          <li><a class="row" href="/nations/pawnee-nation-of-oklahoma-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Pawnee Nation of Oklahoma</span><span class="row-m">US Plains and Midwest</span><span class="row-l">Pawnee, Oklahoma, United States; ancestral homeland on the ...</span></a></li>
+          <li><a class="row" href="/nations/onondaga-nation-us-ny"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Onondaga Nation</span><span class="row-m">US East and Southeast</span><span class="row-l">Onondaga Nation territory south of Syracuse, central New ...</span></a></li>
+          <li><a class="row" href="/nations/havasu-baaja-havasupai-us-az"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Havasu Baaja</span><span class="row-m">Northern Mexico and the US Southwest</span><span class="row-l">Havasu Canyon in the Grand Canyon, Arizona, US ...</span></a></li>
+          <li><a class="row" href="/nations/nuu-chah-nulth-bc-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Nuu-chah-nulth</span><span class="row-m">Canada</span><span class="row-l">The west coast of Vancouver Island, British Columbia, ...</span></a></li>
+          <li><a class="row" href="/nations/chol-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ch&#x27;ol</span><span class="row-m">Central and Southern Mexico</span><span class="row-l">Northern Chiapas, Mexico, including Tila, Tumbalá, Palenque, Sabanilla ...</span></a></li>
+          <li><a class="row" href="/nations/lenca-honduras-el-salvador"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Lenca</span><span class="row-m">Central America</span><span class="row-l">Western and southwestern Honduras (Intibucá, Lempira, La Paz ...</span></a></li>
+          <li><a class="row" href="/nations/teko-french-guiana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Teko</span><span class="row-m">The Caribbean, Trinidad and the Guianas</span><span class="row-l">Camopi on the Oyapock River and Cayodé on ...</span></a></li>
+          <li><a class="row" href="/nations/kichwa-puruwa-chimborazo-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Puruwá</span><span class="row-m">The Andes</span><span class="row-l">Chimborazo province in the central highlands of Ecuador</span></a></li>
+          <li><a class="row" href="/nations/terena-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Terena</span><span class="row-m">Amazonia and lowland South America</span><span class="row-l">Mato Grosso do Sul, with communities in Mato ...</span></a></li>
+          <li><a class="row" href="/nations/itelmen-kamchatka"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Itelmen</span><span class="row-m">The Arctic, northern Europe and Russia</span><span class="row-l">Tigilsky District on the west coast of Kamchatka ...</span></a></li>
+          <li><a class="row" href="/nations/bagyeli-cameroon"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bagyeli</span><span class="row-m">Africa</span><span class="row-l">the forests of southern Cameroon, around Akom II, ...</span></a></li>
+          <li><a class="row" href="/nations/lk-wanniyala-aetto"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Wanniyala-Aetto</span><span class="row-m">Asia</span><span class="row-l">Eastern Sri Lanka, including the Maduru Oya area</span></a></li>
+          <li><a class="row" href="/nations/yapese-fm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yapese</span><span class="row-m">Oceania, Aotearoa and Australia</span><span class="row-l">the main islands of Yap (Yap, Gagil, Tomil ...</span></a></li>
+        </ul>
+      </section>
+      <section id="find" aria-labelledby="findH">
+        <h2 class="sec-h" id="findH">Find a nation</h2>
+        <div class="find" role="search" id="findBox" hidden>
+          <label for="findInput" class="lbl">Find a nation</label>
+          <input type="search" id="findInput" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Name, other name, place or country" aria-describedby="findHelp">
+          <p class="find-help" id="findHelp">Accents are optional: Maori finds Māori, Dine finds Diné. Names always show as the nation writes them.</p>
+          <p class="find-status" id="findStatus" aria-live="polite"></p>
+          <ul class="results" id="findResults"></ul>
+        </div>
+        <noscript><p class="lede">Search needs JavaScript. The region lists below hold every nation.</p></noscript>
+      </section>
+    </div>
+    <section class="sec" id="regions" aria-labelledby="regionsH">
+      <h2 class="sec-h" id="regionsH">By region</h2>
+      <p class="lede">Regions are plain geography for finding your way. No region is named after one people. Cross-border nations appear under every country they name.</p>
+      <ul class="rows cols2">
+        <li><a class="row" href="/nations/region/africa"><span class="row-t">Africa</span><span class="row-m">41 nations</span><span class="row-l">Algeria, Angola, Botswana, Burkina Faso, Burundi, Cameroon, Central African Republic, Chad, Democratic Republic of the Congo, Djibouti, Egypt, Eritrea, Ethiopia, Gabon, Kenya, Libya, Mali, Morocco, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, South Africa, South Sudan, Tanzania, Tunisia, Uganda, Zimbabwe</span></a></li>
+        <li><a class="row" href="/nations/region/alaska-hawaii-pacific-us"><span class="row-t">Alaska, Hawaiʻi and the US Pacific</span><span class="row-m">21 nations</span><span class="row-l">American Samoa, Canada, Guam, United States</span></a></li>
+        <li><a class="row" href="/nations/region/amazon-lowland-sa"><span class="row-t">Amazonia and lowland South America</span><span class="row-m">29 nations</span><span class="row-l">Argentina, Bolivia, Brazil, Colombia, Ecuador, Guyana, Paraguay, Peru, Uruguay, Venezuela</span></a></li>
+        <li><a class="row" href="/nations/region/asia"><span class="row-t">Asia</span><span class="row-m">53 nations</span><span class="row-l">Bangladesh, Brunei Darussalam, India, Indonesia, Japan, Lao People&#x27;s Democratic Republic, Malaysia, Myanmar, Nepal, Pakistan, Philippines, Sri Lanka, Taiwan, Thailand</span></a></li>
+        <li><a class="row" href="/nations/region/canada"><span class="row-t">Canada</span><span class="row-m">35 nations</span><span class="row-l">Canada, United States</span></a></li>
+        <li><a class="row" href="/nations/region/central-america-caribbean"><span class="row-t">Central America</span><span class="row-m">26 nations</span><span class="row-l">Belize, Brazil, Colombia, Costa Rica, Dominica, El Salvador, French Guiana, Guatemala, Guyana, Honduras, Mexico, Nicaragua, Panama, Suriname, Venezuela</span></a></li>
+        <li><a class="row" href="/nations/region/mx-central-south"><span class="row-t">Central and Southern Mexico</span><span class="row-m">26 nations</span><span class="row-l">Mexico</span></a></li>
+        <li><a class="row" href="/nations/region/mx-north-us-southwest"><span class="row-t">Northern Mexico and the US Southwest</span><span class="row-m">26 nations</span><span class="row-l">Mexico, United States</span></a></li>
+        <li><a class="row" href="/nations/region/oceania"><span class="row-t">Oceania, Aotearoa and Australia</span><span class="row-m">46 nations</span><span class="row-l">Australia, Chile, Cook Islands, Fiji, French Polynesia, Indonesia, Kiribati, Marshall Islands, Micronesia, Nauru, New Caledonia, New Zealand, Niue, Northern Mariana Islands, Palau, Papua New Guinea, Samoa, Tokelau, Tonga, Tuvalu, Vanuatu</span></a></li>
+        <li><a class="row" href="/nations/region/andes"><span class="row-t">The Andes</span><span class="row-m">22 nations</span><span class="row-l">Argentina, Bolivia, Chile, Colombia, Ecuador, Peru</span></a></li>
+        <li><a class="row" href="/nations/region/arctic-europe-russia"><span class="row-t">The Arctic, northern Europe and Russia</span><span class="row-m">20 nations</span><span class="row-l">China, Finland, Greenland, Mongolia, Norway, Russian Federation, Sweden</span></a></li>
+        <li><a class="row" href="/nations/region/caribbean-guianas"><span class="row-t">The Caribbean, Trinidad and the Guianas</span><span class="row-m">16 nations</span><span class="row-l">Brazil, Colombia, Cuba, Dominican Republic, French Guiana, Guyana, Puerto Rico, Suriname, Trinidad and Tobago, United States, Venezuela</span></a></li>
+        <li><a class="row" href="/nations/region/us-east-southeast"><span class="row-t">US East and Southeast</span><span class="row-m">25 nations</span><span class="row-l">Canada, United States</span></a></li>
+        <li><a class="row" href="/nations/region/us-plains-midwest"><span class="row-t">US Plains and Midwest</span><span class="row-m">35 nations</span><span class="row-l">United States</span></a></li>
+        <li><a class="row" href="/nations/region/us-west-pacific"><span class="row-t">US West and Pacific Northwest</span><span class="row-m">29 nations</span><span class="row-l">Canada, United States</span></a></li>
+      </ul>
+    </section>
+    <section class="sec" id="countries" aria-labelledby="countriesH">
+      <h2 class="sec-h" id="countriesH">By country</h2>
+      <p class="lede">Present-day countries, listed by ISO 3166 names. Many nations live across more than one.</p>
+      <ul class="cols4">
+        <li><a class="cc" href="/nations/in/dz">Algeria <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/as">American Samoa <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ao">Angola <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/ar">Argentina <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/au">Australia <span>15</span></a></li>
+        <li><a class="cc" href="/nations/in/bd">Bangladesh <span>9</span></a></li>
+        <li><a class="cc" href="/nations/in/bz">Belize <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/bo">Bolivia <span>6</span></a></li>
+        <li><a class="cc" href="/nations/in/bw">Botswana <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/br">Brazil <span>26</span></a></li>
+        <li><a class="cc" href="/nations/in/bn">Brunei Darussalam <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/bf">Burkina Faso <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/bi">Burundi <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/cm">Cameroon <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/ca">Canada <span>40</span></a></li>
+        <li><a class="cc" href="/nations/in/cf">Central African Republic <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/td">Chad <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/cl">Chile <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/cn">China <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/co">Colombia <span>16</span></a></li>
+        <li><a class="cc" href="/nations/in/ck">Cook Islands <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/cr">Costa Rica <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/cu">Cuba <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/cd">Democratic Republic of the Congo <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/dj">Djibouti <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/dm">Dominica <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/do">Dominican Republic <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ec">Ecuador <span>12</span></a></li>
+        <li><a class="cc" href="/nations/in/eg">Egypt <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/sv">El Salvador <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/er">Eritrea <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/et">Ethiopia <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/fj">Fiji <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/fi">Finland <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/gf">French Guiana <span>6</span></a></li>
+        <li><a class="cc" href="/nations/in/pf">French Polynesia <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ga">Gabon <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/gl">Greenland <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/gu">Guam <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/gt">Guatemala <span>10</span></a></li>
+        <li><a class="cc" href="/nations/in/gy">Guyana <span>9</span></a></li>
+        <li><a class="cc" href="/nations/in/hn">Honduras <span>5</span></a></li>
+        <li><a class="cc" href="/nations/in/in">India <span>15</span></a></li>
+        <li><a class="cc" href="/nations/in/id">Indonesia <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/jp">Japan <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ke">Kenya <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/ki">Kiribati <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/la">Lao People&#x27;s Democratic Republic <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ly">Libya <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/my">Malaysia <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/ml">Mali <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/mh">Marshall Islands <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/mx">Mexico <span>36</span></a></li>
+        <li><a class="cc" href="/nations/in/fm">Micronesia <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/mn">Mongolia <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ma">Morocco <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/mm">Myanmar <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/na">Namibia <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/nr">Nauru <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/np">Nepal <span>10</span></a></li>
+        <li><a class="cc" href="/nations/in/nc">New Caledonia <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/nz">New Zealand <span>8</span></a></li>
+        <li><a class="cc" href="/nations/in/ni">Nicaragua <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/ne">Niger <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/ng">Nigeria <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/nu">Niue <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/mp">Northern Mariana Islands <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/no">Norway <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/pk">Pakistan <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/pw">Palau <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/pa">Panama <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/pg">Papua New Guinea <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/py">Paraguay <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/pe">Peru <span>10</span></a></li>
+        <li><a class="cc" href="/nations/in/ph">Philippines <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/pr">Puerto Rico <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/cg">Republic of the Congo <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/ru">Russian Federation <span>18</span></a></li>
+        <li><a class="cc" href="/nations/in/rw">Rwanda <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ws">Samoa <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/za">South Africa <span>7</span></a></li>
+        <li><a class="cc" href="/nations/in/ss">South Sudan <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/lk">Sri Lanka <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/sr">Suriname <span>4</span></a></li>
+        <li><a class="cc" href="/nations/in/se">Sweden <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/tw">Taiwan <span>16</span></a></li>
+        <li><a class="cc" href="/nations/in/tz">Tanzania <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/th">Thailand <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/tk">Tokelau <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/to">Tonga <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/tt">Trinidad and Tobago <span>2</span></a></li>
+        <li><a class="cc" href="/nations/in/tn">Tunisia <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/tv">Tuvalu <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ug">Uganda <span>3</span></a></li>
+        <li><a class="cc" href="/nations/in/us">United States <span>136</span></a></li>
+        <li><a class="cc" href="/nations/in/uy">Uruguay <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/vu">Vanuatu <span>1</span></a></li>
+        <li><a class="cc" href="/nations/in/ve">Venezuela <span>12</span></a></li>
+        <li><a class="cc" href="/nations/in/zw">Zimbabwe <span>1</span></a></li>
+      </ul>
+    </section>
+
+    <div class="pair sec">
+      <section id="coverage" aria-labelledby="coverageH">
+        <h2 class="sec-h" id="coverageH">Where we are</h2>
+        <p class="lede">450 nations, 1,258 checked facts, 15 regions, 99 countries. <a href="https://www.un.org/en/observances/indigenous-day/background" rel="noopener noreferrer" target="_blank">The United Nations estimates 476 million Indigenous people in 90 countries and about 5,000 distinct cultures<span class="sr-only"> (opens in a new tab)</span></a>, so this list is a beginning. Thin regions are listed first on the coverage page.</p>
+        <p class="act"><a class="txt-link" href="/nations/coverage">See the coverage table</a></p>
+      </section>
+      <section id="method" aria-labelledby="methodH">
+        <h2 class="sec-h" id="methodH">How this is made</h2>
+        <ul class="method">
+          <li>Every fact is written from a published page and carries that page's publisher, a link, and the date a tool or a person last found the supporting words on it.</li>
+          <li>A tool re-reads every cited page weekly. Changes from a check go live after review. A fact whose words are gone is hidden until a person restores it.</li>
+          <li>Drafts were compiled with AI assistance, then checked against sources by a tool and by people.</li>
+          <li>This page makes no request to any other site. Sources open only when you choose to follow them.</li>
+        </ul>
+      </section>
+    </div>
+    <div class="sec" id="checks">
+      <dl class="panel">
+        <div><dt>Last check</dt><dd>8 Oct 2026<small>compiled</small></dd></div>
+        <div><dt>Sources reached</dt><dd>none yet<small>a sample run of 40 of 742 pages was made on 10 Oct 2026</small></dd></div>
+        <div><dt>Facts verified</dt><dd>1,260</dd></div>
+        <div><dt>Hidden or waiting</dt><dd>0 hidden, 0 waiting for a person<small>2 under review by an editor</small></dd></div>
+      </dl>
+      <p class="note">No full check has been published yet. Every fact shows the date its supporting words were found when it was compiled.</p>
+      <p class="note" id="vpOverdue" hidden></p>
+      <p class="act"><a class="txt-link" href="/nations/verification">What was checked, and what a check cannot tell you</a></p>
+    </div>
+    <section class="sec" id="corrections" aria-labelledby="corrH">
+      <h2 class="sec-h" id="corrH">Corrections come first</h2>
+      <p class="lede">If you belong to a nation listed here, or speak for one, your word outranks every source on this page. Ask and we hide first and ask second, within 72 hours. Readers who find an error are welcome to write too.</p>
+      <p class="act"><a class="pill" href="mailto:contact@zotheos.org?subject=Nations%20correction&amp;body=What%20is%20wrong%3A%0A%0AA%20source%20that%20shows%20the%20correction%20%28address%20of%20the%20page%29%2C%20optional%3A%0A%0AIf%20you%20write%20for%20the%20nation%2C%20say%20so%20and%20we%20act%20within%2072%20hours.">Write to contact@zotheos.org</a><a class="txt-link" href="/nations/for-nations">How a nation corrects, adds or removes anything here</a></p>
+    </section>
+  </div>
+</main>
+<footer class="ft">
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="133" height="28"></a>
+        <p class="ft-tag">Offline ethical intelligence. Private by default. Built independently.</p>
+        <p class="ft-founder">Founded by <strong>David Garcia</strong><br>United States Marine Corps Veteran<br>ZOTHEOS LLC &middot; Established March 2025<br>In development since January 2024</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <div class="ft-col" role="group" aria-labelledby="fcol-council">
+          <span class="ft-col-l" id="fcol-council">Council</span>
+          <a href="/#council-story">The council</a>
+          <a href="/#features">Architecture</a>
+          <a href="/#workspace">Workspace</a>
+          <a href="/#console">Console</a>
+          <a href="/#memory">Memory</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-proof">
+          <span class="ft-col-l" id="fcol-proof">Proof</span>
+          <a href="/#proof">Proof</a>
+          <a href="/#compare">Comparison</a>
+          <a href="/#devices">Hardware</a>
+          <a href="/#model-choice">Model choice</a>
+          <a href="/#site-privacy">Website privacy</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-release">
+          <span class="ft-col-l" id="fcol-release">Release</span>
+          <a href="/download">Download status</a>
+          <a href="/#waitlist">Early access</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#founder">Founder</a>
+          <a href="/#mission">Mission</a>
+          <a href="/#support">Support</a>
+          <a href="/nations">Indigenous nations today</a>
+        </div>
+      </nav>
+      <p class="ft-meta">&copy; 2026 ZOTHEOS LLC<br>All rights reserved.<br><br>Sovereign OS<br>Offline &middot; Private &middot; Independent</p>
+    </div>
+    <div class="ft-block" id="site-privacy">
+      <p class="lbl">Website privacy</p>
+      <div>
+        <p>On this device: these pages save your theme and motion choice in browser storage, and the nations page keeps a random key and its place in the walk there, so you meet new nations. None of it leaves your device.</p>
+        <p>Connections: every request these pages make goes to zotheos.org. Sources and nations' own sites open only when you follow a link. A correction is written by your own mail client to <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
+      </div>
+    </div>
+    <div class="ft-block" id="roots">
+      <p class="lbl"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Roots and gratitude</p>
+      <div>
+        <p class="roots">ZOTHEOS draws its visual language from ancient Mesoamerica: the stepped fret, the fine black line of the painted codices, the count of days. It honors the Indigenous peoples of the Americas: the Nahua, Maya, Zapotec and many other peoples of Mexico and Central America, and the Native nations further north. They are distinct peoples with connected roots that are still living, and many Mexican and Mexican American families carry those roots too. As the project grows, it intends to work with Indigenous scholars and community members, so that every symbol here is used accurately and with permission. Any wider work with the traditions of other peoples is meant to follow the same rule: their guidance, their permission. That work has a first page: <a href="/nations">Indigenous nations today</a>, their own names first, every fact with its source and the date it was checked.</p>
+        <p><a href="/#roots">Sources and orthography, on the landing page</a></p>
+      </div>
+    </div>
+    <div class="ft-block" id="nations-credit">
+      <p class="lbl">Nations</p>
+      <div>
+        <p>Nations: names, lands and facts as each nation publishes them, and from the public sources named on every card. Full list at <a href="/nations/sources">zotheos.org/nations/sources</a>.</p>
+        <p>Compiled with AI assistance from published sources, checked against those sources by a tool every week and by people. Corrections and removal requests from any nation are honored.</p>
+        <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
+        <p>This site makes no request to any other site. Sources open only when you follow them.</p>
+        <p>Compiled 8 Oct 2026</p>
+      </div>
+    </div>
+    <div class="ft-epi">
+      <p class="nah"><span lang="nah">in xochitl, in cuicatl</span> <small>flower and song, poetry</small></p>
+      <p class="ver">ZTHS &middot; 026</p>
+    </div>
+  </div>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="fret-mini" viewBox="0 0 10 10"><path d="M0.75 9.25V6.6h2.7V3.95h2.7V1.3h3.1v3.8H7.3" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke" stroke-linecap="square" stroke-linejoin="miter"/></symbol></svg>
+
+<script>
+(function () {
+  /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
+     the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
+  var d = document.documentElement;
+  var NAMES = { '': 'Obsidian mono', maya: 'Maya Blue cosmic', codex: 'Codex parchment', skeleton: 'Skeleton obsidian' };
+  var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function radios(group, onPick) {
+    if (!group) return function () {};
+    var opts = group.querySelectorAll('[role="radio"]');
+    function mark(b) {
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].setAttribute('aria-checked', opts[i] === b ? 'true' : 'false');
+        opts[i].tabIndex = opts[i] === b ? 0 : -1;
+      }
+    }
+    group.addEventListener('click', function (e) {
+      var b = e.target.closest('[role="radio"]');
+      if (b && group.contains(b) && b.getAttribute('aria-disabled') !== 'true') { mark(b); onPick(b); }
+    });
+    group.addEventListener('keydown', function (e) {
+      var k = e.key, i = Array.prototype.indexOf.call(opts, document.activeElement);
+      if (i < 0) return;
+      var j = (k === 'ArrowRight' || k === 'ArrowDown') ? i + 1 : (k === 'ArrowLeft' || k === 'ArrowUp') ? i - 1 : k === 'Home' ? 0 : k === 'End' ? opts.length - 1 : -2;
+      if (j === -2) return;
+      e.preventDefault();
+      j = (j + opts.length) % opts.length;
+      opts[j].focus(); mark(opts[j]); onPick(opts[j]);
+    });
+    return mark;
+  }
+  var themeMark = radios(document.querySelector('#appearancePop .theme-picker'), function (b) { theme(b.getAttribute('data-set') || '', true); });
+  function theme(t, save) {
+    if (t !== 'maya' && t !== 'codex' && t !== 'skeleton') t = '';
+    if (t) d.setAttribute('data-theme', t); else d.removeAttribute('data-theme');
+    var m = document.getElementById('themeColorMeta');
+    if (m) m.setAttribute('content', BG[t]);
+    var n = document.getElementById('apThemeName');
+    if (n) n.textContent = NAMES[t];
+    themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
+    if (save) put('zotheos_landing_theme', t);
+  }
+  var chosen = 'living';
+  var sm = get('zotheos_motion');
+  if (sm === 'living' || sm === 'calm' || sm === 'still') chosen = sm;
+  else if (get('zotheos_fx') === 'off') chosen = 'still';
+  var group = document.getElementById('motionGroup');
+  var motionMark = radios(group, function (b) { chosen = b.getAttribute('data-mode'); put('zotheos_motion', chosen); motion(); });
+  function motion() {
+    var floor = !!(mq && mq.matches);
+    var m = floor ? 'still' : chosen;
+    d.setAttribute('data-motion', m);
+    var row = document.getElementById('apMotionRow'), note = document.getElementById('apMotionNote');
+    if (row) row.classList.toggle('is-idle', floor);
+    if (note) note.hidden = !floor;
+    if (group) {
+      var opts = group.querySelectorAll('[role="radio"]');
+      for (var i = 0; i < opts.length; i++) {
+        if (floor && opts[i].getAttribute('data-mode') !== 'still') opts[i].setAttribute('aria-disabled', 'true');
+        else opts[i].removeAttribute('aria-disabled');
+      }
+      motionMark(group.querySelector('[data-mode="' + m + '"]'));
+    }
+  }
+  theme(get('zotheos_landing_theme') || '', false);
+  motion();
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', motion); else if (mq.addListener) mq.addListener(motion); }
+})();
+</script>
+
+<script type="application/json" id="heraldIndex">{"built":"2026-10-08","compiled":"2026-10-08","first":{"date":"2026-10-08","face":"brand","i":3,"k":"alaska-hawaii-pacific-us","l":"Chevak and the nearby Bering Sea coast of southwest Alaska, United States","n":"Cup'ik","t":"In Chevak the people and their language are called Cup'ik, and on Nunivak Island the related form is Cup'ig, each used in place of the word Yup'ik."},"lastCheck":null,"major":1,"nations":450,"regions":[{"ab":21,"d":"Alaska, Hawaiʻi and the US Pacific","k":"alaska-hawaii-pacific-us","n":21,"s":["alaska-hawaii-pacific-us.6ee5830d.json"]},{"ab":29,"d":"US West and Pacific Northwest","k":"us-west-pacific","n":29,"s":["us-west-pacific.b78385bc.json"]},{"ab":35,"d":"US Plains and Midwest","k":"us-plains-midwest","n":35,"s":["us-plains-midwest.fdbf1b50.json"]},{"ab":25,"d":"US East and Southeast","k":"us-east-southeast","n":25,"s":["us-east-southeast.7a158856.json"]},{"ab":26,"d":"Northern Mexico and the US Southwest","k":"mx-north-us-southwest","n":26,"s":["mx-north-us-southwest.a30a66d1.json"]},{"ab":35,"d":"Canada","k":"canada","n":35,"s":["canada.d3c3bd5c.json"]},{"ab":26,"d":"Central and Southern Mexico","k":"mx-central-south","n":26,"s":["mx-central-south.0a5ae64a.json"]},{"ab":26,"d":"Central America","k":"central-america-caribbean","n":26,"s":["central-america-caribbean.59c6dc8e.json"]},{"ab":16,"d":"The Caribbean, Trinidad and the Guianas","k":"caribbean-guianas","n":16,"s":["caribbean-guianas.0870f734.json"]},{"ab":22,"d":"The Andes","k":"andes","n":22,"s":["andes.695c1489.json"]},{"ab":29,"d":"Amazonia and lowland South America","k":"amazon-lowland-sa","n":29,"s":["amazon-lowland-sa.9fd2e1f8.json"]},{"ab":20,"d":"The Arctic, northern Europe and Russia","k":"arctic-europe-russia","n":20,"s":["arctic-europe-russia.dba5902b.json"]},{"ab":41,"d":"Africa","k":"africa","n":41,"s":["africa.cd99e73f.json"]},{"ab":53,"d":"Asia","k":"asia","n":53,"s":["asia.c3a4b8df.json"]},{"ab":46,"d":"Oceania, Aotearoa and Australia","k":"oceania","n":46,"s":["oceania.86e88b28.json"]}],"shardSize":100,"v":1}</script>
+<script>
+(function () {
+  'use strict';
+  /* The herald of names (DESIGN_NATIONS 4 to 7). Strings live in TEXT. Every card is set with textContent. */
+  var TEXT = {
+    also: 'Also known as', say: 'Say it', lands: 'Lands', source: 'Source: ', asOf: 'As of ', checked: 'Checked ',
+    person: 'Checked by a person on ', grace: 'Our tool could not reach the page on ', open: 'Open this nation',
+    own: "Nation's own site", newTab: ' (opens in a new tab)', pron: 'Pronunciation: ', pause: 'Pause', resume: 'Resume',
+    ringPos: ' of 15 in today\'s ring', nations: ' nations', lastCheck: 'Last check ', compiled: 'Compiled ',
+    pressNext: 'Press Next for the next nation.', loadFail: 'More nations could not load. Every nation still has its own page under By region.',
+    live: 'Nation: ', liveLands: '. Lands: ', loading: 'Loading the name list', many: ' nations match', one: '1 nation matches',
+    none: 'No nation matches yet. Try another spelling, a place, or browse by region.', showAll: 'Show all',
+    searchFail: 'The name list could not load. The region lists below hold every nation.',
+    overdue: 'Verification is overdue. The last published check ran on ', overdue2: '. Facts stay shown with their last checked date.'
+  };
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var FOLD_DROP = "'\u02bb\u02bc\u2019`\u02ca\u00b7\u2027\u0294\u01c0\u01c1\u01c2";
+  var FOLD_MAP = {"ß": "ss", "æ": "ae", "ø": "o", "ı": "i", "ł": "l", "ŋ": "ng", "œ": "oe", "ɓ": "b", "ɗ": "d", "ə": "e", "ɨ": "i", "ɫ": "l", "ɬ": "l", "ʉ": "u", "θ": "th", "ⁿ": "n"};
+  var RE_MN = /\p{Mn}/gu, RE_SEP = /[\p{P}\p{S}\p{Z}\p{C}]/gu, RE_L = /\p{L}/u;
+  function fold(s) {
+    s = String(s).normalize('NFKD').replace(RE_MN, '').toLowerCase();
+    var o = '', i, c, k, a = Array.from(s), b = [];
+    for (i = 0; i < a.length; i++) {
+      c = a[i]; k = c.codePointAt(0);
+      if (k >= 0xAB70 && k <= 0xABBF) c = String.fromCodePoint(k - 0xAB70 + 0x13A0);
+      else if (k >= 0x13F8 && k <= 0x13FD) c = String.fromCodePoint(k - 8);
+      if (FOLD_DROP.indexOf(c) < 0) b.push(c);
+    }
+    for (i = 0; i < b.length; i++) {
+      c = b[i];
+      if (c === '7' && i > 0 && i < b.length - 1 && RE_L.test(b[i - 1]) && RE_L.test(b[i + 1])) continue;
+      o += Object.prototype.hasOwnProperty.call(FOLD_MAP, c) ? FOLD_MAP[c] : c;
+    }
+    return o.replace(RE_SEP, ' ').split(/\s+/).filter(Boolean).join(' ');
+  }
+  function imul(a, b) { return Math.imul(a, b) >>> 0; }
+  function fnv1a32(s) {
+    var h = 0x811c9dc5, b = new TextEncoder().encode(s);
+    for (var i = 0; i < b.length; i++) { h = (h ^ b[i]) >>> 0; h = imul(h, 0x01000193); }
+    return h;
+  }
+  function mix32(x) {
+    x = x >>> 0; x = (x ^ (x >>> 16)) >>> 0; x = imul(x, 0x7feb352d); x = (x ^ (x >>> 15)) >>> 0;
+    x = imul(x, 0x846ca68b); return (x ^ (x >>> 16)) >>> 0;
+  }
+  function ringPick(seed, ri, n) { return mix32((seed ^ imul(ri + 1, 0x9e3779b1)) >>> 0) % n; }
+  function dayNumber(iso) { var p = iso.split('-'); return Math.floor(Date.UTC(+p[0], +p[1] - 1, +p[2]) / 86400000); }
+  function pickFact(id, facts, day) {
+    var pref = [], i;
+    for (i = 0; i < facts.length; i++) if (facts[i].k === 'today' || facts[i].k === 'achievement') pref.push(i);
+    if (!pref.length) for (i = 0; i < facts.length; i++) pref.push(i);
+    return pref[(day + fnv1a32(id)) % pref.length];
+  }
+  function feistel4(x, n, key) {
+    if (n <= 1) return 0;
+    var bits = Math.max(2, Math.ceil(Math.log2(n))); if ((1 << bits) < n) bits++;
+    if (bits % 2) bits++;
+    var half = bits / 2, mask = (1 << half) - 1, l, r, f, t, k;
+    do {
+      l = x >>> half; r = x & mask;
+      for (k = 0; k < 4; k++) { f = mix32((r ^ key ^ imul(k + 1, 0x85ebca6b)) >>> 0) & mask; t = r; r = (l ^ f) >>> 0; l = t; }
+      x = ((l << half) | r) >>> 0;
+    } while (x >= n);
+    return x;
+  }
+  function tokens(s) { var f = fold(s); return f ? f.split(' ') : []; }
+  function fieldHas(field, qt) {
+    for (var i = 0; i < qt.length; i++) {
+      var ok = false;
+      for (var j = 0; j < field.length; j++) if (field[j].indexOf(qt[i]) === 0) { ok = true; break; }
+      if (!ok) return false;
+    }
+    return true;
+  }
+  function exact(field, qt) {
+    for (var i = 0; i < qt.length; i++) if (field.indexOf(qt[i]) >= 0) return true;
+    return false;
+  }
+  /* rank: 0 name, 1 also (shown) or also_search (never shown), 2 lands, 3 country or region, 4 spread across fields */
+  function rank(e, qt) {
+    if (fieldHas(e.tn, qt)) return { r: 0, x: exact(e.tn, qt) ? 0 : 1 };
+    for (var i = 0; i < e.ta.length; i++) if (fieldHas(e.ta[i], qt)) return { r: 1, x: 1, also: e.a[i] };
+    for (i = 0; i < e.tq.length; i++) if (fieldHas(e.tq[i], qt)) return { r: 1, x: 1 };
+    if (fieldHas(e.tl, qt)) return { r: 2, x: 1 };
+    if (fieldHas(e.tp, qt)) return { r: 3, x: 1 };
+    if (fieldHas(e.all, qt)) return { r: 4, x: 1 };
+    return null;
+  }
+  function prep(row, regions, countries) {
+    var e = { id: row[0], n: row[1], a: row[2], q: row[3], l: row[4], r: row[5], c: row[6], f: row[7], s: row[8] };
+    e.tn = tokens(e.n); e.ta = e.a.map(tokens); e.tq = e.q.map(tokens); e.tl = tokens(e.l);
+    e.tp = tokens(e.c.map(function (c) { return countries[c] || ''; }).join(' ') + ' ' + (regions[e.r] || ''));
+    e.all = [].concat(e.tn, [].concat.apply([], e.ta), [].concat.apply([], e.tq), e.tl, e.tp);
+    e.key = fold(e.n);
+    return e;
+  }
+  function search(entries, q) {
+    var qt = tokens(q), out = [];
+    if (!qt.length) return out;
+    for (var i = 0; i < entries.length; i++) { var m = rank(entries[i], qt); if (m) out.push({ e: entries[i], m: m }); }
+    out.sort(function (a, b) { return a.m.r - b.m.r || a.m.x - b.m.x || (a.e.key < b.e.key ? -1 : a.e.key > b.e.key ? 1 : 0); });
+    return out;
+  }
+  var ZN = { fold: fold, fnv1a32: fnv1a32, mix32: mix32, ringPick: ringPick, dayNumber: dayNumber, pickFact: pickFact,
+             feistel4: feistel4, prep: prep, search: search };
+  if (typeof document === 'undefined') { if (typeof globalThis !== 'undefined') globalThis.ZN_TEST = ZN; return; }
+
+  /* ---------------------------------------------------------------------------------------------- the page */
+  var $ = function (id) { return document.getElementById(id); };
+  var d = document.documentElement, herald = $('today'), stage = $('heraldStage'), live = $('heraldLive');
+  var btnPrev = $('hrPrev'), btnPause = $('hrPause'), btnNext = $('hrNext'), ringEl = $('hrRing'), status = $('hrStatus');
+  var IDX;
+  try { IDX = JSON.parse($('heraldIndex').textContent); } catch (e) { return; }
+  if (!IDX || !IDX.regions || !herald || !stage) return;
+  function fmt(iso) { var p = iso.split('-'); return (+p[2]) + ' ' + MONTHS[+p[1] - 1] + ' ' + p[0]; }
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  var now = new Date(), today = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate());
+  var day = dayNumber(today);
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } return null; }
+  var regs = IDX.regions.filter(function (r) { return r.ab > 0; });
+  var seed = fnv1a32(today + '|' + IDX.v);
+  var ring = regs.map(function (r, j) { return { r: r, i: ringPick(seed, IDX.regions.indexOf(r), r.ab), j: j }; });
+  var SEEN = 'zth_nations_ring_' + today, seen = parseInt(store(SEEN) || '0', 10) || 0;
+  try { for (var si = localStorage.length - 1; si >= 0; si--) { var sk = localStorage.key(si); if (sk && sk.indexOf('zth_nations_ring_') === 0 && sk !== SEEN) localStorage.removeItem(sk); } } catch (e) {}
+  var key = parseInt(store('zth_nations_key') || '', 10);
+  if (!(key >= 0)) {
+    var buf = new Uint32Array(1); (window.crypto || window.msCrypto).getRandomValues(buf); key = buf[0];
+    store('zth_nations_key', String(key));
+  }
+  var cursor = parseInt(store('zth_nations_cursor') || '', 10);
+  if (!(cursor >= 0)) { cursor = store('zth_nations_key') === String(key) ? 0 : (key % 997); }
+  var planC = cursor;
+  var RD = {}; IDX.regions.forEach(function (r) { RD[r.k] = r.d; });
+  var order = regs.slice().sort(function (a, b) { return mix32((key ^ fnv1a32(a.k)) >>> 0) - mix32((key ^ fnv1a32(b.k)) >>> 0); });
+  var lastLine = IDX.lastCheck ? TEXT.lastCheck + fmt(IDX.lastCheck) : TEXT.compiled + fmt(IDX.compiled);
+
+  /* ---------------------------------------------------------------------------------------------- shards */
+  var shards = {}, queue = [], busy = false, failed = false;
+  var ID_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/, URL_RE = /^https:\/\/[^\s"<>]+$/, DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+  function str(s, max) { return typeof s === 'string' && s.length > 0 && s.length <= max; }
+  function clean(s) { return s.replace(/[\u2013\u2014]/g, ', '); }
+  function validCard(c) {
+    if (!c || !ID_RE.test(c.id) || !str(c.n, 120) || !str(c.l, 300) || !Array.isArray(c.f) || !c.f.length) return false;
+    if (c.o && !URL_RE.test(c.o)) return false;
+    if (c.s && !(str(c.s.t, 160) && URL_RE.test(c.s.u) && str(c.s.p, 160))) return false;
+    c.f = c.f.filter(function (f) { return str(f.t, 200) && str(f.p, 200) && URL_RE.test(f.u) && DATE_RE.test(f.d) && f.d <= today; });
+    return c.f.length > 0;
+  }
+  function pump() {
+    if (busy || !queue.length) return;
+    busy = true;
+    var job = queue.shift(), ctl = window.AbortController ? new AbortController() : null;
+    var t = setTimeout(function () { if (ctl) ctl.abort(); }, 4000);
+    fetch(job.url, { credentials: 'omit', signal: ctl ? ctl.signal : undefined }).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status); return r.json();
+    }).then(function (j) { clearTimeout(t); busy = false; job.ok(j); pump(); }, function (e) { clearTimeout(t); busy = false; job.fail(e); pump(); });
+  }
+  function get(url, first) {
+    return new Promise(function (ok, fail) { var job = { url: url, ok: ok, fail: fail }; if (first) queue.unshift(job); else queue.push(job); pump(); });
+  }
+  function shard(r) {
+    if (!shards[r.k]) {
+      shards[r.k] = get('/static/nations/' + r.s[0]).then(function (j) {
+        if (!j || j.r !== r.k || !Array.isArray(j.n)) throw new Error('bad shard');
+        return j.n.map(function (c) { return validCard(c) ? c : null; });
+      });
+      shards[r.k].catch(function () { delete shards[r.k]; });
+    }
+    return shards[r.k];
+  }
+
+  /* ---------------------------------------------------------------------------------------------- the card */
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = clean(String(text)); return e; }
+  function ext(href, text) {
+    var a = el('a', null, text); a.href = href; a.rel = 'noopener noreferrer'; a.target = '_blank';
+    a.appendChild(el('span', 'sr-only', TEXT.newTab)); return a;
+  }
+  function timeEl(iso) { var t = el('time', null, fmt(iso)); t.setAttribute('datetime', iso); return t; }
+  function dot() { var s = el('span', 'hr-dot', '·'); s.setAttribute('aria-hidden', 'true'); return s; }
+  function line(cls, k, text, face) {
+    var p = el('p', cls); if (face === 'names') p.setAttribute('data-face', 'names');
+    p.appendChild(el('span', 'hr-k', k)); p.appendChild(document.createTextNode(' ' + clean(text))); return p;
+  }
+  function build(c, fi, region) {
+    var f = c.f[fi % c.f.length], art = el('article', 'hr-card'), a = (c.a || []).slice(0, 2);
+    art.id = 'heraldCard';
+    if (!a.length) art.classList.add('no-also');
+    if (!c.s) art.classList.add('no-say');
+    var head = el('div', 'hr-head'); head.appendChild(el('p', 'hr-region', region.d));
+    var h = el('h2', 'hr-name', c.n); h.dir = 'auto';
+    h.setAttribute('data-size', c.sz); h.setAttribute('data-face', c.fc); h.setAttribute('data-script', c.sc);
+    head.appendChild(h); var ln = el('span', 'hr-line'); ln.setAttribute('aria-hidden', 'true'); head.appendChild(ln);
+    art.appendChild(head);
+    if (a.length) art.appendChild(line('hr-also', TEXT.also, a.join(', '), c.af));
+    if (c.s) { var say = line('hr-say', TEXT.say, c.s.t, c.sf); say.appendChild(ext(c.s.u, TEXT.pron + c.s.p)); art.appendChild(say); }
+    art.appendChild(line('hr-lands', TEXT.lands, c.l, c.lf));
+    var fact = el('p', 'hr-fact', f.t); if (f.fc === 'names') fact.setAttribute('data-face', 'names'); art.appendChild(fact);
+    var rc = el('p', 'hr-receipt'); rc.appendChild(ext(f.u, TEXT.source + f.p));
+    if (f.y) { rc.appendChild(dot()); rc.appendChild(document.createTextNode(TEXT.asOf + f.y)); }
+    rc.appendChild(dot()); rc.appendChild(document.createTextNode(f.h ? TEXT.person : TEXT.checked)); rc.appendChild(timeEl(f.d));
+    if (f.g && f.c) { rc.appendChild(dot()); rc.appendChild(document.createTextNode(TEXT.grace)); rc.appendChild(timeEl(f.c)); }
+    art.appendChild(rc);
+    var more = el('p', 'hr-more'), op = el('a', null, TEXT.open); op.href = '/nations/' + c.id; more.appendChild(op);
+    if (c.o) more.appendChild(ext(c.o, TEXT.own));
+    art.appendChild(more);
+    return { art: art, name: c.n, lands: c.l, fact: f.t, len: f.t.length, face: c.sc !== 'latn' ? c.sc : c.fc, factFace: f.fc };
+  }
+  var FACES = { brand: 'Instrument Serif', names: 'ZN Serif', cher: 'ZN Cherokee', cans: 'ZN Syllabics', tfng: 'ZN Tifinagh' };
+  function fontsReady(v) {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    var ps = [document.fonts.load('400 64px "' + (FACES[v.face] || FACES.brand) + '"', v.name)];
+    if (v.factFace === 'names') ps.push(document.fonts.load('400 20px "ZN Sans"', v.fact));
+    return Promise.race([Promise.all(ps), new Promise(function (r) { setTimeout(r, 600); })]).catch(function () {});
+  }
+
+  /* ---------------------------------------------------------------------------------------------- the clock */
+  var motion = function () { return d.getAttribute('data-motion') || 'living'; };
+  var hist = [], pos = -1, phase = 'in', remaining = 0, timer = 0, started = 0, pressed = false;
+  var hover = false, focusIn = false, visible = true, busyNav = false;
+  function paused() { return pressed || hover || focusIn || document.hidden || !visible; }
+  function dwellFor(v) { return Math.min(14000, Math.max(7000, 4500 + 55 * v.len)); }
+  function stopClock() { if (timer) { clearTimeout(timer); timer = 0; remaining = Math.max(0, remaining - (Date.now() - started)); } }
+  function clock() {
+    stopClock();
+    if (phase !== 'dwell' || motion() === 'still' || paused()) return;
+    started = Date.now(); timer = setTimeout(function () { timer = 0; remaining = 0; advance(false); }, remaining);
+  }
+  function onBuilt(v) {
+    phase = 'dwell'; remaining = dwellFor(v);
+    stage.setAttribute('data-state', 'shown');
+    if (hist[pos] && hist[pos].ring >= 0) { seen |= 1 << hist[pos].ring; store(SEEN, String(seen)); }
+    if (hist[pos] && hist[pos].walk && hist[pos].c >= cursor) { cursor = hist[pos].c + 1; store('zth_nations_cursor', String(cursor)); }
+    prefetch(); clock();
+  }
+  function whenBuilt(v) {
+    var rc = stage.querySelector('.hr-more') || stage.querySelector('.hr-receipt');
+    var anims = rc && rc.getAnimations ? rc.getAnimations() : [];
+    if (!anims.length || motion() === 'still') { onBuilt(v); return; }
+    Promise.all(anims.map(function (a) { return a.finished; })).then(function () { if (cur === v) onBuilt(v); }, function () { if (cur === v) onBuilt(v); });
+  }
+  var cur = null;
+  function show(at, announce) {
+    var entry = hist[at];
+    return entry.view().then(function (v) {
+      return fontsReady(v).then(function () {
+        var old = $('heraldCard'); stage.setAttribute('data-state', 'in');
+        if (old) stage.replaceChild(v.art, old); else stage.appendChild(v.art);
+        pos = at; cur = v; phase = 'in'; marks(entry); line2(entry);
+        if (announce) live.textContent = clean(TEXT.live + v.name + TEXT.liveLands + v.lands + '. ' + v.fact);
+        whenBuilt(v);
+      });
+    });
+  }
+  function fadeOut() {
+    return new Promise(function (ok) {
+      if (motion() === 'still') { ok(true); return; }
+      stage.setAttribute('data-state', 'out'); phase = 'out';
+      var c = $('heraldCard'), an = c && c.getAnimations ? c.getAnimations() : [];
+      var black = motion() === 'calm' ? 300 : 400;
+      var done = function () { if (phase !== 'out') { ok(false); return; } setTimeout(function () { ok(phase === 'out'); }, black); };
+      if (!an.length) { done(); return; }
+      an[0].finished.then(done, done);
+    });
+  }
+  function nextEntry() {
+    for (var j = 0; j < ring.length; j++) if (!(seen & (1 << j)) && !inHist(ring[j])) return ringEntry(ring[j]);
+    var c0 = planC++, r = order[c0 % order.length], k = Math.floor(c0 / order.length), n = r.ab;
+    var i = feistel4(k % n, n, (key ^ fnv1a32(r.k) ^ IDX.major) >>> 0);
+    return cardEntry(r, i, function (c) { return (Math.floor(k / n) + fnv1a32(c.id)) % c.f.length; }, -1, { walk: true, c: c0 });
+  }
+  function inHist(rg) { for (var h = 0; h < hist.length; h++) if (hist[h].ring === rg.j && hist[h].day === today) return true; return false; }
+  function ringEntry(rg) { return cardEntry(rg.r, rg.i, function (c) { return pickFact(c.id, c.f, day); }, rg.j, {}); }
+  function cardEntry(r, i, factOf, j, extra) {
+    var e = { ring: j, day: today, view: function () {
+      return shard(r).then(function (cards) { var c = cards[i]; if (!c) throw new Error('card'); return build(c, factOf(c), r); });
+    } };
+    for (var x in extra) e[x] = extra[x];
+    return e;
+  }
+  function advance(user, back) {
+    if (busyNav) return; busyNav = true; stopClock();
+    var target, pushed = false;
+    if (back) { if (pos <= 0) { busyNav = false; clock(); return; } target = pos - 1; }
+    else if (pos < hist.length - 1) target = pos + 1;
+    else { hist.push(nextEntry()); target = hist.length - 1; pushed = true; }
+    (user ? Promise.resolve(true) : fadeOut()).then(function (go) {
+      if (!go) { if (pushed) hist.pop(); busyNav = false; clock(); return null; }
+      return show(target, user).then(function () { failed = false; busyNav = false; });
+    }).catch(function () {
+      failed = true; busyNav = false; if (pushed) hist.pop();
+      stage.setAttribute('data-state', 'shown'); phase = 'dwell'; remaining = 4000; line2(hist[pos]); clock();
+    });
+  }
+  function prefetch() {
+    if (failed) return;
+    var peek = [];
+    for (var j = 0; j < ring.length && peek.length < 2; j++) if (!(seen & (1 << j)) && !inHist(ring[j])) peek.push(ring[j].r);
+    if (peek.length < 2) peek.push(order[cursor % order.length]);
+    peek.slice(0, 2).forEach(function (r) { shard(r).catch(function () {}); });
+  }
+
+  /* ---------------------------------------------------------------------------------------------- status, marks */
+  function marks(entry) {
+    var dots = ringEl.querySelectorAll('i');
+    for (var i = 0; i < dots.length; i++) dots[i].className = entry && entry.ring === i ? 'on' : '';
+  }
+  function line2(entry) {
+    var parts = [];
+    if (entry && entry.ring >= 0) parts.push((entry.ring + 1) + TEXT.ringPos);
+    parts.push(IDX.nations.toLocaleString('en-US') + TEXT.nations, lastLine);
+    var t = failed ? TEXT.loadFail : parts.join(' · ');
+    if (!failed && motion() === 'still') t += ' · ' + TEXT.pressNext;
+    status.textContent = t;
+    btnPrev.setAttribute('aria-disabled', pos <= 0 ? 'true' : 'false');
+  }
+  ringEl.textContent = '';
+  for (var g = 0; g < 3; g++) { var grp = el('span', 'g'); for (var gi = 0; gi < 5; gi++) grp.appendChild(el('i')); ringEl.appendChild(grp); }
+
+  /* ---------------------------------------------------------------------------------------------- the static first card */
+  var F = IDX.first, staticArt = $('heraldCard'), firstRing = -1;
+  if (F && ring[0] && ring[0].r.k === F.k && ring[0].i === F.i && F.date === today) firstRing = 0;
+  else if (F && ring.length) { for (var fr = 0; fr < ring.length; fr++) if (ring[fr].r.k === F.k && ring[fr].i === F.i && F.date === today) firstRing = fr; }
+  var staticView = { art: staticArt, name: F ? F.n : '', lands: F ? F.l : '', fact: F ? F.t : '', len: F ? F.t.length : 60 };
+  hist.push({ ring: firstRing, day: today, view: function () { var a = staticArt.cloneNode(true); var v = {}; for (var x in staticView) v[x] = staticView[x]; v.art = a; v.face = F.face; return Promise.resolve(v); } });
+  pos = 0; cur = staticView; marks(hist[0]); line2(hist[0]);
+  if (herald.contains(document.activeElement)) live.textContent = clean(TEXT.live + staticView.name + TEXT.liveLands + staticView.lands + '. ' + staticView.fact);
+  whenBuilt(staticView);
+
+  /* ---------------------------------------------------------------------------------------------- controls */
+  btnNext.addEventListener('click', function () { advance(true, false); });
+  btnPrev.addEventListener('click', function () { if (btnPrev.getAttribute('aria-disabled') !== 'true') advance(true, true); });
+  btnPause.addEventListener('click', function () {
+    pressed = !pressed; btnPause.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    btnPause.textContent = pressed ? TEXT.resume : TEXT.pause; pressed ? stopClock() : clock();
+  });
+  $('hrControls').addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); advance(true, false); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); if (pos > 0) advance(true, true); }
+  });
+  function cancelFade() { if (phase === 'out') { stage.setAttribute('data-state', 'shown'); phase = 'dwell'; remaining = 2500; } }
+  herald.addEventListener('pointerenter', function () { hover = true; cancelFade(); stopClock(); });
+  herald.addEventListener('pointerleave', function () { hover = false; clock(); });
+  herald.addEventListener('focusin', function () { focusIn = true; cancelFade(); stopClock(); });
+  herald.addEventListener('focusout', function (e) { if (!herald.contains(e.relatedTarget)) { focusIn = false; clock(); } });
+  document.addEventListener('visibilitychange', function () { document.hidden ? stopClock() : clock(); });
+  if (window.IntersectionObserver) {
+    new IntersectionObserver(function (es) { visible = es[0].intersectionRatio >= 0.6; visible ? clock() : stopClock(); },
+      { threshold: [0, 0.6, 1] }).observe(stage);
+  }
+  new MutationObserver(function () { line2(hist[pos]); clock(); }).observe(d, { attributes: true, attributeFilter: ['data-motion'] });
+
+  /* ---------------------------------------------------------------------------------------------- today's ring list */
+  var ringList = $('ringList'), ringNote = $('ringNote');
+  if (F && F.date === today && ringNote) ringNote.hidden = true;
+  else if (ringList && window.IntersectionObserver) {
+    var io = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return; io.disconnect();
+      var rows = [], chain = Promise.resolve();
+      ring.forEach(function (rg) { chain = chain.then(function () { return shard(rg.r).then(function (cards) { rows.push([rg, cards[rg.i]]); }); }); });
+      chain.then(function () {
+        var frag = document.createDocumentFragment();
+        rows.forEach(function (x) {
+          var c = x[1]; if (!c) return;
+          var li = el('li'), a = el('a', 'row'); a.href = '/nations/' + c.id;
+          var n = el('span', 'nm', c.n); n.dir = 'auto'; n.setAttribute('data-face', c.fc); n.setAttribute('data-script', c.sc);
+          a.appendChild(n); a.appendChild(el('span', 'row-m', x[0].r.d));
+          var w = c.l.split(/\s+/); var l = el('span', 'row-l', w.slice(0, 8).join(' ') + (w.length > 8 ? ' ...' : ''));
+          if (c.lf === 'names') l.setAttribute('data-face', 'names'); a.appendChild(l); li.appendChild(a); frag.appendChild(li);
+        });
+        ringList.textContent = ''; ringList.appendChild(frag); if (ringNote) ringNote.hidden = true;
+      }, function () {});
+    }, { rootMargin: '400px 0px' });
+    io.observe(ringList);
+  }
+
+  /* ---------------------------------------------------------------------------------------------- search */
+  var box = $('findBox'), input = $('findInput'), out = $('findResults'), fstat = $('findStatus'), entries = null, loadingS = false, deb = 0;
+  if (box && input) {
+    box.hidden = false;
+    var say = function (t) { clearTimeout(deb); deb = setTimeout(function () { fstat.textContent = t; }, 300); };
+    var render = function (all) {
+      var q = input.value, res = entries ? search(entries, q) : [];
+      out.textContent = '';
+      if (!q.trim()) { clearTimeout(deb); fstat.textContent = ''; return; }
+      if (!entries) return;
+      var lim = all ? res.length : Math.min(24, res.length);
+      for (var i = 0; i < lim; i++) {
+        var e = res[i].e, li = el('li'), a = el('a'); a.href = '/nations/' + e.id;
+        var n = el('span', 'nm', e.n); n.dir = 'auto'; n.setAttribute('data-face', e.f); n.setAttribute('data-script', e.s); a.appendChild(n);
+        if (res[i].m.also) a.appendChild(el('span', 'sr-also', TEXT.also + ' ' + res[i].m.also));
+        var ls = e.l.length > 90 ? e.l.slice(0, 90).replace(/\s+\S*$/, '') + ' ...' : e.l;
+        a.appendChild(el('span', 'row-m', (RD[e.r] || '') + ' · ' + ls));
+        li.appendChild(a); out.appendChild(li);
+      }
+      if (res.length > lim) {
+        var li2 = el('li'), b = el('button', 'pill', TEXT.showAll); b.type = 'button';
+        b.addEventListener('click', function () { render(true); var as = out.querySelectorAll('a'); if (as[lim]) as[lim].focus(); });
+        li2.appendChild(b); out.appendChild(li2);
+      }
+      say(res.length === 1 ? TEXT.one : res.length ? res.length.toLocaleString('en-US') + TEXT.many : TEXT.none);
+    };
+    input.addEventListener('focus', function () {
+      if (entries || loadingS) return; loadingS = true; fstat.textContent = TEXT.loading;
+      get('/static/nations/search.json', true).then(function (j) {
+        entries = j.n.map(function (row) { return prep(row, j.regions, j.countries); }); fstat.textContent = ''; render(false);
+      }, function () { loadingS = false; fstat.textContent = TEXT.searchFail; });
+    });
+    input.addEventListener('input', function () { render(false); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { var a = out.querySelector('a'); if (a) { e.preventDefault(); a.focus(); } }
+      else if (e.key === 'Escape') { input.value = ''; render(false); }
+    });
+    out.addEventListener('keydown', function (e) {
+      var as = Array.prototype.slice.call(out.querySelectorAll('a, button')), i = as.indexOf(document.activeElement);
+      if (i < 0) return;
+      if (e.key === 'ArrowDown' && i < as.length - 1) { e.preventDefault(); as[i + 1].focus(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); (i === 0 ? input : as[i - 1]).focus(); }
+      else if (e.key === 'Escape') { input.value = ''; render(false); input.focus(); }
+    });
+  }
+
+  /* ---------------------------------------------------------------------------------------------- overdue */
+  setTimeout(function () {
+    get('/static/nations/status.json').then(function (s) {
+      var o = $('vpOverdue');
+      if (!o || !s || !s.last_full_check) return;
+      if (dayNumber(today) - dayNumber(s.last_full_check) > 14) { o.textContent = TEXT.overdue + fmt(s.last_full_check) + TEXT.overdue2; o.hidden = false; }
+    }, function () {});
+  }, 9000);
+})();
+</script>
+</body>
+</html>

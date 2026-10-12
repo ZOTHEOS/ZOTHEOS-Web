@@ -1,0 +1,50 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="nh" id="header">
+  <div class="nh-in">
+    <div class="nh-left">
+      <button class="appearance-btn pill" id="appearanceBtn" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span><span class="ab-caret" aria-hidden="true"></span></button>
+    </div>
+    <a class="nh-mark" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="143" height="30"></a>
+    <nav class="nh-nav" aria-label="Nations">
+{{{nav_links}}}
+      <button class="nav-menu-btn pill" id="navMenuBtn" type="button" popovertarget="navSheet"><span class="nm-bars" aria-hidden="true"></span><span class="nm-label">Menu</span></button>
+    </nav>
+  </div>
+</header>
+<!-- The Theme and Motion rows are copied from index.html; tools/nations_lint.py fails when they drift. -->
+<div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Obsidian mono" title="Obsidian mono"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Codex parchment" title="Codex parchment"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Obsidian mono</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
+<nav class="nav-sheet" id="navSheet" popover aria-label="Sections">
+  <div class="ns-top">
+    <span class="ap-label">Indigenous nations today</span>
+    <button class="ns-close pill" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
+  </div>
+  <ul class="ns-list">
+{{{sheet_links}}}
+  </ul>
+  <div class="ns-foot">
+    <a class="pill" href="/">ZOTHEOS home</a>
+    <button class="pill ns-appearance" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span></button>
+  </div>
+</nav>

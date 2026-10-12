@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-f+hxFbCs1IVWPw9jc6aTKj/2p1RCcvdadavBi6pZCGw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Credits | Indigenous nations today</title>
+  <meta name="description" content="Credits for Indigenous nations today: every nation by its own name, every publisher, the people, the fonts and the checking tool.">
+  <link rel="canonical" href="https://zotheos.org/nations/credits">
+  <meta property="og:title" content="Credits | Indigenous nations today">
+  <meta property="og:description" content="Credits for Indigenous nations today: every nation by its own name, every publisher, the people, the fonts and the checking tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zotheos.org/nations/credits">
+  <meta property="og:image" content="https://zotheos.org/static/og.png">
+  <meta name="theme-color" content="#000000" id="themeColorMeta">
+  <link rel="icon" href="/zotheos_icon.ico?v=3">
+  <script>
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
+  <!-- Fonts are self-hosted (SIL Open Font License, static/fonts/OFL.txt). zth-fonts is the landing's block, byte for
+       byte; zth-fonts-names holds the faces for letters the brand faces lack. tools/fonts_check.py keeps both in step. -->
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin>
+  <style id="zth-fonts">
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  </style>
+  <style id="zth-fonts-names">
+    @font-face { font-family: 'ZN Serif'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 111.1%;
+      src: url(/static/fonts/zn-serif.d8d3ab76.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Sans'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-sans.4b953325.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03E1, U+03F0-04FF, U+1E00-1EFF, U+2018-201F, U+207F; }
+    @font-face { font-family: 'ZN Mono'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 104.1%;
+      src: url(/static/fonts/zn-mono.066025d7.woff2) format('woff2');
+      unicode-range: U+02BB; }
+    @font-face { font-family: 'ZN Cherokee'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.3%;
+      src: url(/static/fonts/zn-cherokee.4a768fc6.woff2) format('woff2');
+      unicode-range: U+13A0-13F5, U+13F8-13FD, U+AB70-ABBF; }
+    @font-face { font-family: 'ZN Syllabics'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 105.2%;
+      src: url(/static/fonts/zn-syllabics.841c0d05.woff2) format('woff2');
+      unicode-range: U+1400-167F, U+18B0-18F5; }
+    @font-face { font-family: 'ZN Devanagari'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-devanagari.82b61ca2.woff2) format('woff2');
+      unicode-range: U+0900-097F, U+200C-200D, U+25CC, U+A8E0-A8FF; }
+    @font-face { font-family: 'ZN Tifinagh'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
+      unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
+  </style>
+  <link rel="stylesheet" href="/static/nations/nations.f4f12d02.css">
+  <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nh" id="header">
+  <div class="nh-in">
+    <div class="nh-left">
+      <button class="appearance-btn pill" id="appearanceBtn" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span><span class="ab-caret" aria-hidden="true"></span></button>
+    </div>
+    <a class="nh-mark" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="143" height="30"></a>
+    <nav class="nh-nav" aria-label="Nations">
+      <a href="/nations#today">Today</a>
+      <a href="/nations#find">Find</a>
+      <a href="/nations#regions">Regions</a>
+      <a href="/nations/coverage">Coverage</a>
+      <a href="/nations/about">About</a>
+      <a href="/nations/for-nations">For nations</a>
+      <button class="nav-menu-btn pill" id="navMenuBtn" type="button" popovertarget="navSheet"><span class="nm-bars" aria-hidden="true"></span><span class="nm-label">Menu</span></button>
+    </nav>
+  </div>
+</header>
+<!-- The Theme and Motion rows are copied from index.html; tools/nations_lint.py fails when they drift. -->
+<div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Obsidian mono" title="Obsidian mono"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Blue cosmic" title="Maya Blue cosmic"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Codex parchment" title="Codex parchment"></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Skeleton obsidian" title="Skeleton obsidian"></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Obsidian mono</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
+<nav class="nav-sheet" id="navSheet" popover aria-label="Sections">
+  <div class="ns-top">
+    <span class="ap-label">Indigenous nations today</span>
+    <button class="ns-close pill" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
+  </div>
+  <ul class="ns-list">
+    <li><a href="/nations#today"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span></span></span><span class="ns-name">Today</span></a></li>
+    <li><a href="/nations#find"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Find</span></a></li>
+    <li><a href="/nations#regions"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Regions</span></a></li>
+    <li><a href="/nations/coverage"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Coverage</span></a></li>
+    <li><a href="/nations/about"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span></span></span><span class="ns-name">About</span></a></li>
+    <li><a href="/nations/for-nations"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span></span></span><span class="ns-name">For nations</span></a></li>
+    <li><a href="/nations/sources"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Sources</span></a></li>
+    <li><a href="/nations/credits" aria-current="page"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Credits</span></a></li>
+    <li><a href="/nations/verification"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Verification</span></a></li>
+    <li><a href="/nations/changes"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span></span></span><span class="ns-name">Changes</span></a></li>
+  </ul>
+  <div class="ns-foot">
+    <a class="pill" href="/">ZOTHEOS home</a>
+    <button class="pill ns-appearance" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span></button>
+  </div>
+</nav>
+
+
+<main id="main">
+<div class="read n-head prose">
+  <p class="eyebrow"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Credits</p>
+  <h1 class="page-h">Credits</h1>
+  <p class="lede">Every nation on this site, by its own name, and everyone whose published work these pages stand on.</p>
+  <h2>Nations</h2>
+  <h3 class="lbl">Africa</h3>
+  <ul class="roll">
+    <li><a href="/nations/afar-horn-of-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Afar</span></a></li>
+    <li><a href="/nations/anywaa-ethiopia-south-sudan"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Anywaa</span></a></li>
+    <li><a href="/nations/baaka-car-congo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">BaAka</span></a></li>
+    <li><a href="/nations/bagyeli-cameroon"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bagyeli</span></a></li>
+    <li><a href="/nations/baka-cameroon-gabon"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Baka</span></a></li>
+    <li><a href="/nations/batwa-great-lakes"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Batwa</span></a></li>
+    <li><a href="/nations/benet-uganda"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Benet</span></a></li>
+    <li><a href="/nations/datooga-tanzania"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Datooga</span></a></li>
+    <li><a href="/nations/endorois-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Endorois</span></a></li>
+    <li><a href="/nations/griqua-south-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Griqua</span></a></li>
+    <li><a href="/nations/hadzabe-tanzania"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hadzabe</span></a></li>
+    <li><a href="/nations/haiom-namibia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hai//om</span></a></li>
+    <li><a href="/nations/imazighen-north-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Imazighen</span></a></li>
+    <li><a href="/nations/ishelhin-morocco"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ishelhiyen</span></a></li>
+    <li><a href="/nations/san-juhoansi-namibia-botswana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ju|&#x27;hoansi</span></a></li>
+    <li><a href="/nations/iqbayliyen-kabyles-algeria"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kabyles</span></a></li>
+    <li><a href="/nations/karimojong-uganda"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Karimojong</span></a></li>
+    <li><a href="/nations/kel-tamasheq-sahara-sahel"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kel Tamasheq</span></a></li>
+    <li><a href="/nations/khoikhoi-south-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Khoikhoi</span></a></li>
+    <li><a href="/nations/san-khomani-south-africa"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">ǂKhomani</span></a></li>
+    <li><a href="/nations/san-khwe-southern-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Khwe</span></a></li>
+    <li><a href="/nations/konso-ethiopia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Konso</span></a></li>
+    <li><a href="/nations/korana-south-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Korana</span></a></li>
+    <li><a href="/nations/maasai-kenya-tanzania"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Maasai</span></a></li>
+    <li><a href="/nations/mbororo-cameroon-chad"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mbororo</span></a></li>
+    <li><a href="/nations/mbuti-drc"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mbuti</span></a></li>
+    <li><a href="/nations/at-mzab-algeria"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mozabite</span></a></li>
+    <li><a href="/nations/nama-namibia-south-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nama</span></a></li>
+    <li><a href="/nations/san-naro-botswana-namibia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Naro</span></a></li>
+    <li><a href="/nations/ogiek-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ogiek</span></a></li>
+    <li><a href="/nations/oromo-ethiopia-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Oromo</span></a></li>
+    <li><a href="/nations/ovahimba-namibia-angola"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ovahimba</span></a></li>
+    <li><a href="/nations/irifiyen-morocco"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rifians</span></a></li>
+    <li><a href="/nations/samburu-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Samburu</span></a></li>
+    <li><a href="/nations/sengwer-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sengwer</span></a></li>
+    <li><a href="/nations/siwans-egypt"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Siwans</span></a></li>
+    <li><a href="/nations/toubou-chad-libya-niger"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Toubou</span></a></li>
+    <li><a href="/nations/tshwa-zimbabwe"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tshwa</span></a></li>
+    <li><a href="/nations/wodaabe-niger-sahel"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wodaabe</span></a></li>
+    <li><a href="/nations/san-xun-southern-africa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">!Xun</span></a></li>
+    <li><a href="/nations/yiaku-kenya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yiaku</span></a></li>
+  </ul>
+  <h3 class="lbl">Alaska, Hawaiʻi and the US Pacific</h3>
+  <ul class="roll">
+    <li><a href="/nations/ahtna-copper-river-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ahtna</span></a></li>
+    <li><a href="/nations/alutiiq-sugpiaq-alaska"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Alutiiq/Sugpiaq</span></a></li>
+    <li><a href="/nations/chamoru-guam"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">CHamoru</span></a></li>
+    <li><a href="/nations/cupik-chevak-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Cup&#x27;ik</span></a></li>
+    <li><a href="/nations/deg-hitan-lower-yukon-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Deg Hit&#x27;an</span></a></li>
+    <li><a href="/nations/denaina-cook-inlet-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Dena&#x27;ina</span></a></li>
+    <li><a href="/nations/eyak-cordova-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Eyak</span></a></li>
+    <li><a href="/nations/gwichin-alaska-yukon-nwt"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gwich&#x27;in</span></a></li>
+    <li><a href="/nations/haida-kaigani-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Haida</span></a></li>
+    <li><a href="/nations/han-eagle-alaska-dawson-yukon"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hän</span></a></li>
+    <li><a href="/nations/inupiat-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Iñupiat</span></a></li>
+    <li><a href="/nations/koyukon-interior-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Koyukon</span></a></li>
+    <li><a href="/nations/lower-tanana-dene-alaska"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Lower Tanana Dene</span></a></li>
+    <li><a href="/nations/native-hawaiians-kanaka-maoli-hawaii"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Native Hawaiians</span></a></li>
+    <li><a href="/nations/samoans-american-samoa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Samoans</span></a></li>
+    <li><a href="/nations/st-lawrence-island-yupik-alaska"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">St. Lawrence Island Yupik</span></a></li>
+    <li><a href="/nations/tlingit-southeast-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tlingit</span></a></li>
+    <li><a href="/nations/tsimshian-metlakatla-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tsimshian</span></a></li>
+    <li><a href="/nations/unangax-aleutian-alaska"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">Unangax̂</span></a></li>
+    <li><a href="/nations/upper-tanana-alaska-yukon"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Upper Tanana</span></a></li>
+    <li><a href="/nations/yupik-central-alaska"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yup&#x27;ik</span></a></li>
+  </ul>
+  <h3 class="lbl">Amazonia and lowland South America</h3>
+  <ul class="roll">
+    <li><a href="/nations/achuar-pe-ec"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Achuar</span></a></li>
+    <li><a href="/nations/ashaninka-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ashaninka</span></a></li>
+    <li><a href="/nations/ashaninka-pe"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Asháninka</span></a></li>
+    <li><a href="/nations/auwe-xavante-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">A&#x27;uwe</span></a></li>
+    <li><a href="/nations/ava-guarani-nandeva-br-py"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Avá Guarani</span></a></li>
+    <li><a href="/nations/awajun-pe"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Awajún</span></a></li>
+    <li><a href="/nations/baniwa-br-co-ve"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Baniwa</span></a></li>
+    <li><a href="/nations/guarani-kaiowa-br-py"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Guarani Kaiowá</span></a></li>
+    <li><a href="/nations/guarani-mbya-br-py-ar-uy"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Guarani Mbya</span></a></li>
+    <li><a href="/nations/huni-kuin-br-pe"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Huni Kuin</span></a></li>
+    <li><a href="/nations/kaapor-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ka&#x27;apor</span></a></li>
+    <li><a href="/nations/kuikuro-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kuikuro</span></a></li>
+    <li><a href="/nations/macuxi-br-gy-ve"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Macuxi</span></a></li>
+    <li><a href="/nations/mebengokre-kayapo-br"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">Mẽbêngôkre</span></a></li>
+    <li><a href="/nations/munduruku-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Munduruku</span></a></li>
+    <li><a href="/nations/pataxo-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Pataxó</span></a></li>
+    <li><a href="/nations/kichwa-sarayaku-ec"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Pueblo Originario Kichwa de Sarayaku</span></a></li>
+    <li><a href="/nations/qom-ar-py"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Qom</span></a></li>
+    <li><a href="/nations/sapara-ec-pe"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sápara</span></a></li>
+    <li><a href="/nations/shipibo-konibo-pe"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Shipibo-Konibo</span></a></li>
+    <li><a href="/nations/shuar-ec"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Shuar</span></a></li>
+    <li><a href="/nations/terena-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Terena</span></a></li>
+    <li><a href="/nations/tikuna-maguta-br-pe-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tikuna</span></a></li>
+    <li><a href="/nations/tsimane-bo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tsimane&#x27;</span></a></li>
+    <li><a href="/nations/tupinamba-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tupinambá</span></a></li>
+    <li><a href="/nations/waorani-ec"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Waorani</span></a></li>
+    <li><a href="/nations/wapichana-br-gy"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wapichana</span></a></li>
+    <li><a href="/nations/wichi-ar-bo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wichí</span></a></li>
+    <li><a href="/nations/yanomami-br-ve"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yanomami</span></a></li>
+  </ul>
+  <h3 class="lbl">Asia</h3>
+  <ul class="roll">
+    <li><a href="/nations/jp-ainu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ainu</span></a></li>
+    <li><a href="/nations/th-akha"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Akha</span></a></li>
+    <li><a href="/nations/tw-atayal"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Atayal</span></a></li>
+    <li><a href="/nations/in-bhil"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bhil</span></a></li>
+    <li><a href="/nations/in-bodo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bodo</span></a></li>
+    <li><a href="/nations/tw-bunun"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bunun</span></a></li>
+    <li><a href="/nations/bd-chakma"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Chakma</span></a></li>
+    <li><a href="/nations/id-dayak"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Dayak</span></a></li>
+    <li><a href="/nations/in-garo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Garo</span></a></li>
+    <li><a href="/nations/in-gond"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gond</span></a></li>
+    <li><a href="/nations/tw-hlaalua"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hla&#x27;alua</span></a></li>
+    <li><a href="/nations/in-ho"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ho</span></a></li>
+    <li><a href="/nations/ph-ibaloi"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ibaloi</span></a></li>
+    <li><a href="/nations/my-iban"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Iban</span></a></li>
+    <li><a href="/nations/ph-ifugao"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ifugao</span></a></li>
+    <li><a href="/nations/my-kadazandusun"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kadazandusun</span></a></li>
+    <li><a href="/nations/pk-kalasha"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kalasha</span></a></li>
+    <li><a href="/nations/tw-kanakanavu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kanakanavu</span></a></li>
+    <li><a href="/nations/ph-kankanaey"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kankanaey</span></a></li>
+    <li><a href="/nations/mm-karen"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Karen</span></a></li>
+    <li><a href="/nations/tw-kavalan"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kavalan</span></a></li>
+    <li><a href="/nations/in-khasi"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Khasi</span></a></li>
+    <li><a href="/nations/in-kurukh"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kurukh</span></a></li>
+    <li><a href="/nations/ph-lumad"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Lumad</span></a></li>
+    <li><a href="/nations/np-magar"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Magar</span></a></li>
+    <li><a href="/nations/bd-marma"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Marma</span></a></li>
+    <li><a href="/nations/id-mentawai"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mentawai</span></a></li>
+    <li><a href="/nations/in-mizo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mizo</span></a></li>
+    <li><a href="/nations/bd-mru"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mru</span></a></li>
+    <li><a href="/nations/in-munda"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Munda</span></a></li>
+    <li><a href="/nations/in-naga"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Naga</span></a></li>
+    <li><a href="/nations/np-newa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Newa</span></a></li>
+    <li><a href="/nations/my-orang-asli"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Orang Asli</span></a></li>
+    <li><a href="/nations/tw-paiwan"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Paiwan</span></a></li>
+    <li><a href="/nations/tw-pangcah"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Pangcah</span></a></li>
+    <li><a href="/nations/tw-pinuyumayan"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Pinuyumayan</span></a></li>
+    <li><a href="/nations/np-rai"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rai</span></a></li>
+    <li><a href="/nations/tw-rukai"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rukai</span></a></li>
+    <li><a href="/nations/tw-saisiyat"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Saisiyat</span></a></li>
+    <li><a href="/nations/tw-sakizaya"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sakizaya</span></a></li>
+    <li><a href="/nations/in-santal"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Santal</span></a></li>
+    <li><a href="/nations/tw-sediq"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sediq</span></a></li>
+    <li><a href="/nations/np-sherpa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sherpa</span></a></li>
+    <li><a href="/nations/np-tamang"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tamang</span></a></li>
+    <li><a href="/nations/np-tamu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tamu</span></a></li>
+    <li><a href="/nations/tw-tao"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tao</span></a></li>
+    <li><a href="/nations/tw-thao"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Thao</span></a></li>
+    <li><a href="/nations/np-tharu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tharu</span></a></li>
+    <li><a href="/nations/bd-tripura"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tripura</span></a></li>
+    <li><a href="/nations/tw-truku"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Truku</span></a></li>
+    <li><a href="/nations/tw-tsou"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tsou</span></a></li>
+    <li><a href="/nations/lk-wanniyala-aetto"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Wanniyala-Aetto</span></a></li>
+    <li><a href="/nations/np-yakthung"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yakthung</span></a></li>
+  </ul>
+  <h3 class="lbl">Canada</h3>
+  <ul class="roll">
+    <li><a href="/nations/akwesasne-mohawk-on-qc-ny"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Akwesasne</span></a></li>
+    <li><a href="/nations/anishinabek-nation-on-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Anishinabek Nation</span></a></li>
+    <li><a href="/nations/atikamekw-nitaskinan-qc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Atikamekw</span></a></li>
+    <li><a href="/nations/dene-denendeh-nt-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Dene</span></a></li>
+    <li><a href="/nations/eeyou-istchee-cree-qc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Eeyou</span></a></li>
+    <li><a href="/nations/gitxsan-bc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gitxsan</span></a></li>
+    <li><a href="/nations/haida-gwaii-bc-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Haida Nation</span></a></li>
+    <li><a href="/nations/heiltsuk-bc-ca"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">Haíɫzaqv</span></a></li>
+    <li><a href="/nations/innu-labrador-quebec-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Innu</span></a></li>
+    <li><a href="/nations/inuit-nunangat-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Inuit</span></a></li>
+    <li><a href="/nations/nunavut-inuit-nu-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Inuit of Nunavut</span></a></li>
+    <li><a href="/nations/inuvialuit-nt-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Inuvialuit</span></a></li>
+    <li><a href="/nations/kahnawake-mohawk-qc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kahnawà:ke</span></a></li>
+    <li><a href="/nations/kainai-blood-tribe-ab-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kainai</span></a></li>
+    <li><a href="/nations/ktunaxa-bc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ktunaxa</span></a></li>
+    <li><a href="/nations/nunatsiavut-labrador-inuit-nl-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Labrador Inuit</span></a></li>
+    <li><a href="/nations/metis-nation-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Métis Nation</span></a></li>
+    <li><a href="/nations/mikmaq-mikmaki-ns-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mi’kmaq</span></a></li>
+    <li><a href="/nations/muskeg-lake-cree-nation-sk-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Muskeg Lake Cree Nation</span></a></li>
+    <li><a href="/nations/wendat-wendake-qc-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Nation Wendat</span></a></li>
+    <li><a href="/nations/nisgaa-bc-ca"><span class="nm" dir="auto" data-size="l" data-face="names" data-script="latn">Nisg̱a’a Nation</span></a></li>
+    <li><a href="/nations/nunavik-inuit-qc-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Nunavik Inuit</span></a></li>
+    <li><a href="/nations/nuu-chah-nulth-bc-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Nuu-chah-nulth</span></a></li>
+    <li><a href="/nations/piikani-ab-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Piikani Nation</span></a></li>
+    <li><a href="/nations/secwepemc-bc-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Secwépemc</span></a></li>
+    <li><a href="/nations/tsleil-waututh-bc-ca"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">səlilwətaɬ</span></a></li>
+    <li><a href="/nations/siksika-blackfoot-ab-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Siksika Nation</span></a></li>
+    <li><a href="/nations/six-nations-grand-river-on-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Six Nations of the Grand River</span></a></li>
+    <li><a href="/nations/squamish-bc-ca"><span class="nm" dir="auto" data-size="m" data-face="names" data-script="latn">Sḵwx̱wú7mesh Úxwumixw</span></a></li>
+    <li><a href="/nations/syilx-okanagan-bc-wa"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Syilx Okanagan Nation</span></a></li>
+    <li><a href="/nations/tlicho-nt-ca"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">Tłı̨chǫ</span></a></li>
+    <li><a href="/nations/tsuutina-ab-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tsuut’ina Nation</span></a></li>
+    <li><a href="/nations/vuntut-gwitchin-yt-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Vuntut Gwitchin First Nation</span></a></li>
+    <li><a href="/nations/wolastoqiyik-nb-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Wolastoqiyik</span></a></li>
+    <li><a href="/nations/musqueam-bc-ca"><span class="nm" dir="auto" data-size="l" data-face="names" data-script="latn">xʷməθkʷəy̓əm</span></a></li>
+  </ul>
+  <h3 class="lbl">Central America</h3>
+  <ul class="roll">
+    <li><a href="/nations/bribri-costa-rica"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Bribri</span></a></li>
+    <li><a href="/nations/bugle-panama"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Buglé</span></a></li>
+    <li><a href="/nations/cabecar-costa-rica"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Cabécar</span></a></li>
+    <li><a href="/nations/chorti-maya-guatemala-honduras"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ch&#x27;orti&#x27;</span></a></li>
+    <li><a href="/nations/embera-panama-colombia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Emberá</span></a></li>
+    <li><a href="/nations/garifuna-central-america"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Garifuna</span></a></li>
+    <li><a href="/nations/guna-gunayala-panama"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Guna</span></a></li>
+    <li><a href="/nations/ixil-maya-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ixil</span></a></li>
+    <li><a href="/nations/kalina-guianas"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kaliña</span></a></li>
+    <li><a href="/nations/kalinago-dominica"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kalinago</span></a></li>
+    <li><a href="/nations/kaqchikel-maya-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kaqchikel</span></a></li>
+    <li><a href="/nations/kiche-maya-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">K&#x27;iche&#x27;</span></a></li>
+    <li><a href="/nations/lenca-honduras-el-salvador"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Lenca</span></a></li>
+    <li><a href="/nations/lokono-guianas"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Lokono</span></a></li>
+    <li><a href="/nations/mam-maya-guatemala-mexico"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mam</span></a></li>
+    <li><a href="/nations/mayangna-nicaragua-honduras"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mayangna</span></a></li>
+    <li><a href="/nations/miskitu-nicaragua-honduras"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Miskitu</span></a></li>
+    <li><a href="/nations/mopan-maya-belize-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mopan</span></a></li>
+    <li><a href="/nations/nahuat-pipil-el-salvador"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Nahuat Pipil</span></a></li>
+    <li><a href="/nations/naso-tjer-di-panama"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Naso Tjër Di</span></a></li>
+    <li><a href="/nations/ngabe-panama-costa-rica"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ngäbe</span></a></li>
+    <li><a href="/nations/qeqchi-maya-guatemala-belize"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Q&#x27;eqchi&#x27;</span></a></li>
+    <li><a href="/nations/tzutujil-maya-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tz&#x27;utujil</span></a></li>
+    <li><a href="/nations/wayuu-guajira"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wayuu</span></a></li>
+    <li><a href="/nations/wounaan-panama-colombia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wounaan</span></a></li>
+    <li><a href="/nations/xinka-southeast-guatemala"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Xinka</span></a></li>
+  </ul>
+  <h3 class="lbl">Central and Southern Mexico</h3>
+  <ul class="roll">
+    <li><a href="/nations/ayuuk-mixe-oaxaca-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ayuuk</span></a></li>
+    <li><a href="/nations/binniza-zapotec-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Binnizá</span></a></li>
+    <li><a href="/nations/chol-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ch&#x27;ol</span></a></li>
+    <li><a href="/nations/cuicateco-oaxaca-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Dibaku</span></a></li>
+    <li><a href="/nations/ha-shuta-enima-mazatec-oaxaca-mx"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Ha shuta enima</span></a></li>
+    <li><a href="/nations/hach-winik-lacandon-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hach Winik</span></a></li>
+    <li><a href="/nations/hnahnu-otomi-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hñähñu</span></a></li>
+    <li><a href="/nations/ikoots-huave-oaxaca-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ikoots</span></a></li>
+    <li><a href="/nations/jnatjo-mazahua-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Jñatrjo</span></a></li>
+    <li><a href="/nations/kitse-chatnio-chatino-oaxaca-mx"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kitsé Cha&#x27;tnio</span></a></li>
+    <li><a href="/nations/maya-yucatan-peninsula-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Maya</span></a></li>
+    <li><a href="/nations/mephaa-guerrero-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Me&#x27;phaa</span></a></li>
+    <li><a href="/nations/nahua-mx-central-south"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nahua</span></a></li>
+    <li><a href="/nations/popoloca-puebla-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ngiwa</span></a></li>
+    <li><a href="/nations/amuzgo-guerrero-oaxaca-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nn&#x27;anncue</span></a></li>
+    <li><a href="/nations/nuu-savi-mixtec-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ñuu Savi</span></a></li>
+    <li><a href="/nations/zoque-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">O&#x27; de püt</span></a></li>
+    <li><a href="/nations/popoluca-veracruz-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Popoluca</span></a></li>
+    <li><a href="/nations/purhepecha-michoacan-mx"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">P&#x27;urhépecha</span></a></li>
+    <li><a href="/nations/tojolabal-chiapas-mx"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tojol-ab&#x27;al</span></a></li>
+    <li><a href="/nations/triqui-oaxaca-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Triqui</span></a></li>
+    <li><a href="/nations/tsa-ju-jmi-chinantec-oaxaca-mx"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tsa ju jmí&#x27;</span></a></li>
+    <li><a href="/nations/tseltal-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tseltal</span></a></li>
+    <li><a href="/nations/tsotsil-chiapas-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tsotsil</span></a></li>
+    <li><a href="/nations/totonaco-veracruz-puebla-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tutunakú</span></a></li>
+    <li><a href="/nations/yokotan-tabasco-mx"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yokot&#x27;an</span></a></li>
+  </ul>
+  <h3 class="lbl">Northern Mexico and the US Southwest</h3>
+  <ul class="roll">
+    <li><a href="/nations/ashiwi-zuni-us-nm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">A:shiwi</span></a></li>
+    <li><a href="/nations/haaku-acoma-us-nm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Acoma</span></a></li>
+    <li><a href="/nations/akimel-ootham-us-az"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Akimel O’otham</span></a></li>
+    <li><a href="/nations/cocopah-cucapa-us-az-mx-bc"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Cocopah</span></a></li>
+    <li><a href="/nations/comcaac-mx-sonora"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Comcaac</span></a></li>
+    <li><a href="/nations/dine-navajo-nation-us"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Diné</span></a></li>
+    <li><a href="/nations/havasu-baaja-havasupai-us-az"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Havasu Baaja</span></a></li>
+    <li><a href="/nations/hopi-us-az"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hopi</span></a></li>
+    <li><a href="/nations/hualapai-us-az"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Hualapai</span></a></li>
+    <li><a href="/nations/jicarilla-apache-us-nm"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Jicarilla Apache</span></a></li>
+    <li><a href="/nations/khapo-santa-clara-us-nm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kha’P’o</span></a></li>
+    <li><a href="/nations/kumeyaay-us-ca-mx-bc"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kumeyaay</span></a></li>
+    <li><a href="/nations/mescalero-apache-us-nm"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Mescalero Apache</span></a></li>
+    <li><a href="/nations/nuche-ute-us-co-ut"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nuche</span></a></li>
+    <li><a href="/nations/ohkay-owingeh-us-nm"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Ohkay Owingeh</span></a></li>
+    <li><a href="/nations/raramuri-mx-chihuahua"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rarámuri</span></a></li>
+    <li><a href="/nations/san-carlos-apache-us-az"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">San Carlos Apache</span></a></li>
+    <li><a href="/nations/southern-paiute-us-ut-az"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Southern Paiute</span></a></li>
+    <li><a href="/nations/taos-pueblo-us-nm"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Taos Pueblo</span></a></li>
+    <li><a href="/nations/tohono-oodham-us-az-mx-son"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tohono O’odham</span></a></li>
+    <li><a href="/nations/warijo-mx-chihuahua-sonora"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Warihó and Macurawe</span></a></li>
+    <li><a href="/nations/white-mountain-apache-us-az"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">White Mountain Apache</span></a></li>
+    <li><a href="/nations/wixarika-mx-jalisco-nayarit"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wixárika</span></a></li>
+    <li><a href="/nations/yavapai-us-az"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yavapai</span></a></li>
+    <li><a href="/nations/yoeme-mx-sonora-us-arizona"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yoeme</span></a></li>
+    <li><a href="/nations/yoreme-mx-sonora-sinaloa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yoreme</span></a></li>
+  </ul>
+  <h3 class="lbl">Oceania, Aotearoa and Australia</h3>
+  <ul class="roll">
+    <li><a href="/nations/anangu-au"><span class="nm" dir="auto" data-size="xl" data-face="names" data-script="latn">Aṉangu</span></a></li>
+    <li><a href="/nations/arrernte-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Arrernte</span></a></li>
+    <li><a href="/nations/chuukese-fm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Chuukese</span></a></li>
+    <li><a href="/nations/cook-islands-maori-ck"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Cook Islands Māori</span></a></li>
+    <li><a href="/nations/gadigal-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gadigal</span></a></li>
+    <li><a href="/nations/gamilaraay-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gamilaraay</span></a></li>
+    <li><a href="/nations/gunantuna-tolai-pg"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Gunantuna</span></a></li>
+    <li><a href="/nations/gunditjmara-au"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Gunditjmara</span></a></li>
+    <li><a href="/nations/i-kiribati-ki"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">I-Kiribati</span></a></li>
+    <li><a href="/nations/itaukei-fj"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">iTaukei</span></a></li>
+    <li><a href="/nations/kanak-nc"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kanak</span></a></li>
+    <li><a href="/nations/kaurna-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kaurna</span></a></li>
+    <li><a href="/nations/kosraeans-fm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kosraeans</span></a></li>
+    <li><a href="/nations/larrakia-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Larrakia</span></a></li>
+    <li><a href="/nations/maohi-pf"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mā&#x27;ohi</span></a></li>
+    <li><a href="/nations/marshallese-mh"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Marshallese</span></a></li>
+    <li><a href="/nations/meriam-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Meriam</span></a></li>
+    <li><a href="/nations/moriori-nz"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Moriori</span></a></li>
+    <li><a href="/nations/nauruans-nr"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nauruans</span></a></li>
+    <li><a href="/nations/ngai-tahu-nz"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ngāi Tahu</span></a></li>
+    <li><a href="/nations/ngai-tuhoe-nz"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ngāi Tūhoe</span></a></li>
+    <li><a href="/nations/ngati-porou-nz"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Ngāti Porou</span></a></li>
+    <li><a href="/nations/ngati-whatua-orakei-nz"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Ngāti Whātua Ōrākei</span></a></li>
+    <li><a href="/nations/ni-vanuatu-vu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">ni-Vanuatu</span></a></li>
+    <li><a href="/nations/niueans-nu"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Niueans</span></a></li>
+    <li><a href="/nations/noongar-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Noongar</span></a></li>
+    <li><a href="/nations/palauans-pw"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Palauans</span></a></li>
+    <li><a href="/nations/papuan-peoples-id"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Papuan peoples</span></a></li>
+    <li><a href="/nations/pohnpeians-fm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Pohnpeians</span></a></li>
+    <li><a href="/nations/rapa-nui-cl"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rapa Nui</span></a></li>
+    <li><a href="/nations/refaluwasch-mp"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Refaluwasch</span></a></li>
+    <li><a href="/nations/rotumans-fj"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Rotumans</span></a></li>
+    <li><a href="/nations/samoans-samoa"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Samoans</span></a></li>
+    <li><a href="/nations/te-arawa-nz"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Te Arawa</span></a></li>
+    <li><a href="/nations/tiwi-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tiwi</span></a></li>
+    <li><a href="/nations/tokelauans-tk"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tokelauans</span></a></li>
+    <li><a href="/nations/tongans-to"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tongans</span></a></li>
+    <li><a href="/nations/torres-strait-islanders-au"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Torres Strait Islanders</span></a></li>
+    <li><a href="/nations/tuvaluans-tv"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tuvaluans</span></a></li>
+    <li><a href="/nations/waikato-tainui-nz"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Waikato-Tainui</span></a></li>
+    <li><a href="/nations/whanganui-iwi-nz"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Whanganui Iwi</span></a></li>
+    <li><a href="/nations/wiradjuri-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wiradjuri</span></a></li>
+    <li><a href="/nations/wurundjeri-woi-wurrung-au"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Wurundjeri Woi Wurrung</span></a></li>
+    <li><a href="/nations/yapese-fm"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yapese</span></a></li>
+    <li><a href="/nations/yawuru-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yawuru</span></a></li>
+    <li><a href="/nations/yolngu-au"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yolŋu</span></a></li>
+  </ul>
+  <h3 class="lbl">The Andes</h3>
+  <ul class="roll">
+    <li><a href="/nations/arhuaco-sierra-nevada-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Arhuaco</span></a></li>
+    <li><a href="/nations/aymara-altiplano-bo-pe-cl"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Aymara</span></a></li>
+    <li><a href="/nations/colla-atacama-cl-ar"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Colla</span></a></li>
+    <li><a href="/nations/diaguita-norte-chico-cl-ar"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Diaguita</span></a></li>
+    <li><a href="/nations/kaggaba-kogi-sierra-nevada-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kággaba</span></a></li>
+    <li><a href="/nations/kankuamo-sierra-nevada-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kankuamo</span></a></li>
+    <li><a href="/nations/kichwa-sierra-ec"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kichwa</span></a></li>
+    <li><a href="/nations/kichwa-kanari-canar-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Kañari</span></a></li>
+    <li><a href="/nations/kichwa-kayambi-cayambe-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Kayambi</span></a></li>
+    <li><a href="/nations/kichwa-otavalo-imbabura-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Otavalo</span></a></li>
+    <li><a href="/nations/kichwa-puruwa-chimborazo-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Puruwá</span></a></li>
+    <li><a href="/nations/kichwa-saraguro-loja-ec"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kichwa Saraguro</span></a></li>
+    <li><a href="/nations/lickanantay-atacama-cl"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Lickanantay</span></a></li>
+    <li><a href="/nations/mapuche-cl-ar"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mapuche</span></a></li>
+    <li><a href="/nations/misak-cauca-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Misak</span></a></li>
+    <li><a href="/nations/nasa-cauca-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nasa</span></a></li>
+    <li><a href="/nations/pasto-narino-co-ec"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Pasto</span></a></li>
+    <li><a href="/nations/quechua-andes-pe-bo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Quechua</span></a></li>
+    <li><a href="/nations/uro-titicaca-pe-bo"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Uro</span></a></li>
+    <li><a href="/nations/uru-chipaya-oruro-bo"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Uru Chipaya</span></a></li>
+    <li><a href="/nations/wiwa-sierra-nevada-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wiwa</span></a></li>
+    <li><a href="/nations/yanacona-macizo-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yanacona</span></a></li>
+  </ul>
+  <h3 class="lbl">The Arctic, northern Europe and Russia</h3>
+  <ul class="roll">
+    <li><a href="/nations/dolgan-taimyr"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Dolgan</span></a></li>
+    <li><a href="/nations/even-northeast-siberia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Even</span></a></li>
+    <li><a href="/nations/evenki-siberia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Evenki</span></a></li>
+    <li><a href="/nations/inughuit-avanersuaq-greenland"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Inughuit</span></a></li>
+    <li><a href="/nations/itelmen-kamchatka"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Itelmen</span></a></li>
+    <li><a href="/nations/kalaallit-greenland"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Kalaallit</span></a></li>
+    <li><a href="/nations/ket-yenisei"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ket</span></a></li>
+    <li><a href="/nations/khanty-west-siberia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Khanty</span></a></li>
+    <li><a href="/nations/koryak-kamchatka"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Koryak</span></a></li>
+    <li><a href="/nations/chukchi-luoravetlan-chukotka"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Luoravetlan</span></a></li>
+    <li><a href="/nations/mansi-west-siberia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Mansi</span></a></li>
+    <li><a href="/nations/nanai-amur"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nanai</span></a></li>
+    <li><a href="/nations/nenets-arctic-russia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nenets</span></a></li>
+    <li><a href="/nations/nganasan-taimyr"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nganasan</span></a></li>
+    <li><a href="/nations/nivkh-amur-sakhalin"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nivkh</span></a></li>
+    <li><a href="/nations/yukaghir-odul-kolyma"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Odul, Wadul</span></a></li>
+    <li><a href="/nations/sami-sapmi-nordic-russia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Sámi</span></a></li>
+    <li><a href="/nations/selkup-west-siberia"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Selkup</span></a></li>
+    <li><a href="/nations/udehe-khor-bikin"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Udehe</span></a></li>
+    <li><a href="/nations/yupik-chukotka"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yupik</span></a></li>
+  </ul>
+  <h3 class="lbl">The Caribbean, Trinidad and the Guianas</h3>
+  <ul class="roll">
+    <li><a href="/nations/akawaio-kapon-guyana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Akawaio</span></a></li>
+    <li><a href="/nations/bari-catatumbo-co-ve"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Barí</span></a></li>
+    <li><a href="/nations/parikwene-palikur-amapa-guiana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Parikwene</span></a></li>
+    <li><a href="/nations/patamona-pakaraima-guyana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Patamona</span></a></li>
+    <li><a href="/nations/pemon-ve-gy-br"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Pemón</span></a></li>
+    <li><a href="/nations/santa-rosa-first-peoples-arima-tt"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Santa Rosa First Peoples Community</span></a></li>
+    <li><a href="/nations/taino-caribbean-diaspora"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Taíno</span></a></li>
+    <li><a href="/nations/tareno-trio-suriname-brazil"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tarëno</span></a></li>
+    <li><a href="/nations/teko-french-guiana"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Teko</span></a></li>
+    <li><a href="/nations/uwottuja-piaroa-venezuela"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Uwottüja</span></a></li>
+    <li><a href="/nations/wai-wai-guyana-brazil"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wai Wai</span></a></li>
+    <li><a href="/nations/wajapi-amapa-oyapock"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wajãpi</span></a></li>
+    <li><a href="/nations/warao-orinoco-guyana-trinidad"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Warao</span></a></li>
+    <li><a href="/nations/wayana-guianas-brazil"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Wayana</span></a></li>
+    <li><a href="/nations/yekwana-venezuela-brazil"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Ye&#x27;kwana</span></a></li>
+    <li><a href="/nations/yukpa-perija-ve-co"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Yukpa</span></a></li>
+  </ul>
+  <h3 class="lbl">US East and Southeast</h3>
+  <ul class="roll">
+    <li><a href="/nations/catawba-nation-us-sc"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Catawba Nation</span></a></li>
+    <li><a href="/nations/cayuga-nation-us-ny"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Cayuga Nation</span></a></li>
+    <li><a href="/nations/cherokee-nation-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Cherokee Nation</span></a></li>
+    <li><a href="/nations/choctaw-nation-oklahoma-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Choctaw Nation of Oklahoma</span></a></li>
+    <li><a href="/nations/delaware-nation-lenape-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Delaware Nation</span></a></li>
+    <li><a href="/nations/delaware-tribe-of-indians-lenape-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Delaware Tribe of Indians</span></a></li>
+    <li><a href="/nations/eastern-band-cherokee-us-nc"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Eastern Band of Cherokee Indians</span></a></li>
+    <li><a href="/nations/lumbee-tribe-us-nc"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Lumbee Tribe of North Carolina</span></a></li>
+    <li><a href="/nations/mashpee-wampanoag-us-ma"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Mashpee Wampanoag Tribe</span></a></li>
+    <li><a href="/nations/mississippi-band-choctaw-us-ms"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Mississippi Band of Choctaw Indians</span></a></li>
+    <li><a href="/nations/muscogee-creek-nation-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Muscogee Nation</span></a></li>
+    <li><a href="/nations/narragansett-indian-tribe-us-ri"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Narragansett Indian Tribe</span></a></li>
+    <li><a href="/nations/oneida-indian-nation-us-ny"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Oneida Indian Nation</span></a></li>
+    <li><a href="/nations/onondaga-nation-us-ny"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Onondaga Nation</span></a></li>
+    <li><a href="/nations/pamunkey-indian-tribe-us-va"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Pamunkey Indian Tribe</span></a></li>
+    <li><a href="/nations/passamaquoddy-peskotomuhkati-us-me"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Passamaquoddy (Peskotomuhkati)</span></a></li>
+    <li><a href="/nations/saint-regis-mohawk-akwesasne-us-ny"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Saint Regis Mohawk Tribe</span></a></li>
+    <li><a href="/nations/seminole-nation-oklahoma-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Seminole Nation of Oklahoma</span></a></li>
+    <li><a href="/nations/seminole-tribe-florida-us-fl"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Seminole Tribe of Florida</span></a></li>
+    <li><a href="/nations/seneca-nation-us-ny"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Seneca Nation</span></a></li>
+    <li><a href="/nations/shinnecock-indian-nation-us-ny"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Shinnecock Indian Nation</span></a></li>
+    <li><a href="/nations/chickasaw-nation-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">The Chickasaw Nation</span></a></li>
+    <li><a href="/nations/tuscarora-nation-us-ny"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tuscarora Nation</span></a></li>
+    <li><a href="/nations/united-keetoowah-band-us-ok"><span class="nm" dir="auto" data-size="xs" data-face="brand" data-script="latn">United Keetoowah Band of Cherokee Indians in Oklahoma</span></a></li>
+    <li><a href="/nations/aquinnah-wampanoag-us-ma"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Wampanoag Tribe of Gay Head (Aquinnah)</span></a></li>
+  </ul>
+  <h3 class="lbl">US Plains and Midwest</h3>
+  <ul class="roll">
+    <li><a href="/nations/apsaalooke-nation-us-mt"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Apsáalooke Nation</span></a></li>
+    <li><a href="/nations/blackfeet-nation-us-mt"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Blackfeet Nation</span></a></li>
+    <li><a href="/nations/cheyenne-and-arapaho-tribes-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Cheyenne and Arapaho Tribes</span></a></li>
+    <li><a href="/nations/cheyenne-river-sioux-tribe-us-sd"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Cheyenne River Sioux Tribe</span></a></li>
+    <li><a href="/nations/citizen-potawatomi-nation-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Citizen Potawatomi Nation</span></a></li>
+    <li><a href="/nations/comanche-nation-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Comanche Nation</span></a></li>
+    <li><a href="/nations/forest-county-potawatomi-us-wi"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Forest County Potawatomi</span></a></li>
+    <li><a href="/nations/fort-peck-assiniboine-sioux-us-mt"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Fort Peck Assiniboine and Sioux Tribes</span></a></li>
+    <li><a href="/nations/ho-chunk-nation-us-wi"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Ho-Chunk Nation</span></a></li>
+    <li><a href="/nations/iowa-tribe-of-kansas-and-nebraska-us-ks-ne"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Iowa Tribe of Kansas and Nebraska</span></a></li>
+    <li><a href="/nations/iowa-tribe-of-oklahoma-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Iowa Tribe of Oklahoma</span></a></li>
+    <li><a href="/nations/kiowa-tribe-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Kiowa Tribe</span></a></li>
+    <li><a href="/nations/little-traverse-bay-bands-odawa-us-mi"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Little Traverse Bay Bands of Odawa Indians</span></a></li>
+    <li><a href="/nations/mha-nation-us-nd"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Mandan, Hidatsa, and Arikara Nation</span></a></li>
+    <li><a href="/nations/menominee-indian-tribe-us-wi"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Menominee Indian Tribe of Wisconsin</span></a></li>
+    <li><a href="/nations/meskwaki-nation-us-ia"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Meskwaki Nation</span></a></li>
+    <li><a href="/nations/mille-lacs-band-of-ojibwe-us-mn"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Mille Lacs Band of Ojibwe</span></a></li>
+    <li><a href="/nations/northern-arapaho-tribe-us-wy"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Northern Arapaho Tribe</span></a></li>
+    <li><a href="/nations/northern-cheyenne-tribe-us-mt"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Northern Cheyenne Tribe</span></a></li>
+    <li><a href="/nations/oglala-sioux-tribe-us-sd"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Oglala Sioux Tribe</span></a></li>
+    <li><a href="/nations/omaha-tribe-of-nebraska-us-ne"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Omaha Tribe of Nebraska</span></a></li>
+    <li><a href="/nations/oneida-nation-us-wi"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Oneida Nation</span></a></li>
+    <li><a href="/nations/osage-nation-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Osage Nation</span></a></li>
+    <li><a href="/nations/pawnee-nation-of-oklahoma-us-ok"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Pawnee Nation of Oklahoma</span></a></li>
+    <li><a href="/nations/ponca-tribe-of-nebraska-us-ne"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Ponca Tribe of Nebraska</span></a></li>
+    <li><a href="/nations/prairie-band-potawatomi-nation-us-ks"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Prairie Band Potawatomi Nation</span></a></li>
+    <li><a href="/nations/red-lake-nation-us-mn"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Red Lake Nation</span></a></li>
+    <li><a href="/nations/sac-and-fox-nation-us-ok"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Sac and Fox Nation</span></a></li>
+    <li><a href="/nations/sault-ste-marie-tribe-chippewa-us-mi"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Sault Ste. Marie Tribe of Chippewa Indians</span></a></li>
+    <li><a href="/nations/shakopee-mdewakanton-sioux-community-us-mn"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Shakopee Mdewakanton Sioux Community</span></a></li>
+    <li><a href="/nations/sicangu-lakota-oyate-us-sd"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Sicangu Lakota Oyate</span></a></li>
+    <li><a href="/nations/sisseton-wahpeton-oyate-us-sd-nd"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Sisseton Wahpeton Oyate</span></a></li>
+    <li><a href="/nations/spirit-lake-nation-us-nd"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Spirit Lake Nation</span></a></li>
+    <li><a href="/nations/standing-rock-sioux-tribe-us-nd-sd"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Standing Rock Sioux Tribe</span></a></li>
+    <li><a href="/nations/turtle-mountain-band-of-chippewa-us-nd"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Turtle Mountain Band of Chippewa Indians</span></a></li>
+  </ul>
+  <h3 class="lbl">US West and Pacific Northwest</h3>
+  <ul class="roll">
+    <li><a href="/nations/cahuilla-band-of-indians-us-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Cahuilla Band of Indians</span></a></li>
+    <li><a href="/nations/yakama-nation-us-wa"><span class="nm" dir="auto" data-size="xs" data-face="brand" data-script="latn">Confederated Tribes and Bands of the Yakama Nation</span></a></li>
+    <li><a href="/nations/confederated-tribes-of-grand-ronde-us-or"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Confederated Tribes of Grand Ronde</span></a></li>
+    <li><a href="/nations/confederated-tribes-of-siletz-indians-us-or"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Confederated Tribes of Siletz Indians</span></a></li>
+    <li><a href="/nations/ctuir-umatilla-us-or"><span class="nm" dir="auto" data-size="xs" data-face="brand" data-script="latn">Confederated Tribes of the Umatilla Indian Reservation</span></a></li>
+    <li><a href="/nations/confederated-tribes-of-warm-springs-us-or"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Confederated Tribes of the Warm Springs</span></a></li>
+    <li><a href="/nations/graton-rancheria-coast-miwok-southern-pomo-us-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Federated Indians of Graton Rancheria</span></a></li>
+    <li><a href="/nations/hoopa-valley-tribe-us-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Hoopa Valley Tribe</span></a></li>
+    <li><a href="/nations/karuk-tribe-us-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Karuk Tribe</span></a></li>
+    <li><a href="/nations/kashia-band-of-pomo-indians-us-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Kashia Band of Pomo Indians</span></a></li>
+    <li><a href="/nations/lummi-nation-us-wa"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Lummi Nation</span></a></li>
+    <li><a href="/nations/makah-tribe-us-wa"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Makah Tribe</span></a></li>
+    <li><a href="/nations/morongo-band-of-mission-indians-us-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Morongo Band of Mission Indians</span></a></li>
+    <li><a href="/nations/muckleshoot-indian-tribe-us-wa"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Muckleshoot Indian Tribe</span></a></li>
+    <li><a href="/nations/nimiipuu-nez-perce-tribe-us-id"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Nimiipuu</span></a></li>
+    <li><a href="/nations/puyallup-tribe-of-indians-us-wa"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Puyallup Tribe of Indians</span></a></li>
+    <li><a href="/nations/pyramid-lake-paiute-tribe-us-nv"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Pyramid Lake Paiute Tribe</span></a></li>
+    <li><a href="/nations/quinault-indian-nation-us-wa"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Quinault Indian Nation</span></a></li>
+    <li><a href="/nations/santa-ynez-band-of-chumash-indians-us-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Santa Ynez Band of Chumash Indians</span></a></li>
+    <li><a href="/nations/swinomish-indian-tribal-community-us-wa"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Swinomish Indian Tribal Community</span></a></li>
+    <li><a href="/nations/te-moak-tribe-western-shoshone-us-nv"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Te-Moak Tribe of Western Shoshone Indians</span></a></li>
+    <li><a href="/nations/timbisha-shoshone-tribe-us-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Timbisha Shoshone Tribe</span></a></li>
+    <li><a href="/nations/tolowa-dee-ni-nation-us-ca"><span class="nm" dir="auto" data-size="m" data-face="brand" data-script="latn">Tolowa Dee-ni&#x27; Nation</span></a></li>
+    <li><a href="/nations/tongva-us-ca"><span class="nm" dir="auto" data-size="xl" data-face="brand" data-script="latn">Tongva</span></a></li>
+    <li><a href="/nations/tulalip-tribes-us-wa"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Tulalip Tribes</span></a></li>
+    <li><a href="/nations/tuolumne-band-of-me-wuk-indians-us-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Tuolumne Band of Me-Wuk Indians</span></a></li>
+    <li><a href="/nations/viejas-band-of-kumeyaay-indians-us-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Viejas Band of Kumeyaay Indians</span></a></li>
+    <li><a href="/nations/washoe-tribe-us-nv-ca"><span class="nm" dir="auto" data-size="s" data-face="brand" data-script="latn">Washoe Tribe of Nevada and California</span></a></li>
+    <li><a href="/nations/yurok-tribe-us-ca"><span class="nm" dir="auto" data-size="l" data-face="brand" data-script="latn">Yurok Tribe</span></a></li>
+  </ul>
+  <h2>Publishers</h2>
+  <p><a href="/nations/sources#g1">Nations&#x27; own sites, governments and representative bodies</a>: <a href="/nations/sources#p-694c5081">Académie des Langues Kanak</a>, <a href="/nations/sources#p-17f2c625">ʻAha Pūnana Leo</a>, <a href="/nations/sources#p-aacf61c7">Ainu Association of Hokkaido</a>, <a href="/nations/sources#p-1aeb01a0">Aleutian Pribilof Islands Association</a>, <a href="/nations/sources#p-5ec9c4e1">Anishinabek Nation</a>, <a href="/nations/sources#p-ec4fcce1">Associação Floresta Protegida</a>, <a href="/nations/sources#p-50bb22ea">Blackfeet Nation</a>, <a href="/nations/sources#p-54b0584a">Blood Tribe (Kainai)</a>, <a href="/nations/sources#p-22a3293f">Cahuilla Band of Indians</a>, <a href="/nations/sources#p-29f30d11">Calista Corporation</a>, <a href="/nations/sources#p-7ce61a46">Catawba Nation</a>, <a href="/nations/sources#p-9f99ae86">Cayuga Nation</a>, <a href="/nations/sources#p-35c85363">Central Council of the Tlingit &amp; Haida Indian Tribes of Alaska</a>, <a href="/nations/sources#p-0ef58e75">Cherokee Nation</a>, <a href="/nations/sources#p-f9cbf4ed">Cheyenne and Arapaho Tribes</a>, <a href="/nations/sources#p-1185288d">Choctaw Nation of Oklahoma</a>, <a href="/nations/sources#p-272debe1">Citizen Potawatomi Nation</a>, <a href="/nations/sources#p-b435222d">Cocopah Indian Tribe</a>, <a href="/nations/sources#p-e66018f2">Comanche Nation</a>, <a href="/nations/sources#p-7361c63e">Comissão Guarani Yvyrupa</a>, <a href="/nations/sources#p-ef8b880e">Confederación Indígena Tayrona</a>, <a href="/nations/sources#p-47d3dcda">Confederated Tribes and Bands of the Yakama Nation</a>, <a href="/nations/sources#p-257bf19f">Confederated Tribes of Grand Ronde</a>, <a href="/nations/sources#p-15cf2268">Confederated Tribes of Siletz Indians</a>, <a href="/nations/sources#p-0ca3f110">Confederated Tribes of the Umatilla Indian Reservation</a>, <a href="/nations/sources#p-34630db1">Confederated Tribes of Warm Springs</a>, <a href="/nations/sources#p-8407d878">Congrès Mondial Amazigh / Amazigh World Congress</a>, <a href="/nations/sources#p-165d8c42">Conseil de la Nation Atikamekw</a>, <a href="/nations/sources#p-58a781e1">Conselho Indígena de Roraima</a>, <a href="/nations/sources#p-5daccaa2">Council of the Haida Nation</a>, <a href="/nations/sources#p-f6d028dd">Crow Tribe Executive Branch</a>, <a href="/nations/sources#p-0d1620f5">Delaware Nation</a>, <a href="/nations/sources#p-bd990ff6">Delaware Tribe of Indians</a>, <a href="/nations/sources#p-df9747d1">Dene Nation</a>, <a href="/nations/sources#p-cabc9ad5">Department of Chamorro Affairs, Government of Guam</a>, <a href="/nations/sources#p-8cbf8ba4">Doyon Foundation</a>, <a href="/nations/sources#p-1769931e">Eastern Band of Cherokee Indians</a>, <a href="/nations/sources#p-a982ebc9">Endorois Welfare Council</a>, <a href="/nations/sources#p-df879eaf">Federated Indians of Graton Rancheria</a>, <a href="/nations/sources#p-d58fe704">Forest County Potawatomi Community</a>, <a href="/nations/sources#p-ec42a749">Fort McDowell Yavapai Nation</a>, <a href="/nations/sources#p-d55ca401">Garo Hills Autonomous District Council</a>, <a href="/nations/sources#p-676626f1">Gila River Indian Community</a>, <a href="/nations/sources#p-f524e568">Gitxsan Huwilp Government</a>, <a href="/nations/sources#p-1144edbd">Government of the Republic of Nauru</a>, <a href="/nations/sources#p-4b769efe">Government of Tokelau</a>, <a href="/nations/sources#p-85296f88">Grand Council of the Crees (Eeyou Istchee) / Cree Nation Government</a>, <a href="/nations/sources#p-90ecd9d4">Gunditj Mirring Traditional Owners Aboriginal Corporation</a>, <a href="/nations/sources#p-218aec21">Gwich&#x27;in Council International</a>, <a href="/nations/sources#p-013d157d">Havasupai Tribe</a>, <a href="/nations/sources#p-71c043c2">Heiltsuk Tribal Council</a>, <a href="/nations/sources#p-09a43473">Ho-Chunk Nation</a>, <a href="/nations/sources#p-8bad3f7b">Hokotehi Moriori Trust</a>, <a href="/nations/sources#p-c43fa612">Hoopa Valley Tribe</a>, <a href="/nations/sources#p-acb18b71">Hualapai Tribe</a>, <a href="/nations/sources#p-fc41ec26">Iḷisaġvik College</a>, <a href="/nations/sources#p-c4fe39ca">Innu Nation</a>, <a href="/nations/sources#p-d39f8aec">Inter Tribal Council of Arizona</a>, <a href="/nations/sources#p-3ad8b55f">Inuit Circumpolar Council Canada</a>, <a href="/nations/sources#p-32fcd4c7">Inuit Tapiriit Kanatami</a>, <a href="/nations/sources#p-44425e30">Inuvialuit Regional Corporation</a>, <a href="/nations/sources#p-6fd9fa71">Iowa Tribe of Kansas and Nebraska</a>, <a href="/nations/sources#p-88de2d5f">Iowa Tribe of Oklahoma</a>, <a href="/nations/sources#p-49118fdb">iTaukei Affairs Board</a>, <a href="/nations/sources#p-c55da3dd">iTaukei Land Trust Board</a>, <a href="/nations/sources#p-4a435d4d">Kadazan Dusun Cultural Association Sabah</a>, <a href="/nations/sources#p-2f1d5a7a">Karuk Tribe</a>, <a href="/nations/sources#p-2458f01a">Kashia Band of Pomo Indians</a>, <a href="/nations/sources#p-302a90ef">Kenaitze Indian Tribe</a>, <a href="/nations/sources#p-8d27410b">Khanty Mansi Mir (joint editorial office of the Khanty Yasang and Luima Seripos newspapers)</a>, <a href="/nations/sources#p-f895fad7">Khasi Hills Autonomous District Council</a>, <a href="/nations/sources#p-f386d3dc">Kiowa Tribe</a>, <a href="/nations/sources#p-de1d05e7">Ktunaxa Nation Council</a>, <a href="/nations/sources#p-706354f2">Kwilmu’kw Maw-klusuaqn (Mi’kmaq Rights Initiative)</a>, <a href="/nations/sources#p-e98da919">Larrakia Nation Aboriginal Corporation</a>, <a href="/nations/sources#p-79a6f525">Lhere Artepe Aboriginal Corporation</a>, <a href="/nations/sources#p-2ede5974">Little Traverse Bay Bands of Odawa Indians</a>, <a href="/nations/sources#p-203554d6">Lumbee Tribe of North Carolina</a>, <a href="/nations/sources#p-8f64c46c">Lummi Nation</a>, <a href="/nations/sources#p-d51d9dde">Makah Tribe</a>, <a href="/nations/sources#p-fb28e1e6">Makivvik</a>, <a href="/nations/sources#p-77b715d6">Mandan, Hidatsa, and Arikara Nation</a>, <a href="/nations/sources#p-516eecc0">Mashpee Wampanoag Tribe</a>, <a href="/nations/sources#p-192b6e1b">Mescalero Apache Tribe</a>, <a href="/nations/sources#p-c3668973">Métis National Council</a>, <a href="/nations/sources#p-30799f35">Metlakatla Indian Community</a>, <a href="/nations/sources#p-d62fbfa4">Mille Lacs Band of Ojibwe</a>, <a href="/nations/sources#p-97e5c03c">Mississippi Band of Choctaw Indians</a>, <a href="/nations/sources#p-fa028545">Mohawk Council of Akwesasne</a>, <a href="/nations/sources#p-89488d70">Mohawk Council of Kahnawà:ke</a>, <a href="/nations/sources#p-fa0319e8">Morongo Band of Mission Indians</a>, <a href="/nations/sources#p-99975d4b">Muckleshoot Indian Tribe</a>, <a href="/nations/sources#p-ac382a89">Muscogee (Creek) Nation</a>, <a href="/nations/sources#p-8500c415">Muskeg Lake Cree Nation</a>, <a href="/nations/sources#p-ef38fdde">Musqueam Indian Band</a>, <a href="/nations/sources#p-d386fce8">NANA Regional Corporation</a>, <a href="/nations/sources#p-9b552bb7">Narragansett Indian Tribe</a>, <a href="/nations/sources#p-d602897c">Nation Wendat (Wendake)</a>, <a href="/nations/sources#p-dd5a0e4a">Native Village of Eyak</a>, <a href="/nations/sources#p-74ff82f4">Navajo Nation</a>, <a href="/nations/sources#p-106e1f2b">Navajo Nation Council (Legislative Branch)</a>, <a href="/nations/sources#p-79e76d5f">Nepal Federation of Indigenous Nationalities (NEFIN)</a>, <a href="/nations/sources#p-9950ca13">Nez Perce Tribe</a>, <a href="/nations/sources#p-3fce4300">Ngā Tāngata Tiaki o Whanganui</a>, <a href="/nations/sources#p-be415491">Ngāti Whātua Ōrākei Trust</a>, <a href="/nations/sources#p-7653209d">Nisg̱a’a Lisims Government</a>, <a href="/nations/sources#p-d3bb2e06">Northern Arapaho Tribe</a>, <a href="/nations/sources#p-7a503474">Northwest Indian College</a>, <a href="/nations/sources#p-851e25db">Northwest Indian Fisheries Commission</a>, <a href="/nations/sources#p-9822fac4">Nunatsiavut Government</a>, <a href="/nations/sources#p-87eeb00f">Nunavut Tunngavik Incorporated</a>, <a href="/nations/sources#p-dcbc3184">Nuu-chah-nulth Tribal Council</a>, <a href="/nations/sources#p-01b27021">Office of Hawaiian Affairs</a>, <a href="/nations/sources#p-5f26ad9e">Ogiek Peoples&#x27; Development Program (OPDP)</a>, <a href="/nations/sources#p-9ecab258">Okanagan Nation Alliance</a>, <a href="/nations/sources#p-99252491">Oneida Indian Nation</a>, <a href="/nations/sources#p-12fc5411">Onondaga Nation</a>, <a href="/nations/sources#p-d56995bd">Oqaasileriffik (Language Secretariat of Greenland)</a>, <a href="/nations/sources#p-39b05f7b">Organización Gonawindúa Tayrona</a>, <a href="/nations/sources#p-8833b0dd">Organized Village of Kasaan</a>, <a href="/nations/sources#p-fd3fcabe">Osage Nation</a>, <a href="/nations/sources#p-86f809e0">Paiute Indian Tribe of Utah</a>, <a href="/nations/sources#p-ffb05512">Pamunkey Indian Tribe</a>, <a href="/nations/sources#p-825a65e9">Pascua Yaqui Tribe</a>, <a href="/nations/sources#p-87690e33">Passamaquoddy Tribe at Sipayik (Pleasant Point)</a>, <a href="/nations/sources#p-d3e650c4">Pawnee Nation of Oklahoma</a>, <a href="/nations/sources#p-09ebca66">Piikani Nation</a>, <a href="/nations/sources#p-d32941ad">Ponca Tribe of Nebraska</a>, <a href="/nations/sources#p-c8018755">Prairie Band Potawatomi Nation</a>, <a href="/nations/sources#p-b8b6e223">Pueblo of Acoma</a>, <a href="/nations/sources#p-769fb9a3">Pueblo Originario Kichwa de Sarayaku</a>, <a href="/nations/sources#p-56f11f08">Puyallup Tribe of Indians</a>, <a href="/nations/sources#p-87e401e7">Pyramid Lake Paiute Tribe</a>, <a href="/nations/sources#p-77f84a41">Quinault Indian Nation</a>, <a href="/nations/sources#p-72688061">RAIPON (Association of Indigenous Small-Numbered Peoples of the North, Siberia and the Far East)</a>, <a href="/nations/sources#p-420644f4">Red Lake Nation</a>, <a href="/nations/sources#p-94edd347">Rosebud Sioux Tribe</a>, <a href="/nations/sources#p-61e91efe">Saami Council (Sámiráđđi)</a>, <a href="/nations/sources#p-3e18775f">Sac and Fox Nation</a>, <a href="/nations/sources#p-842f1454">Sac &amp; Fox Tribe of the Mississippi in Iowa</a>, <a href="/nations/sources#p-e280a548">Saint Regis Mohawk Tribe</a>, <a href="/nations/sources#p-763c0a2f">Sámediggi (Sámi Parliament of Finland)</a>, <a href="/nations/sources#p-7ae72611">Sámediggi (Sámi Parliament of Norway)</a>, <a href="/nations/sources#p-6222db92">Santa Clara Pueblo</a>, <a href="/nations/sources#p-3a7ffbba">Santa Ynez Band of Chumash Indians</a>, <a href="/nations/sources#p-e5314682">Sault Ste. Marie Tribe of Chippewa Indians</a>, <a href="/nations/sources#p-3230cb0c">Sealaska Heritage Institute</a>, <a href="/nations/sources#p-9e9b18af">Seminole Nation of Oklahoma</a>, <a href="/nations/sources#p-5db404ce">Seminole Tribe of Florida</a>, <a href="/nations/sources#p-8bd58134">Seneca Nation of Indians</a>, <a href="/nations/sources#p-1b82009b">Shakopee Mdewakanton Sioux Community</a>, <a href="/nations/sources#p-98227ffe">Shinnecock Indian Nation</a>, <a href="/nations/sources#p-fb74061a">Shuswap Nation Tribal Council</a>, <a href="/nations/sources#p-e8644275">Siksika Nation</a>, <a href="/nations/sources#p-258e4bdb">Sisseton Wahpeton Oyate</a>, <a href="/nations/sources#p-43c73127">Six Nations of the Grand River</a>, <a href="/nations/sources#p-afc1550b">South Australian Native Title Services</a>, <a href="/nations/sources#p-9166e70c">South West Aboriginal Land and Sea Council</a>, <a href="/nations/sources#p-a613ebd3">Squamish Nation</a>, <a href="/nations/sources#p-518f0d1f">Standing Rock Sioux Tribe</a>, <a href="/nations/sources#p-17452b50">Sycuan Band of the Kumeyaay Nation</a>, <a href="/nations/sources#p-0169d724">Taos Pueblo</a>, <a href="/nations/sources#p-07427c52">Te-Moak Tribe of Western Shoshone</a>, <a href="/nations/sources#p-ee049497">Te Rūnanga o Ngāi Tahu</a>, <a href="/nations/sources#p-9e9e91d9">Te Rūnanganui o Ngāti Porou</a>, <a href="/nations/sources#p-50b078bd">Ten Tribes Partnership</a>, <a href="/nations/sources#p-0f757fe8">The Chickasaw Nation</a>, <a href="/nations/sources#p-b48c5f61">The Hopi Tribe</a>, <a href="/nations/sources#p-ab202513">Timbisha Shoshone Tribe</a>, <a href="/nations/sources#p-b43c3e60">Tiwi Land Council</a>, <a href="/nations/sources#p-f387ea45">Tk̓emlúps te Secwépemc</a>, <a href="/nations/sources#p-67deb270">Tohono O’odham Nation</a>, <a href="/nations/sources#p-e94d1dfa">Tolowa Dee-ni&#x27; Nation</a>, <a href="/nations/sources#p-0921a5ca">Tongva Taraxat Paxaavxa Conservancy</a>, <a href="/nations/sources#p-5c72673c">Torres Strait Regional Authority</a>, <a href="/nations/sources#p-4256999e">Tsleil-Waututh Nation</a>, <a href="/nations/sources#p-6cfb033d">Tsuut’ina Nation</a>, <a href="/nations/sources#p-0e925ae3">Tulalip Tribes</a>, <a href="/nations/sources#p-8248ceb7">Tuolumne Band of Me-Wuk Indians</a>, <a href="/nations/sources#p-19a1e65a">Tuscarora Nation</a>, <a href="/nations/sources#p-f7a7c8da">United Keetoowah Band of Cherokee Indians in Oklahoma</a>, <a href="/nations/sources#p-21c3e285">Ute Mountain Ute Tribe</a>, <a href="/nations/sources#p-2357e9dd">Vereniging van Inheemse Dorpshoofden in Suriname (VIDS)</a>, <a href="/nations/sources#p-a05dade2">Viejas Band of Kumeyaay Indians</a>, <a href="/nations/sources#p-1913c66d">Vuntut Gwitchin First Nation</a>, <a href="/nations/sources#p-8564cee2">Waikato-Tainui</a>, <a href="/nations/sources#p-bf5be285">Wampanoag Tribe of Gay Head (Aquinnah)</a>, <a href="/nations/sources#p-d9e8bf91">Wolastoqey Nation in New Brunswick</a>, <a href="/nations/sources#p-b7b94686">Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation</a>, <a href="/nations/sources#p-9b9d6cb9">Yavapai-Prescott Indian Tribe</a>, <a href="/nations/sources#p-1cd49da0">Yawuru (Nyamba Buru Yawuru)</a>, <a href="/nations/sources#p-85e1fe8a">Yurok Tribe</a>.</p>
+  <p><a href="/nations/sources#g2">Governments, national registries and statistics offices</a>: <a href="/nations/sources#p-b4220dff">Academia de Lenguas Mayas de Guatemala (ALMG)</a>, <a href="/nations/sources#p-f5b68a8a">Agencia Guatemalteca de Noticias (AGN)</a>, <a href="/nations/sources#p-b0446b84">Asamblea Nacional del Ecuador</a>, <a href="/nations/sources#p-b29ccb18">Bathurst Regional Council</a>, <a href="/nations/sources#p-6ad1f7f5">Caribbean Court of Justice</a>, <a href="/nations/sources#p-ff5e8790">City of Saskatoon</a>, <a href="/nations/sources#p-77638248">City of Sydney (Sydney Barani)</a>, <a href="/nations/sources#p-0a2bd917">CNMI Carolinian Affairs Office</a>, <a href="/nations/sources#p-ec851638">Cook Islands Statistics Office</a>, <a href="/nations/sources#p-69db6c76">Cook Islands Tourism Corporation</a>, <a href="/nations/sources#p-da9a581d">Council of Indigenous Peoples, Taiwan</a>, <a href="/nations/sources#p-4a52c79e">Crown-Indigenous Relations and Northern Affairs Canada</a>, <a href="/nations/sources#p-07316e9c">Daily News, Government of Botswana</a>, <a href="/nations/sources#p-a8d269c1">DANE (National Administrative Department of Statistics, Colombia)</a>, <a href="/nations/sources#p-7edb2a15">Department of Arts and Culture, Government of Meghalaya</a>, <a href="/nations/sources#p-31c78dd3">Department of Official Language, Ministry of Home Affairs, India</a>, <a href="/nations/sources#p-9479ec8e">Department of Public Information, Government of Guyana</a>, <a href="/nations/sources#p-e6b52322">Directorate of Information and Public Relations, Government of Assam</a>, <a href="/nations/sources#p-ffb7a1b4">Division of Culture, Government of the Commonwealth of Dominica</a>, <a href="/nations/sources#p-0e0d6219">Dr. Ramdayal Munda Tribal Welfare Research Institute, Jharkhand</a>, <a href="/nations/sources#p-9a49b078">Electoral Office, Commonwealth of Dominica</a>, <a href="/nations/sources#p-ad79c4c9">Fiji Government</a>, <a href="/nations/sources#p-7bb13cb4">Glenelg Hopkins Catchment Management Authority (Victoria)</a>, <a href="/nations/sources#p-db826ca3">Government of Belize Press Office</a>, <a href="/nations/sources#p-311c60e7">Government of Meghalaya</a>, <a href="/nations/sources#p-555701dc">Government of Newfoundland and Labrador, Indigenous Affairs and Reconciliation</a>, <a href="/nations/sources#p-67671380">Government of the Northwest Territories, Executive and Indigenous Affairs</a>, <a href="/nations/sources#p-203c315c">Government of Western Australia</a>, <a href="/nations/sources#p-96da195f">Haut-Commissariat au Plan (HCP), Direction Régionale de Souss Massa</a>, <a href="/nations/sources#p-53d86847">Haut-Commissariat au Plan (HCP), Morocco</a>, <a href="/nations/sources#p-c6306c37">Hornbill Festival</a>, <a href="/nations/sources#p-29dd27bd">Institut de la statistique et des études économiques Nouvelle-Calédonie (ISEE)</a>, <a href="/nations/sources#p-7df66e84">Instituto Nacional de Estadística de Bolivia</a>, <a href="/nations/sources#p-20e32f05">Instituto Nacional de Estadística y Censo (INEC), Panama</a>, <a href="/nations/sources#p-90970181">Instituto Nacional de Estadística y Geografía (INEGI)</a>, <a href="/nations/sources#p-a6d38ac3">Instituto Nacional de Estadísticas de Chile</a>, <a href="/nations/sources#p-14627bf4">Japanese Law Translation, Ministry of Justice, Japan</a>, <a href="/nations/sources#p-43b7e3cb">Kenya News Agency</a>, <a href="/nations/sources#p-58f9de2b">Kosrae Island Resource Management Authority</a>, <a href="/nations/sources#p-7d71adb4">Legal Information System of the Federated States of Micronesia</a>, <a href="/nations/sources#p-612a3370">Legislative Reference Bureau, State of Hawaiʻi</a>, <a href="/nations/sources#p-1af18237">Madhya Pradesh Tourism Board</a>, <a href="/nations/sources#p-6589d27e">Ministère de la Culture, Direction des affaires culturelles de Guyane</a>, <a href="/nations/sources#p-f42079d5">Ministerio de Cultura de Colombia</a>, <a href="/nations/sources#p-1fb2e59f">Ministerio de Cultura de Colombia, Dirección de Poblaciones</a>, <a href="/nations/sources#p-8acc1fb9">Ministerio de Cultura del Perú, Base de Datos de Pueblos Indígenas u Originarios</a>, <a href="/nations/sources#p-a9ec8fd8">Ministerio de las Culturas, las Artes y el Patrimonio (Chile)</a>, <a href="/nations/sources#p-0cc61b2f">Ministerio de las Culturas, las Artes y el Patrimonio de Chile</a>, <a href="/nations/sources#p-ea107c6c">Ministerio de Salud Pública del Ecuador</a>, <a href="/nations/sources#p-71a2b156">Ministerio del Interior y Seguridad Pública, Gobierno de Chile</a>, <a href="/nations/sources#p-7b9a6f76">Ministerio del Medio Ambiente, Gobierno de Chile</a>, <a href="/nations/sources#p-69ccfef1">Ministry of Amerindian Affairs, Government of Guyana</a>, <a href="/nations/sources#p-050723db">Ministry of Foreign and CARICOM Affairs, Government of the Republic of Trinidad and Tobago</a>, <a href="/nations/sources#p-b46632a8">Ministry of iTaukei Affairs (tabled in the Parliament of Fiji)</a>, <a href="/nations/sources#p-606fe02c">Minnesota Indian Affairs Council</a>, <a href="/nations/sources#p-4c64dd56">Mizoram Legislative Assembly</a>, <a href="/nations/sources#p-e2b877e7">Montana Governor&#x27;s Office of Indian Affairs</a>, <a href="/nations/sources#p-533a21aa">Nagaland State Portal, Government of Nagaland</a>, <a href="/nations/sources#p-a8a4fdac">National Foundation for Development of Indigenous Nationalities, Nepal</a>, <a href="/nations/sources#p-a8be5ddd">National Trust of Trinidad and Tobago</a>, <a href="/nations/sources#p-849c041c">Nauru Bureau of Statistics</a>, <a href="/nations/sources#p-91d27696">New Mexico Legislature</a>, <a href="/nations/sources#p-48207afc">New Zealand Ministry of Education (Tāhūrangi)</a>, <a href="/nations/sources#p-d443a87d">Niue Statistics Office</a>, <a href="/nations/sources#p-8b51e085">North Carolina Department of Administration, Commission of Indian Affairs</a>, <a href="/nations/sources#p-8abbeacc">North Dakota Indian Affairs Commission</a>, <a href="/nations/sources#p-d23aaf61">Odisha State Tribal Museum (SCSTRTI, Government of Odisha)</a>, <a href="/nations/sources#p-419ebfd2">Office of the Registrar of Indigenous Corporations (Australian Government)</a>, <a href="/nations/sources#p-1841f590">Órgano Electoral Plurinacional de Bolivia, Fuente Directa</a>, <a href="/nations/sources#p-f06df470">Palau Visitors Authority</a>, <a href="/nations/sources#p-c5a7c0cc">Parc amazonien de Guyane</a>, <a href="/nations/sources#p-31ac0e03">Parks Australia</a>, <a href="/nations/sources#p-6f199910">President&#x27;s Secretariat, India</a>, <a href="/nations/sources#p-8223d36a">Press Information Department, Government of Pakistan</a>, <a href="/nations/sources#p-fea4f8b7">Prime Minister&#x27;s Office, Government of India</a>, <a href="/nations/sources#p-528921af">Prime Minister&#x27;s Office of Denmark (Statsministeriet)</a>, <a href="/nations/sources#p-0ed0f770">Protected Areas Commission, Guyana</a>, <a href="/nations/sources#p-f8c4bb32">Provincial Government of Benguet</a>, <a href="/nations/sources#p-660f583e">Queensland Art Gallery | Gallery of Modern Art</a>, <a href="/nations/sources#p-6d8d1f4d">Radio Nepal</a>, <a href="/nations/sources#p-8a779c66">Rotorua Lakes Council</a>, <a href="/nations/sources#p-2958210c">Samoa Bureau of Statistics</a>, <a href="/nations/sources#p-7adc4595">Secretaría de Cultura, Sistema de Información Cultural (SIC), Gobierno de México</a>, <a href="/nations/sources#p-5df1b0a0">Secretaría de Cultura, Sistema de Información Cultural (SIC), with station information from INPI</a>, <a href="/nations/sources#p-4a57ee32">Seminole Nation of Oklahoma, via U.S. Senate Committee on Indian Affairs</a>, <a href="/nations/sources#p-ee67969f">Service public de la Polynésie française (DGEN)</a>, <a href="/nations/sources#p-b5b0f993">Sistema de Información Cultural, Secretaría de Cultura (Mexico)</a>, <a href="/nations/sources#p-a3721737">Sonoma County Regional Parks</a>, <a href="/nations/sources#p-5a2b488a">South African Broadcasting Corporation (SABC)</a>, <a href="/nations/sources#p-593104aa">State Library of Queensland</a>, <a href="/nations/sources#p-11eff039">State Library of South Australia</a>, <a href="/nations/sources#p-b0ad518b">Tāoga Niue (Government of Niue)</a>, <a href="/nations/sources#p-8c74b533">Te Fare Tauhiti Nui, Maison de la Culture de Tahiti</a>, <a href="/nations/sources#p-7b2219a9">Te Kāhui Whakatau (Treaty Settlements), New Zealand Government</a>, <a href="/nations/sources#p-44855c22">Tonga Statistics Department</a>, <a href="/nations/sources#p-8075fc94">U.S. Department of the Interior, Bureau of Indian Affairs</a>, <a href="/nations/sources#p-cc837e25">U.S. Department of the Interior, Indian Affairs</a>, <a href="/nations/sources#p-f724ff55">U.S. Fish and Wildlife Service</a>, <a href="/nations/sources#p-ec0d03a9">U.S. National Park Service</a>, <a href="/nations/sources#p-216f6b7c">U.S. National Park Service, National Park of American Samoa</a>, <a href="/nations/sources#p-a371ddd0">USDA Forest Service, Lake Tahoe Basin Management Unit</a>, <a href="/nations/sources#p-22018ac0">Wisconsin Department of Public Instruction</a>.</p>
+  <p><a href="/nations/sources#g3">UN bodies and international organizations</a>: <a href="/nations/sources#p-73acdf3f">Center for Orang Asli Concerns</a>, <a href="/nations/sources#p-4e1a12ea">Commonwealth Local Government Forum</a>, <a href="/nations/sources#p-d63c6ad4">Cultural Survival</a>, <a href="/nations/sources#p-435157fb">Cultural Survival (by the Hai//om Community San Council)</a>, <a href="/nations/sources#p-4d89ee8e">Dzanga-Sangha Protected Areas</a>, <a href="/nations/sources#p-ee56dc42">FAOLEX, Food and Agriculture Organization of the United Nations</a>, <a href="/nations/sources#p-ba194b04">Forest Peoples Programme</a>, <a href="/nations/sources#p-2d81bb4b">ICCA Registry (UNEP-WCMC)</a>, <a href="/nations/sources#p-5d6cbbf2">Instituto Nacional de Estadística (INE), Venezuela</a>, <a href="/nations/sources#p-de8a4ccf">Instituto Socioambiental (ISA)</a>, <a href="/nations/sources#p-1df16481">Instituto Socioambiental (ISA), Indigenous Peoples in Brazil</a>, <a href="/nations/sources#p-87b31f20">International Institute for Environment and Development (IIED)</a>, <a href="/nations/sources#p-30b717c5">IWGIA (International Work Group for Indigenous Affairs)</a>, <a href="/nations/sources#p-b412005d">Minority Rights Group</a>, <a href="/nations/sources#p-d8c81d85">Pastoralist Communication Initiative</a>, <a href="/nations/sources#p-d56f466d">Pueblo Indígena Uwottüja, published by the Observatorio de Ecología Política de Venezuela</a>, <a href="/nations/sources#p-db58e81f">Reteti Elephant Sanctuary</a>, <a href="/nations/sources#p-a258c898">UN Environment Programme (UNEP)</a>, <a href="/nations/sources#p-27407eff">UNESCO Intangible Cultural Heritage</a>, <a href="/nations/sources#p-4426b64a">UNESCO Man and the Biosphere Programme</a>, <a href="/nations/sources#p-0a082b6e">UNESCO World Heritage Centre</a>, <a href="/nations/sources#p-f963dffc">UNICEF Latin America and the Caribbean</a>, <a href="/nations/sources#p-df0a14f7">United Nations, Department of Economic and Social Affairs (UNPFII)</a>, <a href="/nations/sources#p-197ccf14">Waan Aelõñ in Majel (WAM)</a>.</p>
+  <p><a href="/nations/sources#g4">Museums, universities and research</a>: <a href="/nations/sources#p-659bc7ea">Alaska Native Language Center, University of Alaska Fairbanks</a>, <a href="/nations/sources#p-b3a80e74">Alutiiq Museum and Archaeological Repository</a>, <a href="/nations/sources#p-2791b1f5">Arctic Anthropology blog, Arctic Centre, University of Lapland</a>, <a href="/nations/sources#p-3f8fe7ad">Australian National University</a>, <a href="/nations/sources#p-b9820334">Banglapedia, Asiatic Society of Bangladesh</a>, <a href="/nations/sources#p-7e701b76">CNRS Éditions (OpenEdition Books)</a>, <a href="/nations/sources#p-e54cbe21">Culture and the Mind project, University of Sheffield</a>, <a href="/nations/sources#p-9627c253">DIPALICORI, Universidad de Costa Rica</a>, <a href="/nations/sources#p-171bf01b">Fenno-Ugria Foundation</a>, <a href="/nations/sources#p-d990a7c8">Guampedia</a>, <a href="/nations/sources#p-d7a89547">Inalco (Institut national des langues et civilisations orientales)</a>, <a href="/nations/sources#p-c818ba94">Institut für Archäologie und Kulturanthropologie, Universität Bonn</a>, <a href="/nations/sources#p-95b15761">Instituto Humanitas Unisinos (republishing Conselho Indigenista Missionário)</a>, <a href="/nations/sources#p-123683d1">Instituto Nacional de Antropología e Historia (INAH)</a>, <a href="/nations/sources#p-53678637">Instituto Tecnológico de Costa Rica (TEC)</a>, <a href="/nations/sources#p-c094f83e">Journal of Pacific Archaeology</a>, <a href="/nations/sources#p-8386605e">La Biennale di Venezia</a>, <a href="/nations/sources#p-291a31a7">L&#x27;aménagement linguistique dans le monde, Université Laval (CEFAN)</a>, <a href="/nations/sources#p-02390fbe">Language Documentation &amp; Conservation, University of Hawai&#x27;i Press</a>, <a href="/nations/sources#p-6f02a583">Lex, Danmarks Nationalleksikon</a>, <a href="/nations/sources#p-5daa31b1">Memoria Chilena, Biblioteca Nacional de Chile</a>, <a href="/nations/sources#p-94ad789f">MSH Mondes (CNRS and Université Paris Nanterre)</a>, <a href="/nations/sources#p-2092a3ef">Museo Chileno de Arte Precolombino</a>, <a href="/nations/sources#p-8a65f709">Museum of New Zealand Te Papa Tongarewa</a>, <a href="/nations/sources#p-909d1252">Namibian Journal of Environment</a>, <a href="/nations/sources#p-c24a4a48">OsloMet (Oslo Metropolitan University), River Rights project</a>, <a href="/nations/sources#p-730c59bb">Peary-MacMillan Arctic Museum, Bowdoin College</a>, <a href="/nations/sources#p-74e291ec">Peter the Great Museum of Anthropology and Ethnography (Kunstkamera), Russian Academy of Sciences</a>, <a href="/nations/sources#p-9c682cbd">ReVista, Harvard Review of Latin America (David Rockefeller Center for Latin American Studies)</a>, <a href="/nations/sources#p-50200b8b">Shima: The International Journal of Research into Island Cultures</a>, <a href="/nations/sources#p-6355e74b">Smithsonian Institution (National Museum of the American Indian and Smithsonian Latino Center)</a>, <a href="/nations/sources#p-69999d0e">Smithsonian Magazine (Smithsonian Institution)</a>, <a href="/nations/sources#p-aa7ff07d">Smithsonian National Museum of Natural History</a>, <a href="/nations/sources#p-5ba29097">Smithsonian National Museum of the American Indian</a>, <a href="/nations/sources#p-1c2df10f">Smithsonian National Museum of the American Indian (American Indian magazine)</a>, <a href="/nations/sources#p-dc558c94">South African History Online</a>, <a href="/nations/sources#p-276596df">Tagai State College (Queensland Department of Education)</a>, <a href="/nations/sources#p-34ecfa76">Talloires Network of Engaged Universities (Tufts University)</a>, <a href="/nations/sources#p-b139921f">The Red Book of the Peoples of the Russian Empire (Institute of the Estonian Language archive)</a>, <a href="/nations/sources#p-120ced25">The Rotuma Website, University of Hawai&#x27;i</a>, <a href="/nations/sources#p-75e719c0">Tripura University</a>, <a href="/nations/sources#p-19bc6f29">Tun Jugah Foundation</a>, <a href="/nations/sources#p-571d98d8">Unicode Consortium</a>, <a href="/nations/sources#p-74afabdf">Unidiversidad, Universidad Nacional de Cuyo (from Télam)</a>, <a href="/nations/sources#p-dce0bbfe">Universidad de San Carlos de Guatemala, Dirección General de Investigación</a>, <a href="/nations/sources#p-fa79f5cb">Université Laval, CEFAN: L&#x27;aménagement linguistique dans le monde</a>, <a href="/nations/sources#p-04c0fd73">Upopoy National Ainu Museum and Park</a>, <a href="/nations/sources#p-4f695e41">Yale Environment 360, Yale School of the Environment</a>.</p>
+  <p><a href="/nations/sources#g9">Not yet classified</a>: <a href="/nations/sources#p-3bc2d052">Casa Civil da Presidência da República, Governo do Brasil</a>, <a href="/nations/sources#p-2710b3d2">Kara-Tunga (partner of Cross Cultural Foundation Uganda)</a>, <a href="/nations/sources#p-fa267519">Mongabay</a>, <a href="/nations/sources#p-9ceff4d5">Quadratín México (republished Procuraduría Agraria bulletin)</a>, <a href="/nations/sources#p-9327deec">The Namibian</a>.</p>
+  <h2>People</h2>
+  <p>Compiled and edited by ZOTHEOS. Founder: David Garcia.</p>
+  <h2>Method, figures, fonts</h2>
+  <p>Compiled with AI assistance from published sources, checked against those sources by a tool every week and by people. Corrections and removal requests from any nation are honored.</p>
+  <p>Global figures: United Nations, World Bank.</p>
+  <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
+  <p>Verifier: ZOTHEOS-nations-verifier, Python, run weekly through GitHub Actions.</p>
+</div>
+
+</main>
+<footer class="ft">
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="133" height="28"></a>
+        <p class="ft-tag">Offline ethical intelligence. Private by default. Built independently.</p>
+        <p class="ft-founder">Founded by <strong>David Garcia</strong><br>United States Marine Corps Veteran<br>ZOTHEOS LLC &middot; Established March 2025<br>In development since January 2024</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <div class="ft-col" role="group" aria-labelledby="fcol-council">
+          <span class="ft-col-l" id="fcol-council">Council</span>
+          <a href="/#council-story">The council</a>
+          <a href="/#features">Architecture</a>
+          <a href="/#workspace">Workspace</a>
+          <a href="/#console">Console</a>
+          <a href="/#memory">Memory</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-proof">
+          <span class="ft-col-l" id="fcol-proof">Proof</span>
+          <a href="/#proof">Proof</a>
+          <a href="/#compare">Comparison</a>
+          <a href="/#devices">Hardware</a>
+          <a href="/#model-choice">Model choice</a>
+          <a href="/#site-privacy">Website privacy</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-release">
+          <span class="ft-col-l" id="fcol-release">Release</span>
+          <a href="/download">Download status</a>
+          <a href="/#waitlist">Early access</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#founder">Founder</a>
+          <a href="/#mission">Mission</a>
+          <a href="/#support">Support</a>
+          <a href="/nations">Indigenous nations today</a>
+        </div>
+      </nav>
+      <p class="ft-meta">&copy; 2026 ZOTHEOS LLC<br>All rights reserved.<br><br>Sovereign OS<br>Offline &middot; Private &middot; Independent</p>
+    </div>
+    <div class="ft-block" id="site-privacy">
+      <p class="lbl">Website privacy</p>
+      <div>
+        <p>On this device: these pages save your theme and motion choice in browser storage, and the nations page keeps a random key and its place in the walk there, so you meet new nations. None of it leaves your device.</p>
+        <p>Connections: every request these pages make goes to zotheos.org. Sources and nations' own sites open only when you follow a link. A correction is written by your own mail client to <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
+      </div>
+    </div>
+    <div class="ft-block" id="roots">
+      <p class="lbl"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Roots and gratitude</p>
+      <div>
+        <p class="roots">ZOTHEOS draws its visual language from ancient Mesoamerica: the stepped fret, the fine black line of the painted codices, the count of days. It honors the Indigenous peoples of the Americas: the Nahua, Maya, Zapotec and many other peoples of Mexico and Central America, and the Native nations further north. They are distinct peoples with connected roots that are still living, and many Mexican and Mexican American families carry those roots too. As the project grows, it intends to work with Indigenous scholars and community members, so that every symbol here is used accurately and with permission. Any wider work with the traditions of other peoples is meant to follow the same rule: their guidance, their permission. That work has a first page: <a href="/nations">Indigenous nations today</a>, their own names first, every fact with its source and the date it was checked.</p>
+        <p><a href="/#roots">Sources and orthography, on the landing page</a></p>
+      </div>
+    </div>
+    <div class="ft-block" id="nations-credit">
+      <p class="lbl">Nations</p>
+      <div>
+        <p>Nations: names, lands and facts as each nation publishes them, and from the public sources named on every card. Full list at <a href="/nations/sources">zotheos.org/nations/sources</a>.</p>
+        <p>Compiled with AI assistance from published sources, checked against those sources by a tool every week and by people. Corrections and removal requests from any nation are honored.</p>
+        <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
+        <p>This site makes no request to any other site. Sources open only when you follow them.</p>
+        <p>Compiled 8 Oct 2026</p>
+      </div>
+    </div>
+    <div class="ft-epi">
+      <p class="nah"><span lang="nah">in xochitl, in cuicatl</span> <small>flower and song, poetry</small></p>
+      <p class="ver">ZTHS &middot; 026</p>
+    </div>
+  </div>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="fret-mini" viewBox="0 0 10 10"><path d="M0.75 9.25V6.6h2.7V3.95h2.7V1.3h3.1v3.8H7.3" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke" stroke-linecap="square" stroke-linejoin="miter"/></symbol></svg>
+
+<script>
+(function () {
+  /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
+     the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
+  var d = document.documentElement;
+  var NAMES = { '': 'Obsidian mono', maya: 'Maya Blue cosmic', codex: 'Codex parchment', skeleton: 'Skeleton obsidian' };
+  var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function radios(group, onPick) {
+    if (!group) return function () {};
+    var opts = group.querySelectorAll('[role="radio"]');
+    function mark(b) {
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].setAttribute('aria-checked', opts[i] === b ? 'true' : 'false');
+        opts[i].tabIndex = opts[i] === b ? 0 : -1;
+      }
+    }
+    group.addEventListener('click', function (e) {
+      var b = e.target.closest('[role="radio"]');
+      if (b && group.contains(b) && b.getAttribute('aria-disabled') !== 'true') { mark(b); onPick(b); }
+    });
+    group.addEventListener('keydown', function (e) {
+      var k = e.key, i = Array.prototype.indexOf.call(opts, document.activeElement);
+      if (i < 0) return;
+      var j = (k === 'ArrowRight' || k === 'ArrowDown') ? i + 1 : (k === 'ArrowLeft' || k === 'ArrowUp') ? i - 1 : k === 'Home' ? 0 : k === 'End' ? opts.length - 1 : -2;
+      if (j === -2) return;
+      e.preventDefault();
+      j = (j + opts.length) % opts.length;
+      opts[j].focus(); mark(opts[j]); onPick(opts[j]);
+    });
+    return mark;
+  }
+  var themeMark = radios(document.querySelector('#appearancePop .theme-picker'), function (b) { theme(b.getAttribute('data-set') || '', true); });
+  function theme(t, save) {
+    if (t !== 'maya' && t !== 'codex' && t !== 'skeleton') t = '';
+    if (t) d.setAttribute('data-theme', t); else d.removeAttribute('data-theme');
+    var m = document.getElementById('themeColorMeta');
+    if (m) m.setAttribute('content', BG[t]);
+    var n = document.getElementById('apThemeName');
+    if (n) n.textContent = NAMES[t];
+    themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
+    if (save) put('zotheos_landing_theme', t);
+  }
+  var chosen = 'living';
+  var sm = get('zotheos_motion');
+  if (sm === 'living' || sm === 'calm' || sm === 'still') chosen = sm;
+  else if (get('zotheos_fx') === 'off') chosen = 'still';
+  var group = document.getElementById('motionGroup');
+  var motionMark = radios(group, function (b) { chosen = b.getAttribute('data-mode'); put('zotheos_motion', chosen); motion(); });
+  function motion() {
+    var floor = !!(mq && mq.matches);
+    var m = floor ? 'still' : chosen;
+    d.setAttribute('data-motion', m);
+    var row = document.getElementById('apMotionRow'), note = document.getElementById('apMotionNote');
+    if (row) row.classList.toggle('is-idle', floor);
+    if (note) note.hidden = !floor;
+    if (group) {
+      var opts = group.querySelectorAll('[role="radio"]');
+      for (var i = 0; i < opts.length; i++) {
+        if (floor && opts[i].getAttribute('data-mode') !== 'still') opts[i].setAttribute('aria-disabled', 'true');
+        else opts[i].removeAttribute('aria-disabled');
+      }
+      motionMark(group.querySelector('[data-mode="' + m + '"]'));
+    }
+  }
+  theme(get('zotheos_landing_theme') || '', false);
+  motion();
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', motion); else if (mq.addListener) mq.addListener(motion); }
+})();
+</script>
+
+</body>
+</html>

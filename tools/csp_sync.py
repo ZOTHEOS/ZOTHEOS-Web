@@ -12,9 +12,16 @@ scripts are found with html.parser, so a '<script' inside an HTML comment is not
 directive of the page's <meta http-equiv="Content-Security-Policy"> and of every vercel.json header entry whose
 source serves that page is rewritten to the hash list, or to 'none' when the page has no inline script
 (download.html stays script-src 'none'). Other directives are never touched, and each file keeps its own line endings.
+
+Pages are grouped (GROUPS). Every file in a group must carry the same inline scripts (one hash list), or --check
+reports the odd file: the 450 generated nation pages come from one template, so a template edit that reached only
+some pages is caught. For a "strict" group the whole meta policy of every file must equal the header policy byte for
+byte, less the directives a meta policy cannot carry (frame-ancestors, report-uri, sandbox). A group whose files
+are missing is skipped, so a checkout without a nations build still passes.
 """
 import argparse
 import base64
+import glob
 import hashlib
 import json
 import os
@@ -22,7 +29,28 @@ import re
 import sys
 from html.parser import HTMLParser
 
-PAGES = ("index.html", "download.html")
+PAGES = ("index.html", "download.html")   # the two landing pages (kept for tools that import this name)
+META_IGNORED = ("frame-ancestors", "report-uri", "sandbox")
+
+
+def groups(root):
+    """The page groups, with their files resolved under root."""
+    nat = sorted(os.path.relpath(p, root).replace(os.sep, "/")
+                 for p in glob.glob(os.path.join(root, "nations", "**", "*.html"), recursive=True))
+    return [
+        {"name": "index.html", "files": ["index.html"], "sources": ["/", "/index", "/index.html"], "strict": False},
+        {"name": "download.html", "files": ["download.html"], "sources": ["/download", "/download.html"], "strict": False},
+        {"name": "nations hub", "files": ["nations.html"], "sources": ["/nations", "/nations.html"], "strict": True},
+        {"name": "nations pages", "files": nat, "sources": ["/nations/(.*)"], "strict": True},
+    ]
+
+
+def meta_policy(policy):
+    """A header policy as a meta element may carry it: the directives browsers ignore in meta are dropped."""
+    parts = [d.strip() for d in policy.split(";") if d.strip()]
+    return "; ".join(d for d in parts if d.split()[0] not in META_IGNORED)
+
+
 META_RE = re.compile(r'(<meta\b[^>]*http-equiv="Content-Security-Policy"[^>]*\bcontent=")([^"]*)(")', re.I)
 DIRECTIVE_RE = re.compile(r"(?<![\w-])script-src(?![\w-])[^;]*")
 
@@ -72,14 +100,12 @@ def fix_policy(policy, hashes):
     return DIRECTIVE_RE.sub(lambda m: directive(hashes), policy, count=1)
 
 
-def page_for_source(source):
-    """vercel.json header source -> page file it serves (None when it is not one of ours)."""
-    if source == "/":
-        return "index.html"
-    name = source.lstrip("/")
-    if not name.endswith(".html"):
-        name += ".html"
-    return name if name in PAGES else None
+def page_for_source(source, grps=None):
+    """vercel.json header source -> name of the page group it serves (None when it is not one of ours)."""
+    for g in grps or groups(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))):
+        if source in g["sources"]:
+            return g["name"]
+    return None
 
 
 def read(path):
@@ -98,23 +124,30 @@ def main():
     ap.add_argument("--root", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     a = ap.parse_args()
     root = a.root
-    drift, writes, hashes = [], {}, {}
+    drift, writes, hashes, metas = [], {}, {}, {}
+    grps = [g for g in groups(root) if g["files"] and all(os.path.isfile(os.path.join(root, f)) for f in g["files"])]
 
-    for page in PAGES:
-        p = os.path.join(root, page)
-        if not os.path.isfile(p):
-            continue
-        html = read(p)
-        hs = page_hashes(html)
-        hashes[page] = hs
-        n = len(META_RE.findall(html))
-        if n != 1:
-            drift.append(f"{page}: expected one meta CSP, found {n}")
-            continue
-        new = META_RE.sub(lambda m: m.group(1) + fix_policy(m.group(2), hs) + m.group(3), html, count=1)
-        if new != html:
-            drift.append(f"{page}: meta CSP script-src is stale ({len(hs)} inline scripts)")
-            writes[p] = new
+    for g in grps:
+        ref = None
+        for page in g["files"]:
+            p = os.path.join(root, page)
+            html = read(p)
+            hs = page_hashes(html)
+            if ref is None:
+                ref = hs
+            elif hs != ref:
+                drift.append(f"{page}: inline scripts differ from the group {g['name']}")
+                continue
+            n = len(META_RE.findall(html))
+            if n != 1:
+                drift.append(f"{page}: expected one meta CSP, found {n}")
+                continue
+            new = META_RE.sub(lambda m: m.group(1) + fix_policy(m.group(2), hs) + m.group(3), html, count=1)
+            if new != html:
+                drift.append(f"{page}: meta CSP script-src is stale ({len(hs)} inline scripts)")
+                writes[p] = new
+            metas.setdefault(g["name"], {})[page] = META_RE.search(new).group(2)
+        hashes[g["name"]] = ref or []
 
     vp = os.path.join(root, "vercel.json")
     if os.path.isfile(vp):
@@ -123,19 +156,26 @@ def main():
         conf = json.loads(raw)
         seen = set()
         for entry in conf.get("headers", []):
-            page = page_for_source(entry.get("source", ""))
-            if page is None or page not in hashes:
+            name = page_for_source(entry.get("source", ""), grps)
+            if name is None or name not in hashes:
                 continue
             for hd in entry.get("headers", []):
                 if hd.get("key", "").lower() == "content-security-policy":
-                    seen.add(page)
-                    fixed = fix_policy(hd["value"], hashes[page])
+                    seen.add(name)
+                    fixed = fix_policy(hd["value"], hashes[name])
                     if fixed != hd["value"]:
                         drift.append(f"vercel.json {entry['source']}: script-src is stale")
                         hd["value"] = fixed
-        for page in hashes:
-            if page not in seen:
-                drift.append(f"vercel.json: no Content-Security-Policy header serves {page}")
+                    g = next(x for x in grps if x["name"] == name)
+                    if g["strict"]:
+                        want = meta_policy(fixed)
+                        for page, pol in metas.get(name, {}).items():
+                            if pol != want:
+                                drift.append(f"{page}: meta policy differs from the {entry['source']} header policy "
+                                             f"(strict group {name})")
+        for name in hashes:
+            if name not in seen:
+                drift.append(f"vercel.json: no Content-Security-Policy header serves {name}")
         new = json.dumps(conf, indent=2) + "\n"
         if nl != "\n":
             new = new.replace("\n", nl)
@@ -144,17 +184,22 @@ def main():
                 drift.append("vercel.json: formatting differs from canonical json (indent 2)")
             writes[vp] = new
 
-    for page, hs in hashes.items():
-        print(f"{page}: {len(hs)} inline script(s)")
+    for g in grps:
+        many = f" in each of {len(g['files'])} pages" if len(g["files"]) > 1 else ""
+        print(f"{g['name']}: {len(hashes[g['name']])} inline script(s){many}")
     if a.check:
-        for d in drift:
+        for d in drift[:40]:
             print("DRIFT " + d)
+        if len(drift) > 40:
+            print(f"DRIFT ... and {len(drift) - 40} more")
         print("csp_sync --check: " + ("FAIL" if drift else "ok"))
         return 1 if drift else 0
     for p, text in writes.items():
         write(p, text)
-        print("updated " + os.path.relpath(p, root))
-    if not writes:
+    if writes:
+        names = ", ".join(os.path.relpath(p, root) for p in writes)
+        print(f"updated {len(writes)} file(s)" + (": " + names if len(writes) < 6 else ""))
+    else:
         print("csp_sync: already in sync")
     return 0
 

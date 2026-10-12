@@ -1,0 +1,87 @@
+{{{head}}}
+<main id="main">
+  <section class="herald" id="today" aria-labelledby="heraldLabel">
+    <h1 class="hr-eyebrow" id="heraldLabel"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Indigenous nations today</h1>
+    <div class="hr-stage" id="heraldStage" data-state="in">
+{{{first_card}}}
+    </div>
+    <div class="hr-controls" id="hrControls" role="group" aria-label="Herald controls">
+      <button type="button" class="hr-btn pill" id="hrPrev">Previous</button>
+      <button type="button" class="hr-btn pill" id="hrPause" aria-pressed="false">Pause</button>
+      <button type="button" class="hr-btn pill" id="hrNext">Next</button>
+      <span class="hr-ring" id="hrRing" aria-hidden="true">{{{ring_marks}}}</span>
+      <p class="hr-status" id="hrStatus">{{status_line}}</p>
+      <noscript><p class="hr-status">This page shows one nation. Every nation has its own page under By region.</p></noscript>
+    </div>
+    <p class="hr-lede">One nation at a time, named as it names itself, with one checked fact and its source.</p>
+    <div class="sr-only" aria-live="polite" id="heraldLive"></div>
+  </section>
+  <div class="wrap">
+    <div class="duo sec">
+      <section id="ring" aria-labelledby="ringH">
+        <h2 class="sec-h" id="ringH">Today's ring</h2>
+        <p class="lede">Fifteen nations, one from each region, the same for everyone today. Tomorrow the ring turns.</p>
+        <p class="note" id="ringNote">Ring for {{ring_date}}</p>
+        <ul class="rows" id="ringList">
+{{{ring_rows}}}
+        </ul>
+      </section>
+      <section id="find" aria-labelledby="findH">
+        <h2 class="sec-h" id="findH">Find a nation</h2>
+        <div class="find" role="search" id="findBox" hidden>
+          <label for="findInput" class="lbl">Find a nation</label>
+          <input type="search" id="findInput" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Name, other name, place or country" aria-describedby="findHelp">
+          <p class="find-help" id="findHelp">Accents are optional: Maori finds Māori, Dine finds Diné. Names always show as the nation writes them.</p>
+          <p class="find-status" id="findStatus" aria-live="polite"></p>
+          <ul class="results" id="findResults"></ul>
+        </div>
+        <noscript><p class="lede">Search needs JavaScript. The region lists below hold every nation.</p></noscript>
+      </section>
+    </div>
+    <section class="sec" id="regions" aria-labelledby="regionsH">
+      <h2 class="sec-h" id="regionsH">By region</h2>
+      <p class="lede">Regions are plain geography for finding your way. No region is named after one people. Cross-border nations appear under every country they name.</p>
+      <ul class="rows cols2">
+{{{region_rows}}}
+      </ul>
+    </section>
+    <section class="sec" id="countries" aria-labelledby="countriesH">
+      <h2 class="sec-h" id="countriesH">By country</h2>
+      <p class="lede">Present-day countries, listed by ISO 3166 names. Many nations live across more than one.</p>
+      <ul class="cols4">
+{{{country_rows}}}
+      </ul>
+    </section>
+{{{news_shelf}}}
+    <div class="pair sec">
+      <section id="coverage" aria-labelledby="coverageH">
+        <h2 class="sec-h" id="coverageH">Where we are</h2>
+        <p class="lede">{{{coverage_para}}}</p>
+        <p class="act"><a class="txt-link" href="/nations/coverage">See the coverage table</a></p>
+      </section>
+      <section id="method" aria-labelledby="methodH">
+        <h2 class="sec-h" id="methodH">How this is made</h2>
+        <ul class="method">
+          <li>Every fact is written from a published page and carries that page's publisher, a link, and the date a tool or a person last found the supporting words on it.</li>
+          <li>A tool re-reads every cited page weekly. Changes from a check go live after review. A fact whose words are gone is hidden until a person restores it.</li>
+          <li>Drafts were compiled with AI assistance, then checked against sources by a tool and by people.</li>
+          <li>This page makes no request to any other site. Sources open only when you choose to follow them.</li>
+        </ul>
+      </section>
+    </div>
+    <div class="sec" id="checks">
+{{{panel}}}
+    </div>
+    <section class="sec" id="corrections" aria-labelledby="corrH">
+      <h2 class="sec-h" id="corrH">Corrections come first</h2>
+      <p class="lede">If you belong to a nation listed here, or speak for one, your word outranks every source on this page. Ask and we hide first and ask second, within 72 hours. Readers who find an error are welcome to write too.</p>
+      <p class="act"><a class="pill" href="{{mail_hub}}">Write to {{contact}}</a><a class="txt-link" href="/nations/for-nations">How a nation corrects, adds or removes anything here</a></p>
+    </section>
+  </div>
+</main>
+{{{footer}}}
+{{{scripts}}}
+<script type="application/json" id="heraldIndex">{{{index_json}}}</script>
+<script>{{{herald}}}</script>
+</body>
+</html>

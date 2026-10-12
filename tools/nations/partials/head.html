@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="{{{csp}}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://zotheos.org/static/og.png">
+  <meta name="theme-color" content="#000000" id="themeColorMeta">
+  <link rel="icon" href="/zotheos_icon.ico?v=3">
+  <script>{{{bootstrap}}}</script>
+  <!-- Fonts are self-hosted (SIL Open Font License, static/fonts/OFL.txt). zth-fonts is the landing's block, byte for
+       byte; zth-fonts-names holds the faces for letters the brand faces lack. tools/fonts_check.py keeps both in step. -->
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin>
+  <style id="zth-fonts">{{{fonts_brand}}}</style>
+  {{{fonts_names}}}
+  <link rel="stylesheet" href="/static/nations/{{css}}">
+  <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
+</head>
+<body>
+{{{header}}}

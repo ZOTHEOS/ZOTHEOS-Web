@@ -70,7 +70,7 @@ def clusters(s):
     out = []
     for c in s:
         cat = unicodedata.category(c)
-        if out and (cat in ("Mn", "Me", "Mc") or c in "‍͏" or 0xFE00 <= ord(c) <= 0xFE0F):
+        if out and (cat in ("Mn", "Me", "Mc") or c in "\u200d\u034f" or 0xFE00 <= ord(c) <= 0xFE0F):
             out[-1] += c
         else:
             out.append(c)
