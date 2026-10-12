@@ -1,12 +1,17 @@
 # Pinned for .github/workflows/nations-refresh.yml and news-refresh.yml (Python 3.10, ubuntu-latest).
 # pypdf reads PDF sources in the verifier; fonttools and brotli subset and read the woff2 faces in the build.
+# typing_extensions is pypdf's dependency on Python 3.10.
 #
-# OWED BY THE OWNER before the first run: the --hash lines. The workflow installs with --require-hashes, which
-# refuses to run until every requirement carries the sha256 of the files pip would download for Linux. Generate them
-# once on any machine with network access:
-#     pip download --only-binary=:all: --platform manylinux2014_x86_64 --python-version 3.10 -d wh fonttools==4.63.0 brotli==1.2.0 pypdf==6.4.0
-#     pip hash wh/*
-# and append each as "    --hash=sha256:<digest>" under its line (continue the line with a backslash).
-fonttools==4.63.0
-brotli==1.2.0
-pypdf==6.4.0
+# Hashes (2026-10-11): every Linux x86_64 cp310 and pure-Python wheel PyPI publishes for these versions, so
+# pip --require-hashes accepts whichever of them the runner picks.
+fonttools==4.63.0 \
+    --hash=sha256:032038247a96c1690f9f31e377c389383c902531b085aa4e4dabd6f57f870e69 \
+    --hash=sha256:445af2eab030a16b9171ea8bdda7ebf7d96bda2df88ee182a464252f6e05e20d \
+    --hash=sha256:d7e5c9973aa04c95650c96e5f5ad865fbf42d62079163ecfab1e01cbc2504c22
+brotli==1.2.0 \
+    --hash=sha256:1b557b29782a643420e08d75aea889462a4a8796e9a6cf5621ab05a3f7da8ef2 \
+    --hash=sha256:a1778532b978d2536e79c05dac2d8cd857f6c55cd0c95ace5b03740824e0e2f1
+pypdf==6.4.0 \
+    --hash=sha256:55ab9837ed97fd7fcc5c131d52fcc2223bc5c6b8a1488bbf7c0e27f1f0023a79
+typing_extensions==4.16.0 \
+    --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8
