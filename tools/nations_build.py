@@ -133,6 +133,7 @@ def time_el(iso):
 
 
 DOT = '<span class="hr-dot" aria-hidden="true">&middot;</span>'
+FRET = '<svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>'
 
 
 def maya(n):
@@ -671,9 +672,9 @@ class Builder:
             members = sorted((k for k, p in pubs.items() if p["group"] == g), key=lambda k: (fold(k), k))
             if not members:
                 continue
-            out.append(f'  <section class="src-g" id="g{g}" aria-labelledby="g{g}h"><p class="open-rule"><span class="lbl">'
-                       f'Group {esc(g if g != "9" else "")}</span></p>'.replace("Group </span>", "Unclassified</span>") +
-                       f'<h2 id="g{g}h">{esc(groups[g])}</h2>')
+            label = f"Group {g}" if g != "9" else "Unclassified"
+            out.append(f'  <section class="src-g" id="g{g}" aria-labelledby="g{g}h"><p class="open-rule">{FRET}'
+                       f'<span class="lbl">{esc(label)}</span></p><h2 id="g{g}h">{esc(groups[g])}</h2>')
             for k in members:
                 p = pubs[k]
                 last = max(f["date"] for fs in p["urls"].values() for f in fs)
@@ -761,7 +762,7 @@ class Builder:
         secs = []
 
         def sec(label, inner):
-            secs.append(f'  <section><p class="open-rule"><span class="lbl">{esc(label)}</span></p>\n{inner}\n  </section>')
+            secs.append(f'  <section><p class="open-rule">{FRET}<span class="lbl">{esc(label)}</span></p>\n{inner}\n  </section>')
         if run:
             mode = "sample run, nothing written" if run.get("sample") else ("full check, published" if run.get("published") else "full check, waiting for review")
             rows = [("Run date", L.fmt_date(run["run_date"])), ("Mode", mode),

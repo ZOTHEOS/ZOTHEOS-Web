@@ -350,3 +350,4 @@ html { scroll-padding-top: 88px; }
 .type-s { gap: 14px; padding: 22px 0; }
 .prose .open-rule { max-width: none; }
 .tbl th[scope="row"] { font: 400 15px/1.5 var(--zn-read); letter-spacing: 0; text-transform: none; color: var(--ink); }
+[data-theme="codex"] :is(.nh-mark, .ft-brand) img { filter: brightness(0); opacity: 0.88; }
