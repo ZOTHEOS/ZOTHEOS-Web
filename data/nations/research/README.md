@@ -159,3 +159,41 @@ The batch record is `batches/2026-10-12-140316.json`. Full source captures stay 
 artifacts; public repository receipts exclude session headers and form state. Missing HTTP access
 remains a failure, not evidence. No new human verification, urgent risk signal, recognition finding
 or complete-coverage claim was created.
+
+
+## Inclusive US coverage, October 14 UTC observation cycle
+
+The owner's priority is all Indigenous peoples and distinct Nations in the US, including communities outside
+federal and state recognition. This is a continuing research goal, never a completed-coverage claim. The new
+`us_coverage_plan.json` tracks all 50 state source-discovery scopes and four additional lanes: communities
+outside recognition lists, Native Hawaiian peoples and communities, Alaska villages/peoples/organizations,
+and cross-border or wider US-associated communities. Virginia and North Carolina source inventories are
+preserved; 48 other state discovery scopes remain pending. Those scopes are work units, not Nation totals.
+A state directory can be preserved while its unlisted communities and histories remain incomplete.
+
+`us_va_state_directory_2026.json` contains 11 observed table rows. Seven source asterisks mean the Virginia
+page marks both federal and state recognition; this is attributed notation, not a new legal-status finding.
+`us_nc_state_directory_2026.json` contains nine observed tribe headings. NC DOA directory wording says Catawba
+petitioned for recognition, while its landing page announces recognition at a June 6 meeting without an
+established year. The discrepancy remains visible and queued; nine headings are not a certified recognition
+total. Both inventories use `state_tribal_directory_listing`, `snapshot_kind: source_observation`, and the
+UTC retrieval day, not an inferred legal effective date. Overlapping lists never create additional Nations.
+
+Every source/own-site link receipt must exist, stay within the bounded receipts directory and match its
+measured URL, hash and timestamp. Four Virginia own-site identities and one Lumbee own-site identity were
+read and independently reviewed with AI assistance. Canonical identity crosswalks remain unreviewed. No
+new historical fact, human receipt, urgency claim or recognition adjudication was created. Full captures
+remain local; repository receipts omit cookies, sessions and form state and say where capture bytes live.
+
+Named source notes use `scoped_notes` with explicit directory IDs. Holding any bound record suppresses the
+whole note; a named discrepancy's supporting link follows its subject's hold. This prevents an otherwise
+removed directory name from surviving in a note. Removing a required inclusion lane or the whole plan when
+state inventories exist fails the build. The public directory preserves every original name in its HTML;
+JavaScript adds source selection, 40-record browsing and searchable names. No-JavaScript readers retain
+inventory anchors and browser Find. Source counts, observation dates and profile checks retain their own
+meaning. The footer's compilation/check line is explicitly scoped to researched profiles.
+
+The persistent queue contains per-record identity/history tasks, state-level source discovery and explicit
+inclusion-gap tasks. Researchers must locate and read own and primary sources before adding facts; discovery
+tasks without approved source IDs must establish a reviewed host allowlist before their first captured read.
+Do not turn a state label into a homeland boundary, government count or requirement for Indigenous identity.

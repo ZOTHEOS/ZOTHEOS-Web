@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "review_kind": "independent AI-assisted source, respect and code acceptance review",
+  "reviewer": "Codex virginia_sources agent, reviewing North Carolina rather than its own Virginia source work; no human or nation approval claimed",
+  "reviewed_at": "2026-10-14T05:37:56.633321+00:00",
+  "scope": "North Carolina staged source inventory, source captures and receipts; US typed inventory guards and directory/coverage generator; publication holds and research queue; source-readable visual change review. Root remains sole repository writer.",
+  "files": {
+    "tools/nations_inventories.py": "61c7d3c360ff85742615b564c74d25ee68e9a4a04702ca8cdaac644806506df2",
+    "tools/nations_directory.py": "5d4538b3bccd5137a97c286a57cb5e45de29eb635a394437a410f66863735d02",
+    "tools/nations_research.py": "6a8d4a4d0785eae6ac77a783525951bcd7a53e8f86ab662e415fac8fb295fd6d",
+    "tools/nations/partials/appearance.js": "2c2a9f4083af57d8cd438ec2246b98e0e3a7d80b6d4fc5b618fc95250dbe1834",
+    "tools/nations/partials/nations.css": "d2615761d598926b215da857504c0edcb4736a25e9795fae50190e41aea523dc",
+    "tools/nations/templates/hub.html": "edc22416f1c707b129c7b16c7d6e39151cc6ec66193bbb68ac781c3ddf65efe9",
+    "data/nations/research/us_nc_state_directory_2026.json": "15620132986e2cf0e2404ad531922dde56c66313e3823e13ef89b692c5f7e104",
+    "data/nations/research/us_coverage_plan.json": "306f994bbcfed83b485d0237889e53b974c99b29d3fdbec6fc7ad198031e642b",
+    "data/nations/research/directory_sources.json": "ef97c220efc445b7f45c659dab66d37472b7644f628a831f072d779cd9390a03",
+    "data/nations/research/coverage_queue.json": "cba22e4ae81a9604d6d47c5b1b93ae05429ceee5b8926e166a9f8c47e05a8a17",
+    "tools/nations/partials/footer.html": "85224c43897de5777b62113ec49df2826e71d3d4639ad4558922fa59ee9bbceb",
+    "data/nations/research/us_va_state_directory_2026.json": "35bb43bddcdac1526dc3aeb0174222556642fd3368b0622b051930e2370bc9ed",
+    "tools/tests/test_us_state_directory_acceptance.py": "8f478ba25f68550657929f86d15522f6d7cfc9224ee30a140d85f75f23d4eb91",
+    "tools/tests/test_us_scoped_notes_acceptance.py": "d96d54a40454052be0a9d3da9145cee7e2ce3415bc44b0101b1e9f990095b422"
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "priority": "P2",
+      "location": "tools/nations_directory.py:us_gaps",
+      "finding": "Removing the Native Hawaiian lane originally passed validation and erased that research gap from the public report.",
+      "evidence": "Initial isolated acceptance run: 38 passed, one failing missing_inclusion_lane test.",
+      "resolution": "Generator now requires exactly four unique IDs for outside-recognition, native-hawaiian, alaska-communities and borders-and-territories, all pending. Retest39/39passed."
+    },
+    {
+      "priority": "P2",
+      "location": "tools/nations_directory.py:extra_section source-read date",
+      "finding": "Source retrieval timestamps represented with an offset spanning UTC midnight retained a correct observation date but rendered their timestamp-local date with a UTC label. Actual batch +00:00 timestamps were not wrong.",
+      "evidence": "Two isolated valid-offset cases, Virginia and North Carolina, failed their public Read UTC assertions before the correction.",
+      "resolution": "Read dates now parse the source timestamp and convert to UTC before date formatting. Both targeted cases passed after correction; 37 other cases deselected. No source dates or receipts were changed."
+    }
+  ],
+  "tests": {
+    "file": "test_us_state_directory_acceptance.py",
+    "sha256": "8f478ba25f68550657929f86d15522f6d7cfc9224ee30a140d85f75f23d4eb91",
+    "command": "py -3.10 -m pytest <isolated reviewer artifact>/test_us_state_directory_acceptance.py -q -p no:cacheprovider --basetemp <isolated reviewer scratch-after-lane-fix>",
+    "initial_result": {
+      "passed": 38,
+      "failed": 1
+    },
+    "coverage": [
+      "state document and record units, jurisdiction, ID prefix and source-observation typing",
+      "actual UTC observation date including timestamp-local day crossing",
+      "confined existent successful source receipt with matching URL, hash and timestamp",
+      "own website identity link with matching destination and actual identity evidence",
+      "unreviewed name candidates cannot create canonical profile links",
+      "Catawba unresolved source statements remain publicly visible, event year not invented",
+      "directory ID holds remove HTML rows, font input and planner/claim access without registry mutations",
+      "incomplete US plan retains all fifty state scopes and four additional inclusion lanes",
+      "valid UTC observation timestamps represented with a prior local calendar day render the same UTC read date"
+    ],
+    "earlier_full_acceptance_result": {
+      "passed": 39,
+      "failed": 0,
+      "pytest_reported_seconds": 2.28
+    },
+    "earlier_full_acceptance_scope": "Independent39/39run before the later named-note bindings and UTC display refinement, retained as historical verification rather than asserted rerun.",
+    "final_result": {
+      "targeted": "observation_day_uses_utc_instead_of_the_timestamp_local_calendar_day",
+      "passed": 2,
+      "failed": 0,
+      "deselected": 37,
+      "pytest_reported_seconds": 0.29
+    },
+    "narrow_refresh_run": "Only two UTC display cases rerun by this reviewer. No full suite rerun.",
+    "root_reported_additional_verification": {
+      "passed": 56,
+      "scope": "39 existing acceptance checks,15 peer scoped-note hold checks and2 directory checks",
+      "provenance": "Parent report, not independently executed by this reviewer; root full suite underway when refresh requested."
+    }
+  },
+  "source_checks": {
+    "heading_names_exactly_match": true,
+    "measured_heading_count": 9,
+    "canonical_identity_matches_approved": 0,
+    "own_website_link_reviews_observed": 1,
+    "http_body_hashes_and_lengths_independently_checked": 7,
+    "robots_permission_reads_independently_checked": 2,
+    "robots_paths_allowed": 5,
+    "host_start_intervals_seconds": [
+      3.858194,
+      3.746664,
+      3.9785,
+      3.641123,
+      4.422336
+    ],
+    "catawba_own_robots_http_status": 404,
+    "catawba_own_content_not_fetched": true,
+    "source_retrieval_note": "This reviewer read exact locally captured bodies and compared recorded hashes. No new HTTP fetch or invented retrieval date.",
+    "catawba_conflict": "Directory petition statement and June 6 recognition announcement both exist in captures; announcement HTML gives no year. Certified recognition count and effective event date remain unestablished.",
+    "lumbee_link": "DOA directory includes an HTTPS Lumbee website link; own homepage footer explicitly identifies itself as the official website of the Lumbee Tribe of North Carolina. A canonical identity or federal legal-status decision is not created.",
+    "source_url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+    "source_retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+    "source_sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485"
+  },
+  "respect_checks": [
+    "Nine North Carolina state-source listings are not called all Indigenous peoples, an all-US count or nine additional distinct Nations.",
+    "Recognition categories remain attributed source statements and are not membership or identity adjudications.",
+    "Sappony geography remains a research scope, not an exclusive North Carolina homeland claim.",
+    "No leader contact details, public-form action, sacred material, made-up current emergency or human receipt imported.",
+    "Unlisted communities, Native Hawaiian communities, Alaska identity distinctions, cross-border and wider US-associated communities remain explicit pending lanes."
+  ],
+  "limitations": [
+    "Live browser interaction and Vercel publication are root/palette-agent checks, not claimed by this artifact.",
+    "No human review or Nation endorsement occurred.",
+    "Existing canonical facts and historical legal claims were outside this review and unchanged by these directory additions.",
+    "Full source captures remain local; repository receipt pointers explicitly identify local evidence storage."
+  ],
+  "decision": "No unresolved P1/P2 in the refreshed source/code state. Suitable for root publication after its remaining required build, full-suite and live verification; those checks are not claimed by this review.",
+  "previous_reviewed_at": "2026-10-14T05:24:38.823810+00:00",
+  "narrow_refresh_review": {
+    "no_new_http_fetches": true,
+    "no_source_timestamp_changes": true,
+    "source_meaning_changes": false,
+    "nc_note": "Catawba named alert now binds exactly to its known NC directory ID. It and the alternate published-account link render only while that subject row is visible. Shortened discrepancy excerpts are exact source substrings; unresolved status and unknown event year retained.",
+    "va_binding_code_review": "Four known Virginia directory IDs bind the compound distinction note. Holding any one suppresses the whole named note; this is a code/binding review, not a new independent review of this agent own Virginia source research.",
+    "bounded_notes": "At most32 notes, each alert/note with1–16 distinct known directory IDs and bounded nonempty text; unknown or duplicate subjects fail closed.",
+    "inclusion_plan": "Missing plan fails when state inventories exist; all50 unique state scopes, complete:false and all4 required pending lanes retained. No completeness percentage.",
+    "footer": "Researched profiles prefix scopes the historical profile check line; current directory read date remains separately sourced.",
+    "utc_display": "Actual source instants unchanged. Public Read UTC derives date after timezone conversion, not timestamp-prefix slicing.",
+    "exact_short_excerpts_verified": true
+  }
+}

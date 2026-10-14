@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_ai_source_and_respect_review",
+  "reviewer": "Codex north_carolina_sources, independently reviewing Virginia research prepared by another agent; model not asserted",
+  "reviewed_at": "2026-10-14T05:20:31.883701+00:00",
+  "human": false,
+  "nation_review_claimed": false,
+  "result": "source_and_scope_passed",
+  "reviewed_candidate_file": "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-coverage-2026-10-14\\virginia\\us_va_state_directory_2026.json",
+  "reviewed_candidate_sha256": "479e0b8b1bcb1b61ebb39654862f22ae261715dd58b3b0b3dc29ded29be5b716",
+  "review_scope": [
+    "Captured state table labels, years and locations versus candidate metadata",
+    "Actual asterisk footnote meaning and seven marked rows",
+    "Four own-homepage identity links and distinct state heading associations",
+    "Captured body hashes, byte lengths, robots directives and fetch-start pacing",
+    "Distinct governing-body labels and absence of automatic canonical matches"
+  ],
+  "new_http_requests": 0,
+  "network_scope_note": "Review reads saved actual source HTML and retrieval receipts; it does not claim a second independent HTTP measurement.",
+  "source_rows_checked": 11,
+  "source_asterisks_checked": 7,
+  "captured_receipt_bodies_checked": 13,
+  "body_checks": [
+    {
+      "body_file": "robots.txt",
+      "sha256": "776472806e8671115b720b4cd60b1d4d356ef3aa69165db76cb09928fba7f2fa",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:11:18.917253+00:00"
+    },
+    {
+      "body_file": "virginia-indians.html",
+      "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:11:22.730797+00:00"
+    },
+    {
+      "body_file": "state-recognized-tribes.html",
+      "sha256": "3e4d1280bfa6643920263a338ae388397b1d60c1f0b99f8c031af299ff25a38d",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:11:26.717310+00:00"
+    },
+    {
+      "body_file": "mattaponi-robots.txt",
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:12:41.691391+00:00"
+    },
+    {
+      "body_file": "mattaponi-own-home.html",
+      "sha256": "c86ac005aa435589a5c4fdbcad03ee1618a538c9c2aeba301c9e332c2831f7e9",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:12:45.957074+00:00"
+    },
+    {
+      "body_file": "cheroenhaka-nottoway-robots.txt",
+      "sha256": "ff648b9c675b52e9ae02ea03800fd28315b652efde8e8477d223fa0cb0b0efc0",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:12:47.021633+00:00"
+    },
+    {
+      "body_file": "cheroenhaka-nottoway-own-home.html",
+      "sha256": "905b134a01f3c1ef05bb7bb60dda2ce6b15962ddfda4b69040d158e1f58a093f",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:12:57.378667+00:00"
+    },
+    {
+      "body_file": "nottoway-robots.txt",
+      "sha256": "80d0b8a7b0ff3fff5bee18d9ef06c82d2d39afdf73638e2cce17ee687fa256e7",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:12:58.157349+00:00"
+    },
+    {
+      "body_file": "nottoway-own-home.html",
+      "sha256": "79cfa9bebce9915ccf481db371f72058d4edbf106f4b670355e1f2aab877af47",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:13:02.610300+00:00"
+    },
+    {
+      "body_file": "patawomeck-robots.txt",
+      "sha256": "e557699bf8e639e6f7c16e7a10822f7ecfa03b5561ddf545ba672c3e59df853f",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:13:03.430361+00:00"
+    },
+    {
+      "body_file": "patawomeck-own-home.html",
+      "sha256": "7225826b10353944451d93bb6167a89b183cb1c2a2d1bd74766a15485bcbe91e",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:13:07.258025+00:00"
+    },
+    {
+      "body_file": "patawomeck-final-host-robots.txt",
+      "sha256": "e557699bf8e639e6f7c16e7a10822f7ecfa03b5561ddf545ba672c3e59df853f",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:13:51.668029+00:00"
+    },
+    {
+      "body_file": "patawomeck-final-host-home.html",
+      "sha256": "7225826b10353944451d93bb6167a89b183cb1c2a2d1bd74766a15485bcbe91e",
+      "sha_match": true,
+      "bytes_match": true,
+      "captured_http_status": 200,
+      "retrieved_at": "2026-10-14T05:13:55.382295+00:00"
+    }
+  ],
+  "own_site_identity_checks": [
+    {
+      "directory_id": "us-state-va-mattaponi",
+      "official_url": "https://mattaponi.gov/",
+      "own_published_name": "Mattaponi Indian Tribe & Reservation",
+      "evidence_in_actual_html": true,
+      "state_website_link_under_distinct_heading": true,
+      "own_body_hash_match": true,
+      "robots_allows_home": true,
+      "reviewer_human": false,
+      "scope": "Public website identity relationship only; no canonical profile or legal recognition adjudication."
+    },
+    {
+      "directory_id": "us-state-va-cheroenhaka-nottoway",
+      "official_url": "https://www.cheroenhaka-nottoway.org/",
+      "own_published_name": "Cheroenhaka (Nottoway) Indian Tribe",
+      "evidence_in_actual_html": true,
+      "state_website_link_under_distinct_heading": true,
+      "own_body_hash_match": true,
+      "robots_allows_home": true,
+      "reviewer_human": false,
+      "scope": "Public website identity relationship only; no canonical profile or legal recognition adjudication."
+    },
+    {
+      "directory_id": "us-state-va-nottoway-of-virginia",
+      "official_url": "https://nottowayindians.org/",
+      "own_published_name": "Nottoway Indian Tribe of Virginia",
+      "evidence_in_actual_html": true,
+      "state_website_link_under_distinct_heading": true,
+      "own_body_hash_match": true,
+      "robots_allows_home": true,
+      "reviewer_human": false,
+      "scope": "Public website identity relationship only; no canonical profile or legal recognition adjudication."
+    },
+    {
+      "directory_id": "us-state-va-patawomeck",
+      "official_url": "https://www.patawomeckindiantribeofvirginia.org/",
+      "own_published_name": "Patawomeck Indian Tribe of Virginia",
+      "evidence_in_actual_html": true,
+      "state_website_link_under_distinct_heading": true,
+      "own_body_hash_match": true,
+      "robots_allows_home": true,
+      "reviewer_human": false,
+      "scope": "Public website identity relationship only; no canonical profile or legal recognition adjudication."
+    }
+  ],
+  "fetch_interval_checks": [
+    {
+      "host": "commonwealth.virginia.gov",
+      "previous_body": "robots.txt",
+      "next_body": "virginia-indians.html",
+      "start_interval_seconds": 3.813544,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "commonwealth.virginia.gov",
+      "previous_body": "virginia-indians.html",
+      "next_body": "state-recognized-tribes.html",
+      "start_interval_seconds": 3.986513,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "mattaponi.gov",
+      "previous_body": "mattaponi-robots.txt",
+      "next_body": "mattaponi-own-home.html",
+      "start_interval_seconds": 4.265683,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "cheroenhaka-nottoway.org",
+      "previous_body": "cheroenhaka-nottoway-robots.txt",
+      "next_body": "cheroenhaka-nottoway-own-home.html",
+      "start_interval_seconds": 10.357034,
+      "required_seconds": 10,
+      "passed": true
+    },
+    {
+      "host": "nottowayindians.org",
+      "previous_body": "nottoway-robots.txt",
+      "next_body": "nottoway-own-home.html",
+      "start_interval_seconds": 4.452951,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "patawomeckindiantribeofvirginia.org",
+      "previous_body": "patawomeck-robots.txt",
+      "next_body": "patawomeck-own-home.html",
+      "start_interval_seconds": 3.827664,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "patawomeckindiantribeofvirginia.org",
+      "previous_body": "patawomeck-own-home.html",
+      "next_body": "patawomeck-final-host-robots.txt",
+      "start_interval_seconds": 44.410004,
+      "required_seconds": 3,
+      "passed": true
+    },
+    {
+      "host": "patawomeckindiantribeofvirginia.org",
+      "previous_body": "patawomeck-final-host-robots.txt",
+      "next_body": "patawomeck-final-host-home.html",
+      "start_interval_seconds": 3.714266,
+      "required_seconds": 3,
+      "passed": true
+    }
+  ],
+  "respect_checks": {
+    "cheroenhaka_nottoway_kept_distinct_from_nottoway_of_virginia": true,
+    "mattaponi_kept_distinct_from_upper_mattaponi": true,
+    "no_pref_name_replacement": true,
+    "no_canonical_identity_crosswalk_approved": true,
+    "absence_of_star_not_treated_as_nonfederal_finding": true,
+    "state_list_not_definition_of_indigenous_identity": true,
+    "no_all_communities_covered_claim": true,
+    "source_observation_date_not_effective_recognition_date": true,
+    "no_outreach_or_donation": true,
+    "no_human_receipts_invented": true
+  },
+  "findings": [],
+  "integration_requirements_already_identified_by_root": [
+    "Add top-level state VA and snapshot_kind source_observation.",
+    "Normalize Pamunkey candidate string to required candidate object; existing canonical alias Pamunkey independently confirmed.",
+    "Use consistent UTC observation-date validation for Oct14 UTC receipts.",
+    "Retain source captures locally and label repository receipt body references as local capture references.",
+    "Keep verification/respect status explicitly AI-assisted rather than human-reviewed."
+  ],
+  "limitations": [
+    "Seven other Virginia own-site identities not fetched in this batch.",
+    "Government source lists overlap and do not define all Indigenous communities.",
+    "Initial Patawomeck request redirected to www; final-host robots and compliant reread were subsequently captured and are the identity evidence used.",
+    "This is source/respect review of staged evidence, not final code/security/game or public-deployment verification.",
+    "Lumbee own-site review was authored by this agent and is excluded from this independent Virginia review. Root or the Virginia researcher should separately review NC evidence."
+  ]
+}

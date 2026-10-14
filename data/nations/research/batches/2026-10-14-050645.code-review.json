@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_ai_code_review",
+  "reviewer": "Codex north_carolina_sources; model not asserted",
+  "human": false,
+  "nation_review_claimed": false,
+  "reviewed_at": "2026-10-14T05:37:20.023046+00:00",
+  "base_commit": "04a419516e47de352d7ea549aa0fb5020bc40472",
+  "scope": "Website changes relative to origin/main, limited to source-directory behavior, new US inclusion plan and publication evidence/hold contract. Root retains final build/full-suite/browser/deployment verification.",
+  "reviewed_file_sha256": {
+    "tools/nations_directory.py": "5d4538b3bccd5137a97c286a57cb5e45de29eb635a394437a410f66863735d02",
+    "tools/nations_inventories.py": "61c7d3c360ff85742615b564c74d25ee68e9a4a04702ca8cdaac644806506df2",
+    "tools/nations_research.py": "6a8d4a4d0785eae6ac77a783525951bcd7a53e8f86ab662e415fac8fb295fd6d",
+    "tools/nations/partials/appearance.js": "2c2a9f4083af57d8cd438ec2246b98e0e3a7d80b6d4fc5b618fc95250dbe1834",
+    "tools/nations/partials/nations.css": "d2615761d598926b215da857504c0edcb4736a25e9795fae50190e41aea523dc",
+    "tools/nations/templates/hub.html": "edc22416f1c707b129c7b16c7d6e39151cc6ec66193bbb68ac781c3ddf65efe9",
+    "tools/nations/partials/footer.html": "85224c43897de5777b62113ec49df2826e71d3d4639ad4558922fa59ee9bbceb",
+    "tools/tests/test_us_state_directory_acceptance.py": "8f478ba25f68550657929f86d15522f6d7cfc9224ee30a140d85f75f23d4eb91",
+    "tools/tests/test_us_scoped_notes_acceptance.py": "d96d54a40454052be0a9d3da9145cee7e2ce3415bc44b0101b1e9f990095b422",
+    "data/nations/research/us_coverage_plan.json": "306f994bbcfed83b485d0237889e53b974c99b29d3fdbec6fc7ad198031e642b",
+    "data/nations/research/us_va_state_directory_2026.json": "35bb43bddcdac1526dc3aeb0174222556642fd3368b0622b051930e2370bc9ed",
+    "data/nations/research/us_nc_state_directory_2026.json": "15620132986e2cf0e2404ad531922dde56c66313e3823e13ef89b692c5f7e104",
+    "data/nations/research/directory_sources.json": "ef97c220efc445b7f45c659dab66d37472b7644f628a831f072d779cd9390a03",
+    "data/nations/research/coverage_queue.json": "cba22e4ae81a9604d6d47c5b1b93ae05429ceee5b8926e166a9f8c47e05a8a17",
+    "data/nations/research/README.md": "97e1d48d873aba3c6e7ac2ca272ec9fe27813390ccddaec893bdfc2c2df35fa5"
+  },
+  "result": "passed_after_fixes",
+  "open_p1_p2_findings": [],
+  "resolved_findings": [
+    {
+      "priority": "P2",
+      "title": "Named state-directory notes survived directory-only removal holds",
+      "status": "fixed_and_independently_verified",
+      "fix": "Named NC alert and VA distinction note now bind explicit directory IDs. Any held bound row suppresses its note; NC source-discrepancy link also follows its subject visibility.",
+      "initial_reproduction": "hold-review-reproduction.json",
+      "fix_verification": "hold-review-fix-verification.json",
+      "independent_acceptance": "15 scoped-note and receipt-subject cases passed using isolated fixtures; actual source note suppressed for each binding, unrelated removals preserve it."
+    },
+    {
+      "priority": "P2",
+      "title": "US inclusion plan permitted required lanes to disappear",
+      "status": "fixed",
+      "fix": "Exact four required lane IDs and fifty state scopes enforced; missing plan fails when state inventories exist.",
+      "verification": "Reviewed final guard logic; root reported all associated acceptance cases passed. No duplicated root full-suite execution claimed."
+    }
+  ],
+  "independent_validation": {
+    "scoped_note_pytest_cases": 15,
+    "scoped_note_pytest_result": "15 passed in 1.28s",
+    "detached_dom_cases": 10,
+    "detached_dom_result": "10 passed, refreshed actual generated HTML and current directory IIFE",
+    "detached_dom_receipt": "directory-behaviour-acceptance.json",
+    "behavior_covered": [
+      "All 2260 source records remain visible before JavaScript",
+      "40-row initial batch and 80 after Show More",
+      "First newly revealed name receives keyboard focus",
+      "NC selected source has exactly nine rows",
+      "Search and Clear retain selected source",
+      "Ute does not match Paiute; regex-like queries are literal",
+      "Initial later-row Canada deep link reveals correct source/batch",
+      "Inventory hash navigation, repeated hash and keyboard focus",
+      "Modifier navigation left native",
+      "Malformed and non-directory hashes preserve current query",
+      "Missing enhancement control leaves full directory readable"
+    ],
+    "real_browser_performed": false,
+    "current_canonical_registry_unchanged_from_base": true,
+    "raw_registry_comparison": "Parsed JSON equality, allowing newline format differences."
+  },
+  "truth_checks": {
+    "source_listings_are_not_new_distinct_nations": true,
+    "government_lists_not_definition_of_indigenous_identity": true,
+    "all_us_coverage_not_claimed": true,
+    "48_pending_state_scopes_not_count_of_missing_nations": true,
+    "native_hawaiian_alaska_unlisted_cross_border_urban_territory_lanes_visible": true,
+    "observation_dates_utc_not_recognition_effective_dates": true,
+    "source_receipts_bounded_existing_200_hash_timestamp_checked": true,
+    "own_url_identity_receipt_destination_matches": true,
+    "no_canonical_crosswalk_approved": true,
+    "no_new_human_history_urgency_claims": true,
+    "footer_profile_check_line_scoped_to_researched_profiles": true,
+    "catawba_recognition_conflict_stays_unresolved_when_subject_published": true
+  },
+  "separate_source_review": {
+    "artifact": "independent-virginia-review.json",
+    "note": "Independent Virginia source/respect review is separate from code review. NC research was authored by this agent and is excluded from its independent source review."
+  },
+  "limitations": [
+    "Detached DOM checks do not verify visual rendering, screen-reader announcements or browser event timing; root performs browser checks.",
+    "No full-suite pass, deployment or live-site publication is asserted by this reviewer.",
+    "This review pin set represents inspected working-tree files; root must reconfirm unchanged pins before publishing.",
+    "AI-assisted checks are explicitly not human or Nation approval."
+  ]
+}

@@ -78,9 +78,24 @@
   if (!input || !list) return;
   var rows = list.querySelectorAll('[data-directory-name]'), groups = list.querySelectorAll('.directory-group');
   var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
+  var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
+  var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
+  if (!status || !clear) return;
+  var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
+  var enhanced = !!(tools && inventory && more && limitNote);
   function fold(s) { return (s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s).toLowerCase(); }
-  var names = [], i;
-  for (i = 0; i < rows.length; i++) names.push(fold(rows[i].getAttribute('data-directory-name')));
+  for (i = 0; i < rows.length; i++) {
+    names.push(fold(rows[i].getAttribute('data-directory-name')));
+    var owner = rows[i].closest('[data-directory-inventory]');
+    scopes.push(owner ? owner.getAttribute('data-directory-inventory') : '');
+    if (!owner) enhanced = false;
+  }
+  if (enhanced) {
+    for (i = 0; i < inventory.options.length; i++) {
+      var value = inventory.options[i].value, section = document.getElementById(value);
+      if (value !== 'all' && (!section || !list.contains(section) || section.getAttribute('data-directory-inventory') !== value)) enhanced = false;
+    }
+  }
   function directoryMatches(name, words) {
     for (var j = 0; j < words.length; j++) {
       var word = words[j], at = -1;
@@ -90,15 +105,85 @@
     return true;
   }
   function filter() {
-    var words = fold(input.value).trim().split(/\s+/), count = 0;
-    for (var i = 0; i < rows.length; i++) {
-      var match = directoryMatches(names[i], words);
-      rows[i].hidden = !match;
+    var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
+    var selected = enhanced ? inventory.value : 'all';
+    visible = [];
+    for (var j = 0; j < rows.length; j++) {
+      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words);
       if (match) count++;
+      var show = match && (!enhanced || shown < limit);
+      rows[j].hidden = !show;
+      if (show) { shown++; visible.push(rows[j]); }
     }
     for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
-    status.textContent = count + ' of ' + rows.length + ' name records shown.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+    if (enhanced) {
+      var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
+      status.textContent = shown + ' of ' + count + ' matching name records shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      var next = Math.min(batch, count - shown);
+      more.hidden = next <= 0;
+      more.textContent = 'Show ' + next + ' More';
+      more.setAttribute('aria-label', 'Show the next ' + next + ' matching name records');
+      limitNote.textContent = (next > 0 ? 'Show More reveals the next ' + next + ' matching records. ' : '') + 'Each source keeps its own category and date. These counts are not a total of Indigenous Nations.';
+    } else {
+      status.textContent = count + ' of ' + rows.length + ' name records shown.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+    }
   }
-  input.addEventListener('input', filter);
-  clear.addEventListener('click', function () { input.value = ''; filter(); input.focus(); });
+  input.addEventListener('input', function () { limit = batch; filter(); });
+  clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
+  if (!enhanced) return;
+  inventory.addEventListener('change', function () { limit = batch; filter(); });
+  more.addEventListener('click', function () {
+    var previous = visible.length;
+    limit += batch; filter();
+    // Focus the first newly revealed name so keyboard and screen-reader users can continue reading there.
+    if (visible.length > previous) {
+      var name = visible[previous].querySelector('.directory-name') || visible[previous];
+      name.setAttribute('tabindex', '-1'); name.focus();
+    }
+  });
+  function hashTarget() {
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return null; }
+    var target = document.getElementById(id);
+    return target && list.contains(target) ? target : null;
+  }
+  function reveal(target, initial, focusInventory) {
+    var owner = target.closest('[data-directory-inventory]');
+    if (!owner) return;
+    inventory.value = owner.getAttribute('data-directory-inventory');
+    input.value = ''; limit = batch;
+    var row = target.closest('[data-directory-name]'), ordinal = 0;
+    if (row) {
+      for (var j = 0; j < rows.length; j++) {
+        if (scopes[j] !== inventory.value) continue;
+        ordinal++;
+        if (rows[j] === row) { limit = Math.ceil(ordinal / batch) * batch; break; }
+      }
+    }
+    filter();
+    if (focusInventory) inventory.focus();
+    else if (initial) window.requestAnimationFrame(function () { target.scrollIntoView(); });
+    else target.scrollIntoView();
+  }
+  var navHash = '';
+  window.addEventListener('hashchange', function () {
+    var target = hashTarget(), focusInventory = target && navHash === target.id;
+    navHash = '';
+    if (target) reveal(target, false, focusInventory);
+  });
+  var jumps = document.querySelectorAll('.directory-inventory-nav a');
+  for (i = 0; i < jumps.length; i++) jumps[i].addEventListener('click', function (e) {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = this.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+    var target;
+    try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch (err) { return; }
+    if (!target || !list.contains(target)) return;
+    e.preventDefault(); navHash = target.id;
+    if (window.location.hash === href) { navHash = ''; reveal(target, false, true); }
+    else window.location.hash = href;
+  });
+  filter(); tools.hidden = false;
+  var target = hashTarget();
+  if (target) reveal(target, true, false);
 })();
