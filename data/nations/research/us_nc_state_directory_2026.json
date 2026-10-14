@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "source": {
+    "publisher": "North Carolina Department of Administration, American Indian Affairs",
+    "title": "NC Tribal Communities",
+    "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+    "publication_date": null,
+    "as_of": null,
+    "retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+    "sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485",
+    "receipt": "receipts/us-nc-doa-tribes-2026-10-14.receipt.json",
+    "source_edition": "Unversioned public web directory observed on 2026-10-14 UTC; no record-level effective date established.",
+    "as_of_scope_note": "Inventory as_of is the UTC retrieval date, not a recognition-grant date."
+  },
+  "stated_count": null,
+  "enumerated_count": 9,
+  "entity_unit": "state_tribal_directory_listing",
+  "state": "NC",
+  "as_of": "2026-10-14",
+  "scope_note": "Tribal listings on the North Carolina DOA community directory, including tribes also named in federal sources. A dated state-directory inventory, not a definition of Indigenous identity or a count of additional distinct Tribal Nations.",
+  "extraction_note": "Nine h2 tribal headings in main content. BeautifulSoup names match independent regex extraction of main and h2 elements. Navigation/footer headings excluded by both paths. No addresses, contacts, population figures, legal status or effective legal dates imported. Exact displayed labels preserved.",
+  "public_extraction_note": "Names are preserved from the state directory. Each listing still needs its own identity and history review.",
+  "public_notes": [
+    "Nine tribal listings were observed on October 14, 2026 UTC. Some also occur in federal lists; these records are not added to a total of distinct Nations.",
+    "A state directory cannot define every Indigenous community. Nations absent from government lists, urban organizations and broader peoples need separate, source-led research."
+  ],
+  "source_discrepancies": [
+    {
+      "subject_directory_id": "us-state-nc-catawba-nation",
+      "status": "unresolved",
+      "kind": "recognition_statement_conflict",
+      "directory_statement": "has petitioned for state recognition",
+      "announcement_statement": "officially became a state-recognized tribe in North Carolina",
+      "announcement_url": "https://www.doa.nc.gov/divisions/american-indian-affairs",
+      "announcement_receipt": "receipts/us-nc-doa-indian-affairs-2026-10-14.receipt.json",
+      "event_date": null,
+      "displayed_month_day": "June 6",
+      "event_year_status": "not established from announcement text",
+      "note": "Preserve nine source listings without claiming a certified nine-tribe state-recognition total; no effective date inferred."
+    }
+  ],
+  "checks": {
+    "heading_count": 9,
+    "unique_directory_ids": 9,
+    "duplicate_exact_names": [],
+    "independent_extraction": "BeautifulSoup main-content h2 names exactly match separate main/h2 regex extraction in order.",
+    "own_website_identity_reviews": 1,
+    "canonical_identity_crosswalks_confirmed": 0,
+    "catawba_own_site_robot_status": 404,
+    "own_site_read_limit_note": "Catawba own-site fetch paused after robots404. Only Lumbee own website read in this bounded batch. Remaining own-site identities pending.",
+    "robot_policy_note": "NC DOA and Lumbee robots200 allowed requested paths. Fetch starts separated by at least3.1sec per host.",
+    "human_reviews": 0
+  },
+  "entities": [
+    {
+      "directory_id": "us-state-nc-catawba-nation",
+      "name": "Catawba Nation",
+      "directory_name": "Catawba Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": [
+          {
+            "registry_id": "catawba-nation-us-sc",
+            "basis": "exact_name_or_alias_unreviewed"
+          }
+        ]
+      },
+      "source_heading": "Catawba Nation"
+    },
+    {
+      "directory_id": "us-state-nc-coharie-tribe",
+      "name": "Coharie Tribe",
+      "directory_name": "Coharie Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Coharie Tribe"
+    },
+    {
+      "directory_id": "us-state-nc-eastern-band-of-cherokee",
+      "name": "Eastern Band of Cherokee",
+      "directory_name": "Eastern Band of Cherokee",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Eastern Band of Cherokee"
+    },
+    {
+      "directory_id": "us-state-nc-haliwa-saponi-indian-tribe",
+      "name": "Haliwa-Saponi Indian Tribe",
+      "directory_name": "Haliwa-Saponi Indian Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Haliwa-Saponi Indian Tribe"
+    },
+    {
+      "directory_id": "us-state-nc-lumbee-tribe-of-north-carolina",
+      "name": "Lumbee Tribe of North Carolina",
+      "directory_name": "Lumbee Tribe of North Carolina",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": "https://www.lumbeetribe.com",
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": [
+          {
+            "registry_id": "lumbee-tribe-us-nc",
+            "basis": "exact_name_or_alias_unreviewed"
+          }
+        ]
+      },
+      "source_heading": "Lumbee Tribe of North Carolina",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "AI-assisted source review by Codex north_carolina_sources; model not asserted",
+        "checked_at": "2026-10-14T05:13:30.896642+00:00",
+        "evidence_receipt": "receipts/us-nc-lumbee-own-home-2026-10-14.receipt.json",
+        "evidence": "Own-site footer identifies it as the official website of the Lumbee Tribe of North Carolina; the same HTTPS website is linked by NC DOA. Website relationship reviewed only; no canonical government identity decision."
+      }
+    },
+    {
+      "directory_id": "us-state-nc-meherrin-indian-tribe",
+      "name": "Meherrin Indian Tribe",
+      "directory_name": "Meherrin Indian Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Meherrin Indian Tribe"
+    },
+    {
+      "directory_id": "us-state-nc-occaneechi-band-of-the-saponi-nation",
+      "name": "Occaneechi Band of the Saponi Nation",
+      "directory_name": "Occaneechi Band of the Saponi Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Occaneechi Band of the Saponi Nation"
+    },
+    {
+      "directory_id": "us-state-nc-sappony",
+      "name": "Sappony",
+      "directory_name": "Sappony",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Sappony"
+    },
+    {
+      "directory_id": "us-state-nc-waccamaw-siouan-tribe",
+      "name": "Waccamaw Siouan Tribe",
+      "directory_name": "Waccamaw Siouan Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NC",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_heading": "Waccamaw Siouan Tribe"
+    }
+  ],
+  "snapshot_kind": "source_observation",
+  "public_alerts": [],
+  "scoped_notes": [
+    {
+      "kind": "alert",
+      "text": "The DOA directory says Catawba has petitioned for state recognition. The DOA Indian Affairs landing page announces recognition at a June 6 meeting without giving the year. The two accounts differ; recognition timing remains under review.",
+      "directory_ids": [
+        "us-state-nc-catawba-nation"
+      ]
+    }
+  ]
+}

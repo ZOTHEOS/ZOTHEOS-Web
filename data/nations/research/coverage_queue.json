@@ -58905,6 +58905,2754 @@
       "candidate_registry_ids": [
         "warao-orinoco-guyana-trinidad"
       ]
+    },
+    {
+      "task_id": "enumerate-us-va-tribal-directory",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "VA tribal directory source inventory",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 96,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "source_id": "us-va-tribal-directory",
+          "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+          "retrieved_at": "2026-10-14T05:11:22.730797+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+          "receipt_id": "r-ab66c95f7ad7e286"
+        }
+      ],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null,
+      "note": "Source inventory prepared from fetched pages; independent AI-assisted source/respect review and reviewed PR still required."
+    },
+    {
+      "task_id": "profile-us-state-va-mattaponi",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-mattaponi",
+      "subject": "Mattaponi",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-pamunkey",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-pamunkey",
+      "subject": "Pamunkey",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.918259+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "identity_crosswalk_first",
+      "note": "Existing exact-name candidates need identity review before any new profile draft. A broader people entry is not automatically the same government."
+    },
+    {
+      "task_id": "profile-us-state-va-chickahominy",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-chickahominy",
+      "subject": "Chickahominy",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-eastern-chickahominy",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-eastern-chickahominy",
+      "subject": "Eastern Chickahominy",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-rappahannock",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-rappahannock",
+      "subject": "Rappahannock",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-upper-mattaponi",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-upper-mattaponi",
+      "subject": "Upper Mattaponi",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-nansemond",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-nansemond",
+      "subject": "Nansemond",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-monacan-indian-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-monacan-indian-nation",
+      "subject": "Monacan Indian Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-cheroenhaka-nottoway",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-cheroenhaka-nottoway",
+      "subject": "Cheroenhaka (Nottoway)",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-nottoway-of-virginia",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-nottoway-of-virginia",
+      "subject": "Nottoway of Virginia",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-va-patawomeck",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-va-patawomeck",
+      "subject": "Patawomeck",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "enumerate-us-nc-tribal-directory",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "NC tribal directory source inventory",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 96,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "source_id": "us-nc-tribal-directory",
+          "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+          "retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485",
+          "receipt_id": "r-58febfbfdbca2904"
+        }
+      ],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null,
+      "note": "Source inventory prepared from fetched pages; independent AI-assisted source/respect review and reviewed PR still required."
+    },
+    {
+      "task_id": "profile-us-state-nc-catawba-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-catawba-nation",
+      "subject": "Catawba Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.918259+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "identity_crosswalk_first",
+      "note": "Existing exact-name candidates need identity review before any new profile draft. A broader people entry is not automatically the same government."
+    },
+    {
+      "task_id": "profile-us-state-nc-coharie-tribe",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-coharie-tribe",
+      "subject": "Coharie Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-eastern-band-of-cherokee",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-eastern-band-of-cherokee",
+      "subject": "Eastern Band of Cherokee",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-haliwa-saponi-indian-tribe",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-haliwa-saponi-indian-tribe",
+      "subject": "Haliwa-Saponi Indian Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-lumbee-tribe-of-north-carolina",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-lumbee-tribe-of-north-carolina",
+      "subject": "Lumbee Tribe of North Carolina",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.918259+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "identity_crosswalk_first",
+      "note": "Existing exact-name candidates need identity review before any new profile draft. A broader people entry is not automatically the same government."
+    },
+    {
+      "task_id": "profile-us-state-nc-meherrin-indian-tribe",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-meherrin-indian-tribe",
+      "subject": "Meherrin Indian Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-occaneechi-band-of-the-saponi-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-occaneechi-band-of-the-saponi-nation",
+      "subject": "Occaneechi Band of the Saponi Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-sappony",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-sappony",
+      "subject": "Sappony",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nc-waccamaw-siouan-tribe",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nc-waccamaw-siouan-tribe",
+      "subject": "Waccamaw Siouan Tribe",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "identity-us-nc-catawba-statement-conflict",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Resolve Catawba directory and announcement wording with dated own and primary sources",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 97,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory",
+        "us-nc-indian-affairs"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-al",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Alabama",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ak",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Alaska",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-az",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Arizona",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ar",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Arkansas",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ca",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for California",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-co",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Colorado",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ct",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Connecticut",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-de",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Delaware",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-fl",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Florida",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ga",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Georgia",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-hi",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Hawaii",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-id",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Idaho",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-il",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Illinois",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-in",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Indiana",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ia",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Iowa",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ks",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Kansas",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ky",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Kentucky",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-la",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Louisiana",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-me",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Maine",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-md",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Maryland",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ma",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Massachusetts",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-mi",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Michigan",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-mn",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Minnesota",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ms",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Mississippi",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-mo",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Missouri",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-mt",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Montana",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ne",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Nebraska",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-nv",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Nevada",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-nh",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for New Hampshire",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-nj",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for New Jersey",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-nm",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for New Mexico",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ny",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for New York",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-nd",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for North Dakota",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-oh",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Ohio",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ok",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Oklahoma",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-or",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Oregon",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-pa",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Pennsylvania",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ri",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Rhode Island",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-sc",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for South Carolina",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-sd",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for South Dakota",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-tn",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Tennessee",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-tx",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Texas",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-ut",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Utah",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-vt",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Vermont",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-wa",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Washington",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-wv",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for West Virginia",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-wi",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Wisconsin",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-state-wy",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Find state-level and nation-led sources for Wyoming",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-outside-recognition",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Communities outside recognition lists",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-native-hawaiian",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Native Hawaiian peoples and communities",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-alaska-communities",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Alaska villages, peoples and organizations",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-borders-and-territories",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Cross-border and wider US-associated communities",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-14T05:19:07.385656+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "identity-us-state-va-pamunkey",
+      "task_type": "identity_review",
+      "entity_id": "us-state-va-pamunkey",
+      "subject": "Resolve identity crosswalk: Pamunkey",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-va",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-va-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": null,
+      "next_attempt_after": null,
+      "profile_disposition": null,
+      "note": null,
+      "candidate_registry_ids": [
+        "pamunkey-indian-tribe-us-va"
+      ]
+    },
+    {
+      "task_id": "identity-us-state-nc-catawba-nation",
+      "task_type": "identity_review",
+      "entity_id": "us-state-nc-catawba-nation",
+      "subject": "Resolve identity crosswalk: Catawba Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": null,
+      "next_attempt_after": null,
+      "profile_disposition": null,
+      "note": null,
+      "candidate_registry_ids": [
+        "catawba-nation-us-sc"
+      ]
+    },
+    {
+      "task_id": "identity-us-state-nc-lumbee-tribe-of-north-carolina",
+      "task_type": "identity_review",
+      "entity_id": "us-state-nc-lumbee-tribe-of-north-carolina",
+      "subject": "Resolve identity crosswalk: Lumbee Tribe of North Carolina",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nc",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": null,
+      "next_attempt_after": null,
+      "profile_disposition": null,
+      "note": null,
+      "candidate_registry_ids": [
+        "lumbee-tribe-us-nc"
+      ]
     }
   ]
 }

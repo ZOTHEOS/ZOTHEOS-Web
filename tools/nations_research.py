@@ -24,7 +24,7 @@ UNITS = {'federally_listed_tribal_entity', 'directory_government_or_affiliate', 
          'people_or_community', 'linguistic_community', 'census_self_identification_category',
          'indigenous_people', 'census_ethnicity_people_or_group', 'census_indigenous_people',
          'people_or_nationality', 'representative_organization', 'inuit_representative_body',
-         'source_discovery', 'nation_owned_source', 'research_subject'}
+         'source_discovery', 'nation_owned_source', 'research_subject', 'state_tribal_directory_listing'}
 
 
 def load(path):

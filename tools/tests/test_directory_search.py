@@ -28,3 +28,13 @@ assert(!directoryMatches('southern ute indian tribe',['[ute]']));
     checks = checks.replace("'yaqit ʔa·knuqⱡi'it'", '"yaqit ʔa·knuqⱡi\'it"')
     result = subprocess.run([node, '-e', function + checks], capture_output=True, text=True, encoding='utf-8')
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_inventory_browsing_batches_deep_links_and_keyboard_focus():
+    node = shutil.which('node')
+    if not node:
+        pytest.skip('node is not installed')
+    result = subprocess.run([node, str(Path(ROOT) / 'tools/tests/directory-ui-acceptance.cjs'),
+                             str(Path(ROOT) / 'tools/nations/partials/appearance.js')],
+                            capture_output=True, text=True, encoding='utf-8')
+    assert result.returncode == 0, result.stdout + result.stderr

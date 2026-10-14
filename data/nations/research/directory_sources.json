@@ -464,6 +464,59 @@
       "discovery_date": "2026-10-12",
       "status": "source_retrieved",
       "note": "Own account of this named community; does not establish recognition or exclusive representation."
+    },
+    {
+      "source_id": "us-va-tribal-directory",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "state_tribal_directory_listing",
+      "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+      "allowed_hosts": [
+        "mattaponi.gov",
+        "nottowayindians.org",
+        "www.cheroenhaka-nottoway.org",
+        "www.commonwealth.virginia.gov",
+        "www.patawomeckindiantribeofvirginia.org"
+      ],
+      "stated_count": null,
+      "as_of": "2026-10-14",
+      "discovery_date": "2026-10-14",
+      "status": "source_retrieved",
+      "note": "11 source listings observed in UTC; source category and recognition statements are attributed. No distinct-Nation total or canonical identity approval."
+    },
+    {
+      "source_id": "us-nc-tribal-directory",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "state_tribal_directory_listing",
+      "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+      "allowed_hosts": [
+        "www.doa.nc.gov",
+        "www.lumbeetribe.com"
+      ],
+      "stated_count": null,
+      "as_of": "2026-10-14",
+      "discovery_date": "2026-10-14",
+      "status": "source_retrieved",
+      "note": "9 source listings observed in UTC; source category and recognition statements are attributed. No distinct-Nation total or canonical identity approval."
+    },
+    {
+      "source_id": "us-nc-indian-affairs",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.doa.nc.gov/divisions/american-indian-affairs",
+      "allowed_hosts": [
+        "www.doa.nc.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-14",
+      "status": "source_retrieved",
+      "note": "Catawba recognition announcement differs from directory wording; the displayed June 6 has no established event year. Keep unresolved."
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "review_type": "own_website_identity_link",
+  "reviewer": "Codex AI-assisted source review; no human or nation approval claimed",
+  "status": "verified",
+  "source_url": "https://www.mattaponi.gov/",
+  "final_url": "https://mattaponi.gov/",
+  "checked_at": "2026-10-14T05:12:45.957074+00:00",
+  "http_status": 200,
+  "sha256": "c86ac005aa435589a5c4fdbcad03ee1618a538c9c2aeba301c9e332c2831f7e9",
+  "evidence_phrase": "Mattaponi Indian Tribe & Reservation",
+  "own_published_name": "Mattaponi Indian Tribe & Reservation",
+  "link_evidence_url": "https://www.commonwealth.virginia.gov/virginia-indians/state-recognized-tribes/",
+  "link_evidence_receipt": "va-state-recognized-tribes.receipt.json",
+  "limits": "This reviews only the own-site identity link. It creates no canonical identity match, preferred-name replacement, historical fact, recognition adjudication or urgent risk signal.",
+  "evidence_note": "Short exact identity-name phrase read from the own homepage; surrounding page whitespace is not quoted.",
+  "local_capture_name": "mattaponi-own-home.html",
+  "capture_retention": "Full source capture retained in local research artifacts; not deployed or copied into this public repository."
+}

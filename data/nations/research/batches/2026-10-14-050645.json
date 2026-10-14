@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-10-14T05:06:45.161Z",
+  "recorded_at": "2026-10-14T05:39:35.463408+00:00",
+  "station": "Codex website Nations steward on MELLO-MOOSE; model identity not asserted",
+  "scope": "Two source-directory subjects: Virginia and North Carolina. Inclusive US source-discovery planning and website browsing design; no new canonical facts or legal recognition findings.",
+  "queue_subjects": [
+    "enumerate-us-va-tribal-directory",
+    "enumerate-us-nc-tribal-directory"
+  ],
+  "source_inventories": [
+    {
+      "state": "VA",
+      "unit": "state_tribal_directory_listing",
+      "records": 11,
+      "stated_count": null,
+      "snapshot_kind": "source_observation",
+      "utc_observation_date": "2026-10-14",
+      "source": {
+        "publisher": "Virginia Secretary of the Commonwealth",
+        "title": "Virginia Indians: Virginia State Recognized Tribes",
+        "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+        "retrieved_at": "2026-10-14T05:11:22.730797+00:00",
+        "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+        "receipt": "receipts/va-virginia-indians.receipt.json",
+        "publication_date": null,
+        "source_edition": "Unversioned web table observed October 14, 2026. No record-level effective date established.",
+        "directory_link_source_url": "https://www.commonwealth.virginia.gov/virginia-indians/state-recognized-tribes/",
+        "directory_link_receipt": "receipts/va-state-recognized-tribes.receipt.json"
+      }
+    },
+    {
+      "state": "NC",
+      "unit": "state_tribal_directory_listing",
+      "records": 9,
+      "stated_count": null,
+      "snapshot_kind": "source_observation",
+      "utc_observation_date": "2026-10-14",
+      "source": {
+        "publisher": "North Carolina Department of Administration, American Indian Affairs",
+        "title": "NC Tribal Communities",
+        "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+        "publication_date": null,
+        "as_of": null,
+        "retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+        "sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485",
+        "receipt": "receipts/us-nc-doa-tribes-2026-10-14.receipt.json",
+        "source_edition": "Unversioned public web directory observed on 2026-10-14 UTC; no record-level effective date established.",
+        "as_of_scope_note": "Inventory as_of is the UTC retrieval date, not a recognition-grant date."
+      }
+    }
+  ],
+  "canonical_registry_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+  "canonical_profiles": 457,
+  "canonical_facts_changed": false,
+  "canonical_identity_matches_approved": 0,
+  "human_review_receipts_created": 0,
+  "own_source_identity_links_reviewed": 5,
+  "queue_tasks": 1790,
+  "us_source_discovery_scopes": 50,
+  "state_inventories_preserved": 2,
+  "other_state_scopes_pending": 48,
+  "additional_inclusion_lanes": [
+    "outside-recognition",
+    "native-hawaiian",
+    "alaska-communities",
+    "borders-and-territories"
+  ],
+  "complete_us_coverage": false,
+  "complete_worldwide_coverage": false,
+  "unresolved": [
+    "Federal stated575 vs577records unchanged",
+    "Canadian profile stated619 vs638records unchanged",
+    "Catawba NC directory petition wording vsJune6announcement with eventyearnotestablished",
+    "All new canonical identity links pending; source inventories overlap and cannot be summed as distinctNations"
+  ],
+  "review": {
+    "human": false,
+    "method": "Separate AI-assisted source/respect reviews and independent code/acceptance review",
+    "reports": [
+      "2026-10-14-050645.code-review.json",
+      "2026-10-14-050645.nc-source-review.json",
+      "2026-10-14-050645.va-source-review.json"
+    ],
+    "final_review_file_pins_matched": true,
+    "unresolved_p1_p2": []
+  },
+  "validation": {
+    "full_suite_passed": 180,
+    "full_suite_scope": "Final hold and inclusion implementation before UTC offset display correction",
+    "final_focused_passed": 56,
+    "final_focused_scope": "Updated UTC reading-day and scoped-note regressions plus portable directory interaction acceptance",
+    "nations_pages": 581,
+    "gates": [
+      "nations_build --check (includes copy/fonts/CSP/links/sizes/contrast)",
+      "nations_research validate",
+      "game_nations --check",
+      "release_switch --check",
+      "git diff --check"
+    ],
+    "canonical_validator": "0errors,54existingwarnings; canonicaldataunchanged",
+    "browser": "Actual preview:40/80rowswithnew-namekeyboardfocus; scopedUSUtesearch3governments;NC9rowsandrealdiscrepancy;VA11;390pxnodhorizontaloverflow;Mayaandpaperdropdowncolors;mobileMenuAppearance;Calm;restoredMayaLiving;1280px2-columnrowsnooverflow"
+  },
+  "publication": {
+    "state": "Reviewed and checked; pull request and production verification pending at this record time"
+  },
+  "capture_retention": "Full source bodies remain local. Repository receipts exclude session headers, cookies and form state. Source observations and event dates remain separate."
+}

@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "source": {
+    "publisher": "Virginia Secretary of the Commonwealth",
+    "title": "Virginia Indians: Virginia State Recognized Tribes",
+    "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+    "retrieved_at": "2026-10-14T05:11:22.730797+00:00",
+    "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+    "receipt": "receipts/va-virginia-indians.receipt.json",
+    "publication_date": null,
+    "source_edition": "Unversioned web table observed October 14, 2026. No record-level effective date established.",
+    "directory_link_source_url": "https://www.commonwealth.virginia.gov/virginia-indians/state-recognized-tribes/",
+    "directory_link_receipt": "receipts/va-state-recognized-tribes.receipt.json"
+  },
+  "entity_unit": "state_tribal_directory_listing",
+  "jurisdiction": "US-VA",
+  "stated_count": null,
+  "enumerated_count": 11,
+  "as_of": "2026-10-14",
+  "as_of_scope": "Actual observation date, not a new effective date for state or federal recognition.",
+  "scope_note": "Eleven name rows in the Virginia Secretary of the Commonwealth state-recognized table. This is an attributed state directory snapshot, not all Indigenous peoples or communities of Virginia. Some rows also appear in the separate federal directory; catalogue units are not added as distinct Nations.",
+  "extraction_note": "Read one table headed Tribe, Year Recognized and Location. Eleven distinct source labels independently matched with a second HTML-cell extraction. Seven asterisks are preserved in directory_name and source_federal_marker; name removes only the trailing notation marker. State website links were read in source order; only four own homepages were fetched and reviewed as identity links. No personal contacts are copied.",
+  "public_extraction_note": "Names follow Virginia's published table. The source marks seven rows with an asterisk for both federal and state recognition; identity matches and histories remain separate research work.",
+  "public_notes": [
+    "A state list is a planning source, not the definition of who is Indigenous. Unlisted communities, peoples and distinct governing bodies need their own sources.",
+    "State and federal lists overlap. These eleven rows are not eleven additional Nations and are never added to other lists as a unique total.",
+    "The snapshot date records when the pages were read. The table's recognition years remain source metadata and are not assigned as current record-level effective dates."
+  ],
+  "checks": {
+    "row_count": 11,
+    "unique_source_labels": 11,
+    "source_marked_federal_and_state": 7,
+    "source_unmarked_federal_rows": 4,
+    "duplicate_source_labels": [],
+    "independent_extraction": "BeautifulSoup table cells exactly match a separate regex row/cell extraction.",
+    "own_sites_read_and_identity_link_reviewed": 4,
+    "canonical_identity_matches_approved": 0,
+    "http_failures": 0,
+    "human_reviews_created": 0
+  },
+  "review": {
+    "status": "needs_review",
+    "sources": "pending independent AI review",
+    "identity": "unreviewed",
+    "human_review": null,
+    "respect": "pending independent review"
+  },
+  "followup": {
+    "status": "pending",
+    "risk": "unassessed",
+    "scope": "Review each Nation's own preferred name, governing-body scope and public history before canonical profile creation or identity linking. Track Virginia communities outside the state list separately with their own evidence."
+  },
+  "entities": [
+    {
+      "directory_id": "us-state-va-mattaponi",
+      "name": "Mattaponi",
+      "directory_name": "Mattaponi",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": "https://mattaponi.gov/",
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "17th century",
+      "source_location": "Banks of the Mattaponi River, King William Co.",
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears on this source row. Absence of a marker is not an independent finding that the entity lacks federal recognition.",
+      "state_published_tribal_url": "https://www.Mattaponi.gov",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "Codex AI-assisted source review; no human or nation approval claimed",
+        "evidence_receipt": "receipts/va-mattaponi-own-identity.receipt.json"
+      },
+      "own_published_name": "Mattaponi Indian Tribe & Reservation"
+    },
+    {
+      "directory_id": "us-state-va-pamunkey",
+      "name": "Pamunkey",
+      "directory_name": "Pamunkey*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": [
+          {
+            "registry_id": "pamunkey-indian-tribe-us-va",
+            "basis": "exact_name_or_alias_unreviewed"
+          }
+        ]
+      },
+      "source_year_recognized": "17th century",
+      "source_location": "Banks of the Pamunkey River, King William Co.",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://www.pamunkey.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-chickahominy",
+      "name": "Chickahominy",
+      "directory_name": "Chickahominy*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1983",
+      "source_location": "Charles City County",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://www.chickahominytribe.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-eastern-chickahominy",
+      "name": "Eastern Chickahominy",
+      "directory_name": "Eastern Chickahominy*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1983",
+      "source_location": "New Kent County",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://www.cied.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-rappahannock",
+      "name": "Rappahannock",
+      "directory_name": "Rappahannock*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1983",
+      "source_location": "Indian Neck, King & Queen County",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "http://www.rappahannocktribe.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-upper-mattaponi",
+      "name": "Upper Mattaponi",
+      "directory_name": "Upper Mattaponi*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1983",
+      "source_location": "King William County",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://umitribe.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-nansemond",
+      "name": "Nansemond",
+      "directory_name": "Nansemond*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1985",
+      "source_location": "Cities of Suffolk and Chesapeake",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://nansemond.gov/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-monacan-indian-nation",
+      "name": "Monacan Indian Nation",
+      "directory_name": "Monacan Indian Nation*",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "1989",
+      "source_location": "Bear Mountain, Amherst County",
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
+      "state_published_tribal_url": "https://www.monacannation.gov/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+    },
+    {
+      "directory_id": "us-state-va-cheroenhaka-nottoway",
+      "name": "Cheroenhaka (Nottoway)",
+      "directory_name": "Cheroenhaka (Nottoway)",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": "https://www.cheroenhaka-nottoway.org/",
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "2010",
+      "source_location": "Courtland, Southampton County",
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears on this source row. Absence of a marker is not an independent finding that the entity lacks federal recognition.",
+      "state_published_tribal_url": "https://www.cheroenhaka-nottoway.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "Codex AI-assisted source review; no human or nation approval claimed",
+        "evidence_receipt": "receipts/va-cheroenhaka-nottoway-own-identity.receipt.json"
+      },
+      "own_published_name": "Cheroenhaka (Nottoway) Indian Tribe"
+    },
+    {
+      "directory_id": "us-state-va-nottoway-of-virginia",
+      "name": "Nottoway of Virginia",
+      "directory_name": "Nottoway of Virginia",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": "https://nottowayindians.org/",
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "2010",
+      "source_location": "Capron, Southampton County",
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears on this source row. Absence of a marker is not an independent finding that the entity lacks federal recognition.",
+      "state_published_tribal_url": "http://nottowayindians.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "Codex AI-assisted source review; no human or nation approval claimed",
+        "evidence_receipt": "receipts/va-nottoway-of-virginia-own-identity.receipt.json"
+      },
+      "own_published_name": "Nottoway Indian Tribe of Virginia"
+    },
+    {
+      "directory_id": "us-state-va-patawomeck",
+      "name": "Patawomeck",
+      "directory_name": "Patawomeck",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "VA",
+      "as_of": "2026-10-14",
+      "official_url": "https://www.patawomeckindiantribeofvirginia.org/",
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_year_recognized": "2010",
+      "source_location": "Stafford County",
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears on this source row. Absence of a marker is not an independent finding that the entity lacks federal recognition.",
+      "state_published_tribal_url": "https://patawomeckindiantribeofvirginia.org/",
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "Codex AI-assisted source review; no human or nation approval claimed",
+        "evidence_receipt": "receipts/va-patawomeck-own-identity.receipt.json"
+      },
+      "own_published_name": "Patawomeck Indian Tribe of Virginia"
+    }
+  ],
+  "state": "VA",
+  "snapshot_kind": "source_observation",
+  "scoped_notes": [
+    {
+      "kind": "note",
+      "text": "Cheroenhaka (Nottoway) and Nottoway of Virginia are separate entries. Mattaponi and Upper Mattaponi are also kept separate; shared words do not justify merging identities.",
+      "directory_ids": [
+        "us-state-va-cheroenhaka-nottoway",
+        "us-state-va-nottoway-of-virginia",
+        "us-state-va-mattaponi",
+        "us-state-va-upper-mattaponi"
+      ]
+    }
+  ]
+}
