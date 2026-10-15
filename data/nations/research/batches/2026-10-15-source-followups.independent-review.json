@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15 07:22:10 UTC",
+  "reviewer": "Codex independent_batch_20261015",
+  "station": "Independent source and code review for ZOTHEOS-Web on the user's MELLO-MOOSE workspace",
+  "review_kind": "Independent AI-assisted source, respect and implementation review",
+  "human_review": false,
+  "repository_writes_by_reviewer": false,
+  "network_source_reads_by_reviewer": 0,
+  "scope": "Bounded Catawba date-source followup, INPI map source guide, supporting-source receipt guards and concise directory profile-link labels",
+  "decision": "No unresolved P1 or P2 finding in the reviewed scoped changes. Suitable for reviewed PR publication after root-run required checks pass.",
+  "reviewed_files": [
+    {
+      "path": "data/nations/research/README.md",
+      "sha256": "b8fc5ab668c77da498d7fb8cde428f873f496193b46a2b523fae4a82dc50a547",
+      "bytes": 17289
+    },
+    {
+      "path": "data/nations/research/coverage_queue.json",
+      "sha256": "c222bdb2e07f3a1f0888308b180b504652dac96b72985b8d9e6a77684bb29c56",
+      "bytes": 1609604
+    },
+    {
+      "path": "data/nations/research/directory_sources.json",
+      "sha256": "19d4c13185517be7ff249f865648d48077cab74c661367ec029f30f75dc1dcd8",
+      "bytes": 19159
+    },
+    {
+      "path": "data/nations/research/us_nc_state_directory_2026.json",
+      "sha256": "007e282c1cf7fa7d6317876a331a8f0e24547b15ff25c39dbbd781ba5c5bf61e",
+      "bytes": 11154
+    },
+    {
+      "path": "data/nations/resources.json",
+      "sha256": "84fe6bc0489893677d2e19ae2fc5025ff1f30c413c6b98685f7acd1d1b279170",
+      "bytes": 11448
+    },
+    {
+      "path": "tools/nations_directory.py",
+      "sha256": "9df716126d3640390cc6f80a687c7d6b2147908ca5627889fb7fbb408d7d5b94",
+      "bytes": 28877
+    },
+    {
+      "path": "tools/nations_inventories.py",
+      "sha256": "139bec29866b453227f870be6924cb7bca5a92bfdc8b3e90e6a4100b0f13641d",
+      "bytes": 12317
+    },
+    {
+      "path": "tools/tests/test_steward_source_acceptance.py",
+      "sha256": "9e406bf36fd1c98c47857215dae1605e6bb4b3f2078ee69d160b38352f8f6afc",
+      "bytes": 5762
+    },
+    {
+      "path": "data/nations/research/receipts/mx-inpi-map-2026-10-15.receipt.json",
+      "sha256": "8cd7bb76a3aa409ec0f1081011e851d890b26db05d61a10bcdcfd8edc080df32",
+      "bytes": 654
+    },
+    {
+      "path": "data/nations/research/receipts/mx-inpi-page-2026-10-15.receipt.json",
+      "sha256": "8682f40c83184710556d4470d25dda8c99befead6eed8ad61d5393edbb5dfded",
+      "bytes": 568
+    },
+    {
+      "path": "data/nations/research/receipts/mx-source-read-0-2026-10-15.receipt.json",
+      "sha256": "6bfcea904d4dbcc507206c5ec39f6fa60b771ecbcce1cc94486842ed7348ae3c",
+      "bytes": 569
+    },
+    {
+      "path": "data/nations/research/receipts/mx-source-read-1-2026-10-15.receipt.json",
+      "sha256": "50f6615887a9eafae6a0b58ec777ddc22a861bd2bb7c9285094cd26b6c772697",
+      "bytes": 578
+    },
+    {
+      "path": "data/nations/research/receipts/mx-source-read-2-2026-10-15.receipt.json",
+      "sha256": "906e549cc7ab7bbeffec67e5112b25d9c9479097192655166eabf6854136bb04",
+      "bytes": 570
+    },
+    {
+      "path": "data/nations/research/receipts/us-nc-doa-april-2026-minutes-2026-10-15.receipt.json",
+      "sha256": "097ba508ab0b234601ce08de669efbf1508dca03e64e890122310d5e510c61e6",
+      "bytes": 1133
+    },
+    {
+      "path": "data/nations/research/receipts/us-nc-doa-commission-2026-10-15.receipt.json",
+      "sha256": "8ea8b3033b77612d4f18b109ad47dee2f77a4db1ffa375106c3ef2d06f46c2e2",
+      "bytes": 1058
+    },
+    {
+      "path": "data/nations/research/receipts/us-nc-doa-indian-affairs-2026-10-15.receipt.json",
+      "sha256": "45d77e93678677c22b5b1f3bbb9f7625903c9d242be5a948a55282db240f550b",
+      "bytes": 1040
+    },
+    {
+      "path": "data/nations/research/receipts/us-nc-doa-june-2026-minutes-2026-10-15.receipt.json",
+      "sha256": "06680ce68469fcb57c0237a058a1874a7383818df5d11070f2c8e7428daebfef",
+      "bytes": 1102
+    },
+    {
+      "path": "data/nations/research/receipts/us-nc-doa-robots-2026-10-15.receipt.json",
+      "sha256": "776ebde52429c5a288f26561c75850c18cdbfa62b71698be9c6660a3e18d60ff",
+      "bytes": 895
+    }
+  ],
+  "source_receipt_capture_checks": [
+    {
+      "receipt": "data/nations/research/receipts/mx-inpi-map-2026-10-15.receipt.json",
+      "source_url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/ndee-04-25.kml",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T07:11:29.731959Z",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/mx-inpi-page-2026-10-15.receipt.json",
+      "source_url": "https://catalogo.inpi.gob.mx/ndee/",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T07:10:33.044837Z",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/mx-source-read-0-2026-10-15.receipt.json",
+      "source_url": "https://nacion-ndee-nnee-nde.org/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T07:10:28.044167Z",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/mx-source-read-1-2026-10-15.receipt.json",
+      "source_url": "https://catalogo.inpi.gob.mx/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T07:10:28.602757Z",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/mx-source-read-2-2026-10-15.receipt.json",
+      "source_url": "https://www.inali.gob.mx/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T07:10:29.93963Z",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nc-doa-april-2026-minutes-2026-10-15.receipt.json",
+      "source_url": "https://www.doa.nc.gov/cia/commission-indian-affairs-april-14-2026-minutes/download?attachment=",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T01:01:14.822348-06:00",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nc-doa-commission-2026-10-15.receipt.json",
+      "source_url": "https://www.doa.nc.gov/boards-commissions/commission-indian-affairs",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T01:01:08.428264-06:00",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nc-doa-indian-affairs-2026-10-15.receipt.json",
+      "source_url": "https://www.doa.nc.gov/divisions/american-indian-affairs",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T01:01:05.224527-06:00",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nc-doa-june-2026-minutes-2026-10-15.receipt.json",
+      "source_url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T01:01:11.628761-06:00",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nc-doa-robots-2026-10-15.receipt.json",
+      "source_url": "https://www.doa.nc.gov/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T01:01:02.020033-06:00",
+      "capture_exists": true,
+      "capture_hash_matches": true
+    }
+  ],
+  "observations": [
+    "The ten copied successful source receipts retain hashes that match the actual local captured bodies. Source robots files were read independently from those captures.",
+    "Visually read rendered June 2026 NC minutes PDF pages 1, 5, 7 and 19, and April 2026 pages 3 and 4. June minutes record the recognition motion carried; April report acceptance and September record approval are distinct events.",
+    "The approved minutes explicitly date the meeting June 5 2026; the DOA landing announcement says June 6 without giving its year. The public note supports June 2026 while preserving the exact-day source difference and null legal effective date.",
+    "The October 14 directory observation, nine headings, no certified stated count and unreviewed canonical crosswalks remain unchanged.",
+    "INPI parent HTML embeds the actual captured KML URL. Its single Placemark has the source name N'dee/N'nee/Ndé, Chihuahua fields and type Sede. Public copy uses source-record language and does not invent a current government, recognition, territory or complete community inventory.",
+    "The candidate own-site robots disallows all content. No blocked content, index snippet or failed INALI report is used for a public claim.",
+    "The Chiricahua resource card retains all three canonical publication-hold bindings. Only the freshly read INPI page and map get October 15 source dates; other source dates remain October 12.",
+    "Generic supporting-source links are bounded to eight, HTTPS-only, require a confined successful measured receipt with matching requested/final URL and positive integer page references, and render only when their discrepancy subject remains visible.",
+    "Directory labels say Profile Link Pending and explicitly explain identity linking; they do not claim a matching profile is absent.",
+    "The stale README 457-entry wording is corrected to 457 researched profiles, separate from 577 federal source-name records."
+  ],
+  "test_evidence": {
+    "authored_before_feature": true,
+    "pre_feature_execution": {
+      "cases": 18,
+      "passed": 0,
+      "failed": 18,
+      "interpretation": "Expected red acceptance for not-yet-implemented supporting-source contract and new date evidence."
+    },
+    "post_feature_independent_execution": {
+      "cases": 18,
+      "passed": 18,
+      "failed": 0,
+      "pytest_seconds": 1.01,
+      "command": "py -3.10 -m pytest <artifact>/test_steward_source_acceptance.py -q -p no:cacheprovider",
+      "environment_override": "ZOTHEOS_TEST_REPO=C:\\ZOTHEOS-Web"
+    },
+    "portable_repo_copy": "Actual repository test lines match the independently executed artifact after portable ROOT default correction; Compare-Object found no line differences.",
+    "covered_failures": [
+      "Missing or escaping receipt path",
+      "Failed HTTP or malformed source hash",
+      "Missing timestamp timezone",
+      "Mismatched receipt or final URL",
+      "Unsafe link URL",
+      "Empty source label or too many sources",
+      "Invalid or excessive page references",
+      "Markup injection in source label",
+      "Held subject removes supporting links and labels while sibling records remain",
+      "Old observation date and count remain preserved; source-day discrepancy not silently resolved"
+    ]
+  },
+  "remaining_limits": [
+    "This is an AI review, not a human or Nation approval.",
+    "No browser or rendered live-site inspection was performed by this reviewer in this batch; browser verification from a prior cycle must retain its original date.",
+    "Root's full build, complete test suite, CSP/font/link checks and production byte verification remain separately reported gates.",
+    "Exact Catawba announcement day disagreement and named Mexican communities' governing relationships remain unresolved research work.",
+    "The source inventories remain incomplete and mixed in scope; no US or worldwide complete-coverage claim is supported.",
+    "No canonical facts, government identity crosswalks, fact-aging clock, game mechanics or intro audio were reviewed as new changes in this batch."
+  ],
+  "source_capture_location": "Full primary captures and source page renders remain in this chat's local steward-2026-10-15 artifact directory; repository receipts do not include cookies, sessions, form state or source map coordinates.",
+  "source_review_artifact": "independent-source-review.json",
+  "prebuild_acceptance_artifact": "independent-prebuild-acceptance.json"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T08:09:12.894880+00:00",
+  "station": "Codex website integration on MELLO-MOOSE",
+  "scope": "Two Indigenous source followups, supporting-source receipt guards, concise directory labels and founder public mission alignment",
+  "repository": "https://github.com/ZOTHEOS/ZOTHEOS-Web",
+  "branch": "codex/expansion-collaboration-2026-10-15",
+  "baseline_main": "5bf1982bb58b96fbb81cf272e5240448d995425e",
+  "publication_state_at_recording": "Prepared and checked for reviewed pull request; production publication not yet performed.",
+  "source_subjects": [
+    {
+      "task": "identity-us-nc-catawba-statement-conflict",
+      "state": "needs_review",
+      "result": "Approved minutes support June 2026 recognition motion. June 5 minutes heading and June 6 announcement remain a source-day discrepancy; legal effective date stays unknown.",
+      "receipts": [
+        "receipts/us-nc-doa-june-2026-minutes-2026-10-15.receipt.json",
+        "receipts/us-nc-doa-april-2026-minutes-2026-10-15.receipt.json",
+        "receipts/us-nc-doa-indian-affairs-2026-10-15.receipt.json"
+      ],
+      "preserved": "October 14 directory observation, nine headings and unreviewed identity crosswalks.",
+      "followup": "followup-catawba-published-day-difference"
+    },
+    {
+      "task": "identity-chiricahua-mexico-own-communities",
+      "state": "needs_review",
+      "result": "The INPI map's one N'dee/N'nee/Ndé record has type Sede in Chihuahua. The source guide distinguishes it from a government, territorial boundary and complete community inventory.",
+      "receipts": [
+        "receipts/mx-inpi-page-2026-10-15.receipt.json",
+        "receipts/mx-inpi-map-2026-10-15.receipt.json",
+        "receipts/mx-source-read-0-2026-10-15.receipt.json"
+      ],
+      "preserved": "All three canonical resource subject bindings and previous source dates for sources not re-read. No coordinates copied.",
+      "followup": "followup-chiricahua-mexico-permissible-own-governments"
+    }
+  ],
+  "implementation": [
+    "Supporting source links require confined successful receipts, matching HTTPS source/final URLs, measured hashes and timezone-aware timestamps. Page references and list sizes are bounded.",
+    "A held discrepancy subject suppresses its supporting source links and labels.",
+    "Profile Link Pending now explains that an existing profile may need a reviewed identity match; it does not assert profile absence.",
+    "The public Mission states humanity agency, truth, dignity, sovereignty, universal peace as moral horizon, care for ecosystems and evidence-based accountability. It preserves human choice and excludes private personal material.",
+    "The founder note now describes optional online disclosure as a standard instead of promising all data always stays on the device.",
+    "The refreshed Claude handoff carries the mission, actual source status and a read-only cinema inventory assignment. The owner will paste it into Claude; a response is not yet received."
+  ],
+  "measured_collection": {
+    "canonical_profiles": 457,
+    "canonical_raw_facts": 1287,
+    "public_facts_from_deterministic_build": 1285,
+    "held_facts_from_deterministic_build": 2,
+    "queue_tasks": 1792,
+    "source_inventory_records_from_previous_reviewed_baseline": 2260,
+    "source_inventory_record_count_meaning": "Mixed-scope source records, not distinct Nations and not complete US or worldwide coverage.",
+    "canonical_model_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "canonical_facts_added": 0,
+    "human_approvals_added": 0
+  },
+  "independent_reviews": [
+    "2026-10-15-source-followups.independent-review.json",
+    "2026-10-15-public-mission.independent-review.json"
+  ],
+  "human_review": false,
+  "checks": {
+    "pytest": {
+      "passed": 198,
+      "failed": 0,
+      "seconds": 129.72,
+      "command": "py -3.10 -m pytest tools/tests -q -p no:cacheprovider"
+    },
+    "nations_build_check": "passed; 581 generated pages; lint, fonts, CSP, links, sizes and contrast gates passed",
+    "release_check": "passed; CSP, visible copy, release state, log and status slots",
+    "research_queue_validation": "passed with no errors",
+    "game_export_check": "passed",
+    "git_diff_check": "passed",
+    "protected_paths": "Git diff against HEAD is empty for canonical model, game, supplied intro audio and vercel.json.",
+    "browser_visual_review": "Not performed this cycle. No browser is available in the permitted Computer Use app inventory; previous checks retain their original date."
+  },
+  "unresolved": [
+    "Exact Catawba source-day difference and legal effective date.",
+    "Permissible own-published sources for distinct Mexican community governing relationships. Robots-blocked candidate content remains unread.",
+    "US and worldwide Indigenous coverage remains incomplete; persistent discovery and identity queues remain active.",
+    "Claude cinema tool inventory and proposal await the owner relay; no render is claimed.",
+    "Fresh browser layout verification and live publication byte verification remain separate unperformed steps at recording."
+  ]
+}

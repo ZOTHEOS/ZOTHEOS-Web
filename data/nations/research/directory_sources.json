@@ -517,6 +517,54 @@
       "discovery_date": "2026-10-14",
       "status": "source_retrieved",
       "note": "Catawba recognition announcement differs from directory wording; the displayed June 6 has no established event year. Keep unresolved."
+    },
+    {
+      "source_id": "us-nc-june-2026-minutes",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+      "allowed_hosts": [
+        "www.doa.nc.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Approved commission minutes record the June 2026 vote; June5 minutes vsJune6 announcement day difference retained."
+    },
+    {
+      "source_id": "us-nc-april-2026-minutes",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.doa.nc.gov/cia/commission-indian-affairs-april-14-2026-minutes/download?attachment=",
+      "allowed_hosts": [
+        "www.doa.nc.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Committee-report acceptance is distinct from the later final vote."
+    },
+    {
+      "source_id": "mx-inpi-map-ndee",
+      "countries": [
+        "MX"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/ndee-04-25.kml",
+      "allowed_hosts": [
+        "catalogo.inpi.gob.mx"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "One Sede source record, not all communities, a government identity or territory."
     }
   ]
 }

@@ -28,15 +28,44 @@
     {
       "subject_directory_id": "us-state-nc-catawba-nation",
       "status": "unresolved",
-      "kind": "recognition_statement_conflict",
+      "kind": "recognition_statement_and_day_difference",
       "directory_statement": "has petitioned for state recognition",
       "announcement_statement": "officially became a state-recognized tribe in North Carolina",
       "announcement_url": "https://www.doa.nc.gov/divisions/american-indian-affairs",
       "announcement_receipt": "receipts/us-nc-doa-indian-affairs-2026-10-14.receipt.json",
       "event_date": null,
       "displayed_month_day": "June 6",
-      "event_year_status": "not established from announcement text",
-      "note": "Preserve nine source listings without claiming a certified nine-tribe state-recognition total; no effective date inferred."
+      "event_year_status": "2026 established by approved commission minutes, not inferred from URL or calendar",
+      "note": "The approved minutes establish recognition approval in June 2026. The directory still describes a petition, and the DOA announcement gives June 6 rather than the minutes’ June 5 date. Preserve both differences; no effective legal day assigned.",
+      "event_month": "2026-06",
+      "minutes_url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+      "minutes_receipt": "receipts/us-nc-doa-june-2026-minutes-2026-10-15.receipt.json",
+      "minutes_meeting_date": "2026-06-05",
+      "supporting_sources": [
+        {
+          "label": "Read the approved June 2026 commission minutes",
+          "url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+          "receipt": "receipts/us-nc-doa-june-2026-minutes-2026-10-15.receipt.json",
+          "pages": [
+            1,
+            5,
+            7,
+            19
+          ]
+        },
+        {
+          "label": "Read the April 2026 committee report discussion",
+          "url": "https://www.doa.nc.gov/cia/commission-indian-affairs-april-14-2026-minutes/download?attachment=",
+          "receipt": "receipts/us-nc-doa-april-2026-minutes-2026-10-15.receipt.json",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        }
+      ],
+      "reviewed_at": "2026-10-15T07:13:04.821219+00:00",
+      "review_kind": "AI-assisted source and scanned-page review; no human or Nation approval claimed"
     }
   ],
   "checks": {
@@ -246,7 +275,7 @@
   "scoped_notes": [
     {
       "kind": "alert",
-      "text": "The DOA directory says Catawba has petitioned for state recognition. The DOA Indian Affairs landing page announces recognition at a June 6 meeting without giving the year. The two accounts differ; recognition timing remains under review.",
+      "text": "Approved NC commission minutes record Catawba state recognition in June 2026. The minutes are dated June 5; the DOA announcement says June 6 without giving the year, and its directory still describes a petition. The exact day remains unresolved between these sources.",
       "directory_ids": [
         "us-state-nc-catawba-nation"
       ]

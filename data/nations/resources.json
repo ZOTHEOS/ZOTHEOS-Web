@@ -249,7 +249,7 @@
       "title": "Chiricahua histories across the border",
       "kind": "Community histories and a Mexican public catalogue",
       "scope": "United States and Mexico; distinct source categories",
-      "summary": "Start with Fort Sill and Mescalero's own histories, then read the Chiricahua Apache Nation's account of its councils. INPI's Mexican entry concerns a broader people. Related ancestry is not proof of one shared government or exclusive representation; named Mexican communities still need their own source review.",
+      "summary": "Start with Fort Sill and Mescalero's own histories, then the Chiricahua Apache Nation's account of its councils. INPI concerns a broader people: its linked map contains a Chihuahua record labelled N'dee/N'nee/Ndé with type Sede (seat). This is not a complete Mexican community list, a Chiricahua government or a territorial boundary. Related ancestry does not make present governments interchangeable.",
       "links": [
         {
           "label": "Fort Sill Apache history",
@@ -270,6 +270,10 @@
         {
           "label": "INPI catalogue update, February 21, 2025",
           "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/2025_02_21_MAT_inpi.pdf"
+        },
+        {
+          "label": "INPI map source (KML): one seat record, not a territory map",
+          "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/ndee-04-25.kml"
         }
       ],
       "sources": [
@@ -295,13 +299,19 @@
           "title": "N’dee",
           "publisher": "Instituto Nacional de los Pueblos Indígenas",
           "url": "https://catalogo.inpi.gob.mx/ndee/",
-          "accessed": "2026-10-12"
+          "accessed": "2026-10-15"
         },
         {
           "title": "Catalogue update, February 21, 2025",
           "publisher": "Instituto Nacional de los Pueblos Indígenas",
           "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/2025_02_21_MAT_inpi.pdf",
           "accessed": "2026-10-12"
+        },
+        {
+          "title": "Linked N’dee map source, type Sede",
+          "publisher": "Instituto Nacional de los Pueblos Indígenas",
+          "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/ndee-04-25.kml",
+          "accessed": "2026-10-15"
         }
       ],
       "nation_ids": [

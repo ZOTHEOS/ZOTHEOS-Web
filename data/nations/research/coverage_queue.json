@@ -57280,12 +57280,13 @@
       "region": "mx-north-us-southwest",
       "priority": 100,
       "priority_reason": "owner_requested_chiricahua_ute",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "mx-inpi-catalogue",
         "priority-fort-sill",
         "priority-mescalero",
-        "priority-chiricahua-nation"
+        "priority-chiricahua-nation",
+        "mx-inpi-map-ndee"
       ],
       "review": {
         "identity": "pending",
@@ -57300,11 +57301,21 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
+      "receipts": [
+        {
+          "source_id": "mx-inpi-map-ndee",
+          "url": "https://catalogo.inpi.gob.mx/wp-content/uploads/2024/08/ndee-04-25.kml",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "retrieved_at": "2026-10-15T07:11:29.731959Z",
+          "sha256": "010d8888c38c3b8eedea21471c3f57df111cb4820d24429f01fc2f0f1647ea36",
+          "receipt_id": "r-4f6d22873bafba70"
+        }
+      ],
+      "updated_at": "2026-10-15T07:18:42.280512+00:00",
       "next_attempt_after": null,
       "lease_until": null,
-      "note": "INPI broad people-level account was read; named Mexican communities and their own contemporary governing sources remain unresolved. Do not equate this category to one Chiricahua government or infer recognition."
+      "note": "INPI map source retrieved 2026-10-15 contains a named N'dee/N'nee/Ndé Sede record in Chihuahua, not a Chiricahua government or complete Mexican community inventory. Own-published candidate site nacion-ndee-nnee-nde.org located, but robots.txt HTTP 200 disallows / and no site content was fetched. Governing identities and own names remain unresolved. INALI report read failures are retained, with no facts inferred."
     },
     {
       "task_id": "identity-ca-profile-050",
@@ -59738,10 +59749,12 @@
       "region": "us-inclusion-work",
       "priority": 97,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-nc-tribal-directory",
-        "us-nc-indian-affairs"
+        "us-nc-indian-affairs",
+        "us-nc-june-2026-minutes",
+        "us-nc-april-2026-minutes"
       ],
       "review": {
         "identity": "pending",
@@ -59759,9 +59772,21 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "source_id": "us-nc-june-2026-minutes",
+          "url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "retrieved_at": "2026-10-15T07:01:11.628761+00:00",
+          "sha256": "8397fc5985cbf9915f4824f76e78d0aa7fe84a95a2220c441cde07fc1dc1dfa6",
+          "receipt_id": "r-e6660c1ff4e73fd6"
+        }
+      ],
+      "updated_at": "2026-10-15T07:18:42.058732+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Approved minutes establish June2026 approval; exact day remains June5inminutes vsJune6announcement. Original directory observation/count and identity crosswalks remain unchanged. AI-reviewed public note and citations need reviewed PR."
     },
     {
       "task_id": "discover-us-state-al",
@@ -61653,6 +61678,68 @@
       "candidate_registry_ids": [
         "lumbee-tribe-us-nc"
       ]
+    },
+    {
+      "task_id": "followup-catawba-published-day-difference",
+      "task_type": "identity_review",
+      "entity_id": null,
+      "subject": "Catawba: reconcile June5 minutes and June6 announcement through permissible primary correction",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 92,
+      "priority_reason": "unresolved_source_difference_or_own_identity_gap",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-june-2026-minutes",
+        "us-nc-indian-affairs"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T07:18:41.774663+00:00",
+      "next_attempt_after": "2026-10-22T07:18:42.324211+00:00",
+      "note": "No routine repeat report for unchanged sources. No outreach or access-rule bypass; no canonical match or legal adjudication."
+    },
+    {
+      "task_id": "followup-chiricahua-mexico-permissible-own-governments",
+      "task_type": "identity_review",
+      "entity_id": null,
+      "subject": "Find permissible own-published sources naming Mexican Chiricahua-identifying communities and their governing relationships",
+      "entity_type": "research_subject",
+      "countries": [
+        "MX"
+      ],
+      "region": "mx-north-us-southwest",
+      "priority": 92,
+      "priority_reason": "unresolved_source_difference_or_own_identity_gap",
+      "status": "pending",
+      "allowed_source_ids": [
+        "mx-inpi-catalogue",
+        "mx-inpi-map-ndee"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T07:18:41.774663+00:00",
+      "next_attempt_after": "2026-10-22T07:18:42.324211+00:00",
+      "note": "No routine repeat report for unchanged sources. No outreach or access-rule bypass; no canonical match or legal adjudication."
     }
   ]
 }

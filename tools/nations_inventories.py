@@ -153,6 +153,19 @@ def documents(root):
             if discrepancy.get('subject_directory_id') not in entry_ids or discrepancy.get('status') != 'unresolved':
                 raise ValueError('Inventory discrepancy needs its known held-capable subject')
             https(discrepancy['announcement_url'])
+            supporting = discrepancy.get('supporting_sources', [])
+            if not isinstance(supporting, list) or len(supporting) > 8:
+                raise ValueError('Inventory supporting sources exceed their bounded contract')
+            for evidence in supporting:
+                text(evidence.get('label'), 'supporting source label', 240)
+                https(evidence.get('url'))
+                measured = state_receipt(folder, evidence.get('receipt'))
+                if measured.get('url') != evidence['url'] or measured.get('final_url') != evidence['url']:
+                    raise ValueError('Supporting source URL must match its measured receipt and destination')
+                pages = evidence.get('pages', [])
+                if (not isinstance(pages, list) or len(pages) > 32
+                        or any(type(page) is not int or page <= 0 for page in pages)):
+                    raise ValueError('Supporting source page references must be bounded positive integers')
         for e in entities:
             if (not re.fullmatch(re.escape(prefix) + r'[a-z0-9]+(?:-[a-z0-9]+)*', e['directory_id'])
                     or e['entity_type'] != unit or e['countries'] != [country]
