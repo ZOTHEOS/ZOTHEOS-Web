@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T16:43:48.659749+00:00",
+  "review_kind": "Independent AI-assisted meaning, source and dignity review",
+  "reviewer": "Codex /root/ute_history_gap_20261015",
+  "proposal_author": false,
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "network_requests": 0,
+  "web_edits": false,
+  "gui_site_checks_claimed": false,
+  "decision": "Both proposed attributed historical context paragraphs and own links are supported as written. No mandatory correction. Normal implementation and publication gates remain.",
+  "unresolved_p1_p2_findings": [],
+  "subject": "ute-indian-tribe-uintah-ouray-us-ut",
+  "proposal_sha256": "50d170f5d90b31305722d8d56c33fcbae5f5d33945a349ed9fbbaff74eaf88ab",
+  "source_receipt_checks": [
+    {
+      "receipt": "ute-indian-about.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-about.body",
+      "body_sha256": "dae5aff3f83fa2e152238c37755816f822b08deec5e5f0396572baf56b811b00",
+      "retrieved_at": "2026-10-15T16:37:28.791246+00:00",
+      "bytes": 557572,
+      "receipt_sha256": "238f7384be3e43d53f7df02d809c90fe6278d3fcde3f6538a2447ab441831347",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-business.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-business.body",
+      "body_sha256": "b58388bbb5c3dc8dbc8478de1e911a039d861c33ca52364576b66fd962f2f4f6",
+      "retrieved_at": "2026-10-15T16:38:20.929172+00:00",
+      "bytes": 548653,
+      "receipt_sha256": "b7c720139abc63e5edaa077d43f44188a2e92b1b8f6dfab240b0af1d1114ec5b",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-home.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-home.body",
+      "body_sha256": "99ee10b99ffd9e27b2795c98cc21daf6116b6d4a2589d3b8d70e1693fe7b7043",
+      "retrieved_at": "2026-10-15T16:36:56.886554+00:00",
+      "bytes": 585569,
+      "receipt_sha256": "915bd4e552b832568fa6fa6fb50fcd7cd0e1f0164c5ba75b785a8ae475737286",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-press-2025.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-press-2025.body",
+      "body_sha256": "5814f83b514745b31e04e387316be400ebf6e0a4da32fdb3f54b8c456afd5f05",
+      "retrieved_at": "2026-10-15T16:38:51.218617+00:00",
+      "bytes": 546837,
+      "receipt_sha256": "0f39c72567b31e516135b2a3b85198ac2f68c4ebf0677bbae79728274efd7a96",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-reservation-2025.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-reservation-2025.body",
+      "body_sha256": "fd44879883021b591a0182366a8f3fcf3295f24e884250dbd6c7b8fac05c8e71",
+      "retrieved_at": "2026-10-15T16:39:27.386555+00:00",
+      "bytes": 497720,
+      "receipt_sha256": "40fe01d055b2afcdcb41ff1a868cff815680dcfbb821850004beaee40ee5c82f",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-robots-initial.receipt.json",
+      "http_status": null,
+      "diagnostic_preserved": true,
+      "sha256": "2020bbd4d705e1ea1ad2b584d1c4914509aef5fe10af4391f69683f61853865b"
+    },
+    {
+      "receipt": "ute-indian-robots.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-robots.body",
+      "body_sha256": "3d2864e991a40958693abbd208f1504927955958a144ab4b9e581b2d4e622bf6",
+      "retrieved_at": "2026-10-15T16:36:39.605398+00:00",
+      "bytes": 315,
+      "receipt_sha256": "ae1c4ab5ef4515fe46a09e48cdded770037488e69a937c50d691ebb21b8a38a6",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-water-case-2025.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-water-case-2025.body",
+      "body_sha256": "80a5d334d6fa4a5c24c5be74242e07011d626d3d994621ea0e620175d3bfbd8e",
+      "retrieved_at": "2026-10-15T16:39:50.744298+00:00",
+      "bytes": 124787,
+      "receipt_sha256": "bcd06e29aad62cb30c54f3776193d808f446d5f567a7ead59323aa9341cc1e1c",
+      "matching_capture": true
+    },
+    {
+      "receipt": "ute-indian-water.receipt.json",
+      "http_status": 200,
+      "body": "ute-indian-water.body",
+      "body_sha256": "f9b63e4c5fe761dd0564cae55be47072b2b3596bf77f531350a57dff6e9e229c",
+      "retrieved_at": "2026-10-15T16:37:58.877293+00:00",
+      "bytes": 536381,
+      "receipt_sha256": "b9d52bbd3f594bb97534da8ea051e5aabf593469cd5fde4637bc83a4c0b18579",
+      "matching_capture": true
+    }
+  ],
+  "minimum_observed_request_start_interval_seconds": 10.423699378967285,
+  "saved_robots_rules_checked": true,
+  "pdf_checks": [
+    {
+      "file": "ute-indian/ute-indian-reservation-2025.body",
+      "sha256": "fd44879883021b591a0182366a8f3fcf3295f24e884250dbd6c7b8fac05c8e71",
+      "pages": 2,
+      "extracted_text_characters": [
+        2186,
+        831
+      ],
+      "all_pages_visually_reviewed": true
+    },
+    {
+      "file": "ute-indian/ute-indian-water-case-2025.body",
+      "sha256": "80a5d334d6fa4a5c24c5be74242e07011d626d3d994621ea0e620175d3bfbd8e",
+      "pages": 2,
+      "extracted_text_characters": [
+        0,
+        0
+      ],
+      "all_pages_visually_reviewed": true
+    }
+  ],
+  "visual_page_findings": [
+    {
+      "file": "ute-indian/reservation-page-1.png",
+      "sha256": "6c311af8f7597b30f10aa1e446f48a08f1b60f66574171c01a87033ab5c17de5",
+      "finding": "Read entire page. It states the 1880 Act and 1882 Executive Order and describes stock grazing and later energy development. Its legal illegality/title assertions remain attributed to the Tribe in proposed copy. December 16 has no year printed."
+    },
+    {
+      "file": "ute-indian/reservation-page-2.png",
+      "sha256": "303011d685317fd33ca27f758f8e5c6a80380af1e9b9cfb0bbf05cb4f1aa36dd",
+      "finding": "Read entire page. Continues the Tribe's argument about land title and congressional acts. No publication date or final judgment printed. Proposed paragraph does not imply a court adopted this position."
+    },
+    {
+      "file": "ute-indian/water-page-1.png",
+      "sha256": "1c93580fd9dfd1a083722cb7cf63bc8e857a790106d2a69b60f808a7cb71cdce",
+      "finding": "Read entire scanned page. Printed statement date July 10, 2025; reported court report and recommendation July 8, 2025; source references 1923 Cedarview Decree. Repeated recommendation language supports cautious procedural wording, not a final judgment."
+    },
+    {
+      "file": "ute-indian/water-page-2.png",
+      "sha256": "f7ced2a292ca55a6ad9d50e7e4b519442fc24351382aaacc0fcad708f81c0b71",
+      "finding": "Read entire scanned page. Source links water protection to Tribal ranchers/farmers and sovereignty. Personal names, current membership/acreage, photo and private litigant identifiers are absent from proposed public copy."
+    }
+  ],
+  "source_scope_findings": [
+    "Eight successful records match actual body hashes, sizes and timezone-aware retrieval timestamps. Initial DNS failure has no invented body/hash/status.",
+    "PDFs were located through retained own press-archive links on approved utetribe.com. No outside-domain captures or redirects appear in the receipt set.",
+    "First source's archive label February 8, 2025 is not promoted to a printed PDF publication date or a December hearing year.",
+    "Second source is an attributed July 2025 statement. Neither the underlying court recommendation nor a current docket was independently fetched, so no final judgment, present legal title, violation finding or 2026 victory is approved.",
+    "1923, 1880 and 1882 are historical years stated by these own sources, not October 2026 events.",
+    "Southern Ute, Ute Mountain Ute and broader Nuche identities remain distinct."
+  ],
+  "limits": [
+    "No canonical facts, old check dates or source-matching receipts are reapproved by this review.",
+    "Fresh context headings and paragraphs must follow profile and fact removal controls, exact source approval and normal reviewed-PR gates.",
+    "This is AI-assisted document review, not human or Nation approval and not website layout verification."
+  ],
+  "checked_source_pins": [
+    {
+      "path": "ute-indian/reservation-page-1.png",
+      "sha256": "6c311af8f7597b30f10aa1e446f48a08f1b60f66574171c01a87033ab5c17de5"
+    },
+    {
+      "path": "ute-indian/reservation-page-2.png",
+      "sha256": "303011d685317fd33ca27f758f8e5c6a80380af1e9b9cfb0bbf05cb4f1aa36dd"
+    },
+    {
+      "path": "ute-indian/ute-indian-about.body",
+      "sha256": "dae5aff3f83fa2e152238c37755816f822b08deec5e5f0396572baf56b811b00"
+    },
+    {
+      "path": "ute-indian/ute-indian-about.links.json",
+      "sha256": "c09d1bf9c00e3990772f4dbced0f63dfe8a52f371c183ef16fc3c3fd416b7c38"
+    },
+    {
+      "path": "ute-indian/ute-indian-about.receipt.json",
+      "sha256": "238f7384be3e43d53f7df02d809c90fe6278d3fcde3f6538a2447ab441831347"
+    },
+    {
+      "path": "ute-indian/ute-indian-business.body",
+      "sha256": "b58388bbb5c3dc8dbc8478de1e911a039d861c33ca52364576b66fd962f2f4f6"
+    },
+    {
+      "path": "ute-indian/ute-indian-business.links.json",
+      "sha256": "224372ad0cdf4b694ada73a681676ca4d16838d37983b25813b7a950cbd3f925"
+    },
+    {
+      "path": "ute-indian/ute-indian-business.receipt.json",
+      "sha256": "b7c720139abc63e5edaa077d43f44188a2e92b1b8f6dfab240b0af1d1114ec5b"
+    },
+    {
+      "path": "ute-indian/ute-indian-home.body",
+      "sha256": "99ee10b99ffd9e27b2795c98cc21daf6116b6d4a2589d3b8d70e1693fe7b7043"
+    },
+    {
+      "path": "ute-indian/ute-indian-home.links.json",
+      "sha256": "a15d1eebdd8eaea3c4cafa76dda0276e3e5efd392bf41b81ad58e27d4963b1c8"
+    },
+    {
+      "path": "ute-indian/ute-indian-home.receipt.json",
+      "sha256": "915bd4e552b832568fa6fa6fb50fcd7cd0e1f0164c5ba75b785a8ae475737286"
+    },
+    {
+      "path": "ute-indian/ute-indian-press-2025.body",
+      "sha256": "5814f83b514745b31e04e387316be400ebf6e0a4da32fdb3f54b8c456afd5f05"
+    },
+    {
+      "path": "ute-indian/ute-indian-press-2025.links.json",
+      "sha256": "2ccfc691e4e967475477f2ffc1613ceacb421420a98a2840bc816d73a57bd2f2"
+    },
+    {
+      "path": "ute-indian/ute-indian-press-2025.receipt.json",
+      "sha256": "0f39c72567b31e516135b2a3b85198ac2f68c4ebf0677bbae79728274efd7a96"
+    },
+    {
+      "path": "ute-indian/ute-indian-reservation-2025.body",
+      "sha256": "fd44879883021b591a0182366a8f3fcf3295f24e884250dbd6c7b8fac05c8e71"
+    },
+    {
+      "path": "ute-indian/ute-indian-reservation-2025.receipt.json",
+      "sha256": "40fe01d055b2afcdcb41ff1a868cff815680dcfbb821850004beaee40ee5c82f"
+    },
+    {
+      "path": "ute-indian/ute-indian-robots-initial.receipt.json",
+      "sha256": "2020bbd4d705e1ea1ad2b584d1c4914509aef5fe10af4391f69683f61853865b"
+    },
+    {
+      "path": "ute-indian/ute-indian-robots.body",
+      "sha256": "3d2864e991a40958693abbd208f1504927955958a144ab4b9e581b2d4e622bf6"
+    },
+    {
+      "path": "ute-indian/ute-indian-robots.receipt.json",
+      "sha256": "ae1c4ab5ef4515fe46a09e48cdded770037488e69a937c50d691ebb21b8a38a6"
+    },
+    {
+      "path": "ute-indian/ute-indian-water-case-2025.body",
+      "sha256": "80a5d334d6fa4a5c24c5be74242e07011d626d3d994621ea0e620175d3bfbd8e"
+    },
+    {
+      "path": "ute-indian/ute-indian-water-case-2025.receipt.json",
+      "sha256": "bcd06e29aad62cb30c54f3776193d808f446d5f567a7ead59323aa9341cc1e1c"
+    },
+    {
+      "path": "ute-indian/ute-indian-water.body",
+      "sha256": "f9b63e4c5fe761dd0564cae55be47072b2b3596bf77f531350a57dff6e9e229c"
+    },
+    {
+      "path": "ute-indian/ute-indian-water.links.json",
+      "sha256": "645521a459102a40c346edcc7ccb4cad4037129fabc1573735760fe8dcd8c0b5"
+    },
+    {
+      "path": "ute-indian/ute-indian-water.receipt.json",
+      "sha256": "b9d52bbd3f594bb97534da8ea051e5aabf593469cd5fde4637bc83a4c0b18579"
+    },
+    {
+      "path": "ute-indian/water-page-1.png",
+      "sha256": "1c93580fd9dfd1a083722cb7cf63bc8e857a790106d2a69b60f808a7cb71cdce"
+    },
+    {
+      "path": "ute-indian/water-page-2.png",
+      "sha256": "f7ced2a292ca55a6ad9d50e7e4b519442fc24351382aaacc0fcad708f81c0b71"
+    }
+  ],
+  "file_pins": {
+    "ute-indian/history-context-handoff.json": "50d170f5d90b31305722d8d56c33fcbae5f5d33945a349ed9fbbaff74eaf88ab",
+    "ute-indian/request_ledger.json": "644d99ee24698e6d268b61c4a7466524610ea4299f883e43255b52fc2d74d8e3"
+  }
+}

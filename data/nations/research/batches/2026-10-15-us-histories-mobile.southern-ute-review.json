@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T16:43:43.078949+00:00",
+  "station": {
+    "seat": "Independent source meaning and respect reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE as assigned",
+    "cycle": "us-histories-mobile-2026-10-15"
+  },
+  "authorship_independence": "Reviewer authored the separate Ute Indian Tribe package, not the Southern Ute candidate.",
+  "subject": "southern-ute-indian-tribe-us-co",
+  "review_kind": "AI-assisted independent retained-body, meaning, date and respect review",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "findings": [],
+  "outcome": "No unresolved source meaning or respect findings in the three proposed paragraphs and two public own links. Ready for root implementation, acceptance, publication and live gates.",
+  "meaning_checks": [
+    {
+      "title": "Homelands Before Reservation Boundaries",
+      "result": "pass",
+      "basis": "Independently extracted raw history HTML identifies Mouache eastern Rocky Mountain homelands into New Mexico, Caputa south of Conejos River/San Luis Valley/headwaters, and those two bands as Southern Ute. Candidate preserves source attribution and historical/current-boundary distinction."
+    },
+    {
+      "title": "Allotment And Different Paths",
+      "result": "pass",
+      "basis": "History says Hunter Act1895 opened Ute Strip to homesteading/sale and allotment, describes Weenuchiu communal landholding/westward move versus Mouache/Caputa allotments. Chronology separately says1896 allotments distributed. Candidate does not make related bands interchangeable governments."
+    },
+    {
+      "title": "Restoration And Future Generations",
+      "result": "pass",
+      "basis": "Chronology prints1937 Restoration Act return and1984 Tribal Council education resolution with higher-education committee/program. Candidate attributes both to chronology, omits acreage and current program/title inference, and retains community agency alongside land loss."
+    },
+    {
+      "title": "Source uncertainty",
+      "result": "pass",
+      "basis": "1868 acreage inconsistency and1896 severalty wording issue remain explicitly recorded and excluded; no independent legal effect/current title or precise month/day beyond printed historical years is inferred."
+    },
+    {
+      "title": "Respect and publisher scope",
+      "result": "pass",
+      "basis": "No personal contacts, current officeholders, source graphics, seals, ceremonies, origin account, medicinal claim or sensitive coordinates enter publication. Caputa is source wording, not an approved new alias. Distinct Ute governments remain separate."
+    },
+    {
+      "title": "Dates and urgency",
+      "result": "pass",
+      "basis": "Pages have no asserted publication dates. Server Last-Modified coincides with request time and is not promoted to publication/event date. Printed historical years1895,1896,1937,1984 remain attributed. No present emergency, current eligibility or funding claim."
+    }
+  ],
+  "retained_source_receipt_checks": [
+    {
+      "source_id": "southern-ute-robots-2026-10-15",
+      "url": "https://www.southernute-nsn.gov/robots.txt",
+      "retrieved_at": "2026-10-15T16:36:06.397716+00:00",
+      "sha256": "686ca9dced97ba1e383988e89962f5081e23f9eee335cd63a894604193c28a15",
+      "http_status": 200,
+      "capture_hash_and_size_match": true
+    },
+    {
+      "source_id": "southern-ute-lands-2026-10-15",
+      "url": "https://www.southernute-nsn.gov/natural-resources/lands/",
+      "retrieved_at": "2026-10-15T16:36:16.533801+00:00",
+      "sha256": "dd1f637098dd87d11ed78206abdbfa1eaee29c11b58192fdbd46eb7b4e0c0591",
+      "http_status": 200,
+      "capture_hash_and_size_match": true
+    },
+    {
+      "source_id": "southern-ute-history-2026-10-15",
+      "url": "https://www.southernute-nsn.gov/history/",
+      "retrieved_at": "2026-10-15T16:36:26.853058+00:00",
+      "sha256": "919863eee9e22f04eb81f2d7046a45e14df7ffe1753ae8646c21eac722d8bc9b",
+      "http_status": 200,
+      "capture_hash_and_size_match": true
+    },
+    {
+      "source_id": "southern-ute-chronology-2026-10-15",
+      "url": "https://www.southernute-nsn.gov/history/chronology/",
+      "retrieved_at": "2026-10-15T16:37:28.625933+00:00",
+      "sha256": "a2170c1b5b3e53cfdf62139347965c6b9263b5137b661c2c595ae9dab4973ef3",
+      "http_status": 200,
+      "capture_hash_and_size_match": true
+    }
+  ],
+  "observed_request_start_intervals_seconds": [
+    10.136085,
+    10.319257,
+    61.772875
+  ],
+  "robots_crawl_delay_seconds": 10,
+  "receipt_metadata_note": "Candidate source objects add robots_crawl_delay_seconds and min_host_interval_seconds beyond original capture receipts. Actual source receipt fields match; request timestamps independently show intervals of at least10seconds. No bytes or timestamps were altered.",
+  "paragraph_character_counts": [
+    371,
+    455,
+    378
+  ],
+  "artifact_file_sha256": {
+    "southern-ute/history-context-handoff.json": "2b560091865b4a48c6d0fd63629ce48cd4265d7c2c64d27b6f6ca83ab6522e3d",
+    "southern-ute/southern-ute-chronology-2026-10-15.body": "a2170c1b5b3e53cfdf62139347965c6b9263b5137b661c2c595ae9dab4973ef3",
+    "southern-ute/southern-ute-chronology-2026-10-15.independent-text.txt": "270decb92a9f5b01696701d4a34cd0975ac7e1ee7468e911bb1a495306a913e2",
+    "southern-ute/southern-ute-chronology-2026-10-15.receipt.json": "2e7959ff96a8c78e4320edc81e1d261cfb17b1790a8074d70418a1e20295a98f",
+    "southern-ute/southern-ute-history-2026-10-15.body": "919863eee9e22f04eb81f2d7046a45e14df7ffe1753ae8646c21eac722d8bc9b",
+    "southern-ute/southern-ute-history-2026-10-15.independent-text.txt": "5cb18d806f22d683d4c7eb017bf04a838f731eeced3522ae32090a2ef8bd135b",
+    "southern-ute/southern-ute-history-2026-10-15.receipt.json": "0c99c8ef34e2719928fdc4f69b580c540be5c2f070b6d1c45dad879c49a0ae24",
+    "southern-ute/southern-ute-lands-2026-10-15.body": "dd1f637098dd87d11ed78206abdbfa1eaee29c11b58192fdbd46eb7b4e0c0591",
+    "southern-ute/southern-ute-lands-2026-10-15.receipt.json": "3c8177fc5d77b38de78cf753f56e325889acef554839ab12701d8103a785a468",
+    "southern-ute/southern-ute-robots-2026-10-15.body": "686ca9dced97ba1e383988e89962f5081e23f9eee335cd63a894604193c28a15",
+    "southern-ute/southern-ute-robots-2026-10-15.receipt.json": "80cdf1b943a2af5644d0cc99624bf4eb49301b3817d1cb314c05fd5ca3b7c2bc"
+  },
+  "remaining_gates": [
+    "Root final assembled text/source links, profile and fact-reference hold filtering, heading accessibility/escaping acceptance.",
+    "Canonical fact and old review clocks remain unchanged; new context date is actual source review only.",
+    "Required deterministic build/full tests/reviewed PR and actual live-byte verification.",
+    "No fresh GUI/phone/screen-reader check is claimed by this read-only source review."
+  ]
+}

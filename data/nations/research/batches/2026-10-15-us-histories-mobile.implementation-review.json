@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T16:49:49.081610+00:00",
+  "station": {
+    "seat": "Independent source/history implementation reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE as assigned",
+    "cycle": "us-histories-mobile-2026-10-15"
+  },
+  "review_kind": "AI-assisted independent final worktree code, source-binding, receipt and hold review",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "gui_verified": false,
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "findings": [],
+  "outcome": "No unresolved P1/P2 findings in reviewed history implementation scope. Exact five proposed paragraphs and four resources are integrated with truthful dates, attribution and limits. Root release/live and separate directory UI gates remain.",
+  "source_and_code_checks": [
+    "Five public paragraphs and titles exactly equal independently cross-reviewed candidates; four public resource nation/URL/label/purpose bindings exactly match proposals.",
+    "All four context sources map to exact nation/link catalogue entries and successful measured receipt URLs/hashes/check timestamps. Unknown first PDF publication/hearing year stays unknown; July2025 statement is not promoted to final judgment/current outcome.",
+    "Optional title requires nonempty string<=160characters, rejects whitespace-only values and escapes h3 before body. It is appended only after the shared visibility filter; removing/holding a note removes its title too. Untitled output remains byte-identical in the independent acceptance fixture.",
+    "Existing exact nation/URL allowlist, actual UTC context-review ceiling, public fact-reference checks, profile removal filtering and source bounds remain intact.",
+    "Independent actual-data in-memory hide simulations removed all new target titles/paragraphs/resources with the target profile without leaking them into the other government page.",
+    "All19 sanitized receipts preserve original source status/URL/time/hash/size fields. Eighteen body-backed captures match actual retained body hashes/sizes; one DNS failure has no invented status/body/hash/size. HTTP500 robots remains failure, not verified content.",
+    "Nanticoke ownership chain remains blocked with dated retry, identity pending, official_url=null and unreviewed crosswalk. Unverified new-site history is not in public context.",
+    "Canonical registry/fact clocks, old contexts, overrides, human receipts, holds, game and supplied audio exactly match baseline bytes. No completeness, current legal outcome or urgency claim added."
+  ],
+  "independent_tests": {
+    "command_scope": "test_context_note_headings_acceptance.py, test_nations_context.py, test_context_review_clock_acceptance.py",
+    "passed": 28,
+    "failed": 0,
+    "exit_code": 0,
+    "runtime_seconds_reported": 0.25,
+    "post_process_note": "pyreadline3 console-destructor invalid-handle message emitted after results; no GUI claim."
+  },
+  "receipt_checks": [
+    {
+      "path": "data/nations/research/receipts/us-southern-ute-southern-ute-chronology-2026-10-15-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "a2170c1b5b3e53cfdf62139347965c6b9263b5137b661c2c595ae9dab4973ef3",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-southern-ute-southern-ute-history-2026-10-15-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "919863eee9e22f04eb81f2d7046a45e14df7ffe1753ae8646c21eac722d8bc9b",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-southern-ute-southern-ute-lands-2026-10-15-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "dd1f637098dd87d11ed78206abdbfa1eaee29c11b58192fdbd46eb7b4e0c0591",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-southern-ute-southern-ute-robots-2026-10-15-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "686ca9dced97ba1e383988e89962f5081e23f9eee335cd63a894604193c28a15",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-about-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "dae5aff3f83fa2e152238c37755816f822b08deec5e5f0396572baf56b811b00",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-business-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "b58388bbb5c3dc8dbc8478de1e911a039d861c33ca52364576b66fd962f2f4f6",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-home-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "99ee10b99ffd9e27b2795c98cc21daf6116b6d4a2589d3b8d70e1693fe7b7043",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-press-2025-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "5814f83b514745b31e04e387316be400ebf6e0a4da32fdb3f54b8c456afd5f05",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-reservation-2025-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "fd44879883021b591a0182366a8f3fcf3295f24e884250dbd6c7b8fac05c8e71",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-robots-initial-checked-2026-10-15.receipt.json",
+      "http_status": null,
+      "sha256": null,
+      "original_fields_match": true,
+      "body_hash_size_match": false
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-robots-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "3d2864e991a40958693abbd208f1504927955958a144ab4b9e581b2d4e622bf6",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-water-case-2025-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "80a5d334d6fa4a5c24c5be74242e07011d626d3d994621ea0e620175d3bfbd8e",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-ute-indian-ute-indian-water-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "f9b63e4c5fe761dd0564cae55be47072b2b3596bf77f531350a57dff6e9e229c",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-about-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "59e592c158625da2ad61870943d9d05975b5c0e0bbbb57e2b49b4812ab9852a3",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-home-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "10301ba2f287850fa4a3b22597f6a0f1741182870bc28c7f0b7e96c507996963",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-nj-education-pdf-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "7c42ee62f8017e85421172d2fed9da7199210f07a549b5d6f3d57adf0cb61ca5",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-published-nlltribe.com-robots-0-checked-2026-10-15.receipt.json",
+      "http_status": 500,
+      "sha256": "4b9443d1fac58409ab0efe11dba4dbcd7b18b65f8de36412511c5edeaad0332a",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-www.nj.gov-robots-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "ff9ce81f5dd01928fdffd1cca9176678f1d15d1671f6ee5658a063d5d234a421",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-nanticoke-www.nlltribalnation.org-robots-checked-2026-10-15.receipt.json",
+      "http_status": 200,
+      "sha256": "43dbdd521dfd020db2d0832157de24899e7b8e96af2ac125a75fcd8f141be578",
+      "original_fields_match": true,
+      "body_hash_size_match": true
+    }
+  ],
+  "reviewed_worktree_sha256": {
+    "tools/nations_context.py": "d9d09d0bc3aaea19be6c9bd68bfbe924a102ab37d09dc07fcb925674a29f65f8",
+    "tools/tests/test_context_note_headings_acceptance.py": "6f331d24118832b67a162fd7b7e694ca3877f40f580bf99e4aec38c2c85ee1ca",
+    "data/nations/sources/ute-histories-2026-10-15.context.json": "4d47313cf3aef38dd92621ec9b79895584a38c2845a4794c9297f876ee306d35",
+    "data/nations/context_links.json": "577f4d411a8c5806bb59a667e675a6611352200ed80e24a7433a41f3d1cdb0d8",
+    "data/nations/research/coverage_queue.json": "a83c388e2a970117dc6f05950e08807a5cf29fd606222ff119a2fdeed4e73785",
+    "data/nations/research/directory_sources.json": "8e4050738e5eb6eadd75984e6739b5fdff5ce0eae459ee95fe6348eb1bc893e7",
+    "data/nations/research/us_nj_state_directory_2026.json": "ee583864f50842a569fc6d49603491715b9a57c3070f823ccf704d36bef03f36",
+    "data/nations/research/receipts/us-southern-ute-southern-ute-chronology-2026-10-15-checked-2026-10-15.receipt.json": "739b7a8c8c0342503b0e1b7eef3884fdbf814df6dbbae5183fe72984f264dc4f",
+    "data/nations/research/receipts/us-southern-ute-southern-ute-history-2026-10-15-checked-2026-10-15.receipt.json": "7b96e318a511325e38feaac8742855f55b6299e33916420ee6c831c04c023cfe",
+    "data/nations/research/receipts/us-southern-ute-southern-ute-lands-2026-10-15-checked-2026-10-15.receipt.json": "94ea5efa081637c5a8d562f4c599b9946b7510e10da758ed8376d1def0cb6f77",
+    "data/nations/research/receipts/us-southern-ute-southern-ute-robots-2026-10-15-checked-2026-10-15.receipt.json": "534b658271d49b0e9c8da09aa75c82be166a4273b162fee43dc4480d2413a943",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-about-checked-2026-10-15.receipt.json": "0109ecca86c7509676e037204c22b1e4e7ed46d502918ab3b0c56e35967f5803",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-business-checked-2026-10-15.receipt.json": "26c1894402385311b8380123944dca56942ade5d4d3c84067ffabc9950afecc4",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-home-checked-2026-10-15.receipt.json": "80c8efbb0497ffca7147c64eaeda7a67691beb2f4fb7abbfe1dcbb58e08d3422",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-press-2025-checked-2026-10-15.receipt.json": "6a6d6659ddb6085dd8764eb3bdd2e0915faa7e6c08d1ac0a9a35466e11666909",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-reservation-2025-checked-2026-10-15.receipt.json": "555fc7a1bde972c2d6f21c7e8410ac062dee526accbba2e4ba90c5b87d4ac89f",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-robots-initial-checked-2026-10-15.receipt.json": "2a78fd62c5c0002891ce858c55c878de43043a5a9a76f0d5e613246976357a79",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-robots-checked-2026-10-15.receipt.json": "f8471be2d71de2ee9c50546cddbda6abbdffef7454589756d4f4822c707dc476",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-water-case-2025-checked-2026-10-15.receipt.json": "788dfc6f47be3ea55141b03111bb9b95201778ed074fc963284ef7c888c3965e",
+    "data/nations/research/receipts/us-ute-indian-ute-indian-water-checked-2026-10-15.receipt.json": "6f04973f6d8c8fbb90b80f43521bb745d5f67cbe10e9df258bd805493842fe77",
+    "data/nations/research/receipts/us-nanticoke-about-checked-2026-10-15.receipt.json": "56ad6fdad58da5c9c9324cae899561d18eda2923f27c5e5e1d2ebb3cf63abb6c",
+    "data/nations/research/receipts/us-nanticoke-home-checked-2026-10-15.receipt.json": "2420d0059049257632cd1f86a87228866c4c04ea1fa392920f92221cb9f72a45",
+    "data/nations/research/receipts/us-nanticoke-nj-education-pdf-checked-2026-10-15.receipt.json": "d942ae915c326eef75fa1c822d891c9562d676536691b05e6c3323c92d96c51f",
+    "data/nations/research/receipts/us-nanticoke-published-nlltribe.com-robots-0-checked-2026-10-15.receipt.json": "568a853b6b7af3d90137f11883a7bde333ca25c04b5b19aac64d15c547c09fe6",
+    "data/nations/research/receipts/us-nanticoke-www.nj.gov-robots-checked-2026-10-15.receipt.json": "65998a54113527f690850d1266ca099b5fc58e33c493d93036316464eeaf9f31",
+    "data/nations/research/receipts/us-nanticoke-www.nlltribalnation.org-robots-checked-2026-10-15.receipt.json": "b7876f37b5df768dadbbf5219dfebd022f3f3bac60691752609e62e82744e16e"
+  },
+  "protected_worktree_sha256": {
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data/nations/sources/expansion-americas-2026-10-12.context.json": "e625f72f3cd63ec45c4cc3d063e74c522dc9aa247e40dd5483722a804d60aec7",
+    "data/nations/sources/chiricahua-scope-2026-10-12.context.json": "d23da26a51de5c0a1159367419a477994b23bd973ac0a5517c7bd9592f351179",
+    "data/nations/sources/ute-mountain-homelands-2026-10-15.context.json": "24f3f215d2d39f74494e1647cc8b028e95a0781274e54e5ac605329ddf4f74d6",
+    "static/zotheos_intro.mp3": "3f0b3db8cccfff2b9c38808076aa30729e501cefc398522a25c5ec281b75aaa5",
+    "game/index.html": "05b67815f7f332fe95554bd3173a395c19ea6994a8ac9d929a90f526643e4ab4",
+    "game/index.src.html": "f61e3094f0d6e4c215b2231ee3ad8f796ccc80dfe40e9cb0ebfbb69fc952c9cf",
+    "game/nations.json": "ab4e261a61449cd598fa91225249409dbfe2c9e8d6aeec80a07511b34990d101"
+  },
+  "generated_history_html_sha256": {
+    "nations/southern-ute-indian-tribe-us-co.html": "ae011a84d4a37b8e8d3a293a03a134540d0b5b03513f6105ced1b1ad54cfba6b",
+    "nations/ute-indian-tribe-uintah-ouray-us-ut.html": "03914ecf90131ee4871506973b074a288967a5ee98d3963d87677886b0d07748"
+  },
+  "scope_exclusions": [
+    "Docs were still being updated by root and are not reviewed or pinned here.",
+    "Directory UI/code/CSS and rendered mobile layout are outside this history review; separate reviewer handles them.",
+    "Root full-suite/build session still running when review initiated. No full-suite, merge, deploy, live HTTP or GUI result claimed."
+  ],
+  "resolved_limits": [
+    "Southern Ute1868acreage and1896 wording ambiguities remain excluded;1937restoration and1984education are attributed chronology entries.",
+    "Ute Indian first PDF has no established printed publicationdate/hearingyear. Secondis datedJuly10,2025 and reportsJuly8recommendation; no underlying court/currentdocket independently read.",
+    "Sacred origin account, personal contacts, photos, seals, private litigant identifiers and unsupported current acreage/population excluded."
+  ],
+  "review_artifact_sha256": {
+    "independent-southern-ute-history-review.json": "963bd224ce79e92c74780b4ea54bf71818bf5042cc61a7993c4b6a67470778a6",
+    "independent-ute-indian-history-review.json": "e59bbe519f212ab84480444a1a5d406c7b8ac44f092056b690a93a5f1b8edd72",
+    "southern-ute/history-context-handoff.json": "2b560091865b4a48c6d0fd63629ce48cd4265d7c2c64d27b6f6ca83ab6522e3d",
+    "ute-indian/history-context-handoff.json": "50d170f5d90b31305722d8d56c33fcbae5f5d33945a349ed9fbbaff74eaf88ab"
+  }
+}

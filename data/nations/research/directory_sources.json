@@ -396,8 +396,8 @@
       "stated_count": null,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources."
+      "status": "source_retrieved",
+      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources. Own-source historical context re-read October 15, independently reviewed with AI assistance. Historical accounts and dated legal positions do not establish present boundaries or a current case outcome."
     },
     {
       "source_id": "priority-ute-mountain",
@@ -430,8 +430,8 @@
       "stated_count": null,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources."
+      "status": "source_retrieved",
+      "note": "A government distinct from the broader Nuche people entry. Prioritize its own land, water and governance sources. Own-source historical context re-read October 15, independently reviewed with AI assistance. Historical accounts and dated legal positions do not establish present boundaries or a current case outcome."
     },
     {
       "source_id": "priority-mescalero",
@@ -696,6 +696,67 @@
       "discovery_date": "2026-10-15",
       "status": "source_retrieved",
       "note": "Attributed historical settlement announcement. Commission membership does not itself establish legal recognition."
+    },
+    {
+      "source_id": "us-nj-nanticoke-current-site-candidate",
+      "url": "https://www.nlltribalnation.org/",
+      "allowed_hosts": [
+        "www.nlltribalnation.org"
+      ],
+      "entity_unit": "nation_owned_source",
+      "status": "source_retrieved",
+      "note": "Self-branded Tribal-Council-managed site captured as a research candidate. Current ownership link remains pending because the older NJ Education-published host robots returned500. No verified official_url, public history or canonical crosswalk inferred.",
+      "countries": [
+        "US"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "source_scope_review": {
+        "review_kind": "AI-assisted exact-host approval before capture, not human or Nation approval",
+        "approval_receipt": "batches/2026-10-15-us-histories-mobile.json"
+      }
+    },
+    {
+      "source_id": "us-nj-nanticoke-published-site",
+      "url": "https://nlltribe.com/",
+      "allowed_hosts": [
+        "nlltribe.com",
+        "www.nlltribe.com"
+      ],
+      "entity_unit": "nation_owned_source",
+      "status": "source_located",
+      "note": "NJ Education published this homepage link. Its robots returned500 on October15; stopped without a homepage or alternate-host request. Ownership redirect remains unverified; retry no earlier than the queue backoff.",
+      "countries": [
+        "US"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "source_scope_review": {
+        "review_kind": "AI-assisted exact-host approval before capture, not human or Nation approval",
+        "approval_receipt": "batches/2026-10-15-us-histories-mobile.json"
+      }
+    },
+    {
+      "source_id": "us-nj-education-indigenous-history",
+      "url": "https://www.nj.gov/education/standards/socst/docs/integratinghistorydocs/IntegratingIndigenousNJ_HistoryIntoK-12SocialStudies.pdf",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "entity_unit": "research_subject",
+      "status": "source_retrieved",
+      "note": "Published links on physical PDF page31 are research evidence, not confirmation of a newer domain or an identity merge.",
+      "countries": [
+        "US"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "source_scope_review": {
+        "review_kind": "AI-assisted exact-host approval before capture, not human or Nation approval",
+        "approval_receipt": "batches/2026-10-15-us-histories-mobile.json"
+      }
     }
   ]
 }

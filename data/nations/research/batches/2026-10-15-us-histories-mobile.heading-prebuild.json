@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T16:41:41.976858+00:00",
+  "review_kind": "Independent AI-assisted prebuild acceptance",
+  "reviewer": "Codex /root/ute_history_gap_20261015",
+  "human_review_claimed": false,
+  "web_edits": false,
+  "case_file": "test_context_note_headings_acceptance.py",
+  "case_file_sha256": "5bf3d50f6eb075b8d69da6152553070a61bac1ee6fe8c149393b08c55dd5a388",
+  "baseline_context_file": "tools/nations_context.py",
+  "baseline_context_sha256": "d44c0b447cffc4c561d20f9c1fa6203519a03030ba623d8df0abd93a323265ce",
+  "current_context_sha256_after_test": "d44c0b447cffc4c561d20f9c1fa6203519a03030ba623d8df0abd93a323265ce",
+  "pytest": {
+    "python": "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "result": "2 failed, as expected before implementation",
+    "exit_code": 1,
+    "log": "heading-baseline-pytest.txt",
+    "log_sha256": "fc4085fceb84924c26384e46ac929b8c69ef802f4534b9667090031e78d5c361",
+    "cases": [
+      {
+        "name": "test_optional_heading_escapes_precedes_body_and_follows_removal_controls",
+        "measured_red": "The escaped optional heading is missing",
+        "baseline_checks_without_failures": [
+          "Untitled legacy fixture output matches pinned bytes",
+          "Untitled paragraph remains unchanged when adjacent titled note is present",
+          "Model-held profile suppresses paragraph",
+          "Model-held supporting fact suppresses paragraph",
+          "Removing titled note restores exact legacy output"
+        ]
+      },
+      {
+        "name": "test_optional_heading_rejects_invalid_or_oversized_titles",
+        "measured_red": "None, false, number, list, object, empty, whitespace-only, and 161-character titles were silently accepted."
+      }
+    ]
+  },
+  "legacy_fixture_sha256": "87c4c13d07695d90ed417f8406213d4edfbea8ccf0360fcd68df0b18121a8dd1",
+  "acceptance_scope": [
+    "Optional title, if present, must be a nonblank string no longer than 160 characters.",
+    "Escaped h3 with existing n-sec-h style must precede its own paragraph.",
+    "No new CSS, JavaScript or canonical fact-date mutation.",
+    "Old untitled content byte-compatible. Heading follows the same visibility/removal controls as its note."
+  ],
+  "runtime_note": "Pytest printed an interpreter-shutdown pyreadline console warning after the measured 2 expected assertion failures; it is retained in the log, not reported as a website defect.",
+  "fixtures": "Fictional local artifact fixtures only. No real Nation facts or publication data modified."
+}

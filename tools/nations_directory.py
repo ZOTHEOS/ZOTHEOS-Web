@@ -258,21 +258,23 @@ def page(builder):
     out = ['<div class="read n-head prose directory-page">', '<p class="eyebrow">Names And Sources</p>',
            '<h1 class="page-h">Names deserve visibility.</h1>',
            '<p class="lede">Start with a name. Follow its source. See what still needs research.</p>',
+           '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p>',
+           '<label for="directoryQuery">Find a name in this directory</label>',
+           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute, Apache or a community name" aria-controls="directoryNames" aria-describedby="directoryResult">',
+           '<button type="button" id="directoryClear" class="pill">Clear</button></div>',
+           '<div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
+           '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
+           + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div>',
+           '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
+           '<p id="directoryLimit" class="note"></p></div>',
+           '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
+           '<details class="directory-source"><summary>Understand These Records</summary>',
            '<p class="note directory-key"><strong>Profile Link Pending</strong> means this source record has not yet been linked to a researched profile. A profile may already exist under another name; identity review comes first.</p>',
            '<div class="directory-paths"><section><h2>Sourced name records</h2><p>A directory entry is not a researched profile. '
            'Names below retain the published category and date. These different lists cannot be added together as a count of Indigenous nations.</p></section>',
            '<section><h2>Researched profiles</h2><p>' + str(len(builder.m.nations)) + ' profiles of peoples, communities and governing bodies. '
            'Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> '
-           '&middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div>',
-           '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p><div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
-           '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
-           + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div>',
-           '<label for="directoryQuery">Find a name in this directory</label>',
-           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute, Apache or a community name" aria-controls="directoryNames" aria-describedby="directoryResult">',
-           '<button type="button" id="directoryClear" class="pill">Clear</button></div>',
-           '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
-           '<p id="directoryLimit" class="note"></p></div>',
-           '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
+           '&middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div></details>',
            us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
            '<div id="directoryNames"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
            '<h2 id="us-directory-title">United States: the published federal list</h2>',

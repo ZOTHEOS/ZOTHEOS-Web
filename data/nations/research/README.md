@@ -270,3 +270,34 @@ Context review dates now validate against the actual UTC calendar day, independe
 last fact-check day. New source review never requires backdating evidence or advancing unrelated checked,
 last_verified or generated values. Actual future or invalid context dates, wrong nation/URL links, removed
 nations and held fact references still fail or suppress publication under the existing bounded contract.
+
+
+## October 15 own-source histories and mobile directory
+
+The Southern Ute and Ute Indian Tribe profiles gain five short historical context layers and four direct
+own-publisher resources. These stay separate from canonical fact checks. Southern Ute layers cover the
+Mouache and Caputa homelands, allotment, restoration and education. The Ute Indian Tribe layers attribute
+its Uncompahgre land-restoration account and a dated July 2025 water-case statement. A reported court
+recommendation is not a final judgment or a current case outcome. Unknown PDF publication dates and
+hearing years remain unknown. No acreage, present jurisdiction, urgency score or private/sacred detail
+was imported. The two governments and Ute Mountain Ute remain distinct.
+
+Context notes may carry an optional title of at most 160 characters. Invalid, blank and oversized titles
+fail validation. Titles are escaped HTML headings and follow the same publication/removal controls as
+their paragraphs. Untitled legacy output stays identical. Source review dates never advance unrelated
+canonical checked, last_verified or generated dates.
+
+The Nanticoke Lenni-Lenape source followup captured a self-branded current-site candidate and an NJ Education
+document with older published links. The older published host's robots returned HTTP500. Reading stopped
+without a homepage request or alternate-host bypass. Current ownership linkage remains pending: the
+directory official_url stays null, its canonical crosswalk stays unreviewed, and the draft history stays
+unpublished. The queue records the actual failure and a one-day retry backoff. Self-branding alone did not
+become a verified ownership chain. No directory names were removed because a source could not be checked.
+
+The directory now places name search immediately after its introduction, before the optional source
+filter. The complete profile/source distinction remains in a default-closed native details element.
+Every existing static source record, ID, script, stylesheet and source disclosure is preserved. Search
+still works in bounded batches and all names remain in HTML without JavaScript. Current coverage remains
+2,272 differently scoped source records in eight lists, 457 canonical profiles, four preserved state
+source inventories, 46 other state discovery scopes pending, and four additional inclusion lanes pending.
+These numbers do not count distinct Nations or establish complete US or worldwide coverage.

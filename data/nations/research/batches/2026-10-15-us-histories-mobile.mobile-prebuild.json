@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "station": "Independent prebuild acceptance author, Nanticoke research subagent",
+  "review_kind": "AI-assisted tests authored before root UI implementation",
+  "human_review_claimed": false,
+  "started_at": "2026-10-15T16:42:55.576576+00:00",
+  "completed_at": "2026-10-15T16:42:57.352062+00:00",
+  "test_file": "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-histories-mobile-2026-10-15\\test_mobile_directory_compactness.py",
+  "test_sha256": "8e8a6faeb235e18742f574f692140b43d2c968eab2002d8b090d018e4635eb12",
+  "command": [
+    "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-m",
+    "pytest",
+    "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-histories-mobile-2026-10-15\\test_mobile_directory_compactness.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "environment_overrides": {
+    "ZOTHEOS_TEST_REPO": "C:\\ZOTHEOS-Web",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "return_code": 1,
+  "results": {
+    "failed": 3,
+    "passed": 0
+  },
+  "expected_failure_causes": [
+    "Directory search comes after explanatory cards instead of directly after lede.",
+    "Optional inventory select currently comes before name query.",
+    "Complete profile/Pending method text is currently always expanded instead of native default-closed details."
+  ],
+  "baseline_public_record_count": 2272,
+  "all_static_record_names_found": true,
+  "canonical_facts_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+  "baseline_builder_sha256": "6bae33449036d9714b65cde3e56b4f43824c60660e2e329edffcfc4ebe458b2b",
+  "baseline_generated_html_sha256": "1438f08f7672e4fa8a75e18719d8a5d713424309bbbd642b834d712df2b9ee26",
+  "generated_html_unchanged_during_baseline": true,
+  "asset_record_manifest": "mobile-public-records-baseline.json",
+  "manifest_sha256": "3569f30de9bb1329ea5f8b2875839f033b7e94e7506c5d8a0ea16a9fffa9e186",
+  "log_file": "mobile-prebuild-red.log",
+  "log_sha256": "11786a9f2b1dced470c94cbbba40760831223ed9e90772f0554b0ddbbd70b3f2",
+  "limitations": [
+    "No new browser/viewport observations made by this acceptance author.",
+    "Root remains responsible for actual 320/390/430 viewport and all-theme visual verification.",
+    "These tests parse built public HTML and must run after regeneration."
+  ]
+}
