@@ -58976,7 +58976,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -58996,9 +58996,31 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://mattaponi.gov/",
+          "retrieved_at": "2026-10-15T23:34:07.502519+00:00",
+          "http_status": 200,
+          "sha256": "a93e1050e43d7cb721872287023139fb00739c084f4f2e0bbd28370df7d90b69",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-virginia-mattaponi-home.receipt.json",
+          "receipt_id": "r-e5f5178424e8a6de"
+        }
+      ],
+      "updated_at": "2026-10-15T23:43:58.183463+00:00",
+      "next_attempt_after": "2026-10-22T23:43:57.409297+00:00",
+      "lease_until": null,
+      "note": "Successful public access; publisher footer requires expressed written Tribal Council permission for reuse. No history/profile published. Existing directory name and verified link remain. Pending reuse-scope decision, not robots failure, takedown or legal determination.",
+      "profile_disposition": "publisher_reuse_scope_pending",
+      "publication_scope": {
+        "status": "pending",
+        "history_published": false,
+        "access_failure": false,
+        "takedown_received": false,
+        "directory_visible": true,
+        "note": "Do not re-fetch unchanged notice routinely or treat owner permission as Tribal Council permission. No outreach authorized."
+      }
     },
     {
       "task_id": "profile-us-state-va-pamunkey",
@@ -59266,7 +59288,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59286,9 +59308,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.cheroenhaka-nottoway.org/",
+          "retrieved_at": "2026-10-15T23:34:17.834103+00:00",
+          "http_status": 200,
+          "sha256": "905b134a01f3c1ef05bb7bb60dda2ce6b15962ddfda4b69040d158e1f58a093f",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-virginia-cheroenhaka-home.receipt.json",
+          "receipt_id": "r-24ce8ed0eb59172d"
+        }
+      ],
+      "updated_at": "2026-10-15T23:43:58.309673+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/us-missing-virginia-cheroenhaka-identity-review.json",
+      "identity_review_kind": "AI-assisted explicit source identity review"
     },
     {
       "task_id": "profile-us-state-va-nottoway-of-virginia",
@@ -59302,7 +59340,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59322,9 +59360,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://nottowayindians.org/",
+          "retrieved_at": "2026-10-15T23:34:56.240017+00:00",
+          "http_status": 200,
+          "sha256": "ff0679822fb9950c48ab4bd2b840f7dc733c93ff0e8c5d7f95df5b503e319624",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-virginia-nottoway-home.receipt.json",
+          "receipt_id": "r-b7a9e64dc0e1080b"
+        }
+      ],
+      "updated_at": "2026-10-15T23:43:58.309673+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/us-missing-virginia-nottoway-identity-review.json",
+      "identity_review_kind": "AI-assisted explicit source identity review"
     },
     {
       "task_id": "profile-us-state-va-patawomeck",

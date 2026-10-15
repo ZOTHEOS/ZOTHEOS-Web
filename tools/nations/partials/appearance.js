@@ -80,6 +80,7 @@
   var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
   var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
   var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
+  var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -107,9 +108,12 @@
   function filter() {
     var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
     var selected = enhanced ? inventory.value : 'all';
+    var readyOnly = !!(enhanced && profilesOnly && profilesOnly.checked);
+    if (profileHint) profileHint.hidden = !readyOnly;
     visible = [];
     for (var j = 0; j < rows.length; j++) {
-      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words);
+      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words)
+        && (!readyOnly || rows[j].getAttribute('data-directory-profile') === 'ready');
       if (match) count++;
       var show = match && (!enhanced || shown < limit);
       rows[j].hidden = !show;
@@ -118,7 +122,7 @@
     for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
     if (enhanced) {
       var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
-      status.textContent = shown + ' of ' + count + ' matching name records shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';
@@ -132,6 +136,7 @@
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
   inventory.addEventListener('change', function () { limit = batch; filter(); });
+  if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
   more.addEventListener('click', function () {
     var previous = visible.length;
     limit += batch; filter();
@@ -151,6 +156,7 @@
     var owner = target.closest('[data-directory-inventory]');
     if (!owner) return;
     inventory.value = owner.getAttribute('data-directory-inventory');
+    if (profilesOnly) profilesOnly.checked = false;
     input.value = ''; limit = batch;
     var row = target.closest('[data-directory-name]'), ordinal = 0;
     if (row) {

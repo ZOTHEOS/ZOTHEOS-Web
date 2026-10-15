@@ -1,0 +1,133 @@
+{
+  "run_date": "2026-10-15",
+  "dry_run": false,
+  "user_agent": "ZOTHEOS-nations-verifier/1 (+https://zotheos.org)",
+  "host_interval_s": 10.2,
+  "timeout_s": 20.0,
+  "retries": 0,
+  "robots": true,
+  "urls_total": 6,
+  "urls_checked": 6,
+  "requests_sent": 8,
+  "elapsed_s": 42.2,
+  "facts_checked": 7,
+  "facts_unchecked": 0,
+  "status": {
+    "verified": 7
+  },
+  "urls": [
+    {
+      "url": "https://www.cheroenhaka-nottoway.org/",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://www.cheroenhaka-nottoway.org/",
+      "facts": 1
+    },
+    {
+      "url": "https://nottowayindians.org/history",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://nottowayindians.org/history",
+      "facts": 2
+    },
+    {
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+      "facts": 1
+    },
+    {
+      "url": "https://nottowayindians.org/interpretive-center",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://nottowayindians.org/interpretive-center",
+      "facts": 1
+    },
+    {
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+      "facts": 1
+    },
+    {
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+      "http": 200,
+      "outcome": "fetched",
+      "note": "",
+      "final_url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+      "facts": 1
+    }
+  ],
+  "facts": [
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "fact": "cheroenhaka-nottoway-us-va-b64aee5d",
+      "url": "https://www.cheroenhaka-nottoway.org/",
+      "evidence": "Indian Tribe Southampton County, VA",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "fact": "nottoway-indian-tribe-virginia-us-va-b862e4c2",
+      "url": "https://nottowayindians.org/history",
+      "evidence": "Iroquoian speakers of southeastern Virginia",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "fact": "nottoway-indian-tribe-virginia-us-va-32fecdc2",
+      "url": "https://nottowayindians.org/history",
+      "evidence": "In 1821, matriarch Edy Turner petitioned the Virginia General Assembly",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "fact": "cheroenhaka-nottoway-us-va-57b20312",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+      "evidence": "election of a Chief and Tribal Governing Council",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "fact": "nottoway-indian-tribe-virginia-us-va-c57d79f7",
+      "url": "https://nottowayindians.org/interpretive-center",
+      "evidence": "Community House & Interpretive Center in Capron, VA",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "fact": "cheroenhaka-nottoway-us-va-843fcb64",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+      "evidence": "source materials dating back to March 4th, 1820",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "fact": "cheroenhaka-nottoway-us-va-f4f7c9a8",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+      "evidence": "Iroquoian language and in English identifying Native Flora and Fauna",
+      "status": "verified",
+      "note": "",
+      "previous": "unreachable"
+    }
+  ]
+}

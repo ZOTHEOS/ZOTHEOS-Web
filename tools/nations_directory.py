@@ -163,12 +163,14 @@ def load_canada(root):
 
 def entry(builder, e):
     face = 'brand' if builder.brand.serif_ok(e['name']) else 'names'
-    out = ['<li id="' + esc(e['directory_id']) + '" data-directory-name="' + esc(e['directory_name']) + '">'
+    c = e['registry_crosswalk']
+    has_profile = c['status'] == 'confirmed' and c['registry_id'] in builder.m.by_id
+    out = ['<li id="' + esc(e['directory_id']) + '" data-directory-name="' + esc(e['directory_name'])
+           + '" data-directory-profile="' + ('ready' if has_profile else 'pending') + '">'
            '<h4 class="nm directory-name" dir="auto" data-face="' + face + '">' + esc(e['name']) + '</h4>']
     if e['directory_name'] != e['name']:
         out.append('<p class="note" dir="auto">Published name record: ' + esc(e['directory_name']) + '</p>')
-    c = e['registry_crosswalk']
-    if c['status'] == 'confirmed' and c['registry_id'] in builder.m.by_id:
+    if has_profile:
         out.append('<p><a href="/nations/' + esc(c['registry_id']) + '">Read the researched profile</a></p>')
     else:
         out.append('<p class="rc directory-state">Profile Link Pending</p>')
@@ -265,7 +267,10 @@ def page(builder):
            '<div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
            '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
            + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div>',
+           '<label class="directory-ready" for="directoryProfilesOnly"><input id="directoryProfilesOnly" type="checkbox" aria-controls="directoryNames" aria-describedby="directoryProfileHint"><span>Profiles Ready To Read</span></label>',
+           '<p id="directoryProfileHint" class="note" hidden>Filters reviewed directory links; other researched profiles may not be linked here yet. <a href="/nations#find">Search all researched profiles</a>.</p>',
            '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
+           '<p><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></p>',
            '<p id="directoryLimit" class="note"></p></div>',
            '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
            '<details class="directory-source"><summary>Understand These Records</summary>',
@@ -276,7 +281,7 @@ def page(builder):
            'Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> '
            '&middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div></details>',
            us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
-           '<div id="directoryNames"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
+           '<div id="directoryNames" tabindex="-1"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
            '<h2 id="us-directory-title">United States: the published federal list</h2>',
            '<p>' + str(len(entities)) + ' published federal name records. The source states ' + str(directory['stated_count']) + ' Tribal entities.</p>',
            '<p class="note">Unresolved source-count difference: ' + esc(directory['count_discrepancy']['note']) + '</p>',

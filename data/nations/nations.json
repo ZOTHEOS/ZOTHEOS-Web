@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-12",
-  "count": 457,
-  "facts": 1287,
+  "generated": "2026-10-15",
+  "count": 459,
+  "facts": 1294,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 25,
+    "us-east-southeast": 27,
     "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
@@ -24778,6 +24778,148 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        }
+      ]
+    },
+    {
+      "id": "cheroenhaka-nottoway-us-va",
+      "region": "us-east-southeast",
+      "name": "Cheroenhaka (Nottoway) Indian Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "Southampton County, Virginia, United States",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.cheroenhaka-nottoway.org/",
+      "name_source_url": "https://www.cheroenhaka-nottoway.org/",
+      "facts": [
+        {
+          "id": "cheroenhaka-nottoway-us-va-b64aee5d",
+          "text": "Cheroenhaka (Nottoway) Indian Tribe is based in Southampton County, Virginia.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Cheroenhaka Nottoway: Official Tribal Website",
+            "publisher": "Cheroenhaka (Nottoway) Indian Tribe",
+            "url": "https://www.cheroenhaka-nottoway.org/",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "Indian Tribe Southampton County, VA",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        },
+        {
+          "id": "cheroenhaka-nottoway-us-va-57b20312",
+          "text": "The Tribe's historical account records an elected Chief and Tribal Governing Council in May 2002.",
+          "kind": "history",
+          "as_of": "2002",
+          "source": {
+            "title": "Ethno-Historical / Current Snapshot of the Cheroenhaka (Nottoway) Indian Nation of Southhampton County, Virginia",
+            "publisher": "Cheroenhaka (Nottoway) Indian Tribe",
+            "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "election of a Chief and Tribal Governing Council",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        },
+        {
+          "id": "cheroenhaka-nottoway-us-va-843fcb64",
+          "text": "The Tribe's language page publishes a vocabulary drawn from materials dating to March 4, 1820.",
+          "kind": "language",
+          "as_of": "1820",
+          "source": {
+            "title": "Cheroenhaka Language",
+            "publisher": "Cheroenhaka (Nottoway) Indian Tribe",
+            "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "source materials dating back to March 4th, 1820",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        },
+        {
+          "id": "cheroenhaka-nottoway-us-va-f4f7c9a8",
+          "text": "The Tribe describes Cattashowrock Town's trails as using Iroquoian and English signs to identify local plants and animals.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "Cattashowrock Town",
+            "publisher": "Cheroenhaka (Nottoway) Indian Tribe",
+            "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "Iroquoian language and in English identifying Native Flora and Fauna",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "nottoway-indian-tribe-virginia-us-va",
+      "region": "us-east-southeast",
+      "name": "Nottoway Indian Tribe of Virginia",
+      "also": [],
+      "pronounce": null,
+      "lands": "southeastern Virginia along the Nottoway River; the Tribe's Community House & Interpretive Center is in Capron",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://nottowayindians.org/",
+      "name_source_url": "https://nottowayindians.org/",
+      "facts": [
+        {
+          "id": "nottoway-indian-tribe-virginia-us-va-b862e4c2",
+          "text": "The Tribe's history describes the Nottoway as Iroquoian speakers of southeastern Virginia.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Tribal History - Nottoway Indian Tribe of Virginia",
+            "publisher": "Nottoway Indian Tribe of Virginia",
+            "url": "https://nottowayindians.org/history",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "Iroquoian speakers of southeastern Virginia",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        },
+        {
+          "id": "nottoway-indian-tribe-virginia-us-va-32fecdc2",
+          "text": "According to the Tribe's history, Edy Turner petitioned the Virginia General Assembly on behalf of her people in 1821.",
+          "kind": "history",
+          "as_of": "1821",
+          "source": {
+            "title": "Tribal History - Nottoway Indian Tribe of Virginia",
+            "publisher": "Nottoway Indian Tribe of Virginia",
+            "url": "https://nottowayindians.org/history",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "In 1821, matriarch Edy Turner petitioned the Virginia General Assembly",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
+        },
+        {
+          "id": "nottoway-indian-tribe-virginia-us-va-c57d79f7",
+          "text": "The Tribe says its Community House & Interpretive Center formally opened in Capron on May 5, 2012.",
+          "kind": "achievement",
+          "as_of": "2012",
+          "source": {
+            "title": "Community House & Interpretive Center - Nottoway Indian Tribe of Virginia",
+            "publisher": "Nottoway Indian Tribe of Virginia",
+            "url": "https://nottowayindians.org/interpretive-center",
+            "accessed": "2026-10-15"
+          },
+          "evidence": "Community House & Interpretive Center in Capron, VA",
+          "status": "verified",
+          "checked": "2026-10-15",
+          "last_verified": "2026-10-15"
         }
       ]
     },

@@ -189,3 +189,19 @@ connections to the verifier (WebFetch, curl, browser) and to the assembler on 20
    Garo "A.chik" aliases) and the Hai//om click-letter spelling decision for the site.
 6. The 13 round-1 "respect edit unresolved" drops still wait for a double-checked rewrite.
 7. A full (uncapped) refresh run before publishing, then the first `stale` review.
+
+## October 15, 2026: two missing Virginia profiles
+
+The bounded source batch adds Cheroenhaka (Nottoway) Indian Tribe and Nottoway Indian Tribe of Virginia
+as distinct profiles with seven checked facts, four titled history layers and four own-publisher
+resources. Every previous canonical record and fact clock is preserved by a selective import of the
+isolated assembler output. The updated contract has 459 profiles and 1,294 raw facts; the public model
+shows 1,292 facts and preserves the two existing holds. Two reviewed Virginia directory links supplement
+the four reviewed federal-source links. Directory-source counts remain 2,272 overlapping records, not
+a total of distinct Nations. Nationwide and worldwide coverage remain incomplete.
+
+Mattaponi history remains unpublished pending reuse scope after its own footer's written-permission
+condition was observed. Its directory name and verified own-site link remain. No robots refusal or
+takedown is invented. New check/review dates describe actual source work, not new historical events.
+See research/batches/2026-10-15-us-missing-virginia.json and its independent review records for measured
+checks, source provenance, browser observations, remaining limitations and release gates.

@@ -429,8 +429,15 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .directory-filter { margin-top: 20px; max-width: 100%; }
 .directory-filter select { max-width: 100%; text-overflow: ellipsis; }
 .directory-filter option { background: var(--page-bg); color: var(--ink); }
+.directory-search .directory-ready { display: flex; align-items: center; gap: 12px; width: fit-content; max-width: 100%; min-height: 48px; margin: 12px 0 0; padding: 10px 0; cursor: pointer; }
+.directory-ready input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.directory-ready span { font-size: 16px; line-height: 1.5; }
+.directory-search #directoryProfileHint { margin-top: 8px; }
+.directory-search #directoryProfileHint a { display: inline-block; padding-block: 10px; }
 .directory-search #directoryResult { margin-top: 16px; color: var(--ink-2); }
 .directory-search #directoryLimit { margin-top: 8px; }
+.directory-results-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; }
+#directoryNames { scroll-margin-top: 88px; }
 .directory-page .directory-group { scroll-margin-top: 88px; }
 .directory-page .directory-source { margin: 16px 0 24px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .directory-source summary { cursor: pointer; min-height: 48px; padding: 12px 0; color: var(--ink-2); }
