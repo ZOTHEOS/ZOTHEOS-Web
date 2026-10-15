@@ -1,0 +1,40 @@
+{
+  "reviewed_at": "2026-10-15T17:27:20.027692+00:00",
+  "reviewer": "Codex root integrator, independent of the Catawba research author; AI-assisted source meaning/respect review, not human or Nation approval",
+  "reviewed_package_sha256": "bcf9eabfffb291d5550b291f1a9cccd6c1126732426d815e5bb432ff33c9197c",
+  "passed": true,
+  "unresolved_p1_p2": [],
+  "evidence": {
+    "catawba-about.receipt.json": {
+      "receipt_sha256": "1b598f41829107e2cb78e87a88502e9f5f1da3b8c78ae89da7715ca6c9ab6680",
+      "body_sha256": "d485aebd4c9ed01abef43bcadc2cb6d1582f1efa53c0689c9849aa19c2c6f73d",
+      "http_status": 200
+    },
+    "catawba-farm.receipt.json": {
+      "receipt_sha256": "e2eea25c532ee04ad38e79928686dd53316935afbb12a32fcb6b1aa9c90413f8",
+      "body_sha256": "caccb56d4d3852263805f99a506adccf724ff30525bd25e0eb307da9e2424e65",
+      "http_status": 200
+    },
+    "catawba-land-services.receipt.json": {
+      "receipt_sha256": "e7b16fdbefd736e5c39bc4ec1ef35686e9d2027597e2da5e54649423d6d9de06",
+      "body_sha256": "ddd6c04a98c49b282a44761ef08ae1d1a4f9fb0fc2035d05d3b6f00fa21b351c",
+      "http_status": 200
+    },
+    "catawba-robots.receipt.json": {
+      "receipt_sha256": "acf49f5abd2801872ab91c8253ec0854a3288be5abec0c21337442bd6988823a",
+      "body_sha256": "2441d61830fdd0a45e1fa86fe779c476a8db75000250906440465562db19974b",
+      "http_status": 404
+    }
+  },
+  "minimum_request_interval_seconds": 10.93512487411499,
+  "findings": [
+    "All four exact response bodies match retained receipt hashes and lengths; approval predates the first request.",
+    "Genuine robots404 is absent published restrictions under the established unavailable-robots policy, not positive permission or endorsement. No redirects or outside hosts.",
+    "Three proposed layers faithfully attribute the treaty-pressure account, 1944/1973/1975 organizing and published land/planning work.",
+    "No year is inferred for the treaty. Both conflicting1951/1959 federal-status years are excluded from narrative and explicitly identified in the source resource caveat.",
+    "The optional farm resource is acceptable only with the stated FAQ date and June2026 funding-limit/current-status caveat; no schedules, eligibility, contact or current availability promises.",
+    "No sacred details, personal contacts, locations/acreage, current population, new legal outcome or present emergency claims are imported.",
+    "Existing canonical dates and the separate NC exact-day discrepancy/backoff must remain unchanged."
+  ],
+  "release_limits": "Root integration, independent implementation review, required build/tests, PR and actual live verification remain separate gates."
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "station": {
+    "seat": "Independent Ute Mountain source and meaning cross-reviewer, Fort Sill research subagent",
+    "model": "Inherited model; backend not independently verified",
+    "machine": "MELLO-MOOSE as assigned; not hardware audited",
+    "cycle": "us-next-histories-2026-10-15"
+  },
+  "reviewed_at": "2026-10-15T17:27:03.885187+00:00",
+  "subject": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "review_kind": "AI-assisted independent retained-source, meaning and respect review",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "authorship_independence": "Reviewer authored the separate Fort Sill package, not this Ute Mountain proposal.",
+  "reviewed_package": "ute-mountain/history-context-handoff.json",
+  "reviewed_package_sha256": "19b57568b4c31d7750226fc6a69b3d43eb3e0c7940b017a1748153600881149a",
+  "expected_package_sha256": "19b57568b4c31d7750226fc6a69b3d43eb3e0c7940b017a1748153600881149a",
+  "outcome": "Pass. No required candidate text edits. Root final integration, hold checks and publication checks remain separate.",
+  "findings": [],
+  "required_candidate_edits": [],
+  "checks": [
+    {
+      "topic": "Exact captured source and dates",
+      "result": "Pass",
+      "evidence": "All five saved source bodies match package SHA/size and sanitized receipts. Four content responses200, robots404. Actual source checks are October15 UTC, publication dates unknown, Last-Modified not promoted to event/publication dates."
+    },
+    {
+      "topic": "Robots and pacing",
+      "result": "Pass",
+      "evidence": "Robots404 is truthfully absence of a policy, not positive permission. Five ledger requests use only approved www.utemountainutetribe.com; minimum start interval and prior-finish spacing exceed3.2seconds. External HTTP environmental-host link was not followed."
+    },
+    {
+      "topic": "1874 and1978 hunting-rights description",
+      "result": "Pass",
+      "evidence": "Independently parsed Wildlife Program text expressly prints Act April29,1874 and consent-decree September21,1978 dates. Candidate attributes them to the Tribe and excludes present legal determination, regulations and public hunting/access permission. Underlying legal texts were not fetched or represented as independently verified."
+    },
+    {
+      "topic": "Water and public health",
+      "result": "Pass",
+      "evidence": "Saved Environmental Program About Us and bullets support water conservation, environmental education and water/air quality as published program descriptions. Candidate expressly excludes current operation guarantees or environmental-condition/outcome measurements."
+    },
+    {
+      "topic": "Curriculum and separate governments",
+      "result": "Pass",
+      "evidence": "Cultural/Language page states Southern Ute and Ute Mountain worked on fourth-grade Ute curriculum. No year, implementation/completion detail or school adoption is supplied. Candidate preserves these unknowns and distinguishes the governments."
+    },
+    {
+      "topic": "Respect and protected data",
+      "result": "Pass",
+      "evidence": "Public proposals omit source ceremonies, craft instruction, staff/personal contacts, emergency phones, old population/acreage, template filler, medicinal claims, photos and coordinates. Captured HTML stays local. Program purposes are attributed rather than promoted to verified current services."
+    },
+    {
+      "topic": "Resource update discipline",
+      "result": "Pass",
+      "evidence": "The existing exact Natural Resources resource and context-link pair occur once each. Proposal explicitly updates that resource in place; two new direct own-publisher program resources have matching successful captures."
+    }
+  ],
+  "request_audit": {
+    "request_count": 5,
+    "minimum_start_interval_seconds": 3.430899143218994,
+    "minimum_previous_finish_to_next_start_seconds": 3.2065157890319824,
+    "robots_http_status": 404,
+    "content_http_statuses": [
+      200,
+      200,
+      200,
+      200
+    ],
+    "source_hosts": [
+      "www.utemountainutetribe.com"
+    ]
+  },
+  "protected_existing_state": {
+    "canonical_fact_dates_changed_by_review": false,
+    "web_repo_writes": false,
+    "network_requests": 0,
+    "old_canonical_facts_and_holds_remain_controlling": true
+  },
+  "artifact_file_pins": {
+    "ute-mountain\\robots.body": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+    "ute-mountain\\publish_receipts\\us-ute-mountain-robots-next-2026-10-15.receipt.json": "a14c6c007b2619259a093170a56cd6cf68252a22a15e5b88e8e04d791d5ce366",
+    "ute-mountain\\home.body": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+    "ute-mountain\\publish_receipts\\us-ute-mountain-home-next-2026-10-15.receipt.json": "dfae3a05f305b39a46bfd511bd2193fa0645e6b7ee4d1e64df7bb0236764c543",
+    "ute-mountain\\natural-resources.body": "0f845191288d49a4eab62b7a7f323aa352e80bb0c243e676ff6086cff95d363a",
+    "ute-mountain\\publish_receipts\\us-ute-mountain-natural-resources-next-2026-10-15.receipt.json": "dd41ea9beb1a625c020eab47aeaaf4e23c4c1a234c3cd74a689f551cc687ad9f",
+    "ute-mountain\\environmental-program.body": "d04dcb4a9fc54eb1c402907e38b653c003db64452d24e3b51ce3a20d4ca11240",
+    "ute-mountain\\publish_receipts\\us-ute-mountain-environmental-program-next-2026-10-15.receipt.json": "b012eec49f2eac2b593d1fce95dcb1b59f4e941f677c3e41d1c9ce6ae32f1b8e",
+    "ute-mountain\\cultural-language.body": "8ada311125cd50896a591100d6db12fa13375dd562b771240c9d52d2a892bc95",
+    "ute-mountain\\publish_receipts\\us-ute-mountain-cultural-language-next-2026-10-15.receipt.json": "561953e963ffa58326305d63a30f49949b75b82c78fca67c00ce5ca05fcb4a34",
+    "ute-mountain/request_ledger.json": "d3ea458badeaa8a67aec5e1f1f0d48d65d9f4ea7629c22c504ff578c0679ede7"
+  },
+  "repository_file_pins_at_review": {
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/context_links.json": "577f4d411a8c5806bb59a667e675a6611352200ed80e24a7433a41f3d1cdb0d8",
+    "data/nations/sources/ute-mountain-homelands-2026-10-15.context.json": "24f3f215d2d39f74494e1647cc8b028e95a0781274e54e5ac605329ddf4f74d6",
+    "data/nations/sources/expansion-americas-2026-10-12.context.json": "e625f72f3cd63ec45c4cc3d063e74c522dc9aa247e40dd5483722a804d60aec7",
+    "data/nations/research/directory_sources.json": "8e4050738e5eb6eadd75984e6739b5fdff5ce0eae459ee95fe6348eb1bc893e7",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263"
+  },
+  "repository_pin_differences_since_candidate": {},
+  "required_integration_checks": [
+    "Preserve old canonical facts/accessed/checked/last_verified fields and existing Weenuche homeland context.",
+    "Update the existing exact Natural Resources resource/link once; do not append a duplicate.",
+    "All new context/resources must remain bound to Ute Mountain Ute and disappear under its record hold.",
+    "Render new source review dates as actual October15 checks, not publication or new emergency dates.",
+    "Review final source associations and purpose text after assembly; this source cross-review alone does not confirm implementation or live publication."
+  ]
+}

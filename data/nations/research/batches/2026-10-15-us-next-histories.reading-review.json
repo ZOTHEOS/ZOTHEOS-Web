@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T17:27:34.720786+00:00",
+  "reviewer": "Codex independent AI-assisted reviewer /root/ute_history_gap_20261015",
+  "change_author": false,
+  "human_review_claimed": false,
+  "web_writes": false,
+  "network_requests": 0,
+  "fresh_browser_actions_by_reviewer": 0,
+  "decision": "Scoped reading-layout change passes independent source, retained-screenshot and browser-evidence review. No unresolved P1/P2 finding.",
+  "unresolved_p1_p2_findings": [],
+  "baseline_git_revision": "e7d94b60c7a6237abdeeb9d3f32155c180c1c69e",
+  "diff_scope": {
+    "result": "Removing the one inserted context reading block recreates the entire published baseline stylesheet exactly after newline normalization.",
+    "selector_count": 11,
+    "selectors": [
+      ".n-sec[aria-labelledby=\"nContext\"]",
+      ".n-sec[aria-labelledby=\"nContext\"] > h2",
+      ".n-sec[aria-labelledby=\"nContext\"] > h3",
+      ".n-sec[aria-labelledby=\"nContext\"] > h2 + h3",
+      ".n-sec[aria-labelledby=\"nContext\"] > .rc",
+      ".n-sec[aria-labelledby=\"nContext\"] > .note",
+      ".n-sec[aria-labelledby=\"nContext\"] > .src-u",
+      ".n-sec[aria-labelledby=\"nContext\"] > .src-u > li",
+      ".n-sec[aria-labelledby=\"nContext\"] > .src-u > li > p:first-child a",
+      ".n-sec[aria-labelledby=\"nContext\"] > .src-u .note",
+      ".n-sec[aria-labelledby=\"nContext\"] > .src-u .rc"
+    ],
+    "scope": "Only .n-sec[aria-labelledby=\"nContext\"] and its descendants; no general nation names, facts, directory, game or appearance controls changed.",
+    "new_css_or_js_assets": "No new dependency or JavaScript in this change; standard stylesheet build remains required."
+  },
+  "evidence_assessment": [
+    {
+      "topic": "Readability",
+      "finding": "Personally viewed full desktop before/after screenshots and the latest phone after screenshot. Distinct sans-serif history subsections and visible whitespace resolve the baseline crowded hierarchy. Full headings and body text remain present; the phone image is a scrolled excerpt, not a complete-page capture."
+    },
+    {
+      "topic": "Spacing",
+      "finding": "Root-retained actual browser metrics report 12px heading/body and body/receipt gaps, and 32px between a receipt and the next subsection. CSS tokens define the same 12/32px values. Baseline zero-gap rows match the before screenshot."
+    },
+    {
+      "topic": "Sources and receipts",
+      "finding": "CSS changes neither source URLs nor DOM content. Semantic h2/h3, note text, dated receipts, source anchors and screen-reader new-tab labels remain in Context output. New 44px minimum applies to own-resource links inside this context section; existing inline fact-citation and related-record links are not newly certified as 44px targets."
+    },
+    {
+      "topic": "Responsive evidence",
+      "finding": "Retained root-browser measurements show no horizontal overflow at 320,390,768,1280px viewport widths and own-resource link rectangles at least44px tall. These are actual desktop-browser viewport measurements, not reviewer reruns or physical-device certification."
+    },
+    {
+      "topic": "Themes and motion",
+      "finding": "No color, theme, animation, transition, focus, hidden-state or name-font rule changed. The new h3 style uses the existing reading font. Static current-token contrast for body, links and receipts exceeds4.5 in all four appearances. Root browser switched four appearances; UI Still was selected. No OS reduced-motion emulation is claimed."
+    },
+    {
+      "topic": "Keyboard access",
+      "finding": "Native source anchors and existing :focus-visible rule remain intact; no display:none, visibility, pointer-events or tab-order changes added. This source review is not a fresh end-to-end keyboard or screen-reader test."
+    }
+  ],
+  "static_token_contrast": [
+    {
+      "theme": "Sovereign Skeleton",
+      "background": "#000000",
+      "body": 21.0,
+      "own_source_link": 12.552,
+      "review_receipt": 8.325
+    },
+    {
+      "theme": "Maya Radiance",
+      "background": "#02101E",
+      "body": 16.282,
+      "own_source_link": 10.746,
+      "review_receipt": 7.501
+    },
+    {
+      "theme": "Living Codex",
+      "background": "#E8DBC0",
+      "body": 13.735,
+      "own_source_link": 7.941,
+      "review_receipt": 4.88
+    },
+    {
+      "theme": "Obsidian Ember",
+      "background": "#050507",
+      "body": 16.135,
+      "own_source_link": 9.089,
+      "review_receipt": 5.18
+    }
+  ],
+  "retained_browser_evidence_timestamp": "2026-10-15T17:25:12.699Z",
+  "retained_browser_scope": "Actual in-app desktop browser responsive viewport checks, not physical-device or screen-reader certification; Still motion preference selected through UI, not OS reduced-motion emulation.",
+  "limits": [
+    "Reviewer assessed actual retained root browser evidence and screenshots; no new browser operations or live source fetches performed.",
+    "Southern Ute page is the measured layout fixture. This does not certify every Nation page, language, assistive technology, physical phone or browser engine.",
+    "Source presence and focus rules are preserved at source level; no independent screen-reader or fresh keyboard interaction certification.",
+    "Normal build, font/copy/contrast checks and reviewed publication must still pass."
+  ],
+  "file_pins": {
+    "tools/nations/partials/nations.css": "78cceded9b6cb5567129a7164f74ce3435b8433bbf3b5d328ea8cc2dd3fd0a8c",
+    "tools/nations/partials/tokens.css": "398adf6ae1d5c17e146178e185a298a30222d578927652b18c5076fc3b00f34c",
+    "tools/nations_context.py": "d9d09d0bc3aaea19be6c9bd68bfbe924a102ab37d09dc07fcb925674a29f65f8",
+    "nations-css-published-baseline.css": "d2615761d598926b215da857504c0edcb4736a25e9795fae50190e41aea523dc",
+    "reading-prebuild-criteria.json": "a083a264b3c3e1155a6e3cb29079b6fb75d514b7093f789a360a6a4251cb74e8",
+    "spacing-before.json": "3bd7d464dd05cbfeab887ae4292e75413c646f3dda22d160517b64665b5f26ea",
+    "reading-browser-checks.json": "2f77ba45b8aac68bbc096d4d6544e9e632afa3d2a74ccb6072044a6ebcdd040b",
+    "history-desktop-before.jpg": "7a6197c6e2f001a93dffc1890ddb0243d7e88a272bc6b7c16644ac759e5cbaf8",
+    "history-desktop-after.jpg": "7225c3f22e4edf88d312f42c4f53521cdcb91aa0fa9b0a965cdbfc311e25e7f0",
+    "history-phone-after.jpg": "21af62ddc7c30bf12b8296adca4e9dc314ca8ca3ea1bc4fa86ec95e094036e66"
+  }
+}

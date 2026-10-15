@@ -301,3 +301,43 @@ still works in bounded batches and all names remain in HTML without JavaScript. 
 2,272 differently scoped source records in eight lists, 457 canonical profiles, four preserved state
 source inventories, 46 other state discovery scopes pending, and four additional inclusion lanes pending.
 These numbers do not count distinct Nations or establish complete US or worldwide coverage.
+
+
+## October 15 next own-source histories and reading design
+
+Three existing profiles gain nine short, titled layers: Ute Mountain Ute, Fort Sill Apache and Catawba.
+Seven own-publisher resource links are new. The existing Ute Mountain Ute Natural Resources and Fort Sill
+history resources are updated in place, with exact successful receipts and their own October 15 review
+dates. No new canonical profile, directory identity match or canonical fact refresh is claimed.
+
+Ute Mountain Ute rights dates remain attributed to its Natural Resources account, rather than an
+independent interpretation of the underlying Act or consent decree. Environmental and educational
+pages describe program purposes and reported curriculum collaboration, not measured outcomes, current
+operation or confirmed completion. Fort Sill context explains coercion around displacement and later
+institutional rebuilding. The source's mid-1970s period is retained; no exact 1976 date is invented.
+Preservation goals are distinct from proof of current classes or outcomes. Related Apache and Ute
+governments and broader peoples remain separate records.
+
+Catawba context covers land pressure, constitutional organizing and land/community planning. Its own
+About page gives conflicting 1951 and 1959 federal-status-removal years. Neither year is adopted, the
+resource explains the conflict and a separate dated followup remains pending. The existing North
+Carolina exact-day discrepancy and retry delay are unchanged. The Black Snake Farm resource labels its
+July 15, 2025 FAQ and funding stated through June 2026; current funding, eligibility, schedules and
+availability are not established. No aid availability or present legal outcome is promised.
+
+Thirteen sanitized HTTP receipts preserve eleven successful responses and two genuine robots404
+responses. Missing robots files are absence of published restrictions under the existing unavailable-
+robots policy, not positive permission or endorsement. Actual body hashes, timestamps and paced reads
+are retained; no denied source, outside host, sacred detail, personal contact or coordinates were used.
+Full source bodies remain local audit artifacts. Reviews are AI-assisted, not human or Nation approval.
+
+Context reading styles now separate subsection headings, paragraphs and source-review dates; resource
+links offer at least 44px height. The shared stylesheet is content-addressed, so the build updates its
+reference across generated Nations pages. Theme tokens, motion code, the landing page, game, owner-
+supplied intro and canonical data remain unchanged. Browser phone/tablet/desktop checks and their
+limits are recorded separately; no physical-device or screen-reader certification is claimed.
+
+The queue and source catalogue retain this bounded batch and the unresolved year conflict. Coverage
+still consists of differently scoped source records, not a complete list of distinct Nations. Four
+state source inventories remain preserved, 46 other state discovery scopes and all four additional
+inclusion lanes remain pending. The batch record is batches/2026-10-15-us-next-histories.json.

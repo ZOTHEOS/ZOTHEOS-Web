@@ -254,6 +254,27 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .rc { font: 400 11px/1.7 var(--zn-mono); letter-spacing: 0.04em; color: var(--ink-3); }
 .rc a { font-family: var(--zn-read); font-size: 13px; letter-spacing: 0; color: var(--ink-2); }
 .rc a:hover { color: var(--ink); }
+/* Keep historical context in readable layers, separate from fact-check receipts. */
+.n-sec[aria-labelledby="nContext"] { max-width: 68ch; }
+.n-sec[aria-labelledby="nContext"] > h2 { margin-bottom: var(--sp-5); }
+.n-sec[aria-labelledby="nContext"] > h3 {
+  display: block; font: 500 clamp(21px, 2vw, 26px)/1.25 var(--zn-read);
+  letter-spacing: -0.015em; margin: var(--sp-6) 0 var(--sp-3);
+}
+.n-sec[aria-labelledby="nContext"] > h2 + h3 { margin-top: 0; }
+.n-sec[aria-labelledby="nContext"] > .rc { margin-top: var(--sp-3); font-size: 12px; }
+.n-sec[aria-labelledby="nContext"] > .rc + .fact-t { margin-top: var(--sp-5); }
+.n-sec[aria-labelledby="nContext"] > .note { max-width: 64ch; }
+.n-sec[aria-labelledby="nContext"] > .src-u { margin-top: var(--sp-4); gap: var(--sp-5); }
+.n-sec[aria-labelledby="nContext"] > .src-u > li {
+  padding-top: var(--sp-3); border-top: 1px solid var(--rule); font-size: 15px; line-height: 1.6;
+}
+.n-sec[aria-labelledby="nContext"] > .src-u > li > p:first-child a {
+  display: inline-block; min-height: 44px; padding-block: 10px;
+  font: 500 16px/1.5 var(--zn-read);
+}
+.n-sec[aria-labelledby="nContext"] > .src-u .note { margin-top: var(--sp-1); }
+.n-sec[aria-labelledby="nContext"] > .src-u .rc { margin-top: var(--sp-2); font-size: 12px; }
 .counts { margin-top: 16px; font-size: 15px; color: var(--ink-3); }
 .ctry a { color: var(--ink); }
 .card { padding: 28px 0; border-top: 1px solid var(--rule); display: grid; gap: 10px; }

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T17:38:50.464888+00:00",
+  "station": "Codex integration on MELLO-MOOSE; exact backend model not independently asserted",
+  "branch": "codex/us-next-histories-2026-10-15",
+  "baseline_main": "e7d94b60c7a6237abdeeb9d3f32155c180c1c69e",
+  "publication_state_at_recording": "Checked and independently reviewed for pull request publication; merge, production deployment and actual live verification are subsequent gates.",
+  "changes": [
+    "Three existing profiles gain nine attributed own-source history layers. No new canonical profile or fact added.",
+    "Ute Mountain Ute layers address reserved rights, environmental purposes and reported curriculum collaboration. Underlying laws, program operation/outcomes and completion are not newly established.",
+    "Fort Sill layers explain coercion around displacement, mid-1970s institutional rebuilding and language-preservation purposes. The two independent reviewer wording refinements are recorded in integration-map.json.",
+    "Catawba layers describe land pressure, 1944/1973/1975 constitutional organizing and land/community planning. Its own 1951/1959 status-year conflict stays explicit and pending; the older separate NC exact-day task is unchanged.",
+    "Seven direct own-publisher links added. Two existing resources updated singularly with successful measured receipts, without changing unrelated context dates.",
+    "Scoped shared reading styles distinguish headings, add 12px heading/body/receipt gaps, 32px subsection separation and 24px before following legacy notes. Context own-resource links offer at least 44px height.",
+    "Content-addressed CSS reference changed across 581 generated pages. Other generated HTML is unchanged after the mechanical stylesheet reference substitution, except the three expanded profiles.",
+    "Claude Council Route remains an owner-relayed isolated prototype with seven unconfirmed app claims. No prototype, app claim, driver, service or Core change is adopted here."
+  ],
+  "measured_counts": {
+    "expanded_existing_profiles": 3,
+    "new_history_sections": 9,
+    "new_own_publisher_links": 7,
+    "existing_resources_updated": 2,
+    "canonical_profiles_unchanged": 457,
+    "canonical_raw_facts_unchanged": 1287,
+    "public_facts_unchanged": 1285,
+    "held_facts_unchanged": 2,
+    "mixed_source_records_unchanged": 2272,
+    "source_lists_unchanged": 8,
+    "state_source_inventories_preserved": 4,
+    "state_discovery_scopes_pending": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "persistent_queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1702,
+      "needs_review": 108,
+      "blocked": 2
+    },
+    "new_sanitized_receipts": 13,
+    "receipt_http_statuses": {
+      "200": 11,
+      "404": 2
+    },
+    "human_or_nation_approvals_created": 0,
+    "meaning": "Overlapping source records and work scopes are not distinct-Nation totals, coverage percentages or complete-coverage claims."
+  },
+  "checks": {
+    "final_pytest": {
+      "passed": 259,
+      "failed": 0,
+      "seconds": 138.82
+    },
+    "build": "passed;581 pages; 0 copy/lint warnings/errors; fonts,CSP,links,size and four-theme contrast passed",
+    "deterministic_build_check": "passed",
+    "queue_validation": "errors[]",
+    "release_check": "passed",
+    "game_export_check": "passed",
+    "directory_node_interaction_acceptance": "passed",
+    "git_diff_check": "passed before staging; staged check remains separate",
+    "independent_hold_and_removal_simulations": 9,
+    "actual_browser": {
+      "profile_viewport_combinations": 12,
+      "widths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "horizontal_overflow": false,
+      "context_own_resource_links_min_height_px": 44,
+      "theme_controls_checked": [
+        "Sovereign Skeleton",
+        "Maya Radiance",
+        "Living Codex",
+        "Obsidian Ember"
+      ],
+      "motion_scope": "Still preference selected through UI; no OS reduced-motion emulation or new motion claimed.",
+      "limits": "Desktop-browser responsive testing, not physical-device or screen-reader certification."
+    }
+  },
+  "reviews": [
+    {
+      "file": "2026-10-15-us-next-histories.ute-mountain-review.json",
+      "sha256": "9dcbdacd92ef474c151bb688225c7fbdb99a76c983bebbdf6592cca57c81d054",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "af5969f88b91bbf4c60be0655a070d81317ee0389aba7bb93cecbaa4ac220c32"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.fort-sill-review.json",
+      "sha256": "ea69871747899cf38df043e19f0af0ec23bb088c40e5707e3e6c490ac2715f23",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "eba0f02d76cdb6b6d89ac49d9cbaff3b5bb3b276a4c3289e81c9947f64a4c193"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.catawba-review.json",
+      "sha256": "db028f954a59d7479858f0889004db8d980942173386586f76e11c3e80cb1ef3",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "3d28bf818f73b8005a77129ae27e0c8a1b441901f9bf73b58926f41a5c1d7c09"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.reading-review.json",
+      "sha256": "cdd0ef81df81a3a99e652a5397cb382453707461dc9d78fcf8f5aacf5e265d40",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "beef184af63d3184c00f36489aba70ff066b8b17a9c603d9e951f432e5c5627c"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.prebuild-criteria.json",
+      "sha256": "2caf736e981e8f11dbfa9afc4c020a5517af38002235049014d17e7dabf7a2f3",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "13c18709add6f228028955be4f3dc825edcef3ee3652854abee7becc82ac9b95"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.integration-review.json",
+      "sha256": "8d8bb8c3b678f874a9949bd7df27e7ffd37cf890f20b5a43166ff5d157d24ee0",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "a37381dab0a4df0fc284db588edad65c3cb0884bd6842456678e6633aa5ecc15"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.reading-browser-checks.json",
+      "sha256": "2f77ba45b8aac68bbc096d4d6544e9e632afa3d2a74ccb6072044a6ebcdd040b",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "2f77ba45b8aac68bbc096d4d6544e9e632afa3d2a74ccb6072044a6ebcdd040b"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.profile-browser-checks.json",
+      "sha256": "a4cc93b36d3182b1f0ba97c95d831b6f1daaf27acc3bb02a88ab05e9b6838913",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "a4cc93b36d3182b1f0ba97c95d831b6f1daaf27acc3bb02a88ab05e9b6838913"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.final-spacing-browser-check.json",
+      "sha256": "755d4e83aba832be5a68f66e90d1a2967fa32bdc78bfc59c686cb9bd3cfb7932",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "755d4e83aba832be5a68f66e90d1a2967fa32bdc78bfc59c686cb9bd3cfb7932"
+    },
+    {
+      "file": "2026-10-15-us-next-histories.catawba-host-approval.json",
+      "sha256": "3fece753161e97fc6f6a2615b4bfbf3630c1efa8c318dd8a039bd7c81135e677",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "1a24466b6faa6801c9525c6ae66591602086a1f356edee2be4d80b11bf243a43"
+    }
+  ],
+  "review_hash_provenance": "Source/implementation reports pin actual local working-tree snapshots. Git may normalize CRLF to LF. Copied review-record hashes above identify normalized LF bytes separately from original local artifacts.",
+  "source_packages": [
+    {
+      "subject": "ute-mountain",
+      "local_artifact": "history-context-handoff.json",
+      "sha256": "19b57568b4c31d7750226fc6a69b3d43eb3e0c7940b017a1748153600881149a"
+    },
+    {
+      "subject": "fort-sill",
+      "local_artifact": "history-context-handoff.json",
+      "sha256": "aadb51dfd82110a95de05843525663b46b6fea63c907a68ab2c537cf17e67cd8"
+    },
+    {
+      "subject": "catawba",
+      "local_artifact": "history-context-handoff.json",
+      "sha256": "bcf9eabfffb291d5550b291f1a9cccd6c1126732426d815e5bb432ff33c9197c"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "history-desktop-before.jpg",
+      "sha256": "7a6197c6e2f001a93dffc1890ddb0243d7e88a272bc6b7c16644ac759e5cbaf8",
+      "retention": "Local browser audit artifact only"
+    },
+    {
+      "file": "history-desktop-after.jpg",
+      "sha256": "7225c3f22e4edf88d312f42c4f53521cdcb91aa0fa9b0a965cdbfc311e25e7f0",
+      "retention": "Local browser audit artifact only"
+    },
+    {
+      "file": "history-phone-after.jpg",
+      "sha256": "21af62ddc7c30bf12b8296adca4e9dc314ca8ca3ea1bc4fa86ec95e094036e66",
+      "retention": "Local browser audit artifact only"
+    },
+    {
+      "file": "catawba-phone-final-local.jpg",
+      "sha256": "2091ee0d54fc22ec69a638a5c392fa6898f52abde1d53a32f361084b95b1a54e",
+      "retention": "Local browser audit artifact only"
+    }
+  ],
+  "unresolved": [
+    "Catawba About gives conflicting 1951 and 1959 federal-status removal years; neither is silently selected.",
+    "Catawba farm FAQ is labeled July 15, 2025 and states funding through June 2026. Present funding, schedule, eligibility and availability remain unverified.",
+    "Undated own program descriptions do not establish present operation, outcomes or project completion. Historic legal positions are not current title/jurisdiction determinations.",
+    "Existing NC exact-day, Nanticoke ownership and other source/identity gaps remain unchanged and pending.",
+    "US and worldwide coverage remain incomplete. No urgent development or emergency was established by this historical batch.",
+    "Core/Council process claims remain unconfirmed and outside this website batch."
+  ],
+  "human_review": false
+}

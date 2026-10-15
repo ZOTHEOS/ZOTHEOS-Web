@@ -201,3 +201,27 @@ The reported landing/architecture/preview/news issues remain a separate prioriti
 verified against current files before changes. There is no automated human or Nation approval. Release
 gates and exact published bytes are recorded after review; this handoff update itself does not claim a
 merge or a production deployment.
+
+
+## Next History Batch And Claude Prototype Boundary
+
+PR18 is published at main e7d94b60c7a6237abdeeb9d3f32155c180c1c69e. The next website branch is
+codex/us-next-histories-2026-10-15, starting from that commit. Codex owns Nations evidence integration,
+the shared context reading styles, generated pages, review and publication for this batch. It adds
+bounded own-source histories to three existing profiles: Ute Mountain Ute, Fort Sill Apache and Catawba.
+It does not claim complete US coverage or new canonical facts. The recorded sources and source-year
+uncertainties control the copy, including the pending Catawba 1951/1959 discrepancy.
+
+The owner relayed Claude's update that Council Route prototyping is proceeding outside every checkout.
+The proposed desktop/phone clips, four-theme sheet, real-security-policy checks and seven app-process
+claims are Claude-reported plans, not independently verified deliverables or published functionality.
+No app-process claim has been confirmed by this website batch. Keep pending claims visibly pending in
+review materials. An unchecked process must not become an asserted product guarantee in a live
+animation, caption or transcript. Existing website-only scope does not authorize a new Core audit.
+
+Claude can continue its isolated prototype while Codex completes Nations work. No shared checkout was
+assigned here, no Claude output was copied into production and no renderer, driver or workstation
+service was changed. A later integration needs the actual prototype artifacts, exact claim list,
+evidence for each published claim, static/captioned alternatives, performance checks and independent
+review. This entry records the relayed coordination state; it does not assert a direct message sent
+to Claude or a new human approval.
