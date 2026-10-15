@@ -40,9 +40,10 @@ def isolated(tmp_path):
     for name in ['us_federal_directory.json', 'ca_registry_groups_2024.json', 'directory_sources.json',
                  'us_coverage_plan.json', *(c[0] for c in CASES)]:
         shutil.copyfile(ROOT / 'data/nations/research' / name, folder / name)
-    optional_al = ROOT / 'data/nations/research/us_al_state_directory_2026.json'
-    if optional_al.exists():
-        shutil.copyfile(optional_al, folder / optional_al.name)
+    for filename, _, unit, *_ in I.INVENTORIES:
+        optional = ROOT / 'data/nations/research' / filename
+        if unit == 'state_tribal_directory_listing' and optional.exists():
+            shutil.copyfile(optional, folder / optional.name)
     shutil.copytree(ROOT / 'data/nations/research/receipts', folder / 'receipts')
     shutil.copyfile(ROOT / 'data/nations/nations.json', tmp_path / 'data/nations/nations.json')
     write(folder / 'coverage_queue.json', {'max_subjects_per_run': 3, 'tasks': []})

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source": {
+    "publisher": "New Jersey Department of State, New Jersey Commission on American Indian Affairs",
+    "title": "About the Commission",
+    "display_title": "About the Commission: named tribal representation groups",
+    "url": "https://www.nj.gov/state/njcaia-about.shtml",
+    "retrieved_at": "2026-10-15T14:03:34.375978+00:00",
+    "sha256": "e287f12724a0f6c0b81ac1b97dc4c30533d905304e42b0edc0ddfa4666169fd4",
+    "receipt": "receipts/us-nj-about-2026-10-15.receipt.json",
+    "publication_date": null,
+    "source_edition": "Live undated commission About page observed on October 15, 2026 UTC. It is a commission representation description, not a dated comprehensive recognition register."
+  },
+  "entity_unit": "state_tribal_directory_listing",
+  "state": "NJ",
+  "jurisdiction": "US-NJ",
+  "stated_count": null,
+  "enumerated_count": 3,
+  "snapshot_kind": "source_observation",
+  "as_of": "2026-10-15",
+  "as_of_scope": "Actual UTC observation day. Not a recognition date or a count of all Indigenous Nations associated with New Jersey.",
+  "scope_note": "Three named tribal representation groups in one New Jersey commission paragraph. Inter-Tribal People is a separate representation category for residents with membership in tribes outside New Jersey; it is not a fourth named Nation. The source describes commission membership, not every Indigenous people, community, government, or current legal recognition status.",
+  "extraction_note": "Read all three approved public Department of State pages and the two specifically approved 2018/2019 Attorney General releases. Count only the three named tribal groups in the About page representation paragraph, in displayed order. Exclude the commission member count, ex officio office, individual commissioners and Inter-Tribal People category. Preserve differing source labels as research notes, not canonical aliases. Personal names, contacts, pictures, seals and sacred content are excluded from this candidate inventory.",
+  "public_extraction_note": "Three source labels are preserved from the commission representation paragraph. Profile links and preferred names still need identity review. This is a planning source, not a definition of who is Indigenous.",
+  "public_notes": [
+    "This source describes representation on a state commission. Its nine commission members and four representation categories are different units from these three named tribal groups.",
+    "Inter-Tribal People is a membership-based representation category for residents associated with tribes outside New Jersey. It is not counted here as a fourth Nation.",
+    "The source does not cover every Indigenous person, people, community or distinct governing body associated with New Jersey. Communities beyond these represented groups need their own sources.",
+    "October 15, 2026 is the source observation date. Recognition history and present legal scope require separate dated evidence and do not follow from commission membership alone."
+  ],
+  "checks": {
+    "source_named_tribal_groups": 3,
+    "unique_source_labels": 3,
+    "source_representation_categories_in_paragraph": 4,
+    "excluded_membership_category": "Inter-Tribal People",
+    "source_commission_member_count": 9,
+    "source_commission_members_counted_as_nations": false,
+    "duplicate_source_labels": [],
+    "extraction_methods": [
+      "AI reading of saved HTML and independently generated text",
+      "Exact ordered-label and membership-category assertions against the saved About paragraph"
+    ],
+    "independent_reviewer": "Codex ute_history_gap_20261015 cross-reviewed captured NJ source bytes, labels, units, receipts and hold simulations. AI-assisted, not human or Nation approval; implementation review is separate.",
+    "own_sites_read_and_identity_link_reviewed": 0,
+    "canonical_identity_matches_approved": 0,
+    "human_reviews_created": 0
+  },
+  "review": {
+    "status": "needs_review",
+    "sources": "Independent AI-assisted source meaning and receipt review completed; implementation and publication gates remain separately recorded.",
+    "identity": "unreviewed",
+    "human_review": null,
+    "respect": "No personal contacts, leadership, imagery, source graphics, sacred material or inferred legal recognition dates imported."
+  },
+  "followup": {
+    "status": "pending",
+    "risk": "unassessed",
+    "scope": "Locate and source-review permissible nation-owned publications for each named group, preferred names, distinct government scope, digestible history and current developments. Track Sand Hill Band and Cohanzick Lenape leads separately rather than assuming this commission scope includes all Indigenous communities."
+  },
+  "entities": [
+    {
+      "directory_id": "us-state-nj-nanticoke-lenni-lenape-indians",
+      "name": "Nanticoke Lenni-Lenape Indians",
+      "directory_name": "Nanticoke Lenni-Lenape Indians",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NJ",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_section": "About the Commission, paragraph beginning There are nine members of the Commission",
+      "source_note": "Exact label from the source representation paragraph. This listing records a named tribal representation category, not a personal commissioner, current preferred name approval or independent finding of legal recognition. The Inter-Tribal People membership category is not another Nation record."
+    },
+    {
+      "directory_id": "us-state-nj-powhatan-renape-indians",
+      "name": "Powhatan Renape Indians",
+      "directory_name": "Powhatan Renape Indians",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NJ",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_section": "About the Commission, paragraph beginning There are nine members of the Commission",
+      "source_note": "Exact label from the source representation paragraph. This listing records a named tribal representation category, not a personal commissioner, current preferred name approval or independent finding of legal recognition. The Inter-Tribal People membership category is not another Nation record."
+    },
+    {
+      "directory_id": "us-state-nj-ramapough-lenape-indian-nation",
+      "name": "Ramapough Lenape Indian Nation",
+      "directory_name": "Ramapough Lenape Indian Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "NJ",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_section": "About the Commission, paragraph beginning There are nine members of the Commission",
+      "source_note": "Exact label from the source representation paragraph. This listing records a named tribal representation category, not a personal commissioner, current preferred name approval or independent finding of legal recognition. The Inter-Tribal People membership category is not another Nation record."
+    }
+  ]
+}

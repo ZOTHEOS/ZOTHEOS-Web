@@ -41,9 +41,10 @@ def scenario(tmp_path):
                      'directory_sources.json', 'us_coverage_plan.json', NC,
                      'us_va_state_directory_2026.json'):
         shutil.copyfile(ROOT / 'data/nations/research' / filename, folder / filename)
-    optional_al = ROOT / 'data/nations/research/us_al_state_directory_2026.json'
-    if optional_al.exists():
-        shutil.copyfile(optional_al, folder / optional_al.name)
+    for filename, _, unit, *_ in I.INVENTORIES:
+        optional = ROOT / 'data/nations/research' / filename
+        if unit == 'state_tribal_directory_listing' and optional.exists():
+            shutil.copyfile(optional, folder / optional.name)
     shutil.copytree(ROOT / 'data/nations/research/receipts', folder / 'receipts')
     doc = read(folder / NC)
     source = {'label': 'Fictional supporting source', 'url': URL, 'receipt': REC, 'pages': [1, 5, 7, 19]}

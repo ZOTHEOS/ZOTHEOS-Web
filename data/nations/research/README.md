@@ -240,3 +240,33 @@ The canonical homepage returned HTTP403. Reading stopped immediately. No denial 
 identity/history claim or official website link was published, and its followup is deferred for seven days.
 Failed and unknown access states remain distinct from successful source receipts. Full source captures stay
 local; only sanitized provenance metadata enters this public repository.
+
+
+## October 15 afternoon source and history batch
+
+`us_nj_state_directory_2026.json` preserves three exact labels from the New Jersey commission's representation
+paragraph. They are named representation groups, not a complete recognition register. Inter-Tribal People is
+a separate membership category, not a fourth Nation. Nine commission members, four representation categories
+and three named groups are different units. The scope is explicitly shown in the source inventory chooser.
+No preferred-name, canonical identity or current legal recognition determination is inferred. Sand Hill and
+Cohanzick source leads stay in an explicit beyond-commission discovery task, not silent aliases or approved
+government identities. Historical 2018 and 2019 announcements and conflicting creation-law labels remain
+research evidence; no current recognition event or emergency is invented from today's observation date.
+
+Four state source inventories are now preserved, with 46 state discovery scopes and all four additional
+inclusion lanes pending. Source records still overlap and are never added as a count of distinct Nations.
+State namespace validation and directory removals now derive from explicitly configured typed inventories,
+so adding a state cannot leave its source labels or takedown namespace out of sync. Unknown states remain
+rejected until their inventory contract is configured.
+
+The Ute Mountain Ute profile adds one own-source historical homelands paragraph and direct source link.
+The Tribe's account describes parts of four present-day states and shared historical border areas. It is not
+a present-day reservation map, property ruling or jurisdiction determination. The October 15 fetch matched
+the October 12 homepage bytes; this is a fresh review of an unchanged source, not newly published history.
+Distinct Ute governments and the broader peoples overview remain separate. No sacred material or coordinates
+were imported, and no existing fact was newly verified by adding this contextual account.
+
+Context review dates now validate against the actual UTC calendar day, independently of the canonical model's
+last fact-check day. New source review never requires backdating evidence or advancing unrelated checked,
+last_verified or generated values. Actual future or invalid context dates, wrong nation/URL links, removed
+nations and held fact references still fail or suppress publication under the existing bounded contract.

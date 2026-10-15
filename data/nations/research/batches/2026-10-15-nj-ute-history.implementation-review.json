@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T14:16:19.786052+00:00",
+  "station": {
+    "seat": "Independent acceptance and final implementation reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE as assigned, no hardware audit",
+    "cycle": "2026-10-15T14:00:18.490Z"
+  },
+  "review_kind": "AI-assisted independent retained-source, implementation and acceptance review",
+  "human_review_claimed": false,
+  "gui_verified": false,
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "findings": [],
+  "outcome": "No unresolved P1/P2 findings in the reviewed source, implementation, evidence and generated HTML scope. Root full-suite/build/publish/live verification remain separate gates.",
+  "checks": [
+    "Reviewed configured-state prefix derivation: only explicit state_tribal_directory_listing INVENTORIES entries configure AL/VA/NC/NJ. Incoming rows and filenames cannot authorize ZZ.",
+    "Reviewed state holds, scope checks and NJ display labels. New Jersey is visibly described as commission representation, not a recognition register.",
+    "Read retained NJ About paragraph and Ute Weenuche Lands text against candidates and final public text. No present legal boundary, universal representative or current recognition determination inferred.",
+    "NJ source has three exact named tribal groups, separate Inter-Tribal People category and nine commission members. These remain distinct units.",
+    "Reviewed Context UTC ceiling independent of canonical build date, both call sites and unchanged fact/hold/exact nation-URL controls.",
+    "Old future-date unit test now uses actual tomorrow. Historical third-state fixture explicitly resets omitted NJ to pending; generic state/source fixtures copy only configured optional state files.",
+    "All 37 original independent acceptance tests passed after implementation; repository copies differ only by portable ROOT fallback.",
+    "Independent queue validation returned no errors. Actual context rendering keeps new Oct15 review beside old Oct12 relationship/resources; these dates are not normalized together.",
+    "Protected canonical registry, overrides, human receipts, prior contexts, publication holds, game and supplied audio match reviewed baseline bytes.",
+    "Read generated directory and Ute profile HTML; NJ three-record unit and 46 pending scopes are present, and Ute context/link retain attribution, uncertainty and distinct government relationships. This is source inspection, not a browser rendering claim.",
+    "All eight copied source receipts match their retained capture hashes, URLs, timestamps, status and sizes. Ute robots HTTP404 remains a recorded failure body, never promoted to successful content evidence."
+  ],
+  "acceptance_run": {
+    "tests": 37,
+    "passed": 37,
+    "failed": 0,
+    "pytest_exit_code": 0,
+    "pytest_runtime_seconds_reported": 2.75,
+    "post_process_note": "pyreadline3 emitted its known console-destructor invalid-handle message after successful results. No GUI verification is implied."
+  },
+  "source_receipt_body_checks": [
+    {
+      "receipt": "data/nations/research/receipts/us-nj-about-2026-10-15.receipt.json",
+      "captured_body_sha256": "e287f12724a0f6c0b81ac1b97dc4c30533d905304e42b0edc0ddfa4666169fd4",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nj-commission-2026-10-15.receipt.json",
+      "captured_body_sha256": "d34432c791d0d21b26e0806bd686ed00d4f37ab46d266699b31bfcf791d7bc4d",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nj-statutes-2026-10-15.receipt.json",
+      "captured_body_sha256": "dbd82ca59f1d0e2893aabc1cb3da5e33d674dce21b0acb56b96db5f571f5063d",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nj-settlement-2018-2026-10-15.receipt.json",
+      "captured_body_sha256": "5b1770b53dd1d2ebe8e0955adfc2aa935d505b8253827fc83f9e9cabb7c27adb",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nj-settlement-2019-2026-10-15.receipt.json",
+      "captured_body_sha256": "348e0550f839348f035014b10c0e2837df2d36dce9f02ec3d0bcdecb1220ec81",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-nj-www-nj-gov-robots-2026-10-15.receipt.json",
+      "captured_body_sha256": "ff9ce81f5dd01928fdffd1cca9176678f1d15d1671f6ee5658a063d5d234a421",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-ute-mountain-home-2026-10-15.receipt.json",
+      "captured_body_sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+      "http_status": 200,
+      "matched_captured_bytes": true
+    },
+    {
+      "receipt": "data/nations/research/receipts/us-ute-mountain-robots-2026-10-15.receipt.json",
+      "captured_body_sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+      "http_status": 404,
+      "matched_captured_bytes": true
+    }
+  ],
+  "source_file_sha256": {
+    "tools/nations_inventories.py": "5161f94337a6f01d823e85261ef2daea4f4c4943de6604b0d7c30d6c1f7aa8aa",
+    "tools/nations_context.py": "d44c0b447cffc4c561d20f9c1fa6203519a03030ba623d8df0abd93a323265ce",
+    "tools/tests/test_nations_context.py": "95a626e548ff44aea74c9a3811afafe0d9422ce658d1550171ae2653df617cc6",
+    "tools/tests/test_third_state_inventory_acceptance.py": "9900cc8860d32f1148fd6288b74a0aabe17df0b692a79bc4d54254a2477a9dfd",
+    "tools/tests/test_steward_source_acceptance.py": "52f61c74f085bdd833eae571f73647ca6113c785679e49219cf0bd1b94c35140",
+    "tools/tests/test_us_state_directory_acceptance.py": "07c0482bd0a0d9df3226099a18f819617753f92f115460ec011d77df577b14f7",
+    "tools/tests/test_fourth_state_inventory_acceptance.py": "4ec669c018a4d0be4d21abea6e5421d3f35631a82656a40614f85de04d6f98ba",
+    "tools/tests/test_context_review_clock_acceptance.py": "959516c296f5fd662b0560331f1b6e625b79c12523116b6e515fbebdc181d257",
+    "data/nations/context_links.json": "7d425a013e90c50a5c88058fa1e6464309b6eb3cd1bfc9b1131639fca4e0ee77",
+    "data/nations/research/us_coverage_plan.json": "02a91a06d14772950b4709ba77fd2239c1146a97c6c480e40db737f08a40b737",
+    "data/nations/research/us_nj_state_directory_2026.json": "ee583864f50842a569fc6d49603491715b9a57c3070f823ccf704d36bef03f36",
+    "data/nations/research/directory_sources.json": "3f944233d2b8ce4d506f42b216cca87614fd248f7dc08eb559f3f64808977b27",
+    "data/nations/research/coverage_queue.json": "1e15305248ac97a05e712dfed3e45358e132b4c0a52f89513a95ab1f51d35677",
+    "data/nations/research/README.md": "8abaa38b9fc58ec6e5bff2bebdd2e12808833eed1e34eff5416ac115a2cdb0b9",
+    "data/nations/sources/ute-mountain-homelands-2026-10-15.context.json": "24f3f215d2d39f74494e1647cc8b028e95a0781274e54e5ac605329ddf4f74d6",
+    "docs/collaboration/2026-10-15-claude-code-expansion-handoff.md": "cee0ee78feb18f8c41c5d1d1f103aece452843142d713a30eab22c8464719e8a",
+    "data/nations/research/receipts/us-nj-about-2026-10-15.receipt.json": "64edc4ed94c6dba21f1bdd4daf5f4f502cd521ad80fc83802c61311b7e502c57",
+    "data/nations/research/receipts/us-nj-commission-2026-10-15.receipt.json": "e1395c8c9a3409f7cffe6b8b14b86879b4a7bc1eb7e868aa102cb694015ed209",
+    "data/nations/research/receipts/us-nj-statutes-2026-10-15.receipt.json": "568c2d3060dad74f8ee015b40ce9c55c4fa6dbcd610205a5cf5a5d82624d8b45",
+    "data/nations/research/receipts/us-nj-settlement-2018-2026-10-15.receipt.json": "8c9d99d1d2059c6db7c5b1d11a1955f06f5b06a654a20dd4740a2ab87b1a8b47",
+    "data/nations/research/receipts/us-nj-settlement-2019-2026-10-15.receipt.json": "6cdd652e151fa83c61459638fbcb735569a897c09f62200a917be844892f0d82",
+    "data/nations/research/receipts/us-nj-www-nj-gov-robots-2026-10-15.receipt.json": "21d89f4128b18c3c279d2601cc984fb761c787d33aee6c28822bf6ea34d62e95",
+    "data/nations/research/receipts/us-ute-mountain-home-2026-10-15.receipt.json": "ea7b3234cf0fa7dc77352a2ed28bba2acc7b6d90dd11074d02b812cc1057c7b9",
+    "data/nations/research/receipts/us-ute-mountain-robots-2026-10-15.receipt.json": "3b72e0cf76050aafe504517c87541d71ba8e35a86f590093fec61e8d8b653090"
+  },
+  "protected_file_sha256": {
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/nations/sources/expansion-americas-2026-10-12.context.json": "e625f72f3cd63ec45c4cc3d063e74c522dc9aa247e40dd5483722a804d60aec7",
+    "data/nations/sources/chiricahua-scope-2026-10-12.context.json": "d23da26a51de5c0a1159367419a477994b23bd973ac0a5517c7bd9592f351179",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "game/index.html": "05b67815f7f332fe95554bd3173a395c19ea6994a8ac9d929a90f526643e4ab4",
+    "game/nations.json": "ab4e261a61449cd598fa91225249409dbfe2c9e8d6aeec80a07511b34990d101",
+    "static/zotheos_intro.mp3": "3f0b3db8cccfff2b9c38808076aa30729e501cefc398522a25c5ec281b75aaa5"
+  },
+  "generated_html_sha256": {
+    "nations/directory.html": "1438f08f7672e4fa8a75e18719d8a5d713424309bbbd642b834d712df2b9ee26",
+    "nations/coverage.html": "05ff13f482a4091b8be61cc8daedb3c54906941f4cc8c63c5dcd57a275c724d1",
+    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "18472ac1eaa0f4b8d59e58bff08b93b5534d385815ffb248eea6c1969ab3dd7f"
+  },
+  "cross_source_review_artifact_sha256": {
+    "independent-nj-source-review.json": "ccb187913cda4ac876a139ca4ba600443d37a09cf8506f8e4172c7ee901633c9",
+    "independent-ute-history-review.json": "1cfdecc136b32172a1512997b97f859f3ddd345e86661cbb4f4c4e1219fee3d6"
+  },
+  "review_limits": [
+    "No claim of full test-suite, build check, release gates, merge, deployment, live HTTP bytes or current browser visual verification. Root must record those actual outcomes separately.",
+    "This does not approve canonical identity matches, legal recognition findings, Nation endorsement, human review or complete US/world coverage.",
+    "Old context and canonical fact clocks are intentionally unchanged. The fresh own-source reading is unchanged content, not an urgent development."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T14:10:27.268252+00:00",
+  "reviewer": "Codex independent AI-assisted source reviewer /root/ute_history_gap_20261015",
+  "author_of_candidate": false,
+  "human_review_claimed": false,
+  "network_requests_by_this_review": 0,
+  "web_writes": false,
+  "gui_verification_claimed": false,
+  "decision": "Source candidate acceptable for its bounded Commission-representation scope. Implementation acceptance remains required.",
+  "unresolved_p1_p2_findings": [],
+  "source_findings": [
+    {
+      "topic": "Exact source labels and units",
+      "finding": "The saved About paragraph lists the three candidate names, in candidate order, then the separate Inter-Tribal People membership category. Nine describes commission members, four describes representation categories, and three is the enumerated named-group count, not a stated registry total."
+    },
+    {
+      "topic": "Recognition and names",
+      "finding": "Commission membership is not a current recognition register. The saved statute separately limits commission recognition authority. The 2018/2019 official announcements support attributed historical settlement research only. Preferred-name, identity and governing-scope matches remain unreviewed."
+    },
+    {
+      "topic": "Unresolved source label",
+      "finding": "About page P.L.1134 differs from statute L.1995,c.295. Candidate correctly avoids deriving a founding-law fact from the mismatch."
+    },
+    {
+      "topic": "Limits and dignity",
+      "finding": "No personal commissioner names, contacts, officeholders, seals, sacred content or current-urgency claims imported into candidate inventory. Sand Hill/Cohanzick leads are internal followup material, absent from rendered public fields."
+    }
+  ],
+  "receipt_capture_checks": [
+    {
+      "receipt": "us-nj-www-nj-gov-robots-2026-10-15.receipt.json",
+      "capture": "www-nj-gov-robots.txt",
+      "sha256": "ff9ce81f5dd01928fdffd1cca9176678f1d15d1671f6ee5658a063d5d234a421",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:02:46.699977+00:00",
+      "bytes": 377,
+      "matching_capture": true,
+      "receipt_file_sha256": "21d89f4128b18c3c279d2601cc984fb761c787d33aee6c28822bf6ea34d62e95"
+    },
+    {
+      "receipt": "us-nj-commission-2026-10-15.receipt.json",
+      "capture": "commission.html",
+      "sha256": "d34432c791d0d21b26e0806bd686ed00d4f37ab46d266699b31bfcf791d7bc4d",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:03:30.633162+00:00",
+      "bytes": 53689,
+      "matching_capture": true,
+      "receipt_file_sha256": "e1395c8c9a3409f7cffe6b8b14b86879b4a7bc1eb7e868aa102cb694015ed209"
+    },
+    {
+      "receipt": "us-nj-about-2026-10-15.receipt.json",
+      "capture": "about.html",
+      "sha256": "e287f12724a0f6c0b81ac1b97dc4c30533d905304e42b0edc0ddfa4666169fd4",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:03:34.375978+00:00",
+      "bytes": 35516,
+      "matching_capture": true,
+      "receipt_file_sha256": "64edc4ed94c6dba21f1bdd4daf5f4f502cd521ad80fc83802c61311b7e502c57"
+    },
+    {
+      "receipt": "us-nj-statutes-2026-10-15.receipt.json",
+      "capture": "statutes.html",
+      "sha256": "dbd82ca59f1d0e2893aabc1cb3da5e33d674dce21b0acb56b96db5f571f5063d",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:03:37.926256+00:00",
+      "bytes": 46860,
+      "matching_capture": true,
+      "receipt_file_sha256": "568c2d3060dad74f8ee015b40ce9c55c4fa6dbcd610205a5cf5a5d82624d8b45"
+    },
+    {
+      "receipt": "us-nj-settlement-2018-2026-10-15.receipt.json",
+      "capture": "settlement-2018.html",
+      "sha256": "5b1770b53dd1d2ebe8e0955adfc2aa935d505b8253827fc83f9e9cabb7c27adb",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:04:37.664870+00:00",
+      "bytes": 66907,
+      "matching_capture": true,
+      "receipt_file_sha256": "8c9d99d1d2059c6db7c5b1d11a1955f06f5b06a654a20dd4740a2ab87b1a8b47"
+    },
+    {
+      "receipt": "us-nj-settlement-2019-2026-10-15.receipt.json",
+      "capture": "settlement-2019.html",
+      "sha256": "348e0550f839348f035014b10c0e2837df2d36dce9f02ec3d0bcdecb1220ec81",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T14:04:33.712242+00:00",
+      "bytes": 70162,
+      "matching_capture": true,
+      "receipt_file_sha256": "6cdd652e151fa83c61459638fbcb735569a897c09f62200a917be844892f0d82"
+    }
+  ],
+  "source_scope_approval_before_content": true,
+  "robots_allowance_checked_from_saved_body": true,
+  "minimum_observed_request_start_interval_seconds": 3.550278,
+  "hold_render_checks": [
+    {
+      "held_directory_id": "us-state-nj-nanticoke-lenni-lenape-indians",
+      "name_and_id_absent_from_rendered_directory": true,
+      "other_two_candidate_rows_preserved": true
+    },
+    {
+      "held_directory_id": "us-state-nj-powhatan-renape-indians",
+      "name_and_id_absent_from_rendered_directory": true,
+      "other_two_candidate_rows_preserved": true
+    },
+    {
+      "held_directory_id": "us-state-nj-ramapough-lenape-indian-nation",
+      "name_and_id_absent_from_rendered_directory": true,
+      "other_two_candidate_rows_preserved": true
+    }
+  ],
+  "hold_check_limit": "Three source-content/render simulations inject already-parsed held IDs because the baseline hold parser does not yet accept NJ. This does not claim that the planned NJ parser, typed loader, source-id integration or coverage-plan extension has passed. Root must separately test the real dated-hold path after implementation.",
+  "integration_requirements": [
+    "Use technical source_id us-nj-tribal-directory but a public Commission representation title.",
+    "Retain stated_count null, three distinct source labels, observation date, and unreviewed identity links.",
+    "Keep historical settlement claims and name variants scoped to known row IDs if later published, so holding any subject removes all its named notes and links.",
+    "Keep Sand Hill and Cohanzick outside the public inventory until distinct own-source identity research.",
+    "Run typed NJ loader, dated hold, queue, coverage plan, build and publication gates."
+  ],
+  "file_pins": {
+    "new-jersey/candidate-handoff.json": "569715884581decaf965f54a356d94d47fe30133efb56bb21c2e4a19e06bbe03",
+    "new-jersey/us_nj_state_directory_2026.candidate.json": "7cdc211476d6ee7ab61783a25b5478e0f165f39bd138eb94d03db6d91456c2c7",
+    "new-jersey/source-scope-approval.json": "85561cdf460b0ef85fb1eb9c80383656f3ce2d1709b3e2493267e449bec096ca",
+    "new-jersey/conditional-source-rationale.json": "3a36493748d5376e251bcfedf0a7c79f368c9c977b28c8f97694f712621df12a",
+    "tools/nations_directory.py": "a2def8edde0923304a0f10974b12f458b85318e711d99cd847f678d45f520340",
+    "tools/nations_inventories.py": "198373f22c01b5dc3e8f1433241e5a517937659f5d4e1f2a2e397bc84a87e4e5"
+  }
+}
