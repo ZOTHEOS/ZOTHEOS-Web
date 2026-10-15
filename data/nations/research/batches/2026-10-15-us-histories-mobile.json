@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T16:54:01.573458+00:00",
+  "station": "Codex integration on MELLO-MOOSE; exact backend model not independently asserted",
+  "branch": "codex/us-histories-mobile-2026-10-15",
+  "baseline_main": "589beee2136536adaf7b049a1ad1c87279bb9510",
+  "publication_state_at_recording": "Reviewed and checked for pull request publication. Merge, production deployment and live verification remain separate subsequent steps.",
+  "substantive_changes": [
+    "Southern Ute own-source layers explain Mouache/Caputa homelands, 1895/1896 allotment, 1937 restoration and 1984 education. Source ambiguities and acreage excluded.",
+    "Ute Indian Tribe layers attribute an Uncompahgre land-restoration account and a July 2025 water statement. Reported recommendations and Tribal legal positions remain distinct from final judgment, present title and current 2026 outcomes.",
+    "Five short history sections gain bounded escaped headings and four direct own-publisher resources. Untitled legacy output remains byte-identical; removal and held-note controls suppress headings with their paragraphs.",
+    "Name search immediately follows the directory introduction. Query precedes the optional source filter; full profile/source definitions remain in native default-closed details.",
+    "All 2272 static source records, order, names, existing element IDs, script/style URLs and asset bytes match the independent baseline. No directory record is dropped for missing research.",
+    "Nanticoke current-site ownership and history remain unpublished after the older NJ Education-published host robots returned500. Actual receipts, source-scope approvals, ownership uncertainty and retry backoff retained. No bypass or guessed official_url/canonical crosswalk.",
+    "Claude reply received and retained locally. Its unresolved objections are quoted in the collaboration record; inventory/driver/license assertions remain attributed. No cinema render or workstation changes."
+  ],
+  "measured_counts": {
+    "new_history_paragraphs": 5,
+    "new_own_publisher_resource_links": 4,
+    "canonical_profiles_unchanged": 457,
+    "canonical_raw_facts_unchanged": 1287,
+    "public_facts_unchanged": 1285,
+    "held_facts_unchanged": 2,
+    "canonical_facts_added": 0,
+    "mixed_source_records_unchanged": 2272,
+    "source_lists_unchanged": 8,
+    "state_source_inventories_preserved": 4,
+    "state_source_discovery_pending": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "persistent_queue_tasks": 1808,
+    "queue_by_status": {
+      "pending": 1701,
+      "needs_review": 105,
+      "blocked": 2
+    },
+    "new_sanitized_receipts": 19,
+    "receipt_http_statuses": {
+      "200": 17,
+      "None": 1,
+      "500": 1
+    },
+    "human_or_nation_approvals_created": 0,
+    "meaning": "Source records overlap and use different units. None of these counts establishes distinct Nation totals or complete coverage."
+  },
+  "checks": {
+    "pytest": {
+      "passed": 259,
+      "failed": 0,
+      "seconds": 136.81,
+      "runtime": "Existing Python3.10.9 direct interpreter and pinned dependencies; no installation or driver changes."
+    },
+    "independent_prebuild_acceptance": {
+      "cases": 5,
+      "baseline_failures": 5,
+      "implemented_passes": 5
+    },
+    "independent_context_tests": {
+      "passed": 28,
+      "failed": 0,
+      "seconds": 0.25
+    },
+    "build": "passed;581 generated pages;copy,font,CSP,links,size,contrast gates passed",
+    "deterministic_build_check": "passed",
+    "research_queue_validation": "passed with no errors",
+    "release_check": "passed",
+    "game_export_check": "passed",
+    "node_directory_interaction": "passed",
+    "git_diff_check": "passed",
+    "browser_phone_viewports": {
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "horizontal_overflow": false,
+      "minimum_search_control_height_px": 48,
+      "verified_interactions": [
+        "Ute name search",
+        "zero results within NJ scope",
+        "Clear preserves source scope",
+        "native method disclosure",
+        "query-Clear-filter keyboard order",
+        "Show More from40to80 with name focus"
+      ],
+      "themes": "All four theme radios and readable select colors checked on the published baseline at320px. Script/CSS assets are unchanged in this branch.",
+      "limits": "Actual desktop in-app browser viewport observations, not physical iOS/Android, mobile Safari or screen-reader certification."
+    },
+    "protected_files": "Canonical facts/dates, previous contexts, identity crosswalks, holds, human receipts, landing, game, CSS/JS and supplied audio unchanged."
+  },
+  "review_file_pin_scope": "Independent reports pin physical working-tree snapshots. Configured Git text normalization can change CRLF file bytes to LF without substantive changes. Copied review-record hashes separately identify their normalized LF bytes.",
+  "reviews": [
+    {
+      "file": "2026-10-15-us-histories-mobile.southern-ute-review.json",
+      "sha256": "8aa711d50e8e11ad8430b78a32e95a8c46478d38c14069e1587ee57eda6e9bb5",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "963bd224ce79e92c74780b4ea54bf71818bf5042cc61a7993c4b6a67470778a6"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.ute-indian-review.json",
+      "sha256": "c35360d63ff46eaff910aa9cb969f54a5b85e52eb20a4d9dfd7c293f90861ee6",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "e59bbe519f212ab84480444a1a5d406c7b8ac44f092056b690a93a5f1b8edd72"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.implementation-review.json",
+      "sha256": "d4da1b93e941fe30a82aec5435515f70264605f0b16fb4dadb9e7a0137fb5995",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "4e31de002dea39434f14b5930b4158927478a89e6fe27f60c1cdfa64b03d6a68"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.mobile-review.json",
+      "sha256": "08fa92dbfc7e2714df9d5f17499337b578aa9f017545ed5f1f308e29b40b2797",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "30f0556f21662bd9886be50153c60f6213b54aedf3f6bca8309e2f36ced81e2c"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.heading-prebuild.json",
+      "sha256": "cccb4c7240f2327d0d165dea75ca8ebaaf08dbbbfc967d1a56aa4484db183318",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "35ad20b714b98a8ab7e2519ae6187773b2dfb22f4d7bc56e486ec4e3f56a3543"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.mobile-prebuild.json",
+      "sha256": "9308aa213b9e1a094f520ff58f60343fe6f1174331080974923c023ce5f09fd3",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "26cdf9812c074400a0b7b0459f8b0c6ded37c31e1ec40e768c0f9de6561f6dc5"
+    },
+    {
+      "file": "2026-10-15-us-histories-mobile.browser-checks.json",
+      "sha256": "3a55876d41c4ea31aa30f3ff0c3f73c622391da6cd64b5cd828b21d5954cf0fb",
+      "hash_kind": "LF-normalized committed review-record bytes",
+      "original_local_artifact_sha256": "3a55876d41c4ea31aa30f3ff0c3f73c622391da6cd64b5cd828b21d5954cf0fb"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "directory-mobile-390-local.jpg",
+      "sha256": "98c834fe86056ae54ec23fc7b991acf1942c07f8f715c010b7c1e7a09325163e",
+      "retention": "Local browser audit artifact only"
+    },
+    {
+      "file": "southern-ute-history-mobile-local.jpg",
+      "sha256": "a5803af0bd5ca7a0a274736036208c0ac02c7cddcb204e2faadd29a800125128",
+      "retention": "Local browser audit artifact only"
+    }
+  ],
+  "unresolved": [
+    "Nanticoke current-site ownership, preferred-name/profile drafting and canonical identity remain pending. Its new-site history draft is not published.",
+    "Historical source ambiguities and unknown PDF publication/hearing dates were not silently resolved.",
+    "Current legal outcomes and urgent developments were not established in this bounded historical batch.",
+    "US and worldwide coverage remain incomplete, including46pending state scopes and all4additional inclusion lanes.",
+    "Physical-device and screen-reader testing remain unclaimed. Production bytes and live browser verification follow merge.",
+    "Claude Council Route, landing/architecture claims, news and cinema production remain separately scoped followups."
+  ],
+  "human_review": false
+}

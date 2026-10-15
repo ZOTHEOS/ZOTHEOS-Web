@@ -101,8 +101,11 @@ class Context:
             for note in groups["public_notes"]:
                 nid = self.nation(note.get("nation"), known)
                 body = text(note.get("text"))
+                title = text(note["title"], 160) if "title" in note else None
+                if title is not None and not title.strip():
+                    raise ValueError("context: empty note title")
                 if self.visible(nid, note, public_facts):
-                    self.add(nid, "notes", (body, reviewed))
+                    self.add(nid, "notes", (body, reviewed, title))
             for resource in groups["official_resources"]:
                 nid = self.nation(resource.get("nation"), known)
                 address = text(resource.get("url"), 700)
@@ -157,7 +160,9 @@ class Context:
             return ""
         out = ['<section class="n-sec" aria-labelledby="nContext">',
                '<h2 class="n-sec-h" id="nContext">Context and resources</h2>']
-        for body, reviewed in entry.get("notes", []):
+        for body, reviewed, title in entry.get("notes", []):
+            if title is not None:
+                out.append(f'<h3 class="n-sec-h">{esc(title)}</h3>')
             out.append(f'<p class="fact-t">{esc(body)}</p><p class="rc">Context reviewed {stamp(reviewed)} with AI assistance.</p>')
         if entry.get("relations"):
             out.append('<h3 class="n-sec-h">Related records</h3>')

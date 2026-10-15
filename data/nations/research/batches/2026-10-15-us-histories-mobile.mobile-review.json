@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "station": {
+    "seat": "Independent mobile HTML and pending-source integration reviewer",
+    "model": "Inherited model; exact backend not independently verified",
+    "machine": "MELLO-MOOSE as assigned, no hardware audit",
+    "cycle": "us-histories-mobile-2026-10-15"
+  },
+  "reviewed_at": "2026-10-15T16:48:56.797167+00:00",
+  "review_kind": "AI-assisted source/DOM/code review, not human or Nation approval",
+  "human_review_claimed": false,
+  "authorship_independence": "Reviewer authored the prebuild acceptance tests and Nanticoke research candidate; root independently authored the UI implementation. Reviewer did not author the UI change.",
+  "findings": [],
+  "outcome": "Reviewed mobile DOM change and Nanticoke pending-source integration pass. Actual viewport/theme/interaction verification and full publication gates remain root responsibilities.",
+  "acceptance_tests": {
+    "command": [
+      "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-m",
+      "pytest",
+      "C:\\ZOTHEOS-Web\\tools\\tests\\test_mobile_directory_compactness.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "observed_result": "3 passed in 0.24s",
+    "test_file_matches_prebuild_author_copy": true,
+    "prebuild_expected_red_count": 3,
+    "test_file_sha256": "8e8a6faeb235e18742f574f692140b43d2c968eab2002d8b090d018e4635eb12"
+  },
+  "static_preservation": {
+    "public_records": 2272,
+    "record_ids_names_and_order_match_baseline": true,
+    "every_record_name_present_in_static_html": true,
+    "no_record_hidden_or_inside_closed_details": true,
+    "all_element_ids_match_baseline": true,
+    "stylesheet_urls_match": true,
+    "external_script_urls_match": true,
+    "inline_script_hashes_match": true,
+    "local_styles_and_script_asset_bytes_match": true,
+    "scope_profile_and_pending_explanations_preserved": true,
+    "native_noscript_fallback_preserved": true,
+    "canonical_profile_facts_bytes_unchanged": true
+  },
+  "nanticoke_review": {
+    "official_url": null,
+    "registry_crosswalk_status": "unreviewed",
+    "canonical_profile_created": false,
+    "public_history_published": false,
+    "queue_status": "blocked",
+    "actual_failure_status": 500,
+    "actual_failure_retrieved_at": "2026-10-15T16:38:21.603944+00:00",
+    "next_attempt_after": "2026-10-16T16:46:31.579431+00:00",
+    "source_candidate_clearly_labelled_pending": true,
+    "notes": "The successful newer self-branded source capture is recorded as research, not an approved current official ownership chain. The historical draft remains local and unpublished. The stored 500 is not a successful source receipt."
+  },
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "browser_or_viewport_checks_claimed": false,
+  "source_file_pins": {
+    "tools/nations_directory.py": "92fbab2f9ccc86993cc9e6c17ebc6ed725006337fabc227af83c776c2e40b49c",
+    "tools/tests/test_mobile_directory_compactness.py": "8e8a6faeb235e18742f574f692140b43d2c968eab2002d8b090d018e4635eb12",
+    "nations/directory.html": "5d4cda45f7490b9575409ad79facd3307df6a26309996315eccaaa47d7f681cd",
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/research/us_nj_state_directory_2026.json": "ee583864f50842a569fc6d49603491715b9a57c3070f823ccf704d36bef03f36",
+    "data/nations/research/coverage_queue.json": "a83c388e2a970117dc6f05950e08807a5cf29fd606222ff119a2fdeed4e73785",
+    "data/nations/research/directory_sources.json": "8e4050738e5eb6eadd75984e6739b5fdff5ce0eae459ee95fe6348eb1bc893e7",
+    "data/nations/research/receipts/us-nanticoke-about-checked-2026-10-15.receipt.json": "56ad6fdad58da5c9c9324cae899561d18eda2923f27c5e5e1d2ebb3cf63abb6c",
+    "data/nations/research/receipts/us-nanticoke-home-checked-2026-10-15.receipt.json": "2420d0059049257632cd1f86a87228866c4c04ea1fa392920f92221cb9f72a45",
+    "data/nations/research/receipts/us-nanticoke-nj-education-pdf-checked-2026-10-15.receipt.json": "d942ae915c326eef75fa1c822d891c9562d676536691b05e6c3323c92d96c51f",
+    "data/nations/research/receipts/us-nanticoke-published-nlltribe.com-robots-0-checked-2026-10-15.receipt.json": "568a853b6b7af3d90137f11883a7bde333ca25c04b5b19aac64d15c547c09fe6",
+    "data/nations/research/receipts/us-nanticoke-www.nj.gov-robots-checked-2026-10-15.receipt.json": "65998a54113527f690850d1266ca099b5fc58e33c493d93036316464eeaf9f31",
+    "data/nations/research/receipts/us-nanticoke-www.nlltribalnation.org-robots-checked-2026-10-15.receipt.json": "b7876f37b5df768dadbbf5219dfebd022f3f3bac60691752609e62e82744e16e"
+  },
+  "artifact_pins": {
+    "mobile-public-records-baseline.json": "3569f30de9bb1329ea5f8b2875839f033b7e94e7506c5d8a0ea16a9fffa9e186",
+    "mobile-prebuild-red-report.json": "26cdf9812c074400a0b7b0459f8b0c6ded37c31e1ec40e768c0f9de6561f6dc5",
+    "nanticoke/nanticoke-own-history-handoff.json": "9a7af9e2a101bd6d718d7ded65db9f1a92a76ddd3ac4ac9571b10f4541254e7e"
+  },
+  "limitations": [
+    "No claim of fresh browser or screenshot review. Root performs 320/390/430 phone/theme checks.",
+    "Other Ute context additions and context-clock changes are outside this mobile/Nanticoke review scope and need their own independent review.",
+    "Future legitimate holds, source changes and deliberate feature work must be reviewed on their own merits; this record is a dated UI-change preservation check."
+  ]
+}

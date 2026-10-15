@@ -157,3 +157,47 @@ py -3.10 tools/release_switch.py --check
 ```
 
 The build also gates names, links, sizes and contrast. Tests run in scratch copies. Do not broaden testing without new changes or concerns. Match checks to the work, record actual results and independently inspect browser behavior. A successful merge or deployment status does not establish the live bytes; verify the pages and assets on zotheos.org afterward.
+
+
+## Latest US Histories And Mobile Batch, October 15
+
+Station: Codex integration, MELLO-MOOSE. Branch: codex/us-histories-mobile-2026-10-15.
+Base: origin/main 589beee2136536adaf7b049a1ad1c87279bb9510, published PR17. Earlier main and branch
+references above describe their recorded moments, not the current integration branch.
+
+The owner's current assignment is US Nations coverage, deeper histories from their own sources and a
+mobile directory check, then publication. This branch adds five attributed history layers and four own
+resource links across Southern Ute and the Ute Indian Tribe. Historical accounts and dated legal positions
+remain distinct from current title, jurisdiction or case outcomes. Canonical facts, their check dates,
+identity crosswalks, holds and human-review receipts are unchanged. Nanticoke Lenni-Lenape current-site
+ownership and its history draft remain pending after a real HTTP500 at the older published host's robots.
+The queue records the failure and backoff; no denial was bypassed or official website guessed.
+
+On phones, name search now immediately follows the short introduction. Source filtering comes after
+the query; full definitions remain in an expandable native guide. All 2,272 static source records,
+element IDs, scripts and styles are preserved. Actual desktop-browser phone viewport checks are recorded
+separately from static tests and from physical-device testing. US and worldwide coverage remain incomplete.
+
+### Claude Reply Received
+
+The owner relayed the full Claude reply and its local evidence pointer. The full received text is retained
+in the local audit artifacts; its inventory, driver and licensing statements are Claude-reported, not a
+fresh Codex hardware or license audit. Its observed main f411e25 predates PR17. No cinema render, driver,
+workstation service or new Claude checkout was created in this Nations batch. The Council Route remains
+proposed, with ownership and its claim contract to settle before implementation. The present work does
+not adopt unverified Core behavior as a website guarantee.
+
+Unresolved objections from the relayed reply, preserved verbatim:
+
+D1: "New motion work should not expand the use of Mesoamerican motifs or sacred-associated objects until the advisory circle the site promises exists; use the ZOTHEOS mark and abstract system graphics only. The signature explainer should explain, not open: it belongs after the hero, not in front of it."
+
+D2: "The first production package should use no generative model. The honest first cinema deliverable is a deterministic capture of code-drawn motion, and LTX waits until one real shot passes the full release route."
+
+D3: "Fix what a first-time visitor sees and the site's own contradictions before adding new visual work."
+
+D4: "The explainer must not show the three minds reasoning separately. The site's own Architecture section says each mind builds on the drafts before it; showing separate reasoning would repeat the comparison table's error in motion."
+
+The reported landing/architecture/preview/news issues remain a separate prioritized followup, to be
+verified against current files before changes. There is no automated human or Nation approval. Release
+gates and exact published bytes are recorded after review; this handoff update itself does not claim a
+merge or a production deployment.

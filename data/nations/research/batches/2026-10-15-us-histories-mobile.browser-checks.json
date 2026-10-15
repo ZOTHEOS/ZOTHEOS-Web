@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-10-15T16:49:30.532Z",
+  "kind": "Desktop in-app browser at explicit phone viewports, not physical iOS/Android devices",
+  "source": "http://127.0.0.1:4174/nations/directory.html",
+  "widths": [
+    {
+      "clientWidth": 305,
+      "controls": [
+        {
+          "height": 48,
+          "id": "directoryQuery",
+          "inside": true,
+          "width": 200.5
+        },
+        {
+          "height": 48,
+          "id": "directoryClear",
+          "inside": true,
+          "width": 64.5
+        },
+        {
+          "height": 48,
+          "id": "directoryInventory",
+          "inside": true,
+          "width": 273
+        }
+      ],
+      "height": 740,
+      "queryDocumentTop": 582.84375,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "controls": [
+        {
+          "height": 48,
+          "id": "directoryQuery",
+          "inside": true,
+          "width": 270.5
+        },
+        {
+          "height": 48,
+          "id": "directoryClear",
+          "inside": true,
+          "width": 64.5
+        },
+        {
+          "height": 48,
+          "id": "directoryInventory",
+          "inside": true,
+          "width": 343
+        }
+      ],
+      "height": 844,
+      "queryDocumentTop": 542.046875,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "clientWidth": 415,
+      "controls": [
+        {
+          "height": 48,
+          "id": "directoryQuery",
+          "inside": true,
+          "width": 308.125
+        },
+        {
+          "height": 48,
+          "id": "directoryClear",
+          "inside": true,
+          "width": 64.5
+        },
+        {
+          "height": 48,
+          "id": "directoryInventory",
+          "inside": true,
+          "width": 380.625
+        }
+      ],
+      "height": 932,
+      "queryDocumentTop": 542.046875,
+      "scrollWidth": 415,
+      "width": 430
+    }
+  ],
+  "themeControlsOnPublishedBaseline": [
+    {
+      "overflow": false,
+      "rootAttributes": [
+        [
+          "data-motion",
+          "living"
+        ],
+        [
+          "data-theme",
+          "maya"
+        ]
+      ],
+      "selectBg": "rgb(2, 16, 30)",
+      "selectInk": "rgb(244, 236, 216)",
+      "selected": "Maya Radiance",
+      "theme": null,
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "rootAttributes": [
+        [
+          "data-motion",
+          "living"
+        ],
+        [
+          "data-theme",
+          "codex"
+        ]
+      ],
+      "selectBg": "rgb(232, 219, 192)",
+      "selectInk": "rgb(26, 15, 8)",
+      "selected": "Living Codex",
+      "theme": null,
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "rootAttributes": [
+        [
+          "data-motion",
+          "living"
+        ],
+        [
+          "data-theme",
+          "skeleton"
+        ]
+      ],
+      "selectBg": "rgb(5, 5, 7)",
+      "selectInk": "rgb(237, 228, 211)",
+      "selected": "Obsidian Ember",
+      "theme": null,
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "rootAttributes": [
+        [
+          "data-motion",
+          "living"
+        ]
+      ],
+      "selectBg": "rgb(0, 0, 0)",
+      "selectInk": "rgb(255, 255, 255)",
+      "selected": "Sovereign Skeleton",
+      "theme": null,
+      "width": 320
+    }
+  ],
+  "interactions": [
+    {
+      "action": "Ute name search",
+      "status": "5 of 5 matching name records shown in all source inventories."
+    },
+    {
+      "action": "Ute within NJ scope",
+      "status": "0 of 0 matching name records shown in United States: New Jersey commission representation: Named tribal representation groups. Try another spelling or search the researched profiles."
+    },
+    {
+      "action": "Clear preserves NJ scope",
+      "status": "3 of 3 matching name records shown in United States: New Jersey commission representation: Named tribal representation groups.",
+      "scope": "directoryInventory"
+    },
+    {
+      "action": "Native method disclosure",
+      "open": true,
+      "pendingVisible": true
+    },
+    {
+      "action": "Keyboard next after name query",
+      "activeId": "directoryClear"
+    },
+    {
+      "action": "Keyboard next after Clear",
+      "activeId": "directoryInventory"
+    },
+    {
+      "action": "All scopes reset",
+      "status": "40 of 2272 matching name records shown in all source inventories."
+    },
+    {
+      "action": "Show more",
+      "focusClass": "nm directory-name",
+      "focusText": "Chickahominy Indian Tribe-Eastern Division",
+      "status": "80 of 2272 matching name records shown in all source inventories."
+    }
+  ]
+}

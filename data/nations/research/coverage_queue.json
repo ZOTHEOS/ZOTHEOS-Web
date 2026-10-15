@@ -62135,11 +62135,14 @@
       "region": "us-state-nj",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
         "us-nj-tribal-directory",
         "us-nj-commission-hub",
-        "us-nj-commission-statutes"
+        "us-nj-commission-statutes",
+        "us-nj-nanticoke-current-site-candidate",
+        "us-nj-nanticoke-published-site",
+        "us-nj-education-indigenous-history"
       ],
       "review": {
         "identity": "pending",
@@ -62157,9 +62160,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T14:11:36.803392+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://nlltribe.com/robots.txt",
+          "retrieved_at": "2026-10-15T16:38:21.603944+00:00",
+          "http_status": 500,
+          "sha256": "4b9443d1fac58409ab0efe11dba4dbcd7b18b65f8de36412511c5edeaad0332a",
+          "source_id": "us-nj-nanticoke-published-site",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-nanticoke-published-nlltribe.com-robots-0-checked-2026-10-15.receipt.json",
+          "receipt_id": "r-5805f09d491951dd"
+        }
+      ],
+      "updated_at": "2026-10-15T16:46:31.579431+00:00",
+      "next_attempt_after": "2026-10-16T16:46:31.579431+00:00",
+      "lease_until": null,
+      "note": "Current official-site ownership chain unverified: the older NJ Education-published host robots returned500. No homepage or alternate-host bypass. New-site history draft stays unpublished; official_url remains null, identity crosswalk remains unreviewed. Source captures preceded this integration lease."
     },
     {
       "task_id": "profile-us-state-nj-powhatan-renape-indians",
@@ -62321,6 +62337,104 @@
       "next_attempt_after": null,
       "lease_until": null,
       "note": "Fresh own-source context review for historical Weenuche homelands and shared border areas. No current jurisdiction or urgency claim; canonical fact clocks and identity remain unchanged. Source captures preceded this integration lease; no earlier lease is invented."
+    },
+    {
+      "task_id": "history-southern-ute-allotment-restoration-education",
+      "task_type": "historical_context",
+      "entity_id": "us-fed-bf8c7ddaf9dc",
+      "subject": "Deepen own-source history for Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado",
+      "entity_type": "federally_listed_tribal_entity",
+      "countries": [
+        "US"
+      ],
+      "region": "us-owner-priority-ute",
+      "priority": 96,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "priority-southern-ute"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "url": "https://www.southernute-nsn.gov/history/",
+          "retrieved_at": "2026-10-15T16:36:26.853058+00:00",
+          "http_status": 200,
+          "sha256": "919863eee9e22f04eb81f2d7046a45e14df7ffe1753ae8646c21eac722d8bc9b",
+          "source_id": "priority-southern-ute",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-southern-ute-southern-ute-history-2026-10-15-checked-2026-10-15.receipt.json",
+          "receipt_id": "r-5886bef0ef5afbaf"
+        }
+      ],
+      "updated_at": "2026-10-15T16:46:31.121043+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented."
+    },
+    {
+      "task_id": "history-ute-indian-land-water-context",
+      "task_type": "historical_context",
+      "entity_id": "us-fed-70dbbf8ba886",
+      "subject": "Deepen own-source history for Ute Indian Tribe of the Uintah & Ouray Reservation, Utah",
+      "entity_type": "federally_listed_tribal_entity",
+      "countries": [
+        "US"
+      ],
+      "region": "us-owner-priority-ute",
+      "priority": 96,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "priority-ute-indian"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "url": "https://utetribe.com/wp-content/uploads/2025/07/VictoryInTribalWaterTheftCaseJuly10.pdf",
+          "retrieved_at": "2026-10-15T16:39:50.744298+00:00",
+          "http_status": 200,
+          "sha256": "80a5d334d6fa4a5c24c5be74242e07011d626d3d994621ea0e620175d3bfbd8e",
+          "source_id": "priority-ute-indian",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-ute-indian-ute-indian-water-case-2025-checked-2026-10-15.receipt.json",
+          "receipt_id": "r-5edf98ec3255ca1f"
+        }
+      ],
+      "updated_at": "2026-10-15T16:46:31.347444+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented."
     }
   ]
 }
