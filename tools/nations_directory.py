@@ -171,7 +171,7 @@ def entry(builder, e):
     if c['status'] == 'confirmed' and c['registry_id'] in builder.m.by_id:
         out.append('<p><a href="/nations/' + esc(c['registry_id']) + '">Read the researched profile</a></p>')
     else:
-        out.append('<p class="rc">Directory name. A corresponding researched profile has not been confirmed here.</p>')
+        out.append('<p class="rc directory-state">Profile Link Pending</p>')
     if e.get('official_url'):
         out.append('<p>' + source_link(e['official_url'], 'Visit the verified official website') + '</p>')
     out.append('</li>')
@@ -258,6 +258,7 @@ def page(builder):
     out = ['<div class="read n-head prose directory-page">', '<p class="eyebrow">Names And Sources</p>',
            '<h1 class="page-h">Names deserve visibility.</h1>',
            '<p class="lede">Start with a name. Follow its source. See what still needs research.</p>',
+           '<p class="note directory-key"><strong>Profile Link Pending</strong> means this source record has not yet been linked to a researched profile. A profile may already exist under another name; identity review comes first.</p>',
            '<div class="directory-paths"><section><h2>Sourced name records</h2><p>A directory entry is not a researched profile. '
            'Names below retain the published category and date. These different lists cannot be added together as a count of Indigenous nations.</p></section>',
            '<section><h2>Researched profiles</h2><p>' + str(len(builder.m.nations)) + ' profiles of peoples, communities and governing bodies. '
@@ -304,6 +305,9 @@ def page(builder):
         for discrepancy in doc.get('source_discrepancies', []):
             if discrepancy.get('status') == 'unresolved' and discrepancy['subject_directory_id'] in present:
                 block.append('<p>' + source_link(discrepancy['announcement_url'], 'Read the other published account') + '</p>')
+                for evidence in discrepancy.get('supporting_sources', []):
+                    page_note = (' (pages ' + ', '.join(str(page) for page in evidence['pages']) + ')') if evidence.get('pages') else ''
+                    block.append('<p class="note">' + source_link(evidence['url'], evidence['label']) + esc(page_note) + '</p>')
         block += ['<details class="directory-source"><summary>Read the source and scope</summary>',
                   '<p class="rc">' + esc(display['label']) + '; source snapshot ' + esc(display_date(doc['as_of'])) + '. '
                   + source_link(src['url'], src['publisher'] + ': ' + src.get('display_title', src['title'])) + '. Read ' + esc(display_date(datetime.fromisoformat(src['retrieved_at'].replace('Z', '+00:00')).astimezone(timezone.utc).date().isoformat())) + ' UTC.</p>',

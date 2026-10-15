@@ -13,7 +13,7 @@ are currently enabled. The architecture's proposed `nations_author.py` is not pr
 
 - `us_federal_directory.json`: every name record in the January 2026 federal notice, with its entity type,
   source, date, historical aliases and unreviewed profile crosswalk. This is directory information, separate from
-  the mixed people/government profiles. The latest captured audit measures 457 entries. Directory-only names can be shown with their source and a clear
+  the mixed people/government profiles. The captured canonical registry audit measures 457 researched profiles, separate from the 577 federal source-name records. Directory-only names can be shown with their source and a clear
   profile-pending label. New facts still pass the existing review lane.
 - `coverage_queue.json`: tasks, priorities, leases, source scopes, dated receipts and independent-review states.
 - `ca_registry_groups_2024.json`: dated Canadian administrative-name snapshot, with 634 named registry groups
@@ -197,3 +197,23 @@ The persistent queue contains per-record identity/history tasks, state-level sou
 inclusion-gap tasks. Researchers must locate and read own and primary sources before adding facts; discovery
 tasks without approved source IDs must establish a reviewed host allowlist before their first captured read.
 Do not turn a state label into a homeland boundary, government count or requirement for Indigenous identity.
+
+
+## October 15 source followup
+
+Approved NC commission minutes, visually read because the PDF is scanned, record the Catawba recognition motion
+in June 2026. The minutes are headed June 5, while the DOA announcement says June 6 without giving its year.
+The old directory still describes a petition. The public note now distinguishes the supported month from the
+unresolved day difference; it does not assign a legal effective day or alter the October 14 directory snapshot.
+April committee-report acceptance and September minutes approval are not new recognition events. Supporting
+source links are bounded, match successful measured receipts and follow the discrepancy subject's hold.
+
+INPI's linked KML contains one N'dee/N'nee/Ndé record of type Sede in Chihuahua. The existing source guide adds
+that distinction without copying coordinates, creating a government identity or claiming all communities.
+A located own-published candidate site denies automated reading; no content was fetched or verified. INALI
+failures and the inaccessible legislative summary remain failures, not evidence for public facts. Original
+canonical facts, identity crosswalks, human receipts and old source observation dates remain unchanged.
+
+The two source tasks move to needs_review with real receipts. Separate pending followups retain the unresolved
+day discrepancy and need for permissible own-government sources, with a seven-day retry delay to avoid routine
+repeated reporting of unchanged material. Source guides are AI-assisted and do not claim human approval.

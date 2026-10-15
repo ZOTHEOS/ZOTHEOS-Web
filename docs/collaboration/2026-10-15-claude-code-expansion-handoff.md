@@ -6,9 +6,9 @@ The owner authorizes continuing website enhancement, expansion, commits and publ
 
 ## Mission And Standard
 
-ZOTHEOS describes itself as offline ethical intelligence, private by default and built independently. The website should help people understand, question and inspect information while retaining human judgment. Indigenous Nations visibility, histories, land, sovereignty, language, community work and rights are a standing priority. Make knowledge welcoming and digestible without weakening its meaning.
+The founder clarified the public mission on October 15: give power back to humanity. Truth, dignity and sovereignty guide the work, especially in service to people whose voices have been silenced or overlooked. Universal peace is the moral horizon. Help people understand, question and inspect information, strengthen their own judgment, and act with care for one another and the living world. Care explicitly includes land, water and ecosystems. Indigenous Nations visibility, histories, land, sovereignty, language, community work and rights remain a standing priority. Make knowledge welcoming and digestible without weakening its meaning. Attribute communities' own published accounts without implying consultation, permission or endorsement that did not occur.
 
-Truth outranks spectacle. Multiple models can share an error; agreement is not proof. Source claims precisely, preserve uncertainty and make contradictions visible. Product architecture illustrations are explanations, not measured app demonstrations. Core feature status cannot be established by website copy alone. Indigenous identity is not defined by government recognition. Do not merge a people, community, governing body, representative organization, language or census category because the names resemble one another.
+These are commitments directing the work, not demonstrated guarantees of protection, healing, environmental benefit, consciousness or guaranteed truth. Challenge harmful claims and conduct without dehumanizing people. Accountability requires evidence and fair processes. Do not turn general concerns about power or manipulation into unsupported allegations of universal coordination. Do not publish private personal material or private future project concepts. Truth outranks spectacle. Multiple models can share an error; agreement is not proof. Source claims precisely, preserve uncertainty and make contradictions visible. Product architecture illustrations are explanations, not measured app demonstrations. Core feature status cannot be established by website copy alone. Indigenous identity is not defined by government recognition. Do not merge a people, community, governing body, representative organization, language or census category because the names resemble one another.
 
 ## Station And Ownership
 
@@ -32,7 +32,7 @@ No messages to third parties, donations, forms or outreach are authorized. The o
 
 ## Published State
 
-Latest merged website revision: `5bf1982bb58b96fbb81cf272e5240448d995425e`, PR 14, https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/14. Feature revision: `b302dc809ff77754fbc10a531e063ffeb749c6f1`. Confirm current main before implementation.
+Published baseline when this handoff was prepared: `5bf1982bb58b96fbb81cf272e5240448d995425e`, PR 14, https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/14. Feature revision: `b302dc809ff77754fbc10a531e063ffeb749c6f1`. Confirm current main before implementation.
 
 PR 14 adds open source-inventory choices, source filters, 40-record browsing, continuation focus and working record deep links. Every name remains in the HTML without JavaScript. Source detail disclosures keep unresolved differences outside the fold. Actual preview checks included 390px phones, 1280px desktop, Appearance through the phone Menu, light and dark controls, Calm motion and Ute search selecting the three distinct federal-list governments.
 
@@ -49,9 +49,9 @@ The measured collection has 457 canonical profiles and 1,287 raw facts, with 1,2
 
 The US inclusion plan covers 50 state source-discovery scopes. Virginia and North Carolina inventories are preserved, with 48 other state scopes pending. This is a work tracker, not a completeness percentage. Four separate pending lanes cover communities outside recognition lists, Native Hawaiian peoples and communities, Alaska's distinct governments/peoples/villages/organizations, and cross-border or wider US-associated communities. Complete US and worldwide coverage have not been achieved.
 
-There are 1,790 queue tasks at the last measured state. Confirm the queue rather than treating this number as permanent. Canonical identity crosswalks in the two new state inventories remain unreviewed. Five own-site identity links were independently reviewed with AI assistance. No human review, urgent-risk finding or legal recognition adjudication was invented.
+There are 1,792 queue tasks after the October 15 source followups. Confirm the queue rather than treating this number as permanent. Canonical identity crosswalks in the two new state inventories remain unreviewed. Five own-site identity links were independently reviewed with AI assistance. No human review, urgent-risk finding or legal recognition adjudication was invented.
 
-PR 14 passed 180 full-suite tests before a final UTC display correction; 56 focused tests passed afterward. Final deterministic build, font, copy, CSP, links, size, contrast, queue, release and game-data checks passed. Three independent AI review records and source receipts are committed in `data/nations/research/batches/2026-10-14-050645*`. They are AI reviews, not human or Nation approvals. Live Vercel status succeeded. Eight production resources matched reviewed bytes in the local publication receipt on October 14 UTC; fresh visual confirmation is being finished.
+PR 14 passed 180 full-suite tests before a final UTC display correction; 56 focused tests passed afterward. Final deterministic build, font, copy, CSP, links, size, contrast, queue, release and game-data checks passed. Three independent AI review records and source receipts are committed in `data/nations/research/batches/2026-10-14-050645*`. They are AI reviews, not human or Nation approvals. Live Vercel status succeeded. Eight production resources matched reviewed bytes in the local publication receipt on October 14 UTC; Fresh browser visual confirmation remains pending because no browser is available in the permitted Computer Use app inventory. The earlier phone and desktop checks retain their original date.
 
 ## Website Files
 
@@ -104,14 +104,18 @@ Retain actual source URLs, HTTP state/body SHA when measured, observed text, eve
 
 Directory holds and canonical holds differ but must both be honored. Named inventory notes bind explicit directory IDs through `scoped_notes`; any held subject suppresses the whole note. Discrepancy links follow their subject's visibility. Composite named resources bind canonical IDs. Do not restore held content automatically. Existing human-only restoration and signing-key rules remain in force.
 
-## Research In Progress On October 15
+## Source Followups Prepared On October 15
 
-Two bounded source subjects are being investigated by Codex research agents. They are read-only contributors; Codex owns integration.
+Two bounded source subjects have been integrated locally and independently reviewed by an AI reviewer. They are pending publication checks at this handoff refresh, not described here as live additions.
 
-1. Catawba NC statements: current DOA directory says petitioned; DOA landing says recognition at a June 6 meeting without a year. A General Assembly summary and a commission calendar may provide different dates. No date or legal-status resolution is approved yet. Preserve contradictions until primary evidence establishes their meaning.
-2. Chiricahua-identifying communities in Mexico: Fort Sill, Mescalero and Chiricahua Apache Nation remain distinct. INPI's N'dee/Nnee/Ndé account is broader than Chiricahua and does not establish a single contemporary government. A newly located Mexican own-site denies all automated crawling; its content is unread and cannot supply verified facts. Additional primary sources are being checked.
+1. Catawba NC statements: approved commission minutes establish a recognition motion in June 2026. The minutes are dated June 5; the DOA landing says June 6 without a year, and the older directory still describes a petition. Preserve the exact-day discrepancy and unknown legal effective date. Public supporting links identify the actual minutes and page references. The October 14 directory snapshot, nine observed headings and unreviewed identity crosswalks remain unchanged.
+2. Chiricahua-identifying communities in Mexico: the freshly read INPI map contains one N'dee/N'nee/Ndé record in Chihuahua with type Sede, meaning a seat. It is not a territory boundary, complete community inventory or proof of a single contemporary government. The existing resource guide links that source and retains three distinct canonical subject bindings. A candidate own-site disallows automated crawling; its content is unread and not used for verified claims.
 
-Do not duplicate, overwrite or silently resolve these subjects. Report source and representation concerns to Codex. Current work artifacts are in the local `steward-2026-10-15` folder attached to this task.
+Directory rows now say Profile Link Pending with a clear explanation: an existing profile may still need a reviewed identity match. No canonical facts, legal recognition decisions or human approvals were added. Source receipts, queue updates and independent review retain their actual check dates and unresolved questions. Do not duplicate, overwrite or silently resolve these subjects. Current work artifacts are in the local steward-2026-10-15 folder attached to this task.
+
+## Collaboration Status
+
+The local Claude CLI returned an authentication error before producing a model response. The owner chose to paste this handoff into their already signed-in Claude Code session. Claude's tool inventory, availability on each workstation, critique and cinema proposal have not yet been received. Codex observed ffmpeg and ffprobe on the local PATH; this does not establish access to any AI cinema renderer. No generation or paid render has been commissioned.
 
 ## First Assignment For Claude Code
 
