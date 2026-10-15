@@ -1,0 +1,80 @@
+{
+  "review_kind": "Independent AI source/HTML semantic review; no GUI and no human review",
+  "reviewed_at": "2026-10-15T02:47:13.476276-06:00",
+  "findings": [],
+  "record_counts": {
+    "source_records": 2269,
+    "public_html_records": 2269,
+    "alabama_source_records": 9,
+    "state_source_discovery_pending": 47,
+    "canonical_profiles": 457
+  },
+  "verified": [
+    "Search tools follow explanatory paths and precede US inclusion and inventory chooser.",
+    "All HTML IDs unique, existing labels and controls/status relationships retained.",
+    "Search tools hidden until JavaScript while every permitted source row remains visible in HTML without JavaScript.",
+    "Nine Alabama source rows and unique, correctly named AL/VA/NC options and section titles.",
+    "Incomplete coverage and non-distinct-count warnings retained.",
+    "Existing directory JavaScript/CSS and canonical registry unchanged against HEAD."
+  ],
+  "limits": [
+    "No fresh GUI, contrast, screen-reader or mobile layout observations. Existing JS interaction acceptance remains separately runnable.",
+    "HTML/source pins describe current worktree snapshot only; root must recheck if changed before publication."
+  ],
+  "file_pins": {
+    "tools/nations_directory.py": {
+      "sha256": "a2def8edde0923304a0f10974b12f458b85318e711d99cd847f678d45f520340",
+      "bytes": 28981
+    },
+    "tools/nations_inventories.py": {
+      "sha256": "198373f22c01b5dc3e8f1433241e5a517937659f5d4e1f2a2e397bc84a87e4e5",
+      "bytes": 12578
+    },
+    "tools/nations/partials/appearance.js": {
+      "sha256": "2c2a9f4083af57d8cd438ec2246b98e0e3a7d80b6d4fc5b618fc95250dbe1834",
+      "bytes": 10172
+    },
+    "tools/nations/partials/nations.css": {
+      "sha256": "d2615761d598926b215da857504c0edcb4736a25e9795fae50190e41aea523dc",
+      "bytes": 32633
+    },
+    "nations/directory.html": {
+      "sha256": "69e7cdbff04c7f8ab0580dd7c7a983152a3e3d888f70d7ad199349f67b8f5b41",
+      "bytes": 633041
+    },
+    "data/nations/research/us_al_state_directory_2026.json": {
+      "sha256": "1a76dea536b67a0519325de5823b748406e6a4d5ef45c3ec3cf489764751c0b4",
+      "bytes": 14263
+    },
+    "data/nations/nations.json": {
+      "sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+      "bytes": 1208682
+    }
+  },
+  "baseline_unchanged": {
+    "tools/nations/partials/appearance.js": {
+      "git_diff_unchanged": true,
+      "head_blob_exact_worktree_bytes": true,
+      "head_blob_sha256": "2c2a9f4083af57d8cd438ec2246b98e0e3a7d80b6d4fc5b618fc95250dbe1834",
+      "line_ending_normalized_bytes_equal": true
+    },
+    "tools/nations/partials/nations.css": {
+      "git_diff_unchanged": true,
+      "head_blob_exact_worktree_bytes": true,
+      "head_blob_sha256": "d2615761d598926b215da857504c0edcb4736a25e9795fae50190e41aea523dc",
+      "line_ending_normalized_bytes_equal": true
+    },
+    "data/nations/nations.json": {
+      "git_diff_unchanged": true,
+      "head_blob_exact_worktree_bytes": true,
+      "head_blob_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+      "line_ending_normalized_bytes_equal": true
+    }
+  },
+  "interaction_verification": {
+    "command": "C:\\nvm4w\\nodejs\\node.exe tools/tests/directory-ui-acceptance.cjs tools/nations/partials/appearance.js",
+    "exit_code": 0,
+    "observed_result": "Directory interaction acceptance passed: no-JS source availability, bounded batches, typed scope, Ute/Paiute separation, no results, Show More focus, preserved scope, deep links, chooser focus, malformed hash, legacy fallback.",
+    "kind": "Actual unchanged script executed in existing isolated DOM fixture. Not a browser, screen-reader or mobile measurement."
+  }
+}

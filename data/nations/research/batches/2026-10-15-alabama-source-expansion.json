@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T08:49:47.476516+00:00",
+  "station": "Codex integration on MELLO-MOOSE, ZOTHEOS-Web only",
+  "branch": "codex/us-source-expansion-2026-10-15",
+  "baseline_main": "5e0361ddd621f8dbb73f2e56d3856252b83b3a4b",
+  "publication_state_at_recording": "Reviewed and checked for pull request publication; not yet merged or live-byte verified.",
+  "substantive_changes": [
+    "Nine exact Alabama commission roster headings retained as state-directory source records. Original capitalization/abbreviations retained, no personal contacts, leadership, addresses or graphics copied.",
+    "The source states nine with one federal overlap; upload path and Last-Modified do not establish publication or recognition effective dates. Actual source observation is October 15 UTC.",
+    "Name search moved before inclusion and inventory navigation, with a labeled Find A Name heading and missing-result scope explanation. Existing JS, CSS and accessibility hooks retained.",
+    "Explicit Alabama source labels, state scope validation and publication holds replace the previous two-state assumptions.",
+    "Independent review found an unbound named footnote. It was bound to its subject; an actual-data regression confirms the note disappears with the held listing while siblings remain.",
+    "Nine typed source/history followups added. Poarch own-source attempt stopped at actual403 after separately reviewed redirects and permitted robots; no official link, branding/history claim or resource card verified.",
+    "Claude collaboration brief records its pipeline and review team as owner-relayed reports. Final station, tools, licensing, costs and production proposal remain pending. No render, driver change or workstation service change claimed."
+  ],
+  "source_inventory_file": "us_al_state_directory_2026.json",
+  "source_observation_utc": "2026-10-15T08:34:16.099943+00:00",
+  "source_url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+  "source_body_sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+  "measured_counts": {
+    "new_alabama_source_records": 9,
+    "total_mixed_source_records": 2269,
+    "meaning": "Overlapping and differently scoped source records, not distinct Nations and not complete Indigenous coverage.",
+    "state_source_inventories_preserved": 3,
+    "state_source_discovery_pending": 47,
+    "additional_inclusion_lanes_pending": 4,
+    "persistent_queue_tasks": 1801,
+    "new_source_followups_pending": 8,
+    "new_source_followups_blocked": 1,
+    "canonical_profiles_unchanged": 457,
+    "canonical_raw_facts_unchanged": 1287,
+    "canonical_facts_added": 0,
+    "human_or_nation_approvals_created": 0
+  },
+  "checks": {
+    "pytest": {
+      "passed": 217,
+      "failed": 0,
+      "seconds": 132.82,
+      "runtime": "Existing Python3.10.9 direct interpreter; original pinned fonttools4.63.0, brotli1.2.0, pypdf6.4.0."
+    },
+    "independent_acceptance": {
+      "passed": 19,
+      "failed": 0,
+      "seconds": 2.63,
+      "prebuild_red_cases": 18,
+      "later_pre_fix_red_regression": 1
+    },
+    "build": "passed; 581 pages, copy/font/CSP/link/size/contrast gates passed",
+    "research_queue_validation": "passed with no errors",
+    "release_check": "passed",
+    "game_export_check": "passed",
+    "directory_interaction": "passed including batching, scope, keyboard focus, deep links and Ute/Paiute name boundary",
+    "git_diff_check": "passed",
+    "protected_files": "Canonical facts, landing Mission, game, supplied audio, CSS and JS unchanged from baseline.",
+    "browser_visuals": "Not performed; no new phone, desktop or screen-reader observation claimed."
+  },
+  "independent_reviews": [
+    "2026-10-15-alabama-source-expansion.independent-review.json",
+    "2026-10-15-alabama-source-expansion.ux-review.json",
+    "2026-10-15-alabama-source-expansion.prebuild-review.json"
+  ],
+  "unresolved": [
+    "All nine Alabama identity crosswalks and canonical profile/history research remain unreviewed.",
+    "Poarch own-source content access denied; retry deferred seven days without alternate-host/path bypass.",
+    "Forty-seven other state discovery scopes and all four additional inclusion lanes remain pending; coverage is incomplete.",
+    "Claude cinema inventory details and proposal remain pending the owner relay.",
+    "Fresh browser layout inspection and live publication verification are separate remaining steps at this record time."
+  ],
+  "human_review": false
+}

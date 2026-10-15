@@ -40,6 +40,9 @@ def isolated(tmp_path):
     for name in ['us_federal_directory.json', 'ca_registry_groups_2024.json', 'directory_sources.json',
                  'us_coverage_plan.json', *(c[0] for c in CASES)]:
         shutil.copyfile(ROOT / 'data/nations/research' / name, folder / name)
+    optional_al = ROOT / 'data/nations/research/us_al_state_directory_2026.json'
+    if optional_al.exists():
+        shutil.copyfile(optional_al, folder / optional_al.name)
     shutil.copytree(ROOT / 'data/nations/research/receipts', folder / 'receipts')
     shutil.copyfile(ROOT / 'data/nations/nations.json', tmp_path / 'data/nations/nations.json')
     write(folder / 'coverage_queue.json', {'max_subjects_per_run': 3, 'tasks': []})
@@ -229,7 +232,7 @@ def test_us_gap_plan_cannot_claim_complete_or_discard_unresearched_scopes(isolat
     elif corrupt == 'missing_state': plan['state_scopes'].pop()
     elif corrupt == 'duplicate_state': plan['state_scopes'][-1] = dict(plan['state_scopes'][0])
     elif corrupt == 'pretend_inventory':
-        plan['state_scopes'][0].update(status='source_inventory_preserved', inventory_file='us_al_state_directory_2026.json')
+        next(row for row in plan['state_scopes'] if row['state'] == 'CO').update(status='source_inventory_preserved', inventory_file='us_co_state_directory_2026.json')
     else: plan['additional_lanes'] = [r for r in plan['additional_lanes'] if r['id'] != 'native-hawaiian']
     write(path, plan)
     with pytest.raises(ValueError): D.page(builder(root))

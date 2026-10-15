@@ -247,7 +247,7 @@ def page(builder):
     other_extra = [(doc, rows) for doc, rows in extra_entries if doc['entity_unit'] != 'state_tribal_directory_listing']
     total = len(entities) + len(ca_entries) + sum(len(rows) for _, rows in extra_entries)
     choices = [('us-directory', 'United States', 'Federal published names', str(len(entities)), display_date(source['publication_date']))]
-    choices += [(d['_display']['anchor'], 'United States: ' + ('Virginia' if d['state'] == 'VA' else 'North Carolina'),
+    choices += [(d['_display']['anchor'], d['_display']['title'],
                  'State directory listings', str(len(rows)), display_date(d['as_of']) + ' UTC observation') for d, rows in us_extra]
     choices += [('canada-directory', 'Canada', '2024 administrative register groups', str(len(ca_entries)), display_date(canada['source']['as_of']))]
     choices += [(d['_display']['anchor'], d['_display']['title'], d['_display']['label'], str(len(rows)), display_date(d['as_of'])) for d, rows in other_extra]
@@ -264,8 +264,7 @@ def page(builder):
            '<section><h2>Researched profiles</h2><p>' + str(len(builder.m.nations)) + ' profiles of peoples, communities and governing bodies. '
            'Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> '
            '&middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div>',
-           us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
-           '<div class="directory-search" id="directoryTools" hidden><div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
+           '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p><div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
            '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
            + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div>',
            '<label for="directoryQuery">Find a name in this directory</label>',
@@ -273,7 +272,8 @@ def page(builder):
            '<button type="button" id="directoryClear" class="pill">Clear</button></div>',
            '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
            '<p id="directoryLimit" class="note"></p></div>',
-           '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the inventory links above to browse.</p></noscript>',
+           '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
+           us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
            '<div id="directoryNames"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
            '<h2 id="us-directory-title">United States: the published federal list</h2>',
            '<p>' + str(len(entities)) + ' published federal name records. The source states ' + str(directory['stated_count']) + ' Tribal entities.</p>',

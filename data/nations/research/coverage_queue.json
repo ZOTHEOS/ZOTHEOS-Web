@@ -59800,8 +59800,11 @@
       "region": "us-state-source-discovery",
       "priority": 90,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
-      "allowed_source_ids": [],
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-al-tribal-directory",
+        "us-al-state-agency-index"
+      ],
       "review": {
         "identity": "pending",
         "sources": "pending",
@@ -59818,9 +59821,23 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+          "retrieved_at": "2026-10-15T08:34:16.099943+00:00",
+          "http_status": 200,
+          "sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+          "source_id": "us-al-tribal-directory",
+          "retrieval_method": "http",
+          "evidence": "Nine source headings in the actual commission PDF, independently text/AI visually read; personal contacts and leadership omitted.",
+          "evidence_receipt": "receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+          "receipt_id": "r-69bfd815aaae1689"
+        }
+      ],
+      "updated_at": "2026-10-15T08:41:28.136123+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Preserved nine Alabama commission source names with real October15 observation receipts. Source count nine includes one federal overlap. Identity crosswalks remain unreviewed; nine typed own-source/history followups added. Source capture preceded this integration lease; no earlier lease is invented."
     },
     {
       "task_id": "discover-us-state-ak",
@@ -61740,6 +61757,354 @@
       "updated_at": "2026-10-15T07:18:41.774663+00:00",
       "next_attempt_after": "2026-10-22T07:18:42.324211+00:00",
       "note": "No routine repeat report for unchanged sources. No outreach or access-rule bypass; no canonical match or legal adjudication."
+    },
+    {
+      "task_id": "profile-us-state-al-southeastern-mvskoke-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-southeastern-mvskoke-nation",
+      "subject": "SOUTHEASTERN MVSKOKE NATION",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-piqua-shawnee-tribe",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-piqua-shawnee-tribe",
+      "subject": "PIQUA SHAWNEE TRIBE",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-cher-o-creek-intratribal-indians",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-cher-o-creek-intratribal-indians",
+      "subject": "CHER-O-CREEK INTRATRIBAL INDIANS",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-mowa-band-of-choctaw-indians",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-mowa-band-of-choctaw-indians",
+      "subject": "MOWA BAND OF CHOCTAW INDIANS",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-united-cherokee-ani-yun-wiya-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-united-cherokee-ani-yun-wiya-nation",
+      "subject": "UNITED CHEROKEE ANI-YUN-WIYA NATION",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-machis-lower-creek-indian-tribe-of-al",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-machis-lower-creek-indian-tribe-of-al",
+      "subject": "MACHIS LOWER CREEK INDIAN TRIBE OF AL",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-echota-cherokee-tribe-of-al",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-echota-cherokee-tribe-of-al",
+      "subject": "ECHOTA CHEROKEE TRIBE OF AL",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-cherokee-tribe-of-ne-alabama",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-cherokee-tribe-of-ne-alabama",
+      "subject": "CHEROKEE TRIBE OF NE ALABAMA",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-al-tribal-directory"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "next_attempt_after": null,
+      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+    },
+    {
+      "task_id": "profile-us-state-al-poarch-band-of-creek-indians",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-al-poarch-band-of-creek-indians",
+      "subject": "POARCH BAND OF CREEK INDIANS",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-al",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "blocked",
+      "allowed_source_ids": [
+        "us-al-tribal-directory",
+        "us-al-poarch-own-source"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "url": "https://pci-nsn.gov/",
+          "retrieved_at": "2026-10-15T08:40:15.958885+00:00",
+          "http_status": 403,
+          "sha256": "002e044fb02aaa871a3f7f7161edc0c1db8a89b3b64d6f404d7e7a9ea31ed6e6",
+          "source_id": "us-al-poarch-own-source",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-al-poarch-canonical-home.receipt.json",
+          "note": "Measured access denial only. Response is not evidence for facts or identity.",
+          "receipt_id": "r-bd88b8fd0f4ea64d"
+        }
+      ],
+      "updated_at": "2026-10-15T08:45:10.265612+00:00",
+      "next_attempt_after": "2026-10-22T08:45:10.311630+00:00",
+      "note": "Candidate own homepage returned actual HTTP403 after permitted robots and reviewed canonical redirects. Stopped without alternate-host/path, proxy or snippet substitution. No own branding/history/official URL verified. The access attempt preceded this integration lease; no earlier lease is invented.",
+      "lease_until": null,
+      "retry_policy_note": "Defer repeated access-denied research for seven days; do not retry earlier without new permissible evidence or an explicit source change."
     }
   ]
 }
