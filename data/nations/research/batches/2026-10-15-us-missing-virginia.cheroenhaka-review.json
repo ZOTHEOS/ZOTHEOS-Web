@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T23:42:05.890984+00:00",
+  "station": {
+    "seat": "Independent source meaning, naming/respect and publication-scope reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE as assigned; no hardware audit",
+    "cycle": "us-missing-virginia-2026-10-15"
+  },
+  "review_kind": "AI-assisted independent review of another agent proposal and captured evidence; no source network requests or Web writes",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "fresh_source_requests": 0,
+  "web_queue_git_writes": false,
+  "baseline": "1b96dfa7f8581b46fe598614711493aa28293524",
+  "outcome": "PASS. No unresolved P1/P2 source meaning, identity, date, respect or publication-scope findings in the proposed Cheroenhaka package or Mattaponi deferral.",
+  "findings": [],
+  "proposal": {
+    "path": "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-missing-virginia-2026-10-15\\cheroenhaka\\profile-handoff.json",
+    "sha256": "195751c381c8d96afa599eda40b5e4af952d1ac6a9efe0514ac515bbd0fcc493",
+    "raw_candidate_sha256": "709c26a4cca73635761fba3ca7c52affa71f79f2e97f8c8b30d346f6d0622dc0"
+  },
+  "identity_review": {
+    "verdict": "supported with explicit distinct-community scope",
+    "own_name": "Cheroenhaka (Nottoway) Indian Tribe",
+    "official_url": "https://www.cheroenhaka-nottoway.org/",
+    "lands": "Southampton County, Virginia, United States",
+    "also": [],
+    "pronounce": null,
+    "distinction": "Cheroenhaka (Nottoway) Indian Tribe and Nottoway Indian Tribe of Virginia retain separate own names, directory IDs and exact own-site URLs. Shared Nottoway wording is not a basis to merge them or settle exclusive representation.",
+    "whole_baseline_registry_records_scanned": 457,
+    "baseline_identity_or_alias_matches": [],
+    "baseline_registry_sha256": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "baseline_va_inventory_sha256": "35bb43bddcdac1526dc3aeb0174222556642fd3368b0622b051930e2370bc9ed",
+    "limits": "Missing from this canonical snapshot is not a finding about existence, recognition or all Indigenous coverage. No pronunciation, generalized alias, exclusive voice, current jurisdiction or legal recognition is inferred."
+  },
+  "fact_reviews": [
+    {
+      "fact_index": 0,
+      "verdict": "supported",
+      "source_key": "home",
+      "evidence": "Indian Tribe Southampton County, VA",
+      "meaning_and_scope": "Own home headline identifies this Tribe and Southampton County. Location is a community display locality; no homeland or jurisdiction boundary is inferred."
+    },
+    {
+      "fact_index": 1,
+      "verdict": "supported",
+      "source_key": "snapshot",
+      "evidence": "election of a Chief and Tribal Governing Council",
+      "meaning_and_scope": "Own historical snapshot states May 2002 election of a Chief and Tribal Governing Council. The paragraph is attributed as historical and does not turn reorganization into the origin of the people."
+    },
+    {
+      "fact_index": 2,
+      "verdict": "supported",
+      "source_key": "language",
+      "evidence": "source materials dating back to March 4th, 1820",
+      "meaning_and_scope": "Language introduction dates source materials to March 4, 1820. Fact describes the source page and historical materials, not present speaker fluency, exclusivity or current class access."
+    },
+    {
+      "fact_index": 3,
+      "verdict": "supported",
+      "source_key": "town",
+      "evidence": "Iroquoian language and in English identifying Native Flora and Fauna",
+      "meaning_and_scope": "Town page describes interpretive trail signage in Iroquoian and English for local flora/fauna. Fact preserves attribution and does not assert opening hours, date or measured educational outcome."
+    }
+  ],
+  "history_note_reviews": [
+    {
+      "title": "Community Continuity And Reorganization",
+      "verdict": "supported",
+      "sources": [
+        "snapshot"
+      ],
+      "meaning": "Own history updated in 2022 supports land loss, reclassification, family continuity, February 2002 reorganization and May 2002 elections. Final wording distinguishes a government reorganization from the beginning of a people and explicitly preserves the other Nottoway community. No intertribal polemic or legal recognition inference adopted."
+    },
+    {
+      "title": "Language Records And Public Learning",
+      "verdict": "supported",
+      "sources": [
+        "language",
+        "town"
+      ],
+      "meaning": "Own pages support 1820 and 1830s vocabulary records, correspondence and bilingual public interpretation. Wording clearly excludes current speakers, classes, opening times and measured outcomes. No sacred vocabulary or colonial derogatory classification reproduced."
+    }
+  ],
+  "resources_review": "Both exact own URLs are retained successful source captures. Purpose text explains dated/colonial records and older plans without promising current access, facilities or programs.",
+  "reuse_and_respect_review": {
+    "robots_access": "All requested public paths are allowed; actual crawl-delay is 10 seconds and real ledger respects it.",
+    "minimum_observed_start_gap_seconds": 10.269626140594482,
+    "minimum_observed_previous_finish_gap_seconds": 10.000306606292725,
+    "successful_receipts": 7,
+    "redirects_or_new_hosts_followed": 0,
+    "source_scope_preceded_first_get": true,
+    "reproduction_scope": "Paraphrased short facts and notes with 4-12 word evidence fragments. Copyright/footer statements and copyrighted shield/journals were observed; no explicit written-permission reuse condition was found in captured Cheroenhaka pages. This is not a blanket media or full-text reuse license. Raw bodies remain local.",
+    "excluded": "Intertribal allegations, blood/ancestry adjudication, sacred material, colonial slurs, ceremonies, contacts, maps, coordinates, photos, shield and proprietary journal reproduction remain excluded."
+  },
+  "source_body_and_receipt_pins": {
+    "robots": {
+      "body_sha256": "ff648b9c675b52e9ae02ea03800fd28315b652efde8e8477d223fa0cb0b0efc0",
+      "body_bytes": 185,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/robots.txt",
+      "retrieved_at": "2026-10-15T23:34:07.564477+00:00",
+      "receipt_sha256": "347414fac9fc248385eca6853f791ffb0f77f2fbd01af1c7b4a52ef3b11d9cfc",
+      "sanitized_receipt_sha256": "484c51e8d70d8c76bf005c3296849bd19210f9a104cc35c4bcca5766653928f2"
+    },
+    "home": {
+      "body_sha256": "905b134a01f3c1ef05bb7bb60dda2ce6b15962ddfda4b69040d158e1f58a093f",
+      "body_bytes": 79753,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/",
+      "retrieved_at": "2026-10-15T23:34:17.834103+00:00",
+      "receipt_sha256": "c26cacd54e63e937277607d6654570cae8ff3a8db2d5450c21c881d95eb996e2",
+      "sanitized_receipt_sha256": "d00de8860014368afdbbeffb9657be25af6e2233d3abf1cf3855373e62c04203"
+    },
+    "about": {
+      "body_sha256": "18a94d8a14d5124fa04342791fe938132b6b892a8f9c0eb8b7f49327ee484c0e",
+      "body_bytes": 59928,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/",
+      "retrieved_at": "2026-10-15T23:34:58.201206+00:00",
+      "receipt_sha256": "c285912eae9600ab458e138f80969ada823859cf017516c3ed03fda412608c77",
+      "sanitized_receipt_sha256": "4a77bb01be8996f9af42870b9a1b58c8d7c0c32234aa085426e205291316b37b"
+    },
+    "history": {
+      "body_sha256": "4d8c6a39b9aa2da28de2a0e431829d759075af392788b3ba98112e20ed85d9e2",
+      "body_bytes": 46262,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/history-of-the-cheroenhaka-nottoway/",
+      "retrieved_at": "2026-10-15T23:35:08.549914+00:00",
+      "receipt_sha256": "17c4bd51a112e02d73d1bc8be5f6dc71a70bc2392a570288e75b3667b4a41ae3",
+      "sanitized_receipt_sha256": "ed8d66040a8554916fdd2c0bcaab1bcf325e795aef574a182fce7b4688b6c3a6"
+    },
+    "language": {
+      "body_sha256": "7e2ed02ee97adcc604950063adc43c75daf6f795a2f545ae921ab9c8e6b0250f",
+      "body_bytes": 90869,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+      "retrieved_at": "2026-10-15T23:35:18.930685+00:00",
+      "receipt_sha256": "52d657312137a288b4c750c0e417ce1ad91b953f1df6f156a616c21f83a3aec5",
+      "sanitized_receipt_sha256": "4bb9fddb85fac8e8194f7f606b4f950d621abdc4b9792689f74081ffce95f63d"
+    },
+    "snapshot": {
+      "body_sha256": "66e758e92d851759239d2ac1b30d99a7debd49df340c461501581809e79de7dd",
+      "body_bytes": 154725,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+      "retrieved_at": "2026-10-15T23:35:47.029046+00:00",
+      "receipt_sha256": "4be5e591d32f7f5ca75ff7af47d41161381ba3d4a6a75a64d9e515dbd786e9bf",
+      "sanitized_receipt_sha256": "e2533b7ef16f2bbfa5207fb558e19acef9a44a98f349a1712c113da4570b648d"
+    },
+    "town": {
+      "body_sha256": "b34cb7a8f9a0e31c9405b49db1c5318f3588253af5c4cba24861cc937cdb09cc",
+      "body_bytes": 61866,
+      "http_status": 200,
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+      "retrieved_at": "2026-10-15T23:36:35.955440+00:00",
+      "receipt_sha256": "f0cbc52ba5776656ae04e905d432af4b1c74795be5e6abc811223faefb45d8ef",
+      "sanitized_receipt_sha256": "ccdd1b6613e8118ba7a4912637d6d1d90b2cf3daf45cc23d45bc376d87185726"
+    }
+  },
+  "other_artifact_pins": {
+    "source-scope.json": "475fee2106bf7457d45987e357887ae73ce985ea639abbac7f1273c676bfc3e9",
+    "request_ledger.json": "ddf9331dc175f610d0c9bd159b5d15f92ecd1e18d9e4ef8424e0778e70e642ab",
+    "raw-contract-check.log": "446bb095d139c030cc9c5af506311ce3d3fa69409204ea6ccffab3541ede63ce"
+  },
+  "mattaponi_scope_review": {
+    "proposal_path": "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-missing-virginia-2026-10-15\\mattaponi\\publication-scope-handoff.json",
+    "proposal_sha256": "03f71cf79d19b2bfe712a73d8327cbb0173ca2ab6dbee221f8b5b426e3ada0ed",
+    "verdict": "supported deferral with continued directory visibility",
+    "actual_access": "Robots and homepage HTTP 200. Homepage allowed under robots. No access denial, robot failure, server failure, new host or denial bypass.",
+    "notice_evidence": {
+      "source": "https://mattaponi.gov/",
+      "location": "Homepage footer",
+      "short_exact_excerpt": "All content contained on this website can only be used with expressed written permission of the Mattaponi tribal council.",
+      "body_sha256": "a93e1050e43d7cb721872287023139fb00739c084f4f2e0bbd28370df7d90b69"
+    },
+    "decision_scope": "Respect root-directed temporary reuse-scope deferral. No history facts, profile or notes proposed. No permission invented, no outreach and no request for user to substitute for publisher permission.",
+    "not_a_claim": "This is not a received takedown, current canonical hold, robots refusal or legal ruling. HTTP metadata is not a historical event or publication date.",
+    "existing_directory_visibility": {
+      "directory_id": "us-state-va-mattaponi",
+      "label": "Mattaponi",
+      "official_url": "https://mattaponi.gov/",
+      "verified_link_preserved": true,
+      "profile_status": "directory_only"
+    },
+    "missingness_limits": "No canonical profile built from the withheld history. Directory listing remains separate from Upper Mattaponi and Pamunkey; absence stays openly pending.",
+    "actual_requests_after_notice": 0,
+    "source_pins": {
+      "robots": {
+        "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+        "bytes": 2141,
+        "url": "https://mattaponi.gov/robots.txt",
+        "http_status": 200,
+        "retrieved_at": "2026-10-15T23:34:04.082176+00:00"
+      },
+      "home": {
+        "sha256": "a93e1050e43d7cb721872287023139fb00739c084f4f2e0bbd28370df7d90b69",
+        "bytes": 34295,
+        "url": "https://mattaponi.gov/",
+        "http_status": 200,
+        "retrieved_at": "2026-10-15T23:34:07.502519+00:00"
+      }
+    },
+    "receipt_and_intake_pins": {
+      "robots.receipt.json": "1dfc7fe498ac776e96172d30ab5667d8c0e4d4830c9a3b485ae8856179dbdab9",
+      "robots.body": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "home.receipt.json": "7a11f4354bb4052b065e8a66a9e1091bd8d08700e96886a8a672bc80b6377c76",
+      "home.body": "a93e1050e43d7cb721872287023139fb00739c084f4f2e0bbd28370df7d90b69",
+      "name-missingness-preaudit.json": "244f77f8376ba413f06a2a83e9488761fbe003a2e693ca3bb030b35e60363dcb",
+      "publisher-notice-intake.json": "201fd585f23f2d3bc2ce3bb2327717988ca73a27dfc2e2697400a0bb95884730",
+      "request_ledger.json": "a9af4ab66f607fd2383c92a899e6cbe2a60f51d70ff8556e3c98ae8feb40c1fb"
+    }
+  },
+  "actual_validation": "Artifact-only Python assertions recomputed 9 source body hashes/sizes, all 7 Cheroenhaka sanitized receipts, both proposal hashes, raw candidate identity, evidence phrase presence, raw length/dates, robots allowed paths, actual ledger pacing, approved host and baseline whole-registry distinction. No full tests, GUI or production checks performed.",
+  "remaining_gates": [
+    "Root supplies actual independent verify/respect compiler records and final registry crosswalk only after import survives existing raw/merge/hold checks.",
+    "Root reviews final UI, canonical and generated diff, runs required release checks and handles PR/deployment/live verification.",
+    "Mattaponi reuse-scope decision remains pending; do not publish its history without resolving acceptable scope."
+  ],
+  "review_boundary": "Reviewer authored the separate Nottoway of Virginia proposal, but did not author this Cheroenhaka package or Mattaponi scope handoff. This review is independent for those packages; it does not provide independent approval of this reviewer's own Nottoway proposal."
+}

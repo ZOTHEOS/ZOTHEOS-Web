@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "station": {
+    "seat": "Independent Nottoway source/meaning/respect reviewer, Cheroenhaka research subagent",
+    "model": "Inherited model; exact backend not independently verified",
+    "machine": "MELLO-MOOSE as assigned; no hardware audit",
+    "cycle": "us-missing-virginia-2026-10-15"
+  },
+  "reviewed_at": "2026-10-15T23:41:42.193073+00:00",
+  "review_kind": "AI-assisted independent source, identity and respect review",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "authorship_independence": "Reviewer authored the distinct Cheroenhaka proposal, not this Nottoway proposal.",
+  "reviewed_package": "nottoway/profile-handoff.json",
+  "reviewed_package_sha256": "8124c4546c6c9cd0e9cc03fa92134fdacdd90aaf70b93fc889226d6067676e36",
+  "outcome": "Meaning/identity/respect review passes. One canonical as_of correction is required before integration.",
+  "findings": [
+    {
+      "severity": "P2",
+      "location": "proposed_raw_profile.facts[2].as_of",
+      "issue": "Full ISO day is incompatible with the canonical four-digit-year contract and integer year sorting.",
+      "actual": "2012-05-05",
+      "required_edit": "Change canonical raw as_of to 2012. Keep exact May5,2012 in fact text, context and event-date metadata.",
+      "evidence": "data/nations/tools/validate.py169-171 rejects non-four-digit as_of; tools/nations_lib.py380 converts as_of with int().",
+      "meaning_impact": "No source fact changes. This is required schema alignment before compiling/publishing."
+    }
+  ],
+  "fact_reviews": [
+    {
+      "fact_index": 0,
+      "source_meaning": "supported",
+      "respect_action": "keep",
+      "reason": "Explicitly attributed historical Iroquoian language description; it does not measure present speakers or merge all Nottoway-identifying governments."
+    },
+    {
+      "fact_index": 1,
+      "source_meaning": "supported",
+      "respect_action": "keep",
+      "reason": "The Tribe deliberately names historical matriarch EdyTurner in a public nonceremonial1821petition account. Proposed civic action is expressly attributed and makes no exclusive ancestral claim or inference of current rights.",
+      "named_person_policy": "ARCHITECTURE9.1 scopes its explicit deceased-person prohibition to Aboriginal/TorresStraitIslander peoples and separately offers safer no-names guidance. REPORT judgment calls interprets safer-at-launch wording as advisory; risk table gives a broad launch mitigation. This does not create a blanket human-approval requirement for this Virginia historical civic figure. No evidence of a specific Nation restriction or harm-risk request was found in the retained sources. The two existing Bhil named-person holds remain untouched."
+    },
+    {
+      "fact_index": 2,
+      "source_meaning": "supported",
+      "respect_action": "keep",
+      "required_schema_fix": true,
+      "reason": "The center page expressly states formal opening on May5,2012 in Capron. Exact date is source-backed; canonical as_of must use year2012 while text/metadata retain the full event date."
+    }
+  ],
+  "context_and_resources": {
+    "meaning": "Two short layers accurately paraphrase the own timeline and center descriptions. Staffing/funding/education statements remain attributed and explicitly exclude current operational assurance.",
+    "dates": "Page publication dates remain unknown. Historic1821petition and2012opening are event dates, not new2026publication.",
+    "identity": "Nottoway Indian Tribe of Virginia and Cheroenhaka(Nottoway) Indian Tribe remain two directory identities with distinct own hosts and no generic alias merge. No intertribal allegation or recognition/sovereignty adjudication is adopted.",
+    "respect": "No ceremonies, private contacts, images, addresses, genealogies, precise coordinates or current officeholders are reproduced. The named historical petition figure is limited to public civic history.",
+    "current_claim_limits": "Center opening, not present staffing/hours/classes, is the achievement fact. Resources direct readers to the publisher without confirming current availability."
+  },
+  "retrieval_review": {
+    "successful_content_captures": 3,
+    "robots_http_status": 200,
+    "body_and_receipt_hashes_verified": true,
+    "minimum_observed_start_spacing_seconds": 6.987319,
+    "required_spacing_seconds": 3.2,
+    "robots_urls_permitted": true,
+    "redirects_or_new_hosts_claimed": false,
+    "dns_failure": "Initial sandbox DNS11001 was retained as a failure without a body hash. The identical approved robots request was retried with network escalation; successful receipts are separate, not fabricated replacement of an HTTP denial."
+  },
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "artifact_file_pins": {
+    "nottoway\\home.body": "ff0679822fb9950c48ab4bd2b840f7dc733c93ff0e8c5d7f95df5b503e319624",
+    "nottoway\\home.receipt.json": "0b19c0579bb6abf5f097a31bd37cd7bb34f0d3edbb42aa8c9d1c7ef8c442d215",
+    "nottoway\\history.body": "c92e09386546e8b5525d2db8abbb8eced2afaaf920d252570e801379af4a90dc",
+    "nottoway\\history.receipt.json": "28e43766339e18a1452226e3987570a7a99f0ae55f6f7d4821196031aa32512e",
+    "nottoway\\interpretive-center.body": "47ce7b8145a977cb5af5346f7bb092b14690363994433b4dfac08e708c4d3648",
+    "nottoway\\interpretive-center.receipt.json": "13bc36adaa320e1bf72131e82c8bfddaf707f405e4314fcaab7fe398dc29dcf1",
+    "nottoway/robots.body": "80d0b8a7b0ff3fff5bee18d9ef06c82d2d39afdf73638e2cce17ee687fa256e7",
+    "nottoway/robots.receipt.json": "b669fa99528f886a463b307028306d696eae3253d0c47858df3ef7f624a4f99e",
+    "nottoway/missingness-audit.json": "b39af415640f8b5499bd6413e27af7d2cbb2a052f2c005aaad3b4e5456889ca8",
+    "nottoway/source-scope-approval.json": "dafa5019aba25d5291ae1d3e6ad566c7bf8dd6e0605aa9126858a7f08d0b1d04"
+  },
+  "repository_policy_pins": {
+    "data\\nations\\ARCHITECTURE.md": "08715df0a90c0e5b130da6409130ca86ce217b84e9e42c3c4929fb8db1062b12",
+    "data\\nations\\REPORT.md": "7e9c7e2cdd33bc38e28107b73d71589c5366192fd1088c180a3a78cbb8c47c2a",
+    "data\\nations\\overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data\\nations\\research\\publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data\\nations\\tools\\validate.py": "87485bef978e0da48daa4ca7d335f83e1020ff5a4842f13a20acc727b16ab1fc",
+    "tools\\nations_lib.py": "5cc08ea265db15d1cda337feda8b45b321ad22d94f74c6c2da4ec99b7bc58e85"
+  },
+  "required_integration_checks": [
+    "Correct fact2as_of to a four-digit year before raw/verify/respect merge.",
+    "Keep exact historical dates in text/context while source publication dates stay unknown.",
+    "Preserve all existing old fact checks, Bhil named-person holds and record takedown/removal controls.",
+    "Require independent implementation/assembled-output and mobile link checks before publication; this retained-source review does not prove live output."
+  ]
+}

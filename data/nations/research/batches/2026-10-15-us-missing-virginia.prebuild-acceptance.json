@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T23:39:43.978474+00:00",
+  "reviewer": "Codex independent acceptance author /root/ute_history_gap_20261015",
+  "implementation_author": false,
+  "human_review_claimed": false,
+  "web_writes": false,
+  "network_requests": 0,
+  "phase": "Prebuild baseline, before implementation",
+  "baseline_branch_as_assigned": "codex/us-missing-virginia-2026-10-15",
+  "baseline_commit_as_assigned": "1b96dfa7f8581b46fe598614711493aa28293524",
+  "pytest_result": {
+    "exit_code": 1,
+    "failed": 5,
+    "passed": 2,
+    "result": "Expected red baseline: three missing ready/pending attributes, missing native checkbox/hint, and combined Node behavior case. Both existing canonical hide/takedown controls pass."
+  },
+  "node_result": {
+    "fixtureOnly": true,
+    "browserOrDeviceCertification": false,
+    "outcomes": [
+      {
+        "name": "Static source names remain available before JS",
+        "passed": true
+      },
+      {
+        "name": "Native change filters ready links and discloses count scope",
+        "passed": false,
+        "error": "A pending record remains visible in Profiles Ready mode"
+      },
+      {
+        "name": "Query, inventory and ready state combine with AND",
+        "passed": false,
+        "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    'entry-0',\n    'entry-1',\n    'entry-51',\n+   'entry-101'\n  ]\n"
+      },
+      {
+        "name": "Show More batches and focuses the first newly revealed ready name",
+        "passed": false,
+        "error": "The expression evaluated to a falsy value:\n\n  assert(allReady(f))\n"
+      },
+      {
+        "name": "Clear keeps ready mode and selected source while clearing query",
+        "passed": false,
+        "error": "The input did not match the regular expression /40 of 42/. Input:\n\n'40 of 53 matching name records shown in Other source category.'\n"
+      },
+      {
+        "name": "Explicit source anchor resets ready and query",
+        "passed": false,
+        "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+      },
+      {
+        "name": "Deep row link resets ready and reveals pending target; malformed hash is harmless",
+        "passed": false,
+        "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+      },
+      {
+        "name": "Older markup without checkbox keeps existing browsing",
+        "passed": true
+      },
+      {
+        "name": "Legacy unenhanced markup keeps all static names and literal search",
+        "passed": true
+      }
+    ]
+  },
+  "node_counts": {
+    "failed": 6,
+    "passed": 3
+  },
+  "coverage": [
+    "All static names available before JS.",
+    "Ready means reviewed confirmed crosswalk AND public canonical profile. Unreviewed and nonpublic confirmed rows remain pending, without profile href.",
+    "Ready, name query and selected source compose with AND.",
+    "Native change/source changes reset batch to40; Show More increments40 and focuses first newly revealed ready name.",
+    "Clear preserves ready state and selected source while clearing query.",
+    "Explicit source anchor and row deep-link reset ready and query, including pending target. Malformed hash does not change filter state.",
+    "Counts describe name/source records with reviewed profile links, not a count of Nations or canonical profiles.",
+    "Hint hidden until checked; native labeled checkbox follows inventory and precedes status; hint contains actual /nations#find link.",
+    "Older enhanced/unenhanced markup without checkbox retains original browsing.",
+    "Canonical hide_nation and takedown prevent linked directory row disclosure."
+  ],
+  "test_files": [
+    "test_directory_profiles_ready_acceptance.py",
+    "directory-profiles-ready-acceptance.cjs"
+  ],
+  "remaining_real_browser_gates": [
+    "Native keyboard Space operation and visible focus.",
+    "44px checkbox/label touch row and readable wrapping at phone widths.",
+    "Theme contrast and viewport overflow checks.",
+    "Actual screen-reader/device certification is not supplied by synthetic fixtures."
+  ],
+  "limitations": [
+    "Node uses an isolated DOM fixture and actual production directory script, not copied filtering logic. It tests behavior but is not a browser.",
+    "Pytest emitted an unrelated interpreter-shutdown pyreadline console warning after the measured results; preserved in log.",
+    "Existing tools/tests/directory-ui-acceptance.cjs was read but never edited.",
+    "No future passing result or production publication is claimed."
+  ],
+  "artifact_pins": {
+    "test_directory_profiles_ready_acceptance.py": "31f88512e94c7aee86727ec49246747db76b20ea49bd924617467520e8af13d6",
+    "directory-profiles-ready-acceptance.cjs": "999e52c2d12f14395e30c9c6cf9802bc0a767ef4e90b99522817cde675b01d0e",
+    "profiles-ready-node-baseline.txt": "5a10ccf4c2164c465a5f88cc581af9dedabad436736139f125a48eac6523b925",
+    "profiles-ready-pytest-baseline.txt": "bebaeba78f666cd693b9227db3aaa276958a8bd0255c720d38665c97084421ed"
+  },
+  "baseline_source_pins": {
+    "tools/nations/partials/appearance.js": "2c2a9f4083af57d8cd438ec2246b98e0e3a7d80b6d4fc5b618fc95250dbe1834",
+    "tools/nations_directory.py": "92fbab2f9ccc86993cc9e6c17ebc6ed725006337fabc227af83c776c2e40b49c",
+    "tools/tests/directory-ui-acceptance.cjs": "a4a949c5cb11396d10614dda2dc9f808907cd496f473c99f8a31e87961faac38",
+    "tools/nations/partials/nations.css": "783fb52e29acdb5e3cb1c99201a3da32e5b17ff8a45ebaec5edcaa693e2ad969"
+  }
+}

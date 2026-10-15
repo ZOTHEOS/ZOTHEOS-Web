@@ -341,3 +341,46 @@ The queue and source catalogue retain this bounded batch and the unresolved year
 still consists of differently scoped source records, not a complete list of distinct Nations. Four
 state source inventories remain preserved, 46 other state discovery scopes and all four additional
 inclusion lanes remain pending. The batch record is batches/2026-10-15-us-next-histories.json.
+
+
+## October 15 missing Virginia profiles and directory access
+
+Two previously directory-only communities now have separately researched profiles: Cheroenhaka
+(Nottoway) Indian Tribe and Nottoway Indian Tribe of Virginia. Their own published names, official
+sites and distinct identities were independently AI-reviewed before the two Virginia source rows
+were linked. Shared Nottoway wording does not merge governments or establish exclusive representation.
+Empty aliases preserve that distinction.
+
+Seven short facts and four titled historical layers use the Tribes' own pages. Topics include
+community continuity through land loss and reclassification, 2002 Cheroenhaka government reorganization,
+historical language records, the public 1821 petition account and the Nottoway center's May 5, 2012
+opening. Four direct resources let readers continue at the publishers. Source publication dates remain
+unknown except the Cheroenhaka snapshot's printed December 31, 2022 update. Historical dates do not
+establish current recognition, jurisdiction, visitor access, fluency, funding or measured outcomes.
+Intertribal allegations and derogatory colonial classifications are not adopted.
+
+The existing assembler compiled only the new reviewed input in isolation. The existing HTTP verifier
+then actually checked all seven new evidence phrases across six cited URLs, with robots rules and
+a 10.2-second host interval. Its legacy compile date was replaced with the real candidate assembly
+day. The final selective import preserves every prior canonical nation/fact object and its clocks.
+Raw, verification and respect records remain durable inputs; no human or Nation approval is claimed.
+
+Mattaponi robots and homepage returned HTTP200, but the homepage footer requires expressed written
+Tribal Council permission to reuse content. No Mattaponi history or empty profile was published.
+Its existing directory label and verified own-site link remain visible. A dated reuse-scope followup
+retains that distinction, with a seven-day not-before date and no routine re-fetch of the unchanged
+notice. This is not an access failure, received takedown, blanket removal or legal ruling.
+
+The optional Profiles Ready To Read checkbox combines with name search and source inventory. It
+filters only reviewed directory links to actually public profiles. Six linked source records do
+not mean only six researched profiles exist: the hint links to all profiles. Pending source records
+remain available when the filter is off, and all names remain in static HTML without JavaScript.
+The direct Browse Matching Names link avoids unnecessary scrolling past the source explanations.
+Native checkbox/keyboard behavior, bounded paging and explicit-source/deep-row resets remain checked.
+
+Current measured coverage is 459 canonical profiles, 1,294 raw facts, 1,292 public facts and two held
+facts. The directory still has 2,272 differently scoped source records in eight lists. Four state
+inventories are preserved; 46 other state discovery scopes and four inclusion lanes remain pending.
+These overlapping units are not a count of distinct Nations or complete US/worldwide coverage.
+The canonical game-card export includes the same two new profiles without changing game mechanics.
+The batch and independent reviews are recorded in batches/2026-10-15-us-missing-virginia.*.json.

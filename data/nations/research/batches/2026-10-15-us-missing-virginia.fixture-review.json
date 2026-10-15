@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted fixture correction proposal and targeted execution",
+  "human_review_claimed": false,
+  "web_repo_writes": false,
+  "parent_reported_baseline": {
+    "passed": 264,
+    "failed": 2,
+    "seconds": 142.05,
+    "attribution": "Root's actual full-suite run, relayed to this agent. This agent did not rerun the full suite."
+  },
+  "problem": "Two acceptance tests copied real source snapshots, then asserted every real crosswalk would remain unreviewed forever. Newly reviewed Virginia profile links legitimately changed that data state.",
+  "proposed_fix": "Add a derived unreviewed_source_rows fixture that normalizes crosswalk status, registry_id and candidates only inside isolated temporary VA/NC copies. Opt the two affected tests and the existing malformed-unreviewed-candidate test into that explicitly unapproved state.",
+  "preserved_contracts": [
+    "The shared isolated fixture and production source snapshots stay unchanged.",
+    "Every existing assertion remains; state file retains 27 and scoped-note file retains 16 assertion statements.",
+    "Unreviewed rows remain visible without a canonical link.",
+    "Inventing a registry_id on an unreviewed candidate still fails.",
+    "Directory holds still remove the row, named note and font glyph inputs.",
+    "Unrelated holds preserve independent scoped notes and sibling rows.",
+    "Receipt, source-unit, snapshot-day and UTC checks remain intact.",
+    "Existing Profiles Ready acceptance separately covers confirmed visible links and confirmed-profile holds."
+  ],
+  "actual_targeted_execution": {
+    "interpreter": "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "arguments": ["-m", "pytest", "test_us_state_directory_acceptance.py", "test_us_scoped_notes_acceptance.py", "-q", "-p", "no:cacheprovider"],
+    "source": "The two proposed artifact files, state module collected first; environment ZOTHEOS_TEST_REPO points to the real read-only website. Temporary fixture copies live in the owned artifact folder.",
+    "return_code": 0,
+    "passed": 54,
+    "failed": 0,
+    "seconds": 8.06,
+    "stderr_note": "An existing pyreadline3 console destructor warning appeared after pytest completion. Process exit was zero and all 54 tests passed."
+  },
+  "patch_sha256": "cb6d83fb8dedd041c7338578eef9e4592250993636c978b97f8001d9ee6dcf82",
+  "replacement_files": {
+    "test_us_state_directory_acceptance.py": "07c216c8d68d5b3e9a0132998257f5a41b352bd0873c40c6a58fd5e5c80c5b11",
+    "test_us_scoped_notes_acceptance.py": "d5d9df14461e3603033127b2447027a34180007587e217fe27b05b804852e9dc"
+  },
+  "remaining_root_work": "Copy both reviewed replacement files or apply the patch after comparing original pins. Run required final checks and publish through the normal reviewed PR workflow. No profile link should be undone to satisfy a stale fixture."
+}

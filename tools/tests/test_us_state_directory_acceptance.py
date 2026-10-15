@@ -52,6 +52,21 @@ def isolated(tmp_path):
     assert (tmp_path / 'data/nations/nations.json').read_bytes() == before
 
 
+@pytest.fixture
+def unreviewed_source_rows(isolated):
+    """Exercise an unapproved state snapshot independently of production link progress."""
+    root, folder = isolated
+    for filename, _, _ in CASES:
+        path = folder / filename
+        doc = read(path)
+        for row in doc['entities']:
+            row['registry_crosswalk'] = {
+                'status': 'unreviewed', 'registry_id': None, 'candidates': []
+            }
+        write(path, doc)
+    return root, folder
+
+
 def builder(root):
     b = B.Builder(str(ROOT))
     b.root = str(root)
@@ -75,8 +90,8 @@ def task(e, sid):
 
 
 @pytest.mark.parametrize('filename,state,sid', CASES)
-def test_every_state_source_row_is_visible_without_identity_approval(isolated, filename, state, sid):
-    root, folder = isolated
+def test_every_state_source_row_is_visible_without_identity_approval(unreviewed_source_rows, filename, state, sid):
+    root, folder = unreviewed_source_rows
     doc = read(folder / filename)
     assert doc['entity_unit'] == 'state_tribal_directory_listing'
     assert doc['snapshot_kind'] == 'source_observation'
@@ -187,8 +202,8 @@ def test_catawba_source_conflict_stays_visible_without_an_invented_effective_dat
 
 
 @pytest.mark.parametrize('filename,state,sid', CASES)
-def test_unreviewed_candidates_cannot_gain_a_canonical_link_without_identity_review(isolated, filename, state, sid):
-    root, folder = isolated
+def test_unreviewed_candidates_cannot_gain_a_canonical_link_without_identity_review(unreviewed_source_rows, filename, state, sid):
+    root, folder = unreviewed_source_rows
     path, doc, e = target(folder, filename)
     nid = next(n['id'] for n in read(ROOT / 'data/nations/nations.json')['nations'] if 'US' in n['countries'])
     e['registry_crosswalk']['candidates'] = [{'registry_id': nid, 'basis': 'fixture-name-only'}]

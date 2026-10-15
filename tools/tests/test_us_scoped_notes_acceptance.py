@@ -12,7 +12,7 @@ import pytest
 sys.dont_write_bytecode = True
 ROOT = Path(os.environ.get('ZOTHEOS_TEST_REPO', Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(ROOT / 'tools/tests'))
-from test_us_state_directory_acceptance import isolated, builder, read, write, CASES
+from test_us_state_directory_acceptance import isolated, unreviewed_source_rows, builder, read, write, CASES
 import nations_directory as D
 import nations_fonts as F
 import nations_inventories as I
@@ -29,8 +29,8 @@ def inventory_section(page, anchor):
 
 
 @pytest.mark.parametrize('filename,state,sid', CASES)
-def test_each_bound_directory_hold_suppresses_actual_named_source_note(isolated, filename, state, sid):
-    root, folder = isolated
+def test_each_bound_directory_hold_suppresses_actual_named_source_note(unreviewed_source_rows, filename, state, sid):
+    root, folder = unreviewed_source_rows
     doc = read(folder / filename)
     note = scoped(doc)
     anchor = 'us-virginia' if state == 'VA' else 'us-north-carolina'

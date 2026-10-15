@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-LCqfQIOvV9jNQ47CJGuY4OOn2AttT8W2GPyVJQ2+GDQ='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-d6QvhBs5OawGxUsUlmclK+mGtNpwMWjygx/IdjsDoW0='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Barí | Indigenous nations today</title>
   <meta name="description" content="Barí: Serranía de los Motilones and the Catatumbo and Oro river basins in Norte de Santander, Colombia, and Zulia state, Venezuela. Census counts put the ...">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.e1707769.css">
+  <link rel="stylesheet" href="/static/nations/nations.e4ef1d31.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -253,7 +253,7 @@
         <p>Compiled with AI assistance from published sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
         <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
         <p>This site makes no request to any other site. Sources open only when you follow them.</p>
-        <p>Researched profiles: Compiled 12 Oct 2026</p>
+        <p>Researched profiles: Compiled 15 Oct 2026</p>
       </div>
     </div>
     <div class="ft-epi">
@@ -346,6 +346,7 @@
   var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
   var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
   var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
+  var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -373,9 +374,12 @@
   function filter() {
     var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
     var selected = enhanced ? inventory.value : 'all';
+    var readyOnly = !!(enhanced && profilesOnly && profilesOnly.checked);
+    if (profileHint) profileHint.hidden = !readyOnly;
     visible = [];
     for (var j = 0; j < rows.length; j++) {
-      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words);
+      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words)
+        && (!readyOnly || rows[j].getAttribute('data-directory-profile') === 'ready');
       if (match) count++;
       var show = match && (!enhanced || shown < limit);
       rows[j].hidden = !show;
@@ -384,7 +388,7 @@
     for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
     if (enhanced) {
       var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
-      status.textContent = shown + ' of ' + count + ' matching name records shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';
@@ -398,6 +402,7 @@
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
   inventory.addEventListener('change', function () { limit = batch; filter(); });
+  if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
   more.addEventListener('click', function () {
     var previous = visible.length;
     limit += batch; filter();
@@ -417,6 +422,7 @@
     var owner = target.closest('[data-directory-inventory]');
     if (!owner) return;
     inventory.value = owner.getAttribute('data-directory-inventory');
+    if (profilesOnly) profilesOnly.checked = false;
     input.value = ''; limit = batch;
     var row = target.closest('[data-directory-name]'), ordinal = 0;
     if (row) {

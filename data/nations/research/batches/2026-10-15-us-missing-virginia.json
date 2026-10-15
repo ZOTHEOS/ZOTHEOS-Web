@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T23:53:09.075078+00:00",
+  "station": "Codex website integration on MELLO-MOOSE; exact backend not independently asserted",
+  "branch": "codex/us-missing-virginia-2026-10-15",
+  "baseline_main": "1b96dfa7f8581b46fe598614711493aa28293524",
+  "publication_state_at_recording": "Independently reviewed and checked for pull request publication. Merge, successful production deployment and actual live verification remain subsequent gates.",
+  "changes": [
+    "Two previously directory-only Tribal communities receive distinct own-source canonical profiles: Cheroenhaka (Nottoway) Indian Tribe and Nottoway Indian Tribe of Virginia. Empty aliases avoid silently merging governments.",
+    "Seven short facts, four titled history layers and four direct own-publisher resources added. Dated history stays distinct from unknown current legal/program status, outcomes and source publication dates.",
+    "Targeted raw/verify/respect inputs passed actual isolated assembler and HTTP verifier. Selective import exactly preserves every pre-existing canonical object and fact clock; no blanket global refresh or legacy compile-date backdating.",
+    "Two Virginia directory rows receive explicit source-backed AI identity crosswalk receipts. Other identities remain unreviewed; source lists do not define Indigeneity or count distinct Nations.",
+    "Mattaponi history is deferred after successful source access revealed an expressed-written-permission reuse condition. Its existing directory name and verified own-site link remain visible; no robots failure, received takedown or legal ruling is invented.",
+    "Optional native Profiles Ready To Read checkbox combines with query and typed source inventory. Honest count/hint and all-profiles link distinguish six reviewed directory links from all researched profiles. Pending names and no-JavaScript HTML remain available.",
+    "Browse Matching Names jumps directly to keyboard-focusable results without clearing filters. Native48px checkbox label,44px results jump, legacy fallback, 40-row batches, More focus, Clear/source preservation and explicit-source/deep-row resets checked.",
+    "Two older tests now use explicitly unreviewed copied source snapshots for unapproved-state scenarios; all43assert statements and hold checks remain. Production reviewed links are not undone.",
+    "Generated website/CSP/content-addressed CSS/data and canonical game education exports updated. Landing, original audio, game mechanics, Core, workstation services, keys and actual publication holds unchanged."
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 7,
+    "new_history_layers": 4,
+    "new_own_resources": 4,
+    "canonical_profiles": 459,
+    "raw_facts": 1294,
+    "public_facts": 1292,
+    "held_facts": 2,
+    "previous_records_exactly_preserved": 457,
+    "mixed_directory_records": 2272,
+    "source_lists": 8,
+    "reviewed_directory_profile_links": 6,
+    "state_source_inventories": 4,
+    "remaining_state_discovery_scopes": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1699,
+      "needs_review": 111,
+      "blocked": 2
+    },
+    "successful_sanitized_research_receipts": 13,
+    "explicit_identity_receipts": 2,
+    "human_or_Nation_approvals_created": 0,
+    "meaning": "Overlapping source rows, canonical profiles and government/people categories are different units. No complete US/worldwide coverage or unique-Nation total claimed."
+  },
+  "checks": {
+    "full_pytest": {
+      "passed": 266,
+      "failed": 0,
+      "seconds": 140.63
+    },
+    "baseline_new_acceptance": "Independently written before implementation:5expectedpytestfailures,2passes; now all7pass.",
+    "fixture_regression": "Initial fullrun264passes2failures due stale production-unreviewed assumptions; explicit temporary source-state fixture correction retains all43assertions. Final full suite above supersedes it.",
+    "targeted_source_verifier": {
+      "run_date": "2026-10-15",
+      "dry_run": false,
+      "user_agent": "ZOTHEOS-nations-verifier/1 (+https://zotheos.org)",
+      "host_interval_s": 10.2,
+      "timeout_s": 20.0,
+      "retries": 0,
+      "robots": true,
+      "urls_total": 6,
+      "urls_checked": 6,
+      "requests_sent": 8,
+      "elapsed_s": 42.2,
+      "facts_checked": 7,
+      "facts_unchecked": 0,
+      "status": {
+        "verified": 7
+      },
+      "urls": [
+        {
+          "url": "https://www.cheroenhaka-nottoway.org/",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://www.cheroenhaka-nottoway.org/",
+          "facts": 1
+        },
+        {
+          "url": "https://nottowayindians.org/history",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://nottowayindians.org/history",
+          "facts": 2
+        },
+        {
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+          "facts": 1
+        },
+        {
+          "url": "https://nottowayindians.org/interpretive-center",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://nottowayindians.org/interpretive-center",
+          "facts": 1
+        },
+        {
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+          "facts": 1
+        },
+        {
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+          "http": 200,
+          "outcome": "fetched",
+          "note": "",
+          "final_url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+          "facts": 1
+        }
+      ],
+      "facts": [
+        {
+          "nation": "cheroenhaka-nottoway-us-va",
+          "fact": "cheroenhaka-nottoway-us-va-b64aee5d",
+          "url": "https://www.cheroenhaka-nottoway.org/",
+          "evidence": "Indian Tribe Southampton County, VA",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "nottoway-indian-tribe-virginia-us-va",
+          "fact": "nottoway-indian-tribe-virginia-us-va-b862e4c2",
+          "url": "https://nottowayindians.org/history",
+          "evidence": "Iroquoian speakers of southeastern Virginia",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "nottoway-indian-tribe-virginia-us-va",
+          "fact": "nottoway-indian-tribe-virginia-us-va-32fecdc2",
+          "url": "https://nottowayindians.org/history",
+          "evidence": "In 1821, matriarch Edy Turner petitioned the Virginia General Assembly",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "cheroenhaka-nottoway-us-va",
+          "fact": "cheroenhaka-nottoway-us-va-57b20312",
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+          "evidence": "election of a Chief and Tribal Governing Council",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "nottoway-indian-tribe-virginia-us-va",
+          "fact": "nottoway-indian-tribe-virginia-us-va-c57d79f7",
+          "url": "https://nottowayindians.org/interpretive-center",
+          "evidence": "Community House & Interpretive Center in Capron, VA",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "cheroenhaka-nottoway-us-va",
+          "fact": "cheroenhaka-nottoway-us-va-843fcb64",
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+          "evidence": "source materials dating back to March 4th, 1820",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        },
+        {
+          "nation": "cheroenhaka-nottoway-us-va",
+          "fact": "cheroenhaka-nottoway-us-va-f4f7c9a8",
+          "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+          "evidence": "Iroquoian language and in English identifying Native Flora and Fauna",
+          "status": "verified",
+          "note": "",
+          "previous": "unreachable"
+        }
+      ]
+    },
+    "build": "583pages;459profiles;1292publicfacts;2held;0copy/lint errors or warnings; font/link/CSP/size/contrast gates pass",
+    "deterministic_build": "passed",
+    "research_queue_validation": "errors[]",
+    "release_check": "passed",
+    "game_export_check": "passed",
+    "canonical_validator": "PASS0errors54pre-existing review warnings, no added warning",
+    "independent_control_simulations": 8,
+    "responsive_browser": {
+      "directory_widths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "profile_viewport_combinations": 8,
+      "appearance_themes": 4,
+      "horizontal_overflow": false,
+      "label_minimum_height_px": 48,
+      "results_jump_minimum_height_px": 44,
+      "context_resource_link_minimum_height_px": 44,
+      "native_space_and_visible_focus": {
+        "checked": false,
+        "focus": "directoryProfilesOnly",
+        "outline": "rgb(255, 255, 255) solid 2px",
+        "shown": "11 of 11 matching name records shown in United States: Virginia tribal directory: Virginia state directory listings."
+      },
+      "explicit_source_reveals_pending_names": {
+        "checked": false,
+        "focus": "directoryInventory",
+        "mattaponiVisible": true,
+        "query": "",
+        "shown": 11,
+        "source": "us-virginia"
+      },
+      "limits": "Responsive desktop browser, not physical-device or screen-reader certification"
+    },
+    "exact_staged_tree_and_live_publication": "Subsequent gates, not claimed by this pre-publication record."
+  },
+  "reviews": [
+    {
+      "file": "2026-10-15-us-missing-virginia.cheroenhaka-review.json",
+      "sha256": "91a3bbb034514f2b8ab46893e279c031ab5dc8bba9541b5914465655b51dc677",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "b17eb03edb10fd5d17b5213acf78af95c2b9fbc5e25dd417abf94e933a3c4636"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.nottoway-review.json",
+      "sha256": "b60c801f0ffee5aba24497d5a70f4679f9f36de6f4fcca7e49ee0f970159c4c2",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "06dcd1b5d806c269424ee35b5f5b85f89edd31074de36f5dbf47c9112a2b1c9f"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.integration-review.json",
+      "sha256": "9314abc69a913f05f9b795fc8b6d79aba9660be328138579f96ef431356346fd",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "821602efa2a44bb63fd9a9f5275f12834e03fbfd99394cf5e209b23d7312158f"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.prebuild-acceptance.json",
+      "sha256": "9ada4740daac18a93f84177bafd9d967793f95d25a658028eb54f1d1d97ec485",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "b1127d84798314a41da38585152fea40c0f47e0e15cd2c7a6ec2a61cc9c430ce"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.profiles-ready-review.json",
+      "sha256": "7be3c84b3097dafee8b6bb2fb0c32ac62e59cdf22ee8693c00bd65f57dac15e5",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "fc060b82761bd5e63710addfe6a7b4e7e3bb51e1fc6a0d5216e4ab26e40fdc5c"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.fixture-review.json",
+      "sha256": "bfb0dec2dc8801f36bd3f77aa7a2e9d35a8e1571eff19204ad10e4aaab12ecc6",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "bfb0dec2dc8801f36bd3f77aa7a2e9d35a8e1571eff19204ad10e4aaab12ecc6"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.browser-checks.json",
+      "sha256": "07e1bdab9f274d7df49431480331278b70a04d888a0523633cf3dc1dc0805b01",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "07e1bdab9f274d7df49431480331278b70a04d888a0523633cf3dc1dc0805b01"
+    },
+    {
+      "file": "2026-10-15-us-missing-virginia.targeted-refresh.json",
+      "sha256": "72a1fa6fbb69c34ed93392c126eda7e70d63ec427d4b114d11381b9a915eaa06",
+      "hash_kind": "LF-normalized committed record bytes",
+      "original_local_artifact_sha256": "72a1fa6fbb69c34ed93392c126eda7e70d63ec427d4b114d11381b9a915eaa06"
+    }
+  ],
+  "review_hash_provenance": "LF-normalized public review records are distinguished from local original artifact hashes. Source captures remain local; actual URL/body hashes/timestamps are in sanitized receipts.",
+  "new_profile_ids": [
+    "cheroenhaka-nottoway-us-va",
+    "nottoway-indian-tribe-virginia-us-va"
+  ],
+  "identity_receipts": {
+    "us-state-va-cheroenhaka-nottoway": "receipts/us-missing-virginia-cheroenhaka-identity-review.json",
+    "us-state-va-nottoway-of-virginia": "receipts/us-missing-virginia-nottoway-identity-review.json"
+  },
+  "source_receipts": [
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-about.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/history-of-the-cheroenhaka-nottoway/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-history.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-home.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-language.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/robots.txt",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-robots.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-snapshot.receipt.json"
+    },
+    {
+      "subject": "cheroenhaka",
+      "url": "https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/",
+      "path": "research/receipts/us-missing-virginia-cheroenhaka-town.receipt.json"
+    },
+    {
+      "subject": "nottoway",
+      "url": "https://nottowayindians.org/history",
+      "path": "research/receipts/us-missing-virginia-nottoway-history.receipt.json"
+    },
+    {
+      "subject": "nottoway",
+      "url": "https://nottowayindians.org/",
+      "path": "research/receipts/us-missing-virginia-nottoway-home.receipt.json"
+    },
+    {
+      "subject": "nottoway",
+      "url": "https://nottowayindians.org/interpretive-center",
+      "path": "research/receipts/us-missing-virginia-nottoway-interpretive-center.receipt.json"
+    },
+    {
+      "subject": "nottoway",
+      "url": "https://nottowayindians.org/robots.txt",
+      "path": "research/receipts/us-missing-virginia-nottoway-robots.receipt.json"
+    },
+    {
+      "subject": "mattaponi",
+      "url": "https://mattaponi.gov/",
+      "path": "research/receipts/us-missing-virginia-mattaponi-home.receipt.json"
+    },
+    {
+      "subject": "mattaponi",
+      "url": "https://mattaponi.gov/robots.txt",
+      "path": "research/receipts/us-missing-virginia-mattaponi-robots.receipt.json"
+    }
+  ],
+  "unresolved": [
+    "Mattaponi acceptable history-reuse scope remains pending. Existing listing/link remain; no user or AI substitutes for Tribal Council permission. No outreach performed.",
+    "Undated descriptions do not confirm current visitor hours, classes, fluent-speaker counts, staffing, recognition, land title, jurisdiction or program outcomes.",
+    "Cheroenhaka snapshot includes intertribal allegations and language records include colonial derogatory passages; none adopted. Shared naming does not merge governments.",
+    "ExistingCatawba date conflicts,Nanticoke ownership followup,Poarch source access and other queue gaps remain pending/unchanged. No urgent current development established by this historical batch.",
+    "US and worldwide coverage remain incomplete; state inventories and recognized categories are planning sources, never definitions of who is Indigenous.",
+    "Claude Council Route remains isolated, app claims unconfirmed, outside this website batch."
+  ],
+  "human_review": false
+}

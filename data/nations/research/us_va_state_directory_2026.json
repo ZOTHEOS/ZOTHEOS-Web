@@ -34,14 +34,15 @@
     "duplicate_source_labels": [],
     "independent_extraction": "BeautifulSoup table cells exactly match a separate regex row/cell extraction.",
     "own_sites_read_and_identity_link_reviewed": 4,
-    "canonical_identity_matches_approved": 0,
+    "canonical_identity_matches_approved": 2,
     "http_failures": 0,
-    "human_reviews_created": 0
+    "human_reviews_created": 0,
+    "canonical_identity_review_date": "2026-10-15"
   },
   "review": {
     "status": "needs_review",
     "sources": "pending independent AI review",
-    "identity": "unreviewed",
+    "identity": "Two explicit directory-to-profile links independently AI-reviewed October 15; remaining identities unreviewed.",
     "human_review": null,
     "respect": "pending independent review"
   },
@@ -265,11 +266,14 @@
       "state": "VA",
       "as_of": "2026-10-14",
       "official_url": "https://www.cheroenhaka-nottoway.org/",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "cheroenhaka-nottoway-us-va",
+        "candidates": [],
+        "reviewer": "Independent AI source/identity cross-review plus root integration; not human or Nation approval",
+        "evidence_receipt": "receipts/us-missing-virginia-cheroenhaka-identity-review.json",
+        "review_kind": "AI-assisted explicit source identity review"
       },
       "source_year_recognized": "2010",
       "source_location": "Courtland, Southampton County",
@@ -295,11 +299,14 @@
       "state": "VA",
       "as_of": "2026-10-14",
       "official_url": "https://nottowayindians.org/",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "nottoway-indian-tribe-virginia-us-va",
+        "candidates": [],
+        "reviewer": "Independent AI source/identity cross-review plus root integration; not human or Nation approval",
+        "evidence_receipt": "receipts/us-missing-virginia-nottoway-identity-review.json",
+        "review_kind": "AI-assisted explicit source identity review"
       },
       "source_year_recognized": "2010",
       "source_location": "Capron, Southampton County",

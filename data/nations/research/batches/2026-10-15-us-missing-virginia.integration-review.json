@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T23:48:34.046756+00:00",
+  "station": {
+    "seat": "Independent final source, compiler and publication-control reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE as assigned; no hardware audit",
+    "cycle": "us-missing-virginia-2026-10-15"
+  },
+  "review_kind": "AI-assisted artifact and source integration review; root owns GUI, full release checks and publication",
+  "baseline": "1b96dfa7f8581b46fe598614711493aa28293524",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "web_queue_git_writes": false,
+  "fresh_network_requests": 0,
+  "authorship_boundary": "Reviewer authored the Nottoway research proposal; independent-nottoway-review.json supplies its independent meaning/respect check. This review independently checks faithful integration and controls, and separately reviewed the other agent Cheroenhaka proposal.",
+  "outcome": "PASS. No unresolved P1/P2 findings in final new-profile source, canonical, receipt, crosswalk, queue and publication-control scope.",
+  "findings": [],
+  "resolved_findings": [
+    {
+      "kind": "Nottoway schema compatibility",
+      "resolution": "Original proposed as_of day changed to canonical year 2012, matching independent source review. Exact May 5, 2012 remains in sourced fact and context. Original proposal kept unchanged for provenance."
+    },
+    {
+      "kind": "Respect-reason precision",
+      "resolution": "Root removed irrelevant Edy Turner petition example from all four Cheroenhaka fact-level reasons. Final reasons match institutional/language/interpretive scope; canonical facts unchanged."
+    }
+  ],
+  "measured": {
+    "baseline_records_preserved_exactly": 457,
+    "new_profiles": 2,
+    "new_facts": 7,
+    "canonical_profiles": 459,
+    "raw_facts": 1294,
+    "public_facts": 1292,
+    "held_facts": 2,
+    "new_titled_history_layers": 4,
+    "new_own_resources": 4,
+    "successful_sanitized_receipts": 13,
+    "identity_review_receipts": 2,
+    "queue_tasks": 1812,
+    "queue_tasks_changed": 3,
+    "actual_isolated_control_cases": 8,
+    "Mattaponi_history_or_profiles_added": 0
+  },
+  "checks": [
+    "All 457 existing canonical nation objects, including every old fact status, date, ID, source, name and alias, are exactly preserved as JSON objects. Only two distinct empty-alias profiles and seven actual checked facts added; generated stamp moves to actual compilation day.",
+    "New raw triplet matches independently reviewed proposals except required year-only as_of correction. Every fact status/check/last_verified equals actual targeted verification output with 7 verified facts, 6 successful content URLs, robots enabled, 10.2 second spacing and no retries. These are machine evidence checks, not human approval.",
+    "Exact new source triplet independently passed rawcheck and isolated assembler with empty overrides: 2 nations, 7 facts, no merges. Compiled nation/fact objects match inserted canonical objects except documented refresh-added last_verified fields. No source or override changes made in Web.",
+    "Four titles/notes and four exact own resources match reviewed packages. All notes and links render only for their named profile. Exact nation/link catalog rejects the other government URL in two real negative fixtures.",
+    "Thirteen sanitized successful HTTP 200 receipt records match original URL, time, hash, size and actual retained body bytes. No raw bodies or source HTML were inserted into these receipts. Initial Nottoway DNS failure is not counted as successful HTTP.",
+    "Two VA crosswalks explicitly reference separate new IDs, own sites, existing ownership evidence and AI review records. Other VA rows, labels and sources remain unchanged. The two AI-reviewed match metadata fields are updated without creating human approval. No recognition category or generic Nottoway alias inferred.",
+    "Mattaponi is absent from canonical profiles/context, has no new actual hold/removal record, and preserves original directory name/verified link. Existing profile task records successful access and pending reuse scope, not robots failure, takedown, legal ruling or permission.",
+    "Only three existing profile queue tasks changed; actual source receipts attached and unassessed risk/needs_review retained. Mattaponi has explicit pending scope and next-attempt date rather than silent completion. Queue validation returned errors[].",
+    "Protected overrides, human/history reviews, publication holds, US coverage plan, landing, original audio, game mechanics source, model/context loader and assembler code remain unchanged after CRLF normalization. Derived game export and UI styling are parent-reviewed scopes.",
+    "Actual artifact-only fixtures exercised four profile hide/takedown cases, two directory-specific holds and two wrong-government resource failures. Controls suppress the appropriate profile/context/listing, keep other government and Mattaponi visible, and do not invent real Nation requests."
+  ],
+  "actual_commands": [
+    {
+      "command": [
+        "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "C:\\ZOTHEOS-Web\\data\\nations\\tools\\rawcheck.py",
+        "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-missing-virginia-2026-10-15\\independent-compile-scratch\\expansion-us-east-southeast-2026-10-15.raw.json"
+      ],
+      "exit_code": 0,
+      "stdout": "facts: 7 nations: 2\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\garci\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "C:\\ZOTHEOS-Web\\data\\nations\\tools\\merge.py",
+        "--dir",
+        "C:\\Users\\garci\\.codex\\visualizations\\2026\\10\\01\\01a0f569-836b-7be1-994e-ca1127820bbf\\us-missing-virginia-2026-10-15\\independent-compile-scratch"
+      ],
+      "exit_code": 0,
+      "stdout": "OK: 2 nations, 7 facts, 1 regions; dropped 0 nations and 0 facts; merged 0 duplicate(s).\n",
+      "stderr": ""
+    }
+  ],
+  "actual_scratch_control_cases": [
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "case": "hide_nation",
+      "result": "profile, context and crosswalk directory listing suppressed; other government preserved"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "case": "takedown",
+      "result": "profile, context and crosswalk directory listing suppressed; other government preserved"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "case": "directory-only hold",
+      "result": "only named directory listing suppressed; canonical context and Mattaponi listing preserved"
+    },
+    {
+      "nation": "cheroenhaka-nottoway-us-va",
+      "case": "wrong-government URL negative check",
+      "result": "resource rejected by exact nation/link allowlist"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "case": "hide_nation",
+      "result": "profile, context and crosswalk directory listing suppressed; other government preserved"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "case": "takedown",
+      "result": "profile, context and crosswalk directory listing suppressed; other government preserved"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "case": "directory-only hold",
+      "result": "only named directory listing suppressed; canonical context and Mattaponi listing preserved"
+    },
+    {
+      "nation": "nottoway-indian-tribe-virginia-us-va",
+      "case": "wrong-government URL negative check",
+      "result": "resource rejected by exact nation/link allowlist"
+    }
+  ],
+  "receipt_body_checks": [
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-about.receipt.json",
+      "sha256": "18a94d8a14d5124fa04342791fe938132b6b892a8f9c0eb8b7f49327ee484c0e",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-history.receipt.json",
+      "sha256": "4d8c6a39b9aa2da28de2a0e431829d759075af392788b3ba98112e20ed85d9e2",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-home.receipt.json",
+      "sha256": "905b134a01f3c1ef05bb7bb60dda2ce6b15962ddfda4b69040d158e1f58a093f",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-language.receipt.json",
+      "sha256": "7e2ed02ee97adcc604950063adc43c75daf6f795a2f545ae921ab9c8e6b0250f",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-robots.receipt.json",
+      "sha256": "ff648b9c675b52e9ae02ea03800fd28315b652efde8e8477d223fa0cb0b0efc0",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-snapshot.receipt.json",
+      "sha256": "66e758e92d851759239d2ac1b30d99a7debd49df340c461501581809e79de7dd",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-cheroenhaka-town.receipt.json",
+      "sha256": "b34cb7a8f9a0e31c9405b49db1c5318f3588253af5c4cba24861cc937cdb09cc",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-nottoway-history.receipt.json",
+      "sha256": "c92e09386546e8b5525d2db8abbb8eced2afaaf920d252570e801379af4a90dc",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-nottoway-home.receipt.json",
+      "sha256": "ff0679822fb9950c48ab4bd2b840f7dc733c93ff0e8c5d7f95df5b503e319624",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-nottoway-interpretive-center.receipt.json",
+      "sha256": "47ce7b8145a977cb5af5346f7bb092b14690363994433b4dfac08e708c4d3648",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-nottoway-robots.receipt.json",
+      "sha256": "80d0b8a7b0ff3fff5bee18d9ef06c82d2d39afdf73638e2cce17ee687fa256e7",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-mattaponi-home.receipt.json",
+      "sha256": "a93e1050e43d7cb721872287023139fb00739c084f4f2e0bbd28370df7d90b69",
+      "http_status": 200,
+      "retained_body_matches": true
+    },
+    {
+      "path": "data/nations/research/receipts/us-missing-virginia-mattaponi-robots.receipt.json",
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "http_status": 200,
+      "retained_body_matches": true
+    }
+  ],
+  "new_profile_canonical_fact_ids": {
+    "cheroenhaka-nottoway-us-va": [
+      "cheroenhaka-nottoway-us-va-b64aee5d",
+      "cheroenhaka-nottoway-us-va-57b20312",
+      "cheroenhaka-nottoway-us-va-843fcb64",
+      "cheroenhaka-nottoway-us-va-f4f7c9a8"
+    ],
+    "nottoway-indian-tribe-virginia-us-va": [
+      "nottoway-indian-tribe-virginia-us-va-b862e4c2",
+      "nottoway-indian-tribe-virginia-us-va-32fecdc2",
+      "nottoway-indian-tribe-virginia-us-va-c57d79f7"
+    ]
+  },
+  "source_lf_sha256": {
+    "data/nations/sources/expansion-us-east-southeast-2026-10-15.raw.json": "10a7c0a169eb2f207c30b15430d31dbc48c01a788d70c534bf0ec751ecbafd7f",
+    "data/nations/sources/expansion-us-east-southeast-2026-10-15.verify.json": "6bcf63c0cab4c500a27f0fc9ac2d7526bfcbbe7b9af3f012d3eba4954310ba71",
+    "data/nations/sources/expansion-us-east-southeast-2026-10-15.respect.json": "8bcbc83ff766d2cbb9dad0536023280a4df17235ef138dba2c513f7fb1bdb736",
+    "data/nations/sources/us-missing-virginia-2026-10-15.context.json": "e48f3fded538995ee0dc2638cfef6907917cc0504c55410111215cd3e6280a1f",
+    "data/nations/nations.json": "50a3131e41aaffe3004d3abcdb0df7588e4cc4872adb6a834d4416da8f7fe52e",
+    "data/nations/nations.min.json": "3833e0db6ac2b6cb0940fd67732e385e05f80b7d897cb2df5125aafc496f4ce4",
+    "data/nations/context_links.json": "2e604a1415ae0ef7d51ce1c6ebd160f67297b2cd12315bd5b0947f090c26861a",
+    "data/nations/research/us_va_state_directory_2026.json": "6e28d93518c9979f1ee8afa88e0a25abad3cb112a052989aabbeb76ce0c779f9",
+    "data/nations/research/coverage_queue.json": "b5feee7f5e8c63b6f6ebec1052bc928b7000e3d04c8e85d6b87246829322889e",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-about.receipt.json": "6292f3f719b227017050a90929e731f8df6a8b0ee101e945ebd252e273db3be7",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-history.receipt.json": "06b46afe7cc0cb2461530415f7e67f26df9f002ab9d4f4ba13f94611e5baa8bd",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-home.receipt.json": "39ba987a151430a29f52e8ee15f0500540fd223b514f6e8feb42be4133da4d01",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-language.receipt.json": "18b01a5fb6eb89764526af4957669e5b9c24cffc8fd4f0545b12444a5bfb6202",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-robots.receipt.json": "118c24891ec0aa594eed2dfb1d8ad7d476eb29fa3beecd5d5b1f842da666ad1c",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-snapshot.receipt.json": "da33d5fc5911a51e392260562c314f74d64a2c4c40629a14757cddbadf25bcfb",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-town.receipt.json": "c60208ec4f869894b1b5b7f3d9b2879dac2533d10e60ac2739da470b2fd563e6",
+    "data/nations/research/receipts/us-missing-virginia-nottoway-history.receipt.json": "9a3866b03d56f844a8469e1f9f51d8f55b22cc47a79f64b4deda266b33848ba5",
+    "data/nations/research/receipts/us-missing-virginia-nottoway-home.receipt.json": "dfcb9c03617070904e90aca6077b20ba3d356d2b849ccff7542c279b92f49cbe",
+    "data/nations/research/receipts/us-missing-virginia-nottoway-interpretive-center.receipt.json": "4bfe54dd90d59efddc05ba95d44205c366995128afd57e3d184e60d247c646b5",
+    "data/nations/research/receipts/us-missing-virginia-nottoway-robots.receipt.json": "42bb80071ab04dd6687a877c5b4f015b3caca4583b0f5162792fcdfd742bd84f",
+    "data/nations/research/receipts/us-missing-virginia-mattaponi-home.receipt.json": "bee1a322c19897f56e684dd910868a0bca809064d3843b7bea5e931a7af49352",
+    "data/nations/research/receipts/us-missing-virginia-mattaponi-robots.receipt.json": "0cdcba1934fa2878063a4aa4cb355d60cada491dd1cc9265a4af78fabd3f2205",
+    "data/nations/research/receipts/us-missing-virginia-cheroenhaka-identity-review.json": "68a50cb8a9d14757272981c7ba26a25c0243026615a1a6d03002db9e2876da70",
+    "data/nations/research/receipts/us-missing-virginia-nottoway-identity-review.json": "125f7b46a8917a45d9dad64f9df5ca2dfcda8f9aa3d73bc133affa623ce53612"
+  },
+  "protected_baseline_lf_sha256": {
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/nations/verify/history.json": "73a25dff43dc63d978d69a0455344e75be64e0fd4661c4008e6d9a1bf24cb193",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data/nations/research/us_coverage_plan.json": "02a91a06d14772950b4709ba77fd2239c1146a97c6c480e40db737f08a40b737",
+    "index.html": "00cc97cb56c85458ed11a1cec9b508eeaa609be37fff906a4b07bc968da921b3",
+    "static/zotheos_intro.mp3": "a92de32f6835c32ce7775ab464d0bc5038949ce9733483f1eae33dfebcae7385",
+    "game/index.src.html": "f61e3094f0d6e4c215b2231ee3ad8f796ccc80dfe40e9cb0ebfbb69fc952c9cf",
+    "tools/nations_lib.py": "5cc08ea265db15d1cda337feda8b45b321ad22d94f74c6c2da4ec99b7bc58e85",
+    "tools/nations_context.py": "d9d09d0bc3aaea19be6c9bd68bfbe924a102ab37d09dc07fcb925674a29f65f8",
+    "data/nations/tools/merge.py": "2ca763bcada4948ba8cdd55886242a0d6c744f8b086c7c8a1d7d6041bacf184e"
+  },
+  "artifact_pins": {
+    "integration-map.json": "55ae6d011a34e2cfedc23f73ba65093d1d174914794460c233b3c1bc9b6b91c5",
+    "independent-cheroenhaka-review.json": "b17eb03edb10fd5d17b5213acf78af95c2b9fbc5e25dd417abf94e933a3c4636",
+    "independent-nottoway-review.json": "06dcd1b5d806c269424ee35b5f5b85f89edd31074de36f5dbf47c9112a2b1c9f",
+    "verification/refresh_report.json": "72a1fa6fbb69c34ed93392c126eda7e70d63ec427d4b114d11381b9a915eaa06",
+    "cheroenhaka/profile-handoff.json": "195751c381c8d96afa599eda40b5e4af952d1ac6a9efe0514ac515bbd0fcc493",
+    "nottoway/profile-handoff.json": "8124c4546c6c9cd0e9cc03fa92134fdacdd90aaf70b93fc889226d6067676e36",
+    "mattaponi/publication-scope-handoff.json": "03f71cf79d19b2bfe712a73d8327cbb0173ca2ab6dbee221f8b5b426e3ada0ed"
+  },
+  "hash_kind": "LF-normalized source/record bytes; raw source body hashes remain exact actual HTTP bytes in receipt_body_checks",
+  "limits": [
+    "This review does not independently approve its author's Nottoway source meaning; separate named reviewer does.",
+    "No fresh network, GUI, full pytest or production checks performed here. Root supplied actual targeted verification output; exact raw merge and 8 scratch control checks were independently executed by this reviewer.",
+    "Parent handles UI/browser, full suite, derived game export, exact commit/PR review, deployment and live verification.",
+    "Mattaponi content reuse scope remains unresolved; no outreach or substitution of owner permission is authorized."
+  ]
+}
