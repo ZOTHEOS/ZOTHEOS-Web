@@ -68,23 +68,33 @@
   "independent_reviews": [
     {
       "file": "2026-10-15-nj-ute-history.prebuild-review.json",
-      "sha256": "4cd01ee490eea733e9bbcfa6f128b0eea068612793e5145a73ba4f41338f9044"
+      "sha256": "4cd01ee490eea733e9bbcfa6f128b0eea068612793e5145a73ba4f41338f9044",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "f0d558bf8f844a183d9cac568b426d204cabecf39527cff272064a06bfb4e37b"
     },
     {
       "file": "2026-10-15-nj-ute-history.nj-source-review.json",
-      "sha256": "ccb187913cda4ac876a139ca4ba600443d37a09cf8506f8e4172c7ee901633c9"
+      "sha256": "ccb187913cda4ac876a139ca4ba600443d37a09cf8506f8e4172c7ee901633c9",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "09e4682d19f083480fc9f0d0516aee393500dd26f8123f86ae89672bb1ebb083"
     },
     {
       "file": "2026-10-15-nj-ute-history.ute-source-review.json",
-      "sha256": "1cfdecc136b32172a1512997b97f859f3ddd345e86661cbb4f4c4e1219fee3d6"
+      "sha256": "1cfdecc136b32172a1512997b97f859f3ddd345e86661cbb4f4c4e1219fee3d6",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "e45a612ac9b84cfcafd7cd091184474f0da1260cdae262ad1aad0e3e285ccfac"
     },
     {
       "file": "2026-10-15-nj-ute-history.implementation-review.json",
-      "sha256": "97790f3e5f01a7fc538fb3c6378bc228cad80e6ece7b36bee271f588803ebe89"
+      "sha256": "97790f3e5f01a7fc538fb3c6378bc228cad80e6ece7b36bee271f588803ebe89",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "6f9c4bf5c4a86a6c1d9c60a78ecf265ac8b81d72e9c0453a959e6c26a6137a95"
     },
     {
       "file": "2026-10-15-nj-ute-history.receipt-addendum.json",
-      "sha256": "20ecdbd3d0c51bbdeb22f2a3040594a4bada2c74ff29ad4db4ff9773a629cf8a"
+      "sha256": "20ecdbd3d0c51bbdeb22f2a3040594a4bada2c74ff29ad4db4ff9773a629cf8a",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "ad8ff531d297f931541b5783d1e174d227c8417c9a717a168d60ed8eae9b7d57"
     }
   ],
   "unresolved": [
@@ -95,5 +105,6 @@
     "Fresh browser layout inspection and live publication verification remain separate gates at record time.",
     "Claude final cinema details remain pending owner relay."
   ],
-  "human_review": false
+  "human_review": false,
+  "review_file_pin_scope": "Independent reports pin the physical reviewed working-tree snapshot. Git normalizes configured text files from CRLF to LF; their decoded JSON/source text is unchanged. Separate committed_blob_sha256 fields identify the LF Git review-record blobs."
 }
