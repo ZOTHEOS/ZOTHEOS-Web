@@ -248,7 +248,7 @@ def page(builder):
     total = len(entities) + len(ca_entries) + sum(len(rows) for _, rows in extra_entries)
     choices = [('us-directory', 'United States', 'Federal published names', str(len(entities)), display_date(source['publication_date']))]
     choices += [(d['_display']['anchor'], d['_display']['title'],
-                 'State directory listings', str(len(rows)), display_date(d['as_of']) + ' UTC observation') for d, rows in us_extra]
+                 d['_display']['label'], str(len(rows)), display_date(d['as_of']) + ' UTC observation') for d, rows in us_extra]
     choices += [('canada-directory', 'Canada', '2024 administrative register groups', str(len(ca_entries)), display_date(canada['source']['as_of']))]
     choices += [(d['_display']['anchor'], d['_display']['title'], d['_display']['label'], str(len(rows)), display_date(d['as_of'])) for d, rows in other_extra]
     navigation = '<nav class="directory-inventory-nav" aria-label="Directory inventories"><ul>' + ''.join(

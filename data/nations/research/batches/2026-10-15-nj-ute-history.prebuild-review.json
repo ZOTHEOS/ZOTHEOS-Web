@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:05:18.618235+00:00",
+  "station": {
+    "seat": "Independent acceptance reviewer",
+    "agent": "history_acceptance_20261015",
+    "machine": "MELLO-MOOSE",
+    "cycle": "2026-10-15T14:00:18.490Z"
+  },
+  "review_kind": "AI-assisted pre-build acceptance; not human or Nation approval",
+  "read_only_web": true,
+  "source_research_performed": false,
+  "gui_verified": false,
+  "baseline_commit_observed": "35804378f4b62b581efc61cf1c4a57b38b43205d",
+  "baseline_git_status_note": "Read-only git status under the restricted process returned not-in-work-tree; root owns actual checkout verification. rev-parse returned the recorded commit.",
+  "baseline_runs": [
+    {
+      "artifact": "test_fourth_state_inventory_acceptance.py",
+      "test_count": 24,
+      "passed": 0,
+      "failed": 24,
+      "reason": "NJ is not loaded by current INVENTORIES. Every case first requires exactly one loaded fourth-state fixture.",
+      "exit_code": 1,
+      "runtime_seconds_reported": 2.03
+    },
+    {
+      "artifact": "test_context_review_clock_acceptance.py",
+      "test_count": 13,
+      "passed": 8,
+      "failed": 5,
+      "reason": "Fresh context/catalogue review is rejected by the canonical model build-date ceiling before identity and hold checks can execute. Future/invalid-day checks pass.",
+      "exit_code": 1,
+      "runtime_seconds_reported": 0.09
+    }
+  ],
+  "post_test_interpreter_note": "Both pytest processes emitted a pyreadline3 console-destructor Windows invalid-handle message after reporting results. Recorded as observed; it did not alter test result counts.",
+  "fixture_boundaries": [
+    "All names, links and source receipts are fictional isolated data; none are Nation facts, approval, fetched evidence or human review.",
+    "NJ classification remains state source-listing units. Real source extraction must independently decide whether a heading is a group, commission category or legal status claim.",
+    "No matching by name is authorized. Directory list rows never change canonical Nations facts.",
+    "Four preserved state source scopes must leave 46 pending, all four extra inclusion lanes and complete=false."
+  ],
+  "smallest_implementation": [
+    "Register NJ optional typed inventory, explicit NJ state mapping, New Jersey display labels and NJ hold namespace.",
+    "Change NJ coverage scope to preserved only with the actual typed inventory and measured matching source receipt.",
+    "Preserve scoped named notes so held names cannot leak through footnotes, font subsets or queue selection/claims.",
+    "Keep old three-state scenario intentionally NJ-pending when NJ data is not copied. Generic full-plan fixtures may copy optional NJ.",
+    "Separate context review date validation from canonical fact-age/build dates using actual UTC current day; do not backdate source review or advance canonical dates.",
+    "Update old context future-date tests to use actual tomorrow rather than 2026-10-13, which is no longer a future UTC day."
+  ],
+  "baseline_file_sha256": {
+    "tools/nations_inventories.py": "198373f22c01b5dc3e8f1433241e5a517937659f5d4e1f2a2e397bc84a87e4e5",
+    "tools/nations_directory.py": "a2def8edde0923304a0f10974b12f458b85318e711d99cd847f678d45f520340",
+    "tools/nations_research.py": "6a8d4a4d0785eae6ac77a783525951bcd7a53e8f86ab662e415fac8fb295fd6d",
+    "tools/nations_context.py": "3a3bf7a1f6a9137769d095135dd5aa7d9d21073c70a1a8bce7e111f4dd4234b2",
+    "tools/nations_lib.py": "5cc08ea265db15d1cda337feda8b45b321ad22d94f74c6c2da4ec99b7bc58e85",
+    "tools/tests/test_third_state_inventory_acceptance.py": "77e6991483192099f516f564cfd65713e2bed0a32c1089f8f3a9b48aab95c3f0",
+    "tools/tests/test_us_state_directory_acceptance.py": "94cca219ea2cf7f89641969584b2121ca74245ffc818eb90dac9cb43fc8fb3c4",
+    "tools/tests/test_nations_context.py": "2324a54b4adb9d8b3a916b1d0ec42c1253a10b6054a1cc0a02ec9838d23627fc",
+    "data/nations/research/us_coverage_plan.json": "df15de38e6ba587fb31f6e660c5d2134996ba1407e89c6c7bb5cebab2b605a1b",
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "acceptance_file_sha256": {
+    "test_context_review_clock_acceptance.py": "14537beae61ad0fa291cda693ec1204cba73afb6434aef818fd6f0a092d70db2",
+    "test_fourth_state_inventory_acceptance.py": "51f053bfaddb89ca9bad57923a4c11f43e7893c7c0f50fc6c3b58af767a534ff"
+  }
+}

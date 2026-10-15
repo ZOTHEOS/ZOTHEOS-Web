@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T14:18:19.872074+00:00",
+  "agent": "history_acceptance_20261015",
+  "review_kind": "AI-assisted independent receipt metadata addendum",
+  "human_review_claimed": false,
+  "gui_verified": false,
+  "findings": [],
+  "outcome": "Receipt amendment is truthful and satisfies the unchanged existing retention contract. No new source body, success status, hash, size or human approval was invented.",
+  "amended_receipt": "data/nations/research/receipts/us-ute-mountain-robots-initial-network-failure-2026-10-15.receipt.json",
+  "amended_receipt_sha256": "6553ccd2b77b150b7a8b6ba51d6424285c91a5b86436590a58cbf7f833f5446a",
+  "checks": [
+    "Original failed URL, DNS error, scope and actual check instant remain unchanged. Timestamp offset changed representation only, preserving the same instant.",
+    "HTTP status remains null. No final URL, response-body hash or byte count exists.",
+    "Retention metadata explicitly says no HTTP body was captured and diagnostic remains in local audit artifacts.",
+    "human_review_claimed is explicitly false.",
+    "All 24 source,9 protected and3 generated HTML pins from final review remain unchanged.",
+    "Existing test_nations_directory.py matches HEAD bytes; its receipt acceptance check was not weakened."
+  ],
+  "focused_test": {
+    "name": "test_public_source_captures_preserve_measured_bytes_and_hashes",
+    "passed": 1,
+    "failed": 0,
+    "exit_code": 0,
+    "runtime_seconds_reported": 0.07
+  },
+  "parent_reported_prior_full_suite": {
+    "passed": 253,
+    "failed": 1,
+    "attribution": "Root-reported; not this reviewer independent full-suite run. Failure was missing local retention metadata in this initial DNS diagnostic receipt."
+  },
+  "remaining_gate": "Final full-suite result, publication and live verification remain root responsibilities."
+}

@@ -60803,8 +60803,12 @@
       "region": "us-state-source-discovery",
       "priority": 90,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
-      "allowed_source_ids": [],
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-nj-tribal-directory",
+        "us-nj-commission-statutes",
+        "us-nj-commission-hub"
+      ],
       "review": {
         "identity": "pending",
         "sources": "pending",
@@ -60821,9 +60825,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.nj.gov/state/njcaia-about.shtml",
+          "retrieved_at": "2026-10-15T14:03:34.375978+00:00",
+          "http_status": 200,
+          "sha256": "e287f12724a0f6c0b81ac1b97dc4c30533d905304e42b0edc0ddfa4666169fd4",
+          "source_id": "us-nj-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-nj-about-2026-10-15.receipt.json",
+          "receipt_id": "r-f7aab77a460bae04"
+        }
+      ],
+      "updated_at": "2026-10-15T14:11:37.053948+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Preserved three source-named commission representation groups, not a recognition total. Inter-Tribal People category excluded from Nation rows. Own-source identity/history and beyond-commission leads remain queued. Source captures preceded this integration lease; no earlier lease is invented."
     },
     {
       "task_id": "discover-us-state-nm",
@@ -62105,6 +62122,205 @@
       "note": "Candidate own homepage returned actual HTTP403 after permitted robots and reviewed canonical redirects. Stopped without alternate-host/path, proxy or snippet substitution. No own branding/history/official URL verified. The access attempt preceded this integration lease; no earlier lease is invented.",
       "lease_until": null,
       "retry_policy_note": "Defer repeated access-denied research for seven days; do not retry earlier without new permissible evidence or an explicit source change."
+    },
+    {
+      "task_id": "profile-us-state-nj-nanticoke-lenni-lenape-indians",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nj-nanticoke-lenni-lenape-indians",
+      "subject": "Nanticoke Lenni-Lenape Indians",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nj",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nj-tribal-directory",
+        "us-nj-commission-hub",
+        "us-nj-commission-statutes"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T14:11:36.803392+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nj-powhatan-renape-indians",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nj-powhatan-renape-indians",
+      "subject": "Powhatan Renape Indians",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nj",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nj-tribal-directory",
+        "us-nj-commission-hub",
+        "us-nj-commission-statutes"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T14:11:36.803392+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "profile-us-state-nj-ramapough-lenape-indian-nation",
+      "task_type": "entity_profile",
+      "entity_id": "us-state-nj-ramapough-lenape-indian-nation",
+      "subject": "Ramapough Lenape Indian Nation",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-nj",
+      "priority": 80,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nj-tribal-directory",
+        "us-nj-commission-hub",
+        "us-nj-commission-statutes"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T14:11:36.803392+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "discover-us-nj-beyond-commission-groups",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Research New Jersey communities outside commission representation, including separately scoped Sand Hill and Cohanzick leads",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-state-source-discovery",
+      "priority": 90,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nj-commission-hub"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T14:11:36.803392+00:00",
+      "next_attempt_after": null
+    },
+    {
+      "task_id": "history-ute-mountain-ute-homeland-context",
+      "task_type": "historical_context",
+      "entity_id": "us-fed-32d69163a8c7",
+      "subject": "Review Ute Mountain Ute historical homelands and shared border context",
+      "entity_type": "federally_listed_tribal_entity",
+      "countries": [
+        "US"
+      ],
+      "region": "us-owner-priority-ute",
+      "priority": 96,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "priority-ute-mountain"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "url": "https://www.utemountainutetribe.com/",
+          "retrieved_at": "2026-10-15T14:02:44.181282+00:00",
+          "http_status": 200,
+          "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+          "source_id": "priority-ute-mountain",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-ute-mountain-home-2026-10-15.receipt.json",
+          "receipt_id": "r-54fe56bbfe8aaf86"
+        }
+      ],
+      "updated_at": "2026-10-15T14:11:37.273730+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Fresh own-source context review for historical Weenuche homelands and shared border areas. No current jurisdiction or urgency claim; canonical fact clocks and identity remain unchanged. Source captures preceded this integration lease; no earlier lease is invented."
     }
   ]
 }

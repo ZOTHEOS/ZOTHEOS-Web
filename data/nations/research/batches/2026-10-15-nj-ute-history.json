@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:20:25.076363+00:00",
+  "station": "Codex website integration, MELLO-MOOSE, cycle 2026-10-15T14:00:18.490Z",
+  "branch": "codex/steward-us-history-2026-10-15-140018",
+  "baseline_main": "f411e254c32201d533cdf7a08f3d413276ef766d",
+  "publication_state_at_recording": "Independently reviewed and checked for pull request publication; not yet merged or live-byte verified.",
+  "substantive_changes": [
+    "Three exact source-named New Jersey commission representation groups are preserved as directory source records. Inter-Tribal People is a separate representation category, not a fourth Nation. Commission membership and current recognition status are not interchangeable.",
+    "New Jersey identity crosswalks remain unreviewed. Group-owned sources, history and communities outside commission representation remain queued. No personal contacts, leadership lists, seals or sacred materials were imported.",
+    "Ute Mountain Ute own-source historical context explains Weenuche homelands and shared border areas, with a direct resource link. It is not a present-day reservation map or jurisdiction determination.",
+    "The fresh Ute source reading returned the same body bytes as October 12. Unknown publication/event dates remain null; no new urgent development is inferred.",
+    "Context review dates now validate against the actual UTC day independently of older canonical fact-check dates. Canonical checked, last_verified and generated dates were not advanced to admit fresh source context.",
+    "State IDs and publication holds derive only from the explicitly configured inventory contract. Unknown state namespaces remain rejected. NJ labels retain the commission scope.",
+    "Claude collaboration handoff was updated to actual main and this bounded batch. Final cinema inventory and production proposal still await owner relay. No rendering, driver or workstation service changes performed."
+  ],
+  "measured_counts": {
+    "new_nj_source_records": 3,
+    "total_mixed_source_records": 2272,
+    "source_lists": 8,
+    "meaning": "Overlapping and differently scoped records, not distinct Nations and not complete Indigenous coverage.",
+    "state_source_inventories_preserved": 4,
+    "state_source_discovery_pending": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "persistent_queue_tasks": 1806,
+    "new_queue_tasks": 5,
+    "canonical_profiles_unchanged": 457,
+    "canonical_raw_facts_unchanged": 1287,
+    "canonical_facts_added": 0,
+    "public_facts_unchanged": 1285,
+    "held_facts_unchanged": 2,
+    "human_or_nation_approvals_created": 0
+  },
+  "checks": {
+    "pytest": {
+      "passed": 254,
+      "failed": 0,
+      "seconds": 116.29,
+      "runtime": "Existing Python3.10.9 direct interpreter, pinned fonttools4.63.0/brotli1.2.0/pypdf6.4.0; no runtime installation."
+    },
+    "prior_full_suite": {
+      "passed": 253,
+      "failed": 1,
+      "seconds": 132.62,
+      "resolution": "Added explicit truthful local diagnostic retention to the no-body DNS-failure receipt. Existing test unchanged; no successful capture or hash invented."
+    },
+    "independent_acceptance": {
+      "passed": 37,
+      "failed": 0,
+      "seconds": 2.75,
+      "prebuild_red_cases": 29,
+      "prebuild_green_cases": 8
+    },
+    "focused_root_acceptance": {
+      "passed": 126,
+      "failed": 0,
+      "seconds": 8.14
+    },
+    "build_and_deterministic_check": "passed; 581 pages, zero lint errors/warnings, copy/font/CSP/link/size/contrast gates passed",
+    "research_queue_validation": "passed with no errors",
+    "release_check": "passed",
+    "game_export_check": "passed",
+    "directory_interaction": "Node acceptance passed; batching, scope, keyboard focus, deep links and Ute/Paiute name boundary. Not a rendered browser observation.",
+    "git_diff_check": "passed",
+    "reviewed_file_pins": "All 24 source/test/data/doc/receipt, 9 protected and 3 generated HTML pins rechecked; amended failure receipt independently pinned in addendum.",
+    "browser_visuals": "Not performed; no fresh phone, desktop, screen-reader or browser layout claim."
+  },
+  "independent_reviews": [
+    {
+      "file": "2026-10-15-nj-ute-history.prebuild-review.json",
+      "sha256": "4cd01ee490eea733e9bbcfa6f128b0eea068612793e5145a73ba4f41338f9044",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "f0d558bf8f844a183d9cac568b426d204cabecf39527cff272064a06bfb4e37b"
+    },
+    {
+      "file": "2026-10-15-nj-ute-history.nj-source-review.json",
+      "sha256": "ccb187913cda4ac876a139ca4ba600443d37a09cf8506f8e4172c7ee901633c9",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "09e4682d19f083480fc9f0d0516aee393500dd26f8123f86ae89672bb1ebb083"
+    },
+    {
+      "file": "2026-10-15-nj-ute-history.ute-source-review.json",
+      "sha256": "1cfdecc136b32172a1512997b97f859f3ddd345e86661cbb4f4c4e1219fee3d6",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "e45a612ac9b84cfcafd7cd091184474f0da1260cdae262ad1aad0e3e285ccfac"
+    },
+    {
+      "file": "2026-10-15-nj-ute-history.implementation-review.json",
+      "sha256": "97790f3e5f01a7fc538fb3c6378bc228cad80e6ece7b36bee271f588803ebe89",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "6f9c4bf5c4a86a6c1d9c60a78ecf265ac8b81d72e9c0453a959e6c26a6137a95"
+    },
+    {
+      "file": "2026-10-15-nj-ute-history.receipt-addendum.json",
+      "sha256": "20ecdbd3d0c51bbdeb22f2a3040594a4bada2c74ff29ad4db4ff9773a629cf8a",
+      "hash_kind": "Original local audit artifact bytes before Git line-ending normalization",
+      "committed_blob_sha256": "ad8ff531d297f931541b5783d1e174d227c8417c9a717a168d60ed8eae9b7d57"
+    }
+  ],
+  "unresolved": [
+    "New Jersey group identities, group-owned sources and broader communities outside the commission remain pending; three source rows are not a statewide identity or recognition census.",
+    "NJ source creation-law text differs from the statute reference; no founding-date or legal conclusion was published. Historical 2018/2019 announcements are research evidence, not a new 2026 determination.",
+    "Forty-six other state discovery scopes and all four additional inclusion lanes remain pending. US and worldwide coverage remain incomplete.",
+    "No new urgent development was established in this bounded batch.",
+    "Fresh browser layout inspection and live publication verification remain separate gates at record time.",
+    "Claude final cinema details remain pending owner relay."
+  ],
+  "human_review": false,
+  "review_file_pin_scope": "Independent reports pin the physical reviewed working-tree snapshot. Git normalizes configured text files from CRLF to LF; their decoded JSON/source text is unchanged. Separate committed_blob_sha256 fields identify the LF Git review-record blobs."
+}

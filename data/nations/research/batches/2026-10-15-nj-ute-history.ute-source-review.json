@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "station": {
+    "seat": "Independent source and meaning reviewer, NJ source-discovery subagent",
+    "machine": "MELLO-MOOSE as assigned, no hardware audit",
+    "cycle": "2026-10-15T14:00:18.490Z",
+    "model": "Inherited Codex model, backend not independently verified"
+  },
+  "reviewed_at": "2026-10-15T14:09:30.603552+00:00",
+  "subject": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "authorship_independence": "This reviewer did not author the Ute candidate; its other task was New Jersey directory source discovery.",
+  "review_kind": "AI-assisted independent retained-source, paraphrase and respect review",
+  "human_review_claimed": false,
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "outcome": "Source meaning and respect review passed. Final context review-clock policy, implementation tests, hold/publication gates and live verification remain root responsibilities.",
+  "findings": [],
+  "source_verified": {
+    "url": "https://www.utemountainutetribe.com/",
+    "http_status": 200,
+    "retrieved_at": "2026-10-15T14:02:44.181282+00:00",
+    "bytes": 38588,
+    "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+    "same_bytes_as_prior_receipt": true,
+    "prior_retrieved_at": "2026-10-12T08:34:03.893296+00:00",
+    "publication_date": null,
+    "event_date": null,
+    "last_modified_is_not_event_or_publication_date": true
+  },
+  "meaning_checks": [
+    {
+      "check": "Historical geographic framing",
+      "result": "Pass",
+      "reason": "The independently extracted Weenuche Lands paragraph names the western Rocky Mountains and four present states. Proposed parts-of wording avoids claiming all of those states."
+    },
+    {
+      "check": "Shared borders and regular use",
+      "result": "Pass",
+      "reason": "The source explicitly describes normal protection, regular travel, indistinct limits and shared border areas. The proposed digestible paraphrase retains those qualifications."
+    },
+    {
+      "check": "Current legal boundaries",
+      "result": "Pass",
+      "reason": "The proposal expressly distinguishes historical homeland description from present reservation boundaries and legal jurisdiction. No coordinates, title, acreage, treaty rights or legal outcome is asserted."
+    },
+    {
+      "check": "Distinct Ute governments",
+      "result": "Pass",
+      "reason": "The candidate is bound only to the existing Ute Mountain Ute government profile. The homepage separately describes Southern Ute and northern bands; the proposed paragraph does not merge governments or claim exclusive representation of all Ute peoples."
+    },
+    {
+      "check": "Publication and urgency",
+      "result": "Pass",
+      "reason": "The homepage has no proposed publication/event date, and current captured bytes equal the October 12 receipt hash. This is an October 15 re-read of unchanged source material, not newly published history or a current emergency."
+    },
+    {
+      "check": "Respect and personal information",
+      "result": "Pass",
+      "reason": "The proposed paragraph and resource use only the public historical homeland account. No ceremony, sacred content, personal names, contact details, seals, private membership data or coordinates enter the public proposal."
+    },
+    {
+      "check": "Attribution",
+      "result": "Pass",
+      "reason": "The paragraph opens by attributing the account to the Tribe and links the same public own-publisher homepage. Historical limitations remain visible."
+    }
+  ],
+  "required_followup_gates": [
+    "Keep canonical fact text and old fact verification dates unchanged.",
+    "Do not backdate the actual October 15 source check to fit the old model build date.",
+    "Any context review-clock change needs independent implementation review and acceptance tests.",
+    "Review the final assembled context for duplicate material, source links, holds, date rendering and accessibility before normal PR release."
+  ],
+  "artifact_file_pins": {
+    "ute-history\\ute-history-candidate-handoff.json": "696d27aa28c99e24202a4978facf501c4c9b46aa13db858b263cbcb089e9f9a7",
+    "ute-history\\ute-mountain-home-2026-10-15.body": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+    "ute-history\\ute-mountain-home-2026-10-15.receipt.json": "ea7b3234cf0fa7dc77352a2ed28bba2acc7b6d90dd11074d02b812cc1057c7b9",
+    "ute-history\\ute-mountain-home-2026-10-15.extracted.txt": "896a628e0bff7a6342cb33cfe665c32934ec5df8f8e56c6c5c1a9192a1053c72",
+    "ute-history\\ute-mountain-robots-2026-10-15.receipt.json": "3b72e0cf76050aafe504517c87541d71ba8e35a86f590093fec61e8d8b653090"
+  },
+  "repository_file_pins_at_review": {
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/sources/expansion-americas-2026-10-12.context.json": "e625f72f3cd63ec45c4cc3d063e74c522dc9aa247e40dd5483722a804d60aec7",
+    "data/nations/context_links.json": "29e30bb4afbafd7031a5458e651e10a453199b8c6c0a8366e6f823a093165152",
+    "data/nations/research/directory_sources.json": "5eba64949efeb7a415f2b04325e856db7ddc5d8e33e27f9b9842c11ab6f38828",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444"
+  },
+  "candidate_repository_pin_differences": {}
+}

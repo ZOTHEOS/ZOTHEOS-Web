@@ -413,8 +413,8 @@
       "stated_count": null,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "A government distinct from Southern Ute and Uintah and Ouray governments. Current risks require dated source evidence."
+      "status": "source_retrieved",
+      "note": "Own homepage re-read October 15 UTC for historical Weenuche homelands and shared border areas. Historical account is not a current legal-boundary determination or emergency. Distinct from Southern Ute and Uintah and Ouray governments."
     },
     {
       "source_id": "priority-ute-indian",
@@ -616,6 +616,86 @@
       "discovery_date": "2026-10-15",
       "status": "source_located",
       "note": "Candidate printed by commission roster redirects to pci-nsn.gov. Exact observed redirect hosts were separately scope-reviewed before followup. Canonical robots200 permitted public paths, but homepage403 was not bypassed. Own branding, identity and history remain unread/unverified; no official link or resource card is approved."
+    },
+    {
+      "source_id": "us-nj-tribal-directory",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "state_tribal_directory_listing",
+      "url": "https://www.nj.gov/state/njcaia-about.shtml",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "stated_count": null,
+      "as_of": "2026-10-15",
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Three named tribal representation groups read in commission paragraph; Inter-Tribal People is a fourth representation category, not another Nation. Source is not a complete current recognition register."
+    },
+    {
+      "source_id": "us-nj-commission-statutes",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.nj.gov/state/dos-statutes-american-indian-affairs.shtml",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Department of State statutory transcription. Representation membership categories, named legal labels and commission recognition authority must remain distinct."
+    },
+    {
+      "source_id": "us-nj-commission-hub",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.nj.gov/state/njcaia.shtml",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Additional community and history source-discovery leads only; not all named communities or current events are verified."
+    },
+    {
+      "source_id": "us-nj-ag-settlement-2018",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.nj.gov/oag/newsreleases18/pr20181115b.html",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "stated_count": null,
+      "as_of": "2018-11-15",
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Attributed historical settlement announcement. Source labels not automatically preferred names or profile aliases."
+    },
+    {
+      "source_id": "us-nj-ag-settlement-2019",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.nj.gov/oag/newsreleases19/pr20190318b.html",
+      "allowed_hosts": [
+        "www.nj.gov"
+      ],
+      "stated_count": null,
+      "as_of": "2019-03-18",
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Attributed historical settlement announcement. Commission membership does not itself establish legal recognition."
     }
   ]
 }

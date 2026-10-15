@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-15T08:41:27.866812+00:00",
+  "recorded_at": "2026-10-15T14:11:36.793392+00:00",
   "complete": false,
   "unit": "Research source-discovery scopes, not Tribal Nations or a recognition denominator",
   "state_scopes": [
@@ -153,7 +153,8 @@
     {
       "state": "NJ",
       "name": "New Jersey",
-      "status": "source_discovery_pending"
+      "status": "source_inventory_preserved",
+      "inventory_file": "us_nj_state_directory_2026.json"
     },
     {
       "state": "NM",

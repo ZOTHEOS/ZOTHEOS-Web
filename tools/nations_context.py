@@ -20,14 +20,15 @@ def text(value, limit=700):
     return value
 
 
-def date(value, build_date):
+def date(value):
     if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
         raise ValueError("context: review date must be YYYY-MM-DD")
     try:
         result = datetime.date.fromisoformat(value)
     except ValueError as exc:
         raise ValueError("context: invalid review date") from exc
-    if result > datetime.date.fromisoformat(build_date):
+    # A source review has its own clock; old canonical fact checks stay unchanged.
+    if result > datetime.datetime.now(datetime.timezone.utc).date():
         raise ValueError("context: future review date")
     return value
 
@@ -83,14 +84,14 @@ class Context:
             key = (nid, address)
             if key in links:
                 raise ValueError("context: duplicate approved URL")
-            links[key] = {"reviewed": date(entry.get("reviewed"), model.build_date),
+            links[key] = {"reviewed": date(entry.get("reviewed")),
                           "publisher": text(entry.get("publisher"), 160)}
         records = 0
         for path in files:
             if path.resolve().parent != source_folder.resolve():
                 raise ValueError("context: context path escapes source folder")
             doc = read_json(path)
-            reviewed = date(doc.get("reviewed"), model.build_date)
+            reviewed = date(doc.get("reviewed"))
             groups = {"public_notes": items(doc, "public_notes", 64),
                       "official_resources": items(doc, "official_resources", 32),
                       "relationships": items(doc, "relationships", 32)}

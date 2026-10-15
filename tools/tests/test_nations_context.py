@@ -1,6 +1,7 @@
 """Portable stdlib tests: python tools/tests/test_nations_context.py [tools-dir] [model-root]."""
 import ast
 import copy
+import datetime as dt
 import importlib.util
 import json
 from pathlib import Path
@@ -85,7 +86,7 @@ class ContextTests(unittest.TestCase):
             Context(self.root, self.m)
 
     def test_future_and_invalid_review_dates_fail(self):
-        for value in ["2026-10-13", "2026-02-30", "today"]:
+        for value in [(dt.datetime.now(dt.timezone.utc).date() + dt.timedelta(days=1)).isoformat(), "2026-02-30", "today"]:
             doc = payload(); doc["reviewed"] = value; self.write(doc)
             with self.assertRaises(ValueError): Context(self.root, self.m)
 

@@ -1,0 +1,10 @@
+{
+  "id": "ute-mountain-robots-initial-network-failure",
+  "url": "https://www.utemountainutetribe.com/robots.txt",
+  "retrieved_at": "2026-10-15T08:02:31.828513-06:00",
+  "http_status": null,
+  "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+  "scope": "Initial sandbox network failure; approved unchanged retry succeeded. No content accessed in failed attempt.",
+  "capture_retention": "No HTTP response body captured; initial DNS failure diagnostic retained in local audit artifacts only. No body hash or byte count exists.",
+  "human_review_claimed": false
+}

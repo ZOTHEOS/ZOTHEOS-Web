@@ -76,6 +76,10 @@ def scenario(tmp_path):
         'discovery_date': DAY, 'status': 'source_retrieved', 'note': 'Fictional test allowlist only.'})
     write(folder / 'directory_sources.json', sources)
     plan = read(folder / 'us_coverage_plan.json')
+    # This fixture intentionally models the original three-state contract.
+    nj = next(row for row in plan['state_scopes'] if row['state'] == 'NJ')
+    nj['status'] = 'source_discovery_pending'
+    nj.pop('inventory_file', None)
     for state in plan['state_scopes']:
         if state['state'] == 'AL':
             state.update(status='source_inventory_preserved', inventory_file=FILE)
