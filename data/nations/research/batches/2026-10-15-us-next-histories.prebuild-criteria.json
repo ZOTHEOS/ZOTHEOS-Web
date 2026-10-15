@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T17:29:19.169434+00:00",
+  "recorded_before_history_integration": true,
+  "reviewer": "history_acceptance_20261015",
+  "review_kind": "AI-assisted independent integration acceptance contract; not independent approval of own authored history",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "network_requests_performed": 0,
+  "web_repo_writes_performed": 0,
+  "baseline_git_revision": "e7d94b60c7a6237abdeeb9d3f32155c180c1c69e",
+  "authorship_boundary": "This reviewer authored the Catawba research proposal. Root independent-catawba-review.json supplies independent meaning/respect review. Final reviewer scope checks faithful integration, exact provenance, publication controls and regression boundaries, not independent self-approval.",
+  "acceptance_expectations": [
+    "Exactly nine new titled notes across the three existing canonical profiles. Copy independently reviewed title/text exactly unless a separately reviewed correction is recorded. No new profile or canonical fact/check-date/identity approval.",
+    "Nine proposed exact nation/URL resources produce only seven new resource records: update the two existing exact resources in place, do not duplicate links. Existing note text/review dates, relationships and unrelated resources stay unchanged.",
+    "Exact nation and source URL catalogue entries carry real actual review dates and matching successful measured source receipts. Robots HTTP404 remains unavailable-policy evidence, not successful page content. No source body or private/sacred detail deployed.",
+    "All new titles, paragraphs, and own links disappear with each target profile hold/takedown. Existing fact-associated hold filtering and exact-link allowlist remain active; no cross-government context leakage.",
+    "The canonical registry, overrides, human records, directory identity crosswalks, current coverage plan, NCday-discrepancy data/backoff tasks, original game/audio/landing remain unchanged.",
+    "Three history subject task records and a dated Catawba own-source conflicting-year followup remain clear, risk unassessed, with genuine source receipts and no invented human completion. Compute actual queue counts after integration; do not assume every source observation is a new event.",
+    "Catawba1951/1959source-year conflict remains unresolved; neither year selected. Farm FAQ July15,2025/funding throughJune2026/schedule disagreement retains current-status caveat. No NCrecognitiondate dispute is rechecked or silently resolved.",
+    "Fort Sill mid-1970s remains approximate, not1976. Coerced relocation does not merge present governments. Language goals do not verify current classes or outcomes.",
+    "Ute Mountain Ute1874Act/1978decree are attributed program-account dates, not independent legal rulings or public hunting/access permission. Undated environmental/curriculum pages do not establish present operations or project completion.",
+    "Reading CSS affects only the context section and descendants. Removing the inserted reading block recreates old stylesheet after newline normalization; tokens/colors/theme/motion/name fonts/other layouts stay unchanged.",
+    "Content-hashed stylesheet URL changes mechanically across all581generated pages. Only the three target profiles gain history content; every other generated page differs only by the old/new stylesheet reference. No other script/asset/content changes.",
+    "Reading acceptance follows the prebuild criteria:12px heading/body and body/receipt gaps,32px prior-receipt/next-heading gap, own-resource links at least44px, no overflow at320/390/768/1280desktopviewports, themes readable, no new animation. Treat retained browser measures as root observations, not reviewer browser reruns or physical-device/screen-reader certification.",
+    "Required checks, independent release/commit review, reviewed PR and actual production bytes follow. Core/council/cinema prototype claims stay out of scope and unverified."
+  ],
+  "expected_counts": {
+    "new_notes": 9,
+    "resource_proposals": 9,
+    "existing_resources_to_update": 2,
+    "new_resource_links": 7,
+    "history_subject_profiles": 3,
+    "generated_stylesheet_references_expected": 581,
+    "baseline_queue_tasks": 1808
+  },
+  "proposals": [
+    {
+      "folder": "catawba",
+      "subject": "catawba-nation-us-sc",
+      "artifact_sha256": "bcf9eabfffb291d5550b291f1a9cccd6c1126732426d815e5bb432ff33c9197c",
+      "note_count": 3,
+      "resource_count": 3,
+      "notes": [
+        {
+          "title": "Land Pressure And Dispossession",
+          "text": "The Nation describes the Treaty at Nations Ford as an exchange in which it relinquished land in return for promises of another tract and payment. Its account places the agreement amid settler pressure and the threat of removal west. This is an attributed history of dispossession, not a current finding about land title or jurisdiction."
+        },
+        {
+          "title": "Constitution And Collective Action",
+          "text": "The Nation's account dates the creation of a constitution to 1944. It records a petition to Congress for federal recognition in 1973 and an updated constitution adopted in 1975. Its history links these steps to the community's effort to regain recognition. These milestones add context to the later settlement; they do not decide a present recognition dispute."
+        },
+        {
+          "title": "Stewardship And Community Planning",
+          "text": "The Nation describes its Realty program as protecting and managing trust- and fee-owned lands. Its transportation program also describes public meetings to gather input on planned projects. These are the Nation's descriptions of its work, not independent measurements of results, a current land-title ruling or a guarantee that a listed project is complete."
+        }
+      ],
+      "resources": [
+        {
+          "nation": "catawba-nation-us-sc",
+          "url": "https://www.catawba.com/about-the-nation",
+          "label": "Catawba Nation history and constitutional organizing",
+          "purpose": "The Nation's account of land pressure, the Nations Ford agreement and constitutional organizing in 1944, 1973 and 1975. Its sections give conflicting 1951 and 1959 federal-status years; neither year is adopted here."
+        },
+        {
+          "nation": "catawba-nation-us-sc",
+          "url": "https://www.catawba.com/land-management-services",
+          "label": "Catawba land stewardship and community planning",
+          "purpose": "Read the Nation's descriptions of Realty and transportation planning, including public input. An undated program description is not independent proof of current project completion or legal title."
+        },
+        {
+          "nation": "catawba-nation-us-sc",
+          "url": "https://www.catawba.com/black-snake-farm",
+          "label": "Black Snake Farm and dated market information",
+          "purpose": "Own farm description and market FAQ labeled July 15, 2025. It states grant funding through June 2026. Current funding, schedule and eligibility are not confirmed by this source review."
+        }
+      ]
+    },
+    {
+      "folder": "fort-sill",
+      "subject": "fort-sill-apache-us-ok-nm",
+      "artifact_sha256": "aadb51dfd82110a95de05843525663b46b6fea63c907a68ab2c537cf17e67cd8",
+      "note_count": 3,
+      "resource_count": 3,
+      "notes": [
+        {
+          "title": "Promises, Pressure And Scattered Allotments",
+          "text": "The Tribe's history explains that Apache prisoners were told Fort Sill would be their permanent home, then pressured to leave as a condition of freedom. It describes a Mescalero invitation to relocate and families who continued to demand promised land at Fort Sill. A later compromise placed those who remained on scattered allotments near Apache and Fletcher. These were different paths under coercion, not interchangeable present-day governments."
+        },
+        {
+          "title": "Rebuilding Government And A Land Base",
+          "text": "The Tribe's history records a land-claim settlement in the mid-1970s and the approval of a constitution. It then describes acquiring land in Oklahoma and in its New Mexico and Arizona homelands. Its government page explains how the General Council and Business Committee share governing responsibilities. These sources describe rebuilding institutions and a land base after displacement; they do not establish present property boundaries or legal jurisdiction."
+        },
+        {
+          "title": "Language And Living Continuity",
+          "text": "The Tribe's public Cultural and Language Program page describes preserving Tribal history and teaching the Chiricahua language. It describes collecting historical resources and developing learning materials for Tribal members. These are the Tribe's stated program purposes. An undated program description does not verify today's classes or their outcomes. This living work belongs alongside the history of imprisonment and displacement."
+        }
+      ],
+      "resources": [
+        {
+          "nation": "fort-sill-apache-us-ok-nm",
+          "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+          "label": "Fort Sill Apache history in the Tribe's own words",
+          "purpose": "Read the Tribe's account of imprisonment, pressure to leave Fort Sill, scattered allotments and later rebuilding. Historical homeland and land-recovery descriptions are not present property or jurisdiction rulings."
+        },
+        {
+          "nation": "fort-sill-apache-us-ok-nm",
+          "url": "https://fortsillapache-nsn.gov/about/tribal-government/",
+          "label": "Fort Sill Apache government explained by the Tribe",
+          "purpose": "The Tribe describes the General Council and Business Committee and their roles in governing. This resource is not an independent audit or an endorsement of outcomes, current officeholders or election dates."
+        },
+        {
+          "nation": "fort-sill-apache-us-ok-nm",
+          "url": "https://fortsillapache-nsn.gov/programs/cultural-language-program/",
+          "label": "Fort Sill Apache cultural and language preservation",
+          "purpose": "The Tribe describes its public history-preservation and Chiricahua language-teaching goals. This listing does not reproduce ceremonial or restricted knowledge and does not verify a current class timetable or program outcomes."
+        }
+      ]
+    },
+    {
+      "folder": "ute-mountain",
+      "subject": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "artifact_sha256": "19b57568b4c31d7750226fc6a69b3d43eb3e0c7940b017a1748153600881149a",
+      "note_count": 3,
+      "resource_count": 3,
+      "notes": [
+        {
+          "title": "Reserved Hunting Rights",
+          "text": "The Tribe's Natural Resources page connects its members' hunting rights to an Act of April 29, 1874 and a September 21, 1978 Brunot consent decree. It places those agreements within its account of wildlife management. This is the Tribe's description of reserved rights, not a current legal determination, hunting regulation or permission for visitors to enter or hunt."
+        },
+        {
+          "title": "Water, Health And Future Generations",
+          "text": "On its undated Environmental Program page, the Tribe describes work with Ute Mountain Ute communities to conserve resources and protect public health for future generations. Listed areas include water conservation, environmental education, and water and air quality. These are the Tribe's published program descriptions, not independent measurements of environmental conditions or proof that a service operates on a particular date."
+        },
+        {
+          "title": "Learning Across Generations",
+          "text": "The Tribe's Cultural/Language Program page describes strengthening cultural identity and teaching youth about Ute Mountain Ute ancestry. It also reports that Ute Mountain Ute and Southern Ute worked together on a fourth-grade Ute curriculum. The page gives no project date or completion details. This is a reported collaboration between distinct Tribes, not evidence that their governments or educational programs are interchangeable."
+        }
+      ],
+      "resources": [
+        {
+          "nation": "ute-mountain-ute-tribe-us-co-ut-nm",
+          "url": "https://www.utemountainutetribe.com/natural%20resources.html",
+          "label": "Ute Mountain Ute natural resources",
+          "purpose": "The Tribe describes its own land, environmental and wildlife programs, including a dated account of Brunot hunting rights. This is not permission to enter or hunt."
+        },
+        {
+          "nation": "ute-mountain-ute-tribe-us-co-ut-nm",
+          "url": "https://www.utemountainutetribe.com/enviromental%20program.html",
+          "label": "Ute Mountain Ute environmental program",
+          "purpose": "Read the Tribe's descriptions of water conservation, environmental education and public-health protection. Program descriptions are not measurements of environmental outcomes."
+        },
+        {
+          "nation": "ute-mountain-ute-tribe-us-co-ut-nm",
+          "url": "https://www.utemountainutetribe.com/Cultural_Language%20Program.html",
+          "label": "Ute Mountain Ute cultural and language education",
+          "purpose": "The Tribe describes language and youth education, including reported fourth-grade curriculum work with Southern Ute. Project dates, current schedules and completion are not established."
+        }
+      ]
+    }
+  ],
+  "existing_resources_to_update": [
+    {
+      "nation": "fort-sill-apache-us-ok-nm",
+      "url": "https://fortsillapache-nsn.gov/history-and-traditional-culture/history/",
+      "existing_file": "data/nations/sources/chiricahua-scope-2026-10-12.context.json"
+    },
+    {
+      "nation": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "url": "https://www.utemountainutetribe.com/natural%20resources.html",
+      "existing_file": "data/nations/sources/expansion-americas-2026-10-12.context.json"
+    }
+  ],
+  "baseline_context_sha256": {
+    "data/nations/sources/chiricahua-scope-2026-10-12.context.json": "d23da26a51de5c0a1159367419a477994b23bd973ac0a5517c7bd9592f351179",
+    "data/nations/sources/expansion-americas-2026-10-12.context.json": "e625f72f3cd63ec45c4cc3d063e74c522dc9aa247e40dd5483722a804d60aec7",
+    "data/nations/sources/ute-histories-2026-10-15.context.json": "0a259ec8f9484a423faa9b7cbf81008a1f05316cfececeecbaf5d560f72f5c2c",
+    "data/nations/sources/ute-mountain-homelands-2026-10-15.context.json": "24f3f215d2d39f74494e1647cc8b028e95a0781274e54e5ac605329ddf4f74d6"
+  },
+  "protected_git_sha256": {
+    "data/nations/nations.json": "bdc1e8f6e34bf805faf7beb043353170416d91b6effe4ceb3ceec15ba26733ad",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data/nations/research/us_nc_state_directory_2026.json": "007e282c1cf7fa7d6317876a331a8f0e24547b15ff25c39dbbd781ba5c5bf61e",
+    "data/nations/research/us_nj_state_directory_2026.json": "ee583864f50842a569fc6d49603491715b9a57c3070f823ccf704d36bef03f36",
+    "data/nations/research/us_coverage_plan.json": "02a91a06d14772950b4709ba77fd2239c1146a97c6c480e40db737f08a40b737",
+    "game/index.html": "05b67815f7f332fe95554bd3173a395c19ea6994a8ac9d929a90f526643e4ab4",
+    "game/index.src.html": "f61e3094f0d6e4c215b2231ee3ad8f796ccc80dfe40e9cb0ebfbb69fc952c9cf",
+    "game/nations.json": "ab4e261a61449cd598fa91225249409dbfe2c9e8d6aeec80a07511b34990d101",
+    "static/zotheos_intro.mp3": "3f0b3db8cccfff2b9c38808076aa30729e501cefc398522a25c5ec281b75aaa5",
+    "index.html": "00cc97cb56c85458ed11a1cec9b508eeaa609be37fff906a4b07bc968da921b3"
+  },
+  "baseline_catawba_nc_tasks": [
+    {
+      "task_id": "identity-us-nc-catawba-statement-conflict",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Resolve Catawba directory and announcement wording with dated own and primary sources",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 97,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "us-nc-tribal-directory",
+        "us-nc-indian-affairs",
+        "us-nc-june-2026-minutes",
+        "us-nc-april-2026-minutes"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [
+        {
+          "source_id": "us-nc-june-2026-minutes",
+          "url": "https://www.doa.nc.gov/cia/june-5-2026-cia-meeting-minutes/download?attachment=",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "retrieved_at": "2026-10-15T07:01:11.628761+00:00",
+          "sha256": "8397fc5985cbf9915f4824f76e78d0aa7fe84a95a2220c441cde07fc1dc1dfa6",
+          "receipt_id": "r-e6660c1ff4e73fd6"
+        }
+      ],
+      "updated_at": "2026-10-15T07:18:42.058732+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Approved minutes establish June2026 approval; exact day remains June5inminutes vsJune6announcement. Original directory observation/count and identity crosswalks remain unchanged. AI-reviewed public note and citations need reviewed PR."
+    },
+    {
+      "task_id": "followup-catawba-published-day-difference",
+      "task_type": "identity_review",
+      "entity_id": null,
+      "subject": "Catawba: reconcile June5 minutes and June6 announcement through permissible primary correction",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-work",
+      "priority": 92,
+      "priority_reason": "unresolved_source_difference_or_own_identity_gap",
+      "status": "pending",
+      "allowed_source_ids": [
+        "us-nc-june-2026-minutes",
+        "us-nc-indian-affairs"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-10-15T07:18:41.774663+00:00",
+      "next_attempt_after": "2026-10-22T07:18:42.324211+00:00",
+      "note": "No routine repeat report for unchanged sources. No outreach or access-rule bypass; no canonical match or legal adjudication."
+    }
+  ],
+  "reading_prebuild_criteria": {
+    "recorded_before_implementation": true,
+    "baseline_artifact": "spacing-before.json",
+    "baseline_observation": "Published context headings, paragraphs and receipts have zero vertical gaps.",
+    "acceptance": [
+      "History subsection headings visibly differ from the section heading.",
+      "At least 12px separates each titled history heading from its body and each body from its review receipt.",
+      "At least 32px separates a preceding receipt from the next subsection heading.",
+      "Source links offer at least 44px height.",
+      "No horizontal overflow at 320, 390, 768 and 1280px desktop-browser viewport widths.",
+      "Existing full names, facts, dated caveats, own-source links and keyboard access remain available.",
+      "Four appearances remain readable and reduced motion introduces no added animation."
+    ],
+    "limits": "Browser viewport checks are not physical-device or screen-reader certification."
+  },
+  "input_artifact_sha256": {
+    "reading-prebuild-criteria.json": "a083a264b3c3e1155a6e3cb29079b6fb75d514b7093f789a360a6a4251cb74e8",
+    "independent-catawba-review.json": "3d28bf818f73b8005a77129ae27e0c8a1b441901f9bf73b58926f41a5c1d7c09",
+    "independent-ute-mountain-review.json": "af5969f88b91bbf4c60be0655a070d81317ee0389aba7bb93cecbaa4ac220c32",
+    "independent-reading-review.json": "beef184af63d3184c00f36489aba70ff066b8b17a9c603d9e951f432e5c5627c"
+  },
+  "remaining_gates": "Root will signal final files for source/copy/count/receipt review and actual profile hold simulations. This contract does not claim final implementation, source review independence for Catawba, test success or publication."
+}

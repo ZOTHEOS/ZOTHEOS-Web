@@ -379,8 +379,8 @@
       "stated_count": null,
       "as_of": null,
       "discovery_date": "2026-10-12",
-      "status": "source_located",
-      "note": "Own-site name differs from current federal list styling. Preserve both and request identity/name review before a profile is written."
+      "status": "source_retrieved",
+      "note": "Own-site historical, government and language-purpose accounts re-read October 15 and independently AI-reviewed. Existing Fort Sill profile stays distinct from Mescalero, broader Chiricahua peoples and the named Chiricahua Apache Nation; historical rebuilding does not determine current title/jurisdiction."
     },
     {
       "source_id": "priority-southern-ute",
@@ -414,7 +414,7 @@
       "as_of": null,
       "discovery_date": "2026-10-12",
       "status": "source_retrieved",
-      "note": "Own homepage re-read October 15 UTC for historical Weenuche homelands and shared border areas. Historical account is not a current legal-boundary determination or emergency. Distinct from Southern Ute and Uintah and Ouray governments."
+      "note": "Own natural-resource, environmental and language pages re-read October 15 and independently AI-reviewed. Reserved-rights dates remain attributed to the Tribe. Program descriptions are not measured outcomes/current-service or curriculum-completion claims; distinct Ute governments stay separate."
     },
     {
       "source_id": "priority-ute-indian",
@@ -757,6 +757,26 @@
         "review_kind": "AI-assisted exact-host approval before capture, not human or Nation approval",
         "approval_receipt": "batches/2026-10-15-us-histories-mobile.json"
       }
+    },
+    {
+      "source_id": "us-catawba-own-source",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.catawba.com/about-the-nation",
+      "allowed_hosts": [
+        "www.catawba.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "source_scope_review": {
+        "review_kind": "AI-assisted exact-host approval before capture, not human or Nation endorsement",
+        "approval_receipt": "batches/2026-10-15-us-next-histories.catawba-host-approval.json"
+      },
+      "note": "Existing canonical own-host research scope. About, land and farm pages read; conflicting 1951/1959 termination years and dated farm funding limits remain explicit. No present recognition adjudication or current service guarantee."
     }
   ]
 }
