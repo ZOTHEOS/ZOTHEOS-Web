@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-14T05:19:07.385656+00:00",
+  "recorded_at": "2026-10-15T08:41:27.866812+00:00",
   "complete": false,
   "unit": "Research source-discovery scopes, not Tribal Nations or a recognition denominator",
   "state_scopes": [
     {
       "state": "AL",
       "name": "Alabama",
-      "status": "source_discovery_pending"
+      "status": "source_inventory_preserved",
+      "inventory_file": "us_al_state_directory_2026.json"
     },
     {
       "state": "AK",

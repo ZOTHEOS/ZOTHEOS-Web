@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "source": {
+    "publisher": "Alabama Indian Affairs Commission",
+    "title": "Tribes Recognized by the State of Alabama",
+    "url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+    "retrieved_at": "2026-10-15T08:34:16.099943+00:00",
+    "sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+    "receipt": "receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+    "publication_date": null,
+    "source_edition": "One-page PDF linked by the commission board directory on 15 Oct 2026 UTC. No explicit publication or revision date appears on the page. Server Last-Modified is 2026-10-07 but is not an event or legal effective date.",
+    "directory_link_source_url": "https://aiac.alabama.gov/board-commissioners",
+    "directory_link_receipt": "receipts/us-al-aiac-board-2026-10-15.receipt.json",
+    "source_page_label_note": "The PDF has one physical page. Its printed footer says PAGE 2."
+  },
+  "entity_unit": "state_tribal_directory_listing",
+  "state": "AL",
+  "jurisdiction": "US-AL",
+  "stated_count": 9,
+  "enumerated_count": 9,
+  "snapshot_kind": "source_observation",
+  "as_of": "2026-10-15",
+  "as_of_scope": "Actual UTC observation day, not a new state or federal recognition effective date.",
+  "scope_note": "Nine name headings in the Alabama Indian Affairs Commission source roster. This is an attributed state commission listing, not all Indigenous peoples or communities associated with Alabama. State and federal source lists overlap and are never added as distinct Nation totals.",
+  "extraction_note": "Read the publicly linked commission roster PDF. Nine distinct all-capital tribal name headings were text-extracted with pypdf and separately read in a full-page Poppler rendering. Source order is left column then right column. Preserve source abbreviations AL and NE and the Poarch asterisk. No personal contacts, leader names, addresses, phone numbers, imagery or copied source graphics enter this inventory.",
+  "public_extraction_note": "Names follow the commission roster, including its original capitalization and abbreviated labels. Source classifications remain attributed notation, not an independent legal-status finding. Identity matches and histories remain separate research work.",
+  "public_notes": [
+    "A state source is a planning reference, not the definition of who is Indigenous. Unlisted peoples, communities and distinct governing bodies need their own sources.",
+    "The commission page states nine state-recognized tribes and says one is also federally recognized. That overlap is not a tenth listing.",
+    "October 15, 2026 is when this source was read. No current leader, individual contact or record-level legal effective date is established."
+  ],
+  "checks": {
+    "source_name_headings": 9,
+    "unique_source_labels": 9,
+    "source_federal_markers": 1,
+    "source_unmarked_rows": 8,
+    "duplicate_source_labels": [],
+    "extraction_methods": [
+      "pypdf text extraction with exact heading occurrence check",
+      "AI visual reading of one full-page Poppler rendering"
+    ],
+    "independent_reviewer": "Codex state_inventory_contract independently read the rendered page and extracted text; root also visually read the source. AI-assisted reviews, not human or Nation approval.",
+    "own_sites_read_and_identity_link_reviewed": 0,
+    "canonical_identity_matches_approved": 0,
+    "human_reviews_created": 0
+  },
+  "review": {
+    "status": "needs_review",
+    "sources": "Source headings independently checked with AI assistance; final implementation and receipt review pending.",
+    "identity": "unreviewed",
+    "human_review": null,
+    "respect": "Source names and abbreviations retained; personal contacts, leadership and imagery omitted. AI-assisted review; no Nation endorsement."
+  },
+  "followup": {
+    "status": "pending",
+    "risk": "unassessed",
+    "scope": "Read permissible own sources, preferred names, distinct governing scope and digestible history. Research communities outside state recognition separately. Do not conflate overlapping state/federal listings."
+  },
+  "entities": [
+    {
+      "directory_id": "us-state-al-southeastern-mvskoke-nation",
+      "name": "SOUTHEASTERN MVSKOKE NATION",
+      "directory_name": "SOUTHEASTERN MVSKOKE NATION",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "southeasternmvskokenation.org",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-piqua-shawnee-tribe",
+      "name": "PIQUA SHAWNEE TRIBE",
+      "directory_name": "PIQUA SHAWNEE TRIBE",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "https://piquashawnee.gov",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-cher-o-creek-intratribal-indians",
+      "name": "CHER-O-CREEK INTRATRIBAL INDIANS",
+      "directory_name": "CHER-O-CREEK INTRATRIBAL INDIANS",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": null,
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-mowa-band-of-choctaw-indians",
+      "name": "MOWA BAND OF CHOCTAW INDIANS",
+      "directory_name": "MOWA BAND OF CHOCTAW INDIANS",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "mowachoctawindians.com",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-united-cherokee-ani-yun-wiya-nation",
+      "name": "UNITED CHEROKEE ANI-YUN-WIYA NATION",
+      "directory_name": "UNITED CHEROKEE ANI-YUN-WIYA NATION",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "ucantribe.com",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-machis-lower-creek-indian-tribe-of-al",
+      "name": "MACHIS LOWER CREEK INDIAN TRIBE OF AL",
+      "directory_name": "MACHIS LOWER CREEK INDIAN TRIBE OF AL",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "machistribe.com",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-echota-cherokee-tribe-of-al",
+      "name": "ECHOTA CHEROKEE TRIBE OF AL",
+      "directory_name": "ECHOTA CHEROKEE TRIBE OF AL",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "echotacherokee.org",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-cherokee-tribe-of-ne-alabama",
+      "name": "CHEROKEE TRIBE OF NE ALABAMA",
+      "directory_name": "CHEROKEE TRIBE OF NE ALABAMA",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": false,
+      "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
+      "state_published_tribal_url_text": "cherokeetribeofnortheastalabama.org",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    },
+    {
+      "directory_id": "us-state-al-poarch-band-of-creek-indians",
+      "name": "POARCH BAND OF CREEK INDIANS",
+      "directory_name": "POARCH BAND OF CREEK INDIANS *",
+      "entity_type": "state_tribal_directory_listing",
+      "countries": [
+        "US"
+      ],
+      "state": "AL",
+      "as_of": "2026-10-15",
+      "official_url": null,
+      "profile_status": "directory_only",
+      "registry_crosswalk": {
+        "status": "unreviewed",
+        "registry_id": null,
+        "candidates": []
+      },
+      "source_federal_marker": true,
+      "source_federal_marker_note": "The commission PDF marks this row with an asterisk footnoted Federally Recognized. This is attributed source notation, not an independent legal-status finding.",
+      "state_published_tribal_url_text": "poarchcreekindians.org",
+      "source_name_page": 1,
+      "source_name_page_label": "PAGE 2",
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+    }
+  ],
+  "scoped_notes": [
+    {
+      "kind": "note",
+      "directory_ids": [
+        "us-state-al-poarch-band-of-creek-indians"
+      ],
+      "text": "The commission roster marks POARCH BAND OF CREEK INDIANS with an asterisk for federal recognition. This is attributed source notation, not a new independent legal-status determination."
+    }
+  ]
+}

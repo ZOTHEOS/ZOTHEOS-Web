@@ -217,3 +217,26 @@ canonical facts, identity crosswalks, human receipts and old source observation 
 The two source tasks move to needs_review with real receipts. Separate pending followups retain the unresolved
 day discrepancy and need for permissible own-government sources, with a seven-day retry delay to avoid routine
 repeated reporting of unchanged material. Source guides are AI-assisted and do not claim human approval.
+
+
+## October 15 Alabama source expansion
+
+`us_al_state_directory_2026.json` preserves nine name headings from the commission's publicly linked roster.
+The commission page states nine listings with one federal overlap. These are source records, not nine new
+Nations or complete Alabama coverage. The source has one physical PDF page with a printed PAGE 2 footer;
+no publication or recognition effective date is inferred from its upload path or Last-Modified header.
+Original source capitalization and abbreviations remain visible. No leaders, personal contacts or imagery
+were imported. All identity crosswalks remain unreviewed, with nine typed own-source/history followups.
+
+The inclusion plan now preserves three state source inventories and leaves 47 state discovery scopes plus
+all four additional inclusion lanes pending. State recognition never defines who is Indigenous. Name search
+now precedes the long inclusion and source chooser sections while preserving no-JavaScript name access.
+Alabama rows support the same receipt, scope and takedown controls as Virginia and North Carolina. The named
+asterisk explanation is bound to its subject; a hold removes that note with the source row.
+
+A candidate own-source redirect was recorded for Poarch. Genuine robots404 was treated as unavailable under
+the existing verifier policy and RFC 9309 section 2.3.1.3; the later canonical robots200 allowed public paths.
+The canonical homepage returned HTTP403. Reading stopped immediately. No denial was bypassed, no own
+identity/history claim or official website link was published, and its followup is deferred for seven days.
+Failed and unknown access states remain distinct from successful source receipts. Full source captures stay
+local; only sanitized provenance metadata enters this public repository.

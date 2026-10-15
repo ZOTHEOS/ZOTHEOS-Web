@@ -115,7 +115,15 @@ Directory rows now say Profile Link Pending with a clear explanation: an existin
 
 ## Collaboration Status
 
-The local Claude CLI returned an authentication error before producing a model response. The owner chose to paste this handoff into their already signed-in Claude Code session. Claude's tool inventory, availability on each workstation, critique and cinema proposal have not yet been received. Codex observed ffmpeg and ffprobe on the local PATH; this does not establish access to any AI cinema renderer. No generation or paid render has been commissioned.
+The local Claude CLI returned an authentication error before producing a model response. The owner chose to paste this handoff into their already signed-in Claude Code session and has now relayed a preliminary reply. Claude reports a local pipeline including ComfyUI, LTX-2.5, SeedVR2, HiDream-O1, Qwen3-TTS, judges and release checks. This is collaborator-reported availability, not a Codex-verified tool or renderer inventory. Actual station, selected model, tool versions, invocation evidence, licensing and costs still need the final reply. The owner also relayed a reported GPU-driver compatibility concern; no required driver version or slowdown has been independently established. Driver and workstation-service changes are outside this website assignment. Preserve the owner's current Studio driver. Claude reports a read-only review/design team is running; its results have not yet been received. No cinema output or generation claim is made.
+
+## Current Codex Website Batch
+
+PR 15 is merged and published at main 5e0361ddd621f8dbb73f2e56d3856252b83b3a4b. The public Mission, source followups and original audio were verified against eight actual HTTPS responses. The batch passed 198 tests. Fresh GUI layout verification remains pending; byte verification is not a browser inspection.
+
+Codex currently owns C:\ZOTHEOS-Web on branch codex/us-source-expansion-2026-10-15, based on that main revision. It is adding nine attributed Alabama commission source records, dated October 15 UTC, and moving Find A Name before the long inclusion/navigation sections. The staged source inventories total 2,269 mixed-scope records, not distinct Nations. Three state source inventories are preserved, 47 state discovery scopes and all four additional inclusion lanes remain pending. The queue has 1,801 tasks at this refresh. Canonical profiles and facts are unchanged. Alabama identity crosswalks remain unreviewed; a candidate own-source homepage denied access and supplies no verified own history or official link. These next-batch changes are not claimed published at this handoff refresh.
+
+Continue the cinema inventory and proposal without editing the shared checkout. Return the requested evidence and production package through the owner relay. Scores from model judges are AI judgments, not measurements of truth, community endorsement or demonstrated visitor comprehension. Codex will integrate a bounded original visual package after its source, accessibility, performance and ownership criteria are concrete.
 
 ## First Assignment For Claude Code
 
@@ -132,7 +140,7 @@ After the inventory, we can choose a bounded original motion prototype, review t
 
 ## Verification Commands
 
-Use the project's existing Python runtime, normally `py -3.10`. Keep `PYTHONDONTWRITEBYTECODE=1`. Core checks include:
+Use the project's existing pinned Python runtime. After the restart, the py launcher lists only Python 3.14, but the verified Python 3.10.9 interpreter still exists at C:\Users\garci\AppData\Local\Programs\Python\Python310\python.exe with fonttools 4.63.0, brotli 1.2.0 and pypdf 6.4.0. Invoke that existing interpreter directly if py -3.10 is unavailable; no runtime or driver installation is needed. Keep `PYTHONDONTWRITEBYTECODE=1`. Core checks include:
 
 ```text
 py -3.10 tools/nations_build.py

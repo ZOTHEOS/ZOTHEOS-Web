@@ -6,6 +6,8 @@ import re
 from urllib.parse import urlsplit
 
 INVENTORIES = (
+    ('us_al_state_directory_2026.json', 'us-state-al-', 'state_tribal_directory_listing', 'US', 'us-al-tribal-directory',
+     'us-alabama', 'United States: Alabama tribal directory', 'Alabama commission directory listings'),
     ('us_va_state_directory_2026.json', 'us-state-va-', 'state_tribal_directory_listing', 'US', 'us-va-tribal-directory',
      'us-virginia', 'United States: Virginia tribal directory', 'Virginia state directory listings'),
     ('us_nc_state_directory_2026.json', 'us-state-nc-', 'state_tribal_directory_listing', 'US', 'us-nc-tribal-directory',
@@ -60,7 +62,7 @@ def directory_holds(root):
     for row in rows:
         key = row.get('directory_id')
         if (not isinstance(key, str) or key in result
-                or not re.fullmatch(r'(?:us-fed-[a-f0-9]{12}|us-state-(?:va|nc)-[a-z0-9]+(?:-[a-z0-9]+)*|ca-register-[0-9]{3}|ca-profile-[a-z0-9-]+|br-census-[a-z0-9-]+)', key)
+                or not re.fullmatch(r'(?:us-fed-[a-f0-9]{12}|us-state-(?:al|va|nc)-[a-z0-9]+(?:-[a-z0-9]+)*|ca-register-[0-9]{3}|ca-profile-[a-z0-9-]+|br-census-[a-z0-9-]+)', key)
                 or row.get('action') not in ('hold', 'takedown')):
             raise ValueError('Invalid or duplicate directory hold')
         text(row.get('receipt'), 'removal receipt', 700)
@@ -129,7 +131,7 @@ def documents(root):
         if doc.get('public_extraction_note'):
             text(doc['public_extraction_note'], 'public source note')
         if unit == 'state_tribal_directory_listing':
-            state = 'VA' if prefix == 'us-state-va-' else 'NC'
+            state = {'us-state-al-': 'AL', 'us-state-va-': 'VA', 'us-state-nc-': 'NC'}[prefix]
             if doc.get('state') != state or doc.get('snapshot_kind') != 'source_observation':
                 raise ValueError('State inventory must retain its observed geographic scope')
             measured = state_receipt(folder, source.get('receipt'))

@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T08:47:25.883865+00:00",
+  "reviewer": "Codex AI subagent /root/state_inventory_contract",
+  "review_kind": "Independent AI-assisted source, implementation and acceptance review",
+  "human_review": false,
+  "nation_endorsement_claimed": false,
+  "web_mutations": false,
+  "gui_validation_claimed": false,
+  "network_requests_in_review": false,
+  "reviewed_baseline_head": "5e0361ddd621f8dbb73f2e56d3856252b83b3a4b",
+  "status": "passed_no_unresolved_P1_or_P2",
+  "findings": [
+    {
+      "priority": "P2",
+      "status": "resolved",
+      "description": "Unbound public extraction note named Poarch after a directory-only hold. Named marker explanation moved to scoped_notes bound only to its subject; generic extraction text now contains no Poarch name.",
+      "regression_test": "test_actual_alabama_named_federal_marker_explanation_follows_its_subject_hold",
+      "pre_fix_result": "1 failed, 18 deselected; missing explicit subject-bound note",
+      "post_fix_result": "Included in independently passing 19-case acceptance run"
+    }
+  ],
+  "acceptance_history": {
+    "original_prebuild": {
+      "tests": 18,
+      "failed": 18,
+      "reasons": "AL not registered and name search after long sections",
+      "record": "independent-prebuild-acceptance.json",
+      "sha256": "11d133a86c856ac43080301ea19f5dc9b96dd635270888bdc1a7376669fbcb4f"
+    },
+    "initial_postbuild": {
+      "tests": 18,
+      "passed": 18,
+      "seconds": 2.36,
+      "exit_code": 0
+    },
+    "final_postfix": {
+      "tests": 19,
+      "passed": 19,
+      "seconds": 2.63,
+      "exit_code": 0,
+      "runtime": "Pinned Python 3.10.9 direct interpreter",
+      "artifact_equals_repo_test_bytes": true
+    }
+  },
+  "source_review": {
+    "ai_visual_source": "alabama-aiac-tribes-oct-2026-page-1.png",
+    "physical_pdf_pages": 1,
+    "printed_page_label": "PAGE 2",
+    "source_heading_records": 9,
+    "source_federal_markers": 1,
+    "exact_names_match_captured_text": true,
+    "all_identity_crosswalks_unreviewed": true,
+    "own_official_links": 0,
+    "source_observation_day": "2026-10-15",
+    "source_observation_is_legal_effective_date": false,
+    "personal_contacts_leaders_images_imported": false,
+    "distinct_nations_total_claimed": false
+  },
+  "receipt_checks": [
+    {
+      "path": "data/nations/research/receipts/us-al-agency-2026-10-15.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "alabama-agency.body",
+      "retained_bytes": 3149,
+      "retained_sha256": "263eb1bb100b183bc54bc59f6f14d715b013b1c752ca787a161a672907994c83",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-board-2026-10-15.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "alabama-aiac-board.body",
+      "retained_bytes": 106369,
+      "retained_sha256": "bfe7a242eccda5910d640789b2c03fbb3e34163f34a77ce22d98f359eabb256b",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-robots-2026-10-15.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "alabama-aiac-robots.txt",
+      "retained_bytes": 67,
+      "retained_sha256": "9311bab30d8b5d05f5fa5563a251b8c96b8470873bb77c62d3d17c146d7acab7",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-root-2026-10-15.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "alabama-aiac-root.body",
+      "retained_bytes": 155584,
+      "retained_sha256": "af1de4fd3acc048dbed7ab05cc46a2499a27ab95745dfc385e7a9fbc2ceefd55",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "alabama-aiac-tribes-oct-2026.body",
+      "retained_bytes": 183978,
+      "retained_sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-canonical-home.receipt.json",
+      "http_status": 403,
+      "retained_capture_name": "poarch-canonical-home.body",
+      "retained_bytes": 1305,
+      "retained_sha256": "002e044fb02aaa871a3f7f7161edc0c1db8a89b3b64d6f404d7e7a9ea31ed6e6",
+      "matches_retained_capture": true,
+      "outcome": "Recorded access failure, not factual or identity evidence"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-canonical-robots.receipt.json",
+      "http_status": 200,
+      "retained_capture_name": "poarch-canonical-robots.body",
+      "retained_bytes": 169,
+      "retained_sha256": "ab6dbf845c84135cc3c04925a6fd1726afab6cef38911426eb852ab1d9d52ba4",
+      "matches_retained_capture": true,
+      "outcome": "Successful scoped source read"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-current-robots.receipt.json",
+      "http_status": null,
+      "retained_capture_name": "poarch-current-robots.body",
+      "outcome": "Redirect guard stopped before approved destination; response status and body digest remain unknown"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-home.receipt.json",
+      "http_status": null,
+      "retained_capture_name": "poarch-home.body",
+      "outcome": "Redirect guard stopped before approved destination; response status and body digest remain unknown"
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-robots.receipt.json",
+      "http_status": 404,
+      "retained_capture_name": "poarch-robots.body",
+      "retained_bytes": 0,
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_retained_capture": true,
+      "outcome": "Recorded access failure, not factual or identity evidence"
+    }
+  ],
+  "queue_review": {
+    "total_tasks": 1801,
+    "new_typed_followups": 9,
+    "pending_new_followups": 8,
+    "blocked_new_followups": 1,
+    "poarch_access_status": 403,
+    "retry_deferred": true,
+    "no_verified_own_history_or_identity_published": true
+  },
+  "boundaries": {
+    "state_inventories_preserved": 3,
+    "state_discovery_scopes_pending": 47,
+    "additional_inclusion_lanes_pending": 4,
+    "complete_claim": false,
+    "canonical_registry_entries": 457,
+    "canonical_registry_raw_facts": 1287,
+    "protected_diff_empty": [
+      "data/nations/nations.json",
+      "data/nations/overrides.json",
+      "static/zotheos_intro.mp3",
+      "game/",
+      "index.html"
+    ],
+    "protected_diff_checked_against_head": true
+  },
+  "handoff_review": {
+    "cinema_inventory_attributed_to_claude_report": true,
+    "driver_claim_not_independently_established": true,
+    "no_verified_render_claim": true,
+    "shared_checkout_codex_owned": true,
+    "next_batch_not_yet_claimed_published": true
+  },
+  "remaining_gates": [
+    "Root full build and complete test suite are separate gates; not claimed by this reviewer.",
+    "GitHub review/merge and live Vercel publication verification remain publication gates.",
+    "Fresh browser layout, mobile and assistive-technology checks are not claimed."
+  ],
+  "file_pins": [
+    {
+      "path": "tools/nations_inventories.py",
+      "sha256": "198373f22c01b5dc3e8f1433241e5a517937659f5d4e1f2a2e397bc84a87e4e5",
+      "bytes": 12578
+    },
+    {
+      "path": "tools/nations_directory.py",
+      "sha256": "a2def8edde0923304a0f10974b12f458b85318e711d99cd847f678d45f520340",
+      "bytes": 28981
+    },
+    {
+      "path": "tools/tests/test_us_state_directory_acceptance.py",
+      "sha256": "94cca219ea2cf7f89641969584b2121ca74245ffc818eb90dac9cb43fc8fb3c4",
+      "bytes": 12136
+    },
+    {
+      "path": "tools/tests/test_steward_source_acceptance.py",
+      "sha256": "fb8e10b0da6b09adcaffededf3188898e2863314be2983288bee717993ea7ca2",
+      "bytes": 5936
+    },
+    {
+      "path": "tools/tests/test_third_state_inventory_acceptance.py",
+      "sha256": "77e6991483192099f516f564cfd65713e2bed0a32c1089f8f3a9b48aab95c3f0",
+      "bytes": 14831
+    },
+    {
+      "path": "data/nations/research/us_al_state_directory_2026.json",
+      "sha256": "1a76dea536b67a0519325de5823b748406e6a4d5ef45c3ec3cf489764751c0b4",
+      "bytes": 14263
+    },
+    {
+      "path": "data/nations/research/us_coverage_plan.json",
+      "sha256": "df15de38e6ba587fb31f6e660c5d2134996ba1407e89c6c7bb5cebab2b605a1b",
+      "bytes": 7085
+    },
+    {
+      "path": "data/nations/research/directory_sources.json",
+      "sha256": "5eba64949efeb7a415f2b04325e856db7ddc5d8e33e27f9b9842c11ab6f38828",
+      "bytes": 21208
+    },
+    {
+      "path": "data/nations/research/coverage_queue.json",
+      "sha256": "89fabd61abd008afd3f52d24ba09f65524f4f8242a232a68188163e5f6abfe49",
+      "bytes": 1622599
+    },
+    {
+      "path": "data/nations/research/README.md",
+      "sha256": "ead548b68a36181d52492919efeddeabfe45bb804e0aad1b28b4ece90c0b2ce3",
+      "bytes": 19094
+    },
+    {
+      "path": "docs/collaboration/2026-10-15-claude-code-expansion-handoff.md",
+      "sha256": "412d1d6ac27ef85e90a60ddc1bb1831c716823a99b37ea377790b9892bfa9deb",
+      "bytes": 20971
+    },
+    {
+      "path": "nations/directory.html",
+      "sha256": "69e7cdbff04c7f8ab0580dd7c7a983152a3e3d888f70d7ad199349f67b8f5b41",
+      "bytes": 633041
+    },
+    {
+      "path": "nations/coverage.html",
+      "sha256": "e84711c863151abef010123766e53c78d4255e7c8ffbeb04fcf187dc8a923ed9",
+      "bytes": 94714
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-agency-2026-10-15.receipt.json",
+      "sha256": "fb90c41154ce5e3301107c27d69fff67f2b7286d99058dec77fdbb300f17a6c9",
+      "bytes": 838
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-board-2026-10-15.receipt.json",
+      "sha256": "a8b318934d0a57db4a93abe6f48bc0b3fd893b1ac7e9d6b1b8b0e54b08797061",
+      "bytes": 840
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-robots-2026-10-15.receipt.json",
+      "sha256": "9eaa38d99932d33c178b767d68f83fe080b97194eaa562f70d4a4b6c8a7a401a",
+      "bytes": 819
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-root-2026-10-15.receipt.json",
+      "sha256": "617f3d93abdd5ff9ef417b1d15bf400be2b599cf4103edc2fb07a71258606994",
+      "bytes": 801
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+      "sha256": "ad60bce3627537c16fe5ec1dd9a45566d4751de11c4ee7053ab6a3dce84554ed",
+      "bytes": 924
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-canonical-home.receipt.json",
+      "sha256": "e6e11e447a15047c40d62131451b40521dc65cb922307da5bc0386b946a75dd2",
+      "bytes": 575
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-canonical-robots.receipt.json",
+      "sha256": "8012bfaae146b3fe28906db7f09b53510e2194e50692a5b10ad504189809a049",
+      "bytes": 573
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-current-robots.receipt.json",
+      "sha256": "0cb129390a41097040cc30f7e8b54f2ca8f435a1b7e772d42c1814ed932afeea",
+      "bytes": 612
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-home.receipt.json",
+      "sha256": "46e5f209005a2897ef21ad624e0d3954210d822cd0fd728cc1c1839ed3e1a5d0",
+      "bytes": 587
+    },
+    {
+      "path": "data/nations/research/receipts/us-al-poarch-robots.receipt.json",
+      "sha256": "3e8654a82b695a4ea38c5f981d51231fce9565aef6c5793b9d0f35f03a714fee",
+      "bytes": 606
+    }
+  ]
+}

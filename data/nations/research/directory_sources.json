@@ -565,6 +565,57 @@
       "discovery_date": "2026-10-15",
       "status": "source_retrieved",
       "note": "One Sede source record, not all communities, a government identity or territory."
+    },
+    {
+      "source_id": "us-al-tribal-directory",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "state_tribal_directory_listing",
+      "url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+      "allowed_hosts": [
+        "aiac.alabama.gov"
+      ],
+      "stated_count": 9,
+      "as_of": "2026-10-15",
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Nine roster name headings observed October 15 UTC. The commission states nine with one federal overlap, not ten or a unique additional Nations count. State source names do not establish preferred names, all Indigenous identity or current leadership."
+    },
+    {
+      "source_id": "us-al-state-agency-index",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://inform.alabama.gov/agencies/Details/68",
+      "allowed_hosts": [
+        "inform.alabama.gov"
+      ],
+      "stated_count": null,
+      "as_of": "2026-10-15",
+      "discovery_date": "2026-10-15",
+      "status": "source_retrieved",
+      "note": "Official Alabama agency directory corroborates commission source ownership, not each listed community identity or legal status."
+    },
+    {
+      "source_id": "us-al-poarch-own-source",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://pci-nsn.gov/",
+      "allowed_hosts": [
+        "poarchcreekindians.org",
+        "www.poarchcreekindians.org",
+        "www.pci-nsn.gov",
+        "pci-nsn.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-15",
+      "status": "source_located",
+      "note": "Candidate printed by commission roster redirects to pci-nsn.gov. Exact observed redirect hosts were separately scope-reviewed before followup. Canonical robots200 permitted public paths, but homepage403 was not bypassed. Own branding, identity and history remain unread/unverified; no official link or resource card is approved."
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "baseline_result": {
+    "failed": 18,
+    "exit_code": 1,
+    "network": false,
+    "tests": 18,
+    "passed": 0,
+    "runtime": "Python3.10.9 direct pinned runtime",
+    "expected_reason": "AL inventory not registered and search placed after long inclusion/navigation sections"
+  },
+  "web_edits": false,
+  "human_review": false,
+  "acceptance_file": "test_third_state_inventory_acceptance.py",
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted pre-build architecture and acceptance planning",
+  "required_changes": [
+    "Add explicit AL typed inventory registration with its own prefix, source id and display labels.",
+    "Remove VA-otherwise-NC state inference and directory chooser fallback.",
+    "Allow AL holds without permitting unknown state codes.",
+    "Update exact source allowlist, measured receipt and UTC source observation data.",
+    "Update AL source-discovery plan only after actual inventory exists; retain incomplete50-state/four-lane plan.",
+    "Queue per-listing typed followups; do not create canonical identity approval or profiles from matching names.",
+    "Place existing hidden directory search before inclusion and inventory navigation, preserving accessible labels and no-JavaScript rows."
+  ],
+  "baseline_file_pins": [
+    {
+      "sha256": "139bec29866b453227f870be6924cb7bca5a92bfdc8b3e90e6a4100b0f13641d",
+      "path": "tools/nations_inventories.py"
+    },
+    {
+      "sha256": "9df716126d3640390cc6f80a687c7d6b2147908ca5627889fb7fbb408d7d5b94",
+      "path": "tools/nations_directory.py"
+    },
+    {
+      "sha256": "8f478ba25f68550657929f86d15522f6d7cfc9224ee30a140d85f75f23d4eb91",
+      "path": "tools/tests/test_us_state_directory_acceptance.py"
+    },
+    {
+      "sha256": "d96d54a40454052be0a9d3da9145cee7e2ce3415bc44b0101b1e9f990095b422",
+      "path": "tools/tests/test_us_scoped_notes_acceptance.py"
+    },
+    {
+      "sha256": "306f994bbcfed83b485d0237889e53b974c99b29d3fdbec6fc7ad198031e642b",
+      "path": "data/nations/research/us_coverage_plan.json"
+    },
+    {
+      "sha256": "35bb43bddcdac1526dc3aeb0174222556642fd3368b0622b051930e2370bc9ed",
+      "path": "data/nations/research/us_va_state_directory_2026.json"
+    },
+    {
+      "sha256": "007e282c1cf7fa7d6317876a331a8f0e24547b15ff25c39dbbd781ba5c5bf61e",
+      "path": "data/nations/research/us_nc_state_directory_2026.json"
+    }
+  ],
+  "recorded_at": "2026-10-15T08:35:16.5457421+00:00",
+  "acceptance_sha256": "702cf87ee8f0575a255665382b8b561d08087ca93cd9e7760543dd2ecf3d0ef0"
+}
