@@ -7122,6 +7122,16 @@
 .theater-invitation a { display:inline-flex; align-items:center; min-height:48px; margin-top:20px; padding:12px 18px; border:1px solid var(--line); color:var(--ink); text-decoration:none; }
 .theater-invitation a:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
 @media(max-width:679px) { .theater-invitation { grid-template-columns:1fr; padding-block:48px; } .theater-invitation .ti-art { min-height:180px; } }
+
+.world-showcase {max-width:1328px;margin:0 auto;padding:72px clamp(20px,4vw,40px);border-top:1px solid var(--line);scroll-margin-top:100px;}
+.ws-heading {display:grid;grid-template-columns:1.2fr 1fr;gap:16px 44px;align-items:end;margin-bottom:36px;}
+.ws-heading .lbl {grid-column:1/-1;}.ws-heading h2 {font:400 clamp(40px,5vw,68px)/1.05 var(--serif);letter-spacing:-.02em;}
+.ws-heading>p:last-child {max-width:46ch;color:var(--ink-2);line-height:1.8;}
+.ws-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}.ws-card {display:flex;flex-direction:column;gap:18px;padding:30px;min-width:0;min-height:280px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;}
+.ws-card:hover {border-color:var(--ink);}.ws-card:focus-visible {outline:2px solid var(--ink);outline-offset:5px;}
+.ws-index {font:400 11px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);}.ws-card h3 {font:400 clamp(30px,3vw,42px)/1.15 var(--serif);}.ws-card p {max-width:48ch;color:var(--ink-2);font-size:15px;line-height:1.8;}.ws-action {margin-top:auto;padding-top:16px;font:500 13px/1.5 var(--sans);}
+.ws-theater {background:radial-gradient(ellipse at 95% 100%,color-mix(in oklab,var(--cochineal) 12%,transparent),transparent 75%);}
+@media(max-width:679px){.world-showcase{padding-block:48px;}.ws-heading,.ws-grid{grid-template-columns:minmax(0,1fr);}.ws-card{padding:24px;min-height:250px;}.ws-heading{gap:18px;margin-bottom:26px;}}
 </style>
 </head>
 <body class="page-loading">
@@ -7240,6 +7250,7 @@
         <span class="header-mark-text">ZOTHEOS</span>
       </a>
       <nav class="header-nav" id="primaryNav" aria-label="Primary">
+        <a href="/theater">Theater</a>
         <a href="#features" data-nav-section="features">Architecture</a>
         <a href="#proof" data-nav-section="proof">Proof</a>
         <a href="#workspace" data-nav-section="workspace">Workspace</a>
@@ -7259,6 +7270,8 @@
       <button class="ns-close" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
     </div>
     <ul class="ns-list">
+      <li><a href="/theater"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Theater</span></a></li>
+      <li><a href="#explore-zotheos"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Explore ZOTHEOS</span></a></li>
       <li style="--i:0"><a href="#council-story"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">The council</span></a></li>
       <li style="--i:1"><a href="#features"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span></span></span><span class="ns-name">Architecture</span></a></li>
       <li style="--i:2"><a href="#proof"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Proof</span></a></li>
@@ -8248,7 +8261,7 @@
     <span class="seal-dot"></span>
   </div>
 
-  <section class="theater-invitation" id="theater" aria-labelledby="theater-invitation-title"><div><p class="lbl">ZOTHEOS Theater · Indigenous Voices First</p><h2 id="theater-invitation-title">Stories That<br>Deserve Your Time.</h2><p>Documentaries and recorded conversations on histories that must be faced, communities that endure and futures they are shaping. Clear sources. Honest viewing notes. Watch at your pace.</p><a href="/theater">Enter The Theater <span aria-hidden="true">&nbsp;↗</span></a></div><div class="ti-art" aria-hidden="true">Truth.<br>Continuity.<br>Renewal.</div></section>
+  <section class="world-showcase" id="explore-zotheos" aria-labelledby="explore-title"><div class="ws-heading"><p class="lbl">Built For Humanity · Across The World</p><h2 id="explore-title">More Ways To<br>Understand Our World.</h2><p>Watch. Learn. Question. Follow the sources and keep your own judgment.</p></div><div class="ws-grid"><a class="ws-card ws-theater" href="/theater"><span class="ws-index">01 · Watch</span><h3>ZOTHEOS Theater</h3><p>Films, shorts and conversations from official sources. Clear viewing notes, with Indigenous voices first.</p><span class="ws-action">Enter The Theater ↗</span></a><a class="ws-card" href="/nations/directory"><span class="ws-index">02 · Discover</span><h3>Nations Worldwide</h3><p>Distinct peoples, histories and Nations’ own resources. A growing directory with its coverage gaps visible.</p><span class="ws-action">Explore The Directory ↗</span></a><a class="ws-card" href="/nations/resources"><span class="ws-index">03 · Go Deeper</span><h3>Histories And Resources</h3><p>Continue into cited histories, languages, land and community-led knowledge.</p><span class="ws-action">Follow The Sources ↗</span></a><a class="ws-card" href="/game"><span class="ws-index">04 · Play And Learn</span><h3>A Different Way In</h3><p>Games and learning cards offer another starting point. The histories and sources remain yours to explore.</p><span class="ws-action">Open The Games ↗</span></a></div></section>
 <section id="compare">
     <div class="section-inner">
       <div class="section-head reveal">

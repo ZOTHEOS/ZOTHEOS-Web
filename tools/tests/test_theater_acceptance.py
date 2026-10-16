@@ -144,7 +144,7 @@ def test_thumbnail_validation_fails_closed_before_output(tmp_path, fictional_cat
 def test_actual_script_satisfies_v2_ready_player_and_motion_behavior():
     node = Path(r'C:\nvm4w\nodejs\node.exe')
     assert node.is_file(), 'Pinned Node runtime is required for this acceptance gate'
-    result = subprocess.run([str(node), str(ART/'theater-interaction-acceptance-v2.cjs'),
+    result = subprocess.run([str(node), str(ART/'theater-library-acceptance.cjs'),
                              str(ROOT/'static/theater/theater.js')], capture_output=True, text=True, encoding='utf-8')
     assert result.returncode == 0, result.stdout + result.stderr
 

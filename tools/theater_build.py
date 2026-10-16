@@ -15,8 +15,10 @@ from urllib.parse import unquote, urlsplit
 
 sys.dont_write_bytecode = True
 SOURCE = Path(__file__).resolve().parents[1]
-KINDS = {'excerpt': 'Official Excerpt', 'trailer': 'Official Trailer', 'full-film': 'Full Film',
+KINDS = {"recorded-program": "Recorded Program", 'excerpt': 'Official Excerpt', 'trailer': 'Official Trailer', 'full-film': 'Full Film',
          'official-page': 'Official Page', 'short': 'Short Film'}
+REGIONS = {'north-america':'North America', 'central-america-caribbean':'Central America And Caribbean', 'south-america':'South America', 'arctic':'Arctic', 'africa':'Africa', 'europe':'Europe', 'asia':'Asia', 'oceania':'Oceania', 'global':'Across Regions', 'unindexed':'Location Not Yet Indexed'}
+FORMS = {'documentary':'Documentary', 'animation':'Animation', 'drama':'Drama', 'talk':'Recorded Talk', 'news':'News And Reporting', 'other':'Other Format'}
 THUMBNAIL_HOSTS = {'i.ytimg.com', 'i.vimeocdn.com', 'image.pbs.org', 'assets.nfbcdn.ca'}
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'none'; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; "
@@ -63,7 +65,7 @@ def thumbnail_url(value):
             or any(part in ('.', '..') for part in decoded.split('/'))):
         raise ValueError('Thumbnail traversal is forbidden')
     if p.hostname == 'i.ytimg.com' and not re.fullmatch(
-            r'/(?:vi|vi_webp)/[A-Za-z0-9_-]{11}/(?:default|mqdefault|hqdefault|hq720|sddefault|maxresdefault|[0-3])\.(?:jpg|webp)', p.path):
+            r'/(?:vi|vi_webp)/[A-Za-z0-9_-]{11}/(?:default|mqdefault|hqdefault|hq720|sddefault|maxresdefault|maxres2|[0-3])\.(?:jpg|webp)', p.path):
         raise ValueError('Invalid YouTube thumbnail path or video ID')
     return value
 
@@ -80,7 +82,7 @@ def validate(data):
         raise ValueError('Unsupported catalogue version')
     checked(data['updated'])
     films, topics = data['films'], data['topics']
-    if not isinstance(films, list) or not 1 <= len(films) <= 150:
+    if not isinstance(films, list) or not 1 <= len(films) <= 500:
         raise ValueError('Catalogue size is outside the reviewed bound')
     if not isinstance(topics, list) or not 1 <= len(topics) <= 40:
         raise ValueError('Topic list is outside the reviewed bound')
@@ -99,6 +101,12 @@ def validate(data):
         for key, limit in [('title', 180), ('credits', 500), ('publisher', 200), ('synopsis', 220),
                            ('availability', 650), ('content_note', 400)]:
             text(film[key], key, limit)
+        if 'region' in film and film['region'] not in REGIONS:
+            raise ValueError('Invalid story region')
+        if 'form' in film and film['form'] not in FORMS:
+            raise ValueError('Invalid film form')
+        if 'location' in film:
+            text(film['location'], 'story location', 180)
         if 'cover_title' in film:
             text(film['cover_title'], 'cover title', 100)
         if film['viewing'] not in KINDS:
@@ -112,7 +120,7 @@ def validate(data):
         if film.get('runtime') is not None:
             text(film['runtime'], 'runtime', 100)
         providers = [('youtube_id', r'[A-Za-z0-9_-]{11}'), ('pbs_id', r'[0-9]{10}'),
-                     ('vimeo_id', r'[0-9]{6,12}'), ('nfb_slug', r'[a-z0-9]+(?:_[a-z0-9]+)*')]
+                     ('vimeo_id', r'[0-9]{6,12}'), ('nfb_slug', r'[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*')]
         present = []
         for key, pattern in providers:
             value = film.get(key)
@@ -120,6 +128,12 @@ def validate(data):
                 if not isinstance(value, str) or not re.fullmatch(pattern, value) or (key == 'nfb_slug' and len(value) > 100):
                     raise ValueError('Invalid ' + key)
                 present.append(key)
+        if film.get('nfb_preview_slug') is not None:
+            text(film['nfb_preview_slug'], 'NFB preview slug', 100)
+            if not film.get('nfb_slug') or not re.fullmatch(r'[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*', film['nfb_preview_slug']) or film.get('nfb_preview_type') not in ('trailer','promo_clip') or film['viewing'] not in ('trailer','excerpt'):
+                raise ValueError('Invalid NFB trailer selection')
+        if film.get('nfb_preview_type') is not None and not film.get('nfb_preview_slug'):
+            raise ValueError('An NFB preview type requires its supplied clip slug')
         if len(present) > 1:
             raise ValueError('Only one player provider per selection')
         if 'pbs_route' in film and film['pbs_route'] not in ('stationplayer', 'viralplayer'):
@@ -157,12 +171,13 @@ def player(film):
     if film.get('vimeo_id'):
         return 'vimeo', film['vimeo_id'], 'https://player.vimeo.com/video/' + film['vimeo_id'] + '?autoplay=0&dnt=1&title=0&byline=0&portrait=0'
     if film.get('nfb_slug'):
-        return 'nfb', film['nfb_slug'], 'https://www.nfb.ca/film/' + film['nfb_slug'] + '/embed/player/?autoplay=0'
+        trailer = film['nfb_preview_type'] + '/' + film['nfb_preview_slug'] + '/' if film.get('nfb_preview_slug') else ''
+        return 'nfb', film['nfb_slug'], 'https://www.nfb.ca/film/' + film['nfb_slug'] + '/' + trailer + 'embed/player/?auto_play=false&autoplay=0'
     return '', '', ''
 
 
 def render(data):
-    e = lambda value: escape(str(value), quote=True)
+    e = lambda value: escape(str(value) if str(value).startswith("https://") else str(value).replace("–", "-").replace("—", ", "), quote=True)
     topics = {t['id']: t['name'] for t in data['topics']}
     feature = next(f for f in data['films'] if f['id'] == data['featured'])
 
@@ -176,17 +191,22 @@ def render(data):
         provider, ident, _ = player(film)
         attrs = {'theater-film': film['id'], 'featured': str(film['id'] == data['featured']).lower(),
                  'title': film['title'], 'search': ' '.join([film['title'], film['synopsis'], film['credits'],
-                                                           film['publisher'], *[topics[t] for t in film['topics']]]),
+                                                           film['publisher'], film.get('location',''), FORMS.get(film.get('form'),''), *[topics[t] for t in film['topics']]]),
                  'topic': ' '.join(film['topics']), 'provider': provider, 'video-id': ident,
                  'pbs-route': film.get('pbs_route', 'stationplayer'), 'watch-url': film['watch_url'],
                  'kind': KINDS[film['viewing']], 'availability': film['availability'], 'summary': film['synopsis'],
-                 'content-note': film['content_note'], 'credits': film['credits'], 'runtime': film.get('runtime') or ''}
+                 'content-note': film['content_note'], 'credits': film['credits'], 'runtime': film.get('runtime') or '',
+                 'region':film.get('region','unindexed'), 'viewing':film['viewing'], 'location':film.get('location',''), 'nfb-preview':film.get('nfb_preview_slug') or '', 'nfb-preview-type':film.get('nfb_preview_type') or ''}
         at = ' '.join('data-' + k + '="' + e(v) + '"' for k, v in attrs.items())
         if film.get('thumbnail_url'):
             visual = '<img src="' + e(film['thumbnail_url']) + '" alt="' + e('Preview for ' + film['title']) + '" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer">'
         else:
             visual = '<span class="th-art th-cover" aria-hidden="true"><span class="th-cover-number">' + str(i).zfill(2) + '</span><span class="th-cover-title">' + e(film.get('cover_title', film['title'])) + '</span></span>'
         facts = [KINDS[film['viewing']]]
+        if not provider:
+            facts.append('External Viewing')
+        if film.get('form'):
+            facts.append(FORMS[film['form']])
         if film.get('runtime'):
             facts.append(film['runtime'])
         if film.get('year'):
@@ -198,9 +218,9 @@ def render(data):
                 thumb_note += ' <a href="' + e(film['thumbnail_source']) + '" target="_blank" rel="noopener noreferrer">Thumbnail Source</a>'
             thumb_note += '</p>'
         cards.append(f'''<article class="th-film" id="film-{e(film['id'])}" {at}>
-<a class="th-poster-button" href="{e(film['watch_url'])}" target="_blank" rel="noopener noreferrer" data-theater-select="{e(film['id'])}" aria-label="View {e(film['title'])} In Theater">{visual}</a>
+<a class="th-poster-button" href="{e(film['watch_url'])}" target="_blank" rel="noopener noreferrer" data-theater-select="{e(film['id'])}" aria-label="Explore {e(film['title'])}">{visual}</a>
 <h3 class="th-film-title" id="title-{e(film['id'])}">{e(film['title'])}</h3>
-<p class="th-card-meta">{e(' · '.join(facts))}</p>
+<p class="th-card-meta">{e(' · '.join(facts))}</p><p class="th-card-place">{e(film.get('location',''))}</p>
 <details class="th-card-details th-sources"><summary>Details And Official Source</summary><div class="th-cinema-details-body">
 <p class="th-description">{e(film['synopsis'])}</p><p class="th-film-credits">{e(film['credits'])}</p>
 <p class="th-film-access">{e(film['availability'])}</p><p class="th-content-note"><strong>Before Watching:</strong> {e(film['content_note'])}</p>
@@ -211,16 +231,17 @@ def render(data):
     iframe = ('<iframe src="' + e(initial_url) + '" title="' + e(feature['title'] + ' | ' + provider + ' player') +
               '" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>') if initial_url else ''
     slot_hidden = '' if iframe else ' hidden'
-    close_hidden = '' if iframe else ' hidden'
     status = 'Player ready. Press Play in its controls. If unavailable, open the official source.' if iframe else 'This title is available from its official source. No unavailable player is substituted.'
-    nav = '<a class="nh-link" href="#collection">Collection</a><a class="nh-link" href="/nations/directory">Nations</a>'
+    nav = '<a class="nh-link" href="#collection">Collection</a><a class="nh-link" href="/nations/directory">Nations</a><a class="nh-link" href="/">Home</a>'
     sheet = ''.join('<li><a href="' + href + '">' + label + '</a></li>' for label, href in
                     [('The Screening Room', '#screening'), ('The Collection', '#collection'), ('How We Curate', '#curation'),
                      ('Nations Directory', '/nations/directory'), ('Mission', '/#mission')])
     header = read('tools/nations/partials/header.html').replace('{{{nav_links}}}', nav).replace('{{{sheet_links}}}', sheet).replace('aria-label="Nations"', 'aria-label="Theater"').replace('Indigenous nations today', 'ZOTHEOS Theater')
     options = ''.join('<option value="' + e(k) + '">' + e(v) + '</option>' for k, v in topics.items())
     companions = ''.join('<article><h3>' + e(r['title']) + '</h3><p>' + e(r['text']) + '</p><a class="th-watch" href="' + e(r['url']) + '" target="_blank" rel="noopener noreferrer">Read The Official Resource ↗</a><p class="th-art-credit">' + e(r['publisher']) + ' · Checked <time datetime="' + e(r['checked']) + '">' + e(r['checked']) + '</time></p></article>' for r in data.get('resources', []))
-    companion_section = '<section class="th-companions" aria-labelledby="companion-heading"><div class="th-section-heading"><h2 id="companion-heading" class="th-section-title">Beyond The Screen</h2><p class="th-kicker">Research · Restoration · Education</p></div><div class="th-companion-grid">' + companions + '</div></section>' if companions else ''
+    companion_section = '<details id="regional-resources" class="th-cinema-details th-regional"><summary>Regional Companion Resources</summary><section class="th-companions" aria-labelledby="companion-heading"><div class="th-section-heading"><h2 id="companion-heading" class="th-section-title">Beyond The Screen</h2><p class="th-kicker">Research · Restoration · Education</p></div><div class="th-companion-grid">' + companions + '</div></section></details>' if companions else ''
+    region_options = ''.join('<option value="' + key + '">' + e(label) + '</option>' for key,label in REGIONS.items() if any(f.get('region','unindexed')==key for f in data['films']))
+    viewing_options = ''.join('<option value="' + key + '">' + e(label) + '</option>' for key,label in KINDS.items())
     return f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="POLICY_PLACEHOLDER"><title>ZOTHEOS Theater | Stories That Stay With You</title>
@@ -229,22 +250,23 @@ def render(data):
 <script>{read('tools/nations/partials/bootstrap.js')}</script><style id="zth-fonts">{read('tools/nations/partials/fonts-brand.css')}</style>{read('tools/nations/partials/fonts-names.css')}
 <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin><link rel="stylesheet" href="/static/theater/theater.css"></head>
 <body>{header}<main id="main" class="th-page th-cinema">
-<header class="th-cinema-heading"><p class="th-kicker">ZOTHEOS Theater · Indigenous Voices First</p><h1 id="theater-heading">Stories That Stay With You.</h1><p>Histories to face. Communities to listen to. Futures they are shaping.</p></header>
+<header class="th-cinema-heading"><p class="th-kicker">ZOTHEOS Theater · Indigenous Voices First</p><h1 id="theater-heading">Stories That Stay With You.</h1><p>Indigenous histories and living communities, across Nations and borders. Stories of truth, dignity and renewal.</p><p class="th-library-scope">{len(data['films'])} Sourced Stories · Growing Worldwide</p></header>
 <section id="screening" class="th-screening-layout" aria-labelledby="theaterTitle"><div>
 <div class="th-stage-shell"><svg class="th-stepped-frame" viewBox="0 0 1200 675" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="th-frame-structure" d="M1 38H19V19H38V1H1162V19H1181V38H1199V637H1181V656H1162V674H38V656H19V637H1Z"/><path class="th-frame-glow" d="M1 38H19V19H38V1H1162V19H1181V38H1199V637H1181V656H1162V674H38V656H19V637H1Z"/></svg>
 <div class="th-screen"><div class="th-stage-fallback"><p>Watch At Your Pace.</p><p>Use the player controls or open the official source. Viewing restrictions can vary.</p></div><div id="theaterPlayer" class="th-player"{slot_hidden}>{iframe}</div></div></div>
 <p id="theaterConsent" class="th-provider-line">Thumbnails and the selected ready player connect automatically to their providers on opening this page. They receive your IP address and request information. Playback begins only when you press Play.</p>
-<div class="th-player-controls th-provider-actions"><button id="theaterLoad" type="button" class="th-watch" aria-describedby="theaterTitle theaterConsent" hidden>Load Player</button><button id="theaterClose" type="button" class="th-select"{close_hidden}>Unload Player</button><button id="theaterMotion" type="button" class="th-select" aria-pressed="false">Still Frame</button><a class="th-watch" id="theaterWatch" href="{e(feature['watch_url'])}" target="_blank" rel="noopener noreferrer">Open Official Source ↗</a></div>
+<div class="th-player-controls th-provider-actions"><a class="th-watch" href="#collection">Browse Stories</a><button id="theaterNext" type="button" hidden class="th-select">Next Story</button><button id="theaterMotion" type="button" hidden class="th-select" aria-pressed="false">Still Frame</button><a class="th-watch" id="theaterWatch" href="{e(feature['watch_url'])}" target="_blank" rel="noopener noreferrer">Open Official Source ↗</a></div>
 <p id="theaterPlayerStatus" class="th-provider-line" role="status">{e(status)}</p></div>
 <div class="th-now-watching"><p class="th-kicker">Now In The Screening Room</p><h2 id="theaterTitle" class="th-feature-title" tabindex="-1">{e(feature['title'])}</h2>
-<p class="th-now-meta"><span id="theaterKind">{e(KINDS[feature['viewing']])}</span><span id="theaterRuntime">{e(feature.get('runtime') or '')}</span></p><p id="theaterDescription" class="th-description">{e(feature['synopsis'])}</p>
+<p class="th-now-meta"><span id="theaterKind">{e(KINDS[feature['viewing']])}</span><span id="theaterRuntime">{e(feature.get('runtime') or '')}</span></p><p id="theaterLocation" class="th-location">{e(feature.get('location',''))}</p><p id="theaterDescription" class="th-description">{e(feature['synopsis'])}</p>
 <details class="th-cinema-details"><summary>Viewing Notes, Content And Sources</summary><div class="th-cinema-details-body"><p id="theaterAvailability">{e(feature['availability'])}</p><div><strong>Before Watching</strong><p id="theaterContentNote">{e(feature['content_note'])}</p></div><p id="theaterCredits">{e(feature['credits'])}</p><ul id="theaterSources" class="th-source-list">{sources(feature)}</ul></div></details></div></section>
 <section id="collection" class="th-catalogue" aria-labelledby="collection-heading"><div class="th-section-heading"><h2 id="collection-heading" class="th-section-title">Explore The Collection</h2><p class="th-kicker">Distinct Stories · Cited Sources</p></div>
-<div id="theaterTools" class="th-tools" hidden><div><label for="theaterSearch">Search Titles, People And Subjects</label><input id="theaterSearch" type="search" placeholder="Try land, language or family" autocomplete="off"></div><div><label for="theaterTopic">Explore A Subject</label><select id="theaterTopic"><option value="all">All Subjects</option>{options}</select></div><button id="theaterClear" class="th-select" type="button">Clear Filters</button><p id="theaterStatus" role="status"></p></div>
-<div id="theaterEmpty" class="th-empty" hidden><h3>No Matching Stories</h3><p>Try a broader search or choose Clear Filters above to see the whole collection.</p></div><div class="th-film-grid">{''.join(cards)}</div></section>
+<div id="theaterTools" class="th-tools" hidden><div><label for="theaterSearch">Search Titles, People And Subjects</label><input id="theaterSearch" type="search" placeholder="Try land, language or family" autocomplete="off"></div><div><label for="theaterTopic">Explore A Subject</label><select id="theaterTopic"><option value="all">All Subjects</option>{options}</select></div><div><label for="theaterRegion">Explore A Region</label><select id="theaterRegion"><option value="all">Worldwide</option>{region_options}</select></div><div><label for="theaterViewing">Choose A Viewing Type</label><select id="theaterViewing"><option value="all">Films, Shorts And More</option>{viewing_options}</select></div><button id="theaterClear" class="th-select" type="button">Clear Filters</button><p id="theaterStatus" role="status"></p></div>
+<div id="theaterEmpty" class="th-empty" hidden><h3>No Matching Stories</h3><p>Try a broader search or choose Clear Filters above to see the whole collection.</p></div><div class="th-film-grid">{''.join(cards)}</div><div class="th-library-more"><button id="theaterMore" class="th-watch" type="button" hidden>Show More Stories</button><a class="th-watch" href="#screening">Return To The Screening Room</a></div></section>
+<section class="th-world-reading" aria-labelledby="world-reading-title"><p class="th-kicker">Across Nations And Borders</p><h2 id="world-reading-title" class="th-section-title">Keep Exploring.</h2><p>This collection is growing worldwide. Geographic labels help you browse; they do not define a people or limit their homelands. Coverage is uneven, and gaps stay visible.</p><div class="th-world-links"><a href="/nations/directory"><strong>Nations Worldwide</strong><span>Find distinct peoples, governments and their own sources.</span></a><a href="/nations/in/us"><strong>United States Nations</strong><span>Continue into the growing US directory and profiles.</span></a><a href="/nations/resources"><strong>Histories And Resources</strong><span>Follow the evidence beyond a film.</span></a><a href="/nations/coverage"><strong>Coverage And Gaps</strong><span>See what is represented and where work remains.</span></a></div></section>
 {companion_section}
 <section id="curation" class="th-method" aria-labelledby="curation-heading"><div><p class="th-kicker">How We Curate</p><h2 id="curation-heading" class="th-section-title">Attention With Responsibility.</h2></div><div><p>Distinct stories, official sources and honest viewing notes. No film stands for every Nation.</p><details class="th-cinema-details"><summary>Read Our Curation And Historical Context</summary><div class="th-cinema-details-body"><p>We read official filmmaker, publisher and community sources before adding a title. Credits, source-check dates and viewing limits remain with each story. Inclusion is not an endorsement by a Nation, independent verification of every statement or a claim that the full recording was watched for this collection.</p><p>Trailers, excerpts and recorded presentations are labeled. Official viewing pages may require payment, an account or access from a particular country. Availability can change. Videos remain with their authorized providers; ZOTHEOS does not copy or host them.</p><h3>History In Context</h3><p>The collection includes the official <em>Daughter of a Lost Bird</em> excerpt on Indigenous adoption. Its child-removal percentage is historical testimony about research before the Indian Child Welfare Act, not a present-day removal rate. <a href="https://www.nicwa.org/what-is-icwa/" target="_blank" rel="noopener noreferrer">Read NICWA’s Historical Context</a>.</p><p>This growing collection is incomplete. Corrections, living cultures, community-led restoration and careful source review guide its growth.</p></div></details><a class="th-watch" href="/nations/resources">Continue With Histories And Resources ↗</a></div></section>
-</main><footer class="ft"><div class="ft-in"><div class="ft-top"><div><a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" width="133" height="28" alt=""></a><p class="ft-tag">Truth. Dignity. Sovereignty.</p><p class="ft-founder">Founded by <strong>David Garcia</strong><br>ZOTHEOS LLC</p></div><nav class="ft-links" aria-label="Footer"><div class="ft-col"><span class="ft-col-l">Explore</span><a href="/">Home</a><a href="/#mission">Mission</a><a href="/theater" aria-current="page">Theater</a><a href="/nations">Indigenous Nations Today</a><a href="/nations/directory">Nations Directory</a><a href="/nations/resources">Histories And Resources</a><a href="/game">Play And Learn</a></div><div class="ft-col"><span class="ft-col-l">Your Choice</span><a href="#theater-privacy">Theater Privacy</a><a href="/#site-privacy">Website Privacy</a><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">YouTube Provider Privacy</a><a href="https://www.pbs.org/about/about-pbs/privacy-policy/" target="_blank" rel="noopener noreferrer">PBS Provider Privacy</a></div></nav><p class="ft-meta">© {datetime.now(timezone.utc).year} ZOTHEOS LLC<br>Film and preview rights remain with their owners.</p></div><div class="ft-block" id="theater-privacy"><p class="lbl">Theater Privacy</p><div><p>Fonts and page code load from this site. Theme and motion preferences stay in your browser. The Theater does not save searches or film selections.</p><p>Official thumbnails load automatically from their listed image providers. The selected YouTube, PBS, Vimeo or National Film Board player also loads automatically, ready for its Play control. These providers receive your IP address and request information when contacted; their own privacy policies apply. No autoplay permission is granted.</p><p>YouTube uses its privacy-enhanced player domain and Vimeo requests its do-not-track mode. Neither makes playback anonymous or guarantees that a provider collects no data. Unload Player removes the frame. Loading or selecting another available player contacts its provider again.</p><p>Source links contact their destinations when followed. Publishers can restrict or remove a title. If playback fails, use the official source. <a href="mailto:contact@zotheos.org">Report A Correction</a>.</p></div></div></div></footer>
+</main><footer class="ft"><div class="ft-in"><div class="ft-top"><div><a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" width="133" height="28" alt=""></a><p class="ft-tag">Truth. Dignity. Sovereignty.</p><p class="ft-founder">Founded by <strong>David Garcia</strong><br>ZOTHEOS LLC</p></div><nav class="ft-links" aria-label="Footer"><div class="ft-col"><span class="ft-col-l">Explore</span><a href="/">Home</a><a href="/#mission">Mission</a><a href="/theater" aria-current="page">Theater</a><a href="/nations">Indigenous Nations Today</a><a href="/nations/directory">Nations Directory</a><a href="/nations/resources">Histories And Resources</a><a href="/game">Play And Learn</a></div><div class="ft-col"><span class="ft-col-l">Your Choice</span><a href="#theater-privacy">Theater Privacy</a><a href="/#site-privacy">Website Privacy</a><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">YouTube Provider Privacy</a><a href="https://www.pbs.org/about/about-pbs/privacy-policy/" target="_blank" rel="noopener noreferrer">PBS Provider Privacy</a></div></nav><p class="ft-meta">© {datetime.now(timezone.utc).year} ZOTHEOS LLC<br>Film and preview rights remain with their owners.</p></div><div class="ft-block" id="theater-privacy"><p class="lbl">Theater Privacy</p><div><p>Fonts and page code load from this site. Theme and motion preferences stay in your browser. The Theater does not save searches or film selections.</p><p>Official thumbnails load automatically from their listed image providers. The selected YouTube, PBS, Vimeo or National Film Board player also loads automatically, ready for its Play control. These providers receive your IP address and request information when contacted; their own privacy policies apply. No autoplay permission is granted.</p><p>YouTube uses its privacy-enhanced player domain and Vimeo requests its do-not-track mode. Neither makes playback anonymous or guarantees that a provider collects no data. Selecting another story replaces the current player and contacts that provider. Use the video’s own Play and Pause controls.</p><p>Source links contact their destinations when followed. Publishers can restrict or remove a title. If playback fails, use the official source. <a href="mailto:contact@zotheos.org">Report A Correction</a>.</p></div></div></div></footer>
 <script>{read('tools/nations/partials/appearance.js')}</script><script>{read('static/theater/theater.js')}</script></body></html>
 '''
 

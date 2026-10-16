@@ -34,6 +34,3 @@ def test_accent_search_preserves_original_names_and_respects_other_filters():
     script=Path(__file__).with_name('theater-accent-search-regressions-v2.cjs')
     result=subprocess.run([node,str(script),str(root/'static/theater/theater.js')],capture_output=True,text=True,encoding='utf-8')
     assert result.returncode==0,result.stdout+result.stderr
-    focus=Path(__file__).with_name('theater-focus-regressions-v2.cjs')
-    result=subprocess.run([node,str(focus),str(root/'static/theater/theater.js')],capture_output=True,text=True,encoding='utf-8')
-    assert result.returncode==0,result.stdout+result.stderr

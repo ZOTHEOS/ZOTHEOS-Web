@@ -1,0 +1,116 @@
+{
+  "version": 2,
+  "prepared_at": "2026-10-16T06:34:43.104141+00:00",
+  "publisher": "ZOTHEOS",
+  "status": "reviewed-for-publication",
+  "catalogue": {
+    "sha256": "7d386097dbec6b04115ec52b3cd24aa30c2c7afbb7a6886fceac43392da0cf0d",
+    "titles": 14,
+    "ready_players": 12,
+    "source_references": 44,
+    "companion_resources": 2,
+    "featured": "yanuni"
+  },
+  "request_revision": "Actual provider previews and a selected ready player replace the prior separate Load and no-remote-image defaults. Playback still requires Play. Automatic connection disclosures are visible.",
+  "review_artifact_sha256": {
+    "sources_and_preservation": "9c9b9a5393806f462b41a8f440c967bfaee7994f6c82461929355edcbd061bba",
+    "code": "2814c023b2e853c384954202fd095b122aae0e295fd8785ce25859cc751ff00b",
+    "browser": "1ac6465de0c6da0ff14e27669aac78fee00b1c6894f7893d12ba57dbe1f4fea2",
+    "privacy": "52b8a73925f09a26cb8986aa192499451efebb4bdb93c5c502a8065b759ad5f3"
+  },
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "validation": {
+    "full_website_tests": 353,
+    "full_suite_seconds": 153.28,
+    "subsequent_targeted_theater_cases": 69,
+    "targeted_seconds": 5.8,
+    "full_suite_scope": "Full suite before the final bounded provider-availability notes and two review fixes; the affected Theater cases and generated-output checks passed again afterwards.",
+    "responsive_widths": [
+      320,
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "themes_checked_desktop": 4,
+    "themes_checked_phone": 4,
+    "canonical_privacy_checks": 6,
+    "adversarial_privacy_checks": 22
+  },
+  "browser_observations": [
+    "All14 real preview images loaded successfully.",
+    "Twelve player selections presented Play controls without starting playback. Brief deliberate startup was checked for Dawnland, Birth of a Family and the exact Denver presentation.",
+    "FirstLight requested registration and BringThemHome reported unavailable; both retain official previews and source-only links without submitting a form.",
+    "Observed no horizontal overflow at the recorded widths. Visible primary actions, search controls and details summaries measured at least44pixels.",
+    "Space selected a card without navigation, Close destroyed the frame, reload restored one, and accent search did not replace the selected player.",
+    "Local StillFrame and global Calm/Still stopped the ambient CSS frame. OS preference behavior was checked in isolated actual-script fixtures, not OS emulation."
+  ],
+  "limits": [
+    "Brief startup and provider metadata are not full-film editorial review or caption-accuracy certification.",
+    "Region, account and provider restrictions can change.",
+    "Responsive browser checks are not physical-device or screen-reader certification.",
+    "The221-second WORLD adoption excerpt differs from the200-second PBS edition and transcript.",
+    "The Denver talk presents the speaker’s research and legal interpretations. They are attributed, not adopted as independent legal conclusions.",
+    "Original stepped frame geometry is project branding, not a claimed traditional Indigenous motif."
+  ],
+  "previous_release": {
+    "git_commit": "56316a46152929e99597f2144b1e00fc667d3bf9",
+    "review": {
+      "version": 1,
+      "prepared_at": "2026-10-16T05:49:24.473323+00:00",
+      "publisher": "ZOTHEOS",
+      "status": "reviewed-for-publication",
+      "catalogue": {
+        "sha256": "fa95f93fc6c222de5b1729446c6a4507dffa200c563254057b3beb5550e0d30e",
+        "titles": 13,
+        "source_references": 27,
+        "companion_resources": 2,
+        "featured": "yanuni"
+      },
+      "review_artifact_sha256": {
+        "source": "2409d0e7d8d7289af6c1a2bb2e0d2503e947498e108f8d7f56c8d7d05fdcd1b8",
+        "code": "70686bbaf1a49aac266f81a6fe8a1b71074570ffb6cef70b5212d6dae696f212",
+        "visual": "96b2e727d8df814a8921bcde04dce056ba9d28e90896852155814a5cc0bcb015"
+      },
+      "person_review_claimed": false,
+      "nation_endorsement_claimed": false,
+      "validation": {
+        "full_website_tests": 322,
+        "full_suite_seconds": 127.86,
+        "independent_renderer_cases": 19,
+        "player_consent_cases": 10,
+        "accent_search_cases": 10,
+        "url_port_cases": 18,
+        "focus_flow_cases": 6,
+        "responsive_widths": [
+          320,
+          390,
+          768,
+          1280
+        ],
+        "themes_checked": 4
+      },
+      "browser_observations": [
+        "No initial iframe; selecting a title creates none.",
+        "YANUNI startup played after explicit Play; duration observed 6821.701 seconds. Close removed the frame.",
+        "Gather and Lakota official trailer players presented Play without autoplay; full trailer playback was not certified.",
+        "PBS excerpt player reported unavailable. Its embed was disabled; official source and transcript retained.",
+        "Zero horizontal overflow at the recorded four viewport widths; source links and main actions measured at least44pixels."
+      ],
+      "limits": [
+        "Brief startup checks are not full-film editorial review or caption accuracy verification.",
+        "Regional, account and provider restrictions can change.",
+        "Responsive browser simulation is not physical-device or screen-reader certification.",
+        "The exact2025Denver TREC presentation remains unpublished pending an original recording match. Its transcript is not published or treated as independent proof of legal conclusions.",
+        "No complete worldwide coverage claim; original abstract title artwork is not official film artwork."
+      ],
+      "privacy_preservation": {
+        "canonical_and_privacy_checks_passed": 6,
+        "adversarial_path_checks_passed": 22,
+        "receipt_sha256": "4797fc8921c552b53beca09a2a88e84f9a1632cf5a62d3776c22c36733119054",
+        "scope": "Canonical fact clocks, person receipts, source citations and original intro audio preserved. Valid HTTPS source paths are distinguished from local paths; private-name, workstation and editorial-credit checks remain in force."
+      }
+    }
+  }
+}

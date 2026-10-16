@@ -100,7 +100,7 @@ def test_curated_catalog_is_not_fixture_data_and_has_sources_credits_dates_and_v
         assert not film['id'].startswith('fixture-')
         for key in ['title','credits','publisher','synopsis','availability','content_note']:
             assert isinstance(film[key],str) and film[key].strip()
-        assert film['viewing'] in {'excerpt','trailer','full-film','official-page','short'}
+        assert film['viewing'] in {'excerpt','trailer','full-film','official-page','short','recorded-program'}
         assert film['sources']
         for source in film['sources']:
             assert urlsplit(source['url']).scheme=='https' and source['title'] and source['publisher']
@@ -115,12 +115,12 @@ def test_every_film_is_statically_present_with_truthful_scope_and_official_watch
     for film in data['films']:
         card=next(el for el in cards if el.attrs['data-theater-film']==film['id'])
         assert 'hidden' not in card.attrs and card.attrs.get('aria-hidden')!='true'
-        assert all(phrase in card.text for phrase in [film['title'],film['credits'],film['availability'],film['content_note']])
+        assert all(phrase.replace("–","-").replace("—",", ") in card.text for phrase in [film['title'],film['credits'],film['availability'],film['content_note']])
         native=[el for el in card.descendants() if el.tag=='a' and el.attrs.get('href')==film['watch_url']]
         assert native, 'Official source remains usable without optional JavaScript'
         assert all({'noopener','noreferrer'} <= set(el.attrs.get('rel','').split()) for el in native)
         assert any(el.tag=='time' and el.attrs.get('datetime')==film['sources'][0]['checked'] for el in card.descendants())
-        terms={'excerpt':['excerpt'],'trailer':['trailer'],'full-film':['full film','full-film'],
+        terms={'recorded-program':['recorded program'],'excerpt':['excerpt'],'trailer':['trailer'],'full-film':['full film','full-film'],
                'official-page':['official page','official-page','official source'], 'short':['short']}[film['viewing']]
         assert any(term in card.text.casefold() for term in terms), 'An excerpt or trailer must not be presented as a full film'
 

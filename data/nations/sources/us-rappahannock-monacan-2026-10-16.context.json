@@ -1,0 +1,281 @@
+{
+  "reviewed": "2026-10-16",
+  "public_notes": [
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "title": "Displacement And Community Continuity",
+      "text": "The Tribe's history describes settlement pressure, repeated forced removals and a return to homelands downriver. It records incorporation in 1921 as an effort to strengthen its government and pursue recognition. These institutional dates do not mark the beginning of the Rappahannock people. The Tribe also describes building a cultural center and developing community programs. Its museum offers a route into histories curated through the Tribe's own website."
+    },
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "title": "Watersheds And Young People",
+      "text": "The Department of Environmental Services describes advocacy and conservation in the lower Rappahannock and Mattaponi river watersheds. It brings Indigenous Traditional Ecological Knowledge into environmental discussions and says it coordinates the Return to the River youth program. These are the Tribe's descriptions of its work, not measured environmental outcomes. Readers can follow the department and youth-program pages to learn directly from the publisher."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "title": "Records, Schooling And Land",
+      "text": "The Nation's history describes communities remaining in Virginia through settlement pressure and discrimination. It explains how the 1924 Racial Integrity Law damaged Native identity records and recounts community challenges to racial classifications and barriers to schooling. The account also records the Episcopal Church's return of a deed for 7.5 acres in 1995. These are events in the Nation's historical account, not a starting date for its people or proof that the effects of discrimination have ended."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "title": "A Living Government And Climate Plans",
+      "text": "The Nation describes itself as a sovereign Tribal government headquartered on Bear Mountain. Its environmental department says a 2023 Climate Pollution Reduction Grant supported planning and describes a Priority Climate Action Plan with a greenhouse gas inventory. It gives 2027 as a planned date for a Comprehensive Climate Action Plan. Those are published plans, not verified completed outcomes. The Nation's museum and government pages offer further learning in its own voice."
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "label": "Rappahannock: Tribal History",
+      "url": "https://www.rappahannocktribe.org/tribal-history/",
+      "purpose": "Read the Tribe's account of displacement, government institutions and community continuity."
+    },
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "label": "Rappahannock: Environmental Services",
+      "url": "https://www.rappahannocktribe.org/environmentalservices/",
+      "purpose": "Explore the Tribe's own descriptions of watershed stewardship and environmental work."
+    },
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "label": "Rappahannock: Return To The River",
+      "url": "https://www.rappahannocktribe.org/return-to-the-river/",
+      "purpose": "Follow the Tribe's youth-program page; this source check does not review its videos or register participants."
+    },
+    {
+      "nation": "rappahannock-indian-tribe-us-va",
+      "label": "Rappahannock: Tribe Museum",
+      "url": "https://www.rappahannocktribe.org/museum-exhibits/",
+      "purpose": "Explore the Tribe's museum portal and its published history exhibits."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "label": "Monacan: Our History",
+      "url": "https://www.monacannation.gov/our-history.html",
+      "purpose": "Read the Nation's account of community continuity, discriminatory records, schooling and land."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "label": "Monacan: Environmental Planning",
+      "url": "https://www.monacannation.gov/environmental.html",
+      "purpose": "Read the Nation's climate-planning account and its explicitly future comprehensive-plan date."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "label": "Monacan: Tribal Government",
+      "url": "https://www.monacannation.gov/government.html",
+      "purpose": "Learn about the Nation's government through its own public page."
+    },
+    {
+      "nation": "monacan-indian-nation-us-va",
+      "label": "Monacan: Nation Museum",
+      "url": "https://www.monacannation.gov/museum.html",
+      "purpose": "Explore the Nation's museum and online learning pages in its own voice."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "sources": [
+      {
+        "schema_version": 1,
+        "source_url": "https://www.rappahannocktribe.org/",
+        "final_url": "https://www.rappahannocktribe.org/",
+        "retrieved_at": "2026-10-16T06:54:10.314284+00:00",
+        "http_status": 200,
+        "sha256": "d2320695ff26fa5d369fc10eb3562bfb9c0a8d2f32fe07ce0579d8657ba83d1c",
+        "bytes": 93989,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Rappahannock Indian Tribe",
+        "title": "Rappahannock Indian Tribe",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "rappahannock",
+        "source_key": "rappahannock-home",
+        "receipt": "research/receipts/next-us-rappahannock-home.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.monacannation.gov/",
+        "final_url": "https://www.monacannation.gov/",
+        "retrieved_at": "2026-10-16T06:54:10.579533+00:00",
+        "http_status": 200,
+        "sha256": "4161bf181f4af95420535c28238102330e1eab5de5f115046de6b130e792a05a",
+        "bytes": 97063,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Monacan Indian Nation",
+        "title": "Monacan Indian Nation",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "monacan",
+        "source_key": "monacan-home",
+        "receipt": "research/receipts/next-us-monacan-home.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.rappahannocktribe.org/tribal-history/",
+        "final_url": "https://www.rappahannocktribe.org/tribal-history/",
+        "retrieved_at": "2026-10-16T06:54:38.370061+00:00",
+        "http_status": 200,
+        "sha256": "4bd83446e10285eade324f97227959f0c66cc80c5bf8a6988fa702ecdf649f6c",
+        "bytes": 65151,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Rappahannock Indian Tribe",
+        "title": "Tribal History | Rappahannock Indian Tribe",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "rappahannock",
+        "source_key": "rappahannock-history",
+        "receipt": "research/receipts/next-us-rappahannock-history.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.monacannation.gov/our-history.html",
+        "final_url": "https://www.monacannation.gov/our-history.html",
+        "retrieved_at": "2026-10-16T06:54:38.661642+00:00",
+        "http_status": 200,
+        "sha256": "714f896e7278f4744f2e41d95165feee71373ff3dc10b9bf641069d6baf5cb80",
+        "bytes": 117275,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Monacan Indian Nation",
+        "title": "Our History | Monacan Indian Nation",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "monacan",
+        "source_key": "monacan-history",
+        "receipt": "research/receipts/next-us-monacan-history.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.rappahannocktribe.org/environmentalservices/",
+        "final_url": "https://www.rappahannocktribe.org/environmentalservices/",
+        "retrieved_at": "2026-10-16T06:54:42.735168+00:00",
+        "http_status": 200,
+        "sha256": "239d8f4c53c2157cf70e2d0841ce1c676a5044d7e8172c2c806e22a741bb4cb6",
+        "bytes": 62807,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Rappahannock Indian Tribe",
+        "title": "Department Of Environmental Services | Rappahannock Indian Tribe",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "rappahannock",
+        "source_key": "rappahannock-environment",
+        "receipt": "research/receipts/next-us-rappahannock-environment.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.monacannation.gov/government.html",
+        "final_url": "https://www.monacannation.gov/government.html",
+        "retrieved_at": "2026-10-16T06:54:42.982649+00:00",
+        "http_status": 200,
+        "sha256": "9e257795cba0fd9aee47f7ddd4dba038fbed912640b29d7a9d208d4d5a1e5ba6",
+        "bytes": 103856,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Monacan Indian Nation",
+        "title": "Tribal Government | Monacan Indian Nation",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "monacan",
+        "source_key": "monacan-government",
+        "receipt": "research/receipts/next-us-monacan-government.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.rappahannocktribe.org/return-to-the-river/",
+        "final_url": "https://www.rappahannocktribe.org/return-to-the-river/",
+        "retrieved_at": "2026-10-16T06:54:47.114105+00:00",
+        "http_status": 200,
+        "sha256": "9d51df0e9ea24fbf53de1a47c738bbf4af57c148696ad6d9defa79c6460cee21",
+        "bytes": 62633,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Rappahannock Indian Tribe",
+        "title": "Return To The River | Rappahannock Indian Tribe",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "rappahannock",
+        "source_key": "rappahannock-return-river",
+        "receipt": "research/receipts/next-us-rappahannock-return-river.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.monacannation.gov/environmental.html",
+        "final_url": "https://www.monacannation.gov/environmental.html",
+        "retrieved_at": "2026-10-16T06:54:47.390387+00:00",
+        "http_status": 200,
+        "sha256": "8950d8728fad47b32f5a05276d4fb7594193434a6cbf3638e366bca2493946ea",
+        "bytes": 107198,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Monacan Indian Nation",
+        "title": "Environmental | Monacan Indian Nation",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "monacan",
+        "source_key": "monacan-environment",
+        "receipt": "research/receipts/next-us-monacan-environment.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.rappahannocktribe.org/museum-exhibits/",
+        "final_url": "https://www.rappahannocktribe.org/museum-exhibits/",
+        "retrieved_at": "2026-10-16T06:56:31.063304+00:00",
+        "http_status": 200,
+        "sha256": "207c17b30539bbb07938552337a10237db01943e413a696868ab4fd829b86e3d",
+        "bytes": 111434,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Rappahannock Indian Tribe",
+        "title": "Rappahannock Tribe Museum",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "rappahannock",
+        "source_key": "rappahannock-museum",
+        "receipt": "research/receipts/next-us-rappahannock-museum.receipt.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://www.monacannation.gov/museum.html",
+        "final_url": "https://www.monacannation.gov/museum.html",
+        "retrieved_at": "2026-10-16T06:56:31.553781+00:00",
+        "http_status": 200,
+        "sha256": "a28afce40b7c7aca51fb8817b9709141334b3f0f1452eaa757c410bc6efe1bc6",
+        "bytes": 110882,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Monacan Indian Nation",
+        "title": "Monacan Indian Nation Museum",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not committed or deployed.",
+        "robots_policy": "Public text path allowed by retained own-site policy for honest ZOTHEOS research user agent. At least3.5seconds per host.",
+        "subject": "monacan",
+        "source_key": "monacan-museum",
+        "receipt": "research/receipts/next-us-monacan-museum.receipt.json"
+      }
+    ]
+  }
+}

@@ -991,3 +991,30 @@ html[data-theater-motion="still"] .th-cinema .th-frame-glow { animation:none!imp
 
 /* Keep a full 200px provider viewport inside the stage's two border pixels. */
 .th-cinema .th-screen { min-height:202px; }
+
+/* Worldwide library: native sources remain complete without enhancement. */
+.th-library-scope {margin-top:18px!important;color:var(--ink-2);font:400 12px/1.7 var(--zn-mono);}
+.th-location,.th-card-place {color:var(--ink-2);font:400 12px/1.6 var(--zn-read);margin-top:8px!important;}
+.th-card-place:empty,.th-location:empty {display:none;}
+.th-cinema .th-tools {grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:16px;}
+.th-cinema .th-tools>div:first-child {grid-column:1/-1;}
+.th-cinema .th-tools>div {min-inline-size:0;}
+.th-cinema .th-tools>button {min-height:48px;}
+.th-cinema .th-tools label {min-height:22px;}
+.th-cinema .th-film-title {min-height:2.6em;}
+.th-cinema .th-card-meta {min-height:2.9em;}
+.th-library-more {display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-block:36px 16px;}
+.th-world-reading {margin-top:64px;border-top:1px solid var(--rule);padding-top:28px;}
+.th-world-reading>.th-kicker {margin-bottom:18px;}
+.th-world-reading>p:last-of-type {margin-block:20px;max-width:72ch;color:var(--ink-2);font:400 15px/1.8 var(--zn-read);}
+.th-world-links {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px;}
+.th-world-links>a {display:flex;flex-direction:column;gap:14px;border:1px solid var(--rule);padding:22px;color:var(--ink);text-decoration:none;min-width:0;}
+.th-world-links>a:hover {border-color:var(--ink);}
+.th-world-links strong {font:400 24px/1.2 var(--serif);}
+.th-world-links span {color:var(--ink-2);font:400 13px/1.75 var(--zn-read);}
+.th-regional {margin-top:32px;}
+.th-regional .th-companions {margin-block:12px 24px;}
+.th-regional .th-section-heading {display:none;}
+@media(max-width:959px){.th-world-links{grid-template-columns:repeat(2,minmax(0,1fr));}.th-cinema .th-tools{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:679px){.th-cinema .th-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;}.th-cinema .th-film-title{min-height:0;}.th-cinema .th-card-meta{min-height:0;}.th-world-reading{margin-top:48px;}.th-world-links{gap:12px;}.th-world-links>a{padding:18px;}.th-world-links strong{font-size:22px;}.th-regional .th-companions h3{font-size:25px;}.th-provider-actions{gap:10px;}}
+@media(max-width:359px){.th-cinema .th-tools,.th-world-links{grid-template-columns:minmax(0,1fr);}.th-cinema .th-tools>div:first-child{grid-column:auto;}}

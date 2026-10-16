@@ -47,7 +47,7 @@ KIND_LABEL = {"today": "Today", "language": "Language", "land": "Land", "governa
               "culture": "Culture", "population": "Population", "history": "History", "achievement": "Achievement"}
 SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Where we are"), ("credits", "Credits"),
            ("verification", "Verification"), ("for-nations", "For nations"), ("changes", "Corrections and removals")]
-NAV = [("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
+NAV = [("Theater", "/theater", None), ("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
        ("Coverage", "/nations/coverage", "coverage"), ("About", "/nations/about", "about"),
        ("For nations", "/nations/for-nations", "for-nations")]
 SHEET = NAV + [("Directory", "/nations/directory", "directory"), ("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
