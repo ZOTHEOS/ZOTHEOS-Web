@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T20:15:16.803839+00:00",
+  "measured_counts": {
+    "canonical_profiles": 472,
+    "raw_facts": 1346,
+    "public_facts": 1344,
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 9,
+    "practice_examples": 4,
+    "old_canonical_objects_preserved": 470,
+    "other_queue_tasks_preserved": 1809,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1674,
+      "needs_review": 134,
+      "blocked": 4
+    }
+  },
+  "independent_source_reviews": {
+    "ucan": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T20:07:45.147991+00:00",
+      "sha256": "58cae3ed2a10f0a669830a8eab9d5fa7ad72722febc3a5f06cc40be23e458ab4",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Independent source meaning and respect review completed."
+    },
+    "smn": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T20:07:49.278244+00:00",
+      "sha256": "519de5ae017c9e1b5bdc7e55c3e85cb26a71df295bb9c7a0f2cbc1061419ac5a",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Independent source meaning and respect review completed."
+    }
+  },
+  "source_verification": {
+    "actual_http_responses": 9,
+    "fact_urls_checked": 7,
+    "facts_verified": 8,
+    "robots": true,
+    "redirects_followed": false,
+    "measured_min_host_gap_seconds": 10.601342,
+    "report_sha256": "8dafcb4724c2d13b75c113c9c7bc1b0fcfab3dee5fb3cfb09ad055d8a3e4b365",
+    "capture_receipts_sha256": "f36e61ae975480571f469d1554dc1ddf9555d61f50701c1b6bc5ab8f86bed49d",
+    "earlier_run_min_utc_gap_seconds": 10.296852,
+    "earlier_run_disposition": "Retained with a measured timing shortfall; not rounded into compliance. Final bounded repeat uses a10.6-second wrapper floor.",
+    "human_review_claimed": false
+  },
+  "new_profiles": [
+    "southeastern-mvskoke-nation-us-al",
+    "united-cherokee-aniyunwiya-nation-us-al"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-state-al-united-cherokee-ani-yun-wiya-nation",
+    "profile-us-state-al-southeastern-mvskoke-nation",
+    "profile-us-state-al-machis-lower-creek-indian-tribe-of-al"
+  ],
+  "blocked_source": {
+    "url": "https://machistribe.com/robots.txt",
+    "http_status": 403,
+    "receipt": "research/receipts/2026-10-16-practice-machis-machis-robots.json",
+    "profile_published": false,
+    "directory_retained": true
+  },
+  "limits": "Historical UCAN plans are not current services or invitations. SMN institutional dates are not the origin of its people. Prior publication holds and manual conditions remain. Government directories never define who is Indigenous. Coverage remains incomplete. No human review or Nation approval is claimed.",
+  "publication_state": "Reviewed source integration; exact release and live checks remain separate."
+}

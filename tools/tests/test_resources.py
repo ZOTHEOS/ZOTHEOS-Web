@@ -65,7 +65,7 @@ def test_history_receipt_uses_last_verified_date_and_discloses_failed_attempt():
     page = b.resources()
     block = re.search(r'<article class="fact" id="history-fact-' + re.escape(fact['id']) + r'">(.*?)</article>', page, re.S).group(1)
     assert 'Checked <time datetime="2026-10-08">' in block
-    assert 'Our tool could not reach the page on <time datetime="2026-10-20">' in block
+    assert 'The tool could not reach the page on <time datetime="2026-10-20">' in block
     assert 'Checked <time datetime="2026-10-09">' not in block
 
 

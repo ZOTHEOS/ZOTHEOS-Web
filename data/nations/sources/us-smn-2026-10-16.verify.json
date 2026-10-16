@@ -1,0 +1,47 @@
+{
+  "region": "us-east-southeast",
+  "checked": "2026-10-16",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-16T20:07:49.278244+00:00",
+    "sha256": "519de5ae017c9e1b5bdc7e55c3e85cb26a71df295bb9c7a0f2cbc1061419ac5a",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Independent source meaning and respect review completed."
+  },
+  "results": [
+    {
+      "id": "southeastern-mvskoke-nation-us-al",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Own introduction explicitly says the named Nation is headquartered near Troy, AL. This is a locality, not a complete homeland or jurisdictional boundary."
+    },
+    {
+      "id": "southeastern-mvskoke-nation-us-al",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Own historical chapter explicitly dates this government organization to 1981 around Pike and Coffee County. It does not date the origin of the people or adjudicate recognition."
+    },
+    {
+      "id": "southeastern-mvskoke-nation-us-al",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Own historical chapter explicitly describes two revisions leading to its present name. This is not an alias claim that every similarly named Creek government is the same entity."
+    },
+    {
+      "id": "southeastern-mvskoke-nation-us-al",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "Own language introduction says it offers only a small portion of the language and states the intended audience as Tribal members and other Mvskokes. No translations, proficiency claim or current class/service promise is imported."
+    }
+  ],
+  "names": [
+    {
+      "id": "southeastern-mvskoke-nation-us-al",
+      "verdict": "keep",
+      "note": "Own homepage heading and historical name account support this particular Nation. Alabama roster exact-host lead corroborates subject linkage. No merge with the distinct Muscogee Nation or other Creek governments; no legal-recognition finding."
+    }
+  ]
+}

@@ -8,13 +8,14 @@ import pytest
 import game_nations as G
 import nations_lib as L
 from conftest import ROOT
+from test_game_shards import unpack
 
 
 def exported(model=None):
     outputs, nations, skipped = G.build(ROOT, model=model)
-    quick = json.loads(outputs["game/nations.json"])
-    history = json.loads(outputs["game/history.json"])
-    return outputs, {n["id"]: n for n in quick["nations"]}, history["nations"], skipped
+    quick = unpack(outputs, "nations")
+    history = unpack(outputs, "history")
+    return outputs, {n["id"]: n for n in quick}, history, skipped
 
 
 def test_existing_history_survives_quick_card_priorities_and_size_limits():

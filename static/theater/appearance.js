@@ -48,7 +48,7 @@
       opener = button;
       if (native) {
         var parentSheet = document.getElementById('navSheet');
-        // Native popovers keep a trigger's ancestor sheet open unless we close it explicitly.
+        // Native popovers keep a trigger's ancestor sheet open unless explicitly closed.
         if (parentSheet && parentSheet.contains(button) && typeof parentSheet.hidePopover === 'function') {
           try { parentSheet.hidePopover(); } catch (_) {}
         }

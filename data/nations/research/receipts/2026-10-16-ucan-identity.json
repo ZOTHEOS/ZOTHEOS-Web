@@ -1,0 +1,40 @@
+{
+  "url": "https://ucantribe.com/",
+  "final_url": "https://ucantribe.com/",
+  "retrieved_at": "2026-10-16T19:59:15.138631+00:00",
+  "http_status": 200,
+  "sha256": "818709ca4b15df4f7f237906a68b2e81c21583a2f32ad7f4bb7a6048f282d77d",
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T20:15:16.803839+00:00",
+  "directory_id": "us-state-al-united-cherokee-ani-yun-wiya-nation",
+  "registry_id": "united-cherokee-aniyunwiya-nation-us-al",
+  "own_published_name": "United Cherokee AniYunWiYa Nation",
+  "official_url": "https://ucantribe.com/",
+  "directory_source": {
+    "publisher": "Alabama Indian Affairs Commission",
+    "title": "Tribes Recognized by the State of Alabama",
+    "url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+    "retrieved_at": "2026-10-15T08:34:16.099943+00:00",
+    "sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+    "receipt": "receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+    "publication_date": null,
+    "source_edition": "One-page PDF linked by the commission board directory on 15 Oct 2026 UTC. No explicit publication or revision date appears on the page. Server Last-Modified is 2026-10-07 but is not an event or legal effective date.",
+    "directory_link_source_url": "https://aiac.alabama.gov/board-commissioners",
+    "directory_link_receipt": "receipts/us-al-aiac-board-2026-10-15.receipt.json",
+    "source_page_label_note": "The PDF has one physical page. Its printed footer says PAGE 2."
+  },
+  "own_home_receipt": "research/receipts/2026-10-16-practice-ucan-ucan-home.json",
+  "evidence_phrase": "United Cherokee AniYunWiYa Nation",
+  "review": {
+    "evidence": "The attributed Alabama directory prints this exact host. The retained own homepage uses the Nation name; dated own pages establish the distinct community context. This is a scoped identity link, not a legal recognition decision."
+  },
+  "independent_review_sha256": "58cae3ed2a10f0a669830a8eab9d5fa7ad72722febc3a5f06cc40be23e458ab4",
+  "missingness_audit": {
+    "existing_profiles_scanned": 470,
+    "same_identity_or_alias_found": false
+  },
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

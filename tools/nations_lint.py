@@ -11,7 +11,7 @@
   - labels: every TEXT string in herald.js and every mono label in the built pages is ASCII, the middle dot, or a code
     point used in regions.json display names
   - no rule in the stylesheet uppercases or italicizes a name; no speech synthesis in nations pages or the game
-  - banned terms (ARCHITECTURE 9.1) absent from our own copy (templates and partials; fact text is validate.py's
+  - banned terms (ARCHITECTURE 9.1) absent from publisher copy (templates and partials; fact text is validate.py's
     job; a source title is the publisher's words, quoted as published); a held fact's text absent from every output
   - fold parity: the fold shipped in nations.html's herald.js (run with node) equals tools/nations_fold.py over every
     name, other name, retrieval name, lands line, region and country name
@@ -282,7 +282,7 @@ def main(argv=None):
         if "partials" in p or "templates" in p:
             mb = BANNED.search(re.sub(r"<[^>]+>", " ", t))
             if mb:
-                errs.append(f"{os.path.relpath(p, root)}: banned term {mb.group(0)!r} in our own copy")
+                errs.append(f"{os.path.relpath(p, root)}: banned term {mb.group(0)!r} in publisher copy")
         for h in held:
             if h in t or json.dumps(h, ensure_ascii=False)[1:-1] in t:
                 errs.append(f"{os.path.relpath(p, root)}: a fact held for review is published")

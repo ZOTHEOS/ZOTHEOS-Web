@@ -845,6 +845,54 @@
       "discovery_date": "2026-10-16",
       "status": "source_located",
       "note": "HTTPS candidate from scheme-less lead in retained Alabama roster. Access scope only; no identity/reuse/publication or redirect approval."
+    },
+    {
+      "source_id": "own-machis-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://machistribe.com/",
+      "allowed_hosts": [
+        "machistribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Exact-host HTTPS access scope from retained Alabama roster; not an identity, factual, reuse or publication approval. No redirects preapproved."
+    },
+    {
+      "source_id": "own-ucan-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://ucantribe.com/",
+      "allowed_hosts": [
+        "ucantribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Exact-host HTTPS access scope from retained Alabama roster; not an identity, factual, reuse or publication approval. No redirects preapproved."
+    },
+    {
+      "source_id": "own-southeastern-mvskoke-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://southeasternmvskokenation.org/",
+      "allowed_hosts": [
+        "southeasternmvskokenation.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Third bounded research-queue subject after a robots403 stopped Ma-Chis. Exact-host HTTPS lead from retained Alabama roster only; identity, factual and publication decisions pending. No redirects approved."
     }
   ]
 }
