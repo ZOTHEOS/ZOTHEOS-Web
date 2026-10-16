@@ -5,27 +5,66 @@
   "items": [
     {
       "id": "trec-denver-2025",
-      "status": "needs-original-recording",
+      "status": "recording-matched",
       "title": "Truth, Restoration, and Education Commission Presentation - Denver Fall Tribal Convening 2025",
       "requested_recording_publication_date": "2025-12-01",
-      "date_status": "user-reported; original recording not yet matched",
-      "reason": "Supplied transcript and official commission reports reviewed. Exact original recording title, channel and URL remain unverified. Do not substitute the separate 2026 film.",
-      "next": "Match an original video URL against publisher metadata and the supplied transcript before adding a watch record.",
+      "date_status": "Publisher upload date verified; precise event date not inferred.",
+      "reason": "Exact publisher recording and context matched against the supplied transcript. Legal interpretations remain attributed to the speaker.",
+      "next": "Monitor publisher availability; do not claim full-recording editorial or caption review.",
       "source_urls": [
         "https://www.peopleofthesacredland.org/reports",
-        "https://www.peopleofthesacredland.org/curriculums-virtual-learning"
-      ]
+        "https://www.peopleofthesacredland.org/curriculums-virtual-learning",
+        "https://www.youtube.com/watch?v=KLDIXcFlJRA"
+      ],
+      "history": [
+        {
+          "status": "needs-original-recording",
+          "title": "Truth, Restoration, and Education Commission Presentation - Denver Fall Tribal Convening 2025",
+          "requested_recording_publication_date": "2025-12-01",
+          "date_status": "user-reported; original recording not yet matched",
+          "reason": "Supplied transcript and official commission reports reviewed. Exact original recording title, channel and URL remain unverified. Do not substitute the separate 2026 film.",
+          "next": "Match an original video URL against publisher metadata and the supplied transcript before adding a watch record.",
+          "source_urls": [
+            "https://www.peopleofthesacredland.org/reports",
+            "https://www.peopleofthesacredland.org/curriculums-virtual-learning",
+            "https://www.youtube.com/watch?v=KLDIXcFlJRA"
+          ]
+        }
+      ],
+      "recording_url": "https://www.youtube.com/watch?v=KLDIXcFlJRA",
+      "checked": "2026-10-16"
     },
     {
       "id": "daughter-excerpt-playback",
-      "status": "provider-unavailable",
-      "reason": "The publisher-provided PBS player displayed This video is currently not available during the browser check. Embed disabled; official excerpt page and transcript remain linked.",
-      "checked": "2026-10-16"
+      "status": "related-official-edition-found",
+      "reason": "The unavailable 200-second PBS edit remains a source and transcript. A distinct 221-second WORLD YouTube excerpt is now the selected preview; no identical-edit claim.",
+      "checked": "2026-10-16",
+      "history": [
+        {
+          "status": "provider-unavailable",
+          "reason": "The publisher-provided PBS player displayed This video is currently not available during the browser check. Embed disabled; official excerpt page and transcript remain linked.",
+          "checked": "2026-10-16"
+        }
+      ]
     },
     {
       "id": "expand-indigenous-led-viewing",
       "status": "queued",
       "next": "Research additional Nations and Indigenous-led filmmakers, authorized full-film and caption/transcript options, cultural continuity, current land and water struggles and community-led victories. Do not reuse an old viewing window as current availability."
+    },
+    {
+      "id": "first-light-player",
+      "status": "official-source-only",
+      "checked": "2026-10-16",
+      "reason": "The filmmaker offers this 13m 02s short for individual viewing, but its player requested email registration in our 2026-10-16 browser check. Continue at the official source; no registration is submitted here. Public and school screenings have separate licensing.",
+      "next": "Recheck the publisher before restoring an embedded player; do not submit forms or bypass access terms."
+    },
+    {
+      "id": "bring-them-home-player",
+      "status": "official-source-only",
+      "checked": "2026-10-16",
+      "reason": "PBS lists a 78m 53s ASL full-film edition, but its embedded player reported unavailable in our 2026-10-16 browser check. Continue at PBS for current access. Region, account and viewing-window terms can change.",
+      "next": "Recheck the publisher before restoring an embedded player; do not submit forms or bypass access terms."
     }
   ]
 }
