@@ -146,7 +146,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-RtrOOlP8NWI+CgkDql6ZYmIb0KC9xbWuESPJwLnQ4FA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://i.ytimg.com https://i.vimeocdn.com https://image.pbs.org https://assets.nfbcdn.ca; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org https://player.vimeo.com https://www.nfb.ca; worker-src 'none'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-4KwPyy5IdYAMFWJMvOVgk3kbYRFNBohUx6Tbmx1ZJfs=' 'sha256-RtrOOlP8NWI+CgkDql6ZYmIb0KC9xbWuESPJwLnQ4FA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://i.ytimg.com https://i.vimeocdn.com https://image.pbs.org https://assets.nfbcdn.ca; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org https://player.vimeo.com https://www.nfb.ca; worker-src 'none'; frame-ancestors 'none'"
         }
       ]
     },
@@ -155,7 +155,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-RtrOOlP8NWI+CgkDql6ZYmIb0KC9xbWuESPJwLnQ4FA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://i.ytimg.com https://i.vimeocdn.com https://image.pbs.org https://assets.nfbcdn.ca; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org https://player.vimeo.com https://www.nfb.ca; worker-src 'none'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-4KwPyy5IdYAMFWJMvOVgk3kbYRFNBohUx6Tbmx1ZJfs=' 'sha256-RtrOOlP8NWI+CgkDql6ZYmIb0KC9xbWuESPJwLnQ4FA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://i.ytimg.com https://i.vimeocdn.com https://image.pbs.org https://assets.nfbcdn.ca; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org https://player.vimeo.com https://www.nfb.ca; worker-src 'none'; frame-ancestors 'none'"
         }
       ]
     },
