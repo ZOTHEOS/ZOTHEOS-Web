@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T16:54:37.982810+00:00",
+  "source_check_date": "2026-10-16",
+  "publication_state": "Independently reviewed local candidate. Exact commit, browser, required checks and production verification remain separate gates.",
+  "new_profiles": [
+    {
+      "id": "sappony-us-nc",
+      "name": "Sappony",
+      "official_url": "https://www.sappony.org/"
+    },
+    {
+      "id": "waccamaw-siouan-tribe-us-nc",
+      "name": "Waccamaw Siouan Tribe",
+      "official_url": "https://waccamaw-siouan.org/"
+    }
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 7,
+    "canonical_profiles": 469,
+    "raw_facts": 1334,
+    "public_facts": 1332,
+    "held_facts": 2,
+    "previous_canonical_objects_preserved": 467,
+    "directory_source_records": 2272,
+    "nc_confirmed_profile_links": 4,
+    "nc_own_site_identity_reviews": 5,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1680,
+      "needs_review": 130,
+      "blocked": 2
+    }
+  },
+  "source_verification": {
+    "run_date": "2026-10-16",
+    "dry_run": false,
+    "robots": true,
+    "host_interval_s": 10.2,
+    "urls_total": 6,
+    "urls_checked": 6,
+    "requests_sent": 8,
+    "facts_checked": 8,
+    "facts_unchecked": 0,
+    "status": {
+      "verified": 8
+    }
+  },
+  "independent_source_review_sha256": "9cc1f0143c4103d5d893ffb982fa24731e27374890df2d8476dd967fccc54ae8",
+  "independent_history_code_review_sha256": "27f45cb58403ff17e86f96b6b8fbd67402953330eb364037865b3d012ed1126d",
+  "human_approval_created": false,
+  "nation_endorsement_claimed": false,
+  "retained_response_metadata_records": 13,
+  "old_queue_tasks_unchanged": 1810,
+  "identity_receipts": {
+    "us-state-nc-sappony": "receipts/2026-10-16-next-sappony-identity.json",
+    "us-state-nc-waccamaw-siouan-tribe": "receipts/2026-10-16-next-waccamaw-identity.json"
+  },
+  "preservation": [
+    "All 467 previous canonical objects, fact clocks, prior holds and publisher conditions are preserved.",
+    "The original NC source edition and Catawba conflicting day remain unchanged.",
+    "No oral-origin material, sacred instructions, media, personal contacts, current statewide count or current service availability is imported."
+  ],
+  "remaining_gaps": [
+    "US and worldwide coverage remains incomplete; government inventories do not define who is Indigenous.",
+    "The Sappony community link returned HTTP 404; quilt article prose and images remain unused.",
+    "Waccamaw program aims are not proof of current operation or outcomes.",
+    "Prior Meherrin and Occaneechi scoped reviews remain manual and unchanged."
+  ]
+}

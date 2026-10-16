@@ -59955,7 +59955,7 @@
       "region": "us-state-nc",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-nc-tribal-directory"
       ],
@@ -59975,9 +59975,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.sappony.org/",
+          "retrieved_at": "2026-10-16T16:38:01.988890+00:00",
+          "http_status": 200,
+          "sha256": "119a1f92262edb6580dbac30605c98e55853ed42ca0c6a3a58936e88806a9da3",
+          "source_id": "us-nc-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-next-sappony-own-home.json",
+          "receipt_id": "r-4a6a8052e343b2e8"
+        }
+      ],
+      "updated_at": "2026-10-16T16:54:38.271500+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-next-sappony-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-nc-waccamaw-siouan-tribe",
@@ -59991,7 +60007,7 @@
       "region": "us-state-nc",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-nc-tribal-directory"
       ],
@@ -60011,9 +60027,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://waccamaw-siouan.org/",
+          "retrieved_at": "2026-10-16T16:39:57.563113+00:00",
+          "http_status": 200,
+          "sha256": "b965fd6d3f48e0f970c106bed74f217902c45375a877f9f3e6964da09b4d42d8",
+          "source_id": "us-nc-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-next-waccamaw-waccamaw-home.json",
+          "receipt_id": "r-d588ffad39a82ffe"
+        }
+      ],
+      "updated_at": "2026-10-16T16:54:38.271500+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-next-waccamaw-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "identity-us-nc-catawba-statement-conflict",

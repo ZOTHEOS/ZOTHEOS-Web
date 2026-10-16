@@ -89,6 +89,7 @@ class Context:
                           "publisher": text(entry.get("publisher"), 160)}
         records = 0
         pending_notes = []
+        reading_keys = set()
         resource_index = {}
         for path in files:
             if path.resolve().parent != source_folder.resolve():
@@ -107,6 +108,16 @@ class Context:
                 title = text(note["title"], 160) if "title" in note else None
                 if title is not None and not title.strip():
                     raise ValueError("context: empty note title")
+                reading_id = None
+                if "reading_id" in note:
+                    reading_id = note["reading_id"]
+                    if (not isinstance(reading_id, str) or len(reading_id) > 48
+                            or not ID.fullmatch(reading_id) or title is None):
+                        raise ValueError("context: invalid history reading id or missing title")
+                    key = (nid, reading_id)
+                    if key in reading_keys:
+                        raise ValueError("context: duplicate history reading id")
+                    reading_keys.add(key)
                 refs = None
                 if "source_urls" in note:
                     refs = note["source_urls"]
@@ -118,7 +129,7 @@ class Context:
                     for address in refs:
                         self.source_url(address)
                 pending_notes.append((nid, body, reviewed, title, refs,
-                                      self.visible(nid, note, public_facts)))
+                                      self.visible(nid, note, public_facts), reading_id))
             for resource in groups["official_resources"]:
                 nid = self.nation(resource.get("nation"), known)
                 address = text(resource.get("url"), 700)
@@ -150,7 +161,7 @@ class Context:
                         self.add(nid, "relations", (statement, tuple(others), reviewed))
 
         # Resolve explicit citations after all files, preserving original note order.
-        for nid, body, reviewed, title, refs, visible in pending_notes:
+        for nid, body, reviewed, title, refs, visible, reading_id in pending_notes:
             citations = []
             if refs is not None:
                 for address in refs:
@@ -165,7 +176,7 @@ class Context:
                         visible = False
                     citations.append(resource)
             if visible:
-                self.add(nid, "notes", (body, reviewed, title, tuple(citations)))
+                self.add(nid, "notes", (body, reviewed, title, tuple(citations), reading_id))
 
     @staticmethod
     def source_url(address):
@@ -210,9 +221,19 @@ class Context:
             return ""
         out = ['<section class="n-sec" aria-labelledby="nContext">',
                '<h2 class="n-sec-h" id="nContext">Context and resources</h2>']
-        for body, reviewed, title, citations in entry.get("notes", []):
+        notes = entry.get("notes", [])
+        guide = [(title, reading_id) for _, _, title, _, reading_id in notes if reading_id is not None]
+        if len(guide) >= 2:
+            out.append('<nav class="nation-reading" aria-label="In This History">'
+                       '<p class="lbl">In This History</p><ul>')
+            for title, reading_id in guide:
+                out.append(f'<li><a href="#nHistory-{esc(reading_id)}">{esc(title)}</a></li>')
+            out.append('</ul></nav>')
+        for body, reviewed, title, citations, reading_id in notes:
             if title is not None:
-                out.append(f'<h3 class="n-sec-h">{esc(title)}</h3>')
+                target = (f' id="nHistory-{esc(reading_id)}" tabindex="-1"'
+                          if reading_id is not None else "")
+                out.append(f'<h3 class="n-sec-h"{target}>{esc(title)}</h3>')
             out.append(f'<p class="fact-t">{esc(body)}</p><p class="rc">Context reviewed {stamp(reviewed)} by ZOTHEOS.</p>')
             if citations:
                 out.append('<p class="rc">Sources For This Layer</p><ul class="src-u">')

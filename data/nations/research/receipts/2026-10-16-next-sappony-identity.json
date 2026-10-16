@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T16:53:37.771026+00:00",
+  "directory_id": "us-state-nc-sappony",
+  "registry_id": "sappony-us-nc",
+  "own_published_name": "Sappony",
+  "official_url": "https://www.sappony.org/",
+  "own_home_receipt": "research/receipts/2026-10-16-next-sappony-own-home.json",
+  "directory_source": {
+    "publisher": "North Carolina Department of Administration, American Indian Affairs",
+    "title": "NC Tribal Communities",
+    "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+    "publication_date": null,
+    "as_of": null,
+    "retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+    "sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485",
+    "receipt": "receipts/us-nc-doa-tribes-2026-10-14.receipt.json",
+    "source_edition": "Unversioned public web directory observed on 2026-10-14 UTC; no record-level effective date established.",
+    "as_of_scope_note": "Inventory as_of is the UTC retrieval date, not a recognition-grant date."
+  },
+  "ownership_chain": "The retained October14 NC directory links HTTPS www.sappony.org, whose normalized root homepage and own history/governance were read successfully.",
+  "independent_review_sha256": "9cc1f0143c4103d5d893ffb982fa24731e27374890df2d8476dd967fccc54ae8",
+  "missingness_audit": {
+    "existing_profiles_scanned": 467,
+    "matching_identity_or_aliases": 0
+  },
+  "human_review_claimed": false,
+  "limits": "Specific community and Tribal government identity only; no new recognition decision or exhaustive territorial extent. Original directory edition and other identities remain unchanged.",
+  "url": "https://www.sappony.org/",
+  "retrieved_at": "2026-10-16T16:38:01.988890+00:00",
+  "http_status": 200,
+  "sha256": "119a1f92262edb6580dbac30605c98e55853ed42ca0c6a3a58936e88806a9da3",
+  "final_url": "https://www.sappony.org/",
+  "evidence_phrase": "Sappony"
+}

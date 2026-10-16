@@ -1,8 +1,8 @@
 {
   "version": "1",
   "generated": "2026-10-16",
-  "count": 467,
-  "facts": 1326,
+  "count": 469,
+  "facts": 1334,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 35,
+    "us-east-southeast": 37,
     "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
@@ -25553,6 +25553,167 @@
             "accessed": "2026-10-16"
           },
           "evidence": "citizens and community members of all ages",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "sappony-us-nc",
+      "region": "us-east-southeast",
+      "name": "Sappony",
+      "also": [],
+      "pronounce": null,
+      "lands": "the High Plains Indian Settlement along the North Carolina-Virginia boundary, including Person County, North Carolina, and Halifax County, Virginia, as described by Sappony",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.sappony.org/",
+      "name_source_url": "https://www.sappony.org/",
+      "facts": [
+        {
+          "id": "sappony-us-nc-18cc5dab",
+          "text": "Sappony identifies traditional homelands in the High Plains Settlement across North Carolina's Person County and Virginia's Halifax County.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Sappony History Timeline - Sappony",
+            "publisher": "Sappony",
+            "url": "https://www.sappony.org/sappony-timeline",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "Person County, NC and Halifax County, VA",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "sappony-us-nc-3a6ebeb0",
+          "text": "Sappony's timeline dates replacing the state label 'Indians of Person County' with 'Sappony' to 2003.",
+          "kind": "history",
+          "as_of": "2003",
+          "source": {
+            "title": "Sappony History Timeline - Sappony",
+            "publisher": "Sappony",
+            "url": "https://www.sappony.org/sappony-timeline",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "in 2003, our name officially changed",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "sappony-us-nc-91847df3",
+          "text": "Sappony's governance page describes a council with one elected representative from each of the settlement's seven families.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Governance - Sappony",
+            "publisher": "Sappony",
+            "url": "https://www.sappony.org/governance",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "one elected representative from each of the seven families",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "sappony-us-nc-ebc5e3c9",
+          "text": "Sappony describes committees addressing education, cultural preservation and economic development.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Governance - Sappony",
+            "publisher": "Sappony",
+            "url": "https://www.sappony.org/governance",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "education, cultural preservation, public relations, and economic development",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "waccamaw-siouan-tribe-us-nc",
+      "region": "us-east-southeast",
+      "name": "Waccamaw Siouan Tribe",
+      "also": [
+        "Waccamaw Siouan Indians",
+        "Waccamaw Siouan Indian Tribe"
+      ],
+      "pronounce": null,
+      "lands": "Bladen and Columbus Counties in southeastern North Carolina, near Green Swamp",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://waccamaw-siouan.org/",
+      "name_source_url": "https://waccamaw-siouan.org/",
+      "facts": [
+        {
+          "id": "waccamaw-siouan-tribe-us-nc-601c565c",
+          "text": "The Tribe's introduction places its communities mainly in Bladen and Columbus Counties, North Carolina, near Green Swamp.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Waccamaw Siouan Tribe - Home",
+            "publisher": "Waccamaw Siouan Tribe",
+            "url": "https://waccamaw-siouan.org/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "North Carolina counties of Bladen and Columbus",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "waccamaw-siouan-tribe-us-nc-cad344f4",
+          "text": "The Tribe's history identifies Priscilla Freeman Jacobs as its first female chief, serving from 1986 to 2005.",
+          "kind": "history",
+          "as_of": "2005",
+          "source": {
+            "title": "History",
+            "publisher": "Waccamaw Siouan Tribe",
+            "url": "https://waccamaw-siouan.org/history",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "first female chief (from 1986 to 2005)",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "waccamaw-siouan-tribe-us-nc-b7f9ead9",
+          "text": "Its government page describes a Tribal Council elected by the membership and an Elders Review Committee.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Government",
+            "publisher": "Waccamaw Siouan Tribe",
+            "url": "https://waccamaw-siouan.org/government",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "members who are elected by the tribal membership",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "waccamaw-siouan-tribe-us-nc-73ec1f2e",
+          "text": "The program overview describes elder-led, hands-on education and STEAM learning as aims for tribal youth.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "Overview",
+            "publisher": "Waccamaw Siouan Tribe",
+            "url": "https://waccamaw-siouan.org/overview",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "hands-on learning workshops conducted by elders",
           "status": "verified",
           "checked": "2026-10-16",
           "last_verified": "2026-10-16"

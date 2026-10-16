@@ -18,20 +18,21 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope, Checked October 16, 2026
 
-The registry contains 461 researched profiles and 1,302 raw facts. Publication controls currently show
-1,300 facts and retain two existing holds. The latest bounded batch adds Nansemond Indian Nation and
-Upper Mattaponi Tribe as separate profiles, with eight sourced facts, four titled history layers and
-four direct links to their own resources. Every earlier canonical record and fact date is preserved.
+The registry contains 469 researched profiles and 1,334 raw facts. Publication controls currently show
+1,332 facts and retain two existing holds. The latest bounded batch adds distinct Sappony and Waccamaw
+Siouan Tribe profiles with eight checked facts, four source-linked history layers and seven direct
+own-publisher resources. All 467 previous canonical objects and fact clocks stay unchanged.
 
-The directory preserves 2,272 differently scoped source records in eight lists. Ten source records
-have reviewed links to researched profiles. These overlapping units are not a count of distinct
-Indigenous Nations. US and worldwide coverage remain incomplete; government recognition is not the
-definition of Indigenous identity. Four state inventories are preserved, while 46 other state source
-scopes and four additional inclusion lanes remain pending.
+The directory preserves 2,272 differently scoped records across eight inventories. Two more North
+Carolina rows link to independently reviewed profiles, while the original source edition and Catawba
+date discrepancy remain intact. Four state source inventories are preserved; 46 other state source
+scopes and four additional inclusion lanes remain pending. These overlapping units are not a count
+of distinct Indigenous Nations. Government recognition never defines Indigenous identity.
 
-Matching Names now places a readable summary beside the results and offers clear recovery routes
-when no records match. Searching researched profiles remains a separate route. All directory names
-stay available without JavaScript; filters do not remove pending names from the underlying record.
+The two new histories have native In This History links to stable titled sections. Their text and
+exact supporting sources remain readable without JavaScript. Earlier histories are not silently
+opted in or rewritten. Publication holds filter navigation and its targets together. Current services,
+outcomes, human review, Tribal approval and complete coverage are not inferred.
 
 ## October 16: Distinct Chickahominy Profiles And Native Reading Links
 
