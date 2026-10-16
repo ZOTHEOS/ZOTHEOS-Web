@@ -437,3 +437,30 @@ The directory retains 2,272 overlapping source records. The 1,812-task queue has
 128 needing review and two existing blocked tasks. Different source units are not added into a count
 of distinct Nations, and no complete US or worldwide coverage is claimed. The batch and source
 metadata are retained in `batches/2026-10-16-us-source-scopes-and-layer-links.json` and `receipts/`.
+
+## October 16: Sappony, Waccamaw Siouan And Native History Navigation
+
+Two missing North Carolina directory profiles gain separately reviewed own-source histories. Sappony
+preserves its High Plains community across North Carolina and Virginia, changing livelihoods, chosen
+name and shared family governance. Waccamaw Siouan preserves an attributed account of refuge and
+continuity, the completed 1986 to 2005 leadership period of Priscilla Freeman Jacobs, member governance
+and stated educational aims. Related peoples and similarly named governments remain distinct.
+
+Eight facts passed the actual isolated verifier across six cited URLs with robots enabled and a
+10.2-second host interval. Seven own resources support four short reading layers. Unknown publication
+dates stay unknown; historical event dates and actual October 16 checks remain separate. Older statewide
+counts, uncertain early-contact chronology, oral-origin accounts, personal contacts, media and current
+service promises are excluded. The Sappony community HTTP 404 and inspected-but-unused article are recorded
+as limits, not successful sources or a profile-wide takedown.
+
+Optional per-note reading_id creates stable native heading targets. With at least two visible opted-in
+layers, In This History offers wrapping touch/keyboard links. Duplicate IDs within one Nation fail even
+if a candidate is held. Holds suppress the related link and target; surviving IDs never renumber.
+Legacy fragments without opt-in remain byte-exact. No new scripts, storage or remote request is added.
+
+Coverage is 469 canonical profiles, 1,334 raw facts and 1,332 public facts, with two prior held facts.
+The 1,812-task queue changes only these two subjects; 1,680 tasks remain pending, 130 need review and
+two prior tasks remain blocked. Directory names still comprise 2,272 overlapping records, not distinct
+Nations. Meherrin, Occaneechi and all prior publication-scope/backoff decisions remain unchanged.
+The source batch is batches/2026-10-16-us-sappony-waccamaw.json. Review and live verification are separate
+release gates; no human or Nation approval is claimed.

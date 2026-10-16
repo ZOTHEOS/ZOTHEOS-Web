@@ -1,0 +1,156 @@
+{
+  "decision": "approve",
+  "checked_at": "2026-10-16T17:04:23.586442+00:00",
+  "reviewer": "ZOTHEOS",
+  "baseline_commit": "bea888049aa62b7898f1a3d73664c6336c68c3b3",
+  "scope": "Bounded Sappony/Waccamaw Siouan own-source expansion and opt-in native history navigation.",
+  "actual_independent_results": {
+    "source_profiles": 2,
+    "facts": 8,
+    "layers": 4,
+    "resources": 7,
+    "installed_acceptance_cases_passed": 47,
+    "prior_canonical_objects_exact": 467,
+    "prior_context_fragments_byte_exact": 467,
+    "unrelated_queue_tasks_exact": 1810,
+    "retained_response_metadata_verified": 13,
+    "prior_quick_game_records_exact": 467,
+    "prior_history_game_records_exact": 85
+  },
+  "current_counts": {
+    "profiles": 469,
+    "raw_facts": 1334,
+    "public_facts": 1332,
+    "held_facts": 2,
+    "quick_game_facts": 932,
+    "game_history_nations": 87
+  },
+  "csp": {
+    "vercel_sha256": "3e1cf05dd3fe3f3f1fd39e9deb9b9bd548e56f990dfe714dd71ce50d7bd77b58",
+    "changed_policies": [
+      {
+        "route": "/nations",
+        "old_hash": "'sha256-PtBVQMZx/yLfyzqrx6Tq1vHuJQVSctN9K93SjGD5Css='",
+        "new_hash": "'sha256-KNKC8vJnb7OFlUMbMFKHI81EsdHNZlZitmWkpvvcCKE='"
+      },
+      {
+        "route": "/nations.html",
+        "old_hash": "'sha256-PtBVQMZx/yLfyzqrx6Tq1vHuJQVSctN9K93SjGD5Css='",
+        "new_hash": "'sha256-KNKC8vJnb7OFlUMbMFKHI81EsdHNZlZitmWkpvvcCKE='"
+      }
+    ],
+    "all_other_directives_origins_tokens_exact": true,
+    "only_changed_script_is_herald_application_json_data": [
+      {
+        "path": "/nations",
+        "before": 467,
+        "after": 469
+      },
+      {
+        "path": "/regions/3/ab",
+        "before": 35,
+        "after": 37
+      },
+      {
+        "path": "/regions/3/n",
+        "before": 35,
+        "after": 37
+      },
+      {
+        "path": "/regions/3/s/0",
+        "before": "us-east-southeast.ba8427f4.json",
+        "after": "us-east-southeast.07bdfc63.json"
+      }
+    ],
+    "executable_script_texts_exact": true
+  },
+  "file_pins": {
+    "data/nations/README.md": "536fffc58a057223faaf347283b03aaa71d19a440840a85d804d515eec29c6dc",
+    "data/nations/context_links.json": "6fd5d64b38e7952580a22919d0047450b6ddeafbf5975e760dd51753dbbf703a",
+    "data/nations/nations.json": "5d8f0c9b1f15794eae39f5e0fee1696ee6b109891d75dfa93cdbb15d7c3dc91a",
+    "data/nations/nations.min.json": "28248670fe7fd2eea1eca3ae8f45e7ad9272b91d79a391b33312f5bc966649c5",
+    "data/nations/overrides.json": "62bed3716b5184e12ee8ee54579b7777fe73df7d39e0c26de82347ab88d71444",
+    "data/nations/research/README.md": "b99bd1c074bad01156540b7398003ca5b71764e3d2980685352ca913db95e6d1",
+    "data/nations/research/batches/2026-10-16-us-sappony-waccamaw.json": "d3189dd5793a33a00d7a2a4fea3189f7bb9b649c9e80affd4bdc4b4479780630",
+    "data/nations/research/coverage_queue.json": "9ccba601d87178400f6cb58201c63143ed9bf7687702a5d187f6f3e432b3829e",
+    "data/nations/research/directory_sources.json": "07e480d8d1a18635e1b0794e1941fde6af743857c940d3103bcc4b09b30a2f5e",
+    "data/nations/research/publication_holds.json": "3d4b858e40a7f7bf83e45a7c025309f4a160e763fd311243b942e8cad8778263",
+    "data/nations/research/receipts/2026-10-16-next-sappony-identity.json": "7c6dbc659b8d862504b8fbe1d98599660b8a709ba141417b0b9f206e1ff1608b",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-community.json": "6762e8c90c184a4088d8a99994736d8685de9a00c9a9320868c187662f479776",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-governance.json": "fd868d476e984f7004e2c724a5ed3853eb381247800bc374997df09d9165c92b",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-home.json": "d409c4b780fb66aecae28a28d8f15d8e654f39c5b64532d6f1132e727c9bf944",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-quilts.json": "c5a9b58e023286f348017286ae699fce426eead1cff9cba1d3b0d3dcaab7f723",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-robots.json": "69393746c8441ae50b99412dad52dd9c8c72a25a2e73b10b3cfb786c8d83b742",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-stories-index.json": "e6055650f4e5bfe7862b53de0da405545138a02c7c36267e04e77c85fdadf226",
+    "data/nations/research/receipts/2026-10-16-next-sappony-own-timeline.json": "62084575588f6e4a503bd61c870c3fb3bf503a5f90b89cb8de4464d66508c320",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-identity.json": "7b001f5321b4ac57e4c436020c7666c954106ed50eb3ea6525fa5042d555fba3",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-apex-robots.json": "8556888bb9ee5492d549b2b32edb0bda20e8b3527ff32cc46be461108883a815",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-government.json": "deb0a6a12d48b0b4608e6262b9128c0e292227af05482f4639b20389ec0469ac",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-history.json": "abd2768df4713536b9a35ba34d8e559a677f6b5cd6da04e090d6dda13001e742",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-home.json": "cad0cf27d26d5e7805b8599211fba6f0f23960542f83d98aef1cabea12e7de7d",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-overview.json": "41bf605b84ac794948d6035a78ff872f1f4c83c68b485c326bc80561d818d67a",
+    "data/nations/research/receipts/2026-10-16-next-waccamaw-waccamaw-robots.json": "99c6a36e9e18f122ddea671e18bc345978a3df52cf8c3f0d17ecafd7d25148d3",
+    "data/nations/research/us_nc_state_directory_2026.json": "2e91af6fb9b4db1f29748d482d9c12f137fd373ff42163d41c409cd982498286",
+    "data/nations/sources/expansion-us-east-southeast-2026-10-16-sappony-waccamaw.raw.json": "0e11941bf95a1ddc0b6f33305b50d1f14db9ec9c912e3a86836db7139c7baccb",
+    "data/nations/sources/expansion-us-east-southeast-2026-10-16-sappony-waccamaw.respect.json": "e74360125151868a3748bb45b7f9ad46d003058c6698d8389ba575790265394b",
+    "data/nations/sources/expansion-us-east-southeast-2026-10-16-sappony-waccamaw.verify.json": "24a7aa72899ae02af8d0c5ef93f6df150e703811ffca5cf791250925391a3743",
+    "data/nations/sources/us-sappony-waccamaw-2026-10-16.context.json": "3632138a2e2b388cd7026fde5b77ae464dfb232cca7176966893d87ebfa91526",
+    "data/nations/verify/history.json": "73a25dff43dc63d978d69a0455344e75be64e0fd4661c4008e6d9a1bf24cb193",
+    "data/nations/verify/human.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/theater/films.json": "10ad5ad03008dc1a89a548bf0daa691e9131ed614dbd309cf79089d5cfac5cd4",
+    "game/history.json": "d35fa4f66b8e95fc0c1c576cb015e72f428ef46c3b37cf2e1a4c33d0f0fb6044",
+    "game/index.html": "0d5f6085a299145e0fff01a53ff7799d0fe019b23e030a84d1701f531e47af22",
+    "game/index.src.html": "598ff941bdb6121ea49dfbf4b16ccfa83d563f19d41905f7ed81e930b73cb9cc",
+    "game/nations.json": "9eb471e3adcb6d4c8a958c9b52ae2728971f7c5983460d65ea52880cac4ae531",
+    "index.html": "55454006cbc6e24bfd159165088104a83ad5018905a019d887e1e03da9f2f7c4",
+    "nations.html": "2b62acdcee2b0ab9ae477ae2c13692c426c88990878188668161e21213dad3a3",
+    "nations/directory.html": "6f7b6e2d3a2d202890ba8273dfd7a30ee34b6c6b56864355f1123c81dc3c0f9e",
+    "nations/sappony-us-nc.html": "8f562668a3b3f8b7c801cd9afc32e49a6d40c90ba0861eb3774c68116008cea9",
+    "nations/waccamaw-siouan-tribe-us-nc.html": "81d3750297201053f94b0e366abe4f59f9707a95541556c4c537c7c7653c4346",
+    "static/nations/nations.4467fb5c.css": "4467fb5c73539015137210845c32097497d8999e11d9b355f0fb24466477d1c5",
+    "static/theater/theater.css": "29d3624c5699f149d902b3f5a74771b952fccd806bd2fc6584a2f84ab310cac4",
+    "static/theater/theater.js": "46dace3a53fc35623e0a0903aa5e9962621bd0a0bdc5b5ae1123c9c0b9d0e050",
+    "static/zotheos_intro.mp3": "3f0b3db8cccfff2b9c38808076aa30729e501cefc398522a25c5ec281b75aaa5",
+    "theater.html": "60f16870e4e31cfcba7f5115c266f994e1778eb3c97c97e8415490af5370d031",
+    "tools/nations/partials/nations.css": "644f53ec924cbeafb94be6998f79736bfe1ed70cdfee4ea1800d5013085ec2f0",
+    "tools/nations_build.py": "1a85f8e78f2f20e0d5344736c67e4503ce573fc027393b9f356c3d6678709909",
+    "tools/nations_context.py": "cc96c329c04b107e71f9852349b5c147c7af0a5893029bacba4a872b0876a273",
+    "tools/nations_inventories.py": "5161f94337a6f01d823e85261ef2daea4f4c4943de6604b0d7c30d6c1f7aa8aa",
+    "tools/nations_lib.py": "5cc08ea265db15d1cda337feda8b45b321ad22d94f74c6c2da4ec99b7bc58e85",
+    "tools/nations_research.py": "6a8d4a4d0785eae6ac77a783525951bcd7a53e8f86ab662e415fac8fb295fd6d",
+    "tools/tests/legacy-history-navigation-golden.html": "6c61abb5eb0777aff2b75f2d01e8ae6a9b591e812126791fe97c8189dda9e04f",
+    "tools/tests/test_history_reading_navigation.py": "f0db5da19cc0613fee251daa6f217a2df7f2cd794c62354a703695af823fbccb",
+    "vercel.json": "3e1cf05dd3fe3f3f1fd39e9deb9b9bd548e56f990dfe714dd71ce50d7bd77b58"
+  },
+  "schema_version": 1,
+  "source_and_respect": "Actual retained own texts support all approved claims and exact layer associations. Peoples, governments and supporting organizations remain distinct. The two current identity crosswalks do not establish legal recognition. Prior conditions/holds/backoffs remain unchanged. No unused quilt prose/photo,404-derived fact, sacred/origin detail, contact, current officer/service promise or human/Nation endorsement is adopted.",
+  "independent_release_review_sha256": "7dd832d41cdf78a8d8db7f5485f1eaae1ac344a504b8990b16deb959c5fe9b79",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "full_suite": {
+    "tests": 509,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "reported_seconds": 179.14
+  },
+  "browser": {
+    "layout_cases": 10,
+    "widths": [
+      320,
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "theme_cases": 8,
+    "all_navigation_links_minimum44px": true,
+    "zero_recorded_console_errors": true
+  },
+  "verification_scope": "The complete-suite and browser runs were performed for the project and their actual receipts were inspected separately. No duplicate independent full-suite or browser execution is claimed. Production verification follows the reviewed merge.",
+  "formatting_addendum": {
+    "reviewer": "ZOTHEOS",
+    "sha256": "ab6938c586f6e8ff3def756fffd82b6ada3d2600b0199a59a705d1e3820eabd5",
+    "scope": "Remove one final blank EOF line from the new test file. Actual independent byte and AST comparison confirms identical test behavior; existing release approval stands. No code/data/generated output changes."
+  }
+}

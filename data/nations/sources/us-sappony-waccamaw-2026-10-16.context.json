@@ -1,0 +1,242 @@
+{
+  "reviewed": "2026-10-16",
+  "public_notes": [
+    {
+      "nation": "sappony-us-nc",
+      "reading_id": "high-plains-community",
+      "title": "High Plains And Living Continuity",
+      "text": "Sappony's own timeline places the community in High Plains before the North Carolina-Virginia boundary was drawn. It describes changing livelihoods, from hunting and farming to colonial trade, tenant and landed farming, and contemporary life. The account also explains replacing a state-designated label with Sappony in 2003. These dates describe settlement, institutions and naming within a continuing people; they are not a beginning date for Sappony identity.",
+      "source_urls": [
+        "https://www.sappony.org/sappony-timeline"
+      ]
+    },
+    {
+      "nation": "sappony-us-nc",
+      "reading_id": "shared-leadership-and-community",
+      "title": "Governance As Shared Work",
+      "text": "Sappony's governance account connects family representation with shared leadership through an elected Tribal Chair and Chief. An executive committee supports daily business, while other committees address education, cultural preservation and economic development. The page describes these roles as volunteer work. This is the Tribe's public description of its institutions and community priorities; current officeholders, service availability and outcomes have not been separately verified.",
+      "source_urls": [
+        "https://www.sappony.org/governance"
+      ]
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "reading_id": "refuge-and-continuity",
+      "title": "Refuge, Place And Continuity",
+      "text": "The Tribe's history describes Waccamaw peoples seeking refuge in North Carolina swamplands after conflict with South Carolina. Its own introduction locates its communities mainly in Bladen and Columbus Counties on the edge of Green Swamp. This is the Tribe's retrospective account of place and continuity, not an exhaustive ancestral boundary or an assertion that all Waccamaw peoples are one government.",
+      "source_urls": [
+        "https://waccamaw-siouan.org/history",
+        "https://waccamaw-siouan.org/"
+      ]
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "reading_id": "leadership-and-learning",
+      "title": "Community Leadership And Learning",
+      "text": "The Tribe's history introduces the life story of Priscilla Freeman Jacobs and identifies her as its first female chief, serving from 1986 to 2005. Its public government page describes a member-elected council and ways for members to contribute to decisions. Its program overview sets out elder-led learning, STEAM and environmental stewardship as educational aims. Those aims are not a verified current timetable or an outcome measurement.",
+      "source_urls": [
+        "https://waccamaw-siouan.org/history",
+        "https://waccamaw-siouan.org/government",
+        "https://waccamaw-siouan.org/overview"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "sappony-us-nc",
+      "label": "Sappony: About The Community",
+      "url": "https://www.sappony.org/",
+      "purpose": "Begin with Sappony's own introduction to its High Plains community."
+    },
+    {
+      "nation": "sappony-us-nc",
+      "label": "Sappony: History Timeline",
+      "url": "https://www.sappony.org/sappony-timeline",
+      "purpose": "Read Sappony's own account of settlement, changing livelihoods and its chosen name."
+    },
+    {
+      "nation": "sappony-us-nc",
+      "label": "Sappony: Tribal Governance",
+      "url": "https://www.sappony.org/governance",
+      "purpose": "Read how Sappony describes shared leadership, family representation and community priorities."
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "label": "Waccamaw Siouan: About The Tribe",
+      "url": "https://waccamaw-siouan.org/",
+      "purpose": "Begin with the Tribe's own introduction and public routes to its history, government and programs."
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "label": "Waccamaw Siouan: History And Reading",
+      "url": "https://waccamaw-siouan.org/history",
+      "purpose": "Read the Tribe's retrospective history and its suggested books, including its account of women's leadership."
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "label": "Waccamaw Siouan: Tribal Governance",
+      "url": "https://waccamaw-siouan.org/government",
+      "purpose": "Read the Tribe's account of its council, member participation and governance structure; current officeholders are not certified here."
+    },
+    {
+      "nation": "waccamaw-siouan-tribe-us-nc",
+      "label": "Waccamaw Siouan: Community Learning And Programs",
+      "url": "https://waccamaw-siouan.org/overview",
+      "purpose": "Read the stated program and educational aims. This link does not guarantee a current timetable, service availability or eligibility."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "status": "Independent source meaning and respect review completed; no human or Nation approval claimed.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T16:50:16.462729+00:00",
+      "sha256": "9cc1f0143c4103d5d893ffb982fa24731e27374890df2d8476dd967fccc54ae8",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false
+    },
+    "sources": [
+      {
+        "schema_version": 1,
+        "source_key": "own-home",
+        "subject": "sappony",
+        "source_url": "https://www.sappony.org/",
+        "final_url": "https://www.sappony.org/",
+        "retrieved_at": "2026-10-16T16:38:01.988890+00:00",
+        "http_status": 200,
+        "sha256": "119a1f92262edb6580dbac30605c98e55853ed42ca0c6a3a58936e88806a9da3",
+        "bytes": 115286,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Sappony",
+        "title": "Sappony",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "receipt": "research/receipts/2026-10-16-next-sappony-own-home.json"
+      },
+      {
+        "schema_version": 1,
+        "source_key": "own-timeline",
+        "subject": "sappony",
+        "source_url": "https://www.sappony.org/sappony-timeline",
+        "final_url": "https://www.sappony.org/sappony-timeline",
+        "retrieved_at": "2026-10-16T16:39:03.673174+00:00",
+        "http_status": 200,
+        "sha256": "acebd8cf49841040e5a8c81e078363912316c9a83359bf988bc0cf0ba8da90fe",
+        "bytes": 85485,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Sappony",
+        "title": "Sappony History Timeline - Sappony",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "receipt": "research/receipts/2026-10-16-next-sappony-own-timeline.json"
+      },
+      {
+        "schema_version": 1,
+        "source_key": "own-governance",
+        "subject": "sappony",
+        "source_url": "https://www.sappony.org/governance",
+        "final_url": "https://www.sappony.org/governance",
+        "retrieved_at": "2026-10-16T16:39:14.727988+00:00",
+        "http_status": 200,
+        "sha256": "61418ca9ceaa775e4479dda9b6a5e0895d1d57c3c2f8800a5733940ae243a8b1",
+        "bytes": 142966,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Sappony",
+        "title": "Governance - Sappony",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in local source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "receipt": "research/receipts/2026-10-16-next-sappony-own-governance.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://waccamaw-siouan.org/",
+        "final_url": "https://waccamaw-siouan.org/",
+        "retrieved_at": "2026-10-16T16:39:57.563113+00:00",
+        "http_status": 200,
+        "sha256": "b965fd6d3f48e0f970c106bed74f217902c45375a877f9f3e6964da09b4d42d8",
+        "bytes": 109777,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Waccamaw Siouan Tribe",
+        "title": "Waccamaw Siouan Tribe - Home",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in private source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "subject": "waccamaw-siouan",
+        "source_key": "waccamaw-home",
+        "receipt": "research/receipts/2026-10-16-next-waccamaw-waccamaw-home.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://waccamaw-siouan.org/history",
+        "final_url": "https://waccamaw-siouan.org/history",
+        "retrieved_at": "2026-10-16T16:40:49.323935+00:00",
+        "http_status": 200,
+        "sha256": "b9191b202e09a15838aa684727512599f19ab516d707345de96ddf276a025d44",
+        "bytes": 113125,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Waccamaw Siouan Tribe",
+        "title": "History",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in private source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "subject": "waccamaw-siouan",
+        "source_key": "waccamaw-history",
+        "receipt": "research/receipts/2026-10-16-next-waccamaw-waccamaw-history.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://waccamaw-siouan.org/government",
+        "final_url": "https://waccamaw-siouan.org/government",
+        "retrieved_at": "2026-10-16T16:40:59.765637+00:00",
+        "http_status": 200,
+        "sha256": "449fcfcfa01672bc77f7c7db856d48489ab1be915629932a3ad8ea6445f3b8ca",
+        "bytes": 152989,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Waccamaw Siouan Tribe",
+        "title": "Government",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in private source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "subject": "waccamaw-siouan",
+        "source_key": "waccamaw-government",
+        "receipt": "research/receipts/2026-10-16-next-waccamaw-waccamaw-government.json"
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://waccamaw-siouan.org/overview",
+        "final_url": "https://waccamaw-siouan.org/overview",
+        "retrieved_at": "2026-10-16T16:41:10.244318+00:00",
+        "http_status": 200,
+        "sha256": "c75972ba76413d53587ba9bcf7840120d72b84e7de424f611d72b0c7a0b82360",
+        "bytes": 107913,
+        "hash_kind": "Actual HTTP response body bytes",
+        "publisher": "Waccamaw Siouan Tribe",
+        "title": "Overview",
+        "publication_date": null,
+        "modified_date": null,
+        "human_review_claimed": false,
+        "capture_retention": "Full response body retained in private source-review evidence; not proposed for publication.",
+        "robots_policy": "Public path allowed by retained robots policy; no endorsement implied.",
+        "subject": "waccamaw-siouan",
+        "source_key": "waccamaw-overview",
+        "receipt": "research/receipts/2026-10-16-next-waccamaw-waccamaw-overview.json"
+      }
+    ]
+  }
+}

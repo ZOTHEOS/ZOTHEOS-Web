@@ -73,10 +73,10 @@
     "unique_directory_ids": 9,
     "duplicate_exact_names": [],
     "independent_extraction": "BeautifulSoup main-content h2 names exactly match separate main/h2 regex extraction in order.",
-    "own_website_identity_reviews": 3,
-    "canonical_identity_crosswalks_confirmed": 2,
+    "own_website_identity_reviews": 5,
+    "canonical_identity_crosswalks_confirmed": 4,
     "catawba_own_site_robot_status": 404,
-    "own_site_read_limit_note": "The earlier Lumbee own-site read is retained. Coharie and Haliwa-Saponi own-site identity and two canonical links were separately reviewed on 2026-10-16. Catawba robots404 and its dated source discrepancy remain unchanged. Other identities remain unreviewed.",
+    "own_site_read_limit_note": "The existing Lumbee, Coharie and Haliwa-Saponi own-site reviews are retained. Sappony and Waccamaw Siouan identities and canonical links were separately reviewed on2026-10-16. The original source edition, Catawba discrepancy and other pending identities/conditions remain unchanged.",
     "robot_policy_note": "NC DOA and Lumbee robots200 allowed requested paths. Fetch starts separated by at least3.1sec per host.",
     "human_reviews": 0
   },
@@ -259,14 +259,23 @@
       ],
       "state": "NC",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://www.sappony.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "sappony-us-nc",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-next-sappony-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "source_heading": "Sappony"
+      "source_heading": "Sappony",
+      "own_published_name": "Sappony",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-next-sappony-identity.json"
+      }
     },
     {
       "directory_id": "us-state-nc-waccamaw-siouan-tribe",
@@ -278,14 +287,23 @@
       ],
       "state": "NC",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://waccamaw-siouan.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "waccamaw-siouan-tribe-us-nc",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-next-waccamaw-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "source_heading": "Waccamaw Siouan Tribe"
+      "source_heading": "Waccamaw Siouan Tribe",
+      "own_published_name": "Waccamaw Siouan Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-next-waccamaw-identity.json"
+      }
     }
   ],
   "snapshot_kind": "source_observation",
