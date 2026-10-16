@@ -558,12 +558,23 @@ class Builder:
         body_n = (f"Nation: {n['name']} ({n['id']})\nWhat is wrong:\n\n"
                   "A source that shows the correction (address of the page), optional:\n\n"
                   "If you write for the nation, say so and we act within 72 hours.")
+        context = self.nation_context(n)
+        # Native section links move keyboard focus as well as the reading position.
+        if context:
+            context = context.replace('id="nContext"', 'id="nContext" tabindex="-1"', 1)
+        reading = ['<nav class="nation-reading" aria-labelledby="nReadingTitle">',
+                   '<p class="lbl" id="nReadingTitle">Explore This Record</p><ul>',
+                   '<li><a href="#nLands">Lands</a></li>',
+                   '<li><a href="#nFacts">Facts And Sources</a></li>']
+        if context:
+            reading.append('<li><a href="#nContext">Context And Resources</a></li>')
+        reading.append('</ul></nav>')
         body = render(self.tpl("nation"), {
             "region_key": r["key"], "region_display": r["display"], "sz": n["sz"], "fc": n["fc"], "sc": n["sc"],
             "name": n["name"], "meta": "\n".join(meta), "own": own, "lands": n["lands"],
             "lands_face": self.face_attr(n["lf"]), "countries": cs, "fact_dots": dots, "facts": "\n".join(facts),
             "counts": "\n".join(f'    <p class="counts">{esc(c)}</p>' for c in counts),
-            "context": self.nation_context(n),
+            "context": context, "reading_navigation": "\n".join(reading),
             "mail_nation": mailto(self.contact, f"Nations correction: {n['id']}", body_n)})
         first = n["facts"][0]["text"] if n["facts"] else ""
         desc = L.cut_chars(f"{n['name']}: {n['lands']}. {first}".strip(), 155)

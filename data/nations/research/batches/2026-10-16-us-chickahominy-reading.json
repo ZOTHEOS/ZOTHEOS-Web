@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T05:21:03.223622+00:00",
+  "source_check_date": "2026-10-16",
+  "publication_state": "Reviewed and locally checked candidate; exact-commit review, PR merge, production deployment and live verification remain later gates.",
+  "scope": "Two missing US Tribal government profiles, deeper own-source histories and native profile reading navigation. Inclusive US and worldwide coverage remain incomplete.",
+  "new_profiles": [
+    {
+      "id": "chickahominy-indian-tribe-us-va",
+      "name": "Chickahominy Indian Tribe",
+      "official_url": "https://www.chickahominytribe.org/"
+    },
+    {
+      "id": "chickahominy-indian-tribe-eastern-division-us-va",
+      "name": "Chickahominy Indian Tribe - Eastern Division",
+      "official_url": "https://www.cied.org/"
+    }
+  ],
+  "changes": [
+    "Chickahominy Indian Tribe and Chickahominy Indian Tribe - Eastern Division receive separate profiles with eight concise facts, four titled historical/context layers and four direct own-publisher resources.",
+    "Chickahominy history covers river homelands, displacement, education barriers and community persistence. Its published environmental vision remains an aspiration, not a measured outcome.",
+    "Eastern Division history connects its school, formation of a distinct government and incorporation without treating twentieth-century institutional dates as the beginning of the people. Its Tribal Government remains distinct from the separate CIED nonprofit.",
+    "CIT-ED food-sovereignty material describes a 2022 gardening and composting account and 2025 garden/food-forest plans. Completion, current availability and independent environmental outcomes are not established.",
+    "Each of four source-directory rows receives a separate identity link: one Virginia and one federal record per profile. The two governments are never merged under a generic Chickahominy alias. Dated federal source editions remain unchanged.",
+    "Explore This Record adds native links to Lands and Facts And Sources, with Context And Resources only when public context exists. These links are intended to shorten reading journeys without hiding substantive content or requiring JavaScript. Final browser verification is recorded separately.",
+    "The selective canonical overlay preserves all 461 previous profile objects and every prior fact clock. Existing fact holds and pending publisher-reuse reviews remain unchanged."
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 4,
+    "canonical_profiles": 463,
+    "raw_facts": 1310,
+    "public_facts": 1308,
+    "held_facts": 2,
+    "previous_canonical_records_preserved": 461,
+    "mixed_directory_records": 2272,
+    "source_lists": 8,
+    "reviewed_directory_profile_links": 14,
+    "new_reviewed_directory_links": 4,
+    "virginia_confirmed_profile_links": 6,
+    "virginia_own_site_identity_links": 8,
+    "state_source_inventories": 4,
+    "remaining_state_discovery_scopes": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "queue_tasks": 1812,
+    "queue_tasks_changed": 4,
+    "queue_by_status": {
+      "pending": 1690,
+      "needs_review": 120,
+      "blocked": 2
+    }
+  },
+  "source_verification": {
+    "run_date": "2026-10-16",
+    "dry_run": false,
+    "robots": true,
+    "host_interval_s": 3.5,
+    "urls_total": 4,
+    "urls_checked": 4,
+    "requests_sent": 6,
+    "facts_checked": 8,
+    "facts_unchecked": 0,
+    "status": {
+      "verified": 8
+    }
+  },
+  "retained_http_receipts": {
+    "count": 10,
+    "http_200": 10,
+    "full_source_bodies_public": false,
+    "receipt_basis": "Actual response time, status, SHA256 and byte length. Full response bodies stay outside the publication tree."
+  },
+  "review_scope": {
+    "credit": "ZOTHEOS",
+    "source_meaning_and_respect": "The two retained own-source proposals received separate reviews of factual meaning, specific identity, source access and respect.",
+    "identity": "Each Virginia and federal source-record link received explicit identity review. Government, people, nonprofit and source-list categories remain distinct.",
+    "preservation": "Current records compared with the baseline: all 461 prior profile objects are exactly preserved.",
+    "consultation_or_endorsement_claimed": false,
+    "human_approval_created": false,
+    "limits": "No present legal recognition adjudication, treaty-rights ruling, land-title determination, program completion guarantee, Nation endorsement or complete-coverage claim."
+  },
+  "publication_scope_pending": [
+    {
+      "name": "Patawomeck Indian Tribe of Virginia",
+      "status": "existing_pending_reuse_scope_unchanged",
+      "note": "New own-content-based history remains deferred pending conservative publisher-reuse-scope review. Existing directory name and own-site link remain visible. No new fetch, permission, takedown or removal request is invented."
+    },
+    {
+      "name": "Mattaponi Indian Tribe & Reservation",
+      "status": "existing_pending_reuse_scope_unchanged",
+      "note": "The separate earlier publisher-condition review and backoff remain unchanged, with existing directory name and own-site link retained."
+    }
+  ],
+  "date_discipline": "October 16 UTC is the actual source-check date. Publisher metadata, historical event years, the retained January 30 federal source edition, source retrieval times and earlier fact clocks keep separate meanings.",
+  "remaining_release_gates": [
+    "Exact-commit review",
+    "Reviewed pull request and deployment checks",
+    "Production deployment and actual live verification"
+  ],
+  "limits": "Directory records, source inventories, researched profiles and distinct Indigenous Nations are different units. Recognition lists guide source discovery and never define who is Indigenous. Viewport checks, if completed, do not certify physical devices or screen readers.",
+  "baseline_main": "4bf7b1a42dee09ac12a9673624b28a11bb4d60ef",
+  "review_receipt_hashes": {
+    "independent-chickahominy-review.json": "c1c0a75a48e8723d464bbbf36719b8bb482a05855ef571697042deec30d867d0",
+    "independent-eastern-chickahominy-review.json": "20c3300d5beb790708672b61c6853fe612f21c77288d2b73414c81a1318e6af2",
+    "independent-reading-ui-review.json": "9df2d23adf6cd1f91c9002785fd85ac77a057e3e1a59ba11ca243496c44f4a4e",
+    "independent-final-integration-review.json": "23ba6003421000beee3486d762c0d9a29475cfba5b48cb0f572222f152709a55"
+  },
+  "review_receipt_note": "Detailed production reviews are retained separately. Public source retrieval and identity receipts remain in the canonical research model. No person or Nation approval is claimed.",
+  "checks": {
+    "full_pytest": {
+      "passed": 284,
+      "failed": 0,
+      "seconds": 126.22
+    },
+    "generated_site": {
+      "pages": 587,
+      "profiles": 463,
+      "public_facts": 1308,
+      "held_facts": 2,
+      "lint_errors": 0,
+      "lint_warnings": 0
+    },
+    "canonical_validator": {
+      "errors": 0,
+      "existing_warnings": 54
+    },
+    "privacy_acceptance": {
+      "passed": 6,
+      "failed": 0
+    },
+    "reading_navigation_acceptance": {
+      "prebuild_passed": 3,
+      "prebuild_expected_failures": 11,
+      "postbuild_passed": 14
+    },
+    "game_education_export": {
+      "profiles": 463,
+      "quick_facts": 920,
+      "profiles_with_history": 82
+    },
+    "browser": {
+      "viewports": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "route_checks": 12,
+      "native_anchor_checks": 32,
+      "minimum_link_height_px": 44,
+      "overflow_failures": 0,
+      "themes": 4,
+      "console_warnings_or_errors": 0,
+      "motion": "Still preference through the UI; no OS emulation claimed",
+      "limits": "Viewport checks do not certify physical devices or screen readers."
+    },
+    "publication_control_cases": 12,
+    "deterministic_build_check": "passed",
+    "queue_csp_copy_font_link_release_checks": "passed"
+  },
+  "browser_evidence_hashes": {
+    "responsive-browser-checks.json": "896988f268bca7f1461ad24e3eaa9d1af78666ffbfd46cd675e3f67ea0196b84",
+    "theme-keyboard-browser-checks.json": "658872390217b89c66a0f6971f88b01b366c9b13e87fab60071e2458a5c85c2b"
+  }
+}

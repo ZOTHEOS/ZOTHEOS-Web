@@ -1,8 +1,8 @@
 {
   "version": "1",
   "generated": "2026-10-16",
-  "count": 461,
-  "facts": 1302,
+  "count": 463,
+  "facts": 1310,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 29,
+    "us-east-southeast": 31,
     "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
@@ -25075,6 +25075,164 @@
             "accessed": "2026-10-16"
           },
           "evidence": "King William County returned it to the Tribe in 1987",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "chickahominy-indian-tribe-us-va",
+      "region": "us-east-southeast",
+      "name": "Chickahominy Indian Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "the Chickahominy River area and Chickahominy Ridge in Virginia, as described in the Tribe's history",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.chickahominytribe.org/",
+      "name_source_url": "https://www.chickahominytribe.org/",
+      "facts": [
+        {
+          "id": "chickahominy-indian-tribe-us-va-a8d4830a",
+          "text": "The Chickahominy Indian Tribe's history describes permanent villages along the Virginia river that still bears its name.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Post-Contact Era (1500-1900) | Chickahominy Indian Tribe",
+            "publisher": "Chickahominy Indian Tribe",
+            "url": "https://www.chickahominytribe.org/tribal-history/post-contact-era-1500-1900",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "permanent villages along the Virginia river that still bears our name",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-us-va-03cbafb9",
+          "text": "The Tribe's history says the Treaty of 1646 displaced Chickahominy people from their river homelands.",
+          "kind": "history",
+          "as_of": "1646",
+          "source": {
+            "title": "Post-Contact Era (1500-1900) | Chickahominy Indian Tribe",
+            "publisher": "Chickahominy Indian Tribe",
+            "url": "https://www.chickahominytribe.org/tribal-history/post-contact-era-1500-1900",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "The Treaty of 1646 displaced the Chickahominy people",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-us-va-9ba3941b",
+          "text": "The Tribe dates the establishment of Samaria Indian Baptist Church, a community institution, to 1901.",
+          "kind": "history",
+          "as_of": "1901",
+          "source": {
+            "title": "Post-Contact Era (1500-1900) | Chickahominy Indian Tribe",
+            "publisher": "Chickahominy Indian Tribe",
+            "url": "https://www.chickahominytribe.org/tribal-history/post-contact-era-1500-1900",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "In 1901, the Chickahominy Tribe established Samaria Indian Baptist Church",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-us-va-8f09eb2e",
+          "text": "The Tribe's history describes members building schools and funding teachers' salaries under Virginia's discriminatory education policies.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "20th Century | Chickahominy Indian Tribe",
+            "publisher": "Chickahominy Indian Tribe",
+            "url": "https://www.chickahominytribe.org/tribal-history/20th-century",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "tribal members built schools and raised funds",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "chickahominy-indian-tribe-eastern-division-us-va",
+      "region": "us-east-southeast",
+      "name": "Chickahominy Indian Tribe - Eastern Division",
+      "also": [],
+      "pronounce": null,
+      "lands": "New Kent County, Virginia; the Tribe describes roots in Virginia before English colonization",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.cied.org/",
+      "name_source_url": "https://www.cied.org/",
+      "facts": [
+        {
+          "id": "chickahominy-indian-tribe-eastern-division-us-va-0de492a3",
+          "text": "The Tribe's history dates the start of its New Kent County school to 1910; the one-room school taught grades 1 through 8.",
+          "kind": "history",
+          "as_of": "1910",
+          "source": {
+            "title": "History | CIED",
+            "publisher": "Chickahominy Indian Tribe - Eastern Division",
+            "url": "https://www.cied.org/history",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "A school was started in New Kent County",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-eastern-division-us-va-b9f240c1",
+          "text": "The Tribe's history dates the formation of its own tribal government to 1920 to 1921.",
+          "kind": "governance",
+          "as_of": "1920",
+          "source": {
+            "title": "History | CIED",
+            "publisher": "Chickahominy Indian Tribe - Eastern Division",
+            "url": "https://www.cied.org/history",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "began forming their own tribal government",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-eastern-division-us-va-59910abd",
+          "text": "The Tribe's timeline records a certificate of incorporation for the Chickahominy Indians Eastern Division in 1925.",
+          "kind": "governance",
+          "as_of": "1925",
+          "source": {
+            "title": "History | CIED",
+            "publisher": "Chickahominy Indian Tribe - Eastern Division",
+            "url": "https://www.cied.org/history",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "A certificate of incorporation was issued",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "chickahominy-indian-tribe-eastern-division-us-va-dad198ad",
+          "text": "In its food-sovereignty account, CIT-ED says a 2022 EPA grant supported a community compost and gardening program.",
+          "kind": "today",
+          "as_of": "2022",
+          "source": {
+            "title": "Food Sovereignty | CIED",
+            "publisher": "Chickahominy Indian Tribe - Eastern Division",
+            "url": "https://www.cied.org/community-garden",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "develop a community compost and gardening program",
           "status": "verified",
           "checked": "2026-10-16",
           "last_verified": "2026-10-16"

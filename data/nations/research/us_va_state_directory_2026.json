@@ -33,8 +33,8 @@
     "source_unmarked_federal_rows": 4,
     "duplicate_source_labels": [],
     "independent_extraction": "BeautifulSoup table cells exactly match a separate regex row/cell extraction.",
-    "own_sites_read_and_identity_link_reviewed": 4,
-    "canonical_identity_matches_approved": 4,
+    "own_sites_read_and_identity_link_reviewed": 8,
+    "canonical_identity_matches_approved": 6,
     "http_failures": 0,
     "human_reviews_created": 0,
     "canonical_identity_review_date": "2026-10-16"
@@ -42,7 +42,7 @@
   "review": {
     "status": "needs_review",
     "sources": "pending independent AI review",
-    "identity": "Four specific directory-to-profile links reviewed by ZOTHEOS; remaining rows unreviewed.",
+    "identity": "Six specific directory-to-profile links reviewed by ZOTHEOS; remaining rows unreviewed.",
     "human_review": null,
     "respect": "pending independent review"
   },
@@ -121,19 +121,28 @@
       ],
       "state": "VA",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://www.chickahominytribe.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "chickahominy-indian-tribe-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/chickahominy-reading-us-state-va-chickahominy-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
       "source_year_recognized": "1983",
       "source_location": "Charles City County",
       "source_federal_marker": true,
       "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
       "state_published_tribal_url": "https://www.chickahominytribe.org/",
-      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "own_published_name": "Chickahominy Indian Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/chickahominy-reading-us-state-va-chickahominy-identity.json"
+      }
     },
     {
       "directory_id": "us-state-va-eastern-chickahominy",
@@ -145,19 +154,28 @@
       ],
       "state": "VA",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://www.cied.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "chickahominy-indian-tribe-eastern-division-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/chickahominy-reading-us-state-va-eastern-chickahominy-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
       "source_year_recognized": "1983",
       "source_location": "New Kent County",
       "source_federal_marker": true,
       "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
       "state_published_tribal_url": "https://www.cied.org/",
-      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "own_published_name": "Chickahominy Indian Tribe - Eastern Division",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/chickahominy-reading-us-state-va-eastern-chickahominy-identity.json"
+      }
     },
     {
       "directory_id": "us-state-va-rappahannock",

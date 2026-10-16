@@ -1350,7 +1350,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -1369,8 +1369,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T05:12:01.828940+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/chickahominy-reading-us-fed-18eeda3f2b93-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-21f35795bcf8",
@@ -1384,7 +1388,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -1403,8 +1407,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T05:12:01.828940+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/chickahominy-reading-us-fed-21f35795bcf8-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-0d67d0093e56",
@@ -59080,7 +59088,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59100,9 +59108,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.chickahominytribe.org/",
+          "retrieved_at": "2026-10-16T05:05:44.349404+00:00",
+          "http_status": 200,
+          "sha256": "5a9f496d869b102918c2ddb7e53c99cb156bee159ba9eb44f6ea10df6883dd26",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/chickahominy-reading-chickahominy-home.receipt.json",
+          "receipt_id": "r-b12eeeffbf984e21"
+        }
+      ],
+      "updated_at": "2026-10-16T05:12:01.828940+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/chickahominy-reading-us-state-va-chickahominy-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-eastern-chickahominy",
@@ -59116,7 +59140,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59136,9 +59160,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.cied.org/",
+          "retrieved_at": "2026-10-16T05:05:55.065909+00:00",
+          "http_status": 200,
+          "sha256": "e7a4cb1796bdd50a79feacc9b85eb0d33360d5364b5b8f4d7b1293bc8250b093",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/chickahominy-reading-eastern-chickahominy-home.receipt.json",
+          "receipt_id": "r-2459c4c8fa3708a7"
+        }
+      ],
+      "updated_at": "2026-10-16T05:12:01.828940+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/chickahominy-reading-us-state-va-eastern-chickahominy-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-rappahannock",
