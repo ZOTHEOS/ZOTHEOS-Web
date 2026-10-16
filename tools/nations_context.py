@@ -4,6 +4,7 @@ import html
 import json
 from pathlib import Path
 import re
+from urllib.parse import urlsplit
 
 import nations_lib as L
 
@@ -87,6 +88,8 @@ class Context:
             links[key] = {"reviewed": date(entry.get("reviewed")),
                           "publisher": text(entry.get("publisher"), 160)}
         records = 0
+        pending_notes = []
+        resource_index = {}
         for path in files:
             if path.resolve().parent != source_folder.resolve():
                 raise ValueError("context: context path escapes source folder")
@@ -104,8 +107,18 @@ class Context:
                 title = text(note["title"], 160) if "title" in note else None
                 if title is not None and not title.strip():
                     raise ValueError("context: empty note title")
-                if self.visible(nid, note, public_facts):
-                    self.add(nid, "notes", (body, reviewed, title))
+                refs = None
+                if "source_urls" in note:
+                    refs = note["source_urls"]
+                    if (not isinstance(refs, list) or not 1 <= len(refs) <= 4
+                            or any(not isinstance(v, str) for v in refs)):
+                        raise ValueError("context: invalid layer sources")
+                    if len(set(refs)) != len(refs):
+                        raise ValueError("context: duplicate layer sources")
+                    for address in refs:
+                        self.source_url(address)
+                pending_notes.append((nid, body, reviewed, title, refs,
+                                      self.visible(nid, note, public_facts)))
             for resource in groups["official_resources"]:
                 nid = self.nation(resource.get("nation"), known)
                 address = text(resource.get("url"), 700)
@@ -114,8 +127,11 @@ class Context:
                     raise ValueError("context: resource URL not on exact nation/link allowlist")
                 label = text(resource.get("label"), 160)
                 purpose = text(resource.get("purpose"))
-                if self.visible(nid, resource, public_facts):
-                    self.add(nid, "resources", (resource["url"], label, purpose, links[key]))
+                visible = self.visible(nid, resource, public_facts)
+                value = (resource["url"], label, purpose, links[key])
+                resource_index.setdefault(key, []).append((value, visible))
+                if visible:
+                    self.add(nid, "resources", value)
             for relation in groups["relationships"]:
                 origin = self.nation(relation.get("from"), known)
                 targets = relation.get("to")
@@ -132,6 +148,40 @@ class Context:
                     others = [other for other in members if other != nid]
                     if others:
                         self.add(nid, "relations", (statement, tuple(others), reviewed))
+
+        # Resolve explicit citations after all files, preserving original note order.
+        for nid, body, reviewed, title, refs, visible in pending_notes:
+            citations = []
+            if refs is not None:
+                for address in refs:
+                    definitions = resource_index.get((nid, address), [])
+                    if not definitions:
+                        raise ValueError("context: layer source requires an approved same-nation resource")
+                    first = definitions[0]
+                    if any(value != first for value in definitions[1:]):
+                        raise ValueError("context: ambiguous layer source resource")
+                    resource, source_visible = first
+                    if not source_visible:
+                        visible = False
+                    citations.append(resource)
+            if visible:
+                self.add(nid, "notes", (body, reviewed, title, tuple(citations)))
+
+    @staticmethod
+    def source_url(address):
+        text(address, 700)
+        if any(ord(c) < 32 or ord(c) == 127 for c in address):
+            raise ValueError("context: invalid layer source URL")
+        if not URL.fullmatch(address) or "\\" in address:
+            raise ValueError("context: invalid layer source URL")
+        try:
+            parsed = urlsplit(address)
+            port = parsed.port
+        except ValueError as exc:
+            raise ValueError("context: invalid layer source URL") from exc
+        if (not parsed.hostname or parsed.username is not None or parsed.password is not None
+                or port == 0 or parsed.netloc.endswith(":")):
+            raise ValueError("context: invalid layer source URL")
 
     @staticmethod
     def nation(nid, known):
@@ -160,10 +210,17 @@ class Context:
             return ""
         out = ['<section class="n-sec" aria-labelledby="nContext">',
                '<h2 class="n-sec-h" id="nContext">Context and resources</h2>']
-        for body, reviewed, title in entry.get("notes", []):
+        for body, reviewed, title, citations in entry.get("notes", []):
             if title is not None:
                 out.append(f'<h3 class="n-sec-h">{esc(title)}</h3>')
             out.append(f'<p class="fact-t">{esc(body)}</p><p class="rc">Context reviewed {stamp(reviewed)} by ZOTHEOS.</p>')
+            if citations:
+                out.append('<p class="rc">Sources For This Layer</p><ul class="src-u">')
+                for address, label, purpose, receipt in citations:
+                    out.append(f'<li><p><a href="{esc(address)}" rel="noopener noreferrer" target="_blank">{esc(label)}'
+                               '<span class="sr-only"> (opens in a new tab)</span></a></p>'
+                               f'<p class="rc">{esc(receipt["publisher"])}, source reviewed {stamp(receipt["reviewed"])} by ZOTHEOS.</p></li>')
+                out.append('</ul>')
         if entry.get("relations"):
             out.append('<h3 class="n-sec-h">Related records</h3>')
         for statement, others, reviewed in entry.get("relations", []):

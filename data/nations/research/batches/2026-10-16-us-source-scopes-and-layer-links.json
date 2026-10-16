@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T14:17:47.861189+00:00",
+  "baseline_commit": "d75ca51e7f7c3df1ecfd7b6e5cf8df6b2ce04a15",
+  "scope": "Two missing US Tribal-government research scopes and two exact source associations on an existing Coharie history profile.",
+  "measured_counts": {
+    "new_profiles": 0,
+    "new_facts": 0,
+    "canonical_profiles": 467,
+    "public_facts": 1324,
+    "existing_held_facts": 2,
+    "research_scopes_held_for_manual_review": 2,
+    "new_layer_source_associations": 2,
+    "directory_records": 2272,
+    "queue_tasks": 1812,
+    "changed_queue_tasks": 2,
+    "queue_by_status": {
+      "pending": 1682,
+      "needs_review": 128,
+      "blocked": 2
+    }
+  },
+  "review_sha256": {
+    "source_holds": "da732bc86f8a34bd6cbe7d9e3602d3581bf8d8bd8cec6b3d4b3927656e92853b",
+    "coharie_associations": "428e9d5220fcc5c03bf9ac9bb6a590445d1ff25fb0e251d3ad1181308b1a2d8a"
+  },
+  "source_reviews": [
+    {
+      "subject": "meherrin",
+      "disposition": "publisher_reuse_scope_pending",
+      "evidence_receipt": "receipts/2026-10-16-meherrin-own-terms.json",
+      "http_status": 200,
+      "profile_published": false,
+      "directory_visible": true
+    },
+    {
+      "subject": "occaneechi",
+      "disposition": "source_integrity_review_pending",
+      "evidence_receipt": "receipts/2026-10-16-occaneechi-occaneechi-history.json",
+      "http_status": 200,
+      "profile_published": false,
+      "directory_visible": true
+    }
+  ],
+  "findings": [
+    "Meherrin publisher-use conditions need a scoped manual decision; no written Tribal authorization is claimed.",
+    "An Occaneechi history capture contains unrelated inserted material; no actor or blanket site-compromise determination is made. Publisher media conditions also remain under scoped review.",
+    "The two existing Coharie layers link directly to their specifically reviewed history/river resources. All text, facts and old review clocks remain unchanged."
+  ],
+  "preservation": [
+    "All467 canonical profile objects, all228 Theater records and game/intro/homepage bytes remain exact.",
+    "All1810 unrelated queue tasks, prior holds, original NC directory snapshot, recognition/source discrepancies and nine name rows remain unchanged.",
+    "Research holds do not create a takedown, removal request, recognition decision or community endorsement. No automatic refetch/restoration or outreach."
+  ],
+  "human_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "coverage_complete": false
+}
