@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "checked_at": "2026-10-16T18:39:52.309225+00:00",
+  "catalogue_sha256": "01e147bbff13c1616d6006a0af0f6409d162a0e623e2b651646ccc77482090cc",
+  "independent_meaning_review_sha256": "267a6e87c91f1b127ffddd6c7e5a466b0b67ab58cf0c4aeebf95f7e5017659f6",
+  "reviewed_source_reads": {
+    "reviewed": "2026-10-16",
+    "retrieval_method": "web_tool",
+    "http_status": null,
+    "note": "Actual primary pages/PDFs opened and read with web tool. No HTTP code or response-body hash is inferred. Publication dates/events remain separate from this check.",
+    "source_urls": [
+      "https://cambodia.ohchr.org/sites/default/files/book/DRIP-En.pdf",
+      "https://legal.un.org/avl/ha/ga_61-295/ga_61-295.html",
+      "https://vote.narf.org/advocacy-actions/",
+      "https://www.archives.gov/research/native-americans/treaties/supporting-documentation",
+      "https://fpcc.ca/stories/fpcc-language-resources/",
+      "https://www.gida-global.org/s/dsj-1158_carroll.pdf",
+      "https://fnigc.ca/ocap-training/",
+      "https://www.nicwa.org/what-is-icwa/",
+      "https://nativecdfi.net/"
+    ],
+    "excluded_attempts": [
+      {
+        "url": "https://www.un.org/esa/socdev/unpfii/documents/faq_drips_en.pdf",
+        "outcome": "Web tool reported403; not used as a cited source."
+      },
+      {
+        "url": "https://www.ohchr.org/sites/default/files/Documents/Publications/Declaration_indigenous_en.pdf",
+        "outcome": "Web tool could not fetch; not a successful source."
+      },
+      {
+        "url": "https://mukurtu.org/about/",
+        "outcome": "Web tool internal fetch failure; not used."
+      },
+      {
+        "url": "https://www.gida-global.org/care",
+        "outcome": "Web tool internal fetch failure; cite separately opened original CARE paper instead."
+      }
+    ],
+    "interpretation": "Sources support attributed factual context and external resources. Reader-controlled steps and future app workflows are original ZOTHEOS proposals, not instructions endorsed by cited institutions."
+  },
+  "limits": "Primary source reading and independent source meaning review only. Not human, Nation or cited-organization endorsement; source check dates do not make historical rules current. App workflows are proposals, not released services."
+}

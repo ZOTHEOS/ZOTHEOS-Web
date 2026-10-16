@@ -62134,9 +62134,10 @@
       "region": "us-state-al",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-al-tribal-directory"
+        "us-al-tribal-directory",
+        "own-piqua-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -62154,10 +62155,34 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "receipts": [
+        {
+          "url": "https://piquashawnee.gov/terms",
+          "retrieved_at": "2026-10-16T18:21:46.892371+00:00",
+          "http_status": 200,
+          "sha256": "badae2e87af8e2eeb398d1e19facc660553e8d267478bbb57690f2af336c48f2",
+          "source_id": "own-piqua-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-pathways-piqua-own-terms.json",
+          "receipt_id": "r-2c03b8f6f4e531bc"
+        }
+      ],
+      "updated_at": "2026-10-16T18:39:52.652392+00:00",
       "next_attempt_after": null,
-      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+      "note": "Public pages were accessible. Express publisher name/seal use condition requires manual scoped publication review before any new profile. Existing directory name and source edition remain. Not a takedown, access denial, legal ruling or recognition finding.",
+      "lease_until": null,
+      "profile_disposition": "publisher_name_and_seal_use_scope_pending",
+      "publication_scope": {
+        "status": "pending",
+        "history_published": false,
+        "access_failure": false,
+        "takedown_received": false,
+        "directory_visible": true,
+        "automatic_refetch": false,
+        "automatic_restoration": false,
+        "review_receipt_sha256": "ad1f293018f607c5fd0b7fd28cd912d809ab1b2dc6f9fe4fac747eacd0148e6e",
+        "note": "Manual scoped decision required. Do not routinely re-fetch unchanged terms, use substitute sources to bypass the condition, contact the publisher or infer that owner consent is Tribal permission. A scheduler date alone does not resolve the condition."
+      }
     },
     {
       "task_id": "profile-us-state-al-cher-o-creek-intratribal-indians",
@@ -62208,9 +62233,10 @@
       "region": "us-state-al",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-al-tribal-directory"
+        "us-al-tribal-directory",
+        "own-mowa-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -62228,10 +62254,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "receipts": [
+        {
+          "url": "https://www.mowachoctawindians.com/",
+          "retrieved_at": "2026-10-16T18:24:34.843906+00:00",
+          "http_status": 200,
+          "sha256": "177c9521e6e0ca6c34123251372d1f3e370324f1bab409237d8b3751722d15e9",
+          "source_id": "own-mowa-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-pathways-mowa-mowa-www-home.json",
+          "receipt_id": "r-82d50cf769cab1ad"
+        }
+      ],
+      "updated_at": "2026-10-16T18:39:52.957428+00:00",
       "next_attempt_after": null,
-      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "lease_until": null,
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-mowa-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-al-united-cherokee-ani-yun-wiya-nation",
@@ -62319,9 +62360,10 @@
       "region": "us-state-al",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-al-tribal-directory"
+        "us-al-tribal-directory",
+        "own-echota-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -62340,9 +62382,10 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": "2026-10-15T08:41:27.866812+00:00",
-      "next_attempt_after": null,
-      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+      "updated_at": "2026-10-16T18:39:52.771843+00:00",
+      "next_attempt_after": "2026-10-17T18:39:52.771843+00:00",
+      "note": "Approved HTTPS robots request failed certificate hostname validation before HTTP. No response status, content, robots policy or publisher condition was established. One-day retry backoff; no certificate bypass, guessed alternate host, downgrade or directory removal. Failed-attempt metadata: receipts/2026-10-16-echota-tls-attempt.json.",
+      "lease_until": null
     },
     {
       "task_id": "profile-us-state-al-cherokee-tribe-of-ne-alabama",

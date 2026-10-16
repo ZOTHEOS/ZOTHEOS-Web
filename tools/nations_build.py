@@ -39,18 +39,19 @@ sys.path.insert(0, TOOLS)
 import nations_lib as L  # noqa: E402
 import nations_directory as D  # noqa: E402
 from nations_context import Context  # noqa: E402
+import nations_pathways as P  # noqa: E402
 from nations_fold import fold, js as fold_js  # noqa: E402
 
 SITE = "https://zotheos.org"
 URL_OK = re.compile(r'^https://[^\s"<>]+$')
 KIND_LABEL = {"today": "Today", "language": "Language", "land": "Land", "governance": "Governance",
               "culture": "Culture", "population": "Population", "history": "History", "achievement": "Achievement"}
-SUPPORT = [("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Where we are"), ("credits", "Credits"),
+SUPPORT = [("paths-to-action", "Paths To Action"), ("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Where we are"), ("credits", "Credits"),
            ("verification", "Verification"), ("for-nations", "For nations"), ("changes", "Corrections and removals")]
 NAV = [("Theater", "/theater", None), ("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
        ("Coverage", "/nations/coverage", "coverage"), ("About", "/nations/about", "about"),
        ("For nations", "/nations/for-nations", "for-nations")]
-SHEET = NAV + [("Directory", "/nations/directory", "directory"), ("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
+SHEET = NAV + [("Paths To Action", "/nations/paths-to-action", "paths-to-action"), ("Directory", "/nations/directory", "directory"), ("Resources", "/nations/resources", "resources"), ("Sources", "/nations/sources", "sources"), ("Credits", "/nations/credits", "credits"),
                ("Verification", "/nations/verification", "verification"), ("Changes", "/nations/changes", "changes")]
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
@@ -621,13 +622,17 @@ class Builder:
     # ---- support pages
     def support_pages(self):
         return {
-            "about": self.about(), "sources": self.sources(), "resources": self.resources(), "directory": self.directory_page(), "coverage": self.coverage_page(),
+            "paths-to-action": self.pathways(), "about": self.about(), "sources": self.sources(), "resources": self.resources(), "directory": self.directory_page(), "coverage": self.coverage_page(),
             "credits": self.credits(), "verification": self.verification(), "for-nations": self.for_nations(),
             "changes": self.changes_page()}
 
     def sp(self, key, body, description):
         title = dict(SUPPORT)[key] + " | Indigenous nations today"
         return self.page(key, f"/nations/{key}", title, description, body)
+
+    def pathways(self):
+        return self.sp("paths-to-action", P.render(self.root, self.m),
+                       "Practical, source-linked pathways for Indigenous people and Nations: land, representation, language, evidence and reader-controlled next steps.")
 
     def about(self):
         g = self.m.universe["global"]
@@ -745,6 +750,7 @@ class Builder:
         out = ['<div class="read n-head prose">', '<p class="eyebrow">Resources</p>',
                '<h1 class="page-h">Go further.</h1>',
                '<p class="lede">Follow official resources, then explore historical context from the nations in this growing list.</p>',
+               '<p class="lede"><a href="/nations/paths-to-action">Paths To Action</a>: a practical guide to evidence, representation and community-chosen next steps.</p>',
                f'<p class="lede">Our registry currently names {L.fmt_int(total)} nations. It is a growing starting point, '
                'not a complete list of the world\'s Indigenous peoples. '
                '<a href="/nations/coverage">See what is covered and where the gaps are.</a> <a href="/nations/directory">Search the broader directory of names.</a></p>',
@@ -1044,6 +1050,7 @@ class Builder:
                                 f"{L.fmt_int(len(self.m.nations))} nations, {L.fmt_int(self.m.counts['shown'])} facts, "
                                 "re-checked weekly.")
         self.build_data(out)
+        wr(os.path.join(out, "static", "nations", "action-brief.txt"), P.action_brief(self.root, self.m))
         boot_h, app_h = b64hash(self.bootstrap), b64hash(self.appearance)
         self.page_policy = POLICY.format(scripts=f"{boot_h} {app_h}", connect="'none'")
         self.hub_policy = POLICY.format(scripts=f"{boot_h} {app_h} {b64hash(self.index_json)} {b64hash(self.herald)}",

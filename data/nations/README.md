@@ -18,21 +18,22 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope, Checked October 16, 2026
 
-The registry contains 469 researched profiles and 1,334 raw facts. Publication controls currently show
-1,332 facts and retain two existing holds. The latest bounded batch adds distinct Sappony and Waccamaw
-Siouan Tribe profiles with eight checked facts, four source-linked history layers and seven direct
-own-publisher resources. All 467 previous canonical objects and fact clocks stay unchanged.
+The registry contains 470 researched profiles and 1,338 raw facts. Publication controls show 1,336
+facts and retain two existing holds. The latest batch adds a distinct MOWA Band of Choctaw Indians
+profile, four own-source facts, two short historical reading layers and four own-publisher resources.
+All 469 previous canonical objects, historical fragments and fact clocks remain unchanged.
 
-The directory preserves 2,272 differently scoped records across eight inventories. Two more North
-Carolina rows link to independently reviewed profiles, while the original source edition and Catawba
-date discrepancy remain intact. Four state source inventories are preserved; 46 other state source
-scopes and four additional inclusion lanes remain pending. These overlapping units are not a count
-of distinct Indigenous Nations. Government recognition never defines Indigenous identity.
+The directory preserves 2,272 overlapping records across eight inventories. The Alabama source
+edition and labels remain intact; one row now links to a separately reviewed MOWA profile. Piqua's
+express name/seal condition remains a manual scoped publication review. Echota's approved HTTPS
+robots request failed certificate validation before HTTP and has a recorded backoff. Neither case
+is a takedown or a finding about Indigenous identity. Worldwide and US coverage remain incomplete.
 
-The two new histories have native In This History links to stable titled sections. Their text and
-exact supporting sources remain readable without JavaScript. Earlier histories are not silently
-opted in or rewritten. Publication holds filter navigation and its targets together. Current services,
-outcomes, human review, Tribal approval and complete coverage are not inferred.
+Paths To Action is an open, ten-chapter practical guide with an offline blank action brief. It
+distinguishes current website resources, reader-controlled planning and proposed desktop workflows.
+Nine primary sources were actually read and independently reviewed for meaning. The guide does not
+collect submissions, provide legal/financial advice, confer authority or promise outcomes. The
+desktop app remains in internal testing; no human, Nation or cited-organization endorsement is implied.
 
 ## October 16: Distinct Chickahominy Profiles And Native Reading Links
 

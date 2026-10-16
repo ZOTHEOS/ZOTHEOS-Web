@@ -464,3 +464,29 @@ two prior tasks remain blocked. Directory names still comprise 2,272 overlapping
 Nations. Meherrin, Occaneechi and all prior publication-scope/backoff decisions remain unchanged.
 The source batch is batches/2026-10-16-us-sappony-waccamaw.json. Review and live verification are separate
 release gates; no human or Nation approval is claimed.
+
+## October 16: MOWA And Practical Pathways
+
+The three-subject batch preserves MOWA as distinct from other Choctaw peoples and governments. Its
+own historical accounts support four checked facts, two titled reading layers and four own links.
+No recognition adjudication, current membership, service outcome, restricted knowledge or media is
+imported. Exact response hashes are metadata; full publisher bodies stay outside the repository.
+Four new facts passed the actual isolated verifier with robots enabled and a measured 10.316439-second
+minimum interval in the final run. The earlier measured 10.195433-second gap is recorded, not rounded
+into compliance. The bounded repeat used a 10.3-second wrapper floor; both attempts remain in evidence.
+
+Piqua remains needs_review for an express name/seal-use condition, manual-only with no automatic
+refetch/restoration or alternate-source bypass. Echota remains blocked after a pre-HTTP TLS hostname
+failure, with one-day backoff and no invented HTTP response or source hash. Existing directory labels
+and the original Alabama source date remain visible. The other 1,809 queue tasks stay unchanged.
+
+The ten practical pathways use source-linked context plus explicitly attributed ZOTHEOS planning
+proposals. Public offices do not replace a Nation's sovereignty. UNDRIP, country-specific law and
+community protocols are distinct. US ICWA eligibility is not universal. OCAP is scoped to First Nations
+in Canada, with FNIGC's trademark attribution. No translation invention or unauthorized voice reuse
+is proposed. Optional named canonical examples inherit all fact/Nation holds, receipt clocks and
+person/grace labels. A held named source removes the entire dependent chapter and offline brief entry.
+There are no new guide scripts, forms, uploads, browser storage or network providers.
+
+Source records: batches/2026-10-16-mowa-and-pathways.json and
+batches/2026-10-16-practical-pathways-sources.json. Release checks and live verification remain separate.

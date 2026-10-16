@@ -796,6 +796,55 @@
         "approval_receipt": "batches/2026-10-15-us-next-histories.catawba-host-approval.json"
       },
       "note": "Existing canonical own-host research scope. About, land and farm pages read; conflicting 1951/1959 termination years and dated farm funding limits remain explicit. No present recognition adjudication or current service guarantee."
+    },
+    {
+      "source_id": "own-piqua-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://piquashawnee.gov/",
+      "allowed_hosts": [
+        "piquashawnee.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Bounded HTTPS own-site candidate from retained Alabama commission roster. Host access scope only; identity, content and reuse review pending. No redirects preapproved."
+    },
+    {
+      "source_id": "own-mowa-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://mowachoctawindians.com/",
+      "allowed_hosts": [
+        "mowachoctawindians.com",
+        "www.mowachoctawindians.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Bounded HTTPS own-site candidate from retained Alabama commission roster. Host access scope only; identity, content and reuse review pending. No redirects preapproved. Exact www host separately scoped after observed apex homepage301 Location. Identity/publication still pending."
+    },
+    {
+      "source_id": "own-echota-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://echotacherokee.org/",
+      "allowed_hosts": [
+        "echotacherokee.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "HTTPS candidate from scheme-less lead in retained Alabama roster. Access scope only; no identity/reuse/publication or redirect approval."
     }
   ]
 }

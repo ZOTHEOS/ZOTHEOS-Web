@@ -1,8 +1,8 @@
 {
   "version": "1",
   "generated": "2026-10-16",
-  "count": 469,
-  "facts": 1334,
+  "count": 470,
+  "facts": 1338,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 37,
+    "us-east-southeast": 38,
     "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
@@ -25714,6 +25714,89 @@
             "accessed": "2026-10-16"
           },
           "evidence": "hands-on learning workshops conducted by elders",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "mowa-band-of-choctaw-indians-us-al",
+      "region": "us-east-southeast",
+      "name": "MOWA Band of Choctaw Indians",
+      "also": [
+        "MOWA Choctaw Indians",
+        "MOWA Choctaw Tribe",
+        "MOWA Choctaw Band of Indians"
+      ],
+      "pronounce": null,
+      "lands": "Mobile and Washington Counties in southwestern Alabama, near the Mobile and Tombigbee Rivers",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.mowachoctawindians.com/",
+      "name_source_url": "https://www.mowachoctawindians.com/",
+      "facts": [
+        {
+          "id": "mowa-band-of-choctaw-indians-us-al-3b180553",
+          "text": "The Tribe's introduction places its communities in Mobile and Washington Counties in southwestern Alabama.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "MOWA Choctaw Native American (Indian) Tribe",
+            "publisher": "MOWA Band of Choctaw Indians",
+            "url": "https://www.mowachoctawindians.com/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "Choctaw Indians of Mobile and Washington Counties",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "mowa-band-of-choctaw-indians-us-al-bac41345",
+          "text": "Its history explains MOWA as a name drawn from Mobile and Washington Counties.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "We Are Choctaw: A Historical Account of Tradition and Progress - MOWA Band of Choctaw Indians",
+            "publisher": "MOWA Band of Choctaw Indians",
+            "url": "https://www.mowachoctawindians.com/history",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "draw their name from the two counties they straddle",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "mowa-band-of-choctaw-indians-us-al-22898883",
+          "text": "The Tribe's land history describes logging as both a source of jobs and displacement for families.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "Land & Timber Industry - MOWA Band of Choctaw Indians",
+            "publisher": "MOWA Band of Choctaw Indians",
+            "url": "https://www.mowachoctawindians.com/land-timber-industry",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "This displaced families, but it also provided jobs.",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "mowa-band-of-choctaw-indians-us-al-19232814",
+          "text": "Its history dates an effort to obtain federal aid for Alabama Choctaw schools to 1934.",
+          "kind": "history",
+          "as_of": "1934",
+          "source": {
+            "title": "Social Barriers - MOWA Band of Choctaw Indians",
+            "publisher": "MOWA Band of Choctaw Indians",
+            "url": "https://www.mowachoctawindians.com/social-barriers",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "Federal Aid Sought for Alabama Choctaw Schools (1934)",
           "status": "verified",
           "checked": "2026-10-16",
           "last_verified": "2026-10-16"

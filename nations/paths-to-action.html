@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Paths To Action | Indigenous nations today</title>
+  <meta name="description" content="Practical, source-linked pathways for Indigenous people and Nations: land, representation, language, evidence and reader-controlled next steps.">
+  <link rel="canonical" href="https://zotheos.org/nations/paths-to-action">
+  <meta property="og:title" content="Paths To Action | Indigenous nations today">
+  <meta property="og:description" content="Practical, source-linked pathways for Indigenous people and Nations: land, representation, language, evidence and reader-controlled next steps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zotheos.org/nations/paths-to-action">
+  <meta property="og:image" content="https://zotheos.org/static/og.png">
+  <meta name="theme-color" content="#000000" id="themeColorMeta">
+  <link rel="icon" href="/zotheos_icon.ico?v=3">
+  <script>
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
+  <!-- Fonts are self-hosted (SIL Open Font License, static/fonts/OFL.txt). zth-fonts is the landing's block, byte for
+       byte; zth-fonts-names holds the faces for letters the brand faces lack. tools/fonts_check.py keeps both in step. -->
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin>
+  <style id="zth-fonts">
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  </style>
+  <style id="zth-fonts-names">
+    @font-face { font-family: 'ZN Serif'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 111.1%;
+      src: url(/static/fonts/zn-serif.ee66476c.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-04FF, U+1E00-1EFF, U+2018-201F, U+207F, U+2C61; }
+    @font-face { font-family: 'ZN Sans'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-sans.2bfa7ad3.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03E1, U+03F0-04FF, U+1E00-1EFF, U+2013, U+2018-201F, U+207F, U+2C61; }
+    @font-face { font-family: 'ZN Mono'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 104.1%;
+      src: url(/static/fonts/zn-mono.a9a7fdeb.woff2) format('woff2');
+      unicode-range: U+023D, U+0294, U+02BB, U+0313, U+0331, U+2C61; }
+    @font-face { font-family: 'ZN Cherokee'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.3%;
+      src: url(/static/fonts/zn-cherokee.4a768fc6.woff2) format('woff2');
+      unicode-range: U+13A0-13F5, U+13F8-13FD, U+AB70-ABBF; }
+    @font-face { font-family: 'ZN Syllabics'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 105.2%;
+      src: url(/static/fonts/zn-syllabics.841c0d05.woff2) format('woff2');
+      unicode-range: U+1400-167F, U+18B0-18F5; }
+    @font-face { font-family: 'ZN Devanagari'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-devanagari.82b61ca2.woff2) format('woff2');
+      unicode-range: U+0900-097F, U+200C-200D, U+25CC, U+A8E0-A8FF; }
+    @font-face { font-family: 'ZN Tifinagh'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
+      unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
+  </style>
+  <link rel="stylesheet" href="/static/nations/nations.d5dd0d73.css">
+  <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nh" id="header">
+  <div class="nh-in">
+    <div class="nh-left">
+      <button class="appearance-btn pill" id="appearanceBtn" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span><span class="ab-caret" aria-hidden="true"></span></button>
+    </div>
+    <a class="nh-mark" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="143" height="30"></a>
+    <nav class="nh-nav" aria-label="Nations">
+      <a href="/theater">Theater</a>
+      <a href="/nations#today">Today</a>
+      <a href="/nations#find">Find</a>
+      <a href="/nations#regions">Regions</a>
+      <a href="/nations/coverage">Coverage</a>
+      <a href="/nations/about">About</a>
+      <a href="/nations/for-nations">For nations</a>
+      <button class="nav-menu-btn pill" id="navMenuBtn" type="button" popovertarget="navSheet"><span class="nm-bars" aria-hidden="true"></span><span class="nm-label">Menu</span></button>
+    </nav>
+  </div>
+</header>
+<!-- The Theme and Motion rows are copied from index.html; tools/nations_lint.py fails when they drift. -->
+<div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <p class="ap-note ap-theme-description" id="apThemeDescription">Silver structure, a foundation for your own judgment.</p>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel" aria-describedby="apThemeDescription">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Sovereign Skeleton" title="Sovereign Skeleton: Silver structure, a foundation for your own judgment."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
+<nav class="nav-sheet" id="navSheet" popover aria-label="Sections">
+  <div class="ns-top">
+    <span class="ap-label">Indigenous nations today</span>
+    <button class="ns-close pill" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
+  </div>
+  <ul class="ns-list">
+    <li><a href="/theater"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span></span></span><span class="ns-name">Theater</span></a></li>
+    <li><a href="/nations#today"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Today</span></a></li>
+    <li><a href="/nations#find"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Find</span></a></li>
+    <li><a href="/nations#regions"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Regions</span></a></li>
+    <li><a href="/nations/coverage"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span></span></span><span class="ns-name">Coverage</span></a></li>
+    <li><a href="/nations/about"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span></span></span><span class="ns-name">About</span></a></li>
+    <li><a href="/nations/for-nations"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">For nations</span></a></li>
+    <li><a href="/nations/paths-to-action" aria-current="page"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Paths To Action</span></a></li>
+    <li><a href="/nations/directory"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Directory</span></a></li>
+    <li><a href="/nations/resources"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span></span></span><span class="ns-name">Resources</span></a></li>
+    <li><a href="/nations/sources"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span></span></span><span class="ns-name">Sources</span></a></li>
+    <li><a href="/nations/credits"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Credits</span></a></li>
+    <li><a href="/nations/verification"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Verification</span></a></li>
+    <li><a href="/nations/changes"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Changes</span></a></li>
+  </ul>
+  <div class="ns-foot">
+    <a class="pill" href="/">ZOTHEOS home</a>
+    <button class="pill ns-appearance" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span></button>
+  </div>
+</nav>
+
+
+<main id="main">
+<div class="pathways">
+<header class="pw-hero">
+<p class="eyebrow">Truth · Dignity · Sovereignty</p><h1 class="page-h">What Can ZOTHEOS Do For Indigenous People And Nations?</h1>
+<p class="pw-lede">Make knowledge useful. Follow the evidence, identify a decision that matters and prepare a next step you control. Truth, dignity and sovereignty are the standard for judging the work.</p>
+<p class="pw-lede">This is a practical starting point for people, families, community organizations and Nations worldwide, including people outside government recognition lists. Each community chooses its own priorities and representation. No single story, institution or workflow stands for all Indigenous peoples.</p>
+<div class="pw-entry"><a class="pill" href="#pw-chapters">Choose A Starting Point ↓</a>
+<a class="txt-link" href="/static/nations/action-brief.txt" download>Download The Action Brief ↗</a></div>
+<ol class="pw-route" aria-label="From Reading To A Decision"><li>Choose A Need</li><li>Check The Evidence</li><li>Prepare A Concrete Ask</li><li>Decide And Review</li></ol></header>
+<section class="pw-capabilities" aria-label="What Is Available And What Is Proposed">
+<div class="pw-capability"><p class="eyebrow">Available On This Website</p>
+<p>Read the public Nations directory, source-linked histories and coverage gaps. Follow Nations’ own websites and official resources.</p>
+<p>Use this guide and download its blank action brief. Explore official Theater recordings with their source and viewing notes.</p>
+</div>
+<div class="pw-capability"><p class="eyebrow">Clear Boundaries</p>
+<p>This website does not file applications, represent a Nation, determine citizenship, provide legal or financial advice, negotiate land rights or guarantee an outcome.</p>
+<p>The guide has no upload or submission form. It does not collect your planning answers. Linked services have their own privacy rules and requirements.</p>
+<p>ZOTHEOS is not yet advised by an Indigenous advisory circle. Inclusion and automated checks are not Nation endorsement or community consent.</p>
+<p>The planning steps and future workflows are ZOTHEOS proposals. The cited organizations have not endorsed them.</p>
+</div>
+<div class="pw-capability"><p class="eyebrow">App Workflows Are Proposed</p>
+<p>The desktop app remains in internal testing. The Proposed App Workflow blocks below are design proposals to evaluate, not released services or proven outcomes.</p>
+<p>Any future assistance needs verified capabilities, appropriate permission, human review and evaluation chosen with the people affected. Your decisions remain yours.</p>
+</div>
+</section>
+<div class="pw-layout" id="pw-chapters"><nav class="pw-index" aria-label="In This Guide"><p class="eyebrow">Choose A Starting Point</p><ol>
+<li><a href="#pw-land-and-water">Land, Water And Restoration</a></li>
+<li><a href="#pw-representation-and-power">Representation With Decision-Making Power</a></li>
+<li><a href="#pw-evidence-and-records">Recover Records And Keep The Context</a></li>
+<li><a href="#pw-language-and-culture">Language And Culture Under Community Direction</a></li>
+<li><a href="#pw-data-sovereignty">Control Over Data And Digital Work</a></li>
+<li><a href="#pw-children-and-families">Children, Families And Community Connections</a></li>
+<li><a href="#pw-community-economies">Resources For Community-Chosen Futures</a></li>
+<li><a href="#pw-education-and-public-truth">Education That Keeps Evidence And Dignity Together</a></li>
+<li><a href="#pw-worldwide-and-cross-border">Worldwide Rights, Local Routes</a></li>
+<li><a href="#pw-repair-and-accountability">Make Repair Specific And Accountable</a></li>
+</ol><p>One continuous guide. Every chapter is open to read.</p></nav><div class="pw-reading">
+<section class="pw-chapter" aria-labelledby="pw-land-and-water">
+<p class="eyebrow">Pathway 01</p><h2 id="pw-land-and-water" tabindex="-1">Land, Water And Restoration</h2>
+<p class="pw-intro">A serious answer to land loss begins with the outcome the affected people want. UNDRIP addresses lands and resources in Article 26, redress including restitution in Article 28, and development priorities and consent in Article 32. These standards matter alongside the particular legal system and the Nation’s own institutions.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Begin With The Nation’s Account</h3><p>Use the directory and linked histories to identify the distinct Nation and its own published priorities. Follow the original source. A map, a state label or this directory cannot establish title, a complete homeland boundary or authority to negotiate.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Build A Decision Brief</h3><p>For a public proposal affecting land or water, record the project, responsible authority, published documents, verified deadline and the community’s authorized position. Ask which outcome is sought: return of ownership, protection of access, restoration, a decision-making agreement or another remedy. Record these separately; an invitation to advise does not itself transfer ownership.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Organize Evidence For Human Review</h3><p>A future, tested ZOTHEOS workflow could compare public project documents, extract dated commitments and draft questions with page references. It would need to preserve uncertainty and original files. Counsel, rights holders and authorized community representatives would assess the evidence and choose the remedy.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A source-linked land-and-water brief with one requested decision, its decision-maker, evidence gaps and a verified next date.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Confirm land status, jurisdiction, who can speak for the rights holders and the current procedural rules with qualified local support.</li>
+<li>Keep sensitive places and restricted knowledge out of a public brief. A website summary cannot give consent, settle title or predict a court outcome.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Who will hold authority, access and responsibility after the proposed agreement, and who gets to say no?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://cambodia.ohchr.org/sites/default/files/book/DRIP-En.pdf" target="_blank" rel="noopener noreferrer">United Nations Declaration On The Rights Of Indigenous Peoples</a><span>United Nations / OHCHR · Source Checked <time datetime="2026-10-16">16 Oct 2026</time> · Context Dated <time datetime="2007-09-13">13 Sep 2007</time></span></li>
+<li><a href="https://legal.un.org/avl/ha/ga_61-295/ga_61-295.html" target="_blank" rel="noopener noreferrer">UNDRIP: Historical Context, Provisions And Legal Influence (June 2009 Introductory Note)</a><span>United Nations Audiovisual Library of International Law, introductory note by Siegfried Wiessner · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-representation-and-power">
+<p class="eyebrow">Pathway 02</p><h2 id="pw-representation-and-power" tabindex="-1">Representation With Decision-Making Power</h2>
+<p class="pw-intro">Indigenous people can seek influence in national and local institutions while their Nations sustain their own systems of government. UNDRIP Articles 5 and 18 recognize these distinct dimensions. More Indigenous officeholders can be a community goal; meaningful authority, accountability and chosen representation also need attention.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Find Practical Voting Resources</h3><p>For US elections, follow NARF’s voter resources for registration, identification, polling access, Native-language assistance and Tribal leaders’ guides. This site connects you to those resources; it does not register voters, endorse a party, recruit candidates or speak for a Nation.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Name The Decision And The Seat</h3><p>Separate a public-election goal from a Nation’s own governance process. For the issue you choose, identify the council, school board, agency, legislature or other body with actual authority. Write the decision sought, who is affected and how representatives will report back. Verify current eligibility, deadlines and voting rules through official channels.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Compare Public Commitments</h3><p>A proposed ZOTHEOS workflow could place published platforms, meeting records, budgets and later votes beside one another with exact citations. People would set the questions and check context. The system should not infer someone’s identity or political preferences, score a community’s loyalty or make an endorsement in its name.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A decision map connecting one issue to the institution that can act, the participation route, a verified date and a public accountability question.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>National representation does not replace a Nation’s own authority or consent. Who represents a Nation is for its own procedures, not ZOTHEOS, to decide.</li>
+<li>Check current election and participation requirements. This guide is nonpartisan public information, not campaign or legal representation.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Would a person at the table have a meaningful say, resources and accountability to the people affected?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://vote.narf.org/advocacy-actions/" target="_blank" rel="noopener noreferrer">Resources For Native Voters And Tribes</a><span>Native American Rights Fund · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+<li><a href="https://cambodia.ohchr.org/sites/default/files/book/DRIP-En.pdf" target="_blank" rel="noopener noreferrer">United Nations Declaration On The Rights Of Indigenous Peoples</a><span>United Nations / OHCHR · Source Checked <time datetime="2026-10-16">16 Oct 2026</time> · Context Dated <time datetime="2007-09-13">13 Sep 2007</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-evidence-and-records">
+<p class="eyebrow">Pathway 03</p><h2 id="pw-evidence-and-records" tabindex="-1">Recover Records And Keep The Context</h2>
+<p class="pw-intro">Historical work becomes more useful when another person can trace a statement back to its source. The US National Archives links treaty texts with supporting correspondence, council records and catalog identifiers. Its records are one institutional perspective; a Nation’s own accounts and protocols belong in the research plan.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Follow Facts To Their Sources</h3><p>Read a profile’s Facts And Sources and its deeper history links. Notice the difference between an event year and the date the source was checked. The directory’s coverage notes can reveal missing records without turning an omission into proof that a people did not exist.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Make An Evidence Ledger</h3><p>For each statement, record the original title, author or institution, date, URL or archive identifier, page, supporting passage and what it does not establish. Keep conflicting accounts side by side. Ask a community archive or historian how to handle names and records before making a family or collective history public.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Draft With Verifiable References</h3><p>A possible desktop workflow could help organize a permitted document collection into an evidence table and a timeline. It would need reliable page references and checks for missing or misread text. An extracted sentence is a starting point for review; it cannot decide whether a treaty remains applicable or a legal claim succeeds.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>An evidence ledger that separates sourced statements, interpretations, disputed accounts and unanswered questions.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Archives may contain colonial language, omissions and harmful classifications. Explain their context instead of adopting those labels as fact.</li>
+<li>Preserve original files and record corrections. Historical rolls, ancestry research and a search result do not determine present-day citizenship or membership.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Could someone with a different view inspect the same evidence and see where your conclusion comes from?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://www.archives.gov/research/native-americans/treaties/supporting-documentation" target="_blank" rel="noopener noreferrer">American Indian Treaties: Supporting Documentation</a><span>US National Archives and Records Administration · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-language-and-culture">
+<p class="eyebrow">Pathway 04</p><h2 id="pw-language-and-culture" tabindex="-1">Language And Culture Under Community Direction</h2>
+<p class="pw-intro">A language project can begin with everyday learning and a community’s own goals. FPCC publishes planning, language-nest, family-learning and mentor-apprentice resources. Its FirstVoices tools support community-managed language sites. Availability of a tool or a public recording does not establish permission to copy, translate or train a model on it.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Find Community-Led Learning</h3><p>Use Nations’ own links and the FPCC resource guide to locate a suitable starting point. Read who the material is for and what reuse is allowed. This website’s translation guidance concerns public reading text; automated translation is not an authority on an Indigenous language.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Plan A Small Learning Project</h3><p>With the relevant speakers and community authority, choose an audience, a modest learning goal and an approved set of materials. Agree on attribution, payment, access, reuse and the ability to withdraw material before recording. Choose an existing community-led resource when it already meets the need.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Support A Teacher-Checked Workflow</h3><p>A future ZOTHEOS workflow might organize approved lesson notes or draft practice activities in a language it has been evaluated for. Fluent speakers would check every output. It must not invent translations. Any use of a person’s voice or reuse of recordings would need separate permission, applicable rights checks and speaker review.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A community-approved learning plan describing the audience, permitted materials, speaker review and access rules.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Ask which materials may be public, shared within a community or kept restricted. Do not infer a common rule across Nations.</li>
+<li>Keep speaker expertise central and compensate work appropriately. A fluent-sounding model output may still be wrong.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Will this project strengthen speakers and learners while leaving the community in control of its knowledge?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://fpcc.ca/stories/fpcc-language-resources/" target="_blank" rel="noopener noreferrer">FPCC Language Resources</a><span>First Peoples Cultural Council · Source Checked <time datetime="2026-10-16">16 Oct 2026</time> · Context Dated <time datetime="2026-02-19">19 Feb 2026</time></span></li>
+<li><a href="https://www.gida-global.org/s/dsj-1158_carroll.pdf" target="_blank" rel="noopener noreferrer">The CARE Principles For Indigenous Data Governance</a><span>Stephanie Russo Carroll and coauthors, Data Science Journal / Global Indigenous Data Alliance · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-data-sovereignty">
+<p class="eyebrow">Pathway 05</p><h2 id="pw-data-sovereignty" tabindex="-1">Control Over Data And Digital Work</h2>
+<p class="pw-intro">The CARE principles connect Indigenous data governance with collective benefit, authority to control, responsibility and ethics. FNIGC describes ownership, control, access and possession through the First Nations principles of OCAP®. FNIGC is explicit that these are specifically principles of First Nations in Canada; each Nation’s own protocols remain essential.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Read The Governance Frameworks</h3><p>Use the cited CARE paper and FNIGC’s own explanation before selecting a tool. These are external learning resources. ZOTHEOS has not been certified against them or endorsed by their authors. OCAP® is a registered trademark of the First Nations Information Governance Centre (FNIGC).</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Write The Rules Before Gathering Data</h3><p>Decide who authorizes collection, who benefits, who can see or change records, where copies sit, how retention works and who can stop use. Separate public research from citizenship files, health records, restricted knowledge and precise sensitive locations. Write down permitted uses and a contact route for correction or withdrawal.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Test A Community-Controlled Workspace</h3><p>A proposed local workflow could help organize permitted material under access and retention rules that the community chooses. It would require verified security, export, deletion and network behavior. Local storage alone does not establish consent, collective control, confidentiality or protection from a compromised device.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A data-use agreement checklist with decision authority, purpose, access, retention, permitted reuse and an exit plan.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Assess the actual system, contracts and data flows before adding sensitive material. A product description is not a security audit.</li>
+<li>This guide has no upload or submission form. Keep the downloaded planning brief in a location you choose; do not put private records into it for publication.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Can the people whose knowledge or records are involved understand the use, change the rules and stop it?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://www.gida-global.org/s/dsj-1158_carroll.pdf" target="_blank" rel="noopener noreferrer">The CARE Principles For Indigenous Data Governance</a><span>Stephanie Russo Carroll and coauthors, Data Science Journal / Global Indigenous Data Alliance · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+<li><a href="https://fnigc.ca/ocap-training/" target="_blank" rel="noopener noreferrer">The First Nations Principles Of OCAP®</a><span>First Nations Information Governance Centre · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-children-and-families">
+<p class="eyebrow">Pathway 06</p><h2 id="pw-children-and-families" tabindex="-1">Children, Families And Community Connections</h2>
+<p class="pw-intro">NICWA explains the Indian Child Welfare Act as a US law with defined requirements for covered child-custody proceedings. Its application involves specific criteria; it is not a universal rule for every family or country. A useful guide helps someone reach the right specialist while protecting the child’s privacy.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Reach The Original Guidance</h3><p>Open NICWA’s explanation and family resources from its own site. This page provides a reading route, not case intake or an eligibility finding. A documentary can give historical context, but cannot establish what should happen in an individual proceeding.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Prepare For A Qualified Conversation</h3><p>If a US child-welfare matter may involve ICWA, speak promptly with the child’s Tribe and a qualified attorney or legal service, as NICWA advises. Privately organize notices, dates, questions and existing case contacts. Ask how the relevant law, Tribal membership determination and current court process apply; avoid posting identifying records publicly.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Keep Any Draft Assistance Narrow</h3><p>A possible ZOTHEOS workflow could help a person organize questions from documents they are authorized to use. It would require rigorous privacy and accuracy checks. It must not decide membership, legal eligibility, custody, placement or the best interests of a child, and it must not delay professional help.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A private question list and document index for a qualified adviser, with verified dates and identifying information kept out of public material.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Current deadlines and court instructions require qualified case-specific advice. Check local law; do not export US ICWA assumptions to another jurisdiction.</li>
+<li>A family’s dignity includes control over its story. Obtain appropriate authority before sharing any record or account involving a child.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Does the next step protect the child’s safety, relationships, privacy and the community’s lawful role?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://www.nicwa.org/what-is-icwa/" target="_blank" rel="noopener noreferrer">What Is ICWA?</a><span>National Indian Child Welfare Association · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-community-economies">
+<p class="eyebrow">Pathway 07</p><h2 id="pw-community-economies" tabindex="-1">Resources For Community-Chosen Futures</h2>
+<p class="pw-intro">The Native CDFI Network describes work to strengthen Native community development financial institutions and access to capital. It includes Native American, Alaska Native and Native Hawaiian communities in its mission. A resource connection can help someone explore options; it is not evidence of eligibility, an open funding round or an affordable loan.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Find A Relevant Starting Point</h3><p>Follow the Network’s current resources and the Nation’s own published economic or education programs. Read the actual provider’s terms and service area. ZOTHEOS does not lend, award grants, verify a program’s current availability or receive financial applications.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Prepare A Realistic Project Brief</h3><p>Define a project chosen by the people involved: a business, language program, food initiative, community facility or another need. List the budget, skills, ongoing costs, intended beneficiaries and decision authority. Compare the provider’s current criteria, obligations, fees and repayment conditions with qualified advice where appropriate.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Help Prepare Draft Materials</h3><p>A proposed workflow could turn an approved budget and project notes into a draft narrative, a missing-information list and a source-linked comparison of published opportunities. People would verify every figure and representation. No invented impact metrics, financial promises or automatic applications belong in the output.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A project brief with a checked budget, responsibilities, ongoing costs, provider questions and an honest list of missing information.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Confirm all eligibility, cost, repayment, ownership and deadline details with the actual provider. This guide is not financial advice.</li>
+<li>Ask who owns the result and carries the risk. A project should build community capacity rather than transfer control through unclear terms.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Will the benefits, skills and decision-making stay with the people the project is meant to serve?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://nativecdfi.net/" target="_blank" rel="noopener noreferrer">Native CDFI Network: Mission And Resources</a><span>Native CDFI Network · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-education-and-public-truth">
+<p class="eyebrow">Pathway 08</p><h2 id="pw-education-and-public-truth" tabindex="-1">Education That Keeps Evidence And Dignity Together</h2>
+<p class="pw-intro">The public website already offers cited Nation profiles, source-linked reading and a Theater of official viewing destinations. Those are starting points for learning. Their existence does not mean every statement in a film has been independently verified or that any Nation has endorsed ZOTHEOS.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Read Beyond A Film</h3><p>Choose a profile and read its own sources alongside a relevant Theater recording. Keep the viewing type, content notes, historical period and access limits in view. Look for living community work and continuity as well as accounts of harm.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Create A Responsible Learning Session</h3><p>Define a question and audience, choose permitted materials, and provide context and a way to step away from difficult content. Separate the source’s statement from your interpretation. Include community-authored material and correct mistakes openly. Seek the appropriate permission before using voices, artwork or cultural material in a public project.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Draft A Source-Checked Learning Pack</h3><p>A future workflow could help prepare a reading sequence, glossary or discussion questions from material permitted for that purpose. A qualified educator and relevant community reviewers would check it. It should preserve disagreement and uncertainty rather than manufacture consensus or a single pan-Indigenous account.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A learning plan with one question, direct source links, viewing notes, an explanation of uncertainty and a correction route.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>A public link is not a licence to rehost a film, imitate a voice or copy restricted knowledge. Check the publisher and community conditions.</li>
+<li>Sources have limits and can change. When an account is disputed, attribute it and show what evidence remains unresolved.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>Will the audience leave better able to check a claim and recognize the people behind it?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://fpcc.ca/stories/fpcc-language-resources/" target="_blank" rel="noopener noreferrer">FPCC Language Resources</a><span>First Peoples Cultural Council · Source Checked <time datetime="2026-10-16">16 Oct 2026</time> · Context Dated <time datetime="2026-02-19">19 Feb 2026</time></span></li>
+<li><a href="https://www.gida-global.org/s/dsj-1158_carroll.pdf" target="_blank" rel="noopener noreferrer">The CARE Principles For Indigenous Data Governance</a><span>Stephanie Russo Carroll and coauthors, Data Science Journal / Global Indigenous Data Alliance · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-worldwide-and-cross-border">
+<p class="eyebrow">Pathway 09</p><h2 id="pw-worldwide-and-cross-border" tabindex="-1">Worldwide Rights, Local Routes</h2>
+<p class="pw-intro">UNDRIP offers a worldwide rights framework, including cross-border relationships in Article 36. Practical routes vary by place. The UN’s legal commentary discusses its influence and relationships with other law; a declaration, a domestic statute, a treaty and a court judgment should not be treated as interchangeable.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Start With The Right People And Place</h3><p>Use worldwide directory navigation to find the distinct people, Nation or representative organization. Then read its own sources. Country and region labels help browsing; they do not define identity, exclusive homelands or who may speak for a community.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Find The Applicable Process</h3><p>Identify the decision, the relevant jurisdiction and the community-authorized institution or adviser. Ask which domestic, regional, treaty or international process is actually available, with what requirements and risks. A general rights statement does not by itself establish an enforceable remedy, an admissible complaint or a guaranteed response.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Compare Without Flattening Differences</h3><p>A proposed ZOTHEOS workflow could compare public accounts across borders while retaining original language, dates and separate legal contexts. It would need reviewed translations and local expertise. It should not turn another Nation’s agreement, legal status or practice into a universal template.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A jurisdiction-and-process map with the community’s chosen objective, applicable sources, adviser questions and a verified next step.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Confirm the current rules and the authority of any representative or intermediary. This page does not submit complaints or conduct outreach.</li>
+<li>Check translation and local terminology with people qualified to interpret them. Recognition categories do not exhaust the world’s Indigenous identities.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>What needs to change in this place, and whose knowledge and authority are needed to decide how?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://cambodia.ohchr.org/sites/default/files/book/DRIP-En.pdf" target="_blank" rel="noopener noreferrer">United Nations Declaration On The Rights Of Indigenous Peoples</a><span>United Nations / OHCHR · Source Checked <time datetime="2026-10-16">16 Oct 2026</time> · Context Dated <time datetime="2007-09-13">13 Sep 2007</time></span></li>
+<li><a href="https://legal.un.org/avl/ha/ga_61-295/ga_61-295.html" target="_blank" rel="noopener noreferrer">UNDRIP: Historical Context, Provisions And Legal Influence (June 2009 Introductory Note)</a><span>United Nations Audiovisual Library of International Law, introductory note by Siegfried Wiessner · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+<section class="pw-chapter" aria-labelledby="pw-repair-and-accountability">
+<p class="eyebrow">Pathway 10</p><h2 id="pw-repair-and-accountability" tabindex="-1">Make Repair Specific And Accountable</h2>
+<p class="pw-intro">A practical proposal for repair should say what changes, who decides, who pays and how the affected people judge the result. The planning method below is a ZOTHEOS proposal for organizing work. It is not an agreement by a Nation, a legal remedy or evidence that any promised benefit has happened.</p><div class="pw-steps">
+<article class="pw-step pw-website-now"><p class="pw-scope">Website Now</p>
+<h3>Use The Brief And Show The Gaps</h3><p>Download the plain-text action brief from this page. Choose one chapter and fill the blank fields in a place you control. The directory’s coverage report and corrections route can help you identify missing public information. This page does not collect your answers.</p></article>
+<article class="pw-step pw-reader-controlled"><p class="pw-scope">Work You Control</p>
+<h3>Ask For A Concrete Commitment</h3><p>For a proposal you are authorized to advance, name the requested change, responsible institution, resources, consent process, milestone and correction route. Examples to evaluate include a community-directed language budget, a documented access commitment or an agreed land-restoration process. Keep compensation, ownership, representation and service delivery distinct; the affected rights holders decide what is acceptable.</p></article>
+<article class="pw-step pw-future-app"><p class="pw-scope">Proposed App Workflow</p>
+<h3>Track Promises Against Evidence</h3><p>A future workflow could compare a public commitment with dated records of what followed. People would choose the measures and decide whether publication is appropriate. A polished report, a meeting or a positive sentiment score must not be substituted for a demonstrated change in authority, access or conditions.</p></article>
+</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>A community-directed commitment record: requested change, authorized decision-maker, resources, evidence, review date and a way to correct or stop.</p></div>
+<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>
+<li>Agree on what would count as progress and what would trigger revision or stopping. Record actual observations and uncertainty; do not invent participation, consent or outcomes.</li>
+<li>For allies and institutions: ask what support is wanted, resource the work fairly and accept refusal. The guide is not a mandate to initiate a project in someone else’s name.</li>
+</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>If the people affected said this did not help, could the project change course and return control?</p></aside>
+<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>
+<li><a href="https://www.gida-global.org/s/dsj-1158_carroll.pdf" target="_blank" rel="noopener noreferrer">The CARE Principles For Indigenous Data Governance</a><span>Stephanie Russo Carroll and coauthors, Data Science Journal / Global Indigenous Data Alliance · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+<li><a href="https://legal.un.org/avl/ha/ga_61-295/ga_61-295.html" target="_blank" rel="noopener noreferrer">UNDRIP: Historical Context, Provisions And Legal Influence (June 2009 Introductory Note)</a><span>United Nations Audiovisual Library of International Law, introductory note by Siegfried Wiessner · Source Checked <time datetime="2026-10-16">16 Oct 2026</time></span></li>
+</ul><p>Sources support the stated context. Planning steps and proposed workflows are ZOTHEOS suggestions; they are not endorsements by the cited organizations.</p></div>
+<a class="pw-back" href="#pw-chapters">Back To The Guide ↑</a></section>
+</div></div><section class="pw-next" aria-labelledby="pw-next-title"><h2 id="pw-next-title">Choose One Useful Next Step.</h2>
+<p>Use the blank brief to record the question, the people with authority, the sources and what still needs checking. Fill it offline in a place you control. This page has no form or upload and does not receive your answers.</p>
+<div class="pw-links"><a class="pill" href="/nations/directory">Find A Nation’s Own Sources</a><a class="pill" href="/nations/resources">Keep Reading</a><a class="pill" href="/nations/for-nations">Corrections From Nations</a><a class="pill" href="/nations/coverage">Coverage And Gaps</a><a class="pill" href="/download">App Release Status</a></div>
+<p class="pw-receipt">Read online or use your browser’s Print option to keep a reading copy. Source-check dates record when a source was read; they do not make every rule, program or historical statement current.</p></section></div>
+</main>
+<footer class="ft">
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="133" height="28"></a>
+        <p class="ft-tag">Offline ethical intelligence. Private by default. Built independently.</p>
+        <p class="ft-founder">Founded by <strong>David Garcia</strong><br>United States Marine Corps Veteran<br>ZOTHEOS LLC &middot; Established March 2025<br>In development since January 2024</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <div class="ft-col" role="group" aria-labelledby="fcol-council">
+          <span class="ft-col-l" id="fcol-council">Council</span>
+          <a href="/#council-story">The council</a>
+          <a href="/#features">Architecture</a>
+          <a href="/#workspace">Workspace</a>
+          <a href="/#console">Console</a>
+          <a href="/#memory">Memory</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-proof">
+          <span class="ft-col-l" id="fcol-proof">Proof</span>
+          <a href="/#proof">Proof</a>
+          <a href="/#compare">Comparison</a>
+          <a href="/#devices">Hardware</a>
+          <a href="/#model-choice">Model choice</a>
+          <a href="/#site-privacy">Website privacy</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-release">
+          <span class="ft-col-l" id="fcol-release">Release</span>
+          <a href="/download">Download status</a>
+          <a href="/#waitlist">Early access</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#founder">Founder</a>
+          <a href="/#mission">Mission</a>
+          <a href="/#support">Support</a>
+        </div>
+        <div class="ft-col" role="group" aria-labelledby="fcol-explore">
+          <span class="ft-col-l" id="fcol-explore">Explore</span>
+          <a href="/theater">Theater</a>
+          <a href="/nations/directory">Nations directory</a>
+          <a href="/nations">Indigenous nations today</a>
+          <a href="/nations/resources">Histories and resources</a>
+          <a href="/nations/paths-to-action">Paths To Action</a>
+          <a href="/game">Play Ollamaliztli</a>
+        </div>
+      </nav>
+      <p class="ft-meta">&copy; 2026 ZOTHEOS LLC<br>All rights reserved.<br><br>Sovereign OS<br>Offline &middot; Private &middot; Independent</p>
+    </div>
+    <div class="ft-block" id="site-privacy">
+      <p class="lbl">Website privacy</p>
+      <div>
+        <p>On this device: these pages save your theme and motion choice in browser storage, and the nations page keeps a random key and its place in the walk there, so you meet new nations. None of it leaves your device.</p>
+        <p>Connections: Nations pages load their resources from zotheos.org. Sources and nations' own sites open when you follow a link. The separate <a href="/theater">Theater</a> automatically loads publisher thumbnails and the selected ready player on opening the page. Their providers receive your IP address and request information under their own privacy policies; playback waits for Play. A correction is written by your own mail client to <a href="mailto:contact@zotheos.org">contact@zotheos.org</a>.</p>
+      </div>
+    </div>
+    <div class="ft-block" id="roots">
+      <p class="lbl"><svg class="fret" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><use href="#fret-mini"/></svg>Roots and gratitude</p>
+      <div>
+        <p class="roots">ZOTHEOS draws its visual language from ancient Mesoamerica: the stepped fret, the fine black line of the painted codices, the count of days. It honors the Indigenous peoples of the Americas: the Nahua, Maya, Zapotec and many other peoples of Mexico and Central America, and the Native nations further north. They are distinct peoples with connected roots that are still living, and many Mexican and Mexican American families carry those roots too. As the project grows, it intends to work with Indigenous scholars and community members, so that every symbol here is used accurately and with permission. Any wider work with the traditions of other peoples is meant to follow the same rule: their guidance, their permission. That work has a first page: <a href="/nations">Indigenous nations today</a>, their own names first, every fact with its source and the date it was checked.</p>
+        <p><a href="/#roots">Sources and orthography, on the landing page</a></p>
+      </div>
+    </div>
+    <div class="ft-block" id="nations-credit">
+      <p class="lbl">Nations</p>
+      <div>
+        <p>Nations: names, lands and facts as each nation publishes them, and from the public sources named on every card. Full list at <a href="/nations/sources">zotheos.org/nations/sources</a>.</p>
+        <p>Published by ZOTHEOS from cited sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
+        <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
+        <p>Nations pages do not embed third-party media. Source links open when followed; optional video providers are explained on the separate Theater page.</p>
+        <p>Researched profiles: Compiled 16 Oct 2026</p>
+      </div>
+    </div>
+    <div class="ft-epi">
+      <p class="nah"><span lang="nah">in xochitl, in cuicatl</span> <small>flower and song, poetry</small></p>
+      <p class="ver">ZTHS &middot; 026</p>
+    </div>
+  </div>
+</footer>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="fret-mini" viewBox="0 0 10 10"><path d="M0.75 9.25V6.6h2.7V3.95h2.7V1.3h3.1v3.8H7.3" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke" stroke-linecap="square" stroke-linejoin="miter"/></symbol></svg>
+
+<script>
+(function () {
+  /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
+     the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
+  var d = document.documentElement;
+  var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
+  var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
+  var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function radios(group, onPick) {
+    if (!group) return function () {};
+    var opts = group.querySelectorAll('[role="radio"]');
+    function mark(b) {
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].setAttribute('aria-checked', opts[i] === b ? 'true' : 'false');
+        opts[i].tabIndex = opts[i] === b ? 0 : -1;
+      }
+    }
+    group.addEventListener('click', function (e) {
+      var b = e.target.closest('[role="radio"]');
+      if (b && group.contains(b) && b.getAttribute('aria-disabled') !== 'true') { mark(b); onPick(b); }
+    });
+    group.addEventListener('keydown', function (e) {
+      var k = e.key, i = Array.prototype.indexOf.call(opts, document.activeElement);
+      if (i < 0) return;
+      var j = (k === 'ArrowRight' || k === 'ArrowDown') ? i + 1 : (k === 'ArrowLeft' || k === 'ArrowUp') ? i - 1 : k === 'Home' ? 0 : k === 'End' ? opts.length - 1 : -2;
+      if (j === -2) return;
+      e.preventDefault();
+      j = (j + opts.length) % opts.length;
+      opts[j].focus(); mark(opts[j]); onPick(opts[j]);
+    });
+    return mark;
+  }
+  var themeMark = radios(document.querySelector('#appearancePop .theme-picker'), function (b) { theme(b.getAttribute('data-set') || '', true); });
+  function theme(t, save) {
+    if (t !== 'maya' && t !== 'codex' && t !== 'skeleton') t = '';
+    if (t) d.setAttribute('data-theme', t); else d.removeAttribute('data-theme');
+    var m = document.getElementById('themeColorMeta');
+    if (m) m.setAttribute('content', BG[t]);
+    var n = document.getElementById('apThemeName');
+    if (n) n.textContent = NAMES[t];
+    var description = document.getElementById('apThemeDescription');
+    if (description) description.textContent = DESCRIPTIONS[t];
+    themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
+    if (save) put('zotheos_landing_theme', t);
+  }
+  var chosen = 'living';
+  var sm = get('zotheos_motion');
+  if (sm === 'living' || sm === 'calm' || sm === 'still') chosen = sm;
+  else if (get('zotheos_fx') === 'off') chosen = 'still';
+  var group = document.getElementById('motionGroup');
+  var motionMark = radios(group, function (b) { chosen = b.getAttribute('data-mode'); put('zotheos_motion', chosen); motion(); });
+  function motion() {
+    var floor = !!(mq && mq.matches);
+    var m = floor ? 'still' : chosen;
+    d.setAttribute('data-motion', m);
+    var row = document.getElementById('apMotionRow'), note = document.getElementById('apMotionNote');
+    if (row) row.classList.toggle('is-idle', floor);
+    if (note) note.hidden = !floor;
+    if (group) {
+      var opts = group.querySelectorAll('[role="radio"]');
+      for (var i = 0; i < opts.length; i++) {
+        if (floor && opts[i].getAttribute('data-mode') !== 'still') opts[i].setAttribute('aria-disabled', 'true');
+        else opts[i].removeAttribute('aria-disabled');
+      }
+      motionMark(group.querySelector('[data-mode="' + m + '"]'));
+    }
+  }
+  theme(get('zotheos_landing_theme') || '', false);
+  motion();
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', motion); else if (mq.addListener) mq.addListener(motion); }
+})();
+
+(function () {
+  var input = document.getElementById('directoryQuery'), list = document.getElementById('directoryNames');
+  if (!input || !list) return;
+  var rows = list.querySelectorAll('[data-directory-name]'), groups = list.querySelectorAll('.directory-group');
+  var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
+  var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
+  var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
+  var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
+  var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
+  var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
+  if (!status || !clear) return;
+  var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
+  var enhanced = !!(tools && inventory && more && limitNote);
+  function fold(s) { return (s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s).toLowerCase(); }
+  for (i = 0; i < rows.length; i++) {
+    names.push(fold(rows[i].getAttribute('data-directory-name')));
+    var owner = rows[i].closest('[data-directory-inventory]');
+    scopes.push(owner ? owner.getAttribute('data-directory-inventory') : '');
+    if (!owner) enhanced = false;
+  }
+  if (enhanced) {
+    for (i = 0; i < inventory.options.length; i++) {
+      var value = inventory.options[i].value, section = document.getElementById(value);
+      if (value !== 'all' && (!section || !list.contains(section) || section.getAttribute('data-directory-inventory') !== value)) enhanced = false;
+    }
+  }
+  function directoryMatches(name, words) {
+    for (var j = 0; j < words.length; j++) {
+      var word = words[j], at = -1;
+      do { at = name.indexOf(word, at + 1); if (at < 0) return false; }
+      while (/^[a-z0-9]/.test(word) && at > 0 && /[a-z0-9]/.test(name.charAt(at - 1)));
+    }
+    return true;
+  }
+  function filter() {
+    var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
+    var selected = enhanced ? inventory.value : 'all';
+    var readyOnly = !!(enhanced && profilesOnly && profilesOnly.checked);
+    if (profileHint) profileHint.hidden = !readyOnly;
+    visible = [];
+    for (var j = 0; j < rows.length; j++) {
+      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words)
+        && (!readyOnly || rows[j].getAttribute('data-directory-profile') === 'ready');
+      if (match) count++;
+      var show = match && (!enhanced || shown < limit);
+      rows[j].hidden = !show;
+      if (show) { shown++; visible.push(rows[j]); }
+    }
+    for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
+    if (enhanced) {
+      var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
+      status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      if (resultsIntro) resultsIntro.hidden = false;
+      if (resultsSummary) resultsSummary.textContent = status.textContent;
+      if (resultsEmpty) resultsEmpty.hidden = count !== 0;
+      if (resultsActions) resultsActions.hidden = count === 0;
+      var next = Math.min(batch, count - shown);
+      more.hidden = next <= 0;
+      more.textContent = 'Show ' + next + ' More';
+      more.setAttribute('aria-label', 'Show the next ' + next + ' matching name records');
+      limitNote.textContent = (next > 0 ? 'Show More reveals the next ' + next + ' matching records. ' : '') + 'Each source keeps its own category and date. These counts are not a total of Indigenous Nations.';
+    } else {
+      status.textContent = count + ' of ' + rows.length + ' name records shown.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+    }
+  }
+  input.addEventListener('input', function () { limit = batch; filter(); });
+  clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
+  if (!enhanced) return;
+  inventory.addEventListener('change', function () { limit = batch; filter(); });
+  if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
+  more.addEventListener('click', function () {
+    var previous = visible.length;
+    limit += batch; filter();
+    // Focus the first newly revealed name so keyboard and screen-reader users can continue reading there.
+    if (visible.length > previous) {
+      var name = visible[previous].querySelector('.directory-name') || visible[previous];
+      name.setAttribute('tabindex', '-1'); name.focus();
+    }
+  });
+  function hashTarget() {
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return null; }
+    var target = document.getElementById(id);
+    return target && list.contains(target) ? target : null;
+  }
+  function reveal(target, initial, focusInventory) {
+    var owner = target.closest('[data-directory-inventory]');
+    if (!owner) return;
+    inventory.value = owner.getAttribute('data-directory-inventory');
+    if (profilesOnly) profilesOnly.checked = false;
+    input.value = ''; limit = batch;
+    var row = target.closest('[data-directory-name]'), ordinal = 0;
+    if (row) {
+      for (var j = 0; j < rows.length; j++) {
+        if (scopes[j] !== inventory.value) continue;
+        ordinal++;
+        if (rows[j] === row) { limit = Math.ceil(ordinal / batch) * batch; break; }
+      }
+    }
+    filter();
+    if (focusInventory) inventory.focus();
+    else if (initial) window.requestAnimationFrame(function () { target.scrollIntoView(); });
+    else target.scrollIntoView();
+  }
+  var navHash = '';
+  window.addEventListener('hashchange', function () {
+    var target = hashTarget(), focusInventory = target && navHash === target.id;
+    navHash = '';
+    if (target) reveal(target, false, focusInventory);
+  });
+  var jumps = document.querySelectorAll('.directory-inventory-nav a');
+  for (i = 0; i < jumps.length; i++) jumps[i].addEventListener('click', function (e) {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = this.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+    var target;
+    try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch (err) { return; }
+    if (!target || !list.contains(target)) return;
+    e.preventDefault(); navHash = target.id;
+    if (window.location.hash === href) { navHash = ''; reveal(target, false, true); }
+    else window.location.hash = href;
+  });
+  filter(); tools.hidden = false;
+  var target = hashTarget();
+  if (target) reveal(target, true, false);
+})();
+</script>
+
+</body>
+</html>
