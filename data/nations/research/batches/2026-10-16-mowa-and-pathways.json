@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T18:39:52.309225+00:00",
+  "publication_state": "Reviewed source candidate; exact code/browser/release/live checks remain separate.",
+  "measured_counts": {
+    "new_profiles": 1,
+    "new_facts": 4,
+    "new_history_layers": 2,
+    "new_own_resources": 4,
+    "canonical_profiles": 470,
+    "raw_facts": 1338,
+    "public_facts": 1336,
+    "previous_canonical_objects_preserved": 469,
+    "directory_source_records": 2272,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1677,
+      "needs_review": 132,
+      "blocked": 3
+    }
+  },
+  "new_profiles": [
+    {
+      "id": "mowa-band-of-choctaw-indians-us-al",
+      "name": "MOWA Band of Choctaw Indians",
+      "official_url": "https://www.mowachoctawindians.com/"
+    }
+  ],
+  "independent_source_review": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-16T18:35:38.189994+00:00",
+    "sha256": "f43bbb48c3a769172a58b8410dd63d7d3204c7157538fd31d2fec895fddfc860",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  },
+  "source_verification": {
+    "schema_version": 1,
+    "publisher": "ZOTHEOS",
+    "recorded_at": "2026-10-16T18:37:36.066763+00:00",
+    "scope": "Only four new MOWA facts in a one-profile private candidate. No existing canonical records or old fact clocks included.",
+    "verification": {
+      "run_date": "2026-10-16",
+      "dry_run": false,
+      "user_agent": "ZOTHEOS-nations-verifier/1 (+https://zotheos.org)",
+      "host_interval_s": 10.2,
+      "timeout_s": 35.0,
+      "retries": 0,
+      "robots": true,
+      "urls_total": 4,
+      "urls_checked": 4,
+      "requests_sent": 5,
+      "elapsed_s": 42.7,
+      "facts_checked": 4,
+      "facts_unchecked": 0,
+      "status": {
+        "verified": 4
+      }
+    },
+    "source_checks": [
+      {
+        "url": "https://www.mowachoctawindians.com/",
+        "http": 200,
+        "outcome": "fetched",
+        "note": "",
+        "final_url": "https://www.mowachoctawindians.com/",
+        "facts": 1
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/history",
+        "http": 200,
+        "outcome": "fetched",
+        "note": "",
+        "final_url": "https://www.mowachoctawindians.com/history",
+        "facts": 1
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/land-timber-industry",
+        "http": 200,
+        "outcome": "fetched",
+        "note": "",
+        "final_url": "https://www.mowachoctawindians.com/land-timber-industry",
+        "facts": 1
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/social-barriers",
+        "http": 200,
+        "outcome": "fetched",
+        "note": "",
+        "final_url": "https://www.mowachoctawindians.com/social-barriers",
+        "facts": 1
+      }
+    ],
+    "fact_checks": [
+      {
+        "nation": "mowa-band-of-choctaw-indians-us-al",
+        "fact": "mowa-band-of-choctaw-indians-us-al-3b180553",
+        "url": "https://www.mowachoctawindians.com/",
+        "evidence": "Choctaw Indians of Mobile and Washington Counties",
+        "status": "verified",
+        "note": "",
+        "previous": "verified"
+      },
+      {
+        "nation": "mowa-band-of-choctaw-indians-us-al",
+        "fact": "mowa-band-of-choctaw-indians-us-al-bac41345",
+        "url": "https://www.mowachoctawindians.com/history",
+        "evidence": "draw their name from the two counties they straddle",
+        "status": "verified",
+        "note": "",
+        "previous": "verified"
+      },
+      {
+        "nation": "mowa-band-of-choctaw-indians-us-al",
+        "fact": "mowa-band-of-choctaw-indians-us-al-22898883",
+        "url": "https://www.mowachoctawindians.com/land-timber-industry",
+        "evidence": "This displaced families, but it also provided jobs.",
+        "status": "verified",
+        "note": "",
+        "previous": "verified"
+      },
+      {
+        "nation": "mowa-band-of-choctaw-indians-us-al",
+        "fact": "mowa-band-of-choctaw-indians-us-al-19232814",
+        "url": "https://www.mowachoctawindians.com/social-barriers",
+        "evidence": "Federal Aid Sought for Alabama Choctaw Schools (1934)",
+        "status": "verified",
+        "note": "",
+        "previous": "verified"
+      }
+    ],
+    "response_captures": [
+      {
+        "url": "https://www.mowachoctawindians.com/robots.txt",
+        "final_url": "https://www.mowachoctawindians.com/robots.txt",
+        "started_at": "2026-10-16T18:36:02.340828+00:00",
+        "completed_at": "2026-10-16T18:36:02.568815+00:00",
+        "http_status": 200,
+        "sha256": "10d4bed331d1487cf3c0fdd1388e04d83bf26ffab93b93f87b9db81ad0df24cc",
+        "bytes": 508,
+        "content_encoding": "gzip",
+        "decoded_sha256": "af769a06c3042d671852b72aa175f7fcc8898ab43e1785a25e0e9f017c0b26fd",
+        "decoded_bytes": 1517,
+        "read_completed_without_error": true,
+        "seconds_since_previous_response": null
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/",
+        "final_url": "https://www.mowachoctawindians.com/",
+        "started_at": "2026-10-16T18:36:12.891699+00:00",
+        "completed_at": "2026-10-16T18:36:13.157741+00:00",
+        "http_status": 200,
+        "sha256": "081e3e1e8241c689586fdf2835e3247098c40f1b8d16f8908b78e105bd067982",
+        "bytes": 50835,
+        "content_encoding": "gzip",
+        "decoded_sha256": "177c9521e6e0ca6c34123251372d1f3e370324f1bab409237d8b3751722d15e9",
+        "decoded_bytes": 432537,
+        "read_completed_without_error": true,
+        "seconds_since_previous_response": 10.322884
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/history",
+        "final_url": "https://www.mowachoctawindians.com/history",
+        "started_at": "2026-10-16T18:36:23.474855+00:00",
+        "completed_at": "2026-10-16T18:36:23.776145+00:00",
+        "http_status": 200,
+        "sha256": "b3d767d853431df0839673b1f5b823f3a1bbd1f168a66133f742847b93ead858",
+        "bytes": 41413,
+        "content_encoding": "gzip",
+        "decoded_sha256": "6266b1a1c73719226cd190424a314b4e480c507bc01750a93be153b3b2c610dd",
+        "decoded_bytes": 357458,
+        "read_completed_without_error": true,
+        "seconds_since_previous_response": 10.317114
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/land-timber-industry",
+        "final_url": "https://www.mowachoctawindians.com/land-timber-industry",
+        "started_at": "2026-10-16T18:36:34.092584+00:00",
+        "completed_at": "2026-10-16T18:36:34.395896+00:00",
+        "http_status": 200,
+        "sha256": "a106f575b4a4b3eeed303e41af20038a5a732edda27db3944b1d35425709d78e",
+        "bytes": 40271,
+        "content_encoding": "gzip",
+        "decoded_sha256": "f997a3a9d5d5919600c95f8f63439cbb06c077229fa8a82561f499860f73e7cf",
+        "decoded_bytes": 319841,
+        "read_completed_without_error": true,
+        "seconds_since_previous_response": 10.316439
+      },
+      {
+        "url": "https://www.mowachoctawindians.com/social-barriers",
+        "final_url": "https://www.mowachoctawindians.com/social-barriers",
+        "started_at": "2026-10-16T18:36:44.714758+00:00",
+        "completed_at": "2026-10-16T18:36:44.976592+00:00",
+        "http_status": 200,
+        "sha256": "1abd62cbf81fc8e75f84bc1d062b9b24dc2fba9fc364c33da246d743a4c2a0a3",
+        "bytes": 40379,
+        "content_encoding": "gzip",
+        "decoded_sha256": "3e46eb23c3c3f552e9cd49373fcd346e9b2dfde2c8f4531187abd934eac096b2",
+        "decoded_bytes": 318055,
+        "read_completed_without_error": true,
+        "seconds_since_previous_response": 10.318862
+      }
+    ],
+    "tool_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "pacing": {
+      "configured_verifier_interval_seconds": 10.2,
+      "final_wrapper_floor_seconds": 10.3,
+      "final_minimum_measured_utc_gap_seconds": 10.316439,
+      "verification_attempts": 2,
+      "total_verifier_requests": 10,
+      "earlier_attempt": "All four evidence phrases matched, but one measured UTC gap was 10.195433 seconds. That attempt was preserved and its spacing was not rounded into compliance. The same bounded URLs were checked once more with a 10.3-second wrapper floor."
+    },
+    "meaning_limit": "Verified means the existing source verifier found each short evidence phrase on a fresh permitted response. It does not establish every historical interpretation, legal status, current service or community endorsement. Separate independent meaning/respect review remains required.",
+    "human_review_claimed": false,
+    "nation_endorsement_claimed": false
+  },
+  "changed_queue_tasks": [
+    "profile-us-state-al-piqua-shawnee-tribe",
+    "profile-us-state-al-mowa-band-of-choctaw-indians",
+    "profile-us-state-al-echota-cherokee-tribe-of-al"
+  ],
+  "other_queue_tasks_preserved": 1809,
+  "source_conditions": {
+    "piqua": {
+      "status": "manual_scoped_review_pending",
+      "terms_url": "https://piquashawnee.gov/terms",
+      "terms_checked": "2026-10-16T18:21:46.892371+00:00",
+      "terms_sha256": "badae2e87af8e2eeb398d1e19facc660553e8d267478bbb57690f2af336c48f2",
+      "stated_effective_date": "2026-01-01",
+      "profile_published": false,
+      "directory_retained": true,
+      "note": "Express name/seal use condition. No blanket legal conclusion, takedown or routine refetch."
+    },
+    "echota": {
+      "status": "access_failure_before_http",
+      "attempt_receipt": "receipts/2026-10-16-echota-tls-attempt.json",
+      "profile_published": false,
+      "directory_retained": true
+    }
+  },
+  "preservation": [
+    "All469 previous canonical objects and fact clocks remain unchanged.",
+    "Prior source conditions and publication holds remain unchanged.",
+    "Government inventories are planning references, never an Indigenous identity boundary."
+  ],
+  "complete_coverage_claimed": false,
+  "human_approval_created": false,
+  "nation_endorsement_claimed": false
+}

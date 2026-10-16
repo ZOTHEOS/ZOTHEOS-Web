@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "record_type": "failed_https_request_attempt_not_source_receipt",
+  "source_url": "https://echotacherokee.org/robots.txt",
+  "requested_at": "2026-10-16T18:24:22.364782+00:00",
+  "completed_at": "2026-10-16T18:24:22.692230+00:00",
+  "http_status": null,
+  "response_body_received": false,
+  "response_bytes": null,
+  "response_sha256": null,
+  "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'echotacherokee.org'. (_ssl.c:997)>",
+  "failed_stage": "TLS hostname verification before an HTTP response",
+  "redirect_observed": false,
+  "robots_policy_read": false,
+  "certificate_verification_disabled": false,
+  "placeholder_file_note": "The capture helper retained an empty zero-byte local placeholder. Its empty-file hash is not a publisher response, source receipt or evidence of website content.",
+  "human_review_claimed": false
+}

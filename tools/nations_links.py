@@ -79,6 +79,10 @@ def main(argv=None):
         for resource in catalog.get("resources", []):
             allowed |= {link["url"] for link in resource.get("links", [])}
             allowed |= {source["url"] for source in resource.get("sources", [])}
+    pp = os.path.join(root, "data", "nations", "pathways.json")
+    if os.path.isfile(pp):
+        catalog = json.load(open(pp, encoding="utf-8"))
+        allowed |= {source["url"] for source in catalog.get("sources", [])}
     cp = os.path.join(root, "data", "nations", "context_links.json")
     if os.path.isfile(cp):
         catalog = json.load(open(cp, encoding="utf-8"))
