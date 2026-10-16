@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T08:32:04.389379+00:00",
+  "directory_id": "us-state-nc-haliwa-saponi-indian-tribe",
+  "registry_id": "haliwa-saponi-indian-tribe-us-nc",
+  "own_published_name": "Haliwa-Saponi Indian Tribe",
+  "official_url": "https://www.haliwa-saponi.gov/",
+  "own_home_receipt": "research/receipts/next-nc-haliwa-www-gov-home.receipt.json",
+  "evidence_phrase": "Haliwa-Saponi Indian Tribe",
+  "directory_source": {
+    "publisher": "North Carolina Department of Administration, American Indian Affairs",
+    "title": "NC Tribal Communities",
+    "url": "https://www.doa.nc.gov/divisions/american-indian-affairs/tribes",
+    "publication_date": null,
+    "as_of": null,
+    "retrieved_at": "2026-10-14T05:12:00.208948+00:00",
+    "sha256": "7338e1d5631995f55c3c98ae3117a9ff9cfb3b93829d9366d96030d5f39a5485",
+    "receipt": "receipts/us-nc-doa-tribes-2026-10-14.receipt.json",
+    "source_edition": "Unversioned public web directory observed on 2026-10-14 UTC; no record-level effective date established.",
+    "as_of_scope_note": "Inventory as_of is the UTC retrieval date, not a recognition-grant date."
+  },
+  "ownership_chain": "NC DOA retained own-site link followed through separately retained HTTPS canonical redirects. HTTP downgrade not followed.",
+  "independent_review_record_sha256": "2538d12bcbf493db4409d1d6ccd9e263a3d116daac7264a54e451e076d54b1bd",
+  "missingness_audit": {
+    "existing_profiles_scanned": 465,
+    "matching_identity_or_aliases": 0
+  },
+  "human_review_claimed": false,
+  "limits": "Specific government identity only. The dated state-directory observation is preserved; it is not a fresh recognition or territorial-boundary determination.",
+  "url": "https://www.haliwa-saponi.gov/",
+  "final_url": "https://www.haliwa-saponi.gov/",
+  "retrieved_at": "2026-10-16T08:12:35.928243+00:00",
+  "http_status": 200,
+  "sha256": "46a4144245d7d34591720ba4cf3ebe62aa6a8cc1e5e7d13cf505f2eb871ddd80"
+}

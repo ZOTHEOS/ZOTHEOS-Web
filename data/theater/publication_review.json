@@ -1,43 +1,45 @@
 {
-  "version": 3,
-  "prepared_at": "2026-10-16T07:46:23.222638+00:00",
+  "version": 4,
+  "prepared_at": "2026-10-16T08:44:02.062653+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-for-publication",
   "catalogue": {
-    "sha256": "eed9e50c522f1c33752b2aa4995def7514f294c1e75695b8c2f1b75e556dd73f",
-    "titles": 222,
-    "configured_players": 215,
+    "sha256": "10ad5ad03008dc1a89a548bf0daa691e9131ed614dbd309cf79089d5cfac5cd4",
+    "titles": 228,
+    "configured_players": 221,
     "source_only": 7,
-    "source_references": 433,
+    "source_references": 451,
     "featured": "yanuni",
     "viewing": {
       "full-film": 18,
-      "recorded-program": 63,
+      "recorded-program": 67,
       "trailer": 49,
-      "short": 64,
+      "short": 66,
       "excerpt": 21,
       "official-page": 7
     }
   },
-  "request_revision": "Worldwide browsing, a larger source-backed collection, a homepage gateway and cross-page navigation. The selected player is ready for native Play/Pause with no separate Load or Unload controls. No autoplay or automatic next-story playback.",
+  "request_revision": "Two missing US Tribal-government profiles with own sources; six worldwide publisher-linked selections; native per-story links and a Where To Watch discovery filter on responsive layouts.",
   "review_artifact_sha256": {
-    "independent-final-world-library-integration-review.json": "281d395c5bd45d45b9c768371974cc22c81a532b719d71ad2f4503318db0006e",
-    "independent-nations-import-review.json": "60c909aba891f17dcd13873240009a4f990ece64fe4285a902f5b5da9ffba6ec",
-    "independent-nations-public-alias-addendum.json": "14cfd13884516d45980363bbe22dbaaa93d8ff010baa7cc927cd3b52338e8b79",
-    "independent-public-privacy-final.json": "7b5ff8ef443d3bb5ec78efe3822a14eb15ebae649aad7f0d2930b151ed5e9b59",
-    "website-library-code-review.json": "85acfc785cb2d4530a5a8f97f23e3432b1790b13670f13fb434373a781117a39",
-    "browser-library-measurements.json": "e9370899716cb1b05060507d9fcdabc2a26a8e168e9cac55dc0bbf665a1e396e",
-    "privacy-preservation-v2-results.json": "2b713b97750efd8af17c4ba3124cdf91cb2fd8044a2eb2040bfc4a721f4777cc"
+    "independent-data-integration-review.json": "caaefdafd314d48e6406bf87880b13304c309aeb238f1f0aa03dde6fde3baa9d",
+    "independent-final-code-output-review.json": "6539bb9f0615051d7dccba0643145bc4e304008fa5d84fc109e0bb74e12a2f74",
+    "independent-story-access-code-review.json": "096a8a7d5d33138b54407b8b3641c40f6ee5070ef24f47a9df6b26f6ceecce0f",
+    "independent-two-nations-source-review.json": "2538d12bcbf493db4409d1d6ccd9e263a3d116daac7264a54e451e076d54b1bd",
+    "independent-source-title-metadata-addendum.json": "38fd48ac4d1055d34b3d35e385034602cbd8d286abcc570cbb457552b2bf3a48",
+    "independent-theater-continuation-source-review.json": "ed97c007c9630034bb182960ee28bdc5564af2c9c7419daab85c72ee7fef2953",
+    "privacy-and-source-clock-review.json": "c6bf92fa4a9667cd9b2eee172d4e41717f8581a4ce045c13864aca60602868e1",
+    "browser-local-measurements.json": "8e6315a2ad23712890f055666fff0b8118f2f456b9571fe0a6e50278b500604b",
+    "browser-nations-measurements.json": "ba450be96a22576bdea5098f71361fe5974058c7be24580c3f2343e0d59c0a35",
+    "full-suite-results.xml": "c6d80a90511670e49ada560ad69108797383d8a7fbbe0cc08b15e53ca82c21b4"
   },
-  "source_reviews": "Every new catalogue synopsis received a separate retained-source meaning review. Configured provider metadata is not certification of every current playback region or every statement in a film.",
+  "source_reviews": "All six additions received independent retained-source meaning review; eight new Nation facts passed separate source meaning/respect review and the actual isolated source refresh.",
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
   "validation": {
-    "full_website_tests": 410,
-    "full_suite_seconds": 182.11,
-    "subsequent_affected_cases": 126,
-    "affected_seconds": 8.94,
-    "scope": "The full suite passed before the final neutral poster wording and twelve project-credit alias labels. All affected Theater cases and CSP parity passed again after those bounded changes.",
+    "full_website_tests": 422,
+    "full_suite_seconds": 171.996,
+    "independent_script_interaction_cases": 39,
+    "independent_renderer_cases": 11,
     "responsive_widths": [
       320,
       390,
@@ -45,44 +47,42 @@
       1280,
       1440
     ],
-    "themes_checked_phone": 4,
-    "themes_checked_desktop": 4,
-    "canonical_privacy_checks": 6,
-    "adversarial_privacy_checks": 22,
-    "source_meaning_reviews": 208,
+    "theme_layouts_phone": 4,
+    "theme_layouts_desktop": 4,
     "nations_build": {
-      "profiles": 465,
-      "pages": 589,
-      "public_facts": 1316,
+      "profiles": 467,
+      "pages": 591,
+      "public_facts": 1324,
       "held_facts": 2
     },
     "game_source_export": {
-      "nations": 465,
-      "quick_facts": 924,
-      "nations_with_history": 84
-    }
+      "nations": 467,
+      "quick_facts": 928,
+      "nations_with_history": 85
+    },
+    "checks": "Build, link, font, contrast, visible-copy and CSP checks passed; full website regression suite passed. Actual browser observations are separately scoped below."
   },
   "browser_observations": [
-    "The real222-record catalogue enhances to24 initially visible cards; nine Show More actions reach222. Final-page focus moves to the first newly revealed poster without replacing the single selected iframe.",
-    "Combined region and recorded-program filters retain the current player. Clear Filters resets discovery controls. Keyboard Space selects the long Denver title and moves focus into its player.",
-    "The new Kenya program and Denver presentation present native Play controls. An NFB Angry Inuk trailer deliberately played to0:20 of1:48 before Pause. This is not complete-film review.",
-    "First Light retains its registration restriction and official-source route; selecting it removes the iframe and focuses the selected heading.",
-    "At measured widths the page has no horizontal overflow. Primary screening actions measure46pixels high; the320px player retains200pixels of content height.",
-    "All four theme input/option pairs remain readable. Living enables the ambient frame; local Still stops it. Global Still/Calm and OS preference behavior have separate actual-script fixtures.",
-    "The homepage links to Theater, Nations, resources and the game; the Theater is visible in homepage and generated Nations navigation.",
-    "The Rappahannock profile context jump clears the sticky header at390px. Its two separately sourced directory records return the same specifically reviewed profile, while source names and dates remain distinct."
+    "Direct NFB story startup mounted that exact provider without a featured YouTube player in the observed DOM/resource inventory. A fresh external-only link mounted zero provider frames. This is not a complete network trace.",
+    "The new Sámi essay presented its native provider Play control. No automatic playback or automatic next-story advance was introduced.",
+    "Watch Here selected221 configured records; Official Site selected7. Combined discovery retained the selected player; manual Next respected the matching records.",
+    "A native story link survived a fresh page load and exposed its selected card without initial focus theft. Normal selection did not rewrite the URL.",
+    "Measured widths had no horizontal overflow. Discovery controls were48 pixels high; four theme select/option pairs remained readable at phone and desktop sizes.",
+    "The phone menu opened Appearance. The new Coharie/Haliwa profiles and reviewed-profile directory links worked at phone/desktop sizes, with context headings below the fixed header."
   ],
   "preservation": [
-    "All463 previous canonical Nation objects and all prior fact clocks remain exact. Eight new facts, four history layers and eight own-publisher resources are added.",
-    "Four state/federal identity links and four queue tasks are deliberately changed. Twelve older production-credit strings are normalized to the project alias; identity, evidence, status, dates and receipt fields stay exact.",
-    "All14 older Theater records are semantically exact, with display order mixed across source-indexed regions. Unknown locations remain unindexed.",
-    "All nine inspected gameplay/media files and the original intro MP3 are exact. Only generated game Nations/history records change for the two added profiles.",
-    "Eighteen non-Theater header groups are exact; two Nations routes replace only their generated-data script hash. No external origin is added."
+    "All465 earlier canonical Nation objects and all222 earlier film objects remain exact.",
+    "Exactly two NC identity links and two queue tasks change;1810 other tasks, existing holds, federal/VA inventories and source clocks remain unchanged.",
+    "Two older NC production-label strings use the ZOTHEOS alias, without altering their evidence, dates, source disagreement or status.",
+    "Homepage, original intro and gameplay bytes remain unchanged. Only generated game educational data receives the new profiles.",
+    "No new external origin or motion override is introduced. Static featured player remains available in noscript; every official source remains a native link."
   ],
   "limits": [
-    "No claim that all215 provider selections have been played in full or are available in every location/account.",
-    "No complete worldwide or US Tribal Nation coverage, human approval, community endorsement, caption-accuracy certification or legal/clinical/scientific conclusion inferred from programming.",
-    "No erasure claim for historical Git copies, caches, public business filings or third-party runtime collection.",
-    "Original frame geometry is ZOTHEOS branding, not an authenticated shared Indigenous or sacred pattern."
+    "JavaScript-disabled behavior was checked through static renderer tests, not an actual disabled-JavaScript browser session.",
+    "Configured players and caption metadata are not guarantees of worldwide playback, complete-film viewing or caption quality.",
+    "Haliwa-Saponi deeper dated history remains an explicit research gap; no unsupported founding date or recognition finding is added.",
+    "Coverage remains incomplete worldwide and within the US. Government lists are planning sources, not the definition of Indigenous identity.",
+    "No historical Git/cache erasure, human approval, community endorsement or universal safety promise is made.",
+    "Cinema package work remains a separate unfinished integration lane; no obsolete prototype or superseded render is published."
   ]
 }

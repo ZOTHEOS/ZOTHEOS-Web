@@ -996,7 +996,7 @@ html[data-theater-motion="still"] .th-cinema .th-frame-glow { animation:none!imp
 .th-library-scope {margin-top:18px!important;color:var(--ink-2);font:400 12px/1.7 var(--zn-mono);}
 .th-location,.th-card-place {color:var(--ink-2);font:400 12px/1.6 var(--zn-read);margin-top:8px!important;}
 .th-card-place:empty,.th-location:empty {display:none;}
-.th-cinema .th-tools {grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:16px;}
+.th-cinema .th-tools {grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:16px;}
 .th-cinema .th-tools>div:first-child {grid-column:1/-1;}
 .th-cinema .th-tools>div {min-inline-size:0;}
 .th-cinema .th-tools>button {min-height:48px;}

@@ -132,4 +132,8 @@ def test_new_evidence_does_not_rewrite_the_old_observation_or_invent_legal_day()
     assert discrepancy['event_month'] == '2026-06'
     assert discrepancy['minutes_meeting_date'] == '2026-06-05'
     assert discrepancy['displayed_month_day'] == 'June 6'
-    assert all(e['registry_crosswalk']['status'] == 'unreviewed' for e in doc['entities'])
+    # The source dispute must not approve Catawba identity; other identities may pass separate review.
+    subjects = [e for e in doc['entities'] if e['directory_id'] == SUBJECT]
+    assert len(subjects) == 1
+    assert subjects[0]['registry_crosswalk']['status'] == 'unreviewed'
+    assert subjects[0]['registry_crosswalk']['registry_id'] is None
