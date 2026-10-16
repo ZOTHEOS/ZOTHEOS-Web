@@ -45,7 +45,7 @@ function fixture(options={}){
  fxRow.add(new El('p','apFxNote',{},'Applies while Motion is Living'));
  const language=pop.add(new El('a','languageLink',{href:'#site-translation'},'Language And Translation'));pop.add(new El('button','apReturnToFilm',{type:'button'},'Back To The Film'));
  const heading=main.add(new El('header','intro'));heading.add(new El('h1','theater-heading',{},'PUBLIC INTRODUCTION.'));
- const now=main.add(new El('div','story',{class:'th-now-watching'}));const title=now.add(new El('h2','theaterTitle',{tabindex:'-1'},'PUBLIC STORY TITLE'));now.add(new El('p','theaterDescription',{},'PUBLIC STORY SUMMARY'));
+ const now=main.add(new El('section','screening',{class:'th-screening-layout'}));const title=now.add(new El('h2','theaterTitle',{tabindex:'-1'},'PUBLIC STORY TITLE'));now.add(new El('p','theaterDescription',{},'PUBLIC STORY SUMMARY'));
  now.add(new El('textarea','privateTextarea',{},'PRIVATE_TEXTAREA_SENTINEL'));
  now.add(new El('p','privateHidden',{hidden:''},'PRIVATE_HIDDEN_SENTINEL'));
  now.add(new El('span','privateAria',{'aria-hidden':'true'},'PRIVATE_ARIA_SENTINEL'));
