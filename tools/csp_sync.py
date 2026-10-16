@@ -125,7 +125,7 @@ def fix_policy(policy, hashes):
 
 
 def page_for_source(source, grps=None):
-    """vercel.json header source -> name of the page group it serves (None when it is not one of ours)."""
+    """vercel.json header source -> name of the page group it serves (None when it is not managed by this tool)."""
     for g in grps or groups(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))):
         if source in g["sources"]:
             return g["name"]

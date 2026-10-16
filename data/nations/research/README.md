@@ -490,3 +490,19 @@ There are no new guide scripts, forms, uploads, browser storage or network provi
 
 Source records: batches/2026-10-16-mowa-and-pathways.json and
 batches/2026-10-16-practical-pathways-sources.json. Release checks and live verification remain separate.
+
+## October 16: Own Sources And Reader-Controlled Practice
+
+A bounded three-subject batch adds distinct UCAN and Southeastern Mvskoke profiles using their own
+published sources. Two separate source authors cross-reviewed the proposals. Eight facts passed
+actual isolated verification with robots enabled and no redirects. Exact response hashes and source
+dates remain distinct; original bodies stay outside the repository. No human or Nation approval is implied.
+Ma-Chis returned HTTP403 at robots; the directory remains and a one-day backoff is recorded.
+
+Four Paths To Action examples connect canonical source facts with clearly hypothetical planning
+exercises. Public evidence precedes questions, numbered steps, limits and reflection. No outreach,
+submission, land access, fundraising permission, legal entitlement or current-service outcome is promised.
+The new examples inherit canonical holds, receipt clocks and person/grace labels. There are no new
+guide scripts, forms, browser storage or network providers. The blank action brief remains available.
+
+Source record: batches/2026-10-16-own-sources-and-practice.json. Publication and live checks remain separate.

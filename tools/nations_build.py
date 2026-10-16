@@ -46,7 +46,7 @@ SITE = "https://zotheos.org"
 URL_OK = re.compile(r'^https://[^\s"<>]+$')
 KIND_LABEL = {"today": "Today", "language": "Language", "land": "Land", "governance": "Governance",
               "culture": "Culture", "population": "Population", "history": "History", "achievement": "Achievement"}
-SUPPORT = [("paths-to-action", "Paths To Action"), ("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Where we are"), ("credits", "Credits"),
+SUPPORT = [("paths-to-action", "Paths To Action"), ("about", "How this is made"), ("sources", "Sources"), ("resources", "Resources"), ("directory", "Directory"), ("coverage", "Coverage And Gaps"), ("credits", "Credits"),
            ("verification", "Verification"), ("for-nations", "For nations"), ("changes", "Corrections and removals")]
 NAV = [("Theater", "/theater", None), ("Today", "/nations#today", "hub"), ("Find", "/nations#find", None), ("Regions", "/nations#regions", None),
        ("Coverage", "/nations/coverage", "coverage"), ("About", "/nations/about", "about"),
@@ -365,11 +365,11 @@ class Builder:
         parts.append(ext(f["url"], label))
         parts.append(("Checked by a person on " if f["human"] else "Checked ") + time_el(f["date"]))
         if f["grace"] and f["note"]:
-            parts.append("Our tool could not reach the page on " + time_el(f["note"]))
+            parts.append("The tool could not reach the page on " + time_el(f["note"]))
         if nation is not None:
             body = (f"Nation: {nation['name']} ({nation['id']})\nFact: {f['id']}\nWhat is wrong:\n\n"
                     "A source that shows the correction (address of the page), optional:\n\n"
-                    "If you write for the nation, say so and we act within 72 hours.")
+                    "If you write for the nation, say so; ZOTHEOS acts within 72 hours.")
             href = mailto(self.contact, f"Nations correction: {nation['id']} {f['id']}", body)
             parts.append(f'<a href="{esc(href)}">Suggest a correction to this fact</a>')
         return f" {DOT} ".join(parts)
@@ -401,7 +401,7 @@ class Builder:
             rc.append(f"As of {esc(f['as_of'])}")
         rc.append(("Checked by a person on " if f["human"] else "Checked ") + time_el(f["date"]))
         if f["grace"] and f["note"]:
-            rc.append("Our tool could not reach the page on " + time_el(f["note"]))
+            rc.append("The tool could not reach the page on " + time_el(f["note"]))
         out.append(f'        <p class="hr-receipt">{f" {DOT} ".join(rc)}</p>')
         more = f'<a href="/nations/{esc(n["id"])}">Open this nation</a>'
         if n["official_url"]:
@@ -437,7 +437,7 @@ class Builder:
                f'</span></a>, so this list is a beginning. Thin regions are listed first on the coverage page.')
         status_line = f"1 of 15 in today's ring · {L.fmt_int(len(self.m.nations))} nations · {self.check_short}"
         body_hub = ("What is wrong:\n\nA source that shows the correction (address of the page), optional:\n\n"
-                    "If you write for the nation, say so and we act within 72 hours.")
+                    "If you write for the nation, say so; ZOTHEOS acts within 72 hours.")
         head, footer, scripts = self.frame("hub", "/nations", "Indigenous nations today | ZOTHEOS", self.hub_description,
                                            "", hub=True)
         return render(self.tpl("hub"), {
@@ -558,7 +558,7 @@ class Builder:
                 if k else "")
         body_n = (f"Nation: {n['name']} ({n['id']})\nWhat is wrong:\n\n"
                   "A source that shows the correction (address of the page), optional:\n\n"
-                  "If you write for the nation, say so and we act within 72 hours.")
+                  "If you write for the nation, say so; ZOTHEOS acts within 72 hours.")
         context = self.nation_context(n)
         # Native section links move keyboard focus as well as the reading position.
         if context:
@@ -751,7 +751,7 @@ class Builder:
                '<h1 class="page-h">Go further.</h1>',
                '<p class="lede">Follow official resources, then explore historical context from the nations in this growing list.</p>',
                '<p class="lede"><a href="/nations/paths-to-action">Paths To Action</a>: a practical guide to evidence, representation and community-chosen next steps.</p>',
-               f'<p class="lede">Our registry currently names {L.fmt_int(total)} nations. It is a growing starting point, '
+               f'<p class="lede">The registry currently names {L.fmt_int(total)} nations. It is a growing starting point, '
                'not a complete list of the world\'s Indigenous peoples. '
                '<a href="/nations/coverage">See what is covered and where the gaps are.</a> <a href="/nations/directory">Search the broader directory of names.</a></p>',
                '<nav aria-label="On this page"><ul class="src-u">']
@@ -792,7 +792,7 @@ class Builder:
                 'Some facts in other categories also describe past events.</p>',
                 '<p>These are excerpts, not complete histories. Dates belong to the statements they accompany; '
                 'a past event does not establish the situation today. '
-                '<a href="/nations/verification">What our checks can and cannot tell you.</a></p>']
+                '<a href="/nations/verification">What the checks can and cannot tell you.</a></p>']
         for region in self.m.regions:
             members = [n for n in histories if n["region"] == region["key"]]
             if not members:
@@ -991,7 +991,7 @@ class Builder:
             "A fact whose words are gone is hidden until a person restores it. Nothing hidden is ever restored by the "
             "tool alone. Changes from a check go live after review.")))
         sec("What a check cannot tell you", "  <p>A pass means the cited words are still on the cited page. It does not mean "
-            "the page is right, complete or current, and it does not mean we read the words the way the nation would. "
+            "the page is right, complete or current, and it does not establish that this page interprets the words as the nation would. "
             "Corrections from nations come first.</p>")
         sec("What the dates mean before the first full check", f"  <p>Checked {esc(L.fmt_date(self.m.compiled))} on a fact "
             "means the date its supporting words were found on the cited page while the fact was compiled. After the first "
@@ -1002,7 +1002,7 @@ class Builder:
 
     def for_nations(self):
         body = ("Nation:\nWhat you would like changed or removed:\n\n"
-                "If you write for the nation, say so and we act within 72 hours.")
+                "If you write for the nation, say so; ZOTHEOS acts within 72 hours.")
         return self.sp("for-nations", render(self.tpl("for-nations"), {
             "contact": self.contact, "mail_for_nations": mailto(self.contact, "For nations", body)}),
             "How a nation corrects, adds or removes anything on Indigenous nations today. Your word comes first.")

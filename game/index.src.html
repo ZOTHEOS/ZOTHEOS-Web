@@ -2506,7 +2506,7 @@ function natSeen(id, inc) {
 }
 function el(p, tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; p.appendChild(e); return e; }
 function lnk(p, txt, url, cls) { var a = el(p, 'a', cls || '', txt); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; return a; }
-// One card, the same everywhere: our label, the nation's own name first, other names, lands, one fact, its source and checked date.
+// One card, the same everywhere: the card label, the nation's own name first, other names, lands, one fact, its source and checked date.
 function natCard(box, n, k, where) {
   // the herald redrawn with the same nation keeps its fact and fires no hook; anything else is a new card
   var same = where === 'title' && NHL.id === n.id, fi = same ? NHL.fi : (natDay() + k + natSeen(n.id)) % n.facts.length, f = n.facts[fi], p, h, old;

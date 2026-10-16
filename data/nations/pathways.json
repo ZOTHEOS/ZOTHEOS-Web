@@ -132,7 +132,24 @@
         "un-declaration",
         "un-legal-note"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "mowa-band-of-choctaw-indians-us-al",
+          "fact_ids": [
+            "mowa-band-of-choctaw-indians-us-al-22898883"
+          ],
+          "practice": {
+            "question": "In this hypothetical exercise, how could a public history brief keep work, displacement and land ownership from being treated as the same claim?",
+            "steps": [
+              "Read the Tribe’s linked Land And Timber Industry chapter. Record the publisher’s account of work and displacement, its source title and the period it discusses.",
+              "Create separate headings for livelihoods, displacement and ownership. Place only supported statements beneath each; mark a missing record or disputed account as an open question.",
+              "If further work is authorized, prepare a list of records to seek and questions for a relevant archive or qualified adviser. Keep private family details and sensitive locations out of a public brief."
+            ],
+            "boundary": "This historical account is not a property-title search, an agreed land claim or evidence of a current remedy. The exercise does not authorize research or negotiation for the Tribe.",
+            "reflection": "Whose account is missing, and what evidence would be needed before making a stronger claim?"
+          }
+        }
+      ]
     },
     {
       "id": "representation-and-power",
@@ -218,7 +235,24 @@
       "source_ids": [
         "treaty-records"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "mowa-band-of-choctaw-indians-us-al",
+          "fact_ids": [
+            "mowa-band-of-choctaw-indians-us-al-19232814"
+          ],
+          "practice": {
+            "question": "In this hypothetical exercise, how could someone trace a historical school-aid request without turning a request into proof that aid arrived?",
+            "steps": [
+              "Open the Tribe’s Social Barriers chapter and locate its heading about the 1934 school-aid effort. Record the exact source and the distinction between the historical year and the source-check date.",
+              "Start an evidence ledger with separate columns for the request, a response, any decision and any delivery. Leave unsupported columns blank rather than completing the story from an assumption.",
+              "Write one bounded archival question, such as which public correspondence records the response. Follow the archive’s access rules and the community’s guidance before sharing family records."
+            ],
+            "boundary": "A reported request does not establish approval, delivery, legal entitlement or the outcome of a separate court case. No private family file is needed to use this exercise.",
+            "reflection": "Could a reader follow the evidence and see exactly where the account remains incomplete?"
+          }
+        }
+      ]
     },
     {
       "id": "language-and-culture",
@@ -390,7 +424,25 @@
       "source_ids": [
         "native-economies"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "united-cherokee-aniyunwiya-nation-us-al",
+          "fact_ids": [
+            "united-cherokee-aniyunwiya-nation-us-al-380beda9",
+            "united-cherokee-aniyunwiya-nation-us-al-804f2c0b"
+          ],
+          "practice": {
+            "question": "Hypothetical reader question: How could I prepare a dated checklist for a small gathering that I am responsible for?",
+            "steps": [
+              "Read the two dated Nation posts. In a private note, label one account as a plan and the other as a reported start; keep the source dates beside the links.",
+              "For a gathering you control, list your own venue permission, facilities, equipment and weather checks. Write who on your own team will check each item and by when.",
+              "Make a one-page preparation checklist with a review date and an unresolved-items column. Recheck your own arrangements before deciding whether the gathering can proceed."
+            ],
+            "boundary": "This is a hypothetical exercise in the reader's own planning. The Nation's old notices do not authorize access to its land, attendance, volunteering, fundraising or use of cultural material, and they do not establish present project status. No outreach or submission is part of this example.",
+            "reflection": "Which parts of my note are dated source facts, and which decisions and responsibilities belong to my own project?"
+          }
+        }
+      ]
     },
     {
       "id": "education-and-public-truth",
@@ -435,7 +487,25 @@
         "language-planning",
         "care"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "southeastern-mvskoke-nation-us-al",
+          "fact_ids": [
+            "southeastern-mvskoke-nation-us-al-a3106dbc",
+            "southeastern-mvskoke-nation-us-al-f65c80de"
+          ],
+          "practice": {
+            "question": "In this hypothetical exercise, how could I correct a learning note I control so it identifies this Nation accurately and links to its own account?",
+            "steps": [
+              "Read the Nation's introduction and the Southeastern Mvskoke Nation section of its history. Record the preferred name, the source URL and the date you read it.",
+              "Revise a note you control to name the Southeastern Mvskoke Nation specifically. Attribute the 1981 organization date to its history, and keep that government date separate from the much longer history of its people.",
+              "Add direct links to the Nation's own introduction and history. Mark any relationship to another Creek government that you have not verified as an open question; save the revision for your own review."
+            ],
+            "boundary": "This is a reader-controlled learning exercise. A shared language, Creek history or similar name does not establish a single government, citizenship, authority to represent the Nation or permission to reuse cultural material.",
+            "reflection": "Which assumption changed when I separated the history of a people from the organization and name of a particular government?"
+          }
+        }
+      ]
     },
     {
       "id": "worldwide-and-cross-border",

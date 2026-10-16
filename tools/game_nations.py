@@ -205,7 +205,7 @@ def main(argv=None):
             f.write(text)
         print("%s: %d characters, %d UTF-8 bytes" % (rel, len(text), len(text.encode("utf-8"))))
     # A hold or takedown must also remove previously generated public shard copies.
-    # Only delete our exact content-addressed output names; never other game files.
+    # Only delete the generator's exact content-addressed output names; never other game files.
     for rel in stale_shards(args.root, outputs):
         os.unlink(os.path.join(args.root, rel))
     history_doc = json.loads(outputs["game/history.json"])

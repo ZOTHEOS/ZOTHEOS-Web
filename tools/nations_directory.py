@@ -350,7 +350,7 @@ def page(builder):
     out += ['</div><div class="directory-loading"><button type="button" class="pill" id="directoryMore" aria-controls="directoryNames" hidden>Show More Names</button></div>',
             work_lanes(sources, [doc['_display']['source_id'] for doc in extra]),
             '<section class="src-g"><h2>More than a government list</h2><p>Independent communities and peoples outside state recognition must also be visible. '
-            'Their own names and sources belong in this collection. We do not merge communities because their names sound similar.</p>',
+            'Their own names and sources belong in this collection. Communities are not merged because their names sound similar.</p>',
             '<p><a href="/nations/for-nations">Send a correction, addition or removal request</a>. Land and rights resources link to nations and Indigenous-led organizations directly; '
             'this site does not speak on their behalf.</p></section></div>']
     return builder.sp('directory', '\n'.join(out), 'Browse separately typed Indigenous name inventories with sources, dates and openly tracked US and worldwide coverage gaps.')

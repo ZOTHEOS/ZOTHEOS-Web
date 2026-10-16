@@ -4,7 +4,7 @@
   /* The herald of names (DESIGN_NATIONS 4 to 7). Strings live in TEXT. Every card is set with textContent. */
   var TEXT = {
     also: 'Also known as', say: 'Say it', lands: 'Lands', source: 'Source: ', asOf: 'As of ', checked: 'Checked ',
-    person: 'Checked by a person on ', grace: 'Our tool could not reach the page on ', open: 'Open this nation',
+    person: 'Checked by a person on ', grace: 'The tool could not reach the page on ', open: 'Open this nation',
     own: "Nation's own site", newTab: ' (opens in a new tab)', pron: 'Pronunciation: ', pause: 'Pause', resume: 'Resume',
     ringPos: ' of 15 in today\'s ring', nations: ' nations', lastCheck: 'Last check ', compiled: 'Compiled ',
     pressNext: 'Press Next for the next nation.', loadFail: 'More nations could not load. Every nation still has its own page under By region.',

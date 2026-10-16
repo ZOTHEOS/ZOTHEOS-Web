@@ -91,6 +91,12 @@ def load(root, model):
             facts=array(example.get('fact_ids'),1,4)
             if any(not isinstance(f,str) for f in facts) or len(facts)!=len(set(facts)) or not set(facts)<=known[example['nation']]:
                 raise ValueError('pathways: unknown, empty or duplicate example fact')
+            if 'practice' in example:
+                practice=example['practice']
+                if not isinstance(practice,dict) or set(practice)!={'question','steps','boundary','reflection'}:
+                    raise ValueError('pathways: invalid practice fields')
+                for key in ('question','boundary','reflection'):text(practice[key])
+                strings(practice['steps'],1,8)
         # All required evidence is validated first. Named source holds hide the complete dependent chapter.
         if any(sources[s].get('nation') and sources[s]['nation'] not in model.by_id for s in required):continue
         chapters.append(item)
@@ -103,19 +109,39 @@ def stamp(value):
 def ext(url,label):
     return '<a href="'+escape(url,quote=True)+'" target="_blank" rel="noopener noreferrer">'+escape(label)+'</a>'
 
+def visible_examples(chapter, model):
+    result=[]
+    for example in chapter.get('examples',[]):
+        nation=model.by_id.get(example['nation'])
+        if not nation:continue
+        facts={f['id']:f for f in nation['facts']}
+        if all(fid in facts for fid in example['fact_ids']):
+            result.append((example,nation,[facts[fid] for fid in example['fact_ids']]))
+    return result
+
+
 def render(root, model):
     data,chapters,sources=load(root,model);e=escape
+    cases={c['id']:visible_examples(c,model) for c in chapters}
     out=['<div class="pathways">','<header class="pw-hero">',
          '<p class="eyebrow">Truth · Dignity · Sovereignty</p><h1 class="page-h">'+e(data['title'])+'</h1>']
     out.extend('<p class="pw-lede">'+e(p)+'</p>' for p in data['intro'])
     out+=['<div class="pw-entry"><a class="pill" href="#pw-chapters">Choose A Starting Point ↓</a>',
-          '<a class="txt-link" href="/static/nations/action-brief.txt" download>Download The Action Brief ↗</a></div>',
+          '<a class="txt-link" id="pw-brief" href="/static/nations/action-brief.txt" download>Download The Action Brief ↗</a></div>',
           '<ol class="pw-route" aria-label="From Reading To A Decision"><li>Choose A Need</li><li>Check The Evidence</li><li>Prepare A Concrete Ask</li><li>Decide And Review</li></ol></header>',
           '<section class="pw-capabilities" aria-label="What Is Available And What Is Proposed">']
     for key,title in [('now','Available On This Website'),('limits','Clear Boundaries'),('future','App Workflows Are Proposed')]:
         out.append('<div class="pw-capability"><p class="eyebrow">'+e(title)+'</p>')
         out.extend('<p>'+e(p)+'</p>' for p in data['capabilities'][key]);out.append('</div>')
-    out+=['</section>','<div class="pw-layout" id="pw-chapters"><nav class="pw-index" aria-label="In This Guide"><p class="eyebrow">Choose A Starting Point</p><ol>']
+    out.append('</section>')
+    if any(cases.values()):
+        out+=['<section class="pw-case-index" aria-label="Examples In This Guide"><div><p class="eyebrow">From Evidence To A Useful Question</p><h2>Start With A Sourced Example.</h2><p>Read what a Nation has published, then try a hypothetical planning exercise. These are learning examples, not ZOTHEOS interventions, promised outcomes or permission to act for a Nation.</p></div><ul>']
+        for c in chapters:
+            if cases[c['id']]:
+                names=', '.join(n['name'] for _,n,_ in cases[c['id']])
+                out.append('<li><a href="#pw-cases-'+e(c['id'],quote=True)+'"><span>'+e(c['title'])+'</span><small>'+e(names)+'</small><span aria-hidden="true">↓</span></a></li>')
+        out.append('</ul></section>')
+    out+=['<div class="pw-layout" id="pw-chapters"><nav class="pw-index" aria-label="In This Guide"><p class="eyebrow">Choose A Starting Point</p><ol>']
     out.extend('<li><a href="#pw-'+e(c['id'],quote=True)+'">'+e(c['title'])+'</a></li>' for c in chapters)
     out+=['</ol><p>One continuous guide. Every chapter is open to read.</p></nav><div class="pw-reading">']
     for number,c in enumerate(chapters,1):
@@ -130,21 +156,27 @@ def render(root, model):
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']
-        for example in c.get('examples',[]):
-            nation=model.by_id.get(example['nation'])
-            if not nation:continue
-            facts={f['id']:f for f in nation['facts']}
-            if not all(fid in facts for fid in example['fact_ids']):continue
-            out.append('<article class="pw-example"><h3><a href="/nations/'+e(nation['id'],quote=True)+'">'+e(nation['name'])+'</a></h3>')
-            for fid in example['fact_ids']:
-                fact=facts[fid]
+        if cases[c['id']]:
+            out.append('<section class="pw-cases" aria-label="Sourced Examples"><h3 class="pw-case-heading" id="pw-cases-'+e(c['id'],quote=True)+'" tabindex="-1">A Published Account. A Practical Starting Point.</h3>')
+        for example,nation,facts in cases[c['id']]:
+            out.append('<article class="pw-example"><p class="eyebrow">From The Nation&#39;s Own Published Account</p><h3><a href="/nations/'+e(nation['id'],quote=True)+'">'+e(nation['name'])+'</a></h3>')
+            for fact in facts:
                 receipt=ext(address(fact['url']),fact['title'])+' · '+e(fact['publisher'])
                 receipt+=(' · Checked By A Person On ' if fact.get('human') else ' · Checked ')+stamp(fact['date'])
                 if fact.get('as_of'):receipt+=' · As Of '+e(str(fact['as_of']))
                 if fact.get('grace') and fact.get('note'):
-                    receipt+=' · Our tool could not reach the page on '+stamp(fact['note'])
+                    receipt+=' · The tool could not reach the page on '+stamp(fact['note'])
                 out.append('<article class="pw-example-fact"><p>'+e(fact['text'])+'</p><p class="pw-receipt">'+receipt+'</p></article>')
+            if 'practice' in example:
+                practice=example['practice']
+                out+=['<section class="pw-practice" aria-label="Hypothetical Planning Exercise"><p class="pw-scope">Hypothetical Planning Exercise · Work You Control</p><h4>Try This With The Evidence</h4>',
+                      '<p class="pw-question">'+e(practice['question'])+'</p><ol>']
+                out.extend('<li>'+e(step)+'</li>' for step in practice['steps'])
+                out+=['</ol><p class="pw-boundary"><strong>What This Does Not Establish</strong> '+e(practice['boundary'])+'</p>',
+                      '<p class="pw-practice-reflection"><strong>Reflect</strong> '+e(practice['reflection'])+'</p>',
+                      '<a class="pw-brief-link" href="#pw-brief">Use The Blank Action Brief ↑</a></section>']
             out.append('</article>')
+        if cases[c['id']]:out.append('</section>')
         refs=list(dict.fromkeys(c['source_ids']+[s for step in c['steps'] for s in step['source_ids']]))
         out.append('<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>')
         for sid in refs:

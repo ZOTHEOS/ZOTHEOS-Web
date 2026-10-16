@@ -18,22 +18,24 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope, Checked October 16, 2026
 
-The registry contains 470 researched profiles and 1,338 raw facts. Publication controls show 1,336
-facts and retain two existing holds. The latest batch adds a distinct MOWA Band of Choctaw Indians
-profile, four own-source facts, two short historical reading layers and four own-publisher resources.
-All 469 previous canonical objects, historical fragments and fact clocks remain unchanged.
+The registry contains 472 researched profiles and 1,346 raw facts. Publication controls show 1,344
+facts and retain two existing holds. The latest batch adds United Cherokee AniYunWiYa Nation and
+Southeastern Mvskoke Nation as distinct profiles, eight own-source facts, four short historical
+reading layers and nine own-publisher resources. All 470 previous canonical objects and fact clocks
+remain unchanged. Old plans are not advertised as current services or invitations.
 
-The directory preserves 2,272 overlapping records across eight inventories. The Alabama source
-edition and labels remain intact; one row now links to a separately reviewed MOWA profile. Piqua's
-express name/seal condition remains a manual scoped publication review. Echota's approved HTTPS
-robots request failed certificate validation before HTTP and has a recorded backoff. Neither case
-is a takedown or a finding about Indigenous identity. Worldwide and US coverage remain incomplete.
+The directory preserves 2,272 overlapping source records. Two Alabama rows now link to separately
+reviewed profiles; the original source edition, labels and other rows remain. Ma-Chis returned HTTP403
+at its robots file and remains queued with backoff. No access bypass or Indigenous identity judgment
+is implied. Earlier source conditions and publication holds remain. Worldwide and US coverage are incomplete.
 
-Paths To Action is an open, ten-chapter practical guide with an offline blank action brief. It
-distinguishes current website resources, reader-controlled planning and proposed desktop workflows.
-Nine primary sources were actually read and independently reviewed for meaning. The guide does not
-collect submissions, provide legal/financial advice, confer authority or promise outcomes. The
-desktop app remains in internal testing; no human, Nation or cited-organization endorsement is implied.
+Paths To Action has ten chapters, nine primary framework sources, four canonical examples and an
+offline blank action brief. Each example separates dated source facts from a hypothetical exercise
+the reader controls, with steps, a boundary and a reflection. They are not delivered services or
+Nation-endorsed recommendations. Existing fact and Nation holds suppress dependent examples.
+
+David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy uses
+singular or neutral wording. Nations' own evidence, cultural names and film titles retain their meaning.
 
 ## October 16: Distinct Chickahominy Profiles And Native Reading Links
 

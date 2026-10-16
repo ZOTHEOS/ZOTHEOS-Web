@@ -6,6 +6,17 @@ from pathlib import Path
 
 import pytest
 from conftest import ROOT
+from test_game_shards import unpack
+
+
+def exported_document(name):
+    relative = 'game/' + name + '.json'
+    outputs = {relative: (Path(ROOT) / relative).read_text(encoding='utf-8')}
+    doc = json.loads(outputs[relative])
+    for entry in doc.get('shards', []):
+        shard = 'game/data/' + entry[0]
+        outputs[shard] = (Path(ROOT) / shard).read_text(encoding='utf-8')
+    return dict(doc, nations=unpack(outputs, name))
 
 
 def game_eval(body, data):
@@ -28,8 +39,8 @@ ev('devNat=0');
 
 
 def test_every_exported_nation_and_historical_fact_survives_ui_validation():
-    nations = json.loads((Path(ROOT)/'game/nations.json').read_text(encoding='utf-8'))
-    histories = json.loads((Path(ROOT)/'game/history.json').read_text(encoding='utf-8'))
+    nations = exported_document('nations')
+    histories = exported_document('history')
     facts = [f for n in histories['nations'].values() for group in ('history', 'context') for f in n[group]]
     got = game_eval("console.log(JSON.stringify(ev('[natValid(DATA.nations).map(function(n){return n.id}), DATA.facts.every(function(f){return !!natFact(f, \\\"2099-01-01\\\")})]')));",
                     {'nations': nations['nations'], 'facts': facts})
