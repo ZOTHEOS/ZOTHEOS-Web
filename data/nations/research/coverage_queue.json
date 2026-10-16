@@ -59833,7 +59833,7 @@
       "region": "us-state-nc",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-nc-tribal-directory"
       ],
@@ -59853,9 +59853,34 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://meherrinnation.org/terms-of-use/",
+          "retrieved_at": "2026-10-16T14:09:56.216705+00:00",
+          "http_status": 200,
+          "sha256": "e12f396351665588a660c8f60e912e770558a98965ddbdb2d5eb3ca5cfa956cf",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-meherrin-own-terms.json",
+          "source_id": "us-nc-tribal-directory",
+          "receipt_id": "r-69aa5ed88c1bf728"
+        }
+      ],
+      "updated_at": "2026-10-16T14:17:47.933588+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Successful public access; the publisher states prior written-authorization use conditions. No history/profile is published. Scoped reuse review is pending, not a takedown, access failure, recognition finding or legal ruling.",
+      "profile_disposition": "publisher_reuse_scope_pending",
+      "publication_scope": {
+        "status": "pending",
+        "history_published": false,
+        "access_failure": false,
+        "takedown_received": false,
+        "directory_visible": true,
+        "automatic_refetch": false,
+        "automatic_restoration": false,
+        "review_receipt_sha256": "da732bc86f8a34bd6cbe7d9e3602d3581bf8d8bd8cec6b3d4b3927656e92853b",
+        "note": "Resume only after a recorded manual scope decision and appropriate attributable sources. A scheduler date does not resolve this condition. No outreach or alternate-source bypass is authorized."
+      }
     },
     {
       "task_id": "profile-us-state-nc-occaneechi-band-of-the-saponi-nation",
@@ -59869,7 +59894,7 @@
       "region": "us-state-nc",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-nc-tribal-directory"
       ],
@@ -59889,9 +59914,34 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://obsn.org/history/",
+          "retrieved_at": "2026-10-16T14:09:34.804281+00:00",
+          "http_status": 200,
+          "sha256": "9146298b5b34cfb7cb1833d6e6a6de43806a5eaa15196bd2cf2201ddfcda5a95",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-occaneechi-occaneechi-history.json",
+          "source_id": "us-nc-tribal-directory",
+          "receipt_id": "r-2520121fab782d05"
+        }
+      ],
+      "updated_at": "2026-10-16T14:17:48.048984+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Successful public access; captured history interleaves unrelated content and publisher media conditions also need scope review. No history/profile is published from this material. No attribution of who altered it, blanket site-compromise claim, access failure, takedown or legal ruling.",
+      "profile_disposition": "source_integrity_review_pending",
+      "publication_scope": {
+        "status": "pending",
+        "history_published": false,
+        "access_failure": false,
+        "takedown_received": false,
+        "directory_visible": true,
+        "automatic_refetch": false,
+        "automatic_restoration": false,
+        "review_receipt_sha256": "da732bc86f8a34bd6cbe7d9e3602d3581bf8d8bd8cec6b3d4b3927656e92853b",
+        "note": "Resume only after a recorded manual scope decision and appropriate attributable sources. A scheduler date does not resolve this condition. No outreach or alternate-source bypass is authorized."
+      }
     },
     {
       "task_id": "profile-us-state-nc-sappony",

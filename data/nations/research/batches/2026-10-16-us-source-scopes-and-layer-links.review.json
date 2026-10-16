@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "prepared_at": "2026-10-16T14:28:46.550263+00:00",
+  "status": "reviewed-for-publication",
+  "scope": "Two exact Coharie layer citations and two named, pending research scopes. No new Nation profile or historical fact is published.",
+  "independent_review_sha256": {
+    "independent-release-review.json": "5909ca227a8190ed7795f0525d39fe4bbad98da1d9ef008864f5fc0f59cdce3e",
+    "independent-layer-legacy-preservation.json": "4f611888afefb122d95bfe625d29aed7d8b9a9117c101e7426a707d5727253bc",
+    "independent-two-source-holds-review.json": "da732bc86f8a34bd6cbe7d9e3602d3581bf8d8bd8cec6b3d4b3927656e92853b",
+    "coharie-layer-association-review.json": "428e9d5220fcc5c03bf9ac9bb6a590445d1ff25fb0e251d3ad1181308b1a2d8a",
+    "browser-layer-measurements.json": "2834bbe2a1bf266cae53dbaa8b5e8ded89cdec3fbe7fc0cba85e5e782634991a",
+    "browser-directory-scope-checks.json": "4030d63f1879312f10d0f72c2f8ded063fe6d70ee079c617077ab419e30e8eaa",
+    "full-suite-results.xml": "c26b010be569a462bb4a43a4b1d9f757ea84a376a8c2cfcd665def3fc5502267",
+    "final-affected-results.xml": "f4066dcb52e13a4e0947ac066b2e863da3058d7f94eaae0c1da8b544632ba797"
+  },
+  "checks": {
+    "full-suite": {
+      "cases": 462,
+      "seconds": 161.99
+    },
+    "final-affected": {
+      "cases": 97,
+      "seconds": 43.169
+    }
+  },
+  "test_scope": "The complete462-case suite passed before two directory notes gained their explicit subject names. All97 affected deterministic-output, directory, source and citation cases passed after the final wording.",
+  "prebuild_contract": "37 independently authored cases ran before implementation; three separately recorded postimplementation hardening cases exposed control-character URLs and passed after their guard.",
+  "browser": {
+    "widths": [
+      320,
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "phone_and_desktop_themes_each": 4,
+    "minimum_observed_citation_link_height_px": 44,
+    "observations": [
+      "No horizontal overflow in measured layouts.",
+      "Tab reaches the native exact own-source link with visible focus.",
+      "Named source-scope notes remain readable; pending directory names stay searchable without a fabricated reviewed profile."
+    ]
+  },
+  "preservation": [
+    "All467 canonical profiles,1326 raw facts,1324 public facts and2 held facts remain unchanged.",
+    "All228 Theater records, game exports/mechanics, intro audio, homepage, hosting CSP and prior hold/restoration controls remain exact.",
+    "Exactly466 old context fragments are byte-identical. Removing only the two new citation groups recovers the earlier Coharie page.",
+    "All1810 unrelated research tasks and nine NC directory name/source/identity rows remain unchanged. No directory takedown or identity match is fabricated."
+  ],
+  "source_receipts": {
+    "actual_http_responses": 13,
+    "metadata_only": true,
+    "body_hash_and_clock_checks": "Independent review matches every retained actual response; full source bodies and unrelated inserted content are not published."
+  },
+  "limits": [
+    "Meherrin reuse scope and Occaneechi source integrity/publication scope remain pending manual review. No automatic restoration, routine refetch or outreach.",
+    "No actor attribution, blanket site-compromise determination, legal/recognition ruling, human approval or Nation endorsement is claimed.",
+    "Canonical coverage does not grow this cycle and remains incomplete in the US and worldwide."
+  ]
+}

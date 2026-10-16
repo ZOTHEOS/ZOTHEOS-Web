@@ -407,3 +407,33 @@ supports a complete US or worldwide coverage claim.
 Matching Names gains an adjacent summary and useful empty-result recovery. The single original live
 status, native links, retained filters, bounded paging and no-JavaScript names remain part of the
 reading contract. Source and control review do not replace final browser and deployment verification.
+
+
+## October 16: Exact Sources For History Layers And Two Open Research Gaps
+
+Coharie's two existing context layers now carry explicit native source links: the schooling layer
+points to the Tribe's history page, and the river layer to its Great Coharie River Initiative page.
+Their text, original review dates and canonical facts remain unchanged. Optional `source_urls` accepts
+one to four distinct exact URLs already described by the same Nation's approved official resources.
+References resolve across context files without depending on filename order. Unapproved, malformed,
+cross-Nation, control-character or ambiguous references fail validation. If a referenced resource is
+held, its associated layer and citation remain hidden. Older notes without explicit references are
+not backfilled or rewritten. Citation and context review dates keep their separate meanings.
+
+Meherrin and Occaneechi missing-profile research reached successful public responses, then stopped
+at different publication-scope concerns. Meherrin's stated site-use conditions need scoped review;
+no written Tribal authorization is claimed. An Occaneechi history capture contains unrelated
+material, and its dated media disclaimer also needs scope review. No actor, blanket site-compromise
+claim, legal restriction on facts, recognition finding or current emergency is inferred.
+
+Both tasks remain `needs_review` with explicit pending publication scopes, no routine refetch,
+no automatic restoration and no outreach. Their directory names and original October 14 source
+edition stay visible. No new profile, historical facts or community endorsement is published from
+these sources. These are not received takedowns or failed-access receipts. The existing directory
+removal-hold mechanism, prior publisher conditions and fact/person restoration controls are unchanged.
+
+Coverage remains 467 canonical profiles, 1,326 raw facts and 1,324 public facts, with two held facts.
+The directory retains 2,272 overlapping source records. The 1,812-task queue has 1,682 pending,
+128 needing review and two existing blocked tasks. Different source units are not added into a count
+of distinct Nations, and no complete US or worldwide coverage is claimed. The batch and source
+metadata are retained in `batches/2026-10-16-us-source-scopes-and-layer-links.json` and `receipts/`.
