@@ -824,15 +824,24 @@ class Builder:
     def coverage_page(self):
         cov, lfc = self.coverage, self.m.last_full_check()
         last = L.fmt_date(lfc) if lfc else "not yet"
-        cols = [("Listed", "listed"), ("Tier A", "a"), ("Tier B", "b"), ("Tier C", "c"),
+        # A tier name never splits from its letter.
+        cols = [("Listed", "listed"), ("Tier\u00a0A", "a"), ("Tier\u00a0B", "b"), ("Tier\u00a0C", "c"),
                 ("With pronunciation", "pronounce"), ("Facts re-checking", "rechecking")]
 
+        # On a wide screen the three long headers keep two lines, broken only at these word spaces (never inside
+        # "re-checking"); the cells' data-label keeps the plain name for phones.
+        two_line = {"With pronunciation": "With<br>pronunciation", "Facts re-checking": "Facts<br>re-checking",
+                    "Last full check": "Last full<br>check"}
+
+        def head(c):
+            return two_line.get(c, esc(c))
+
         def table(caption, first, rows, keyname, extra=None):
-            th = "".join(f'<th scope="col">{esc(c)}</th>' for c, _ in cols)
+            th = "".join(f'<th scope="col">{head(c)}</th>' for c, _ in cols)
             if extra:
                 th += f'<th scope="col">{esc(extra[0])}</th>'
-            out = [f'  <table class="tbl"><caption>{esc(caption)}</caption><thead><tr><th scope="col">{esc(first)}</th>'
-                   f'{th}<th scope="col">Last full check</th></tr></thead><tbody>']
+            out = [f'  <table class="tbl tbl-wide"><caption>{esc(caption)}</caption><thead><tr><th scope="col">{esc(first)}</th>'
+                   f'{th}<th scope="col">{head("Last full check")}</th></tr></thead><tbody>']
             for row in rows:
                 cells = "".join(f'<td class="n" data-label="{esc(c)}">{row[k]}</td>' for c, k in cols)
                 if extra:

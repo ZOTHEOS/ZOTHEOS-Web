@@ -346,7 +346,7 @@
           var li = el('li'), a = el('a', 'row'); a.href = '/nations/' + c.id;
           var n = el('span', 'nm', c.n); n.dir = 'auto'; n.setAttribute('data-face', c.fc); n.setAttribute('data-script', c.sc);
           a.appendChild(n); a.appendChild(el('span', 'row-m', x[0].r.d));
-          var w = c.l.split(/\s+/); var l = el('span', 'row-l', w.slice(0, 8).join(' ') + (w.length > 8 ? ' ...' : ''));
+          var w = c.l.split(/\s+/); var l = el('span', 'row-l', w.slice(0, 8).join(' ') + (w.length > 8 ? '\u00a0...' : ''));
           if (c.lf === 'names') l.setAttribute('data-face', 'names'); a.appendChild(l); li.appendChild(a); frag.appendChild(li);
         });
         ringList.textContent = ''; ringList.appendChild(frag); if (ringNote) ringNote.hidden = true;
@@ -370,7 +370,7 @@
         var e = res[i].e, li = el('li'), a = el('a'); a.href = '/nations/' + e.id;
         var n = el('span', 'nm', e.n); n.dir = 'auto'; n.setAttribute('data-face', e.f); n.setAttribute('data-script', e.s); a.appendChild(n);
         if (res[i].m.also) a.appendChild(el('span', 'sr-also', TEXT.also + ' ' + res[i].m.also));
-        var ls = e.l.length > 90 ? e.l.slice(0, 90).replace(/\s+\S*$/, '') + ' ...' : e.l;
+        var ls = e.l.length > 90 ? e.l.slice(0, 90).replace(/\s+\S*$/, '') + '\u00a0...' : e.l;
         a.appendChild(el('span', 'row-m', (RD[e.r] || '') + ' · ' + ls));
         li.appendChild(a); out.appendChild(li);
       }

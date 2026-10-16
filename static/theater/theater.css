@@ -134,8 +134,10 @@ button { font: inherit; color: inherit; }
 [data-face="names"]:is(p, span, li, dd, td) { font-family: var(--zn-read-fb); }
 
 /* ---------- header (the landing's, by omission) ---------- */
+/* The side tracks are equal while their controls fit, so the wordmark sits on the page's centre axis; a track
+   never shrinks below its controls, so nothing ever runs under the wordmark. */
 .nh { position: sticky; top: 0; z-index: 60; background: var(--page-bg); border-bottom: 1px solid var(--rule); }
-.nh-in { max-width: var(--col-max); margin: 0 auto; height: 72px; padding: 0 24px; display: grid;
+.nh-in { max-width: var(--col-max); margin: 0 auto; height: 72px; padding: 0 var(--gutter); display: grid;
   grid-template-columns: 1fr auto 1fr; grid-template-areas: "left mark nav"; align-items: center; gap: 16px; }
 .nh-left { grid-area: left; display: flex; align-items: center; }
 .nh-mark { grid-area: mark; display: flex; align-items: center; }
@@ -199,7 +201,7 @@ button { font: inherit; color: inherit; }
   .nav-menu-btn { display: inline-flex; }
 }
 @media (max-width: 719px) {
-  .nh-in { height: 64px; padding: 0 16px; gap: 8px; grid-template-areas: "nav mark right"; }
+  .nh-in { height: 64px; padding: 0 var(--gutter); gap: 8px; grid-template-areas: "nav mark right"; }   /* the page gutter: Menu on the content edge */
   .nh-left { display: none; }
   .nh-nav { justify-content: flex-start; }
   .nav-menu-btn { margin: 0; }
@@ -207,6 +209,11 @@ button { font: inherit; color: inherit; }
   .ns-appearance { display: inline-flex; }
   .appearance-pop { inset: auto auto 24px 16px; }
   .nav-sheet { padding: 0 16px 24px; }
+}
+/* The smallest phones: a tighter Menu pill stays inside its track, so the wordmark keeps the centre axis
+   with clear space on both sides (the landing's own pill does the same). */
+@media (max-width: 359px) {
+  .nav-menu-btn { gap: 8px; padding: 0 9px 0 10px; letter-spacing: 0.12em; }
 }
 
 /* ---------- page frame ---------- */
@@ -454,7 +461,10 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
   .hr-status { grid-column: 1 / -1; }
   .cols2 { grid-template-columns: minmax(0, 1fr); }
   .cols4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ft-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ft-links { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+  .ft-col { gap: 0; }
+  .ft-col-l { margin-bottom: 4px; }
+  .ft-col a { display: flex; align-items: center; min-height: 44px; }
   .ft-block { grid-template-columns: minmax(0, 1fr); }
   .roll { grid-template-columns: minmax(0, 1fr); }
   .sec { padding-top: var(--sp-8); }
@@ -587,7 +597,8 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 [data-theme="skeleton"] .th-page { --th-art-glow: #60192b; }
 [data-theme="codex"] .th-page { --th-art-glow: #9b6b47; --th-art-ink: #4a3a2a; --th-art-muted: #a58d60; }
 .th-page *, .th-page *::before, .th-page *::after { box-sizing: border-box; }
-.th-page :is(h1, h2, h3, p, figure, ul) { margin: 0; }
+/* Zero specificity beyond the element, like the global reset, so every authored class margin below applies. */
+:where(.th-page) :is(h1, h2, h3, p, figure, ul) { margin: 0; }
 .th-page :is(a, button, summary):focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
 .th-page a { text-underline-offset: .25em; }
 .th-page :is(section, h2, article) { scroll-margin-block-start: 100px; }
@@ -669,7 +680,8 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .th-access { display: inline-flex; max-inline-size: 100%; padding: 5px 8px; border: 1px solid var(--rule); color: var(--ink-2); font: 400 11px/1.5 var(--zn-mono, var(--mono)); overflow-wrap: anywhere; }
 .th-method { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 24px 48px; margin-block-end: 64px; padding-block: 24px; border-block: 1px solid var(--rule); }
 .th-method h2 { font: 400 28px/1.15 var(--serif); }
-.th-method p { max-inline-size: 64ch; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+.th-method p:not(.th-kicker) { max-inline-size: 64ch; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+.th-method .th-kicker { margin-block-end: 14px; }
 
 /* Maya gold is art pigment; body copy stays solid and readable. No animation is added. */
 [data-theme="maya"] .th-title em { color: var(--cochineal); }
@@ -746,12 +758,14 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 
 /* Cinema layout extends the existing brand and appearance tokens.
    Thumbnail URLs and player sources must come from reviewed publisher records. */
+/* One column for header, page and footer: 1280px with the shared gutter, so their edges line up. The footer's
+   own top margin is the only space after the last section, as on the Nations pages. */
 .th-page.th-cinema {
   --th-gap: clamp(24px, 3vw, 48px);
-  --th-page-width: 1440px;
+  --th-page-width: 1280px;
   max-inline-size: var(--th-page-width);
   margin-inline: auto;
-  padding: 38px clamp(18px, 4vw, 48px) 80px;
+  padding: 38px var(--gutter) 0;
 }
 .th-cinema [hidden] { display: none !important; }
 .th-cinema :where(button, a, input, select, summary):focus-visible {
@@ -764,8 +778,10 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
   font: 400 clamp(44px, 5vw, 72px)/1.02 var(--serif);
   letter-spacing: -.025em;
   max-inline-size: 20ch;
+  text-wrap: balance;
 }
-.th-cinema-heading > p:last-child {
+.th-cinema-heading .th-kicker { text-wrap: balance; }
+.th-cinema-heading > p:not([class]) {
   margin-block-start: 14px;
   max-inline-size: 64ch;
   color: var(--ink-2);
@@ -779,7 +795,7 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
   align-items: start;
 }
 .th-screening-layout > * { min-inline-size: 0; }
-.th-stage-shell { position: relative; isolation: isolate; padding: 12px; }
+.th-stage-shell { position: relative; isolation: isolate; padding: 18px; }   /* clears the 19/1200 corner steps */
 .th-cinema .th-screen {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -833,7 +849,7 @@ html[data-motion="still"] .th-cinema .th-frame-glow {
   opacity: .12;
 }
 .th-provider-line {
-  margin: 14px 12px 0;
+  margin: 14px 18px 0;
   color: var(--ink-2);
   font: 400 13px/1.65 var(--zn-read);
   max-inline-size: 74ch;
@@ -842,7 +858,7 @@ html[data-motion="still"] .th-cinema .th-frame-glow {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 14px 12px 0;
+  margin: 14px 18px 0;
 }
 .th-cinema .th-watch, .th-cinema .th-select {
   min-height: 46px;
@@ -932,6 +948,11 @@ html[data-motion="still"] .th-cinema .th-frame-glow {
 .th-card-details :where(p, li) { font-size: 13px; line-height: 1.65; color: var(--ink-2); overflow-wrap: anywhere; }
 .th-card-details a { display: inline-flex; align-items: center; min-block-size: 44px; padding-block: 8px; color: var(--ink); }
 .th-cinema .th-companions, .th-cinema .th-method { margin-block-start: 64px; padding-block: 0; }
+.th-cinema .th-method { margin-block-end: 0; padding-block: 28px; }
+/* Card footers line up across a row: the details link sits at the foot of every equal-height card. */
+.th-cinema .th-film > .th-card-details { margin-block-start: auto; padding-block-start: 12px; }
+/* A meta item (a runtime, an edition) never splits; lines break only between items. */
+.th-nw { white-space: nowrap; }
 @media (max-width: 1179px) {
   .th-screening-layout { grid-template-columns: minmax(0, 1.7fr) minmax(260px, .9fr); gap: 28px; }
   .th-cinema .th-film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -946,14 +967,16 @@ html[data-motion="still"] .th-cinema .th-frame-glow {
   .th-cinema .th-film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 679px) {
-  .th-page.th-cinema { padding: 24px 18px 56px; }
+  .th-page.th-cinema { padding: 24px var(--gutter) 0; }
   .th-cinema-heading { margin-block-end: 22px; }
   .th-cinema-heading h1 { font-size: clamp(40px, 11vw, 56px); }
-  .th-cinema-heading > p:last-child { margin-block-start: 12px; font-size: 14px; }
+  .th-cinema-heading > p:not([class]) { margin-block-start: 12px; font-size: 14px; }
   .th-stage-shell { padding: 8px; }
-  .th-provider-line, .th-provider-actions { margin-inline: 8px; }
+  .th-provider-line, .th-provider-actions { margin-inline: 0; }
+  .th-provider-actions { gap: 10px; }
+  .th-provider-actions > * { flex: 1 1 auto; justify-content: center; text-align: center; }
   .th-provider-line { font-size: 12px; line-height: 1.65; }
-  .th-now-watching { display: block; padding: 0 8px; }
+  .th-now-watching { display: block; padding: 0; }
   .th-now-watching > .th-kicker { margin-block-end: 12px; }
   .th-cinema .th-feature-title { font-size: clamp(30px, 8vw, 40px); }
   .th-now-watching > .th-now-meta { margin-block: 14px; }
@@ -984,7 +1007,7 @@ html[data-motion="still"] .th-cinema .th-frame-glow {
 }
 
 html[data-theater-motion="still"] .th-cinema .th-frame-glow { animation:none!important; stroke-dasharray:none; opacity:.12; }
-.th-cinema .th-film-title { text-wrap:initial; }
+.th-cinema .th-film-title { text-wrap:balance; }
 .th-cinema .th-poster-button { flex:none; }
 .th-cinema .th-card-details { margin-top:10px; }
 .th-cinema .th-card-details summary { display:flex; align-items:center; }
@@ -1018,3 +1041,8 @@ html[data-theater-motion="still"] .th-cinema .th-frame-glow { animation:none!imp
 @media(max-width:959px){.th-world-links{grid-template-columns:repeat(2,minmax(0,1fr));}.th-cinema .th-tools{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:679px){.th-cinema .th-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;}.th-cinema .th-film-title{min-height:0;}.th-cinema .th-card-meta{min-height:0;}.th-world-reading{margin-top:48px;}.th-world-links{gap:12px;}.th-world-links>a{padding:18px;}.th-world-links strong{font-size:22px;}.th-regional .th-companions h3{font-size:25px;}.th-provider-actions{gap:10px;}}
 @media(max-width:359px){.th-cinema .th-tools,.th-world-links{grid-template-columns:minmax(0,1fr);}.th-cinema .th-tools>div:first-child{grid-column:auto;}}
+/* Phones: one full-width filter per row, so every select shows its whole label. */
+@media(max-width:479px){.th-cinema .th-tools{grid-template-columns:minmax(0,1fr);}.th-cinema .th-tools>div:first-child{grid-column:auto;}}
+/* Line endings: headings balance, running text avoids a lone last word (style only; nowrap rules stay). */
+.th-page :is(h2, h3) { text-wrap-style: balance; }
+.th-page p { text-wrap-style: pretty; }

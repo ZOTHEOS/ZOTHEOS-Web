@@ -262,7 +262,7 @@ def page(builder):
            '<p class="lede">Start with a name. Follow its source. See what still needs research.</p>',
            '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p>',
            '<label for="directoryQuery">Find a name in this directory</label>',
-           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute, Apache or a community name" aria-controls="directoryNames" aria-describedby="directoryResult">',
+           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">',
            '<button type="button" id="directoryClear" class="pill">Clear</button></div>',
            '<div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
            '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'

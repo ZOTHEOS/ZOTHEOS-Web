@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-UFLz6EkSO/7YzkYhJEF8xyQH3Qxlgt56o/dCsjhsmhE=' 'sha256-2RJSHTM7Uo0TSVbMdnYwIV3RKUU8n0ya+NOjtotC82Q='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-AThXjkFvQhRrSEdUKaRxLHlkZCk2jRvnmTiwpzUIdQQ=' 'sha256-xoag0hUo4FwRdSIW0C1fgX43/4/RMWkT1X5zwfVXZNk=' 'sha256-uMtdpH5BRta22fcPfKZ00taFkB+jvCUcsKOVxRBAU/k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://zotheos.org/static/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ZOTHEOS: three minds reason, you decide." />
+  <meta property="og:image:alt" content="The ZOTHEOS wordmark above the words: A private, local AI council. You decide." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZOTHEOS | Offline Ethical Intelligence" />
   <meta name="twitter:description" content="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-pre="A local AI council. Windows desktop validation in progress. Built to be checked." data-rs-avail="A local AI council. The Windows desktop {version} is available. Built to be checked." />
@@ -1455,47 +1455,51 @@
     html.cv-warm section:not(#top):not(#council-story) { content-visibility: visible; }
     [data-anchor-target]:focus { outline: none; }
     #council-pillars { --cis: 301px; }   /* W2-05: pillar arrows and fret rules (was 269) */
-    #features { --cis: 977px; }   /* W2-07 re-measured (mechanism figure, footnotes, specimen) */
-    #proof { --cis: 910px; }   /* W2-08 re-measured (specimens, label, receipt strip) */
-    #workspace { --cis: 1124px; }   /* W2-09/10/11 re-measured (palette, platforms + seat figure, memory card tail) */
+    /* Re-measured in the polish pass (route stage, gateway, four-card bento, wider tablet gutters, line endings). */
+    #features { --cis: 2568px; }
+    #proof { --cis: 910px; }
+    #workspace { --cis: 1124px; }
     #devices { --cis: 1432px; }
-    #memory { --cis: 1168px; }
-    #console { --cis: 1136px; }   /* W2-06 re-measured: the ghosts hold the finished size from the first frame */
-    #mission { --cis: 738px; }
-    #compare { --cis: 1056px; }
-    #faq { --cis: 1049px; }
-    #founder { --cis: 614px; }
-    #waitlist { --cis: 475px; }
+    #memory { --cis: 1020px; }
+    #console { --cis: 1136px; }
+    #mission { --cis: 726px; }
+    #explore-zotheos { --cis: 797px; }
+    #compare { --cis: 1133px; }
+    #faq { --cis: 921px; }
+    #founder { --cis: 659px; }
+    #waitlist { --cis: 433px; }
     #support { --cis: 459px; }
     @media (max-width: 1099px) {
       #council-pillars { --cis: 301px; }   /* the row layout holds down to 861px; stacked below, see the 860px band */
-      #features { --cis: 1262px; }
-      #proof { --cis: 1126px; }   /* the receipt strip's edge-band inset wraps its line once here */
-      #workspace { --cis: 1131px; }
-      #devices { --cis: 1472px; }
-      #memory { --cis: 1404px; }
-      #console { --cis: 1245px; }
-      #mission { --cis: 940px; }
-      #compare { --cis: 1150px; }
-      #faq { --cis: 1000px; }
-      #founder { --cis: 530px; }
-      #waitlist { --cis: 460px; }
-      #support { --cis: 670px; }
+      #features { --cis: 2921px; }
+      #proof { --cis: 1141px; }
+      #workspace { --cis: 1109px; }
+      #devices { --cis: 1516px; }
+      #memory { --cis: 1092px; }
+      #console { --cis: 1246px; }
+      #mission { --cis: 848px; }
+      #explore-zotheos { --cis: 781px; }
+      #compare { --cis: 1182px; }
+      #faq { --cis: 1035px; }
+      #founder { --cis: 594px; }
+      #waitlist { --cis: 431px; }
+      #support { --cis: 469px; }
     }
     @media (max-width: 860px) { #council-pillars { --cis: 915px; } }   /* pillars stack at 860px (measured 915 at 860 and 390) */
     @media (max-width: 640px) {
       #council-pillars { --cis: 915px; }
-      #features { --cis: 1785px; }
+      #features { --cis: 4553px; }
       #proof { --cis: 2046px; }
-      #workspace { --cis: 1871px; }
+      #workspace { --cis: 1868px; }
       #devices { --cis: 2067px; }
       #memory { --cis: 1749px; }
-      #console { --cis: 1942px; }
-      #mission { --cis: 1448px; }
-      #compare { --cis: 2474px; }
+      #console { --cis: 1788px; }
+      #mission { --cis: 1585px; }
+      #explore-zotheos { --cis: 1335px; }
+      #compare { --cis: 3199px; }
       #faq { --cis: 986px; }
-      #founder { --cis: 645px; }
-      #waitlist { --cis: 650px; }
+      #founder { --cis: 705px; }
+      #waitlist { --cis: 579px; }
       #support { --cis: 931px; }
     }
     .section-inner { max-width: 1280px; margin: 0 auto; }
@@ -1584,6 +1588,10 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
+    /* Under the full-width Fusion card sit four cards: one row of four where each keeps a readable measure, two by
+       two on narrower screens, never three and a stray. */
+    @media (min-width: 1400px) { .bento { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    @media (min-width: 861px) and (max-width: 1399px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     .bento-card {
       padding: 32px;
       border: 1px solid var(--rule-soft);
@@ -1875,9 +1883,10 @@
     }
     .waitlist-form {
       display: flex; gap: 10px;
-      max-width: 520px;
+      max-width: 660px;   /* the 220px field and the button share one centred row */
       margin: 0 auto;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .waitlist-input {
       flex: 1; min-width: 220px;
@@ -2687,6 +2696,10 @@
     }
     .col-z.img-failed .col-z-logo { display: none; }
     .col-z.img-failed .col-z-text { display: inline; }
+    /* Release state beside the mark while the desktop is in testing (.rs-pre): the column describes the design. */
+    .compare-row .col-z { flex-wrap: wrap; row-gap: 6px; }
+    .col-z-state { font-family: var(--mono); font-size: 10px; font-weight: 500; line-height: 14px;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-2); }
     .compare-row .col-them {
       font-family: var(--sans);
       font-size: 11px;
@@ -3226,7 +3239,7 @@
       font-size: 10px;
       letter-spacing: 0.20em;
       text-transform: uppercase;
-      color: var(--ink-4);
+      color: var(--ink-3);   /* ink-4 fell under 3:1 on Living Codex, Obsidian Ember and Maya */
       margin-top: 4px;
     }
 
@@ -4022,7 +4035,9 @@
       color: var(--ink);
       transform: translateY(-1px);
     }
-    @media (max-width: 960px) { .day-chip { display: none; } }
+    /* The bar keeps the chip from 1121px: with the 72px gutter below 1440px, the widest day sign (Cozcacuauhtli) and
+       Appearance then clear the wordmark by the bar's 16px gap. Narrower, the chip lives in the section sheet. */
+    @media (max-width: 1120px) { .day-chip { display: none; } }
 
     /* Kinetic headline: each letter of "You decide" is its own
        body, rising into place, then breathing near the cursor. */
@@ -4946,17 +4961,19 @@
       .faq-layout .faq-list { max-width: none; padding-right: min(56px, max(0px, calc(88px - (100vw - 1280px) / 2))); }
     }
 
-    /* #waitlist: no empty band under the form. */
+    /* #waitlist: no empty band under the form. Phones: the section already holds a 22px gutter, so the card's
+       own side padding steps down and the heading and button keep a readable measure. */
     .waitlist-card { padding-bottom: 48px; }
+    @media (max-width: 640px) { .waitlist-card { padding: 44px 22px 40px; } }
     .waitlist-status:empty { margin-top: 0; min-height: 0; }
 
-    /* footer: three labelled link columns instead of one tall list. */
-    .footer-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr) auto; gap: clamp(28px, 4vw, 56px); }
-    .footer-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; align-items: start; }
+    /* footer: four labelled link columns instead of one tall list (the site's other pages have their own column). */
+    .footer-inner { grid-template-columns: minmax(0, .9fr) minmax(0, 2.2fr) auto; gap: clamp(28px, 4vw, 56px); }
+    .footer-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; align-items: start; }
     .footer-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
     .footer-col-label {
       font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--ink-4); padding-bottom: 10px; margin-bottom: 2px; border-bottom: 1px solid var(--rule-soft);
+      color: var(--ink-3); padding-bottom: 10px; margin-bottom: 2px; border-bottom: 1px solid var(--rule-soft);
     }
     .footer-links a { max-width: 100%; }
     @media (min-width: 861px) and (max-width: 1180px) {
@@ -4969,9 +4986,13 @@
       .footer-inner { grid-template-columns: 1fr; }
     }
     @media (max-width: 560px) {
-      .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .footer-links a { width: auto; white-space: normal; }
+      /* two by two: Council beside Proof, Release beside Explore; every link a full 44px row */
+      .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+      .footer-links a { width: auto; white-space: normal; display: flex; align-items: center; min-height: 44px; }
+      .footer-col { gap: 0; }
+      .footer-col-label { margin-bottom: 4px; }
     }
+    @media (max-width: 640px) { footer { padding-inline: 22px; } }
     /* ==== end batch D sections ==== */
 
     /* ==== Wave 1 batch D: floating orbs off content on phones (W1-15) ==== */
@@ -5005,6 +5026,23 @@
       .scroll-top { left: 12px; }
       .mirror-btn { right: 12px; }
     }
+    /* Narrow desktops and tablets (641 to 1439px): the column gutter was 32 to 80px while the orbs span 24 to 78px,
+       so they sat over the first letters of text. Here the orbs are 44px at 16px from the edge (16 to 60px) and
+       the column keeps at least 72px of gutter, so nothing readable passes under them. From 1440px the column's
+       own margin clears 44px orbs with room to spare. */
+    @media (min-width: 641px) and (max-width: 1439px) {
+      section:not(#top):not(#council-story):not(#council-pillars), main > .greca-divider, footer, #header {
+        padding-inline: max(72px, calc((100vw - 1280px) / 2));
+      }
+    }
+    /* The fixed header shares the column's gutter at every width (the band above, the sections' 22px on phones,
+       and from 1440px the same centred 1280px column), so its first and last controls stand on the content's edges. */
+    @media (max-width: 640px) { #header { padding-inline: 22px; } }
+    @media (min-width: 641px) and (max-width: 1599px) {
+      .scroll-top, .mirror-btn, html:not([data-theme]) .scroll-top { width: 44px; height: 44px; bottom: 16px; }
+      .scroll-top { left: 16px; }
+      .mirror-btn { right: 16px; }
+    }
     /* ==== end batch D orbs ==== */
 
     /* ==== Wave 1 batch H: header (W1-07) and intro hygiene (W1-08) ==== */
@@ -5015,7 +5053,8 @@
     [data-theme="skeleton"] { --hdr-band: #0E110E; }
 
     /* True centre axis: the two side zones are equal tracks that may not grow past their share, so the
-       wordmark's centre is the page's centre. Links fold into the sheet before they could crowd it. */
+       wordmark's centre is the page's centre. A track cannot grow, so links that do not fit would run under the
+       wordmark: the folds below are sized so the visible links always fit their track. */
     .header-inner {
       container: hdr / inline-size;
       grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -5058,15 +5097,20 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.45) 60%, rgba(255, 255, 255, 0.65) 100%) border-box;
     }
 
-    /* Folding: the two lowest-priority links go first, then the rest; Menu always reaches every section. */
-    @container hdr (max-width: 1230px) {
-      .header-nav a[data-nav-section="memory"], .header-nav a[data-nav-section="faq"] { display: none; }
+    /* Folding: with Theater in the bar, seven links need about 628px while each side track is at most about 552px
+       (the bar is 1280px at most), so Memory, Mission and FAQ always live in the sheet and Workspace follows on a
+       narrower bar. Architecture and Proof fold on a bar of 976px or less (a 1120px window with the 72px gutter, the
+       width where the day chip also folds), so Theater, the two of them and Menu always clear the wordmark by more
+       than the bar's 16px gap. Menu always reaches every section. */
+    @container hdr (max-width: 1290px) {
+      .header-nav a[data-nav-section="memory"], .header-nav a[data-nav-section="faq"],
+      .header-nav a[data-nav-section="mission"] { display: none; }
       .nav-menu-btn { display: inline-flex; }
     }
-    @container hdr (max-width: 1180px) {
-      .header-nav a[data-nav-section="workspace"], .header-nav a[data-nav-section="mission"] { display: none; }
+    @container hdr (max-width: 1230px) {
+      .header-nav a[data-nav-section="workspace"] { display: none; }
     }
-    @container hdr (max-width: 800px) {
+    @container hdr (max-width: 976px) {
       .header-nav a[data-nav-section] { display: none; }
     }
 
@@ -5776,7 +5820,7 @@
     }
     .cs-seat {
       position: absolute; transform: translateX(-50%);
-      height: 40px; padding: 0 10px;
+      height: 44px; padding: 0 10px;   /* a 44px target; each seat sits 2px higher so the glyphs stay on the rail */
       display: inline-flex; align-items: center; gap: 9px;
       background: none; border: 0; border-radius: 2px;
       color: var(--ink-4); cursor: pointer;
@@ -5791,15 +5835,15 @@
     [data-theme="skeleton"] .cs-seat { color: var(--ink-3); }
     [data-theme="codex"] .cs-seat { color: var(--ink-2); }
     .cs-seat::before {
-      content: ''; position: absolute; left: 18px; top: 2px; width: 4px; height: 4px; border-radius: 50%;
+      content: ''; position: absolute; left: 18px; top: 4px; width: 4px; height: 4px; border-radius: 50%;
       background: currentColor; opacity: 0; transition: opacity var(--dur-2) var(--ease-out);
     }
     .cs-seat[aria-current="step"] { color: var(--ink); }
     .cs-seat[aria-current="step"]::before { opacity: 1; }
     #councilSeats .cs-seat:focus-visible { outline-offset: 0; }   /* outranks the mono theme's link and button ring offset */
-    .cs-seat[data-seat="0"] { left: 116px; top: 28px; }
-    .cs-seat[data-seat="1"] { left: 276px; top: 16px; }
-    .cs-seat[data-seat="2"] { left: 436px; top: 4px; }
+    .cs-seat[data-seat="0"] { left: 116px; top: 26px; }
+    .cs-seat[data-seat="1"] { left: 276px; top: 14px; }
+    .cs-seat[data-seat="2"] { left: 436px; top: 2px; }
     .convene-end {
       position: absolute; left: 532px; top: 32px;   /* baseline on the top tread's line, past the curl */
       font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1; white-space: nowrap;
@@ -5825,9 +5869,9 @@
     @media (min-width: 761px) and (max-height: 720px) {
       .convene { height: 76px; margin-bottom: 10px; }
       .convene-rail { top: 16px; }
-      .cs-seat[data-seat="0"] { top: 16px; }
-      .cs-seat[data-seat="1"] { top: 4px; }
-      .cs-seat[data-seat="2"] { top: -8px; }
+      .cs-seat[data-seat="0"] { top: 14px; }
+      .cs-seat[data-seat="1"] { top: 2px; }
+      .cs-seat[data-seat="2"] { top: -10px; }
       .convene-end { top: 20px; }
       .cs-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
       .cs-seat { padding: 0 12px; }
@@ -6832,7 +6876,10 @@
     .fusion-output > div:last-child { border-color: color-mix(in srgb, var(--ink) 55%, transparent); }
     .fusion-caption { font-size: 12px; line-height: 1.6; color: var(--ink-3); }
     .fusion-method { border-top: 1px solid var(--rule); padding-top: 16px; }
-    .fusion-method summary { cursor: pointer; padding: 8px 0; color: var(--ink); font: 500 14px/1.6 var(--sans); }
+    .fusion-method summary {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      min-height: 44px; cursor: pointer; padding: 8px 0; color: var(--ink); font: 500 14px/1.6 var(--sans);
+    }
     .fusion-method summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
     .fusion-card .fusion-method p { margin: 12px 0 0; font-size: 14px; line-height: 1.75; color: var(--ink-2); max-width: 80ch; }
     .fusion-method a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
@@ -7112,6 +7159,83 @@
       [data-theme="maya"] .hero-headline.settled .glow,
       [data-theme="maya"] .hero-actions .btn-primary { animation: none !important; }
     }
+
+    /* ==== Polish pass: spacing, rhythm, small screens and crisp edges ==== */
+    /* Line endings: headings balance their lines, running text avoids a lone last word. The style longhand leaves
+       every nowrap rule (white-space) untouched. */
+    h2, h3, h4, summary { text-wrap-style: balance; }
+    p, li, dd, figcaption { text-wrap-style: pretty; }
+    .card-foot, .founder-who span, .tonal-seal { text-wrap-style: balance; }
+
+    /* The sheet lists the other pages first, then this page's sections in their order on the page. */
+    .ns-list li.ns-page-end { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+
+    /* The smallest phones: the Menu pill stays clear of the centred wordmark. */
+    @media (max-width: 359px) {
+      .nav-menu-btn { gap: 8px; padding: 0 9px 0 10px; letter-spacing: 0.12em; }
+    }
+
+    /* The hero's primary label stays on one line; a 320px phone tightens its tracking to fit. */
+    .hero-actions .btn-primary.rs-pre .bl { white-space: nowrap; }
+    @media (max-width: 380px) {
+      .hero-actions .btn-primary { padding-inline: 16px; letter-spacing: 0.24em; }
+    }
+
+    /* "You decide." stays crimson without a soft halo on Living Codex and Obsidian Ember (no glow, no haze). */
+    :is([data-theme="codex"], [data-theme="skeleton"]) .hero-headline .glow,
+    :is([data-theme="codex"], [data-theme="skeleton"]) .hero-headline.settled .glow,
+    :is([data-theme="codex"], [data-theme="skeleton"]) .hero-headline .seal { text-shadow: none; animation: none; }
+
+    /* Hardware tiers: a long family name may wrap on a narrow phone instead of running off the screen. */
+    @media (max-width: 760px) {
+      .tier-hw > span { white-space: normal; }
+    }
+
+    /* Nested boxes on phones give their text more room. */
+    @media (max-width: 480px) {
+      .fusion-flow li, .fusion-input { padding-inline: 14px; }
+      .console-body { padding-inline: 12px; }
+      .console-status { margin-inline: -12px; padding-inline: 12px; }
+      .console-verdict { padding-inline: 16px; }
+    }
+
+    /* The phone dock is an opaque band like the scrolled header: no blur, nothing smeared behind it. */
+    .mobile-cta, html:not([data-theme]) .mobile-cta, [data-theme="codex"] .mobile-cta, [data-theme="skeleton"] .mobile-cta {
+      background: var(--hdr-band);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+
+    /* Scroll-to-top in the colour themes: a crisp edge and no glow rings; on Living Codex the arrow is paper on
+       crimson so it reads. */
+    [data-theme] .scroll-top {
+      box-shadow: inset 0 1px 0 rgba(244, 236, 216, 0.10), inset 0 -1px 0 rgba(0, 0, 0, 0.55), 0 4px 14px rgba(0, 0, 0, 0.45);
+      animation: none;
+    }
+    [data-theme] .scroll-top svg { filter: none; }
+    [data-theme="codex"] .scroll-top { color: #F4ECD8; }
+
+    /* The specular line stays off long reading boxes on phones, where it crossed the text as a grey streak. */
+    @media (max-width: 640px) {
+      html:not([data-theme]) :is(.founder-card, .waitlist-card, .value-item, .tier-ladder .tier-row) { animation: none; }
+      @supports (animation-timeline: view()) {
+        /* where reveals run on scroll, those boxes keep their unveil and drop only the sheen */
+        html.zr-css.zm-fluid:not([data-theme]) :is(.value-item, .waitlist-card, .founder-card).reveal {
+          animation: zr-unveil linear both;
+          animation-timeline: view();
+          animation-range: entry min(var(--zr-at, 0px), 40%) entry min(100%, calc(var(--zr-at, 0px) + 200px));
+          animation-delay: 0s;
+        }
+        html.zr-css.zm-fluid:not([data-theme]) :is(.value-item, .waitlist-card, .founder-card).reveal.zr-shown { animation-timeline: auto; }
+      }
+    }
+
+    /* Small controls reach 44px. */
+    .hero-status { position: relative; }
+    .hero-status::after { content: ""; position: absolute; inset: -7px 0; }
+    footer .website-privacy > summary { min-height: 44px; }
+    .model-choice-notes a { display: inline-flex; align-items: center; min-height: 44px; }
+    .mv-del { flex: none; }
   </style>
 <style>
 .theater-invitation { max-width:1328px; margin:0 auto; padding:72px clamp(20px,4vw,40px); display:grid; grid-template-columns:1.25fr 1fr; gap:32px; border-top:1px solid var(--line); }
@@ -7123,15 +7247,84 @@
 .theater-invitation a:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
 @media(max-width:679px) { .theater-invitation { grid-template-columns:1fr; padding-block:48px; } .theater-invitation .ti-art { min-height:180px; } }
 
-.world-showcase {max-width:1328px;margin:0 auto;padding:72px clamp(20px,4vw,40px);border-top:1px solid var(--line);scroll-margin-top:100px;}
-.ws-heading {display:grid;grid-template-columns:1.2fr 1fr;gap:16px 44px;align-items:end;margin-bottom:36px;}
-.ws-heading .lbl {grid-column:1/-1;}.ws-heading h2 {font:400 clamp(40px,5vw,68px)/1.05 var(--serif);letter-spacing:-.02em;}
-.ws-heading>p:last-child {max-width:46ch;color:var(--ink-2);line-height:1.8;}
-.ws-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}.ws-card {display:flex;flex-direction:column;gap:18px;padding:30px;min-width:0;min-height:280px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;}
+/* The gateway follows the section system: the shared section padding and 1280px column, the house label and the
+   italic section title, and a greca divider on each side. */
+.world-showcase {scroll-margin-top:100px;}
+.ws-heading,.ws-grid {max-width:1280px;margin-inline:auto;}
+.ws-heading {display:grid;grid-template-columns:1.2fr 1fr;gap:24px 44px;align-items:end;margin-bottom:50px;}
+.ws-heading .section-head {grid-column:1/-1;margin-bottom:0;}.ws-heading .section-title {margin-bottom:0;text-wrap:balance;}
+.ws-heading>p:last-child {max-width:40ch;color:var(--ink-2);line-height:1.8;text-wrap:pretty;}
+.ws-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}.ws-card {display:flex;flex-direction:column;gap:18px;padding:30px;min-width:0;min-height:280px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;}
 .ws-card:hover {border-color:var(--ink);}.ws-card:focus-visible {outline:2px solid var(--ink);outline-offset:5px;}
 .ws-index {font:400 11px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);}.ws-card h3 {font:400 clamp(30px,3vw,42px)/1.15 var(--serif);}.ws-card p {max-width:48ch;color:var(--ink-2);font-size:15px;line-height:1.8;}.ws-action {margin-top:auto;padding-top:16px;font:500 13px/1.5 var(--sans);}
 .ws-theater {background:radial-gradient(ellipse at 95% 100%,color-mix(in oklab,var(--cochineal) 12%,transparent),transparent 75%);}
-@media(max-width:679px){.world-showcase{padding-block:48px;}.ws-heading,.ws-grid{grid-template-columns:minmax(0,1fr);}.ws-card{padding:24px;min-height:250px;}.ws-heading{gap:18px;margin-bottom:26px;}}
+.ws-card h3 {text-wrap:balance;}
+@media(max-width:679px){.ws-heading,.ws-grid{grid-template-columns:minmax(0,1fr);}.ws-card{padding:22px;min-height:0;}}
+@media(max-width:640px){#explore-zotheos .section-label{letter-spacing:.22em;text-wrap:balance;}}
+@media(max-width:420px){.ws-heading .section-title br{display:none;}}
+</style>
+<style>
+/* council-route:css */
+.cr,#crRun{display:grid;gap:14px}
+.cr{--cr-l:var(--ink-3);--cr-n:var(--ink-2);--cr-a:var(--cochineal);--cr-g:var(--bg-floor);--cr-t:var(--ink-2);container-type:inline-size}
+.cr[hidden]{display:none}
+[data-theme=skeleton] .cr{--cr-a:var(--ink);--cr-l:var(--ink-2);--cr-g:none}
+[data-theme=codex] .cr{--cr-l:var(--ink);--cr-n:var(--ink);--cr-t:var(--ink);--cr-g:none}
+.cr-ctl,.cr-bar{display:flex;flex-wrap:wrap;gap:8px}
+.cr-bar{align-items:center;margin-bottom:4px}
+.cr-b{display:inline-grid;grid-auto-flow:column;place-items:center;min-width:44px;min-height:44px;padding:0 16px;border:1px solid var(--ink-3);background:none;color:var(--ink);font:500 14px/1 var(--sans);cursor:pointer}
+.cr-b[hidden]{display:none}
+.cr-b:hover{border-color:var(--ink-2)}
+.cr-b[aria-pressed=true]{border-color:var(--cr-a)}
+.cr-o{margin-left:auto}
+.cr-m{width:7px;height:7px;margin-right:8px;border:1px solid currentColor;border-radius:50%}
+.cr-b[aria-pressed=true] .cr-m{background:currentColor}
+.cr[data-cc=off] .cr-cb{display:none}
+.cr-b:focus-visible,.cr-text summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cr-b[aria-disabled=true]{color:var(--ink-3);cursor:default}
+#crPlay{min-width:6.5em}
+#crPlay>span,.cr[data-b="0"] .cr-st>span+span,.cr:not([data-b="0"]) .cr-st>span:first-child{display:none}
+.cr[data-p=play] #crPlay>span:nth-child(1),.cr[data-p=pause] #crPlay>span:nth-child(2),.cr[data-p=replay] #crPlay>span:nth-child(3){display:inline}
+.cr-stage{--u:1;position:relative;aspect-ratio:1000/400;background:var(--cr-g)}
+.cr-stage.p{aspect-ratio:400/580;width:calc(100% + 44px);max-width:314px;margin-inline:max(-22px,calc(50% - 157px))}
+.cr-stage svg{position:absolute;inset:0;width:100%;height:100%}
+.cr svg *{fill:none}
+.cr .b,.cr .h{stroke-dasharray:1 1}
+.cr .b,.cr .n,.cr .en{stroke:var(--cr-l);stroke-width:calc(var(--u)*1.2px)}
+.cr .n{stroke:var(--cr-n)}
+.cr .h,.cr .hn{stroke:var(--cr-a);stroke-width:calc(var(--u)*2.2px);opacity:0}
+.cr .t{stroke-dasharray:5 4}
+.cr .bar.b{stroke:var(--cr-n);stroke-width:calc(var(--u)*2.5px)}
+.cr .bar.h{stroke-width:calc(var(--u)*4px)}
+.cr .en{stroke-dasharray:5 5}
+.cr .dot{fill:var(--cr-n);stroke:none}
+.cr .bg{fill:var(--bg-floor)}
+.cr .mk{stroke:#fff;stroke-width:14px;stroke-dasharray:1 1;forced-color-adjust:none}
+.cr .gl{color:var(--cr-n)}
+.cr .gl.hn{color:var(--cr-a)}
+.cr-l{position:absolute;width:max-content;font:500 13px/1.3 var(--sans);color:var(--cr-t);white-space:nowrap}
+.cr-stage.p .cr-l{font-size:12px}
+.cr-l.on{color:var(--ink);font-weight:650}
+.cr-l[data-k=gap]{white-space:normal;max-width:min(30em,38%);text-align:center}
+.cr-stage.p .cr-l[data-k=gap]{max-width:76%}
+.cr-l[data-k=q]{white-space:normal;max-width:9.5em}
+.cr-stage.p .cr-l[data-k=q]{white-space:nowrap;max-width:none}
+.cr-stage.p .cr-l[data-k=bar]{white-space:normal;max-width:7em}
+.cr-l[data-k=opt]::before{content:'';display:inline-block;width:18px;margin-right:6px;vertical-align:middle;border-top:1px dashed var(--cr-l)}
+.cr .cr-st{margin:0;font:500 13px/1.5 var(--sans);color:var(--ink-2)}
+#crN{display:inline-block;width:.6em;text-align:center}
+.cr-cb{display:grid}
+.cr .cr-cb>*{grid-area:1/1;margin:0;max-width:62ch;font:400 17px/1.55 var(--sans);color:var(--ink)}
+.cr-cb>span{visibility:hidden}
+.cr-text{border-top:1px solid var(--rule)}
+.cr-text summary{display:flex;align-items:center;min-height:44px;cursor:pointer;color:var(--ink);font:500 14px/1.4 var(--sans)}
+.cr-text ol{margin:4px 0 0;padding-left:1.5em;display:grid;gap:6px}
+.cr .cr-text li,.cr .cr-text p{font-size:14px;line-height:1.6;color:var(--ink)}
+.cr .cr-text p{margin:10px 0 0}
+[data-motion=still] .cr-text::details-content{transition:none}
+@container (max-width:719px){.cr .cr-cb>*{font-size:16px}}
+@media (forced-colors:active){.cr{--cr-l:CanvasText;--cr-n:CanvasText;--cr-a:Highlight}.cr .bg{fill:Canvas}}
+/* /council-route:css */
 </style>
 </head>
 <body class="page-loading">
@@ -7270,8 +7463,8 @@
       <button class="ns-close" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
     </div>
     <ul class="ns-list">
-      <li><a href="/theater"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Theater</span></a></li>
-      <li><a href="#explore-zotheos"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Explore ZOTHEOS</span></a></li>
+      <li class="ns-page"><a href="/theater"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Theater</span></a></li>
+      <li class="ns-page ns-page-end"><a href="/nations"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Nations</span></a></li>
       <li style="--i:0"><a href="#council-story"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">The council</span></a></li>
       <li style="--i:1"><a href="#features"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span></span></span><span class="ns-name">Architecture</span></a></li>
       <li style="--i:2"><a href="#proof"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Proof</span></a></li>
@@ -7280,12 +7473,12 @@
       <li style="--i:5"><a href="#memory"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span></span></span><span class="ns-name">Memory</span></a></li>
       <li style="--i:6"><a href="#console"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span></span></span><span class="ns-name">Console</span></a></li>
       <li style="--i:7"><a href="#mission"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Mission</span></a></li>
-      <li style="--i:8"><a href="#compare"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Comparison</span></a></li>
-      <li style="--i:9"><a href="#faq"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">FAQ</span></a></li>
-      <li style="--i:10"><a href="#founder"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span></span></span><span class="ns-name">Founder</span></a></li>
-      <li style="--i:11"><a href="#waitlist"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span></span></span><span class="ns-name">Early access</span></a></li>
-      <li style="--i:12"><a href="#support"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Support</span></a></li>
-      <li style="--i:13"><a href="/nations"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Nations</span></a></li>
+      <li style="--i:8"><a href="#explore-zotheos"><span class="ns-num" aria-hidden="true"></span><span class="ns-name">Explore ZOTHEOS</span></a></li>
+      <li style="--i:9"><a href="#compare"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Comparison</span></a></li>
+      <li style="--i:10"><a href="#faq"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">FAQ</span></a></li>
+      <li style="--i:11"><a href="#founder"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span></span></span><span class="ns-name">Founder</span></a></li>
+      <li style="--i:12"><a href="#waitlist"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span></span></span><span class="ns-name">Early access</span></a></li>
+      <li style="--i:13"><a href="#support"><span class="ns-num" aria-hidden="true"><span class="maya-num"><span class="b"></span><span class="b"></span><span class="d"></span><span class="d"></span></span></span><span class="ns-name">Support</span></a></li>
     </ul>
     <div class="ns-foot" id="navSheetFoot">
       <a class="ns-dl" href="/download.html"><span class="rs-pre">Download status</span><span class="rs-avail">Download for Windows</span> <span aria-hidden="true">&rarr;</span></a>
@@ -7624,8 +7817,56 @@
             </div>
             <figcaption class="fusion-caption">Illustration of the standard full council route, not a live run. Modes, settings and model availability can change the stages.</figcaption>
           </figure>
+          <!-- council-route:markup -->
+<div class="cr" id="councilRoute" data-b="0" data-p="play" hidden>
+ <div id="crRun">
+ <div class="cr-ctl" id="crCtl" role="group" aria-label="Council route">
+  <button type="button" class="cr-b" id="crPlay"><span>Play</span><span>Pause</span><span>Replay</span></button>
+  <button type="button" class="cr-b" id="crPrev">Previous<span class="sr-only"> step</span></button>
+  <button type="button" class="cr-b" id="crNext">Next<span class="sr-only"> step</span></button>
+ </div>
+ <div class="cr-stage" id="crStage" aria-hidden="true">
+  <svg id="crSvg" focusable="false"></svg>
+  <span class="cr-l" data-k="dev">Your device</span>
+  <span class="cr-l" data-k="gap">Connection needed for model downloads and optional tools</span>
+  <span class="cr-l" data-k="q">Your question + supporting sources</span>
+  <span class="cr-l" data-k="a">Analyst</span>
+  <span class="cr-l" data-k="h">Humanist</span>
+  <span class="cr-l" data-k="s">Skeptic</span>
+  <span class="cr-l" data-k="opt">Optional extra<br>cross-critique,<br>off by default</span>
+  <span class="cr-l" data-k="bar">Strongest agreement,<br>questioned</span>
+  <span class="cr-l" data-k="y">Synthesis</span>
+  <span class="cr-l" data-k="tie" data-cr="tie">Analyst's model</span>
+  <span class="cr-l" data-k="u">You</span>
+ </div>
+ <div class="cr-cap">
+  <div class="cr-bar">
+   <p class="cr-st"><span>The whole route</span><span>Step <span id="crN">0</span> of 7</span></p>
+   <button type="button" class="cr-b cr-o" id="crCc" aria-pressed="true"><span class="cr-m" aria-hidden="true"></span>CC<span class="sr-only"> captions</span></button>
+   <button type="button" class="cr-b" id="crSnd" aria-pressed="false" hidden><span class="cr-m" aria-hidden="true"></span>Audio</button>
+  </div>
+  <div class="cr-cb" id="crCb"><p id="crCap" aria-live="off"></p></div>
+ </div>
+ </div>
+ <details class="cr-text" id="crText">
+  <summary>Read the route as text</summary>
+  <ol id="crList">
+   <li>You bring a question. Sources enter when supplied or retrieved. The models run on your hardware.</li>
+   <li>The Analyst builds the first draft from the question, reasoning and available evidence.</li>
+   <li>The Humanist also reads that draft, possibly shortened, and adds who is affected, what matters and what it overlooks.</li>
+   <li>The Skeptic also reads both earlier drafts and argues against their strongest agreement, not against you.</li>
+   <li>One synthesized draft combines the perspectives. <span data-cr="tie">Synthesis normally reuses the Analyst's model, so it is not an independent fourth judge.</span></li>
+   <li>Accept, question or reject the draft. The decision stays with you.</li>
+   <li>Agreement is not proof. This illustrates the standard full council route, not a live run. Timing is not to scale.</li>
+  </ol>
+  <p>The optional extra cross-critique round is off by default. A separate debate mode can use additional rounds. Modes, settings and model availability can change the stages.</p>
+ </details>
+ <div id="crRest" hidden><span>Press Play to follow the route, or step through it at your own pace.</span><span>Step through the route at your own pace.</span></div>
+ <template id="crAlt"><li>Inspect the sources, disagreements and limits. Accept, question or reject the draft. The decision stays with you.</li><span class="cr-l" data-k="ring">Open question</span></template>
+</div>
+<!-- /council-route:markup -->
           <details class="fusion-method">
-            <summary>Method, research and limits</summary>
+            <summary><span>Method, research and limits</span><span class="zd-icon" aria-hidden="true"></span></summary>
             <p><strong>What the route means.</strong> Later minds receive earlier drafts as context; that context can be shortened. Synthesis normally reuses the Analyst's model with a synthesis prompt, rather than adding an independent fourth judge. Question-based emphasis is prompt guidance, not a measured competence score. A separate debate mode can use additional rounds.</p>
             <p><strong>Research context.</strong> <a href="https://arxiv.org/abs/2305.14325" target="_blank" rel="noopener noreferrer">Du et al., Improving Factuality and Reasoning in Language Models through Multiagent Debate</a> studies models exchanging and revising answers on selected tasks. It motivates testing deliberation; it does not establish ZOTHEOS's accuracy.</p>
             <p><strong>Why confidence needs care.</strong> <a href="https://arxiv.org/abs/2207.05221" target="_blank" rel="noopener noreferrer">Kadavath et al., Language Models (Mostly) Know What They Know</a> studies model self-evaluation and its limits. ZOTHEOS also uses heuristic quality signals. A stated confidence level is not automatically a calibrated probability. Models can share mistakes, and additional discussion cannot guarantee a correct answer.</p>
@@ -8261,15 +8502,23 @@
     <span class="seal-dot"></span>
   </div>
 
-  <section class="world-showcase" id="explore-zotheos" aria-labelledby="explore-title"><div class="ws-heading"><p class="lbl">Built For Humanity · Across The World</p><h2 id="explore-title">More Ways To<br>Understand Our World.</h2><p>Watch. Learn. Question. Follow the sources and keep your own judgment.</p></div><div class="ws-grid"><a class="ws-card ws-theater" href="/theater"><span class="ws-index">01 · Watch</span><h3>ZOTHEOS Theater</h3><p>Films, shorts and conversations from official sources. Clear viewing notes, with Indigenous voices first.</p><span class="ws-action">Enter The Theater ↗</span></a><a class="ws-card" href="/nations/directory"><span class="ws-index">02 · Discover</span><h3>Nations Worldwide</h3><p>Distinct peoples, histories and Nations’ own resources. A growing directory with its coverage gaps visible.</p><span class="ws-action">Explore The Directory ↗</span></a><a class="ws-card" href="/nations/resources"><span class="ws-index">03 · Go Deeper</span><h3>Histories And Resources</h3><p>Continue into cited histories, languages, land and community-led knowledge.</p><span class="ws-action">Follow The Sources ↗</span></a><a class="ws-card" href="/game"><span class="ws-index">04 · Play And Learn</span><h3>A Different Way In</h3><p>Games and learning cards offer another starting point. The histories and sources remain yours to explore.</p><span class="ws-action">Open The Games ↗</span></a></div></section>
-<section id="compare">
+  <section class="world-showcase" id="explore-zotheos" aria-labelledby="explore-title"><div class="ws-heading"><div class="section-head"><span class="section-label">Built For Humanity&nbsp;· Across The World</span></div><h2 class="section-title" id="explore-title">More Ways To <br>Understand Our World<span class="seal">.</span></h2><p>Watch. Learn. Question. Follow the sources and keep your own judgment.</p></div><div class="ws-grid"><a class="ws-card ws-theater" href="/theater"><span class="ws-index">01 · Watch</span><h3>ZOTHEOS Theater</h3><p>Films, shorts and conversations from official sources. Clear viewing notes, with Indigenous voices first.</p><span class="ws-action">Enter The Theater ↗</span></a><a class="ws-card" href="/nations/directory"><span class="ws-index">02 · Discover</span><h3>Nations Worldwide</h3><p>Distinct peoples, histories and Nations’ own resources. A growing directory with its coverage gaps visible.</p><span class="ws-action">Explore The Directory ↗</span></a><a class="ws-card" href="/nations/resources"><span class="ws-index">03 · Go Deeper</span><h3>Histories And Resources</h3><p>Continue into cited histories, languages, land and community-led knowledge.</p><span class="ws-action">Follow The Sources ↗</span></a><a class="ws-card" href="/game"><span class="ws-index">04 · Play And Learn</span><h3>A Different Way In</h3><p>Games and learning cards offer another starting point. The histories and sources remain yours to explore.</p><span class="ws-action">Open The Games ↗</span></a></div></section>
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+
+  <section id="compare">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
         <span class="section-label">Comparison</span>
       </div>
       <h2 class="section-title reveal">A different posture entirely<span class="seal">.</span></h2>
-      <p class="section-desc reveal reveal-d1">ZOTHEOS is built around local control and inspectable evidence. Hosted services differ in their policies and capabilities; compare the specific service you use.</p>
+      <p class="section-desc reveal reveal-d1">ZOTHEOS is built around local control and inspectable evidence.<span class="rs-pre"> The ZOTHEOS column describes the local edition as designed: the Windows desktop is in internal testing, and these features are part of the current validation.</span> Hosted services differ in their policies and capabilities; compare the specific service you use.</p>
 
       <div class="compare-table reveal reveal-d2" role="table" aria-label="Local ZOTHEOS design and cloud-service considerations">
         <div class="compare-row compare-head" role="row">
@@ -8277,6 +8526,7 @@
           <div role="columnheader" class="col-z">
             <img src="/static/zotheos_logo.png" alt="ZOTHEOS" class="col-z-logo" data-logo-fallback=".col-z" />
             <span class="col-z-text">ZOTHEOS</span>
+            <span class="col-z-state rs-pre">In internal testing</span>
           </div>
           <div role="columnheader" class="col-them">Cloud services vary</div>
         </div>
@@ -8297,7 +8547,7 @@
         </div>
         <div class="compare-row" role="row">
           <div role="rowheader">Reasoning method</div>
-          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Three independent cores, synthesized</div>
+          <div role="cell" class="yes"><span class="cc-col" aria-hidden="true">ZOTHEOS</span>Three roles in sequence, later roles reading earlier drafts; one synthesis you review</div>
           <div role="cell" class="no"><span class="cc-col" aria-hidden="true">Cloud services vary</span>Provider-specific architecture</div>
         </div>
         <div class="compare-row" role="row">
@@ -8593,16 +8843,19 @@
         <div class="footer-col" role="group" aria-labelledby="fcol-release">
           <span class="footer-col-label" id="fcol-release">Release</span>
           <a href="/download.html"><span class="rs-pre">Download status</span><span class="rs-avail">Download for Windows</span></a>
-          <a href="/nations">Indigenous nations today</a>
           <a href="#waitlist">Early access</a>
           <a href="#faq">FAQ</a>
           <a href="#founder">Founder</a>
           <a href="#mission">Mission</a>
           <a href="#support">Support</a>
-          <a href="/game">Play Ollamaliztli</a>
-            <a href="/nations/resources">Histories And Resources</a>
+        </div>
+        <div class="footer-col" role="group" aria-labelledby="fcol-explore">
+          <span class="footer-col-label" id="fcol-explore">Explore</span>
           <a href="/theater">Theater</a>
-            <a href="/nations/directory">Nations Directory</a>
+          <a href="/nations/directory">Nations directory</a>
+          <a href="/nations">Indigenous nations today</a>
+          <a href="/nations/resources">Histories and resources</a>
+          <a href="/game">Play Ollamaliztli</a>
         </div>
       </nav>
       <div class="footer-meta">
@@ -9628,11 +9881,11 @@
         if (!to || sheet.contains(to) || to === menuBtn || (dayNote && dayNote.contains(to)) || !sheet.matches(':popover-open')) return;
         try { sheet.hidePopover(); } catch (x) {}
       });
-      /* Phones carry the whole appearance group into the foot; tablets (where the bar hides the day chip)
-         carry the day chip alone. */
+      /* Phones carry the whole appearance group into the foot; tablets and narrow laptops (up to 1120px, where
+         the bar hides the day chip) carry the day chip alone. */
       var chip = document.getElementById('dayChip');
       var mq = window.matchMedia('(max-width: 720px)');
-      var mqTab = window.matchMedia('(max-width: 960px)');
+      var mqTab = window.matchMedia('(max-width: 1120px)');
       function place() {
         if (mq.matches) {
           if (chip && chip.parentNode !== left) left.appendChild(chip);
@@ -12422,8 +12675,10 @@
           if (n >= 3 && !hold && !touched && call.classList.contains('is-live')) startCycle();
         }
         // The card must stay stuck below the header until all five steps have resolved: the points column gets
-        // a tail so its row outlasts the card by HOLD px of scroll after the fifth point crosses the line.
-        var pointsCol = call.querySelector('.memory-points'), LINE = 0.6, HOLD = 220;
+        // a tail so its row outlasts the card by HOLD px of scroll after the fifth point crosses the line. The card
+        // rides that tail down to the row's end, so the section's own padding stays whole under it; HOLD is kept short
+        // (110px, one section rhythm) so the empty run beside the held card stays short too.
+        var pointsCol = call.querySelector('.memory-points'), LINE = 0.6, HOLD = 110;
         function fit(live) {
           var pad = 0;
           if (live && pointsCol) {
@@ -12469,5 +12724,313 @@
       })();
     })();
   </script>
+<script>
+/* council-route:js */
+(() => {
+/* Owner switches (see the review notes) */
+const CONFIRMED = false;
+const TIE = true;
+const GLYPH_ACTIVE = false;
+const PLAY_IN_STILL = false;
+/* The owner's own sound for the route, same origin (for example '/static/council_route.mp3'). Empty keeps the Audio
+   button hidden and loads nothing. */
+const SOUND_FILE = '';
+const d = document, w = window, R = d.getElementById('councilRoute');
+if (!R || !R.animate || !w.matchMedia) return;
+const $ = i => d.getElementById(i);
+const S = $('crStage'), V = $('crSvg'), cap = $('crCap'), ol = $('crList'), bP = $('crPlay'), bB = $('crPrev'),
+  bN = $('crNext'), bC = $('crCc'), bS = $('crSnd'), O = $('introOverlay'), H = d.documentElement, nv = w.navigator,
+  mq = w.matchMedia('(prefers-reduced-motion: reduce)'), EASE = 'cubic-bezier(.65,0,.35,1)';
+const G = {
+  l: {w: 1000, h: 400, en: [232,136,468,108], dr: [468,326,468,234], rg: [[656,246],[884,344],[962,342]],
+    n: {q: [72,196], a: [300,200], h: [480,200], s: [660,200], y: [860,316], u: [940,316]},
+    p: {bd: 'M540 24H16V384H984V24H940', r1: 'M72 181V76H300V178', r2: 'M300 76H480V178', r3: 'M480 76H660V178',
+      s1a: 'M306 222V332H648', t1h: 'M468 332V222', s2a: 'M486 222V316H664', t1s: 'M648 332V322A6 6 0 0 1 648 310V222',
+      t2s: 'M664 316V222', s3a: 'M676 222V300H720', s1b: 'M648 332H845', s2b: 'M664 316H838', s3b: 'M720 300H845',
+      bar: 'M642 232H670', tie: 'M860 338V364H294V222', you: 'M882 316H926'},
+    L: {dev: [28,372,0], gap: [740,24,1], q: [24,256,0], a: [292,160,2], h: [472,160,2], s: [652,160,2],
+      opt: [222,196,2], bar: [636,270,2], y: [860,282,1], tie: [286,300,2], u: [940,284,1], ring: [976,370,2]}},
+  p: {w: 400, h: 580, en: [116,166,76,248], dr: [322,290,178,290], rg: [[184,404],[284,520],[246,540]],
+    n: {q: [28,88], a: [146,208], h: [146,298], s: [146,388], y: [314,486], u: [314,540]},
+    p: {bd: 'M36 36H12V568H388V36H364', r1: 'M28 103V208H124', r2: 'M28 208V298H124', r3: 'M28 298V388H124',
+      s1a: 'M168 220H330V372', t1h: 'M330 290H168', s2a: 'M168 306H314V388', t1s: 'M330 372H320A6 6 0 0 0 308 372H168',
+      t2s: 'M314 388H168', s3a: 'M168 402H298V430', s1b: 'M330 372V474', s2b: 'M314 388V466', s3b: 'M298 430V474',
+      bar: 'M176 366V394', tie: 'M334 486H372V194H168', you: 'M314 506V527'},
+    L: {dev: [24,556,0], gap: [200,36,1], q: [50,88,0], a: [108,221,2], h: [108,311,2], s: [108,401,2],
+      opt: [380,136,2], bar: [124,449,0], y: [288,495,2], tie: [200,180,0], u: [294,540,2], ring: [232,540,2]}}
+};
+let M = [[1,'d','bd',0,1.2], [1,'f','Ldev',1,.4], [1,'f','Lgap',1,.4], [1,'f','q',1.2,.4], [1,'n','q',1.2,.3],
+  [2,'d','r1',0,.9], [2,'n','a',.9,.3], [2,'d','s1a',1.2,.9],
+  [3,'d','r2',0,.6], [3,'n','h',.6,.3], [3,'d','t1h',.6,.4], [3,'t','dr',1,.9], [3,'d','s2a',1.9,.6],
+  [4,'d','r3',0,.6], [4,'n','s',.6,.3], [4,'d','t1s',.6,.5], [4,'d','t2s',.6,.5], [4,'d','bar',1.1,.3], [4,'f','Lbar',1.1,.3],
+  [4,'d','s3a',1.4,.6], [5,'d','s1b',0,1.2], [5,'d','s2b',0,1.2], [5,'d','s3b',0,1.2], [5,'d','tie',.6,.6], [5,'f','Ltie',.9,.3],
+  [5,'n','y',1.2,.3], [6,'d','you',0,.6], [6,'n','u',.6,.3,7]];
+const ON = ['', 'dev gap q', 'a', 'h', 's bar', 'y tie', 'u ring', 'u'];
+if (!TIE) {
+  R.querySelectorAll('[data-cr=tie]').forEach(n => n.parentNode.removeChild(n));
+  M = M.filter(m => !/tie/.test(m[2]));
+}
+if (CONFIRMED) {
+  const alt = $('crAlt').content;
+  ol.replaceChild(alt.querySelector('li'), ol.children[5]);
+  S.appendChild(alt.querySelector('span'));
+  M.push([6,'f','Lring',1.7,.3]);
+}
+const LB = {}, F = {}, txt = n => n.textContent.replace(/\s+/g, ' ').trim();
+S.querySelectorAll('[data-k]').forEach(n => { LB[n.dataset.k] = F['L' + n.dataset.k] = n; });
+const CAP = Array.from(ol.children, txt), REST = Array.from($('crRest').children, txt), T0 = [0], T1 = [0];
+let E, N, DR, RG, A = null, tm = 0, beat = 0, playing = false, ended = false, held = false, lay = '', vis = false,
+  seen = 0, au = null, snd = false, TT = 0;
+CAP.forEach((c, i) => { T0[i + 1] = TT; TT += Math.ceil((1.5 + .26 * c.split(' ').length) * 2) / 2; T1[i + 1] = TT; });
+const still = () => mq.matches || H.dataset.motion === 'still';
+const canPlay = () => PLAY_IN_STILL || !still();
+const tr = (c, s) => 'translate(' + c[0] + 'px,' + c[1] + 'px)' + (s === undefined ? '' : ' scale(' + s + ')');
+function el(t, a, p) {
+  const e = d.createElementNS('http://www.w3.org/2000/svg', t);
+  for (const k in a) e.setAttribute(k, a[k]);
+  return (p || V).appendChild(e);
+}
+function build() {
+  const g = G[lay];
+  V.textContent = '';
+  V.setAttribute('viewBox', '0 0 ' + g.w + ' ' + g.h);
+  S.className = 'cr-stage ' + lay;
+  E = {}; N = {};
+  el('rect', {x: g.en[0], y: g.en[1], width: g.en[2], height: g.en[3], rx: 10, class: 'en'});
+  for (const k in g.p) {
+    if (k !== 'tie') {
+      const b = el('path', {d: g.p[k], pathLength: 1, class: 'b ' + k}), h = el('path', {d: g.p[k], pathLength: 1, class: 'h ' + k});
+      E[k] = {d: [b, h], h};
+    } else if (TIE) {
+      const b = el('path', {d: g.p[k], pathLength: 1, class: 'mk'}, el('mask', {id: 'crMk', maskUnits: 'userSpaceOnUse', x: 0, y: 0, width: g.w, height: g.h}));
+      const x = el('g', {mask: 'url(#crMk)'});
+      el('path', {d: g.p[k], class: 'b t'}, x);
+      E[k] = {d: [b], h: el('path', {d: g.p[k], class: 'h t'}, x)};
+    }
+  }
+  const node = (id, draw) => {
+    const x = el('g', {transform: 'translate(' + g.n[id] + ')'}), b = draw(x, 'n');
+    N[id] = [draw(x, 'hn')];
+    return b;
+  };
+  F.q = node('q', (x, c) => {
+    const s = el('g', {class: c}, x);
+    el('rect', {x: -11, y: -15, width: 22, height: 30}, s);
+    el('path', {d: 'M-6 -7H6M-6 -1H6M-6 5H2'}, s);
+    return s;
+  });
+  ['analyst', 'humanist', 'skeptic'].forEach((n, j) => {
+    const id = n[0];
+    node(id, (x, c) => el('rect', {x: -22, y: -22, width: 44, height: 44, class: c}, x));
+    let u = el('use', {href: '#glyph-' + n, x: -16, y: -16, width: 32, height: 32, class: 'gl'}, V.lastChild);
+    if (j === 2) u.setAttribute('stroke-width', '2.4');
+    if (GLYPH_ACTIVE) { u = V.lastChild.appendChild(u.cloneNode()); u.setAttribute('class', 'gl hn'); N[id].push(u); }
+  });
+  node('y', (x, c) => el('circle', {r: 22, class: c}, x));
+  node('u', (x, c) => el('circle', {r: 14, class: c}, x));
+  el('circle', {r: 3.5, class: 'dot'}, V.lastChild);
+  DR = el('g', {class: 'hn'});
+  el('rect', {x: -8, y: -7.5, width: 16, height: 15, class: 'bg'}, DR);
+  el('path', {d: 'M-4 -2H4M-4 2H2'}, DR);
+  DR.style.transform = tr(g.dr);
+  RG = CONFIRMED ? el('circle', {r: 8, class: 'hn'}) : null;
+  for (const k in LB) {
+    const i = g.L[k], x = LB[k].style;
+    x.left = i[0] / g.w * 100 + '%';
+    x.top = i[1] / g.h * 100 + '%';
+    x.transform = 'translate(' + -50 * i[2] + '%,-50%)';
+    x.textAlign = ['left', 'center', 'right'][i[2]];
+  }
+}
+function paint(k) {
+  kill();
+  for (const m of M) {
+    const on = !k || m[0] <= k, act = k && m[0] <= k && k <= (m[5] || m[0]);
+    if (m[1] === 'd') {
+      for (const x of E[m[2]].d) x.style.strokeDashoffset = on ? 0 : 1;
+      E[m[2]].h.style.opacity = act ? 1 : 0;
+    } else if (m[1] === 'f') F[m[2]].style.opacity = on ? 1 : 0;
+    else if (m[1] === 'n') for (const x of N[m[2]]) x.style.opacity = act ? 1 : 0;
+    else DR.style.opacity = 0;
+  }
+  if (RG) {
+    RG.style.transform = tr(G[lay].rg[!k || k > 5 ? 2 : 1], k && k < 5 ? 0 : 1);
+    RG.style.opacity = 1;
+  }
+  show(k);
+}
+function an(x, p, pts) {
+  const f = [[0, pts[0][1]], ...pts, [TT, pts[pts.length - 1][1]]].map(v => ({offset: Math.min(v[0], TT) / TT, easing: v[2] || 'linear', [p]: v[1]}));
+  const a = x.animate(f, {duration: TT * 1000, fill: 'both'});
+  a.pause();
+  A.push(a);
+}
+function mk() {
+  const g = G[lay];
+  A = [];
+  for (const m of M) {
+    const s = T0[m[0]] + m[3], e = s + m[4], z = T1[m[5] || m[0]];
+    if (m[1] === 'd') {
+      for (const x of E[m[2]].d) an(x, 'strokeDashoffset', [[s, 1, EASE], [e, 0]]);
+      an(E[m[2]].h, 'opacity', [[s, 0], [s, 1], [z, 1, EASE], [z + .3, 0]]);
+    } else if (m[1] === 'f') an(F[m[2]], 'opacity', [[s, 0, EASE], [e, 1]]);
+    else if (m[1] === 'n') for (const x of N[m[2]]) an(x, 'opacity', [[s, 0, EASE], [e, 1], [z, 1, EASE], [z + .3, 0]]);
+    else {
+      an(DR, 'transform', [[s, tr(g.dr), EASE], [e, tr(g.dr.slice(2))]]);
+      an(DR, 'opacity', [[s, 0], [s, 1], [e, 1, EASE], [e + .2, 0]]);
+    }
+  }
+  if (RG) {
+    const r = g.rg, a = T0[5], b = T0[6] + .9;
+    an(RG, 'transform', [[a, tr(r[0], 0), EASE], [a + .3, tr(r[0], 1), EASE], [a + 1.1, tr(r[1], 1)], [b, tr(r[1], 1), EASE], [b + .8, tr(r[2], 1)]]);
+  }
+}
+function kill() {
+  clearTimeout(tm);
+  if (A) A.forEach(a => a.cancel());
+  A = null;
+  playing = false;
+}
+const at = t => { let k = 1; while (k < 8 && t >= T1[k] - 1e-6) k++; return k; };
+function show(k) {
+  const s = k ? txt(ol.children[k - 1]) : REST[canPlay() ? 0 : 1], o = ON[k].split(' ');
+  if (k !== beat) buzz();
+  beat = k;
+  R.dataset.b = k;
+  $('crN').textContent = k;
+  if (cap.textContent !== s) {
+    cap.setAttribute('aria-live', k ? 'polite' : 'off');
+    cap.textContent = s;
+  }
+  for (const n in LB) LB[n].classList.toggle('on', o.includes(n));
+  bP.hidden = !canPlay();
+  bS.hidden = !SOUND_FILE || !canPlay();
+  R.dataset.p = playing ? 'pause' : ended ? 'replay' : 'play';
+  bB.setAttribute('aria-disabled', !k);
+  bN.setAttribute('aria-disabled', k > 6);
+  sync();
+}
+/* A very short pulse on phones that have one: only after the visitor has pressed something on the page, never in
+   Still, and not when localStorage zotheos_haptics is "off". */
+function buzz() {
+  let p;
+  try { p = w.localStorage.getItem('zotheos_haptics'); } catch (e) {}
+  try { if (p !== 'off' && !still() && nv.vibrate && nv.userActivation.hasBeenActive) nv.vibrate(10); } catch (e) {}
+}
+/* The owner's sound, when configured and switched on, follows the run's clock. */
+function sync() {
+  if (!au) return;
+  if (snd && playing) {
+    const t = A[0].currentTime / 1000;
+    if (Math.abs(au.currentTime - t) > .3) au.currentTime = t;
+    const q = au.play();
+    if (q && q.catch) q.catch(() => {});
+  } else au.pause();
+}
+function seek(t) {
+  A.forEach(a => { a.currentTime = t * 1000; });
+  show(Math.min(at(t), 7));
+}
+function tick() {
+  const t = A[0].currentTime / 1000, k = at(t);
+  if (k > 7) { ended = true; return paint(0); }
+  if (k !== beat) show(k);
+  tm = setTimeout(tick, Math.max(16, (T1[k] - t) * 1000 + 20));
+}
+function play(s) {
+  if (playing || !canPlay()) return;
+  if (s) $('crRun').scrollIntoView({block: 'nearest'});
+  if (!A) { mk(); seek(beat ? T0[beat] : 0); }
+  ended = false;
+  playing = true;
+  vis = seen >= .25;
+  A.forEach(a => a.play());
+  show(beat);
+  tick();
+}
+function pause() {
+  if (!playing) return;
+  clearTimeout(tm);
+  playing = false;
+  A.forEach(a => a.pause());
+  show(beat);
+}
+/* Like a video preview: starts on its own once 60% of the stage is in view, in Living or Calm, with the tab shown and
+   the intro gone; never after the visitor paused or stepped (until they press Play), never again after the end. */
+const gone = () => !O || O.classList.contains('dismissed');
+function auto() {
+  if (!playing && !held && !ended && !still() && !d.hidden && seen >= .6 && gone()) play();
+}
+function step(k) {
+  k += beat;
+  if (k < 0 || k > 7) return;
+  held = true;
+  ended = false;
+  paint(k);
+}
+function fit() {
+  const l = R.clientWidth < 1000 ? 'p' : 'l';
+  if (l !== lay) { lay = l; kill(); build(); paint(beat); auto(); }
+  if (S.clientWidth) S.style.setProperty('--u', G[lay].w / S.clientWidth);
+}
+function motion() {
+  if (!canPlay() && A) paint(beat);
+  show(beat);
+  auto();
+}
+/* Under 25% of the stage in view pauses (once it has been in view during the run, so Play's own scroll is not a
+   leave); back at 60% it resumes. */
+const view = es => {
+  seen = es[es.length - 1].intersectionRatio;
+  if (seen >= .25) vis = true;
+  else if (vis) pause();
+  auto();
+};
+try {
+  R.hidden = false;
+  fit();
+  for (const c of CAP.concat(REST)) {
+    const x = $('crCb').appendChild(d.createElement('span'));
+    x.setAttribute('aria-hidden', 'true');
+    x.textContent = c;
+  }
+  if (still()) $('crText').open = true;
+  if (w.IntersectionObserver) new IntersectionObserver(view, {threshold: [0, .25, .6]}).observe(S);
+  if (w.ResizeObserver) new ResizeObserver(fit).observe(R);
+  new MutationObserver(motion).observe(H, {attributes: true, attributeFilter: ['data-motion']});
+  if (O) new MutationObserver(() => gone() ? auto() : pause()).observe(O, {attributes: true, attributeFilter: ['class']});
+  if (mq.addEventListener) mq.addEventListener('change', motion);
+} catch (e) {
+  R.hidden = true;
+  return;
+}
+w.addEventListener('zotheos:effectschange', motion);
+d.addEventListener('visibilitychange', () => d.hidden ? pause() : auto());
+bP.addEventListener('click', () => {
+  const b = beat;
+  if (playing) { held = true; pause(); } else { held = false; play(1); }
+  if (beat === b) buzz();
+});
+bB.addEventListener('click', () => step(-1));
+bN.addEventListener('click', () => step(1));
+bC.addEventListener('click', () => {
+  const on = R.dataset.cc === 'off';
+  R.dataset.cc = on ? 'on' : 'off';
+  bC.setAttribute('aria-pressed', on);
+});
+if (SOUND_FILE) bS.addEventListener('click', () => {
+  snd = !snd;
+  if (!au) { au = d.createElement('audio'); au.src = SOUND_FILE; }
+  bS.setAttribute('aria-pressed', snd);
+  sync();
+});
+$('crCtl').addEventListener('keydown', e => {
+  const k = {ArrowLeft: -1, ArrowRight: 1}[e.key];
+  if (k && !(e.altKey || e.ctrlKey || e.metaKey || e.shiftKey)) { e.preventDefault(); step(k); }
+});
+R.addEventListener('cr:seek', e => { if (canPlay()) { held = true; kill(); mk(); seek(+e.detail); } });
+})();
+/* /council-route:js */
+</script>
 </body>
 </html>

@@ -211,6 +211,9 @@ def render(data):
             facts.append(film['runtime'])
         if film.get('year'):
             facts.append(str(film['year']) + (' premiere' if 'premiere' in film.get('year_scope', '').lower() else ''))
+        # Each item stays whole (a runtime never splits from its seconds) and its separator rides with the item before
+        # it, so no line starts with a dot. The visible text is unchanged.
+        meta = '&nbsp;· '.join('<span class="th-nw">' + e(part) + '</span>' for fact in facts for part in fact.split(' · '))
         thumb_note = ''
         if film.get('thumbnail_credit'):
             thumb_note = '<p class="th-thumbnail-credit">' + e(film['thumbnail_credit'])
@@ -220,7 +223,7 @@ def render(data):
         cards.append(f'''<article class="th-film" id="film-{e(film['id'])}" {at}>
 <a class="th-poster-button" href="{e(film['watch_url'])}" target="_blank" rel="noopener noreferrer" data-theater-select="{e(film['id'])}" aria-label="Explore {e(film['title'])}">{visual}</a>
 <h3 class="th-film-title" id="title-{e(film['id'])}">{e(film['title'])}</h3>
-<p class="th-card-meta">{e(' · '.join(facts))}</p><p class="th-card-place">{e(film.get('location',''))}</p>
+<p class="th-card-meta">{meta}</p><p class="th-card-place">{e(film.get('location',''))}</p>
 <details class="th-card-details th-sources"><summary>Details And Official Source</summary><div class="th-cinema-details-body">
 <p class="th-description">{e(film['synopsis'])}</p><p class="th-film-credits">{e(film['credits'])}</p>
 <p class="th-film-access">{e(film['availability'])}</p><p class="th-content-note"><strong>Before Watching:</strong> {e(film['content_note'])}</p>

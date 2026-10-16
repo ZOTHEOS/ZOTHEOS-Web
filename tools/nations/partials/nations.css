@@ -36,6 +36,8 @@ button { font: inherit; color: inherit; }
 [data-face="names"]:is(p, span, li, dd, td) { font-family: var(--zn-read-fb); }
 
 /* ---------- header (the landing's, by omission) ---------- */
+/* The side tracks are equal while their controls fit, so the wordmark sits on the page's centre axis; a track
+   never shrinks below its controls, so nothing ever runs under the wordmark. */
 .nh { position: sticky; top: 0; z-index: 60; background: var(--page-bg); border-bottom: 1px solid var(--rule); }
 .nh-in { max-width: var(--col-max); margin: 0 auto; height: 72px; padding: 0 24px; display: grid;
   grid-template-columns: 1fr auto 1fr; grid-template-areas: "left mark nav"; align-items: center; gap: 16px; }
@@ -43,7 +45,7 @@ button { font: inherit; color: inherit; }
 .nh-mark { grid-area: mark; display: flex; align-items: center; }
 .nh-mark img { width: 143px; height: 30px; object-fit: contain; }
 .nh-nav { grid-area: nav; display: flex; align-items: center; justify-content: flex-end; gap: 2px; }
-.nh-nav a { padding: 8px 12px; font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.18em; text-transform: uppercase;
+.nh-nav a { padding: 8px; font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--ink-3); text-decoration: none; white-space: nowrap; }
 .nh-nav a:hover, .ns-list a:hover .ns-name, .ft-col a:hover { color: var(--ink-2); }
 .nh-nav a[aria-current="page"] { color: var(--ink); }
@@ -96,12 +98,14 @@ button { font: inherit; color: inherit; }
 .maya-num { display: inline-flex; align-items: center; gap: 4px; }
 .maya-num .d { width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
 .maya-num .b { width: 16px; height: 4px; border-radius: 2.5px; background: var(--ink); }
-@media (max-width: 1023px) {
+/* Seven links fit their track from 1300px; below that the bar folds to Menu, which holds every link. The
+   wordmark stays on the page's centre axis either way. */
+@media (max-width: 1299px) {
   .nh-nav a { display: none; }
   .nav-menu-btn { display: inline-flex; }
 }
 @media (max-width: 719px) {
-  .nh-in { height: 64px; padding: 0 16px; gap: 8px; grid-template-areas: "nav mark right"; }
+  .nh-in { height: 64px; padding: 0 var(--gutter); gap: 8px; grid-template-areas: "nav mark right"; }   /* the page gutter: Menu on the content edge */
   .nh-left { display: none; }
   .nh-nav { justify-content: flex-start; }
   .nav-menu-btn { margin: 0; }
@@ -109,6 +113,11 @@ button { font: inherit; color: inherit; }
   .ns-appearance { display: inline-flex; }
   .appearance-pop { inset: auto auto 24px 16px; }
   .nav-sheet { padding: 0 16px 24px; }
+}
+/* The smallest phones: a tighter Menu pill stays inside its track, so the wordmark keeps the centre axis
+   with clear space on both sides (the landing's own pill does the same). */
+@media (max-width: 359px) {
+  .nav-menu-btn { gap: 8px; padding: 0 9px 0 10px; letter-spacing: 0.12em; }
 }
 
 /* ---------- page frame ---------- */
@@ -120,6 +129,7 @@ main { display: block; }
 .page-h { font: italic 400 clamp(40px, 5.4vw, 84px)/1.02 var(--serif); letter-spacing: -0.012em; margin: var(--sp-4) 0 20px; }
 .lede { font-size: var(--fs-read); line-height: var(--lh-read); color: var(--ink-2); max-width: var(--measure); }
 .lede + .lede { margin-top: var(--sp-3); }
+.lede + .rows, .note + .rows, .lede + .cols4 { margin-top: var(--sp-4); }
 .prose p { max-width: var(--measure); color: var(--ink-2); }
 .prose p + p, .prose p + ul, .prose ul + p { margin-top: var(--sp-4); }
 .prose ul { max-width: var(--measure); color: var(--ink-2); }
@@ -228,8 +238,8 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .sr-also { font-size: 14px; color: var(--ink-2); }
 .panel { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: var(--sp-6); padding-top: var(--sp-5); border-top: 1px solid var(--line); }
 .panel dt { font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); }
-.panel dd { margin: 8px 0 0; font: 400 28px/1.15 var(--serif); color: var(--ink); }
-.panel dd small { display: block; margin-top: 6px; font: 400 13px/1.45 var(--sans); color: var(--ink-3); }
+.panel dd { margin: 8px 0 0; font: 400 28px/1.15 var(--serif); color: var(--ink); text-wrap: balance; }
+.panel dd small { display: block; margin-top: 6px; font: 400 13px/1.45 var(--sans); color: var(--ink-3); text-wrap: pretty; }
 .method li { max-width: var(--measure); color: var(--ink-2); padding: 10px 0; border-top: 1px solid var(--rule); }
 
 /* ---------- nation, region and country pages ---------- */
@@ -252,7 +262,7 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .n-sec > h2[id] { scroll-margin-top: 112px; }
 .n-sec > h2[tabindex="-1"]:focus { outline: 2px solid var(--ink); outline-offset: 6px; }
 .n-sec { margin-top: var(--sp-7); }
-.n-sec-h { display: flex; align-items: baseline; gap: 14px; font: italic 400 clamp(28px, 2.6vw, 40px)/1.1 var(--serif); }
+.n-sec-h { display: flex; align-items: baseline; gap: 14px; font: italic 400 clamp(28px, 2.6vw, 40px)/1.1 var(--serif); margin-bottom: var(--sp-4); }
 .cdots { display: inline-flex; gap: 5px; align-self: center; }
 .cdots i { width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
 .fcount { font: 400 11px/1 var(--zn-mono); color: var(--ink-3); align-self: center; }
@@ -268,6 +278,7 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .n-sec[aria-labelledby="nContext"] > .nation-reading a { max-width: 100%; overflow-wrap: anywhere; }
 .n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"] { scroll-margin-top: 112px; }
 .n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"]:focus { outline: 2px solid var(--ink); outline-offset: 6px; }
+.rc a[href^="mailto:"] { white-space: nowrap; }
 /* Keep historical context in readable layers, separate from fact-check receipts. */
 .n-sec[aria-labelledby="nContext"] { max-width: 68ch; }
 .n-sec[aria-labelledby="nContext"] > h2 { margin-bottom: var(--sp-5); }
@@ -306,7 +317,22 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .tbl th { font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
 .tbl td { color: var(--ink-2); }
 .tbl td.n { font-family: var(--zn-mono); font-size: 13px; }
+.tbl th, .tbl td { vertical-align: baseline; }
+.tbl td.n { white-space: nowrap; }
+/* The coverage tables, on a wide screen: they leave the reading column for the full 1216px grid, the counts and the
+   check date take only the width they need, and the names and the denominator note get the rest (one line a row). */
+@media (min-width: 1100px) {
+  .read > .tbl-wide { width: min(1216px, calc(100vw - 64px)); margin-inline: calc((100% - min(1216px, calc(100vw - 64px))) / 2); }
+  .tbl-wide th[scope="row"] { min-width: 16ch; }
+  .tbl-wide td.n, .tbl-wide td:last-child { width: 1%; white-space: nowrap; }
+}
+/* From 1180px the long count headers take two lines, broken only where the build marks a word space; narrower, the
+   count columns stay narrow so the country rows keep one line each. */
+@media (min-width: 1180px) { .tbl-wide thead th { white-space: nowrap; } }
 .src-g { margin-top: var(--sp-8); }
+/* The inclusion block's kicker sits 12px over its heading on every page that carries it. */
+.src-g > .eyebrow { margin-bottom: var(--sp-3); }
+.src-g > .eyebrow + h2 { margin-top: 0; }
 .src-p { padding: 18px 0; border-top: 1px solid var(--rule); }
 .src-p h3 { font: 400 19px/1.4 var(--zn-read); color: var(--ink); }
 .src-p .row-m { margin-top: 4px; }
@@ -322,12 +348,12 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 /* ---------- footer ---------- */
 .ft { margin-top: var(--sp-10); padding: 48px 0 72px; border-top: 1px solid var(--rule); }
 .ft-in { max-width: var(--col-max); margin: 0 auto; padding: 0 var(--gutter); }
-.ft-top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr) minmax(0, 0.8fr); gap: 48px; }
+.ft-top { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 2.4fr) minmax(0, .7fr); gap: 48px; }
 .ft-brand img { width: 133px; height: 28px; object-fit: contain; }
 .ft-tag { margin-top: 12px; font: italic 400 15px/1.55 var(--serif); color: var(--ink-2); }
 .ft-founder { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule-soft); font-size: 12px; line-height: 1.7; color: var(--ink-3); }
 .ft-founder strong { color: var(--ink-2); font-weight: 500; }
-.ft-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+.ft-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; }
 .ft-col { display: flex; flex-direction: column; gap: 12px; font: 400 11px/1.55 var(--zn-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
 .ft-col a { text-decoration: none; }
 .ft-col-l { padding-bottom: 10px; border-bottom: 1px solid var(--rule-soft); color: var(--ink-low); font-weight: 500; letter-spacing: 0.22em; }
@@ -362,7 +388,10 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
   .hr-status { grid-column: 1 / -1; }
   .cols2 { grid-template-columns: minmax(0, 1fr); }
   .cols4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ft-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ft-links { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+  .ft-col { gap: 0; }
+  .ft-col-l { margin-bottom: 4px; }
+  .ft-col a { display: flex; align-items: center; min-height: 44px; }
   .ft-block { grid-template-columns: minmax(0, 1fr); }
   .roll { grid-template-columns: minmax(0, 1fr); }
   .sec { padding-top: var(--sp-8); }
@@ -372,6 +401,14 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
   .tbl tr { display: block; padding: 10px 0; border-top: 1px solid var(--rule); }
   .tbl td, .tbl th[scope="row"] { display: grid; grid-template-columns: 44% 1fr; gap: 10px; padding: 4px 0; border: 0; }
   .tbl td::before, .tbl th[scope="row"]::before { content: attr(data-label); font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+}
+/* The wide coverage tables stay stacked up to 719px: below the 720px desktop bar their header row alone is wider
+   than the column, which scrolled the page sideways. */
+@media (max-width: 719px) {
+  .tbl-wide thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tbl-wide tr { display: block; padding: 10px 0; border-top: 1px solid var(--rule); }
+  .tbl-wide td, .tbl-wide th[scope="row"] { display: grid; grid-template-columns: 44% 1fr; gap: 10px; padding: 4px 0; border: 0; }
+  .tbl-wide td::before, .tbl-wide th[scope="row"]::before { content: attr(data-label); font: 500 11px/1.5 var(--zn-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
 }
 
 /* ---------- refinements ---------- */
@@ -436,6 +473,7 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .directory-page .directory-gap h3 { margin-top: 24px; font-size: 18px; line-height: 1.4; }
 .directory-search { margin: var(--sp-6) 0; padding: var(--sp-5) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--rule); }
 .directory-search label { display: block; margin-bottom: 8px; color: var(--ink); }
+.directory-search > h2 + .note { margin-bottom: var(--sp-4); }
 .directory-inputs { display: flex; align-items: center; gap: 12px; }
 .directory-inputs input, .directory-filter select { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--page-bg); color: var(--ink); font: inherit; }
 .directory-inputs input::placeholder { color: var(--ink-3); opacity: 1; }
@@ -478,3 +516,14 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
   .directory-page .directory-group { scroll-margin-top: 80px; }
 }
 @media (max-width: 480px) { .directory-inputs { gap: 8px; } .directory-inputs .pill { padding-inline: 12px; letter-spacing: 0.1em; } }
+
+/* The hub's search column holds its place beside the ring while the ring is read; a long result list scrolls in
+   the column, and the box stays in view. */
+@media (min-width: 1024px) {
+  #find { align-self: start; position: sticky; top: calc(72px + var(--sp-5)); }
+  #find .results { max-height: calc(100vh - 380px); overflow-y: auto; }
+}
+
+/* Line endings: headings balance, running text avoids a lone last word (style only; nowrap rules stay). */
+h2, h3 { text-wrap-style: balance; }
+p, li, dd { text-wrap-style: pretty; }

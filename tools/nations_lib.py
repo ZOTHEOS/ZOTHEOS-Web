@@ -128,7 +128,7 @@ def plural(n, one, many):
 
 def cut_words(s, n):
     words = s.split()
-    return " ".join(words[:n]) + (" ..." if len(words) > n else "")
+    return " ".join(words[:n]) + ("\u00a0..." if len(words) > n else "")   # the ellipsis never starts a line
 
 
 def cut_chars(s, n):

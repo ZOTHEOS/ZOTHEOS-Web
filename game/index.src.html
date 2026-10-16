@@ -135,21 +135,21 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg .goal{background:#000;position:absolute;left:16px;right:16px;top:52px;height:76px;font-size:13px;line-height:18px;pointer-events:none}#zg .goal span{display:block}#zg .goal span+span{color:#b8b8b8}#zg .help{max-width:30em;text-align:left}#zg summary{min-height:44px;cursor:pointer;line-height:44px}#zg .help p{font-size:14px;margin-bottom:8px}' +
   '#zg .dot{display:inline-block;width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;margin-right:5px;vertical-align:-1px}#zg .dot.on{background:#fff}' +
   '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
-  '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
-  '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan>:last-child{margin-bottom:auto}#zg .solid{background:#000}#zg .map>:last-child{margin-bottom:0}' +
+  '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-flow:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
+  '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan::after{content:"";margin-bottom:auto}#zg .solid{background:#000}#zg .map::after{content:none}' +
   '#zg h1,#zg h2{margin:0;font:inherit;font-weight:300;color:#fff;text-transform:uppercase;letter-spacing:.24em}' +
-  '#zg h1{font-size:clamp(28px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}' +
+  '#zg h1{font-size:clamp(22px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}' +
   '#zg p{margin:0;max-width:30em;font-size:16px;line-height:1.5;color:#fff}#zg .sub{color:#b8b8b8}' +
-  '#zg .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:stretch}' +
+  '#zg .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}' +
   '#zg #zgTi{padding:24px 48px}' +
-  '#zg .mode{display:block;width:min(330px,100%);padding:14px 18px;text-align:left;min-height:64px}' +
-  '#zg .mode b{display:block;font-size:20px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:4px}' +
-  '#zg .mode span{display:block;font-size:15px;line-height:1.4;letter-spacing:.02em;color:#e6e6e6}#zg .mode .sub{font-size:13px;color:#b8b8b8;margin-top:4px}' +
+  '#zg .mode{display:flex;flex-flow:column;width:min(330px,100%);padding:14px 18px;text-align:left;min-height:64px}' +
+  '#zg .mode b{font-size:20px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:4px}' +
+  '#zg .mode span{font-size:15px;line-height:1.4;letter-spacing:.02em;color:#e6e6e6}#zg .mode .sub{font-size:13px;color:#b8b8b8;margin-top:4px}' +
   '#zg .olli{display:block;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset -3px -3px 0 #b8b8b8;margin-bottom:6px}' +
   '#zg .big{font-size:40px;letter-spacing:.08em;font-weight:300;font-variant-numeric:tabular-nums}' +
   '#zg .cap{position:absolute;left:16px;right:16px;top:60px;text-align:center;font-size:16px;line-height:1.75;pointer-events:none;transition:opacity .15s;opacity:0}' +
   '#zg .cap span{background:#000;padding:3px 10px;-webkit-box-decoration-break:clone;box-decoration-break:clone}' +
-  '#zg .nh{width:min(560px,100%);border:1.5px solid #b8b8b8;padding:14px 16px;text-align:left;display:flex;flex-direction:column;gap:10px}' +
+  '#zg .nh{width:min(560px,100%);border:1.5px solid #b8b8b8;padding:14px 16px;text-align:left;display:flex;flex-flow:column;gap:10px}' +
   '#zg .nh .row{justify-content:flex-start}#zg .nc{transition:opacity .15s}' +
   '#zg .nc p{margin:0 0 6px;font-size:15px;color:#e6e6e6;max-width:none}' +
   '#zg .nc .nl{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#b8b8b8}' +
@@ -160,7 +160,7 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
   '#zg [hidden]{display:none!important}' +
   '@media (max-width:400px){#zg .hud{gap:10px;padding-left:8px;font-size:13px}}' +
-  '@media (max-height:520px){#zg .pan{gap:8px;padding:10px 16px}#zg #zgTi{padding:10px 40px}#zg h1{font-size:30px}#zg .mode{padding:8px 14px;min-height:0}#zg .mode b{font-size:17px}}' +
+  '@media (max-width:359px),(max-height:520px){#zg .pan{gap:8px;padding:10px 16px}#zg #zgTi{padding:10px 40px}#zg h1{font-size:min(30px,7vw)}#zg .mode{padding:8px 14px;min-height:0}#zg .mode b{font-size:17px}}' +
   '@media (prefers-reduced-motion:reduce){#zg .cap,#zg .nc{transition:none}}';
 // The one ornament: a step-fret on a 6 unit grid (stairs then a square hook). Swap as data.
 var FRET = { grid: 6, pts: [[0,6],[0,4.5],[1.5,4.5],[1.5,3],[3,3],[3,0],[6,0],[6,4],[4.5,4],[4.5,1.8]] };
