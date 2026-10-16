@@ -205,3 +205,41 @@ condition was observed. Its directory name and verified own-site link remain. No
 takedown is invented. New check/review dates describe actual source work, not new historical events.
 See research/batches/2026-10-15-us-missing-virginia.json and its independent review records for measured
 checks, source provenance, browser observations, remaining limitations and release gates.
+
+## October 16, 2026: Nansemond And Upper Mattaponi Histories
+
+ZOTHEOS adds two previously directory-only Tribal Nations as distinct researched profiles: Nansemond
+Indian Nation and Upper Mattaponi Tribe. Eight concise facts, four titled history layers and four
+own-publisher resources follow their own public accounts. Four separately reviewed source records,
+two Virginia and two federal, link to these two profiles. The duplicate source appearances do not
+create additional Nations or establish a new recognition finding.
+
+Nansemond history connects river homelands, colonial displacement, family continuity and community
+institutions. Its Environmental Program is a published description, not independently measured
+restoration success or a guarantee of present operation. Upper Mattaponi history distinguishes the
+1921 adoption of its name from a much longer community history. Sharon Indian School's earlier
+construction, 1950s replacement, 1965 closure and 1987 return remain separate. The 1677 treaty account
+is attributed history, not a present determination of treaty rights or land title.
+
+The existing source verifier checked all eight new evidence phrases across four cited URLs with
+robots rules and a 3.5-second host interval. All eight were verified. Source meaning, identity,
+respect and faithful integration were reviewed separately. The selective canonical import preserves
+all 459 previous profile objects and their original fact clocks. Check dates are October 16 UTC;
+source publication metadata and historical event years remain distinct.
+
+Patawomeck source access succeeded, but new own-content-based history is conservatively deferred
+while ZOTHEOS reviews the publisher's reuse scope. Its existing directory name and verified own-site
+link remain visible. This is not an access denial, received takedown, removal request or legal ruling
+about copyright in facts. The separate earlier Mattaponi publisher-condition review is unchanged.
+No empty profile, permission record, consultation or endorsement is invented.
+
+The updated contract has 461 profiles and 1,302 raw facts. The public model shows 1,300 facts and
+preserves two existing holds. Directory coverage remains 2,272 mixed-scope records in eight lists,
+with ten reviewed profile links. Four state inventories are preserved; 46 other state discovery
+scopes and four additional inclusion lanes remain pending. Coverage is incomplete.
+
+Matching Names now repeats the current result summary at the point of reading, adds digestible
+zero-match guidance and offers native routes to adjust filters or search researched profiles. It
+preserves the original single live announcement, filter state, bounded paging and static names.
+Browser verification and final release gates must be recorded separately; this research report does
+not itself establish deployment or physical-device accessibility certification.

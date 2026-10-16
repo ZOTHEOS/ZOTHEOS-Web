@@ -281,7 +281,12 @@ def page(builder):
            'Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> '
            '&middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div></details>',
            us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
-           '<div id="directoryNames" tabindex="-1"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
+           '<div id="directoryNames" tabindex="-1"><div id="directoryResultsIntro" class="directory-results-intro" hidden>',
+           '<h2>Matching Names</h2><p id="directoryResultsSummary" class="note"></p>',
+           '<p id="directoryResultsActions"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></p>',
+           '<div id="directoryResultsEmpty" hidden><p>No source records match these filters. Try another spelling or source inventory. A missing result does not mean a Nation does not exist.</p>',
+           '<p class="directory-recovery"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a><a class="directory-results-link" href="/nations#find">Search Researched Profiles</a></p></div></div>',
+           '<section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',
            '<h2 id="us-directory-title">United States: the published federal list</h2>',
            '<p>' + str(len(entities)) + ' published federal name records. The source states ' + str(directory['stated_count']) + ' Tribal entities.</p>',
            '<p class="note">Unresolved source-count difference: ' + esc(directory['count_discrepancy']['note']) + '</p>',

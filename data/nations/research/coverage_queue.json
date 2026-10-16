@@ -5869,7 +5869,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -5888,8 +5888,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T01:03:53.881517+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/us-missing-histories-us-fed-7948cb7db57b-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-dbfaf4600088",
@@ -11058,7 +11062,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -11077,8 +11081,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T01:03:53.881517+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/us-missing-histories-us-fed-16a10f928bbf-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-e7d253ff4cf5",
@@ -59180,7 +59188,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59200,9 +59208,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.umitribe.org/",
+          "retrieved_at": "2026-10-16T00:49:50.247027+00:00",
+          "http_status": 200,
+          "sha256": "cdc59549c3ea81e2cb182993c08f9f9c021f1c91c47462b567ec561d8c56d05c",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-histories-upper-mattaponi-www-home.receipt.json",
+          "receipt_id": "r-150180bded1683e9"
+        }
+      ],
+      "updated_at": "2026-10-16T01:03:53.882509+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/us-missing-histories-us-state-va-upper-mattaponi-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-nansemond",
@@ -59216,7 +59240,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59236,9 +59260,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://nansemond.gov/",
+          "retrieved_at": "2026-10-16T00:49:07.503039+00:00",
+          "http_status": 200,
+          "sha256": "4121bca2c5de1504d64b8de2589f5231110a813ff17645d8b288a945b1b43e2f",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-histories-nansemond-home.receipt.json",
+          "receipt_id": "r-dc96dfb16d349a03"
+        }
+      ],
+      "updated_at": "2026-10-16T01:03:53.882509+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/us-missing-histories-us-state-va-nansemond-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-monacan-indian-nation",
@@ -59392,7 +59432,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59412,9 +59452,31 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.patawomeckindiantribeofvirginia.org/",
+          "retrieved_at": "2026-10-16T00:48:14.219770+00:00",
+          "http_status": 200,
+          "sha256": "7225826b10353944451d93bb6167a89b183cb1c2a2d1bd74766a15485bcbe91e",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/us-missing-histories-patawomeck-home.receipt.json",
+          "receipt_id": "r-f6cffe9c44c2448e"
+        }
+      ],
+      "updated_at": "2026-10-16T01:03:53.755494+00:00",
+      "next_attempt_after": "2026-10-23T01:03:52.942665+00:00",
+      "lease_until": null,
+      "note": "Successful access; history/profile deferred for conservative publisher reuse-scope review. Existing name and verified link remain. No access denial, takedown, actual hold or legal ruling about ownership of facts. Captures preceded this integration lease.",
+      "profile_disposition": "publisher_reuse_scope_pending",
+      "publication_scope": {
+        "status": "pending",
+        "history_published": false,
+        "access_failure": false,
+        "takedown_received": false,
+        "directory_visible": true,
+        "note": "Conservative reuse-scope followup, not a legal ruling. No outreach or substitute permission; no routine repeated read of unchanged notice."
+      }
     },
     {
       "task_id": "enumerate-us-nc-tribal-directory",

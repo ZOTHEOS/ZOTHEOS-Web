@@ -1,0 +1,147 @@
+{
+  "reviewed": "2026-10-16",
+  "public_notes": [
+    {
+      "nation": "upper-mattaponi-us-va",
+      "title": "A Community Name With A Longer History",
+      "text": "The Tribe's history connects Passaunkack with the area of today's Upper Mattaponi community. It describes Upper Mattaponi participation in the 1677 Treaty of Middle Plantation under Cockacoeske, then an Adamstown community recorded in 1885 and the adoption of the Upper Mattaponi Tribe name in 1921. This is the Tribe's historical account, not a present land-boundary or treaty-rights determination."
+    },
+    {
+      "nation": "upper-mattaponi-us-va",
+      "title": "Sharon Indian School And Community Continuity",
+      "text": "The school history dates construction to 1919, closure to 1965 and King William County's return of the building to the Tribe to 1987. The About page distinguishes an earlier school from a 1950s replacement. The Tribe's pages describe the school as a gathering place and the Foundation as a steward of its history and educational work. These are the publisher's accounts; they do not establish today's access, hours, staffing or program results."
+    },
+    {
+      "nation": "nansemond-indian-nation-us-va",
+      "title": "River Homelands And Displacement",
+      "text": "The Nation's history describes Nansemond settlements along both sides of the river and membership in the Tsenacomoco, or Powhatan, coalition. It recounts English displacement during the Anglo-Powhatan Wars of 1610 to 1646 and differing family responses to colonial pressure. The account emphasizes that political differences did not end family and kinship ties. This is its historical account, not a present land-boundary determination."
+    },
+    {
+      "nation": "nansemond-indian-nation-us-va",
+      "title": "Community Institutions And Self-Government",
+      "text": "The Nation describes an Indiana Methodist Church established around 1850 for the Nansemond community in Norfolk County. Its history says the same site later housed a public school for Nansemond children in the 1890s. It dates formal organization with elected officers to 1984 and explains its return to the name Nansemond Indian Nation. These are connected parts of the Nation's account of community continuity."
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "upper-mattaponi-us-va",
+      "label": "Upper Mattaponi Tribe: About And History",
+      "url": "https://www.umitribe.org/about",
+      "purpose": "Read the Tribe's own account of Tsenacomacah, Passaunkack, Adamstown and the Upper Mattaponi name. Historical geography and treaty accounts do not establish present boundaries or legal rights."
+    },
+    {
+      "nation": "upper-mattaponi-us-va",
+      "label": "Upper Mattaponi: Sharon Indian School Foundation",
+      "url": "https://www.umitribe.org/sharon-indian-school-foundation",
+      "purpose": "The Tribe's school-history and Foundation page traces education, closure and the building's return. Read its stated community and educational aims; check current access and programs with the publisher."
+    },
+    {
+      "nation": "nansemond-indian-nation-us-va",
+      "label": "Nansemond Indian Nation: Tribal History",
+      "url": "https://nansemond.gov/tribal-history/",
+      "purpose": "Read the Nation's own account of river homelands, colonial displacement, family continuity and self-government."
+    },
+    {
+      "nation": "nansemond-indian-nation-us-va",
+      "label": "Nansemond Indian Nation: Programs",
+      "url": "https://nansemond.gov/programs/",
+      "purpose": "Explore the Nation's descriptions of environmental, education, health and housing programs. Check current availability with the publisher."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "sources": [
+      {
+        "url": "https://www.umitribe.org/about",
+        "final_url": "https://www.umitribe.org/about",
+        "retrieved_at": "2026-10-16T00:50:06.813024+00:00",
+        "http_status": 200,
+        "sha256": "a7e73bd038cc5bee98a061f308c2779ac82fa8864b9f9eb54136029aeb8d3319",
+        "bytes": 632053,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "upper-mattaponi",
+        "receipt": "research/receipts/us-missing-histories-upper-mattaponi-www-about.receipt.json"
+      },
+      {
+        "url": "https://www.umitribe.org/",
+        "final_url": "https://www.umitribe.org/",
+        "retrieved_at": "2026-10-16T00:49:50.247027+00:00",
+        "http_status": 200,
+        "sha256": "cdc59549c3ea81e2cb182993c08f9f9c021f1c91c47462b567ec561d8c56d05c",
+        "bytes": 1171516,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "upper-mattaponi",
+        "receipt": "research/receipts/us-missing-histories-upper-mattaponi-www-home.receipt.json"
+      },
+      {
+        "url": "https://www.umitribe.org/sharon-indian-school-foundation",
+        "final_url": "https://www.umitribe.org/sharon-indian-school-foundation",
+        "retrieved_at": "2026-10-16T00:50:16.388060+00:00",
+        "http_status": 200,
+        "sha256": "11243d62a5aa890bc703075aa71baba34bb0889a6663a85a7b0c7481b275d6be",
+        "bytes": 638880,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "upper-mattaponi",
+        "receipt": "research/receipts/us-missing-histories-upper-mattaponi-www-school.receipt.json"
+      },
+      {
+        "url": "https://nansemond.gov/",
+        "final_url": "https://nansemond.gov/",
+        "retrieved_at": "2026-10-16T00:49:07.503039+00:00",
+        "http_status": 200,
+        "sha256": "4121bca2c5de1504d64b8de2589f5231110a813ff17645d8b288a945b1b43e2f",
+        "bytes": 112373,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "nansemond",
+        "receipt": "research/receipts/us-missing-histories-nansemond-home.receipt.json"
+      },
+      {
+        "url": "https://nansemond.gov/tribal-history/",
+        "final_url": "https://nansemond.gov/tribal-history/",
+        "retrieved_at": "2026-10-16T00:49:16.023071+00:00",
+        "http_status": 200,
+        "sha256": "a127b136ce58536df0a216b9f5c14d65699956b06549a0b9625a42ab14859858",
+        "bytes": 80827,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "nansemond",
+        "receipt": "research/receipts/us-missing-histories-nansemond-history.receipt.json"
+      },
+      {
+        "url": "https://nansemond.gov/programs/",
+        "final_url": "https://nansemond.gov/programs/",
+        "retrieved_at": "2026-10-16T00:49:27.725202+00:00",
+        "http_status": 200,
+        "sha256": "1c5aa9e57df00d21668230b2887ab91693e6ccef472d3ae10a4e807a0c5fca28",
+        "bytes": 76316,
+        "hash_kind": "Actual HTTP response body bytes",
+        "content_type": "text/html; charset=UTF-8",
+        "human_review_claimed": false,
+        "capture_retention": "Response body retained in local audit evidence only; not committed or deployed.",
+        "subject": "nansemond",
+        "receipt": "research/receipts/us-missing-histories-nansemond-programs.receipt.json"
+      }
+    ],
+    "limits": [
+      "Two distinct Tribal communities, not broader Powhatan or Mattaponi aliases. Historical naming and institutional organizing are not the beginning of a people.",
+      "Upper Mattaponi treaty account is attributed, not a present legal-rights ruling. School construction, later replacement, closure and return are separate events.",
+      "Nansemond CMS dates are source metadata, not dates of every event or current service guarantees. Program descriptions are not measured outcomes.",
+      "Patawomeck history publication remains pending conservative reuse-scope review after successful access; existing directory name/link remain. No legal ruling about copyright of facts, access denial, takedown or real hold is inferred."
+    ]
+  }
+}

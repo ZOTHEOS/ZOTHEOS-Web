@@ -21,8 +21,8 @@ FID = 'fictional-history-fact'
 TITLE = 'Land <Memory> & "Meaning"'
 BODY = 'A fictional history paragraph for heading acceptance.'
 OLD = 'An untitled legacy context note.'
-# Captured before implementation from the fictional untitled fixture only.
-LEGACY_SHA256 = '87c4c13d07695d90ed417f8406213d4edfbea8ccf0360fcd68df0b18121a8dd1'
+# Fictional untitled fixture; only the approved ZOTHEOS editorial credit changed on 2026-10-16.
+LEGACY_SHA256 = '5cef1f03c1015fe4d90706dc7211e896aac3b4be23a0518beca94e19155d4516'
 
 
 def context(root, notes, *, held_profile=False, held_fact=False):

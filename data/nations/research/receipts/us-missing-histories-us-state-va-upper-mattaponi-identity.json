@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T01:02:54.638627+00:00",
+  "directory_id": "us-state-va-upper-mattaponi",
+  "registry_id": "upper-mattaponi-us-va",
+  "own_published_name": "Upper Mattaponi Tribe",
+  "official_url": "https://www.umitribe.org/",
+  "own_home_receipt": "research/receipts/us-missing-histories-upper-mattaponi-www-home.receipt.json",
+  "directory_source": {
+    "publisher": "Virginia Secretary of the Commonwealth",
+    "title": "Virginia Indians: Virginia State Recognized Tribes",
+    "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+    "retrieved_at": "2026-10-14T05:11:22.730797+00:00",
+    "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+    "receipt": "receipts/va-virginia-indians.receipt.json",
+    "publication_date": null,
+    "source_edition": "Unversioned web table observed October 14, 2026. No record-level effective date established.",
+    "directory_link_source_url": "https://www.commonwealth.virginia.gov/virginia-indians/state-recognized-tribes/",
+    "directory_link_receipt": "receipts/va-state-recognized-tribes.receipt.json"
+  },
+  "state_published_ownership_chain": "https://umitribe.org/",
+  "independent_review_record_sha256": "fadf95d951ca860d44ea6e648c833cf649de82b448b05cecc30b3743e7cd43ff",
+  "missingness_audit": {
+    "existing_profiles_scanned": 459,
+    "matching_identity_or_aliases": 0
+  },
+  "human_review_claimed": false,
+  "limits": "Specific Tribal community/government. State and federal source records link one profile, not two Nations. Dated retained source list was read for identity, not newly fetched or used to adjudicate current recognition, jurisdiction or land title.",
+  "url": "https://www.umitribe.org/",
+  "final_url": "https://www.umitribe.org/",
+  "retrieved_at": "2026-10-16T00:49:50.247027+00:00",
+  "http_status": 200,
+  "sha256": "cdc59549c3ea81e2cb182993c08f9f9c021f1c91c47462b567ec561d8c56d05c",
+  "evidence_phrase": "Upper Mattaponi Tribe"
+}

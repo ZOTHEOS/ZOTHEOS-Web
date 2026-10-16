@@ -81,6 +81,8 @@
   var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
   var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
+  var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
+  var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -123,6 +125,10 @@
     if (enhanced) {
       var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
       status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      if (resultsIntro) resultsIntro.hidden = false;
+      if (resultsSummary) resultsSummary.textContent = status.textContent;
+      if (resultsEmpty) resultsEmpty.hidden = count !== 0;
+      if (resultsActions) resultsActions.hidden = count === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';

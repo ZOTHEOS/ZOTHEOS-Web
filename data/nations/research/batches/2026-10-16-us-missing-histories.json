@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T01:16:59.579864+00:00",
+  "source_check_date": "2026-10-16",
+  "publication_state": "Reviewed and locally checked for pull request publication. Merge, deployment and live verification remain separate subsequent gates.",
+  "scope": "Bounded own-source histories and directory reading improvements. Coverage remains incomplete.",
+  "new_profiles": [
+    {
+      "id": "nansemond-indian-nation-us-va",
+      "name": "Nansemond Indian Nation",
+      "official_url": "https://nansemond.gov/"
+    },
+    {
+      "id": "upper-mattaponi-us-va",
+      "name": "Upper Mattaponi Tribe",
+      "official_url": "https://www.umitribe.org/"
+    }
+  ],
+  "changes": [
+    "Two previously directory-only Tribal Nations receive distinct researched profiles, eight short sourced facts, four titled history layers and four direct own-site resources.",
+    "Nansemond history covers river homelands, colonial displacement, family continuity and community institutions. Its environmental program is described as the publisher presents it, without promising current operation or measured outcomes.",
+    "Upper Mattaponi history distinguishes the community from the 1921 adoption of its present name. Sharon Indian School construction, later replacement, closure and return are separate events. The 1677 treaty account is attributed history, not a present legal-rights ruling.",
+    "Four separately reviewed directory records link two Virginia entries and two federal-source entries to these two profiles. Overlapping records do not create four Nations or establish new recognition findings.",
+    "Matching Names gains an adjacent result summary, clear zero-match guidance and routes to adjust filters or search researched profiles. The original single live status remains the announcement source. Query, inventory and ready-profile mode are preserved by the results jump; all static names remain available without JavaScript.",
+    "Every previous canonical record and fact clock is preserved. The targeted import adds only the reviewed new profiles and facts.",
+    "Public editorial credits use ZOTHEOS and the visible game sound credit uses David Garcia. Source citations, original audio and truthful distinctions between automated evidence checks, source reviews and dated person checks remain intact.",
+    "Current website cleanup does not erase earlier public repository files, commit history, copies or outside public records. No universal absence-of-assistance or exclusively human authorship claim is made."
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 4,
+    "canonical_profiles": 461,
+    "raw_facts": 1302,
+    "public_facts": 1300,
+    "held_facts": 2,
+    "previous_canonical_records_preserved": 459,
+    "mixed_directory_records": 2272,
+    "source_lists": 8,
+    "reviewed_directory_profile_links": 10,
+    "new_reviewed_directory_links": 4,
+    "state_source_inventories": 4,
+    "remaining_state_discovery_scopes": 46,
+    "additional_inclusion_lanes_pending": 4,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1694,
+      "needs_review": 116,
+      "blocked": 2
+    }
+  },
+  "source_verification": {
+    "run_date": "2026-10-16",
+    "dry_run": false,
+    "robots": true,
+    "host_interval_s": 3.5,
+    "urls_total": 4,
+    "urls_checked": 4,
+    "requests_sent": 6,
+    "facts_checked": 8,
+    "facts_unchecked": 0,
+    "status": {
+      "verified": 8
+    }
+  },
+  "review_scope": {
+    "credit": "ZOTHEOS",
+    "source_meaning_and_respect": "Independent review of retained source text and proposed factual meaning completed.",
+    "identity": "Each of four directory records received a separate identity review.",
+    "preservation_and_controls": "Integrated data and scratch publication controls reviewed; actual profile and row-specific holds remain effective.",
+    "consultation_or_endorsement_claimed": false,
+    "human_approval_created": false,
+    "limits": "Review does not establish present land title, treaty rights, program outcomes, legal recognition, Nation approval or complete coverage."
+  },
+  "publication_scope_pending": [
+    {
+      "name": "Patawomeck Indian Tribe of Virginia",
+      "status": "pending_reuse_scope_review",
+      "note": "Public source access succeeded. ZOTHEOS conservatively deferred new own-content-based history while reviewing the scope of the publisher's reuse terms. Its existing directory name and verified own-site link remain visible. This is not a takedown, access failure, removal request or legal ruling about ownership of facts."
+    },
+    {
+      "name": "Mattaponi Indian Tribe & Reservation",
+      "status": "existing_pending_reuse_scope_unchanged",
+      "note": "The earlier separate publisher-condition review and backoff remain unchanged; the existing name and verified own-site link remain visible."
+    }
+  ],
+  "date_discipline": "Source retrieval, page metadata, historical event years and review dates remain separate. New source checks use the actual October 16 UTC date; old fact clocks are not advanced.",
+  "remaining_release_gates": [
+    "Exact-commit review",
+    "Pull request deployment checks and reviewed merge",
+    "Successful production deployment and actual live response verification"
+  ],
+  "limits": "Directory rows, source lists, canonical profiles and distinct Indigenous Nations are different units. Government recognition lists are planning references, not a definition of who is Indigenous.",
+  "baseline_main": "2b724fd951a67472fc36f09a2fe9c639f666658d",
+  "checks": {
+    "generated_site": {
+      "pages": 585,
+      "profiles": 461,
+      "public_facts": 1300,
+      "held_facts": 2,
+      "lint_errors": 0,
+      "lint_warnings": 0
+    },
+    "canonical_validator": {
+      "errors": 0,
+      "existing_warnings": 54
+    },
+    "game_education_export": {
+      "profiles": 461,
+      "quick_facts": 916,
+      "profiles_with_history": 80
+    },
+    "game_build": {
+      "es5_parse": true,
+      "javascript_bytes": 99995,
+      "budget_warning": "Above 92000-byte advisory budget; below 100000-byte hard ceiling. No mechanics changed."
+    },
+    "browser": {
+      "responsive-browser-checks.json": {
+        "recorded_at": "2026-10-16T01:11:55.172Z",
+        "checks": [
+          {
+            "client": 305,
+            "contextHeadings": [],
+            "contextLinkHeights": [],
+            "path": "/nations/directory",
+            "scroll": 305,
+            "singleStatus": 1,
+            "title": "Names deserve visibility.",
+            "width": 320
+          },
+          {
+            "client": 305,
+            "contextHeadings": [
+              "A Community Name With A Longer History",
+              "Sharon Indian School And Community Continuity",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              68,
+              68
+            ],
+            "path": "/nations/upper-mattaponi-us-va",
+            "scroll": 305,
+            "singleStatus": 0,
+            "title": "Upper Mattaponi Tribe",
+            "width": 320
+          },
+          {
+            "client": 305,
+            "contextHeadings": [
+              "River Homelands And Displacement",
+              "Community Institutions And Self-Government",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              68,
+              44
+            ],
+            "path": "/nations/nansemond-indian-nation-us-va",
+            "scroll": 305,
+            "singleStatus": 0,
+            "title": "Nansemond Indian Nation",
+            "width": 320
+          },
+          {
+            "client": 375,
+            "contextHeadings": [],
+            "contextLinkHeights": [],
+            "path": "/nations/directory",
+            "scroll": 375,
+            "singleStatus": 1,
+            "title": "Names deserve visibility.",
+            "width": 390
+          },
+          {
+            "client": 375,
+            "contextHeadings": [
+              "A Community Name With A Longer History",
+              "Sharon Indian School And Community Continuity",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              68
+            ],
+            "path": "/nations/upper-mattaponi-us-va",
+            "scroll": 375,
+            "singleStatus": 0,
+            "title": "Upper Mattaponi Tribe",
+            "width": 390
+          },
+          {
+            "client": 375,
+            "contextHeadings": [
+              "River Homelands And Displacement",
+              "Community Institutions And Self-Government",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              44
+            ],
+            "path": "/nations/nansemond-indian-nation-us-va",
+            "scroll": 375,
+            "singleStatus": 0,
+            "title": "Nansemond Indian Nation",
+            "width": 390
+          },
+          {
+            "client": 753,
+            "contextHeadings": [],
+            "contextLinkHeights": [],
+            "path": "/nations/directory",
+            "scroll": 753,
+            "singleStatus": 1,
+            "title": "Names deserve visibility.",
+            "width": 768
+          },
+          {
+            "client": 753,
+            "contextHeadings": [
+              "A Community Name With A Longer History",
+              "Sharon Indian School And Community Continuity",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              44
+            ],
+            "path": "/nations/upper-mattaponi-us-va",
+            "scroll": 753,
+            "singleStatus": 0,
+            "title": "Upper Mattaponi Tribe",
+            "width": 768
+          },
+          {
+            "client": 753,
+            "contextHeadings": [
+              "River Homelands And Displacement",
+              "Community Institutions And Self-Government",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              44
+            ],
+            "path": "/nations/nansemond-indian-nation-us-va",
+            "scroll": 753,
+            "singleStatus": 0,
+            "title": "Nansemond Indian Nation",
+            "width": 768
+          },
+          {
+            "client": 1265,
+            "contextHeadings": [],
+            "contextLinkHeights": [],
+            "path": "/nations/directory",
+            "scroll": 1265,
+            "singleStatus": 1,
+            "title": "Names deserve visibility.",
+            "width": 1280
+          },
+          {
+            "client": 1265,
+            "contextHeadings": [
+              "A Community Name With A Longer History",
+              "Sharon Indian School And Community Continuity",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              44
+            ],
+            "path": "/nations/upper-mattaponi-us-va",
+            "scroll": 1265,
+            "singleStatus": 0,
+            "title": "Upper Mattaponi Tribe",
+            "width": 1280
+          },
+          {
+            "client": 1265,
+            "contextHeadings": [
+              "River Homelands And Displacement",
+              "Community Institutions And Self-Government",
+              "From the publisher's own pages"
+            ],
+            "contextLinkHeights": [
+              44,
+              44
+            ],
+            "path": "/nations/nansemond-indian-nation-us-va",
+            "scroll": 1265,
+            "singleStatus": 0,
+            "title": "Nansemond Indian Nation",
+            "width": 1280
+          }
+        ],
+        "evidence_sha256": "c7fbe42ee7ef17d5357cdc86b94abe0c6304c8d767f2beaa5680ec3081a7f1ae"
+      },
+      "directory-interaction-browser-checks.json": {
+        "recorded_at": "2026-10-16T01:12:18.790Z",
+        "checks": [
+          {
+            "actionsHeight": 44,
+            "focus": "directoryNames",
+            "focusOutline": "3px",
+            "step": "positive-result",
+            "summaryMatches": true,
+            "visibleRows": 1
+          },
+          {
+            "focus": "directoryQuery",
+            "hash": "#directoryQuery",
+            "inventory": "us-virginia",
+            "query": "Nansemond",
+            "ready": true,
+            "step": "return-to-filters"
+          },
+          {
+            "emptyVisible": true,
+            "links": [
+              {
+                "height": 44,
+                "text": "Adjust Filters"
+              },
+              {
+                "height": 44,
+                "text": "Search Researched Profiles"
+              }
+            ],
+            "normalActionsHidden": true,
+            "statusCount": 1,
+            "step": "empty-result",
+            "summaryMatches": true,
+            "visibleRows": 0
+          },
+          {
+            "focus": "directoryQuery",
+            "inventory": "us-virginia",
+            "query": "no-match-review-fixture",
+            "ready": true,
+            "step": "empty-return"
+          },
+          {
+            "focus": "directoryQuery",
+            "inventory": "us-virginia",
+            "query": "",
+            "ready": true,
+            "step": "clear-preserves-source-and-ready",
+            "visibleRows": 4
+          }
+        ],
+        "evidence_sha256": "0db36bcb2d9bbb2ff0c3f62a6ed4b59c5940281ffc69103cf4979888168d3214"
+      },
+      "theme-browser-checks.json": {
+        "recorded_at": "2026-10-16T01:13:33.242Z",
+        "checks": [
+          {
+            "name": "Sovereign Skeleton",
+            "background": "rgb(0, 0, 0)",
+            "client": 375,
+            "ink": "rgb(255, 255, 255)",
+            "scroll": 375,
+            "selected": [],
+            "theme": null,
+            "width": 390
+          },
+          {
+            "name": "Maya Radiance",
+            "background": "rgb(2, 16, 30)",
+            "client": 375,
+            "ink": "rgb(244, 236, 216)",
+            "scroll": 375,
+            "selected": [],
+            "theme": "maya",
+            "width": 390
+          },
+          {
+            "name": "Living Codex",
+            "background": "rgb(232, 219, 192)",
+            "client": 375,
+            "ink": "rgb(26, 15, 8)",
+            "scroll": 375,
+            "selected": [],
+            "theme": "codex",
+            "width": 390
+          },
+          {
+            "name": "Obsidian Ember",
+            "background": "rgb(5, 5, 7)",
+            "client": 375,
+            "ink": "rgb(237, 228, 211)",
+            "scroll": 375,
+            "selected": [],
+            "theme": "skeleton",
+            "width": 390
+          }
+        ],
+        "evidence_sha256": "739013b20d65da5009daccf7627c38fa6dadd697d2665fa0e5cd2282c1c26d33"
+      },
+      "limits": "Browser viewport checks, not physical-device or screen-reader certification. Still preference was selected through the site UI; no operating-system reduced-motion emulation claimed.",
+      "game": {
+        "approvedSoundCredit": true,
+        "checkedDateShown": true,
+        "client": 390,
+        "historyExpanded": true,
+        "nansemondName": true,
+        "recorded_at": "2026-10-16T01:16:29.802Z",
+        "route": "/game/",
+        "scroll": 390,
+        "sourceLink": true,
+        "width": 390,
+        "logs": []
+      }
+    },
+    "source_and_publication_controls": {
+      "prior_records_preserved": 459,
+      "new_exact_http_receipts": 13,
+      "http_200": 12,
+      "http_301": 1,
+      "isolated_control_cases_passed": 12,
+      "human_or_nation_approvals_created": 0
+    },
+    "privacy_acceptance": {
+      "corrected_contract_passed": 6,
+      "failed": 0,
+      "fixture_correction": "The game has no author meta element. The corrected contract checks any existing author metadata and the actual visible sound credit. Original contract and baseline retained separately."
+    },
+    "full_pytest": {
+      "passed": 270,
+      "failed": 0,
+      "seconds": 123.91
+    }
+  },
+  "review_receipt_hashes": {
+    "independent-upper-mattaponi-review.json": "fadf95d951ca860d44ea6e648c833cf649de82b448b05cecc30b3743e7cd43ff",
+    "independent-nansemond-review.json": "962b7e7617877ad6f97c8fe607c69c3b28483de296368c32c3a98fc319f4f92d",
+    "independent-patawomeck-scope-review.json": "364b8e8ccb4565f9e8f3bcfda6800a7cf197384468dec59ae7a70a134e4c4bcb",
+    "final-integration-review.json": "b538a988b8e828031bb9befaeb60f7e4a38424921b43ff6ed8dcfc70ee9f9232",
+    "independent-results-ui-review.json": "87aec3b5926944b4eb504da2826c7e0a77b525ac7d6f8829da1a42885fa91be1",
+    "independent-privacy-final-review.json": "95d516ecfd6325e9ce05b7c9de7bb53de53d769267f1d0f23075b3754c5ad5a6"
+  },
+  "review_receipt_note": "Detailed production reviews are retained separately. Public source retrieval and identity receipts remain in the canonical research model. These reviews do not claim person or Nation approval."
+}
