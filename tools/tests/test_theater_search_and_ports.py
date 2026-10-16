@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import pytest
-from test_theater_acceptance import fixture_build, fictional_catalog
+from theater_acceptance_v1_helpers import fixture_build, fictional_catalog
 
 @pytest.mark.parametrize('field', ['watch_url','source_url'])
 @pytest.mark.parametrize('destination,accepted', [
@@ -31,9 +31,9 @@ def test_accent_search_preserves_original_names_and_respects_other_filters():
     node=shutil.which('node')
     if not node: pytest.skip('Node unavailable')
     root=Path(os.environ.get('ZOTHEOS_TEST_REPO',Path(__file__).resolve().parents[2]))
-    script=Path(__file__).with_name('theater-accent-search-regressions.cjs')
+    script=Path(__file__).with_name('theater-accent-search-regressions-v2.cjs')
     result=subprocess.run([node,str(script),str(root/'static/theater/theater.js')],capture_output=True,text=True,encoding='utf-8')
     assert result.returncode==0,result.stdout+result.stderr
-    focus=Path(__file__).with_name('theater-focus-regressions.cjs')
+    focus=Path(__file__).with_name('theater-focus-regressions-v2.cjs')
     result=subprocess.run([node,str(focus),str(root/'static/theater/theater.js')],capture_output=True,text=True,encoding='utf-8')
     assert result.returncode==0,result.stdout+result.stderr
