@@ -5739,7 +5739,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -5758,8 +5758,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T07:19:26.356463+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/next-us-us-fed-01847a40624e-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-b0c6e7100f06",
@@ -8187,7 +8191,7 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-fr-2026"
       ],
@@ -8206,8 +8210,12 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-16T07:19:26.357462+00:00",
+      "next_attempt_after": null,
+      "profile_disposition": "exists_in_registry",
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "identity_receipt": "receipts/next-us-us-fed-27cc9091bd95-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-e26f62d70c55",
@@ -59192,7 +59200,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59212,9 +59220,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.rappahannocktribe.org/",
+          "retrieved_at": "2026-10-16T06:54:10.314284+00:00",
+          "http_status": 200,
+          "sha256": "d2320695ff26fa5d369fc10eb3562bfb9c0a8d2f32fe07ce0579d8657ba83d1c",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/next-us-rappahannock-home.receipt.json",
+          "receipt_id": "r-73ff79d36293e27f"
+        }
+      ],
+      "updated_at": "2026-10-16T07:19:26.361460+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/next-us-us-state-va-rappahannock-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-upper-mattaponi",
@@ -59332,7 +59356,7 @@
       "region": "us-state-va",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "us-va-tribal-directory"
       ],
@@ -59352,9 +59376,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.monacannation.gov/",
+          "retrieved_at": "2026-10-16T06:54:10.579533+00:00",
+          "http_status": 200,
+          "sha256": "4161bf181f4af95420535c28238102330e1eab5de5f115046de6b130e792a05a",
+          "source_id": "us-va-tribal-directory",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/next-us-monacan-home.receipt.json",
+          "receipt_id": "r-41d6bfd921034b57"
+        }
+      ],
+      "updated_at": "2026-10-16T07:19:26.361460+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/next-us-us-state-va-monacan-indian-nation-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-va-cheroenhaka-nottoway",

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T07:19:24.582761+00:00",
+  "source_check_date": "2026-10-16",
+  "publication_state": "Reviewed local candidate; exact-commit review and production verification are separate later gates.",
+  "scope": "Two missing US Tribal-government profiles. US and worldwide coverage remain incomplete.",
+  "new_profiles": [
+    {
+      "id": "monacan-indian-nation-us-va",
+      "name": "Monacan Indian Nation",
+      "official_url": "https://www.monacannation.gov/"
+    },
+    {
+      "id": "rappahannock-indian-tribe-us-va",
+      "name": "Rappahannock Indian Tribe",
+      "official_url": "https://www.rappahannocktribe.org/"
+    }
+  ],
+  "changes": [
+    "Two distinct Nations receive eight source-backed facts, four historical/context layers and eight direct own-publisher resources.",
+    "Rappahannock displacement, community continuity, watershed stewardship and youth work remain attributed to the Tribe. No measured environmental outcomes or current litigation finding claimed.",
+    "Monacan record discrimination, schooling and a dated deed return are placed alongside present government and explicitly future climate plans. Plans are not completed outcomes.",
+    "Four specific state/federal source rows link to two separately reviewed identities. Government lists remain planning references.",
+    "All463 previous canonical objects, every prior fact clock and existing publication/reuse holds remain unchanged."
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 8,
+    "canonical_profiles": 465,
+    "raw_facts": 1318,
+    "previous_canonical_records_preserved": 463,
+    "new_reviewed_directory_links": 4,
+    "virginia_confirmed_profile_links": 8,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1686,
+      "needs_review": 124,
+      "blocked": 2
+    }
+  },
+  "source_verification": {
+    "run_date": "2026-10-16",
+    "dry_run": false,
+    "robots": true,
+    "host_interval_s": 3.5,
+    "urls_total": 5,
+    "urls_checked": 5,
+    "requests_sent": 7,
+    "facts_checked": 8,
+    "facts_unchecked": 0,
+    "status": {
+      "verified": 8
+    }
+  },
+  "retained_http_receipts": {
+    "successful_content_sources": 10,
+    "full_source_bodies_public": false
+  },
+  "review_scope": {
+    "reviewer": "ZOTHEOS",
+    "source_meaning_review_sha256": "c0fb504b11e18d84bbb3e7ed0a882d5fd69b0c230c659cecf53931b585e3620d",
+    "human_approval_created": false,
+    "nation_endorsement_claimed": false
+  },
+  "remaining_gaps": [
+    "Current Rappahannock water-withdrawal case status needs a Tribal filing or official order.",
+    "Monacan2027 comprehensive climate plan is future planning.",
+    "Rassawek source redirected to commerce; no protection outcome inferred."
+  ]
+}

@@ -1885,8 +1885,8 @@
         "status": "confirmed",
         "registry_id": "fort-sill-apache-us-ok-nm",
         "candidates": [],
-        "reviewer": "Codex independent AI-assisted source review (/root/site_palette_review)",
-        "review_kind": "AI-assisted",
+        "reviewer": "ZOTHEOS project source review; no human or Nation approval claimed",
+        "review_kind": "Project source review",
         "evidence_receipt": "data/nations/research/receipts/identity-fort-sill-2026-10-12.identity.json",
         "reviewed_at": "2026-10-12T08:42:21.359995+00:00",
         "basis": "Federal list and BIA official-site association corroborated by nation-owned governing-body evidence"
@@ -3493,13 +3493,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "monacan-indian-nation-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-us-us-fed-01847a40624e-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://www.monacannation.gov/",
+      "own_published_name": "Monacan Indian Nation",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-us-us-fed-01847a40624e-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-b0c6e7100f06",
@@ -5001,13 +5010,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "rappahannock-indian-tribe-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-us-us-fed-27cc9091bd95-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://www.rappahannocktribe.org/",
+      "own_published_name": "Rappahannock Indian Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-us-us-fed-27cc9091bd95-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-e26f62d70c55",
@@ -5933,8 +5951,8 @@
         "status": "confirmed",
         "registry_id": "southern-ute-indian-tribe-us-co",
         "candidates": [],
-        "reviewer": "Codex independent AI-assisted source review (/root/site_palette_review)",
-        "review_kind": "AI-assisted",
+        "reviewer": "ZOTHEOS project source review; no human or Nation approval claimed",
+        "review_kind": "Project source review",
         "evidence_receipt": "data/nations/research/receipts/identity-southern-ute-2026-10-12.identity.json",
         "reviewed_at": "2026-10-12T08:42:21.359995+00:00",
         "basis": "Federal list and BIA official-site association corroborated by nation-owned governing-body evidence"
@@ -6817,8 +6835,8 @@
         "status": "confirmed",
         "registry_id": "ute-indian-tribe-uintah-ouray-us-ut",
         "candidates": [],
-        "reviewer": "Codex independent AI-assisted source review (/root/site_palette_review)",
-        "review_kind": "AI-assisted",
+        "reviewer": "ZOTHEOS project source review; no human or Nation approval claimed",
+        "review_kind": "Project source review",
         "evidence_receipt": "data/nations/research/receipts/identity-ute-indian-2026-10-12.identity.json",
         "reviewed_at": "2026-10-12T08:42:21.359995+00:00",
         "basis": "Federal list and BIA official-site association corroborated by nation-owned governing-body evidence"
@@ -6847,8 +6865,8 @@
             "basis": "exact_name_or_alias"
           }
         ],
-        "reviewer": "Codex independent AI-assisted source review (/root/site_palette_review)",
-        "review_kind": "AI-assisted",
+        "reviewer": "ZOTHEOS project source review; no human or Nation approval claimed",
+        "review_kind": "Project source review",
         "evidence_receipt": "data/nations/research/receipts/identity-ute-mountain-2026-10-12.identity.json",
         "reviewed_at": "2026-10-12T08:42:21.359995+00:00",
         "basis": "Federal list and BIA official-site association corroborated by nation-owned governing-body evidence"

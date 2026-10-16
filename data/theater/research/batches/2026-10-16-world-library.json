@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T07:35:56.950834+00:00",
+  "scope": "Bounded worldwide catalogue expansion. Indigenous stories and Nations remain distinct; this is not complete worldwide or US Nation coverage.",
+  "catalogue": {
+    "catalogue_sha256": "eed9e50c522f1c33752b2aa4995def7514f294c1e75695b8c2f1b75e556dd73f",
+    "titles": 222,
+    "configured_players": 215,
+    "source_only": 7,
+    "viewing": {
+      "full-film": 18,
+      "recorded-program": 63,
+      "trailer": 49,
+      "short": 64,
+      "excerpt": 21,
+      "official-page": 7
+    },
+    "regions": {
+      "unindexed": 64,
+      "africa": 19,
+      "asia": 4,
+      "oceania": 14,
+      "south-america": 7,
+      "arctic": 27,
+      "north-america": 81,
+      "central-america-caribbean": 2,
+      "global": 4
+    }
+  },
+  "previous_records_preserved": 14,
+  "new_records": 208,
+  "new_record_sources": [
+    {
+      "artifact": "appendable-films-a-with-previews.json",
+      "sha256": "c1ba6ebad1e5a559487f6f2787862a9605b3fb01b96ff31d10e51759bd2ece9b",
+      "entries": 50
+    },
+    {
+      "artifact": "curated-world-batch.json",
+      "sha256": "68f3b30aeae68434a1ecaeba436a59f15ac38b641fc7bcc6054878d783895adf",
+      "entries": 51
+    },
+    {
+      "artifact": "curated-world-batch-two.json",
+      "sha256": "ec84c87e282583def432648a171be84b7c6552b296fc87992c5d03f29fca4119",
+      "entries": 46
+    },
+    {
+      "artifact": "curated-world-batch-three.json",
+      "sha256": "388b2c4f565074c51fabd60006852a3180a0d447376465d7bdaaa868599910d5",
+      "entries": 7
+    },
+    {
+      "artifact": "appendable-films-b.json",
+      "sha256": "822aeb74a3ddbd4861d9c2f6fac9f66bf8d3bf7f6f86db73dba7a88b93097eb7",
+      "entries": 44
+    },
+    {
+      "artifact": "appendable-films-c.json",
+      "sha256": "0130b3b0d9476a5606a289ed6265d3e4f0de3c8a8b2365a842ee9380028eb3c6",
+      "entries": 10
+    }
+  ],
+  "source_review_pins": [
+    {
+      "artifact": "independent-first-batches-source-review.json",
+      "sha256": "c12ecf4d3aea8503159907ce3e179ae79cd46d32c8df39cd008b358cd8aae484"
+    },
+    {
+      "artifact": "independent-world-two-three-source-review.json",
+      "sha256": "d5258a9180d9b15992f3078a0170cafb9a64a216a784b5546d76dd77ba1a9cfc"
+    },
+    {
+      "artifact": "independent-nfb-b-source-review.json",
+      "sha256": "3362f259631029860f12dd380dc83f4e9fa9557d4f890fdc36caa0c6b5f85530"
+    },
+    {
+      "artifact": "independent-nfb-c-source-review.json",
+      "sha256": "d7e8d0a6cbd95b1db6b02779341c52e56961d1b554e0381898f9c1ed3726e7c0"
+    }
+  ],
+  "source_conditions": {
+    "nfb_ledger": "research/2026-10-16-nfb-source-ledger.json",
+    "nfb_ledger_sha256": "633b2c6c5b0432cce6e4723ff95893e54f6ed33335d025a10d81d425fd18d7e5",
+    "world_authority_audit_sha256": "cf0dd7bd6218ec16f032762a3e1e9481c7844ce29ec32882af4a3ae41b260951",
+    "nfb_author_ledger_artifact_sha256": "3405338f92415e5e56e9330e5c5a7e3fba49dfacc5439971cfb968d45aedf130"
+  },
+  "editorial_choices": [
+    "Official source descriptions were read before short original summaries were written.",
+    "Full films, shorts, trailers, excerpts, recorded programs and source-only entries are labeled separately.",
+    "A stable regional mix opens the collection without personalized ranking, popularity scores or inferred locations.",
+    "Source-only and contextual holds are not counted as configured players. Language replacements count once per work.",
+    "Recorded interviews and audio-led programs are labeled; original production dates remain unknown where only upload dates are known."
+  ],
+  "review_limits": [
+    "No complete-film, caption-accuracy or worldwide current playback certification.",
+    "Provider metadata and offered-source checks establish configured viewing candidates; availability can vary by region, account and time.",
+    "No community endorsement, person-check receipt, new recognition status or legal/scientific ruling inferred from a film.",
+    "No media rehosting, source imagery generation or sacred designs."
+  ],
+  "publication_state": "Independently reviewed release candidate. Source and local validation receipts are recorded in publication_review.json; PR merge and live deployment verification are separate gates."
+}

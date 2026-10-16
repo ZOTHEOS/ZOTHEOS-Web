@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-10-16",
-  "scope": "Bounded starter collection; no complete worldwide coverage claim.",
+  "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
       "id": "trec-denver-2025",
@@ -49,8 +49,10 @@
     },
     {
       "id": "expand-indigenous-led-viewing",
-      "status": "queued",
-      "next": "Research additional Nations and Indigenous-led filmmakers, authorized full-film and caption/transcript options, cultural continuity, current land and water struggles and community-led victories. Do not reuse an old viewing window as current availability."
+      "status": "bounded-batch-reviewed",
+      "next": "Continue missing US and worldwide Nation-owned stories, underrepresented regions and accessible authorized editions. A catalogue count is not a substitute for inclusive coverage or full-program editorial review.",
+      "checked": "2026-10-16",
+      "batch": "research/batches/2026-10-16-world-library.json"
     },
     {
       "id": "first-light-player",
@@ -65,6 +67,40 @@
       "checked": "2026-10-16",
       "reason": "PBS lists a 78m 53s ASL full-film edition, but its embedded player reported unavailable in our 2026-10-16 browser check. Continue at PBS for current access. Region, account and viewing-window terms can change.",
       "next": "Recheck the publisher before restoring an embedded player; do not submit forms or bypass access terms."
+    },
+    {
+      "id": "world-library-context-holds-2026-10-16",
+      "status": "needs-source-context",
+      "checked": "2026-10-16",
+      "reason": "Some publisher records have conflicting place or affiliation metadata, no substantive synopsis, uncertain edition uniqueness, restricted access or important authorship/consultation context. Those claims or works remain excluded rather than resolved by inference.",
+      "next": "Read resolving own-publisher context before adding a record or restoring a held claim. No duplicate edit or unsupported geography is counted toward expansion.",
+      "nfb_hold_ledger": "research/2026-10-16-nfb-source-ledger.json",
+      "world_proposal_holds": 14,
+      "source_review_pins": [
+        {
+          "artifact": "independent-first-batches-source-review.json",
+          "sha256": "c12ecf4d3aea8503159907ce3e179ae79cd46d32c8df39cd008b358cd8aae484"
+        },
+        {
+          "artifact": "independent-world-two-three-source-review.json",
+          "sha256": "d5258a9180d9b15992f3078a0170cafb9a64a216a784b5546d76dd77ba1a9cfc"
+        },
+        {
+          "artifact": "independent-nfb-b-source-review.json",
+          "sha256": "3362f259631029860f12dd380dc83f4e9fa9557d4f890fdc36caa0c6b5f85530"
+        },
+        {
+          "artifact": "independent-nfb-c-source-review.json",
+          "sha256": "d7e8d0a6cbd95b1db6b02779341c52e56961d1b554e0381898f9c1ed3726e7c0"
+        }
+      ]
+    },
+    {
+      "id": "world-library-coverage-and-accessibility",
+      "status": "ongoing",
+      "checked": "2026-10-16",
+      "reason": "Geographic labels cover only source-supported places. Unindexed location, Europe, Central America/Caribbean, Asia and Nation-owned US work need further source discovery; Indigenous identity is not determined by a state or government list.",
+      "next": "Prioritize gaps and direct creators/Nations. Check publisher caption/transcript and audio-language options before claiming accessibility quality; whole-program review remains separate."
     }
   ]
 }
