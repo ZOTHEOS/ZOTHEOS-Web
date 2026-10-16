@@ -48,6 +48,7 @@ def test_name_candidates_do_not_invent_profile_links(tmp_path):
     b = builder()
     p, obj = editable(tmp_path)
     e = obj['entities'][0]
+    e['registry_crosswalk'] = {'status': 'unreviewed', 'registry_id': None, 'candidates': []}
     e['registry_crosswalk']['candidates'] = [{'registry_id': b.m.nations[0]['id'], 'basis': 'exact_name_or_alias'}]
     write(p, obj)
     b.root = str(tmp_path)

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T21:18:55.208107+00:00",
+  "measured_counts": {
+    "canonical_profiles": 474,
+    "raw_facts": 1354,
+    "public_facts": 1352,
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 8,
+    "practice_examples": 6,
+    "chapter_briefs": 10,
+    "old_canonical_objects_preserved": 472,
+    "other_queue_tasks_preserved": 1809,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 136,
+      "blocked": 5,
+      "pending": 1671
+    }
+  },
+  "independent_source_reviews": {
+    "northeast": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T21:13:25.870477+00:00",
+      "sha256": "a85afbe545f0d1c2c159648d533cd60e4d6603e3d61a4e5b09f627e1f2ce9340",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning and respect review completed for this scoped proposal."
+    },
+    "absentee": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T21:11:39.595110+00:00",
+      "sha256": "afae33ec5d5bc729bdbb164e2df6f99a8db08cc01578b3fed21534b3ef6d3635",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning and respect review completed for this scoped proposal."
+    }
+  },
+  "source_verification": {
+    "actual_http_responses": 9,
+    "fact_urls_checked": 7,
+    "facts_verified": 8,
+    "robots": true,
+    "redirects_followed": false,
+    "automatic_retries": 0,
+    "measured_min_host_gap_seconds": 10.6022,
+    "report_sha256": "56a3668832409c4175496d9378a9f65222b91abd93f880e7dd8b27c7315fd1b6",
+    "capture_receipts_sha256": "65508ec8c02ff4b568a1aaeb895e17d375f547f299737b2a427d7eab38924a0d",
+    "audit_sha256": "cab58bde67da487bfbf8f6b40b05c37b468c82ae977b8f2aae93b9defc479247",
+    "human_review_claimed": false,
+    "meaning_approval": "Separate pinned semantic reviews; HTTP containment does not establish source meaning or permission."
+  },
+  "new_profiles": [
+    "cherokee-tribe-of-northeast-alabama-us-al",
+    "absentee-shawnee-tribe-us-ok"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-state-al-cherokee-tribe-of-ne-alabama",
+    "profile-us-fed-220eab4a2b96",
+    "profile-us-fed-e848f6cf3065"
+  ],
+  "blocked_source": {
+    "url": "https://www.aguacaliente.org/robots.txt",
+    "http_status": 403,
+    "receipt": "research/receipts/2026-10-16-community-agua-robots.json",
+    "profile_published": false,
+    "directory_retained": true
+  },
+  "limits": "Institutional dates are not the origin of peoples. Website learning indexes do not establish access, teaching authority or cultural reuse permission. Government role maps are hypothetical preparation, not current appeal routes or legal advice. Prior publication holds and manual conditions remain. Government directories never define who is Indigenous. Coverage remains incomplete. No human review or Nation approval is claimed.",
+  "publication_state": "Reviewed source integration; exact release and live checks remain separate."
+}

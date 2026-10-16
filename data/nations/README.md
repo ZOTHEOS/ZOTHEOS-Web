@@ -1,7 +1,7 @@
 # Indigenous nations of today: the ZOTHEOS registry
 
 `nations.json` is the source of truth: nations and peoples of today, each with its own name first, where it lives,
-and facts in our own words. Every fact carries its source (title, publisher, URL), the exact phrase on that page that
+and original short summaries. Every fact carries its source (title, publisher, URL), the exact phrase on that page that
 supports it, and the date it was checked. `nations.min.json` is the same data, minified.
 
 - `sources/` holds the research, verification and respect-review files for every region, so each decision can be
@@ -18,21 +18,23 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope, Checked October 16, 2026
 
-The registry contains 472 researched profiles and 1,346 raw facts. Publication controls show 1,344
-facts and retain two existing holds. The latest batch adds United Cherokee AniYunWiYa Nation and
-Southeastern Mvskoke Nation as distinct profiles, eight own-source facts, four short historical
-reading layers and nine own-publisher resources. All 470 previous canonical objects and fact clocks
-remain unchanged. Old plans are not advertised as current services or invitations.
+The registry contains 474 researched profiles and 1,354 raw facts. Publication controls show 1,352
+facts and retain two existing holds. The latest batch adds the Cherokee Tribe of Northeast Alabama
+and Absentee Shawnee Tribe of Indians of Oklahoma as distinct profiles, eight own-source facts,
+four short historical reading layers and eight own-publisher resources. All 472 previous canonical
+objects and fact clocks remain unchanged. Historical institutions are not the beginning of a people.
 
-The directory preserves 2,272 overlapping source records. Two Alabama rows now link to separately
-reviewed profiles; the original source edition, labels and other rows remain. Ma-Chis returned HTTP403
-at its robots file and remains queued with backoff. No access bypass or Indigenous identity judgment
-is implied. Earlier source conditions and publication holds remain. Worldwide and US coverage are incomplete.
+The directory preserves 2,272 overlapping source records. One Alabama row and one federal-list row
+now link to separately reviewed profiles; original editions, labels and other rows remain. Agua Caliente
+returned HTTP403 at its robots file and stays queued with backoff. No alternate host was tried.
+Earlier source conditions and publication holds remain. Worldwide and US coverage are incomplete.
 
-Paths To Action has ten chapters, nine primary framework sources, four canonical examples and an
-offline blank action brief. Each example separates dated source facts from a hypothetical exercise
-the reader controls, with steps, a boundary and a reflection. They are not delivered services or
-Nation-endorsed recommendations. Existing fact and Nation holds suppress dependent examples.
+Paths To Action has ten chapters, nine primary framework sources, six canonical examples, an
+offline shared blank brief and ten focused chapter briefs. Each example separates dated source
+facts from a hypothetical exercise the reader controls, with steps, a boundary and reflection.
+New examples cover institutional role maps and community-led learning resources. They are not
+delivered services or Nation-endorsed recommendations. Existing holds suppress dependent outputs.
+Chapter downloads contain blank reader fields, source links and the selected pathway only.
 
 David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy uses
 singular or neutral wording. Nations' own evidence, cultural names and film titles retain their meaning.

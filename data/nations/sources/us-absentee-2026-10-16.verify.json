@@ -1,0 +1,47 @@
+{
+  "region": "us-plains-midwest",
+  "checked": "2026-10-16",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-16T21:11:39.595110+00:00",
+    "sha256": "afae33ec5d5bc729bdbb164e2df6f99a8db08cc01578b3fed21534b3ef6d3635",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning and respect review completed for this scoped proposal."
+  },
+  "results": [
+    {
+      "id": "absentee-shawnee-tribe-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "AUTHOR assessment: the About Us account explicitly connects the absentee distinction with absence from the 1854 Kansas reservation treaty signing. The fact attributes that account and does not infer every Shawnee person's history or establish treaty rights."
+    },
+    {
+      "id": "absentee-shawnee-tribe-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "AUTHOR assessment: the Government page explicitly lists two branches and a separate independent Election Commission. The source does not establish a publication or applicable event date for this institutional description, so as_of remains null. The actual retrieval/check date stays separate; no independent certification of present law, officeholders or procedures is claimed."
+    },
+    {
+      "id": "absentee-shawnee-tribe-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "AUTHOR assessment: the department account explicitly dates its application to 2002 and THPO status to 2004. No present jurisdiction boundary, quantified workload, ownership conclusion or certification is inferred."
+    },
+    {
+      "id": "absentee-shawnee-tribe-us-ok",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "AUTHOR assessment: the Language page's Resources index visibly lists Lexicon and Online lessons. Neither linked content nor any lesson, pronunciation, speaker, participant, survey or restricted learning material was fetched. The fact keeps index presence separate from access or availability. An ambiguous dcterms.date is not treated as publication, modification or resource event date, so as_of remains null while actual retrieval/check dates remain recorded."
+    }
+  ],
+  "names": [
+    {
+      "id": "absentee-shawnee-tribe-us-ok",
+      "verdict": "keep",
+      "note": "AUTHOR assessment: the retained homepage heading uses the full lead name without a hyphen. The About Us history also uses Absentee-Shawnee and explicitly distinguishes the (Loyal) Shawnee and Eastern Shawnee. The alternate hyphenated legal-directory spelling is preserved as an alias. All 472 canonical names, aliases and official hosts were examined; no matching profile was found. This is an identity crosswalk only, not recognition adjudication. The lands field is a broad, source-described community location, not a boundary or title claim."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "reviewed": "2026-10-16",
+  "public_notes": [
+    {
+      "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+      "reading_id": "roots-and-modern-status",
+      "title": "Roots Before A Modern Status Date",
+      "text": "The Tribe links its Northeast Alabama community to the lower Cherokee towns and cites documents from the 1700s and censuses from the 1800s. Its introduction dates formal state recognition to 1984. This is the Tribe's own account; the underlying historical records are not reproduced here. A modern status date is not the beginning of a people's history, and this community is not merged with other Cherokee governments.",
+      "source_urls": [
+        "https://cherokeetribeofnortheastalabama.org/"
+      ]
+    },
+    {
+      "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+      "reading_id": "constitution-and-districts",
+      "title": "Constitution And District Representation",
+      "text": "The Tribe's government page dates a revision and ratification of its Constitution to June 6, 2006. It describes executive officers and a district-based Tribal Council, with constitutional amendments addressed at an annual meeting. These are its own published institutional descriptions. They do not establish the latest constitutional text, a reader's citizenship, authority to participate or a current legal remedy.",
+      "source_urls": [
+        "https://cherokeetribeofnortheastalabama.org/government"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+      "label": "CTNEAL: The Tribe In Its Own Words",
+      "url": "https://cherokeetribeofnortheastalabama.org/",
+      "purpose": "Read the Tribe's own name and short historical introduction."
+    },
+    {
+      "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+      "label": "CTNEAL: Constitution And Government",
+      "url": "https://cherokeetribeofnortheastalabama.org/government",
+      "purpose": "Read its public institutional description; verify current rules with the appropriate authority."
+    },
+    {
+      "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+      "label": "CTNEAL: Its Public Learning Resources",
+      "url": "https://cherokeetribeofnortheastalabama.org/learning-tools",
+      "purpose": "Follow the Tribe's own learning page. Public access does not grant permission to copy, translate, teach or train on the material."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "status": "Separate automated source meaning and respect review completed for this scoped proposal.",
+    "person_check_receipt": null,
+    "sources": [
+      {
+        "schema_version": 1,
+        "source_url": "https://cherokeetribeofnortheastalabama.org/",
+        "final_url": "https://cherokeetribeofnortheastalabama.org/",
+        "retrieved_at": "2026-10-16T21:07:20.576359+00:00",
+        "http_status": 200,
+        "sha256": "967efb2cf621f23016b88283a422d20231cbf9523de0538763a172193d7e65b4",
+        "bytes": 110088,
+        "publisher": "Cherokee Tribe of Northeast Alabama",
+        "title": "Cherokee Tribe of Northeast Alabama - Home",
+        "publication_date": null,
+        "modified_date": null,
+        "source_key": "northeast-home",
+        "receipt": "research/receipts/2026-10-16-community-northeast-home.json",
+        "human_review_claimed": false
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://cherokeetribeofnortheastalabama.org/government",
+        "final_url": "https://cherokeetribeofnortheastalabama.org/government",
+        "retrieved_at": "2026-10-16T21:07:46.079052+00:00",
+        "http_status": 200,
+        "sha256": "6f876fa7e2aba64d3edf9cdee6984cd278e90fc6d2e19cec3567bc83440c3e1a",
+        "bytes": 93404,
+        "publisher": "Cherokee Tribe of Northeast Alabama",
+        "title": "Government",
+        "publication_date": null,
+        "modified_date": null,
+        "source_key": "northeast-government",
+        "receipt": "research/receipts/2026-10-16-community-northeast-government.json",
+        "human_review_claimed": false
+      },
+      {
+        "schema_version": 1,
+        "source_url": "https://cherokeetribeofnortheastalabama.org/learning-tools",
+        "final_url": "https://cherokeetribeofnortheastalabama.org/learning-tools",
+        "retrieved_at": "2026-10-16T21:08:03.092324+00:00",
+        "http_status": 200,
+        "sha256": "303080db314c90dceab2324da2be478faef748cd71febe8f5c9e04a34a41774b",
+        "bytes": 104151,
+        "publisher": "Cherokee Tribe of Northeast Alabama",
+        "title": "Learning Tools",
+        "publication_date": null,
+        "modified_date": null,
+        "source_key": "northeast-learning",
+        "receipt": "research/receipts/2026-10-16-community-northeast-learning.json",
+        "human_review_claimed": false
+      }
+    ],
+    "publisher_conditions": {
+      "checked_at": "2026-10-16T21:10:59.183552+00:00",
+      "scope": "Home, government, learning tools and both linked Terms and Conditions pages.",
+      "observed": "Both linked terms pages returned200 but displayed only the shared navigation, footer and cookie notice, without substantive terms text. Footer says all rights reserved.",
+      "interpretation": "No reuse permission is inferred from absent substantive terms. Only short original factual paraphrases and direct public links are proposed; no images, seals, voices, lessons or full source text enter the repository.",
+      "publication_date_rule": "Copyright2024 is not the publication or modification date of these pages. Those unknown metadata dates stay null."
+    },
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T21:13:25.870477+00:00",
+      "sha256": "a85afbe545f0d1c2c159648d533cd60e4d6603e3d61a4e5b09f627e1f2ce9340",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning and respect review completed for this scoped proposal."
+    }
+  }
+}

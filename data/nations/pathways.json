@@ -194,7 +194,24 @@
         "native-voting",
         "un-declaration"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "absentee-shawnee-tribe-us-ok",
+          "fact_ids": [
+            "absentee-shawnee-tribe-us-ok-d67e4463"
+          ],
+          "practice": {
+            "question": "Hypothetical reader question: How can I avoid treating different governing bodies as interchangeable when I study a public decision?",
+            "steps": [
+              "Read the Tribe's own government description. In a private note, keep its Legislative/Executive Branch, Judicial Branch and independent Election Commission distinct; record the source URL and the date you read it.",
+              "Choose a public decision you are studying. Create a private table with the decision, responsible institution, published rule, date and unanswered questions. Use that institution's own rules rather than transferring the Tribe's structure to another government.",
+              "Mark unknown responsibilities as unknown. Separate who makes a decision, who reviews it and who administers an election; keep your notes as a preparation document for qualified human review."
+            ],
+            "boundary": "This is a hypothetical reading and note-making exercise. It does not authorize participation, determine membership or jurisdiction, advise on a legal case, identify a current appeal route, represent the Tribe or establish endorsement. No outreach, filing, submission or transfer of cultural material is part of the exercise.",
+            "reflection": "Which responsibilities are supported by the institution's own published rules, and which assumptions still need checking?"
+          }
+        }
+      ]
     },
     {
       "id": "evidence-and-records",
@@ -297,7 +314,24 @@
         "language-planning",
         "care"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "cherokee-tribe-of-northeast-alabama-us-al",
+          "fact_ids": [
+            "cherokee-tribe-of-northeast-alabama-us-al-08c03086"
+          ],
+          "practice": {
+            "question": "In this hypothetical exercise, how could I prepare a reading plan that follows a community's own learning resources without claiming to teach or translate its language?",
+            "steps": [
+              "Open the Tribe's own Learning Tools page. Record the publisher, source URL, the date you read it and any stated audience or access conditions.",
+              "Make a short bookmark list of public resources you want to understand. Keep the original links and labels; do not copy lessons, recordings or word lists into a new public collection.",
+              "Write the questions that a qualified speaker or teacher would need to resolve before a learning activity could be shared. Mark pronunciation, local usage and reuse permissions as unverified until appropriately checked."
+            ],
+            "boundary": "This is a private reading-plan exercise, not a language lesson, translation, teaching qualification, invitation or permission to reuse cultural material. Public availability does not authorize voice imitation or model training. No outreach, submission or recording is part of this exercise.",
+            "reflection": "What can I learn by following the original resource, and what still requires a speaker's knowledge and the community's permission?"
+          }
+        }
+      ]
     },
     {
       "id": "data-sovereignty",

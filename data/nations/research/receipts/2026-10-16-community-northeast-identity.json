@@ -1,0 +1,40 @@
+{
+  "url": "https://cherokeetribeofnortheastalabama.org/",
+  "final_url": "https://cherokeetribeofnortheastalabama.org/",
+  "retrieved_at": "2026-10-16T21:07:20.576359+00:00",
+  "http_status": 200,
+  "sha256": "967efb2cf621f23016b88283a422d20231cbf9523de0538763a172193d7e65b4",
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T21:18:55.208107+00:00",
+  "directory_id": "us-state-al-cherokee-tribe-of-ne-alabama",
+  "registry_id": "cherokee-tribe-of-northeast-alabama-us-al",
+  "own_published_name": "Cherokee Tribe of Northeast Alabama",
+  "official_url": "https://cherokeetribeofnortheastalabama.org/",
+  "directory_source": {
+    "publisher": "Alabama Indian Affairs Commission",
+    "title": "Tribes Recognized by the State of Alabama",
+    "url": "https://aiac.alabama.gov/wp-content/uploads/2026/10/AIAC-Tribes-List.pdf",
+    "retrieved_at": "2026-10-15T08:34:16.099943+00:00",
+    "sha256": "3814f866e3b5b67627222173a41432765202ba620d6a126d0e69d7d0af4c84f0",
+    "receipt": "receipts/us-al-aiac-tribes-2026-10-15.receipt.json",
+    "publication_date": null,
+    "source_edition": "One-page PDF linked by the commission board directory on 15 Oct 2026 UTC. No explicit publication or revision date appears on the page. Server Last-Modified is 2026-10-07 but is not an event or legal effective date.",
+    "directory_link_source_url": "https://aiac.alabama.gov/board-commissioners",
+    "directory_link_receipt": "receipts/us-al-aiac-board-2026-10-15.receipt.json",
+    "source_page_label_note": "The PDF has one physical page. Its printed footer says PAGE 2."
+  },
+  "own_home_receipt": "research/receipts/2026-10-16-community-northeast-home.json",
+  "evidence_phrase": "Cherokee Tribe of Northeast Alabama",
+  "review": {
+    "evidence": "The retained directory label and own-publisher homepage identify this distinct government or community. All 472 prior canonical names, aliases and official hosts were examined. The preferred own name, directory spelling and historical context stay distinct; this crosswalk does not adjudicate recognition or Indigenous identity."
+  },
+  "independent_review_sha256": "a85afbe545f0d1c2c159648d533cd60e4d6603e3d61a4e5b09f627e1f2ce9340",
+  "missingness_audit": {
+    "existing_profiles_scanned": 472,
+    "same_identity_or_alias_found": false
+  },
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

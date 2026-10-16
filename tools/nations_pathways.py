@@ -152,7 +152,7 @@ def render(root, model):
         for step in c['steps']:
             out+=['<article class="pw-step pw-'+e(step['scope'],quote=True)+'"><p class="pw-scope">'+SCOPES[step['scope']]+'</p>',
                   '<h3>'+e(step['title'])+'</h3><p>'+e(step['text'])+'</p></article>']
-        out+=['</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>'+e(c['deliverable'])+'</p></div>',
+        out+=['</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>'+e(c['deliverable'])+'</p><a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">Plain text. One pathway. Fill offline in a place you control.</span></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']
@@ -208,3 +208,45 @@ def action_brief(root, model):
         out.append('')
     out+=['Proposed app workflows are not released services. Check the original sources and current requirements with appropriate local expertise.','']
     return '\n'.join(out)
+
+
+def _chapter_brief_text(chapter, sources):
+    out=['ZOTHEOS | PATHWAY ACTION BRIEF', chapter['title'],
+         'https://zotheos.org/nations/paths-to-action#pw-'+chapter['id'], '',
+         'A blank planning aid. Write offline in a place you control. This is not a submitted application, legal advice, community consent or a completed action.',
+         'The website does not receive these answers. Keep sensitive information private and check permission before sharing any records.', '',
+         'Question or need: ____________________', 'Who is affected: ____________________',
+         'Who has authority to decide and authorize this work: ____________________',
+         'Requested change: ____________________', 'Sources, exact page references and actual check dates: ____________________',
+         'What remains uncertain or disputed: ____________________',
+         'Permissions and information that must stay private: ____________________',
+         'Verified deadline / next review date and source: ____________________',
+         'Responsible person or institution: ____________________',
+         'Resources and ongoing responsibilities: ____________________',
+         'How affected people will evaluate, correct or stop the work: ____________________',
+         'Next step I choose: ____________________', '', 'SOMETHING YOU CAN PREPARE',
+         chapter['deliverable'], '', 'WHO DECIDES AND WHAT TO VERIFY']
+    out.extend(str(i)+'. '+value for i,value in enumerate(chapter['verify'],1))
+    out+=['', 'REFLECTION', chapter['reflection'], '', 'SOURCES AND DATES']
+    refs=dict.fromkeys(chapter['source_ids']+[sid for step in chapter['steps'] for sid in step['source_ids']])
+    for sid in refs:
+        source=sources[sid]
+        line=source['title']+' | '+source['publisher']+' | '+source['url']+' | Source checked '+source['reviewed']
+        if source.get('as_of'):line+=' | Context dated '+source['as_of']
+        out.append(line)
+    out+=['', 'Proposed app workflows are not released services. Check original sources and current requirements with appropriate local expertise.',
+          'Planning questions are ZOTHEOS suggestions, not endorsement by a Nation or the cited organizations.', '']
+    return '\n'.join(out)
+
+
+def chapter_brief(root, model, chapter_id):
+    _,chapters,sources=load(root,model)
+    ident(chapter_id)
+    chapter=next((c for c in chapters if c['id']==chapter_id),None)
+    if chapter is None:raise ValueError('pathways: chapter is unknown or not public')
+    return _chapter_brief_text(chapter,sources)
+
+
+def chapter_briefs(root, model):
+    _,chapters,sources=load(root,model)
+    return {'action-brief-'+chapter['id']+'.txt':_chapter_brief_text(chapter,sources) for chapter in chapters}

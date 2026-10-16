@@ -16,9 +16,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-absentee-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -34,9 +35,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.absenteeshawneetribe-nsn.gov/",
+          "retrieved_at": "2026-10-16T21:06:10.106879+00:00",
+          "http_status": 200,
+          "sha256": "9ee6ed5fd82577eaee88b36405a2f23a04d862634731faa21b6cff33b6aa496d",
+          "source_id": "own-absentee-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-community-ast-home.json",
+          "receipt_id": "r-61d3ffd647aa590b"
+        }
+      ],
+      "updated_at": "2026-10-16T21:18:56.006588+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-community-absentee-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-e848f6cf3065",
@@ -50,9 +67,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-agua-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -68,9 +86,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.aguacaliente.org/robots.txt",
+          "retrieved_at": "2026-10-16T21:05:58.153890+00:00",
+          "http_status": 403,
+          "sha256": "283656a39e6ecb4ed50f1f14a13c9c397c684aaf5bd82d390581d12f00c324c3",
+          "source_id": "own-agua-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-community-agua-robots.json",
+          "receipt_id": "r-af6653920ab8cc57"
+        }
+      ],
+      "updated_at": "2026-10-16T21:18:55.868770+00:00",
+      "next_attempt_after": "2026-10-17T21:18:55.868770+00:00",
+      "lease_until": null,
+      "note": "Exact-host robots request returned HTTP403. No content page, alternate host, retry or access bypass. One-day backoff; original directory label and source edition remain. This is not an identity finding or publication takedown."
     },
     {
       "task_id": "profile-us-fed-d47fa3ee934f",
@@ -62444,9 +62475,10 @@
       "region": "us-state-al",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-al-tribal-directory"
+        "us-al-tribal-directory",
+        "own-northeast-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -62464,10 +62496,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T08:41:27.866812+00:00",
+      "receipts": [
+        {
+          "url": "https://cherokeetribeofnortheastalabama.org/",
+          "retrieved_at": "2026-10-16T21:07:20.576359+00:00",
+          "http_status": 200,
+          "sha256": "967efb2cf621f23016b88283a422d20231cbf9523de0538763a172193d7e65b4",
+          "source_id": "own-northeast-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-community-northeast-home.json",
+          "receipt_id": "r-10ab23287367250c"
+        }
+      ],
+      "updated_at": "2026-10-16T21:18:56.007709+00:00",
       "next_attempt_after": null,
-      "note": "State roster discovery only. Locate permissible own sources and review preferred name and identity before drafting a new profile. Do not infer federal status from absence of an asterisk."
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "lease_until": null,
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-community-northeast-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-state-al-poarch-band-of-creek-indians",
