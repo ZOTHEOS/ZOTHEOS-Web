@@ -44,6 +44,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$b"
           git add game/nations.json game/history.json
+          if [ -f theater.html ]; then git add theater.html; fi
           if [ -d game/data ] || [ -n "$(git ls-files game/data)" ]; then git add -A game/data; fi
           git add -A data/nations nations nations.html static/nations static/fonts tools/fonts.sha256 tools/nations/partials/fonts-names.css vercel.json sitemap.xml
           if git diff --cached --quiet; then echo "No change this week"; exit 0; fi

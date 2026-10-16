@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-8caZ9WE0sM3eUzUkwIcY5K0+uyz+KD9rGKEAKmhaolM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org; worker-src 'none'"><title>ZOTHEOS Theater | Stories That Deserve An Audience</title>
+<meta name="description" content="Documentaries and recorded conversations on Indigenous histories, sovereignty and renewal. Official sources, clear viewing notes and players you choose to load.">
+<link rel="canonical" href="https://zotheos.org/theater"><meta property="og:title" content="ZOTHEOS Theater"><meta property="og:type" content="website"><meta property="og:url" content="https://zotheos.org/theater"><meta name="theme-color" content="#000000" id="themeColorMeta"><link rel="icon" href="/zotheos_icon.ico?v=3">
+<script>
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script><style id="zth-fonts">
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url(/static/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 300 700; font-display: swap;
+      src: url(/static/fonts/dm-sans-italic-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 600; font-display: swap;
+      src: url(/static/fonts/jetbrains-mono-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  </style><style id="zth-fonts-names">
+    @font-face { font-family: 'ZN Serif'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 111.1%;
+      src: url(/static/fonts/zn-serif.ee66476c.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-04FF, U+1E00-1EFF, U+2018-201F, U+207F, U+2C61; }
+    @font-face { font-family: 'ZN Sans'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-sans.2bfa7ad3.woff2) format('woff2');
+      unicode-range: U+0020-007E, U+00A0-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03E1, U+03F0-04FF, U+1E00-1EFF, U+2013, U+2018-201F, U+207F, U+2C61; }
+    @font-face { font-family: 'ZN Mono'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 104.1%;
+      src: url(/static/fonts/zn-mono.a9a7fdeb.woff2) format('woff2');
+      unicode-range: U+023D, U+0294, U+02BB, U+0313, U+0331, U+2C61; }
+    @font-face { font-family: 'ZN Cherokee'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.3%;
+      src: url(/static/fonts/zn-cherokee.4a768fc6.woff2) format('woff2');
+      unicode-range: U+13A0-13F5, U+13F8-13FD, U+AB70-ABBF; }
+    @font-face { font-family: 'ZN Syllabics'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 105.2%;
+      src: url(/static/fonts/zn-syllabics.841c0d05.woff2) format('woff2');
+      unicode-range: U+1400-167F, U+18B0-18F5; }
+    @font-face { font-family: 'ZN Devanagari'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-devanagari.82b61ca2.woff2) format('woff2');
+      unicode-range: U+0900-097F, U+200C-200D, U+25CC, U+A8E0-A8FF; }
+    @font-face { font-family: 'ZN Tifinagh'; font-style: normal; font-weight: 400; font-display: block; size-adjust: 98.1%;
+      src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
+      unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
+  </style>
+
+<link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-latin.woff2" crossorigin><link rel="stylesheet" href="/static/theater/theater.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="nh" id="header">
+  <div class="nh-in">
+    <div class="nh-left">
+      <button class="appearance-btn pill" id="appearanceBtn" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span><span class="ab-caret" aria-hidden="true"></span></button>
+    </div>
+    <a class="nh-mark" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="" width="143" height="30"></a>
+    <nav class="nh-nav" aria-label="Theater">
+<a class="nh-link" href="#collection">Collection</a><a class="nh-link" href="/nations/directory">Nations</a>
+      <button class="nav-menu-btn pill" id="navMenuBtn" type="button" popovertarget="navSheet"><span class="nm-bars" aria-hidden="true"></span><span class="nm-label">Menu</span></button>
+    </nav>
+  </div>
+</header>
+<!-- The Theme and Motion rows are copied from index.html; tools/nations_lint.py fails when they drift. -->
+<div class="appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <p class="ap-note ap-theme-description" id="apThemeDescription">Silver structure, a foundation for your own judgment.</p>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel" aria-describedby="apThemeDescription">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Sovereign Skeleton" title="Sovereign Skeleton: Silver structure, a foundation for your own judgment."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
+<nav class="nav-sheet" id="navSheet" popover aria-label="Sections">
+  <div class="ns-top">
+    <span class="ap-label">ZOTHEOS Theater</span>
+    <button class="ns-close pill" type="button" popovertarget="navSheet" popovertargetaction="hide">Close</button>
+  </div>
+  <ul class="ns-list">
+<li><a href="#screening">The Screening Room</a></li><li><a href="#collection">The Collection</a></li><li><a href="#curation">How We Curate</a></li><li><a href="/nations/directory">Nations Directory</a></li><li><a href="/#mission">Mission</a></li>
+  </ul>
+  <div class="ns-foot">
+    <a class="pill" href="/">ZOTHEOS home</a>
+    <button class="pill ns-appearance" type="button" popovertarget="appearancePop"><span class="ab-dot" aria-hidden="true"></span><span class="ab-label">Appearance</span></button>
+  </div>
+</nav>
+<main id="main" class="th-page">
+<section class="th-hero" aria-labelledby="theater-heading"><p class="th-kicker">ZOTHEOS Theater · Indigenous Voices First</p><div class="th-hero-copy"><h1 id="theater-heading" class="th-title">Truth Deserves<br><em>An Audience.</em></h1><div class="th-lede"><p>History that must be faced. Life that continues. Futures shaped by the people living them.</p><p>Documentaries, short films and recorded conversations, beginning with Native Nations and Indigenous peoples. Choose a story. Stay with its people. Follow the sources.</p><a class="th-watch" href="#collection">Explore The Collection <span aria-hidden="true">↓</span></a></div></div></section>
+<section class="th-feature" id="screening" aria-labelledby="screening-heading"><div class="th-section-heading"><h2 id="screening-heading" class="th-section-title">The Screening Room</h2><p class="th-kicker">Recorded Stories · Watch At Your Pace</p></div>
+<div class="th-screen th-art th-art--memory"><div class="th-screen-intro"><span class="th-play" aria-hidden="true"></span><p>Make Room For The Story.</p><span>No video loads until you choose.</span></div><div id="theaterPlayer" class="th-player" hidden></div></div>
+<div class="th-player-controls"><button id="theaterLoad" type="button" aria-describedby="theaterTitle theaterConsent" class="th-watch" hidden>Load PBS Player</button><button id="theaterClose" type="button" class="th-select" hidden>Close Player</button><p id="theaterPlayerStatus" role="status">The official source below is available without an embedded player.</p></div>
+<p id="theaterConsent" class="th-consent">Loading a player connects your browser to YouTube or PBS. The selected provider receives your IP address and request information; its privacy policies and controls apply. Close Player removes the player. You can always use the official source instead.</p>
+<div class="th-feature-caption"><div><p class="th-film-meta" id="theaterKind">Full Film</p><h3 id="theaterTitle" class="th-feature-title" tabindex="-1">Yanuni</h3><p class="th-film-credits" id="theaterCredits">Directed by Richard Ladkani; producers Juma Xipaia, Leonardo DiCaprio, Anita Ladkani, Richard Ladkani, Jennifer Davisson and Phillip Watson.</p></div><div><p id="theaterDescription" class="th-description">Juma Xipaia defends her people&#x27;s Amazonian land while navigating leadership and motherhood. Family resilience meets threats from illegal mining and the struggle for Indigenous sovereignty.</p><p id="theaterAvailability" class="th-film-access">Full film on producer Leonardo DiCaprio&#x27;s official YouTube channel. Location, account or provider restrictions may apply.</p><p id="theaterContentNote" class="th-content-note">Discusses threats against Indigenous defenders, illegal mining and dangerous environmental enforcement operations.</p><a class="th-watch" id="theaterWatch" href="https://www.youtube.com/watch?v=RhDdAONYZeQ" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a></div></div>
+<aside class="th-context"><h3>History In Context</h3><p>The collection includes the official <em>Daughter of a Lost Bird</em> excerpt on Indigenous adoption. It examines the Indian Adoption Project through historical narration and testimony.</p><p>The child-removal percentage heard in the archival testimony describes historical research before the Indian Child Welfare Act. It is not a present-day removal rate. <a href="https://www.nicwa.org/what-is-icwa/" target="_blank" rel="noopener noreferrer">Read NICWA’s historical context</a>.</p></aside>
+<p class="th-art-credit">Original ZOTHEOS abstract title artwork. These are not film stills, official posters or depictions of ceremonies.</p></section>
+<section id="collection" class="th-catalogue" aria-labelledby="collection-heading"><div class="th-section-heading"><h2 id="collection-heading" class="th-section-title">Stories To Stay With</h2><p class="th-kicker">A Growing, Cited Collection</p></div><p class="th-collection-intro">Face what happened. Listen to what people are protecting. Look for the work of renewal. These stories are distinct; no film stands for every Nation.</p>
+<div id="theaterTools" class="th-tools" hidden><div><label for="theaterSearch">Search Titles, People And Subjects</label><input id="theaterSearch" type="search" placeholder="Try land, language or family" autocomplete="off"></div><div><label for="theaterTopic">Explore A Subject</label><select id="theaterTopic"><option value="all">All Subjects</option><option value="family">Family And Child Removal</option><option value="land">Land And Water</option><option value="sovereignty">Sovereignty</option><option value="language">Language</option><option value="continuity">Cultural Continuity</option><option value="resistance">Community Resistance</option><option value="leadership">Creative Leadership</option><option value="environment">Environment And Health</option></select></div><button id="theaterClear" class="th-select" type="button">Clear Filters</button><p id="theaterStatus" role="status"></p></div>
+<div id="theaterEmpty" class="th-empty" hidden><h3>No Matching Stories</h3><p>Try a broader search or choose Clear Filters above to see the whole collection.</p></div><div class="th-film-grid"><article class="th-film" id="film-yanuni" data-theater-film="yanuni" data-featured="true" data-title="Yanuni" data-search="Yanuni Juma Xipaia defends her people&#x27;s Amazonian land while navigating leadership and motherhood. Family resilience meets threats from illegal mining and the struggle for Indigenous sovereignty. Directed by Richard Ladkani; producers Juma Xipaia, Leonardo DiCaprio, Anita Ladkani, Richard Ladkani, Jennifer Davisson and Phillip Watson. Land And Water Sovereignty Community Resistance Environment And Health" data-topic="land sovereignty resistance environment" data-provider="youtube" data-video-id="RhDdAONYZeQ" data-watch-url="https://www.youtube.com/watch?v=RhDdAONYZeQ" data-kind="Full Film" data-availability="Full film on producer Leonardo DiCaprio&#x27;s official YouTube channel. Location, account or provider restrictions may apply." data-summary="Juma Xipaia defends her people&#x27;s Amazonian land while navigating leadership and motherhood. Family resilience meets threats from illegal mining and the struggle for Indigenous sovereignty." data-content-note="Discusses threats against Indigenous defenders, illegal mining and dangerous environmental enforcement operations." data-credits="Directed by Richard Ladkani; producers Juma Xipaia, Leonardo DiCaprio, Anita Ladkani, Richard Ladkani, Jennifer Davisson and Phillip Watson.">
+          <div class="th-art th-art--earth th-cover" aria-hidden="true"><span class="th-cover-number">01</span><span class="th-cover-title">Yanuni</span><span class="th-cover-scope">Full Film</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Full Film · 2025 · 113m 42s (YouTube edition)</p><h3 class="th-film-title">Yanuni</h3>
+          <p class="th-description">Juma Xipaia defends her people&#x27;s Amazonian land while navigating leadership and motherhood. Family resilience meets threats from illegal mining and the struggle for Indigenous sovereignty.</p><p class="th-film-credits">Directed by Richard Ladkani; producers Juma Xipaia, Leonardo DiCaprio, Anita Ladkani, Richard Ladkani, Jennifer Davisson and Phillip Watson.</p>
+          <p class="th-film-access">Full film on producer Leonardo DiCaprio&#x27;s official YouTube channel. Location, account or provider restrictions may apply.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses threats against Indigenous defenders, illegal mining and dangerous environmental enforcement operations.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.youtube.com/watch?v=RhDdAONYZeQ" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="yanuni" aria-label="View Yanuni In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://malaikapictures.com/portfolio/yanuni" target="_blank" rel="noopener noreferrer">Yanuni: Film And Credits</a><span> Malaika Pictures · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://malaikapictures.com/richard-ladkani" target="_blank" rel="noopener noreferrer">Richard Ladkani: Yanuni Film Details</a><span> Malaika Pictures · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://institutojuma.org/about-us/" target="_blank" rel="noopener noreferrer">About Us: Juma Institute And Juma Xipaia</a><span> Instituto Juma · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRhDdAONYZeQ&amp;format=json" target="_blank" rel="noopener noreferrer">Yanuni: Official Upload Metadata</a><span> YouTube official metadata / Leonardo DiCaprio · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.youtube.com/watch?v=RhDdAONYZeQ" target="_blank" rel="noopener noreferrer">Yanuni: Official Full-Film Upload</a><span> Leonardo DiCaprio official YouTube channel · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-daughter-of-a-lost-bird-indigenous-adoption" data-theater-film="daughter-of-a-lost-bird-indigenous-adoption" data-featured="false" data-title="Daughter of a Lost Bird | Indigenous Adoption" data-search="Daughter of a Lost Bird | Indigenous Adoption An excerpt confronts Native child removal and forced assimilation within a film following Kendra and her mother as they reconnect with each other and Lummi heritage. Directed by Brooke Pepion Swaney. Family And Child Removal Cultural Continuity Sovereignty" data-topic="family continuity sovereignty" data-provider="" data-video-id="" data-watch-url="https://pbswisconsin.org/watch/america-reframed/america-reframed-daughter-of-a-lost-bird-indigenous-adoption/" data-kind="Official Excerpt" data-availability="Official 3m 20s excerpt page and transcript. PBS playback was unavailable when checked on 2026-10-16. The child-removal percentage is historical, not a present-day rate." data-summary="An excerpt confronts Native child removal and forced assimilation within a film following Kendra and her mother as they reconnect with each other and Lummi heritage." data-content-note="Child separation and historical racist language." data-credits="Directed by Brooke Pepion Swaney.">
+          <div class="th-art th-art--memory th-cover" aria-hidden="true"><span class="th-cover-number">02</span><span class="th-cover-title">Daughter of a Lost Bird | Indigenous Adoption</span><span class="th-cover-scope">Official Excerpt</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Excerpt · 2022 · 3m 20s excerpt</p><h3 class="th-film-title">Daughter of a Lost Bird | Indigenous Adoption</h3>
+          <p class="th-description">An excerpt confronts Native child removal and forced assimilation within a film following Kendra and her mother as they reconnect with each other and Lummi heritage.</p><p class="th-film-credits">Directed by Brooke Pepion Swaney.</p>
+          <p class="th-film-access">Official 3m 20s excerpt page and transcript. PBS playback was unavailable when checked on 2026-10-16. The child-removal percentage is historical, not a present-day rate.</p><p class="th-content-note"><strong>Before Watching:</strong> Child separation and historical racist language.</p>
+          <div class="th-actions"><a class="th-watch" href="https://pbswisconsin.org/watch/america-reframed/america-reframed-daughter-of-a-lost-bird-indigenous-adoption/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="daughter-of-a-lost-bird-indigenous-adoption" aria-label="View Daughter of a Lost Bird | Indigenous Adoption In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://pbswisconsin.org/watch/america-reframed/america-reframed-daughter-of-a-lost-bird-indigenous-adoption/" target="_blank" rel="noopener noreferrer">Daughter of a Lost Bird | Indigenous Adoption</a><span> PBS Wisconsin / America ReFramed · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://worldchannel.org/episode/america-reframed-daughter-of-a-lost-bird/" target="_blank" rel="noopener noreferrer">Daughter of a Lost Bird</a><span> WORLD Channel / America ReFramed · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.nicwa.org/what-is-icwa/" target="_blank" rel="noopener noreferrer">What is ICWA?</a><span> National Indian Child Welfare Association · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-first-light" data-theater-film="first-light" data-featured="false" data-title="First Light" data-search="First Light Wabanaki experiences of child removal meet an effort in Maine to uncover the truth and pursue healing through a truth and reconciliation commission. Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma). Family And Child Removal Sovereignty Cultural Continuity" data-topic="family sovereignty continuity" data-provider="" data-video-id="" data-watch-url="https://upstanderproject.org/films/first-light/free-streaming" data-kind="Short Film" data-availability="The filmmaker offers free streaming for individual viewing and lists separate institutional licensing for public or school screenings. Regional playback was not tested." data-summary="Wabanaki experiences of child removal meet an effort in Maine to uncover the truth and pursue healing through a truth and reconciliation commission." data-content-note="Discusses forced child removal, cultural loss and family separation." data-credits="Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma).">
+          <div class="th-art th-art--memory th-cover" aria-hidden="true"><span class="th-cover-number">03</span><span class="th-cover-title">First Light</span><span class="th-cover-scope">Short Film</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Short Film · 13m</p><h3 class="th-film-title">First Light</h3>
+          <p class="th-description">Wabanaki experiences of child removal meet an effort in Maine to uncover the truth and pursue healing through a truth and reconciliation commission.</p><p class="th-film-credits">Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma).</p>
+          <p class="th-film-access">The filmmaker offers free streaming for individual viewing and lists separate institutional licensing for public or school screenings. Regional playback was not tested.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses forced child removal, cultural loss and family separation.</p>
+          <div class="th-actions"><a class="th-watch" href="https://upstanderproject.org/films/first-light/free-streaming" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="first-light" aria-label="View First Light In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://upstanderproject.org/films/first-light" target="_blank" rel="noopener noreferrer">First Light</a><span> Upstander Project · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://upstanderproject.org/films/first-light/free-streaming" target="_blank" rel="noopener noreferrer">First Light | Free Streaming</a><span> Upstander Project · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-dawnland" data-theater-film="dawnland" data-featured="false" data-title="Dawnland" data-search="Dawnland A Maine truth and reconciliation commission investigates the removal of Wabanaki children, opening difficult conversations about responsibility, family and cultural survival. Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma); senior advisor Chris Newell (Passamaquoddy). Family And Child Removal Sovereignty Cultural Continuity" data-topic="family sovereignty continuity" data-provider="" data-video-id="" data-watch-url="https://upstanderproject.org/films/dawnland" data-kind="Official Page" data-availability="The producer lists rental or purchase for individual viewing. Current free full-film playback was not established." data-summary="A Maine truth and reconciliation commission investigates the removal of Wabanaki children, opening difficult conversations about responsibility, family and cultural survival." data-content-note="Discusses forced child removal, abuse and intergenerational harm." data-credits="Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma); senior advisor Chris Newell (Passamaquoddy).">
+          <div class="th-art th-art--memory th-cover" aria-hidden="true"><span class="th-cover-number">04</span><span class="th-cover-title">Dawnland</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page · 2018 premiere · 86m / 54m versions</p><h3 class="th-film-title">Dawnland</h3>
+          <p class="th-description">A Maine truth and reconciliation commission investigates the removal of Wabanaki children, opening difficult conversations about responsibility, family and cultural survival.</p><p class="th-film-credits">Directed by Adam Mazo and Ben Pender-Cudlip; producer N. Bruce Duthu (Houma); senior advisor Chris Newell (Passamaquoddy).</p>
+          <p class="th-film-access">The producer lists rental or purchase for individual viewing. Current free full-film playback was not established.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses forced child removal, abuse and intergenerational harm.</p>
+          <div class="th-actions"><a class="th-watch" href="https://upstanderproject.org/films/dawnland" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="dawnland" aria-label="View Dawnland In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://upstanderproject.org/films/dawnland" target="_blank" rel="noopener noreferrer">Dawnland</a><span> Upstander Project · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.pbs.org/independentlens/documentaries/dawnland/" target="_blank" rel="noopener noreferrer">Dawnland | Independent Lens</a><span> PBS · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-gather" data-theater-film="gather" data-featured="false" data-title="Gather" data-search="Gather Native food advocates reclaim food systems, knowledge and community relationships, connecting food sovereignty with cultural continuity and care for the land. Directed by Sanjay Rawal; producers Sterlin Harjo and Tanya Meillier. Land And Water Cultural Continuity Sovereignty" data-topic="land continuity sovereignty" data-provider="youtube" data-video-id="M5ZTFe4y3c4" data-watch-url="https://www.nativefoodsystems.org/watch/" data-kind="Official Trailer" data-availability="The official page embeds a trailer and lists commercial viewing providers. Provider access, subscriptions and regional availability can change; full-film playback was not verified." data-summary="Native food advocates reclaim food systems, knowledge and community relationships, connecting food sovereignty with cultural continuity and care for the land." data-content-note="Discusses colonization and disruption of Native food systems." data-credits="Directed by Sanjay Rawal; producers Sterlin Harjo and Tanya Meillier.">
+          <div class="th-art th-art--river th-cover" aria-hidden="true"><span class="th-cover-number">05</span><span class="th-cover-title">Gather</span><span class="th-cover-scope">Official Trailer</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Trailer</p><h3 class="th-film-title">Gather</h3>
+          <p class="th-description">Native food advocates reclaim food systems, knowledge and community relationships, connecting food sovereignty with cultural continuity and care for the land.</p><p class="th-film-credits">Directed by Sanjay Rawal; producers Sterlin Harjo and Tanya Meillier.</p>
+          <p class="th-film-access">The official page embeds a trailer and lists commercial viewing providers. Provider access, subscriptions and regional availability can change; full-film playback was not verified.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses colonization and disruption of Native food systems.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.nativefoodsystems.org/watch/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="gather" aria-label="View Gather In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.nativefoodsystems.org/" target="_blank" rel="noopener noreferrer">Home | Gather Film</a><span> First Nations Development Institute · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.nativefoodsystems.org/watch/" target="_blank" rel="noopener noreferrer">Watch | Gather Film</a><span> First Nations Development Institute · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.nativefoodsystems.org/home/about/what-is-food-sovereignty/" target="_blank" rel="noopener noreferrer">Why A Film? | Gather Film</a><span> First Nations Development Institute · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DM5ZTFe4y3c4&amp;format=json" target="_blank" rel="noopener noreferrer">GATHER TRAILER 031020</a><span> First Nations Development Institute · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-bring-them-home" data-theater-film="bring-them-home" data-featured="false" data-title="Bring Them Home" data-search="Bring Them Home Blackfoot community members work to return buffalo to tribal lands, linking ecological restoration with cultural renewal and the future of their communities. Narrated and executive produced by Lily Gladstone (Blackfeet/Nez Perce), as credited by PBS. Land And Water Environment And Health Cultural Continuity" data-topic="land environment continuity" data-provider="" data-video-id="" data-watch-url="https://www.pbs.org/show/bring-them-home/" data-kind="Official Page" data-availability="PBS lists the film as streaming and provides an ASL version. Availability may depend on region or provider conditions; no universal free-playback claim." data-summary="Blackfoot community members work to return buffalo to tribal lands, linking ecological restoration with cultural renewal and the future of their communities." data-content-note="Discusses buffalo loss, colonial oppression and community healing." data-credits="Narrated and executive produced by Lily Gladstone (Blackfeet/Nez Perce), as credited by PBS.">
+          <div class="th-art th-art--earth th-cover" aria-hidden="true"><span class="th-cover-number">06</span><span class="th-cover-title">Bring Them Home</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page</p><h3 class="th-film-title">Bring Them Home</h3>
+          <p class="th-description">Blackfoot community members work to return buffalo to tribal lands, linking ecological restoration with cultural renewal and the future of their communities.</p><p class="th-film-credits">Narrated and executive produced by Lily Gladstone (Blackfeet/Nez Perce), as credited by PBS.</p>
+          <p class="th-film-access">PBS lists the film as streaming and provides an ASL version. Availability may depend on region or provider conditions; no universal free-playback claim.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses buffalo loss, colonial oppression and community healing.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.pbs.org/show/bring-them-home/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="bring-them-home" aria-label="View Bring Them Home In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.pbs.org/show/bring-them-home/" target="_blank" rel="noopener noreferrer">Bring Them Home</a><span> PBS · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-inhabitants" data-theater-film="inhabitants" data-featured="false" data-title="Inhabitants" data-search="Inhabitants Five Native communities share approaches to land stewardship, from dryland farming and forest care to buffalo restoration and food systems in Hawaiʻi. Co-directed by Costa Boutsikaris and Anna Palmer; producer/advisor Ben-Alex Dupris; Native impact producer Colleen Cooley. Land And Water Environment And Health Sovereignty" data-topic="land environment sovereignty" data-provider="" data-video-id="" data-watch-url="https://www.inhabitantsfilm.com/" data-kind="Official Page" data-availability="The filmmaker links to Vimeo on Demand and iTunes and offers separate community screening routes. Current payment, region and playback conditions were not independently tested." data-summary="Five Native communities share approaches to land stewardship, from dryland farming and forest care to buffalo restoration and food systems in Hawaiʻi." data-content-note="Discusses colonization, land disruption and climate impacts." data-credits="Co-directed by Costa Boutsikaris and Anna Palmer; producer/advisor Ben-Alex Dupris; Native impact producer Colleen Cooley.">
+          <div class="th-art th-art--earth th-cover" aria-hidden="true"><span class="th-cover-number">07</span><span class="th-cover-title">Inhabitants</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page</p><h3 class="th-film-title">Inhabitants</h3>
+          <p class="th-description">Five Native communities share approaches to land stewardship, from dryland farming and forest care to buffalo restoration and food systems in Hawaiʻi.</p><p class="th-film-credits">Co-directed by Costa Boutsikaris and Anna Palmer; producer/advisor Ben-Alex Dupris; Native impact producer Colleen Cooley.</p>
+          <p class="th-film-access">The filmmaker links to Vimeo on Demand and iTunes and offers separate community screening routes. Current payment, region and playback conditions were not independently tested.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses colonization, land disruption and climate impacts.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.inhabitantsfilm.com/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="inhabitants" aria-label="View Inhabitants In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.inhabitantsfilm.com/" target="_blank" rel="noopener noreferrer">Inhabitants</a><span> Inhabitants Film · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.inhabitantsfilm.com/about" target="_blank" rel="noopener noreferrer">About | Inhabitants</a><span> Inhabitants Film · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-lakota-nation" data-theater-film="lakota-nation" data-featured="false" data-title="Lakota Nation vs. United States" data-search="Lakota Nation vs. United States Lakota voices challenge dispossession and distorted representations, connecting the Black Hills with enduring community life, resistance and sovereignty. Directed by Jesse Short Bull and Laura Tomaselli. Land And Water Community Resistance Sovereignty" data-topic="land resistance sovereignty" data-provider="youtube" data-video-id="eV9Oeut62vw" data-watch-url="https://www.youtube.com/watch?v=eV9Oeut62vw" data-kind="Official Trailer" data-availability="Official distributor trailer. This is not the full documentary. Regional playback and future platform availability can change." data-summary="Lakota voices challenge dispossession and distorted representations, connecting the Black Hills with enduring community life, resistance and sovereignty." data-content-note="Discusses dispossession and historical violence." data-credits="Directed by Jesse Short Bull and Laura Tomaselli.">
+          <div class="th-art th-art--river th-cover" aria-hidden="true"><span class="th-cover-number">08</span><span class="th-cover-title">Lakota Nation vs. United States</span><span class="th-cover-scope">Official Trailer</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Trailer · Feature: 118m (IFC Center listing)</p><h3 class="th-film-title">Lakota Nation vs. United States</h3>
+          <p class="th-description">Lakota voices challenge dispossession and distorted representations, connecting the Black Hills with enduring community life, resistance and sovereignty.</p><p class="th-film-credits">Directed by Jesse Short Bull and Laura Tomaselli.</p>
+          <p class="th-film-access">Official distributor trailer. This is not the full documentary. Regional playback and future platform availability can change.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses dispossession and historical violence.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.youtube.com/watch?v=eV9Oeut62vw" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="lakota-nation" aria-label="View Lakota Nation vs. United States In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.ifccenter.com/films/lakota-nation-vs-the-united-states-open-captioning/" target="_blank" rel="noopener noreferrer">Lakota Nation vs. United States (Open Captioning)</a><span> IFC Center · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DeV9Oeut62vw&amp;format=json" target="_blank" rel="noopener noreferrer">Lakota Nation vs. United States - Official Trailer | HD | IFC Films</a><span> Independent Film Company · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-we-still-live-here" data-theater-film="we-still-live-here" data-featured="false" data-title="We Still Live Here - Âs Nutayuneân" data-search="We Still Live Here - Âs Nutayuneân Wampanoag community members work to bring their language into new generations, joining archival documents, study and community determination. Directed by Anne Makepeace. Language Cultural Continuity Sovereignty" data-topic="language continuity sovereignty" data-provider="" data-video-id="" data-watch-url="https://www.pbs.org/independentlens/documentaries/we-still-live-here/" data-kind="Official Page" data-availability="Official film information and credits. Current full-film streaming availability was not established; this link is not presented as a free full-film player." data-summary="Wampanoag community members work to bring their language into new generations, joining archival documents, study and community determination." data-content-note="Discusses language suppression and cultural recovery." data-credits="Directed by Anne Makepeace.">
+          <div class="th-art th-art--language th-cover" aria-hidden="true"><span class="th-cover-number">09</span><span class="th-cover-title">We Still Live Here - Âs Nutayuneân</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page · 2011 premiere</p><h3 class="th-film-title">We Still Live Here - Âs Nutayuneân</h3>
+          <p class="th-description">Wampanoag community members work to bring their language into new generations, joining archival documents, study and community determination.</p><p class="th-film-credits">Directed by Anne Makepeace.</p>
+          <p class="th-film-access">Official film information and credits. Current full-film streaming availability was not established; this link is not presented as a free full-film player.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses language suppression and cultural recovery.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.pbs.org/independentlens/documentaries/we-still-live-here/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="we-still-live-here" aria-label="View We Still Live Here - Âs Nutayuneân In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.pbs.org/independentlens/documentaries/we-still-live-here/" target="_blank" rel="noopener noreferrer">We Still Live Here | Independent Lens</a><span> PBS · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-kanehsatake" data-theater-film="kanehsatake" data-featured="false" data-title="Kanehsatake: 270 Years of Resistance" data-search="Kanehsatake: 270 Years of Resistance Filmed behind Kanien’kéhaka lines, this documentary follows the 1990 confrontation over a proposed development on Mohawk lands at Oka. Written and directed by Alanis Obomsawin. Land And Water Community Resistance Sovereignty" data-topic="land resistance sovereignty" data-provider="" data-video-id="" data-watch-url="https://www.nfb.ca/film/kanehsatake_270_years_of_resistance/" data-kind="Official Page" data-availability="Official NFB film and viewing page. NFB determines playback, rental and regional terms." data-summary="Filmed behind Kanien’kéhaka lines, this documentary follows the 1990 confrontation over a proposed development on Mohawk lands at Oka." data-content-note="NFB warns that the film contains scenes of violence." data-credits="Written and directed by Alanis Obomsawin.">
+          <div class="th-art th-art--river th-cover" aria-hidden="true"><span class="th-cover-number">10</span><span class="th-cover-title">Kanehsatake: 270 Years of Resistance</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page · 1993 · 1h59m (NFB metadata)</p><h3 class="th-film-title">Kanehsatake: 270 Years of Resistance</h3>
+          <p class="th-description">Filmed behind Kanien’kéhaka lines, this documentary follows the 1990 confrontation over a proposed development on Mohawk lands at Oka.</p><p class="th-film-credits">Written and directed by Alanis Obomsawin.</p>
+          <p class="th-film-access">Official NFB film and viewing page. NFB determines playback, rental and regional terms.</p><p class="th-content-note"><strong>Before Watching:</strong> NFB warns that the film contains scenes of violence.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.nfb.ca/film/kanehsatake_270_years_of_resistance/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="kanehsatake" aria-label="View Kanehsatake: 270 Years of Resistance In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.nfb.ca/film/kanehsatake_270_years_of_resistance/" target="_blank" rel="noopener noreferrer">Kanehsatake: 270 Years of Resistance</a><span> National Film Board of Canada · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-birth-of-a-family" data-theater-film="birth-of-a-family" data-featured="false" data-title="Birth of a Family" data-search="Birth of a Family Four Indigenous siblings separated through child-removal policies meet and piece together family history, building connections that years apart could not erase. Directed by Tasha Hubbard; written by Tasha Hubbard and Betty Ann Adam. Family And Child Removal Cultural Continuity Community Resistance" data-topic="family continuity resistance" data-provider="" data-video-id="" data-watch-url="https://www.nfb.ca/film/birth_of_a_family/" data-kind="Official Page" data-availability="Official NFB film and viewing page. Access may depend on territory or NFB conditions." data-summary="Four Indigenous siblings separated through child-removal policies meet and piece together family history, building connections that years apart could not erase." data-content-note="Discusses forced child removal, adoption and family separation." data-credits="Directed by Tasha Hubbard; written by Tasha Hubbard and Betty Ann Adam.">
+          <div class="th-art th-art--memory th-cover" aria-hidden="true"><span class="th-cover-number">11</span><span class="th-cover-title">Birth of a Family</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page · 2017 · 1h19m (NFB metadata)</p><h3 class="th-film-title">Birth of a Family</h3>
+          <p class="th-description">Four Indigenous siblings separated through child-removal policies meet and piece together family history, building connections that years apart could not erase.</p><p class="th-film-credits">Directed by Tasha Hubbard; written by Tasha Hubbard and Betty Ann Adam.</p>
+          <p class="th-film-access">Official NFB film and viewing page. Access may depend on territory or NFB conditions.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses forced child removal, adoption and family separation.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.nfb.ca/film/birth_of_a_family/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="birth-of-a-family" aria-label="View Birth of a Family In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.nfb.ca/film/birth_of_a_family/" target="_blank" rel="noopener noreferrer">Birth of a Family</a><span> National Film Board of Canada · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-uyra" data-theater-film="uyra" data-featured="false" data-title="Uýra - The Rising Forest" data-search="Uýra - The Rising Forest In the Amazon, Uýra uses performance and shared knowledge to connect Indigenous youth with identity, place and the interdependence of people and the environment. PBS lists Juliana Curi, João Henrique Kurtz, Lívia Cheibub, Martina Sönksen and Uýra Sodoma as filmmakers. Environment And Health Cultural Continuity Creative Leadership" data-topic="environment continuity leadership" data-provider="" data-video-id="" data-watch-url="https://www.pbs.org/pov/films/uyratherisingforest/" data-kind="Official Page" data-availability="Official PBS POV information and resources. Current full-film playback was not established; the page lists a 2023 PBS premiere, not a current event." data-summary="In the Amazon, Uýra uses performance and shared knowledge to connect Indigenous youth with identity, place and the interdependence of people and the environment." data-content-note="Discusses racism, transphobia and environmental harm." data-credits="PBS lists Juliana Curi, João Henrique Kurtz, Lívia Cheibub, Martina Sönksen and Uýra Sodoma as filmmakers.">
+          <div class="th-art th-art--earth th-cover" aria-hidden="true"><span class="th-cover-number">12</span><span class="th-cover-title">Uýra - The Rising Forest</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page · 60m (PBS listing)</p><h3 class="th-film-title">Uýra - The Rising Forest</h3>
+          <p class="th-description">In the Amazon, Uýra uses performance and shared knowledge to connect Indigenous youth with identity, place and the interdependence of people and the environment.</p><p class="th-film-credits">PBS lists Juliana Curi, João Henrique Kurtz, Lívia Cheibub, Martina Sönksen and Uýra Sodoma as filmmakers.</p>
+          <p class="th-film-access">Official PBS POV information and resources. Current full-film playback was not established; the page lists a 2023 PBS premiere, not a current event.</p><p class="th-content-note"><strong>Before Watching:</strong> Discusses racism, transphobia and environmental harm.</p>
+          <div class="th-actions"><a class="th-watch" href="https://www.pbs.org/pov/films/uyratherisingforest/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="uyra" aria-label="View Uýra - The Rising Forest In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://www.pbs.org/pov/films/uyratherisingforest/" target="_blank" rel="noopener noreferrer">Uýra - The Rising Forest</a><span> PBS POV · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article><article class="th-film" id="film-blood-memory" data-theater-film="blood-memory" data-featured="false" data-title="Blood Memory" data-search="Blood Memory Sandy White Hawk reconnects with her Sicangu Lakota family and supports other Native adoptees returning to their communities. Directed by Drew Nicholas. Family And Child Removal Cultural Continuity" data-topic="family continuity" data-provider="" data-video-id="" data-watch-url="https://worldchannel.org/episode/arf-blood-memory/" data-kind="Official Page" data-availability="Official film information. Current full-film streaming or free access was not verified." data-summary="Sandy White Hawk reconnects with her Sicangu Lakota family and supports other Native adoptees returning to their communities." data-content-note="Family separation, abuse and adoption-related trauma." data-credits="Directed by Drew Nicholas.">
+          <div class="th-art th-art--memory th-cover" aria-hidden="true"><span class="th-cover-number">13</span><span class="th-cover-title">Blood Memory</span><span class="th-cover-scope">Official Page</span></div>
+          <div class="th-film-body"><p class="th-film-meta">Official Page</p><h3 class="th-film-title">Blood Memory</h3>
+          <p class="th-description">Sandy White Hawk reconnects with her Sicangu Lakota family and supports other Native adoptees returning to their communities.</p><p class="th-film-credits">Directed by Drew Nicholas.</p>
+          <p class="th-film-access">Official film information. Current full-film streaming or free access was not verified.</p><p class="th-content-note"><strong>Before Watching:</strong> Family separation, abuse and adoption-related trauma.</p>
+          <div class="th-actions"><a class="th-watch" href="https://worldchannel.org/episode/arf-blood-memory/" target="_blank" rel="noopener noreferrer">Open Official Source <span aria-hidden="true">↗</span></a><button type="button" class="th-select" data-theater-select="blood-memory" aria-label="View Blood Memory In Theater" hidden>View In Theater</button></div>
+          <details class="th-sources"><summary>Sources And Viewing Notes</summary><ul><li><a href="https://worldchannel.org/episode/arf-blood-memory/" target="_blank" rel="noopener noreferrer">Blood Memory</a><span> WORLD Channel / America ReFramed · Checked <time datetime="2026-10-16">2026-10-16</time></span></li><li><a href="https://visionmakermedia.org/wp-content/uploads/2020/12/Blood-Memory-Discussion-Guide.pdf" target="_blank" rel="noopener noreferrer">Blood Memory Viewer Discussion Guide</a><span> Vision Maker Media · Checked <time datetime="2026-10-16">2026-10-16</time></span></li></ul></details></div></article></div></section>
+<section class="th-companions" aria-labelledby="companion-heading"><div class="th-section-heading"><h2 id="companion-heading" class="th-section-title">Beyond The Screen</h2><p class="th-kicker">Research · Restoration · Education</p></div><div class="th-companion-grid"><article><h3>Colorado: Truth And Restoration</h3><p>People of the Sacred Land publishes its Truth, Restoration, and Education Commission reports on Colorado history and its recommendations for restoration. Read the research and the organization&#x27;s own framing.</p><a class="th-watch" href="https://www.peopleofthesacredland.org/reports" target="_blank" rel="noopener noreferrer">Read The Official Resource ↗</a><p class="th-art-credit">People of the Sacred Land · Checked <time datetime="2026-10-16">2026-10-16</time></p></article><article><h3>Education That Continues</h3><p>People of the Sacred Land shares curriculum and virtual learning materials about American Indian history. These resources offer another way to stay with the subject beyond a film.</p><a class="th-watch" href="https://www.peopleofthesacredland.org/curriculums-virtual-learning" target="_blank" rel="noopener noreferrer">Read The Official Resource ↗</a><p class="th-art-credit">People of the Sacred Land · Checked <time datetime="2026-10-16">2026-10-16</time></p></article></div></section><section id="curation" class="th-method" aria-labelledby="curation-heading"><div><p class="th-kicker">How We Curate</p><h2 id="curation-heading" class="th-section-title">Attention With<br>Responsibility.</h2></div><div><p>We read official filmmaker, publisher and community sources before adding a title. Credits, source-check dates and viewing limits stay beside it. Inclusion is not an endorsement by a Nation, an independent verification of every statement in a film or a claim that the full film has been watched for this collection.</p><p>Trailers and excerpts are labeled. Official pages may require payment, a library account or access in a particular country. Availability can change. Full films remain with their authorized providers; ZOTHEOS does not copy or host them.</p><p>Difficult histories belong beside living cultures, relationships, resistance and community-led restoration. This starter collection is incomplete. Sources and corrections guide its growth.</p><a class="th-watch" href="/nations/resources">Continue With Histories And Resources <span aria-hidden="true">↗</span></a></div></section>
+</main><footer class="ft"><div class="ft-in"><div class="ft-top"><div><a class="ft-brand" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" width="133" height="28" alt=""></a><p class="ft-tag">Truth. Dignity. Sovereignty.</p><p class="ft-founder">Founded by <strong>David Garcia</strong><br>ZOTHEOS LLC</p></div><nav class="ft-links" aria-label="Footer"><div class="ft-col"><span class="ft-col-l">Explore</span><a href="/">Home</a><a href="/#mission">Mission</a><a href="/theater" aria-current="page">Theater</a><a href="/nations">Indigenous Nations Today</a><a href="/nations/directory">Nations Directory</a><a href="/nations/resources">Histories And Resources</a><a href="/game">Play And Learn</a></div><div class="ft-col"><span class="ft-col-l">Your Choice</span><a href="#theater-privacy">Theater Privacy</a><a href="/#site-privacy">Website Privacy</a><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">YouTube Provider Privacy</a><a href="https://www.pbs.org/about/about-pbs/privacy-policy/" target="_blank" rel="noopener noreferrer">PBS Provider Privacy</a></div></nav><p class="ft-meta">© 2026 ZOTHEOS LLC<br>Film rights remain with their owners.</p></div><div class="ft-block" id="theater-privacy"><p class="lbl">Theater Privacy</p><div><p>The page loads its artwork, fonts and code from this site. Theme and motion preferences stay in your browser. Search and film selection are not saved by the Theater.</p><p>A video provider is contacted only after you press Load Player for a selected title. Loading shares connection and request information with that provider. YouTube uses its privacy-enhanced embed domain; this does not make playback anonymous or eliminate provider data collection. PBS uses its own player. No player is loaded automatically and no autoplay permission is granted.</p><p>External source and provider-policy links contact their destinations when followed. A publisher can restrict or remove a video. If a player does not work, use its official source. <a href="mailto:contact@zotheos.org">Report A Correction</a>.</p></div></div></div></footer>
+<script>
+(function () {
+  /* Appearance on the nations pages: Theme and Motion, saved under the landing's keys so a choice carries across
+     the site. The popover itself is declarative (popovertarget). The OS reduced-motion setting is a floor. */
+  var d = document.documentElement;
+  var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
+  var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
+  var BG = { '': '#000000', maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' };
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function radios(group, onPick) {
+    if (!group) return function () {};
+    var opts = group.querySelectorAll('[role="radio"]');
+    function mark(b) {
+      for (var i = 0; i < opts.length; i++) {
+        opts[i].setAttribute('aria-checked', opts[i] === b ? 'true' : 'false');
+        opts[i].tabIndex = opts[i] === b ? 0 : -1;
+      }
+    }
+    group.addEventListener('click', function (e) {
+      var b = e.target.closest('[role="radio"]');
+      if (b && group.contains(b) && b.getAttribute('aria-disabled') !== 'true') { mark(b); onPick(b); }
+    });
+    group.addEventListener('keydown', function (e) {
+      var k = e.key, i = Array.prototype.indexOf.call(opts, document.activeElement);
+      if (i < 0) return;
+      var j = (k === 'ArrowRight' || k === 'ArrowDown') ? i + 1 : (k === 'ArrowLeft' || k === 'ArrowUp') ? i - 1 : k === 'Home' ? 0 : k === 'End' ? opts.length - 1 : -2;
+      if (j === -2) return;
+      e.preventDefault();
+      j = (j + opts.length) % opts.length;
+      opts[j].focus(); mark(opts[j]); onPick(opts[j]);
+    });
+    return mark;
+  }
+  var themeMark = radios(document.querySelector('#appearancePop .theme-picker'), function (b) { theme(b.getAttribute('data-set') || '', true); });
+  function theme(t, save) {
+    if (t !== 'maya' && t !== 'codex' && t !== 'skeleton') t = '';
+    if (t) d.setAttribute('data-theme', t); else d.removeAttribute('data-theme');
+    var m = document.getElementById('themeColorMeta');
+    if (m) m.setAttribute('content', BG[t]);
+    var n = document.getElementById('apThemeName');
+    if (n) n.textContent = NAMES[t];
+    var description = document.getElementById('apThemeDescription');
+    if (description) description.textContent = DESCRIPTIONS[t];
+    themeMark(document.querySelector('#appearancePop .theme-swatch[data-set="' + t + '"]'));
+    if (save) put('zotheos_landing_theme', t);
+  }
+  var chosen = 'living';
+  var sm = get('zotheos_motion');
+  if (sm === 'living' || sm === 'calm' || sm === 'still') chosen = sm;
+  else if (get('zotheos_fx') === 'off') chosen = 'still';
+  var group = document.getElementById('motionGroup');
+  var motionMark = radios(group, function (b) { chosen = b.getAttribute('data-mode'); put('zotheos_motion', chosen); motion(); });
+  function motion() {
+    var floor = !!(mq && mq.matches);
+    var m = floor ? 'still' : chosen;
+    d.setAttribute('data-motion', m);
+    var row = document.getElementById('apMotionRow'), note = document.getElementById('apMotionNote');
+    if (row) row.classList.toggle('is-idle', floor);
+    if (note) note.hidden = !floor;
+    if (group) {
+      var opts = group.querySelectorAll('[role="radio"]');
+      for (var i = 0; i < opts.length; i++) {
+        if (floor && opts[i].getAttribute('data-mode') !== 'still') opts[i].setAttribute('aria-disabled', 'true');
+        else opts[i].removeAttribute('aria-disabled');
+      }
+      motionMark(group.querySelector('[data-mode="' + m + '"]'));
+    }
+  }
+  theme(get('zotheos_landing_theme') || '', false);
+  motion();
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', motion); else if (mq.addListener) mq.addListener(motion); }
+})();
+
+(function () {
+  var input = document.getElementById('directoryQuery'), list = document.getElementById('directoryNames');
+  if (!input || !list) return;
+  var rows = list.querySelectorAll('[data-directory-name]'), groups = list.querySelectorAll('.directory-group');
+  var status = document.getElementById('directoryResult'), clear = document.getElementById('directoryClear');
+  var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
+  var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
+  var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
+  var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
+  var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
+  if (!status || !clear) return;
+  var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
+  var enhanced = !!(tools && inventory && more && limitNote);
+  function fold(s) { return (s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s).toLowerCase(); }
+  for (i = 0; i < rows.length; i++) {
+    names.push(fold(rows[i].getAttribute('data-directory-name')));
+    var owner = rows[i].closest('[data-directory-inventory]');
+    scopes.push(owner ? owner.getAttribute('data-directory-inventory') : '');
+    if (!owner) enhanced = false;
+  }
+  if (enhanced) {
+    for (i = 0; i < inventory.options.length; i++) {
+      var value = inventory.options[i].value, section = document.getElementById(value);
+      if (value !== 'all' && (!section || !list.contains(section) || section.getAttribute('data-directory-inventory') !== value)) enhanced = false;
+    }
+  }
+  function directoryMatches(name, words) {
+    for (var j = 0; j < words.length; j++) {
+      var word = words[j], at = -1;
+      do { at = name.indexOf(word, at + 1); if (at < 0) return false; }
+      while (/^[a-z0-9]/.test(word) && at > 0 && /[a-z0-9]/.test(name.charAt(at - 1)));
+    }
+    return true;
+  }
+  function filter() {
+    var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
+    var selected = enhanced ? inventory.value : 'all';
+    var readyOnly = !!(enhanced && profilesOnly && profilesOnly.checked);
+    if (profileHint) profileHint.hidden = !readyOnly;
+    visible = [];
+    for (var j = 0; j < rows.length; j++) {
+      var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words)
+        && (!readyOnly || rows[j].getAttribute('data-directory-profile') === 'ready');
+      if (match) count++;
+      var show = match && (!enhanced || shown < limit);
+      rows[j].hidden = !show;
+      if (show) { shown++; visible.push(rows[j]); }
+    }
+    for (i = 0; i < groups.length; i++) groups[i].hidden = !groups[i].querySelector('[data-directory-name]:not([hidden])');
+    if (enhanced) {
+      var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
+      status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      if (resultsIntro) resultsIntro.hidden = false;
+      if (resultsSummary) resultsSummary.textContent = status.textContent;
+      if (resultsEmpty) resultsEmpty.hidden = count !== 0;
+      if (resultsActions) resultsActions.hidden = count === 0;
+      var next = Math.min(batch, count - shown);
+      more.hidden = next <= 0;
+      more.textContent = 'Show ' + next + ' More';
+      more.setAttribute('aria-label', 'Show the next ' + next + ' matching name records');
+      limitNote.textContent = (next > 0 ? 'Show More reveals the next ' + next + ' matching records. ' : '') + 'Each source keeps its own category and date. These counts are not a total of Indigenous Nations.';
+    } else {
+      status.textContent = count + ' of ' + rows.length + ' name records shown.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+    }
+  }
+  input.addEventListener('input', function () { limit = batch; filter(); });
+  clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
+  if (!enhanced) return;
+  inventory.addEventListener('change', function () { limit = batch; filter(); });
+  if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
+  more.addEventListener('click', function () {
+    var previous = visible.length;
+    limit += batch; filter();
+    // Focus the first newly revealed name so keyboard and screen-reader users can continue reading there.
+    if (visible.length > previous) {
+      var name = visible[previous].querySelector('.directory-name') || visible[previous];
+      name.setAttribute('tabindex', '-1'); name.focus();
+    }
+  });
+  function hashTarget() {
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return null; }
+    var target = document.getElementById(id);
+    return target && list.contains(target) ? target : null;
+  }
+  function reveal(target, initial, focusInventory) {
+    var owner = target.closest('[data-directory-inventory]');
+    if (!owner) return;
+    inventory.value = owner.getAttribute('data-directory-inventory');
+    if (profilesOnly) profilesOnly.checked = false;
+    input.value = ''; limit = batch;
+    var row = target.closest('[data-directory-name]'), ordinal = 0;
+    if (row) {
+      for (var j = 0; j < rows.length; j++) {
+        if (scopes[j] !== inventory.value) continue;
+        ordinal++;
+        if (rows[j] === row) { limit = Math.ceil(ordinal / batch) * batch; break; }
+      }
+    }
+    filter();
+    if (focusInventory) inventory.focus();
+    else if (initial) window.requestAnimationFrame(function () { target.scrollIntoView(); });
+    else target.scrollIntoView();
+  }
+  var navHash = '';
+  window.addEventListener('hashchange', function () {
+    var target = hashTarget(), focusInventory = target && navHash === target.id;
+    navHash = '';
+    if (target) reveal(target, false, focusInventory);
+  });
+  var jumps = document.querySelectorAll('.directory-inventory-nav a');
+  for (i = 0; i < jumps.length; i++) jumps[i].addEventListener('click', function (e) {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = this.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+    var target;
+    try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch (err) { return; }
+    if (!target || !list.contains(target)) return;
+    e.preventDefault(); navHash = target.id;
+    if (window.location.hash === href) { navHash = ''; reveal(target, false, true); }
+    else window.location.hash = href;
+  });
+  filter(); tools.hidden = false;
+  var target = hashTarget();
+  if (target) reveal(target, true, false);
+})();
+</script><script>(function () {
+  'use strict';
+  var get = function (id) { return document.getElementById(id); };
+  var cards = Array.from(document.querySelectorAll('[data-theater-film]'));
+  var search = get('theaterSearch'), topic = get('theaterTopic');
+  var slot = get('theaterPlayer'), load = get('theaterLoad'), close = get('theaterClose');
+  if (!cards.length || !search || !topic || !slot || !load || !close) return;
+  var selected = null;
+  function valid(card) {
+    var p = card.dataset.provider, id = card.dataset.videoId || '';
+    return (p === 'youtube' && /^[A-Za-z0-9_-]{11}$/.test(id)) ||
+      (p === 'pbs' && /^\d{10}$/.test(id));
+  }
+  function stop(announce) {
+    while (slot.firstChild) slot.removeChild(slot.firstChild);
+    slot.hidden = true;
+    close.hidden = true;
+    load.disabled = !selected || !valid(selected);
+    load.hidden = !selected || !valid(selected);
+    if (announce) get('theaterPlayerStatus').textContent = 'Player closed. Load it again only when you choose.';
+  }
+  function select(card, focus) {
+    stop(false); selected = card;
+    var fields = {theaterTitle:'title', theaterDescription:'summary', theaterAvailability:'availability',
+      theaterKind:'kind', theaterContentNote:'contentNote', theaterCredits:'credits'};
+    Object.keys(fields).forEach(function (id) { get(id).textContent = card.dataset[fields[id]] || ''; });
+    var watch = get('theaterWatch');
+    // Only HTTPS publisher destinations already validated by the static builder.
+    try {
+      var u = new URL(card.dataset.watchUrl);
+      if (u.protocol !== 'https:' || u.username || u.password) throw new Error('Invalid destination');
+      watch.href = u.href;
+    } catch (_) { watch.href = '/theater'; }
+    var playable = valid(card);
+    load.hidden = !playable; load.disabled = !playable;
+    load.textContent = 'Load ' + (card.dataset.provider === 'pbs' ? 'PBS' : 'YouTube') + ' Player';
+    get('theaterConsent').hidden = !playable;
+    get('theaterPlayerStatus').textContent = playable ? 'No player is loaded. Choosing this title does not contact a video provider.' :
+      'Use the official source below. This title has no player on this page.';
+    if (focus) { var target = playable ? load : get('theaterTitle'); target.focus(); target.scrollIntoView({block:playable ? 'center' : 'start',behavior:'instant'}); }
+  }
+  function fold(value) { return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(); }
+  function filter() {
+    var words = fold(search.value.trim()).split(/\s+/).filter(Boolean), count = 0;
+    cards.forEach(function (card) {
+      var hay = fold(card.dataset.search || '');
+      var matches = words.every(function (word) { return hay.indexOf(word) !== -1; }) &&
+        (topic.value === 'all' || (card.dataset.topic || '').split(/\s+/).indexOf(topic.value) !== -1);
+      card.hidden = !matches; if (matches) count++;
+    });
+    get('theaterEmpty').hidden = count !== 0;
+    get('theaterStatus').textContent = count + (count === 1 ? ' title' : ' titles') + ' in this selection.';
+  }
+  search.addEventListener('input', filter); topic.addEventListener('change', filter);
+  get('theaterClear').addEventListener('click', function () { search.value = ''; topic.value = 'all'; filter(); search.focus(); });
+  document.querySelectorAll('[data-theater-select]').forEach(function (button) {
+    button.hidden = false;
+    button.addEventListener('click', function () {
+      var card = cards.find(function (candidate) { return candidate.dataset.theaterFilm === button.dataset.theaterSelect; });
+      if (card) select(card, true);
+    });
+  });
+  load.addEventListener('click', function () {
+    if (!selected || !valid(selected) || slot.firstChild) return;
+    var provider = selected.dataset.provider, frame = document.createElement('iframe');
+    frame.src = provider === 'pbs' ? 'https://player.pbs.org/stationplayer/' + selected.dataset.videoId + '/?autoplay=0' :
+      'https://www.youtube-nocookie.com/embed/' + selected.dataset.videoId + '?autoplay=0&playsinline=1&rel=0';
+    frame.title = selected.dataset.title + ' | ' + (provider === 'pbs' ? 'PBS' : 'YouTube') + ' player';
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allow = 'encrypted-media; picture-in-picture; fullscreen';
+    frame.setAttribute('allowfullscreen', '');
+    slot.hidden = false; slot.appendChild(frame);
+    close.hidden = false; load.hidden = true;
+    get('theaterPlayerStatus').textContent = 'Player loaded. Press play in its controls. If unavailable, open the official source below.';
+    frame.focus(); frame.scrollIntoView({block:'center',behavior:'instant'});
+  });
+  close.addEventListener('click', function () { stop(true); if (!load.hidden) load.focus(); });
+  get('theaterTools').hidden = false;
+  select(cards.find(function (card) { return card.dataset.featured === 'true'; }) || cards[0], false);
+  filter();
+}());
+</script></body></html>

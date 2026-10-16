@@ -141,7 +141,7 @@ def lint(path, root=None):
 
 
 def default_files(root):
-    files = [os.path.join(root, n) for n in ("index.html", "download.html", "nations.html")]
+    files = [os.path.join(root, n) for n in ("index.html", "download.html", "theater.html", "nations.html")]
     files += sorted(glob.glob(os.path.join(root, "nations", "**", "*.html"), recursive=True))
     return [f for f in files if os.path.isfile(f)]
 

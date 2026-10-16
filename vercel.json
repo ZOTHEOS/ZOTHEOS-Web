@@ -142,6 +142,24 @@
       ]
     },
     {
+      "source": "/theater",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-8caZ9WE0sM3eUzUkwIcY5K0+uyz+KD9rGKEAKmhaolM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org; worker-src 'none'; frame-ancestors 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/theater.html",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg=' 'sha256-8caZ9WE0sM3eUzUkwIcY5K0+uyz+KD9rGKEAKmhaolM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'none'; connect-src 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com https://player.pbs.org; worker-src 'none'; frame-ancestors 'none'"
+        }
+      ]
+    },
+    {
       "source": "/nations",
       "headers": [
         {

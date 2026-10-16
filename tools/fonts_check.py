@@ -113,6 +113,8 @@ def main():
     root = args.root
     bad, blocks, names_blocks = [], {}, {}
     npages = nations_pages(root)
+    if os.path.isfile(os.path.join(root, "theater.html")):
+        npages.append("theater.html")
     seen_names = set()
 
     def local(href, where):

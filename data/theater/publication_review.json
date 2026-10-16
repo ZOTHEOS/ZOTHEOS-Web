@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "prepared_at": "2026-10-16T05:49:24.473323+00:00",
+  "publisher": "ZOTHEOS",
+  "status": "reviewed-for-publication",
+  "catalogue": {
+    "sha256": "fa95f93fc6c222de5b1729446c6a4507dffa200c563254057b3beb5550e0d30e",
+    "titles": 13,
+    "source_references": 27,
+    "companion_resources": 2,
+    "featured": "yanuni"
+  },
+  "review_artifact_sha256": {
+    "source": "2409d0e7d8d7289af6c1a2bb2e0d2503e947498e108f8d7f56c8d7d05fdcd1b8",
+    "code": "70686bbaf1a49aac266f81a6fe8a1b71074570ffb6cef70b5212d6dae696f212",
+    "visual": "96b2e727d8df814a8921bcde04dce056ba9d28e90896852155814a5cc0bcb015"
+  },
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "validation": {
+    "full_website_tests": 322,
+    "full_suite_seconds": 127.86,
+    "independent_renderer_cases": 19,
+    "player_consent_cases": 10,
+    "accent_search_cases": 10,
+    "url_port_cases": 18,
+    "focus_flow_cases": 6,
+    "responsive_widths": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "themes_checked": 4
+  },
+  "browser_observations": [
+    "No initial iframe; selecting a title creates none.",
+    "YANUNI startup played after explicit Play; duration observed 6821.701 seconds. Close removed the frame.",
+    "Gather and Lakota official trailer players presented Play without autoplay; full trailer playback was not certified.",
+    "PBS excerpt player reported unavailable. Its embed was disabled; official source and transcript retained.",
+    "Zero horizontal overflow at the recorded four viewport widths; source links and main actions measured at least44pixels."
+  ],
+  "limits": [
+    "Brief startup checks are not full-film editorial review or caption accuracy verification.",
+    "Regional, account and provider restrictions can change.",
+    "Responsive browser simulation is not physical-device or screen-reader certification.",
+    "The exact2025Denver TREC presentation remains unpublished pending an original recording match. Its transcript is not published or treated as independent proof of legal conclusions.",
+    "No complete worldwide coverage claim; original abstract title artwork is not official film artwork."
+  ],
+  "privacy_preservation": {
+    "canonical_and_privacy_checks_passed": 6,
+    "adversarial_path_checks_passed": 22,
+    "receipt_sha256": "4797fc8921c552b53beca09a2a88e84f9a1632cf5a62d3776c22c36733119054",
+    "scope": "Canonical fact clocks, person receipts, source citations and original intro audio preserved. Valid HTTPS source paths are distinguished from local paths; private-name, workstation and editorial-credit checks remain in force."
+  }
+}

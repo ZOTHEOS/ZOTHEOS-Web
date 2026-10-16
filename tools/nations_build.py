@@ -55,7 +55,7 @@ SHEET = NAV + [("Directory", "/nations/directory", "directory"), ("Resources", "
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
           "form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'")
-GENERATED = ["nations.html", "nations", "static/nations", "static/fonts", "tools/fonts.sha256",
+GENERATED = ["theater.html", "nations.html", "nations", "static/nations", "static/fonts", "tools/fonts.sha256",
              "tools/nations/partials/fonts-names.css", "vercel.json", "sitemap.xml"]
 FONTS_FONTS_URL = "/static/fonts/instrument-serif-latin.woff2"
 # herald.js: the spec estimated 12 KB and budgeted 16 KB; ring, walk, search with the emitted fold, card validation and
@@ -1103,8 +1103,8 @@ def L_meta(policy):
 
 
 # ------------------------------------------------------------------------------------------------ scratch, gates, sync
-COPY_DIRS = ["data", "tools", "game", "static/fonts", "static/nations", "nations"]
-COPY_FILES = ["index.html", "download.html", "vercel.json", "sitemap.xml", "robots.txt", "nations.html",
+COPY_DIRS = ["data", "tools", "game", "static/theater", "static/fonts", "static/nations", "nations"]
+COPY_FILES = ["index.html", "download.html", "theater.html", "vercel.json", "sitemap.xml", "robots.txt", "nations.html",
               ".vercelignore", "zotheos_icon.ico"]
 
 
@@ -1289,6 +1289,10 @@ def main(argv=None):
         run(tmp, "tools/fonts_check.py", "--root", tmp, "--record")
         b = Builder(tmp, a.build_date, a.game_json)
         pages = b.build(tmp)
+        if os.path.isfile(os.path.join(tmp, "data", "theater", "films.json")):
+            code, out = run(tmp, "tools/theater_build.py", "--root", tmp)
+            if code != 0:
+                raise BuildError("theater_build.py failed:\n" + out)
         code, out = run(tmp, "tools/csp_sync.py")
         if code != 0:
             raise BuildError("csp_sync.py failed:\n" + out)

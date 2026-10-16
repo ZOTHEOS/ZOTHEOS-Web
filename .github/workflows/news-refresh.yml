@@ -31,6 +31,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$b"
           git add data/news nations.html static/nations vercel.json
+          if [ -f theater.html ]; then git add theater.html; fi
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "nations: headlines $d"
           git push -u origin "$b"
