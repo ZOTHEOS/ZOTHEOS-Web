@@ -170,16 +170,16 @@
     var heading = document.getElementById('theater-heading');
     var title = document.getElementById('theaterTitle');
     var sections = [
-      ['story', 'Selected Story', title && title.closest('.th-now-watching')],
-      ['introduction', 'Theater Introduction', heading && heading.parentElement],
+      ['story', 'Selected Story', title && title.closest('#screening')],
+      ['introduction', 'Theater Introduction', heading && (heading.closest('.th-cinema-heading') || heading.parentElement)],
       ['curation', 'Curation And Historical Context', document.getElementById('curation')]
     ];
     sections.forEach(function (section) {
       if (!section[2]) return;
       var copy = section[2].cloneNode(true);
-      copy.querySelectorAll('script, style, iframe, form, input, textarea, select, button, summary, [contenteditable], [aria-hidden="true"], [hidden]').forEach(function (node) { node.remove(); });
+      copy.querySelectorAll('script, style, iframe, form, input, textarea, select, button, summary, .th-stage-col, .th-now-actions, [contenteditable], [aria-hidden="true"], [hidden]').forEach(function (node) { node.remove(); });
       // Block headings and adjacent metadata spans need separators in exported reading text.
-      copy.querySelectorAll('h1, h2, h3, h4, p, li, div, span, strong, a, time').forEach(function (node) {
+      copy.querySelectorAll('h1, h2, h3, h4, p, li, div, span, strong, a, time, dt, dd').forEach(function (node) {
         node.appendChild(document.createTextNode(' '));
       });
       var text = copy.textContent.replace(/\s+/g, ' ').trim(), parts = [];

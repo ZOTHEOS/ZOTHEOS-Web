@@ -98,7 +98,7 @@
 
 /* /nations: one stylesheet for every nations page (DESIGN_NATIONS 12.3). Flat ground, white and greys in mono,
    thin crisp lines; opacity and one line's inline-size are the only things that move. Names are upright, never
-   italic, never uppercased; italic is the voice of our own headings. */
+   italic, never uppercased; italic is the voice of the page headings. */
 *, *::before, *::after { box-sizing: border-box; }
 html { background: var(--page-bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { margin: 0; background: var(--page-bg); color: var(--ink); font-family: var(--zn-read); font-size: var(--fs-read);
@@ -1121,3 +1121,742 @@ html[data-theater-motion="still"] .th-cinema .th-frame-glow { stroke-dasharray: 
   html:not([data-theme]) .appearance-pop { border: 1px solid CanvasText; background: Canvas; color: CanvasText; }
   .appearance-pop .ap-opt[aria-checked="true"] { border-color: Highlight; }
 }
+
+/* ZOTHEOS stepped frame: shared tokens (revision 3). The palettes bound decorative light to the authored levels. One block for the Theater page, the homepage showcase, the code-drawn frame
+   and the rendered masters. t0 is the tier beside the screen; l1 to l3 are the moving light, dimmest first. */
+:root:not([data-theme]) {  /* Sovereign Skeleton */
+  --zt-frame-ground: #000000; --zt-frame-t0: #6E6E6E; --zt-frame-t1: #505050; --zt-frame-t2: #3A3A3A; --zt-frame-t3: #2A2A2A; --zt-frame-t4: #1E1E1E;
+  --zt-frame-l1: #8F8F8F; --zt-frame-l2: #ABABAB; --zt-frame-l3: #C8C8C8;
+}
+[data-theme="maya"] {  /* Maya Radiance */
+  --zt-frame-ground: #02101E; --zt-frame-t0: #61441E; --zt-frame-t1: #4E3618; --zt-frame-t2: #3F2C14; --zt-frame-t3: #322310; --zt-frame-t4: #281C0C;
+  --zt-frame-l1: #9D6D31; --zt-frame-l2: #B4873C; --zt-frame-l3: #CDA45E;
+}
+[data-theme="codex"] {  /* Living Codex */
+  --zt-frame-ground: #E8DBC0; --zt-frame-t0: #6B5945; --zt-frame-t1: #8A7860; --zt-frame-t2: #A39274; --zt-frame-t3: #B9A988; --zt-frame-t4: #CBBC9C;
+  --zt-frame-l1: #6B5945; --zt-frame-l2: #4A3A2A; --zt-frame-l3: #1A0F08;
+}
+[data-theme="skeleton"] {  /* Obsidian Ember */
+  --zt-frame-ground: #050507; --zt-frame-t0: #480D1B; --zt-frame-t1: #3B0B17; --zt-frame-t2: #2F0A14; --zt-frame-t3: #250911; --zt-frame-t4: #1D080E;
+  --zt-frame-l1: #6E0F25; --zt-frame-l2: #7C142C; --zt-frame-l3: #8B1934;
+}
+
+/* ZOTHEOS stepped frame (revision 3): the code-drawn light around the screen, for the Theater page and the homepage.
+   One grammar with the rendered masters: shared tokens (zt-frame-tokens.css), one stair segment per 0.5 s with
+   steps(1, end), three hard levels that brighten toward the screen and fall back one level per step behind it, an
+   8 s loop, and one mirrored pair of stairs in the top aisle only. The light lands: the last step (the rest step)
+   keeps its rest level in every state, so changing state never makes it blink. zt-frame.js draws every line as a rectangle on
+   whole device pixels; this sheet only colours them. No gradients, glows, blur, fog, grain, dither or fades.
+
+   States (data-zt-light on the svg, set through ZtFrame.set):
+     walk     the light walks the aisle (Living, nothing playing)
+     arrive   the page is about to start a preview: the last four segments light 0.25 s apart and hold
+     playing  a film plays or buffers: no motion, every tier one notch down, the rest step holds
+     rest     Still, Calm, an unanswered reduced-motion request, the tab hidden or the frame out of view
+     paused   the visitor's Pause Light: the light rests at the screen until they resume it */
+
+.zt-frame-box { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.zt-frame-svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: hidden;
+  pointer-events: none; shape-rendering: crispEdges; }
+.zt-frame-svg rect { shape-rendering: crispEdges; }
+
+/* Tiers: t0 beside the screen, each tier outward one step nearer the ground */
+.zt-frame-svg .zt-tier.k0 { fill: var(--zt-frame-t0); }
+.zt-frame-svg .zt-tier.k1 { fill: var(--zt-frame-t1); }
+.zt-frame-svg .zt-tier.k2 { fill: var(--zt-frame-t2); }
+.zt-frame-svg .zt-tier.k3 { fill: var(--zt-frame-t3); }
+.zt-frame-svg .zt-tier.k4 { fill: var(--zt-frame-t4); }
+
+/* Stair segments are drawn only while lit */
+.zt-frame-svg .zt-seg { fill: transparent; }
+
+/* The rest step: the last riser at l1, the innermost tread at l2. It is where every descent lands, so it shows in
+   every state; while the light walks or arrives, its animation lifts it to l3 and lets it fall back to rest. */
+.zt-frame-svg .zt-seg.k0.r { fill: var(--zt-frame-l1); }
+.zt-frame-svg .zt-seg.k0.t { fill: var(--zt-frame-l2); }
+
+/* House lights: while a film plays, every tier steps down one notch in one hard step (no fade) */
+.zt-frame-svg[data-zt-light="playing"] .zt-tier.k0 { fill: var(--zt-frame-t1); }
+.zt-frame-svg[data-zt-light="playing"] .zt-tier.k1 { fill: var(--zt-frame-t2); }
+.zt-frame-svg[data-zt-light="playing"] .zt-tier.k2 { fill: var(--zt-frame-t3); }
+.zt-frame-svg[data-zt-light="playing"] .zt-tier.k3 { fill: var(--zt-frame-t4); }
+
+/* The walk: segment j lights at j x 0.5 s. zA holds l1 for one step; zB l2 then l1; the last step lands: its riser
+   l3, l2, then l1 and its tread l3, then l2, each holding that rest level until the next descent. */
+@keyframes zt-frame-zA { 0% { fill: var(--zt-frame-l1); } 6.25%, 100% { fill: transparent; } }
+@keyframes zt-frame-zB { 0% { fill: var(--zt-frame-l2); } 6.25% { fill: var(--zt-frame-l1); } 12.5%, 100% { fill: transparent; } }
+@keyframes zt-frame-zCr { 0% { fill: var(--zt-frame-l3); } 6.25% { fill: var(--zt-frame-l2); } 12.5%, 100% { fill: var(--zt-frame-l1); } }
+@keyframes zt-frame-zCt { 0% { fill: var(--zt-frame-l3); } 6.25%, 100% { fill: var(--zt-frame-l2); } }
+.zt-frame-svg[data-zt-light="walk"] .zt-seg {
+  animation-duration: 8s; animation-timing-function: steps(1, end); animation-iteration-count: infinite;
+  animation-fill-mode: none; animation-delay: calc(var(--zt-j, 0) * 0.5s);
+}
+.zt-frame-svg[data-zt-light="walk"] .zt-seg.zA { animation-name: zt-frame-zA; }
+.zt-frame-svg[data-zt-light="walk"] .zt-seg.zB { animation-name: zt-frame-zB; }
+.zt-frame-svg[data-zt-light="walk"] .zt-seg.zC.r { animation-name: zt-frame-zCr; }
+.zt-frame-svg[data-zt-light="walk"] .zt-seg.zC.t { animation-name: zt-frame-zCt; }
+
+/* The arrival descent: riser 1, tread 1, riser 0, tread 0 light 0.25 s apart at their zone's first level and hold
+   (the rest step keeps its rest level until the light reaches it). zt-frame.js switches to playing at 1.0 s. */
+@keyframes zt-frame-arrive-zB { from, to { fill: var(--zt-frame-l2); } }
+@keyframes zt-frame-arrive-zC { from, to { fill: var(--zt-frame-l3); } }
+.zt-frame-svg[data-zt-light="arrive"] .zt-seg[data-zt-a] {
+  animation-duration: 1ms; animation-timing-function: steps(1, end); animation-iteration-count: 1;
+  animation-fill-mode: forwards; animation-delay: calc(var(--zt-a, 0) * 0.25s);
+}
+.zt-frame-svg[data-zt-light="arrive"] .zt-seg.zB[data-zt-a] { animation-name: zt-frame-arrive-zB; }
+.zt-frame-svg[data-zt-light="arrive"] .zt-seg.zC[data-zt-a] { animation-name: zt-frame-arrive-zC; }
+
+/* Out of view or tab hidden: hold the walk where it is (zt-frame.js sets data-zt-hold) */
+.zt-frame-svg[data-zt-hold] .zt-seg { animation-play-state: paused; }
+
+/* Floor: if the device asks for less motion and the visitor has not chosen to keep motion, nothing animates and the
+   rest step shows. The page's own motion policy should already have chosen rest; this only guards against a slip.
+   !important is needed: the walk's animation-name rules are more specific than this guard. */
+@media (prefers-reduced-motion: reduce) {
+  .zt-frame-svg .zt-seg { animation: none !important; }
+}
+
+/* Forced colours: the frame is drawn in the system text colour; the light rests and nothing moves (!important, as
+   above, outranks the more specific walk and house-lights rules) */
+@media (forced-colors: active) {
+  .zt-frame-svg { forced-color-adjust: none; }
+  .zt-frame-svg .zt-tier { fill: CanvasText !important; }
+  .zt-frame-svg .zt-seg { animation: none !important; fill: transparent !important; }
+  .zt-frame-svg .zt-seg.k0 { fill: CanvasText !important; }
+}
+
+/* Theater screening room. Extends
+   the shared stylesheet; the shared Nations tokens, header, footer and appearance rules above stay unchanged. The
+   frame tokens and the light keyframes come first from zt-frame-tokens.css (the block shared with the homepage).
+   Light rules: flat tones only. No gradients, glows, blur, fog, grain or dither. Light is whole device pixels with
+   hard-edged stepped brightness. Colour is used for meaning: selection, the primary action, viewing type, focus. */
+
+/* ---------- page tokens ---------- */
+.th-page {
+  --th-g: 46px;                                   /* the frame band: three tiers 18px apart, the outer on the stage edge */
+  --th-gx: var(--th-g);                           /* where controls align: the screen's own edges */
+  --th-select: var(--ink);
+  --th-accent: var(--ink); --th-accent-ink: var(--page-bg);
+  --th-poster-bg: color-mix(in oklab, var(--ink) 6%, var(--page-bg));
+  max-inline-size: 1440px;
+  margin-inline: auto;
+  padding: 16px clamp(16px, 3.4vw, 48px) 88px;
+  color: var(--ink);
+}
+[data-theme="maya"] .th-page { --th-select: #CDA45E; --th-accent: #CDA45E; --th-accent-ink: #02101E; }
+[data-theme="codex"] .th-page { --th-select: #6E0F25; --th-accent: #6E0F25; --th-accent-ink: #F4ECD8; --th-poster-bg: #D9CAA8; }
+[data-theme="skeleton"] .th-page { --th-select: #EDE4D3; --th-accent: #8B1934; --th-accent-ink: #F4ECD8; }
+.th-page *, .th-page *::before, .th-page *::after { box-sizing: border-box; }
+.th-page :where(h1, h2, h3, p, figure, ul, ol, dl, dd) { margin: 0; }
+.th-page [hidden] { display: none !important; }
+.th-sr { position: absolute !important; inline-size: 1px; block-size: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+html:not([data-js]) [data-needs-js] { display: none !important; }
+/* Copy for each side of the switch. Without JavaScript nothing previews, so the no-autoplay wording is the true one. */
+html[data-js][data-preview-autoplay="on"] [data-when-autoplay="off"], html:not([data-js]) [data-when-autoplay="on"],
+html[data-preview-autoplay="off"] [data-when-autoplay="on"] { display: none !important; }
+/* JavaScript shows 24 stories at a time; hide the rest from first paint so nothing jumps when it starts. */
+html[data-js]:not([data-theater-ready]) .th-film:nth-child(n+25) { display: none; }
+.th-page :where(a, button, summary, input, select, [tabindex]):focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.th-page :is(section, article) { scroll-margin-block-start: 88px; }
+.th-page a { text-underline-offset: .25em; }
+/* Site chrome on this page: header and footer links get a 44px target through padding, not a larger font. */
+@media (min-width: 1024px) { .nh-nav a { display: inline-flex; align-items: center; min-block-size: 44px; } }
+.skip { min-block-size: 44px; display: inline-flex; align-items: center; }
+.ft-col { gap: 0; }
+.ft-col a { display: flex; align-items: center; min-block-size: 44px; }
+.ft-col-l { margin-block-end: 6px; }
+.ft-block p a { padding-block: 13px; }   /* a taller target inside running text, without changing the line */
+
+/* ---------- shared type and controls ---------- */
+.th-kicker { display: flex; align-items: center; gap: 12px; font: 500 11px/1.6 var(--zn-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); }
+.th-kicker::before { content: ""; flex: none; inline-size: 28px; block-size: 1px; background: var(--line); }
+.th-section-title { font: 400 clamp(30px, 3.2vw, 46px)/1.06 var(--serif); letter-spacing: -.015em; }
+.th-btn, .th-watch {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-block-size: 46px; max-inline-size: 100%;
+  padding: 10px 18px; border: 1px solid var(--line); border-radius: 2px; background: var(--page-bg); color: var(--ink);
+  font: 500 14px/1.3 var(--zn-read); text-decoration: none; text-align: center; cursor: pointer;
+}
+.th-btn:hover, .th-watch:hover { border-color: var(--rim-hover); text-decoration: underline; }
+.th-btn-solid { background: var(--th-accent); border-color: var(--th-accent); color: var(--th-accent-ink); }
+.th-btn-solid:hover { border-color: var(--th-accent); }
+.th-btn-quiet { border-color: var(--rule); color: var(--ink-2); font-size: 13.5px; padding-inline: 14px; }
+.th-btn-quiet:hover { color: var(--ink); }
+.th-btn .i { flex: none; inline-size: 18px; block-size: 18px; fill: currentColor; }
+.th-btn .i .s { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; }
+
+/* ---------- the one-time motion question: three equal answers, nothing pre-chosen ---------- */
+.th-motion-ask { display: none; }
+html[data-motion-ask="pending"] .th-motion-ask {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  margin-block-end: 16px; padding: 14px 16px 14px 20px; border: 1px solid var(--line);
+}
+.th-motion-ask p { max-inline-size: 72ch; font: 400 14px/1.6 var(--zn-read); color: var(--ink-2); }
+.th-motion-ask strong { color: var(--ink); font-weight: 600; }
+.th-motion-ask-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; min-inline-size: min(100%, 420px); }
+.th-motion-ask-actions .th-btn { inline-size: 100%; padding-inline: 12px; }
+
+/* ---------- masthead: one row ---------- */
+.th-cinema-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, auto); align-items: end; gap: 10px 48px; margin-block-end: 18px; }
+.th-cinema-heading h1 { margin-block-start: 6px; font: 400 clamp(38px, 3.4vw, 48px)/1 var(--serif); letter-spacing: -.02em; text-wrap: balance; }
+.th-masthead-note { max-inline-size: 46ch; padding-block-end: 4px; }
+.th-masthead-note > p:first-child { color: var(--ink-2); font: 400 14px/1.55 var(--zn-read); }
+.th-library-scope { margin-block-start: 4px !important; color: var(--ink-3); font: 400 12px/1.6 var(--zn-mono); letter-spacing: .02em; }
+
+/* ---------- screening room ----------
+   Reading order (DOM): title, creators and Before Watching; the screening controls; the screen; status; the next
+   stories; then the facts. The grid draws the screen first in its column with the controls under it. */
+.th-screening-layout {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); grid-template-rows: auto 1fr;
+  grid-template-areas: "stage head" "stage rest"; column-gap: 40px; align-items: start;
+}
+.th-screening-layout > * { min-inline-size: 0; }
+.th-stage-col { grid-area: stage; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "shell" "tools" "status" "rail" "consent"; container-type: inline-size; }
+.th-now-head { grid-area: head; }
+.th-now-rest { grid-area: rest; }
+.th-stage-shell { grid-area: shell; position: relative; isolation: isolate; padding: var(--th-g); }
+.th-screen { position: relative; z-index: 2; aspect-ratio: 16 / 9; min-block-size: 200px; overflow: hidden; background: #000; }
+.th-player { position: absolute; inset: 0; background: #000; }
+.th-player iframe { display: block; inline-size: 100%; block-size: 100%; border: 0; background: #000; }
+.th-stage-fallback { display: grid; place-content: center; gap: 14px; block-size: 100%; padding: 22px; text-align: center; color: #fff; }
+.th-stage-fallback p { max-inline-size: 38ch; color: #d9d9d9; font: 400 14px/1.6 var(--zn-read); }
+.th-stage-fallback p:first-child { font: 400 28px/1.1 var(--serif); color: #fff; }
+html[data-js] .th-stage-fallback { visibility: hidden; }
+
+/* the curtain: the real provider preview image while a player connects; with a plain note when it cannot play;
+   or, for a story with a Before Watching note, the note above a Play button (nothing starts until the visitor does) */
+.th-curtain { position: absolute; inset: 0; z-index: 3; background: #000; }
+.th-curtain img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.th-curtain-note {
+  position: absolute; inset-inline: 0; inset-block-end: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 18px; padding: 14px 18px; background: var(--page-bg); border-block-start: 1px solid var(--line);
+}
+.th-curtain-note p { flex: 1 1 22ch; color: var(--ink); font: 400 14px/1.5 var(--zn-read); }
+.th-curtain[data-mode="loading"] .th-curtain-note, .th-curtain:not([data-mode="held"]) .th-curtain-play, .th-curtain[data-mode="held"] #theaterCurtainSource { display: none; }
+.th-curtain[data-mode="held"] .th-curtain-note { inset-block: auto 0; max-block-size: 100%; overflow: auto; }
+.th-curtain[data-mode="held"] .th-curtain-note p { flex-basis: 100%; font-size: 15px; }
+.th-curtain-play { min-inline-size: 120px; }
+.th-curtain-short { display: none; }
+/* phones: the note itself sits directly under the screen, so the held curtain keeps the picture and says where to read */
+@media (max-width: 959px) {
+  .th-curtain[data-mode="held"] #theaterCurtainText { display: none; }
+  .th-curtain[data-mode="held"] .th-curtain-short { display: block; flex: 1 1 18ch; color: var(--ink); font: 400 13px/1.45 var(--zn-read); }
+  .th-curtain[data-mode="held"] .th-curtain-note { flex-wrap: nowrap; }
+}
+.th-curtain[data-mode="loading"]::after {
+  content: ""; position: absolute; inset-inline-start: 0; inset-block-end: 0; inline-size: 100%; block-size: 2px;
+  background: var(--zt-frame-l3); transform-origin: 0 50%; transform: scaleX(.25);
+}
+/* the connecting line steps for at most 5 seconds (or until the provider is slow), then holds still */
+html[data-motion="living"] .th-curtain[data-mode="loading"][data-connect="run"]::after,
+html[data-motion="calm"] .th-curtain[data-mode="loading"][data-connect="run"]::after { animation: th-connect 1.8s steps(6, end) infinite; }
+html[data-theater-motion="still"] .th-curtain::after { animation: none !important; }
+@keyframes th-connect { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ---------- the light frame ----------
+   The shared ZOTHEOS stepped frame (zt-frame.js and zt-frame.css, the same component as the homepage): three nested
+   brackets after the mark, 18px apart on every side, the outer one on the stage edge. Their top arms stop short of the
+   centre in terraces (risers 18px, treads 44px), so a stepped aisle opens above the screen; the light descends that
+   aisle to the screen, like a projector beam, and the bottom stays closed. The aisle is a stepped notch with no
+   traditional or ceremonial meaning. Drawn in whole device pixels; this page only places it and sets its state. */
+.th-stage-shell > .zt-frame-box { z-index: 1; }
+/* the walk runs on the frame's 0.5 s ticker here (the same schedule), so the CSS walk animation stays off */
+.zt-frame-svg[data-zt-tick] .zt-seg { animation: none !important; }
+html:not([data-js]) .th-screen { box-shadow: 0 0 0 9px var(--page-bg), 0 0 0 10px var(--zt-frame-t0), 0 0 0 27px var(--page-bg), 0 0 0 28px var(--zt-frame-t1); }
+
+/* The rendered-loop slot (data-ambient="video", review only). The loops are motion revision 3, the same one
+   construction as the code frame; the composed vector twin underneath shows their tiers and rest step whenever the
+   loop is not running. The stage takes the loop's own proportions from first paint, so nothing moves when the loop
+   arrives or leaves. */
+.th-frame-composed { display: none; }
+.th-ambient { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.th-ambient-video { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; max-inline-size: none; display: block; object-fit: fill; }
+@media (min-width: 720px) {
+  :is(.th-stage-shell[data-ambient="video"], html[data-ambient-review="video"] .th-stage-shell) { padding: 7.5cqi 13.3333cqi; }
+  .th-stage-col:has(> .th-stage-shell[data-ambient="video"]), html[data-ambient-review="video"] .th-stage-col { --th-gx: 13.3333cqi; }
+  :is(.th-stage-shell[data-ambient="video"], html[data-ambient-review="video"] .th-stage-shell) > .zt-frame-box { display: none; }
+  :is(.th-stage-shell[data-ambient="video"], html[data-ambient-review="video"] .th-stage-shell) .th-frame-composed {
+    display: block; position: absolute; inset: 0; z-index: 0; inline-size: 100%; block-size: 100%; pointer-events: none;
+  }
+  .th-frame-composed rect { shape-rendering: crispEdges; }
+  .th-frame-composed .t0 { fill: var(--zt-frame-t0); } .th-frame-composed .t1 { fill: var(--zt-frame-t1); } .th-frame-composed .t2 { fill: var(--zt-frame-t2); }
+  .th-frame-composed .t3 { fill: var(--zt-frame-t3); } .th-frame-composed .t4 { fill: var(--zt-frame-t4); }
+  .th-frame-composed .th-rest .r { fill: var(--zt-frame-l1); } .th-frame-composed .th-rest .t { fill: var(--zt-frame-l2); }
+  /* while the loop runs it draws the frame itself; the twin stays under it, identical, so its arrival shifts nothing */
+}
+
+/* ---------- transport: the visitor's controls for the one connected player ---------- */
+.th-transport { grid-area: tools; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 8px var(--th-gx) 0; }
+.th-transport > #theaterMotion { margin-inline-start: auto; }
+.th-tbtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-block-size: 44px; min-inline-size: 44px;
+  padding: 0 12px 0 10px; border: 1px solid var(--line); border-radius: 2px; background: var(--page-bg); color: var(--ink);
+  font: 500 13px/1.2 var(--zn-read); text-decoration: none; white-space: nowrap; cursor: pointer;
+}
+.th-tbtn:hover { border-color: var(--rim-hover); }
+#theaterMotion { border-color: var(--rule); color: var(--ink-2); }
+#theaterMotion:hover { color: var(--ink); }
+#theaterMotion[aria-pressed="true"]:not([aria-disabled="true"]) { border-color: var(--ink); color: var(--ink); }
+.nh-mark { min-block-size: 44px; }
+.ap-seg-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ap-motion-meaning { margin-block-start: 8px; }
+.nav-sheet .ns-list a { display: flex; align-items: center; min-block-size: 44px; font: 400 17px/1.4 var(--zn-read); color: var(--ink); }
+.th-tbtn .i { display: none; flex: none; inline-size: 20px; block-size: 20px; fill: currentColor; }
+.th-tbtn .i .s { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: miter; }
+.th-tbtn .i .k { fill: none; stroke: var(--page-bg); stroke-width: 1.6; }
+.th-tbtn[data-icon="play"] .i-play, .th-tbtn[data-icon="pause"] .i-pause, .th-tbtn[data-icon="sound"] .i-sound, .th-tbtn[data-icon="muted"] .i-muted,
+.th-tbtn[data-icon="cc"] .i-cc, .th-tbtn[data-icon="cc-on"] .i-cc-on, .th-tbtn[data-icon="next"] .i-next,
+.th-tbtn[data-icon="light"] .i-light, .th-tbtn[data-icon="light-off"] .i-light-off, .th-tbtn[data-icon="film"] .i-play,
+.th-tbtn[data-icon="screen"] .i-screen { display: block; }
+.th-tlabel-short { display: none; }
+.th-tname { display: inline; }
+.th-tpre, .th-tpost { display: none; }
+.th-tstate { color: var(--ink-2); font: 500 12px/1 var(--zn-mono); letter-spacing: .1em; text-transform: uppercase; }
+.th-tstate:empty { display: none; }
+/* Sound and Captions are wide enough from first paint for their usual state words, centred, so the row never
+   shifts when a word arrives or changes (only the rare None Offered is wider). */
+#theaterSound { min-inline-size: 150px; }
+#theaterCC { min-inline-size: 184px; }
+/* the ambient state word is shown where the row has room for it; the pressed state and the icon carry it elsewhere */
+@media (min-width: 720px) and (max-width: 1359px) { #theaterMotion .th-tstate { display: none; } }
+/* 1280 class screens: slightly tighter keys so the five controls stay on one row under the screen */
+@media (min-width: 1180px) and (max-width: 1359px) {
+  .th-transport .th-tbtn { padding: 0 9px 0 8px; gap: 7px; }
+  #theaterPlay { min-inline-size: 96px; } #theaterSound { min-inline-size: 140px; } #theaterCC { min-inline-size: 174px; }
+  /* here Pause Light keeps its icon, its pressed outline and its name for assistive technology (and a tooltip), and
+     gives its words to the film's controls, which then never wrap whatever their state words say */
+  #theaterMotion { min-inline-size: 44px; padding: 0; }
+  #theaterMotion .th-tlabel { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+/* the CC mark is two squared letters in a box; it stays the same size in every state */
+.th-tbtn[aria-pressed="true"] .th-tstate { color: var(--ink); }
+/* The accent marks the primary action only: Play when the next action is Play; while a page-started preview plays
+   without sound, the invitation to listen; never decoration during playback. */
+#theaterPlay { min-inline-size: 104px; }
+#theaterPlay[data-next="play"]:not([aria-disabled="true"]), #theaterSound[data-invite] { background: var(--th-accent); border-color: var(--th-accent); color: var(--th-accent-ink); }
+#theaterPlay[data-next="play"] .i .k, #theaterSound[data-invite] .i .k { stroke: var(--th-accent); }
+#theaterSound[data-invite] .th-tstate { display: none; }
+/* a story held behind its note: the Play inside the curtain is the primary action, the row's Play steps back */
+.th-screening-layout[data-curtain="held"] #theaterPlay[data-next="play"]:not([aria-disabled="true"]) { background: var(--page-bg); border-color: var(--line); color: var(--ink); }
+.th-screening-layout[data-curtain="held"] #theaterPlay .i .k { stroke: var(--page-bg); }
+#theaterSound[data-invite] :is(.th-tpre, .th-tpost) { display: inline; }
+.th-tbtn[aria-disabled="true"] { color: var(--ink-3); border-style: dashed; cursor: default; }
+.th-native-note { flex: 1 1 22ch; max-inline-size: 46ch; color: var(--ink-2); font: 400 13px/1.5 var(--zn-read); }
+/* two lines reserved at 15px: a status that changes (or the Before Watching advisory) never moves what is below */
+.th-status-line { grid-area: status; margin: 6px var(--th-gx) 0; min-block-size: 3em; color: var(--ink); font: 400 15px/1.5 var(--zn-read);
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.th-status-line[data-advisory] { font-weight: 500; }
+/* a story that plays elsewhere: its full availability note, never clamped (set once, on selection) */
+.th-screening-layout[data-stage-state="source-only"] .th-status-line { display: block; -webkit-line-clamp: none; overflow: visible; }
+.th-provider-line { grid-area: consent; margin: 14px var(--th-gx) 0; max-inline-size: 80ch; color: var(--ink-3); font: 400 12.5px/1.6 var(--zn-read); }
+
+/* ---------- next in this selection: a rail of real posters; choosing one is always the visitor's own act ---------- */
+.th-upnext { grid-area: rail; margin: 10px var(--th-gx) 0; }
+html[data-js] .th-upnext { min-block-size: 214px; }
+.th-upnext-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-block-end: 8px; }
+.th-upnext-head .th-kicker::before { display: none; }
+.th-upnext-list { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 10px; margin: 0; padding: 0 0 6px; list-style: none;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.th-upnext-list > li { scroll-snap-align: start; min-inline-size: 0; }
+.th-upnext-item { display: grid; gap: 7px; inline-size: 100%; padding: 0; border: 0; background: none; color: var(--ink); text-align: start; cursor: pointer; font: inherit; }
+.th-upnext-thumb { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--th-poster-bg); }
+.th-upnext-thumb::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--rule); }
+.th-upnext-item:hover .th-upnext-thumb::after { box-shadow: inset 0 0 0 1px var(--rim-hover); }
+.th-upnext-thumb img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; max-inline-size: none; object-fit: cover; }
+.th-upnext-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font: 400 16px/1.2 var(--serif); }
+.th-upnext-item:hover .th-upnext-title { text-decoration: underline; text-decoration-thickness: 1px; }
+.th-upnext-meta { color: var(--ink-2); font: 400 12px/1.4 var(--zn-read); }
+.th-upnext-item:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+/* ---------- now in the screening room: kicker, title, creators, whose story, viewing type, Before Watching; then
+   publisher, year, runtime, place, actions, synopsis, viewing note and sources ---------- */
+.th-now-head { padding-block-start: calc(var(--th-g) - 6px); }
+.th-now-intro { margin-block-end: 16px !important; color: var(--ink-3); font: 400 13px/1.55 var(--zn-read); }
+.th-cinema .th-feature-title { margin-block-start: 12px !important; font: 400 clamp(34px, 3vw, 46px)/1.04 var(--serif); letter-spacing: -.016em; overflow-wrap: break-word; text-wrap: balance; scroll-margin-block-start: 100px; }
+.th-feature-title:focus { outline: none; }
+.th-feature-title:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
+.th-creators { margin-block-start: 12px !important; color: var(--ink); font: 400 15px/1.55 var(--zn-read); }
+.th-perspective { margin-block-start: 10px !important; color: var(--ink); font: 400 14px/1.55 var(--zn-read); }
+.th-perspective .th-note-k { display: block; margin-block-end: 2px; }
+.th-now-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-block-start: 14px !important; }
+.th-tag { display: inline-flex; align-items: center; min-block-size: 26px; padding: 3px 9px; border: 1px solid var(--line); color: var(--ink-2); font: 500 10.5px/1.3 var(--zn-mono); letter-spacing: .14em; text-transform: uppercase; }
+.th-tag-kind { border-color: var(--th-select); color: var(--ink); }
+.th-before { margin-block-start: 14px !important; padding: 10px 12px; border: 1px solid var(--line); color: var(--ink); font: 400 14px/1.55 var(--zn-read); }
+.th-before .th-note-k { display: block; margin-block-end: 3px; color: var(--ink-2); }
+.th-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; margin-block-start: 18px !important; padding-block: 14px; border-block: 1px solid var(--rule); }
+.th-facts > div { min-inline-size: 0; }
+.th-facts > div:first-child, #theaterPlaceRow { grid-column: 1 / -1; }
+.th-facts dt { color: var(--ink-3); font: 500 10.5px/1.4 var(--zn-mono); letter-spacing: .14em; text-transform: uppercase; }
+.th-facts dd { margin-block-start: 3px; color: var(--ink); font: 400 14px/1.45 var(--zn-read); overflow-wrap: break-word; }
+.th-now-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-block-start: 18px; }
+.th-now-actions > .th-btn-source { grid-column: 1 / -1; }
+.th-now-actions > .th-btn-quiet { min-block-size: 44px; padding-inline: 10px; gap: 8px; }
+.th-now-rest > .th-description { margin-block-start: 18px !important; max-inline-size: 60ch; color: var(--ink-2); font: 400 15px/1.65 var(--zn-read); }
+.th-notes { display: grid; gap: 12px; margin-block-start: 16px; }
+.th-note { display: grid; gap: 3px; padding-inline-start: 12px; border-inline-start: 1px solid var(--line); color: var(--ink-2); font: 400 13.5px/1.55 var(--zn-read); }
+.th-note-k { color: var(--ink-3); font: 500 10.5px/1.4 var(--zn-mono); letter-spacing: .14em; text-transform: uppercase; }
+.th-cinema-details { margin-block-start: 16px; border-block: 1px solid var(--rule); }
+.th-cinema-details > summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-block-size: 48px; padding-block: 12px; color: var(--ink-2); font: 500 13px/1.5 var(--zn-read); cursor: pointer; list-style: none; }
+.th-cinema-details > summary::-webkit-details-marker { display: none; }
+.th-cinema-details > summary::after { content: "+"; color: var(--ink); font: 400 22px/1 var(--zn-read); }
+.th-cinema-details[open] > summary::after { content: "\2212"; }
+.th-cinema-details-body { padding-block: 4px 20px; }
+.th-cinema-details-body > * + * { margin-block-start: 14px; }
+.th-cinema-details-body :where(p, li) { color: var(--ink-2); font: 400 13.5px/1.65 var(--zn-read); overflow-wrap: anywhere; }
+.th-cinema-details-body strong { color: var(--ink); }
+.th-cinema-details-body ul { list-style: none; padding: 0; }
+.th-cinema-details-body li + li { margin-block-start: 10px; }
+.th-source-list li > a { display: flex; align-items: center; min-block-size: 44px; padding-block: 6px; color: var(--ink); }
+.th-source-list li > span { display: block; color: var(--ink-3); font-size: 12.5px; }
+.th-thumbnail-credit { color: var(--ink-3) !important; font-size: 12.5px !important; }
+.th-thumbnail-credit a { display: inline-flex; align-items: center; min-block-size: 44px; color: var(--ink); }
+
+/* ---------- now playing: docked controls when the visitor's own playback scrolls out of view ---------- */
+.th-dock {
+  position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 59; padding: 6px clamp(16px, 3.4vw, 48px) calc(6px + env(safe-area-inset-bottom));
+  background: var(--page-bg); border-block-start: 1px solid var(--rule); color: var(--ink);
+}
+.th-dock-in { display: flex; align-items: center; gap: 12px; max-inline-size: 1344px; min-block-size: 44px; margin-inline: auto; }
+.th-dock-thumb { position: relative; flex: none; inline-size: 64px; block-size: 36px; overflow: hidden; background: var(--th-poster-bg); }
+.th-dock-thumb img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.th-dock-title { flex: 1 1 auto; min-inline-size: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 400 17px/1.3 var(--serif); }
+.th-dock .th-tbtn { flex: none; }
+
+/* ---------- the collection ---------- */
+.th-cinema .th-catalogue { margin-block-start: clamp(64px, 7vw, 104px); }
+.th-section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 24px; padding-block-start: 22px; border-block-start: 1px solid var(--line); }
+.th-section-heading .th-section-title:focus { outline: none; }
+.th-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) auto; gap: 14px; align-items: end; margin-block: 26px 0; }
+.th-field-search { grid-column: 1 / -1; }
+.th-filter-toggle { display: none; }
+.th-filter-panel { display: contents; }
+.th-field { position: relative; min-inline-size: 0; }
+.th-field label { display: block; margin-block-end: 8px; color: var(--ink-2); font: 400 13px/1.4 var(--zn-read); }
+.th-tools input, .th-tools select {
+  display: block; inline-size: 100%; min-inline-size: 0; min-block-size: 48px; padding: 11px 40px 11px 14px; border: 1px solid var(--line); border-radius: 2px;
+  background: var(--page-bg); color: var(--ink); font: 400 15px/1.5 var(--zn-read); color-scheme: dark; appearance: none; -webkit-appearance: none;
+  text-overflow: ellipsis;
+}
+[data-theme="codex"] .th-tools :is(input, select) { color-scheme: light; }
+.th-tools option { background: var(--page-bg); color: var(--ink); }
+.th-tools input::placeholder { color: var(--ink-3); opacity: 1; }
+.th-tools :is(input, select):hover { border-color: var(--rim-hover); }
+.th-tools select:not(:has(option:checked[value="all"])) { border-color: var(--th-select); }
+.th-field-search input { padding-inline-start: 42px; }
+.th-field-search::before { content: ""; position: absolute; inset-inline-start: 15px; inset-block-end: 17px; inline-size: 11px; block-size: 11px; border: 1.5px solid var(--ink-2); border-radius: 50%; pointer-events: none; }
+.th-field-search::after { content: ""; position: absolute; inset-inline-start: 23.5px; inset-block-end: 15.75px; inline-size: 6px; block-size: 1.5px; background: var(--ink-2); transform: rotate(-45deg); pointer-events: none; }
+.th-filter-panel .th-field::after { content: ""; position: absolute; inset-inline-end: 17px; inset-block-end: 21px; inline-size: 7px; block-size: 7px; border-inline-end: 1.5px solid var(--ink-2); border-block-end: 1.5px solid var(--ink-2); transform: rotate(45deg); pointer-events: none; }
+#theaterClear { min-block-size: 48px; }
+.th-filter-count { display: inline-grid; place-items: center; min-inline-size: 22px; block-size: 22px; padding-inline: 6px; background: var(--th-accent); color: var(--th-accent-ink); font: 500 11px/1 var(--zn-mono); }
+#theaterStatus { grid-column: 1 / -1; min-block-size: 20px; color: var(--ink-2); font: 400 12px/1.6 var(--zn-mono); }
+.th-empty { padding-block: 40px; }
+.th-empty h3 { font: 400 30px/1.2 var(--serif); }
+.th-empty p { margin-block-start: 10px !important; color: var(--ink-2); }
+.th-film-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 24px; margin-block-start: 22px; }
+.th-film { display: flex; flex-direction: column; min-inline-size: 0; }
+.th-film > .th-card-details { margin-block-start: auto; padding-block-start: 6px; }
+.th-poster-button { position: relative; display: block; inline-size: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--th-poster-bg); color: var(--ink); text-decoration: none; }
+.th-poster-button img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; max-inline-size: none; object-fit: cover; }
+/* Provider images with black bars baked in, measured per image: a 4:3 picture fills the slot (the bars leave, the
+   picture is cropped at most by its own top and bottom eighth); square or upright art keeps its whole picture and
+   the bars become the page's own ground. The image is still the provider's real thumbnail. */
+:is(.th-poster-button, .th-upnext-thumb, .th-dock-thumb)[data-crop="fill"] img { transform: scale(var(--th-crop, 1)); }
+:is(.th-poster-button, .th-upnext-thumb, .th-dock-thumb)[data-crop="inset"] { background: var(--page-bg); }
+:is(.th-poster-button, .th-upnext-thumb, .th-dock-thumb)[data-crop="inset"] img { clip-path: inset(0 var(--th-crop-r, 0%) 0 var(--th-crop-l, 0%)); }
+.th-poster-button::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--rule); pointer-events: none; }
+.th-poster-button:hover::after { box-shadow: inset 0 0 0 1px var(--rim-hover); }
+.th-poster-button[aria-pressed="true"]::after { box-shadow: inset 0 0 0 2px var(--th-select); }
+.th-poster-button[aria-pressed="true"]::before {
+  content: "On Screen"; position: absolute; z-index: 1; inset-inline-start: 0; inset-block-start: 0; padding: 5px 8px;
+  background: var(--th-accent); color: var(--th-accent-ink); font: 500 10px/1.2 var(--zn-mono); letter-spacing: .14em; text-transform: uppercase;
+}
+.th-poster-kind, .th-poster-where { position: absolute; max-inline-size: calc(100% - 16px); padding: 4px 7px; background: #000; color: #fff; font: 500 10px/1.2 var(--zn-mono); letter-spacing: .12em; text-transform: uppercase; }
+.th-poster-kind { inset-inline-start: 8px; inset-block-end: 8px; }
+.th-poster-where { inset-inline-end: 8px; inset-block-start: 8px; background: var(--page-bg); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.th-poster-button[aria-pressed="true"] .th-poster-where { display: none; }
+.th-cinema .th-film-title { margin-block-start: 14px; font: 400 22px/1.14 var(--serif); letter-spacing: -.004em; overflow-wrap: break-word; text-wrap: pretty; }
+.th-card-meta { margin-block-start: 7px !important; color: var(--ink-2); font: 400 12.5px/1.5 var(--zn-read); }
+/* creators first, then the publisher and place: the people who made it are always visible on the card */
+.th-cinema .th-film-credits { margin-block-start: 6px; color: var(--ink); font: 400 12.5px/1.5 var(--zn-read); overflow-wrap: break-word; }
+.th-card-byline { margin-block-start: 3px !important; color: var(--ink-3); font: 400 12.5px/1.5 var(--zn-read); }
+.th-card-byline > span { display: block; }
+.th-card-place:empty { display: none !important; }
+.th-card-access { margin-block-start: 6px !important; color: var(--ink); font: 500 10.5px/1.4 var(--zn-mono); letter-spacing: .12em; text-transform: uppercase; }
+.th-card-details > summary { display: flex; align-items: center; gap: 8px; min-block-size: 44px; color: var(--ink-2); font: 500 12.5px/1.4 var(--zn-read); cursor: pointer; list-style: none; }
+.th-card-details > summary::-webkit-details-marker { display: none; }
+.th-card-details > summary::after { content: "+"; color: var(--ink); font: 400 18px/1 var(--zn-read); }
+.th-card-details[open] > summary::after { content: "\2212"; }
+.th-card-details[open] > summary { color: var(--ink); }
+.th-card-details .th-cinema-details-body { padding-block: 2px 8px; }
+.th-card-details .th-cinema-details-body :where(p, li) { font-size: 13px; }
+.th-card-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.th-card-links .th-watch { min-block-size: 44px; padding: 8px 12px; font-size: 13px; }
+.th-film.is-selected .th-film-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+html:is([data-motion="living"], [data-motion="calm"]) .th-film.th-revealed { animation: th-reveal .42s steps(3, end) both; }
+@keyframes th-reveal { from { opacity: 0; } to { opacity: 1; } }
+.th-library-more { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-block: 56px 8px; }
+.th-progress { inline-size: min(280px, 70%); block-size: 1px; background: var(--rule); }
+.th-progress > span { display: block; block-size: 2px; margin-block-start: -.5px; inline-size: 0; background: var(--ink); }
+.th-library-more .th-btn { min-inline-size: 240px; }
+
+/* ---------- beyond the collection ---------- */
+.th-world-reading { margin-block-start: 72px; padding-block-start: 28px; border-block-start: 1px solid var(--line); }
+.th-world-reading > .th-kicker { margin-block-end: 16px; }
+.th-world-reading > p:last-of-type { margin-block: 18px !important; max-inline-size: 72ch; color: var(--ink-2); font: 400 15px/1.75 var(--zn-read); }
+.th-world-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-block-start: 24px; }
+.th-world-links > a { display: flex; flex-direction: column; gap: 12px; min-inline-size: 0; padding: 22px; border: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+.th-world-links > a:hover { border-color: var(--rim-hover); }
+.th-world-links strong { font: 400 24px/1.2 var(--serif); }
+.th-world-links span { color: var(--ink-2); font: 400 13px/1.7 var(--zn-read); }
+.th-regional { margin-block-start: 32px; }
+.th-regional .th-companions { margin-block: 12px 24px; }
+.th-regional .th-section-heading { display: none; }
+.th-companion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.th-companion-grid h3 { font: 400 28px/1.15 var(--serif); }
+.th-companion-grid p { margin-block-start: 12px !important; color: var(--ink-2); font: 400 15px/1.7 var(--zn-read); }
+.th-companion-grid .th-watch { margin-block-start: 16px; }
+.th-art-credit { color: var(--ink-3); font-size: 12px; }
+.th-method { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 24px 48px; margin-block-start: 64px; padding-block: 26px; border-block: 1px solid var(--rule); }
+.th-method .th-kicker { margin-block-end: 12px; }
+.th-method p { max-inline-size: 64ch; color: var(--ink-2); font: 400 15px/1.7 var(--zn-read); }
+.th-method .th-btn { margin-block-start: 18px; }
+.th-art { position: relative; display: block; inline-size: 100%; block-size: 100%; background: var(--th-poster-bg); }
+.th-cover-title { position: absolute; inset: auto 16px 16px; font: 400 24px/1.1 var(--serif); }
+.th-cover-number { position: absolute; inset: 12px auto auto 12px; font: 400 11px/1.5 var(--zn-mono); color: var(--ink-3); }
+
+/* Internal review note styles are unused on the public page. */
+.th-review-bar { margin: 0; padding: 8px 16px; border-block-end: 1px solid var(--line); background: var(--page-bg); color: var(--ink); font: 500 11.5px/1.45 var(--zn-mono); text-align: center; }
+
+/* ---------- view transitions (Living morphs the poster into the screen; Calm cross-fades; Still has none) ---------- */
+::view-transition-group(th-hero) { animation-duration: .46s; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+::view-transition-old(th-hero), ::view-transition-new(th-hero) { block-size: 100%; object-fit: cover; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .22s; }
+html[data-vt="calm"]::view-transition-old(root), html[data-vt="calm"]::view-transition-new(root) { animation-duration: .16s; }
+
+/* ---------- motion floors ---------- */
+html[data-motion="still"] .th-page *, html[data-motion="still"] .th-page *::before, html[data-motion="still"] .th-page *::after { animation: none !important; transition: none !important; }
+html[data-motion-ask="pending"] .th-page *, html[data-motion-ask="pending"] .th-page *::before, html[data-motion-ask="pending"] .th-page *::after { animation: none !important; }
+html[data-theater-motion="still"] .zt-frame-svg .zt-seg { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  html[data-preview-autoplay="off"] .th-page *, html[data-preview-autoplay="off"] .th-page *::before, html[data-preview-autoplay="off"] .th-page *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- widths ---------- */
+@media (max-width: 1279px) {
+  .th-film-grid { gap: 44px 20px; }
+  .th-cinema .th-film-title { font-size: 21px; }
+}
+@media (max-width: 1179px) {
+  .th-screening-layout { grid-template-columns: minmax(0, 1fr) minmax(280px, 340px); column-gap: 32px; }
+  .th-film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .th-tools { grid-template-columns: repeat(2, minmax(0, 1fr)) auto; }
+  .th-filter-panel .th-field:nth-child(odd) { grid-column: 1; } .th-filter-panel .th-field:nth-child(even) { grid-column: 2; }
+  #theaterClear { grid-column: 3; grid-row: 3; }
+}
+/* One column: the screen comes straight after the title and creators, the Before Watching note sits between the
+   screen and its controls, and the facts follow the next stories. */
+@media (max-width: 959px) {
+  .th-cinema-heading { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .th-screening-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: none;
+    grid-template-areas: "kick" "title" "credits" "tags" "shell" "before" "tools" "status" "who" "rail" "rest" "consent"; gap: 0; }
+  .th-now-head, .th-stage-col { display: contents; }
+  .th-now-head > .th-kicker { grid-area: kick; } .th-now-head > .th-now-tags { grid-area: tags; margin-block-start: 10px !important; }
+  .th-now-head > .th-feature-title { grid-area: title; } .th-now-head > .th-creators { grid-area: credits; }
+  .th-now-head > .th-perspective { grid-area: who; margin-block-start: 16px !important; } .th-now-head > .th-before { grid-area: before; margin-block-start: 10px !important; }
+  .th-now-head > .th-now-intro { display: none; }
+  .th-stage-shell { margin-block-start: 14px; }
+  .th-now-rest { grid-area: rest; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "f d" "a d" "n n" "x x"; gap: 0 32px; align-items: start; }
+  .th-now-rest > .th-facts { grid-area: f; } .th-now-rest > .th-now-actions { grid-area: a; } .th-now-rest > .th-description { grid-area: d; }
+  .th-now-rest > .th-notes { grid-area: n; } .th-now-rest > .th-cinema-details { grid-area: x; }
+  .th-world-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 719px) {
+  .th-page { --th-g: 35px; --th-gx: 0px; padding: 12px 16px 64px; }
+  .th-cinema-heading { gap: 4px; margin-block-end: 8px; }
+  .th-cinema-heading h1 { margin-block-start: 6px; font-size: clamp(30px, 8.8vw, 38px); }
+  .th-masthead-note { display: none; }
+  .th-kicker { font-size: 10.5px; letter-spacing: .13em; gap: 10px; }
+  .th-kicker::before { inline-size: 16px; }
+  /* phone stage: full bleed, the tiers run in bands above (the aisle) and below the picture */
+  .th-stage-shell { margin-inline: -16px; padding: var(--th-g) 0; margin-block-start: 10px; }
+  /* phone transport: Play, Sound and Captions as three equal keys (icon above the label), then Next Story and
+     Pause Light as two wide keys */
+  .th-transport { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: stretch; gap: 6px; margin: 8px 0 0; }
+  .th-transport > .th-tbtn { grid-column: span 3; }
+  .th-transport > :is(#theaterPlay, #theaterSound, #theaterCC) { grid-column: span 2; }
+  .th-transport > #theaterMotion { margin-inline-start: 0; }
+  .th-transport > :is(#theaterPlay, #theaterSound, #theaterCC) { flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: center; gap: 2px 5px; min-block-size: 54px; padding: 5px 4px; white-space: normal; text-align: center; line-height: 1.15; }
+  .th-transport > :is(#theaterPlay, #theaterSound, #theaterCC) .i { flex: 0 0 100%; }
+  .th-transport .th-tbtn { font-size: 12.5px; }
+  .th-transport .th-tstate { font-size: 12px; letter-spacing: .06em; }
+  .th-transport > :is(#theaterPlay, #theaterSound, #theaterCC) .th-tstate { flex-basis: 100%; min-inline-size: 0; text-align: center; }
+  :is(#theaterSound, #theaterCC) .th-tstate { min-inline-size: 0; }
+  #theaterPlay, #theaterSound, #theaterCC { min-inline-size: 0; }
+  .th-native-note { grid-column: 1 / -1; padding: 6px 2px; }
+  .th-status-line { margin: 8px 0 0; min-block-size: 3em; font-size: 14px; }   /* two lines: the note itself sits under the screen here */
+  .th-provider-line { margin-inline: 0; font-size: 12px; }
+  .th-upnext { margin: 9px 0 0; }
+  html[data-js] .th-upnext { min-block-size: 186px; }
+  .th-upnext-list { grid-auto-columns: 168px; margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  .th-upnext-title { font-size: 15px; }
+  .th-cinema .th-feature-title { font-size: clamp(28px, 8.2vw, 36px); margin-block-start: 8px !important; }
+  .th-creators { font-size: 14.5px; margin-block-start: 8px !important; }
+  /* the note label runs into its text on phones: one line less between the screen and its controls */
+  .th-before { padding: 8px 12px; }
+  .th-before .th-note-k { display: inline; margin-inline-end: 6px; }
+  .th-now-rest { display: block; }
+  .th-facts { gap: 10px 16px; }
+  .th-cinema .th-catalogue { margin-block-start: 56px; }
+  .th-tools { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+  .th-field-search { grid-column: 1 / -1; grid-row: 1; }
+  .th-filter-toggle { display: inline-flex; grid-column: 1; grid-row: 2; justify-content: space-between; min-block-size: 48px; }
+  .th-filter-toggle[aria-expanded="true"] { border-color: var(--rim-hover); }
+  .th-filter-toggle::after { content: ""; inline-size: 7px; block-size: 7px; margin-inline-start: auto; border-inline-end: 1.5px solid var(--ink-2); border-block-end: 1.5px solid var(--ink-2); transform: translateY(-2px) rotate(45deg); }
+  .th-filter-toggle[aria-expanded="true"]::after { transform: translateY(2px) rotate(225deg); }
+  .th-filter-count { margin-inline-start: 10px; }
+  #theaterClear { grid-column: 2; grid-row: 2; }
+  .th-filter-panel { display: none; grid-column: 1 / -1; grid-row: 3; }
+  .th-filter-panel.is-open { display: grid; gap: 12px; padding: 4px 0 6px; }
+  .th-filter-panel .th-field:nth-child(n) { grid-column: auto; }
+  #theaterStatus { grid-row: 4; }
+  .th-film-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 14px; }
+  .th-cinema .th-film-title { margin-block-start: 10px; font-size: 18px; line-height: 1.15; }
+  .th-card-meta, .th-card-byline, .th-cinema .th-film-credits { font-size: 12px; }
+  .th-poster-kind, .th-poster-where { padding: 3px 5px; font-size: 9px; letter-spacing: .1em; }
+  .th-poster-kind { inset-inline-start: 6px; inset-block-end: 6px; }
+  .th-poster-where { inset-inline-end: 6px; inset-block-start: 6px; }
+  .th-poster-button[aria-pressed="true"]::before { padding: 4px 6px; font-size: 9px; }
+  .th-card-details > summary { font-size: 12px; }
+  .th-world-reading { margin-block-start: 52px; }
+  .th-world-links { gap: 12px; }
+  .th-world-links > a { padding: 18px; }
+  .th-method, .th-companion-grid { grid-template-columns: minmax(0, 1fr); }
+  .th-motion-ask { padding: 14px; }
+  .th-motion-ask-actions { inline-size: 100%; }
+  .th-curtain-note { gap: 8px 12px; padding: 10px 12px; }
+  .th-curtain-note p { font-size: 13px; }
+  .th-curtain[data-mode="held"] .th-curtain-note p { font-size: 13px; }
+  .th-curtain-note .th-btn { min-block-size: 44px; padding: 8px 14px; font-size: 13px; }
+  .th-library-more .th-btn { min-inline-size: 0; inline-size: 100%; }
+  /* phone dock: Pause, Sound and Back To Screen as three equal keys, icon above the label, inside the gutters at 320
+     and up; the title stays in the region for assistive technology */
+  .th-dock { padding-inline: 12px; }
+  .th-dock-in { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 6px; }
+  .th-dock-thumb { display: none; }
+  .th-dock-title { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .th-dock .th-tbtn { flex-wrap: wrap; align-content: center; gap: 2px 5px; min-inline-size: 0; min-block-size: 54px; padding: 5px 4px;
+    white-space: normal; text-align: center; line-height: 1.15; font-size: 12.5px; }
+  .th-dock .th-tbtn .i { flex: 0 0 100%; }
+  .th-dock .th-tstate { font-size: 12px; letter-spacing: .06em; }
+}
+/* 320 class phones: one story per row, poster beside its text, so long titles stay readable */
+@media (max-width: 359px) {
+  .th-film-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .th-film { display: grid; grid-template-columns: 128px minmax(0, 1fr); grid-template-rows: auto auto auto auto auto 1fr; column-gap: 12px; align-content: start; }
+  .th-film > .th-poster-button { grid-column: 1; grid-row: 1 / span 5; align-self: start; }
+  .th-film > :not(.th-poster-button) { grid-column: 2; }
+  .th-film > .th-card-details { grid-column: 1 / -1; }
+  .th-cinema .th-film-title { margin-block-start: 0; font-size: 18px; }
+  .th-poster-where { display: none; }
+  .th-transport .th-tbtn { font-size: 12px; padding-inline: 2px; }
+  #theaterMotion .th-tstate { display: none; }   /* the pressed state and the icon carry it at this width */
+  .th-status-line { min-block-size: 4.5em; -webkit-line-clamp: 3; }   /* three lines at this width */
+  .th-tlabel-long { display: none; }
+  .th-tlabel-short { display: inline; }
+  .th-now-actions { grid-template-columns: minmax(0, 1fr); }
+  .th-kicker::before { display: none; }
+  .th-world-links { grid-template-columns: minmax(0, 1fr); }
+  .th-motion-ask-actions { grid-template-columns: minmax(0, 1fr); }
+}
+@media (forced-colors: active) {
+  .th-frame-composed, .th-ambient { display: none !important; }
+  .th-screen { outline: 1px solid CanvasText; }
+  .th-tbtn, .th-btn, .th-watch, .th-tools :is(input, select) { background: Canvas; color: CanvasText; border-color: CanvasText; }
+  #theaterPlay[data-next="play"], #theaterSound[data-invite], .th-btn-solid, .th-tag-kind, .th-filter-count { forced-color-adjust: none; background: CanvasText; color: Canvas; }
+  .th-poster-button[aria-pressed="true"]::after { box-shadow: inset 0 0 0 3px Highlight; }
+  .th-poster-kind, .th-poster-where, .th-poster-button::before { background: Canvas; color: CanvasText; border: 1px solid CanvasText; }
+}
+/* the one-time way up from a story link's card to the screen where that story is already selected */
+.th-linked-watch { inline-size: 100%; margin-block-start: 10px; }
+@media (max-width: 359px) { .th-film > .th-linked-watch { grid-column: 1 / -1; order: 1; } .th-film > .th-card-details { order: 2; } }
+
+/* The landing page's Appearance chrome, with viewport placement measured from its visible opener. */
+.appearance-pop {
+  inset: auto;
+  top: 72px;
+  left: max(16px, calc((100vw - var(--col-max)) / 2 + var(--gutter)));
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  box-shadow: none;
+  border-color: var(--rule);
+}
+.appearance-pop.is-fallback { display: none; z-index: 10000; }
+.appearance-pop.is-fallback.is-open { display: grid; gap: 20px; }
+.appearance-btn[aria-expanded="true"] { color: var(--ink); border-color: var(--ink); }
+.appearance-btn[aria-expanded="true"] .ab-caret { transform: translateY(2px) rotate(225deg); }
+html:not([data-theme]) .appearance-pop {
+  border: 1px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(180deg, rgba(255,255,255,.62), rgba(255,255,255,.28) 55%, rgba(255,255,255,.44)) border-box;
+}
+:is([data-theme="maya"], [data-theme="skeleton"]) .appearance-pop {
+  border: 1px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(180deg, color-mix(in oklab, var(--ink) 58%, transparent),
+      color-mix(in oklab, var(--ink) 30%, transparent) 55%, color-mix(in oklab, var(--ink) 44%, transparent)) border-box;
+}
+.appearance-pop .theme-picker { flex: none; gap: 0; padding: 0; }
+.appearance-pop .ap-note { margin: 0; }
+.appearance-pop [hidden] { display: none !important; }
+.appearance-pop .ap-seg { border-color: var(--rule); }
+html:not([data-theme]) .appearance-pop .ap-seg { border-color: var(--line); }
+.appearance-pop .ap-opt:hover { border-color: var(--rule); }
+.appearance-pop .ap-opt[aria-checked="true"] { border-color: var(--ink); }
+.appearance-pop .ap-opt[aria-disabled="true"] { cursor: default; color: var(--ink-4); border-color: transparent; }
+.appearance-pop .ap-opt[aria-disabled="true"][aria-checked="true"] { border-color: var(--rule); }
+.appearance-pop :is(.ap-opt, .ap-replay, .theme-swatch):focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 100px; }
+.appearance-pop .theme-swatch:focus-visible { outline-offset: -4px; }
+.ap-translate { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
+.ap-language-note { margin: 6px 0 0; color: var(--ink-2); font: 400 12px/1.6 var(--zn-mono); }
+.ap-replay { min-height: 44px; width: 100%; padding: 0 16px; border: 1px solid var(--rule); border-radius: 100px;
+  background: transparent; color: var(--ink-2); font: 500 11px/1 var(--zn-mono); letter-spacing: .16em; text-transform: uppercase; cursor: pointer; }
+.ap-replay:hover { color: var(--ink); border-color: var(--ink-3); }
+html:not([data-theme]) .ap-replay { border-color: var(--line); }
+.th-translation { scroll-margin-top: 96px; }
+.th-translation summary { cursor: pointer; min-height: 44px; padding-block: 12px; }
+.th-translation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-block: 20px; }
+.th-translation-grid > div { min-width: 0; }
+.th-translation-grid strong { display: block; margin-bottom: 10px; color: var(--ink); }
+.th-translation-grid label { display: block; margin-top: 12px; color: var(--ink); }
+.th-translation-grid :is(p, a) { overflow-wrap: anywhere; }
+#translateSection { display: block; width: 100%; min-height: 44px; margin: 8px 0; padding: 8px;
+  background: var(--bg-deep); color: var(--ink); border: 1px solid var(--rule); font: inherit; color-scheme: dark; }
+#translateSection option { background: var(--bg-deep); color: var(--ink); }
+[data-theme="codex"] #translateSection { color-scheme: light; }
+#theaterTitle { scroll-margin-top: 96px; }
+:root { --th-glow-low: .08; --th-glow-high: .2; --th-glow-rest: .12; --th-glow-dash: 150; }
+html[data-theater-intensity="light"] { --th-glow-low: .04; --th-glow-high: .12; --th-glow-rest: .08; --th-glow-dash: 90; }
+html[data-theater-intensity="heavy"] { --th-glow-low: .12; --th-glow-high: .32; --th-glow-rest: .16; --th-glow-dash: 240; }
+.th-frame-glow { opacity: var(--th-glow-rest); }
+html[data-motion="living"] .th-cinema .th-frame-glow { stroke-dasharray: var(--th-glow-dash) 3650; }
+@keyframes th-frame-breathe { 0%, 100% { opacity: var(--th-glow-low); } 50% { opacity: var(--th-glow-high); } }
+html[data-motion="calm"] .th-cinema .th-frame-glow,
+html[data-motion="still"] .th-cinema .th-frame-glow,
+html[data-theater-motion="still"] .th-cinema .th-frame-glow { stroke-dasharray: none; opacity: var(--th-glow-rest); }
+@media (max-width: 679px) { .th-translation-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+@media (prefers-reduced-motion: reduce) { .th-cinema .th-frame-glow { opacity: var(--th-glow-rest); } }
+@media (forced-colors: active) {
+  .appearance-pop, :is([data-theme="maya"], [data-theme="skeleton"]) .appearance-pop,
+  html:not([data-theme]) .appearance-pop { border: 1px solid CanvasText; background: Canvas; color: CanvasText; }
+  .appearance-pop .ap-opt[aria-checked="true"] { border-color: Highlight; }
+}
+
+/* Shared intensity preferences stay within authored light bounds. */
+html[data-theater-intensity="light"] .th-stage-shell { --zt-frame-l2: var(--zt-frame-l1); --zt-frame-l3: var(--zt-frame-l1); }
+html[data-theater-intensity="medium"] .th-stage-shell { --zt-frame-l3: var(--zt-frame-l2); }
+.th-nw { white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .th-cinema *, .th-cinema *::before, .th-cinema *::after { animation: none !important; transition: none !important; } }
