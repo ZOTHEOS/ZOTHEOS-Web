@@ -40,6 +40,7 @@ def groups(root):
     return [
         {"name": "index.html", "files": ["index.html"], "sources": ["/", "/index", "/index.html"], "strict": False},
         {"name": "download.html", "files": ["download.html"], "sources": ["/download", "/download.html"], "strict": False},
+        {"name": "theater", "files": ["theater.html"], "sources": ["/theater", "/theater.html"], "strict": True},
         {"name": "game", "files": ["game/index.html"], "sources": ["/game", "/game/", "/game/index", "/game/index.html"], "strict": False, "meta": False, "styles": True},
         {"name": "nations hub", "files": ["nations.html"], "sources": ["/nations", "/nations.html"], "strict": True},
         {"name": "nations pages", "files": nat, "sources": ["/nations/(.*)"], "strict": True},

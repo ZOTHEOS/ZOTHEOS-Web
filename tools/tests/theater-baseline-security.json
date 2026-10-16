@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-16T05:23:42.535635+00:00",
+  "kind": "Measured security baseline before Theater implementation",
+  "frame_directives": {
+    "/": [
+      "'none'"
+    ],
+    "/index": [
+      "'none'"
+    ],
+    "/index.html": [
+      "'none'"
+    ],
+    "/download": [
+      "'none'"
+    ],
+    "/download.html": [
+      "'none'"
+    ],
+    "/game": [],
+    "/game/": [],
+    "/game/index": [],
+    "/game/index.html": [],
+    "/nations": [
+      "'none'"
+    ],
+    "/nations.html": [
+      "'none'"
+    ],
+    "/nations/(.*)": [
+      "'none'"
+    ]
+  },
+  "vercel_body_sha256": "c43acf9dac49500f06ab81608b0ec0245eeda457b906e20c9a36862d3fb9901c"
+}

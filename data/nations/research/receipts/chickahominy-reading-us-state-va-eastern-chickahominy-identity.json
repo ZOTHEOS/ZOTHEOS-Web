@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit directory identity and official website review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-16T05:12:01.068917+00:00",
+  "directory_id": "us-state-va-eastern-chickahominy",
+  "registry_id": "chickahominy-indian-tribe-eastern-division-us-va",
+  "own_published_name": "Chickahominy Indian Tribe - Eastern Division",
+  "official_url": "https://www.cied.org/",
+  "own_home_receipt": "research/receipts/chickahominy-reading-eastern-chickahominy-home.receipt.json",
+  "evidence_phrase": "Chickahominy Indian Tribe - Eastern Division",
+  "directory_source": {
+    "publisher": "Virginia Secretary of the Commonwealth",
+    "title": "Virginia Indians: Virginia State Recognized Tribes",
+    "url": "https://www.commonwealth.virginia.gov/virginia-indians/",
+    "retrieved_at": "2026-10-14T05:11:22.730797+00:00",
+    "sha256": "af4cec73c80f85dd3308feb003b0a1d16205ac51bd6f2bdb0999c04c868d2aed",
+    "receipt": "receipts/va-virginia-indians.receipt.json",
+    "publication_date": null,
+    "source_edition": "Unversioned web table observed October 14, 2026. No record-level effective date established.",
+    "directory_link_source_url": "https://www.commonwealth.virginia.gov/virginia-indians/state-recognized-tribes/",
+    "directory_link_receipt": "receipts/va-state-recognized-tribes.receipt.json"
+  },
+  "state_published_ownership_chain": "https://www.cied.org/",
+  "independent_review_record_sha256": "20c3300d5beb790708672b61c6853fe612f21c77288d2b73414c81a1318e6af2",
+  "missingness_audit": {
+    "existing_profiles_scanned": 461,
+    "matching_identity_or_aliases": 0
+  },
+  "human_review_claimed": false,
+  "limits": "Distinct Tribal governments remain separate; CIED nonprofit not merged. Retained directory editions inform identity comparison only, not a fresh legal recognition or land-title determination.",
+  "url": "https://www.cied.org/",
+  "final_url": "https://www.cied.org/",
+  "retrieved_at": "2026-10-16T05:05:55.065909+00:00",
+  "http_status": 200,
+  "sha256": "e7a4cb1796bdd50a79feacc9b85eb0d33360d5364b5b8f4d7b1293bc8250b093"
+}

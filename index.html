@@ -7113,6 +7113,16 @@
       [data-theme="maya"] .hero-actions .btn-primary { animation: none !important; }
     }
   </style>
+<style>
+.theater-invitation { max-width:1328px; margin:0 auto; padding:72px clamp(20px,4vw,40px); display:grid; grid-template-columns:1.25fr 1fr; gap:32px; border-top:1px solid var(--line); }
+.theater-invitation h2 { font:400 clamp(42px,5vw,72px)/1.05 var(--serif); letter-spacing:-.02em; margin:16px 0; }
+.theater-invitation p { max-width:54ch; color:var(--ink-2); line-height:1.7; }
+.theater-invitation .ti-art { min-height:240px; display:grid; place-items:center; border-block:1px solid var(--rule); background:radial-gradient(ellipse at 50% 70%,#39121c88,transparent 65%); font:400 36px/1.2 var(--serif); text-align:center; }
+[data-theme="maya"] .theater-invitation .ti-art { background:radial-gradient(ellipse at 50% 70%,#88602d44,transparent 65%); }
+.theater-invitation a { display:inline-flex; align-items:center; min-height:48px; margin-top:20px; padding:12px 18px; border:1px solid var(--line); color:var(--ink); text-decoration:none; }
+.theater-invitation a:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
+@media(max-width:679px) { .theater-invitation { grid-template-columns:1fr; padding-block:48px; } .theater-invitation .ti-art { min-height:180px; } }
+</style>
 </head>
 <body class="page-loading">
 
@@ -8238,7 +8248,8 @@
     <span class="seal-dot"></span>
   </div>
 
-  <section id="compare">
+  <section class="theater-invitation" id="theater" aria-labelledby="theater-invitation-title"><div><p class="lbl">ZOTHEOS Theater · Indigenous Voices First</p><h2 id="theater-invitation-title">Stories That<br>Deserve Your Time.</h2><p>Documentaries and recorded conversations on histories that must be faced, communities that endure and futures they are shaping. Clear sources. Honest viewing notes. Watch at your pace.</p><a href="/theater">Enter The Theater <span aria-hidden="true">&nbsp;↗</span></a></div><div class="ti-art" aria-hidden="true">Truth.<br>Continuity.<br>Renewal.</div></section>
+<section id="compare">
     <div class="section-inner">
       <div class="section-head reveal">
         <span class="maya-num"><span class="b"></span><span class="d"></span><span class="d"></span><span class="d"></span></span>
@@ -8577,6 +8588,7 @@
           <a href="#support">Support</a>
           <a href="/game">Play Ollamaliztli</a>
             <a href="/nations/resources">Histories And Resources</a>
+          <a href="/theater">Theater</a>
             <a href="/nations/directory">Nations Directory</a>
         </div>
       </nav>
@@ -8602,7 +8614,8 @@
     <details class="website-privacy" id="site-privacy">
       <summary><span>Website privacy and connections</span><span class="zd-icon" aria-hidden="true"></span></summary>
       <div class="privacy-grid">
-        <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p></div>
+        <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p><p>The separate <a href="/theater">Theater</a> offers YouTube and PBS players only after you choose to load one. The selected provider receives connection information, including your IP address, under its own privacy policies. Official source links also open only when followed.</p>
+</div>
         <div><strong>Website connections</strong><p>This page loads its images, video and fonts from this site's own host. The hosting provider handles those requests. Local inference and loading this website are different activities.</p></div>
         <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, our form processor. Choosing section translation sends that public text to Google Translate. Support links open separate payment services with their own policies. None of these services is required for individual local use.</p></div>
         <div><strong>What the mirror can show</strong><p>The mirror reads page-accessible cookies and a saved theme setting. It cannot read HttpOnly cookies or establish what a hosting provider logs or retains.</p></div>

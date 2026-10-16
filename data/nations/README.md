@@ -32,3 +32,29 @@ scopes and four additional inclusion lanes remain pending.
 Matching Names now places a readable summary beside the results and offers clear recovery routes
 when no records match. Searching researched profiles remains a separate route. All directory names
 stay available without JavaScript; filters do not remove pending names from the underlying record.
+
+## October 16: Distinct Chickahominy Profiles And Native Reading Links
+
+Chickahominy Indian Tribe and Chickahominy Indian Tribe - Eastern Division gain separate own-source
+profiles with eight checked facts, four titled context layers and four direct resources. Explicit
+reviews link one Virginia row and one retained January 30 federal-source row to each profile.
+Shared names do not merge their governments; the Eastern Division Tribal Government is also
+distinct from the CIED nonprofit. Institutional dates do not mark the origin of the Chickahominy people.
+
+The histories cover homelands, displacement, schooling, community institutions and self-government.
+Environmental aspirations and explicitly dated 2025 garden/food-forest plans are not presented as
+completed projects or verified current outcomes. Check dates use the actual October 16 UTC date;
+historical years, page metadata and directory editions retain separate meanings. All 461 earlier
+canonical profile objects and fact clocks are exactly preserved by the selective import.
+
+Current coverage is 463 profiles, 1,310 raw facts, 1,308 public facts and two existing held facts.
+The directory retains 2,272 mixed-scope records across eight inventories, with fourteen reviewed
+profile links. Virginia has six confirmed profile links and eight verified own-site identity links;
+those are separate units. The queue contains 1,812 tasks, of which four profile tasks changed in
+this batch. Four state inventories are preserved; 46 state-discovery scopes and four additional
+inclusion lanes remain pending. These measurements never establish complete US or global coverage.
+
+Explore This Record adds native links to Lands and Facts And Sources, plus Context And Resources
+only when public context exists. Reading content stays available without JavaScript. Final browser,
+required release and deployment verification are separate gates. The existing Mattaponi and
+Patawomeck publisher-reuse reviews and backoff are unchanged; no permissions or approvals are invented.

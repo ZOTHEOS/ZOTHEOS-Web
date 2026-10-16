@@ -243,3 +243,42 @@ zero-match guidance and offers native routes to adjust filters or search researc
 preserves the original single live announcement, filter state, bounded paging and static names.
 Browser verification and final release gates must be recorded separately; this research report does
 not itself establish deployment or physical-device accessibility certification.
+
+## October 16, 2026: Distinct Chickahominy Histories And Easier Reading
+
+ZOTHEOS adds Chickahominy Indian Tribe and Chickahominy Indian Tribe - Eastern Division as two
+distinct own-source profiles. Eight concise facts, four titled context layers and four direct
+resources describe their histories through their own public accounts. Separate reviews connect
+one Virginia directory row and one January 30 federal-source row to each profile. Four overlapping
+source records do not create four Nations, merge the two governments or establish new legal status.
+
+Chickahominy history covers river homelands, displacement, schooling and persistence under racial
+classification and education barriers. Its environmental vision remains an aspiration. Eastern
+Division history connects its school, government formation and incorporation without presenting
+twentieth-century institutional dates as the origin of its people. Its Tribal Government remains
+distinct from the CIED nonprofit. A 2022 compost/garden account and plans described for 2025 are
+dated publisher statements; completion, present availability and measured outcomes are not inferred.
+
+The existing HTTP verifier checked eight new evidence phrases across four cited pages, with robots
+rules and a 3.5-second host interval. All eight were verified. Factual meaning, identity and source
+conditions were reviewed separately. The selective import exactly preserves all 461 earlier profile
+objects and their fact clocks. Actual October 16 UTC check dates, source CMS metadata, historical
+years and retained directory-source dates have separate meanings. Source bodies remain outside the
+publication tree; measured public receipts contain status, time, byte length and response hash.
+
+The contract now contains 463 profiles and 1,310 raw facts; its public model shows 1,308 facts with
+two existing holds preserved. The directory retains 2,272 mixed-scope records in eight inventories
+and fourteen reviewed profile links. In Virginia, six profile links and eight verified own-site
+identity links are different measures. Four state inventories, 46 remaining state-discovery scopes
+and four additional pending inclusion lanes remain visible. Four existing queue tasks changed;
+the queue still contains 1,812 tasks. US and worldwide coverage remain incomplete.
+
+Explore This Record adds native jumps to Lands and Facts And Sources, with Context And Resources
+only when public context exists. Content remains present for reading without JavaScript. Final
+browser observations, release checks and deployment verification must be recorded separately;
+this research record does not certify physical-device accessibility or publication.
+
+The earlier Mattaponi and Patawomeck reuse-scope reviews and backoff remain unchanged. Their existing
+directory names and own-site links remain visible. No new permission, consultation, endorsement,
+takedown, removal request or person check is invented. See the corresponding dated batch record
+and source/identity receipts for evidence and outstanding release gates.
