@@ -1051,6 +1051,8 @@ class Builder:
                                 "re-checked weekly.")
         self.build_data(out)
         wr(os.path.join(out, "static", "nations", "action-brief.txt"), P.action_brief(self.root, self.m))
+        for filename, content in P.chapter_briefs(self.root, self.m).items():
+            wr(os.path.join(out, "static", "nations", filename), content)
         boot_h, app_h = b64hash(self.bootstrap), b64hash(self.appearance)
         self.page_policy = POLICY.format(scripts=f"{boot_h} {app_h}", connect="'none'")
         self.hub_policy = POLICY.format(scripts=f"{boot_h} {app_h} {b64hash(self.index_json)} {b64hash(self.herald)}",

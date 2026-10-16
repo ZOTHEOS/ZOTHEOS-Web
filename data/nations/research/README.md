@@ -506,3 +506,21 @@ The new examples inherit canonical holds, receipt clocks and person/grace labels
 guide scripts, forms, browser storage or network providers. The blank action brief remains available.
 
 Source record: batches/2026-10-16-own-sources-and-practice.json. Publication and live checks remain separate.
+
+## October 16: Community Histories And Focused Pathway Briefs
+
+A bounded three-subject batch adds distinct Cherokee Tribe of Northeast Alabama and Absentee
+Shawnee Tribe of Indians of Oklahoma profiles using their own published sources. Separate automated
+reviews checked source meaning and respect conditions. Eight facts passed actual isolated source
+verification: seven fact URLs and two robots files, with measured post-response spacing above 10.6
+seconds, no redirects or retries. Metadata dates, historical dates and actual check dates stay separate.
+No human or Nation approval is implied. Agua Caliente's robots returned HTTP403; its directory row
+remains, with one-day backoff and no content fetch or alternate-host attempt. Other tasks stay unchanged.
+
+Two new hypothetical examples support private role maps and community-led learning plans. Neither
+creates legal routes, citizenship rights, teaching authority or cultural reuse permission. Ten chapter
+briefs add native downloads, blank offline reader fields and selected sources without new scripts,
+forms, storage or network providers. Required-source holds remove dependent briefs from the normal
+build; named-example holds do not hide unrelated chapters. Shared blank-brief access remains.
+
+Source record: batches/2026-10-16-community-history-and-pathways.json. Publication and live checks remain separate.

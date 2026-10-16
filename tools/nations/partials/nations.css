@@ -1,6 +1,6 @@
 /* /nations: one stylesheet for every nations page (DESIGN_NATIONS 12.3). Flat ground, white and greys in mono,
    thin crisp lines; opacity and one line's inline-size are the only things that move. Names are upright, never
-   italic, never uppercased; italic is the voice of our own headings. */
+   italic, never uppercased; italic is the voice of the page headings. */
 *, *::before, *::after { box-sizing: border-box; }
 html { background: var(--page-bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { margin: 0; background: var(--page-bg); color: var(--ink); font-family: var(--zn-read); font-size: var(--fs-read);
@@ -609,3 +609,9 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-practice ol {list-style:decimal;padding-left:24px;margin-top:20px;}.pw-practice li {padding-left:5px;margin-top:16px;line-height:1.85;color:var(--ink-2);}
 .pw-boundary,.pw-practice-reflection {font-size:14px;line-height:1.8;margin-top:22px;color:var(--ink-2);}.pw-boundary strong,.pw-practice-reflection strong {display:block;color:var(--ink);margin-bottom:6px;}.pw-brief-link {font-size:13px;margin-top:16px;}
 @media(max-width:760px) {.pw-case-index {grid-template-columns:minmax(0,1fr);gap:20px;padding-block:28px;}.pw-example {padding:18px;}.pw-example>h3 {font-size:21px;}.pw-practice ol {padding-left:22px;}}
+
+/* A focused worksheet is available beside each pathway outcome. */
+.pw-chapter-download {display:inline-flex;align-items:center;min-height:48px;margin-top:16px;padding:10px 16px;border:1px solid var(--rule);border-radius:28px;font-size:14px;line-height:1.6;max-width:100%;}
+.pw-chapter-download:hover {border-color:var(--ink);}.pw-download-note {display:block;margin-top:8px;font-size:12px;line-height:1.8;color:var(--ink-3);}
+@media(max-width:760px) {.pw-chapter-download {width:100%;justify-content:center;text-align:center;}.pw-download-note {text-align:center;}}
+@media print {.pw-chapter-download,.pw-download-note {display:none!important;}}

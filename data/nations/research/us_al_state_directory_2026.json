@@ -40,8 +40,8 @@
       "AI visual reading of one full-page Poppler rendering"
     ],
     "independent_reviewer": "Codex state_inventory_contract independently read the rendered page and extracted text; root also visually read the source. AI-assisted reviews, not human or Nation approval.",
-    "own_sites_read_and_identity_link_reviewed": 3,
-    "canonical_identity_matches_approved": 3,
+    "own_sites_read_and_identity_link_reviewed": 4,
+    "canonical_identity_matches_approved": 4,
     "human_reviews_created": 0
   },
   "review": {
@@ -262,19 +262,28 @@
       ],
       "state": "AL",
       "as_of": "2026-10-15",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://cherokeetribeofnortheastalabama.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "cherokee-tribe-of-northeast-alabama-us-al",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-community-northeast-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
       "source_federal_marker": false,
       "source_federal_marker_note": "No federal asterisk appears beside this source name. Absence of a marker does not establish absence of federal recognition.",
       "state_published_tribal_url_text": "cherokeetribeofnortheastalabama.org",
       "source_name_page": 1,
       "source_name_page_label": "PAGE 2",
-      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported."
+      "source_note": "Exact displayed source heading retained. The printed website is an unreviewed candidate only; no current leadership, contacts, preferred-name approval or government identity merge is imported.",
+      "own_published_name": "Cherokee Tribe of Northeast Alabama",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-16-community-northeast-identity.json"
+      }
     },
     {
       "directory_id": "us-state-al-poarch-band-of-creek-indians",
