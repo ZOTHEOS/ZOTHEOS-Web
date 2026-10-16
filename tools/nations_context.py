@@ -163,19 +163,19 @@ class Context:
         for body, reviewed, title in entry.get("notes", []):
             if title is not None:
                 out.append(f'<h3 class="n-sec-h">{esc(title)}</h3>')
-            out.append(f'<p class="fact-t">{esc(body)}</p><p class="rc">Context reviewed {stamp(reviewed)} with AI assistance.</p>')
+            out.append(f'<p class="fact-t">{esc(body)}</p><p class="rc">Context reviewed {stamp(reviewed)} by ZOTHEOS.</p>')
         if entry.get("relations"):
             out.append('<h3 class="n-sec-h">Related records</h3>')
         for statement, others, reviewed in entry.get("relations", []):
             names = ", ".join(f'<a href="/nations/{esc(other)}">{esc(self.model.by_id[other]["name"])}</a>' for other in others)
-            out.append(f'<p class="note">{esc(statement)}.</p><p>{names}.</p><p class="rc">Context reviewed {stamp(reviewed)} with AI assistance.</p>')
+            out.append(f'<p class="note">{esc(statement)}.</p><p>{names}.</p><p class="rc">Context reviewed {stamp(reviewed)} by ZOTHEOS.</p>')
         if entry.get("resources"):
             out.append('<h3 class="n-sec-h">From the publisher&#39;s own pages</h3><ul class="src-u">')
         for address, label, purpose, receipt in entry.get("resources", []):
             out.append(f'<li><p><a href="{esc(address)}" rel="noopener noreferrer" target="_blank">{esc(label)}'
                        '<span class="sr-only"> (opens in a new tab)</span></a></p>'
                        f'<p class="note">{esc(purpose)}</p><p class="rc">{esc(receipt["publisher"])}, '
-                       f'source reviewed {stamp(receipt["reviewed"])} with AI assistance.</p></li>')
+                       f'source reviewed {stamp(receipt["reviewed"])} by ZOTHEOS.</p></li>')
         if entry.get("resources"):
             out.append('</ul>')
         out.append('<p class="note">This source review is separate from the fact checks above. External pages open only when you follow a link.</p></section>')

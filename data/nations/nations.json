@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-15",
-  "count": 459,
-  "facts": 1294,
+  "generated": "2026-10-16",
+  "count": 461,
+  "facts": 1302,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 27,
+    "us-east-southeast": 29,
     "us-plains-midwest": 36,
     "us-west-pacific": 29
   },
@@ -24920,6 +24920,164 @@
           "status": "verified",
           "checked": "2026-10-15",
           "last_verified": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "nansemond-indian-nation-us-va",
+      "region": "us-east-southeast",
+      "name": "Nansemond Indian Nation",
+      "also": [],
+      "pronounce": null,
+      "lands": "the Nansemond River area of southeastern Virginia; the Nation describes traditional settlements extending into northeastern North Carolina",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://nansemond.gov/",
+      "name_source_url": "https://nansemond.gov/",
+      "facts": [
+        {
+          "id": "nansemond-indian-nation-us-va-4a549fc9",
+          "text": "The Nansemond Indian Nation identifies its people as Indigenous to the Nansemond River in Virginia.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Tribal History - Nansemond Indian Nation",
+            "publisher": "Nansemond Indian Nation",
+            "url": "https://nansemond.gov/tribal-history/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "indigenous people of the Nansemond River",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "nansemond-indian-nation-us-va-cba7f0ec",
+          "text": "The Nation's history describes fishing, oyster harvesting, hunting and farming in settlements on both sides of the Nansemond River.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "Tribal History - Nansemond Indian Nation",
+            "publisher": "Nansemond Indian Nation",
+            "url": "https://nansemond.gov/tribal-history/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "settlements on both sides of the Nansemond River",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "nansemond-indian-nation-us-va-6703d36e",
+          "text": "The Nation's history dates formal organization with elected officers to 1984.",
+          "kind": "governance",
+          "as_of": "1984",
+          "source": {
+            "title": "Tribal History - Nansemond Indian Nation",
+            "publisher": "Nansemond Indian Nation",
+            "url": "https://nansemond.gov/tribal-history/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "formally organized with elected officers in 1984",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "nansemond-indian-nation-us-va-3605ddd9",
+          "text": "The Nation's published Environmental Program describes oyster restoration, invasive plant removal and native plant restoration.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Programs - Nansemond Indian Nation",
+            "publisher": "Nansemond Indian Nation",
+            "url": "https://nansemond.gov/programs/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "oyster restoration, invasive plant removal, and native plant restoration",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "upper-mattaponi-us-va",
+      "region": "us-east-southeast",
+      "name": "Upper Mattaponi Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "King William County, Virginia; the Tribe describes its community base as within the traditional lands of Tsenacomacah",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.umitribe.org/",
+      "name_source_url": "https://www.umitribe.org/",
+      "facts": [
+        {
+          "id": "upper-mattaponi-us-va-07bfeee4",
+          "text": "The Tribe's history says the Upper Mattaponi were signatories to the 1677 Treaty of Middle Plantation under Cockacoeske.",
+          "kind": "history",
+          "as_of": "1677",
+          "source": {
+            "title": "About - Upper Mattaponi Tribe",
+            "publisher": "Upper Mattaponi Tribe",
+            "url": "https://www.umitribe.org/about",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "were signatories to the 1677 Treaty of Middle Plantation",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "upper-mattaponi-us-va-79205b9a",
+          "text": "The Tribe's history says the Adamstown band became officially known as the Upper Mattaponi Tribe in 1921.",
+          "kind": "history",
+          "as_of": "1921",
+          "source": {
+            "title": "About - Upper Mattaponi Tribe",
+            "publisher": "Upper Mattaponi Tribe",
+            "url": "https://www.umitribe.org/about",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "Upper Mattaponi Tribe in 1921",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "upper-mattaponi-us-va-debe1bbf",
+          "text": "The Tribe's school history dates Sharon Indian School's construction to 1919.",
+          "kind": "history",
+          "as_of": "1919",
+          "source": {
+            "title": "Sharon Indian School Foundation - Upper Mattaponi Tribe",
+            "publisher": "Upper Mattaponi Tribe",
+            "url": "https://www.umitribe.org/sharon-indian-school-foundation",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "Upon construction in 1919",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
+        },
+        {
+          "id": "upper-mattaponi-us-va-f789fefe",
+          "text": "The Tribe's school history says King William County returned Sharon Indian School to the Tribe in 1987.",
+          "kind": "history",
+          "as_of": "1987",
+          "source": {
+            "title": "Sharon Indian School Foundation - Upper Mattaponi Tribe",
+            "publisher": "Upper Mattaponi Tribe",
+            "url": "https://www.umitribe.org/sharon-indian-school-foundation",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "King William County returned it to the Tribe in 1987",
+          "status": "verified",
+          "checked": "2026-10-16",
+          "last_verified": "2026-10-16"
         }
       ]
     },

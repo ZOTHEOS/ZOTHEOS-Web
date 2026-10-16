@@ -384,3 +384,26 @@ inventories are preserved; 46 other state discovery scopes and four inclusion la
 These overlapping units are not a count of distinct Nations or complete US/worldwide coverage.
 The canonical game-card export includes the same two new profiles without changing game mechanics.
 The batch and independent reviews are recorded in batches/2026-10-15-us-missing-virginia.*.json.
+
+## October 16: Two Missing US Profiles And Clearer Results
+
+Nansemond Indian Nation and Upper Mattaponi Tribe now have distinct own-source profiles with eight
+checked facts, four history layers and four resources. Separate identity reviews link two Virginia
+and two federal source records to these same two profiles. Each source record keeps its original
+category and date; no recognition list defines Indigenous identity.
+
+Patawomeck public access succeeded. New own-content-based history remains pending a conservative
+reuse-scope review, while its existing directory name and verified own-site link stay visible. This
+is not a takedown, access denial, removal request or legal ruling about facts. The separate Mattaponi
+publisher-condition followup remains unchanged. Source checks use October 16 UTC; historical dates,
+page metadata and old fact clocks retain their own meanings.
+
+Current coverage comprises 461 canonical profiles, 1,302 raw facts, 1,300 public facts and two held
+facts. The directory retains 2,272 mixed-scope records in eight inventories, with ten reviewed profile
+links. Four state inventories are preserved; 46 state discovery scopes and four additional inclusion
+lanes remain pending. The persistent queue contains 1,812 tasks. These are different units, and none
+supports a complete US or worldwide coverage claim.
+
+Matching Names gains an adjacent summary and useful empty-result recovery. The single original live
+status, native links, retained filters, bounded paging and no-JavaScript names remain part of the
+reading contract. Source and control review do not replace final browser and deployment verification.

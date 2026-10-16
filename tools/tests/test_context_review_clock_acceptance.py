@@ -62,7 +62,7 @@ def test_context_can_be_reviewed_today_without_rewriting_canonical_fact_or_gener
     page = save(scenario).page('fictional-alpha')
     assert 'Fictional reviewed source context.' in page
     assert 'datetime="' + TODAY.isoformat() + '"' in page
-    assert 'with AI assistance' in page and 'separate from the fact checks' in page
+    assert 'by ZOTHEOS' in page and 'separate from the fact checks' in page
     assert 'human verified' not in page.lower()
     assert m.__dict__ == before
     assert m.build_date == OLD and m.raw['generated'] == OLD

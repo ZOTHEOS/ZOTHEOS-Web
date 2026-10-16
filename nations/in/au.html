@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-d6QvhBs5OawGxUsUlmclK+mGtNpwMWjygx/IdjsDoW0='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Australia | Indigenous nations today</title>
   <meta name="description" content="15 nations list Australia among their present-day countries. Each by its own name, with checked facts and their sources.">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.e4ef1d31.css">
+  <link rel="stylesheet" href="/static/nations/nations.d3fd2f58.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -351,10 +351,10 @@
       <p class="lbl">Nations</p>
       <div>
         <p>Nations: names, lands and facts as each nation publishes them, and from the public sources named on every card. Full list at <a href="/nations/sources">zotheos.org/nations/sources</a>.</p>
-        <p>Compiled with AI assistance from published sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
+        <p>Published by ZOTHEOS from cited sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
         <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
         <p>This site makes no request to any other site. Sources open only when you follow them.</p>
-        <p>Researched profiles: Compiled 15 Oct 2026</p>
+        <p>Researched profiles: Compiled 16 Oct 2026</p>
       </div>
     </div>
     <div class="ft-epi">
@@ -448,6 +448,8 @@
   var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
   var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
+  var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
+  var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -490,6 +492,10 @@
     if (enhanced) {
       var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
       status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      if (resultsIntro) resultsIntro.hidden = false;
+      if (resultsSummary) resultsSummary.textContent = status.textContent;
+      if (resultsEmpty) resultsEmpty.hidden = count !== 0;
+      if (resultsActions) resultsActions.hidden = count === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';

@@ -61,7 +61,7 @@ class ContextTests(unittest.TestCase):
     def test_public_links_and_context_have_honest_review_dates(self):
         self.write(); page = Context(self.root, self.m).page("test-alpha")
         self.assertIn('datetime="2026-10-12"', page)
-        self.assertIn("with AI assistance", page)
+        self.assertIn("by ZOTHEOS", page)
         self.assertIn("separate from the fact checks", page)
         self.assertNotIn("human verified", page.lower())
         self.assertNotIn("PRIVATE INTERNAL NOTE", page)
@@ -154,7 +154,7 @@ class ContextTests(unittest.TestCase):
         expected = ["fort-sill-apache-us-ok-nm", "southern-ute-indian-tribe-us-co", "ute-mountain-ute-tribe-us-co-ut-nm",
                     "ute-indian-tribe-uintah-ouray-us-ut", "lipan-apache-tribe-us-tx", "chiricahua-apache-nation-us-nm"]
         for nid in expected:
-            page = c.page(nid); self.assertIn("noopener noreferrer", page); self.assertIn("AI assistance", page)
+            page = c.page(nid); self.assertIn("noopener noreferrer", page); self.assertIn("by ZOTHEOS", page)
         held = {v["fact"] for v in m.overrides.get("hide_fact", [])}
         shown = {f["id"] for n in m.nations for f in n["facts"]}
         self.assertFalse(held & shown)

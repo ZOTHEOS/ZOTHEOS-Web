@@ -630,7 +630,7 @@ class Builder:
         return self.sp("about", render(self.tpl("about"), {
             "user_agent": "ZOTHEOS-nations-verifier/1 (+https://zotheos.org)", "fonts_line": self.fonts_line,
             "scale": scale, "type_sample": self.type_sample()}),
-            "How Indigenous nations today is made: sources, the weekly check, the daily ring, AI assistance and the typefaces.")
+            "How Indigenous nations today is made: sources, the weekly check, the daily ring, editorial responsibility and the typefaces.")
 
     def type_sample(self):
         rows, used = [], set()

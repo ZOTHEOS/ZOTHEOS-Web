@@ -954,7 +954,7 @@ Each card shown emits `nation-card {id, where}` and increments `seen[id]`.
 7. "Mask making is a living art in Mexico today, from the dance masks of Guerrero to the carved wooden masks of the Parachicos of Chiapa de Corzo, which UNESCO added to its list of intangible cultural heritage in 2010. The Stone Face copies none of them."
 8. "Indigenous nations today: each card shows one fact with its source and the date it was checked. Facts come from each nation's own published sources where possible, and from public records otherwise. Corrections are welcome."
 9. "Sources: INAH; Saint Louis Art Museum; Karl Taube, The Iconography of Mirrors at Teotihuacan; UNESCO; Molina 1571 and Karttunen 1992 through the Online Nahuatl Dictionary, Wired Humanities Projects, University of Oregon."
-10. "Sound: David Alanzo Garcia." (the owner confirms this wording before release)
+10. "Sound: David Garcia." (the owner confirms this wording before release)
 
 Then the nations section (19.4).
 

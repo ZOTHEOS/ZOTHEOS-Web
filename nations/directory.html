@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-d6QvhBs5OawGxUsUlmclK+mGtNpwMWjygx/IdjsDoW0='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Directory | Indigenous nations today</title>
   <meta name="description" content="Browse separately typed Indigenous name inventories with sources, dates and openly tracked US and worldwide coverage gaps.">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.e4ef1d31.css">
+  <link rel="stylesheet" href="/static/nations/nations.d3fd2f58.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -186,7 +186,7 @@
 <details class="directory-source"><summary>Understand These Records</summary>
 <p class="note directory-key"><strong>Profile Link Pending</strong> means this source record has not yet been linked to a researched profile. A profile may already exist under another name; identity review comes first.</p>
 <div class="directory-paths"><section><h2>Sourced name records</h2><p>A directory entry is not a researched profile. Names below retain the published category and date. These different lists cannot be added together as a count of Indigenous nations.</p></section>
-<section><h2>Researched profiles</h2><p>459 profiles of peoples, communities and governing bodies. Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> &middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div></details>
+<section><h2>Researched profiles</h2><p>461 profiles of peoples, communities and governing bodies. Read short facts, deeper histories where available, and the evidence behind them.</p><p><a href="/nations#find">Search the researched profiles</a> &middot; <a href="/nations/resources">Histories And Rights Resources</a></p></section></div></details>
 <section class="src-g directory-gap" id="us-inclusion" aria-labelledby="us-inclusion-title">
 <p class="eyebrow">United States inclusion</p><h2 id="us-inclusion-title">Every nation belongs. Coverage is still growing.</h2>
 <p>Federal recognition is not a definition of Indigenous identity. The federal name list is one source. Separate state directories and nations outside recognition need their own records, sources and identity review.</p>
@@ -198,7 +198,12 @@
 <p><a href="/nations/for-nations">Request an addition, correction or removal</a> &middot; <a href="/nations/in/us">Read the US-associated profiles</a></p></section>
 <h2>Choose a source inventory</h2>
 <nav class="directory-inventory-nav" aria-label="Directory inventories"><ul><li><a href="#us-directory"><span class="directory-inventory-title">United States</span><span class="directory-inventory-meta">577 records &middot; Federal published names<br>Snapshot 30 Jan 2026</span></a></li><li><a href="#us-new-jersey"><span class="directory-inventory-title">United States: New Jersey commission representation</span><span class="directory-inventory-meta">3 records &middot; Named tribal representation groups<br>Snapshot 15 Oct 2026 UTC observation</span></a></li><li><a href="#us-alabama"><span class="directory-inventory-title">United States: Alabama tribal directory</span><span class="directory-inventory-meta">9 records &middot; Alabama commission directory listings<br>Snapshot 15 Oct 2026 UTC observation</span></a></li><li><a href="#us-virginia"><span class="directory-inventory-title">United States: Virginia tribal directory</span><span class="directory-inventory-meta">11 records &middot; Virginia state directory listings<br>Snapshot 14 Oct 2026 UTC observation</span></a></li><li><a href="#us-north-carolina"><span class="directory-inventory-title">United States: North Carolina tribal directory</span><span class="directory-inventory-meta">9 records &middot; North Carolina state directory listings<br>Snapshot 14 Oct 2026 UTC observation</span></a></li><li><a href="#canada-directory"><span class="directory-inventory-title">Canada</span><span class="directory-inventory-meta">634 records &middot; 2024 administrative register groups<br>Snapshot 31 Dec 2024</span></a></li><li><a href="#canada-profiles"><span class="directory-inventory-title">Canada: the First Nation Profiles search</span><span class="directory-inventory-meta">638 records &middot; First Nation profile search records<br>Snapshot 12 Oct 2026</span></a></li><li><a href="#brazil-census"><span class="directory-inventory-title">Brazil: named 2022 census categories</span><span class="directory-inventory-meta">391 records &middot; Named census ethnicity, people or group categories<br>Snapshot 2022</span></a></li></ul></nav>
-<div id="directoryNames" tabindex="-1"><section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">
+<div id="directoryNames" tabindex="-1"><div id="directoryResultsIntro" class="directory-results-intro" hidden>
+<h2>Matching Names</h2><p id="directoryResultsSummary" class="note"></p>
+<p id="directoryResultsActions"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></p>
+<div id="directoryResultsEmpty" hidden><p>No source records match these filters. Try another spelling or source inventory. A missing result does not mean a Nation does not exist.</p>
+<p class="directory-recovery"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a><a class="directory-results-link" href="/nations#find">Search Researched Profiles</a></p></div></div>
+<section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">
 <h2 id="us-directory-title">United States: the published federal list</h2>
 <p>577 published federal name records. The source states 575 Tribal entities.</p>
 <p class="note">Unresolved source-count difference: The notice states 575 Tribal entities, while its published name list contains 577 distinct records. All published name records are preserved. The difference is not resolved here.</p>
@@ -731,8 +736,9 @@
 <li id="us-fed-eaab4e063474" data-directory-name="Muckleshoot Indian Tribe" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Muckleshoot Indian Tribe</h4>
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
-<li id="us-fed-7948cb7db57b" data-directory-name="Nansemond Indian Nation" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond Indian Nation</h4>
-<p class="rc directory-state">Profile Link Pending</p>
+<li id="us-fed-7948cb7db57b" data-directory-name="Nansemond Indian Nation" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond Indian Nation</h4>
+<p><a href="/nations/nansemond-indian-nation-us-va">Read the researched profile</a></p>
+<p><a href="https://nansemond.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
 </li>
 <li id="us-fed-dbfaf4600088" data-directory-name="Narragansett Indian Tribe" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Narragansett Indian Tribe</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -1192,8 +1198,9 @@
 <li id="us-fed-96a5275e7557" data-directory-name="United Keetoowah Band of Cherokee Indians in Oklahoma" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">United Keetoowah Band of Cherokee Indians in Oklahoma</h4>
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
-<li id="us-fed-16a10f928bbf" data-directory-name="Upper Mattaponi Tribe" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi Tribe</h4>
-<p class="rc directory-state">Profile Link Pending</p>
+<li id="us-fed-16a10f928bbf" data-directory-name="Upper Mattaponi Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi Tribe</h4>
+<p><a href="/nations/upper-mattaponi-us-va">Read the researched profile</a></p>
+<p><a href="https://www.umitribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
 </li>
 <li id="us-fed-e7d253ff4cf5" data-directory-name="Upper Sioux Community, Minnesota" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Sioux Community, Minnesota</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -2082,9 +2089,10 @@
 <p class="note" dir="auto">Published name record: Monacan Indian Nation*</p>
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
-<li id="us-state-va-nansemond" data-directory-name="Nansemond*" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond</h4>
+<li id="us-state-va-nansemond" data-directory-name="Nansemond*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond</h4>
 <p class="note" dir="auto">Published name record: Nansemond*</p>
-<p class="rc directory-state">Profile Link Pending</p>
+<p><a href="/nations/nansemond-indian-nation-us-va">Read the researched profile</a></p>
+<p><a href="https://nansemond.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
 </li>
 <li id="us-state-va-nottoway-of-virginia" data-directory-name="Nottoway of Virginia" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nottoway of Virginia</h4>
 <p><a href="/nations/nottoway-indian-tribe-virginia-us-va">Read the researched profile</a></p>
@@ -2102,9 +2110,10 @@
 <p class="note" dir="auto">Published name record: Rappahannock*</p>
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
-<li id="us-state-va-upper-mattaponi" data-directory-name="Upper Mattaponi*" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi</h4>
+<li id="us-state-va-upper-mattaponi" data-directory-name="Upper Mattaponi*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi</h4>
 <p class="note" dir="auto">Published name record: Upper Mattaponi*</p>
-<p class="rc directory-state">Profile Link Pending</p>
+<p><a href="/nations/upper-mattaponi-us-va">Read the researched profile</a></p>
+<p><a href="https://www.umitribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
 </li>
 </ul></section>
 <section class="src-g directory-group" data-directory-inventory="us-north-carolina" id="us-north-carolina" aria-labelledby="us-north-carolina-title">
@@ -7887,10 +7896,10 @@
       <p class="lbl">Nations</p>
       <div>
         <p>Nations: names, lands and facts as each nation publishes them, and from the public sources named on every card. Full list at <a href="/nations/sources">zotheos.org/nations/sources</a>.</p>
-        <p>Compiled with AI assistance from published sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
+        <p>Published by ZOTHEOS from cited sources. Automated checks match evidence phrases; source and meaning reviews are recorded separately. A person check is claimed only when a dated person-check receipt exists. Corrections and removal requests from any nation are honored.</p>
         <p>Fonts: Instrument Serif, DM Sans and JetBrains Mono, with Tinos, Noto Sans, Cousine, Noto Sans Cherokee, Noto Sans Canadian Aboriginal, Noto Sans Devanagari and Noto Sans Tifinagh for letters the brand faces lack. All self-hosted under the SIL Open Font License. No letter in a name is ever changed to fit a font.</p>
         <p>This site makes no request to any other site. Sources open only when you follow them.</p>
-        <p>Researched profiles: Compiled 15 Oct 2026</p>
+        <p>Researched profiles: Compiled 16 Oct 2026</p>
       </div>
     </div>
     <div class="ft-epi">
@@ -7984,6 +7993,8 @@
   var tools = document.getElementById('directoryTools'), inventory = document.getElementById('directoryInventory');
   var more = document.getElementById('directoryMore'), limitNote = document.getElementById('directoryLimit');
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
+  var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
+  var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -8026,6 +8037,10 @@
     if (enhanced) {
       var label = selected === 'all' ? 'all source inventories' : inventory.options[inventory.selectedIndex].textContent;
       status.textContent = shown + ' of ' + count + ' matching name records' + (readyOnly ? ' with reviewed profile links' : '') + ' shown in ' + label + '.' + (count ? '' : ' Try another spelling or search the researched profiles.');
+      if (resultsIntro) resultsIntro.hidden = false;
+      if (resultsSummary) resultsSummary.textContent = status.textContent;
+      if (resultsEmpty) resultsEmpty.hidden = count !== 0;
+      if (resultsActions) resultsActions.hidden = count === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';

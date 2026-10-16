@@ -34,15 +34,15 @@
     "duplicate_source_labels": [],
     "independent_extraction": "BeautifulSoup table cells exactly match a separate regex row/cell extraction.",
     "own_sites_read_and_identity_link_reviewed": 4,
-    "canonical_identity_matches_approved": 2,
+    "canonical_identity_matches_approved": 4,
     "http_failures": 0,
     "human_reviews_created": 0,
-    "canonical_identity_review_date": "2026-10-15"
+    "canonical_identity_review_date": "2026-10-16"
   },
   "review": {
     "status": "needs_review",
     "sources": "pending independent AI review",
-    "identity": "Two explicit directory-to-profile links independently AI-reviewed October 15; remaining identities unreviewed.",
+    "identity": "Four specific directory-to-profile links reviewed by ZOTHEOS; remaining rows unreviewed.",
     "human_review": null,
     "respect": "pending independent review"
   },
@@ -193,19 +193,28 @@
       ],
       "state": "VA",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://www.umitribe.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "upper-mattaponi-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/us-missing-histories-us-state-va-upper-mattaponi-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
       "source_year_recognized": "1983",
       "source_location": "King William County",
       "source_federal_marker": true,
       "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
       "state_published_tribal_url": "https://umitribe.org/",
-      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "own_published_name": "Upper Mattaponi Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/us-missing-histories-us-state-va-upper-mattaponi-identity.json"
+      }
     },
     {
       "directory_id": "us-state-va-nansemond",
@@ -217,19 +226,28 @@
       ],
       "state": "VA",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://nansemond.gov/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "nansemond-indian-nation-us-va",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/us-missing-histories-us-state-va-nansemond-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
       "source_year_recognized": "1985",
       "source_location": "Cities of Suffolk and Chesapeake",
       "source_federal_marker": true,
       "source_federal_marker_note": "The Virginia source marks this row with an asterisk for federally recognized and Virginia state recognized. It is attributed source notation, not a new independent legal-status finding.",
       "state_published_tribal_url": "https://nansemond.gov/",
-      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate."
+      "source_note": "Listing observed in the Secretary of the Commonwealth table; current preferred-name and identity reviews remain separate.",
+      "own_published_name": "Nansemond Indian Nation",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/us-missing-histories-us-state-va-nansemond-identity.json"
+      }
     },
     {
       "directory_id": "us-state-va-monacan-indian-nation",
