@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-16T08:32:04.389379+00:00",
+  "source_check_date": "2026-10-16",
+  "publication_state": "Independently source-reviewed local candidate. Exact commit review and production verification are separate later gates.",
+  "new_profiles": [
+    {
+      "id": "coharie-tribe-us-nc",
+      "name": "Coharie Tribe",
+      "official_url": "https://coharietribe.org/"
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "name": "Haliwa-Saponi Indian Tribe",
+      "official_url": "https://www.haliwa-saponi.gov/"
+    }
+  ],
+  "measured_counts": {
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 8,
+    "canonical_profiles": 467,
+    "raw_facts": 1326,
+    "previous_canonical_records_preserved": 465,
+    "new_reviewed_directory_links": 2,
+    "nc_confirmed_profile_links": 2,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "pending": 1684,
+      "needs_review": 126,
+      "blocked": 2
+    }
+  },
+  "source_verification": {
+    "run_date": "2026-10-16",
+    "dry_run": false,
+    "robots": true,
+    "host_interval_s": 3.5,
+    "urls_total": 6,
+    "urls_checked": 6,
+    "requests_sent": 8,
+    "facts_checked": 8,
+    "facts_unchecked": 0,
+    "status": {
+      "verified": 8
+    }
+  },
+  "independent_source_review_sha256": "2538d12bcbf493db4409d1d6ccd9e263a3d116daac7264a54e451e076d54b1bd",
+  "human_approval_created": false,
+  "nation_endorsement_claimed": false,
+  "display_title_addendum_sha256": "38fd48ac4d1055d34b3d35e385034602cbd8d286abcc570cbb457552b2bf3a48",
+  "preservation": [
+    "All 465 previous canonical Nation objects, old fact clocks and existing publication holds stay exact.",
+    "Only two NC directory identities become linked. The original October 14 source snapshot and Catawba source/day disagreement stay intact.",
+    "Two old public production labels use the ZOTHEOS alias; their evidence, dates, identity and status do not change."
+  ],
+  "project_alias_label_changes": [
+    {
+      "directory_id": "us-state-nc-lumbee-tribe-of-north-carolina",
+      "field": "official_url_review.reviewer",
+      "current_alias": "ZOTHEOS"
+    },
+    {
+      "field": "source_discrepancies[0].review_kind",
+      "current_alias": "ZOTHEOS"
+    }
+  ],
+  "remaining_gaps": [
+    "Haliwa-Saponi needs additional own-published sources for a deeper dated historical timeline.",
+    "Coharie river source states aims; current ecological outcomes are not independently measured.",
+    "US and worldwide coverage remain incomplete. Government directories are planning references, not a definition of who is Indigenous."
+  ]
+}

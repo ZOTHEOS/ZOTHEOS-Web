@@ -1,0 +1,81 @@
+{
+  "region": "us-east-southeast",
+  "checked": "2026-10-16",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-16T08:22:18.942066+00:00",
+    "receipt": "independent-two-nations-source-review.json",
+    "sha256": "2538d12bcbf493db4409d1d6ccd9e263a3d116daac7264a54e451e076d54b1bd",
+    "metadata_addendum": {
+      "receipt": "independent-source-title-metadata-addendum.json",
+      "sha256": "38fd48ac4d1055d34b3d35e385034602cbd8d286abcc570cbb457552b2bf3a48",
+      "reviewed_at": "2026-10-16T08:29:41.345259+00:00"
+    },
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  },
+  "results": [
+    {
+      "id": "coharie-tribe-us-nc",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Present community in Harnett/Sampson Counties is explicitly the current location in its own history, not an exclusive ancestral boundary. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "coharie-tribe-us-nc",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "1859 dates the community-funded subscription school, not the origin of the people. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "coharie-tribe-us-nc",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Government page explicitly describes the Intra-Tribal Council representing both counties; no volatile officeholder assertion. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "coharie-tribe-us-nc",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "2015 dates reported volunteer river work; no inferred ecological measurement. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Government location is explicitly Hollister/previously Meadows, with territorial-boundary limitation. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Own introduction supports eleven elected Councilors including Chief/Vice Chief. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "School educational integration is accurately a stated mission, not a demonstrated outcome. Actual independent project review; no person-check receipt claimed."
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "Red Earth supports learning for all ages; possible activities are not a present class schedule or universal cultural practice. Actual independent project review; no person-check receipt claimed."
+    }
+  ],
+  "names": [
+    {
+      "id": "coharie-tribe-us-nc",
+      "ok": true,
+      "note": "The named Coharie Tribe is distinct from related institutions and other regional Nations. Name/own-site/alias supported by its own pages; no government recognition category added as a fact."
+    },
+    {
+      "id": "haliwa-saponi-indian-tribe-us-nc",
+      "ok": true,
+      "note": "Own .gov introduction names the Haliwa-Saponi Indian Tribe and government in Hollister/Meadows. It is not merged with Saponi peoples or other Tribal governments. No federal/state recognition or present legal entitlement determination added."
+    }
+  ]
+}

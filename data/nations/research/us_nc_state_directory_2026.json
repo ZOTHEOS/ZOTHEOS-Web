@@ -65,7 +65,7 @@
         }
       ],
       "reviewed_at": "2026-10-15T07:13:04.821219+00:00",
-      "review_kind": "AI-assisted source and scanned-page review; no human or Nation approval claimed"
+      "review_kind": "ZOTHEOS source and scanned-page review; no human or Nation approval claimed"
     }
   ],
   "checks": {
@@ -73,10 +73,10 @@
     "unique_directory_ids": 9,
     "duplicate_exact_names": [],
     "independent_extraction": "BeautifulSoup main-content h2 names exactly match separate main/h2 regex extraction in order.",
-    "own_website_identity_reviews": 1,
-    "canonical_identity_crosswalks_confirmed": 0,
+    "own_website_identity_reviews": 3,
+    "canonical_identity_crosswalks_confirmed": 2,
     "catawba_own_site_robot_status": 404,
-    "own_site_read_limit_note": "Catawba own-site fetch paused after robots404. Only Lumbee own website read in this bounded batch. Remaining own-site identities pending.",
+    "own_site_read_limit_note": "The earlier Lumbee own-site read is retained. Coharie and Haliwa-Saponi own-site identity and two canonical links were separately reviewed on 2026-10-16. Catawba robots404 and its dated source discrepancy remain unchanged. Other identities remain unreviewed.",
     "robot_policy_note": "NC DOA and Lumbee robots200 allowed requested paths. Fetch starts separated by at least3.1sec per host.",
     "human_reviews": 0
   },
@@ -115,14 +115,23 @@
       ],
       "state": "NC",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://coharietribe.org/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "coharie-tribe-us-nc",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-nc-us-state-nc-coharie-tribe-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "source_heading": "Coharie Tribe"
+      "source_heading": "Coharie Tribe",
+      "own_published_name": "Coharie Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-nc-us-state-nc-coharie-tribe-identity.json"
+      }
     },
     {
       "directory_id": "us-state-nc-eastern-band-of-cherokee",
@@ -153,14 +162,23 @@
       ],
       "state": "NC",
       "as_of": "2026-10-14",
-      "official_url": null,
-      "profile_status": "directory_only",
+      "official_url": "https://www.haliwa-saponi.gov/",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "haliwa-saponi-indian-tribe-us-nc",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-nc-us-state-nc-haliwa-saponi-indian-tribe-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "source_heading": "Haliwa-Saponi Indian Tribe"
+      "source_heading": "Haliwa-Saponi Indian Tribe",
+      "own_published_name": "Haliwa-Saponi Indian Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/next-nc-us-state-nc-haliwa-saponi-indian-tribe-identity.json"
+      }
     },
     {
       "directory_id": "us-state-nc-lumbee-tribe-of-north-carolina",
@@ -187,7 +205,7 @@
       "source_heading": "Lumbee Tribe of North Carolina",
       "official_url_review": {
         "status": "verified",
-        "reviewer": "AI-assisted source review by Codex north_carolina_sources; model not asserted",
+        "reviewer": "ZOTHEOS",
         "checked_at": "2026-10-14T05:13:30.896642+00:00",
         "evidence_receipt": "receipts/us-nc-lumbee-own-home-2026-10-14.receipt.json",
         "evidence": "Own-site footer identifies it as the official website of the Lumbee Tribe of North Carolina; the same HTTPS website is linked by NC DOA. Website relationship reviewed only; no canonical government identity decision."

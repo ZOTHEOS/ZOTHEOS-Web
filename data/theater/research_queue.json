@@ -101,6 +101,39 @@
       "checked": "2026-10-16",
       "reason": "Geographic labels cover only source-supported places. Unindexed location, Europe, Central America/Caribbean, Asia and Nation-owned US work need further source discovery; Indigenous identity is not determined by a state or government list.",
       "next": "Prioritize gaps and direct creators/Nations. Check publisher caption/transcript and audio-language options before claiming accessibility quality; whole-program review remains separate."
+    },
+    {
+      "id": "seeds-specific-geography",
+      "scope": "claim-only",
+      "reason": "AIPP is an Asian organization, but neither retained film description identifies the documentary’s specific story locations. Region remains unindexed; no country is inferred from headquarters or channel identity.",
+      "status": "claim-held",
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "karata-identity-and-geography",
+      "scope": "claim-only",
+      "reason": "The own film page and official upload identify Karata and production partners only. Nicaragua/Miskitu affiliation and present legal status require a resolving retained source; region remains unindexed.",
+      "status": "claim-held",
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "birgejupmi-chapter-duplicates",
+      "scope": "alternate-editions-not-counted",
+      "reason": "The own publisher offers three 5–6-minute chapters alongside the selected full essay. They are not additional stories in this batch.",
+      "discovery_only_youtube_ids": [
+        "iJO3ansex5k",
+        "UykdXnCfC1I",
+        "PMgKAiP7Eq8"
+      ],
+      "status": "research-note",
+      "checked": "2026-10-16"
+    },
+    {
+      "id": "saami-source-link-repair",
+      "scope": "resolved-source-navigation",
+      "reason": "The About folder URL returned a recorded 302 to /en/the-saami-council; its same-host canonical page was read. The film article’s truncated playlist link was not used; the exact embedded original D7L4JmZXyLI establishes the selected recording.",
+      "status": "research-note",
+      "checked": "2026-10-16"
     }
   ]
 }

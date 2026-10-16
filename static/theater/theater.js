@@ -5,6 +5,7 @@
   var buttons = Array.from(document.querySelectorAll('[data-theater-select]'));
   var search = get('theaterSearch'), topic = get('theaterTopic'), region = get('theaterRegion'), viewing = get('theaterViewing');
   var slot = get('theaterPlayer'), more = get('theaterMore'), next = get('theaterNext');
+  var access = get('theaterAccess'), permalink = get('theaterPermalink');
   if (!cards.length || !search || !topic || !slot) return;
   var selected = null, limit = more ? 24 : Infinity, matched = cards.slice();
   var segment = /^[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*$/;
@@ -54,6 +55,7 @@
     var fields = {theaterTitle:'title', theaterDescription:'summary', theaterAvailability:'availability',
       theaterKind:'kind', theaterContentNote:'contentNote', theaterCredits:'credits', theaterLocation:'location', theaterRuntime:'runtime'};
     Object.keys(fields).forEach(function (id) { if (get(id)) get(id).textContent = card.dataset[fields[id]] || ''; });
+    if (permalink) permalink.href = '/theater#film-' + card.dataset.theaterFilm;
     var watch = get('theaterWatch');
     try {
       var raw = card.dataset.watchUrl || '', u = new URL(raw);
@@ -89,7 +91,9 @@
       return words.every(function (word) { return hay.indexOf(word) !== -1; }) &&
         (topic.value === 'all' || (card.dataset.topic || '').split(/\s+/).indexOf(topic.value) !== -1) &&
         (!region || region.value === 'all' || (card.dataset.region || 'unindexed') === region.value) &&
-        (!viewing || viewing.value === 'all' || card.dataset.viewing === viewing.value);
+        (!viewing || viewing.value === 'all' || card.dataset.viewing === viewing.value) &&
+        (!access || access.value === 'all' || (access.value === 'watch-here' && Boolean(playerURL(card))) ||
+          (access.value === 'official-site' && !playerURL(card)));
     });
     limit = more ? 24 : Infinity;
     showMatches();
@@ -97,6 +101,7 @@
   search.addEventListener('input', filter); topic.addEventListener('change', filter);
   if (region) region.addEventListener('change', filter);
   if (viewing) viewing.addEventListener('change', filter);
+  if (access) access.addEventListener('change', filter);
   if (more) more.addEventListener('click', function () {
     var firstNew = matched[limit]; limit += 24; showMatches();
     var poster = firstNew && buttons.find(function (b) { return b.dataset.theaterSelect === firstNew.dataset.theaterFilm; });
@@ -109,7 +114,7 @@
     select(matched[i], true);
   });
   get('theaterClear').addEventListener('click', function () {
-    search.value = ''; topic.value = 'all'; if (region) region.value = 'all'; if (viewing) viewing.value = 'all'; filter(); search.focus();
+    search.value = ''; topic.value = 'all'; if (region) region.value = 'all'; if (viewing) viewing.value = 'all'; if (access) access.value = 'all'; filter(); search.focus();
   });
   buttons.forEach(function (button) {
     button.setAttribute('role', 'button');
@@ -143,6 +148,20 @@
   get('theaterTools').hidden = false;
   if (next) next.hidden = false;
   if (motion) motion.hidden = false;
-  select(cards.find(function (card) { return card.dataset.featured === 'true'; }) || cards[0], false);
+  function linkedCard() {
+    var match = /^#film-([a-z][a-z0-9-]{0,99})$/.exec((window.location && window.location.hash) || '');
+    return match && cards.find(function (card) { return card.dataset.theaterFilm === match[1]; });
+  }
+  function revealLinked(card) {
+    var i = matched.indexOf(card);
+    if (more && i >= limit) { limit = Math.ceil((i + 1) / 24) * 24; showMatches(); }
+  }
+  var linked = linkedCard();
+  select(linked || cards.find(function (card) { return card.dataset.featured === 'true'; }) || cards[0], false);
   filter();
+  if (linked) revealLinked(linked);
+  window.addEventListener('hashchange', function () {
+    var card = linkedCard();
+    if (card) { revealLinked(card); select(card, true); }
+  });
 }());
