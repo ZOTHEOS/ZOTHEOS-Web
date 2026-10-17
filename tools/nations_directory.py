@@ -170,12 +170,15 @@ def entry(builder, e):
            '<h4 class="nm directory-name" dir="auto" data-face="' + face + '">' + esc(e['name']) + '</h4>']
     if e['directory_name'] != e['name']:
         out.append('<p class="note" dir="auto">Published name record: ' + esc(e['directory_name']) + '</p>')
-    if has_profile:
-        out.append('<p><a href="/nations/' + esc(c['registry_id']) + '">Read the researched profile</a></p>')
-    else:
+    if not has_profile:
         out.append('<p class="rc directory-state">Profile Link Pending</p>')
-    if e.get('official_url'):
-        out.append('<p>' + source_link(e['official_url'], 'Visit the verified official website') + '</p>')
+    if has_profile or e.get('official_url'):
+        out.append('<div class="directory-actions" role="group" aria-label="Explore ' + esc(e['name']) + '">')
+        if has_profile:
+            out.append('<p><a href="/nations/' + esc(c['registry_id']) + '">Read the researched profile</a></p>')
+        if e.get('official_url'):
+            out.append('<p>' + source_link(e['official_url'], 'Visit the verified official website') + '</p>')
+        out.append('</div>')
     out.append('</li>')
     return '\n'.join(out)
 
@@ -260,17 +263,17 @@ def page(builder):
     out = ['<div class="read n-head prose directory-page">', '<p class="eyebrow">Names And Sources</p>',
            '<h1 class="page-h">Names deserve visibility.</h1>',
            '<p class="lede">Start with a name. Follow its source. See what still needs research.</p>',
-           '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p>',
-           '<label for="directoryQuery">Find a name in this directory</label>',
+           '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search dated source records here. For histories and facts, <a href="/nations#find">search all researched profiles</a>. These are different routes; a missing result does not mean a Nation does not exist.</p>',
+           '<div class="directory-controls"><div class="directory-query"><label for="directoryQuery">Find a name in this directory</label>',
            '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">',
-           '<button type="button" id="directoryClear" class="pill">Clear</button></div>',
+           '<button type="button" id="directoryClear" class="pill">Clear</button></div></div>',
            '<div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
            '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
-           + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div>',
+           + ''.join('<option value="' + esc(key) + '">' + esc(title + ': ' + label) + '</option>' for key, title, label, _, _ in choices) + '</select></div></div>',
            '<label class="directory-ready" for="directoryProfilesOnly"><input id="directoryProfilesOnly" type="checkbox" aria-controls="directoryNames" aria-describedby="directoryProfileHint"><span>Profiles Ready To Read</span></label>',
            '<p id="directoryProfileHint" class="note" hidden>Filters reviewed directory links; other researched profiles may not be linked here yet. <a href="/nations#find">Search all researched profiles</a>.</p>',
            '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
-           '<p><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></p>',
+           '<div class="directory-reading-actions"><button type="button" id="directoryReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></div>',
            '<p id="directoryLimit" class="note"></p></div>',
            '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
            '<details class="directory-source"><summary>Understand These Records</summary>',
@@ -283,7 +286,7 @@ def page(builder):
            us_gaps(builder, extra), '<h2>Choose a source inventory</h2>', navigation,
            '<div id="directoryNames" tabindex="-1"><div id="directoryResultsIntro" class="directory-results-intro" hidden>',
            '<h2>Matching Names</h2><p id="directoryResultsSummary" class="note"></p>',
-           '<p id="directoryResultsActions"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></p>',
+           '<div id="directoryResultsActions" class="directory-reading-actions"><button type="button" id="directoryResultsReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></div>',
            '<div id="directoryResultsEmpty" hidden><p>No source records match these filters. Try another spelling or source inventory. A missing result does not mean a Nation does not exist.</p>',
            '<p class="directory-recovery"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a><a class="directory-results-link" href="/nations#find">Search Researched Profiles</a></p></div></div>',
            '<section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">',

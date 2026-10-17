@@ -83,6 +83,7 @@
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
   var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
   var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
+  var readFirst = document.getElementById('directoryReadFirst'), resultsReadFirst = document.getElementById('directoryResultsReadFirst');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -129,6 +130,8 @@
       if (resultsSummary) resultsSummary.textContent = status.textContent;
       if (resultsEmpty) resultsEmpty.hidden = count !== 0;
       if (resultsActions) resultsActions.hidden = count === 0;
+      if (readFirst) readFirst.hidden = visible.length === 0;
+      if (resultsReadFirst) resultsReadFirst.hidden = visible.length === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';
@@ -141,6 +144,13 @@
   input.addEventListener('input', function () { limit = batch; filter(); });
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
+  function readFirstMatch() {
+    if (!visible.length) return;
+    var name = visible[0].querySelector('.directory-name') || visible[0];
+    name.setAttribute('tabindex', '-1'); name.focus(); name.scrollIntoView();
+  }
+  if (readFirst) readFirst.addEventListener('click', readFirstMatch);
+  if (resultsReadFirst) resultsReadFirst.addEventListener('click', readFirstMatch);
   inventory.addEventListener('change', function () { limit = batch; filter(); });
   if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
   more.addEventListener('click', function () {

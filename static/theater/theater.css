@@ -1033,6 +1033,8 @@ html[data-theater-motion="still"] .th-cinema .th-frame-glow { animation:none!imp
 .th-world-links {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px;}
 .th-world-links>a {display:flex;flex-direction:column;gap:14px;border:1px solid var(--rule);padding:22px;color:var(--ink);text-decoration:none;min-width:0;}
 .th-world-links>a:hover {border-color:var(--ink);}
+.th-world-links>.th-action-path {grid-column:1/-1;background:color-mix(in srgb,var(--ink) 3%,var(--page-bg));}
+.th-world-links>.th-action-path span {max-width:76ch;}
 .th-world-links strong {font:400 24px/1.2 var(--serif);}
 .th-world-links span {color:var(--ink-2);font:400 13px/1.75 var(--zn-read);}
 .th-regional {margin-top:32px;}

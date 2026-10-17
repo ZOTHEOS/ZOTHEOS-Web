@@ -500,11 +500,12 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .directory-source summary:hover { color: var(--ink); }
 .directory-source[open] { padding-bottom: 16px; }
 .directory-page .directory-source p + p { margin-top: 12px; }
-.directory-page .directory-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; max-width: none; margin-top: 20px; }
-.directory-page .directory-list > li { min-width: 0; padding: 20px 0; margin: 0; border-top: 1px solid var(--rule); scroll-margin-top: 96px; }
+.directory-page .directory-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: none; margin-top: 20px; }
+.directory-page .directory-list > li { min-width: 0; padding: 24px; margin: 0; border: 1px solid var(--rule); border-radius: 6px; background: color-mix(in srgb,var(--ink) 2%,var(--page-bg)); scroll-margin-top: 96px; }
 .directory-page .directory-list > li::before { content: none; }
 .directory-list .directory-name { margin: 0; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.22; overflow-wrap: anywhere; color: var(--ink); }
-.directory-list .directory-name:focus { outline-offset: 4px; }
+.directory-list .directory-name { scroll-margin-top:112px; }
+.directory-list .directory-name:focus { outline:2px solid var(--ink); outline-offset:6px; }
 .directory-list p { margin-top: 8px; }
 .directory-page .directory-loading { display: flex; justify-content: flex-start; margin: 24px 0; }
 #directoryMore { min-height: 48px; }
@@ -516,6 +517,21 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
   .directory-page .directory-group { scroll-margin-top: 80px; }
 }
 @media (max-width: 480px) { .directory-inputs { gap: 8px; } .directory-inputs .pill { padding-inline: 12px; letter-spacing: 0.1em; } }
+
+/* Reader routes connect a search to its actual first visible name without changing the search. */
+.directory-controls {display:grid;grid-template-columns:minmax(0,1fr);gap:20px;}
+.directory-controls .directory-filter {margin-top:0;}
+.directory-reading-actions {display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:20px;}
+.directory-reading-actions .pill {min-height:48px;text-transform:none;letter-spacing:0.02em;font:500 14px/1.5 var(--zn-read);padding:12px 20px;border-color:var(--ink-2);background:color-mix(in srgb,var(--ink) 5%,var(--page-bg));}
+.directory-reading-actions .pill:hover {border-color:var(--ink);background:color-mix(in srgb,var(--ink) 9%,var(--page-bg));}
+.directory-actions {display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.directory-list .directory-actions>p {margin:0;flex:1 1 190px;min-width:0;}
+.directory-actions a {display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;height:100%;padding:12px 14px;border:1px solid var(--rule);border-radius:4px;text-decoration:none;font-size:14px;line-height:1.6;overflow-wrap:anywhere;}
+.directory-actions a:hover {border-color:var(--ink);background:color-mix(in srgb,var(--ink) 5%,var(--page-bg));}
+.directory-actions a:focus-visible,.directory-reading-actions .pill:focus-visible {outline:2px solid var(--ink);outline-offset:4px;}
+@media(min-width:900px) {.directory-controls {grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:480px) {.directory-page .directory-list>li {padding:20px;}.directory-reading-actions .pill {width:100%;justify-content:center;text-align:center;}}
+@media print {.directory-reading-actions {display:none!important;}.directory-page .directory-list>li {background:transparent;break-inside:avoid;}}
 
 /* The hub's search column holds its place beside the ring while the ring is read; a long result list scrolls in
    the column, and the box stays in view. */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Tutunakú | Indigenous nations today</title>
   <meta name="description" content="Tutunakú: The Totonacapan: northern Veracruz around Papantla and the Sierra Norte de Puebla, Mexico. Community groups asked for radio in their own ...">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.51ad071b.css">
+  <link rel="stylesheet" href="/static/nations/nations.e2e1737d.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -363,6 +363,7 @@
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
   var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
   var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
+  var readFirst = document.getElementById('directoryReadFirst'), resultsReadFirst = document.getElementById('directoryResultsReadFirst');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -409,6 +410,8 @@
       if (resultsSummary) resultsSummary.textContent = status.textContent;
       if (resultsEmpty) resultsEmpty.hidden = count !== 0;
       if (resultsActions) resultsActions.hidden = count === 0;
+      if (readFirst) readFirst.hidden = visible.length === 0;
+      if (resultsReadFirst) resultsReadFirst.hidden = visible.length === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';
@@ -421,6 +424,13 @@
   input.addEventListener('input', function () { limit = batch; filter(); });
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
+  function readFirstMatch() {
+    if (!visible.length) return;
+    var name = visible[0].querySelector('.directory-name') || visible[0];
+    name.setAttribute('tabindex', '-1'); name.focus(); name.scrollIntoView();
+  }
+  if (readFirst) readFirst.addEventListener('click', readFirstMatch);
+  if (resultsReadFirst) resultsReadFirst.addEventListener('click', readFirstMatch);
   inventory.addEventListener('change', function () { limit = batch; filter(); });
   if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
   more.addEventListener('click', function () {
