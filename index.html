@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-NgEmzTUw2YdCU32Ap4+ZNnnF2FAk2XzA3JmdYw6YHKA=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-lE86M1Lyy0oZUItvyGmDxb6SzYIApVcJqUbQdGcJYEY=' 'sha256-xoag0hUo4FwRdSIW0C1fgX43/4/RMWkT1X5zwfVXZNk=' 'sha256-uMtdpH5BRta22fcPfKZ00taFkB+jvCUcsKOVxRBAU/k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-IV9nfWvrE1MKPtDfOOm8X//c+1aMccev69ByvDvmSs4=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-X4A607/UobeCMmVU+t0P9z1KDuOa72V0y6mXE5ay/ik=' 'sha256-xoag0hUo4FwRdSIW0C1fgX43/4/RMWkT1X5zwfVXZNk=' 'sha256-1f7Df6mmuuaTDqNwjpNqOx3/9wMwWciljEEwWVM28XU=' 'sha256-uMtdpH5BRta22fcPfKZ00taFkB+jvCUcsKOVxRBAU/k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org https://i.ytimg.com https://assets.nfbcdn.ca; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src https://www.youtube-nocookie.com; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -172,7 +172,7 @@
           "name": "Is my data collected?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Local inference and website processing are separate."
+            "text": "The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Its Theater section contacts YouTube and the National Film Board of Canada as that section approaches the screen. Local inference and website processing are separate."
           }
         },
         {
@@ -7238,14 +7238,396 @@
     .mv-del { flex: none; }
   </style>
 <style>
-.theater-invitation { max-width:1328px; margin:0 auto; padding:72px clamp(20px,4vw,40px); display:grid; grid-template-columns:1.25fr 1fr; gap:32px; border-top:1px solid var(--line); }
-.theater-invitation h2 { font:400 clamp(42px,5vw,72px)/1.05 var(--serif); letter-spacing:-.02em; margin:16px 0; }
-.theater-invitation p { max-width:54ch; color:var(--ink-2); line-height:1.7; }
-.theater-invitation .ti-art { min-height:240px; display:grid; place-items:center; border-block:1px solid var(--rule); background:radial-gradient(ellipse at 50% 70%,#39121c88,transparent 65%); font:400 36px/1.2 var(--serif); text-align:center; }
-[data-theme="maya"] .theater-invitation .ti-art { background:radial-gradient(ellipse at 50% 70%,#88602d44,transparent 65%); }
-.theater-invitation a { display:inline-flex; align-items:center; min-height:48px; margin-top:20px; padding:12px 18px; border:1px solid var(--line); color:var(--ink); text-decoration:none; }
-.theater-invitation a:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
-@media(max-width:679px) { .theater-invitation { grid-template-columns:1fr; padding-block:48px; } .theater-invitation .ti-art { min-height:180px; } }
+/* theater-showcase:css */
+/* ==== ZOTHEOS Theater showcase: the homepage opens onto the Theater ====
+   Its own chapter, after Mission and before the Explore gateway, on the page grid (section padding 110px 32px,
+   .section-inner 1280px, the standard eyebrow and italic section title). The whole band stands on one flat, opaque
+   floor in the theme's own ground, with a 1px rule at its top and bottom, so no page glow, rain or grain crosses the
+   films or the text beside them (the lifted-black law). Light is crisp lines in hard-edged brightness steps: no
+   glows, blur, fog, grain, dither or broad dim fills. The only ornament is ZOTHEOS's own stepped geometry: nested
+   brackets after the mark, open at the top like the mark's upper bracket, their top arms stopping short of the centre
+   in terraces, so a stepped aisle leads down to the screen. The light descends that aisle like a projector beam. The
+   aisle is a stepped notch with no traditional or ceremonial meaning.
+   Replaces the retired .theater-invitation rules and the .ws-theater glow. */
+
+/* One frame palette shared with the Theater and the motion masters (refinement S1): the block below is
+   motion/frame/zt-frame-tokens.css, included verbatim by the build (its SHA-256 is checked and recorded). t0 is the
+   tier beside the screen, each tier outward one step nearer the floor; l1 to l3 are the three hard steps of the
+   moving light. Any brightness change goes into that one file and the masters together. */
+/* ZOTHEOS stepped frame: shared tokens (revision 3). Generated from zt-frame-tokens.json by motion/src/make_tokens.py;
+   edit the JSON, not this file. One block for the Theater page, the homepage showcase, the code-drawn frame
+   and the rendered masters. t0 is the tier beside the screen; l1 to l3 are the moving light, dimmest first. */
+:root:not([data-theme]) {  /* Sovereign Skeleton */
+  --zt-frame-ground: #000000; --zt-frame-t0: #6E6E6E; --zt-frame-t1: #505050; --zt-frame-t2: #3A3A3A; --zt-frame-t3: #2A2A2A; --zt-frame-t4: #1E1E1E;
+  --zt-frame-l1: #8F8F8F; --zt-frame-l2: #ABABAB; --zt-frame-l3: #C8C8C8;
+}
+[data-theme="maya"] {  /* Maya Radiance */
+  --zt-frame-ground: #02101E; --zt-frame-t0: #61441E; --zt-frame-t1: #4E3618; --zt-frame-t2: #3F2C14; --zt-frame-t3: #322310; --zt-frame-t4: #281C0C;
+  --zt-frame-l1: #9D6D31; --zt-frame-l2: #B4873C; --zt-frame-l3: #CDA45E;
+}
+[data-theme="codex"] {  /* Living Codex */
+  --zt-frame-ground: #E8DBC0; --zt-frame-t0: #6B5945; --zt-frame-t1: #8A7860; --zt-frame-t2: #A39274; --zt-frame-t3: #B9A988; --zt-frame-t4: #CBBC9C;
+  --zt-frame-l1: #6B5945; --zt-frame-l2: #4A3A2A; --zt-frame-l3: #1A0F08;
+}
+[data-theme="skeleton"] {  /* Obsidian Ember */
+  --zt-frame-ground: #050507; --zt-frame-t0: #480D1B; --zt-frame-t1: #3B0B17; --zt-frame-t2: #2F0A14; --zt-frame-t3: #250911; --zt-frame-t4: #1D080E;
+  --zt-frame-l1: #6E0F25; --zt-frame-l2: #7C142C; --zt-frame-l3: #8B1934;
+}
+/* This section's own ground, control edge and frame geometry. Sovereign Skeleton (default): structural silver on
+   black. Geometry in CSS px, read by the script, which draws it in device pixels. ox: each tier's distance from the
+   screen at the sides and the foot; oy: at the top, where the aisle is; a: where its top arms stop, measured from the
+   centre line. Bands: the room each side of the screen. The same numbers as the shared frame (zt-frame.js). */
+.tsc {
+  --tsc-floor: var(--bg-floor); --tsc-edge: #6B6B6B;
+  --ox0: 6px; --ox1: 14px; --ox2: 22px; --ox3: 30px; --ox4: 38px;
+  --oy0: 12px; --oy1: 30px; --oy2: 48px; --oy3: 66px; --oy4: 84px;
+  --a0: 36px; --a1: 80px; --a2: 124px; --a3: 168px; --a4: 212px;
+  --tiers: 5; --band-x: 39px; --band-y: 85px; --band-b: 39px;
+  /* Tiers as drawn: one notch toward the floor while a film plays (house lights, as in the Theater). */
+  --zt-f0: var(--zt-frame-t0); --zt-f1: var(--zt-frame-t1); --zt-f2: var(--zt-frame-t2); --zt-f3: var(--zt-frame-t3); --zt-f4: var(--zt-frame-t4);
+  scroll-margin-top: 72px;
+}
+[data-theme="maya"] .tsc { --tsc-edge: #6E8294; }
+/* Obsidian Ember: the floor is the page's own warm obsidian (--bg-mid), not the cool #050507 (refinement S3). */
+[data-theme="skeleton"] .tsc { --tsc-floor: var(--bg-mid); --tsc-edge: #8A7F6E; }
+/* Living Codex: ink on paper; the floor is the page's opaque paper band (--bg-deep, the header band's colour). */
+[data-theme="codex"] .tsc { --tsc-floor: var(--bg-deep); --tsc-edge: #6B5945; }
+.tsc[data-house="down"] { --zt-f0: var(--zt-frame-t1); --zt-f1: var(--zt-frame-t2); --zt-f2: var(--zt-frame-t3); --zt-f3: var(--zt-frame-t4); }
+
+/* The floor (refinements M8, DA-S5, S3). z-index 51: the page's front rain (z 49) and grain (z 50) are drawn as
+   drops on glass over every section; this band sits above them. Header (100), scroll controls, the mobile bar
+   (180 to 200) and every popover stay above it; isolation keeps every page effect out of it. --cis is the size guess
+   for the page's content-visibility: the content-box height measured on main at 1600, 1024 and 390 px wide. */
+#theater { --cis: 1864px; z-index: 51; isolation: isolate; background: var(--tsc-floor); border-block: 1px solid var(--rule); }
+@media (max-width: 1099px) { #theater { --cis: 2993px; } }
+@media (max-width: 640px) { #theater { --cis: 2268px; } }
+.tsc *, .tsc *::before, .tsc *::after { box-sizing: border-box; }
+.tsc-nw { white-space: nowrap; }
+.tsc-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Heading: the page's standard eyebrow and italic title. The eyebrow carries a small drawing of the ZOTHEOS mark's
+   nested bracket where the numbered chapters carry a Maya numeral: the Theater sits outside the count, as it does
+   in the page's section menu. */
+#theater .section-label { color: var(--ink-2); }
+[data-theme="codex"] #theater .section-label { color: var(--ink); }
+.tsc-mark svg { display: block; width: 22px; height: 14px; fill: none; stroke: var(--cochineal); stroke-width: 1; shape-rendering: crispEdges; }
+.tsc-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); gap: 40px 72px; align-items: end; margin-bottom: 56px; }
+.tsc-head .section-title { margin-bottom: 22px; }
+.tsc .tsc-desc { margin-bottom: 0; max-width: 640px; }
+.tsc-ledger { padding-top: 16px; border-top: 1px solid var(--rule); }
+.tsc-ledger-title { margin: 0 0 12px; font: 500 11px/1.6 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--ink-2); }
+.tsc-ledger-total { display: flex; align-items: baseline; gap: 16px; margin: 0 0 16px; }
+.tsc-ledger-total .tsc-n { font: italic 400 64px/0.9 var(--serif); letter-spacing: -.01em; color: var(--ink); }
+.tsc-ledger-total .tsc-l { max-width: 20ch; font: 400 15px/1.45 var(--sans); color: var(--ink-2); }
+.tsc-ledger-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }
+.tsc-ledger-list li { display: flex; align-items: baseline; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); font: 400 14px/1.4 var(--sans); color: var(--ink-2); }
+.tsc-ledger-list .tsc-c { min-width: 2ch; text-align: right; font: 500 14px/1.4 var(--mono); color: var(--ink); }
+
+/* Stage and programme, side by side */
+.tsc-main { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(320px, 1fr); gap: 0 56px; align-items: start; }
+.tsc-stage { position: relative; min-width: 0; }
+/* The hero door's target (refinement V5): an empty mark at the top of the stage, so the screen and its controls are
+   in view together at common desktop heights once the page's own anchor scrolling clears the header; on phones it
+   sits 100px higher, so the section title above the screen shows too. */
+.tsc-anchor { position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none; }
+@media (max-width: 640px) { .tsc-anchor { top: -100px; } }
+.tsc-program { min-width: 0; padding-top: 6px; }
+
+/* The screening frame. The frame's padding is the tier band, so the screen inside stays exactly 16:9 and the outer
+   tier sits on the content edge. The frame has no ground of its own (the floor is the section's), so its only
+   contour is the stepped geometry (refinement S3). With script, one inline SVG draws every line on whole device
+   pixels at every zoom and display scale (refinement M3); without script, the spans below draw the same brackets
+   with 1px borders and no light. */
+.tsc-frame { position: relative; padding: var(--band-y) var(--band-x) var(--band-b); }
+.tsc-screen { position: relative; aspect-ratio: 16 / 9; background: #000000; overflow: hidden; }
+.tsc-tiers { position: absolute; inset: var(--band-y) var(--band-x) var(--band-b); pointer-events: none; }
+.tsc[data-frame="svg"] .tsc-tiers { display: none; }
+.tsc-b { position: absolute; top: calc(-1 * var(--oy)); bottom: calc(-1 * var(--ox)); border: 1px solid var(--c); border-bottom: 0; }
+.tsc-bl { left: calc(-1 * var(--ox)); right: calc(50% + var(--a)); border-right: 0; }
+.tsc-br { right: calc(-1 * var(--ox)); left: calc(50% + var(--a)); border-left: 0; }
+.tsc-bb { position: absolute; left: calc(-1 * var(--ox)); right: calc(-1 * var(--ox)); bottom: calc(-1 * var(--ox)); height: 1px; background: var(--c); }
+.tsc-t0 { --ox: var(--ox0); --oy: var(--oy0); --a: var(--a0); --c: var(--zt-frame-t0); }
+.tsc-t1 { --ox: var(--ox1); --oy: var(--oy1); --a: var(--a1); --c: var(--zt-frame-t1); }
+.tsc-t2 { --ox: var(--ox2); --oy: var(--oy2); --a: var(--a2); --c: var(--zt-frame-t2); }
+.tsc-t3 { --ox: var(--ox3); --oy: var(--oy3); --a: var(--a3); --c: var(--zt-frame-t3); }
+.tsc-t4 { --ox: var(--ox4); --oy: var(--oy4); --a: var(--a4); --c: var(--zt-frame-t4); }
+/* The drawn frame sits under the screen (the screen comes later in the frame, so it paints above): see showcase.js. */
+.tsc-fbox { position: absolute; inset: 0; pointer-events: none; }
+.tsc-svg { position: absolute; left: 0; top: 0; display: block; overflow: hidden; pointer-events: none; shape-rendering: crispEdges; }
+.tsc-svg .g0 { fill: var(--zt-f0); } .tsc-svg .g1 { fill: var(--zt-f1); } .tsc-svg .g2 { fill: var(--zt-f2); }
+.tsc-svg .g3 { fill: var(--zt-f3); } .tsc-svg .g4 { fill: var(--zt-f4); }
+/* Stair segments. A riser joins one tier's arm end to the tier inside it; a tread runs along that tier's arm to its
+   own end. At rest the light holds on the last step: the last riser at the first level, the last tread at the
+   second. Everything else on the stair is unlit until the light walks it. */
+.tsc-svg .sg { fill: transparent; }
+.tsc-svg .sg.k0.r { fill: var(--zt-frame-l1); }
+.tsc-svg .sg.k0.t { fill: var(--zt-frame-l2); }
+
+/* One light grammar with the Theater (refinements M1, M2, S8, S9-landing):
+   - Living, film not playing: the light walks the top aisle from the outer terrace down to the screen, one segment
+     every half second, with no easing, in three hard levels that brighten toward the screen and one level of decay
+     behind. It lands, holds on the last step, and walks again; the loop is 8 s. Only this one aisle pair moves.
+   - Arriving: when a page-started preview is about to begin, the light walks the last four segments at a quarter
+     second each (one second in all) and the preview starts as it lands.
+   - Playing: nothing moves; every tier steps one notch toward the floor and the last step holds.
+   No fade, blur or flash: a pixel changes at most twice a second while walking, four times a second while arriving.
+   The !important and the extra specificity keep this one light grammar exact against any page-wide animation rule.
+   The script sets data-light to run or arrive only in Living: Calm, Still and the device's reduced-motion request
+   (an unconditional floor) keep the light at rest. */
+@keyframes tsc-zA { 0% { fill: var(--zt-frame-l1); } 6.25%, 100% { fill: transparent; } }
+@keyframes tsc-zB { 0% { fill: var(--zt-frame-l2); } 6.25% { fill: var(--zt-frame-l1); } 12.5%, 100% { fill: transparent; } }
+@keyframes tsc-zCr { 0% { fill: var(--zt-frame-l3); } 6.25% { fill: var(--zt-frame-l2); } 12.5%, 100% { fill: var(--zt-frame-l1); } }
+@keyframes tsc-zCt { 0% { fill: var(--zt-frame-l3); } 6.25%, 100% { fill: var(--zt-frame-l2); } }
+@keyframes tsc-arB { 0% { fill: var(--zt-frame-l2); } 25% { fill: var(--zt-frame-l1); } 50%, 100% { fill: transparent; } }
+@keyframes tsc-arCr { 0% { fill: var(--zt-frame-l3); } 25% { fill: var(--zt-frame-l2); } 50%, 100% { fill: var(--zt-frame-l1); } }
+@keyframes tsc-arCt { 0% { fill: var(--zt-frame-l3); } 25%, 100% { fill: var(--zt-frame-l2); } }
+html body .tsc:is([data-light="run"], [data-light="arrive"]) .tsc-svg .sg.k0 { fill: transparent; }   /* the resting light lifts while it walks */
+html body .tsc[data-light="run"] .tsc-svg .sg {
+  animation-duration: 8s !important; animation-timing-function: steps(1, end) !important;
+  animation-iteration-count: infinite !important; animation-fill-mode: none !important;
+  animation-delay: calc(var(--j) * 0.5s) !important; animation-play-state: running !important;
+}
+html body .tsc[data-light="run"] .tsc-svg .sg.zA { animation-name: tsc-zA !important; }
+html body .tsc[data-light="run"] .tsc-svg .sg.zB { animation-name: tsc-zB !important; }
+html body .tsc[data-light="run"] .tsc-svg .sg.k0.r { animation-name: tsc-zCr !important; }
+html body .tsc[data-light="run"] .tsc-svg .sg.k0.t { animation-name: tsc-zCt !important; }
+html body .tsc[data-light="arrive"] .tsc-svg .sg.ar {
+  animation-duration: 1s !important; animation-timing-function: steps(1, end) !important;
+  animation-iteration-count: 1 !important; animation-fill-mode: forwards !important;
+  animation-delay: calc(var(--ar) * 0.25s) !important; animation-play-state: running !important;
+}
+html body .tsc[data-light="arrive"] .tsc-svg .sg.ar.k1 { animation-name: tsc-arB !important; }
+html body .tsc[data-light="arrive"] .tsc-svg .sg.ar.k0.r { animation-name: tsc-arCr !important; }
+html body .tsc[data-light="arrive"] .tsc-svg .sg.ar.k0.t { animation-name: tsc-arCt !important; }
+
+/* Entrance: the first time the screen comes into view (Living and Calm only), the picture opens from the screen's
+   centre line in four hard steps and the tiers switch on from the screen outward, 120ms apart. Opacity and clip only,
+   no fade, and nothing moves the layout. The clip sits on the screen's children, never on the screen itself: the
+   script measures the screen's visibility, and a clipped target would read as out of view. */
+@keyframes tsc-on { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tsc-open { from { clip-path: inset(50% 0 50% 0); } to { clip-path: inset(0 0 0 0); } }
+html body .tsc[data-enter="wait"] .tsc-svg .tier { opacity: 0; }
+html body .tsc[data-enter="wait"] .tsc-screen > * { clip-path: inset(50% 0 50% 0); }
+html body .tsc[data-enter="go"] .tsc-screen > * { animation: tsc-open .48s steps(4, jump-start) 0s both !important; }
+html body .tsc[data-enter="go"] .tsc-svg .tier { animation: tsc-on .01s steps(1, start) calc(.48s + var(--i) * .12s) both !important; }
+
+/* The screen */
+.tsc-poster { position: absolute; inset: 0; display: block; color: #FFFFFF; text-decoration: none; overflow: hidden; }
+.tsc-poster img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(var(--tsc-crop, 1)); }
+.tsc-poster-cta { position: absolute; left: 0; bottom: 0; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 16px; background: #000000; color: #FFFFFF; font: 500 14px/1.3 var(--sans); }
+.tsc-poster:focus-visible { outline: 2px solid #FFFFFF; outline-offset: -4px; }
+.tsc-poster:hover .tsc-poster-cta { text-decoration: underline; text-underline-offset: 4px; }
+/* With script the poster is Play (a press on the screen plays); it is the labelled source link only without script
+   or once the player fails. */
+.tsc[data-script]:not([data-failed]) .tsc-poster-cta { display: none; }
+.tsc-player { position: absolute; inset: 0; }
+.tsc-player[hidden] { display: none; }
+/* Keyboard focus inside the player: the screen's own ring, white with a black inner line, drawn above the player. */
+.tsc-player[data-ring]::after { content: ""; position: absolute; inset: 0; border: 2px solid #FFFFFF; outline: 1px solid #000000; outline-offset: -3px; pointer-events: none; }
+/* Covered: the real poster stays on the screen while the provider loads, for the first 4 s of a page-started
+   preview (the provider's own start-up title, controls and tray hide meanwhile), and after a capped preview pauses.
+   The switch is hard, no fade (refinements N3, S2). */
+.tsc-player[data-cover] { opacity: 0; pointer-events: none; }
+.tsc-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.tsc-player iframe:focus-visible { outline: 2px solid #FFFFFF; outline-offset: -2px; }
+/* A story with a Before Watching hold: its real poster, the note on a flat card, and a Play (refinement DA-M1). */
+.tsc-hold { position: absolute; inset: auto 0 0 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 10px 16px; padding: 14px 16px; background: #000000; }
+.tsc-hold[hidden] { display: none; }
+.tsc-hold p { margin: 0; flex: 1 1 28ch; color: #FFFFFF; font: 400 14px/1.5 var(--sans); }
+.tsc-hold .tsc-btn { color: #000000; background: #FFFFFF; border-color: #FFFFFF; }
+.tsc-hold .tsc-btn:focus-visible { outline-color: #FFFFFF; }
+
+/* Controls, one vocabulary with the Theater in the site's Title Case: Play and Pause, Sound, Captions, Pause Light
+   (refinement S5). They line up with the screen's own edges (refinement S3). */
+.tsc-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px var(--band-x) 0; }
+.tsc-bar[hidden], .tsc-comfort[hidden], .tsc-note[hidden], .tsc-btn[hidden] { display: none; }
+.tsc-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 44px; min-height: 44px; margin: 0; padding: 0 16px; border: 1px solid var(--tsc-edge); border-radius: 0; background: transparent; color: var(--ink); font: 500 14px/1 var(--sans); letter-spacing: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tsc-btn:hover { border-color: var(--ink); }
+.tsc-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.tsc-btn[aria-disabled="true"] { color: var(--ink-2); cursor: default; }
+.tsc-btn[aria-disabled="true"]:hover { border-color: var(--tsc-edge); }
+.tsc-btn svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
+.tsc-btn .tsc-fill { fill: currentColor; stroke: none; }
+.tsc-cc { display: inline-flex; align-items: center; justify-content: center; height: 16px; padding: 0 3px; border: 1px solid currentColor; font: 600 9px/1 var(--mono); letter-spacing: .04em; }
+.tsc-state { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+/* The primary control is solid: Play or Pause, except while a page-started preview plays without sound, when Sound
+   leads (refinement S3): the people in the film are heard by choice, not stopped by default. */
+.tsc-solid, .tsc[data-primary="play"] .tsc-play, .tsc[data-primary="sound"] .tsc-sound { background: var(--ink); border-color: var(--ink); color: var(--tsc-floor); }
+.tsc[data-primary="play"] .tsc-play .tsc-state, .tsc[data-primary="sound"] .tsc-sound .tsc-state { color: inherit; }
+.tsc[data-primary] .tsc-btn[aria-disabled="true"] { background: transparent; border-color: var(--tsc-edge); color: var(--ink-2); }
+.tsc-play { min-width: 112px; }
+.tsc-sound { min-width: 158px; }   /* wide enough for Turn Sound On, so starting or ending a preview never moves Captions */
+.tsc-sound[aria-pressed="false"] .tsc-wave { display: none; }
+/* While a page-started preview plays without sound, Sound is the solid primary and reads Turn Sound On, as in the
+   Theater; its accessible name is then those same visible words (label in name), and its state is aria-pressed. */
+.tsc-pre, .tsc-post { display: none; }
+.tsc[data-primary="sound"] .tsc-sound :is(.tsc-pre, .tsc-post) { display: inline; }
+.tsc[data-primary="sound"] .tsc-sound .tsc-state { display: none; }
+.tsc-quiet { padding: 0 14px; border-color: var(--rule); font-size: 13px; }
+.tsc-quiet[aria-pressed="true"] .tsc-state { color: var(--ink); }
+/* Two lines reserved in px (three under 360px), so nothing below shifts when the line changes length. Without script
+   the line stays empty, so it takes no room. */
+.tsc-status { min-height: 42px; margin: 12px var(--band-x) 0; color: var(--ink-2); font: 400 14px/1.5 var(--sans); }
+.tsc:not([data-script]) .tsc-status { display: none; }
+/* The record's Before Watching note: one place, after the controls and their status line, so the controls sit
+   straight under the screen and a preview can start wherever 60% of the screen and the control row fit (refinements
+   M5, R3-ZONE). */
+.tsc-before { margin: 16px var(--band-x) 0; padding: 12px 14px; border: 1px solid var(--rule); color: var(--ink-2); font: 400 14px/1.6 var(--sans); }
+.tsc-before strong { color: var(--ink); font-weight: 600; }
+.tsc-comfort { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 12px var(--band-x) 0; }
+.tsc-note { margin: 12px var(--band-x) 0; color: var(--ink-2); font: 400 13px/1.6 var(--sans); }
+.tsc-notes { max-width: 92ch; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.tsc-fine { margin: 0 0 10px; color: var(--ink-2); font: 400 13px/1.6 var(--sans); }
+
+/* Programme, beside the frame: kicker, title, the people, the makers, the viewing type and its limits, the full
+   credit (refinements N2, DA-S6). The Before Watching note sits under the controls. */
+.tsc-kicker { margin: 0 0 14px; font: 500 11px/1.6 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--ink-2); }
+.tsc-feature-title { margin: 0 0 16px; font: italic 400 clamp(30px, 2.6vw, 40px)/1.08 var(--serif); letter-spacing: -.01em; color: var(--ink); }
+.tsc-featuring { margin: 0 0 8px; color: var(--ink); font: 400 15px/1.55 var(--sans); }
+.tsc-credit-line { margin: 0 0 16px; color: var(--ink-2); font: 400 14px/1.6 var(--sans); }
+.tsc-credit-line cite { font-family: var(--serif); font-style: italic; font-size: 1.1em; }   /* the serif italic the page already loads */
+.tsc-credit-short { display: none; margin: 0 0 12px; color: var(--ink); font: 400 14px/1.55 var(--sans); }
+.tsc-kind { display: inline-block; margin: 0 0 8px; padding: 6px 10px; border: 1px solid var(--rule); font: 500 12px/1.4 var(--mono); letter-spacing: .06em; color: var(--ink); }
+.tsc-access { margin: 0 0 16px; color: var(--ink-2); font: 400 13px/1.6 var(--sans); }
+.tsc-summary { margin: 0 0 18px; color: var(--ink-2); font: 400 15px/1.7 var(--sans); }
+.tsc-credit { margin: 0 0 4px; border-top: 1px solid var(--rule); }
+.tsc-credit summary { display: flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; font: 500 11px/1.6 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); list-style: none; }
+.tsc-credit summary::-webkit-details-marker { display: none; }
+.tsc-credit summary::before { content: ""; flex: none; width: 7px; height: 7px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(-45deg); }
+.tsc-credit[open] summary::before { transform: rotate(45deg); }
+.tsc-credit summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.tsc-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 9px 16px; margin: 0 0 16px; padding: 4px 0 0; }
+.tsc-facts dt { font: 500 11px/1.75 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+.tsc-facts dd { margin: 0; color: var(--ink); font: 400 14px/1.55 var(--sans); }
+.tsc-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; }
+.tsc-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid var(--tsc-edge); color: var(--ink); text-decoration: none; font: 500 14px/1.2 var(--sans); }
+.tsc-link:hover { border-color: var(--ink); }
+.tsc-link:focus-visible, .tsc-enter:focus-visible, .tsc-item a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+/* Six stories from the Theater, in the Theater's own film-title style (serif) (refinement N2) */
+.tsc-shelf { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.tsc-shelf-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; margin-bottom: 28px; }
+.tsc-shelf-title { margin: 0 0 8px; font: italic 400 clamp(28px, 2.4vw, 36px)/1.15 var(--serif); color: var(--ink); }
+.tsc-shelf-note { margin: 0; max-width: 64ch; color: var(--ink-2); font: 400 15px/1.65 var(--sans); }
+.tsc-enter { display: inline-flex; align-items: center; gap: 14px; min-height: 52px; padding: 0 20px; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font: 500 15px/1.2 var(--sans); }
+.tsc-enter .tsc-state { color: var(--ink-2); }
+.tsc-enter:hover { background: var(--ink); color: var(--tsc-floor); }
+.tsc-enter:hover .tsc-state { color: inherit; }
+.tsc-strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px 16px; margin: 0; padding: 0; list-style: none; }
+.tsc-item { min-width: 0; }
+.tsc-item a { display: flex; flex-direction: column; gap: 10px; height: 100%; color: var(--ink); text-decoration: none; }
+.tsc-thumb { position: relative; display: block; aspect-ratio: 16 / 9; background: #000000; border: 1px solid var(--rule); overflow: hidden; }
+.tsc-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(var(--tsc-crop, 1)); }
+.tsc-item a:hover .tsc-thumb { border-color: var(--ink); }
+.tsc-item a:hover .tsc-item-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.tsc-item-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.tsc-item-title { font: 400 20px/1.15 var(--serif); color: var(--ink); }
+.tsc-item-desc { display: flex; flex-direction: column; gap: 2px; }
+.tsc-item-who { display: block; color: var(--ink); font: 400 13px/1.5 var(--sans); }
+.tsc-item-meta { display: block; color: var(--ink-2); font: 400 13px/1.5 var(--sans); }
+.tsc-item-place { display: block; margin-top: 3px; font: 500 11px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+/* Small type on Maya's blue floor and Codex paper takes the full ink. */
+:is([data-theme="maya"], [data-theme="codex"]) :is(.tsc-item-meta, .tsc-item-place, .tsc-facts dt, .tsc-kicker, .tsc-ledger-title, .tsc-access) { color: var(--ink); }
+
+/* The Explore gateway's Theater card: the old soft crimson glow becomes a 1px pictogram of this section, top right with
+   its foot on the eyebrow's baseline: a 32 x 18 screen and a three-tread stair (risers 4px, treads 8px) descending to
+   its top centre. One mask in crisp edges, no glow, no falloff (refinement S7). */
+.ws-theater { position: relative; --wsb: var(--cochineal); --wpad: 30px; }
+.ws-theater::after {
+  content: ""; position: absolute; top: calc(var(--wpad) - 16px); right: var(--wpad); width: 40px; height: 30px;
+  background: var(--wsb); pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='30' shape-rendering='crispEdges'%3E%3Cpath d='M8 12h32v1h-32zM8 29h32v1h-32zM8 12h1v18h-1zM39 12h1v18h-1zM0 0h9v1h-9zM8 0h1v5h-1zM8 4h9v1h-9zM16 4h1v5h-1zM16 8h9v1h-9zM24 8h1v5h-1z'/%3E%3C/svg%3E") no-repeat 0 0 / 40px 30px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='30' shape-rendering='crispEdges'%3E%3Cpath d='M8 12h32v1h-32zM8 29h32v1h-32zM8 12h1v18h-1zM39 12h1v18h-1zM0 0h9v1h-9zM8 0h1v5h-1zM8 4h9v1h-9zM16 4h1v5h-1zM16 8h9v1h-9zM24 8h1v5h-1z'/%3E%3C/svg%3E") no-repeat 0 0 / 40px 30px;
+}
+:root:not([data-theme]) .ws-theater { --wsb: #8A8A8A; }
+[data-theme="maya"] .ws-theater { --wsb: #9D6D31; }
+[data-theme="codex"] .ws-theater { --wsb: var(--ink-3); }
+.ws-theater .ws-index { padding-right: 56px; }
+@media (max-width: 679px) { .ws-theater { --wpad: 22px; } }   /* the gateway card padding on phones */
+@media (forced-colors: active) { .ws-theater::after { background: CanvasText; } }
+
+/* The homepage's first view: one quiet door to this section on the hero's actions row, after the quiet link
+   (refinement S11), so on desktop the hero keeps main's height; on phones the row is a column and the door adds one
+   44px target (two balanced lines) under the quiet link. A same-page anchor, so no provider is contacted until the
+   section nears. Line height in px keeps a wrapped door on whole pixels. */
+.hero-theater { display: inline-flex; align-items: center; min-height: 44px; margin: 0; padding: 0 2px; color: var(--ink-2); font: italic 400 19px/24px var(--serif); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+@media (max-width: 640px) { .hero-actions > .hero-theater { align-self: center; justify-content: center; text-align: center; text-wrap: balance; } }
+.hero-theater:hover { color: var(--ink); }
+[data-theme="codex"] .hero-theater { color: var(--ink); }   /* full ink on paper, as the section's small type */
+.hero-theater:focus-visible { color: var(--ink); outline: 2px solid currentColor; outline-offset: 4px; }
+
+/* Below the desktop layout: the programme moves under the stage */
+@media (max-width: 1099px) {
+  .tsc-head { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .tsc-ledger { max-width: 560px; }
+  .tsc-main { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .tsc-program { max-width: 720px; margin-top: 40px; padding-top: 0; }
+  .tsc-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* Phones (refinement S8-landing): the eyebrow and title, then straight to the screen, the controls and Before Watching,
+   the featured title and a one-line credit; the full credit folds into Full Credit; the counts fold into one
+   line; the six stories become a rail. The section padding is the page's own 22px band; the frame reaches into it so
+   the screen keeps the full text width; three tiers, shorter stairs. */
+@media (max-width: 640px) {
+  .tsc {
+    --ox0: 5px; --ox1: 11px; --ox2: 17px;
+    --oy0: 10px; --oy1: 22px; --oy2: 34px;
+    --a0: 18px; --a1: 44px; --a2: 70px;
+    --tiers: 3; --band-x: 22px; --band-y: 35px; --band-b: 18px;
+  }
+  .tsc .section-inner { display: flex; flex-direction: column; }
+  .tsc-head, .tsc-head-main { display: contents; }
+  .tsc .section-head { order: 1; margin-bottom: 14px; }
+  .tsc-head .section-title { order: 2; margin-bottom: 6px; }
+  .tsc-main { order: 3; }
+  .tsc .tsc-desc { order: 4; margin-top: 36px; font-size: 15px; line-height: 1.7; }
+  .tsc-ledger { order: 5; margin-top: 18px; padding-top: 12px; max-width: none; }
+  .tsc-notes { order: 6; margin-top: 18px; }
+  .tsc-shelf { order: 7; margin-top: 40px; }
+  .tsc-t3, .tsc-t4 { display: none; }
+  .tsc-frame { margin-inline: -22px; }
+  .tsc-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 8px; margin: 12px 0 0; }   /* three equal keys */
+  .tsc-bar .tsc-btn { flex-direction: column; gap: 5px; min-width: 0; padding: 8px 4px; }
+  .tsc-bar .tsc-btn > .tsc-lbl, .tsc-bar .tsc-btn > .tsc-state { line-height: 1.1; }
+  .tsc-play { min-width: 0; }
+  .tsc-status { margin: 10px 0 0; }
+  .tsc-comfort, .tsc-note, .tsc-before { margin-inline: 0; }
+  .tsc-program { margin-top: 28px; }
+  .tsc-feature-title { font-size: 30px; margin-bottom: 12px; }
+  .tsc-summary, .tsc-featuring, .tsc-credit-line, .tsc-shelf-note, .tsc-ledger-list { display: none; }
+  .tsc-credit-short { display: block; }
+  .tsc-ledger-total::after { content: "."; }
+  .tsc-facts { grid-template-columns: minmax(0, 1fr); gap: 2px 0; }
+  .tsc-facts dd { margin-bottom: 10px; }
+  .tsc-ledger-title { display: inline; margin: 0; }
+  .tsc-ledger-title::after { content: ": "; }
+  .tsc-ledger-total { display: inline; margin: 0; padding: 0; border: 0; }
+  .tsc-ledger-total .tsc-n, .tsc-ledger-total .tsc-l { font: 400 14px/1.6 var(--sans); color: var(--ink-2); letter-spacing: 0; }
+  .tsc-ledger-total .tsc-n { color: var(--ink); }
+  .tsc-shelf-head { margin-bottom: 18px; }
+  .tsc-shelf-note { font-size: 14px; }
+  .tsc-strip { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 240px; gap: 14px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 22px; margin-inline: -22px; padding: 4px 22px 12px; }
+  .tsc-item { scroll-snap-align: start; }
+  .tsc-enter { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 4px 14px; padding: 10px 18px; white-space: nowrap; }
+  #theater .section-label { letter-spacing: 0.22em; text-wrap: balance; }
+}
+@media (max-width: 359px) {
+  .tsc-status { min-height: 63px; }
+  .tsc-cc-word { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media (forced-colors: active) {
+  .tsc-b, .tsc-bb { border-color: CanvasText; background: CanvasText; }
+  .tsc-b { background: transparent; }
+  .tsc-svg .tier rect:not(.sg) { fill: CanvasText; }
+  .tsc-svg .sg { display: none; }
+}
+
+/* Outside the section, in the same block: the hero door's entrance follows the actions row's own stagger, just
+   after the quiet link beside it, and its hover colour answers at once. The header, its links, the smallest-phone
+   Menu pill and the footer rows stay the site's own (the spacing pass). */
+.hero-actions > .hero-theater { transition: color var(--dur-1) var(--ease-out), opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial); }
+.hero-actions.stagger.visible > .hero-theater { transition-delay: 0s, 0.25s, 0.25s; }
+/* /theater-showcase:css */
 
 /* The gateway follows the section system: the shared section padding and 1280px column, the house label and the
    italic section title, and a greca divider on each side. */
@@ -7257,7 +7639,6 @@
 .ws-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}.ws-card {display:flex;flex-direction:column;gap:18px;padding:30px;min-width:0;min-height:280px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;}
 .ws-card:hover {border-color:var(--ink);}.ws-card:focus-visible {outline:2px solid var(--ink);outline-offset:5px;}
 .ws-index {font:400 11px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);}.ws-card h3 {font:400 clamp(30px,3vw,42px)/1.15 var(--serif);}.ws-card p {max-width:48ch;color:var(--ink-2);font-size:15px;line-height:1.8;}.ws-action {margin-top:auto;padding-top:16px;font:500 13px/1.5 var(--sans);}
-.ws-theater {background:radial-gradient(ellipse at 95% 100%,color-mix(in oklab,var(--cochineal) 12%,transparent),transparent 75%);}
 .ws-card h3 {text-wrap:balance;}
 .ws-pathways {grid-column:1/-1;min-height:0;padding-block:36px;background:linear-gradient(120deg,color-mix(in oklab,var(--ink) 4%,transparent),transparent);}.ws-pathways h3 {max-width:28ch;}.ws-pathways p {max-width:72ch;}
 @media(max-width:679px){.ws-heading,.ws-grid{grid-template-columns:minmax(0,1fr);}.ws-card{padding:22px;min-height:0;}}
@@ -7417,6 +7798,17 @@
             </div>
             <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
           </div>
+          <!-- Haptics: the one visible preference for the page's very short pulses, on touch devices that can vibrate
+               (the Theater section's script shows this row only there, even when the section itself is missing): a
+               Theater control pressed, and the Council Route's controls and steps once the visitor has pressed
+               something. Saved as zotheos_haptics, which both read. -->
+          <div class="ap-row" id="apHapticsRow" hidden>
+            <span class="ap-label" id="apHapticsLabel">Haptics</span>
+            <div class="ap-seg" id="hapticsGroup" role="radiogroup" aria-labelledby="apHapticsLabel">
+              <button class="ap-opt" type="button" role="radio" data-haptics="on" aria-checked="true" tabindex="0" title="Short pulses from the Theater and Council Route controls and steps">On</button>
+              <button class="ap-opt" type="button" role="radio" data-haptics="off" aria-checked="false" tabindex="-1">Off</button>
+            </div>
+          </div>
           <div class="ap-row ap-row-fx" id="fxAmountRow">
             <span class="ap-label" id="apFxLabel">Effect intensity</span>
             <div class="ap-seg" id="fxAmount" role="radiogroup" aria-labelledby="apFxLabel">
@@ -7545,6 +7937,11 @@
           <span class="bl">Download for Windows</span> <span class="rs-meta"><span data-rs="version">v0.0.0</span> &middot; <span data-rs="size">0 MB</span></span> <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
         <a class="hero-link" href="#model-choice">Explore model choice</a>
+        <!-- The homepage's door to the Theater chapter, on the actions row, so on desktop the hero keeps its height and
+             the status line below stays where main has it (on phones the door adds one row): a same-page anchor, so
+             no provider is contacted until the section nears (refinement S11). The count is the Theater's
+             (tools/tests/test_theater_showcase.py). -->
+        <a class="hero-theater" href="#theater-screen">Watch in the Theater: Indigenous voices first, 228 selections</a>
       </div>
 
       <!-- D3: the development update as one status line; the full update lives on /download.html.
@@ -8503,6 +8900,147 @@
     <span class="seal-dot"></span>
   </div>
 
+  <!-- theater-showcase:markup -->
+  <!-- ZOTHEOS Theater showcase: the homepage opens onto the Theater. Its own chapter, after Mission and before the
+       Explore gateway, on a flat floor of the theme's own ground. Generated from the Theater records and re-checked
+       against data/theater/films.json by tools/tests/test_theater_showcase.py. The frame is ZOTHEOS's own stepped
+       geometry: nested brackets after the mark, open at the top like the mark's upper bracket; the light descends a
+       stepped aisle to the screen. The aisle is a stepped notch with no traditional or ceremonial meaning. The script
+       draws it in device pixels; the spans below are the no-script frame. Every image is a data-src the script fills
+       only as the section nears the screen, so no visitor (with or without script) contacts a provider before then. -->
+  <section class="tsc" id="theater" aria-labelledby="tsc-title" data-tsc data-provider="youtube" data-video-id="AWCB1Abxktk" data-captions="en" data-title="The Deaf Indigenous Dance Group" data-preview="eligible" data-media-seconds="405" data-note="Contains discussion of barriers experienced by Deaf First Nations performers.">
+    <div class="section-inner">
+      <div class="tsc-head">
+        <div class="tsc-head-main">
+          <div class="section-head">
+            <span class="tsc-mark" aria-hidden="true"><svg viewBox="0 0 22 14" focusable="false"><path d="M0.5 0.5V13.5H21.5V0.5M7.5 0.5H14.5V7.5H7.5Z"/></svg></span>
+            <span class="section-label"><span class="tsc-nw">ZOTHEOS Theater<span aria-hidden="true"> ·</span></span> <span class="tsc-nw">Indigenous voices first<span aria-hidden="true"> ·</span></span> <span class="tsc-nw">Worldwide</span></span>
+          </div>
+          <h2 class="section-title" id="tsc-title">Where ZOTHEOS listens<span class="seal">.</span></h2>
+          <p class="section-desc tsc-desc">Indigenous voices come first, in films, shorts and recorded conversations from around the world, each from an official source. Creators, publishers and viewing notes stay in plain view. You can pause, turn sound on, turn captions off or choose Still at any time.</p>
+        </div>
+        <div class="tsc-ledger" role="group" aria-labelledby="tscLedgerTitle">
+          <p class="tsc-ledger-title" id="tscLedgerTitle">In the Theater today</p>
+          <p class="tsc-ledger-total"><span class="tsc-n">228</span> <span class="tsc-l">selections, each with its official source</span></p>
+          <ul class="tsc-ledger-list">
+            <li><span class="tsc-c">18</span>full films</li>
+            <li><span class="tsc-c">66</span>shorts</li>
+            <li><span class="tsc-c">49</span>trailers</li>
+            <li><span class="tsc-c">21</span>excerpts</li>
+            <li><span class="tsc-c">67</span>recorded programs</li>
+            <li><span class="tsc-c">7</span>official pages</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tsc-main">
+        <div class="tsc-stage">
+          <!-- The hero door lands here: at the screen on desktop, a little above it on phones so the section title shows.
+               It carries no content; the page's anchor script focuses it, so Tab continues into the screen. -->
+          <span class="tsc-anchor" id="theater-screen"></span>
+          <div class="tsc-frame" id="tscFrame">
+            <div class="tsc-screen" id="tscScreen">
+              <a class="tsc-poster" id="tscPoster" href="https://www.youtube.com/watch?v=AWCB1Abxktk" target="_blank" rel="noopener noreferrer" aria-label="Watch The Deaf Indigenous Dance Group on YouTube, the official source (opens a new tab)"><img data-src="https://i.ytimg.com/vi/AWCB1Abxktk/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="tsc-poster-cta" aria-hidden="true">Watch On YouTube <span>↗</span></span></a>
+              <div class="tsc-hold" id="tscHold" role="group" aria-labelledby="tscHoldText" hidden>
+                <p id="tscHoldText"><strong>This story has a Before Watching note.</strong> <span>Contains discussion of barriers experienced by Deaf First Nations performers. The publisher identifies Auslan as part of the series; caption accuracy has not been independently assessed.</span> Press Play when you are ready.</p>
+                <button class="tsc-btn tsc-solid" type="button" id="tscHoldPlay">Play</button>
+              </div>
+              <div class="tsc-player" id="tscPlayer" hidden></div>
+            </div>
+            <div class="tsc-tiers" aria-hidden="true">
+              <span class="tsc-b tsc-t0 tsc-bl"></span><span class="tsc-b tsc-t0 tsc-br"></span><span class="tsc-bb tsc-t0"></span>
+              <span class="tsc-b tsc-t1 tsc-bl"></span><span class="tsc-b tsc-t1 tsc-br"></span><span class="tsc-bb tsc-t1"></span>
+              <span class="tsc-b tsc-t2 tsc-bl"></span><span class="tsc-b tsc-t2 tsc-br"></span><span class="tsc-bb tsc-t2"></span>
+              <span class="tsc-b tsc-t3 tsc-bl"></span><span class="tsc-b tsc-t3 tsc-br"></span><span class="tsc-bb tsc-t3"></span>
+              <span class="tsc-b tsc-t4 tsc-bl"></span><span class="tsc-b tsc-t4 tsc-br"></span><span class="tsc-bb tsc-t4"></span>
+            </div>
+          </div>
+          <!-- The controls sit straight under the screen, so a preview can start on its own wherever 60% of the screen
+               and the whole control row fit in the window (refinement R3-ZONE). The record's one Before Watching note
+               follows the controls and their status line. Play carries the note as its description until the preview
+               first plays, and screen readers hear it once more, in the status, when the preview first starts by
+               itself. -->
+          <div class="tsc-bar" id="tscBar" role="group" aria-label="Preview controls" hidden>
+            <button class="tsc-btn tsc-play" id="tscPlay" type="button" aria-disabled="true" aria-describedby="tscBefore"><svg class="tsc-play-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="tsc-fill" d="M4 2l10 6-10 6z"/></svg><span class="tsc-lbl tsc-play-label">Play</span><span class="tsc-sr"> preview</span></button>
+            <button class="tsc-btn tsc-sound" id="tscSound" type="button" aria-pressed="false" aria-disabled="true"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 6h3l4-3v10l-4-3H2z"/><path class="tsc-wave" d="M11.5 5.5v5M14 4v8"/></svg><span class="tsc-lbl"><span class="tsc-pre">Turn </span>Sound<span class="tsc-post"> On</span></span><span class="tsc-state" aria-hidden="true">Off</span></button>
+            <button class="tsc-btn tsc-cc-btn" id="tscCaptions" type="button" aria-pressed="true" aria-disabled="true"><span class="tsc-cc">CC</span><span class="tsc-lbl tsc-cc-word">Captions</span><span class="tsc-state" aria-hidden="true">On</span></button>
+          </div>
+          <p class="tsc-note" id="tscProviderNote" hidden>This player uses its own controls for Play, sound and captions. It does not start on its own.</p>
+          <p class="tsc-status" id="tscStatus"></p>
+          <p class="tsc-sr" id="tscAnnounce" role="status" aria-live="polite"></p>
+          <p class="tsc-before" id="tscBefore"><strong>Before watching:</strong> Contains discussion of barriers experienced by Deaf First Nations performers. The publisher identifies Auslan as part of the series; caption accuracy has not been independently assessed.</p>
+          <div class="tsc-comfort" id="tscComfort" hidden>
+            <button class="tsc-btn tsc-quiet" id="tscLight" type="button" aria-pressed="false" aria-describedby="tscLightDesc"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 14.5v-4h4v-4h4v-4h5"/></svg><span class="tsc-lbl">Pause Light</span><span class="tsc-state" aria-hidden="true">Resting</span></button>
+            <span class="tsc-sr" id="tscLightDesc">Pauses the ambient light around the screen.</span>
+          </div>
+        </div>
+
+        <div class="tsc-program">
+          <p class="tsc-kicker">Featured preview</p>
+          <h3 class="tsc-feature-title" id="tsc-feature-title">The Deaf Indigenous Dance Group</h3>
+          <p class="tsc-credit-short">With members of the Deaf Indigenous Dance Group, in their own words. By SBS and Deaf Australia; published by SBS On Demand.</p>
+          <p class="tsc-featuring">Featuring members of the Deaf Indigenous Dance Group, formed in 1997, in their own words. The publisher’s description does not name the individual members.</p>
+          <p class="tsc-credit-line">From <cite>Humans of the Australian Deaf Community</cite>, a series created by Paula Thornton, Deaf Australia. Produced by SBS and Deaf Australia; published by SBS On Demand.</p>
+          <p class="tsc-kind"><span class="tsc-nw">Recorded Program</span> · <span class="tsc-nw">Recorded Talk</span> · <span class="tsc-nw">6m 45s</span></p>
+          <p class="tsc-access">Recorded program, not a live broadcast. Availability, accounts and regional restrictions can change.</p>
+          <p class="tsc-summary">Members of the Deaf Indigenous Dance Group discuss dance, culture and Deaf pride, including storytelling through sign language and vibration. An official video-podcast portrait.</p>
+          <details class="tsc-credit" id="tscCredit">
+            <summary>Full Credit</summary>
+            <dl class="tsc-facts">
+              <dt>Featuring</dt><dd>Members of the Deaf Indigenous Dance Group (DIDG), formed in 1997. The publisher’s description does not name the individual members.</dd>
+              <dt>Series</dt><dd>Humans of the Australian Deaf Community, the second series of Our Deaf Ways, a video podcast by SBS and Deaf Australia</dd>
+              <dt>Credits</dt><dd>Series created by Paula Thornton, Deaf Australia; additional editing by Max Banyat; music by Max Gosford.</dd>
+              <dt>Produced by</dt><dd>SBS and Deaf Australia</dd>
+              <dt>Publisher</dt><dd>SBS On Demand, on its official YouTube channel</dd>
+              <dt>Year</dt><dd>Uploaded in April 2025. The source does not state a production year.</dd>
+              <dt>Runtime</dt><dd>6m 45s</dd>
+              <dt>Viewing</dt><dd>Recorded program, not a live broadcast. Availability, accounts and regional restrictions can change.</dd>
+              <dt>Audience</dt><dd>Made for Deaf, DeafBlind and hard of hearing people who use Auslan; the publisher also invites hearing viewers.</dd>
+              <dt>Place</dt><dd>Australia</dd>
+              <dt>Captions</dt><dd>English captions supplied with the upload, not automatic captions. Their accuracy has not been independently assessed.</dd>
+            </dl>
+          </details>
+          <div class="tsc-links">
+            <a class="tsc-link" href="/theater#film-deaf-indigenous-dance-group" data-story="deaf-indigenous-dance-group">Open In The Theater</a>
+            <a class="tsc-link" href="https://www.youtube.com/watch?v=AWCB1Abxktk" target="_blank" rel="noopener noreferrer">Official Source On YouTube <span aria-hidden="true">↗</span><span class="tsc-sr"> (opens a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tsc-notes">
+        <p class="tsc-fine">Chosen by ZOTHEOS from the Theater. Featuring these stories here does not mean their makers, publishers or the people in them endorse ZOTHEOS.</p>
+        <p class="tsc-fine">Privacy: this section contacts YouTube and the National Film Board of Canada as it approaches the screen, once the page has been near it for half a second. A link or the End key that jumps past it contacts neither; scrolling past it, even quickly, usually does, and so does a link that lands near it. They then receive your IP address and request information. YouTube’s player also loads parts from other Google services and keeps some of its own settings in this browser’s storage. Its privacy-enhanced domain does not make playback anonymous, and requests to Google services can carry cookies your browser already holds for Google. When the preview plays, including when it starts by itself, YouTube receives playback reports.</p>
+      </div>
+
+      <div class="tsc-shelf" role="region" aria-labelledby="tsc-shelf-title">
+        <div class="tsc-shelf-head">
+          <div>
+            <h3 class="tsc-shelf-title" id="tsc-shelf-title">Six stories from the Theater</h3>
+            <p class="tsc-shelf-note">From Sápmi, the Teduray and Lambangian communities of Mindanao in the southern Philippines, Southern Africa, Labrador and Treaty 4 territory in Saskatchewan, and a Maya Q’eqchi’ territory project by AEPDI. Each one opens the Theater at that story, with its details and official source.</p>
+          </div>
+          <a class="tsc-enter" href="/theater">Enter The Theater <span class="tsc-state">228 selections</span></a>
+        </div>
+        <ul class="tsc-strip">
+          <li class="tsc-item"><a href="/theater#film-birgejupmi-three-voices" data-story="birgejupmi-three-voices" aria-label="Explore Birgejupmi: A Cinematic Essay By Three Voices" aria-describedby="tscS1"><span class="tsc-thumb"><img data-src="https://i.ytimg.com/vi/D7L4JmZXyLI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="--tsc-crop: 1.182"></span><span class="tsc-item-text"><span class="tsc-item-title">Birgejupmi: A Cinematic Essay By Three Voices</span><span class="tsc-item-desc" id="tscS1"><span class="tsc-item-who">Directors Karin Nutti Pilflykt and Fanny Larsson-Auna</span><span class="tsc-item-meta">The Saami Council and Suoma Sámiid Guovddášsearvi</span><span class="tsc-item-meta">Short film · 15m 51s</span><span class="tsc-item-place">Sápmi</span></span></span></a></li>
+          <li class="tsc-item"><a href="/theater#film-sulagad-system" data-story="sulagad-system" aria-label="Explore The Sulagad System" aria-describedby="tscS2"><span class="tsc-thumb"><img data-src="https://i.ytimg.com/vi/P7uNzpWO7Qo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="tsc-item-text"><span class="tsc-item-title">The Sulagad System</span><span class="tsc-item-desc" id="tscS2"><span class="tsc-item-who">Produced by Tebtebba</span><span class="tsc-item-meta">Recorded program · 17m 25s</span><span class="tsc-item-place">Teduray and Lambangian communities, Mindanao, southern Philippines</span></span></span></a></li>
+          <li class="tsc-item"><a href="/theater#film-indigenous-peoples-network-southern-africa-launch" data-story="indigenous-peoples-network-southern-africa-launch" aria-label="Explore Indigenous Peoples Network Of Southern Africa: Launch" aria-describedby="tscS3"><span class="tsc-thumb"><img data-src="https://i.ytimg.com/vi/cudBS839G-4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="tsc-item-text"><span class="tsc-item-title">Indigenous Peoples Network Of Southern Africa: Launch</span><span class="tsc-item-desc" id="tscS3"><span class="tsc-item-who">Panel by Jamma International</span><span class="tsc-item-meta">Published by Cultural Survival</span><span class="tsc-item-meta">Recorded program · 53m 17s</span><span class="tsc-item-place">Southern Africa</span></span></span></a></li>
+          <li class="tsc-item"><a href="/theater#film-qeqchi-territory-aepdi" data-story="qeqchi-territory-aepdi" aria-label="Explore Maya Q’eqchi’ Territory: An AEPDI Project" aria-describedby="tscS4"><span class="tsc-thumb"><img data-src="https://i.ytimg.com/vi/TFf5UHvHDw0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="tsc-item-text"><span class="tsc-item-title">Maya Q’eqchi’ Territory: An AEPDI Project</span><span class="tsc-item-desc" id="tscS4"><span class="tsc-item-who">A project account by AEPDI</span><span class="tsc-item-meta">Published by Cultural Survival</span><span class="tsc-item-meta">Recorded program · 3m 07s</span></span></span></a></li>
+          <li class="tsc-item"><a href="/theater#film-nfb-evans-drum" data-story="nfb-evans-drum" aria-label="Explore Evan&#x27;s Drum" aria-describedby="tscS5"><span class="tsc-thumb"><img data-src="https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2024/1022642_evansdrum_en_keyart_16x9.jpg?w=618&amp;h=350" alt="" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="tsc-item-text"><span class="tsc-item-title">Evan&#x27;s Drum</span><span class="tsc-item-desc" id="tscS5"><span class="tsc-item-who">Directed by Ossie Michelin</span><span class="tsc-item-meta">National Film Board of Canada</span><span class="tsc-item-meta">Official trailer · 2021. Trailer, not the full film</span><span class="tsc-item-place">Happy Valley-Goose Bay, Labrador</span></span></span></a></li>
+          <li class="tsc-item"><a href="/theater#film-nfb-to-wake-up-the-nakota-language" data-story="nfb-to-wake-up-the-nakota-language" aria-label="Explore To Wake Up the Nakota Language" aria-describedby="tscS6"><span class="tsc-thumb"><img data-src="https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2021/To-Wake-Up-the-Nakota-language-epk-title-XL.jpg?w=704&amp;h=396" alt="" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="tsc-item-text"><span class="tsc-item-title">To Wake Up the Nakota Language</span><span class="tsc-item-desc" id="tscS6"><span class="tsc-item-who">Directed by Louise BigEagle</span><span class="tsc-item-meta">National Film Board of Canada</span><span class="tsc-item-meta">Short film · Documentary · 6m · 2017</span><span class="tsc-item-place">Pheasant Rump First Nation, Treaty 4 territory, Saskatchewan</span></span></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="greca-divider">
+    <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="color: var(--cochineal); opacity: 0.55;"><rect x="0" y="6" width="1216" height="1.5" fill="currentColor"/></g>
+      <g class="grecaTeeth" style="color: var(--cochineal); opacity: 0.78;"></g>
+    </svg>
+    <span class="seal-dot"></span>
+  </div>
+  <!-- /theater-showcase:markup -->
+
   <section class="world-showcase" id="explore-zotheos" aria-labelledby="explore-title"><div class="ws-heading"><div class="section-head"><span class="section-label">Built For Humanity&nbsp;· Across The World</span></div><h2 class="section-title" id="explore-title">More Ways To <br>Understand The World<span class="seal">.</span></h2><p>Watch. Learn. Question. Follow the sources and keep your own judgment.</p></div><div class="ws-grid"><a class="ws-card ws-pathways" href="/nations/paths-to-action"><span class="ws-index">From Understanding To Action</span><h3>What Can ZOTHEOS Do For Indigenous People And Nations?</h3><p>Ten practical pathways through land, representation, language and more. Follow the evidence, prepare a concrete next step and keep the decision in your hands.</p><span class="ws-action">Explore Paths To Action ↗</span></a><a class="ws-card ws-theater" href="/theater"><span class="ws-index">01 · Watch</span><h3>ZOTHEOS Theater</h3><p>Films, shorts and conversations from official sources. Clear viewing notes, with Indigenous voices first.</p><span class="ws-action">Enter The Theater ↗</span></a><a class="ws-card" href="/nations/directory"><span class="ws-index">02 · Discover</span><h3>Nations Worldwide</h3><p>Distinct peoples, histories and Nations’ own resources. A growing directory with its coverage gaps visible.</p><span class="ws-action">Explore The Directory ↗</span></a><a class="ws-card" href="/nations/resources"><span class="ws-index">03 · Go Deeper</span><h3>Histories And Resources</h3><p>Continue into cited histories, languages, land and community-led knowledge.</p><span class="ws-action">Follow The Sources ↗</span></a><a class="ws-card" href="/game"><span class="ws-index">04 · Play And Learn</span><h3>A Different Way In</h3><p>Games and learning cards offer another starting point. The histories and sources remain yours to explore.</p><span class="ws-action">Open The Games ↗</span></a></div></section>
   <div class="greca-divider">
     <svg viewBox="0 0 1216 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -8645,7 +9183,7 @@
             <span class="faq-q">Is any of my data collected?</span>
             <span class="zd-icon" aria-hidden="true"></span>
           </summary>
-          <div class="faq-a">The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Local inference and website processing are separate.</div>
+          <div class="faq-a">The local edition stores conversations, vault and memory on the device running it. This website sends waitlist emails to Formspree for milestone updates, and loads hosted fonts and media. Its Theater section contacts YouTube and the National Film Board of Canada as that section approaches the screen. Local inference and website processing are separate.</div>
         </details>
         <details class="faq-item">
           <summary>
@@ -8882,9 +9420,9 @@
     <details class="website-privacy" id="site-privacy">
       <summary><span>Website privacy and connections</span><span class="zd-icon" aria-hidden="true"></span></summary>
       <div class="privacy-grid">
-        <div><strong>On this device</strong><p>The page saves your theme, effects and rain preferences in browser storage. These website preferences are separate from your local ZOTHEOS conversations and model files.</p><p>The separate <a href="/theater">Theater</a> automatically loads publisher thumbnails and the selected ready player on opening the page. Their providers receive your IP address and request information under their own privacy policies. Eligible previews may start muted when in view; other stories wait for Play. Official source links open when followed.</p>
+        <div><strong>On this device</strong><p>The page saves your theme, motion, effects, rain, haptics and intro sound preferences in browser storage, and for the rest of the visit it remembers that the intro has played. These website preferences are separate from your local ZOTHEOS conversations and model files.</p><p>The Theater section on this page contacts YouTube and the National Film Board of Canada as it approaches the screen, once the page has been near it for half a second: it then shows their thumbnails and connects one YouTube preview player. A link or the End key that jumps past the section contacts neither. Scrolling past it, even quickly, usually contacts them, and so does a link that lands near it, such as one to the Explore section after it. In Living and Calm the preview starts without sound once at least 60% of the screen and all of its controls are in view, and pauses when you scroll away or press Pause. If it started by itself, it stops after 45 seconds, or 15 seconds on a phone, unless you take control with Play, Sound or the player’s own controls. In Still, when your device asks for reduced motion and while your browser asks to save data, it waits for Play. These providers receive your IP address and request information under their own privacy policies. The YouTube player also loads parts from other Google services, keeps some of its own settings in this browser’s storage and receives playback reports whenever the preview plays. Its privacy-enhanced domain does not make playback anonymous, and requests to Google services can carry cookies your browser already holds for Google.</p><p>The separate <a href="/theater">Theater</a> automatically loads publisher thumbnails and the selected ready player on opening the page. Their providers receive your IP address and request information under their own privacy policies. Eligible previews may start muted when in view; other stories wait for Play. None start on their own in Still or when the device requests reduced motion, and previews stop after 45 seconds on desktop and 15 seconds on phones unless you deliberately take control. Official source links open when followed.</p>
 </div>
-        <div><strong>Website connections</strong><p>This page loads its images, video and fonts from this site's own host. The hosting provider handles those requests. Local inference and loading this website are different activities.</p></div>
+        <div><strong>Website connections</strong><p>This page loads its own images, video and fonts from this site's own host. The hosting provider handles those requests. The Theater section is the one exception: as it approaches the screen, its thumbnails come from i.ytimg.com (YouTube) and assets.nfbcdn.ca (National Film Board of Canada) and its preview player from www.youtube-nocookie.com, which loads parts from other Google services, as described above. A visit that never comes near the section, or only jumps past it, contacts none of them. Local inference and loading this website are different activities.</p></div>
         <div><strong>When you choose to submit</strong><p>Joining development updates sends your email to Formspree, the form processor for this site. Choosing section translation sends that public text to Google Translate. Support links open separate payment services with their own policies. None of these services is required for individual local use.</p></div>
         <div><strong>What the mirror can show</strong><p>The mirror reads page-accessible cookies and a saved theme setting. It cannot read HttpOnly cookies or establish what a hosting provider logs or retains.</p></div>
       </div>
@@ -8939,9 +9477,10 @@
           <div class="mirror-row"><span>Page-readable cookies</span><span class="mr-val" id="mrCookies">0</span></div>
           <div class="mirror-row"><span>Hosting activity</span><span class="mr-val">not measured here</span></div>
           <div class="mirror-row"><span>Email signup</span><span class="mr-val">Formspree, when submitted</span></div>
+          <div class="mirror-row"><span>Theater section</span><span class="mr-val" id="mrTheater">YouTube and NFB, as the section nears</span></div>
           <div class="mirror-row"><span>Saved theme setting</span><span class="mr-val" id="mrLocal">not read yet</span></div>
         </div>
-        <div class="mirror-note">The cookie count excludes HttpOnly cookies. This page loads hosted fonts and media; email signup sends data to Formspree. Server logs are not measured here.</div>
+        <div class="mirror-note">The cookie count excludes HttpOnly cookies. This page loads hosted fonts and media; its Theater section contacts YouTube and the National Film Board of Canada as that section nears the screen; email signup sends data to Formspree. Server logs are not measured here.</div>
       </div>
       <div class="m-stage" data-stage="4">
         <div class="mirror-seal-line">Know what is <em>local</em>. Know what connects.</div>
@@ -9411,7 +9950,7 @@
       var sections = [
         ['top', 'Introduction'], ['council-story', 'The council'], ['features', 'Architecture'],
         ['proof', 'Proof'], ['workspace', 'Workspace'], ['devices', 'Hardware and model choice'],
-        ['memory', 'Memory'], ['console', 'Console'], ['mission', 'Mission'],
+        ['memory', 'Memory'], ['console', 'Console'], ['mission', 'Mission'], ['theater', 'Theater'],
         ['compare', 'Comparison'], ['faq', 'Questions'], ['founder', 'Founder'],
         ['waitlist', 'Release list'], ['support', 'Support'], ['roots', 'Roots and gratitude']
       ], texts = [];
@@ -12726,6 +13265,817 @@
       })();
     })();
   </script>
+<script>
+/* theater-showcase:js */
+    /* ZOTHEOS Theater showcase (homepage). One featured preview in the stepped frame. The owner's decision for the
+       Theater and this page alike (David Garcia, 2026-10-16): film previews start muted when in view.
+       PREVIEW_AUTOPLAY true: once at least 60% of the screen and its whole Play, Sound and Captions row are in view, in
+       Living or Calm, the preview starts without sound, with captions where the provider offers them (in Living the
+       light first descends the aisle for one second). It pauses below 15% in view or when the tab is hidden, and a
+       preview the page started stops itself after 45 s with no visitor control, 15 s on phone widths (under 720px, as
+       on the Theater). Nothing starts on its own in Still, when the device asks for reduced motion (an unconditional
+       floor, as on the Theater and the rest of the page), while the browser asks to save data, behind the intro, while
+       visibility is unknown, for a story held behind Play (a difficult-content, audio-led or unconfirmed-caption hold,
+       data-preview other than eligible), after the visitor's own Pause, or once the visitor has taken control. Play,
+       Sound or the player's own controls take that control (no limit); a caption choice does not, it only starts the
+       limit again, as on the Theater. Every start the page makes is muted first, so an earlier Sound choice never
+       unmutes a new preview. Player state is read only from the current frame's own replies, and a mute or an unmute
+       the page asked for resets the opposite request (the Theater's player semantics, static/theater/theater.js).
+       PREVIEW_AUTOPLAY false keeps the Theater's switch-off contract: native controls, no message interface, nothing
+       starts on its own.
+       STORY_WATCH_LINKS true sends the section's story links to /theater?story=<id>#screening (the stage), which
+       needs the Theater to resolve ?story= (see INTEGRATION.md); false keeps the native #film-<id> links.
+       Providers are driven only through their documented postMessage APIs (no third-party script), with exact
+       origin and source checks. No provider is contacted before the section nears the screen: the player connects
+       400px ahead of it and every image is a data-src filled 1250px ahead (the distance Chrome's own lazy loading
+       uses), and both wait until the section has stayed inside that distance for half a second while the page is
+       not flying past, so a link or the End key that jumps across the section contacts nobody; scrolling past it,
+       even quickly, usually does (measured: key and wheel scrolling at 500 to 2,000 px/s). A visit that never comes
+       near here, or only jumps past, sends nothing to YouTube or the NFB, with or without script.
+       Storage: reads the page's Motion (html data-motion, else zotheos_motion) and zotheos_haptics; writes
+       zotheos_haptics only from the Appearance Haptics row, which the Council Route reads too.
+       Flipping PREVIEW_AUTOPLAY: run tools/csp_sync.py (this block's hash changes) and swap the visible sentences
+       below, on => off; tools/tests/test_theater_showcase.py reads this list and checks the page follows the switch.
+       [section] "When the preview plays, including when it starts by itself, YouTube receives playback reports." => "When you press Play, YouTube receives playback reports."
+       [privacy] "In Living and Calm the preview starts without sound once at least 60% of the screen and all of its controls are in view, and pauses when you scroll away or press Pause. If it started by itself, it stops after 45 seconds, or 15 seconds on a phone, unless you take control with Play, Sound or the player’s own controls. In Still, when your device asks for reduced motion and while your browser asks to save data, it waits for Play." => "The preview waits for the player’s own Play control." */
+    (function () {
+      'use strict';
+      var PREVIEW_AUTOPLAY = true;
+      var STORY_WATCH_LINKS = false;
+      var CAP_MS = 45000, PHONE_CAP_MS = 15000, COVER_MS = 4000, ARRIVE_MS = 1000, HOLD_MS = 2000;
+      /* How long a request stays the page's own (the Theater's windows): the visitor's own Play within 9 s, a pause
+         within 6 s, a sound change confirmed within 5 s; a report older than the page's own opposite request by 2.5 s
+         is stale. A start the page made by itself stays its own until the player answers it, however long that takes
+         (a slow connection), unless the visitor presses a control, presses or tabs into the player, or the player is
+         paused from its own controls first; so a late start keeps its limit. */
+      var OWN_PLAY_MS = 9000, OWN_PAUSE_MS = 6000, OWN_SOUND_MS = 5000, STALE_MS = 2500;
+      /* A page start the player has not begun after 6 s: if the player reported that it is loading, the start is
+         under way and the status keeps saying so for up to 20 s in all; otherwise, or after that, the page calls the
+         start off (a pause, which cancels the queued start) and waits for Play for the rest of the visit. */
+      var START_MS = 6000, GIVEUP_MS = 20000;
+      var $ = function (id) { return document.getElementById(id); };
+      var mq = function (q) { try { return window.matchMedia ? window.matchMedia(q) : null; } catch (e) { return null; } };
+      var reduceMQ = mq('(prefers-reduced-motion: reduce)') || { matches: false };
+      var coarse = mq('(pointer: coarse)') || { matches: false };
+      function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+      function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+      /* Motion: the page's own setting, which Appearance keeps on html data-motion (and in zotheos_motion). The
+         device's reduced-motion request is an unconditional floor: Still, as on the Theater and the rest of the page. */
+      var MODES = ['living', 'calm', 'still'];
+      function mode() {
+        if (reduceMQ.matches) return 'still';
+        var m = document.documentElement.getAttribute('data-motion');
+        if (MODES.indexOf(m) >= 0) return m;
+        var s = read('zotheos_motion');
+        if (MODES.indexOf(s) >= 0) return s;
+        return read('zotheos_fx') === 'off' ? 'still' : 'living';
+      }
+
+      /* Haptics: one visible preference in the page's Appearance menu, shown on touch screens that can vibrate, for
+         this section and the Council Route alike (both read zotheos_haptics). It is set up before anything about the
+         section, so the preference stays visible even when the section is missing. A pulse runs only inside a real
+         press, never in Still or under the reduced-motion floor, and never with the preference off. */
+      var canBuzz = 'vibrate' in navigator && !!coarse.matches;
+      var haptics = read('zotheos_haptics') !== 'off';
+      function buzz() {
+        if (!canBuzz || !haptics || mode() === 'still') return;
+        if (!navigator.userActivation || !navigator.userActivation.isActive) return;   /* only inside a real gesture */
+        try { navigator.vibrate(10); } catch (e) {}
+      }
+      var hapRow = $('apHapticsRow'), hapGroup = $('hapticsGroup');
+      function paintHaptics() {
+        if (!hapGroup) return;
+        var pick = hapGroup.querySelector('[data-haptics="' + (haptics ? 'on' : 'off') + '"]');
+        if (window.zRadioSet) window.zRadioSet(hapGroup, pick);
+      }
+      if (hapRow && hapGroup && canBuzz && window.zRadios) {
+        hapRow.hidden = false;
+        paintHaptics();
+        window.zRadios(hapGroup, function (b) {
+          haptics = b.getAttribute('data-haptics') === 'on';
+          store('zotheos_haptics', haptics ? 'on' : 'off');
+          paintHaptics(); buzz();
+        });
+      }
+      window.addEventListener('storage', function (e) {
+        if (e.key === 'zotheos_haptics') { haptics = read('zotheos_haptics') !== 'off'; paintHaptics(); }
+      });
+
+      var root = $('theater');
+      if (!root || !root.hasAttribute('data-tsc')) return;
+      var screen = $('tscScreen'), slot = $('tscPlayer'), poster = $('tscPoster'), bar = $('tscBar'), comfort = $('tscComfort');
+      var playBtn = $('tscPlay'), soundBtn = $('tscSound'), ccBtn = $('tscCaptions'), lightBtn = $('tscLight');
+      var status = $('tscStatus'), announcer = $('tscAnnounce'), note = $('tscProviderNote');
+      var frameBox = $('tscFrame'), holdCard = $('tscHold'), holdPlay = $('tscHoldPlay');
+      if (!screen || !slot || !bar || !playBtn || !soundBtn || !ccBtn || !status) return;
+
+      var ORIGINS = { youtube: 'https://www.youtube-nocookie.com', vimeo: 'https://player.vimeo.com' };
+      var NAMES = { youtube: 'YouTube', vimeo: 'Vimeo', nfb: 'NFB', pbs: 'PBS' };
+      var provider = root.getAttribute('data-provider') || '';
+      var vid = root.getAttribute('data-video-id') || '';
+      var title = root.getAttribute('data-title') || 'Featured preview';
+      var capLang = /^[a-z]{2,3}(-[A-Za-z]{2,4})?$/.test(root.getAttribute('data-captions') || '') ? root.getAttribute('data-captions') : '';
+      var eligible = root.getAttribute('data-preview') === 'eligible';
+      var noteText = root.getAttribute('data-note') || '';
+      /* With the switch off (the Theater's switch-off contract) every provider keeps its own native controls: no
+         message interface, no Play, Sound or Captions bar here, and no autoplay permission. */
+      var api = PREVIEW_AUTOPLAY && (provider === 'youtube' || provider === 'vimeo');
+      var phoneMQ = mq('(max-width: 719px)') || { matches: false };
+      var conn = navigator.connection;
+      var saveData = !!(conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '')));
+
+      var frame = null, ready = false, playing = false, ended = false, failed = false, blocked = false, quiet = false;
+      var muted = true, captions = !!capLang, capAvail = capLang ? null : false, capAuto = false, vimeoTrack = capLang;
+      var userPaused = false, lightPaused = false, inView = 0, barSeen = false, near = false, known = false;
+      var arriving = false, starting = false, loading = false, pendingAuto = false, pendingUser = false, autoRun = false, capped = false;
+      var pausedForView = false, soundOff = false, covered = false, held = !eligible, owned = false;
+      var autoMs = 0, autoT0 = 0, holdUntil = 0, resumeAt = 0, mediaTime = 0, spokeStart = false;
+      /* The page's own requests, by time: play (any), auto (a start the page made by itself), pause, mute, unmute. */
+      var pend = { play: 0, auto: 0, pause: 0, mute: 0, unmute: 0 };
+      var timers = {}, lastSaid = '', lastLabel = '';
+      /* The intro overlay: nothing starts on its own behind it, and a replayed intro pauses a running preview. */
+      var introEl = $('introOverlay');
+      function introGone() { return !introEl || (' ' + (introEl.getAttribute('class') || '') + ' ').indexOf(' dismissed ') >= 0; }
+      function later(name, ms, fn) { clearTimeout(timers[name]); timers[name] = setTimeout(fn, ms); }
+      function stop(name) { clearTimeout(timers[name]); }
+      function within(t, ms) { return !!t && Date.now() - t < ms; }
+
+      /* The visible line always shows the current state. Screen readers hear it only after the visitor acts (for four
+         seconds), when the preview first starts on its own (with the Before Watching note, once), or when something
+         ends, stops or fails, so scrolling past does not keep talking. What is spoken waits 0.6 s for the provider to
+         confirm, so a press is answered with its result ("Paused ...") rather than the state it is leaving. */
+      var speakNext = false, toSpeak = '';
+      function listen() { speakNext = true; later('speak', 4000, function () { speakNext = false; }); }
+      function say(text, spoken, force) {
+        if (text === lastSaid && !force) return;
+        lastSaid = text;
+        if (status.textContent !== text) status.textContent = text;
+        if (announcer && (speakNext || force || failed || ended || capped)) {
+          toSpeak = spoken || text;
+          later('announce', 600, function () { if (announcer.textContent !== toSpeak) announcer.textContent = toSpeak; });
+        }
+      }
+
+      /* Player URLs: documented parameters only; every id is checked against its provider's id shape. quiet (decided
+         when the player connects, as on the Theater) loads it muted when a preview may start by itself. */
+      function playerURL() {
+        var o = encodeURIComponent(location.origin), c = encodeURIComponent(capLang);
+        if (provider === 'youtube' && /^[A-Za-z0-9_-]{11}$/.test(vid))
+          return ORIGINS.youtube + '/embed/' + vid + '?' + (api ? 'enablejsapi=1&origin=' + o + '&' : '') + 'playsinline=1&rel=0&iv_load_policy=3' +
+            (quiet ? '&mute=1' : '') + (capLang ? '&cc_load_policy=1&cc_lang_pref=' + c : '');
+        if (provider === 'vimeo' && /^\d{6,12}$/.test(vid))
+          return ORIGINS.vimeo + '/video/' + vid + '?dnt=1&title=0&byline=0&portrait=0&playsinline=1&autoplay=0' +
+            (quiet ? '&muted=1' : '') + (capLang ? '&texttrack=' + c : '');
+        if (provider === 'nfb' && /^[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*$/.test(vid) && vid.length <= 100)
+          return 'https://www.nfb.ca/film/' + vid + '/embed/player/?auto_play=false&autoplay=0';
+        if (provider === 'pbs' && /^\d{10}$/.test(vid)) return 'https://player.pbs.org/viralplayer/' + vid + '/?autoPlay=false&autoplay=0';
+        return '';
+      }
+
+      function send(msg) {
+        if (!frame || !frame.contentWindow || !api) return;
+        try { frame.contentWindow.postMessage(provider === 'youtube' ? JSON.stringify(msg) : msg, ORIGINS[provider]); } catch (e) {}
+      }
+      function yt(func, args) { send({ event: 'command', func: func, args: args || [], id: 1, channel: 'widget' }); }
+      /* Mute before play: every start the page makes by itself is muted first. */
+      function cmdPlay(auto) {
+        var t = Date.now();
+        pend.play = t; pend.auto = auto ? t : 0; loading = false;
+        if (auto) cmdMute(true);
+        if (provider === 'youtube') {
+          /* After a stop a seek is lost (measured: seekTo before or after playVideo restarts at 0), so a stopped
+             preview is loaded again at its spot (loadVideoById with startSeconds, measured to resume there). */
+          if (resumeAt) yt('loadVideoById', [{ videoId: vid, startSeconds: resumeAt }]);
+          else { if (ended) yt('seekTo', [0, true]); yt('playVideo'); }
+          resumeAt = 0;
+        } else send({ method: 'play' });
+        if (auto) {
+          starting = true;
+          later('block', START_MS, function () {
+            if (playing || !starting) return;
+            if (loading) later('block', GIVEUP_MS - START_MS, giveUp); else giveUp();
+          });
+        }
+      }
+      /* The start is called off: a pause cancels the queued start, so it cannot begin later unattended. It stays the
+         page's own until the player answers, so if it begins anyway it is paused again at once (see state). */
+      function giveUp() {
+        if (playing || !starting) return;
+        starting = false; loading = false;
+        if (pend.auto) { blocked = true; cmdPause(); cover(false); }
+        paint();
+      }
+      function cmdPause() { pend.pause = Date.now(); if (provider === 'youtube') yt('pauseVideo'); else send({ method: 'pause' }); }
+      /* A preview that reached its limit stops loading too (a pause keeps buffering ahead); Play resumes at the spot. */
+      function cmdStop() {
+        pend.pause = Date.now();
+        if (provider === 'youtube') { resumeAt = mediaTime || 0; yt('stopVideo'); } else send({ method: 'pause' });
+      }
+      /* A sound request resets the opposite pending one; a request that matches the confirmed state, with nothing
+         else in flight, needs no answer. */
+      function cmdMute(on) {
+        var reversing = within(pend[on ? 'unmute' : 'mute'], OWN_SOUND_MS);
+        pend[on ? 'unmute' : 'mute'] = 0;
+        pend[on ? 'mute' : 'unmute'] = muted === on && !reversing ? 0 : Date.now();
+        if (pend.mute || pend.unmute) later('sound', OWN_SOUND_MS + 50, paint);
+        if (provider === 'youtube') yt(on ? 'mute' : 'unMute'); else send({ method: 'setMuted', value: on });
+      }
+      function cmdCaptions(on) {
+        if (!capLang) return;
+        if (provider === 'youtube') {
+          /* Measured: setOption track {} hides captions and track {languageCode} shows them; unloadModule hides nothing. */
+          if (on) { yt('loadModule', ['captions']); yt('setOption', ['captions', 'track', { languageCode: capLang }]); }
+          else yt('setOption', ['captions', 'track', {}]);
+        } else send(on ? { method: 'enableTextTrack', value: { language: vimeoTrack } } : { method: 'disableTextTrack' });
+      }
+
+      /* The real poster covers the player while it loads, for the first 4 s of a page-started preview (measured: the
+         provider's own start-up title, controls and More videos tray are still up at 2.5 s and gone by 4 s) and after
+         a capped preview stops. The switch is hard, no fade. With the page's own controls a press on the poster acts
+         as Play (see the poster listener below), so the poster is then no link for the keyboard or assistive
+         technology: Play under the screen is. Without those controls, or once the player fails, the poster is the
+         official source link, focusable and labelled. */
+      function posterRole() {
+        if (!poster) return;
+        if (failed || (!api && (covered || !frame))) { poster.removeAttribute('tabindex'); poster.removeAttribute('aria-hidden'); }
+        else { poster.tabIndex = -1; poster.setAttribute('aria-hidden', 'true'); }
+      }
+      function cover(on) {
+        covered = !!on;
+        if (on) { slot.setAttribute('data-cover', ''); if (frame) frame.tabIndex = -1; }
+        else { slot.removeAttribute('data-cover'); if (frame) frame.removeAttribute('tabindex'); stop('cover'); }
+        posterRole();
+      }
+
+      /* Incoming messages: the provider's exact origin and the current frame's own window only; parsed as data. */
+      window.addEventListener('message', function (e) {
+        if (!frame || !api || e.origin !== ORIGINS[provider] || e.source !== frame.contentWindow) return;
+        var d = e.data;
+        if (typeof d === 'string') { if (d.length > 100000) return; try { d = JSON.parse(d); } catch (x) { return; } }
+        if (!d || typeof d !== 'object') return;
+        if (provider === 'youtube') fromYouTube(d); else fromVimeo(d);
+      });
+      function becameReady() {
+        if (ready) return;
+        ready = true; stop('ready'); stop('hello');
+        if (quiet) cmdMute(true);
+        if (!autoLikely()) cover(false);
+        if (pendingUser) { pendingUser = false; userPlay(); return; }
+        if (pendingAuto) { pendingAuto = false; if (wantAuto(mode())) { autoRun = true; cmdPlay(true); } }
+        apply();
+      }
+      /* Sound reports. A report sent before the page's own opposite request arrived is stale; an unmute the page did
+         not ask for is the visitor's, through the player's own controls, and takes control. */
+      function heardMuted(m) {
+        if (m === false && within(pend.mute, STALE_MS)) return;
+        if (m === true && within(pend.unmute, STALE_MS)) return;
+        if (m === false && muted !== false && !within(pend.unmute, OWN_SOUND_MS)) { soundOff = false; touched(); }
+        if (m === true && muted === false && !within(pend.mute, OWN_SOUND_MS)) soundOff = true;   /* their own mute */
+        if (m === false) pend.unmute = 0; else pend.mute = 0;
+        if (m !== muted) muted = m;
+        paint();
+      }
+      function fromYouTube(d) {
+        var info = d.info;
+        if (d.event === 'onReady') return becameReady();
+        if (d.event === 'onError') return fail();
+        if (d.event === 'initialDelivery') { if (info && typeof info.muted === 'boolean') heardMuted(info.muted); return; }
+        if (d.event === 'apiInfoDelivery' && info && info.captions) {
+          var list = info.captions.tracklist, track = info.captions.track;
+          var current = track && typeof track === 'object' && track.languageCode ? track : null;
+          if (Array.isArray(list)) capAvail = list.length > 0 || !!current;
+          if (current) capAuto = current.kind === 'asr';
+          if (capAvail && !captions) cmdCaptions(false);   /* the module loads with playback; keep the visitor's Off */
+          if (capAvail === false && playing && autoRun) { cmdPause(); cover(true); }   /* no captions here: wait for Play */
+          return paint();
+        }
+        if (d.event === 'infoDelivery' && info) {
+          if (typeof info.currentTime === 'number' && isFinite(info.currentTime)) mediaTime = info.currentTime;
+          if (typeof info.muted === 'boolean') heardMuted(info.muted);
+          if (typeof info.playerState === 'number') state(info.playerState);
+        }
+      }
+      function fromVimeo(d) {
+        if (d.method === 'getTextTracks' && Array.isArray(d.value)) {
+          var usable = d.value.filter(function (t) { return t && (t.kind === 'captions' || t.kind === 'subtitles') && typeof t.language === 'string'; });
+          var pick = usable.filter(function (t) { return t.language.toLowerCase().indexOf(capLang.toLowerCase()) === 0; })[0] || usable[0];
+          capAvail = !!pick;
+          if (pick) vimeoTrack = pick.language;   /* Vimeo matches the track's own code, for example en-US */
+          return paint();
+        }
+        if (d.event === 'ready') {
+          ['play', 'pause', 'ended', 'volumechange', 'error'].forEach(function (v) { send({ method: 'addEventListener', value: v }); });
+          send({ method: 'getTextTracks' });
+          becameReady();
+        } else if (d.event === 'play') state(1);
+        else if (d.event === 'pause') state(2);
+        else if (d.event === 'ended') state(0);
+        else if (d.event === 'error') fail();
+        else if (d.event === 'volumechange' && d.data && typeof d.data.muted === 'boolean') heardMuted(d.data.muted);
+      }
+      /* Provider states: 1 playing, 2 paused, 0 ended, 3 buffering, 5 and -1 stopped or cued. A start that is neither
+         the page's own pending start nor the visitor's Play of the last 9 s, or a pause the page did not ask for in the
+         last 6 s, came from the player's own controls: the visitor's. */
+      function banked() { if (autoT0) { autoMs += Date.now() - autoT0; autoT0 = 0; } stop('cap'); }
+      var lastPS = null, playT = 0;
+      function state(s) {
+        var now = Date.now(), prev = lastPS;
+        lastPS = s;
+        if (s === 1) {
+          var fresh = !playing, ours = !!pend.auto, late = blocked;
+          if (fresh) playT = now;
+          if (fresh && !ours && !within(pend.play, OWN_PLAY_MS)) { userPaused = false; touched(); }
+          pend.auto = 0;
+          playing = true; ended = false; blocked = false; starting = false; loading = false; pausedForView = false; stop('block');
+          if (fresh && autoRun && ours) {
+            /* The visitor left (or chose Still, or the intro came back) while the start was in flight: pause it
+               unseen, and keep the cover and the first-start announcement for when they return. A start the page had
+               already called off is paused again too, and the page keeps waiting for Play. */
+            var gone = inView < 0.15 || document.hidden || !introGone();
+            if (gone || late || !autoplayMode(mode())) { pausedForView = gone; blocked = late; cmdPause(); paint(); return; }
+            if (covered) later('cover', COVER_MS, function () { cover(false); });
+            autoT0 = now; later('cap', Math.max(0, capMs() - autoMs), capNow);
+          } else if (fresh) cover(false);
+        } else if (s === 2) {
+          if (prev !== 2 && !within(pend.pause, OWN_PAUSE_MS)) pend.auto = 0;   /* paused from the player's own controls */
+          if (playing && !within(pend.pause, OWN_PAUSE_MS)) { userPaused = true; touched(); }
+          if (playing) { holdUntil = now + HOLD_MS; later('hold', HOLD_MS + 20, paint); }
+          pend.pause = 0; playing = false; starting = false; banked();
+        } else if (s === 0) { pend.auto = 0; playing = false; starting = false; ended = true; resumeAt = 0; holdUntil = now + HOLD_MS; later('hold', HOLD_MS + 20, paint); banked(); }
+        else if (s === 5 || s === -1) { if (playing) { holdUntil = now + HOLD_MS; later('hold', HOLD_MS + 20, paint); } playing = false; banked(); }
+        else if (s === 3) { if (starting && !playing && pend.auto) loading = true; return; }   /* the start is under way */
+        else return;
+        paint();
+      }
+      /* A page-started preview stops itself after 45 s with no visitor control (refinement S2), 15 s on phone widths,
+         so an unattended visit does not keep streaming; Play continues it. Time spent paused out of view is not
+         counted; a caption choice starts the limit again. No bandwidth saving is claimed here. */
+      function capMs() { return phoneMQ.matches ? PHONE_CAP_MS : CAP_MS; }
+      function capNow() {
+        if (!playing || !autoRun) return;
+        capped = true; cmdStop(); cover(true); paint();
+      }
+      function rearm() { if (playing && autoRun) { stop('cap'); autoMs = 0; autoT0 = Date.now(); later('cap', capMs(), capNow); } }
+      /* Play, Sound or the player's own controls hand the playback to the visitor: no limit, no cover, and nothing
+         starts on its own again during this visit. */
+      function touched() { owned = true; autoRun = false; pend.auto = 0; banked(); cover(false); }
+
+      function connect() {
+        if (frame || failed) return;
+        quiet = known && previewPossible(mode());
+        var src = playerURL();
+        if (!src) return;
+        muted = quiet;
+        frame = document.createElement('iframe');
+        frame.title = title + ', ' + (NAMES[provider] || '') + ' preview player';
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        /* 'autoplay' lets a muted preview start and lets the page's own Play and Sound buttons start sound after the
+           visitor's press (Chrome's delegation rule); nothing here starts playback unless the switch above or the
+           visitor asks for it. */
+        frame.allow = (api ? 'autoplay; ' : '') + 'encrypted-media; picture-in-picture; fullscreen';
+        /* The handshake repeats every 250 ms until the player answers (at most 20 s), as the provider's own API script
+           does: a single message sent at the frame's load event can arrive before the player listens. */
+        var tries = 0;
+        var hello = function () {
+          if (ready || !frame || ++tries > 80) return;
+          if (provider === 'youtube') {
+            send({ event: 'listening', id: 1, channel: 'widget' });
+            ['onReady', 'onStateChange', 'onError'].forEach(function (n) { yt('addEventListener', [n]); });
+          } else send({ method: 'ping' });   /* Vimeo answers with its ready event */
+          later('hello', 250, hello);
+        };
+        frame.addEventListener('load', function () {
+          if (api) hello();
+          else cover(false);   /* a player without an API: shown once its page has loaded */
+        });
+        frame.src = src;
+        cover(true);
+        slot.appendChild(frame);
+        slot.hidden = false;
+        contacted();
+        if (api) later('ready', 20000, function () { if (!ready) fail(); });
+        else ready = true;
+      }
+      function fail() {
+        failed = true; playing = false; arriving = false; starting = false; loading = false; pend.auto = 0;
+        if (frame && frame.parentNode) frame.parentNode.removeChild(frame);
+        frame = null; slot.hidden = true; cover(false);
+        root.setAttribute('data-failed', '');   /* the poster shows its Watch On YouTube label again */
+        paint();
+      }
+
+      /* One place decides whether the preview should start on its own; paint() then shows the truth. Living and Calm
+         start the preview without sound (Calm keeps the frame light at rest); Still and the reduced-motion floor never
+         start anything on its own. */
+      function autoplayMode(m) { return m === 'living' || m === 'calm'; }
+      function previewPossible(m) { return PREVIEW_AUTOPLAY && eligible && api && autoplayMode(m) && !saveData; }
+      function autoLikely() { return previewPossible(mode()) && !userPaused && !blocked && !capped && !owned; }
+      /* The start rule is confirmed from live geometry, never only from whichever observer fired last: one frame can
+         cross both thresholds, and the screen's callback would otherwise read the controls' flag from the previous
+         position and start with Play, Sound and CC below the window. Same bands as the observers: below the 72px
+         header, 60% of the screen and the whole control row inside the window. A screen with no measured box (no
+         layout yet) leaves the decision to the observers, which report nothing for it either. */
+      function zoneNow() {
+        var h = window.innerHeight || 0, top = 72, s = screen.getBoundingClientRect(), b = bar.getBoundingClientRect();
+        if (!(s.height > 0)) return true;
+        var vis = Math.max(0, Math.min(s.bottom, h) - Math.max(s.top, top)) / s.height;
+        return vis >= 0.6 && b.top >= top - 0.5 && b.bottom <= h + 0.5;
+      }
+      function wantAuto(m) {
+        return previewPossible(m) && !failed && known && inView >= 0.6 && barSeen && !document.hidden && introGone() &&
+          !owned && !userPaused && !ended && !capped && !blocked && capAvail !== false && zoneNow();
+      }
+      function land() {
+        arriving = false;
+        if (wantAuto(mode()) && !playing) {
+          if (ready) { autoRun = true; cmdPlay(true); } else pendingAuto = true;
+        }
+        paint();
+      }
+      function begin() {
+        if (mode() === 'living' && !lightPaused && root.getAttribute('data-frame') === 'svg') {
+          arriving = true; later('arrive', ARRIVE_MS, land);   /* the light lands on the innermost tread, then Play */
+        } else land();
+      }
+      function apply() {
+        var m = mode();
+        root.setAttribute('data-motion', m);
+        if (m === 'still' && root.getAttribute('data-enter') === 'wait') root.setAttribute('data-enter', 'done');
+        if (near && !frame) connect();
+        var want = wantAuto(m), away = inView < 0.15 || document.hidden || !introGone();
+        /* Still (or the floor) holds a page-started preview where it is; the visitor's own playback keeps going. */
+        var hold = autoRun && !autoplayMode(m);
+        if (want && !playing && !arriving && !starting) begin();
+        else if (!want && arriving) { arriving = false; stop('arrive'); }
+        if (!want) pendingAuto = false;
+        if (playing && (away || hold)) { pausedForView = away; cmdPause(); }
+        /* A page start still in flight when the visitor leaves (a quick pass in Calm, where no arrival delays it) is
+           called off at once; if the player starts anyway, state(1) pauses it unseen. */
+        else if (starting && !playing && (away || hold)) { starting = false; loading = false; stop('block'); pausedForView = away; cmdPause(); }
+        paint();
+      }
+
+      function setState(btn, text) { var s = btn.querySelector('.tsc-state'); if (s && s.textContent !== text) s.textContent = text; }
+      function soundWord() {
+        if (within(pend.mute, OWN_SOUND_MS) || within(pend.unmute, OWN_SOUND_MS) || muted === null) return 'Checking';
+        return muted ? 'Off' : 'On';
+      }
+      /* The sound the visitor is heading for: a request still waiting for the player's answer counts, so a quick
+         second press reverses the first. */
+      function goingMuted() {
+        if (within(pend.unmute, OWN_SOUND_MS)) return false;
+        if (within(pend.mute, OWN_SOUND_MS)) return true;
+        return muted !== false;
+      }
+      function paint() {
+        var m = mode(), now = Date.now();
+        var light = 'rest';
+        if (m === 'living' && !lightPaused && inView > 0 && !document.hidden && !failed) {
+          if (arriving) light = 'arrive';
+          else if (!playing && !starting && now >= holdUntil) light = 'run';
+        }
+        root.setAttribute('data-light', light);
+        root.setAttribute('data-house', playing ? 'down' : 'up');
+        root.setAttribute('data-primary', playing && muted !== false && autoRun ? 'sound' : 'play');
+        if (lightBtn) {
+          lightBtn.setAttribute('aria-pressed', String(lightPaused));
+          lightBtn.setAttribute('aria-disabled', String(m !== 'living'));
+          setState(lightBtn, lightPaused ? 'Paused' : (light === 'rest' ? 'Resting' : 'Moving'));
+        }
+        if (holdCard) holdCard.hidden = !(held && !playing && !failed);
+        var controls = api && !failed;
+        bar.hidden = !controls;
+        if (note) note.hidden = api || !frame;
+        var label = playing ? 'Pause' : 'Play';
+        if (label !== lastLabel) {
+          lastLabel = label;
+          playBtn.querySelector('.tsc-play-label').textContent = label;
+          playBtn.querySelector('.tsc-play-icon').innerHTML = playing
+            ? '<rect class="tsc-fill" x="3" y="2" width="3.5" height="12"/><rect class="tsc-fill" x="9.5" y="2" width="3.5" height="12"/>'
+            : '<path class="tsc-fill" d="M4 2l10 6-10 6z"/>';
+        }
+        playBtn.setAttribute('aria-disabled', String(!frame && !held && known));
+        soundBtn.setAttribute('aria-disabled', String(!ready));
+        soundBtn.setAttribute('aria-pressed', String(muted === false));
+        setState(soundBtn, soundWord());
+        var none = capAvail === false;
+        ccBtn.setAttribute('aria-disabled', String(!ready || none));
+        ccBtn.setAttribute('aria-pressed', String(captions && !none));
+        setState(ccBtn, none ? 'None' : (captions ? 'On' : 'Off'));
+        var msg = message(m);
+        /* The first time the preview starts by itself, screen readers also hear the Before Watching note (it stays
+           visible after the controls); not for a start the page is pausing as it lands. Play carries the note as its
+           description until then, or until the visitor's own playback, so it is heard before playing either way. */
+        var first = playing && autoRun && !spokeStart && !(pend.pause >= playT) && inView >= 0.15 && !document.hidden && introGone();
+        if (first) spokeStart = true;
+        if (playing && (spokeStart || owned) && playBtn.hasAttribute('aria-describedby')) playBtn.removeAttribute('aria-describedby');
+        say(msg, first && noteText ? msg + ' Before watching: ' + noteText : '', first);
+      }
+      function message(m) {
+        var name = NAMES[provider] || 'the provider';
+        if (failed) return 'This preview cannot play here right now. The official source link stays available.';
+        if (!frame) return held ? 'This story has a Before Watching note. Press Play when you are ready.' : '';
+        if (!api) return 'Ready. This player has its own Play, sound and caption controls and does not start on its own.';
+        if (!ready) return 'Connecting to ' + name + '.';
+        var cc = capAvail === false ? ' No captions on this upload.' :
+          (capLang ? (captions ? (capAvail === null ? ' Captions on where the provider offers them.' : (capAuto ? ' Automatic captions on.' : ' Captions on.')) : ' Captions off.') : '');
+        if (playing) {
+          var w = soundWord();
+          return (w === 'Checking' ? 'Preview playing. Sound state checking.' : w === 'Off' ? 'Preview playing without sound.' : 'Preview playing with sound.') + cc;
+        }
+        if (arriving || starting) return goingMuted() ? 'Starting the preview without sound.' : 'Starting the preview with sound.';
+        if (ended) return 'Preview ended. Press Play to watch it again.';
+        if (capped) return 'Preview paused. Press Play to keep watching.';
+        if (capAvail === false && PREVIEW_AUTOPLAY && eligible) return 'This upload reports no captions here, so the preview waits for Play.';
+        if (userPaused) return 'Paused. It stays paused until you press Play.';
+        if (pausedForView) {
+          if (owned || blocked || !previewPossible(m) || !roomy()) return 'Paused while out of view. Press Play to continue.';
+          return 'Paused while out of view. It continues without sound when you return.';
+        }
+        if (reduceMQ.matches && PREVIEW_AUTOPLAY && eligible) return 'Your device asks for reduced motion, so nothing starts on its own. Press Play when you want to watch.';
+        if (m === 'still') return 'Still: nothing moves. Press Play when you want to watch.';
+        if (held) return 'This story has a Before Watching note. Press Play when you are ready.';
+        if (saveData && PREVIEW_AUTOPLAY) return 'Ready. Press Play to watch. Previews do not start on their own while your browser asks to save data.';
+        if (!PREVIEW_AUTOPLAY || blocked || owned || !known || !roomy()) return 'Ready. Press Play to watch.';
+        return 'Ready. The preview starts without sound when the screen and its controls are in view.';
+      }
+      /* Room to start (refinement R3-ZONE): with the control row's foot at the window's foot, where the most screen
+         shows, 60% of the screen must still clear the 72px header. In a window too short for that the start rule can
+         never be met, so the status asks for Play instead of promising a start. Before layout, or with the controls
+         hidden, the status keeps its usual line. */
+      function roomy() {
+        var s = screen.getBoundingClientRect(), b = bar.getBoundingClientRect(), h = window.innerHeight || 0;
+        if (!s.height || !h || bar.hidden) return true;
+        return 0.6 * s.height + (b.bottom - s.bottom) + 72 <= h;   /* the header band, as in the observers below */
+      }
+      /* The hero door (and a link to #theater-screen) lands at the screen. Where that would leave the control row
+         below the window's foot (a 1366 x 768 laptop, a short phone, a phone turned sideways), it lands lower, just
+         enough to show the row, and never further than the start rule allows (60% of the screen clear of the header).
+         The page's anchor script asks window.zAnchorAim where a jump rests; any earlier answer (the council story's)
+         is kept for every other target. */
+      var doorEl = $('theater-screen'), priorAim = window.zAnchorAim;
+      if (doorEl) window.zAnchorAim = function (target) {
+        if (target !== doorEl) return typeof priorAim === 'function' ? priorAim(target) : null;
+        var a = doorEl.getBoundingClientRect(), s = screen.getBoundingClientRect(), b = bar.getBoundingClientRect();
+        var base = a.top + pageY() - 72, h = window.innerHeight || 0;
+        if (bar.hidden || !s.height || !h) return base;
+        var over = 72 + (b.bottom - a.top) + 8 - h;   /* how far the row's foot would end below the window, with 8px air */
+        if (over <= 0) return base;
+        return base + Math.max(0, Math.min(over, (s.top - a.top) + (roomy() ? 0.4 * s.height : 0)));
+      };
+
+      /* Controls. Every press is a user gesture, the only moment a haptic pulse may run. */
+      function pressable(btn, fn) {
+        btn.addEventListener('click', function () { if (btn.getAttribute('aria-disabled') !== 'true') { listen(); fn(); } });
+      }
+      function userPlay() {
+        if (!frame) { pendingUser = true; near = true; images(); connect(); paint(); return; }
+        if (!ready) { pendingUser = true; return; }
+        userPaused = false; capped = false; held = false; arriving = false; pausedForView = false; stop('arrive');
+        starting = false; loading = false; stop('block');
+        touched();
+        /* The visitor's own Play plays with sound, unless they turned Sound off themselves (one rule with the Theater). */
+        if (goingMuted() && !soundOff) cmdMute(false);
+        cmdPlay(false);
+        paint();
+      }
+      pressable(playBtn, function () {
+        buzz();
+        if (playing) { userPaused = true; touched(); cmdPause(); paint(); } else userPlay();
+      });
+      if (holdPlay) holdPlay.addEventListener('click', function () { listen(); buzz(); userPlay(); });
+      /* A press on the screen while the poster covers it (before the player shows, during the first seconds of a
+         page-started preview, or after one stopped itself) is Play, as on a video site, not a trip to youtube.com.
+         A press during a covered page-started preview reveals it with sound, as Play would. A modified click (new
+         tab or window) still follows the official source, and the poster stays that link when the player fails. */
+      if (poster && api) poster.addEventListener('click', function (e) {
+        if (failed || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        listen(); buzz();
+        if (playing) { touched(); if (goingMuted() && !soundOff) cmdMute(false); paint(); }
+        else userPlay();
+      });
+      /* Sound On takes control, as on the Theater; Sound Off is remembered, so a later Play stays silent. */
+      pressable(soundBtn, function () {
+        buzz();
+        if (goingMuted()) { soundOff = false; touched(); cmdMute(false); }
+        else { soundOff = true; cmdMute(true); }
+        paint();
+      });
+      /* Captions: the visitor's choice is kept, and a page-started preview's limit starts again (as on the Theater). */
+      pressable(ccBtn, function () { buzz(); captions = !captions; cmdCaptions(captions); rearm(); paint(); });
+      if (lightBtn) pressable(lightBtn, function () { lightPaused = !lightPaused; buzz(); paint(); });
+      /* The frame in device pixels (refinement M3): one inline SVG whose viewBox is the box's own device-pixel size
+         and whose CSS size is exactly that box, so one unit is one device pixel; every line sits on whole device
+         pixels and is round(dpr) device pixels thick; it redraws when the box or the display scale changes. It is
+         painted beneath the screen (first child of the frame): drawn over the composited player it would become its
+         own compositor layer, which Chrome places on whole CSS pixels, a fraction of a device pixel off at 125% and
+         150% scaling, and every horizontal line would blur across two rows (measured, round 2). Geometry comes from
+         the CSS custom properties, so the media queries still set it. */
+      var SVGNS = 'http://www.w3.org/2000/svg', svg = null, fbox = null, devBox = null, drawn = '';
+      function cssPx(cs, name) { return parseFloat(cs.getPropertyValue(name)) || 0; }
+      function rect(x, y, w, h, cls, style) {
+        return w > 0 && h > 0 ? '<rect' + (cls ? ' class="' + cls + '"' : '') + (style ? ' style="' + style + '"' : '') +
+          ' x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '"/>' : '';
+      }
+      function drawFrame() {
+        if (!svg) return;
+        var fr = fbox.getBoundingClientRect(), sr = screen.getBoundingClientRect();
+        if (!fr.width || !fr.height || !sr.width) return;
+        var dpr = window.devicePixelRatio || 1;
+        /* The browser's device-pixel box is exact on a real display. Under device emulation Chrome reports CSS pixels
+           there, so a box more than a pixel away from the CSS size times the ratio is not trusted. */
+        var dev = devBox && Math.abs(devBox[0] - fr.width * dpr) <= 1 && Math.abs(devBox[1] - fr.height * dpr) <= 1 ? devBox : null;
+        var W = dev ? dev[0] : Math.round(fr.width * dpr), H = dev ? dev[1] : Math.round(fr.height * dpr);
+        var s = Math.max(1, Math.round(dpr)), R = function (v) { return Math.round(v * dpr); };
+        var cs = getComputedStyle(root), n = Math.max(2, Math.min(5, Math.round(cssPx(cs, '--tiers')) || 5));
+        var SL = R(sr.left - fr.left), SR = R(sr.right - fr.left), ST = R(sr.top - fr.top), SB = R(sr.bottom - fr.top);
+        var CX = Math.round((SL + SR) / 2);
+        var key = [W, H, SL, SR, ST, SB, n, s, dpr].join(',');
+        if (key === drawn) return;
+        drawn = key;
+        svg.style.width = (W / dpr) + 'px';
+        svg.style.height = (H / dpr) + 'px';
+        var OX = [], OY = [], A = [], i, out = '';
+        for (i = 0; i < n; i++) { OX[i] = R(cssPx(cs, '--ox' + i)); OY[i] = R(cssPx(cs, '--oy' + i)); A[i] = R(cssPx(cs, '--a' + i)); }
+        for (i = 0; i < n; i++) {
+          var x0 = SL - OX[i], x1 = SR + OX[i], yT = ST - OY[i], yB = SB + OX[i], g = '';
+          g += rect(x0, yT, s, yB - yT) + rect(x1 - s, yT, s, yB - yT) + rect(x0, yB - s, x1 - x0, s);
+          g += rect(x0, yT, CX - A[i] - x0, s) + rect(CX + A[i], yT, x1 - CX - A[i], s);
+          if (i <= n - 2) {   /* stair step i joins tier i + 1 to tier i */
+            var kz = i === 0 ? '' : (i >= 3 ? ' zA' : ' zB'), j = 2 * (n - 2 - i), ar = i <= 1 ? ' ar' : '', a0 = 2 * (1 - i);
+            var ry = ST - OY[i + 1], rh = OY[i + 1] - OY[i] + s, ty = ST - OY[i], tw = A[i + 1] - A[i];
+            var rs = '--j:' + j + (ar ? ';--ar:' + a0 : ''), ts = '--j:' + (j + 1) + (ar ? ';--ar:' + (a0 + 1) : '');
+            g += rect(CX - A[i + 1] - s, ry, s, rh, 'sg k' + i + ' r' + kz + ar, rs) + rect(CX + A[i + 1], ry, s, rh, 'sg k' + i + ' r' + kz + ar, rs);
+            g += rect(CX - A[i + 1], ty, tw, s, 'sg k' + i + ' t' + kz + ar, ts) + rect(CX + A[i], ty, tw, s, 'sg k' + i + ' t' + kz + ar, ts);
+          }
+          out += '<g class="tier g' + i + '" style="--i:' + i + '">' + g + '</g>';
+        }
+        svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        svg.innerHTML = out;
+      }
+      if (frameBox && 'ResizeObserver' in window) {
+        /* An HTML box measures the frame (ResizeObserver reports device pixels for a CSS box, not for an svg). */
+        fbox = document.createElement('div');
+        fbox.className = 'tsc-fbox';
+        fbox.setAttribute('aria-hidden', 'true');
+        svg = document.createElementNS(SVGNS, 'svg');
+        svg.setAttribute('class', 'tsc-svg');
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
+        svg.setAttribute('preserveAspectRatio', 'none');
+        fbox.appendChild(svg);
+        frameBox.insertBefore(fbox, frameBox.firstChild);
+        var ro = new ResizeObserver(function (es) {
+          es.forEach(function (e) {
+            if (e.target !== fbox) return;
+            var d = e.devicePixelContentBoxSize && e.devicePixelContentBoxSize[0];
+            devBox = d ? [d.inlineSize, d.blockSize] : null;
+          });
+          drawFrame();
+        });
+        try { ro.observe(fbox, { box: 'device-pixel-content-box' }); } catch (x) { ro.observe(fbox); }
+        ro.observe(screen);
+        var dprMQ = null;
+        var watchDpr = function () {
+          if (dprMQ && dprMQ.removeEventListener) dprMQ.removeEventListener('change', onDpr);
+          dprMQ = mq('(resolution: ' + (window.devicePixelRatio || 1) + 'dppx)');
+          if (dprMQ && dprMQ.addEventListener) dprMQ.addEventListener('change', onDpr);
+        };
+        var onDpr = function () { devBox = null; drawn = ''; drawFrame(); watchDpr(); };
+        watchDpr();
+        root.setAttribute('data-frame', 'svg');
+        drawFrame();
+      }
+
+      /* Visibility. The player connects only as the section nears the screen, so the provider receives nothing from
+         visitors who never come near. The preview starts at 60% of the screen in view with all of its controls
+         visible (never under the page's fixed bar, which steps aside while this section is on screen), and pauses
+         below 15% or when the tab is hidden. Without an IntersectionObserver what is in view is unknown: nothing
+         connects or starts on its own, and Play connects the player. */
+      /* Images: every provider image in the section is a data-src (no request at parse, with or without script);
+         it is filled once the section is within 1250px of the screen. Only the two hosts the page policy allows. */
+      var imagesOn = false;
+      function images() {
+        if (imagesOn) return;
+        imagesOn = true;
+        Array.prototype.forEach.call(root.querySelectorAll('img[data-src]'), function (img) {
+          var u = img.getAttribute('data-src') || '';
+          if (/^https:\/\/(i\.ytimg\.com|assets\.nfbcdn\.ca)\//.test(u)) img.setAttribute('src', u);
+        });
+        contacted();
+      }
+      /* The obsidian mirror's Theater row tells the truth for this visit: it changes once a provider is contacted. */
+      var mirrorRow = $('mrTheater');
+      function contacted() { if (mirrorRow && mirrorRow.textContent !== 'YouTube and NFB, contacted') mirrorRow.textContent = 'YouTube and NFB, contacted'; }
+      /* The contact gate: the images and the player wait until the section has stayed within its distance for
+         DWELL_MS while the page is not flying past (faster than FLY px per ms, measured between checks). The page's
+         smooth anchor scrolls and the Home and End keys carry the section across the screen in a few hundred
+         milliseconds and contact nobody; a reader who scrolls here, even without stopping, does, and so, usually,
+         does key or wheel scrolling past it (measured at 500 to 2,000 px/s; only some faster wheel runs passed). */
+      var DWELL_MS = 500, FLY = 2;
+      function pageY() { return window.scrollY || window.pageYOffset || 0; }
+      function nearBy(margin) {
+        var r = root.getBoundingClientRect(), h = window.innerHeight || 0;
+        return r.bottom > -margin && r.top < h + margin;
+      }
+      function gate(name, margin, fn) {
+        var y0 = pageY(), t0 = Date.now();
+        var check = function () {
+          if (!nearBy(margin)) return;   /* it left; the next observer entry arms the gate again */
+          var y = pageY(), t = Date.now(), fast = Math.abs(y - y0) / Math.max(1, t - t0) > FLY;
+          y0 = y; t0 = t;
+          if (fast) later(name, 150, check); else fn();
+        };
+        later(name, DWELL_MS, check);
+      }
+      /* Keyboard focus inside the cross-origin player cannot match :focus-visible here, and the frame element gets no
+         focus event (measured in Chrome: only the window's blur, with the frame as the active element), so the screen
+         draws its own ring when Tab brings focus into the player; a press inside it brings no Tab, so no ring. The
+         ring goes when focus comes back to the page. */
+      var tabAt = 0;
+      document.addEventListener('keydown', function (e) { if (e.key === 'Tab') tabAt = Date.now(); }, true);
+      window.addEventListener('blur', function () {
+        if (!frame || document.activeElement !== frame) return;
+        pend.auto = 0;   /* a press or Tab into the player: what starts there next is the visitor's own */
+        if (Date.now() - tabAt < 800) slot.setAttribute('data-ring', '');
+      });
+      window.addEventListener('focus', function () { slot.removeAttribute('data-ring'); });
+      document.addEventListener('focusin', function () { slot.removeAttribute('data-ring'); });
+      var cta = $('mobileCta');
+      /* the page's own floating buttons (scroll to top, the mirror) also step aside while this section is on screen, so
+         nothing floats over its text and no soft glow crosses the band */
+      var floaters = [cta, $('scrollTop'), $('mirrorBtn')].filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        known = true;
+        new IntersectionObserver(function (es, io) {
+          es.forEach(function (en) {
+            if (imagesOn) { io.disconnect(); return; }
+            if (en.isIntersecting) gate('gateImages', 1250, function () { images(); io.disconnect(); });
+            else stop('gateImages');
+          });
+        }, { rootMargin: '1250px 0px' }).observe(root);
+        new IntersectionObserver(function (es, io) {
+          es.forEach(function (en) {
+            if (near) { io.disconnect(); return; }
+            if (en.isIntersecting) gate('gateNear', 400, function () { near = true; images(); io.disconnect(); apply(); });
+            else stop('gateNear');
+          });
+        }, { rootMargin: '400px 0px' }).observe(root);
+        new IntersectionObserver(function (es) {
+          es.forEach(function (en) { floaters.forEach(function (el) { el.style.visibility = en.isIntersecting ? 'hidden' : ''; }); });
+        }, { threshold: 0 }).observe(root);
+        new IntersectionObserver(function (es) {
+          es.forEach(function (en) { inView = en.isIntersecting ? en.intersectionRatio : 0; enter(); apply(); });
+        }, { threshold: [0, 0.15, 0.3, 0.6, 0.8, 1], rootMargin: '-72px 0px 0px 0px' }).observe(screen);
+        /* The controls count as seen only when they are wholly clear of the fixed header, so a preview never starts
+           with its Pause under it. No band is kept for the phone dock: the dock and the two round buttons step aside
+           (above) whenever any part of the section is on screen, which is always the case while the controls are. */
+        new IntersectionObserver(function (es) {
+          es.forEach(function (en) { barSeen = en.isIntersecting && en.intersectionRatio >= 0.99; apply(); });
+        }, { threshold: [0, 0.5, 0.99, 1], rootMargin: '-72px 0px 0px 0px' }).observe(bar);
+      }
+      document.addEventListener('visibilitychange', apply);
+      /* A resize or a turned phone can make the window too short to start, or roomy again: the status follows. */
+      window.addEventListener('resize', function () { later('fit', 150, paint); });
+      if (introEl && window.MutationObserver) new MutationObserver(apply).observe(introEl, { attributes: true, attributeFilter: ['class'] });
+      if (window.MutationObserver) new MutationObserver(apply).observe(document.documentElement, { attributes: true, attributeFilter: ['data-motion'] });
+      window.addEventListener('zotheos:effectschange', apply);
+      window.addEventListener('storage', function (e) { if (e.key === 'zotheos_motion') apply(); });
+      if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', apply);
+      else if (reduceMQ.addListener) reduceMQ.addListener(apply);
+
+      /* The frame switches on once, in steps, when the screen first comes into view (Living only). */
+      var entered = false;
+      function enter() {
+        if (entered || inView < 0.3) return;
+        entered = true;
+        if (root.getAttribute('data-enter') !== 'wait') return;
+        var m = mode();
+        if (m !== 'living') { root.setAttribute('data-enter', 'done'); return; }
+        root.setAttribute('data-enter', 'go');
+        later('enter', 1100, function () { root.setAttribute('data-enter', 'done'); });
+      }
+      var m0 = mode();
+      if (m0 === 'living' && known && svg) root.setAttribute('data-enter', 'wait');
+
+      /* Story links: the stage form once the Theater resolves ?story= (refinement M6); native #film-<id> otherwise. */
+      if (STORY_WATCH_LINKS) {
+        Array.prototype.forEach.call(root.querySelectorAll('a[data-story]'), function (a) {
+          var id = a.getAttribute('data-story');
+          if (/^[a-z][a-z0-9-]{0,99}$/.test(id)) a.setAttribute('href', '/theater?story=' + id + '#screening');
+        });
+      }
+
+      root.setAttribute('data-script', '');
+      if (comfort) comfort.hidden = false;
+      if (!eligible && poster) poster.setAttribute('aria-describedby', 'tscHoldText');
+      posterRole();
+      apply();
+    })();
+/* /theater-showcase:js */
+</script>
 <script>
 /* council-route:js */
 (() => {

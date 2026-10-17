@@ -26,12 +26,26 @@ test_semantics_and_site_navigation = v1.test_theater_is_a_real_semantic_page_wit
 test_source_credits_dates_and_scope = v1.test_curated_catalog_is_not_fixture_data_and_has_sources_credits_dates_and_viewing_scope
 test_static_cards_and_official_watch_links = v1.test_every_film_is_statically_present_with_truthful_scope_and_official_watch_fallback
 test_filter_labels_and_recovery = v1.test_filter_controls_and_empty_recovery_have_labels_and_one_announcement
-test_non_theater_frame_permissions_preserved = v1.test_existing_non_theater_frame_policies_are_not_widened
 test_strict_script_policy_is_synchronized = v1.test_theater_is_in_csp_sync_and_its_meta_matches_response_policy
 test_unsafe_watch_links_rejected = v1.test_builder_rejects_unsafe_watch_urls_before_publishing
 test_invalid_provider_ids_rejected = v1.test_builder_rejects_invalid_provider_identifiers
 test_dual_provider_rejected = v1.test_builder_rejects_two_providers_for_one_selection
 test_future_source_check_rejected = v1.test_builder_rejects_fabricated_future_source_check
+
+# The homepage Theater chapter ("Where ZOTHEOS listens.", owner-authorized 2026-10-16) adds exactly one frame host to
+# the landing routes for its one featured preview; tools/tests/test_theater_showcase.py locks the whole landing policy.
+# Every other route keeps the measured baseline in theater-baseline-security.json, and nothing else gains a player host.
+LANDING_ROUTES = {'/', '/index', '/index.html'}
+LANDING_FRAMES = ['https://www.youtube-nocookie.com']
+
+
+def test_non_theater_frame_permissions_preserved():
+    baseline = json.loads((ART / 'theater-baseline-security.json').read_text(encoding='utf-8'))
+    current = v1.header_policies()
+    for route, expected in baseline['frame_directives'].items():
+        assert route in current
+        want = LANDING_FRAMES if route in LANDING_ROUTES else expected
+        assert v1.directives(current[route]).get('frame-src', []) == want, route
 
 
 def test_exact_reviewed_image_and_frame_hosts_apply_only_to_theater():
@@ -45,7 +59,11 @@ def test_exact_reviewed_image_and_frame_hosts_apply_only_to_theater():
         assert not set(policy.get('script-src', [])) & {"'unsafe-inline'", "'unsafe-eval'", '*', 'https:'}
     for route, value in policies.items():
         if route not in ['/theater', '/theater.html']:
-            assert not (set(v1.directives(value).get('frame-src', [])) & FRAMES)
+            frames = set(v1.directives(value).get('frame-src', []))
+            if route in LANDING_ROUTES:
+                assert frames == set(LANDING_FRAMES), route
+            else:
+                assert not (frames & FRAMES), route
 
 
 def test_real_curated_thumbnail_urls_render_as_images_with_useful_alternative_text():
