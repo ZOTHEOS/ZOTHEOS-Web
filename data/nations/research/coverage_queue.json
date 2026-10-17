@@ -7196,9 +7196,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-ponca-tribe-of-indians-of-oklahoma-us-ok-2026-10-17"
       ],
       "review": {
         "identity": "pending",
@@ -7214,9 +7215,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.ponca-nsn.gov/",
+          "retrieved_at": "2026-10-17T14:03:54.260618+00:00",
+          "http_status": 200,
+          "sha256": "3070c26df7cadd25b40ded7f3dec5dc9ba55711a5e73d32e2dc19e17af6e2c12",
+          "source_id": "own-ponca-tribe-of-indians-of-oklahoma-us-ok-2026-10-17",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-17-ponca-wichita-ponca-home.json",
+          "receipt_id": "r-9e6a0488ab79d13a"
+        }
+      ],
+      "updated_at": "2026-10-17T14:13:11.873725+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-17-ponca-ok-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-f5330846707d",
@@ -11499,9 +11516,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-wichita-and-affiliated-tribes-us-ok-2026-10-17"
       ],
       "review": {
         "identity": "pending",
@@ -11517,9 +11535,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://wichitatribe.com/robots.txt",
+          "retrieved_at": "2026-10-17T14:05:27.705842+00:00",
+          "http_status": 403,
+          "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3",
+          "source_id": "own-wichita-and-affiliated-tribes-us-ok-2026-10-17",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-17-ponca-wichita-wichita-robots.json",
+          "receipt_id": "r-61e94314f6ecf372"
+        }
+      ],
+      "updated_at": "2026-10-17T14:13:11.732784+00:00",
+      "next_attempt_after": "2026-10-18T14:13:11.732784+00:00",
+      "lease_until": null,
+      "note": "The selected own-host robots request returned HTTP 403 on 2026-10-17. Research stopped before any content page was read. No retry, alternative host, redirect follow or access bypass was attempted. The missing profile remains a coverage gap; source identity, history and rights review remain pending. Apply the canonical access backoff rather than infer facts or source approval from the directory candidate."
     },
     {
       "task_id": "profile-us-fed-dc883d495b14",

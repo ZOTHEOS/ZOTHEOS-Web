@@ -541,3 +541,21 @@ preserved. The directory still does not define Indigenous identity or complete c
 practice draft remains outside this release pending its separate review. Chapter-local native links
 make preparation and sources easier to reach without collapsing reading or adding browser code.
 Source record: batches/2026-10-16-continuity-and-accountability.json. Publication/live checks are separate.
+
+## October 17: Ponca Institutions And Source Boundaries
+
+One missing government profile, Ponca Tribe of Indians of Oklahoma, gains four own-source facts,
+two contextual reading layers and three resource links. The distinct Nebraska Ponca record remains
+unchanged. Modern institutional dates are separated from the people's origins. Earlier homeland
+and displacement history remains visibly incomplete; robots-disallowed paths were not fetched.
+
+Six author reads and three fresh isolated verifier responses carry actual October 17 UTC timestamps
+and hashes. Independent automated source-meaning, identity and respect review is pinned separately;
+there is no human review or Nation endorsement claim. All 476 prior canonical objects, clocks, holds,
+overrides and all existing Paths examples remain unchanged.
+
+Wichita's selected own-host robots request returned actual 403 before any content page. No retry,
+redirect, alternate host or bypass followed. Its task is blocked with a dated receipt and canonical
+backoff. Only these two queue tasks changed. The directory preserves source editions and the other
+rows. Coverage remains incomplete. Source record: batches/2026-10-17-ponca-and-source-boundaries.json.
+Publication and live checks remain separate from research review.

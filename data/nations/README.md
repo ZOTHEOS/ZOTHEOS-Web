@@ -18,23 +18,25 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
-The registry contains 476 researched profiles and 1,363 raw facts. Publication controls show 1,361
-facts and retain two existing holds. This batch adds Kaw Nation and Otoe-Missouria Tribe as distinct
-government profiles, eight own-source facts and four history layers. One new Yurok fact and reading
-layer distinguish announced access from completed land transfer and unknown later outcomes.
-All 473 other prior profile objects, and every earlier Yurok fact, metadata field and clock, remain unchanged.
+The registry contains 477 researched profiles and 1,367 raw facts. Publication controls retain the two
+existing holds. The October 17 batch adds one distinct government profile, Ponca Tribe of Indians
+of Oklahoma, with four own-source facts, two readable history layers and three own-resource links.
+It remains separate from the existing Ponca Tribe of Nebraska profile. All 476 earlier canonical
+profile objects, metadata and fact clocks are unchanged.
 
-The directory preserves 2,272 overlapping source records. Two federal-source rows now link to the
-separately reviewed profiles; original names, editions and other rows remain. Kaw's own pages give
-different exact 2011 ratification dates, which remain disclosed rather than silently reconciled.
-Source access dates remain October 16 UTC; new fact verification ran October 17 UTC. Event dates
-are separate from both. Existing source restrictions and holds remain. Coverage is incomplete worldwide.
+The Ponca account explains self-governance and preservation institutions, dated 1999 and 2016 by
+the Tribe. These dates do not mark the people's origins or first recognition. Earlier homeland and
+displacement history remains an explicit gap because relevant source paths prohibit automated
+access. Wichita's first robots request returned 403; no content was inferred, retried or bypassed.
+Its queue task retains an actual failure receipt and the canonical one-day retry delay.
 
-Paths To Action has ten chapters, nine unchanged framework sources, seven hypothetical examples,
-an offline shared brief and ten focused chapter briefs. The new Yurok example builds a commitment
-ledger from dated evidence; it is not a legal finding, performed intervention or Nation-endorsed plan.
-Native chapter links reach preparation, public examples and sources. Every chapter stays open,
-with no new scripts, forms, tracking or collection of planning answers.
+The directory preserves 2,272 overlapping source records, not a count of distinct Nations. One
+federal-source row gains an explicitly reviewed profile link. Coverage remains incomplete worldwide.
+Source reads and new-fact checks use their actual October 17 UTC dates, separate from event dates.
+
+Paths To Action retains ten chapters, nine framework sources, seven hypothetical practical examples,
+an offline shared brief and ten focused chapter briefs. Native links keep reading open and reach
+preparation, examples and sources without new forms or collection of planning answers.
 
 David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy stays
 singular or neutral. Nations' own names, evidence, film credits and quotations retain their meaning.

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-17T14:13:11.064916+00:00",
+  "measured_counts": {
+    "canonical_profiles": 477,
+    "raw_facts": 1367,
+    "new_profiles": 1,
+    "new_facts": 4,
+    "new_history_layers": 2,
+    "new_own_resources": 3,
+    "old_profiles_completely_preserved": 476,
+    "queue_tasks": 1812,
+    "other_queue_tasks_preserved": 1810,
+    "queue_by_status": {
+      "needs_review": 139,
+      "blocked": 6,
+      "pending": 1667
+    },
+    "author_successful_reads": 6,
+    "blocked_policy_reads": 1,
+    "new_fact_verifier_responses": 3
+  },
+  "independent_source_review": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-17T14:08:47.656921+00:00",
+    "sha256": "513abfd31ff8d53fb2aee2d15b71cd91485e6bb697a0a63af593a2c4ca7dd248",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+  },
+  "source_verification": {
+    "candidate_sha256": "f988f3025a9531abe4259d59716854e3f5b953322177de90cfd3890ea9891252",
+    "audit_sha256": "644cf9db5cccd90e2575a7fecaf3fca53b493fb67acc5f6f8f9e06349a6f4795",
+    "report_sha256": "dae6a8821192ce46d86f6b09fc5c611e90301d922901e4239f602a93ed4ab927",
+    "captures_sha256": "a2a59774eb85dcb731a1f660fb40bd12fde173a53c025e4b2b0b7abe78bac4ba",
+    "actual_checked_utc_date": "2026-10-17",
+    "new_facts_verified": 4,
+    "fact_sources": 2,
+    "robots": 1,
+    "redirects_followed": false,
+    "automatic_retries": 0,
+    "public_capture_receipts": [
+      "research/receipts/2026-10-17-ponca-verifier-capture-01.json",
+      "research/receipts/2026-10-17-ponca-verifier-capture-02.json",
+      "research/receipts/2026-10-17-ponca-verifier-capture-03.json"
+    ]
+  },
+  "changed_queue_tasks": [
+    "profile-us-fed-2e064ca9ff38",
+    "profile-us-fed-deb4c5b51d88"
+  ],
+  "limits": "Coverage is incomplete worldwide. Government inventories are planning references, not definitions of Indigenous identity. Oklahoma and Nebraska Ponca governments remain separate. Earlier Ponca homeland and displacement history is unfilled; disallowed source paths were not accessed. Wichita remains blocked after an actual403 at its first robots request. No invented source content, recognition date, legal outcome, human review or Nation endorsement. Existing holds, overrides, clocks and Paths examples remain unchanged.",
+  "publication_state": "Reviewed integration; required release and live checks remain separate."
+}

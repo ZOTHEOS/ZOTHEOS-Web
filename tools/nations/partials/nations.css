@@ -278,7 +278,8 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .n-sec[aria-labelledby="nContext"] > .nation-reading a { max-width: 100%; overflow-wrap: anywhere; }
 .n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"] { scroll-margin-top: 112px; }
 .n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"]:focus { outline: 2px solid var(--ink); outline-offset: 6px; }
-.rc a[href^="mailto:"] { white-space: nowrap; }
+.fact > .rc a { display: inline-block; min-height: 44px; max-width: 100%; padding-block: 10px;
+  vertical-align: middle; white-space: normal; overflow-wrap: anywhere; }
 /* Keep historical context in readable layers, separate from fact-check receipts. */
 .n-sec[aria-labelledby="nContext"] { max-width: 68ch; }
 .n-sec[aria-labelledby="nContext"] > h2 { margin-bottom: var(--sp-5); }

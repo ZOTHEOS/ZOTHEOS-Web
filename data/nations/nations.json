@@ -1,8 +1,8 @@
 {
   "version": "1",
   "generated": "2026-10-17",
-  "count": 476,
-  "facts": 1363,
+  "count": 477,
+  "facts": 1367,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -17,7 +17,7 @@
     "mx-north-us-southwest": 32,
     "oceania": 46,
     "us-east-southeast": 41,
-    "us-plains-midwest": 39,
+    "us-plains-midwest": 40,
     "us-west-pacific": 29
   },
   "nations": [
@@ -28592,6 +28592,87 @@
             "accessed": "2026-10-16"
           },
           "evidence": "formally recognized by the NPS in the Spring of 2016",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "region": "us-plains-midwest",
+      "name": "Ponca Tribe of Indians of Oklahoma",
+      "also": [
+        "Ponca Tribe of Oklahoma"
+      ],
+      "pronounce": null,
+      "lands": "Oklahoma; the Tribe publishes its offices in Ponca City",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.ponca-nsn.gov/",
+      "name_source_url": "https://www.ponca-nsn.gov/",
+      "facts": [
+        {
+          "id": "ponca-tribe-of-indians-of-oklahoma-us-ok-c34073c8",
+          "text": "The Tribe's self-governance page dates its self-governing status to 1999. This is an institutional milestone, not the beginning of the Ponca people.",
+          "kind": "history",
+          "as_of": "1999",
+          "source": {
+            "title": "Self-Governance",
+            "publisher": "Ponca Tribe of Indians of Oklahoma",
+            "url": "https://www.ponca-nsn.gov/self-governance.html",
+            "accessed": "2026-10-17"
+          },
+          "evidence": "self-governing tribe since 1999",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "ponca-tribe-of-indians-of-oklahoma-us-ok-30bb893f",
+          "text": "The Tribe lists preparing an annual funding agreement for Tribal Council review and approval among its self-governance office's duties.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Self-Governance",
+            "publisher": "Ponca Tribe of Indians of Oklahoma",
+            "url": "https://www.ponca-nsn.gov/self-governance.html",
+            "accessed": "2026-10-17"
+          },
+          "evidence": "Prepare Annual Funding Agreement (AFA) for review and approval",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "ponca-tribe-of-indians-of-oklahoma-us-ok-406a2d32",
+          "text": "The Tribe's preservation page dates the development of its Tribal Historic Preservation Office to 2016.",
+          "kind": "history",
+          "as_of": "2016",
+          "source": {
+            "title": "Historic Preservation",
+            "publisher": "Ponca Tribe of Indians of Oklahoma",
+            "url": "https://www.ponca-nsn.gov/historic-preservation.html",
+            "accessed": "2026-10-17"
+          },
+          "evidence": "developed their Tribal Historic Preservation Office in 2016",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "ponca-tribe-of-indians-of-oklahoma-us-ok-c7c36b1b",
+          "text": "The Tribe describes preservation work that includes Section 106 reviews and consultation with federal, Tribal, state and local agencies.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Historic Preservation",
+            "publisher": "Ponca Tribe of Indians of Oklahoma",
+            "url": "https://www.ponca-nsn.gov/historic-preservation.html",
+            "accessed": "2026-10-17"
+          },
+          "evidence": "including Section 106 reviews, consulting with other federal",
           "status": "verified",
           "checked": "2026-10-17",
           "last_verified": "2026-10-17"
