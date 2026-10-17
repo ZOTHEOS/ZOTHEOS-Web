@@ -4128,9 +4128,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-kaw-nation-us-ok-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -4146,9 +4147,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.kawnation.gov/history-of-kaw-nation/",
+          "retrieved_at": "2026-10-16T23:51:20.770577+00:00",
+          "http_status": 200,
+          "sha256": "9684777950bf2f8aa7c1e9453ae7b00e5aa29a71e24510a2d063da50e1610e68",
+          "source_id": "own-kaw-nation-us-ok-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-continuity-kaw-history.json",
+          "receipt_id": "r-92d076b3dc08e779"
+        }
+      ],
+      "updated_at": "2026-10-17T00:05:34.979571+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-continuity-kaw-nation-us-ok-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-766b50b081b8",
@@ -6508,9 +6525,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-otoe-missouria-tribe-us-ok-2026-10-16"
       ],
       "review": {
         "identity": "pending",
@@ -6526,9 +6544,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.omtribe.org/",
+          "retrieved_at": "2026-10-16T23:51:02.195011+00:00",
+          "http_status": 200,
+          "sha256": "50d0476e30cbf27bca5eaf564cc829772bd6d3a787a6ce6b1fc007b27f4490a3",
+          "source_id": "own-otoe-missouria-tribe-us-ok-2026-10-16",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-16-continuity-otoe-home.json",
+          "receipt_id": "r-8ae02547c5657976"
+        }
+      ],
+      "updated_at": "2026-10-17T00:05:34.979571+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-16-continuity-otoe-missouria-tribe-us-ok-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-17ef1a16b249",

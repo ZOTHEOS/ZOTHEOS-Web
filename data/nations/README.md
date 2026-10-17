@@ -16,28 +16,28 @@ ZOTHEOS compiles facts from published sources with separate evidence and meaning
 requests from any nation are honored. Nothing here is a game object: nations never appear near the game's
 antagonist, on a fail screen or in scoring.
 
-## Current Scope, Checked October 16, 2026
+## Current Scope
 
-The registry contains 474 researched profiles and 1,354 raw facts. Publication controls show 1,352
-facts and retain two existing holds. The latest batch adds the Cherokee Tribe of Northeast Alabama
-and Absentee Shawnee Tribe of Indians of Oklahoma as distinct profiles, eight own-source facts,
-four short historical reading layers and eight own-publisher resources. All 472 previous canonical
-objects and fact clocks remain unchanged. Historical institutions are not the beginning of a people.
+The registry contains 476 researched profiles and 1,363 raw facts. Publication controls show 1,361
+facts and retain two existing holds. This batch adds Kaw Nation and Otoe-Missouria Tribe as distinct
+government profiles, eight own-source facts and four history layers. One new Yurok fact and reading
+layer distinguish announced access from completed land transfer and unknown later outcomes.
+All 473 other prior profile objects, and every earlier Yurok fact, metadata field and clock, remain unchanged.
 
-The directory preserves 2,272 overlapping source records. One Alabama row and one federal-list row
-now link to separately reviewed profiles; original editions, labels and other rows remain. Agua Caliente
-returned HTTP403 at its robots file and stays queued with backoff. No alternate host was tried.
-Earlier source conditions and publication holds remain. Worldwide and US coverage are incomplete.
+The directory preserves 2,272 overlapping source records. Two federal-source rows now link to the
+separately reviewed profiles; original names, editions and other rows remain. Kaw's own pages give
+different exact 2011 ratification dates, which remain disclosed rather than silently reconciled.
+Source access dates remain October 16 UTC; new fact verification ran October 17 UTC. Event dates
+are separate from both. Existing source restrictions and holds remain. Coverage is incomplete worldwide.
 
-Paths To Action has ten chapters, nine primary framework sources, six canonical examples, an
-offline shared blank brief and ten focused chapter briefs. Each example separates dated source
-facts from a hypothetical exercise the reader controls, with steps, a boundary and reflection.
-New examples cover institutional role maps and community-led learning resources. They are not
-delivered services or Nation-endorsed recommendations. Existing holds suppress dependent outputs.
-Chapter downloads contain blank reader fields, source links and the selected pathway only.
+Paths To Action has ten chapters, nine unchanged framework sources, seven hypothetical examples,
+an offline shared brief and ten focused chapter briefs. The new Yurok example builds a commitment
+ledger from dated evidence; it is not a legal finding, performed intervention or Nation-endorsed plan.
+Native chapter links reach preparation, public examples and sources. Every chapter stays open,
+with no new scripts, forms, tracking or collection of planning answers.
 
-David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy uses
-singular or neutral wording. Nations' own evidence, cultural names and film titles retain their meaning.
+David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy stays
+singular or neutral. Nations' own names, evidence, film credits and quotations retain their meaning.
 
 ## October 16: Distinct Chickahominy Profiles And Native Reading Links
 

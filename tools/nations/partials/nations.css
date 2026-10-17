@@ -561,7 +561,7 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-reader-controlled { border-left-color:var(--ink-2); }
 .pw-future-app { border-left-style:dashed; }
 .pw-result { padding:24px; margin-top:32px; background:color-mix(in srgb,var(--ink) 4%,var(--page-bg)); border:1px solid var(--rule); }
-.pw-result>p:last-child { margin-top:12px; line-height:1.8; }
+.pw-result>p:not(.eyebrow) { margin-top:12px; line-height:1.8; }
 .pw-verify { margin-top:28px; }
 .pw-verify ul { list-style:disc; padding-left:20px; }
 .pw-verify li { padding-left:4px; margin-top:12px; }
@@ -615,3 +615,14 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-chapter-download:hover {border-color:var(--ink);}.pw-download-note {display:block;margin-top:8px;font-size:12px;line-height:1.8;color:var(--ink-3);}
 @media(max-width:760px) {.pw-chapter-download {width:100%;justify-content:center;text-align:center;}.pw-download-note {text-align:center;}}
 @media print {.pw-chapter-download,.pw-download-note {display:none!important;}}
+
+/* Local routes keep a long pathway open while bringing its practical work and evidence within reach. */
+.pw-shortcuts {display:flex;flex-wrap:wrap;gap:8px 12px;margin:24px 0 28px;padding:16px 0;border-block:1px solid var(--rule);}
+.pw-shortcuts a {display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 14px;border:1px solid var(--rule);border-radius:24px;font-size:13px;line-height:1.6;color:var(--ink-2);overflow-wrap:anywhere;}
+.pw-shortcuts a:hover {color:var(--ink);border-color:var(--ink);background:color-mix(in srgb,var(--ink) 4%,var(--page-bg));}
+.pw-shortcuts a:focus-visible {outline:2px solid var(--ink);outline-offset:4px;}
+.pw-result .pw-section-title {font:500 18px/1.5 var(--zn-read);margin:0;}
+.pw-result h3[id],.pw-sources h3[id] {scroll-margin-top:112px;}
+.pw-result h3[id]:focus,.pw-sources h3[id]:focus {outline:2px solid var(--ink);outline-offset:6px;}
+@media(max-width:760px) {.pw-shortcuts {gap:10px;margin-block:20px 24px;}.pw-shortcuts a {flex:1 1 180px;justify-content:center;text-align:center;}}
+@media print {.pw-shortcuts {display:none!important;}}

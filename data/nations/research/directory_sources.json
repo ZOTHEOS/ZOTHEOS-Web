@@ -941,6 +941,38 @@
       "discovery_date": "2026-10-16",
       "status": "source_located",
       "note": "Exact-host HTTPS access scope from own-publisher search result, identity remains unapproved. Not identity, factual, reuse or publication approval. No redirects preapproved."
+    },
+    {
+      "source_id": "own-kaw-nation-us-ok-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.kawnation.gov/",
+      "allowed_hosts": [
+        "www.kawnation.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS public-source scope. A scope does not itself approve claims, reuse or publication. No off-host redirects authorized."
+    },
+    {
+      "source_id": "own-otoe-missouria-tribe-us-ok-2026-10-16",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.omtribe.org/",
+      "allowed_hosts": [
+        "www.omtribe.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-16",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS public-source scope. A scope does not itself approve claims, reuse or publication. No off-host redirects authorized."
     }
   ]
 }

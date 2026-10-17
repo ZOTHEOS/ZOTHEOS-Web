@@ -148,11 +148,18 @@ def render(root, model):
         target='pw-'+c['id']
         out+=['<section class="pw-chapter" aria-labelledby="'+e(target,quote=True)+'">',
               '<p class="eyebrow">Pathway '+str(number).zfill(2)+'</p><h2 id="'+e(target,quote=True)+'" tabindex="-1">'+e(c['title'])+'</h2>',
-              '<p class="pw-intro">'+e(c['intro'])+'</p><div class="pw-steps">']
+              '<p class="pw-intro">'+e(c['intro'])+'</p>']
+        out.append('<div class="pw-shortcuts" role="group" aria-label="'+e('In This Pathway: '+c['title'],quote=True)+'">')
+        routes=[('pw-prepare-'+c['id'],'Prepare A Brief')]
+        if cases[c['id']]:routes.append(('pw-cases-'+c['id'],'Sourced Examples'))
+        routes.append(('pw-sources-'+c['id'],'Sources And Further Reading'))
+        for anchor,label in routes:
+            out.append('<a href="#'+e(anchor,quote=True)+'" aria-label="'+e(label+' For '+c['title'],quote=True)+'">'+e(label)+'</a>')
+        out.append('</div><div class="pw-steps">')
         for step in c['steps']:
             out+=['<article class="pw-step pw-'+e(step['scope'],quote=True)+'"><p class="pw-scope">'+SCOPES[step['scope']]+'</p>',
                   '<h3>'+e(step['title'])+'</h3><p>'+e(step['text'])+'</p></article>']
-        out+=['</div><div class="pw-result"><p class="eyebrow">Something You Can Prepare</p><p>'+e(c['deliverable'])+'</p><a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">Plain text. One pathway. Fill offline in a place you control.</span></div>',
+        out+=['</div><div class="pw-result"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3><p>'+e(c['deliverable'])+'</p><a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">Plain text. One pathway. Fill offline in a place you control.</span></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']
@@ -178,7 +185,7 @@ def render(root, model):
             out.append('</article>')
         if cases[c['id']]:out.append('</section>')
         refs=list(dict.fromkeys(c['source_ids']+[s for step in c['steps'] for s in step['source_ids']]))
-        out.append('<div class="pw-sources"><h3>Sources And Further Reading</h3><ul>')
+        out.append('<div class="pw-sources"><h3 id="pw-sources-'+e(c['id'],quote=True)+'" tabindex="-1">Sources And Further Reading</h3><ul>')
         for sid in refs:
             source=sources[sid]
             out.append('<li>'+ext(source['url'],source['title'])+'<span>'+e(source['publisher'])+' · Source Checked '+stamp(source['reviewed'])+((' · Context Dated '+stamp(source['as_of'])) if source.get('as_of') else '')+'</span></li>')
@@ -187,7 +194,7 @@ def render(root, model):
     out+=['</div></div><section class="pw-next" aria-labelledby="pw-next-title"><h2 id="pw-next-title">Choose One Useful Next Step.</h2>',
           '<p>Use the blank brief to record the question, the people with authority, the sources and what still needs checking. Fill it offline in a place you control. This page has no form or upload and does not receive your answers.</p>',
           '<div class="pw-links"><a class="pill" href="/nations/directory">Find A Nation’s Own Sources</a><a class="pill" href="/nations/resources">Keep Reading</a><a class="pill" href="/nations/for-nations">Corrections From Nations</a><a class="pill" href="/nations/coverage">Coverage And Gaps</a><a class="pill" href="/download">App Release Status</a></div>',
-          '<p class="pw-receipt">Read online or use your browser’s Print option to keep a reading copy. Source-check dates record when a source was read; they do not make every rule, program or historical statement current.</p></section></div>']
+          '<p class="pw-receipt">Read online or use your browser’s Print option to keep a reading copy. Source-check dates use UTC and record when a source was read; they do not make every rule, program or historical statement current.</p></section></div>']
     return '\n'.join(out)
 
 def action_brief(root, model):
