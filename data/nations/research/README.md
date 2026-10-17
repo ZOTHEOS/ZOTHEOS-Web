@@ -524,3 +524,20 @@ forms, storage or network providers. Required-source holds remove dependent brie
 build; named-example holds do not hide unrelated chapters. Shared blank-brief access remains.
 
 Source record: batches/2026-10-16-community-history-and-pathways.json. Publication and live checks remain separate.
+
+## October 16 Local Steward Cycle: Continuity And Accountability
+
+Two missing governments, Kaw Nation and Otoe-Missouria Tribe, gain own-source profiles with four
+historical layers and eight resources. A third scoped subject, Yurok Tribe, gains a durable-release
+fact, context and resource feeding a hypothetical commitment-ledger example. Existing profile and
+fact clocks stay unchanged; only the nine new facts pass isolated actual verification. The ten HTTP
+responses contain seven fact sources and three robots files. Reads use actual UTC dates: author
+access on October16 and new fact verification on October17. Source phrases alone do not establish
+meaning, permission, current legal effects, opening outcomes or Nation approval; separate pinned
+automated source and respect reviews remain recorded. The held source lanes stay unchanged.
+
+Only the two selected federal profile tasks changed; other tasks and source inventory editions are
+preserved. The directory still does not define Indigenous identity or complete coverage. A food-project
+practice draft remains outside this release pending its separate review. Chapter-local native links
+make preparation and sources easier to reach without collapsing reading or adding browser code.
+Source record: batches/2026-10-16-continuity-and-accountability.json. Publication/live checks are separate.

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-16",
-  "count": 474,
-  "facts": 1354,
+  "generated": "2026-10-17",
+  "count": 476,
+  "facts": 1363,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -17,7 +17,7 @@
     "mx-north-us-southwest": 32,
     "oceania": 46,
     "us-east-southeast": 41,
-    "us-plains-midwest": 37,
+    "us-plains-midwest": 39,
     "us-west-pacific": 29
   },
   "nations": [
@@ -28436,6 +28436,169 @@
       ]
     },
     {
+      "id": "kaw-nation-us-ok",
+      "region": "us-plains-midwest",
+      "name": "Kaw Nation",
+      "also": [
+        "Kaw Nation, Oklahoma"
+      ],
+      "pronounce": null,
+      "lands": "Oklahoma, with historical homelands in Kansas and the Great Plains",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.kawnation.gov/",
+      "name_source_url": "https://www.kawnation.gov/history-of-kaw-nation/",
+      "facts": [
+        {
+          "id": "kaw-nation-us-ok-d38ab990",
+          "text": "The Nation's history describes forced cession of its Kansas lands and removal to Indian Territory, where the Kanza had to buy their new land.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "History Of Kaw Nation",
+            "publisher": "Kaw Nation",
+            "url": "https://www.kawnation.gov/history-of-kaw-nation/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "forced the tribe to cede all lands in Kansas",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "kaw-nation-us-ok-a44ffea4",
+          "text": "The Nation's history distinguishes a Tribal Council from a General Council composed of enrolled adult citizens.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "History Of Kaw Nation",
+            "publisher": "Kaw Nation",
+            "url": "https://www.kawnation.gov/history-of-kaw-nation/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "a Tribal Council (executive body) and a General Council",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "kaw-nation-us-ok-29861d15",
+          "text": "The Nation's government history records a vote accepting a new constitution in 2011.",
+          "kind": "history",
+          "as_of": "2011",
+          "source": {
+            "title": "History Of The Government Of The Kaw Nation",
+            "publisher": "Kaw Nation",
+            "url": "https://www.kawnation.gov/history-of-the-government-of-the-kaw-nation/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "voted 58 percent to 42 percent to accept",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "kaw-nation-us-ok-7a03d617",
+          "text": "The Nation's language page lists online learning and a basic Kanza course. Listed materials remain under the publisher's access and use conditions.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Kanza Language",
+            "publisher": "Kaw Nation",
+            "url": "https://www.kawnation.gov/language/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "online courses and downloadable documents regarding Kanza Language education",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "region": "us-plains-midwest",
+      "name": "Otoe-Missouria Tribe",
+      "also": [
+        "Otoe-Missouria Tribe of Indians",
+        "Otoe-Missouria Tribe of Indians, Oklahoma"
+      ],
+      "pronounce": null,
+      "lands": "Red Rock, Oklahoma; historical homelands include Nebraska and the lower Missouri River valley",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.omtribe.org/",
+      "name_source_url": "https://www.omtribe.org/",
+      "facts": [
+        {
+          "id": "otoe-missouria-tribe-us-ok-ab491b0c",
+          "text": "The Tribe's history dates confinement on a Big Blue River reservation in southeast Nebraska to 1855.",
+          "kind": "history",
+          "as_of": "1855",
+          "source": {
+            "title": "History: Otoe And Missouria",
+            "publisher": "Otoe-Missouria Tribe",
+            "url": "https://www.omtribe.org/who-we-are/culture/history/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "reservation on the Big Blue River in southeast Nebraska",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "otoe-missouria-tribe-us-ok-e666c14a",
+          "text": "The Tribe's history records removal to Red Rock, Oklahoma, in 1881, followed by boarding-school pressure on children and language.",
+          "kind": "history",
+          "as_of": "1881",
+          "source": {
+            "title": "History: Otoe And Missouria",
+            "publisher": "Otoe-Missouria Tribe",
+            "url": "https://www.omtribe.org/who-we-are/culture/history/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "In 1881 they were moved to Red Rock, Oklahoma",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "otoe-missouria-tribe-us-ok-a3191ce7",
+          "text": "The Tribe's government page describes a seven-member Tribal Council elected by qualified Tribal voters using a secret ballot.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Government",
+            "publisher": "Otoe-Missouria Tribe",
+            "url": "https://www.omtribe.org/who-we-are/government/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "seven members elected by secret ballot by qualified voters",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        },
+        {
+          "id": "otoe-missouria-tribe-us-ok-3f8349a9",
+          "text": "The Tribe's preservation page dates National Park Service recognition of its Tribal Historic Preservation Office to spring 2016.",
+          "kind": "history",
+          "as_of": "2016",
+          "source": {
+            "title": "Tribal Preservation",
+            "publisher": "Otoe-Missouria Tribe",
+            "url": "https://www.omtribe.org/who-we-are/culture/tribal-preservation/",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "formally recognized by the NPS in the Spring of 2016",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
+        }
+      ]
+    },
+    {
       "id": "cahuilla-band-of-indians-us-ca",
       "region": "us-west-pacific",
       "name": "Cahuilla Band of Indians",
@@ -30226,6 +30389,22 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        },
+        {
+          "id": "yurok-tribe-us-ca-ef92def1",
+          "text": "The Tribe's July 28, 2026 release scheduled recreational access at 'O Rew for August 1; the announcement alone does not confirm that opening occurred.",
+          "kind": "land",
+          "as_of": "2026",
+          "source": {
+            "title": "Yurok Tribe, Save The Redwoods League Finalize Major Land Transfer",
+            "publisher": "Yurok Tribe",
+            "url": "https://www.yuroktribe.org/post/yurok-tribe-save-the-redwoods-league-finalize-major-land-transfer",
+            "accessed": "2026-10-16"
+          },
+          "evidence": "will open for recreational access on August 1, 2026",
+          "status": "verified",
+          "checked": "2026-10-17",
+          "last_verified": "2026-10-17"
         }
       ]
     }

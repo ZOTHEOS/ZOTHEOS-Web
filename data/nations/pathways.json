@@ -629,7 +629,26 @@
         "care",
         "un-legal-note"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "yurok-tribe-us-ca",
+          "fact_ids": [
+            "yurok-tribe-us-ca-e493b7c9",
+            "yurok-tribe-us-ca-ef92def1"
+          ],
+          "practice": {
+            "question": "Hypothetical reader question: How could I distinguish a completed land transaction from later plans and check what a public restoration announcement actually establishes?",
+            "steps": [
+              "Read the Yurok Tribe's July 28, 2026 land-transfer announcement. Start a private ledger with separate columns for the statement, the event date, the publication date, the evidence and what remains unknown. Record the June 30 conveyance separately from the August 1 opening date announced in the release.",
+              "Separate ownership, operation, restoration work, public access and future construction into different rows. Label each row as a reported completed action, an announced plan or a question needing evidence. A future cultural-center plan is not a completed building; a scheduled opening is not a record of later access.",
+              "For a public commitment you are studying, name one observable change and the public record that could demonstrate it. Preserve the original statement and date, then add any later source as a new entry. If no later record has been checked, write that limitation instead of marking success or failure.",
+              "Finish a one-page commitment ledger with the responsible institution, evidence gaps and your next review date. Use it to prepare a precise question for qualified human review; keep sensitive places and private community information out of the public note."
+            ],
+            "boundary": "This is a reading and evidence-organizing exercise, not a property-title search, a legal finding, an audit of the Tribe or permission to visit, collect material or act for the rights holders. The release is the Tribe's public account; it does not establish that every planned benefit later occurred or that another land claim would have the same route or outcome.",
+            "reflection": "What changed in ownership or authority, what was only promised, and what evidence would the people affected need to judge whether repair was useful?"
+          }
+        }
+      ]
     }
   ]
 }

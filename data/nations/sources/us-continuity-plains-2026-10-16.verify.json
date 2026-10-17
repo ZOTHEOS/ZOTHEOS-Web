@@ -1,0 +1,76 @@
+{
+  "region": "us-plains-midwest",
+  "checked": "2026-10-16",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-16T23:57:18.966677+00:00",
+    "sha256": "b5554154e746b97fca37e467577410b3735cf08ea4547cc9c8c00ba8325472ae",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+  },
+  "results": [
+    {
+      "id": "kaw-nation-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The retained Kaw history expressly describes forced cession of Kansas lands, removal to Indian Territory and purchase from the Osages using former Kansas holdings. The concise attributed fact does not add a removal year, acreage, present title or present jurisdiction."
+    },
+    {
+      "id": "kaw-nation-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The retained history distinguishes the Tribal Council executive body from a General Council of enrolled citizens over18. This is an observation of that public historical account, not certification of present constitutional law, membership or officeholders."
+    },
+    {
+      "id": "kaw-nation-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The government-history page describes the2011petition, a scheduled August vote and acceptance of the new constitution. The narrow revised fact uses only the shared supported year. The separate constitution index labels April20,2011; the reviewed context cites both pages and explicitly leaves day/month unresolved. No legal effective date is inferred."
+    },
+    {
+      "id": "kaw-nation-us-ok",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The retained public language index explicitly lists online learning and a basic Kanza course. The statement describes listed resources, not actual enrollment, active classes, teaching quality, fluent speakers or permission to download/reuse. Linked course, prayer, survey and recording contents are outside the capture and publication scope."
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The retained Tribe-authored history explicitly dates US confinement on the Big Blue River reservation in southeast Nebraska to1855. The attributed fact neither determines treaty rights nor treats a government reservation date as the beginning of either people."
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The retained history records removal to Red Rock in1881, followed by a separate boarding-school paragraph about removal of children, English instruction and punishment for native speech. The wording places1881on relocation, not every school event or language consequence."
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The government page explicitly describes seven Tribal Council members elected by secret ballot by qualified Tribal voters. Its officeholder table has terms ending2025, so none of those people or terms is certified or republished as current. This fact is the page's institutional description only."
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The preservation page explicitly records the2015application and NPS recognition of the Tribal Historic Preservation Office in spring2016. This is recognition of an office, not recognition of the Tribe, the start of sovereignty, current jurisdiction or a guaranteed consultation result."
+    }
+  ],
+  "names": [
+    {
+      "id": "kaw-nation-us-ok",
+      "verdict": "keep",
+      "note": "Kaw Nation is the lead name in its own retained public history and government site. The dated federal row us-fed-7261e8b9bc9b uses Kaw Nation, Oklahoma and is a reference for the alias/crosswalk only. All474existing IDs, lead names, aliases and published source/official hosts were checked; no matching government profile was found. Kaw/Kanza/Kansa historical people names and related Dhegiha Nations are not merged. Lands are broad source-described locations, not a title or boundary finding."
+    },
+    {
+      "id": "otoe-missouria-tribe-us-ok",
+      "verdict": "keep",
+      "note": "The retained homepage/government site identifies the Otoe-Missouria Tribe, and the federal row us-fed-7093f2065f1c uses Otoe-Missouria Tribe of Indians, Oklahoma. These name variants refer to this combined contemporary government. All474existing IDs, names, aliases and published hosts were checked without a collision. Its own history expressly distinguishes Otoe and Missouria historical peoples; no separate unreviewed government, cultural names or membership ruling is invented. Lands remain broad source-described locations."
+    }
+  ]
+}

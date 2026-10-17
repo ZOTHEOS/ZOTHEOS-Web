@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-17T00:05:34.169404+00:00",
+  "measured_counts": {
+    "canonical_profiles": 476,
+    "raw_facts": 1363,
+    "public_facts": 1361,
+    "new_profiles": 2,
+    "new_facts": 9,
+    "new_history_layers": 5,
+    "new_own_resources": 9,
+    "practice_examples": 7,
+    "chapter_briefs": 10,
+    "old_profiles_completely_preserved": 473,
+    "existing_yurok_metadata_and_facts_preserved": true,
+    "other_queue_tasks_preserved": 1810,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 138,
+      "blocked": 5,
+      "pending": 1669
+    }
+  },
+  "scope": [
+    "kaw-nation-us-ok",
+    "otoe-missouria-tribe-us-ok",
+    "yurok-tribe-us-ca"
+  ],
+  "independent_source_reviews": {
+    "us-continuity-plains-2026-10-16": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T23:57:18.966677+00:00",
+      "sha256": "b5554154e746b97fca37e467577410b3735cf08ea4547cc9c8c00ba8325472ae",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "us-continuity-yurok-2026-10-16": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-16T23:58:28.228194+00:00",
+      "sha256": "94cf8936f762bd72b1fe95a6448f76a5d11e8e8237c22151e110491d0b49b4af",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    }
+  },
+  "source_verification": {
+    "audit_sha256": "024d4be3844b2505404c77c4adee2a17ff4da0a0dbf40c91addf1ec763fa7117",
+    "candidate_sha256": "f6d46ac28c06e559b76567e43f79cdc700aed976aff9649b4a89739a7e0ac610",
+    "report_sha256": "a17cdbafbd684cce66ad9c53c45e770760a3a7985396c50bb2d528ac50910bc9",
+    "captures_sha256": "231eec2831d9b5625dcb58d40f8d1eb8c29d38752cd2bd8ddaaacc804a6f16ae",
+    "new_facts_verified": 9,
+    "fact_urls_checked": 7,
+    "robots_checked": 3,
+    "actual_http_responses": 10,
+    "checked_utc_date": "2026-10-17",
+    "author_access_utc_date": "2026-10-16",
+    "redirects_followed": false,
+    "automatic_retries": 0,
+    "human_review_claimed": false,
+    "receipt_files": [
+      "research/receipts/2026-10-16-continuity-verification-capture-01.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-02.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-03.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-04.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-05.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-06.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-07.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-08.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-09.json",
+      "research/receipts/2026-10-16-continuity-verification-capture-10.json"
+    ]
+  },
+  "changed_queue_tasks": [
+    "profile-us-fed-7261e8b9bc9b",
+    "profile-us-fed-7093f2065f1c"
+  ],
+  "limits": "Coverage is incomplete. Government inventories are planning sources, not a definition of Indigenous identity. Kaw exact ratification dates remain disputed between its own pages. Otoe and Missouria histories do not create two government profiles; preservation-office recognition is not Tribal recognition. The Yurok release reports a transaction and announces access and construction plans; later outcomes are not certified. Prior holds, overrides and source conditions remain. A second food-project exercise remains a local unreviewed draft outside this release. No human review or Nation endorsement is claimed.",
+  "publication_state": "Reviewed integration; required release and live checks remain separate."
+}
