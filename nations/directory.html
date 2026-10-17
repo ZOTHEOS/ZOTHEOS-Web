@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-0BteK4Y5pSSKOk/Cn+/uDWlQd9/QOJ5pg3VOx/NoRyg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Directory | Indigenous nations today</title>
   <meta name="description" content="Browse separately typed Indigenous name inventories with sources, dates and openly tracked US and worldwide coverage gaps.">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.51ad071b.css">
+  <link rel="stylesheet" href="/static/nations/nations.e2e1737d.css">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -174,16 +174,16 @@
 <p class="eyebrow">Names And Sources</p>
 <h1 class="page-h">Names deserve visibility.</h1>
 <p class="lede">Start with a name. Follow its source. See what still needs research.</p>
-<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search the preserved source records, or choose one inventory. A missing result does not mean a nation does not exist.</p>
-<label for="directoryQuery">Find a name in this directory</label>
+<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search dated source records here. For histories and facts, <a href="/nations#find">search all researched profiles</a>. These are different routes; a missing result does not mean a Nation does not exist.</p>
+<div class="directory-controls"><div class="directory-query"><label for="directoryQuery">Find a name in this directory</label>
 <div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">
-<button type="button" id="directoryClear" class="pill">Clear</button></div>
+<button type="button" id="directoryClear" class="pill">Clear</button></div></div>
 <div class="directory-filter"><label for="directoryInventory">Source inventory</label>
-<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option><option value="us-directory">United States: Federal published names</option><option value="us-new-jersey">United States: New Jersey commission representation: Named tribal representation groups</option><option value="us-alabama">United States: Alabama tribal directory: Alabama commission directory listings</option><option value="us-virginia">United States: Virginia tribal directory: Virginia state directory listings</option><option value="us-north-carolina">United States: North Carolina tribal directory: North Carolina state directory listings</option><option value="canada-directory">Canada: 2024 administrative register groups</option><option value="canada-profiles">Canada: the First Nation Profiles search: First Nation profile search records</option><option value="brazil-census">Brazil: named 2022 census categories: Named census ethnicity, people or group categories</option></select></div>
+<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option><option value="us-directory">United States: Federal published names</option><option value="us-new-jersey">United States: New Jersey commission representation: Named tribal representation groups</option><option value="us-alabama">United States: Alabama tribal directory: Alabama commission directory listings</option><option value="us-virginia">United States: Virginia tribal directory: Virginia state directory listings</option><option value="us-north-carolina">United States: North Carolina tribal directory: North Carolina state directory listings</option><option value="canada-directory">Canada: 2024 administrative register groups</option><option value="canada-profiles">Canada: the First Nation Profiles search: First Nation profile search records</option><option value="brazil-census">Brazil: named 2022 census categories: Named census ethnicity, people or group categories</option></select></div></div>
 <label class="directory-ready" for="directoryProfilesOnly"><input id="directoryProfilesOnly" type="checkbox" aria-controls="directoryNames" aria-describedby="directoryProfileHint"><span>Profiles Ready To Read</span></label>
 <p id="directoryProfileHint" class="note" hidden>Filters reviewed directory links; other researched profiles may not be linked here yet. <a href="/nations#find">Search all researched profiles</a>.</p>
 <p id="directoryResult" class="note" role="status" aria-live="polite">2272 directory records in 8 differently scoped lists. All are shown.</p>
-<p><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></p>
+<div class="directory-reading-actions"><button type="button" id="directoryReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></div>
 <p id="directoryLimit" class="note"></p></div>
 <noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>
 <details class="directory-source"><summary>Understand These Records</summary>
@@ -203,7 +203,7 @@
 <nav class="directory-inventory-nav" aria-label="Directory inventories"><ul><li><a href="#us-directory"><span class="directory-inventory-title">United States</span><span class="directory-inventory-meta">577 records &middot; Federal published names<br>Snapshot 30 Jan 2026</span></a></li><li><a href="#us-new-jersey"><span class="directory-inventory-title">United States: New Jersey commission representation</span><span class="directory-inventory-meta">3 records &middot; Named tribal representation groups<br>Snapshot 15 Oct 2026 UTC observation</span></a></li><li><a href="#us-alabama"><span class="directory-inventory-title">United States: Alabama tribal directory</span><span class="directory-inventory-meta">9 records &middot; Alabama commission directory listings<br>Snapshot 15 Oct 2026 UTC observation</span></a></li><li><a href="#us-virginia"><span class="directory-inventory-title">United States: Virginia tribal directory</span><span class="directory-inventory-meta">11 records &middot; Virginia state directory listings<br>Snapshot 14 Oct 2026 UTC observation</span></a></li><li><a href="#us-north-carolina"><span class="directory-inventory-title">United States: North Carolina tribal directory</span><span class="directory-inventory-meta">9 records &middot; North Carolina state directory listings<br>Snapshot 14 Oct 2026 UTC observation</span></a></li><li><a href="#canada-directory"><span class="directory-inventory-title">Canada</span><span class="directory-inventory-meta">634 records &middot; 2024 administrative register groups<br>Snapshot 31 Dec 2024</span></a></li><li><a href="#canada-profiles"><span class="directory-inventory-title">Canada: the First Nation Profiles search</span><span class="directory-inventory-meta">638 records &middot; First Nation profile search records<br>Snapshot 12 Oct 2026</span></a></li><li><a href="#brazil-census"><span class="directory-inventory-title">Brazil: named 2022 census categories</span><span class="directory-inventory-meta">391 records &middot; Named census ethnicity, people or group categories<br>Snapshot 2022</span></a></li></ul></nav>
 <div id="directoryNames" tabindex="-1"><div id="directoryResultsIntro" class="directory-results-intro" hidden>
 <h2>Matching Names</h2><p id="directoryResultsSummary" class="note"></p>
-<p id="directoryResultsActions"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></p>
+<div id="directoryResultsActions" class="directory-reading-actions"><button type="button" id="directoryResultsReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a></div>
 <div id="directoryResultsEmpty" hidden><p>No source records match these filters. Try another spelling or source inventory. A missing result does not mean a Nation does not exist.</p>
 <p class="directory-recovery"><a class="directory-results-link" href="#directoryQuery">Adjust Filters</a><a class="directory-results-link" href="/nations#find">Search Researched Profiles</a></p></div></div>
 <section class="directory-group" data-directory-inventory="us-directory" id="us-directory" aria-labelledby="us-directory-title">
@@ -216,8 +216,10 @@
 <p>Names are reproduced from that dated source, including its historical naming notes. A name or past listing does not establish a present land boundary, treaty right or exclusive community representation.</p></details>
 <section class="src-g directory-group" aria-labelledby="directory-contiguous"><h3 id="directory-contiguous">Contiguous United States</h3><p class="note">348 published name records</p><ul class="directory-list">
 <li id="us-fed-220eab4a2b96" data-directory-name="Absentee-Shawnee Tribe of Indians of Oklahoma" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Absentee-Shawnee Tribe of Indians of Oklahoma</h4>
+<div class="directory-actions" role="group" aria-label="Explore Absentee-Shawnee Tribe of Indians of Oklahoma">
 <p><a href="/nations/absentee-shawnee-tribe-us-ok">Read the researched profile</a></p>
 <p><a href="https://www.absenteeshawneetribe-nsn.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-e848f6cf3065" data-directory-name="Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation, California" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation, California</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -336,12 +338,16 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-18eeda3f2b93" data-directory-name="Chickahominy Indian Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Chickahominy Indian Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Chickahominy Indian Tribe">
 <p><a href="/nations/chickahominy-indian-tribe-us-va">Read the researched profile</a></p>
 <p><a href="https://www.chickahominytribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-21f35795bcf8" data-directory-name="Chickahominy Indian Tribe-Eastern Division" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Chickahominy Indian Tribe-Eastern Division</h4>
+<div class="directory-actions" role="group" aria-label="Explore Chickahominy Indian Tribe-Eastern Division">
 <p><a href="/nations/chickahominy-indian-tribe-eastern-division-us-va">Read the researched profile</a></p>
 <p><a href="https://www.cied.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-0d67d0093e56" data-directory-name="Chicken Ranch Rancheria of Me-Wuk Indians of California" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Chicken Ranch Rancheria of Me-Wuk Indians of California</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -491,7 +497,9 @@
 </li>
 <li id="us-fed-d7307ec4081f" data-directory-name="Fort Sill-Chiricahua-Warm Springs-Apache Tribe (previously listed as Fort Sill Apache Tribe of Oklahoma)" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Fort Sill-Chiricahua-Warm Springs-Apache Tribe</h4>
 <p class="note" dir="auto">Published name record: Fort Sill-Chiricahua-Warm Springs-Apache Tribe (previously listed as Fort Sill Apache Tribe of Oklahoma)</p>
+<div class="directory-actions" role="group" aria-label="Explore Fort Sill-Chiricahua-Warm Springs-Apache Tribe">
 <p><a href="/nations/fort-sill-apache-us-ok-nm">Read the researched profile</a></p>
+</div>
 </li>
 <li id="us-fed-812c3e6b3ec2" data-directory-name="Gila River Indian Community of the Gila River Indian Reservation, Arizona" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Gila River Indian Community of the Gila River Indian Reservation, Arizona</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -581,8 +589,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-7261e8b9bc9b" data-directory-name="Kaw Nation, Oklahoma" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Kaw Nation, Oklahoma</h4>
+<div class="directory-actions" role="group" aria-label="Explore Kaw Nation, Oklahoma">
 <p><a href="/nations/kaw-nation-us-ok">Read the researched profile</a></p>
 <p><a href="https://www.kawnation.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-766b50b081b8" data-directory-name="Keweenaw Bay Indian Community, Michigan" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Keweenaw Bay Indian Community, Michigan</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -732,8 +742,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-01847a40624e" data-directory-name="Monacan Indian Nation" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Monacan Indian Nation</h4>
+<div class="directory-actions" role="group" aria-label="Explore Monacan Indian Nation">
 <p><a href="/nations/monacan-indian-nation-us-va">Read the researched profile</a></p>
 <p><a href="https://www.monacannation.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-b0c6e7100f06" data-directory-name="Mooretown Rancheria of Maidu Indians of California" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Mooretown Rancheria of Maidu Indians of California</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -745,8 +757,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-7948cb7db57b" data-directory-name="Nansemond Indian Nation" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond Indian Nation</h4>
+<div class="directory-actions" role="group" aria-label="Explore Nansemond Indian Nation">
 <p><a href="/nations/nansemond-indian-nation-us-va">Read the researched profile</a></p>
 <p><a href="https://nansemond.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-dbfaf4600088" data-directory-name="Narragansett Indian Tribe" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Narragansett Indian Tribe</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -797,8 +811,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-7093f2065f1c" data-directory-name="Otoe-Missouria Tribe of Indians, Oklahoma" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Otoe-Missouria Tribe of Indians, Oklahoma</h4>
+<div class="directory-actions" role="group" aria-label="Explore Otoe-Missouria Tribe of Indians, Oklahoma">
 <p><a href="/nations/otoe-missouria-tribe-us-ok">Read the researched profile</a></p>
 <p><a href="https://www.omtribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-17ef1a16b249" data-directory-name="Ottawa Tribe of Oklahoma" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Ottawa Tribe of Oklahoma</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -952,8 +968,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-27cc9091bd95" data-directory-name="Rappahannock Tribe, Inc." data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Rappahannock Tribe, Inc.</h4>
+<div class="directory-actions" role="group" aria-label="Explore Rappahannock Tribe, Inc.">
 <p><a href="/nations/rappahannock-indian-tribe-us-va">Read the researched profile</a></p>
 <p><a href="https://www.rappahannocktribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-e26f62d70c55" data-directory-name="Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -1090,7 +1108,9 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-bf8c7ddaf9dc" data-directory-name="Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado</h4>
+<div class="directory-actions" role="group" aria-label="Explore Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado">
 <p><a href="/nations/southern-ute-indian-tribe-us-co">Read the researched profile</a></p>
+</div>
 </li>
 <li id="us-fed-b094571aa03e" data-directory-name="Spirit Lake Tribe, North Dakota" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Spirit Lake Tribe, North Dakota</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -1209,8 +1229,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-16a10f928bbf" data-directory-name="Upper Mattaponi Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Upper Mattaponi Tribe">
 <p><a href="/nations/upper-mattaponi-us-va">Read the researched profile</a></p>
 <p><a href="https://www.umitribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-fed-e7d253ff4cf5" data-directory-name="Upper Sioux Community, Minnesota" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Sioux Community, Minnesota</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -1219,10 +1241,14 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-fed-70dbbf8ba886" data-directory-name="Ute Indian Tribe of the Uintah &amp; Ouray Reservation, Utah" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Ute Indian Tribe of the Uintah &amp; Ouray Reservation, Utah</h4>
+<div class="directory-actions" role="group" aria-label="Explore Ute Indian Tribe of the Uintah &amp; Ouray Reservation, Utah">
 <p><a href="/nations/ute-indian-tribe-uintah-ouray-us-ut">Read the researched profile</a></p>
+</div>
 </li>
 <li id="us-fed-32d69163a8c7" data-directory-name="Ute Mountain Ute Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Ute Mountain Ute Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Ute Mountain Ute Tribe">
 <p><a href="/nations/ute-mountain-ute-tribe-us-co-ut-nm">Read the researched profile</a></p>
+</div>
 </li>
 <li id="us-fed-1183f18aefaf" data-directory-name="Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation, California" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation, California</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -2043,8 +2069,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-al-cherokee-tribe-of-ne-alabama" data-directory-name="CHEROKEE TRIBE OF NE ALABAMA" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">CHEROKEE TRIBE OF NE ALABAMA</h4>
+<div class="directory-actions" role="group" aria-label="Explore CHEROKEE TRIBE OF NE ALABAMA">
 <p><a href="/nations/cherokee-tribe-of-northeast-alabama-us-al">Read the researched profile</a></p>
 <p><a href="https://cherokeetribeofnortheastalabama.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-al-echota-cherokee-tribe-of-al" data-directory-name="ECHOTA CHEROKEE TRIBE OF AL" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">ECHOTA CHEROKEE TRIBE OF AL</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -2053,8 +2081,10 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-al-mowa-band-of-choctaw-indians" data-directory-name="MOWA BAND OF CHOCTAW INDIANS" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">MOWA BAND OF CHOCTAW INDIANS</h4>
+<div class="directory-actions" role="group" aria-label="Explore MOWA BAND OF CHOCTAW INDIANS">
 <p><a href="/nations/mowa-band-of-choctaw-indians-us-al">Read the researched profile</a></p>
 <p><a href="https://www.mowachoctawindians.com/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-al-piqua-shawnee-tribe" data-directory-name="PIQUA SHAWNEE TRIBE" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">PIQUA SHAWNEE TRIBE</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -2064,12 +2094,16 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-al-southeastern-mvskoke-nation" data-directory-name="SOUTHEASTERN MVSKOKE NATION" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">SOUTHEASTERN MVSKOKE NATION</h4>
+<div class="directory-actions" role="group" aria-label="Explore SOUTHEASTERN MVSKOKE NATION">
 <p><a href="/nations/southeastern-mvskoke-nation-us-al">Read the researched profile</a></p>
 <p><a href="https://southeasternmvskokenation.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-al-united-cherokee-ani-yun-wiya-nation" data-directory-name="UNITED CHEROKEE ANI-YUN-WIYA NATION" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">UNITED CHEROKEE ANI-YUN-WIYA NATION</h4>
+<div class="directory-actions" role="group" aria-label="Explore UNITED CHEROKEE ANI-YUN-WIYA NATION">
 <p><a href="/nations/united-cherokee-aniyunwiya-nation-us-al">Read the researched profile</a></p>
 <p><a href="https://ucantribe.com/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 </ul></section>
 <section class="src-g directory-group" data-directory-inventory="us-virginia" id="us-virginia" aria-labelledby="us-virginia-title">
@@ -2084,36 +2118,50 @@
 <p class="note">Cheroenhaka (Nottoway) and Nottoway of Virginia are separate entries. Mattaponi and Upper Mattaponi are also kept separate; shared words do not justify merging identities.</p>
 </details><ul class="directory-list">
 <li id="us-state-va-cheroenhaka-nottoway" data-directory-name="Cheroenhaka (Nottoway)" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Cheroenhaka (Nottoway)</h4>
+<div class="directory-actions" role="group" aria-label="Explore Cheroenhaka (Nottoway)">
 <p><a href="/nations/cheroenhaka-nottoway-us-va">Read the researched profile</a></p>
 <p><a href="https://www.cheroenhaka-nottoway.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-chickahominy" data-directory-name="Chickahominy*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Chickahominy</h4>
 <p class="note" dir="auto">Published name record: Chickahominy*</p>
+<div class="directory-actions" role="group" aria-label="Explore Chickahominy">
 <p><a href="/nations/chickahominy-indian-tribe-us-va">Read the researched profile</a></p>
 <p><a href="https://www.chickahominytribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-eastern-chickahominy" data-directory-name="Eastern Chickahominy*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Eastern Chickahominy</h4>
 <p class="note" dir="auto">Published name record: Eastern Chickahominy*</p>
+<div class="directory-actions" role="group" aria-label="Explore Eastern Chickahominy">
 <p><a href="/nations/chickahominy-indian-tribe-eastern-division-us-va">Read the researched profile</a></p>
 <p><a href="https://www.cied.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-mattaponi" data-directory-name="Mattaponi" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Mattaponi</h4>
 <p class="rc directory-state">Profile Link Pending</p>
+<div class="directory-actions" role="group" aria-label="Explore Mattaponi">
 <p><a href="https://mattaponi.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-monacan-indian-nation" data-directory-name="Monacan Indian Nation*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Monacan Indian Nation</h4>
 <p class="note" dir="auto">Published name record: Monacan Indian Nation*</p>
+<div class="directory-actions" role="group" aria-label="Explore Monacan Indian Nation">
 <p><a href="/nations/monacan-indian-nation-us-va">Read the researched profile</a></p>
 <p><a href="https://www.monacannation.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-nansemond" data-directory-name="Nansemond*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nansemond</h4>
 <p class="note" dir="auto">Published name record: Nansemond*</p>
+<div class="directory-actions" role="group" aria-label="Explore Nansemond">
 <p><a href="/nations/nansemond-indian-nation-us-va">Read the researched profile</a></p>
 <p><a href="https://nansemond.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-nottoway-of-virginia" data-directory-name="Nottoway of Virginia" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Nottoway of Virginia</h4>
+<div class="directory-actions" role="group" aria-label="Explore Nottoway of Virginia">
 <p><a href="/nations/nottoway-indian-tribe-virginia-us-va">Read the researched profile</a></p>
 <p><a href="https://nottowayindians.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-pamunkey" data-directory-name="Pamunkey*" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Pamunkey</h4>
 <p class="note" dir="auto">Published name record: Pamunkey*</p>
@@ -2121,17 +2169,23 @@
 </li>
 <li id="us-state-va-patawomeck" data-directory-name="Patawomeck" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Patawomeck</h4>
 <p class="rc directory-state">Profile Link Pending</p>
+<div class="directory-actions" role="group" aria-label="Explore Patawomeck">
 <p><a href="https://www.patawomeckindiantribeofvirginia.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-rappahannock" data-directory-name="Rappahannock*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Rappahannock</h4>
 <p class="note" dir="auto">Published name record: Rappahannock*</p>
+<div class="directory-actions" role="group" aria-label="Explore Rappahannock">
 <p><a href="/nations/rappahannock-indian-tribe-us-va">Read the researched profile</a></p>
 <p><a href="https://www.rappahannocktribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-va-upper-mattaponi" data-directory-name="Upper Mattaponi*" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Upper Mattaponi</h4>
 <p class="note" dir="auto">Published name record: Upper Mattaponi*</p>
+<div class="directory-actions" role="group" aria-label="Explore Upper Mattaponi">
 <p><a href="/nations/upper-mattaponi-us-va">Read the researched profile</a></p>
 <p><a href="https://www.umitribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 </ul></section>
 <section class="src-g directory-group" data-directory-inventory="us-north-carolina" id="us-north-carolina" aria-labelledby="us-north-carolina-title">
@@ -2153,19 +2207,25 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-nc-coharie-tribe" data-directory-name="Coharie Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Coharie Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Coharie Tribe">
 <p><a href="/nations/coharie-tribe-us-nc">Read the researched profile</a></p>
 <p><a href="https://coharietribe.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-nc-eastern-band-of-cherokee" data-directory-name="Eastern Band of Cherokee" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Eastern Band of Cherokee</h4>
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-nc-haliwa-saponi-indian-tribe" data-directory-name="Haliwa-Saponi Indian Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Haliwa-Saponi Indian Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Haliwa-Saponi Indian Tribe">
 <p><a href="/nations/haliwa-saponi-indian-tribe-us-nc">Read the researched profile</a></p>
 <p><a href="https://www.haliwa-saponi.gov/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-nc-lumbee-tribe-of-north-carolina" data-directory-name="Lumbee Tribe of North Carolina" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Lumbee Tribe of North Carolina</h4>
 <p class="rc directory-state">Profile Link Pending</p>
+<div class="directory-actions" role="group" aria-label="Explore Lumbee Tribe of North Carolina">
 <p><a href="https://www.lumbeetribe.com" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-nc-meherrin-indian-tribe" data-directory-name="Meherrin Indian Tribe" data-directory-profile="pending"><h4 class="nm directory-name" dir="auto" data-face="brand">Meherrin Indian Tribe</h4>
 <p class="rc directory-state">Profile Link Pending</p>
@@ -2174,12 +2234,16 @@
 <p class="rc directory-state">Profile Link Pending</p>
 </li>
 <li id="us-state-nc-sappony" data-directory-name="Sappony" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Sappony</h4>
+<div class="directory-actions" role="group" aria-label="Explore Sappony">
 <p><a href="/nations/sappony-us-nc">Read the researched profile</a></p>
 <p><a href="https://www.sappony.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 <li id="us-state-nc-waccamaw-siouan-tribe" data-directory-name="Waccamaw Siouan Tribe" data-directory-profile="ready"><h4 class="nm directory-name" dir="auto" data-face="brand">Waccamaw Siouan Tribe</h4>
+<div class="directory-actions" role="group" aria-label="Explore Waccamaw Siouan Tribe">
 <p><a href="/nations/waccamaw-siouan-tribe-us-nc">Read the researched profile</a></p>
 <p><a href="https://waccamaw-siouan.org/" rel="noopener noreferrer" target="_blank">Visit the verified official website<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div>
 </li>
 </ul></section>
 <section class="src-g directory-group" data-directory-inventory="canada-directory" id="canada-directory" aria-labelledby="canada-directory-title">
@@ -8025,6 +8089,7 @@
   var profilesOnly = document.getElementById('directoryProfilesOnly'), profileHint = document.getElementById('directoryProfileHint');
   var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
   var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
+  var readFirst = document.getElementById('directoryReadFirst'), resultsReadFirst = document.getElementById('directoryResultsReadFirst');
   if (!status || !clear) return;
   var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
   var enhanced = !!(tools && inventory && more && limitNote);
@@ -8071,6 +8136,8 @@
       if (resultsSummary) resultsSummary.textContent = status.textContent;
       if (resultsEmpty) resultsEmpty.hidden = count !== 0;
       if (resultsActions) resultsActions.hidden = count === 0;
+      if (readFirst) readFirst.hidden = visible.length === 0;
+      if (resultsReadFirst) resultsReadFirst.hidden = visible.length === 0;
       var next = Math.min(batch, count - shown);
       more.hidden = next <= 0;
       more.textContent = 'Show ' + next + ' More';
@@ -8083,6 +8150,13 @@
   input.addEventListener('input', function () { limit = batch; filter(); });
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
+  function readFirstMatch() {
+    if (!visible.length) return;
+    var name = visible[0].querySelector('.directory-name') || visible[0];
+    name.setAttribute('tabindex', '-1'); name.focus(); name.scrollIntoView();
+  }
+  if (readFirst) readFirst.addEventListener('click', readFirstMatch);
+  if (resultsReadFirst) resultsReadFirst.addEventListener('click', readFirstMatch);
   inventory.addEventListener('change', function () { limit = batch; filter(); });
   if (profilesOnly) profilesOnly.addEventListener('change', function () { limit = batch; filter(); });
   more.addEventListener('click', function () {
