@@ -973,6 +973,39 @@
       "discovery_date": "2026-10-16",
       "status": "source_located",
       "note": "Exact own-host HTTPS public-source scope. A scope does not itself approve claims, reuse or publication. No off-host redirects authorized."
+    },
+    {
+      "source_id": "own-ponca-tribe-of-indians-of-oklahoma-us-ok-2026-10-17",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.ponca-nsn.gov/",
+      "allowed_hosts": [
+        "www.ponca-nsn.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-17",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS public-source scope; permitted pages passed separate source review. No off-host redirects authorized."
+    },
+    {
+      "source_id": "own-wichita-and-affiliated-tribes-us-ok-2026-10-17",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://wichitatribe.com/",
+      "allowed_hosts": [
+        "wichitatribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-17",
+      "status": "source_located",
+      "note": "Candidate own host from the saved BIA directory. First robots request returned403; no content, identity or reuse approval. No bypass or alternate host authorized.",
+      "access_status": "blocked_http_403"
     }
   ]
 }

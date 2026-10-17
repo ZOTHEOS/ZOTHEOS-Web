@@ -1,0 +1,88 @@
+{
+  "reviewed": "2026-10-17",
+  "public_notes": [
+    {
+      "nation": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "reading_id": "self-determination-through-tribal-administration",
+      "title": "Self-Determination Through Tribal Administration",
+      "text": "The Tribe's self-governance page places its office within the Indian Self-Determination and Education Assistance Act of 1975 and dates its self-governing status to 1999. It describes practical work: preparing an annual funding agreement for Tribal Council review, coordinating programmes and maintaining government-to-government relationships. These are the Tribe's descriptions of institutions and responsibilities, not independent findings about legal powers or successful outcomes. Neither year marks the beginning of the Ponca people. Earlier homeland and displacement history remains a research gap in this profile; it is not replaced with a guessed account.",
+      "source_urls": [
+        "https://www.ponca-nsn.gov/self-governance.html"
+      ]
+    },
+    {
+      "nation": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "reading_id": "heritage-protection-and-living-learning",
+      "title": "Heritage Protection And Living Learning",
+      "text": "The Tribe dates its Historic Preservation Office to 2016. Its public account describes reviewing federal projects, consulting with other agencies and maintaining cultural-property records. A stated area of interest guides consultation; it is not a current property or jurisdiction map. Review is a process, not a promise that a project will stop. The Tribe also provides its own public language page with headings for colours and numbers. Those links lead back to the Tribe; lessons, recordings, cultural-property records and sensitive site details are not reproduced here. Dates of institutional change do not date the people's origins.",
+      "source_urls": [
+        "https://www.ponca-nsn.gov/historic-preservation.html",
+        "https://www.ponca-nsn.gov/ponca-language.html"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "url": "https://www.ponca-nsn.gov/self-governance.html",
+      "label": "Ponca: Self-Governance In Practice",
+      "purpose": "Read the Tribe's account of its self-governance office and funding responsibilities. The dated milestone is not presented as the people's origin or first recognition."
+    },
+    {
+      "nation": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "url": "https://www.ponca-nsn.gov/historic-preservation.html",
+      "label": "Ponca: Heritage Protection And Consultation",
+      "purpose": "Begin with the Tribe's own preservation account. No private records, burial information, site locations or guaranteed legal outcomes are supplied."
+    },
+    {
+      "nation": "ponca-tribe-of-indians-of-oklahoma-us-ok",
+      "url": "https://www.ponca-nsn.gov/ponca-language.html",
+      "label": "Ponca: Tribe-Published Language Resources",
+      "purpose": "Visit the Tribe's public language page directly. Its materials remain with the publisher; no recording, lesson or permission to reuse is supplied here."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-17T14:08:47.656921+00:00",
+      "sha256": "513abfd31ff8d53fb2aee2d15b71cd91485e6bb697a0a63af593a2c4ca7dd248",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "sources": [
+      {
+        "url": "https://www.ponca-nsn.gov/historic-preservation.html",
+        "final_url": "https://www.ponca-nsn.gov/historic-preservation.html",
+        "retrieved_at": "2026-10-17T14:04:32.584290+00:00",
+        "http_status": 200,
+        "sha256": "d9cc95aaf848f0c01b30fcc028967a5c137d9966ad3a019c391bb28d91964d3b",
+        "body_bytes": 74136,
+        "receipt": "research/receipts/2026-10-17-ponca-wichita-ponca-preservation.json"
+      },
+      {
+        "url": "https://www.ponca-nsn.gov/ponca-language.html",
+        "final_url": "https://www.ponca-nsn.gov/ponca-language.html",
+        "retrieved_at": "2026-10-17T14:04:44.699160+00:00",
+        "http_status": 200,
+        "sha256": "e50f228d07a832829ebf09024d35e4b63339efba806e96d7ed82d34c5ee4a6e0",
+        "body_bytes": 68328,
+        "receipt": "research/receipts/2026-10-17-ponca-wichita-ponca-language.json"
+      },
+      {
+        "url": "https://www.ponca-nsn.gov/self-governance.html",
+        "final_url": "https://www.ponca-nsn.gov/self-governance.html",
+        "retrieved_at": "2026-10-17T14:04:58.305208+00:00",
+        "http_status": 200,
+        "sha256": "104278d33d67ecf6a36e96b62c31b048725ac8d87a5dd7c5afa017a56e62ac6b",
+        "body_bytes": 59457,
+        "receipt": "research/receipts/2026-10-17-ponca-wichita-ponca-self-governance.json"
+      }
+    ]
+  }
+}
