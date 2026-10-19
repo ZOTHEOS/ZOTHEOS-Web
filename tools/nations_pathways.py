@@ -26,6 +26,11 @@ if list(LANE_NOTES) != list(SCOPES):
 PLATE_KEYS = {'name', 'parts', 'kept_out'}
 # The note under a download beside a plate: the file is a blank planning aid, not the finished thing the plate draws.
 DOWNLOAD_NOTE = 'Plain text. Blank fields to help you prepare it. Fill offline in a place you control.'
+# Living Gallery piece 3: each public chapter's plain-text brief, line for line, as a printable page.
+SITE = 'https://zotheos.org'
+BLANK = '____________________'
+SHEET_LINK = 'Open The Printable Sheet'
+SHEET_NOTE = 'This page has no form or upload and does not receive your answers. Use your browser’s Print option to print this sheet.'
 
 def text(value, limit=2000):
     if not isinstance(value, str) or not value.strip() or len(value) > limit or any(ord(c) < 32 and c not in '\n\t' for c in value):
@@ -213,7 +218,7 @@ def render(root, model):
         # The plate (original art, aria-hidden) draws the deliverable; the exact sentence follows it as its caption.
         made=(A.plate(c['plate'])+'<p class="pw-plate-caption">'+e(c['deliverable'])+'</p>') if 'plate' in c else '<p>'+e(c['deliverable'])+'</p>'
         note=DOWNLOAD_NOTE if 'plate' in c else 'Plain text. One pathway. Fill offline in a place you control.'
-        out+=['</div><div class="pw-result'+(' pw-with-plate' if 'plate' in c else '')+'"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3>'+made+'<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">'+note+'</span></div>',
+        out+=['</div><div class="pw-result'+(' pw-with-plate' if 'plate' in c else '')+'"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3>'+made+'<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">'+note+'</span><a class="pw-sheet" href="/nations/brief/'+e(c['id'],quote=True)+'" aria-label="'+e(SHEET_LINK+' For '+c['title'],quote=True)+'">'+SHEET_LINK+'</a></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']
@@ -311,3 +316,100 @@ def chapter_brief(root, model, chapter_id):
 def chapter_briefs(root, model):
     _,chapters,sources=load(root,model)
     return {'action-brief-'+chapter['id']+'.txt':_chapter_brief_text(chapter,sources) for chapter in chapters}
+
+
+def breakable(url):
+    """A web address that wraps after a slash or before a '#', never at a hyphen inside a word such as
+    'paths-to-action', so a reader copying it by hand cannot take a line break for part of the address. Hyphenated
+    pieces up to 32 letters stay whole; a longer piece may still wrap, so a phone never scrolls sideways. The text is
+    unchanged: <wbr> and the spans add no characters."""
+    pieces=[p for p in re.split(r'(?<=/)|(?=#)',url) if p]
+    return '<span class="bs-url">'+'<wbr>'.join('<span class="bs-nw">'+escape(p)+'</span>' if '-' in p and len(p)<=32 else escape(p) for p in pieces)+'</span>'
+
+
+def _source_cells(line, sources):
+    """A source line of the brief split into its parts, when it is exactly one source's title, publisher, address and
+    dates as the brief writes them; None otherwise (the line is then shown as written)."""
+    for source in sources.values():
+        lead=source['title']+' | '+source['publisher']+' | '+source['url']+' | '
+        if line.startswith(lead):
+            return source,line[len(lead):].split(' | ')
+    return None
+
+
+def brief_sheet(chapter, sources):
+    """The printable sheet for one public chapter: the lines of its plain-text brief (_chapter_brief_text, unchanged),
+    in order, each element marked data-line, set as HTML. The sheet reads the text itself, so it can never say anything
+    the download does not; the build stops if a line would be lost or added.
+
+    The plate (original art, aria-hidden) sits under SOMETHING YOU CAN PREPARE, before the deliverable sentence. Section
+    headings are stored in title case and set in capitals by CSS (data-case="upper"), so screen readers read words.
+    After the brief, outside it: the download, the way back and one note. No form or control of any kind, and no Nation
+    example, quotation, name or image, so a printed copy carries nothing that concerns a people.
+    """
+    e=escape;cid=chapter['id'];text=_chapter_brief_text(chapter,sources)
+    blocks,current=[],[]
+    for line in text.split('\n'):
+        if line:current.append(line)
+        elif current:blocks.append(current);current=[]
+    if current:blocks.append(current)
+    head=blocks[0]
+    if len(head)!=3 or head[1]!=chapter['title'] or not head[2].startswith(SITE+'/'):
+        raise ValueError('pathways: the brief header changed; update brief_sheet()')
+    shown=list(head)
+    out=['<div class="brief-page">','<article class="brief-sheet" aria-labelledby="bs-title">','<header class="bs-head">',
+         '<p class="eyebrow bs-mast" data-line>'+e(head[0])+'</p>','<h1 class="page-h bs-title" id="bs-title" data-line>'+e(head[1])+'</h1>',
+         '<p class="bs-guide" data-line><a href="'+e(head[2][len(SITE):],quote=True)+'">'+breakable(head[2])+'</a></p>']
+    in_head,sectioned=True,False
+    for block in blocks[1:]:
+        if all(line.endswith(': '+BLANK) for line in block):
+            if in_head:out.append('</header>');in_head=False
+            out.append('<ol class="bs-fields">')
+            out.extend('<li data-line><span class="bs-label">'+e(line[:-len(BLANK)-1])+'</span><span class="bs-rule"><span class="sr-only">Blank.</span></span></li>' for line in block)
+            out.append('</ol>');shown+=block;continue
+        if re.fullmatch(r'[A-Z][A-Z ]+',block[0]):
+            if in_head:out.append('</header>');in_head=False
+            heading,body=block[0],block[1:]
+            if heading.title().upper()!=heading:raise ValueError('pathways: a brief heading must survive title case')
+            out.append('<section class="bs-sec"><h2 data-line data-case="upper">'+e(heading.title())+'</h2>');shown.append(heading)
+            verify=[re.fullmatch(r'(\d+)\. (.+)',line) for line in body]
+            cells=[_source_cells(line,sources) for line in body]
+            if body and all(verify):
+                out.append('<ol class="bs-verify">'+''.join('<li data-line><span class="bs-n">'+m.group(1)+'.</span> '+e(m.group(2))+'</li>' for m in verify)+'</ol>')
+            elif body and all(cells):
+                out.append('<ul class="bs-sources">')
+                for source,dates in cells:
+                    row=['<span class="bs-src-title">'+e(source['title'])+'</span>',
+                         '<span class="bs-sep"> | </span><span class="bs-src-publisher">'+e(source['publisher'])+'</span>',
+                         '<span class="bs-sep"> | </span><a class="bs-src-url" href="'+e(address(source['url']),quote=True)+'" target="_blank" rel="noopener noreferrer">'+breakable(source['url'])+'</a>']
+                    for n,date in enumerate(dates):
+                        row.append('<span class="bs-sep'+(' bs-sep-on' if n else '')+'"> | </span><span class="bs-src-date">'+e(date)+'</span>')
+                    out.append('<li data-line>'+''.join(row)+'</li>')
+                out.append('</ul>')
+            else:
+                for line in body:
+                    if line==chapter['deliverable']:
+                        if chapter.get('plate'):out.append(A.plate(chapter['plate']))
+                        out.append('<p class="pw-plate-caption" data-line>'+e(line)+'</p>')
+                    else:out.append('<p class="'+('bs-reflect' if heading=='REFLECTION' else 'bs-text')+'" data-line>'+e(line)+'</p>')
+            out.append('</section>');shown+=body;sectioned=True;continue
+        if in_head:
+            out.append('<div class="bs-bounds">'+''.join('<p data-line>'+e(line)+'</p>' for line in block)+'</div>')
+        elif sectioned:
+            out.append('<footer class="bs-close">'+''.join('<p data-line>'+e(line)+'</p>' for line in block)+A.credit(cls='zth-credit bs-credit')+'</footer>')
+        else:raise ValueError('pathways: unexpected block in the brief; update brief_sheet()')
+        shown+=block
+    if in_head:raise ValueError('pathways: the brief has no fields')
+    if shown!=[line for line in text.split('\n') if line]:
+        raise ValueError('pathways: the printable sheet must carry every line of the brief, in order')
+    out+=['</article>','<div class="bs-after">',
+          '<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(cid,quote=True)+'.txt" download aria-label="'+e('Download The '+chapter['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a>',
+          '<a class="bs-back" href="/nations/paths-to-action#pw-'+e(cid,quote=True)+'">Back To This Pathway ↑</a>',
+          '<p class="bs-note">'+e(SHEET_NOTE)+'</p>','</div>','</div>']
+    return '\n'.join(out)
+
+
+def brief_sheets(root, model):
+    """(chapter id, title, sheet body) for every public chapter, in guide order. A held chapter has no sheet."""
+    _,chapters,sources=load(root,model)
+    return [(c['id'],c['title'],brief_sheet(c,sources)) for c in chapters]

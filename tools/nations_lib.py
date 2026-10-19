@@ -18,7 +18,7 @@ ROOT = os.path.dirname(TOOLS)
 SECOND_LEVEL = {"co", "com", "org", "gov", "edu", "ac", "net", "gob", "gv", "or", "ne", "go", "nic", "mil", "govt",
                 "iwi", "maori"}
 RESERVED_IDS = {"index", "region", "in", "api", "static", "about", "sources", "coverage", "credits", "verification",
-                "for-nations", "paths-to-action", "changes", "news", "search", "today"}
+                "for-nations", "paths-to-action", "changes", "news", "search", "today", "brief"}
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 PREF_KINDS = ("today", "achievement")
 GRACE_DAYS = 14
