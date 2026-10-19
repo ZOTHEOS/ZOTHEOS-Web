@@ -349,7 +349,7 @@ def specificity(sel):
     return ids, cls, els
 
 
-def test_rail_gaps_keep_one_clear_device_pixel_at_every_display_scale(page):
+def test_rail_gaps_keep_one_clear_device_pixel_at_every_display_scale(page, data):
     """Review V1: at a 125% display scale a 1px gap is 1.25 device pixels; painted at a half-pixel offset it filled
     in, and on the owner's lifted display neighbouring squares fused into bars. Every gap in the rail, and the gap
     between the lowest squares and the baseline, is 2px (2.5 device pixels, so always one uncovered pixel); the
@@ -362,9 +362,14 @@ def test_rail_gaps_keep_one_clear_device_pixel_at_every_display_scale(page):
     for sel, body in door_rules(page):
         if '.ws-rail' in sel:
             assert not re.search(r'(?:^|;)\s*(?:column-|row-)?gap\s*:\s*1px', body), sel
-    # Each --u step leaves room for 47u + 131px: an 8px lead, 39 decades of u plus 2px, the 33px rule and 8u + 14px.
+    # Each --u step leaves room for the rail the data draws today: an 8px lead, n decade columns of u with 2px gaps,
+    # the 33px rule and the 8u + 14px block, so (n + 8)u + 2n + 53 px (47u + 131 for 39 decades). An earlier or later
+    # recorded date changes n; this names the steps to set in index.html, and the 2px squares still fit a 320 phone.
+    n = (max(data['decades']) - min(data['decades'])) // 10 + 1
+    need = [(n + 8) * u + 2 * n + 53 for u in (3, 4, 5)]
     steps = [int(w) for w, u in re.findall(r'@container \(min-width:(\d+)px\) \{\.ws-rail \{--u:(\d)px;', css)]
-    assert steps == [47 * u + 131 for u in (3, 4, 5)]
+    assert steps == need, f'the rail now draws {n} decades: set its container steps in index.html to {need}'
+    assert (n + 8) * 2 + 2 * n + 53 <= 232 + 22, 'at 320 the rail no longer fits its door (232px plus the 22px lead)'
 
 
 def test_each_door_shows_one_focus_ring_in_every_theme(page):
