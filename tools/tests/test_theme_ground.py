@@ -74,7 +74,10 @@ def test_no_full_width_band_holds_a_second_tone():
     assert re.findall(r'--hdr-band\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', GROUND['codex'], GROUND['skeleton']]
     assert _token('[data-theme="codex"]', '--hdr-band') == GROUND['codex']
     assert '[data-theme="skeleton"] { --hdr-band: #050507; }' in CSS
-    # The Theater chapter's floor is the page ground: Maya and Ember the floor, Codex the paper. No other floor.
-    assert re.findall(r'--tsc-floor\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', 'var(--bg-deep)']
+    # The live Theater chapter stays exactly as on main (review V4): Maya the floor, Codex the paper, and Obsidian
+    # Ember its flat warm obsidian (--bg-mid), one flat tone with no gradient, until the owner decides otherwise.
+    assert re.findall(r'--tsc-floor\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', 'var(--bg-mid)', 'var(--bg-deep)']
     assert '[data-theme="codex"] .tsc { --tsc-floor: var(--bg-deep);' in CSS
-    assert '[data-theme="skeleton"] .tsc { --tsc-edge: #8A7F6E; }' in CSS
+    assert '[data-theme="skeleton"] .tsc { --tsc-floor: var(--bg-mid); --tsc-edge: #8A7F6E; }' in CSS
+    main_rule = '[data-theme="skeleton"] .tsc { --tsc-floor: var(--bg-mid); --tsc-edge: #8A7F6E; }'
+    assert PAGE.count(main_rule) == 1
