@@ -30,6 +30,8 @@ DOWNLOAD_NOTE = 'Plain text. Blank fields to help you prepare it. Fill offline i
 SITE = 'https://zotheos.org'
 BLANK = '____________________'
 SHEET_LINK = 'Open The Printable Sheet'
+SHEET_DOWNLOAD = 'Download This Pathway Brief'
+SHEET_TITLE_FONT = '/static/fonts/instrument-serif-italic-latin.woff2'
 SHEET_NOTE = 'This page has no form or upload and does not receive your answers. Use your browser’s Print option to print this sheet.'
 
 def text(value, limit=2000):
@@ -357,7 +359,11 @@ def brief_sheet(chapter, sources):
     if len(head)!=3 or head[1]!=chapter['title'] or not head[2].startswith(SITE+'/'):
         raise ValueError('pathways: the brief header changed; update brief_sheet()')
     shown=list(head)
-    out=['<div class="brief-page">','<article class="brief-sheet" aria-labelledby="bs-title">','<header class="bs-head">',
+    # The title's italic face is fetched from the first lines of the body, beside the stylesheet, so it is usually set
+    # before first paint; until it arrives nations.css holds the title in a width-matched Georgia Italic, so a late
+    # swap rarely changes its line count and the sheet stays where it is.
+    out=['<link rel="preload" as="font" type="font/woff2" href="'+SHEET_TITLE_FONT+'" crossorigin>',
+         '<div class="brief-page">','<article class="brief-sheet" aria-labelledby="bs-title">','<header class="bs-head">',
          '<p class="eyebrow bs-mast" data-line>'+e(head[0])+'</p>','<h1 class="page-h bs-title" id="bs-title" data-line>'+e(head[1])+'</h1>',
          '<p class="bs-guide" data-line><a href="'+e(head[2][len(SITE):],quote=True)+'">'+breakable(head[2])+'</a></p>']
     in_head,sectioned=True,False
@@ -403,7 +409,8 @@ def brief_sheet(chapter, sources):
     if shown!=[line for line in text.split('\n') if line]:
         raise ValueError('pathways: the printable sheet must carry every line of the brief, in order')
     out+=['</article>','<div class="bs-after">',
-          '<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(cid,quote=True)+'.txt" download aria-label="'+e('Download The '+chapter['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a>',
+          # The accessible name starts with the visible words (WCAG 2.5.3), then names the pathway.
+          '<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(cid,quote=True)+'.txt" download aria-label="'+e(SHEET_DOWNLOAD+' For '+chapter['title'],quote=True)+'">'+SHEET_DOWNLOAD+' ↗</a>',
           '<a class="bs-back" href="/nations/paths-to-action#pw-'+e(cid,quote=True)+'">Back To This Pathway ↑</a>',
           '<p class="bs-note">'+e(SHEET_NOTE)+'</p>','</div>','</div>']
     return '\n'.join(out)

@@ -111,7 +111,10 @@ def test_sheet_structure_links_and_blank_fields(sheets):
     assert back == ['https://zotheos.org/nations/paths-to-action#pw-' + cid, 'Back To This Pathway ↑']
     download = [n for n in anchors if n.attrs.get('href') == '/static/nations/action-brief-' + cid + '.txt']
     assert len(download) == 1 and 'download' in download[0].attrs
-    assert download[0].attrs['aria-label'] == 'Download The ' + title + ' Brief'
+    # WCAG 2.5.3 (label in name): the accessible name starts with the visible words, then names the pathway.
+    visible = download[0].text.replace('↗', '').strip()
+    assert visible == mod.SHEET_DOWNLOAD == 'Download This Pathway Brief'
+    assert download[0].attrs['aria-label'] == visible + ' For ' + title
     assert mod.SHEET_NOTE in doc.text
     for node in anchors:
         if node.attrs.get('href', '').startswith('https://'):

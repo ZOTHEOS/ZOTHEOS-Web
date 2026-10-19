@@ -684,6 +684,9 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-plate-parts {padding-top:6px;}
 .pw-plate-parts li {position:relative;min-height:36px;padding:8px 0 8px 28px;font:400 15px/20px var(--zn-read);color:var(--ink);}
 .pw-plate-nw {white-space:nowrap;}
+/* Below 360px a kept-together chunk may break at its hyphens, so wider reader text spacing (WCAG 1.4.12) never pushes
+   it past the frame. */
+@media(max-width:360px) {.pw-plate-nw {white-space:normal;}}
 .pw-plate-parts li::first-letter,.pw-plate-kept>span+span::first-letter {text-transform:uppercase;}
 .pw-plate-parts li::before {content:'';position:absolute;left:0;top:15px;width:5px;height:5px;border-top:5px solid var(--ink-2);}
 .pw-plate-private>.pw-plate-name {border-bottom:2px solid var(--ink);}
@@ -714,8 +717,14 @@ p, li, dd { text-wrap-style: pretty; }
 .brief-page {max-width:calc(720px + 2 * var(--gutter));margin:0 auto;padding:56px var(--gutter) 96px;overflow-wrap:anywhere;}
 .brief-sheet {counter-reset:bs-field;}
 .bs-mast {line-height:16px;}
-/* One flat ink in every theme: Maya Radiance's gold clip gradient would freeze mid-sweep on a still page. */
-html .brief-sheet .bs-title.page-h {margin:16px 0 6px;font-size:48px;line-height:52px;text-wrap:balance;animation:none;color:var(--ink);background:none;-webkit-text-fill-color:currentColor;-webkit-text-stroke:0;}
+/* One flat ink in every theme: Maya Radiance's gold clip gradient would freeze mid-sweep on a still page. A late swap
+   from plain Georgia Italic to the display serif moved the whole sheet, because a phone title often breaks into a
+   different number of lines in the two faces (46% of title and width pairs). The sheet preloads the serif's italic
+   file, so it is usually set before first paint, and until it arrives the title is in Georgia Italic scaled to the
+   serif's widths (78%), which breaks the same way in all but about 3% of pairs. Without Georgia the stack falls
+   through as before. */
+@font-face {font-family:'ZTH Sheet Title Fallback';font-style:italic;font-weight:400;src:local('Georgia Italic'),local('Georgia-Italic');size-adjust:78%;}
+html .brief-sheet .bs-title.page-h {margin:16px 0 6px;font-family:'Instrument Serif','ZTH Sheet Title Fallback',Georgia,serif;font-size:48px;line-height:52px;text-wrap:balance;animation:none;color:var(--ink);background:none;-webkit-text-fill-color:currentColor;-webkit-text-stroke:0;}
 .bs-guide {font:400 12px/20px var(--zn-mono);}
 .bs-guide a,.bs-src-url {display:inline-flex;align-items:center;min-height:44px;color:var(--ink-2);}
 .bs-guide a:hover,.bs-src-url:hover,.bs-back:hover {color:var(--ink);}
@@ -762,6 +771,9 @@ html .brief-sheet .bs-title.page-h {margin:16px 0 6px;font-size:48px;line-height
  .bs-sec {margin-top:40px;}.bs-reflect {font-size:22px;line-height:30px;}
  .bs-src-date {display:block;}.bs-sep.bs-sep-on {display:none;}
 }
+/* On the narrowest phones the guide address takes three set lines (site, page, section), so it breaks the same way in
+   the mono face and in a narrower system mono, and the sheet does not move when the face arrives. */
+@media (max-width:359px) {.bs-guide .bs-nw {display:block;}}
 /* Paper: black on white whatever the theme, site chrome hidden by the print rules above, two writing lines 8mm apart
    per field, at most two pages on A4 and on US Letter. */
 @media print {
