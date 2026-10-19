@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-19T03:56:19.819386+00:00",
+  "measured_counts": {
+    "canonical_profiles": 479,
+    "raw_facts": 1375,
+    "new_profiles": 2,
+    "new_facts": 8,
+    "new_history_layers": 4,
+    "new_own_resources": 6,
+    "old_profiles_completely_preserved": 477,
+    "queue_tasks": 1812,
+    "other_queue_tasks_preserved": 1810,
+    "queue_by_status": {
+      "needs_review": 141,
+      "blocked": 6,
+      "pending": 1665
+    },
+    "author_successful_reads": 12,
+    "new_fact_verifier_responses": 7
+  },
+  "independent_source_reviews": {
+    "us-caddo-2026-10-19": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-19T03:48:48.776290+00:00",
+      "sha256": "9d654ae655d690a306dcc4e0be175f7929f760bf1cb98f5d9fe72ca2cdc76fb8",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "us-alabama-coushatta-2026-10-19": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-19T03:48:08.849847+00:00",
+      "sha256": "b721608a53c1070c84a48305b9cf7b6132c84c25b08e11a2e33de85805861cdb",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    }
+  },
+  "source_verification": {
+    "candidate_sha256": "3d489709a4033b56263482f9f12ecbce73154019283210999c0a57113e47d95d",
+    "audit_sha256": "76cd5cf0d65f3c3c188cb1bab35202f8595407b8909018bb58e64af4c3b354ce",
+    "report_sha256": "5ae42707dd3cd94aaf5020337e00b2937b618e60fec28dbc74cf256a0d199d69",
+    "captures_sha256": "710a4e605a519e2a57c8ada620720091a1f75cc73c5092bbed45fafdaf34a2d6",
+    "wrapper_sha256": "bfc36c56c7645ca58b3556557bf1765ef34526d0a0d64eb18a5f483743941c93",
+    "unchanged_refresher_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "actual_checked_utc_date": "2026-10-19",
+    "new_facts_verified": 8,
+    "fact_sources": 5,
+    "robots": 2,
+    "redirects_followed": false,
+    "automatic_retries": 0,
+    "public_capture_receipts": [
+      "research/receipts/2026-10-19-southern-verifier-capture-01.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-02.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-03.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-04.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-05.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-06.json",
+      "research/receipts/2026-10-19-southern-verifier-capture-07.json"
+    ],
+    "pacing": {
+      "recorded_at": "2026-10-19T14:02:32.813674+00:00",
+      "published_minimum_spacing_seconds": 3,
+      "implemented_monotonic_target_seconds": 10.6,
+      "minimum_recorded_utc_post_response_gap_seconds": 10.594455,
+      "all_recorded_utc_gaps_meet_target": false,
+      "published_policy_and_captured_robots_satisfied": true,
+      "qualification": "One recorded UTC gap is 0.005545 seconds below the extra conservative target. Clock cause is unknown; monotonic deltas were not captured. Exact receipts are retained, no rounding into compliance and no repeat fetch. Future wrappers should add padding and record monotonic deltas."
+    }
+  },
+  "changed_queue_tasks": [
+    "profile-us-fed-37693d43338c",
+    "profile-us-fed-9b4dd32a947e"
+  ],
+  "limits": "Coverage remains incomplete worldwide. Caddo government and historical bands/confederacies are distinct units; removal experiences were not universal. Alabama-Coushatta Texas is separate from Louisiana Coushatta and broader peoples. Contradictory migration dates remain unresolved. Institutional/legal dates are not origins. Restricted Caddo archive/media are not accessed or reproduced. No legal/service outcome, human review or Nation endorsement is claimed. Existing holds, overrides, clocks, blocked/reuse-review lanes and Paths examples remain unchanged. New layer/resource fact dependencies suppress affected readings when a source fact is held; the independently reviewed Alabama directory resource has no matching canonical fact and is not governed by a general URL-wide hold.",
+  "publication_state": "Reviewed integration; required release and live checks remain separate."
+}

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-17",
-  "count": 477,
-  "facts": 1367,
+  "generated": "2026-10-19",
+  "count": 479,
+  "facts": 1375,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 21,
@@ -16,8 +16,8 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 41,
-    "us-plains-midwest": 40,
+    "us-east-southeast": 42,
+    "us-plains-midwest": 41,
     "us-west-pacific": 29
   },
   "nations": [
@@ -26045,6 +26045,85 @@
       ]
     },
     {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "region": "us-east-southeast",
+      "name": "Alabama-Coushatta Tribe of Texas",
+      "also": [],
+      "pronounce": null,
+      "lands": "East Texas; the Tribe describes its reservation in the Big Thicket",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.alabama-coushatta.com/",
+      "name_source_url": "https://www.alabama-coushatta.com/",
+      "facts": [
+        {
+          "id": "alabama-coushatta-tribe-us-tx-eaa990af",
+          "text": "The Tribe's history timeline dates congressional restoration of its federal recognition to 1987. This is a legal-status milestone, not the beginning of the people.",
+          "kind": "history",
+          "as_of": "1987",
+          "source": {
+            "title": "Our History",
+            "publisher": "Alabama-Coushatta Tribe of Texas",
+            "url": "https://www.alabama-coushatta.com/about-us/our-history/",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "Restoration Act passes Congress and restores",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "alabama-coushatta-tribe-us-tx-3edd3bb3",
+          "text": "The Tribe's account of 1836 says members guided Sam Houston's army and supplied Texas refugees fleeing Santa Anna's army.",
+          "kind": "history",
+          "as_of": "1836",
+          "source": {
+            "title": "Our History",
+            "publisher": "Alabama-Coushatta Tribe of Texas",
+            "url": "https://www.alabama-coushatta.com/about-us/our-history/",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "served as guides for Houston’s army and provided provisions",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "alabama-coushatta-tribe-us-tx-d54bc2fd",
+          "text": "The Tribe describes an elected Tribal Council advised by its Chiefs. The profile concerns this Texas Tribal government, not every Alabama or Coushatta community.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Government",
+            "publisher": "Alabama-Coushatta Tribe of Texas",
+            "url": "https://www.alabama-coushatta.com/government/",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "Tribe of Texas is governed by an elected Tribal Council",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "alabama-coushatta-tribe-us-tx-be296ae5",
+          "text": "The Tribe's government page states that its elected Tribal Council members serve three-year terms.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Government",
+            "publisher": "Alabama-Coushatta Tribe of Texas",
+            "url": "https://www.alabama-coushatta.com/government/",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "which serve three year terms",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        }
+      ]
+    },
+    {
       "id": "apsaalooke-nation-us-mt",
       "region": "us-plains-midwest",
       "name": "Apsáalooke Nation",
@@ -28676,6 +28755,87 @@
           "status": "verified",
           "checked": "2026-10-17",
           "last_verified": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "caddo-nation-us-ok",
+      "region": "us-plains-midwest",
+      "name": "Caddo Nation of Oklahoma",
+      "also": [
+        "Caddo Nation"
+      ],
+      "pronounce": null,
+      "lands": "Oklahoma, with offices in Binger; the Nation describes ancestral homelands in present-day Oklahoma, Louisiana, Arkansas and Texas",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://mycaddonation.com/",
+      "name_source_url": "https://mycaddonation.com/historic-preservation",
+      "facts": [
+        {
+          "id": "caddo-nation-us-ok-4215cf76",
+          "text": "The Nation's history says a removal treaty signed on July 1, 1835 involved Caddo living in northwestern Louisiana under principal chief Tsauninot.",
+          "kind": "history",
+          "as_of": "1835",
+          "source": {
+            "title": "History",
+            "publisher": "Caddo Nation",
+            "url": "https://mycaddonation.com/history-1",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "removal treaty signed on July 1, 1835",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "caddo-nation-us-ok-07a1c138",
+          "text": "The Nation recounts that a Caddo group on Texas's lower Brazos reservation was evacuated in 1859 to avoid a massacre by Texas frontiersmen.",
+          "kind": "history",
+          "as_of": "1859",
+          "source": {
+            "title": "History",
+            "publisher": "Caddo Nation",
+            "url": "https://mycaddonation.com/history-1",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "emergency evacuated by the U.S. Indian Agent",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "caddo-nation-us-ok-88e4d861",
+          "text": "The Nation dates the beginning of its current language program to August 1, 2022. This institutional milestone does not date the start of Caddo language preservation.",
+          "kind": "history",
+          "as_of": "2022",
+          "source": {
+            "title": "Language Preservation",
+            "publisher": "Caddo Nation",
+            "url": "https://mycaddonation.com/language-preservation",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "Language Program began on August 1st, 2022",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
+        },
+        {
+          "id": "caddo-nation-us-ok-b81cb35c",
+          "text": "The Nation's Historic Preservation Department describes work in repatriation and consultation, and publishes separate procedures for Section 106 and NAGPRA requests.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Historic Preservation",
+            "publisher": "Caddo Nation",
+            "url": "https://mycaddonation.com/historic-preservation",
+            "accessed": "2026-10-19"
+          },
+          "evidence": "NAGPRA, Repatriation and Consultation efforts",
+          "status": "verified",
+          "checked": "2026-10-19",
+          "last_verified": "2026-10-19"
         }
       ]
     },

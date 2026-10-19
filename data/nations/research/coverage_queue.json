@@ -149,9 +149,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-alabama-coushatta-tribe-us-tx-2026-10-19"
       ],
       "review": {
         "identity": "pending",
@@ -167,9 +168,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.alabama-coushatta.com/",
+          "retrieved_at": "2026-10-19T03:43:04.560961+00:00",
+          "http_status": 200,
+          "sha256": "4d0b7734f9261181a117270392b759b0dae417111dee57a0b7ea640e1b7cb790",
+          "source_id": "own-alabama-coushatta-tribe-us-tx-2026-10-19",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-19-southern-nations-alabama-coushatta-home.json",
+          "receipt_id": "r-706f8cfa25c41e83"
+        }
+      ],
+      "updated_at": "2026-10-19T03:56:20.658791+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-19-southern-alabama-coushatta-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-238499c1321c",
@@ -897,9 +914,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-caddo-nation-us-ok-2026-10-19"
       ],
       "review": {
         "identity": "pending",
@@ -915,9 +933,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://mycaddonation.com/historic-preservation",
+          "retrieved_at": "2026-10-19T03:43:59.375461+00:00",
+          "http_status": 200,
+          "sha256": "2754f715deb51670aba3108b5b86fae9d77ca81cb71dfe500590325ec2718c49",
+          "source_id": "own-caddo-nation-us-ok-2026-10-19",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-19-southern-nations-caddo-preservation.json",
+          "receipt_id": "r-27b322f43df349b5"
+        }
+      ],
+      "updated_at": "2026-10-19T03:56:20.658791+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-19-southern-caddo-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-989372d07f81",

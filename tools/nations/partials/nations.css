@@ -418,7 +418,9 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .card .nm:hover { color: var(--ink-2); }
 .cards > .card:first-child { border-top: 0; }
 .ft-block .lbl { align-self: start; margin-top: 3px; }
-.credit-link { font: 400 13px/1.5 var(--zn-read); color: var(--ink-2); margin-left: 8px; }
+.credit-link { font: 400 13px/1.5 var(--zn-read); color: var(--ink-2); }
+.n-meta .credit-link { display: block; min-height: 44px; max-width: 100%; padding-block: 10px;
+  margin: 4px 0 0; overflow-wrap: anywhere; }
 .credit-link:hover { color: var(--ink); }
 html { scroll-padding-top: 88px; }
 .type-s { gap: 14px; padding: 22px 0; }

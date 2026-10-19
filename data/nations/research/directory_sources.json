@@ -1006,6 +1006,38 @@
       "status": "source_located",
       "note": "Candidate own host from the saved BIA directory. First robots request returned403; no content, identity or reuse approval. No bypass or alternate host authorized.",
       "access_status": "blocked_http_403"
+    },
+    {
+      "source_id": "own-caddo-nation-us-ok-2026-10-19",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://mycaddonation.com/",
+      "allowed_hosts": [
+        "mycaddonation.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-19",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS source scope. Specific captured pages passed separate source-meaning, identity and respect review. No blanket reuse permission or off-host redirects authorized."
+    },
+    {
+      "source_id": "own-alabama-coushatta-tribe-us-tx-2026-10-19",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.alabama-coushatta.com/",
+      "allowed_hosts": [
+        "www.alabama-coushatta.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-19",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS source scope. Specific captured pages passed separate source-meaning, identity and respect review. No blanket reuse permission or off-host redirects authorized."
     }
   ]
 }

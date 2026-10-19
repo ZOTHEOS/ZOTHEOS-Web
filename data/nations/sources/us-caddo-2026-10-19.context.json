@@ -1,0 +1,106 @@
+{
+  "reviewed": "2026-10-19",
+  "public_notes": [
+    {
+      "nation": "caddo-nation-us-ok",
+      "reading_id": "removal-and-rebuilding-in-the-nations-account",
+      "title": "Removal And Rebuilding In The Nation’s Account",
+      "text": "The Nation describes Caddo communities across what are now Louisiana, Texas, Arkansas and Oklahoma. Its account traces multiple forced removals, not one journey shared identically by everyone. It distinguishes a treaty signed by northwestern Louisiana Caddo in 1835 from the evacuation of another group from Texas in 1859. The Kadohadacho, Natchitoches and Hasinai confederacies later consolidated geographically. Allotment brought further land losses. The account also emphasizes twentieth-century rebuilding and a continuing Caddo identity. This government profile does not replace the histories of every constituent band.",
+      "source_urls": [
+        "https://mycaddonation.com/history-1"
+      ],
+      "fact_ids": [
+        "caddo-nation-us-ok-07a1c138",
+        "caddo-nation-us-ok-4215cf76"
+      ]
+    },
+    {
+      "nation": "caddo-nation-us-ok",
+      "reading_id": "language-continuity-and-heritage-protection",
+      "title": "Language Continuity And Heritage Protection",
+      "text": "The Nation dates its current language program to August 1, 2022, while describing decades of community preservation work. Its account connects classes and archival work to that longer effort and distinguishes Caddo from related Caddoan languages and Nations. The linked archive is offered to Caddo citizens and descendants; this profile supplies no lessons, recordings or archive access. The Historic Preservation Department separately describes consultation and repatriation responsibilities. These institutions support continuity. Linking them does not promise that every project is stopped, every item returned or language loss reversed.",
+      "source_urls": [
+        "https://mycaddonation.com/language-preservation",
+        "https://mycaddonation.com/historic-preservation"
+      ],
+      "fact_ids": [
+        "caddo-nation-us-ok-88e4d861",
+        "caddo-nation-us-ok-b81cb35c"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "caddo-nation-us-ok",
+      "url": "https://mycaddonation.com/history-1",
+      "label": "Caddo Nation: Its Own History",
+      "purpose": "Read the Nation's account of distinct removal experiences, allotment and continuing Caddo identity.",
+      "fact_ids": [
+        "caddo-nation-us-ok-07a1c138",
+        "caddo-nation-us-ok-4215cf76"
+      ]
+    },
+    {
+      "nation": "caddo-nation-us-ok",
+      "url": "https://mycaddonation.com/language-preservation",
+      "label": "Caddo Nation: Language Program",
+      "purpose": "Read the program's public account and participation information. Archive materials remain with the Nation; no access or permission to reproduce them is supplied.",
+      "fact_ids": [
+        "caddo-nation-us-ok-88e4d861"
+      ]
+    },
+    {
+      "nation": "caddo-nation-us-ok",
+      "url": "https://mycaddonation.com/historic-preservation",
+      "label": "Caddo Nation: Heritage Consultation And Repatriation",
+      "purpose": "Visit the Nation’s own procedures for Section 106 and NAGPRA requests. No forms are submitted and no protected site or burial details are reproduced.",
+      "fact_ids": [
+        "caddo-nation-us-ok-b81cb35c"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-19T03:48:48.776290+00:00",
+      "sha256": "9d654ae655d690a306dcc4e0be175f7929f760bf1cb98f5d9fe72ca2cdc76fb8",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "sources": [
+      {
+        "url": "https://mycaddonation.com/historic-preservation",
+        "final_url": "https://mycaddonation.com/historic-preservation",
+        "retrieved_at": "2026-10-19T03:43:59.375461+00:00",
+        "http_status": 200,
+        "sha256": "2754f715deb51670aba3108b5b86fae9d77ca81cb71dfe500590325ec2718c49",
+        "body_bytes": 232073,
+        "receipt": "research/receipts/2026-10-19-southern-nations-caddo-preservation.json"
+      },
+      {
+        "url": "https://mycaddonation.com/history-1",
+        "final_url": "https://mycaddonation.com/history-1",
+        "retrieved_at": "2026-10-19T03:43:23.105421+00:00",
+        "http_status": 200,
+        "sha256": "1c5fa801896da5238b48bff99a8f80603062ebb93f41235d1c4ee8df6d67737f",
+        "body_bytes": 235558,
+        "receipt": "research/receipts/2026-10-19-southern-nations-caddo-history.json"
+      },
+      {
+        "url": "https://mycaddonation.com/language-preservation",
+        "final_url": "https://mycaddonation.com/language-preservation",
+        "retrieved_at": "2026-10-19T03:43:34.058960+00:00",
+        "http_status": 200,
+        "sha256": "0a840e029b3aad00493b3d76c5084b909988842af47c8ac1b48a3c139e82b0b9",
+        "body_bytes": 272524,
+        "receipt": "research/receipts/2026-10-19-southern-nations-caddo-language.json"
+      }
+    ]
+  }
+}

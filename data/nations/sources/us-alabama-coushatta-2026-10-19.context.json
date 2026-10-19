@@ -1,0 +1,104 @@
+{
+  "reviewed": "2026-10-19",
+  "public_notes": [
+    {
+      "nation": "alabama-coushatta-tribe-us-tx",
+      "reading_id": "a-texas-history-and-restoration",
+      "title": "A Texas History And Restoration",
+      "text": "The Tribe traces Alabama and Coushatta ancestors to neighbouring areas in what is now Alabama, followed by movement into East Texas. Its account places members alongside Sam Houston's army in 1836 as guides and providers for refugees. Its timeline records federal recognition being restored in 1987. Restoration marks a change in legal status; it does not date the people's origins. This is the Tribe's own account of its history. The source gives inconsistent migration dating, so no exact migration year is asserted here.",
+      "source_urls": [
+        "https://www.alabama-coushatta.com/about-us/our-history/"
+      ],
+      "fact_ids": [
+        "alabama-coushatta-tribe-us-tx-3edd3bb3",
+        "alabama-coushatta-tribe-us-tx-eaa990af"
+      ]
+    },
+    {
+      "nation": "alabama-coushatta-tribe-us-tx",
+      "reading_id": "living-government-and-community-services",
+      "title": "Living Government And Community Services",
+      "text": "Today's Tribe describes an elected Council with three-year terms and advisory Chiefs. Its government page also links its Constitution and By Laws, allowing readers to begin with the Tribe's own institutional account. The public services directory lists education, cultural programmes, environmental work and a health clinic alongside other departments. Those listings show where the Tribe directs enquiries, not proof of eligibility, available funding or service outcomes. This profile follows the Alabama-Coushatta Tribe of Texas as a distinct government; it does not substitute for the Coushatta Tribe of Louisiana or every Alabama and Coushatta community.",
+      "source_urls": [
+        "https://www.alabama-coushatta.com/government/",
+        "https://www.alabama-coushatta.com/directory/"
+      ],
+      "fact_ids": [
+        "alabama-coushatta-tribe-us-tx-be296ae5",
+        "alabama-coushatta-tribe-us-tx-d54bc2fd"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "alabama-coushatta-tribe-us-tx",
+      "url": "https://www.alabama-coushatta.com/about-us/our-history/",
+      "label": "Alabama-Coushatta: The Tribe Tells Its History",
+      "purpose": "Read the Tribe's account of its ancestors, Texas history and the 1987 restoration milestone. The page's differing migration dates are not silently resolved.",
+      "fact_ids": [
+        "alabama-coushatta-tribe-us-tx-3edd3bb3",
+        "alabama-coushatta-tribe-us-tx-eaa990af"
+      ]
+    },
+    {
+      "nation": "alabama-coushatta-tribe-us-tx",
+      "url": "https://www.alabama-coushatta.com/government/",
+      "label": "Alabama-Coushatta: Government And Constitution",
+      "purpose": "Begin with the Tribe's public description of Council and Chiefs, and its own link to its Constitution and By Laws. No current officeholder list is reproduced.",
+      "fact_ids": [
+        "alabama-coushatta-tribe-us-tx-be296ae5",
+        "alabama-coushatta-tribe-us-tx-d54bc2fd"
+      ]
+    },
+    {
+      "nation": "alabama-coushatta-tribe-us-tx",
+      "url": "https://www.alabama-coushatta.com/directory/",
+      "label": "Alabama-Coushatta: Tribal Services Directory",
+      "purpose": "Find the Tribe-published department directory. Eligibility, availability and suitable contact routes must be checked directly with the Tribe; no form is submitted here."
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-19T03:48:08.849847+00:00",
+      "sha256": "b721608a53c1070c84a48305b9cf7b6132c84c25b08e11a2e33de85805861cdb",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "sources": [
+      {
+        "url": "https://www.alabama-coushatta.com/about-us/our-history/",
+        "final_url": "https://www.alabama-coushatta.com/about-us/our-history/",
+        "retrieved_at": "2026-10-19T03:43:38.998877+00:00",
+        "http_status": 200,
+        "sha256": "c0ca712a7079ab3025df22e06a9f22d0d9cdc4ff848badefe57f6b6c046208a6",
+        "body_bytes": 9473,
+        "receipt": "research/receipts/2026-10-19-southern-nations-alabama-coushatta-history.json"
+      },
+      {
+        "url": "https://www.alabama-coushatta.com/directory/",
+        "final_url": "https://www.alabama-coushatta.com/directory/",
+        "retrieved_at": "2026-10-19T03:44:21.978344+00:00",
+        "http_status": 200,
+        "sha256": "907d6023fbdff4b2c7c952643c7648a76ca2732a15babb659a299ab72af18b77",
+        "body_bytes": 18025,
+        "receipt": "research/receipts/2026-10-19-southern-nations-alabama-coushatta-directory.json"
+      },
+      {
+        "url": "https://www.alabama-coushatta.com/government/",
+        "final_url": "https://www.alabama-coushatta.com/government/",
+        "retrieved_at": "2026-10-19T03:43:50.174052+00:00",
+        "http_status": 200,
+        "sha256": "cc93637b65c8a13f21eadbb06c0707a85f3f6d2a89642810865fba325b6df8bc",
+        "body_bytes": 11124,
+        "receipt": "research/receipts/2026-10-19-southern-nations-alabama-coushatta-government.json"
+      }
+    ]
+  }
+}
