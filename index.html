@@ -499,6 +499,13 @@
         rgba(0, 0, 0, 0.55) 100%);
     }
 
+    /* The lifted-black law for the colour themes too: the owner's display lifts near-black, so a broad page gradient,
+       its glow layers and a grain overlay read as a wide glow and speckle. Maya Radiance, Living Codex and Obsidian Ember
+       stand on one flat ground, the same ground their Nations pages use; the rules above stay as the themes' record. */
+    [data-theme] body { background: var(--bg-floor); }
+    html[data-theme="codex"], [data-theme="codex"] body { background: var(--bg-deep); }
+    [data-theme] :is(.grain, .vignette, .aurora, .hero-mist) { display: none; }
+
     .greca-divider {
       position: relative;
       z-index: 2;
