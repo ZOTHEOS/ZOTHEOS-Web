@@ -56,8 +56,10 @@ SHEET = NAV + [("Paths To Action", "/nations/paths-to-action", "paths-to-action"
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
           "form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'")
+# index.html is listed for its doors block (tools/landing_doors.py, Living Gallery): the homepage doors count the Nations
+# and Theater records, so this build rewrites them; csp_sync.py keeps the page's policy exactly as it already does.
 GENERATED = ["theater.html", "nations.html", "nations", "static/nations", "static/fonts", "tools/fonts.sha256",
-             "tools/nations/partials/fonts-names.css", "vercel.json", "sitemap.xml"]
+             "tools/nations/partials/fonts-names.css", "vercel.json", "sitemap.xml", "index.html"]
 FONTS_FONTS_URL = "/static/fonts/instrument-serif-latin.woff2"
 # herald.js: the spec estimated 12 KB and budgeted 16 KB; ring, walk, search with the emitted fold, card validation and
 # the ring list come to about 26 KB unminified, so the gate holds it at 28 KB (reported as a deviation).
@@ -153,7 +155,7 @@ class Builder:
         if self.model.errors:
             raise BuildError("data: " + "; ".join(self.model.errors))
         self.m = self.model
-        collisions = {n["id"] for n in self.m.nations} & {key for key, _ in SUPPORT}
+        collisions = {n["id"] for n in self.m.nations} & ({key for key, _ in SUPPORT} | {"brief"})
         if collisions:
             raise BuildError("nation ids collide with support pages: " + ", ".join(sorted(collisions)))
         self.brand = L.BrandCover(root)
@@ -624,7 +626,15 @@ class Builder:
         return {
             "paths-to-action": self.pathways(), "about": self.about(), "sources": self.sources(), "resources": self.resources(), "directory": self.directory_page(), "coverage": self.coverage_page(),
             "credits": self.credits(), "verification": self.verification(), "for-nations": self.for_nations(),
-            "changes": self.changes_page()}
+            "changes": self.changes_page(), **self.brief_sheets()}
+
+    def brief_sheets(self):
+        """Living Gallery piece 3: one printable sheet per public pathway at /nations/brief/<chapter id>, its brief line
+        for line, through the standard page frame (same header, footer and two inline scripts)."""
+        return {f"brief/{cid}": self.page(None, f"/nations/brief/{cid}", f"{title} Brief Sheet | Indigenous nations today",
+                                          f"The {title} pathway brief as a printable sheet: blank fields to fill offline, "
+                                          "what to verify and dated sources.", body)
+                for cid, title, body in P.brief_sheets(self.root, self.m)}
 
     def sp(self, key, body, description):
         title = dict(SUPPORT)[key] + " | Indigenous nations today"
@@ -1106,6 +1116,7 @@ class Builder:
         text = rd(sp)
         text = re.sub(r"\n  <!-- nations:start -->.*?<!-- nations:end -->", "", text, flags=re.S)
         locs = ["/nations"] + [f"/nations/{k}" for k, _ in SUPPORT] + \
+               ["/" + k[:-len(".html")] for k in pages if k.startswith("nations/brief/")] + \
                [f"/nations/region/{r['key']}" for r in self.m.regions] + \
                [f"/nations/in/{c.lower()}" for c in sorted(self.m.by_country)] + \
                [f"/nations/{n['id']}" for n in sorted(self.m.nations, key=lambda n: n["id"])]
@@ -1311,6 +1322,10 @@ def main(argv=None):
             code, out = run(tmp, "tools/theater_build.py", "--root", tmp)
             if code != 0:
                 raise BuildError("theater_build.py failed:\n" + out)
+        if os.path.isfile(os.path.join(tmp, "tools", "landing_doors.py")):
+            code, out = run(tmp, "tools/landing_doors.py", "--root", tmp)
+            if code != 0:
+                raise BuildError("landing_doors.py failed:\n" + out)
         code, out = run(tmp, "tools/csp_sync.py")
         if code != 0:
             raise BuildError("csp_sync.py failed:\n" + out)

@@ -47,6 +47,7 @@ jobs:
           if [ -f theater.html ]; then git add theater.html; fi
           if [ -d game/data ] || [ -n "$(git ls-files game/data)" ]; then git add -A game/data; fi
           git add -A data/nations nations nations.html static/nations static/fonts tools/fonts.sha256 tools/nations/partials/fonts-names.css vercel.json sitemap.xml
+          git add index.html   # the homepage doors, rewritten by nations_build.py when a count changes
           if git diff --cached --quiet; then echo "No change this week"; exit 0; fi
           git commit -m "nations: weekly check $d" -m "$(python tools/nations_report_summary.py data/nations/tools/refresh_report.json)"
           git push -u origin "$b"
