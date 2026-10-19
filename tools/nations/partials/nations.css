@@ -671,6 +671,30 @@ p, li, dd { text-wrap-style: pretty; }
 @media(max-width:760px) {.pw-chapter-download {width:100%;justify-content:center;text-align:center;}.pw-download-note {text-align:center;}}
 @media print {.pw-chapter-download,.pw-download-note {display:none!important;}}
 
+/* Living Gallery piece 2: Something You Can Prepare, drawn as a plate (tools/zth_art.py plate()). Original ZOTHEOS art
+   in CSS borders only, so it prints and follows every theme: solid lines of 1 or 2px, no fill, gradient, shadow, filter,
+   opacity, animation or transition. Words come from the deliverable, checked by nations_pathways.plate(). Ink only;
+   the accent stays with selection marks. Few lines on purpose: on a lifted display every line token turns white, so the
+   plate keeps one frame and one rule under its name (2px ink over a privacy rule) and sets its rows apart by space,
+   and the result block loses its tint and frame so frames never nest. The name is in the reading sans (the display
+   serif's thin hyphen reads as a dash). Parts are marked with a 5px square, never a bar (a bar reads as a dash). */
+.pw-result.pw-with-plate {margin-top:40px;padding:0;background:none;border:0;}
+.pw-plate {position:relative;max-width:560px;margin-top:14px;padding:20px 24px 12px;border:1px solid var(--ink-3);color:var(--ink);}
+.pw-plate-name {padding-bottom:14px;border-bottom:1px solid var(--rule);font:500 20px/28px var(--zn-read);color:var(--ink);text-wrap:balance;}
+.pw-plate-parts {padding-top:6px;}
+.pw-plate-parts li {position:relative;min-height:36px;padding:8px 0 8px 28px;font:400 15px/20px var(--zn-read);color:var(--ink);}
+.pw-plate-nw {white-space:nowrap;}
+.pw-plate-parts li::first-letter,.pw-plate-kept>span+span::first-letter {text-transform:uppercase;}
+.pw-plate-parts li::before {content:'';position:absolute;left:0;top:15px;width:5px;height:5px;border-top:5px solid var(--ink-2);}
+.pw-plate-private>.pw-plate-name {border-bottom:2px solid var(--ink);}
+.pw-plate-kept {padding:12px 0 8px;}
+.pw-plate-kept>span {display:block;}
+.pw-plate-kept>span:first-child {font:var(--fw-label) var(--fs-label)/16px var(--zn-mono);letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--ink-3);}
+.pw-plate-kept>span+span {margin-top:6px;font:400 15px/22px var(--zn-read);color:var(--ink);}
+.pw-result>.pw-plate-caption {max-width:560px;margin-top:14px;font-size:15px;line-height:26px;color:var(--ink-2);text-wrap:pretty;}
+@media(max-width:760px) {.pw-plate {padding:20px 16px 12px;}.pw-plate-name {font-size:19px;line-height:26px;}}
+@media print {.pw-plate {--ink:#000000;--ink-2:#000000;--ink-3:#000000;--rule:#8C8C8C;}}
+
 /* Local routes keep a long pathway open while bringing its practical work and evidence within reach. */
 .pw-shortcuts {display:flex;flex-wrap:wrap;gap:8px 12px;margin:24px 0 28px;padding:16px 0;border-block:1px solid var(--rule);}
 .pw-shortcuts a {display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 14px;border:1px solid var(--rule);border-radius:24px;font-size:13px;line-height:1.6;color:var(--ink-2);overflow-wrap:anywhere;}

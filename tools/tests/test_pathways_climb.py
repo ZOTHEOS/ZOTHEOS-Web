@@ -32,7 +32,8 @@ def load_module():
 
 @pytest.fixture(params=[False, True], ids=['plain', 'stepped'])
 def climb(request, tmp_path, monkeypatch):
-    monkeypatch.setattr(zth_art, 'ART_STEPS', request.param)
+    # The module nations_pathways imports, whichever copy another test file left in sys.modules.
+    monkeypatch.setattr(importlib.import_module('zth_art'), 'ART_STEPS', request.param)
     data, model = fixture_catalogue(), fixture_model()
     path = tmp_path / 'data/nations/pathways.json'
     path.parent.mkdir(parents=True)

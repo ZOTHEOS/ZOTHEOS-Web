@@ -21,6 +21,8 @@ ART_STEPS = False
 
 ORIGIN = 'zotheos-original'
 CREDIT = 'Original project geometry by ZOTHEOS. It has no traditional or ceremonial meaning.'
+# The label over a plate's privacy rule (pathway 06). 'Kept Out' repeated the phrase it introduced.
+PRIVACY_LABEL = 'Privacy Rule'
 CLIMB_STEPS = 4
 
 
@@ -82,3 +84,26 @@ def here(position, total, steps=None):
         raise ValueError('zth_art: chapter position out of range')
     marks = ''.join('<i class="on"></i>' if i == position else '<i></i>' for i in range(1, total + 1))
     return _open('span', 'pw-here', steps) + marks + '</span>'
+
+
+# ----------------------------------------------------------------------------------------- piece 2: the shared plate
+def whole(words):
+    """Plate words with each hyphenated compound kept on one line ('land-and-water', 'decision-maker'), so a narrow
+    screen breaks between words, never inside a compound (nations_pathways caps a compound at 28 letters)."""
+    return ' '.join('<span class="pw-plate-nw">' + escape(w) + '</span>' if '-' in w else escape(w) for w in words.split(' '))
+
+
+def plate(value, steps=None):
+    """Something You Can Prepare, drawn as a sheet a person could picture holding: its name and its parts, in the
+    deliverable's own words (nations_pathways.load() has already checked every word against the sentence). It is
+    aria-hidden because the exact deliverable sentence follows it as plain text: screen readers hear the words once.
+    A plate with a privacy rule shows its name and that rule only, never part rows. One implementation for the guide
+    and the printable sheets."""
+    private = ' pw-plate-private' if value.get('kept_out') else ''
+    out = [_open('div', 'pw-plate' + private, steps, ' aria-hidden="true"'), '<p class="pw-plate-name">' + whole(value['name']) + '</p>']
+    if value['parts']:
+        out.append('<ul class="pw-plate-parts">' + ''.join('<li>' + whole(part) + '</li>' for part in value['parts']) + '</ul>')
+    if value.get('kept_out'):
+        out.append('<p class="pw-plate-kept"><span>' + escape(PRIVACY_LABEL) + '</span><span>' + escape(value['kept_out']) + '</span></p>')
+    out.append('</div>')
+    return ''.join(out)

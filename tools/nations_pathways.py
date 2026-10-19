@@ -22,6 +22,10 @@ LANE_NOTES = {'website-now': 'Start on this website today.', 'reader-controlled'
               'future-app': 'A design proposal, not a released service.'}
 if list(LANE_NOTES) != list(SCOPES):
     raise ValueError('pathways: every step scope needs one lane note, in the same order')
+# Living Gallery piece 2: a chapter's optional plate draws its deliverable in the deliverable's own words.
+PLATE_KEYS = {'name', 'parts', 'kept_out'}
+# The note under a download beside a plate: the file is a blank planning aid, not the finished thing the plate draws.
+DOWNLOAD_NOTE = 'Plain text. Blank fields to help you prepare it. Fill offline in a place you control.'
 
 def text(value, limit=2000):
     if not isinstance(value, str) or not value.strip() or len(value) > limit or any(ord(c) < 32 and c not in '\n\t' for c in value):
@@ -61,6 +65,28 @@ def strings(value, minimum=1, maximum=12):
     for item in array(value,minimum,maximum): text(item)
     return value
 
+def plate(value, deliverable):
+    """A plate draws the deliverable as a sheet. Every word on it is copied from the deliverable sentence: the name, then
+    each part, then any kept-out phrase, each found as whole words, with the same case, in the sentence's order. A plate
+    that keeps information out lists no parts (pathway 06 shows its privacy rule and nothing more). Fails closed."""
+    if not isinstance(value,dict) or not {'name','parts'}<=set(value)<=PLATE_KEYS:raise ValueError('pathways: invalid plate fields')
+    parts=strings(value['parts'],0,8)
+    words=[value['name'],*parts]+([value['kept_out']] if 'kept_out' in value else [])
+    for word in words:
+        text(word,180)
+        if word!=' '.join(word.split()):raise ValueError('pathways: plate words need single spaces and no padding')
+        # A hyphenated compound stays on one line on the plate; 28 letters still fits a 320 px screen.
+        if any('-' in w and len(w)>28 for w in word.split(' ')):raise ValueError('pathways: a hyphenated plate word exceeds 28 characters')
+    if 'kept_out' in value and parts:raise ValueError('pathways: a plate that keeps information out lists no parts')
+    if 'kept_out' not in value and not 2<=len(parts)<=8:raise ValueError('pathways: a plate needs 2 to 8 parts')
+    if len(set(words))!=len(words):raise ValueError('pathways: duplicate plate words')
+    position=0
+    for word in words:
+        found=re.compile(r"(?<![\w'’-])"+re.escape(word)+r"(?![\w'’-])").search(deliverable,position)
+        if not found:raise ValueError('pathways: plate words must be copied from the deliverable, whole and in order')
+        position=found.end()
+    return value
+
 def load(root, model):
     path=Path(root)/'data/nations/pathways.json'
     if path.stat().st_size>128*1024: raise ValueError('pathways: catalogue exceeds128KiB')
@@ -95,6 +121,7 @@ def load(root, model):
         seen.add(cid)
         text(item.get('title'),180);text(item.get('intro'))
         text(item.get('deliverable'));text(item.get('reflection'));strings(item.get('verify'),1,8)
+        if 'plate' in item:plate(item['plate'],item['deliverable'])
         required=set(references(item.get('source_ids')))
         for step in array(item.get('steps'),1,8):
             if not isinstance(step,dict) or not isinstance(step.get('scope'),str) or step['scope'] not in SCOPES:raise ValueError('pathways: invalid step scope')
@@ -183,7 +210,10 @@ def render(root, model):
         for step in c['steps']:
             out+=['<article class="pw-step pw-'+e(step['scope'],quote=True)+'"><p class="pw-scope">'+A.lane_mark(step['scope'])+SCOPES[step['scope']]+'</p>',
                   '<h3>'+e(step['title'])+'</h3><p>'+e(step['text'])+'</p></article>']
-        out+=['</div><div class="pw-result"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3><p>'+e(c['deliverable'])+'</p><a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">Plain text. One pathway. Fill offline in a place you control.</span></div>',
+        # The plate (original art, aria-hidden) draws the deliverable; the exact sentence follows it as its caption.
+        made=(A.plate(c['plate'])+'<p class="pw-plate-caption">'+e(c['deliverable'])+'</p>') if 'plate' in c else '<p>'+e(c['deliverable'])+'</p>'
+        note=DOWNLOAD_NOTE if 'plate' in c else 'Plain text. One pathway. Fill offline in a place you control.'
+        out+=['</div><div class="pw-result'+(' pw-with-plate' if 'plate' in c else '')+'"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3>'+made+'<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">'+note+'</span></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']

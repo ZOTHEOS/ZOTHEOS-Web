@@ -127,6 +127,7 @@
         "Keep sensitive places and restricted knowledge out of a public brief. A website summary cannot give consent, settle title or predict a court outcome."
       ],
       "deliverable": "A source-linked land-and-water brief with one requested decision, its decision-maker, evidence gaps and a verified next date.",
+      "plate": {"name": "A source-linked land-and-water brief", "parts": ["one requested decision", "its decision-maker", "evidence gaps", "a verified next date"]},
       "reflection": "Who will hold authority, access and responsibility after the proposed agreement, and who gets to say no?",
       "source_ids": [
         "un-declaration",
@@ -189,6 +190,7 @@
         "Check current election and participation requirements. This guide is nonpartisan public information, not campaign or legal representation."
       ],
       "deliverable": "A decision map connecting one issue to the institution that can act, the participation route, a verified date and a public accountability question.",
+      "plate": {"name": "A decision map", "parts": ["one issue", "the institution that can act", "the participation route", "a verified date", "a public accountability question"]},
       "reflection": "Would a person at the table have a meaningful say, resources and accountability to the people affected?",
       "source_ids": [
         "native-voting",
@@ -248,6 +250,7 @@
         "Preserve original files and record corrections. Historical rolls, ancestry research and a search result do not determine present-day citizenship or membership."
       ],
       "deliverable": "An evidence ledger that separates sourced statements, interpretations, disputed accounts and unanswered questions.",
+      "plate": {"name": "An evidence ledger", "parts": ["sourced statements", "interpretations", "disputed accounts", "unanswered questions"]},
       "reflection": "Could someone with a different view inspect the same evidence and see where your conclusion comes from?",
       "source_ids": [
         "treaty-records"
@@ -309,6 +312,7 @@
         "Keep speaker expertise central and compensate work appropriately. A fluent-sounding model output may still be wrong."
       ],
       "deliverable": "A community-approved learning plan describing the audience, permitted materials, speaker review and access rules.",
+      "plate": {"name": "A community-approved learning plan", "parts": ["the audience", "permitted materials", "speaker review", "access rules"]},
       "reflection": "Will this project strengthen speakers and learners while leaving the community in control of its knowledge?",
       "source_ids": [
         "language-planning",
@@ -371,6 +375,7 @@
         "This guide has no upload or submission form. Keep the downloaded planning brief in a location you choose; do not put private records into it for publication."
       ],
       "deliverable": "A data-use agreement checklist with decision authority, purpose, access, retention, permitted reuse and an exit plan.",
+      "plate": {"name": "A data-use agreement checklist", "parts": ["decision authority", "purpose", "access", "retention", "permitted reuse", "an exit plan"]},
       "reflection": "Can the people whose knowledge or records are involved understand the use, change the rules and stop it?",
       "source_ids": [
         "care",
@@ -413,6 +418,7 @@
         "A family’s dignity includes control over its story. Obtain appropriate authority before sharing any record or account involving a child."
       ],
       "deliverable": "A private question list and document index for a qualified adviser, with verified dates and identifying information kept out of public material.",
+      "plate": {"name": "A private question list and document index for a qualified adviser", "parts": [], "kept_out": "identifying information kept out of public material"},
       "reflection": "Does the next step protect the child’s safety, relationships, privacy and the community’s lawful role?",
       "source_ids": [
         "families"
@@ -454,6 +460,7 @@
         "Ask who owns the result and carries the risk. A project should build community capacity rather than transfer control through unclear terms."
       ],
       "deliverable": "A project brief with a checked budget, responsibilities, ongoing costs, provider questions and an honest list of missing information.",
+      "plate": {"name": "A project brief", "parts": ["a checked budget", "responsibilities", "ongoing costs", "provider questions", "an honest list of missing information"]},
       "reflection": "Will the benefits, skills and decision-making stay with the people the project is meant to serve?",
       "source_ids": [
         "native-economies"
@@ -516,6 +523,7 @@
         "Sources have limits and can change. When an account is disputed, attribute it and show what evidence remains unresolved."
       ],
       "deliverable": "A learning plan with one question, direct source links, viewing notes, an explanation of uncertainty and a correction route.",
+      "plate": {"name": "A learning plan", "parts": ["one question", "direct source links", "viewing notes", "an explanation of uncertainty", "a correction route"]},
       "reflection": "Will the audience leave better able to check a claim and recognize the people behind it?",
       "source_ids": [
         "language-planning",
@@ -579,6 +587,7 @@
         "Check translation and local terminology with people qualified to interpret them. Recognition categories do not exhaust the world’s Indigenous identities."
       ],
       "deliverable": "A jurisdiction-and-process map with the community’s chosen objective, applicable sources, adviser questions and a verified next step.",
+      "plate": {"name": "A jurisdiction-and-process map", "parts": ["the community’s chosen objective", "applicable sources", "adviser questions", "a verified next step"]},
       "reflection": "What needs to change in this place, and whose knowledge and authority are needed to decide how?",
       "source_ids": [
         "un-declaration",
@@ -624,6 +633,7 @@
         "For allies and institutions: ask what support is wanted, resource the work fairly and accept refusal. The guide is not a mandate to initiate a project in someone else’s name."
       ],
       "deliverable": "A community-directed commitment record: requested change, authorized decision-maker, resources, evidence, review date and a way to correct or stop.",
+      "plate": {"name": "A community-directed commitment record", "parts": ["requested change", "authorized decision-maker", "resources", "evidence", "review date", "a way to correct or stop"]},
       "reflection": "If the people affected said this did not help, could the project change course and return control?",
       "source_ids": [
         "care",
