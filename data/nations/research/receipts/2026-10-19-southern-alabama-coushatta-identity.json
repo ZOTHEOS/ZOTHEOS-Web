@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit source-backed directory identity review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-19T03:56:19.819386+00:00",
+  "directory_id": "us-fed-9b4dd32a947e",
+  "registry_id": "alabama-coushatta-tribe-us-tx",
+  "own_published_name": "Alabama-Coushatta Tribe of Texas",
+  "official_url": "https://www.alabama-coushatta.com/",
+  "directory_source": {
+    "publisher": "Bureau of Indian Affairs, Federal Register",
+    "title": "Indian Entities Recognized by and Eligible To Receive Services From the United States Bureau of Indian Affairs",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "publication_date": "2026-01-30",
+    "retrieved_at": "2026-10-12T07:37:12.787522+00:00",
+    "sha256": "616e96f6288cc0bbcdfb947042b1402de8f8bc5e5e90bf49d6c84acdc9458dfa",
+    "structured_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml",
+    "sha256_source_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml"
+  },
+  "url": "https://www.alabama-coushatta.com/",
+  "final_url": "https://www.alabama-coushatta.com/",
+  "retrieved_at": "2026-10-19T03:43:04.560961+00:00",
+  "http_status": 200,
+  "sha256": "4d0b7734f9261181a117270392b759b0dae417111dee57a0b7ea640e1b7cb790",
+  "own_source_receipt": "research/receipts/2026-10-19-southern-nations-alabama-coushatta-home.json",
+  "evidence_phrase": "Alabama-Coushatta Tribe of Texas",
+  "review": {
+    "evidence": "All 477 prior IDs, names, aliases and official/name/fact-source hosts were checked in a pinned separate automated identity review. The present governing body remains distinct from broader historical peoples and other governments. This crosswalk does not adjudicate title, recognition or Indigenous identity."
+  },
+  "independent_review_sha256": "b721608a53c1070c84a48305b9cf7b6132c84c25b08e11a2e33de85805861cdb",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

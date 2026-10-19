@@ -1,0 +1,47 @@
+{
+  "region": "us-east-southeast",
+  "checked": "2026-10-19",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-19T03:48:08.849847+00:00",
+    "sha256": "b721608a53c1070c84a48305b9cf7b6132c84c25b08e11a2e33de85805861cdb",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+  },
+  "results": [
+    {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The retained history timeline places the Restoration Act under 1987 and says Congress restored federal recognition. The proposed fact attributes that account and explicitly distinguishes restoration from the origin of the people; it does not supply independent statutory interpretation, a current legal remedy or a claim of initial Indigenous existence."
+    },
+    {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The history text's 1836 passage expressly says Tribal members guided Houston's army and provided provisions for Texas refugees fleeing Santa Anna's army. The source and proposed fact describe that historical assistance; no present political allegiance or universal view of all Alabama/Coushatta people is inferred."
+    },
+    {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The captured Government introduction describes an elected Tribal Council advised by Chiefs. The public wording keeps that institutional statement narrow and expressly limits the profile to the Texas government, without reproducing the contemporary officeholder roster."
+    },
+    {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The same Government introduction expressly states three-year terms. The fact attributes the institutional description to the Tribe's page; it does not infer exact election dates, current term validity or an independently interpreted constitution."
+    }
+  ],
+  "names": [
+    {
+      "id": "alabama-coushatta-tribe-us-tx",
+      "verdict": "keep",
+      "note": "The own homepage title, branding and footer identify Alabama-Coushatta Tribe of Texas, and the captured BIA directory row OBJECTID499 associates that exact governmental name with this HTTPS host. The 477-profile baseline has no exact ID/name/alias or official/name/fact-host collision. This is the Texas Tribal government, not Coushatta Tribe of Louisiana, all Alabama/Koasati peoples, or a shared-language category. East Texas and Big Thicket geography is supported by the homepage and history text without reproducing acreage, implying ownership boundaries or extending present jurisdiction. The canonical us-east-southeast region is an editorial browsing category, not a territorial finding. No endonym or pronunciation is invented."
+    }
+  ]
+}

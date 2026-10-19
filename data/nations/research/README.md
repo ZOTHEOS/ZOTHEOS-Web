@@ -559,3 +559,31 @@ redirect, alternate host or bypass followed. Its task is blocked with a dated re
 backoff. Only these two queue tasks changed. The directory preserves source editions and the other
 rows. Coverage remains incomplete. Source record: batches/2026-10-17-ponca-and-source-boundaries.json.
 Publication and live checks remain separate from research review.
+
+## October 19 UTC: Southern Nations And Living Continuity
+
+Two missing governments, Caddo Nation of Oklahoma and Alabama-Coushatta Tribe of Texas, gain
+own-source profiles with eight facts, four layered histories and six direct resources. Separate
+automated cross-reviews check meaning, identity, rights and source budgets. Unchanged isolated
+compiler/validator and actual bounded verification check only the new facts. Twelve author
+reads and seven verifier responses carry actual UTC times and hashes. Public receipts omit
+publisher bodies, raw headers/cookies and local capture paths; no human or Nation approval is claimed.
+
+Caddo removal experiences remain distinct; language archives are subject to the Nation's access
+conditions. Alabama-Coushatta migration dating remains unresolved rather than guessed. Its 1987
+restoration is a dated legal-status milestone, not a people's origin. Tribal service listings do
+not establish current eligibility or outcomes. The two governments do not stand for all related
+peoples or communities. Source editions, earlier holds, overrides, clocks and all other queue tasks
+remain unchanged; existing access/reuse blocks are not retried. Fact-bound new context layers and
+resource links inherit later canonical holds; the separately reviewed Alabama services directory
+has no matching canonical fact and remains subject to explicit resource/Nation removal rather
+than a general URL-wide hold. Required publication and live checks remain separate.
+
+Source record: batches/2026-10-19-southern-nations-and-continuity.json. Coverage remains incomplete.
+
+Minimum recorded verifier spacing was 10.594455 seconds, meeting the published three-second
+source policy and the captured robots rules but falling 0.005545 seconds below the wrapper's
+extra 10.6-second target. Monotonic elapsed deltas were not captured, so the clock cause remains
+unknown. The exact receipts and qualified independent audit are retained; the result is not
+rounded into compliance and no unnecessary repeat fetch is made. Future wrappers should add
+padding and record monotonic deltas alongside UTC timestamps.

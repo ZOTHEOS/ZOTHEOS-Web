@@ -18,28 +18,34 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
-The registry contains 477 researched profiles and 1,367 raw facts. Publication controls retain the two
-existing holds. The October 17 batch adds one distinct government profile, Ponca Tribe of Indians
-of Oklahoma, with four own-source facts, two readable history layers and three own-resource links.
-It remains separate from the existing Ponca Tribe of Nebraska profile. All 476 earlier canonical
-profile objects, metadata and fact clocks are unchanged.
+The registry contains 479 researched profiles and 1,375 raw facts. The two existing publication
+holds remain. The October 19 UTC batch adds Caddo Nation of Oklahoma and Alabama-Coushatta Tribe
+of Texas as distinct government profiles, with eight own-source facts, four readable history
+layers and six own-resource links. All 477 earlier canonical objects and fact clocks are unchanged.
 
-The Ponca account explains self-governance and preservation institutions, dated 1999 and 2016 by
-the Tribe. These dates do not mark the people's origins or first recognition. Earlier homeland and
-displacement history remains an explicit gap because relevant source paths prohibit automated
-access. Wichita's first robots request returned 403; no content was inferred, retried or bypassed.
-Its queue task retains an actual failure receipt and the canonical one-day retry delay.
+Caddo's account distinguishes different removal experiences and connects language preservation
+and heritage work to a longer community history. Its citizens/descendants archive remains with
+the Nation; lessons, recordings and protected knowledge are not copied. Alabama-Coushatta's own
+account explains Texas history, restored federal recognition and government institutions. Its
+conflicting migration dates remain disclosed. Neither a legal nor institutional milestone marks
+the beginning of a people, and the Texas government does not replace Louisiana Coushatta.
 
-The directory preserves 2,272 overlapping source records, not a count of distinct Nations. One
-federal-source row gains an explicitly reviewed profile link. Coverage remains incomplete worldwide.
-Source reads and new-fact checks use their actual October 17 UTC dates, separate from event dates.
+The directory retains 2,272 overlapping source records, not a count of distinct Nations. Two
+federal-source rows gain explicitly reviewed profile links; source editions and other rows remain.
+Coverage is incomplete worldwide. Twelve author reads and seven isolated verifier responses use
+their actual October 19 UTC dates. Event dates and older canonical check dates remain separate.
+Earlier blocked-source and reuse-review lanes retain their restrictions and backoff.
+
+New history layers and their fact-sourced resource cards carry canonical fact dependencies, so
+later holds also hide affected readings. The independently reviewed Alabama services directory
+resource has no matching canonical fact; this is not a general URL-wide hold system.
+Pronunciation source citations remain exact native links with clearer separate-line spacing and
+larger tap targets. No pronunciation is invented or altered.
 
 Paths To Action retains ten chapters, nine framework sources, seven hypothetical practical examples,
-an offline shared brief and ten focused chapter briefs. Native links keep reading open and reach
-preparation, examples and sources without new forms or collection of planning answers.
-
-David Garcia builds and maintains ZOTHEOS as a one-person independent project. Publisher copy stays
-singular or neutral. Nations' own names, evidence, film credits and quotations retain their meaning.
+an offline shared brief and ten focused chapter briefs. David Garcia builds and maintains ZOTHEOS
+as a one-person independent project; publisher copy stays singular or neutral. Source evidence,
+Nations' names, film credits and quotations retain their meaning.
 
 ## October 16: Distinct Chickahominy Profiles And Native Reading Links
 
