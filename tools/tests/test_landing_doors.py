@@ -173,9 +173,11 @@ def test_every_decade_slot_between_the_first_and_last_is_drawn_and_none_is_guess
     axis = [s.text() for s in by_class(rail, 'ws-rail-axis')[0].kids]
     assert axis == [f'{lo}s', f'{hi}s']
     keys = [k.text() for k in by_class(rail, 'ws-rail-key')]
-    # Plain parallel keys; screen readers hear the decade range, which the axis shows only to the eye.
-    assert keys[0] == f'{sum(data["decades"].values())} Year given, from the {lo}s to the {hi}s'
-    assert keys[1] == f'{data["undated"]} No year given'
+    # Plain parallel keys that name the record's date field, not the statements (a statement may give a year the
+    # record has not dated yet); screen readers hear the decade range, which the axis shows only to the eye.
+    assert keys[0] == f'{sum(data["decades"].values())} Dated in the record, from the {lo}s to the {hi}s'
+    assert keys[1] == f'{data["undated"]} No date recorded yet'
+    assert 'year given' not in ' '.join(keys).lower()
 
 
 def test_paths_number_word_and_method_follow_the_guide(hub, data):
@@ -279,7 +281,7 @@ def test_render_follows_the_data_not_a_typed_number(data):
     out = LD.render(d, False)
     assert 'Nine practical pathways' in out and '9 pathways. Each includes' in out
     assert '1 profile in 1 region so far.' in out
-    assert 'ws-rail-undated' not in out and 'No year given' not in out
+    assert 'ws-rail-undated' not in out and 'No date recorded yet' not in out
     out = LD.render(dict(data, chapters=1, lanes=data['lanes'][:1]), True)
     assert 'One practical pathway through' in out and '1 pathway. It includes' in out and 'It also has one' in out
     assert A.CREDIT in out
@@ -322,3 +324,70 @@ def test_the_section_reserves_its_measured_height_in_each_band(page):
     anchor jumps land where they should. Each value must be at least the doors' own height there."""
     values = [int(v) for v in re.findall(r'#explore-zotheos \{ --cis: (\d+)px; \}', page)]
     assert len(values) == 3 and values[0] < values[1] < values[2] and values[0] > 1300
+
+
+# ---------------------------------------------------------------------------------------------- round 1 review fixes
+def door_css(page):
+    return re.sub(r'/\*.*?\*/', '', '\n'.join(re.findall(r'<style[^>]*>(.*?)</style>', page, re.S)), flags=re.S)
+
+
+RAIL_PARTS = ('ws-rail-dated', 'ws-rail-undated', 'ws-rail-sep', 'ws-rail-axis', 'ws-rail-key', 'ws-climb-l')
+
+
+def door_rules(page):
+    return [(sel.strip(), body) for sel, body in re.findall(r'([^{}]+)\{([^{}]*)\}', door_css(page))
+            if re.search(r'\.(%s)(?![\w-])' % '|'.join(DOOR_CLASSES + RAIL_PARTS), sel)]
+
+
+def specificity(sel):
+    """(ids, classes + attributes + pseudo-classes, elements) of one selector; :not() counts its argument."""
+    s = re.sub(r'::[\w-]+', ' ', sel)
+    ids = len(re.findall(r'#[\w-]+', s))
+    cls = len(re.findall(r'\.[\w-]+|\[[^\]]*\]|:(?!not\()[\w-]+', s))
+    els = len(re.findall(r'(?:^|[\s>+~(])([a-z][\w-]*)', s))
+    return ids, cls, els
+
+
+def test_rail_gaps_keep_one_clear_device_pixel_at_every_display_scale(page):
+    """Review V1: at a 125% display scale a 1px gap is 1.25 device pixels; painted at a half-pixel offset it filled
+    in, and on the owner's lifted display neighbouring squares fused into bars. Every gap in the rail, and the gap
+    between the lowest squares and the baseline, is 2px (2.5 device pixels, so always one uncovered pixel); the
+    undated block's width follows the same gap, and the container steps follow the wider rail."""
+    css = door_css(page)
+    assert '.ws-rail-dated {display:grid;grid-auto-flow:column;grid-auto-columns:var(--u);column-gap:2px;' in css
+    assert '.ws-rail-dated b {display:flex;flex-direction:column-reverse;gap:2px;padding-bottom:2px;}' in css
+    assert '.ws-rail-undated {display:flex;flex-wrap:wrap-reverse;gap:2px;margin-bottom:3px;}' in css
+    assert '--bw:calc(8 * var(--u) + 14px)' in css
+    for sel, body in door_rules(page):
+        if '.ws-rail' in sel:
+            assert not re.search(r'(?:^|;)\s*(?:column-|row-)?gap\s*:\s*1px', body), sel
+    # Each --u step leaves room for 47u + 131px: an 8px lead, 39 decades of u plus 2px, the 33px rule and 8u + 14px.
+    steps = [int(w) for w, u in re.findall(r'@container \(min-width:(\d+)px\) \{\.ws-rail \{--u:(\d)px;', css)]
+    assert steps == [47 * u + 131 for u in (3, 4, 5)]
+
+
+def test_each_door_shows_one_focus_ring_in_every_theme(page):
+    """Review V2: the door draws the ring, so the link inside draws none, in Sovereign Skeleton too, whose link ring
+    (html:not([data-theme]) a:focus-visible) outranked the old suppression."""
+    css = door_css(page)
+    assert '.ws-door:has(.ws-action:focus-visible) {outline:2px solid var(--ink);outline-offset:4px;}' in css
+    sup = '#explore-zotheos .ws-action:focus-visible'
+    assert sup + ' {outline:0;}' in css
+    rings = [part.strip() for sel, body in re.findall(r'([^{}]+)\{([^{}]*)\}', css) if 'outline' in body
+             for part in sel.split(',') if re.search(r'(?:^|[\s>])a:focus-visible$', part.strip())]
+    assert 'html:not([data-theme]) a:focus-visible' in rings
+    assert all(specificity(r) < specificity(sup) for r in rings), rings
+
+
+def test_door_labels_keep_the_label_floor_and_their_contrast(page):
+    """Review V5 and V6: no door text below the 11px label floor at any width, and the two small ink-3 labels that
+    measured under 4.5:1 from pixels on Living Codex paper are stronger: the Climb numerals take the guide's weight
+    500, the rail's axis years take ink-2."""
+    sizes = []
+    for sel, body in door_rules(page):
+        sizes += [float(v) for v in
+                  re.findall(r'(?:^|;)\s*font(?:-size)?\s*:\s*(?:\d00\s+)?(?:clamp\()?(\d+(?:\.\d+)?)px', body)]
+    assert sizes and min(sizes) >= 11, sorted(sizes)
+    css = door_css(page)
+    assert '.ws-climb li::before {content:"0" counter(c);display:block;font-weight:500;}' in css
+    assert re.search(r'\.ws-rail-axis \{[^}]*color:var\(--ink-2\)', css)

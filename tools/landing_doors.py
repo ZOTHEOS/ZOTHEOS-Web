@@ -160,18 +160,21 @@ def nations_figure(d, A):
 
 
 def history_figure(d, A):
-    """One square per published history fact, stacked in the decade its statement gives; a dotted lead run before the
-    first decade (earlier, not to scale), and the facts with no year kept apart, never guessed into a decade."""
+    """One square per published history fact, stacked in the decade of the date the record holds for it (its as_of
+    field, the date its Nation page prints as "As of <year>"); a dotted lead run before the first decade (earlier, not
+    to scale), and the facts with no recorded date kept apart, never guessed into a decade. The keys name the field,
+    not the statements: a statement may give a year the record has not dated yet, and its square stays apart."""
     dec, nd = d['decades'], d['undated']
     if not dec:
         raise DoorsError('no dated history fact: the Histories rail has nothing to draw')
     lo, hi = min(dec), max(dec)
     cols = ''.join('<b>' + '<i></i>' * dec.get(y, 0) + '</b>' for y in range(lo, hi + 10, 10))
     undated = (f'<span class="ws-rail-sep"></span><span class="ws-rail-undated">{"<i></i>" * nd}</span>') if nd else ''
-    key_undated = f'<span class="ws-rail-key ws-rail-key-undated"><span class="n">{nd}</span> No year given</span>' if nd else ''
+    key_undated = (f'<span class="ws-rail-key ws-rail-key-undated"><span class="n">{nd}</span> No date recorded yet</span>'
+                   if nd else '')
     marks = (f'<div class="ws-rail"><span class="ws-rail-lead"></span><span class="ws-rail-dated">{cols}</span>{undated}'
              f'<span class="ws-rail-axis" aria-hidden="true"><span>{lo}s</span><span>{hi}s</span></span>'
-             f'<span class="ws-rail-key ws-rail-key-dated"><span class="n">{sum(dec.values())}</span> Year given'
+             f'<span class="ws-rail-key ws-rail-key-dated"><span class="n">{sum(dec.values())}</span> Dated in the record'
              f'<span class="sr-only">, from the {lo}s to the {hi}s</span></span>{key_undated}</div>')
     hf, hn = d['history_facts'], d['history_nations']
     caption = (f'{fmt(hf)} published historical {plural(hf, "fact", "facts")} across {fmt(hn)} '
