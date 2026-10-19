@@ -552,9 +552,49 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-lede { max-width:72ch; margin-top:16px; color:var(--ink-2); font-size:18px; line-height:1.75; text-wrap:pretty; }
 .pw-entry,.pw-links { display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px; margin-top:28px; }
 .pw-entry a,.pw-links a,.pw-back { display:inline-flex; align-items:center; min-height:48px; }
-.pw-route { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:40px; padding:20px 0; border-block:1px solid var(--rule); counter-reset:route; }
-.pw-route li { counter-increment:route; font:500 12px/1.6 var(--zn-mono); color:var(--ink-2); }
+/* Living Gallery piece 1: the Climb and the three lanes (tools/zth_art.py). Original ZOTHEOS project geometry, not a
+   traditional design. Every shape is a flat border in a theme token on whole pixels, so it prints and follows all four
+   themes; no gradient, shadow, filter, opacity, animation or transition, so Living, Calm, Still and reduced motion show
+   one frame. The plain Climb: a 2px rule over steps 01 to 03, and over 04 only a tick at each end of its column, a slot
+   left open. The key shares the Climb's column grid. Meaning is shape, never tone alone (the owner's display lifts every
+   line token to white): lanes are solid, double or dotted, and their marks a square, an L or four open corners, none a
+   closed box, so none reads as a checkbox. Each meaning-carrying line is 2px or more, so it survives 125% and 150%
+   display scales; the double is 2px, a 2px gap, 2px (a 3px double collapses to one bar at 1.25). */
+.pw-climb { --g:16px; margin-top:40px; }
+.pw-route,.pw-lanes dl { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); }
+.pw-route { counter-reset:route; }
+.pw-route li { position:relative; counter-increment:route; padding:16px var(--g) 0 0; font:500 12px/1.6 var(--zn-mono); color:var(--ink-2); }
 .pw-route li::before { content:'0' counter(route); display:block; color:var(--ink-3); margin-bottom:8px; }
+.zth-plain .pw-route li::after { content:''; position:absolute; top:0; left:0; right:var(--g); border-top:2px solid var(--ink); }
+.zth-plain .pw-route li:last-child::after { height:8px; border-top:0; border-inline:2px solid var(--ink); }
+.pw-climb figcaption { margin-top:16px; max-width:72ch; font-size:13px; line-height:1.7; color:var(--ink-2); }
+.pw-lanes { --g:16px; margin-top:30px; }
+.pw-lanes dl { gap:18px 0; margin-top:14px; }
+.pw-lanes dl>div { margin-right:var(--g); }
+.pw-lanes dt,.pw-scope { display:flex; align-items:center; gap:10px; font:500 10px/1.6 var(--zn-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); }
+.pw-lanes dd { margin-top:6px; font-size:14px; line-height:1.7; color:var(--ink-2); }
+.pw-step,.pw-lanes dl>div { --pw-pad:22px; padding-left:var(--pw-pad); }
+.pw-lanes dl>div { --pw-pad:16px; }
+.pw-step.pw-website-now,.pw-lanes .pw-website-now { border-left:2px solid var(--ink-3); }
+.pw-step.pw-reader-controlled,.pw-lanes .pw-reader-controlled { border-left:6px double var(--ink-3); padding-left:calc(var(--pw-pad) - 4px); }
+.pw-step.pw-future-app,.pw-lanes .pw-future-app { border-left:2px dotted var(--ink-3); }
+.pw-lane { position:relative; display:block; flex:none; width:12px; height:12px; }
+.pw-website-now .pw-lane { border:6px solid var(--ink); }
+.pw-reader-controlled .pw-lane { border-left:2px solid var(--ink); border-bottom:2px solid var(--ink); }
+.pw-lane i { position:absolute; inset:0; }
+.pw-future-app .pw-lane::before,.pw-future-app .pw-lane::after,.pw-lane i::before,.pw-lane i::after { content:''; position:absolute; width:4px; height:4px; border:0 solid var(--ink); }
+.pw-future-app .pw-lane::before { left:0; top:0; border-width:2px 0 0 2px; }
+.pw-future-app .pw-lane::after { right:0; bottom:0; border-width:0 2px 2px 0; }
+.pw-lane i::before { right:0; top:0; border-width:2px 2px 0 0; }
+.pw-lane i::after { left:0; bottom:0; border-width:0 0 2px 2px; }
+.pw-practice .pw-scope { flex-wrap:wrap; row-gap:0; }
+/* You are here: one equal square per public chapter, the current one filled with the selection accent inside an ink rim
+   (Obsidian Ember's crimson never stands alone). Equal on purpose: no pathway ranks above another. */
+.pw-eyebrow { flex-wrap:wrap; }
+.pw-here { display:flex; gap:4px; margin-left:auto; }
+.pw-here i { display:block; width:8px; height:8px; border:1px solid var(--ink-3); }
+.pw-here i.on { border-color:var(--ink); }
+.pw-here i.on::before { content:''; display:block; border:3px solid var(--cochineal); }
 .pw-capabilities { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; padding:0 0 48px; border-bottom:1px solid var(--rule); }
 .pw-capability p:not(.eyebrow) { margin-top:14px; color:var(--ink-2); font-size:15px; line-height:1.8; }
 .pw-layout { display:grid; grid-template-columns:240px minmax(0,1fr); gap:64px; margin-top:56px; scroll-margin-top:112px; align-items:start; }
@@ -571,12 +611,8 @@ p, li, dd { text-wrap-style: pretty; }
 .pw-chapter h2:focus { outline:2px solid var(--ink); outline-offset:8px; }
 .pw-intro { font-size:18px; line-height:1.8; color:var(--ink-2); }
 .pw-steps { margin-top:32px; display:grid; gap:28px; }
-.pw-step { border-left:2px solid var(--rule); padding-left:22px; }
-.pw-scope { font:500 10px/1.6 var(--zn-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); }
 .pw-step h3,.pw-verify h3,.pw-sources h3,.pw-example h3 { font:500 18px/1.5 var(--zn-read); margin:8px 0 10px; }
 .pw-step>p:last-child,.pw-verify li,.pw-example-fact>p:first-child { color:var(--ink-2); line-height:1.85; }
-.pw-reader-controlled { border-left-color:var(--ink-2); }
-.pw-future-app { border-left-style:dashed; }
 .pw-result { padding:24px; margin-top:32px; background:color-mix(in srgb,var(--ink) 4%,var(--page-bg)); border:1px solid var(--rule); }
 .pw-result>p:not(.eyebrow) { margin-top:12px; line-height:1.8; }
 .pw-verify { margin-top:28px; }
@@ -602,9 +638,11 @@ p, li, dd { text-wrap-style: pretty; }
  .pw-lede,.pw-intro { font-size:17px; }.pw-capabilities { grid-template-columns:1fr; gap:24px; }
  .pw-layout { grid-template-columns:minmax(0,1fr); gap:44px; margin-top:36px; }.pw-index { position:static; max-height:none; overflow:visible; scrollbar-gutter:auto; padding:0; margin:0; }
  .pw-index ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 18px; }
- .pw-index a { min-height:56px; }.pw-next { margin-left:0; }.pw-route { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .pw-index a { min-height:56px; }.pw-next { margin-left:0; }
  .pw-entry { gap:12px; }.pw-entry a { width:100%; }.pw-chapter { margin-bottom:40px; padding-bottom:40px; }
- .pw-step { padding-left:16px; }.pw-result,.pw-example { padding:20px; }.pw-links { gap:12px; }
+ .pw-step { --pw-pad:16px; }.pw-result,.pw-example { padding:20px; }.pw-links { gap:12px; }
+ .pw-climb { --g:10px; margin-top:32px; }.pw-route li { font-size:11px; }
+ .pw-lanes { margin-top:26px; }.pw-lanes dl { grid-template-columns:minmax(0,1fr); gap:14px; }
 }
 @media(max-width:370px) { .pw-index ol { grid-template-columns:minmax(0,1fr); } }
 @media print {

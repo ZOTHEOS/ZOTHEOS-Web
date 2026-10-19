@@ -6,8 +6,22 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
+import zth_art as A
+
 ID = re.compile(r'[a-z][a-z0-9]*(?:-[a-z0-9]+)*')
 SCOPES = {'website-now': 'Website Now', 'reader-controlled': 'Work You Control', 'future-app': 'Proposed App Workflow'}
+# Living Gallery piece 1 (tools/zth_art.py). One source for the guide's method: the Climb, the homepage door and the tests.
+METHOD = ('Choose A Need', 'Check The Evidence', 'Prepare A Concrete Ask', 'Decide And Review')
+METHOD_LABEL = 'From Reading To A Decision'
+# The plain Climb leaves its fourth slot open between two ticks; only the stepped variant draws an open riser.
+CLIMB_CAPTIONS = {False: 'The last step is left open. The decision stays with the people it affects.',
+                  True: 'The last step is drawn open. The decision stays with the people it affects.'}
+LANES_TITLE = 'How Each Step Is Marked'
+# Each note defines its lane in one line and repeats neither the lane's name nor the capabilities section below it.
+LANE_NOTES = {'website-now': 'Start on this website today.', 'reader-controlled': 'Done by you, in a place you control.',
+              'future-app': 'A design proposal, not a released service.'}
+if list(LANE_NOTES) != list(SCOPES):
+    raise ValueError('pathways: every step scope needs one lane note, in the same order')
 
 def text(value, limit=2000):
     if not isinstance(value, str) or not value.strip() or len(value) > limit or any(ord(c) < 32 and c not in '\n\t' for c in value):
@@ -120,6 +134,15 @@ def visible_examples(chapter, model):
     return result
 
 
+def lane_key():
+    """The key to the three lanes, under the Climb and on its column grid. Each row is drawn as a step is drawn (its
+    left rule and its mark), so it teaches both codes at once."""
+    rows=''.join('<div class="pw-'+escape(key,quote=True)+'"><dt>'+A.lane_mark(key)+escape(name)+'</dt><dd>'+escape(LANE_NOTES[key])+'</dd></div>'
+                 for key,name in SCOPES.items())
+    return ('<div class="pw-lanes" role="group" aria-labelledby="pw-lanes-title"><p class="eyebrow" id="pw-lanes-title">'
+            +escape(LANES_TITLE)+'</p><dl>'+rows+'</dl></div>')
+
+
 def render(root, model):
     data,chapters,sources=load(root,model);e=escape
     cases={c['id']:visible_examples(c,model) for c in chapters}
@@ -128,7 +151,7 @@ def render(root, model):
     out.extend('<p class="pw-lede">'+e(p)+'</p>' for p in data['intro'])
     out+=['<div class="pw-entry"><a class="pill" href="#pw-chapters">Choose A Starting Point ↓</a>',
           '<a class="txt-link" id="pw-brief" href="/static/nations/action-brief.txt" download>Download The Action Brief ↗</a></div>',
-          '<ol class="pw-route" aria-label="From Reading To A Decision"><li>Choose A Need</li><li>Check The Evidence</li><li>Prepare A Concrete Ask</li><li>Decide And Review</li></ol></header>',
+          A.climb(METHOD,METHOD_LABEL,CLIMB_CAPTIONS[A.stepped()])+lane_key()+'</header>',
           '<section class="pw-capabilities" aria-label="What Is Available And What Is Proposed">']
     for key,title in [('now','Available On This Website'),('limits','Clear Boundaries'),('future','App Workflows Are Proposed')]:
         out.append('<div class="pw-capability"><p class="eyebrow">'+e(title)+'</p>')
@@ -147,7 +170,8 @@ def render(root, model):
     for number,c in enumerate(chapters,1):
         target='pw-'+c['id']
         out+=['<section class="pw-chapter" aria-labelledby="'+e(target,quote=True)+'">',
-              '<p class="eyebrow">Pathway '+str(number).zfill(2)+'</p><h2 id="'+e(target,quote=True)+'" tabindex="-1">'+e(c['title'])+'</h2>',
+              '<p class="eyebrow pw-eyebrow">Pathway '+str(number).zfill(2)+'<span class="sr-only"> of '+str(len(chapters))+'</span>'+A.here(number,len(chapters))+'</p>'
+              '<h2 id="'+e(target,quote=True)+'" tabindex="-1">'+e(c['title'])+'</h2>',
               '<p class="pw-intro">'+e(c['intro'])+'</p>']
         out.append('<div class="pw-shortcuts" role="group" aria-label="'+e('In This Pathway: '+c['title'],quote=True)+'">')
         routes=[('pw-prepare-'+c['id'],'Prepare A Brief')]
@@ -157,7 +181,7 @@ def render(root, model):
             out.append('<a href="#'+e(anchor,quote=True)+'" aria-label="'+e(label+' For '+c['title'],quote=True)+'">'+e(label)+'</a>')
         out.append('</div><div class="pw-steps">')
         for step in c['steps']:
-            out+=['<article class="pw-step pw-'+e(step['scope'],quote=True)+'"><p class="pw-scope">'+SCOPES[step['scope']]+'</p>',
+            out+=['<article class="pw-step pw-'+e(step['scope'],quote=True)+'"><p class="pw-scope">'+A.lane_mark(step['scope'])+SCOPES[step['scope']]+'</p>',
                   '<h3>'+e(step['title'])+'</h3><p>'+e(step['text'])+'</p></article>']
         out+=['</div><div class="pw-result"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3><p>'+e(c['deliverable'])+'</p><a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">Plain text. One pathway. Fill offline in a place you control.</span></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
@@ -176,7 +200,7 @@ def render(root, model):
                 out.append('<article class="pw-example-fact"><p>'+e(fact['text'])+'</p><p class="pw-receipt">'+receipt+'</p></article>')
             if 'practice' in example:
                 practice=example['practice']
-                out+=['<section class="pw-practice" aria-label="Hypothetical Planning Exercise"><p class="pw-scope">Hypothetical Planning Exercise · Work You Control</p><h4>Try This With The Evidence</h4>',
+                out+=['<section class="pw-practice" aria-label="Hypothetical Planning Exercise"><p class="pw-scope pw-reader-controlled">Hypothetical Planning Exercise · '+A.lane_mark('reader-controlled')+'Work You Control</p><h4>Try This With The Evidence</h4>',
                       '<p class="pw-question">'+e(practice['question'])+'</p><ol>']
                 out.extend('<li>'+e(step)+'</li>' for step in practice['steps'])
                 out+=['</ol><p class="pw-boundary"><strong>What This Does Not Establish</strong> '+e(practice['boundary'])+'</p>',
