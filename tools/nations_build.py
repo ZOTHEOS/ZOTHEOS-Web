@@ -56,8 +56,10 @@ SHEET = NAV + [("Paths To Action", "/nations/paths-to-action", "paths-to-action"
 POLICY = ("default-src 'none'; base-uri 'none'; object-src 'none'; script-src {scripts}; script-src-attr 'none'; "
           "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src {connect}; "
           "form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'")
+# index.html is listed for its doors block (tools/landing_doors.py, Living Gallery): the homepage doors count the Nations
+# and Theater records, so this build rewrites them; csp_sync.py keeps the page's policy exactly as it already does.
 GENERATED = ["theater.html", "nations.html", "nations", "static/nations", "static/fonts", "tools/fonts.sha256",
-             "tools/nations/partials/fonts-names.css", "vercel.json", "sitemap.xml"]
+             "tools/nations/partials/fonts-names.css", "vercel.json", "sitemap.xml", "index.html"]
 FONTS_FONTS_URL = "/static/fonts/instrument-serif-latin.woff2"
 # herald.js: the spec estimated 12 KB and budgeted 16 KB; ring, walk, search with the emitted fold, card validation and
 # the ring list come to about 26 KB unminified, so the gate holds it at 28 KB (reported as a deviation).
@@ -1320,6 +1322,10 @@ def main(argv=None):
             code, out = run(tmp, "tools/theater_build.py", "--root", tmp)
             if code != 0:
                 raise BuildError("theater_build.py failed:\n" + out)
+        if os.path.isfile(os.path.join(tmp, "tools", "landing_doors.py")):
+            code, out = run(tmp, "tools/landing_doors.py", "--root", tmp)
+            if code != 0:
+                raise BuildError("landing_doors.py failed:\n" + out)
         code, out = run(tmp, "tools/csp_sync.py")
         if code != 0:
             raise BuildError("csp_sync.py failed:\n" + out)

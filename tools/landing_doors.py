@@ -4,7 +4,7 @@
 Writes the five doors between <!-- zth:doors:start --> and <!-- zth:doors:end --> in index.html. Every number on a door
 is computed here, in one run, with the loaders the Nations, Paths To Action and Theater builds use, so holds, hidden
 Nations and held facts are left out exactly as they are on the pages each door opens onto. No number is typed into the
-page. When a Codex data batch changes a count, the test suite fails with the one-line fix.
+page.
 
     py -3.10 tools/landing_doors.py            rewrite the block in index.html
     py -3.10 tools/landing_doors.py --check    exit 1 when index.html is out of date (the suite runs this)
@@ -13,6 +13,11 @@ page. When a Codex data batch changes a count, the test suite fails with the one
 The art switch is tools/zth_art.py ART_STEPS (plain until the owner's Roots decision). The doors add no script and load
 nothing, so the page's script hashes and policies do not move. The Theater door keeps its class ws-theater, so the
 Theater chapter's pictogram stays where that chapter puts it.
+
+The builders keep the doors current, so a Nations or Theater data change rewrites them in the same run:
+tools/theater_build.py calls sync() after it writes theater.html (and checks it under --check), and
+tools/nations_build.py runs this tool in its scratch build and lists index.html among its outputs, so its --check
+fails on stale doors too. The weekly nations-refresh workflow stages index.html with the other outputs.
 """
 import argparse
 import html
@@ -42,7 +47,7 @@ def e(value):
     return html.escape(str(value), quote=True)
 
 
-class DoorsError(Exception):
+class DoorsError(ValueError):
     pass
 
 
@@ -229,6 +234,27 @@ def install(page):
     if len(OLD_GRID.findall(page)) != 1:
         raise DoorsError('the old explore grid was not found exactly once; install by hand')
     return OLD_GRID.sub(lambda _: START + END, page, count=1)
+
+
+def sync(root, page=None, check=False):
+    """Write (or with check=True, verify) the doors block in <root>/index.html from <root>'s data. Returns 'written',
+    'current' or 'skipped' (a root with no index.html or no doors markers, such as a builder's test fixture). Raises
+    DoorsError when the data cannot be drawn or, with check=True, when the page is out of date."""
+    target = page or os.path.join(root, 'index.html')
+    if not os.path.isfile(target):
+        return 'skipped'
+    with open(target, encoding='utf-8', newline='') as f:
+        text = f.read()
+    if START not in text and END not in text:
+        return 'skipped'
+    out = apply(text, render(gather(root)))
+    if out == text:
+        return 'current'
+    if check:
+        raise DoorsError('the homepage doors in index.html are out of date; run py -3.10 tools/landing_doors.py')
+    with open(target, 'w', encoding='utf-8', newline='') as f:
+        f.write(out)
+    return 'written'
 
 
 def main(argv=None):

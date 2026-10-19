@@ -568,6 +568,13 @@ def main():
         else:
             output.write_text(body, encoding='utf-8', newline='\n')
         print(f"Theater: {len(data['films'])} cited titles; " + ('output current' if args.check else 'rendered'))
+        # The homepage Theater door counts these records by viewing type (tools/landing_doors.py, Living Gallery):
+        # rewrite it in the same run, or under --check fail when it is stale. A root without the homepage is skipped.
+        if (SOURCE / 'tools/landing_doors.py').is_file():
+            import landing_doors
+            state = landing_doors.sync(str(args.root), check=args.check)
+            if state != 'skipped':
+                print('Theater: homepage doors ' + state)
     except (ValueError, KeyError, TypeError, OSError) as exc:
         print('Theater: ' + str(exc), file=sys.stderr)
         return 1

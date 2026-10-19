@@ -1,7 +1,8 @@
 """Doors (Living Gallery, Batch 1, piece 4): the homepage explore section draws only computed truth, in a static,
 safe shape. The committed page is read as built and checked against the pages each door opens onto; fictional values
-exercise the generator. When a Codex data batch changes a count, test_check_passes_on_the_built_page fails with the
-one-line fix: py -3.10 tools/landing_doors.py
+exercise the generator. nations_build.py and theater_build.py rewrite the doors whenever a count changes; if the
+page is ever edited around them, test_check_passes_on_the_built_page fails with the one-line fix:
+py -3.10 tools/landing_doors.py
 """
 import json
 import os
@@ -391,3 +392,64 @@ def test_door_labels_keep_the_label_floor_and_their_contrast(page):
     css = door_css(page)
     assert '.ws-climb li::before {content:"0" counter(c);display:block;font-weight:500;}' in css
     assert re.search(r'\.ws-rail-axis \{[^}]*color:var\(--ink-2\)', css)
+
+
+def test_the_theater_build_rewrites_stale_doors_and_its_check_catches_them(tmp_path):
+    """Review R1 and TD-2: a Theater data change reaches the homepage doors in the same run. theater_build.py --check
+    fails while the doors are stale; theater_build.py rewrites them; then the check passes."""
+    import shutil
+    import subprocess
+    root = tmp_path / 'site'
+    for rel in ('tools', 'data', 'nations', 'static/theater'):
+        shutil.copytree(R / rel, root / rel, ignore=shutil.ignore_patterns('__pycache__', 'tests'))
+    for rel in ('index.html', 'theater.html', 'vercel.json'):
+        shutil.copy2(R / rel, root / rel)
+    page = (root / 'index.html').read_text(encoding='utf-8')
+    films = json.loads((root / 'data/theater/films.json').read_text(encoding='utf-8'))['films']
+    good = f'{len(films)} records in '
+    assert good in page
+    (root / 'index.html').write_text(page.replace(good, f'{len(films) + 1} records in '), encoding='utf-8', newline='')
+
+    def build(*args):
+        return subprocess.run([sys.executable, str(root / 'tools' / 'theater_build.py'), '--root', str(root), *args],
+                              capture_output=True, text=True, encoding='utf-8',
+                              env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'})
+    stale = build('--check')
+    assert stale.returncode == 1 and 'homepage doors' in stale.stderr, stale.stdout + stale.stderr
+    fixed = build()
+    assert fixed.returncode == 0 and 'homepage doors written' in fixed.stdout, fixed.stdout + fixed.stderr
+    assert (root / 'index.html').read_text(encoding='utf-8') == page
+    again = build('--check')
+    assert again.returncode == 0 and 'homepage doors current' in again.stdout, again.stdout + again.stderr
+
+
+def test_the_nations_build_carries_a_hidden_fact_to_the_doors(scratch):
+    """Review R1 and TD-2: when the weekly re-check hides a history fact (status stale), the same nations_build.py
+    run rewrites the doors, so the homepage never counts a fact the Nations pages no longer show; and the refresh
+    workflow stages index.html with the other build outputs."""
+    from conftest import run
+    before = LD.gather(scratch)
+    target = None
+    for name in ('nations.json', 'nations.min.json'):
+        p = os.path.join(scratch, 'data', 'nations', name)
+        doc = json.load(open(p, encoding='utf-8'))
+        for n in doc['nations']:
+            for f in n['facts']:
+                pick = (target is None and f.get('kind') == 'history' and f.get('status') == 'verified'
+                        and not f.get('as_of'))
+                if pick or f.get('id') == target:
+                    target = f['id']
+                    f['status'] = 'stale'
+        with open(p, 'w', encoding='utf-8', newline='\n') as fh:
+            fh.write(json.dumps(doc, ensure_ascii=False, indent=2) + '\n' if name == 'nations.json'
+                     else json.dumps(doc, ensure_ascii=False, separators=(',', ':')))
+    assert target
+    code, out = run(scratch, 'tools/nations_build.py')
+    assert code == 0, out[-3000:]
+    code, out = run(scratch, 'tools/landing_doors.py', '--check')
+    assert code == 0, out
+    page = open(os.path.join(scratch, 'index.html'), encoding='utf-8').read()
+    assert f'{before["history_facts"] - 1:,} published historical facts' in page
+    assert f'<span class="n">{before["undated"] - 1}</span> No date recorded yet' in page
+    flow = (R / '.github' / 'workflows' / 'nations-refresh.yml').read_text(encoding='utf-8')
+    assert flow.index('python tools/nations_build.py') < flow.index('git add index.html')
