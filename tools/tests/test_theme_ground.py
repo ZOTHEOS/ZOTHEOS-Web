@@ -36,3 +36,45 @@ def test_the_glow_and_grain_layers_are_hidden_in_the_colour_themes():
     # The layers are still in the page (Sovereign hides them the same way), so nothing else depends on their removal.
     for layer in LAYERS:
         assert f'class="{layer}"' in PAGE
+
+
+# Task B: the floor is one tone across the whole homepage, the theme's own colour.
+GROUND = {'maya': '#02101E', 'codex': '#E8DBC0', 'skeleton': '#050507'}
+
+
+def _token(selector, name):
+    """The value `name` takes in the last rule whose selector is exactly `selector` and declares it (later wins)."""
+    vals = []
+    for m in re.finditer(r'(?:^|[{}])\s*' + re.escape(selector) + r'\s*\{([^{}]*)\}', CSS):
+        vals += re.findall(re.escape(name) + r'\s*:\s*([^;]+);', m.group(1))
+    assert vals, (selector, name)
+    return vals[-1].strip()
+
+
+def test_each_ground_is_the_colour_its_browser_bar_already_uses():
+    bar = re.search(r"\{ maya: '(#\w+)', codex: '(#\w+)', skeleton: '(#\w+)' \}\[theme\]", PAGE)
+    assert bar and dict(zip(('maya', 'codex', 'skeleton'), bar.groups())) == GROUND
+    assert _token(':root', '--bg-floor') == GROUND['maya']            # Maya Radiance is the landing's :root
+    assert _token('[data-theme="codex"]', '--bg-deep') == GROUND['codex']
+    assert _token('[data-theme="skeleton"]', '--bg-floor') == GROUND['skeleton']
+    # The shared Theater frame palette stands on the same grounds.
+    for theme, ground in GROUND.items():
+        assert _token(f'[data-theme="{theme}"]', '--zt-frame-ground') == ground, theme
+
+
+def test_no_full_width_band_holds_a_second_tone():
+    # The council band: accent rules stay, the tint and the inset shading go, in every colour theme.
+    sec = CSS.index('[data-theme] .council-section { background: none; box-shadow: none; }')
+    strip = CSS.index('[data-theme] .council-strip { background: none; }')
+    for sel, body in re.findall(r'([^{}]+)\{([^{}]*)\}', CSS):
+        if '[data-theme' in sel and re.search(r'\.council-(section|strip)(?![\w-])', sel) and 'not([data-theme])' not in sel:
+            assert re.search(r'background\s*:\s*none', body) or 'background' not in body, sel.strip()
+    assert sec and strip
+    # The opaque bands (scrolled header, menu sheet, popovers, phone dock) are each theme's ground.
+    assert re.findall(r'--hdr-band\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', GROUND['codex'], GROUND['skeleton']]
+    assert _token('[data-theme="codex"]', '--hdr-band') == GROUND['codex']
+    assert '[data-theme="skeleton"] { --hdr-band: #050507; }' in CSS
+    # The Theater chapter's floor is the page ground: Maya and Ember the floor, Codex the paper. No other floor.
+    assert re.findall(r'--tsc-floor\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', 'var(--bg-deep)']
+    assert '[data-theme="codex"] .tsc { --tsc-floor: var(--bg-deep);' in CSS
+    assert '[data-theme="skeleton"] .tsc { --tsc-edge: #8A7F6E; }' in CSS

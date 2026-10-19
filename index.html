@@ -501,10 +501,15 @@
 
     /* The lifted-black law for the colour themes too: the owner's display lifts near-black, so a broad page gradient,
        its glow layers and a grain overlay read as a wide glow and speckle. Maya Radiance, Living Codex and Obsidian Ember
-       stand on one flat ground, the same ground their Nations pages use; the rules above stay as the themes' record. */
+       stand on one flat ground, the same ground their Nations pages use; the rules above stay as the themes' record.
+       Each ground is the theme's own colour, the one its browser bar already uses: Maya #02101E, Codex #E8DBC0,
+       Ember #050507. The council band keeps its accent rules and loses its tint and inset shading, so no band
+       across the page holds a second tone (the scrolled header and the Theater chapter take the ground below). */
     [data-theme] body { background: var(--bg-floor); }
     html[data-theme="codex"], [data-theme="codex"] body { background: var(--bg-deep); }
     [data-theme] :is(.grain, .vignette, .aurora, .hero-mist) { display: none; }
+    [data-theme] .council-section { background: none; box-shadow: none; }
+    [data-theme] .council-strip { background: none; }
 
     .greca-divider {
       position: relative;
@@ -1108,9 +1113,12 @@
       pointer-events: none;
       user-select: none;
     }
-    .forge-mind { width: var(--fw); text-align: center; text-indent: 0.34em; }
-    .fm-tl, .fm-bl { right: calc(50% + var(--fx)); }
-    .fm-tr, .fm-br { left: calc(50% + var(--fx)); }
+    /* Each caption box is its own words, centred on the point where the old --fw-wide box centred them, so every
+       glyph stands where it did. The wide empty box reached 3.5px past a tall 320px phone (324px), and phone Chrome
+       then scaled the whole page down. */
+    .forge-mind { width: max-content; text-align: center; text-indent: 0.34em; }
+    .fm-tl, .fm-bl { right: calc(50% + var(--fx) + var(--fw) / 2); transform: translate(50%, -50%); }
+    .fm-tr, .fm-br { left: calc(50% + var(--fx) + var(--fw) / 2); transform: translate(-50%, -50%); }
     .fm-tl, .fm-tr { top: calc(var(--fh) * 0.1684); }
     .fm-bl, .fm-br { top: calc(var(--fh) * 0.8313); }
     .forge-you { opacity: calc(0.9 * var(--lit, 0)); }
@@ -5054,10 +5062,11 @@
 
     /* ==== Wave 1 batch H: header (W1-07) and intro hygiene (W1-08) ==== */
     /* The opaque band colour behind the scrolled header and the section sheet: page black in mono, each
-       theme's own ground elsewhere. Opaque, never blurred (lifted-black law). */
+       theme's own ground elsewhere. Opaque, never blurred (lifted-black law). Obsidian Ember's band was a green
+       black (#0E110E) beside its old gradient; on the flat ground it is the ground, with its one hairline. */
     :root { --hdr-band: var(--bg-floor); }
     [data-theme="codex"] { --hdr-band: #E8DBC0; }
-    [data-theme="skeleton"] { --hdr-band: #0E110E; }
+    [data-theme="skeleton"] { --hdr-band: #050507; }
 
     /* True centre axis: the two side zones are equal tracks that may not grow past their share, so the
        wordmark's centre is the page's centre. A track cannot grow, so links that do not fit would run under the
@@ -7295,8 +7304,9 @@
   scroll-margin-top: 72px;
 }
 [data-theme="maya"] .tsc { --tsc-edge: #6E8294; }
-/* Obsidian Ember: the floor is the page's own warm obsidian (--bg-mid), not the cool #050507 (refinement S3). */
-[data-theme="skeleton"] .tsc { --tsc-floor: var(--bg-mid); --tsc-edge: #8A7F6E; }
+/* Obsidian Ember: the floor is the page's own ground. Refinement S3 matched the warm obsidian (--bg-mid) of the old
+   page gradient; the page now stands on one flat ground (#050507, the frame tokens' ground), so the floor follows it. */
+[data-theme="skeleton"] .tsc { --tsc-edge: #8A7F6E; }
 /* Living Codex: ink on paper; the floor is the page's opaque paper band (--bg-deep, the header band's colour). */
 [data-theme="codex"] .tsc { --tsc-floor: var(--bg-deep); --tsc-edge: #6B5945; }
 .tsc[data-house="down"] { --zt-f0: var(--zt-frame-t1); --zt-f1: var(--zt-frame-t2); --zt-f2: var(--zt-frame-t3); --zt-f3: var(--zt-frame-t4); }
