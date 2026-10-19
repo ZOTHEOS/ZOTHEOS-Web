@@ -220,7 +220,7 @@ def render(root, model):
         # The plate (original art, aria-hidden) draws the deliverable; the exact sentence follows it as its caption.
         made=(A.plate(c['plate'])+'<p class="pw-plate-caption">'+e(c['deliverable'])+'</p>') if 'plate' in c else '<p>'+e(c['deliverable'])+'</p>'
         note=DOWNLOAD_NOTE if 'plate' in c else 'Plain text. One pathway. Fill offline in a place you control.'
-        out+=['</div><div class="pw-result'+(' pw-with-plate' if 'plate' in c else '')+'"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3>'+made+'<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">'+note+'</span><a class="pw-sheet" href="/nations/brief/'+e(c['id'],quote=True)+'" aria-label="'+e(SHEET_LINK+' For '+c['title'],quote=True)+'">'+SHEET_LINK+'</a></div>',
+        out+=['</div><div class="pw-result'+(' pw-with-plate' if 'plate' in c else '')+'"><h3 class="pw-section-title" id="pw-prepare-'+e(c['id'],quote=True)+'" tabindex="-1">Something You Can Prepare</h3>'+made+'<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(c['id'],quote=True)+'.txt" download aria-label="'+e('Download The '+c['title']+' Brief',quote=True)+'">Download This Pathway Brief ↗</a><span class="pw-download-note">'+note+'</span><a class="pw-sheet" href="/nations/brief/'+e(c['id'],quote=True)+'" aria-label="'+e(SHEET_LINK+': '+c['title'],quote=True)+'">'+SHEET_LINK+'</a></div>',
               '<div class="pw-verify"><h3>Who Decides And What To Verify</h3><ul>']
         out.extend('<li>'+e(p)+'</li>' for p in c['verify'])
         out+=['</ul></div><aside class="pw-reflection" aria-label="Reflection"><span class="eyebrow">Reflection</span><p>'+e(c['reflection'])+'</p></aside>']
@@ -410,7 +410,7 @@ def brief_sheet(chapter, sources):
         raise ValueError('pathways: the printable sheet must carry every line of the brief, in order')
     out+=['</article>','<div class="bs-after">',
           # The accessible name starts with the visible words (WCAG 2.5.3), then names the pathway.
-          '<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(cid,quote=True)+'.txt" download aria-label="'+e(SHEET_DOWNLOAD+' For '+chapter['title'],quote=True)+'">'+SHEET_DOWNLOAD+' ↗</a>',
+          '<a class="pw-chapter-download" href="/static/nations/action-brief-'+e(cid,quote=True)+'.txt" download aria-label="'+e(SHEET_DOWNLOAD+': '+chapter['title'],quote=True)+'">'+SHEET_DOWNLOAD+' ↗</a>',
           '<a class="bs-back" href="/nations/paths-to-action#pw-'+e(cid,quote=True)+'">Back To This Pathway ↑</a>',
           '<p class="bs-note">'+e(SHEET_NOTE)+'</p>','</div>','</div>']
     return '\n'.join(out)

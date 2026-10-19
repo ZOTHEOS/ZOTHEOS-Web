@@ -7673,7 +7673,7 @@ html body .tsc[data-enter="go"] .tsc-svg .tier { animation: tsc-on .01s steps(1,
 .zth-plain .ws-climb li::after {content:"";position:absolute;top:0;left:0;right:var(--g);border-top:2px solid var(--ink-2);}
 .zth-plain .ws-climb li:last-child::after {height:8px;border:solid var(--ink-2);border-width:0 2px;}
 .ws-climb-l {display:block;margin-top:4px;color:var(--ink-2);}
-@container (min-width:300px) {.ws-climb {--g:10px;}}@container (min-width:400px) {.ws-climb {--g:16px;}}
+@container (max-width:299px) {.ws-climb {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:16px;}}@container (min-width:300px) {.ws-climb {--g:10px;}}@container (min-width:400px) {.ws-climb {--g:16px;}}
 .ws-ledger div {display:grid;grid-template-columns:17ch minmax(0,1fr);gap:12px;align-items:center;min-height:21px;}.ws-ledger .ws-g2 {margin-top:12px;}
 .ws-ledger dt {white-space:nowrap;}.ws-ledger dd {display:grid;grid-template-columns:3ch minmax(0,1fr);gap:12px;align-items:center;}
 .ws-fig .n,.ws-regions,.ws-rail-axis {color:var(--ink);font-family:var(--sans);}.ws-ledger .n {text-align:right;}

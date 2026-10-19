@@ -114,7 +114,7 @@ def test_sheet_structure_links_and_blank_fields(sheets):
     # WCAG 2.5.3 (label in name): the accessible name starts with the visible words, then names the pathway.
     visible = download[0].text.replace('↗', '').strip()
     assert visible == mod.SHEET_DOWNLOAD == 'Download This Pathway Brief'
-    assert download[0].attrs['aria-label'] == visible + ' For ' + title
+    assert download[0].attrs['aria-label'] == visible + ': ' + title
     assert mod.SHEET_NOTE in doc.text
     for node in anchors:
         if node.attrs.get('href', '').startswith('https://'):
@@ -263,4 +263,4 @@ def test_the_guide_note_sits_between_the_download_and_the_sheet_link(sheets):
         assert names[-3:] == ['pw-chapter-download', 'pw-download-note', 'pw-sheet']
         link = kids[-1]
         assert link.attrs['href'] == '/nations/brief/' + c['id'] and link.text == mod.SHEET_LINK
-        assert link.attrs['aria-label'] == mod.SHEET_LINK + ' For ' + c['title']
+        assert link.attrs['aria-label'] == mod.SHEET_LINK + ': ' + c['title']
