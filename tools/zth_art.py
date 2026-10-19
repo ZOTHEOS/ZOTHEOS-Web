@@ -107,3 +107,28 @@ def plate(value, steps=None):
         out.append('<p class="pw-plate-kept"><span>' + escape(PRIVACY_LABEL) + '</span><span>' + escape(value['kept_out']) + '</span></p>')
     out.append('</div>')
     return ''.join(out)
+
+
+# ----------------------------------------------------------------------------------------- piece 4: homepage doors
+def door_figure(key, inner, caption, steps=None):
+    """A door's figure, its lintel: the drawing, then the caption that states its computed numbers in words."""
+    return (_open('figure', 'ws-fig ws-fig-' + escape(key, quote=True), steps) + inner
+            + '<figcaption>' + escape(caption) + '</figcaption></figure>')
+
+
+def door_climb(method, label):
+    """The guide's Climb at door size, drawn by the same rule set: an ordered list of the method's own words. The labels
+    show where the door is wide and are read by screen readers everywhere."""
+    items = ''.join('<li><span class="ws-climb-l">' + escape(step) + '</span></li>' for step in _method(method))
+    return '<ol class="ws-climb" aria-label="' + escape(label, quote=True) + '">' + items + '</ol>'
+
+
+def bar(value, top):
+    """One data bar in true proportion (value of top): a filled rectangle in a viewBox `top` units wide, stretched to
+    its row with crispEdges, so the end lands on a whole device pixel and no style attribute is needed. The track
+    outline is the wrapper's CSS border; the fill takes the figure's colour."""
+    if type(value) is not int or type(top) is not int or not 0 <= value <= top or top < 1:
+        raise ValueError('zth_art: a bar needs whole numbers 0 <= value <= top')
+    return ('<span class="ws-bar" aria-hidden="true"><svg viewBox="0 0 ' + str(top) + ' 1" preserveAspectRatio="none" '
+            'aria-hidden="true" focusable="false" shape-rendering="crispEdges" fill="currentColor">'
+            '<rect width="' + str(value) + '" height="1"/></svg></span>')
