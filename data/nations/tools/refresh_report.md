@@ -1,8 +1,8 @@
-# Nations refresh (dry run) 2026-10-10
+# Nations refresh 2026-10-26
 
-- URLs checked: 40 of 742 (73 requests incl. robots.txt, 79.2 s)
-- Facts checked: 99 (unchecked this run: 1161)
-- Status: unreachable 1, verified 98
+- URLs checked: 822 of 822 (1255 requests incl. robots.txt, 2514.7 s)
+- Facts checked: 1375 (unchecked this run: 0)
+- Status: stale 12, unreachable 140, verified 1223
 
 | outcome | http | facts | url | note |
 |---|---|---|---|---|
@@ -11,7 +11,7 @@
 | fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Xavante |  |
 | fetched | 200 | 1 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Iku%20(Arhuaco).pdf |  |
 | fetched | 200 | 2 | https://raipon.info/press-tsentr/novosti/dolganskaya-yukola-kerdiileek-priznana-obektom-nematerialnogo-naslediya-taymyra/ |  |
-| fetched | 200 | 1 | https://www.japaneselawtranslation.go.jp/en/laws/view/4538/en |  |
+| unreachable | 403 | 1 | https://www.japaneselawtranslation.go.jp/en/laws/view/4538/en | HTTP 403 |
 | fetched | 200 | 3 | https://www.akwesasne.ca/about-us/our-community/ |  |
 | fetched | 200 | 5 | https://moaa.gov.gy/amerindian-nations/ |  |
 | fetched | 200 | 1 | https://dipalicori.ucr.ac.cr/lengua-cultura/bribri/ |  |
@@ -39,10 +39,807 @@
 | fetched | 200 | 2 | https://www.atikamekwsipi.com/fr/la-nation-atikamekw/fondements/population |  |
 | fetched | 200 | 1 | https://dpi.gov.gy/govt-to-resume-amerindian-language-revival-project |  |
 | fetched | 200 | 6 | https://www.inec.gob.pa/archivos/P0289562520231009163041CUADRO%2020.pdf |  |
+| fetched | 200 | 2 | https://fsmlaw.org/chuuk/constitution/article04.htm |  |
+| fetched | 200 | 1 | https://www.cherokee.gov/about-the-nation/ |  |
+| fetched | 200 | 1 | https://blackfeetnation.com/ |  |
+| fetched | 200 | 2 | https://www.yakama.com/about/ |  |
+| fetched | 200 | 1 | https://cpv2024.ine.gob.bo/index.php/ine-presenta-resultados-del-censo-2024-que-muestran-la-transformacion-demografica-y-avances-sociales-en-bolivia/ |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/evenks.shtml |  |
+| fetched | 200 | 2 | https://faolex.fao.org/docs/pdf/pan205776.pdf |  |
+| fetched | 200 | 1 | https://language.cherokee.gov/ |  |
+| fetched | 200 | 1 | https://yakama.com/ichishkiin-word-of-the-day/ |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2021-central-african-republic | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.guampedia.com/role-of-education-in-the-preservation-of-guams-indigenous-language/ |  |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/A7F31083995F0E60D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| unreachable | 202 | 3 | https://denenation.com/our-nation/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.gilariver.org/index.php/about/history |  |
+| fetched | 200 | 1 | https://stats.gov.ck/download/83/census-2021/1497/2021-census-report-with-tables-and-questionnaire.pdf |  |
+| fetched | 200 | 2 | https://www.choctawnation.com/about/ |  |
+| fetched | 200 | 3 | https://www.cheyenneandarapaho-nsn.gov/language-culture |  |
+| fetched | 200 | 1 | https://www.grandronde.org/history-culture/ |  |
+| unreachable |  | 1 | https://dzanga-sangha.org/facts-infos/cultural-heritage/ | robots.txt disallows this path |
+| fetched | 200 | 1 | https://dca.guam.gov/about-us/ |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/colla/ambiente-y-localizacion/ |  |
+| fetched | 200 | 2 | https://lex.dk/Qaanaaq |  |
+| unreachable |  | 2 | https://ignca.gov.in/?p=7278 | network: timed out |
+| fetched | 200 | 3 | https://www.cngov.ca/community-culture/communities/ |  |
+| fetched | 200 | 1 | https://www.tec.ac.cr/sites/default/files/media/doc/anexo_6_pueblos_y_territorios_de_costa_rica.pdf |  |
+| fetched | 200 | 1 | https://cookislands.travel/event/te-maeva-nui-2026 |  |
+| fetched | 200 | 3 | https://www.bia.gov/regional-offices/great-plains/south-dakota/cheyenne-river-agency |  |
+| fetched | 200 | 1 | https://www.forestpeoples.org/en/secure-land-tenure-the-legal-battles-of-Bagyeli-Cameroon |  |
+| fetched | 200 | 1 | https://www.bowdoin.edu/arctic-museum/exhibits/2007/extraordinary-paradise.html |  |
+| unreachable | 403 | 2 | https://www.pmindia.gov.in/en/news_updates/cabinet-approves-declaration-of-15th-november-as-janjatiya-gaurav-divas/ | HTTP 403 |
+| fetched | 200 | 3 | https://gitxsan.ca/about/ |  |
+| fetched | 200 | 3 | https://www.culture.gouv.fr/Media/Regions/Dac-Guyane/Files/Aides-et-demarches/Langues-de-France-en-Guyane |  |
+| fetched | 200 | 1 | https://almg.org.gt/wp-content/uploads/2025/09/GRAMATICA-DESCRIPTIVA.pdf |  |
+| fetched | 200 | 2 | https://www.cocopah.com/ |  |
+| fetched | 200 | 1 | https://axl.cefan.ulaval.ca/pacifique/cook-loi-2003.htm |  |
+| unreachable |  | 1 | https://www.delawarenation-nsn.gov/ | robots.txt disallows this path |
+| fetched | 200 | 3 | https://www.potawatomi.org/government/ |  |
+| fetched | 200 | 2 | https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2025/06/30/censo-2024-aumenta-la-escolaridad-a-12-1-a%C3%B1os-superando-el-umbral-de-educaci%C3%B3n-obligatoria-en-chile |  |
+| stale | 404 | 2 | https://rajbhasha.gov.in/en/languages-included-eighth-schedule-indian-constitution | HTTP 404 |
+| fetched | 200 | 2 | https://www.haidanation.ca/public-notices/for-immediate-release-haida-nation-bc-recognize-haida-aboriginal-title-a-historic-first-in-canada |  |
+| fetched | 200 | 1 | https://agn.gt/simbolos-patrios-en-chorti-un-aporte-para-preservar-el-idioma-y-la-identidad/ |  |
+| fetched | 200 | 3 | https://www.sydneybarani.com.au/sites/aboriginal-people-and-place/ |  |
+| fetched | 200 | 2 | https://www.comanchenation.com/about/page/history |  |
+| fetched | 200 | 2 | https://www.ctsi.nsn.us/ |  |
+| fetched | 200 | 6 | https://doyonfoundation.com/language/doyon-languages-online/ |  |
+| fetched | 200 | 2 | https://dipr.assam.gov.in/sites/default/files/swf_utility_folder/departments/dipr_webcomindia_org_oid_4/menu/document/bodo_sahitya_sabha.pdf |  |
+| fetched | 200 | 2 | https://programsandcourses.anu.edu.au/2024/course/INDG2003/First%20Semester/3073 |  |
+| fetched | 200 | 1 | https://ctsi.nsn.us/heritage/language/ |  |
+| fetched | 200 | 2 | https://www.kenaitze.org/ |  |
+| fetched | 200 | 2 | https://www.yvyrupa.org.br/sobre-a-cgy/ |  |
+| unreachable |  | 2 | https://english.stm.dk/the-prime-ministers-office/the-unity-of-the-realm/greenland/ | network: [Errno 111] Connection refused |
+| fetched | 200 | 3 | https://www.heiltsuk.ca/ |  |
+| fetched | 200 | 4 | https://celade.cepal.org/censosinfo/manuales/VE_EmpadronPobIndigena_2011.pdf |  |
+| fetched | 200 | 2 | https://www.navajo-nsn.gov/History |  |
+| unreachable | 403 | 2 | https://collection.qagoma.qld.gov.au/page/gunantuna-tolai-people | HTTP 403 |
+| fetched | 200 | 1 | https://www.delawaretribe.org/ |  |
+| fetched | 200 | 1 | https://language.fcpotawatomi.com/ |  |
+| fetched | 200 | 2 | https://ctuir.org/about/language/ |  |
+| fetched | 200 | 1 | https://www.labiennale.org/en/node/14738 |  |
+| fetched | 200 | 1 | https://www.gonawindua.org/ |  |
+| fetched | 200 | 1 | https://oqaasileriffik.gl/en/2021/02/07/about-inuit-dialects/ |  |
+| fetched | 200 | 1 | https://www.innu.ca/ |  |
+| fetched | 200 | 2 | https://foreign.gov.tt/documents/603/Statement_-_Special_PC_on_09.08.18.pdf |  |
+| fetched | 200 | 1 | https://www.unicef.org/lac/la-educacion-intercultural-bilingue-eib-en-panama |  |
+| fetched | 200 | 1 | https://www.navajonationcouncil.org/about-us-and-history/ |  |
+| unreachable | 403 | 1 | https://www.qagoma.qld.gov.au/media-release/art-from-papua-new-guinea-celebrated-in-major-qag-exhibition-2016-09-08/ | HTTP 403 |
+| fetched | 200 | 1 | https://delawaretribe.org/language-revitalization/ |  |
+| fetched | 200 | 2 | https://www.fcpotawatomi.com/ |  |
+| fetched | 200 | 2 | https://www.eyak-nsn.gov/about-us/ |  |
+| fetched | 200 | 2 | https://www.gov.nl.ca/exec/iar/overview/land-claims/innu-nation-of-labrador/ |  |
+| fetched | 200 | 2 | https://nationaltrust.tt/celebrating-our-first-peoples/ |  |
+| fetched | 200 | 3 | https://theofficialhavasupaitribe.com/About-Supai/about-supai.html |  |
+| fetched | 200 | 2 | https://glenelghopkins.rcs.vic.gov.au/celebrating-success/world-heritage-conservation-of-budj-bim/ |  |
+| fetched | 200 | 1 | https://museum.warmsprings-nsn.gov/ |  |
+| fetched | 200 | 2 | https://khanty-yasang.ru/pages/o-nas/67 |  |
+| fetched | 200 | 1 | https://ghadc.nic.in/ |  |
+| fetched | 200 | 6 | https://itk.ca/about-canadian-inuit/ |  |
+| unreachable | 403 | 1 | https://www.si.edu/exhibitions/taino-native-heritage-and-identity-caribbean%3Aevent-exhib-6313 | HTTP 403 |
+| fetched | 200 | 1 | https://pressoffice.gov.bz/wp-content/uploads/2019/12/Oct-25-PR234-23-PUBLIC-AND-BANK-HOLIDAYS-2024.pdf |  |
+| fetched | 200 | 1 | https://www.hopi-nsn.gov/ |  |
+| fetched | 200 | 1 | https://www.gunditjmirring.com/ |  |
+| fetched | 200 | 3 | https://doa.nc.gov/divisions/american-indian-affairs/tribes |  |
+| fetched | 200 | 2 | https://www.ho-chunknation.com/about/ |  |
+| fetched | 200 | 2 | https://warmsprings-nsn.gov/history/ |  |
+| fetched | 200 | 1 | https://gwichincouncil.com/about |  |
+| fetched | 200 | 2 | https://www.asambleanacional.gob.ec/es/node/28 |  |
+| fetched | 200 | 1 | https://fennougria.ee/en/peoples/khanty/ |  |
+| fetched | 200 | 1 | https://megartsculture.gov.in/festivals-garo.html |  |
+| fetched | 200 | 2 | https://www.tunngavik.com/nunavut-agreement |  |
+| fetched | 200 | 2 | https://www.smithsonianmag.com/smithsonian-institution/culture-once-believed-extinct-flourishing-180970101/ |  |
+| fetched | 200 | 1 | https://www.shimajournal.org/issues/v4n1/k.-Whincup-Shima-v4n1-113-130.pdf |  |
+| fetched | 200 | 1 | https://ebci.gov/ |  |
+| fetched | 200 | 2 | https://iowatribeofkansasandnebraska.com/ |  |
+| fetched | 200 | 3 | https://gratonrancheria.com/culture/history/ |  |
+| fetched | 200 | 1 | https://cir.org.br/ |  |
+| unreachable |  | 5 | https://www.salud.gob.ec/wp-content/uploads/2022/09/GUI%D1%8FA-NUTRICIO%D1%8FN-Y-NACIONALIDADES-A.pdf | network: [Errno 111] Connection refused |
+| fetched | 200 | 1 | https://arcticanthropology.org/2023/09/06/khanty-fishing-in-the-ob-river-system-west-siberia-6-sep-2023-rovaniemi-talk-by-yuka-oishi/ |  |
+| fetched | 200 | 1 | https://www.meghalaya.gov.in/wangala |  |
+| fetched | 200 | 2 | https://irc.inuvialuit.com/about-irc/inuvialuit-final-agreement/ |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/1325 |  |
+| fetched | 200 | 1 | https://www.lumbeetribe.com/history-and-culture |  |
+| fetched | 200 | 2 | https://www.iowanation.org/ |  |
+| fetched | 200 | 2 | https://www.hoopa-nsn.gov/departments/natural-resource-departments/fisheries/ |  |
+| fetched | 200 | 3 | https://vids.sr/dorpen-en-dorpsbesturen/ |  |
+| fetched | 200 | 3 | https://hualapai-nsn.gov/community/about_the_hualapai_tribe/index.php |  |
+| fetched | 200 | 2 | https://tltb.com.fj/About-Us/Corporate-Profile |  |
+| fetched | 200 | 1 | https://www.kiowatribe.org/department/kiowa-language-department |  |
+| fetched | 200 | 1 | https://www.kasaan.org/ |  |
+| fetched | 200 | 2 | https://www.florestaprotegida.org.br/sobre |  |
+| fetched | 200 | 6 | https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-13/ |  |
+| fetched | 200 | 3 | https://kahnawake.com/about/ |  |
+| fetched | 200 | 2 | https://www.parc-amazonien-guyane.fr/fr/des-decouvertes/un-territoire-multiculturel |  |
+| fetched | 200 | 1 | https://www.fws.gov/partner/jicarilla-apache-nation |  |
+| fetched | 200 | 1 | https://tab.gov.fj/our-history/ |  |
+| fetched | 200 | 2 | https://mashpeewampanoagtribe-nsn.gov/ |  |
+| fetched | 200 | 1 | https://www.karuk.us/departments/language-program |  |
+| fetched | 200 | 1 | https://www.bazaar.culturalsurvival.org/yarina |  |
+| fetched | 200 | 1 | https://www.mptourism.com/gond-art-details-about-gond-tribal-folk-art-and-painting-of-india.html |  |
+| fetched | 200 | 1 | https://fnp-ppn.aadnc-aandc.gc.ca/fnp/Main/Search/FNRegPopulation.aspx?BAND_NUMBER=435&lang=eng |  |
+| fetched | 200 | 2 | https://tentribespartnership.org/tribes/jicarilla-apache-nation/ |  |
+| fetched | 200 | 1 | https://www.parliament.gov.fj/wp-content/uploads/2020/02/1-Ministry-for-iTaukei-Affairs-2016%E2%80%932017-Annual-Report.pdf |  |
+| fetched | 200 | 1 | https://endorois.org/ |  |
+| fetched | 200 | 1 | https://ihu.unisinos.br/644084-vitoria-munduruku-apos-anos-de-luta-ministro-da-justica-assina-portaria-declaratoria-da-ti-sawre-muybu |  |
+| fetched | 200 | 1 | https://www.kunstkamera.ru/en/museum_structure/research_departments/arctic_research_center/ |  |
+| fetched | 200 | 1 | https://ostm.in/tribes_of_odisha/gond/ |  |
+| unreachable | 202 | 2 | https://www.bloodtribe.org/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.ecopoliticavenezuela.org/wp-content/uploads/2020/03/Pronunciamiento-26-1.pdf-1-1.pdf |  |
+| fetched | 200 | 3 | https://www.santaclarapueblo.org/about-us/ |  |
+| unreachable |  | 2 | https://www.alk.nc/ | network: timed out |
+| fetched | 200 | 1 | https://www.choctaw.org/ |  |
+| fetched | 200 | 3 | https://ltbbodawa-nsn.gov/ |  |
+| fetched | 200 | 1 | https://parks.sonomacounty.gov/learn/planning-projects/project-directory/all-active-projects/kashia-coastal-reserve-trail/background |  |
+| fetched | 200 | 2 | https://sahistory.org.za/article/griqua |  |
+| fetched | 200 | 1 | https://www.ilisagvik.edu/about |  |
+| fetched | 200 | 2 | https://ktunaxa.org/about/map/ |  |
+| fetched | 200 | 1 | https://www.pac.gov.gy/kanashen-amerindian-protected-area/ |  |
+| fetched | 200 | 2 | https://divisionofculture.gov.dm/culture/the-indigenous-people/the-kalinago-territory |  |
+| fetched | 200 | 1 | https://sycuantribe.com/history-heritage/ |  |
+| fetched | 200 | 3 | https://www.isee.nc/organisation-coutumiere-kanak |  |
+| fetched | 200 | 3 | https://www.mhanation.com/ |  |
+| fetched | 200 | 2 | https://www.stewartspoint.org/wp2/about/ |  |
+| fetched | 200 | 1 | https://home.nps.gov/articles/000/indigenous-languages-of-alaska-inupiaq.htm |  |
+| fetched | 200 | 1 | https://www.cultura.gob.cl/actualidad/proyecto-fondart-regional-2025-impulsa-la-revitalizacion-de-la-lengua-ckunsa-a-traves-del-arte-y-la-animacion-en-chiu-chiu/ |  |
+| fetched | 200 | 1 | https://www.ktunaxa.org/ |  |
+| fetched | 200 | 1 | https://electoraloffice.gov.dm/news/kalinago-chief-election-results-2 |  |
+| fetched | 200 | 2 | https://guides.slsa.sa.gov.au/Aboriginal_peopleSA/Kaurna |  |
+| fetched | 200 | 2 | https://www.muscogeenation.com/ |  |
+| fetched | 200 | 3 | https://dpi.wi.gov/amind/tribalnationswi/menominee |  |
+| fetched | 200 | 2 | https://www.nwic.edu/about/ |  |
+| fetched | 200 | 1 | https://www.namibian.com.na/government-reaffirms-commitment-to-hai-om-community-development-vice-president-lucia-witbooi/ |  |
+| fetched | 200 | 1 | https://www.nana.com/nana-shareholders-elect-2025-board-of-directors/ |  |
+| fetched | 200 | 1 | https://sarayaku.org/en/wp-json/wp/v2/pages/15464 |  |
+| fetched | 200 | 1 | https://www.trijharkhand.in/en/ho |  |
+| fetched | 200 | 1 | https://www.nunatsiavut.com/ |  |
+| fetched | 200 | 3 | https://mescaleroapachetribe.com/our-culture/ |  |
+| fetched | 200 | 1 | https://www.nativetitlesa.org/%E2%80%8Bnative-title-recognition-for-kaurna-people-over-adelaide-area/ |  |
+| fetched | 200 | 3 | https://www.meskwaki.org/history/ |  |
+| fetched | 200 | 1 | https://www.lummi-nsn.gov/ |  |
+| fetched | 200 | 3 | https://www.metisnation.ca/about |  |
+| fetched | 200 | 2 | https://hpo.kosraestate.gov.fm/ |  |
+| fetched | 200 | 3 | https://narragansettindiannation.org/history/perseverance/ |  |
+| fetched | 200 | 2 | https://millelacsband.com/ |  |
+| fetched | 200 | 3 | https://makah.com/ |  |
+| fetched | 200 | 4 | https://benguet.gov.ph/about-the-province/ |  |
+| fetched | 200 | 3 | https://mikmaqrights.com/?page_id=7 |  |
+| fetched | 200 | 4 | https://www.utemountainutetribe.com/ |  |
+| unreachable |  | 1 | https://www.oneidaindiannation.com/language-preservation | robots.txt disallows this path |
+| fetched | 200 | 3 | https://northernarapaho.com/?page_id=56 |  |
+| fetched | 200 | 1 | https://morongonation.org/history-preservation/ |  |
+| fetched | 200 | 1 | https://www.congres-mondial-amazigh.org/2026/08/28/jour-du-drapeau-amazigh/ |  |
+| fetched | 200 | 1 | https://lrb.hawaii.gov/constitution |  |
+| fetched | 200 | 1 | https://saskatoon.ca/business-development/planning/programs-projects/first-nations-and-metis-lands-and-relationships/urban-reserves-and-land-holdings |  |
+| fetched | 200 | 1 | https://larrakia.com/about/the-larrakia-people/ |  |
+| fetched | 200 | 1 | https://www.hcp.ma/region-agadir/attachment/2801624 |  |
+| fetched | 200 | 1 | https://www.oha.org/about/ |  |
+| fetched | 200 | 1 | https://www.unidiversidad.com.ar/el-wichi-y-el-qom-comienzan-a-ser-hablados-en-la-primera-infancia-y-en-la-adolescencia |  |
+| unreachable | 202 | 1 | https://www.muskeglake.com/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| unreachable | 200 | 1 | https://scholarspace.manoa.hawaii.edu/bitstreams/ca64e484-5a12-495e-9ed8-9c7209095ae7/download | no static text (249 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.nmlegis.gov/Sessions/06%20Regular/memorials/senate/SJM002.HTML |  |
+| fetched | 200 | 2 | https://www.onondaganation.org/aboutus/ |  |
+| fetched | 200 | 2 | https://bia.gov/regional-offices/great-plains/south-dakota/pine-ridge-agency |  |
+| fetched | 200 | 2 | https://muckleshoot.nsn.us/history |  |
+| fetched | 200 | 3 | https://m.hcp.ma/file/244113 |  |
+| fetched | 200 | 1 | https://www.ahapunanaleo.org/history-hl-1 |  |
+| unreachable | 403 | 1 | https://tunjugahfoundation.org.my/publication-language/iban/ | HTTP 403 |
+| unreachable | 202 | 1 | https://muskeglake.com/about-muskeg-lake/history/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.nps.gov/subjects/travelspanishmissions/mission-san-juan-bautista.htm |  |
+| fetched | 200 | 1 | https://www.heiva.org/en/heiva-i-tahiti-2023-2 |  |
+| fetched | 200 | 2 | https://inalco.fr/en/languages/kabyle-berber |  |
+| fetched | 200 | 2 | https://www.wendake.ca/histoire-et-culture |  |
+| fetched | 200 | 1 | https://www.service-public.pf/dgen/evolution-du-site-internet-du-fare-vanaa/ |  |
+| fetched | 200 | 2 | https://www.pamunkey.org/ |  |
+| fetched | 200 | 3 | https://www.nezperce.org/about/ |  |
+| fetched | 200 | 1 | https://nje.org.na/index.php/nje/article/view/volume12-hitchcock |  |
+| fetched | 200 | 3 | https://revista.drclas.harvard.edu/territory-of-the-shuar-people |  |
+| fetched | 200 | 1 | https://www.osagenation-nsn.gov/who-we-are |  |
+| fetched | 200 | 3 | https://www.puyalluptribe-nsn.gov/ |  |
+| fetched | 200 | 1 | https://www.tlingitandhaida.gov/ |  |
+| fetched | 200 | 3 | https://www.nisgaanation.ca/ |  |
+| unreachable | 202 | 1 | https://pitu.gov/bands/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.canoesmarshallislands.com/ |  |
+| unreachable | 202 | 2 | https://www.wabanaki.com/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://osageculture.com/node/371 |  |
+| fetched | 200 | 1 | https://plpt.nsn.us/about-us/ |  |
+| fetched | 200 | 1 | https://sealaskaheritage.org/shi-language-department/ |  |
+| unreachable |  | 1 | https://fuentedirecta.oep.org.bo/noticia/charagua-raqaypampa-y-uru-chipaya-conforman-los-primeros-tres-autogobiernos-indigenas-de-bolivia | network: Remote end closed connection without response |
+| fetched | 200 | 3 | https://kdca.org.my/about-us/ |  |
+| fetched | 200 | 2 | https://www.makivvik.ca/recent-history-demographics/ |  |
+| unreachable | 202 | 1 | https://wabanaki.com/language-2/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.kara-tunga.com/heritage-projects/karamoja-cultural-heritage-education-programme/ |  |
+| fetched | 200 | 1 | https://www.iak.uni-bonn.de/de/institut/abteilungen/altamerikanistik/forschung-publikation/amazonas-anden/heritage-and-territoriality/the-tsimane-and-mosetenes |  |
+| fetched | 200 | 1 | https://sametinget.no/about-the-sami-parliament/ |  |
+| fetched | 200 | 1 | https://tagaisc.eq.edu.au/facilities/campuses/murray-island-mer-eruer-uteb |  |
+| fetched | 200 | 3 | https://www.srmt-nsn.gov/about/history-of-tribal-government |  |
+| fetched | 200 | 2 | https://pawneenation.org/pawnee-history/ |  |
+| fetched | 200 | 2 | https://www.metlakatla.com/ |  |
+| fetched | 200 | 2 | https://cultureandmind.sites.sheffield.ac.uk/fieldsites/tsimane |  |
+| fetched | 200 | 1 | https://samediggi.fi/en/about-us/ |  |
+| fetched | 200 | 1 | https://pid.gov.pk/site/press_detail/9791 |  |
+| fetched | 200 | 1 | https://nuuchahnulth.org/about-ntc |  |
+| fetched | 200 | 1 | https://taospueblo.com/blue-lake/ |  |
+| fetched | 200 | 2 | https://www.moriori.co.nz/ |  |
+| unreachable | 403 | 2 | https://www.indian.senate.gov/sites/default/files/Revised%20Seminole%20Nation%20Written%20Testimony%20for%20Senate%20Committee%20on%20Indian%20Affairs.pdf | HTTP 403 |
+| fetched | 200 | 1 | https://www.quinaultindiannation.com/164/About-the-Quinault-Indian-Nation |  |
+| fetched | 200 | 1 | https://www.saamicouncil.net/en/national-symbols |  |
+| fetched | 200 | 1 | https://ccj.org/wp-content/uploads/2025/12/Anderson_20251030.pdf |  |
+| fetched | 200 | 1 | https://whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/find-a-treaty-settlement/moriori |  |
+| fetched | 200 | 1 | https://www.sno-nsn.gov/getpage.php?name=Language_Program_Landing_1 |  |
+| fetched | 200 | 3 | https://poncatribe-ne.gov/ |  |
+| fetched | 200 | 3 | https://www.iccaregistry.org/en/explore/Ecuador/territorio-ancestral-waorani-ome |  |
+| fetched | 200 | 1 | https://piikanination.com/about |  |
+| fetched | 200 | 1 | https://www.tonation-nsn.gov/about-tohono-oodham-nation/ |  |
+| unreachable | 200 | 2 | https://stats.gov.nr/download/49/2021/359/nauru-2021-population-and-housing-census-analytical-report.pdf | page larger than 8 MB |
+| fetched | 200 | 1 | https://www.semtribe.com/ |  |
+| fetched | 200 | 2 | https://www.pbpindiantribe.com/tribal-history |  |
+| unreachable | 202 | 1 | https://www.apiai.org/cultural-heritage-programs/unangam-tunuu-program/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://khadc.nic.in/gad_elaka_administration.html |  |
+| fetched | 200 | 1 | https://www.inegi.org.mx/contenidos/saladeprensa/aproposito/2024/EAP_PueblosInd24.pdf |  |
+| fetched | 200 | 1 | https://www.nauru.gov.nr/ |  |
+| fetched | 200 | 2 | https://chumash.gov/culture |  |
+| fetched | 200 | 3 | https://www.sahistory.org.za/archive/kora-lost-khoisan-language-early-cape-and-gariep-menan-du-plessis-introduction |  |
+| fetched | 200 | 1 | https://www.inuitcircumpolar.com/about-icc/ |  |
+| fetched | 200 | 2 | https://news.mongabay.com/2021/02/indigenous-community-wins-recognition-of-its-land-rights-in-panama/ |  |
+| fetched | 200 | 2 | https://ngaitahu.iwi.nz/ngai-tahu/ |  |
+| fetched | 200 | 1 | https://sni.org/culture/history/ |  |
+| fetched | 200 | 2 | https://mn.gov/indian-affairs/tribal-nations-in-minnesota/miskwaagamiiwi-zaagaiganing-red-lake-nation.jsp |  |
+| fetched | 200 | 2 | https://www.sabc.co.za/sabc/media-statement-sabc-celebrates-the-history-and-culture-of-the-xu-and-khwe/ |  |
+| fetched | 200 | 1 | https://www.calistacorp.com/region/ |  |
+| fetched | 200 | 2 | https://www.gov.br/casacivil/pt-br/casa-de-governo-yanomami/ti-yanomami |  |
+| fetched | 200 | 1 | https://shuswapnation.org/about/bands/ |  |
+| fetched | 200 | 1 | https://www.redlakenation.org/ |  |
+| fetched | 200 | 2 | https://nwifc.org/member-tribes/swinomish/ |  |
+| fetched | 200 | 2 | https://ngatiporou.com/ |  |
+| fetched | 200 | 2 | https://www.sacandfoxnation-nsn.gov/ |  |
+| fetched | 200 | 1 | https://www.temoaktribe.com/ |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/magar |  |
+| unreachable | 202 | 1 | https://tkemlups.ca/language-culture/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.inah.gob.mx/boletines/la-ruta-wixarika-por-los-sitios-sagrados-a-wirikuta-es-inscrita-en-la-lista-de-patrimonio-mundial-de-la-unesco |  |
+| fetched | 200 | 2 | https://ngatiwhatuaorakei.com/ |  |
+| fetched | 200 | 2 | https://www.shinnecock-nsn.gov/ |  |
+| fetched | 200 | 2 | https://www.saulttribe.com/about-us |  |
+| unreachable | 403 | 1 | https://social.desa.un.org/unpfii/previous-chairpersons-of-the-permanent-forum | HTTP 403 |
+| unreachable |  | 4 | https://radionepalonline.com/2021/09/06/202864.html | network: timed out |
+| fetched | 200 | 3 | https://siksikanation.com/about/ |  |
+| fetched | 200 | 2 | https://shakopeedakota.org/culture-history/our-history/ |  |
+| fetched | 200 | 2 | https://timbisha.com/newsite |  |
+| fetched | 200 | 2 | https://www.unesco.org/en/mab/siberut |  |
+| fetched | 200 | 3 | https://www.sixnations.ca/about/who-we-are/ |  |
+| fetched | 200 | 1 | https://www.dane.gov.co/files/censo2018/informacion-tecnica/presentaciones-territorio/190816-CNPV-presentacion-Resultados-Guajira-Pueblo-Wayuu.pdf |  |
+| unreachable | 202 | 1 | https://fmyn.org/about-fmyn/history/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://pacificarchaeology.org/index.php/journal/article/download/338/465/3852 |  |
+| fetched | 200 | 1 | https://chickasaw.net/Our-Nation/History/Present-Day.aspx |  |
+| fetched | 200 | 2 | https://www.tolowa.gov/35/About-Us |  |
+| fetched | 200 | 2 | https://mizoramassembly.in/page/history |  |
+| fetched | 200 | 3 | https://www.squamish.net/about-our-nation/ |  |
+| fetched | 200 | 1 | https://e360.yale.edu/features/panamas-indigenous-groups-wage-a-high-tech-fight-for-their-lands |  |
+| fetched | 200 | 3 | https://www.rosebudsiouxtribe-nsn.gov/history-culture |  |
+| fetched | 200 | 2 | https://en.banglapedia.org/index.php/Mru,_The |  |
+| fetched | 200 | 2 | https://www.syilx.org/ |  |
+| fetched | 200 | 1 | https://www.ypit.com/about_ypit.htm |  |
+| unreachable |  | 1 | https://niuestatistics.nu/population/niue-census-of-population-and-housing-2022/ | network: [Errno -3] Temporary failure in name resolution |
+| fetched | 200 | 1 | https://www.chickasaw.net/our-nation.aspx |  |
+| fetched | 200 | 3 | https://www.swo-nsn.gov/ |  |
+| fetched | 200 | 1 | https://tongva.land/about |  |
+| fetched | 200 | 1 | https://syilx.org/about/member-communities/ |  |
+| fetched | 200 | 2 | https://digi.usac.edu.gt/edigi/pdf/xinka.pdf |  |
+| unreachable |  | 1 | https://taoganiue.nu/?p=18 | robots.txt disallows this path |
+| fetched | 200 | 2 | https://www.tuscaroranation.org/ |  |
+| fetched | 200 | 3 | https://www.indianaffairs.nd.gov/spirit-lake-nation |  |
+| unreachable |  | 2 | https://dailynews.gov.bw/news-detail/64791 | network: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1017) |
+| fetched | 200 | 3 | https://twnation.ca/about/ |  |
+| unreachable | 403 | 1 | https://americanindian.si.edu/sites/1/files/pdf/education/HaudenosauneeGuide.pdf | HTTP 403 |
+| fetched | 200 | 1 | https://www.tulaliptribes-nsn.gov/ |  |
+| fetched | 200 | 2 | https://www.nagaland.gov.in/people-culture |  |
+| fetched | 200 | 3 | https://tsuutina.com/ |  |
+| fetched | 200 | 1 | https://www.pascuayaqui-nsn.gov/enrollment/ |  |
+| fetched | 200 | 2 | https://www.noongar.org.au/ |  |
+| fetched | 200 | 1 | https://www.ukb-nsn.gov/about-us |  |
+| unreachable | 202 | 1 | https://www.standingrock.org/about/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.ogiekpeoples.org/ |  |
+| fetched | 200 | 1 | https://hornbillfestival.com/about/ |  |
+| unreachable | 504 | 3 | https://www.eia.gov.nt.ca/en/priorities/concluding-and-implementing-land-and-resources-and-self-government-agreements/tlicho | HTTP 504 |
+| fetched | 200 | 1 | https://mexico.quadratin.com.mx/atienden-plan-de-justicia-al-pueblo-yoreme-mayo-de-sonora/ |  |
+| fetched | 200 | 1 | https://www.wa.gov.au/government/media-statements/McGowan-Labor-Government/All-six-South-West-Native-Title-Settlement-Agreements-registered-20181017 |  |
+| fetched | 200 | 3 | https://mewuk.com/cultural/history/ |  |
+| fetched | 200 | 1 | https://www.vgfn.ca/about/our-language |  |
+| fetched | 200 | 2 | https://www.pristineparadisepalau.com/government |  |
+| fetched | 200 | 3 | https://wampanoagtribe-nsn.gov/wampanoag-history |  |
+| fetched | 200 | 1 | https://fortsillapache-nsn.gov/ |  |
+| fetched | 200 | 2 | https://www.viejasbandofkumeyaay.org/ |  |
+| fetched | 200 | 4 | https://coac.org.my/a-brief-introduction/ |  |
+| fetched | 200 | 2 | https://chiricahuaapachenation.org/who-we-are/governance.php |  |
+| fetched | 200 | 1 | https://www.cheroenhaka-nottoway.org/ |  |
+| fetched | 200 | 1 | https://www.americanindianmagazine.org/story/where-wasiw-spoken |  |
+| fetched | 200 | 2 | https://www.fs.usda.gov/r05/laketahoebasin/recreation/discover-history |  |
+| fetched | 200 | 3 | https://wnnb.wolastoqey.ca/about-us/our-history/ |  |
+| fetched | 200 | 2 | https://www.lipanapachetribe.gov/LAT/aboutus.html |  |
+| fetched | 200 | 1 | https://www.absenteeshawneetribe-nsn.gov/about-us |  |
+| fetched | 200 | 1 | https://www.yuroktribe.org/ |  |
+| fetched | 200 | 2 | https://reteti.org/ |  |
+| fetched | 200 | 3 | https://www.musqueam.bc.ca/our-story/ |  |
+| fetched | 200 | 2 | https://www.unep.org/news-and-stories/story/empowering-women-means-taking-stand-environmental-rights |  |
+| fetched | 200 | 2 | https://www.southernute-nsn.gov/history/ |  |
+| fetched | 200 | 1 | https://www.interior.gob.cl/noticias/2017/11/23/presidenta-bachelet-entrega-administracion-del-parque-nacional-rapa-nui-a-la-comunidad-de-isla-de-pascua/ |  |
+| fetched | 200 | 2 | https://nottowayindians.org/history |  |
+| fetched | 200 | 1 | https://nefin.org.np/associateorganization-detail/12 |  |
+| unreachable | 200 | 1 | https://consultaindigena.mma.gob.cl/wp-content/uploads/2021/01/Informe-Final-CI-AMCP-MU-Rapa-Nui.pdf | page larger than 8 MB |
+| fetched | 200 | 3 | https://books.openedition.org/editionscnrs/58480 |  |
+| fetched | 200 | 3 | https://nansemond.gov/tribal-history/ |  |
+| fetched | 200 | 2 | https://www.kawnation.gov/history-of-kaw-nation/ |  |
+| fetched | 200 | 1 | https://www.memoriachilena.gob.cl/602/w3-article-94003.html |  |
+| fetched | 200 | 1 | https://www.mshmondes.cnrs.fr/publication/geerewol/ |  |
+| fetched | 200 | 2 | https://www.umitribe.org/about |  |
+| unreachable | 403 | 1 | https://presidentofindia.nic.in/press_releases/president-india-releases-constitution-india-santhali-language | HTTP 403 |
+| unreachable | 202 | 1 | https://utetribe.com/business-committee/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://opd.gov.mp/library/reports/2020-carolinian-affairs-office-cao-citizen-centric-report.pdf |  |
+| fetched | 200 | 2 | https://www.omtribe.org/who-we-are/culture/history/ |  |
+| fetched | 200 | 1 | https://cnmileg.net/resources/files/Notices/2021%20CCR/2021%20CAO%20CCR.pdf |  |
+| fetched | 200 | 3 | https://www.chickahominytribe.org/tribal-history/post-contact-era-1500-1900 |  |
+| unreachable |  | 1 | https://www.kenyanews.go.ke/yaiku-community-turns-to-artificial-intelligence-to-save-their-dying-language/ | network: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1017) |
+| fetched | 200 | 1 | https://historytogo.utah.gov/post/ute-indians/ |  |
+| fetched | 200 | 1 | https://hawaii.edu/oceanic/rotuma/os/ceremonies/hierarchy.htm |  |
+| fetched | 200 | 2 | https://www.iied.org/series/reviving-indigenous-forest-stewardship |  |
+| fetched | 200 | 1 | https://www.fiji.gov.fj/his-excellency-ratu-wiliame-maivalili-katoniveres-speech-at-rotuma-day-2023/ |  |
+| fetched | 200 | 3 | https://www.cied.org/history |  |
+| fetched | 200 | 2 | https://www.ponca-nsn.gov/self-governance.html |  |
+| unreachable | 403 | 1 | https://newzealandcurriculum.tahurangi.education.govt.nz/gasav-ne-f-eag-rotu-m-ta---rotuman-language-week/5637151348.p | HTTP 403 |
+| fetched | 200 | 1 | https://www.monacannation.gov/ |  |
+| fetched | 200 | 2 | https://mycaddonation.com/history-1 |  |
+| fetched | 200 | 1 | https://sbs.gov.ws/wp-content/uploads/2022/12/Factsheet_Samoa_-PHC2021.pdf |  |
+| fetched | 200 | 1 | https://careers.rotorualakescouncil.nz/our-bicultural-journey/ |  |
+| fetched | 200 | 2 | https://www.rappahannocktribe.org/environmentalservices/ |  |
+| fetched | 200 | 1 | https://www.tiwilandcouncil.com/post/land-ownership |  |
+| fetched | 200 | 2 | https://tripurauniv.ac.in/site/index.php/en/kokborok-home-en |  |
+| unreachable | 202 | 2 | https://coharietribe.org/history/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://tokelau.org.nz/Tokelau+Government.html |  |
+| fetched | 200 | 1 | https://www.tokelau.org.nz/About+Us/Government/Self+Determination+Package/Constitution+of+Tokelau.html |  |
+| fetched | 200 | 2 | https://www.haliwa-saponi.gov/ |  |
+| fetched | 200 | 1 | https://tongastats.gov.to/census-2/population-census-3/census-story/ |  |
+| fetched | 200 | 1 | https://tsra.gov.au/the-tsra/ |  |
+| fetched | 200 | 2 | https://www.sappony.org/sappony-timeline |  |
+| fetched | 200 | 2 | https://www.slq.qld.gov.au/blog/torres-strait-islander-everyday-words |  |
+| fetched | 200 | 1 | https://www.clgf.org.uk/default/assets/File/Country_profiles/Tuvalu.pdf |  |
+| fetched | 200 | 1 | https://waccamaw-siouan.org/ |  |
+| fetched | 200 | 2 | https://www.tepapa.govt.nz/assets/76067/1693436488-tuvalu-activity-book.pdf |  |
+| fetched | 200 | 2 | https://www.waikatotainui.com/ |  |
+| fetched | 200 | 2 | https://www.ngatangatatiaki.co.nz/ |  |
+| fetched | 200 | 1 | https://uni.oslomet.no/riverrights/new-zealand/ |  |
+| fetched | 200 | 1 | https://www.mowachoctawindians.com/ |  |
+| fetched | 200 | 2 | https://www.bathurst.nsw.gov.au/Council/About-our-City/Aboriginal-Community/Information |  |
+| fetched | 200 | 1 | https://talloiresnetwork.tufts.edu/?p=9378 |  |
+| fetched | 200 | 1 | https://www.wurundjeri.com.au/ |  |
+| fetched | 200 | 1 | https://southeasternmvskokenation.org/ |  |
+| stale | 404 | 1 | https://www.yawuru.org.au/about/native-title-and-history/ | HTTP 404 |
+| fetched | 200 | 1 | https://ucantribe.com/word-of-the-month/ |  |
+| stale | 404 | 2 | https://yawuru.org.au/culture/mabu-yawuru-ngan-ga/ | HTTP 404 |
+| fetched | 200 | 3 | https://www.oric.gov.au/spotlight/only-yolnu-make-decisions-land |  |
+| fetched | 200 | 1 | https://cherokeetribeofnortheastalabama.org/ |  |
+| fetched | 200 | 2 | https://www.alabama-coushatta.com/about-us/our-history/ |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/alutiiq.php |  |
 | fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Ashaninka |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Bar%C3%AD.pdf |  |
 | fetched | 200 | 2 | https://raipon.info/narody/dolgany/ |  |
 | fetched | 200 | 1 | https://dipalicori.ucr.ac.cr/periodicobribri/biyochokname-publicacion-cultural-en-lengua-bribri-1978/ |  |
 | fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=26 |  |
+| fetched | 200 | 1 | https://itcaonline.com/member-tribes/hopi-tribe/ |  |
+| fetched | 200 | 2 | https://tribalnations.mt.gov/Directory/BlackfeetNation |  |
+| fetched | 200 | 1 | https://www.pastoralists.org/oromo-pastoralists-visit-woodaabe-general-assembly-in-niger/ |  |
 | fetched | 200 | 1 | https://alutiiqmuseum.org/alutiiq-people/language/ |  |
+| fetched | 200 | 2 | https://bdpi.cultura.gob.pe/pueblos/ashaninka |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/indigenous-peoples-thailand/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.puebloofacoma.org/departments/department-of-education/language-program/ |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/guyana-indigenous-peoples-fight-join-conservation-efforts |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/polyphonic-singing-of-the-aka-pygmies-of-central-africa-00082 |  |
+| fetched | 200 | 1 | https://www.atikamekwsipi.com/fr/la-nation-atikamekw/fondements/langue |  |
+| fetched | 200 | 1 | https://fsmlaw.org/chuuk/index.htm |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/itelmens.shtml |  |
+| fetched | 200 | 1 | https://faolex.fao.org/docs/pdf/pan205774.pdf |  |
+| unreachable | 200 | 4 | https://www.iwgia.org/en/news/iw-2026-cameroon | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/7F4BACB58C965B51D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://www.gilariver.org/index.php/about/culture |  |
+| fetched | 200 | 1 | https://www.choctawnation.com/about/language/ |  |
+| fetched | 200 | 1 | https://www.grandronde.org/culture-history/termination-restoration/ |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/colla/historia/ |  |
+| fetched | 200 | 1 | https://www.bia.gov/as-ia/opa/online-press-release/hoopa-valley-tribe-northwestern-california-display-culture-community |  |
+| unreachable | 508 | 1 | https://www.forestpeoples.org/en/topics/participatory-resource-mapping/news/2012/02/wapichan-people-guyana-present-territorial-map-an | HTTP 508 |
+| fetched | 200 | 2 | https://axl.cefan.ulaval.ca/amsudant/argentine-LOIS-provinces.htm |  |
+| unreachable |  | 1 | https://www.delawarenation-nsn.gov/about-us/ | robots.txt disallows this path |
+| fetched | 200 | 1 | https://www.haidanation.ca/ |  |
+| fetched | 200 | 1 | https://agn.gt/descubre-los-utiles-escolares-en-idioma-chorti/ |  |
+| fetched | 200 | 1 | https://www.comanchenation.com/culture/page/language |  |
+| fetched | 200 | 1 | https://ctuir.org/about/brief-history-of-ctuir/ |  |
+| fetched | 200 | 1 | https://delawaretribe.org/about-us/ |  |
+| unreachable | 403 | 1 | https://www.si.edu/object/nmnhanthropology_8552873 | HTTP 403 |
+| fetched | 200 | 1 | https://www.hopi-nsn.gov/tribal-government/ |  |
+| fetched | 200 | 1 | https://www.asambleanacional.gob.ec/es/node/78986 |  |
+| fetched | 200 | 1 | https://fennougria.ee/en/mansi-rapper-opens-studio/ |  |
+| fetched | 200 | 1 | https://www.meghalaya.gov.in/about |  |
+| fetched | 200 | 1 | https://irc.inuvialuit.com/about-irc/communities/ |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/722/ |  |
+| fetched | 200 | 1 | https://www.lumbeetribe.com/ |  |
+| fetched | 200 | 2 | https://vids.sr/vids-overhandigt-resolutie-grondenrechten-kalina-lokono-vonnis/ |  |
+| fetched | 200 | 1 | https://www.kiowatribe.org/ |  |
+| fetched | 200 | 1 | https://www.kasaan.org/laa-naay |  |
+| fetched | 200 | 1 | https://www.parc-amazonien-guyane.fr/fr/des-connaissances/une-terre-chargee-dhistoire/patrimoine-culturel-immateriel |  |
+| fetched | 200 | 1 | https://mashpeewampanoagtribe-nsn.gov/language |  |
+| fetched | 200 | 1 | https://www.karuk.us/more/peoples-center |  |
+| fetched | 200 | 1 | https://fnp-ppn.aadnc-aandc.gc.ca/fnp/Main/Search/FNRegPopulation.aspx?BAND_NUMBER=436&lang=eng |  |
+| fetched | 200 | 1 | https://ostm.in/tribes_of_odisha/ho/ |  |
+| fetched | 200 | 2 | https://www.choctaw.org/about-us/ |  |
+| fetched | 200 | 1 | https://www.cultura.gob.cl/actualidad/ministra-de-las-culturas-participa-en-inauguracion-de-la-tapati-rapanui-y-desarrolla-agenda-de-trabajo-en-la-isla/ |  |
+| fetched | 200 | 1 | https://www.muscogeenation.com/det/mlp/ |  |
+| fetched | 200 | 3 | https://dpi.wi.gov/amind/tribalnationswi/oneida |  |
+| fetched | 200 | 1 | https://sarayaku.org/en/wp-json/wp/v2/pages/15558 |  |
+| fetched | 200 | 1 | https://www.trijharkhand.in/en/oraon |  |
+| fetched | 200 | 1 | https://mescaleroapachetribe.com/ |  |
+| fetched | 200 | 1 | https://www.utemountainutetribe.com/Cultural_Language%20Program.html |  |
+| unreachable |  | 1 | https://www.oneidaindiannation.com/americas-first-allies | robots.txt disallows this path |
+| fetched | 200 | 1 | https://morongonation.org/ |  |
+| fetched | 200 | 2 | https://larrakia.com/about/ |  |
+| fetched | 200 | 1 | https://www.onondaganation.org/government/ |  |
+| fetched | 200 | 1 | https://muckleshoot.nsn.us/language |  |
+| unreachable | 403 | 1 | https://tunjugahfoundation.org.my/textile-museum-gallery/ | HTTP 403 |
+| fetched | 200 | 3 | https://www.nps.gov/npsa/learn/historyculture/index.htm |  |
+| fetched | 200 | 1 | https://www.wendake.ca/langue |  |
+| fetched | 200 | 1 | https://www.pamunkey.org/natural-resource |  |
+| fetched | 200 | 1 | https://www.osagenation-nsn.gov/ |  |
+| unreachable | 202 | 1 | https://pitu.gov/pitu-language-book/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://plpt.nsn.us/ |  |
+| unreachable |  | 1 | https://fuentedirecta.oep.org.bo/noticia/el-estatuto-fue-redactado-para-el-fortalecimiento-de-la-identidad-de-uru-chipaya | network: Remote end closed connection without response |
+| fetched | 200 | 1 | https://www.makivvik.ca/ |  |
+| fetched | 200 | 1 | https://pawneenation.org/government/ |  |
+| fetched | 200 | 2 | https://nuuchahnulth.org/ |  |
+| fetched | 200 | 2 | https://taospueblo.com/about/ |  |
+| fetched | 200 | 1 | https://www.quinaultindiannation.com/169/Language-Department |  |
+| fetched | 200 | 2 | https://whakatau.govt.nz/te-kahui-whakatau-treaty-settlements/find-a-treaty-settlement/ngai-tuhoe |  |
+| fetched | 200 | 1 | https://piikanination.com/ |  |
+| fetched | 200 | 1 | https://www.tonation-nsn.gov/about-tohono-oodham-nation/history-culture/ |  |
+| fetched | 200 | 2 | https://www.semtribe.com/history/seminoles-today |  |
+| fetched | 200 | 1 | https://www.pbpindiantribe.com/language |  |
+| fetched | 200 | 2 | https://khadc.nic.in/ |  |
+| fetched | 200 | 1 | https://chumash.gov/the-santa-ynez-reservation |  |
+| fetched | 200 | 1 | https://sni.org/ |  |
+| fetched | 200 | 1 | https://shuswapnation.org/about/ |  |
+| fetched | 200 | 2 | https://www.temoaktribe.com/history.shtml |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/newar |  |
+| fetched | 200 | 1 | https://www.shinnecock-nsn.gov/who-we-are |  |
+| fetched | 200 | 1 | https://shakopeedakota.org/ |  |
+| unreachable | 202 | 1 | https://fmyn.org/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://chickasaw.net/Our-Nation/Culture/Language.aspx |  |
+| fetched | 200 | 1 | https://www.tolowa.gov/340/STILL-WE-LIVE-ON |  |
+| fetched | 200 | 1 | https://en.banglapedia.org/index.php/Tripuris,_The |  |
+| fetched | 200 | 1 | https://tongva.land/ |  |
+| fetched | 200 | 2 | https://www.indianaffairs.nd.gov/standing-rock-sioux-tribe |  |
+| fetched | 200 | 1 | https://www.tulaliptribes-nsn.gov/Education/Lushootseed |  |
+| fetched | 200 | 1 | https://www.ukb-nsn.gov/ |  |
+| fetched | 200 | 1 | https://www.vgfn.ca/about/our-homeland |  |
+| fetched | 200 | 3 | https://fortsillapache-nsn.gov/history-and-traditional-culture/history/ |  |
+| fetched | 200 | 1 | https://chiricahuaapachenation.org/our-relations/chiricahua-apache-national-foundation.php |  |
+| fetched | 200 | 1 | https://www.cheroenhaka-nottoway.org/about-us/ethno-historical-current-snapshot-of-the-cheroenhaka-nottoway-indian-nation-of-southhampton-county-virginia/ |  |
+| fetched | 200 | 1 | https://www.lipanapachetribe.gov/LAT/g-pcnews3.html |  |
+| fetched | 200 | 1 | https://www.absenteeshawneetribe-nsn.gov/government |  |
+| fetched | 200 | 1 | https://www.yuroktribe.org/our-history |  |
+| fetched | 200 | 1 | https://www.southernute-nsn.gov/natural-resources/lands/assignments/living-in-la-plata-county/ |  |
+| fetched | 200 | 1 | https://nottowayindians.org/interpretive-center |  |
+| fetched | 200 | 1 | https://nansemond.gov/programs/ |  |
+| fetched | 200 | 1 | https://www.kawnation.gov/history-of-the-government-of-the-kaw-nation/ |  |
+| fetched | 200 | 2 | https://www.umitribe.org/sharon-indian-school-foundation |  |
+| unreachable | 202 | 1 | https://utetribe.com/water-resources/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.omtribe.org/who-we-are/government/ |  |
+| fetched | 200 | 1 | https://www.chickahominytribe.org/tribal-history/20th-century |  |
+| fetched | 200 | 1 | https://www.cied.org/community-garden |  |
+| fetched | 200 | 2 | https://www.ponca-nsn.gov/historic-preservation.html |  |
+| fetched | 200 | 2 | https://www.monacannation.gov/our-history.html |  |
+| fetched | 200 | 1 | https://mycaddonation.com/language-preservation |  |
+| fetched | 200 | 2 | https://www.rappahannocktribe.org/tribal-history/ |  |
+| fetched | 200 | 1 | https://www.tiwilandcouncil.com/post/the-tiwi-islands |  |
+| unreachable | 202 | 1 | https://coharietribe.org/government/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.haliwa-saponi.gov/haliwa-saponi-tribal-school |  |
+| fetched | 200 | 2 | https://www.sappony.org/governance |  |
+| fetched | 200 | 1 | https://waccamaw-siouan.org/history |  |
+| fetched | 200 | 1 | https://www.mowachoctawindians.com/history |  |
+| fetched | 200 | 2 | https://www.wurundjeri.com.au/our-story/recent-history-present/ |  |
+| fetched | 200 | 2 | https://southeasternmvskokenation.org/history-and-culture |  |
+| fetched | 200 | 1 | https://ucantribe.com/attention-united-cherokee-aniyunwiya-nation-artisans/ |  |
+| fetched | 200 | 2 | https://cherokeetribeofnortheastalabama.org/government |  |
+| fetched | 200 | 2 | https://www.alabama-coushatta.com/government/ |  |
+| fetched | 200 | 3 | https://uaf.edu/anlc/languages-move/centralakyupik.php |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Guarani_Kaiow%C3%A1 |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/prensa/noticias/Documents/Poblaciones/PUEBLO%20K%C3%81GGABA%20(KOGUI).pdf |  |
 | fetched | 200 | 3 | https://raipon.info/narody/eveny/ |  |
+| fetched | 200 | 1 | https://dipalicori.ucr.ac.cr/lengua-cultura/cabecar/ |  |
 | fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=59 |  |
+| fetched | 200 | 3 | https://itcaonline.com/member-tribes/san-carlos-apache-tribe/ |  |
+| fetched | 200 | 3 | https://tribalnations.mt.gov/Directory/FortPeckAssiniboineSiouxTribes |  |
+| fetched | 200 | 1 | https://bdpi.cultura.gob.pe/pueblos/aimara |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/bari-and-yukpa/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.puebloofacoma.org/about-us/cultural-preservation/ |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/momentous-ruling-recognizes-land-rights-indigenous-community |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001 |  |
+| fetched | 200 | 1 | https://fsmlaw.org/kosrae/index.htm |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/koryaks.shtml |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-gabon | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 4 | https://www.cip.gov.tw/en/tribe/grid-list/2FE58C8FD4EB86E3D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://www.grandronde.org/culture-history/chinuk-wawa-language/ |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/diaguita/ambiente-y-localizacion/ |  |
+| fetched | 200 | 2 | https://www.bia.gov/regional-offices/great-plains/nebraska/winnebago-agency |  |
+| fetched | 200 | 1 | https://axl.cefan.ulaval.ca/pacifique/niue-loi-2012.htm |  |
+| unreachable |  | 1 | https://www.delawarenation-nsn.gov/delaware-nation-re-established-thpo-status-with-the-national-park-services-and-us-department-of-interior/ | robots.txt disallows this path |
+| fetched | 200 | 1 | https://agn.gt/alegres-le-abrimos-las-puertas-de-nuestra-casa-como-usted-nos-ha-abierto-las-puertas-del-palacio-dice-el-pueblo-xinka-al-presidente-arevalo/ |  |
+| fetched | 200 | 1 | https://www.asambleanacional.gob.ec/es/blogs/ricardo-ulcuango-farinango/79003-asamblea-ampliada-y-mesa-de |  |
+| fetched | 200 | 1 | https://fennougria.ee/en/peoples/mansis/ |  |
+| fetched | 200 | 2 | https://whc.unesco.org/en/list/1529 |  |
+| fetched | 200 | 1 | https://www.kiowatribe.org/about-us |  |
+| fetched | 200 | 1 | https://ostm.in/tribes_of_odisha/oraon/ |  |
+| fetched | 200 | 1 | https://sarayaku.org/en/wp-json/wp/v2/pages/15950 |  |
+| fetched | 200 | 1 | https://www.trijharkhand.in/en/munda |  |
+| fetched | 200 | 1 | https://www.utemountainutetribe.com/white%20mesa%20administration.html |  |
+| fetched | 200 | 1 | https://www.nps.gov/pisp/learn/management/index.htm |  |
+| fetched | 200 | 1 | https://plpt.nsn.us/language/ |  |
+| unreachable |  | 1 | https://fuentedirecta.oep.org.bo/noticia/la-rotacion-de-ayllus-en-el-lanqsni-paqh-ma-eph-organo-ejecutivo | network: Remote end closed connection without response |
+| fetched | 200 | 1 | https://www.quinaultindiannation.com/240/Taholah-Village-Relocation |  |
+| fetched | 200 | 1 | https://whakatau.govt.nz/te-kahui-whakatau-treaty-settlements/find-a-treaty-settlement/te-arawa-lakes |  |
+| fetched | 200 | 1 | https://sni.org/education/seneca-language-departments/ |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/rai |  |
+| fetched | 200 | 3 | https://www.indianaffairs.nd.gov/turtle-mountain-band-chippewa-0 |  |
+| fetched | 200 | 1 | https://www.vgfn.ca/about/our-first-nation |  |
+| fetched | 200 | 1 | https://fortsillapache-nsn.gov/about/tribal-government/ |  |
+| fetched | 200 | 1 | https://www.cheroenhaka-nottoway.org/about-us/cheroenhaka-language/ |  |
+| fetched | 200 | 1 | https://www.absenteeshawneetribe-nsn.gov/historic-preservation |  |
+| fetched | 200 | 1 | https://www.yuroktribe.org/post/yurok-tribe-save-the-redwoods-league-finalize-major-land-transfer |  |
+| fetched | 200 | 1 | https://www.southernute-nsn.gov/natural-resources/wildlife-resource-management/hunting/brunot-area-hunting-and-fishing/ |  |
+| fetched | 200 | 1 | https://www.kawnation.gov/language/ |  |
+| unreachable | 202 | 1 | https://utetribe.com/wp-content/uploads/2026/04/TribeAppealCourtDecisionOnSplitEstateLands.pdf | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.omtribe.org/who-we-are/culture/tribal-preservation/ |  |
+| fetched | 200 | 1 | https://www.monacannation.gov/environmental.html |  |
+| fetched | 200 | 1 | https://mycaddonation.com/historic-preservation |  |
+| fetched | 200 | 1 | https://www.tiwilandcouncil.com/ |  |
+| unreachable | 202 | 1 | https://coharietribe.org/programs/great-coharie-river-initiative/ | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.haliwa-saponi.gov/cultural-classes |  |
+| fetched | 200 | 1 | https://waccamaw-siouan.org/government |  |
+| fetched | 200 | 1 | https://www.mowachoctawindians.com/land-timber-industry |  |
+| fetched | 200 | 1 | https://southeasternmvskokenation.org/mvskoke-language |  |
+| fetched | 200 | 1 | https://ucantribe.com/march-fellowship-2/ |  |
+| fetched | 200 | 1 | https://cherokeetribeofnortheastalabama.org/learning-tools |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/degxinag.php |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/pt/Povo:Guarani |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Kankuamo.pdf |  |
+| fetched | 200 | 1 | https://raipon.info/narody/evenki/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=29 |  |
+| fetched | 200 | 3 | https://itcaonline.com/member-tribes/white-mountain-apache-tribe/ |  |
+| fetched | 200 | 3 | https://tribalnations.mt.gov/Directory/NorthernCheyenneTribe |  |
+| fetched | 200 | 3 | https://bdpi.cultura.gob.pe/pueblos/awajun |  |
+| unreachable | 403 | 4 | https://minorityrights.org/communities/adivasis/ | HTTP 403 |
+| fetched | 200 | 3 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/gunayala-living-model-autonomy-and-self-government |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/oral-and-graphic-expressions-of-the-wajapi-00049 |  |
+| fetched | 200 | 1 | https://fsmlaw.org/pohnpei/index.htm |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/chukchis.shtml |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-rwanda | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 1 | https://www.cip.gov.tw/en/tribe/grid-list/32D5BFDE3389841BD0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/diaguita/organizacion-social-2/ |  |
+| fetched | 200 | 1 | https://www.bia.gov/as-ia/opa/online-press-release/assistant-secretary-washburn-issues-reservation-proclamation-trust |  |
+| fetched | 200 | 1 | https://fennougria.ee/en/young-indigenous-families-supported-by-chum-capital/ |  |
+| fetched | 200 | 3 | https://whc.unesco.org/en/list/1333/ |  |
+| fetched | 200 | 1 | https://ostm.in/tribes_of_odisha/munda/ |  |
+| fetched | 200 | 1 | https://www.nps.gov/articles/yoeme.htm |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/sherpa |  |
+| fetched | 200 | 1 | https://www.cheroenhaka-nottoway.org/about-us/cattashowrock-town/ |  |
+| fetched | 200 | 1 | https://www.absenteeshawneetribe-nsn.gov/language |  |
+| fetched | 200 | 1 | https://waccamaw-siouan.org/overview |  |
+| fetched | 200 | 1 | https://www.mowachoctawindians.com/social-barriers |  |
+| fetched | 200 | 1 | https://ucantribe.com/work-in-progress/ |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/denaina.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/en/Povo:Palikur |  |
+| fetched | 200 | 3 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Misak%20(Guambiano).pdf |  |
+| fetched | 200 | 2 | https://raipon.info/narody/itelmeny/ |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=5 |  |
+| fetched | 200 | 2 | https://itcaonline.com/member-tribes/tonto-apache-tribe/ |  |
+| fetched | 200 | 3 | https://bdpi.cultura.gob.pe/pueblos/shipibo-konibo |  |
+| unreachable | 403 | 1 | https://minorityrights.org/mrg-welcomes-uganda-court-verdict-on-batwa-compensation/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/radio-tiichajil-tenam-becomes-reality |  |
+| fetched | 200 | 3 | https://ich.unesco.org/en/RL/oral-heritage-and-cultural-manifestations-of-the-zapara-people-00007 |  |
+| fetched | 200 | 2 | https://fsmlaw.org/yap/code/title05/T05_Ch01.htm |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/nanais.shtml |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2023-burundi | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/8B0F97E827D78404D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/atacamenos/ambiente-y-localizacion/ |  |
+| fetched | 200 | 1 | https://fennougria.ee/en/peoples/samoyedic-peoples/nganasans/ |  |
+| fetched | 200 | 2 | https://whc.unesco.org/en/list/718/ |  |
+| fetched | 200 | 2 | https://ostm.in/tribes_of_odisha/santal/ |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/janjatiharu |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/eyak.php |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Baniwa |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Nasa.pdf |  |
+| fetched | 200 | 3 | https://raipon.info/narody/kety/ |  |
+| fetched | 200 | 3 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=8 |  |
+| fetched | 200 | 2 | https://bdpi.cultura.gob.pe/pueblos/quechuas |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/dayak/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/pueblos-mayas-ixiles-y-chortis-recuperan-certeza-juridica-sobre-sus-tierras |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/pirekua-traditional-song-of-the-p-urhepecha-00398 |  |
+| fetched | 200 | 1 | https://fsmlaw.org/yap/index.htm |  |
+| fetched | 200 | 1 | https://arhiiv.eki.ee/books/redbook/nenets.shtml |  |
+| unreachable | 200 | 3 | https://www.iwgia.org/en/news/iw-2026-tanzania | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/E8D1B17F6A81D678D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/mapuche/ambiente-y-localizacion/ |  |
+| fetched | 200 | 3 | https://whc.unesco.org/en/list/188/ |  |
+| fetched | 200 | 2 | https://nfdin.gov.np/pages/gurung |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/gwichin.php |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/pt/Povo:Guarani_Mbya |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/prensa/noticias/Documents/Poblaciones/Yukpa%20ywonku%E2%80%93.pdf |  |
+| fetched | 200 | 2 | https://raipon.info/narody/koryaki/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=67 |  |
+| fetched | 200 | 3 | https://bdpi.cultura.gob.pe/pueblos/uro |  |
+| unreachable | 403 | 3 | https://minorityrights.org/communities/hadza-hadzabe/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/former-indigenous-authorities-48-cantones-totonicapan-released-guatemala-after-more-year |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/knowledge-skills-and-rituals-related-to-the-annual-renewal-of-the-qeswachaka-bridge-00594 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-morocco | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/50AABE9D1284F664D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://chileprecolombino.cl/en/pueblos-originarios/mapuche/lengua/ |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/1265/ |  |
+| fetched | 200 | 1 | https://nfdin.gov.np/pages/limbu |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/haida.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/en/Povo:Taurepang |  |
+| fetched | 200 | 2 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Pasto.pdf |  |
+| fetched | 200 | 1 | https://raipon.info/narody/chukchi/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=32 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/barabaig/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/what-happened-toto |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/hudhud-chants-of-the-ifugao-00015 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-algeria | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/C9EB38FF61885E80D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/1386 |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/han.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Huni_Kuin_(Kaxinaw%C3%A1) |  |
+| fetched | 200 | 3 | https://mng.mincultura.gov.co/prensa/noticias/Documents/Poblaciones/PUEBLO%20WIWA.pdf |  |
+| fetched | 200 | 2 | https://raipon.info/narody/nanaytsy/ |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=51 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/endorois/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/meet-our-2022-keepers-earth-fund-grant-partners |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/decisions/13.COM/10.A.6 |  |
+| unreachable | 200 | 4 | https://www.iwgia.org/en/news/iw-2026-namibia | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/A1076DE2F8CB0091D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 2 | https://whc.unesco.org/en/list/1503 |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/koyukon.php |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Ka'apor |  |
+| fetched | 200 | 3 | https://mng.mincultura.gov.co/areas/poblaciones/noticias/Documents/Caracterizaci%C3%B3n%20del%20pueblo%20Yanacona.pdf |  |
+| fetched | 200 | 1 | https://raipon.info/narody/nentsy/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=2 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/landmark-decision-rules-kenyas-removal-of-indigenous-people-from-ancestral-land-illegal/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/node/12477 |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/practices-and-knowledge-linked-to-the-imzad-of-the-tuareg-communities-of-algeria-mali-and-niger-00891 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-libya | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/733B28E29AD8C492D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/715 |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/tanana.php |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Kuikuro |  |
+| fetched | 200 | 1 | https://raipon.info/narody/nganasany/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=16 |  |
+| unreachable | 403 | 4 | https://minorityrights.org/communities/indigenous-peoples-5/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/news/challenges-faced-haiom-san-marginalized-communities-namibia-challenges-and-solutions |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/BSP/xtaxkgakget-makgkaxtlawana-the-centre-for-indigenous-arts-and-its-contribution-to-safeguarding-the-intangible-cultural-heritage-of-the-totonac-people-of-veracruz-mexico-00666 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2020-niger | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/E6314988BF2C0DC6D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 3 | https://whc.unesco.org/en/list/1545/ |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/siberianyupik.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/en/Povo:Tiriy%C3%B3 |  |
+| fetched | 200 | 2 | https://raipon.info/narody/nivkhi/ |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=14 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/indigenous-peoples-and-ethnic-minorities-in-sarawak/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/historic-win-inter-american-court-human-rights-rules-favor |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/RL/wayuu-normative-system-applied-by-the-putchipu-ui-palabrero-00435 |  |
+| unreachable | 200 | 4 | https://www.iwgia.org/en/news/iw-2026-south-africa | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/2880927AC24CBF01D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://whc.unesco.org/en/list/120/ |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/tlingit.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Macuxi |  |
+| fetched | 200 | 3 | https://raipon.info/narody/yukagiry/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=63 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/karen/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/node/12985 |  |
+| fetched | 200 | 1 | https://ich.unesco.org/en/RL/sand-drawings-of-vanuatu-00073 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2024-drc | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/6521E76602C72C42D0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://uaf.edu/anlc/languages-move/tsimshian.php |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/pt/Povo:Mebeng%C3%B4kre_(Kayap%C3%B3) |  |
+| fetched | 200 | 3 | https://raipon.info/narody/celkupy/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=40 |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/maasai-in-kenya/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/es/news/las-palabras-haciendo-eco-en-los-caminos-del-pueblo-lenca-copinh |  |
+| fetched | 200 | 3 | https://ich.unesco.org/en/RL/gada-system-an-indigenous-democratic-socio-political-system-of-the-oromo-01164 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-botswana | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/DF30105CEB78FB5CD0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/aleut.php |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Munduruku |  |
+| fetched | 200 | 3 | https://raipon.info/narody/udegeytsy/ |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=8 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/ogiek/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/indigenous-garifuna-and-feminist-community-correspondents-push-more-inclusive-democracy |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/RL/noken-multifunctional-knotted-or-woven-bag-handcraft-of-the-people-of-papua-00619 |  |
+| unreachable | 200 | 1 | https://www.iwgia.org/en/news/iw-2026-kenya | no static text (0 chars): JavaScript-rendered page, needs the human lane |
+| fetched | 200 | 3 | https://www.cip.gov.tw/en/tribe/grid-list/018C6D2BF369BDFDD0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 2 | https://uaf.edu/anlc/languages-move/uppertanana.php |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Patax%C3%B3 |  |
+| fetched | 200 | 2 | https://raipon.info/narody/eskimosy/ |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=20 |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/himba/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/news/announcing-our-2019-community-media-grants-partners |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/RL/ie-samoa-fine-mat-and-its-cultural-value-01499 |  |
+| fetched | 200 | 2 | https://www.cip.gov.tw/en/tribe/grid-list/210A52DE4470D46BD0636733C6861689/info.html?cumid=5DD9C4959C302B9FD0636733C6861689 |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/en/Povo:Waiwai |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=1 |  |
+| unreachable | 403 | 3 | https://minorityrights.org/communities/sengwer/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/indigenous-communities-and-cultural-survival-urge-cerd-address-community-radio-rights |  |
+| fetched | 200 | 2 | https://ich.unesco.org/en/RL/lakalaka-dances-and-sung-speeches-of-tonga-00072 |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/en/Povo:Waj%C3%A3pi |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=11 |  |
+| unreachable | 403 | 1 | https://minorityrights.org/communities/san-2/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/news/mayagna-communities-work-achieve-food-sovereignty-after-hurricanes-iota-and-eta |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/en/Povo:Wayana |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=5 |  |
+| unreachable | 403 | 2 | https://minorityrights.org/country/nepal/ | HTTP 403 |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/controlling-their-destiny-juhoansi-nyae-nyae |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/en/Povo:Ye%27kwana |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=9 |  |
+| unreachable | 403 | 2 | https://minorityrights.org/communities/wanniyala-aetto-veddhas/ | HTTP 403 |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/news/pueblo-miskitu-yatama-and-yapti-tasba-radios-advance-indigenous-rights-north-caribbean-coast |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Terena |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=37 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/campaign-update-honduras-gives-title-lands-miskito-people |  |
+| fetched | 200 | 3 | https://pib.socioambiental.org/pt/Povo:Ticuna |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=76 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/maya-qeqchi-and-mopan-southern-belize-win-major-land-rights-victory-international-appeals |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Tupinamb%C3%A1 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=15 |  |
+| fetched | 200 | 2 | https://www.culturalsurvival.org/news/radio-sensunat-broadcasting-revitalize-nahuat-language-el-salvador |  |
+| fetched | 200 | 2 | https://pib.socioambiental.org/pt/Povo:Wapichana |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=53 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/resilience-and-resistance-nahuat-pipil-peoples-el-salvador |  |
+| fetched | 200 | 1 | https://pib.socioambiental.org/pt/Povo:Yanomami |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=13 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/maya-leaders-alliance-advocates-united-nations-urging-respect-rule-law-belize |  |
+| fetched | 200 | 3 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=23 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/profile-community-radio-station-radio-sembrador |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=16 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/news/indigenous-mayan-youth-forge-international-relationships-based-community-radio |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=60 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/kastom-development-opening-nahai-kaljaral-senta |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=10 |  |
+| fetched | 200 | 1 | https://www.culturalsurvival.org/publications/cultural-survival-quarterly/wodaabe |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=39 |  |
+| fetched | 200 | 3 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=9 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=64 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=12 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=43 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=2 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=34 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=30 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=41 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=19 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=38 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=10 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=24 |  |
+| fetched | 200 | 3 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=70 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=65 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=13 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=61 |  |
+| fetched | 200 | 3 | https://sic.cultura.gob.mx/ficha.php?table=radi&table_id=43 |  |
+| fetched | 200 | 1 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=49 |  |
+| fetched | 200 | 2 | https://sic.cultura.gob.mx/ficha.php?table=grupo_etnico&table_id=27 |  |
+
+## Stale facts (hidden until a person restores them)
+
+- `in-bodo-c4604055`: HTTP 404.
+- `in-santal-64165b8e`: HTTP 404.
+- `santa-ynez-band-of-chumash-indians-us-ca-3114585b`: evidence phrase not found on page.
+- `yawuru-au-2ade057b`: HTTP 404.
+- `yawuru-au-093a3066`: HTTP 404.
+- `yawuru-au-aff61355`: HTTP 404.
+- `kaggaba-kogi-sierra-nevada-co-61967fa9`: evidence phrase not found on page. Near match (0.67): "la formalizacion del resguard o fue el 8 de octubre de"
+- `kaggaba-kogi-sierra-nevada-co-80417754`: evidence phrase not found on page. Near match (0.75): "l engua nativa se denomina kogui y perteneciente a la familia"
+- `misak-cauca-co-0698c6bc`: evidence phrase not found on page.
+- `misak-cauca-co-ce87db28`: evidence phrase not found on page. Near match (0.67): "se eligio el primer indigena por votacion popula r como"
+- `nasa-cauca-co-2d6e8b27`: evidence phrase not found on page. Near match (0.69): "en 1971 nacio l a organizacion regional indigena del cauca el"
+- `wiwa-sierra-nevada-co-9946f5cb`: evidence phrase not found on page. Near match (0.8): "mayoria de los jovenes dominan la s tres lenguas"
