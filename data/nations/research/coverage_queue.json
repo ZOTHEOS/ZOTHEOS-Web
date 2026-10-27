@@ -115,9 +115,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "ak-chin-source-discovery-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -133,9 +134,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.ak-chin.nsn.us/index.php/misc/terms",
+          "retrieved_at": "2026-10-27T05:26:47.577712+00:00",
+          "http_status": 301,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source_id": "ak-chin-source-discovery-2026-10-27",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-27-ak-chin-discovery-3.json",
+          "receipt_id": "r-5b8642f42981f214"
+        }
+      ],
+      "updated_at": "2026-10-27T05:42:23.591053+00:00",
+      "next_attempt_after": "2026-10-28T05:42:23.591053+00:00",
+      "lease_until": null,
+      "note": "Candidate homepage returned200 but contains unrelated backlink labels; cause unknown. Visible rights link returned301; target not followed. Identity, rights and source integrity require review. No facts or verified official link published."
     },
     {
       "task_id": "profile-us-fed-9b4dd32a947e",
@@ -2209,9 +2223,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-coushatta-tribe-of-louisiana-us-la-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -2227,9 +2242,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.coushatta.org/",
+          "retrieved_at": "2026-10-27T05:29:34.146373+00:00",
+          "http_status": 200,
+          "sha256": "6e1df699b9910cf4f1aea8331b9edbd05a618ff5736de7d5768ef19f711478dd",
+          "source_id": "own-coushatta-tribe-of-louisiana-us-la-2026-10-27",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-27-coushatta-author-02-home.json",
+          "receipt_id": "r-1264a802faac8fc8"
+        }
+      ],
+      "updated_at": "2026-10-27T05:42:23.995400+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-27-coushatta-la-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-7d14b933b348",
@@ -62788,11 +62819,12 @@
       "region": "us-state-nj",
       "priority": 80,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
         "us-nj-tribal-directory",
         "us-nj-commission-hub",
-        "us-nj-commission-statutes"
+        "us-nj-commission-statutes",
+        "ramapough-source-discovery-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -62810,9 +62842,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T14:11:36.803392+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.lenape-nation.org/",
+          "retrieved_at": "2026-10-27T05:27:19.932444+00:00",
+          "http_status": 200,
+          "sha256": "ba992e9d848ff635816b2daa993ec2517784f42dda2fcfdc163dc7159cbfc97f",
+          "source_id": "ramapough-source-discovery-2026-10-27",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-27-ramapough-discovery-2.json",
+          "receipt_id": "r-16cb910c045f5af0"
+        }
+      ],
+      "updated_at": "2026-10-27T05:42:23.841336+00:00",
+      "next_attempt_after": "2026-10-28T05:42:23.841336+00:00",
+      "lease_until": null,
+      "note": "Related Indigenous homepage visibly links ramapomunsee.net. Authorized subject robots attempt failed DNS before HTTP. No subject page read; government identity, preferred name, rights and crosswalk remain unverified. No alternate host or retry."
     },
     {
       "task_id": "discover-us-nj-beyond-commission-groups",

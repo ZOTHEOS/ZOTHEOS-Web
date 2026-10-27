@@ -601,3 +601,23 @@ paths. Sleep target 10.8s produced a minimum recorded monotonic gap 10.796s, abo
 Only one queue task and one directory crosswalk change. Other records, holds and source clocks
 remain. The existing Living Gallery and printable brief work are preserved. No person or Nation
 approval is claimed. Source record: batches/2026-10-25-eklutna-continuity.json. Coverage incomplete.
+
+## October 27 UTC: Depth, Source Gaps And Native Resource Navigation
+
+One new Louisiana government profile adds four own-source facts, two history layers and three
+resources. Separate author and source-meaning/respect review retain institutional dates within
+longer continuity and distinguish the Louisiana and Texas governments. Six actual author reads
+and four fresh verifier responses passed; minimum verifier gap is recorded without rounding.
+
+Two other subjects remain blocked for further research. Ak-Chin has captured 200/200/301 responses
+and unrelated homepage link labels, without an inferred cause or facts. A related Indigenous
+publisher visibly links a Ramapough candidate host; the subject DNS attempt returned no HTTP
+response. Its identity and use restrictions remain unverified. Original restricted-environment
+DNS failures remain separate from actual source attempts. Public metadata excludes bodies,
+cookies, raw headers, private contacts and local paths; no person or Nation approval is claimed.
+
+Only three queue tasks and one reviewed directory crosswalk change; other records and editions
+remain. Existing holds and source clocks are preserved. Independent preimplementation acceptance
+tests protect the new native Publisher Resources jump, hidden-source suppression and unchanged
+legacy markup. Full prose remains open with no new script, tracker or print behavior.
+Source record: batches/2026-10-27-depth-sources-and-navigation.json. Coverage remains incomplete.

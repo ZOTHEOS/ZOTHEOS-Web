@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-27T05:42:22.782540+00:00",
+  "base_commit": "9c80dd2a02024e58b3e11f6ad44eef81965ea6de",
+  "measured_counts": {
+    "canonical_profiles": 481,
+    "raw_facts": 1383,
+    "new_profiles": 1,
+    "new_facts": 4,
+    "new_history_layers": 2,
+    "new_own_resources": 3,
+    "old_profiles_completely_preserved": 480,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 143,
+      "blocked": 8,
+      "pending": 1661
+    },
+    "other_queue_tasks_preserved": 1809,
+    "subjects_researched": 3,
+    "new_capture_metadata_receipts": 18,
+    "new_identity_receipts": 1
+  },
+  "independent_source_review": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-27T05:34:45.331857+00:00",
+    "sha256": "8c5f6f500f6d66d21150a70fc431182fe22a46650f281f56f387af52e9047a13",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+  },
+  "verification": {
+    "approved": true,
+    "reviewed_at": "2026-10-27T05:42:22.723519+00:00",
+    "reviewer": "ZOTHEOS",
+    "candidate_sha256": "99fa181722cb913cb296a6f388d5b08734527d6f22fabaa5d87cab7f459a4f21",
+    "unchanged_refresher_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "wrapper_sha256": "dd830e166f9ff3dc7dd5154d3106bf2d7874ea86fee9e7818e4b666a09664c37",
+    "responses": 4,
+    "facts_verified": 4,
+    "published_policy_minimum_seconds": 3,
+    "conservative_minimum_seconds": 10.7,
+    "wrapper_target_seconds": 10.8,
+    "minimum_recorded_monotonic_gap_seconds": 10.812000000005355,
+    "redirects_followed": false,
+    "retries": 0,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  },
+  "capture_receipts": [
+    "research/receipts/2026-10-27-coushatta-author-01-robots.json",
+    "research/receipts/2026-10-27-coushatta-author-02-home.json",
+    "research/receipts/2026-10-27-coushatta-author-03-privacy.json",
+    "research/receipts/2026-10-27-coushatta-author-04-our-story.json",
+    "research/receipts/2026-10-27-coushatta-author-05-government.json",
+    "research/receipts/2026-10-27-coushatta-author-06-our-language.json",
+    "research/receipts/2026-10-27-coushatta-verifier-capture-01.json",
+    "research/receipts/2026-10-27-coushatta-verifier-capture-02.json",
+    "research/receipts/2026-10-27-coushatta-verifier-capture-03.json",
+    "research/receipts/2026-10-27-coushatta-verifier-capture-04.json",
+    "research/receipts/2026-10-27-ak-chin-discovery-1.json",
+    "research/receipts/2026-10-27-ak-chin-discovery-2.json",
+    "research/receipts/2026-10-27-ak-chin-discovery-3.json",
+    "research/receipts/2026-10-27-ak-chin-restricted-network-1.json",
+    "research/receipts/2026-10-27-ramapough-discovery-1.json",
+    "research/receipts/2026-10-27-ramapough-discovery-2.json",
+    "research/receipts/2026-10-27-ramapough-discovery-3.json",
+    "research/receipts/2026-10-27-ramapough-restricted-network-1.json"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-fed-d47fa3ee934f",
+    "profile-us-fed-ac212d19032a",
+    "profile-us-state-nj-ramapough-lenape-indian-nation"
+  ],
+  "source_gaps": {
+    "ak_chin": "Rights and integrity review pending; no compromise or outage cause asserted. No facts or official-link approval.",
+    "ramapough": "Related Indigenous discovery link retained; subject DNS failed before HTTP. No identity match or publisher outage inferred."
+  },
+  "reading_experience": "A conditional native Publisher Resources shortcut completes existing guided context navigation. Holds and legacy output remain protected; acceptance tests were authored independently before implementation. No script, tracker, collapsed text or print change.",
+  "limits": "Coverage incomplete worldwide. Louisiana and Texas governments remain distinct; institutional dates are not origins. No human/Nation approval, sensitive cultural content, current emergency or guaranteed outcomes. All earlier canonical objects, source dates, publication holds, blocked/reuse lanes, Living Gallery and Paths To Action content remain.",
+  "publication_state": "Source and integration review recorded; final release and live checks remain separate."
+}
