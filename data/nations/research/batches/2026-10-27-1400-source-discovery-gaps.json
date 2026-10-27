@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-27T14:03:42.871940+00:00",
+  "base_commit": "760d6c07b18099e7626b27da1cb10d1d2a7a4efe",
+  "subjects_researched": 3,
+  "requests_attempted": 6,
+  "http_responses": 5,
+  "pre_http_tls_failures": 1,
+  "capture_receipts": [
+    "research/receipts/2026-10-27-1400-quassarte-01.json",
+    "research/receipts/2026-10-27-1400-alturas-01.json",
+    "research/receipts/2026-10-27-1400-alturas-02.json",
+    "research/receipts/2026-10-27-1400-alturas-03.json",
+    "research/receipts/2026-10-27-1400-apache-ok-01.json",
+    "research/receipts/2026-10-27-1400-apache-ok-02.json"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-fed-238499c1321c",
+    "profile-us-fed-19a1cc9bd5de",
+    "profile-us-fed-2915a651f3c8"
+  ],
+  "queue_by_status": {
+    "needs_review": 143,
+    "blocked": 11,
+    "pending": 1658
+  },
+  "other_queue_tasks_preserved": 1809,
+  "canonical_profiles_preserved": 481,
+  "raw_facts_preserved": 1383,
+  "new_profiles": 0,
+  "new_facts": 0,
+  "new_history_layers": 0,
+  "new_official_links": 0,
+  "source_review_sha256": "1f29112ffdad22a9e76ad3a1a9326ac682e05f5cff9d2d52d4881cda71c1f134",
+  "source_gaps": [
+    {
+      "subject_task": "profile-us-fed-238499c1321c",
+      "discovery_bia_objectid": 266,
+      "capture_hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "read_attempts": 1,
+      "http_responses": 0,
+      "finding": "HTTPS robots attempt failed certificate verification before HTTP. No page read, retry, alternate host or TLS bypass. Secure own-source identity and rights remain unverified.",
+      "scope": "Publication of sanitized research metadata only; no facts, identity or official-link approval.",
+      "source_receipts_sha256": "da6ae05b13a338aa5203d5c5d41f0002004ed458f5cf1e5bdcdb1c821badf584"
+    },
+    {
+      "subject_task": "profile-us-fed-19a1cc9bd5de",
+      "discovery_bia_objectid": 385,
+      "capture_hashes": [
+        "0795ffc2630ddc49b45ae06f31f54c8fd466e33cbd9009ba31c2bfdbd6a5ad5e",
+        "4359ff453bf637a76cf0c174d9186d3de77a64a23479b539f6c86bd3cc6ac140",
+        "9d37e5b95880d1dd2dc4f9f97a4191a2f9a059ea1c2aa829d251a3f2f8c09efa"
+      ],
+      "read_attempts": 3,
+      "http_responses": 3,
+      "finding": "Saved BIA lead is a California Tribal Families Coalition directory entry, not an established Nation-owned host. The captured entry did not establish an own-government website. This does not mean the Tribe has no website. Further permissible own-source discovery is needed.",
+      "scope": "Publication of sanitized research metadata only; no facts, identity or official-link approval.",
+      "source_receipts_sha256": "75bc1925753729af4d70947069e5686b44f94749002bc3296f32ec33c2f567bc"
+    },
+    {
+      "subject_task": "profile-us-fed-2915a651f3c8",
+      "discovery_bia_objectid": 500,
+      "capture_hashes": [
+        "fed0011cbd7608303f7e252da24010bccc1fd8864daf50a11f1d4580d228cda5",
+        "ef21f6460809c8a771a18972bd4ec56e01beb659f5cb70e9acb670cba13ef604"
+      ],
+      "read_attempts": 2,
+      "http_responses": 2,
+      "finding": "Candidate homepage contains a gift-shop excerpt that shifts to unrelated casino-session wording and a third-party updater label. Cause unknown; source integrity and rights require review. No hacking, compromise, misconduct or outage cause is asserted. No additional page, sitemap or alternate host read.",
+      "scope": "Publication of sanitized research metadata only; no facts, identity or official-link approval.",
+      "source_receipts_sha256": "eb96cf04f2082de56d2266f81b6bfc99c9ba155708f844711e725758913e8286"
+    }
+  ],
+  "ui_review": "Read-only source inspection found no concrete small reading-navigation defect; current native navigation, focus, wrapping and source targets are preserved. No new runtime or physical-device accessibility claim.",
+  "limits": "Original directory names and source editions, every canonical object and fact clock, publication holds, Living Gallery, Theater and Paths To Action remain unchanged. No inference of identity, rights, website absence, compromise, outage, misconduct, current emergency, human review or Nation endorsement. Public metadata omits raw bodies, headers, cookies, contact details and local paths.",
+  "publication_state": "Research record only. Review, release and deployment gates are separate."
+}

@@ -1103,6 +1103,54 @@
       "discovery_date": "2026-10-27",
       "status": "source_located",
       "note": "Related Indigenous publisher visibly links a candidate subject host. Subject identity, rights and own website remain unverified."
+    },
+    {
+      "source_id": "alabama-quassarte-source-discovery-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.alabama-quassarte.org/",
+      "allowed_hosts": [
+        "www.alabama-quassarte.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "HTTPS robots attempt failed certificate verification before HTTP. No page read, retry, alternate host or TLS bypass. Secure own-source identity and rights remain unverified. Discovery scope only; no source identity, factual or reuse approval."
+    },
+    {
+      "source_id": "alturas-source-discovery-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://caltribalfamilies.org/places/alturas-indian-rancheria/",
+      "allowed_hosts": [
+        "caltribalfamilies.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "Saved BIA lead is a California Tribal Families Coalition directory entry, not an established Nation-owned host. The captured entry did not establish an own-government website. This does not mean the Tribe has no website. Further permissible own-source discovery is needed. Discovery scope only; no source identity, factual or reuse approval."
+    },
+    {
+      "source_id": "apache-ok-source-discovery-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://apachetribe.org/",
+      "allowed_hosts": [
+        "apachetribe.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "Candidate homepage contains a gift-shop excerpt that shifts to unrelated casino-session wording and a third-party updater label. Cause unknown; source integrity and rights require review. No hacking, compromise, misconduct or outage cause is asserted. No additional page, sitemap or alternate host read. Discovery scope only; no source identity, factual or reuse approval."
     }
   ]
 }
