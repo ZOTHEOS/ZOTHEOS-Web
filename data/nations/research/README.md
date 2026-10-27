@@ -621,3 +621,26 @@ remain. Existing holds and source clocks are preserved. Independent preimplement
 tests protect the new native Publisher Resources jump, hidden-source suppression and unchanged
 legacy markup. Full prose remains open with no new script, tracker or print behavior.
 Source record: batches/2026-10-27-depth-sources-and-navigation.json. Coverage remains incomplete.
+
+## October 27 UTC, Second Batch: Three Source-Discovery Gaps
+
+This bounded batch attempted six exact-host reads for three directory-only subjects. Five HTTP
+responses were received and one HTTPS attempt stopped at certificate validation before HTTP.
+Alabama-Quassarte needs a secure permissible source; no certificate validation was bypassed.
+The Alturas BIA lead points to a California Tribal Families Coalition directory entry, whose
+captured links did not establish a Nation-owned website. That is not proof that no website exists.
+Apache Tribe of Oklahoma's candidate homepage included unrelated excerpt wording; its cause is
+unknown. Source integrity and rights require further review before facts or official links.
+
+No profiles, facts, histories, identity matches or official links are added. All 481 canonical
+profiles, 1,383 raw facts, prior fact clocks and existing holds remain exact. The 2,272 overlapping
+directory source records retain their names, dates and identity review states. Coverage remains
+incomplete worldwide. Three queue tasks receive explicit gaps and the normal one-day backoff;
+1,809 other tasks are unchanged. Queue totals: 143 needs_review, 11 blocked and 1,658 pending.
+
+Measured response hashes, actual October 27 UTC check times and sanitized metadata are recorded
+in research/batches/2026-10-27-1400-source-discovery-gaps.json. Full captures stay local. A pre-HTTP
+failure has null response status, final URL, body length and body hash; its empty local capture
+is separately identified. No publisher outage, compromise, legal ruling or emergency is inferred.
+No human review, permission or Nation endorsement is claimed. Existing mobile/desktop reading
+navigation, Living Gallery, Paths To Action and Theater output are preserved.

@@ -214,9 +214,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "alabama-quassarte-source-discovery-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -233,8 +234,10 @@
         "signals": []
       },
       "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "updated_at": "2026-10-27T14:03:43.245819+00:00",
+      "next_attempt_after": "2026-10-28T14:03:43.245819+00:00",
+      "lease_until": null,
+      "note": "HTTPS robots attempt failed certificate verification before HTTP. No page read, retry, alternate host or TLS bypass. Secure own-source identity and rights remain unverified. Evidence: receipts/2026-10-27-1400-quassarte-01.json. Normal one-day retry backoff; no publication takedown or identity decision."
     },
     {
       "task_id": "profile-us-fed-19a1cc9bd5de",
@@ -248,9 +251,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "alturas-source-discovery-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -266,9 +270,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://caltribalfamilies.org/places/alturas-indian-rancheria/",
+          "retrieved_at": "2026-10-27T13:59:20.439479+00:00",
+          "http_status": 200,
+          "sha256": "4359ff453bf637a76cf0c174d9186d3de77a64a23479b539f6c86bd3cc6ac140",
+          "source_id": "alturas-source-discovery-2026-10-27",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-27-1400-alturas-02.json",
+          "receipt_id": "r-c76adab2ed5832c6"
+        }
+      ],
+      "updated_at": "2026-10-27T14:03:43.478354+00:00",
+      "next_attempt_after": "2026-10-28T14:03:43.478354+00:00",
+      "lease_until": null,
+      "note": "Saved BIA lead is a California Tribal Families Coalition directory entry, not an established Nation-owned host. The captured entry did not establish an own-government website. This does not mean the Tribe has no website. Further permissible own-source discovery is needed. Evidence: receipts/2026-10-27-1400-alturas-01.json, receipts/2026-10-27-1400-alturas-02.json, receipts/2026-10-27-1400-alturas-03.json. Normal one-day retry backoff; no publication takedown or identity decision."
     },
     {
       "task_id": "profile-us-fed-2915a651f3c8",
@@ -282,9 +299,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "blocked",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "apache-ok-source-discovery-2026-10-27"
       ],
       "review": {
         "identity": "pending",
@@ -300,9 +318,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://apachetribe.org/",
+          "retrieved_at": "2026-10-27T13:59:31.119819+00:00",
+          "http_status": 200,
+          "sha256": "ef21f6460809c8a771a18972bd4ec56e01beb659f5cb70e9acb670cba13ef604",
+          "source_id": "apache-ok-source-discovery-2026-10-27",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-27-1400-apache-ok-02.json",
+          "receipt_id": "r-1713add243b005bf"
+        }
+      ],
+      "updated_at": "2026-10-27T14:03:43.711391+00:00",
+      "next_attempt_after": "2026-10-28T14:03:43.711391+00:00",
+      "lease_until": null,
+      "note": "Candidate homepage contains a gift-shop excerpt that shifts to unrelated casino-session wording and a third-party updater label. Cause unknown; source integrity and rights require review. No hacking, compromise, misconduct or outage cause is asserted. No additional page, sitemap or alternate host read. Evidence: receipts/2026-10-27-1400-apache-ok-01.json, receipts/2026-10-27-1400-apache-ok-02.json. Normal one-day retry backoff; no publication takedown or identity decision."
     },
     {
       "task_id": "profile-us-fed-13e8e53b298b",
