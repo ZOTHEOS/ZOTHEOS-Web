@@ -18,6 +18,27 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
+The registry contains 480 researched profiles and 1,379 raw facts. Two existing publication holds
+remain. The October 25 UTC batch adds Native Village of Eklutna as a distinct Tribal government,
+with four own-source facts, two history layers and three official resources. All 479 earlier
+canonical objects and their fact clocks are unchanged. The saved directory name, Eklutna Native
+Village, remains an alias; the broader Dena’ina profile and corporate entities remain distinct.
+
+The Tribe’s office was organized in 1961 for land-rights protection. That date is not the origin
+of self-government or a federal-recognition date. Cultural consultation and Eklutna River work
+are attributed to the Tribe’s own pages, without claiming completed restoration or legal outcomes.
+No Elders’ stories, ceremonial instruction, protected locations, media or private contacts are
+copied. New history and resource cards carry canonical fact dependencies for later holds.
+
+Coverage remains incomplete worldwide. The directory retains 2,272 overlapping source records,
+not a count of distinct Nations. One directory row receives an explicitly reviewed profile link.
+Five author reads and four fresh verifier responses retain actual October 25 UTC dates and hashes.
+The new Living Gallery, Paths To Action plates, printable brief sheets and homepage doors are
+preserved from the published base. Their data-derived counts are rebuilt by the current tools.
+David Garcia remains the one-person founder; no human review or Nation endorsement is claimed.
+
+## October 19: Southern Nations And Living Continuity
+
 The registry contains 479 researched profiles and 1,375 raw facts. The two existing publication
 holds remain. The October 19 UTC batch adds Caddo Nation of Oklahoma and Alabama-Coushatta Tribe
 of Texas as distinct government profiles, with eight own-source facts, four readable history

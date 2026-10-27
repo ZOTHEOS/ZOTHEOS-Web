@@ -164,7 +164,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc=' 'sha256-RH5a9PNMMeORK/hAzRlGHsQSZckJ7ibQun0wmOJiAK0=' 'sha256-NMYp8GAfkKeGnZepxDJmjwHp793lyDu3Q6+3gb1oZxA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc=' 'sha256-9LNrupxMvOj/BmbI+pA0JgPjpphkhcMdQRUFH2jy+y8=' 'sha256-NMYp8GAfkKeGnZepxDJmjwHp793lyDu3Q6+3gb1oZxA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'"
         }
       ]
     },
@@ -173,7 +173,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc=' 'sha256-RH5a9PNMMeORK/hAzRlGHsQSZckJ7ibQun0wmOJiAK0=' 'sha256-NMYp8GAfkKeGnZepxDJmjwHp793lyDu3Q6+3gb1oZxA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'"
+          "value": "default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-Ip+fhIamHNpCIiHzglwZ+/l6Ei6DsnjrCTXW+zx4ebc=' 'sha256-9LNrupxMvOj/BmbI+pA0JgPjpphkhcMdQRUFH2jy+y8=' 'sha256-NMYp8GAfkKeGnZepxDJmjwHp793lyDu3Q6+3gb1oZxA='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'"
         }
       ]
     },

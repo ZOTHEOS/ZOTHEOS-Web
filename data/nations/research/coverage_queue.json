@@ -13130,9 +13130,10 @@
       "region": "alaska-hawaii-pacific-us",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-native-village-of-eklutna-us-ak-2026-10-25"
       ],
       "review": {
         "identity": "pending",
@@ -13148,9 +13149,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://eklutna-nsn.gov/",
+          "retrieved_at": "2026-10-25T10:34:27.842317+00:00",
+          "http_status": 200,
+          "sha256": "c606ae511ac8fd7a09a43fa0ab56c5957ff18efb2ead8f0adc1f94bf6649cac7",
+          "source_id": "own-native-village-of-eklutna-us-ak-2026-10-25",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-25-eklutna-author-home.json",
+          "receipt_id": "r-55f5bea55c8b9594"
+        }
+      ],
+      "updated_at": "2026-10-25T19:41:18.201654+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-25-eklutna-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-fc1e9a66a4b7",
