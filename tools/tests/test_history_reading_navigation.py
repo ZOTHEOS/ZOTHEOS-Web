@@ -25,6 +25,9 @@ else:
     from nations_context import Context
 
 LABEL='In This History'
+CONTEXT_LABEL='In This Context'
+RESOURCE_LABEL='Publisher Resources'
+RESOURCE_HEADING="From the publisher's own pages"
 DAY='2026-10-12'
 SCHOOL='FICTIONAL: Schools And Community Persistence'
 RIVER='FICTIONAL: River Work And Future Goals'
@@ -83,14 +86,18 @@ def render(tmp,doc=None,allow=None,model=None,nid='test-alpha'):
     return Context(tmp,model or public_model()).page(nid)
 
 def navigation(dom):
-    return [n for n in dom.nodes() if n.tag=='nav' and n.attrs.get('aria-label')==LABEL]
+    return [n for n in dom.nodes() if n.tag=='nav' and n.attrs.get('aria-label') in {LABEL,CONTEXT_LABEL}]
 
 def target_map(dom):
     return {n.text():n for n in dom.nodes() if n.tag=='h3' and n.attrs.get('id','').startswith('nHistory-')}
 
 def assert_native_links(markup,expected):
     dom=DOM(markup);nav=navigation(dom)
-    assert len(nav)==1,'A labelled native history navigation is required.'
+    assert len(nav)==1,'One labelled native context/history navigation is required.'
+    expected_label=CONTEXT_LABEL if any(href=='#nResources' for _,href in expected) else LABEL
+    assert nav[0].attrs.get('aria-label')==expected_label
+    labels=[n.text() for n in nav[0].nodes() if n.tag=='p' and 'lbl' in n.attrs.get('class','').split()]
+    assert labels==[expected_label]
     assert 'nation-reading' in nav[0].attrs.get('class','').split(),'Reuse existing wrapping/44px native reading styles.'
     links=[n for n in nav[0].nodes() if n.tag=='a']
     assert [(n.text(),n.attrs.get('href')) for n in links]==expected
@@ -101,14 +108,14 @@ def assert_native_links(markup,expected):
         assert link.attrs.get('href','').startswith('#') and 'onclick' not in link.attrs
         target=targets[link.attrs['href'][1:]]
         assert target.tag=='h3' and target.attrs.get('tabindex')=='-1'
-        assert target.text()==link.text()
+        assert target.text()==(RESOURCE_HEADING if link.attrs['href']=='#nResources' else link.text())
         assert 'target' not in link.attrs and 'download' not in link.attrs
     assert markup.index('<nav')<markup.index('id="nHistory-'),'Navigation precedes its reading targets.'
     return dom
 
 def test_two_visible_layers_get_named_native_jump_links(tmp_path):
     page=render(tmp_path)
-    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     assert page.count(BODY1)==page.count(BODY2)==1
 
 def test_one_opted_layer_keeps_its_target_without_redundant_navigation(tmp_path):
@@ -145,7 +152,7 @@ def test_no_visible_layers_has_no_empty_navigation_or_hidden_ids(tmp_path):
     doc,allow=data()
     for note in doc['public_notes']:note['fact_ids']=['alpha-held']
     page=render(tmp_path,doc,allow)
-    assert LABEL not in page and 'nHistory-' not in page and BODY1 not in page and BODY2 not in page
+    assert not navigation(DOM(page)) and 'nHistory-' not in page and BODY1 not in page and BODY2 not in page
 
 def test_hidden_nation_is_not_resurrected_by_navigation(tmp_path):
     model=public_model();model.nations=[model.by_id['test-beta']];model.by_id={'test-beta':model.by_id['test-beta']}
@@ -154,27 +161,27 @@ def test_hidden_nation_is_not_resurrected_by_navigation(tmp_path):
 def test_legacy_titled_layer_is_not_silently_added_to_navigation(tmp_path):
     doc,allow=data();doc['public_notes'].insert(1,{'nation':'test-alpha','title':'Legacy Title','text':'Legacy body.'})
     page=render(tmp_path,doc,allow)
-    dom=assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    dom=assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     old=[n for n in dom.nodes() if n.tag=='h3' and n.text()=='Legacy Title']
     assert len(old)==1 and 'id' not in old[0].attrs and 'tabindex' not in old[0].attrs
 
 def test_reordering_notes_changes_link_order_but_not_target_identity(tmp_path):
     doc,allow=data();doc['public_notes'].reverse()
-    assert_native_links(render(tmp_path,doc,allow),[(RIVER,'#nHistory-river-work'),(SCHOOL,'#nHistory-schools')])
+    assert_native_links(render(tmp_path,doc,allow),[(RIVER,'#nHistory-river-work'),(SCHOOL,'#nHistory-schools'),(RESOURCE_LABEL,'#nResources')])
 
 def test_editorial_title_change_does_not_rewrite_the_stable_target(tmp_path):
     doc,allow=data();doc['public_notes'][0]['title']='Revised Fictional School Heading'
-    assert_native_links(render(tmp_path,doc,allow),[('Revised Fictional School Heading','#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(render(tmp_path,doc,allow),[('Revised Fictional School Heading','#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
 
 def test_visible_opt_in_layers_across_files_share_one_navigation(tmp_path):
     doc,allow=data();other=copy.deepcopy(doc)
     doc['public_notes']=doc['public_notes'][:1];other['public_notes']=other['public_notes'][1:];other['official_resources']=[]
-    assert_native_links(render(tmp_path,[doc,other],allow),[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(render(tmp_path,[doc,other],allow),[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
 
 def test_same_reading_id_in_distinct_nations_is_not_a_collision(tmp_path):
     doc,allow=data();doc['public_notes'].append({'nation':'test-beta','reading_id':'schools','title':'Other Government','text':'A separate fictional Nation.'})
     page=render(tmp_path,doc,allow)
-    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     assert 'Other Government' not in page
 
 @pytest.mark.parametrize('hidden',[False,True])
@@ -203,17 +210,17 @@ def test_opted_layer_requires_an_actual_nonblank_heading(tmp_path,title):
 @pytest.mark.parametrize('valid',['a','7-stories','a'*48])
 def test_boundary_valid_ids_resolve_exactly(tmp_path,valid):
     doc,allow=data();doc['public_notes'][0]['reading_id']=valid
-    assert_native_links(render(tmp_path,doc,allow),[(SCHOOL,'#nHistory-'+valid),(RIVER,'#nHistory-river-work')])
+    assert_native_links(render(tmp_path,doc,allow),[(SCHOOL,'#nHistory-'+valid),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
 
 def test_unicode_and_hostile_heading_text_is_escaped_in_label_and_target(tmp_path):
     doc,allow=data();title='Fictional: Náhá & <img src=x onerror="alert(1)">';doc['public_notes'][0]['title']=title
-    dom=assert_native_links(render(tmp_path,doc,allow),[(title,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    dom=assert_native_links(render(tmp_path,doc,allow),[(title,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     assert not [n for n in dom.nodes() if n.tag in {'img','script','iframe'}]
     assert all(not k.startswith('on') for n in dom.nodes() for k in n.attrs)
 
 def test_navigation_does_not_mint_sources_or_change_review_clocks(tmp_path):
     page=render(tmp_path);dom=DOM(page)
-    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     external=[n.attrs['href'] for n in dom.nodes() if n.tag=='a' and not n.attrs.get('href','').startswith('#')]
     assert external==[URL1,URL2,URL1,URL2]
     assert page.count('Sources For This Layer')==2
@@ -222,6 +229,6 @@ def test_navigation_does_not_mint_sources_or_change_review_clocks(tmp_path):
 
 def test_native_output_needs_no_script_storage_or_remote_media(tmp_path):
     page=render(tmp_path);dom=DOM(page)
-    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work')])
+    assert_native_links(page,[(SCHOOL,'#nHistory-schools'),(RIVER,'#nHistory-river-work'),(RESOURCE_LABEL,'#nResources')])
     assert all(n.tag not in {'script','iframe','img','video','audio','form','button','input'} for n in dom.nodes())
     assert not re.search(r'localStorage|sessionStorage|fetch\(|XMLHttpRequest|history\.',page)

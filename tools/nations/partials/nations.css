@@ -276,8 +276,8 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .n-sec[aria-labelledby="nContext"] > .nation-reading { margin: 0 0 var(--sp-6); }
 .n-sec[aria-labelledby="nContext"] > .nation-reading li,
 .n-sec[aria-labelledby="nContext"] > .nation-reading a { max-width: 100%; overflow-wrap: anywhere; }
-.n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"] { scroll-margin-top: 112px; }
-.n-sec[aria-labelledby="nContext"] > h3[id^="nHistory-"]:focus { outline: 2px solid var(--ink); outline-offset: 6px; }
+.n-sec[aria-labelledby="nContext"] > h3[id] { scroll-margin-top: 112px; }
+.n-sec[aria-labelledby="nContext"] > h3[id]:focus { outline: 2px solid var(--ink); outline-offset: 6px; }
 .fact > .rc a { display: inline-block; min-height: 44px; max-width: 100%; padding-block: 10px;
   vertical-align: middle; white-space: normal; overflow-wrap: anywhere; }
 /* Keep historical context in readable layers, separate from fact-check receipts. */

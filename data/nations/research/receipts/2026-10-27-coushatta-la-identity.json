@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit source-backed directory identity review",
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-10-27T05:42:22.782540+00:00",
+  "directory_id": "us-fed-ac212d19032a",
+  "registry_id": "coushatta-tribe-of-louisiana-us-la",
+  "own_published_name": "Coushatta Tribe of Louisiana",
+  "official_url": "https://www.coushatta.org/",
+  "directory_source": {
+    "publisher": "Bureau of Indian Affairs, Federal Register",
+    "title": "Indian Entities Recognized by and Eligible To Receive Services From the United States Bureau of Indian Affairs",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "publication_date": "2026-01-30",
+    "retrieved_at": "2026-10-12T07:37:12.787522+00:00",
+    "sha256": "616e96f6288cc0bbcdfb947042b1402de8f8bc5e5e90bf49d6c84acdc9458dfa",
+    "structured_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml",
+    "sha256_source_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/30/2026-01899.xml"
+  },
+  "url": "https://www.coushatta.org/",
+  "final_url": "https://www.coushatta.org/",
+  "retrieved_at": "2026-10-27T05:29:34.146373+00:00",
+  "http_status": 200,
+  "sha256": "6e1df699b9910cf4f1aea8331b9edbd05a618ff5736de7d5768ef19f711478dd",
+  "own_source_receipt": "research/receipts/2026-10-27-coushatta-author-02-home.json",
+  "evidence_phrase": "Coushatta Tribe of Louisiana",
+  "review": {
+    "evidence": "Saved BIA OBJECTID234 links exact www.coushatta.org HTTPS host. Own home and page titles identify Coushatta Tribe of Louisiana. No collision across prior names, IDs, aliases or hosts. Louisiana government stays distinct from Texas Alabama-Coushatta and broader Koasati/Coushatta people."
+  },
+  "independent_review_sha256": "8c5f6f500f6d66d21150a70fc431182fe22a46650f281f56f387af52e9047a13",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

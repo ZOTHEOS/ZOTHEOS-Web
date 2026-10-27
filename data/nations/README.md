@@ -18,6 +18,28 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
+The registry contains 481 researched profiles and 1,383 raw facts, with two existing publication
+holds retained. The October 27 UTC batch adds the Coushatta Tribe of Louisiana: four own-source
+facts, two readable history layers and three resources. All 480 earlier canonical objects and
+fact clocks remain exact. The Louisiana government stays distinct from Texas Alabama-Coushatta
+and broader Coushatta/Koasati communities. The 1965 organizing effort and 1985 council elections
+are institutional milestones within a longer history, not the origin of a people.
+
+Three subjects were researched. Ak-Chin needs further rights and source-integrity review;
+Ramapough has a related Indigenous discovery link, but its candidate own host could not be read.
+Neither receives facts, a verified official link or an assumed identity match. The captured
+failures and one-day queue backoff remain explicit. No cause of website compromise or outage
+is asserted. Default-environment DNS failures are separated from actual escalated source reads.
+
+The directory preserves 2,272 overlapping source records, not a count of distinct Nations.
+Coverage remains incomplete worldwide. A native Publisher Resources shortcut appears only in
+context guides with at least two visible reading layers and published resources. Full histories,
+original source links, separate check dates and removal controls remain. The existing Living
+Gallery, ten printable briefs and Paths To Action content are preserved. Public wording remains
+one-person or neutral; no human review or Nation endorsement is claimed.
+
+## October 25: Eklutna Continuity And Land Rights
+
 The registry contains 480 researched profiles and 1,379 raw facts. Two existing publication holds
 remain. The October 25 UTC batch adds Native Village of Eklutna as a distinct Tribal government,
 with four own-source facts, two history layers and three official resources. All 479 earlier

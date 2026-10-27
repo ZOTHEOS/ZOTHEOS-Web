@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-25",
-  "count": 480,
-  "facts": 1379,
+  "generated": "2026-10-27",
+  "count": 481,
+  "facts": 1383,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -16,7 +16,7 @@
     "mx-central-south": 26,
     "mx-north-us-southwest": 32,
     "oceania": 46,
-    "us-east-southeast": 42,
+    "us-east-southeast": 43,
     "us-plains-midwest": 41,
     "us-west-pacific": 29
   },
@@ -26201,6 +26201,85 @@
           "status": "verified",
           "checked": "2026-10-19",
           "last_verified": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "coushatta-tribe-of-louisiana-us-la",
+      "region": "us-east-southeast",
+      "name": "Coushatta Tribe of Louisiana",
+      "also": [],
+      "pronounce": null,
+      "lands": "Southwest Louisiana; the Tribe describes a community centered in Allen Parish",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.coushatta.org/",
+      "name_source_url": "https://www.coushatta.org/",
+      "facts": [
+        {
+          "id": "coushatta-tribe-of-louisiana-us-la-3a974761",
+          "text": "The Tribe dates the creation of Coushatta Indians of Allen Parish, Inc. to 1965, describing community organizing to regain federal recognition.",
+          "kind": "history",
+          "as_of": "1965",
+          "source": {
+            "title": "Our Story",
+            "publisher": "Coushatta Tribe of Louisiana",
+            "url": "https://www.coushatta.org/our-story/",
+            "accessed": "2026-10-27"
+          },
+          "evidence": "community members organized Coushatta Indians of Allen Parish, Inc.",
+          "status": "verified",
+          "checked": "2026-10-27",
+          "last_verified": "2026-10-27"
+        },
+        {
+          "id": "coushatta-tribe-of-louisiana-us-la-60218f70",
+          "text": "The Tribe describes a five-member elected council: four council members and a chairman.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Tribal Government",
+            "publisher": "Coushatta Tribe of Louisiana",
+            "url": "https://www.coushatta.org/government/",
+            "accessed": "2026-10-27"
+          },
+          "evidence": "five members: four council members and the chairman.",
+          "status": "verified",
+          "checked": "2026-10-27",
+          "last_verified": "2026-10-27"
+        },
+        {
+          "id": "coushatta-tribe-of-louisiana-us-la-755a6c11",
+          "text": "The Tribe dates its first Tribal Council elections to 1985 and describes staggered four-year terms.",
+          "kind": "governance",
+          "as_of": "1985",
+          "source": {
+            "title": "Tribal Government",
+            "publisher": "Coushatta Tribe of Louisiana",
+            "url": "https://www.coushatta.org/government/",
+            "accessed": "2026-10-27"
+          },
+          "evidence": "first tribal council elections were held in 1985",
+          "status": "verified",
+          "checked": "2026-10-27",
+          "last_verified": "2026-10-27"
+        },
+        {
+          "id": "coushatta-tribe-of-louisiana-us-la-1debbc00",
+          "text": "The Tribe identifies Koasati as a living language spoken by members in Louisiana and by members of the separate Alabama-Coushatta Tribe in Texas.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Our Language",
+            "publisher": "Coushatta Tribe of Louisiana",
+            "url": "https://www.coushatta.org/our-language/",
+            "accessed": "2026-10-27"
+          },
+          "evidence": "Koasati is a living language spoken by members",
+          "status": "verified",
+          "checked": "2026-10-27",
+          "last_verified": "2026-10-27"
         }
       ]
     },

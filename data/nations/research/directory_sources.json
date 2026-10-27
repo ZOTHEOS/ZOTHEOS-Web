@@ -1054,6 +1054,55 @@
       "discovery_date": "2026-10-25",
       "status": "source_located",
       "note": "Exact own-host HTTPS source scope. Captured pages passed separate source-meaning, identity and respect review; no blanket reuse licence or off-host redirect approval."
+    },
+    {
+      "source_id": "own-coushatta-tribe-of-louisiana-us-la-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.coushatta.org/",
+      "allowed_hosts": [
+        "www.coushatta.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "Specific own-source pages passed independent meaning, identity and respect review. No blanket licence or off-host permission."
+    },
+    {
+      "source_id": "ak-chin-source-discovery-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.ak-chin.nsn.us/",
+      "allowed_hosts": [
+        "www.ak-chin.nsn.us"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "Candidate from saved BIA. Own identity and rights/integrity are not approved for facts or a visitor-facing official link."
+    },
+    {
+      "source_id": "ramapough-source-discovery-2026-10-27",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "source_discovery",
+      "url": "https://www.lenape-nation.org/",
+      "allowed_hosts": [
+        "www.lenape-nation.org",
+        "ramapomunsee.net"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-27",
+      "status": "source_located",
+      "note": "Related Indigenous publisher visibly links a candidate subject host. Subject identity, rights and own website remain unverified."
     }
   ]
 }

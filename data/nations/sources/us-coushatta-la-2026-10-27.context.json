@@ -1,0 +1,106 @@
+{
+  "reviewed": "2026-10-27",
+  "public_notes": [
+    {
+      "nation": "coushatta-tribe-of-louisiana-us-la",
+      "reading_id": "movement-settlement-and-community-organizing",
+      "title": "Movement, Settlement And Community Organizing",
+      "text": "The Tribe traces the Louisiana community through a longer history of movement intended to preserve autonomy as European powers expanded. Its account describes settlement in southwest Louisiana in the 1880s, followed by efforts to secure schooling and medical care. It dates community organization to 1965 and describes further efforts to restore federal services and recognition. These dates locate institutional changes within an existing people’s history. This account concerns the Louisiana Tribe; other Coushatta communities have histories of their own.",
+      "source_urls": [
+        "https://www.coushatta.org/our-story/"
+      ],
+      "fact_ids": [
+        "coushatta-tribe-of-louisiana-us-la-3a974761"
+      ]
+    },
+    {
+      "nation": "coushatta-tribe-of-louisiana-us-la",
+      "reading_id": "continuing-institutions-and-living-language",
+      "title": "Continuing Institutions And Living Language",
+      "text": "The Tribe’s government page links elected leadership with health, education, social and cultural services. It dates the first council elections to 1985 and describes staggered four-year terms. Its language page presents Koasati as living speech in Louisiana and among Alabama-Coushatta members in Texas. Read together, these pages place political institutions and language within continuing community life. A shared language does not make the two Tribal governments interchangeable.",
+      "source_urls": [
+        "https://www.coushatta.org/government/",
+        "https://www.coushatta.org/our-language/"
+      ],
+      "fact_ids": [
+        "coushatta-tribe-of-louisiana-us-la-1debbc00",
+        "coushatta-tribe-of-louisiana-us-la-60218f70",
+        "coushatta-tribe-of-louisiana-us-la-755a6c11"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "coushatta-tribe-of-louisiana-us-la",
+      "url": "https://www.coushatta.org/our-story/",
+      "label": "Coushatta Tribe of Louisiana: Our Story",
+      "purpose": "Read the Tribe’s historical account of movement, Louisiana settlement and community organizing.",
+      "fact_ids": [
+        "coushatta-tribe-of-louisiana-us-la-3a974761"
+      ]
+    },
+    {
+      "nation": "coushatta-tribe-of-louisiana-us-la",
+      "url": "https://www.coushatta.org/government/",
+      "label": "Coushatta Tribe of Louisiana: Tribal Government",
+      "purpose": "Read the Tribe’s description of its elected council and community services.",
+      "fact_ids": [
+        "coushatta-tribe-of-louisiana-us-la-60218f70",
+        "coushatta-tribe-of-louisiana-us-la-755a6c11"
+      ]
+    },
+    {
+      "nation": "coushatta-tribe-of-louisiana-us-la",
+      "url": "https://www.coushatta.org/our-language/",
+      "label": "Coushatta Tribe of Louisiana: Our Language",
+      "purpose": "Read the Tribe’s introduction to Koasati and its speakers in Louisiana and the distinct Alabama-Coushatta Tribe in Texas.",
+      "fact_ids": [
+        "coushatta-tribe-of-louisiana-us-la-1debbc00"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-27T05:34:45.331857+00:00",
+      "sha256": "8c5f6f500f6d66d21150a70fc431182fe22a46650f281f56f387af52e9047a13",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "sources": [
+      {
+        "url": "https://www.coushatta.org/our-story/",
+        "final_url": "https://www.coushatta.org/our-story/",
+        "retrieved_at": "2026-10-27T05:29:57.521252+00:00",
+        "http_status": 200,
+        "sha256": "43faf8d894674e1b6a496902a816477af6534a2efa049908a62352f5498f936d",
+        "body_bytes": 17630,
+        "receipt": "research/receipts/2026-10-27-coushatta-author-04-our-story.json"
+      },
+      {
+        "url": "https://www.coushatta.org/government/",
+        "final_url": "https://www.coushatta.org/government/",
+        "retrieved_at": "2026-10-27T05:30:08.576225+00:00",
+        "http_status": 200,
+        "sha256": "9bc2393e95b7b2f0f37d108b9690d768401992f3c1524520f12c090f0cca6e0d",
+        "body_bytes": 20937,
+        "receipt": "research/receipts/2026-10-27-coushatta-author-05-government.json"
+      },
+      {
+        "url": "https://www.coushatta.org/our-language/",
+        "final_url": "https://www.coushatta.org/our-language/",
+        "retrieved_at": "2026-10-27T05:30:19.390631+00:00",
+        "http_status": 200,
+        "sha256": "87c3c7db3c57c05852010345db6d55fc220dd22ef9fff6cb49b3db5195635f92",
+        "body_bytes": 13435,
+        "receipt": "research/receipts/2026-10-27-coushatta-author-06-our-language.json"
+      }
+    ]
+  }
+}

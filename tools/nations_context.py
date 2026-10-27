@@ -223,11 +223,15 @@ class Context:
                '<h2 class="n-sec-h" id="nContext">Context and resources</h2>']
         notes = entry.get("notes", [])
         guide = [(title, reading_id) for _, _, title, _, reading_id in notes if reading_id is not None]
+        resource_jump = len(guide) >= 2 and bool(entry.get("resources"))
         if len(guide) >= 2:
-            out.append('<nav class="nation-reading" aria-label="In This History">'
-                       '<p class="lbl">In This History</p><ul>')
+            guide_label = "In This Context" if resource_jump else "In This History"
+            out.append(f'<nav class="nation-reading" aria-label="{guide_label}">'
+                       f'<p class="lbl">{guide_label}</p><ul>')
             for title, reading_id in guide:
                 out.append(f'<li><a href="#nHistory-{esc(reading_id)}">{esc(title)}</a></li>')
+            if resource_jump:
+                out.append('<li><a href="#nResources">Publisher Resources</a></li>')
             out.append('</ul></nav>')
         for body, reviewed, title, citations, reading_id in notes:
             if title is not None:
@@ -248,7 +252,8 @@ class Context:
             names = ", ".join(f'<a href="/nations/{esc(other)}">{esc(self.model.by_id[other]["name"])}</a>' for other in others)
             out.append(f'<p class="note">{esc(statement)}.</p><p>{names}.</p><p class="rc">Context reviewed {stamp(reviewed)} by ZOTHEOS.</p>')
         if entry.get("resources"):
-            out.append('<h3 class="n-sec-h">From the publisher&#39;s own pages</h3><ul class="src-u">')
+            resource_target = ' id="nResources" tabindex="-1"' if resource_jump else ""
+            out.append(f'<h3 class="n-sec-h"{resource_target}>From the publisher&#39;s own pages</h3><ul class="src-u">')
         for address, label, purpose, receipt in entry.get("resources", []):
             out.append(f'<li><p><a href="{esc(address)}" rel="noopener noreferrer" target="_blank">{esc(label)}'
                        '<span class="sr-only"> (opens in a new tab)</span></a></p>'
