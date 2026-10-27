@@ -1,11 +1,11 @@
 {
   "version": "1",
-  "generated": "2026-10-19",
-  "count": 479,
-  "facts": 1375,
+  "generated": "2026-10-25",
+  "count": 480,
+  "facts": 1379,
   "regions": {
     "africa": 41,
-    "alaska-hawaii-pacific-us": 21,
+    "alaska-hawaii-pacific-us": 22,
     "amazon-lowland-sa": 29,
     "andes": 22,
     "arctic-europe-russia": 20,
@@ -4059,6 +4059,87 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        }
+      ]
+    },
+    {
+      "id": "native-village-of-eklutna-us-ak",
+      "region": "alaska-hawaii-pacific-us",
+      "name": "Native Village of Eklutna",
+      "also": [
+        "Eklutna Native Village"
+      ],
+      "pronounce": null,
+      "lands": "Alaska; the Tribal government describes community work in Eklutna Village and Anchorage",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://eklutna-nsn.gov/",
+      "name_source_url": "https://eklutna-nsn.gov/",
+      "facts": [
+        {
+          "id": "native-village-of-eklutna-us-ak-f9452f4d",
+          "text": "The Tribe dates the organization of its government office to 1961, describing protection of land rights as its purpose. This is an office milestone, not the beginning of its self-government.",
+          "kind": "history",
+          "as_of": "1961",
+          "source": {
+            "title": "About Native Village of Eklutna",
+            "publisher": "Native Village of Eklutna",
+            "url": "https://eklutna-nsn.gov/about/",
+            "accessed": "2026-10-25"
+          },
+          "evidence": "government office was organized in 1961",
+          "status": "verified",
+          "checked": "2026-10-25",
+          "last_verified": "2026-10-25"
+        },
+        {
+          "id": "native-village-of-eklutna-us-ak-210b63a9",
+          "text": "The Tribe describes its government as traditional rather than formed under the Indian Reorganization Act, with seven Council members serving staggered three-year terms.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "About Native Village of Eklutna",
+            "publisher": "Native Village of Eklutna",
+            "url": "https://eklutna-nsn.gov/about/",
+            "accessed": "2026-10-25"
+          },
+          "evidence": "Seven (7) Council Members serve three (3) year staggered terms.",
+          "status": "verified",
+          "checked": "2026-10-25",
+          "last_verified": "2026-10-25"
+        },
+        {
+          "id": "native-village-of-eklutna-us-ak-86fcc935",
+          "text": "The Tribe describes using National Historic Preservation Act Section 106 and other legislation to mitigate impacts on traditional resources and support inclusion of Dena’ina history on public signage.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "History and Culture",
+            "publisher": "Native Village of Eklutna",
+            "url": "https://eklutna-nsn.gov/departments/history-and-culture/",
+            "accessed": "2026-10-25"
+          },
+          "evidence": "utilize NHPA (National Historic Preservation Act) Section 106",
+          "status": "verified",
+          "checked": "2026-10-25",
+          "last_verified": "2026-10-25"
+        },
+        {
+          "id": "native-village-of-eklutna-us-ak-480ee20a",
+          "text": "The Tribe reports working with partners on assessment, planning and restoration of the Eklutna River. The page describes ongoing work, not a completed restoration.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Land and Environment",
+            "publisher": "Native Village of Eklutna",
+            "url": "https://eklutna-nsn.gov/departments/land-and-environment/",
+            "accessed": "2026-10-25"
+          },
+          "evidence": "assessment, planning, and restoration of the Eklutna River.",
+          "status": "verified",
+          "checked": "2026-10-25",
+          "last_verified": "2026-10-25"
         }
       ]
     },

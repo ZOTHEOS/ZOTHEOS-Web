@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-25T19:41:17.510725+00:00",
+  "base_commit": "43ab6d200d5e3ca3e6712d5f10e6ac684222e3fa",
+  "preserves_living_gallery": true,
+  "measured_counts": {
+    "canonical_profiles": 480,
+    "raw_facts": 1379,
+    "new_profiles": 1,
+    "new_facts": 4,
+    "new_history_layers": 2,
+    "new_own_resources": 3,
+    "old_profiles_completely_preserved": 479,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 142,
+      "blocked": 6,
+      "pending": 1664
+    },
+    "other_queue_tasks_preserved": 1811,
+    "author_reads": 5,
+    "verifier_responses": 4
+  },
+  "independent_source_review": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-25T19:38:33.884360+00:00",
+    "sha256": "f2d8b84d97ab153ea4b35fd347b4e8e4185086b13fb044a48566a6583ff2ba87",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+  },
+  "source_verification": {
+    "approved": true,
+    "reviewed_at": "2026-10-25T19:41:17.460215+00:00",
+    "reviewer": "ZOTHEOS",
+    "candidate_sha256": "1174b3d02594736877c1c4e0474bfa02a3f4d71b71b7d520ce3f420a10266959",
+    "unchanged_refresher_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "source_responses": 4,
+    "facts_verified": 4,
+    "published_policy_minimum_seconds": 3,
+    "extra_conservative_minimum_seconds": 10.7,
+    "sleep_target_seconds": 10.8,
+    "minimum_recorded_monotonic_gap_seconds": 10.796000000002095,
+    "qualification": "Actual minimum10.796s meets published3s and conservative10.7s. It is below the10.8s sleep target; clock cause is unknown. Actual deltas and receipts retained, not rounded or refetched.",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  },
+  "public_capture_receipts": [
+    "research/receipts/2026-10-25-eklutna-author-robots.json",
+    "research/receipts/2026-10-25-eklutna-author-home.json",
+    "research/receipts/2026-10-25-eklutna-author-about.json",
+    "research/receipts/2026-10-25-eklutna-author-history.json",
+    "research/receipts/2026-10-25-eklutna-author-land.json",
+    "research/receipts/2026-10-25-eklutna-verifier-capture-01.json",
+    "research/receipts/2026-10-25-eklutna-verifier-capture-02.json",
+    "research/receipts/2026-10-25-eklutna-verifier-capture-03.json",
+    "research/receipts/2026-10-25-eklutna-verifier-capture-04.json"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-fed-73fd87a30891"
+  ],
+  "limits": "Coverage incomplete worldwide. Native Village of Eklutna government remains distinct from broad Dena’ina and corporate entities. Office1961 milestone is not beginning of self-government or a recognition chronology. No current emergency, sacred detail, legal result, completed restoration, human review or Nation endorsement claimed. Earlier holds, overrides, clock dates and blocked/reuse lanes unchanged. New history/resource entries inherit canonical fact dependencies.",
+  "publication_state": "Reviewed integration; release and live verification remain separate."
+}

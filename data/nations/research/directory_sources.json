@@ -1038,6 +1038,22 @@
       "discovery_date": "2026-10-19",
       "status": "source_located",
       "note": "Exact own-host HTTPS source scope. Specific captured pages passed separate source-meaning, identity and respect review. No blanket reuse permission or off-host redirects authorized."
+    },
+    {
+      "source_id": "own-native-village-of-eklutna-us-ak-2026-10-25",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://eklutna-nsn.gov/",
+      "allowed_hosts": [
+        "eklutna-nsn.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-25",
+      "status": "source_located",
+      "note": "Exact own-host HTTPS source scope. Captured pages passed separate source-meaning, identity and respect review; no blanket reuse licence or off-host redirect approval."
     }
   ]
 }

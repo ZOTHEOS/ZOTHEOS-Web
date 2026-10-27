@@ -1,0 +1,106 @@
+{
+  "reviewed": "2026-10-25",
+  "public_notes": [
+    {
+      "nation": "native-village-of-eklutna-us-ak",
+      "reading_id": "government-continuity-and-land-rights",
+      "title": "Government Continuity And Land Rights",
+      "text": "The Tribe describes self-government that predates outside encroachment. Its public account distinguishes that longer continuity from organizing a government office in 1961 to protect land rights. It says governing authority is entrusted to the Tribal Council under a constitution, while identifying the government as traditional rather than IRA-organized. This institutional history concerns this Tribal government; it does not make the Village the sole representative of all Dena’ina people. The page’s tax-status discussion is not used here to assign a federal-recognition date.",
+      "source_urls": [
+        "https://eklutna-nsn.gov/about/"
+      ],
+      "fact_ids": [
+        "native-village-of-eklutna-us-ak-210b63a9",
+        "native-village-of-eklutna-us-ak-f9452f4d"
+      ]
+    },
+    {
+      "nation": "native-village-of-eklutna-us-ak",
+      "reading_id": "culture-and-environment-as-continuing-work",
+      "title": "Culture And Environment As Continuing Work",
+      "text": "The Tribe describes Elders’ guidance, youth education and public interpretation as part of cultural continuity. Its account connects heritage protection to Section 106 consultation and the presence of Dena’ina history on signage. The Land and Environment department separately describes work with partners on the Eklutna River. These are living institutions and responsibilities, not a story ending in the past. This profile reproduces no Elders’ stories, cultural instruction or protected location information, and does not claim that consultation or river restoration has achieved every goal.",
+      "source_urls": [
+        "https://eklutna-nsn.gov/departments/history-and-culture/",
+        "https://eklutna-nsn.gov/departments/land-and-environment/"
+      ],
+      "fact_ids": [
+        "native-village-of-eklutna-us-ak-480ee20a",
+        "native-village-of-eklutna-us-ak-86fcc935"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "native-village-of-eklutna-us-ak",
+      "url": "https://eklutna-nsn.gov/about/",
+      "label": "Native Village of Eklutna: Government And History",
+      "purpose": "Read the Tribe’s account of its institutions and the office organized for land-rights protection.",
+      "fact_ids": [
+        "native-village-of-eklutna-us-ak-f9452f4d",
+        "native-village-of-eklutna-us-ak-210b63a9"
+      ]
+    },
+    {
+      "nation": "native-village-of-eklutna-us-ak",
+      "url": "https://eklutna-nsn.gov/departments/history-and-culture/",
+      "label": "Native Village of Eklutna: History And Culture",
+      "purpose": "Read the Tribe’s public description of cultural continuity, education and heritage consultation; cultural materials remain with their custodians.",
+      "fact_ids": [
+        "native-village-of-eklutna-us-ak-86fcc935"
+      ]
+    },
+    {
+      "nation": "native-village-of-eklutna-us-ak",
+      "url": "https://eklutna-nsn.gov/departments/land-and-environment/",
+      "label": "Native Village of Eklutna: Land And Environment",
+      "purpose": "Read the Tribe’s account of environmental responsibilities and river work. No claim of completed restoration is made.",
+      "fact_ids": [
+        "native-village-of-eklutna-us-ak-480ee20a"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-25T19:38:33.884360+00:00",
+      "sha256": "f2d8b84d97ab153ea4b35fd347b4e8e4185086b13fb044a48566a6583ff2ba87",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal."
+    },
+    "sources": [
+      {
+        "url": "https://eklutna-nsn.gov/about/",
+        "final_url": "https://eklutna-nsn.gov/about/",
+        "retrieved_at": "2026-10-25T10:34:42.945792+00:00",
+        "http_status": 200,
+        "sha256": "3a050a1be9f34a1112068d6fdc5d2e88c725b055e7bf7b6edbf1eafdea7bae11",
+        "body_bytes": 57149,
+        "receipt": "research/receipts/2026-10-25-eklutna-author-about.json"
+      },
+      {
+        "url": "https://eklutna-nsn.gov/departments/history-and-culture/",
+        "final_url": "https://eklutna-nsn.gov/departments/history-and-culture/",
+        "retrieved_at": "2026-10-25T10:34:57.231110+00:00",
+        "http_status": 200,
+        "sha256": "60294df512e32b6199bcfdb6c8c5b95b5b126ec23cb3d366de5ac52fd70e7ffc",
+        "body_bytes": 57812,
+        "receipt": "research/receipts/2026-10-25-eklutna-author-history.json"
+      },
+      {
+        "url": "https://eklutna-nsn.gov/departments/land-and-environment/",
+        "final_url": "https://eklutna-nsn.gov/departments/land-and-environment/",
+        "retrieved_at": "2026-10-25T10:35:09.985649+00:00",
+        "http_status": 200,
+        "sha256": "9c518fa072f0d80f98cb531158bee2172a62254dde18dfe610a61014ec245c46",
+        "body_bytes": 104980,
+        "receipt": "research/receipts/2026-10-25-eklutna-author-land.json"
+      }
+    ]
+  }
+}

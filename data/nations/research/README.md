@@ -587,3 +587,17 @@ extra 10.6-second target. Monotonic elapsed deltas were not captured, so the clo
 unknown. The exact receipts and qualified independent audit are retained; the result is not
 rounded into compliance and no unnecessary repeat fetch is made. Future wrappers should add
 padding and record monotonic deltas alongside UTC timestamps.
+
+## October 25 UTC: Eklutna Continuity And Land Rights
+
+One previously directory-only Tribal government gains four own-source facts, two history layers
+and three resources. Its own published name leads, the directory name remains an alias, and
+broader Dena’ina identity is not equated with one government. The office’s 1961 milestone is not
+an origin or recognition date; river work is not called completed restoration. Separate author
+and source-meaning/respect review, followed by the unchanged isolated compiler and fresh verifier,
+retain actual October 25 source dates. Public metadata omits bodies, cookies, headers and local
+paths. Sleep target 10.8s produced a minimum recorded monotonic gap 10.796s, above the conservative
+10.7s and published 3s thresholds; actual values remain explicit, cause unknown, without rounding.
+Only one queue task and one directory crosswalk change. Other records, holds and source clocks
+remain. The existing Living Gallery and printable brief work are preserved. No person or Nation
+approval is claimed. Source record: batches/2026-10-25-eklutna-continuity.json. Coverage incomplete.
