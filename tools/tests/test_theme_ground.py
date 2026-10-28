@@ -52,8 +52,10 @@ def _token(selector, name):
 
 
 def test_each_ground_is_the_colour_its_browser_bar_already_uses():
-    bar = re.search(r"\{ maya: '(#\w+)', codex: '(#\w+)', skeleton: '(#\w+)' \}\[theme\]", PAGE)
-    assert bar and dict(zip(('maya', 'codex', 'skeleton'), bar.groups())) == GROUND
+    bar = re.search(r"tc\.setAttribute\('content',\s*\{([^{}]+)\}\[theme\]", PAGE)
+    assert bar, 'Theme browser-bar palette must remain explicit'
+    values = dict(re.findall(r"([a-z]+):\s*'(#[0-9A-Fa-f]{6})'", bar.group(1)))
+    assert {theme: values.get(theme) for theme in GROUND} == GROUND
     assert _token(':root', '--bg-floor') == GROUND['maya']            # Maya Radiance is the landing's :root
     assert _token('[data-theme="codex"]', '--bg-deep') == GROUND['codex']
     assert _token('[data-theme="skeleton"]', '--bg-floor') == GROUND['skeleton']
@@ -71,7 +73,7 @@ def test_no_full_width_band_holds_a_second_tone():
             assert re.search(r'background\s*:\s*none', body) or 'background' not in body, sel.strip()
     assert sec and strip
     # The opaque bands (scrolled header, menu sheet, popovers, phone dock) are each theme's ground.
-    assert re.findall(r'--hdr-band\s*:\s*([^;]+);', CSS) == ['var(--bg-floor)', GROUND['codex'], GROUND['skeleton']]
+    assert _token(':root', '--hdr-band') == 'var(--bg-floor)'
     assert _token('[data-theme="codex"]', '--hdr-band') == GROUND['codex']
     assert '[data-theme="skeleton"] { --hdr-band: #050507; }' in CSS
     # The live Theater chapter stays exactly as on main (review V4): Maya the floor, Codex the paper, and Obsidian

@@ -207,6 +207,10 @@ def test_actual_builder_writes_real_chapter_files_matching_links_without_font_pi
     b.m.last_full_check=lambda:'2026-10-16'
     b.part=lambda name:''
     (root/'index.html').write_text('<script></script><style id="zth-fonts"></style>',encoding='utf8')
+    # Supply the real builder's unrelated cached-effect input without mocking chapter exports.
+    effects=root/'static/appearance/calavera.js'
+    effects.parent.mkdir(parents=True,exist_ok=True)
+    effects.write_text('/* Fictional effect input for isolated build orchestration. */\n',encoding='utf8')
     b.build_data=lambda out:setattr(b,'index_json','{}')
     b.hub=lambda:'<main>Fictional hub</main>'
     b.support_pages=lambda:{'paths-to-action':call('render')}

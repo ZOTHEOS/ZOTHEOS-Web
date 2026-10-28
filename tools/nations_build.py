@@ -40,6 +40,7 @@ import nations_lib as L  # noqa: E402
 import nations_directory as D  # noqa: E402
 from nations_context import Context  # noqa: E402
 import nations_pathways as P  # noqa: E402
+import appearance_assets as AA  # noqa: E402
 from nations_fold import fold, js as fold_js  # noqa: E402
 
 SITE = "https://zotheos.org"
@@ -341,10 +342,10 @@ class Builder:
         head = render(self.part("head.html"), {
             "csp": L_meta(policy), "title": title, "description": description, "canonical": SITE + path,
             "bootstrap": self.bootstrap, "fonts_brand": self.fonts_brand, "fonts_names": self.fonts_names,
-            "css": self.css_name, "header": header})
+            "css": self.css_name, "header": header, "appearance_css": AA.stylesheet(self.root)})
         footer = render(self.part("footer.html"), {"year": self.m.build_date[:4], "contact": self.contact,
                                                    "fonts_line": self.fonts_line, "check_line": self.check_line})
-        scripts = render(self.part("scripts.html"), {"appearance": self.appearance})
+        scripts = AA.scripts(self.root)
         return head, footer, scripts
 
     def page(self, page_key, path, title, description, body):
@@ -1064,6 +1065,7 @@ class Builder:
         for filename, content in P.chapter_briefs(self.root, self.m).items():
             wr(os.path.join(out, "static", "nations", filename), content)
         boot_h, app_h = b64hash(self.bootstrap), b64hash(self.appearance)
+        app_h += " " + b64hash(rd(os.path.join(r, AA.EFFECTS)))
         self.page_policy = POLICY.format(scripts=f"{boot_h} {app_h}", connect="'none'")
         self.hub_policy = POLICY.format(scripts=f"{boot_h} {app_h} {b64hash(self.index_json)} {b64hash(self.herald)}",
                                         connect="'self'")
@@ -1132,7 +1134,7 @@ def L_meta(policy):
 
 
 # ------------------------------------------------------------------------------------------------ scratch, gates, sync
-COPY_DIRS = ["data", "tools", "game", "static/theater", "static/fonts", "static/nations", "nations"]
+COPY_DIRS = ["data", "tools", "game", "static/theater", "static/appearance", "static/fonts", "static/nations", "nations"]
 COPY_FILES = ["index.html", "download.html", "theater.html", "vercel.json", "sitemap.xml", "robots.txt", "nations.html",
               ".vercelignore", "zotheos_icon.ico"]
 
@@ -1166,7 +1168,7 @@ def gzlen(text):
 
 def gates(tmp, b):
     fails, notes = [], []
-    steps = [("nations_lint", ["tools/nations_lint.py", "--build-date", b.m.build_date]), ("lint_copy", ["tools/lint_copy.py"]),
+    steps = [("appearance assets", ["tools/appearance_build.py", "--check"]), ("nations_lint", ["tools/nations_lint.py", "--build-date", b.m.build_date]), ("lint_copy", ["tools/lint_copy.py"]),
              ("fonts_check", ["tools/fonts_check.py"]), ("csp_sync --check", ["tools/csp_sync.py", "--check"]),
              ("nations_links", ["tools/nations_links.py"])]
     for name, args in steps:
@@ -1206,7 +1208,8 @@ def contrast_check(root):
     base = parse(blocks[":root"])
     themes = {"maya": base, "codex": {**base, **parse(blocks['[data-theme="codex"]'])},
               "skeleton": {**base, **parse(blocks['[data-theme="skeleton"]'])},
-              "mono": {**base, **parse(blocks[":root:not([data-theme])"])}}
+              "mono": {**base, **parse(blocks[":root:not([data-theme])"])},
+              "calavera": {**base, **parse(blocks['[data-theme="calavera"]'])}}
     def resolve(t, v):
         for _ in range(4):
             m = re.match(r"var\((--[\w-]+)\)", v.strip())

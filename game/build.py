@@ -10,11 +10,14 @@ ug = next((a for a in sys.argv[1:] if not a.startswith('--')), os.path.join(nm, 
 acorn = os.path.join(os.path.dirname(os.path.dirname(ug)), '..', 'acorn')
 dev = '--dev' in sys.argv
 s = open(os.path.join(here, 'index.src.html'), encoding='utf-8').read()
-a, b = s.index('<script>') + 8, s.index('</script>')
+a = s.index('<script>') + 8
+b = s.index('</script>', a)
 js = s[a:b]
+if not js.strip(): sys.exit('game engine script is empty')
 # The overlay CSS is the JS string `CSS` (injected as <style id="zgS"> on open); its hash is what a style-src CSP needs.
 cb = re.search(r"var CSS = ((?:'(?:[^'\\]|\\.)*'\s*\+?\s*)+);", js, flags=re.S)
 css_rt = ''.join(re.findall(r"'((?:[^'\\]|\\.)*)'", cb.group(1))).replace("\\'", "'").replace('\\\\', '\\') if cb else ''
+if not css_rt: sys.exit('game overlay CSS was not found in the selected engine script')
 csp = base64.b64encode(hashlib.sha256(css_rt.encode('utf-8')).digest()).decode()
 # Gate: Echo's game logic (between the /*L*/ marks) uses no trigonometry, no pow/exp/log and no Math.random.
 for blk in re.findall(r'/\*L\*/(.*?)/\*L\*/', js, flags=re.S):
@@ -27,7 +30,8 @@ if out.returncode: sys.exit(out.stderr.decode())
 mjs = out.stdout.decode('utf-8').strip()
 chk = subprocess.run(['node', '-e', 'var a=require(%s);a.parse(require("fs").readFileSync(0,"utf8"),{ecmaVersion:5});' % json.dumps(os.path.abspath(acorn))], input=mjs.encode('utf-8'), capture_output=True)
 if chk.returncode: sys.exit('not ES5: ' + chk.stderr.decode()[-400:])
-c0, c1 = s.index('<style>') + 7, s.index('</style>')
+c0 = s.index('<style>') + 7
+c1 = s.index('</style>', c0)
 css = re.sub(r'\s*\n\s*', '', s[c0:c1])
 html = s[:c0] + css + s[c1:a] + mjs + s[b:]
 assert '—' not in html and '–' not in html, 'em or en dash in output'

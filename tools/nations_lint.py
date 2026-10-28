@@ -188,7 +188,7 @@ def main(argv=None):
     part = lambda name: L.read(os.path.join(root, "tools", "nations", "partials", name))
     # tokens drift
     tok = part("tokens.css")
-    pairs = [(":root", ":root"), ('[data-theme="codex"]', '[data-theme="codex"]'),
+    pairs = [('[data-theme="calavera"]', '[data-theme="calavera"]'), (":root", ":root"), ('[data-theme="codex"]', '[data-theme="codex"]'),
              ('[data-theme="skeleton"]', '[data-theme="skeleton"]'), (":root:not([data-theme])", ":root:not([data-theme])")]
     for mine_sel, land_sel in pairs:
         mine, theirs = css_blocks(tok, mine_sel), css_blocks(landing, land_sel)

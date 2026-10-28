@@ -184,13 +184,13 @@ def test_actual_catalogue_titles_credits_sources_and_native_story_targets_are_lo
             assert any(e.tag == 'time' and e.attrs.get('datetime') == source['checked'] for e in card.descendants())
 
 
-def test_appearance_effect_language_and_four_themes_survive_the_presentation_change():
+def test_appearance_effect_language_and_five_themes_survive_the_presentation_change():
     d = DOM((ROOT / 'theater.html').read_text(encoding='utf-8'))
     for ident in ['appearancePop', 'fxAmount', 'apLanguageRow', 'apReturnToFilm', 'site-translation', 'translateSection', 'translateText']:
         one(d, ident)
     themes = [e for e in d.elements if 'data-set' in e.attrs and e.tag == 'button']
-    assert {e.attrs['data-set'] for e in themes} == {'','maya','codex','skeleton'}
-    assert len(themes) == 4
+    assert {e.attrs['data-set'] for e in themes} == {'','maya','codex','skeleton','calavera'}
+    assert len(themes) == 5
     fx = one(d, 'fxAmount')
     assert fx.attrs.get('role') == 'radiogroup'
     assert {e.text for e in fx.descendants() if e.attrs.get('role') == 'radio'} == {'Light','Medium','Heavy'}
@@ -234,7 +234,7 @@ def test_actual_preview_runtime_contract(scenario):
 
 def overlay_build(tmp_path, data, policy):
     """Run real CLI with an isolated source root so policy input is truly exercised."""
-    for rel in ['tools/nations/partials', 'tools/theater', 'static/theater']:
+    for rel in ['tools/nations/partials', 'tools/theater', 'static/theater', 'static/appearance']:
         source = ROOT / rel
         if source.is_dir():
             shutil.copytree(source, tmp_path / rel, dirs_exist_ok=True)

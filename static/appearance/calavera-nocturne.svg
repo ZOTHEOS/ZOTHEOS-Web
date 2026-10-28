@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" fill="none">
+  <defs>
+    <linearGradient id="cn-rim" x1="25" y1="52" x2="212" y2="259" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF59D6"/><stop offset=".42" stop-color="#9A78FF"/><stop offset=".76" stop-color="#52E8B5"/><stop offset="1" stop-color="#EDC874"/>
+    </linearGradient>
+    <linearGradient id="cn-petal" x1="44" y1="94" x2="195" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF59D6"/><stop offset=".52" stop-color="#E8A6F4"/><stop offset="1" stop-color="#52E8B5"/>
+    </linearGradient>
+    <radialGradient id="cn-wash" cx=".5" cy=".3" r=".8">
+      <stop stop-color="#281343" stop-opacity=".92"/><stop offset="1" stop-color="#100A20" stop-opacity=".94"/>
+    </radialGradient>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 27C68 27 32 60 32 110c0 25 6 44 21 59l-4 25 20 15 5 39c3 21 18 30 46 30s43-9 46-30l5-39 20-15-4-25c15-15 21-34 21-59 0-50-36-83-88-83Z" fill="url(#cn-wash)" stroke="url(#cn-rim)" stroke-width="2.6"/>
+    <path d="M47 107c2-38 30-66 73-66s71 28 73 66M61 174l18 15m100-15-18 15M81 248c7 11 20 16 39 16s32-5 39-16" stroke="url(#cn-rim)" stroke-width="1.2" opacity=".54"/>
+    <path d="M120 43v9m0 35v10m-21-28h-9m60 0h-9M106 55l-6-6m34 6 6-6m-34 34-6 6m34-6 6 6" stroke="#EDC874" stroke-width="1.3" opacity=".85"/>
+    <path d="m120 54 14 15-14 15-14-15 14-15Z" stroke="#EDC874" stroke-width="1.8"/>
+    <path d="m120 63 6 6-6 6-6-6 6-6Z" fill="#EDC874" fill-opacity=".54"/>
+    <g stroke="url(#cn-petal)" stroke-width="1.9">
+      <path d="M81 105c7-9 17-6 17 3 11-2 17 7 10 15 10 6 7 17-3 19 4 10-3 18-13 14-3 11-14 11-19 2-8 8-18 3-16-7-11 0-16-10-8-17-9-6-7-17 4-19-2-11 7-18 15-11 3-7 9-7 13 1Z"/>
+      <path d="M159 105c-7-9-17-6-17 3-11-2-17 7-10 15-10 6-7 17 3 19-4 10 3 18 13 14 3 11 14 11 19 2 8 8 18 3 16-7 11 0 16-10 8-17 9-6 7-17-4-19 2-11-7-18-15-11-3-7-9-7-13 1Z"/>
+    </g>
+    <ellipse cx="80" cy="130" rx="17" ry="19" fill="#090713" stroke="#FF83DE" stroke-width="1.5"/>
+    <ellipse cx="160" cy="130" rx="17" ry="19" fill="#090713" stroke="#78EFC5" stroke-width="1.5"/>
+    <path d="M74 116c-5 5-7 11-6 17m98-17c5 5 7 11 6 17" stroke="#EDC874" stroke-width="1.2"/>
+    <path d="M120 156c-4 7-11 15-11 23 0 8 7 10 11 4 4 6 11 4 11-4 0-8-7-16-11-23Z" fill="#090713" stroke="url(#cn-rim)" stroke-width="1.7"/>
+    <path d="M61 169c-5 7-2 16 9 15 9 0 13 7 10 13m99-28c5 7 2 16-9 15-9 0-13 7-10 13" stroke="url(#cn-petal)" stroke-width="1.6"/>
+    <path d="M89 177c5 7 12 11 20 11m42-11c-5 7-12 11-20 11" stroke="#EDC874" stroke-width="1.1" opacity=".9"/>
+    <path d="M78 209c11-8 26-12 42-12s31 4 42 12l-4 26c-10 6-23 9-38 9s-28-3-38-9l-4-26Z" fill="#0D081B" stroke="url(#cn-rim)" stroke-width="1.8"/>
+    <path d="M80 220c25 8 55 8 80 0M95 201v38m12-41v44m13-45v47m13-46v44m12-41v38" stroke="#D8BBE8" stroke-width="1.15" opacity=".87"/>
+    <path d="m120 251 4 5-4 5-4-5 4-5ZM50 92l3 4-3 4-3-4 3-4Zm140 0 3 4-3 4-3-4 3-4Z" fill="#52E8B5"/>
+    <circle cx="43" cy="154" r="2" fill="#FF59D6"/><circle cx="197" cy="154" r="2" fill="#52E8B5"/>
+    <path d="M86 289h20m28 0h20M120 11v7m-4-3h8" stroke="#EDC874" stroke-width="1.2" opacity=".55"/>
+  </g>
+</svg>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-release="prerelease">
+<html lang="en" data-release="prerelease" class="site-theme-page">
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Ty4+gUeWck6/EYR+NHzmTLeFo2c0DSkooh7fOiKfV5o=' 'sha256-eogXPh0PJ6FqmrkJ2FvwzmbAAzaKvErXSuUOcvHrVQA=' 'sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org; media-src 'self' https://zotheos.org; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Windows Release Status | ZOTHEOS</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -13,14 +13,36 @@
   <meta property="og:title" content="ZOTHEOS Windows Release Status" />
   <meta property="og:description" content="The local Windows x64 desktop is in validation. Model choice and broad hardware access remain central to development." data-rs-pre="The local Windows x64 desktop is in validation. Model choice and broad hardware access remain central to development." data-rs-avail="The local Windows x64 desktop, {version}. Model choice and broad hardware access remain central to development." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000" id="themeColorMeta" />
   <link rel="preload" as="image" href="/static/zotheos_logo.png" fetchpriority="high" />
   <!-- Fonts are self-hosted from static/fonts (SIL Open Font License 1.1, see static/fonts/OFL.txt), so the page
        makes no request to another site. Latin and Latin Extended subsets: Spanish and Nahuatl letters such as
        n with tilde and the macron vowels render in the brand faces. tools/fonts_check.py keeps both pages in step;
        docs/FONTS.md says how to update a face. -->
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/instrument-serif-italic-latin.woff2" crossorigin />
-  <style id="zth-fonts">
+  <!-- site-appearance-prepaint:start -->
+<script id="site-theme-prepaint">
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton' || t === 'calavera') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
+<!-- site-appearance-prepaint:end -->
+<style id="zth-fonts">
     @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap;
       src: url(/static/fonts/instrument-serif-latin.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
@@ -56,7 +78,7 @@
     /* W1-17: the release page in the landing's default theme, Obsidian mono. Pure black ground, white ink
        ladder, liquid-silver display type, chrome on the rim and black in the body (the lifted-black law:
        the owner's display lifts any dim fill into a grey slab). Square-ish geometry like the landing.
-       No script: the page stays script-src 'none', so it follows mono only. */
+       The saved site appearance is applied before paint; release content remains available without scripts. */
     :root {
       color-scheme: dark;
       --serif: 'Instrument Serif', Georgia, serif;
@@ -75,10 +97,10 @@
       --chrome-rim: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.64) 26%, rgba(255, 255, 255, 0.55) 72%, rgba(255, 255, 255, 0.70) 100%);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { background: #000000; scroll-behavior: smooth; }
+    html { background: var(--page-bg, #000000); scroll-behavior: smooth; }
     body {
       font-family: var(--sans);
-      background: #000000;   /* explicit and never fixed: nothing below the first screen can render on white */
+      background: var(--page-bg, #000000);   /* explicit and never fixed: nothing below the first screen can render on white */
       color: var(--ink-2);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
@@ -355,15 +377,45 @@
       .btn, .btn .arrow { transition: none; }
     }
   </style>
+<!-- site-appearance:start -->
+<link rel="stylesheet" href="/static/appearance/palette.css?v=54c78e53b33b"><link rel="stylesheet" href="/static/appearance/calavera.css?v=aa497196e488">
+<script defer src="/static/appearance/controls.js?v=7a88173e1d0f" integrity="sha256-eogXPh0PJ6FqmrkJ2FvwzmbAAzaKvErXSuUOcvHrVQA=" crossorigin="anonymous"></script><script defer src="/static/appearance/calavera.js?v=743c7ae3a5ed" integrity="sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=" crossorigin="anonymous"></script>
+<noscript><style>.site-appearance-launch,.site-appearance-pop{display:none!important}</style></noscript>
+<!-- site-appearance:end -->
 </head>
 <body>
   <header class="bar">
     <div class="bar-inner">
-      <span class="crumb">Release status</span>
+      <button class="site-appearance-launch" id="appearanceBtn" type="button" popovertarget="appearancePop">Appearance</button>
       <a class="home" href="/" aria-label="ZOTHEOS home"><img src="/static/zotheos_logo.png" alt="ZOTHEOS" width="143" height="30" /></a>
       <a class="back" href="/">Home</a>
     </div>
   </header>
+<div class="appearance-pop site-appearance-pop" id="appearancePop" popover role="group" aria-label="Appearance">
+  <div class="ap-row">
+    <span class="ap-label" id="apThemeLabel">Theme</span>
+    <p class="ap-note ap-theme-description" id="apThemeDescription">Silver structure, a foundation for your own judgment.</p>
+    <div class="ap-themes">
+      <div class="theme-picker" role="radiogroup" aria-labelledby="apThemeLabel" aria-describedby="apThemeDescription">
+        <button class="theme-swatch" type="button" role="radio" data-set="" aria-checked="true" tabindex="0" aria-label="Sovereign Skeleton" title="Sovereign Skeleton: Silver structure, a foundation for your own judgment."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
+        <button class="theme-swatch" type="button" role="radio" data-set="calavera" aria-checked="false" tabindex="-1" aria-label="Calavera Nocturne" title="Calavera Nocturne: Midnight violet, jade and gold. Calaveras in living light."></button>
+      </div>
+      <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
+    </div>
+  </div>
+  <div class="ap-row" id="apMotionRow">
+    <span class="ap-label" id="apMotionLabel">Motion</span>
+    <div class="ap-seg" id="motionGroup" role="radiogroup" aria-labelledby="apMotionLabel">
+      <button class="ap-opt" type="button" role="radio" data-mode="living" aria-checked="true" tabindex="0" title="Every effect moves">Living</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="calm" aria-checked="false" tabindex="-1" title="Background effects rest; the page still moves">Calm</button>
+      <button class="ap-opt" type="button" role="radio" data-mode="still" aria-checked="false" tabindex="-1" title="Nothing moves">Still</button>
+    </div>
+    <p class="ap-note" id="apMotionNote" hidden>Your system asks for reduced motion</p>
+  </div>
+</div>
   <div class="wrap">
     <main>
       <section class="hero">

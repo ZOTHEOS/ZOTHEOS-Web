@@ -405,7 +405,7 @@ def test_the_theater_build_rewrites_stale_doors_and_its_check_catches_them(tmp_p
     import shutil
     import subprocess
     root = tmp_path / 'site'
-    for rel in ('tools', 'data', 'nations', 'static/theater'):
+    for rel in ('tools', 'data', 'nations', 'static/theater', 'static/appearance'):
         shutil.copytree(R / rel, root / rel, ignore=shutil.ignore_patterns('__pycache__', 'tests'))
     for rel in ('index.html', 'theater.html', 'vercel.json'):
         shutil.copy2(R / rel, root / rel)
