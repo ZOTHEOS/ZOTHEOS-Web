@@ -344,7 +344,9 @@ def test_integrated_placement():
     end = s.index('</figure>', fig) + len('</figure>')
     assert s[end:].startswith('\n' + ' ' * 10 + MARKUP + '\n          <details class="fusion-method">')
     # CSS: one <style> of its own in the head. JS: one new inline script, the last one, after the motion floor.
-    assert '<style>\n' + CSS + '\n</style>\n</head>' in s
+    own_style = '<style>\n' + CSS + '\n</style>'
+    assert s.count(own_style) == 1
+    assert s.index('<head>') < s.index(own_style) < s.index('</head>')
     assert s.rstrip().endswith('<script>\n' + JS + '\n</script>\n</body>\n</html>')
 
 

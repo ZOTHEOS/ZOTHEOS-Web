@@ -7,7 +7,7 @@ function engine(html) {
   var box = { window: {}, document: { getElementById: function () { return null; } },
     localStorage: { getItem: function () { return null; }, setItem: function () {} },
     setTimeout: function (f) { f(); return 0; }, clearTimeout: function () {} };
-  vm.createContext(box); vm.runInContext(html.slice(html.indexOf('<script>') + 8, html.indexOf('</script>')), box);
+  vm.createContext(box); vm.runInContext(html.slice(html.indexOf('<script>') + 8, html.indexOf('</script>', html.indexOf('<script>') + 8)), box);
   return box.window.ZTH_GAME;
 }
 var api = engine(source), T = api._ev('TEXT');

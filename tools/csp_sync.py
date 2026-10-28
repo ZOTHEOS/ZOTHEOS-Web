@@ -11,7 +11,7 @@ type="speculationrules" blocks, over the text exactly as the HTML parser sees it
 scripts are found with html.parser, so a '<script' inside an HTML comment is not mistaken for a tag). The script-src
 directive of the page's <meta http-equiv="Content-Security-Policy"> and of every vercel.json header entry whose
 source serves that page is rewritten to the hash list, or to 'none' when the page has no inline script
-(download.html stays script-src 'none'). The game group also hashes its page and injected overlay styles. Other directives are never touched, and each file keeps its own line endings.
+Cached same-origin scripts require verified SRI bytes; script origins are never broadened. The game group also hashes its page and injected overlay styles. Other directives are never touched, and each file keeps its own line endings.
 
 Pages are grouped (GROUPS). Every file in a group must carry the same inline scripts (one hash list), or --check
 reports the odd file: the 450 generated nation pages come from one template, so a template edit that reached only
@@ -28,6 +28,7 @@ import os
 import re
 import sys
 from html.parser import HTMLParser
+from urllib.parse import urlsplit, unquote
 
 PAGES = ("index.html", "download.html")   # the two landing pages (kept for tools that import this name)
 META_IGNORED = ("frame-ancestors", "report-uri", "sandbox")
@@ -64,11 +65,16 @@ class _InlineScripts(HTMLParser):
     def __init__(self, tag="script"):
         self.tag = tag
         super().__init__(convert_charrefs=True)
-        self.bodies, self.cur = [], None
+        self.bodies, self.cur, self.entries = [], None, []
 
     def handle_starttag(self, tag, attrs):
         if tag == self.tag:
             self.cur = "skip" if any(k == "src" for k, _ in attrs) else []
+            if self.cur == "skip" and self.tag == "script":
+                for key in ("src", "integrity"):
+                    if sum(k == key for k, _ in attrs) != 1:
+                        raise SystemExit("cached script needs unique src and integrity attributes")
+                self.entries.append(("external", dict(attrs)))
 
     def handle_data(self, data):
         if isinstance(self.cur, list):
@@ -78,17 +84,42 @@ class _InlineScripts(HTMLParser):
         if tag == self.tag:
             if isinstance(self.cur, list):
                 self.bodies.append("".join(self.cur))
+                self.entries.append(("inline", "".join(self.cur)))
             self.cur = None
 
 
-def page_hashes(html):
+def page_hashes(html, root=None):
     text = html.replace("\r\n", "\n").replace("\r", "\n")
     parser = _InlineScripts()
     parser.feed(text)
     parser.close()
+    root = os.path.realpath(root or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     out = []
-    for body in parser.bodies:
-        digest = hashlib.sha256(body.encode("utf-8")).digest()
+    for kind, value in parser.entries:
+        if kind == "inline":
+            digest = hashlib.sha256(value.encode("utf-8")).digest()
+        else:
+            src = value.get('src', '')
+            parts = urlsplit(src)
+            path = unquote(parts.path)
+            if (parts.scheme or parts.netloc or parts.fragment or not path.startswith('/static/')
+                    or '\\' in path or '%' in path or any(ord(c) < 32 for c in path)
+                    or any(p in ('.', '..') for p in path.split('/'))):
+                raise SystemExit('cached script must use a bounded same-origin static path')
+            integrity = value.get('integrity', '')
+            if not re.fullmatch(r'sha256-[A-Za-z0-9+/]{43}=', integrity):
+                raise SystemExit('cached script needs one exact SHA-256 integrity value')
+            resolved = os.path.realpath(os.path.join(root, path.lstrip('/')))
+            static_root = os.path.realpath(os.path.join(root, 'static'))
+            if (os.path.normcase(static_root) != os.path.normcase(os.path.join(root, 'static'))
+                    or os.path.commonpath([root, static_root]) != root
+                    or os.path.commonpath([static_root, resolved]) != static_root
+                    or os.path.commonpath([root, resolved]) != root or not os.path.isfile(resolved)):
+                raise SystemExit('cached script is absent or outside the site root')
+            with open(resolved, 'rb') as stream:
+                digest = hashlib.sha256(stream.read()).digest()
+            if integrity != 'sha256-' + base64.b64encode(digest).decode('ascii'):
+                raise SystemExit('cached script bytes do not match page integrity')
         out.append("'sha256-" + base64.b64encode(digest).decode("ascii") + "'")
     return out
 
@@ -156,7 +187,7 @@ def main():
         for page in g["files"]:
             p = os.path.join(root, page)
             html = read(p)
-            hs = page_hashes(html)
+            hs = page_hashes(html, root)
             if ref is None:
                 ref = hs
             elif hs != ref:
@@ -216,7 +247,7 @@ def main():
 
     for g in grps:
         many = f" in each of {len(g['files'])} pages" if len(g["files"]) > 1 else ""
-        print(f"{g['name']}: {len(hashes[g['name']])} inline script(s){many}")
+        print(f"{g['name']}: {len(hashes[g['name']])} pinned script(s){many}")
     if a.check:
         for d in drift[:40]:
             print("DRIFT " + d)

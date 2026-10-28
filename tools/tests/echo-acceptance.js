@@ -5,8 +5,9 @@
 var fs = require('fs'), vm = require('vm'), assert = require('assert'), path = require('path');
 var sourcePath = path.resolve(process.argv[2] || path.join(process.cwd(), 'game/index.src.html'));
 var source = fs.readFileSync(sourcePath, 'utf8');
-assert(source.indexOf('<script>') >= 0 && source.indexOf('</script>') > source.indexOf('<script>'), 'Expected the readable standalone game source');
-var js = source.slice(source.indexOf('<script>') + 8, source.indexOf('</script>'));
+var scriptStart = source.indexOf('<script>'), scriptEnd = source.indexOf('</script>', scriptStart + 8);
+assert(scriptStart >= 0 && scriptEnd > scriptStart + 8, 'Expected the readable standalone game source');
+var js = source.slice(scriptStart + 8, scriptEnd);
 var sandbox = { window: {}, document: { getElementById: function () { return null; } },
   localStorage: { getItem: function () { return null; }, setItem: function () {} },
   setTimeout: function (f) { f(); return 0; }, clearTimeout: function () {}, console: console };

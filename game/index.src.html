@@ -4,8 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ollamaliztli</title>
+<meta name="theme-color" content="#000000" id="themeColorMeta">
 <link rel="icon" href="/zotheos_icon.ico?v=3">
 <meta name="description" content="Ollamaliztli, the ballgame of Mesoamerica: two modes, Drop and Echo, with Indigenous nations of today and their cited facts.">
+<!-- site-appearance-prepaint:start -->
+<script id="site-theme-prepaint">
+    /* Theme before first paint: a saved named theme is applied here, so those visitors never see the mono default
+       flash first. Fluid motion (registered custom properties) is switched on only where @property exists.
+       W2-03: the visitor's Motion choice (Living / Calm / Still) is set here too, so Still never shows a moving
+       first frame. The OS reduced-motion setting is a floor: it always reads as Still. */
+    (function () {
+      var d = document.documentElement;
+      var m = 'living';
+      try {
+        var t = localStorage.getItem('zotheos_landing_theme');
+        if (t === 'maya' || t === 'codex' || t === 'skeleton' || t === 'calavera') d.setAttribute('data-theme', t);
+        var s = localStorage.getItem('zotheos_motion');
+        if (s === 'living' || s === 'calm' || s === 'still') m = s;
+        else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
+      } catch (e) {}
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) m = 'still'; } catch (e) {}
+      d.setAttribute('data-motion', m);
+      if (window.CSS && CSS.registerProperty) d.classList.add('zm-fluid');
+    })();
+  </script>
+<!-- site-appearance-prepaint:end -->
 <style>
 html,body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif}
 #zgOpen{position:fixed;left:24px;top:50%;width:44px;height:44px;margin-top:-22px;border:0;background:transparent;cursor:pointer;padding:0}
@@ -15,6 +38,241 @@ html,body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif}
 #zgBack:hover{color:#fff}
 #zgBack:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style>
+<!-- site-appearance:start -->
+<style id="site-appearance-styles">/* Tokens copied by name and value from index.html (tools/nations_lint.py fails when any value drifts), then the
+   nations-only tokens. Maya Radiance is the landing's :root; Sovereign Skeleton is :root:not([data-theme]). */
+:root {
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease-ceremony: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 0.18s;
+  --dur-2: 0.42s;
+  --dur-3: 0.9s;
+  --fs-h2: clamp(40px, 4.6vw, 76px);
+  --lh-h2: 1.02;
+  --fs-read: clamp(16px, 1.1vw, 17px);
+  --lh-read: 1.6;
+  --fs-label: 11px;
+  --fw-label: 500;
+  --tr-label: 0.2em;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
+  --col-max: 1280px;
+  --measure: 64ch;
+  --line-alpha-min: 0.55;
+  --bg-floor: #02101E;
+  --bg-deep: #0A2E48;
+  --ink: #F4ECD8;
+  --ink-2: #B5C4D0;
+  --ink-3: #8FA5B5;
+  --ink-4: #6E8294;
+  --ink-5: #3F5566;
+  --cochineal: #B4873C;
+  --gold-shadow: #9D6D31;
+  --gold-highlight: #F1DFB4;
+  --gold-mid: #CDA45E;
+  --gold-gradient: linear-gradient(112deg, var(--gold-shadow) 0%, var(--cochineal) 18%, var(--gold-highlight) 24%, var(--cochineal) 30%, var(--gold-shadow) 43%, var(--gold-mid) 60%, var(--gold-highlight) 66%, var(--cochineal) 73%, var(--gold-shadow) 86%, var(--gold-shadow) 100%);
+  --rule: rgba(244, 236, 216, 0.16);
+  --rule-soft: rgba(244, 236, 216, 0.08);
+  --surface: rgba(244, 236, 216, 0.04);
+
+  --zn-names: 'Instrument Serif', 'ZN Serif', 'ZN Cherokee', 'ZN Syllabics', 'ZN Tifinagh', serif;
+  --zn-names-fb: 'ZN Serif', 'ZN Cherokee', 'ZN Syllabics', 'ZN Tifinagh', serif;
+  --zn-read: 'DM Sans', 'ZN Sans', 'ZN Devanagari', 'ZN Cherokee', 'ZN Syllabics', 'ZN Tifinagh', system-ui, sans-serif;
+  --zn-read-fb: 'ZN Sans', 'ZN Devanagari', 'ZN Cherokee', 'ZN Syllabics', 'ZN Tifinagh', system-ui, sans-serif;
+  --zn-mono: 'JetBrains Mono', 'ZN Mono', ui-monospace, monospace;
+  --page-bg: var(--bg-floor);
+  --ink-low: var(--ink-4);
+  --line: color-mix(in oklab, var(--ink) 55%, transparent);
+  --rim-hover: color-mix(in oklab, var(--ink) 85%, transparent);
+  --gutter: clamp(16px, 4vw, 32px);
+  color-scheme: dark;
+}
+[data-theme="codex"] {
+  --bg-floor: #C8B078;
+  --bg-deep: #E8DBC0;
+  --ink: #1A0F08;
+  --ink-2: #4A3A2A;
+  --ink-3: #6B5945;
+  --ink-4: #9A8870;
+  --ink-5: #B5A488;
+  --cochineal: #6E0F25;
+  --rule: rgba(26, 15, 8, 0.20);
+  --rule-soft: rgba(26, 15, 8, 0.10);
+  --surface: rgba(26, 15, 8, 0.04);
+  --page-bg: var(--bg-deep);
+  --ink-low: var(--ink-3);
+  color-scheme: light;
+}
+[data-theme="skeleton"] {
+  --bg-floor: #050507;
+  --bg-deep: #14110E;
+  --ink: #EDE4D3;
+  --ink-2: #B8AC95;
+  --ink-3: #8A7F6E;
+  --ink-4: #5a5247;
+  --ink-5: #3a342d;
+  --cochineal: #8B1934;
+  --rule: rgba(237, 228, 211, 0.10);
+  --rule-soft: rgba(237, 228, 211, 0.05);
+  --surface: rgba(237, 228, 211, 0.03);
+  --ink-low: var(--ink-3);
+}
+:root:not([data-theme]) {
+  --bg-floor: #000000;
+  --bg-deep: #000000;
+  --ink: #FFFFFF;
+  --ink-2: #C8C8C8;
+  --ink-3: #A3A3A3;
+  --ink-4: #8A8A8A;
+  --ink-5: #4D4D4D;
+  --cochineal: #FFFFFF;
+  --rule: rgba(255, 255, 255, 0.16);
+  --rule-soft: rgba(255, 255, 255, 0.09);
+  --surface: #000000;
+  --page-bg: #000000;
+  --line: rgba(255, 255, 255, 0.55);
+  --rim-hover: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="calavera"] {
+  --bg-floor: #090716; --bg-mid: #110D22; --bg-deep: #17112D; --bg-warm: #231632; --bg-halo: #302047;
+  --ink: #FFF3E8; --ink-2: #E1D1ED; --ink-3: #C9B4E5; --ink-4: #B3A0CB; --ink-5: #716082;
+  --cochineal: #FF70D9; --cochineal-deep: #74295E; --cochineal-rgb: 255,112,217; --cochineal-text: #FFB3E9;
+  --pulse-green: #77E8BA; --pulse-green-rgb: 119,232,186;
+  --gold-shadow: #BE914C; --gold-mid: #E8BC72; --gold-highlight: #FFE7B0;
+  --basalt-1: #21162E; --basalt-2: #090716; --basalt-3: #17112D;
+  --rule: rgba(225,209,237,.23); --rule-soft: rgba(225,209,237,.12);
+  --surface: rgba(225,209,237,.045); --surface-2: rgba(225,209,237,.025);
+  --page-bg: #090716; --ink-low: #B3A0CB; --line: rgba(225,209,237,.55); --rim-hover: #FFB3E9;
+  --hdr-band: #090716; --zt-frame-ground: #090716; --zt-frame-ink: #C9B4E5; --zt-frame-accent: #77E8BA;
+  --cn-spectrum: linear-gradient(110deg,#FFE7B0 0%,#FFB3E9 24%,#C9B4E5 48%,#77E8BA 74%,#FFE7B0 100%);
+  color-scheme: dark;
+}
+
+/* Original decorative calaveras, drawn for ZOTHEOS. No shared cultural or sacred meaning is claimed. */
+html[data-theme="calavera"] {
+  --bg-floor: #090716; --bg-mid: #110D22; --bg-deep: #17112D; --bg-warm: #231632; --bg-halo: #302047;
+  --ink: #FFF3E8; --ink-2: #E1D1ED; --ink-3: #C9B4E5; --ink-4: #B3A0CB; --ink-5: #716082;
+  --cochineal: #FF70D9; --cochineal-deep: #74295E; --cochineal-rgb: 255,112,217; --cochineal-text: #FFB3E9;
+  --pulse-green: #77E8BA; --pulse-green-rgb: 119,232,186;
+  --gold-shadow: #BE914C; --gold-mid: #E8BC72; --gold-highlight: #FFE7B0;
+  --basalt-1: #21162E; --basalt-2: #090716; --basalt-3: #17112D;
+  --rule: rgba(225,209,237,.23); --rule-soft: rgba(225,209,237,.12);
+  --surface: rgba(225,209,237,.045); --surface-2: rgba(225,209,237,.025);
+  --page-bg: #090716; --ink-low: #B3A0CB; --line: rgba(225,209,237,.55); --rim-hover: #FFB3E9;
+  --hdr-band: #090716; --zt-frame-ground: #090716; --zt-frame-ink: #C9B4E5; --zt-frame-accent: #77E8BA;
+  --cn-spectrum: linear-gradient(110deg,#FFE7B0 0%,#FFB3E9 24%,#C9B4E5 48%,#77E8BA 74%,#FFE7B0 100%);
+  color-scheme: dark;
+}
+html[data-theme="calavera"] body { background: var(--bg-floor); color: var(--ink-2); isolation: isolate; }
+html[data-theme="calavera"] :is(header.scrolled,.nh,.appearance-pop,.nav-sheet,.mobile-cta) { background-color: var(--bg-floor); }
+html[data-theme="calavera"] :is(.hero-title em,.page-h,.n-h1,.th-title,.hero h1 em) {
+  color: var(--ink); background-image: var(--cn-spectrum); background-size: 180% 100%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+html[data-theme="calavera"] :is(a,button,input,select,summary):focus-visible { outline-color: #77E8BA; }
+html[data-theme="calavera"] ::selection { color: #090716; background: #77E8BA; }
+html[data-theme="calavera"] :is(.bento-card,.support-card,.value-item,.instrument-card,.fact,.action-card,.theater-card):is(:hover,:focus-within) {
+  border-color: #C9B4E5; box-shadow: 0 0 0 1px rgba(255,112,217,.18),0 8px 34px rgba(119,232,186,.055);
+}
+.theme-swatch[data-set="calavera"]::before { background: conic-gradient(from 35deg,#FF70D9,#C9B4E5,#77E8BA,#E8BC72,#FF70D9); }
+.appearance-pop .ap-themes { flex-wrap: wrap; }
+.appearance-pop .theme-picker { flex-shrink: 0; }
+.calavera-atmosphere { position: fixed; inset: 0; overflow: hidden; z-index: -1; pointer-events: none; contain: strict; --cn-x: 0px; --cn-y: 0px; --cn-strength: .56; }
+.calavera-atmosphere[hidden] { display: none !important; }
+.cn-field { position: absolute; inset: -12%; transform: translate3d(var(--cn-x),var(--cn-y),0); }
+.cn-light { position: absolute; inset: 0; opacity: var(--cn-strength); background: radial-gradient(ellipse at 9% 28%,rgba(197,35,150,.28),transparent 44%),radial-gradient(ellipse at 92% 72%,rgba(19,164,126,.24),transparent 46%),radial-gradient(ellipse at 67% 4%,rgba(116,60,218,.23),transparent 43%); }
+.cn-light-b { transform: rotate(180deg); opacity: calc(var(--cn-strength)*.6); background: radial-gradient(ellipse at 8% 20%,rgba(232,188,114,.14),transparent 40%),radial-gradient(ellipse at 94% 74%,rgba(153,81,227,.22),transparent 45%); }
+.cn-skull { position: absolute; width: clamp(116px,14vw,210px); aspect-ratio: 240/300; background: url('/static/appearance/calavera-nocturne.svg') center/contain no-repeat; opacity: .15; }
+.cn-skull-a { left: clamp(-70px,1.5vw,26px); top: 19%; transform: rotate(-9deg); }
+.cn-skull-b { right: clamp(-70px,1.5vw,26px); bottom: 5%; transform: rotate(9deg); }
+body:has(.hero) .cn-skull { opacity: .48; }
+.calavera-atmosphere::after { content: ''; position: absolute; inset: 0; background: url('/static/appearance/nocturne-orbits.svg') left center/310px 370px; opacity: .055; }
+.calavera-atmosphere.is-living .cn-light { animation: cn-flow 24s ease-in-out infinite alternate; }
+.calavera-atmosphere.is-living .cn-light-b { animation-name: cn-counterflow; animation-duration: 31s; }
+@keyframes cn-flow { from { transform: translate3d(-2%,0,0) scale(1); opacity: calc(var(--cn-strength)*.7); } to { transform: translate3d(3%,2%,0) scale(1.12); opacity: var(--cn-strength); } }
+@keyframes cn-counterflow { from { transform: rotate(180deg) translate3d(2%,0,0); } to { transform: rotate(170deg) translate3d(-2%,2%,0) scale(1.09); } }
+html[data-theme="calavera"][data-motion="living"].cn-living :is(.hero-title em,.page-h,.n-h1,.th-title) { animation: cn-letterlight 18s ease-in-out infinite alternate; }
+@keyframes cn-letterlight { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@media (max-width: 720px) {
+  .cn-skull { width: 116px; opacity: .09; }
+  .cn-skull-a { left: -44px; top: 21%; }
+  .cn-skull-b { display: none; }
+  body:has(.hero) .cn-skull { opacity: .28; }
+  .appearance-pop .ap-theme-name { max-width: 100%; }
+}
+/* The release-page adapter uses the same semantic radio controls and saved preference. */
+.site-appearance-launch { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 15px; border: 1px solid var(--ink-4,#8A8A8A); border-radius: 24px; background: var(--page-bg,#000); color: var(--ink,#FFF); font: 11px/1.2 var(--mono,monospace); letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+.site-appearance-launch::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--cochineal,#FFF); }
+.site-appearance-pop { box-sizing: border-box; width: min(390px,calc(100vw - 32px)); padding: 22px; margin: auto; border: 1px solid var(--ink-4,#8A8A8A); border-radius: 18px; background: var(--page-bg,#000); color: var(--ink,#FFF); max-height: calc(100dvh - 32px); overflow: auto; }
+.site-appearance-pop .ap-row + .ap-row { margin-top: 24px; }
+.site-appearance-pop .ap-label { display: block; font: 11px/1.4 var(--mono,monospace); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3,#A3A3A3); margin-bottom: 10px; }
+.site-appearance-pop .ap-note { color: var(--ink-2,#C8C8C8); font: 14px/1.5 var(--sans,system-ui); margin: 0 0 12px; }
+.site-appearance-pop .ap-themes { display: flex; align-items: center; gap: 12px; }
+.site-appearance-pop .theme-picker { display: flex; }
+.site-appearance-pop .theme-swatch { position: relative; width: 44px; height: 44px; border: 0; background: none; color: inherit; cursor: pointer; padding: 0; }
+.site-appearance-pop .theme-swatch::before { content: ''; position: absolute; inset: 14px; border-radius: 50%; background: #FFF; }
+.site-appearance-pop [data-set="maya"]::before { background: #2F7693; }
+.site-appearance-pop [data-set="codex"]::before { background: #E8DBC0; }
+.site-appearance-pop [data-set="skeleton"]::before { background: #2A2622; }
+.site-appearance-pop [data-set="calavera"]::before { background: conic-gradient(#FF70D9,#77E8BA,#E8BC72,#FF70D9); }
+.site-appearance-pop .theme-swatch[aria-checked="true"]::before { outline: 1.5px solid currentColor; outline-offset: 4px; }
+.site-appearance-pop .ap-theme-name { font: 14px/1.5 var(--sans,system-ui); }
+.site-appearance-pop .ap-seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.site-appearance-pop .ap-opt { flex: 1; min-height: 44px; padding: 8px; border: 1px solid var(--ink-4,#8A8A8A); border-radius: 22px; color: inherit; background: none; cursor: pointer; }
+.site-appearance-pop .ap-opt[aria-checked="true"] { border-color: var(--ink,#FFF); background: var(--surface,transparent); }
+@media (prefers-reduced-motion: reduce) {
+  .calavera-atmosphere *,html[data-theme="calavera"] :is(.hero-title em,.page-h,.n-h1,.th-title) { animation: none !important; transition: none !important; }
+}
+html[data-theme="calavera"][data-motion="still"],html[data-theme="calavera"][data-motion="still"] * { scroll-behavior: auto; }
+@media print {
+  .calavera-atmosphere,.zg-theme-art,.site-appearance-launch,.site-appearance-pop { display: none !important; }
+  html[data-theme="calavera"] { --ink:#000; --ink-2:#222; --ink-3:#333; --ink-4:#444; --ink-low:#333; --page-bg:#FFF; --bg-floor:#FFF; --surface:#FFF; --line:#444; --cochineal:#000; --cochineal-text:#000; }
+  html[data-theme="calavera"] body { background:#FFF !important; color:#000 !important; }
+  html[data-theme="calavera"] :is(.hero-title em,.page-h,.n-h1,.th-title,.hero h1 em) { background: none; color: #000; -webkit-text-fill-color: currentColor; }
+}
+@media (forced-colors: active) {
+  .calavera-atmosphere,.zg-theme-art { display: none !important; }
+  html[data-theme="calavera"] :is(.hero-title em,.page-h,.n-h1,.th-title,.hero h1 em) { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
+}
+
+/* The game keeps its courts, ball and cues intact. Original ornament appears only on its menu screens. */
+html[data-theme="calavera"] #zg { background: #090716; color: #FFF3E8; }
+html[data-theme="calavera"] #zg :is(.hud,.goal,.solid,.cap span,button,input,a.btn) { background-color: #090716; color: #FFF3E8; border-color: #C9B4E5; }
+html[data-theme="calavera"] #zg :is(h1,h2,p,a) { color: #FFF3E8; }
+html[data-theme="calavera"] #zg :is(.sub,.goal span+span) { color: #C9B4E5; }
+html[data-theme="calavera"] #zg :is(button,input,a.btn)[aria-checked="true"] { background: #FFB3E9; color: #090716; }
+html[data-theme="calavera"] #zg .zg-theme-options button:is(:hover,:focus-visible) { border-color: #77E8BA; box-shadow: 0 0 18px rgba(119,232,186,.12); }
+html[data-theme="calavera"] #zg:is([data-game-screen="title"],[data-game-screen="pause"]) .zg-theme-art { display: block; position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+html[data-theme="calavera"] #zg .zg-theme-art::before,html[data-theme="calavera"] #zg .zg-theme-art::after { content: ''; position: absolute; top: 22%; width: 150px; aspect-ratio: 240/300; background: url('/static/appearance/calavera-nocturne.svg') center/contain no-repeat; opacity: .45; }
+html[data-theme="calavera"] #zg .zg-theme-art::before { left: 3%; transform: rotate(-8deg); }
+html[data-theme="calavera"] #zg .zg-theme-art::after { right: 3%; transform: rotate(8deg); }
+@media (max-width: 900px) { html[data-theme="calavera"] #zg .zg-theme-art { display: none !important; } }
+.site-theme-page[data-theme] body { background: var(--page-bg); }
+.site-theme-page[data-theme="codex"] .home img { filter: brightness(0); }
+.site-theme-page[data-theme="codex"] .hero h1 { background: none; color: var(--ink); -webkit-text-fill-color: currentColor; }
+
+/* Shared game menu typography, preserved for every appearance. */
+#zg h1,#zg h2{margin:0;font:inherit;font-weight:300;color:#fff;text-transform:uppercase;letter-spacing:.24em}
+#zg h1{font-size:clamp(22px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}
+#zg .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+#zg .mode{display:flex;flex-flow:column;width:min(330px,100%);padding:14px 18px;text-align:left;min-height:64px}
+#zg .mode b{font-size:20px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+#zg .mode span{font-size:15px;line-height:1.4;letter-spacing:.02em;color:#e6e6e6}#zg .mode .sub{font-size:13px;color:#b8b8b8;margin-top:4px}
+#zg .big{font-size:40px;letter-spacing:.08em;font-weight:300;font-variant-numeric:tabular-nums}
+#zg .zg-theme-art{display:none;pointer-events:none}
+#zg .zg-page-appearance{width:min(560px,100%);min-width:0;margin:0;padding:10px;border:1px solid #8c8c8c}
+#zg .zg-page-appearance legend{padding:0 8px;font-size:12px;letter-spacing:.12em}
+#zg .zg-theme-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+#zg .zg-theme-options button{min-width:0;padding:8px;font-size:12px;line-height:1.4;letter-spacing:.02em;overflow-wrap:anywhere}
+@media (min-width:620px){#zg .zg-theme-options{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+<script src="/static/appearance/game-theme.js?v=a765b7bba02f" integrity="sha256-p2W3u6AvVEZE8ioWzrXw21t5EwT1TgI34qbLCcm9wSA=" crossorigin="anonymous"></script>
+<script defer src="/static/appearance/calavera.js?v=743c7ae3a5ed" integrity="sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=" crossorigin="anonymous"></script>
+<!-- site-appearance:end -->
 </head>
 <body data-autoopen="1">
 <a id="zgBack" href="/">Back to ZOTHEOS</a>
@@ -137,16 +395,9 @@ var CSS = '#zg{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;colo
   '#zg .yk{display:inline-block;width:13px;height:10px;border:2px solid #fff;border-top:0;border-right-color:transparent;border-radius:0 0 7px 7px;margin-left:12px}' +
   '#zg .pan{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-flow:column;align-items:center;gap:14px;padding:24px 16px;text-align:center;overflow:auto;overscroll-behavior:contain}' +
   '#zg .pan>*{flex-shrink:0}#zg .pan>:first-child{margin-top:auto}#zg .pan::after{content:"";margin-bottom:auto}#zg .solid{background:#000}#zg .map::after{content:none}' +
-  '#zg h1,#zg h2{margin:0;font:inherit;font-weight:300;color:#fff;text-transform:uppercase;letter-spacing:.24em}' +
-  '#zg h1{font-size:clamp(22px,7vw,52px);margin-right:-.24em}#zg h2{font-size:24px}' +
   '#zg p{margin:0;max-width:30em;font-size:16px;line-height:1.5;color:#fff}#zg .sub{color:#b8b8b8}' +
-  '#zg .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}' +
   '#zg #zgTi{padding:24px 48px}' +
-  '#zg .mode{display:flex;flex-flow:column;width:min(330px,100%);padding:14px 18px;text-align:left;min-height:64px}' +
-  '#zg .mode b{font-size:20px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:4px}' +
-  '#zg .mode span{font-size:15px;line-height:1.4;letter-spacing:.02em;color:#e6e6e6}#zg .mode .sub{font-size:13px;color:#b8b8b8;margin-top:4px}' +
   '#zg .olli{display:block;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset -3px -3px 0 #b8b8b8;margin-bottom:6px}' +
-  '#zg .big{font-size:40px;letter-spacing:.08em;font-weight:300;font-variant-numeric:tabular-nums}' +
   '#zg .cap{position:absolute;left:16px;right:16px;top:60px;text-align:center;font-size:16px;line-height:1.75;pointer-events:none;transition:opacity .15s;opacity:0}' +
   '#zg .cap span{background:#000;padding:3px 10px;-webkit-box-decoration-break:clone;box-decoration-break:clone}' +
   '#zg .nh{width:min(560px,100%);border:1.5px solid #b8b8b8;padding:14px 16px;text-align:left;display:flex;flex-flow:column;gap:10px}' +
@@ -194,6 +445,20 @@ function say(m) { if (E.live) { E.live.textContent = ''; setTimeout(function () 
 function cap(m, t) { if (!E.cap) return; E.capS.textContent = m; E.cap.style.opacity = m ? 1 : 0; capT = m ? (t || 3.2) : 0; }
 function capAt(l, r, t) { if (!E.cap) return; var s = E.cap.style; s.left = l + 'px'; s.right = r + 'px'; s.top = t + 'px'; }
 
+// The existing site preference changes pigments only. Courts, physics, cues and knowledge stay the same.
+var gameCalavera = false, gameThemeUI = window.ZotheosGameTheme;
+function gamePigment(value) { return gameCalavera && gameThemeUI ? gameThemeUI.pigment(value) : value; }
+function gameThemeControls() { return gameThemeUI ? gameThemeUI.markup() : ''; }
+function applyGamePaint(value) {
+  var active = value === 'calavera';
+  if (gameCalavera !== active) { gameCalavera = active; SC = {}; BGr = -1; BG = null; }
+  kick();
+}
+function bindGameThemes() {
+  if (gameThemeUI) gameThemeUI.bind(root, applyGamePaint, on);
+  else applyGamePaint(document.documentElement.getAttribute('data-theme') || '');
+}
+
 // ---------- shell ----------
 function btn(id, t, c, x) { return '<button type="button" id="zg' + id + '"' + (c ? ' class="' + c + '"' : '') + (x || '') + '>' + t + '</button>'; }
 function sw(id, t) { return btn(id, t || (id === 'As' ? TEXT.assist : TEXT.calm), '', ' role="switch"'); }
@@ -205,7 +470,7 @@ function build() {
   sty = document.createElement('style'); sty.id = 'zgS'; if (opts.nonce) sty.nonce = opts.nonce; sty.textContent = CSS;
   document.head.appendChild(sty);
   d.innerHTML = '<div id="zg" role="dialog" aria-modal="true" aria-labelledby="zgT" tabindex="-1">' +
-    '<canvas id="zgC" role="img" aria-label="' + T.title + '"></canvas>' +
+    '<canvas id="zgC" role="img" aria-label="' + T.title + '"></canvas><div class="zg-theme-art" aria-hidden="true"></div>' +
     '<div class="hud" id="zgHud" hidden><span id="zgLv"></span><span id="zgSc"></span><span id="zgTm"></span>' + btn('Pa', '<span aria-hidden="true">II</span><span class="sr">' + T.pause + '</span>') + '</div>' +
     '<div class="goal" id="zgGoal" hidden><span id="zgObj"></span><span id="zgBall"></span></div>' +
     '<div class="cap" id="zgCap" aria-hidden="true"><span></span></div>' +
@@ -213,11 +478,11 @@ function build() {
       row(mbtn('Md', T.drop, T.dropDesc) + mbtn('Me', T.echo, T.echoDesc, T.echoNote)) +
       '<div class="row" role="group" aria-label="Court">' + btn('Ct', T.today) + btn('Cn', T.fresh) + '<input id="zgCode" aria-label="' + T.code + '" aria-describedby="zgCm" placeholder="' + T.code + '" maxlength="7" autocomplete="off" spellcheck="false" enterkeyhint="go"></div>' +
       '<p class="sub" id="zgCm" hidden></p>' +
-      row(sw('Ca') + btn('Ab', T.about) + btn('X', T.close)) +
+      row(sw('Ca') + btn('Ab', T.about) + btn('X', T.close)) + gameThemeControls() +
       '<section class="nh" id="zgNh" aria-label="' + T.natLabel + '" hidden><div class="nc" id="zgNc"></div>' +
         row(btn('Nv', T.prev) + btn('Nx', T.next) + btn('Nz', T.pause, '', ' aria-pressed="false"') + abtn('Ns', T.site)) + '<p class="sub" id="zgNu"></p></section></div>' +
     '<div class="pan solid" id="zgPp" hidden><h2>' + T.paused + '</h2><p id="zgPs" class="sub"></p>' +
-      row(btn('Re', T.resume) + btn('Rs', T.restart)) + row(sw('Ca2') + sw('As') + btn('Ab2', T.about) + btn('X2', T.close)) +
+      row(btn('Re', T.resume) + btn('Rs', T.restart)) + row(sw('Ca2') + sw('As') + btn('Ab2', T.about) + btn('X2', T.close)) + gameThemeControls() +
       '<details class="help" id="zgHelp" hidden><summary>' + T.echoHelp + '</summary><p>' + T.echoHint + ' ' + T.echoMouse + ' ' + T.echoTouch + '</p><p>' + T.echoLegend.join('</p><p>') + '</p></details></div>' +
     '<div class="pan solid" id="zgRp" hidden><i class="olli" aria-hidden="true"></i><h2 id="zgRh"></h2><p id="zgRm"></p><div class="big" id="zgRn"></div><p id="zgRi" class="sub"></p>' +
       '<div class="nh" id="zgRx" hidden><p class="sub">' + T.met + '</p><div class="row" id="zgRl"></div><div class="nc" id="zgRc" hidden></div>' + btn('Rb', T.back, '', ' hidden') + '</div>' +
@@ -252,6 +517,7 @@ function build() {
   on(E.Nh, 'focusin', function () { natIn |= 2; natSched(); }); on(E.Nh, 'focusout', function () { natIn &= 1; natSched(); });
   on(E.Code, 'input', codeIn);
   on(E.Help, 'toggle', kick);
+  bindGameThemes();
 }
 function pickCourt(k) { court = k; E.Code.value = ''; E.Cm.hidden = true; syncT(); }
 function codeIn() {
@@ -268,6 +534,7 @@ function syncT() {
 }
 function panel(p) {
   scr = p;
+  root.setAttribute('data-game-screen', p);
   E.Ti.hidden = p !== 'title'; E.Pp.hidden = p !== 'pause'; E.Pp.className = 'pan solid'; E.Rp.hidden = p !== 'result'; E.Ap.hidden = p !== 'about'; E.Np.hidden = p !== 'card';
   E.Hud.hidden = !(p === 'play' || p === 'pause'); E.Pa.hidden = p !== 'play';
   E.Goal.hidden = p !== 'play' || mode !== 'echo'; E.Help.hidden = mode !== 'echo';
@@ -535,12 +802,12 @@ function groove(list, hw, ml) {
   hw = MAX(2, RND(hw));
   ctx.lineCap = 'square';
   for (var k = 0; k < 2; k++) {
-    ctx.strokeStyle = k ? '#000' : '#e6e6e6'; ctx.lineWidth = 2 * hw + (k ? -LW : LW);
+    ctx.strokeStyle = gamePigment(k ? '#000' : '#e6e6e6'); ctx.lineWidth = 2 * hw + (k ? -LW : LW);
     for (var i = 0; i < list.length; i++) { path(list[i]); ctx.stroke(); }
     if (ml) for (i = 0; i < ml.length; i++) { var y = MY + ml[i].ry * MS; if (y > -90 && y < cv.height + 90) { path(ml[i], 1); ctx.stroke(); } }
   }
 }
-function line(p, c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.lineCap = 'butt'; path(p); ctx.stroke(); }
+function line(p, c, w) { ctx.strokeStyle = gamePigment(c); ctx.lineWidth = w || LW; ctx.lineCap = 'butt'; path(p); ctx.stroke(); }
 function motif(x, y, u, fx, fy, rot) {
   var o = [], g = FRET.grid;
   for (var i = 0; i < FRET.pts.length; i++) {
@@ -564,13 +831,13 @@ function ball(x, y, r, ang, out, hit) {
   x = RND(x * 2) / 2; y = RND(y * 2) / 2;
   ctx.translate(x, y);
   ctx.beginPath(); ctx.arc(0, 0, r, 0, 6.2832);
-  if (out) { ctx.fillStyle = '#000'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke(); }
+  if (out) { ctx.fillStyle = gamePigment('#000'); ctx.fill(); ctx.strokeStyle = gamePigment('#fff'); ctx.lineWidth = LW; ctx.stroke(); }
   else {
-    if (r !== BGr) { BGr = r; BG = ctx.createRadialGradient(-r * 0.35, -r * 0.4, r * 0.1, 0, 0, r); BG.addColorStop(0, '#fff'); BG.addColorStop(0.55, '#ececec'); BG.addColorStop(1, '#bdbdbd'); }
-    ctx.fillStyle = BG; ctx.fill();
-    ctx.strokeStyle = '#8c8c8c'; ctx.lineWidth = MAX(1, DPR * 0.75); ctx.stroke();
+    if (r !== BGr) { BGr = r; BG = ctx.createRadialGradient(-r * 0.35, -r * 0.4, r * 0.1, 0, 0, r); BG.addColorStop(0, gamePigment('#fff')); BG.addColorStop(0.55, gamePigment('#ececec')); BG.addColorStop(1, gamePigment('#bdbdbd')); }
+    ctx.fillStyle = gamePigment(BG); ctx.fill();
+    ctx.strokeStyle = gamePigment('#8c8c8c'); ctx.lineWidth = MAX(1, DPR * 0.75); ctx.stroke();
     if (!RM && ang != null) { ctx.beginPath(); ctx.arc(0, 0, r * 0.58, ang, ang + 1.1); ctx.lineWidth = MAX(1, DPR); ctx.stroke(); }
-    if (hit != null) { ctx.beginPath(); ctx.arc(0, 0, r * 1.6, hit - 0.7, hit + 0.7); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke(); }
+    if (hit != null) { ctx.beginPath(); ctx.arc(0, 0, r * 1.6, hit - 0.7, hit + 0.7); ctx.strokeStyle = gamePigment('#fff'); ctx.lineWidth = LW; ctx.stroke(); }
   }
   ctx.translate(-x, -y);
 }
@@ -578,7 +845,7 @@ function draw() {
   if (!ctx) return;
   prim(); MX = MY = 0; MS = 1;
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.fillStyle = gamePigment('#000'); ctx.fillRect(0, 0, cv.width, cv.height);
   if (scr === 'play' && G) G.draw();
   else if (scr === 'title') titleArt();
   else if (scr === 'pause' && mode === 'echo' && G && G.T) E_map(G);
@@ -823,17 +1090,17 @@ function D_hazardDraw(g, S, ch) {
     u=h.state===2?14:h.state===1?3+11*(h.t%(h.tn+h.on+h.rest))/h.tn:3;
     ctx.beginPath();
     for(j=-1;j<=1;j++){x=wx(h.x+j*10);ctx.moveTo(x-5*S,y);ctx.lineTo(x,y-u*S);ctx.lineTo(x+5*S,y);ctx.closePath();}
-    ctx.lineWidth=LW;ctx.strokeStyle=h.state===1||h.state===2?'#fff':'#8c8c8c';
-    if(h.state===2){ctx.fillStyle='#fff';ctx.fill();}ctx.stroke();
+    ctx.lineWidth=LW;ctx.strokeStyle=gamePigment(h.state===1||h.state===2?'#fff':'#8c8c8c');
+    if(h.state===2){ctx.fillStyle=gamePigment('#fff');ctx.fill();}ctx.stroke();
   }
   h=g.guard;if(!h)return;x=wx(h.x);y=wy(h.y);if(y<-40||y>ch+40)return;
   ctx.save();ctx.translate(x,y);ctx.rotate(RM?0:h.angle);
   // The round body matches the contact radius. Polygon rims are safe ornaments.
   ctx.beginPath();ctx.arc(0,0,18*S,0,6.2832);p=D_GUARDS[h.id][1];
   for(i=0;i<p.length;i++){if(i)ctx.lineTo(p[i][0]*S,p[i][1]*S);else ctx.moveTo(p[i][0]*S,p[i][1]*S);}ctx.closePath();
-  ctx.lineWidth=LW;ctx.strokeStyle=h.state===1||h.state===2?'#fff':'#8c8c8c';ctx.fillStyle=h.state===2?'#fff':'#000';ctx.fill();ctx.stroke();
-  ctx.fillStyle=h.state===2?'#000':'#b8b8b8';ctx.fillRect(-8*S,-4*S,6*S,2*S);ctx.fillRect(2*S,-4*S,6*S,2*S);ctx.restore();
-  if(h.state===1){ctx.beginPath();ctx.arc(x,y,25*S,0,6.2832);ctx.strokeStyle='#fff';ctx.lineWidth=LW;ctx.stroke();}
+  ctx.lineWidth=LW;ctx.strokeStyle=gamePigment(h.state===1||h.state===2?'#fff':'#8c8c8c');ctx.fillStyle=gamePigment(h.state===2?'#fff':'#000');ctx.fill();ctx.stroke();
+  ctx.fillStyle=gamePigment(h.state===2?'#000':'#b8b8b8');ctx.fillRect(-8*S,-4*S,6*S,2*S);ctx.fillRect(2*S,-4*S,6*S,2*S);ctx.restore();
+  if(h.state===1){ctx.beginPath();ctx.arc(x,y,25*S,0,6.2832);ctx.strokeStyle=gamePigment('#fff');ctx.lineWidth=LW;ctx.stroke();}
 }
 function wx(x) { return MX + x * MS; }
 function wy(y) { return MY + y * MS; }
@@ -861,8 +1128,8 @@ function D_draw(g) {
   for (i = 0; i < g.rows.length; i++) {
     var M = g.rows[i].mk; if (!M || !M.on) continue;
     var mx = wx(M.x), my = wy(M.y), mr = 6 * S; if (my < -20 || my > ch + 20) continue;
-    ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.2832); ctx.fillStyle = '#000'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = LW; ctx.stroke();
-    ctx.beginPath(); ctx.arc(mx, my, mr * 0.45, 0, 6.2832); ctx.strokeStyle = '#b8b8b8'; ctx.stroke();
+    ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.2832); ctx.fillStyle = gamePigment('#000'); ctx.fill(); ctx.strokeStyle = gamePigment('#fff'); ctx.lineWidth = LW; ctx.stroke();
+    ctx.beginPath(); ctx.arc(mx, my, mr * 0.45, 0, 6.2832); ctx.strokeStyle = gamePigment('#b8b8b8'); ctx.stroke();
   }
   D_hazardDraw(g,S,ch);
   // rings: back half, then the ball, then the front half, so the ball threads through
@@ -870,13 +1137,13 @@ function D_draw(g) {
   if (rv) for (i = 0; i < g.rings.length; i++) { if (!g.inCourt) ringPos(g, g.rings[i], 0); drawRing(g, g.rings[i], S, -1); }
   var ballR = BR * S, bx = wx(b.x), by = wy(b.y);
   ball(bx, by, ballR, b.rot, false, b.hit > 0 ? (b.hs > 0 ? 3.14 : b.hs < 0 ? 0 : 1.57) : null);
-  if (b.nf > 0) { ctx.beginPath(); ctx.arc(bx, by, ballR * 1.7, 1.1, 2.04); ctx.strokeStyle = '#8c8c8c'; ctx.lineWidth = LW; ctx.stroke(); }
+  if (b.nf > 0) { ctx.beginPath(); ctx.arc(bx, by, ballR * 1.7, 1.1, 2.04); ctx.strokeStyle = gamePigment('#8c8c8c'); ctx.lineWidth = LW; ctx.stroke(); }
   if (rv) for (i = 0; i < g.rings.length; i++) drawRing(g, g.rings[i], S, 1);
   if (b.held) { var ay = by + ballR + 10 * S; line([[bx - 5 * S, ay], [bx, ay + 6 * S], [bx + 5 * S, ay]], '#b8b8b8'); }
   // tilt shown as a level, not by rotating the court: lines stay pixel-crisp
   var tx = RND(cw / 2), ty = sn(66 * DPR), tw = 30 * DPR;
   line([[tx - tw, ty], [tx + tw, ty]], '#8c8c8c');
-  ctx.beginPath(); ctx.arc(tx + RND(g.tl * tw), ty, 3.5 * DPR, 0, 6.2832); ctx.fillStyle = '#fff'; ctx.fill();
+  ctx.beginPath(); ctx.arc(tx + RND(g.tl * tw), ty, 3.5 * DPR, 0, 6.2832); ctx.fillStyle = gamePigment('#fff'); ctx.fill();
 }
 // The stone ring stands on its edge, opening sideways like the court rings: the ball must cross it.
 function annulus(x, y, wo, R, wi, a, s) {
@@ -889,16 +1156,16 @@ function annulus(x, y, wo, R, wi, a, s) {
 function drawRing(g, q, S, part) {
   var x = wx(q.x), y = wy(q.y), R = q.R * S, a = q.a * S, w = 0.34;
   if (g.ty === 2) w = MAX(w, SQRT(1 - q.c * q.c)); // turning: edge-on is open, face-on is closed
-  ctx.fillStyle = q.live ? '#fff' : '#000'; ctx.lineWidth = LW; ctx.strokeStyle = q.live ? '#8c8c8c' : '#b8b8b8';
+  ctx.fillStyle = gamePigment(q.live ? '#fff' : '#000'); ctx.lineWidth = LW; ctx.strokeStyle = gamePigment(q.live ? '#8c8c8c' : '#b8b8b8');
   if (part < 0) {
     if (g.ty !== 4) { var tx = q.sd < 0 ? wx(g.wl) : wx(g.wr), ty = wy(q.y - q.R) - 2.4 * S; groove([[[tx, ty], [x, ty], [x, y - R]]], 2.4 * S); }
-    ctx.lineWidth = LW; ctx.strokeStyle = q.live ? '#8c8c8c' : '#b8b8b8';
+    ctx.lineWidth = LW; ctx.strokeStyle = gamePigment(q.live ? '#8c8c8c' : '#b8b8b8');
     annulus(x, y, R * w, R, a * w, a, -1);
     return;
   }
   annulus(x, y, R * w, R, a * w, a, 1);
   if (g.ty === 3 && q.live && g.inCourt) { var f = (g.t0 % g.per) / g.per, an = -1.5708 + f * 6.2832; line([[x, y], [x + Math.cos(an) * (R + 10 * S), y + Math.sin(an) * (R + 10 * S)]], '#fff', MAX(2, LW)); }
-  if (g.ty === 2) { var nx = x - 22 * S, ny = wy(g.floor) - 10 * S, nw = 44 * S; ctx.strokeStyle = '#b8b8b8'; ctx.strokeRect(sn(nx), sn(ny), RND(nw), RND(6 * S)); ctx.fillStyle = '#fff'; ctx.fillRect(nx, ny, nw * (q.open ? 1 : q.c * 0.8), 6 * S); }
+  if (g.ty === 2) { var nx = x - 22 * S, ny = wy(g.floor) - 10 * S, nw = 44 * S; ctx.strokeStyle = gamePigment('#b8b8b8'); ctx.strokeRect(sn(nx), sn(ny), RND(nw), RND(6 * S)); ctx.fillStyle = gamePigment('#fff'); ctx.fillRect(nx, ny, nw * (q.open ? 1 : q.c * 0.8), 6 * S); }
 }
 
 // ---------- ECHO ----------
@@ -2003,12 +2270,12 @@ function mv(x, y) { ctx.moveTo(sn(x), sn(y)); }
 function ln(x, y) { ctx.lineTo(sn(x), sn(y)); }
 function seg(x0, y0, x1, y1) { mv(x0, y0); ln(x1, y1); }
 function wseg(x0, y0, x1, y1) { seg(X_(x0), Y_(y0), X_(x1), Y_(y1)); }
-function sk(c, w) { ctx.strokeStyle = c; ctx.lineWidth = w || LW; ctx.stroke(); }
+function sk(c, w) { ctx.strokeStyle = gamePigment(c); ctx.lineWidth = w || LW; ctx.stroke(); }
 function circ(x, y, r) { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, 6.2832); }
 function rect(x0, y0, x1, y1, f, s) {
   var a = sn(MIN(x0, x1)), b = sn(MIN(y0, y1)), w = RND(ABS(x1 - x0)), h = RND(ABS(y1 - y0));
-  if (f) { ctx.fillStyle = f; ctx.fillRect(a, b, w, h); }
-  if (s) { ctx.strokeStyle = s; ctx.strokeRect(a, b, w, h); }
+  if (f) { ctx.fillStyle = gamePigment(f); ctx.fillRect(a, b, w, h); }
+  if (s) { ctx.strokeStyle = gamePigment(s); ctx.strokeRect(a, b, w, h); }
 }
 function E_box(f, s) { rect(X_(BXS[0]), Y_(BXS[1]), X_(BXS[2]), Y_(BXS[3]), f, s); }
 // walls: seen stone is the carved double line, remembered stone a single grey line
@@ -2067,8 +2334,8 @@ function E_goal(g) {
 }
 function E_label(s, x, y) {
   ctx.save(); ctx.font = RND(12 * DPR) + 'px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  var w = ctx.measureText(s).width; ctx.fillStyle = '#000'; ctx.fillRect(x - w / 2 - 3 * DPR, y - 9 * DPR, w + 6 * DPR, 18 * DPR);
-  ctx.fillStyle = INK.w; ctx.fillText(s, x, y); ctx.restore();
+  var w = ctx.measureText(s).width; ctx.fillStyle = gamePigment('#000'); ctx.fillRect(x - w / 2 - 3 * DPR, y - 9 * DPR, w + 6 * DPR, 18 * DPR);
+  ctx.fillStyle = gamePigment(INK.w); ctx.fillText(s, x, y); ctx.restore();
 }
 function E_ring(g, q) {
   var on = seen(rtile(q)), e = q.off + .7 + q.w, a = q.off + .35, solid, sh, col, k, c, m, X, Y, r, s;
@@ -2085,11 +2352,11 @@ function E_ring(g, q) {
     if (q.hz) { wseg(c, BXS[1], c, BXS[1] + (BXS[3] - BXS[1]) * k); if (q.sil) wseg(c, BXS[3] - (BXS[3] - BXS[1]) * k, c, BXS[3]); }
     else { wseg(BXS[0], m, BXS[0] + (BXS[2] - BXS[0]) * k, m); if (q.sil) wseg(BXS[2] - (BXS[2] - BXS[0]) * k, m, BXS[2], m); }
     sk(col);
-  } else { ctx.lineWidth = q.aim ? 2 * LW : LW; E_box(0, q.aim ? INK.w : col); }
+  } else { ctx.lineWidth = q.aim ? 2 * LW : LW; E_box(0, q.aim && gameCalavera ? '#FF70D9' : q.aim ? INK.w : col); }
   // level 4: a tick sweeps round the live ring like a clock hand, toward the next swap
   if (q.gr && g.fin && q.live && g.L === 3) { k = (g.ftm % q.per) / q.per * 6.2832 - 1.5708; bp(); ctx.moveTo(X_(c), Y_(m)); ctx.lineTo(X_(c + Math.cos(k) * .7), Y_(m + Math.sin(k) * .7)); sk(INK.w); }
   E_point(q); X = X_(q.gx); Y = Y_(q.gy); r = MAX(12 * DPR, .36 * TT);
-  ctx.save(); bp(); circ(X, Y, r); ctx.fillStyle = '#000'; ctx.fill(); sk(q === g.gq ? INK.w : col, 2 * LW);
+  ctx.save(); bp(); circ(X, Y, r); ctx.fillStyle = gamePigment('#000'); ctx.fill(); sk(q === g.gq && gameCalavera ? '#FF70D9' : q === g.gq ? INK.w : col, 2 * LW);
   bp(); circ(X, Y, r * .7); sk(col);
   if (sh) { bp(); seg(X - r * .5, Y - r * .5, X + r * .5, Y + r * .5); sk(col); }
   if (!q.c && !sh) {
@@ -2157,7 +2424,7 @@ function E_you(g) {
     else ctx.arc(x, y, r, a + .9, a + 5.38);
     sk(p.prot > 0 && k ? '#000' : INK.w, p.prot > 0 ? (k ? w * .8 : w * 2.6) : w * 1.6);
   }
-  bp(); circ(RND(x), RND(y), .57 * r); ctx.fillStyle = '#000'; ctx.fill(); sk(INK.w, MAX(LW, RND(w * .6)));
+  bp(); circ(RND(x), RND(y), .57 * r); ctx.fillStyle = gamePigment('#000'); ctx.fill(); sk(INK.w, MAX(LW, RND(w * .6)));
   if (p.hit > 0) { bp(); k = Math.atan2(p.hy, p.hx); ctx.arc(x, y, r * 1.55, k - .6, k + .6); sk(INK.w); }
   if (p.miss > 0) { bp(); ctx.arc(x, y, r * 1.4, a + 2.4, a + 3.9); sk(INK.m); }
 }
@@ -2176,12 +2443,12 @@ function ears() { for (var i = -1; i <= 1; i += 2) circ(fx(i * FACE.ear[0]), fy(
 function E_eyes(st, ux, uy, glint) {
   var e = FACE.eye, m, r = e.pr[st] * FW, k = st ? (st > 1 ? 1 : .7) : .4, px, py, q;
   for (m = -1; m <= 1; m += 2) {
-    bp(); almond(m, 1); ctx.fillStyle = INK.w; ctx.fill();
+    bp(); almond(m, 1); ctx.fillStyle = gamePigment(INK.w); ctx.fill();
     ctx.save(); ctx.clip();
     px = FX + m * (e.inner[0] + e.outer[0]) / 2 * FS * FW + ux * e.pdx * k * FW; py = FY + (e.inner[1] + e.outer[1]) / 2 * FW + uy * e.pdy * k * FW;
-    bp(); circ(px, py, MAX(1.5, r)); ctx.fillStyle = '#000'; ctx.fill();
+    bp(); circ(px, py, MAX(1.5, r)); ctx.fillStyle = gamePigment('#000'); ctx.fill();
     ctx.restore();
-    if (glint) { q = MAX(1, RND(MIN(.018 * FW, .45 * r))); ctx.fillStyle = INK.w; ctx.fillRect(RND(px - .35 * r - q / 2), RND(py - .35 * r - q / 2), q, q); }
+    if (glint) { q = MAX(1, RND(MIN(.018 * FW, .45 * r))); ctx.fillStyle = gamePigment(INK.w); ctx.fillRect(RND(px - .35 * r - q / 2), RND(py - .35 * r - q / 2), q, q); }
   }
 }
 // Its eyes through the dark: the brightest mark on the screen, each shell in a hard white rim (an inlay's edge, never a
@@ -2198,7 +2465,7 @@ function E_lids() { var e = FACE.eye; bp(); for (var m = -1; m <= 1; m += 2) fli
 function E_band(detail) {
   var b = FACE.band, i, j, u, x, a, k, n = b.units;
   // the brow ledge: one solid carved bar, heavy over the eyes
-  ctx.fillStyle = INK.s; i = fx(-.40) - OF; j = fy(FACE.brow[0]) - OF; ctx.fillRect(i, j, fx(.40) - OF - i, fy(FACE.brow[1]) - OF - j);
+  ctx.fillStyle = gamePigment(INK.s); i = fx(-.40) - OF; j = fy(FACE.brow[0]) - OF; ctx.fillRect(i, j, fx(.40) - OF - i, fy(FACE.brow[1]) - OF - j);
   bp(); fline(b.x0, b.y0, b.x1, b.y0); fline(b.x0, b.y1, b.x1, b.y1);
   if (detail && n) {
     u = (b.x1 - b.x0) / n / FRET.grid;
@@ -2215,7 +2482,7 @@ function E_faceArt(g, cx, cy, W, s, eyes, st, ux, uy, mouth, detail, glint, mode
   FX = cx; FY = cy; FW = W; FS = MAX(.12, ABS(s));
   ctx.lineCap = 'butt';
   bp(); fpoly(FACE.outline, 1);
-  if (mode !== 2) { ctx.fillStyle = '#000'; ctx.fill(); }
+  if (mode !== 2) { ctx.fillStyle = gamePigment('#000'); ctx.fill(); }
   sk(col || INK.w, MAX(RND(1.5 * DPR), RND(W / 50)));
   if (mode === 1 || (mode !== 2 && ABS(s) < .12)) return;
   h = MAX(RND(DPR), RND(W / 80)); // feature lines
@@ -2233,7 +2500,7 @@ function E_faceArt(g, cx, cy, W, s, eyes, st, ux, uy, mouth, detail, glint, mode
   if (eyes) E_eyes(st, ux, uy, glint); else E_lids();
   // the mouth: two lips with corner ticks; open, it shows square shell teeth, never points
   bp(); fline(M.x0, M.up, M.x1, M.up); fline(M.x0, lo, M.x1, lo); fline(M.x0, M.up - .015, M.x0, lo + .015); fline(M.x1, M.up - .015, M.x1, lo + .015); sk(INK.s, h);
-  if (mouth && detail) for (ctx.fillStyle = INK.w, h = MAX(1, RND(M.th * W)), i = 0; i < M.teeth; i++) {
+  if (mouth && detail) for (ctx.fillStyle = gamePigment(INK.w), h = MAX(1, RND(M.th * W)), i = 0; i < M.teeth; i++) {
     a = fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth - M.tw / 2); b = MAX(1, ABS(fx(M.x0 + (i + .5) * (M.x1 - M.x0) / M.teeth + M.tw / 2) - a));
     ctx.fillRect(a, fy(M.up), b, h); ctx.fillRect(a, fy(lo) - h, b, h);
   }
@@ -2250,7 +2517,7 @@ function E_brackets(g) {
       for (k = n; k > 0; k--) { ln(X + s * (n - k + 1) * S, Y + t * k * S); ln(X + s * (n - k + 1) * S, Y + t * (k - 1) * S); }
       ln(X + s * n * S, Y - t * S); if (!f) ln(X - s * S, Y - t * S);
     }
-    if (!f) { ctx.fillStyle = '#000'; ctx.fill(); }
+    if (!f) { ctx.fillStyle = gamePigment('#000'); ctx.fill(); }
   }
   ctx.lineCap = 'butt'; k = MAX(1, RND(S * .12));
   sk(INK.s, 2 * k + g.lw); sk('#000', MAX(1, 2 * k - g.lw));
@@ -2277,7 +2544,7 @@ function E_map(g) {
   OX = RND((W * DPR - (EW - 1) * T) / 2); OY = RND(((top + bot) * DPR - (EH - 1) * T) / 2); TT = T; VS = -1; NN = 2e9;
   E_walls(1, 0, EW - 1, 0, EH - 1);
   // claimed courts as white squares, you as a white disc
-  for (ctx.fillStyle = INK.w, i = 0; i < g.rings.length; i++) { o = g.rings[i]; if (o.c && !o.sil) { o = o.o; ctx.fillRect(RND(X_(o.x0 + o.fw / 2 - .9)), RND(Y_(o.y0 + o.fh / 2 - .9)), RND(.8 * T), RND(.8 * T)); } }
+  for (ctx.fillStyle = gamePigment(INK.w), i = 0; i < g.rings.length; i++) { o = g.rings[i]; if (o.c && !o.sil) { o = o.o; ctx.fillRect(RND(X_(o.x0 + o.fw / 2 - .9)), RND(Y_(o.y0 + o.fh / 2 - .9)), RND(.8 * T), RND(.8 * T)); } }
   bp(); circ(X_(g.p.x), Y_(g.p.y), .45 * T); ctx.fill();
 }
 function E_draw(g) {
@@ -2331,7 +2598,7 @@ function E_draw(g) {
   for (i = 0; i < g.tn; i++) {
     if (!seen(tOf(g.tx[i], g.ty[i]))) continue;
     x = X_(g.tx[i]); y = Y_(g.ty[i]); s = T * .085; cx = Math.cos(g.tq[i]) * s; cy = Math.sin(g.tq[i]) * s;
-    bp(); ctx.moveTo(x + cx, y + cy); ctx.lineTo(x - cy, y + cx); ctx.lineTo(x - cx, y - cy); ctx.lineTo(x + cy, y - cx); ctx.fillStyle = INK.w; ctx.fill();
+    bp(); ctx.moveTo(x + cx, y + cy); ctx.lineTo(x - cy, y + cx); ctx.lineTo(x - cx, y - cy); ctx.lineTo(x + cy, y - cx); ctx.fillStyle = gamePigment(INK.w); ctx.fill();
   }
   for (i = 0; i < g.sl.length; i++) {
     o = g.sl[i]; if (!o.w || !seen(o.t)) continue; n = MIN(3, CEIL(o.w * 3)); ctx.lineWidth = LW;

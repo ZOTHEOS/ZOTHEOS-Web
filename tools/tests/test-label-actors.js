@@ -3,7 +3,7 @@
 // Captures the real canvas label backplates; this is layout geometry, not a browser-play claim.
 var fs=require('fs'),vm=require('vm'),assert=require('assert'),path=require('path');
 var file=path.resolve(process.argv[2]||'game/index.src.html'),source=fs.readFileSync(file,'utf8');
-function engine(s){var b={window:{},document:{getElementById:function(){return null;}},localStorage:{getItem:function(){return null;},setItem:function(){}},setTimeout:function(f){f();},clearTimeout:function(){}};vm.createContext(b);vm.runInContext(s.slice(s.indexOf('<script>')+8,s.indexOf('</script>')),b);return b.window.ZTH_GAME;}
+function engine(s){var b={window:{},document:{getElementById:function(){return null;}},localStorage:{getItem:function(){return null;},setItem:function(){}},setTimeout:function(f){f();},clearTimeout:function(){}};vm.createContext(b);vm.runInContext(s.slice(s.indexOf('<script>')+8,s.indexOf('</script>', s.indexOf('<script>') + 8)),b);return b.window.ZTH_GAME;}
 var api=engine(source),T=api._ev('TEXT'),cases=0;
 function overlaps(a,b){return a[0]<b[0]+b[2]&&a[0]+a[2]>b[0]&&a[1]<b[1]+b[3]&&a[1]+a[3]>b[1];}
 function measure(a,width,height,dpr,hz,side,edge,observed){

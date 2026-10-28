@@ -1,5 +1,8 @@
 """Independent real-builder Appearance contract. Fictional films, no source fetches."""
 from pathlib import Path
+import base64
+import hashlib
+from urllib.parse import urlsplit,parse_qs
 import os
 import re
 import sys
@@ -65,7 +68,21 @@ def test_scoped_appearance_code_loads_after_shared_owner_before_player_code(rend
     assert path.is_file(),'A scoped controller must not fork or replace the shared Theme/Motion owner.'
     shared=(R/'tools/nations/partials/appearance.js').read_text(encoding='utf8').strip()
     scoped=path.read_text(encoding='utf8').strip();player=(R/'static/theater/theater.js').read_text(encoding='utf8').strip()
-    assert shared and scoped and player and html.index(shared)<html.index(scoped)<html.index(player)
+    scripts=[node for node in dom.elements if node.tag=='script']
+    controls=[node for node in scripts if urlsplit(node.attrs.get('src','')).path=='/static/appearance/controls.js']
+    assert len(controls)==1, 'One cached canonical Theme/Motion owner'
+    owner=controls[0];source=urlsplit(owner.attrs['src'])
+    assert not source.scheme and not source.netloc and not source.fragment
+    assert 'defer' not in owner.attrs and 'async' not in owner.attrs, 'Owner must execute before the following inline controllers'
+    cached=(R/source.path.lstrip('/')).read_bytes()
+    assert cached.decode('utf8').replace('\r\n','\n').strip()==shared
+    assert owner.attrs.get('integrity')=='sha256-'+base64.b64encode(hashlib.sha256(cached).digest()).decode('ascii')
+    assert parse_qs(source.query).get('v')==[hashlib.sha256(cached).hexdigest()[:12]]
+    normalized=lambda text:' '.join(text.split())
+    scoped_nodes=[node for node in scripts if not node.attrs.get('src') and node.text==normalized(scoped)]
+    player_nodes=[node for node in scripts if not node.attrs.get('src') and node.text==normalized(player)]
+    assert shared and scoped and player and len(scoped_nodes)==len(player_nodes)==1
+    assert scripts.index(owner)<scripts.index(scoped_nodes[0])<scripts.index(player_nodes[0])
     assert not [s for s in dom.elements if s.tag=='script' and s.attrs.get('src','').startswith('http')]
 
 def test_native_official_sources_and_noscript_player_survive_appearance_change(rendered,fictional_catalog):

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-TWFsaLtAPa+1McoBmW8xCwJa2oXW7RVHqDazp8SzRbU=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-IV9nfWvrE1MKPtDfOOm8X//c+1aMccev69ByvDvmSs4=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-X4A607/UobeCMmVU+t0P9z1KDuOa72V0y6mXE5ay/ik=' 'sha256-xoag0hUo4FwRdSIW0C1fgX43/4/RMWkT1X5zwfVXZNk=' 'sha256-1f7Df6mmuuaTDqNwjpNqOx3/9wMwWciljEEwWVM28XU=' 'sha256-uMtdpH5BRta22fcPfKZ00taFkB+jvCUcsKOVxRBAU/k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org https://i.ytimg.com https://assets.nfbcdn.ca; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src https://www.youtube-nocookie.com; worker-src 'none'; manifest-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Ty4+gUeWck6/EYR+NHzmTLeFo2c0DSkooh7fOiKfV5o=' 'sha256-xruraWEmBcGT5VQm0DY7gWOPpnY1CzDY0rf00SA5hP8=' 'sha256-IV9nfWvrE1MKPtDfOOm8X//c+1aMccev69ByvDvmSs4=' 'sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=' 'sha256-P9fjoKSlaYz6o3Jt3O4uVExn76GdgmoRLawjIETUA1s=' 'sha256-FskpwDCe0qsyebewu6tCjYBYcwYDtHJboWb2LMNr8gE=' 'sha256-xoag0hUo4FwRdSIW0C1fgX43/4/RMWkT1X5zwfVXZNk=' 'sha256-1f7Df6mmuuaTDqNwjpNqOx3/9wMwWciljEEwWVM28XU=' 'sha256-uMtdpH5BRta22fcPfKZ00taFkB+jvCUcsKOVxRBAU/k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://zotheos.org https://i.ytimg.com https://assets.nfbcdn.ca; media-src 'self' https://zotheos.org; connect-src https://formspree.io; form-action https://formspree.io; frame-src https://www.youtube-nocookie.com; worker-src 'none'; manifest-src 'self'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ZOTHEOS | Offline Ethical Intelligence</title>
   <link rel="icon" href="/zotheos_icon.ico?v=3" />
@@ -35,7 +35,7 @@
       var m = 'living';
       try {
         var t = localStorage.getItem('zotheos_landing_theme');
-        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        if (t === 'maya' || t === 'codex' || t === 'skeleton' || t === 'calavera') d.setAttribute('data-theme', t);
         var s = localStorage.getItem('zotheos_motion');
         if (s === 'living' || s === 'calm' || s === 'still') m = s;
         else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
@@ -347,6 +347,21 @@
     @supports not (transition-timing-function: linear(0, 1)) {
       :root { --ease-spring: var(--ease-anticipate); }
     }
+
+[data-theme="calavera"] {
+  --bg-floor: #090716; --bg-mid: #110D22; --bg-deep: #17112D; --bg-warm: #231632; --bg-halo: #302047;
+  --ink: #FFF3E8; --ink-2: #E1D1ED; --ink-3: #C9B4E5; --ink-4: #B3A0CB; --ink-5: #716082;
+  --cochineal: #FF70D9; --cochineal-deep: #74295E; --cochineal-rgb: 255,112,217; --cochineal-text: #FFB3E9;
+  --pulse-green: #77E8BA; --pulse-green-rgb: 119,232,186;
+  --gold-shadow: #BE914C; --gold-mid: #E8BC72; --gold-highlight: #FFE7B0;
+  --basalt-1: #21162E; --basalt-2: #090716; --basalt-3: #17112D;
+  --rule: rgba(225,209,237,.23); --rule-soft: rgba(225,209,237,.12);
+  --surface: rgba(225,209,237,.045); --surface-2: rgba(225,209,237,.025);
+  --page-bg: #090716; --ink-low: #B3A0CB; --line: rgba(225,209,237,.55); --rim-hover: #FFB3E9;
+  --hdr-band: #090716; --zt-frame-ground: #090716; --zt-frame-ink: #C9B4E5; --zt-frame-accent: #77E8BA;
+  --cn-spectrum: linear-gradient(110deg,#FFE7B0 0%,#FFB3E9 24%,#C9B4E5 48%,#77E8BA 74%,#FFE7B0 100%);
+  color-scheme: dark;
+}
 
     [data-theme="codex"] {
       --bg-floor:   #C8B078;
@@ -7771,6 +7786,10 @@ html body .tsc[data-enter="go"] .tsc-svg .tier { animation: tsc-on .01s steps(1,
 @media (forced-colors:active){.cr{--cr-l:CanvasText;--cr-n:CanvasText;--cr-a:Highlight}.cr .bg{fill:Canvas}}
 /* /council-route:css */
 </style>
+<!-- site-appearance:start -->
+<link rel="stylesheet" href="/static/appearance/calavera.css?v=aa497196e488">
+<script defer src="/static/appearance/calavera.js?v=743c7ae3a5ed" integrity="sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=" crossorigin="anonymous"></script>
+<!-- site-appearance:end -->
 </head>
 <body class="page-loading">
 
@@ -7848,6 +7867,7 @@ html body .tsc[data-enter="go"] .tsc-svg .tier { animation: tsc-on .01s steps(1,
                 <button class="theme-swatch" type="button" role="radio" data-set="maya" aria-checked="false" tabindex="-1" aria-label="Maya Radiance" title="Maya Radiance: Deep Maya blue with moving gold light."></button>
                 <button class="theme-swatch" type="button" role="radio" data-set="codex" aria-checked="false" tabindex="-1" aria-label="Living Codex" title="Living Codex: Warm paper for memory that keeps growing."></button>
                 <button class="theme-swatch" type="button" role="radio" data-set="skeleton" aria-checked="false" tabindex="-1" aria-label="Obsidian Ember" title="Obsidian Ember: Dark obsidian with a deep crimson ember."></button>
+                <button class="theme-swatch" type="button" role="radio" data-set="calavera" aria-checked="false" tabindex="-1" aria-label="Calavera Nocturne" title="Calavera Nocturne: Midnight violet, jade and gold. Calaveras in living light."></button>
               </div>
               <span class="ap-theme-name" id="apThemeName" aria-hidden="true">Sovereign Skeleton</span>
             </div>
@@ -9865,19 +9885,19 @@ html body .tsc[data-enter="go"] .tsc-svg .tier { animation: tsc-on .01s steps(1,
     (function () {
       var KEY = 'zotheos_landing_theme';
       var root = document.documentElement;
-      var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember' };
-      var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.' };
+      var NAMES = { '': 'Sovereign Skeleton', maya: 'Maya Radiance', codex: 'Living Codex', skeleton: 'Obsidian Ember', calavera: 'Calavera Nocturne' };
+      var DESCRIPTIONS = { '': 'Silver structure, a foundation for your own judgment.', maya: 'Deep Maya blue with moving gold light.', codex: 'Warm paper for memory that keeps growing.', skeleton: 'Dark obsidian with a deep crimson ember.', calavera: 'Midnight violet, jade and gold. Calaveras in living light.' };
       var picker = document.querySelector('.theme-picker');
       var irisAnim = null;
       function apply(theme) {
-        if (theme === 'maya' || theme === 'codex' || theme === 'skeleton') {
+        if (theme === 'maya' || theme === 'codex' || theme === 'skeleton' || theme === 'calavera') {
           root.setAttribute('data-theme', theme);
         } else {
           root.removeAttribute('data-theme');
           theme = '';
         }
         var tc = document.getElementById('themeColorMeta');
-        if (tc) tc.setAttribute('content', { maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507' }[theme] || '#000000');
+        if (tc) tc.setAttribute('content', { maya: '#02101E', codex: '#E8DBC0', skeleton: '#050507', calavera: '#090716' }[theme] || '#000000');
         var btns = document.querySelectorAll('.theme-swatch'), chosen = null;
         for (var i = 0; i < btns.length; i++) if ((btns[i].getAttribute('data-set') || '') === theme) chosen = btns[i];
         window.zRadioSet(picker, chosen);

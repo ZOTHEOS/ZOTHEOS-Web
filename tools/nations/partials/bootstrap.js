@@ -8,7 +8,7 @@
       var m = 'living';
       try {
         var t = localStorage.getItem('zotheos_landing_theme');
-        if (t === 'maya' || t === 'codex' || t === 'skeleton') d.setAttribute('data-theme', t);
+        if (t === 'maya' || t === 'codex' || t === 'skeleton' || t === 'calavera') d.setAttribute('data-theme', t);
         var s = localStorage.getItem('zotheos_motion');
         if (s === 'living' || s === 'calm' || s === 'still') m = s;
         else if (localStorage.getItem('zotheos_fx') === 'off') m = 'still';
