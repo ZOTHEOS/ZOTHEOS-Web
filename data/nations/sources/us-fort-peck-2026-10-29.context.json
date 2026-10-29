@@ -1,0 +1,88 @@
+{
+  "reviewed": "2026-10-29",
+  "public_notes": [
+    {
+      "nation": "fort-peck-assiniboine-sioux-us-mt",
+      "reading_id": "agency-schooling-and-constitutional-history",
+      "title": "Agency, Schooling And Constitutional History",
+      "text": "The Tribes place the agency’s move to Poplar in 1878 and describe a government boarding-school program from 1877 into the 1920s. Their written constitutional history follows a different sequence: a first constitution in 1927 and a rewritten constitution adopted in 1960. These are institutional milestones within the histories of the Assiniboine and Sioux peoples.",
+      "source_urls": [
+        "https://fortpecktribes.org/visitor-opportunities/tribal-history/"
+      ],
+      "fact_ids": [
+        "fort-peck-assiniboine-sioux-us-mt-99a613a2",
+        "fort-peck-assiniboine-sioux-us-mt-fe69d79d",
+        "fort-peck-assiniboine-sioux-us-mt-ff8b91a1"
+      ]
+    },
+    {
+      "nation": "fort-peck-assiniboine-sioux-us-mt",
+      "reading_id": "distinct-nations-and-a-shared-reservation",
+      "title": "Distinct Nations And A Shared Reservation",
+      "text": "The Tribes describe reservation making as a United States policy intended to bring Native peoples under federal control. They also identify distinct Assiniboine and Sioux nations, each with bands and groups, living on the reservation. This framing distinguishes a place shaped by federal policy from the peoples and institutions within it. The joint Fort Peck government does not stand for every Assiniboine or Sioux community.",
+      "source_urls": [
+        "https://fortpecktribes.org/introduction/"
+      ],
+      "fact_ids": [
+        "fort-peck-assiniboine-sioux-us-mt-72c5dd6c"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "fort-peck-assiniboine-sioux-us-mt",
+      "url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+      "label": "Fort Peck Tribes: Tribal History",
+      "purpose": "Read the Tribes’ account of federal agency administration, schooling and constitutional changes.",
+      "fact_ids": [
+        "fort-peck-assiniboine-sioux-us-mt-99a613a2",
+        "fort-peck-assiniboine-sioux-us-mt-fe69d79d",
+        "fort-peck-assiniboine-sioux-us-mt-ff8b91a1"
+      ]
+    },
+    {
+      "nation": "fort-peck-assiniboine-sioux-us-mt",
+      "url": "https://fortpecktribes.org/introduction/",
+      "label": "Fort Peck Tribes: Introduction",
+      "purpose": "Read the Tribes’ description of the distinct Nations and the reservation setting.",
+      "fact_ids": [
+        "fort-peck-assiniboine-sioux-us-mt-72c5dd6c"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:36:51.992231+00:00",
+      "sha256": "3ff7483dd167987404c464b66e04432059ec49587d7557f0d73f4f0b5ac1a1a4",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+        "final_url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+        "retrieved_at": "2026-10-29T00:26:41.265261+00:00",
+        "http_status": 200,
+        "sha256": "4bd1bd584b03fc9619ddfcf9007dd3a3f6878a42cf7f02c6b4eb65113756b362",
+        "body_bytes": 180590,
+        "receipt": "research/receipts/2026-10-29-fort-peck-author-04.json"
+      },
+      {
+        "url": "https://fortpecktribes.org/introduction/",
+        "final_url": "https://fortpecktribes.org/introduction/",
+        "retrieved_at": "2026-10-29T00:26:30.144876+00:00",
+        "http_status": 200,
+        "sha256": "98b277d53dac90b1971531cc34abe70e26a9a088d80ce7251d832d3d8b681e9f",
+        "body_bytes": 175849,
+        "receipt": "research/receipts/2026-10-29-fort-peck-author-03.json"
+      }
+    ]
+  }
+}

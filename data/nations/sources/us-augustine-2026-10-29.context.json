@@ -1,0 +1,104 @@
+{
+  "reviewed": "2026-10-29",
+  "public_notes": [
+    {
+      "nation": "augustine-band-of-cahuilla-indians-us-ca",
+      "reading_id": "a-reservation-date-within-a-longer-history",
+      "title": "A Reservation Date Within A Longer History",
+      "text": "The Tribe dates the Augustine Reservation's formal establishment to December 29, 1891. That is a reservation milestone, not the beginning of Cahuilla people or proof of present-day land title and boundaries. This profile concerns the Augustine Band. It does not replace the distinct Cahuilla Band of Indians government or speak for all Cahuilla communities.",
+      "source_urls": [
+        "https://tribe.augustinetribe-nsn.gov/"
+      ],
+      "fact_ids": [
+        "augustine-band-of-cahuilla-indians-us-ca-d3f1af9a"
+      ]
+    },
+    {
+      "nation": "augustine-band-of-cahuilla-indians-us-ca",
+      "reading_id": "energy-and-environmental-institutions",
+      "title": "Energy And Environmental Institutions",
+      "text": "The Tribe's stewardship account dates development of its renewable-energy operation to 2008 and links the project with self-sufficiency and care for future generations. Its environmental page describes a Tribal Environmental Protection Agency created to develop and implement environmental programs. Together, these accounts show the Tribe presenting economic and environmental work as connected priorities. Current performance figures, program availability and legal responsibilities are not independently certified here.",
+      "source_urls": [
+        "https://tribe.augustinetribe-nsn.gov/stewardship/",
+        "https://tribe.augustinetribe-nsn.gov/tribal-epa/"
+      ],
+      "fact_ids": [
+        "augustine-band-of-cahuilla-indians-us-ca-1f7620d9",
+        "augustine-band-of-cahuilla-indians-us-ca-94d66c59"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "augustine-band-of-cahuilla-indians-us-ca",
+      "url": "https://tribe.augustinetribe-nsn.gov/",
+      "label": "Augustine Band: The Tribe In Its Own Words",
+      "purpose": "Begin with the Tribe's own public name and reservation-history introduction.",
+      "fact_ids": [
+        "augustine-band-of-cahuilla-indians-us-ca-d3f1af9a"
+      ]
+    },
+    {
+      "nation": "augustine-band-of-cahuilla-indians-us-ca",
+      "url": "https://tribe.augustinetribe-nsn.gov/stewardship/",
+      "label": "Augustine Band: Stewardship And Energy History",
+      "purpose": "Read its account of renewable energy and stewardship. Historical milestones are distinct from current performance measurements.",
+      "fact_ids": [
+        "augustine-band-of-cahuilla-indians-us-ca-1f7620d9"
+      ]
+    },
+    {
+      "nation": "augustine-band-of-cahuilla-indians-us-ca",
+      "url": "https://tribe.augustinetribe-nsn.gov/tribal-epa/",
+      "label": "Augustine Band: Tribal Environmental Protection Agency",
+      "purpose": "Read the Tribe's description of its environmental institution; current regulatory authority, service access and outcomes are not certified.",
+      "fact_ids": [
+        "augustine-band-of-cahuilla-indians-us-ca-94d66c59"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:35:43.572486+00:00",
+      "sha256": "09ec089aae045c8d0791c62c85a3d4c83fd6fc25ddba1ca3b3069b7c0800cd02",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://tribe.augustinetribe-nsn.gov/",
+        "final_url": "https://tribe.augustinetribe-nsn.gov/",
+        "retrieved_at": "2026-10-29T00:26:27.511606+00:00",
+        "http_status": 200,
+        "sha256": "c5489c4584a4a9e1075c85db1c5ba1c5ad2c1a173a04c599fe8f8c16dee00854",
+        "body_bytes": 132401,
+        "receipt": "research/receipts/2026-10-29-augustine-author-02.json"
+      },
+      {
+        "url": "https://tribe.augustinetribe-nsn.gov/stewardship/",
+        "final_url": "https://tribe.augustinetribe-nsn.gov/stewardship/",
+        "retrieved_at": "2026-10-29T00:27:00.886975+00:00",
+        "http_status": 200,
+        "sha256": "a929d70e695f46b10a3050468b07083c0936bacbdab5d995e2a3b4c78f5999a5",
+        "body_bytes": 76637,
+        "receipt": "research/receipts/2026-10-29-augustine-author-04.json"
+      },
+      {
+        "url": "https://tribe.augustinetribe-nsn.gov/tribal-epa/",
+        "final_url": "https://tribe.augustinetribe-nsn.gov/tribal-epa/",
+        "retrieved_at": "2026-10-29T00:27:12.542645+00:00",
+        "http_status": 200,
+        "sha256": "468c0ca869845e011a1b1cdc10750e01207f00dba95ba5fe4079e4e6eeb004a8",
+        "body_bytes": 102465,
+        "receipt": "research/receipts/2026-10-29-augustine-author-05.json"
+      }
+    ]
+  }
+}

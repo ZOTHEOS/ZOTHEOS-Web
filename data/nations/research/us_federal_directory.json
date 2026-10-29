@@ -192,13 +192,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "fort-peck-assiniboine-sioux-us-mt",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-fort-peck-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://fortpecktribes.org/",
+      "own_published_name": "Fort Peck Tribes",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-fort-peck-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-f6cccc6dbe0d",
@@ -212,13 +221,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "augustine-band-of-cahuilla-indians-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-augustine-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://tribe.augustinetribe-nsn.gov/",
+      "own_published_name": "Augustine Band of Cahuilla Indians",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-augustine-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-226d9278475b",
@@ -232,13 +250,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "bad-river-band-of-lake-superior-chippewa-us-wi",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-bad-river-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://www.badriver-nsn.gov/",
+      "own_published_name": "Bad River Band of Lake Superior Chippewa",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-10-29-bad-river-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-53b967cfa197",

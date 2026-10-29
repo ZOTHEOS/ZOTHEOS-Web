@@ -1,0 +1,106 @@
+{
+  "reviewed": "2026-10-29",
+  "public_notes": [
+    {
+      "nation": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "reading_id": "treaty-era-record-and-changing-woodlands",
+      "title": "A Treaty-Era Record And Changing Woodlands",
+      "text": "The Band's account dates the reservation to an agreement finalized on September 30, 1854, at Lapointe on Madeline Island. That date concerns the reservation, not the origin of Ojibwe people. The same account describes its woodlands as pine lands clear-cut between 1850 and 1920. These passages place a treaty-era institution alongside a history of environmental change. They do not establish present boundaries or property title.",
+      "source_urls": [
+        "https://www.badriver-nsn.gov/history/"
+      ],
+      "fact_ids": [
+        "bad-river-band-of-lake-superior-chippewa-us-wi-862deef5",
+        "bad-river-band-of-lake-superior-chippewa-us-wi-75dfa437"
+      ]
+    },
+    {
+      "nation": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "reading_id": "water-standards-and-energy-resilience",
+      "title": "Water Standards And Energy Resilience",
+      "text": "The Band's Water Resources page records adoption of Water Quality Standards on July 6, 2011, and describes a designated use for waters that support, or could support, wild rice habitat. Its Energy page links microgrid development to infrastructure outages during the 2016 flood and dates completed commissioning to May 2021. The shared thread is community-directed planning for water and essential services. These are attributed institutional accounts, not certification of current legal force, water safety, power output or service availability.",
+      "source_urls": [
+        "https://www.badriver-nsn.gov/natural-resources/water-resources/",
+        "https://www.badriver-nsn.gov/natural-resources/energy/"
+      ],
+      "fact_ids": [
+        "bad-river-band-of-lake-superior-chippewa-us-wi-978f9d92",
+        "bad-river-band-of-lake-superior-chippewa-us-wi-e69bdd48"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "url": "https://www.badriver-nsn.gov/history/",
+      "label": "Bad River: History In The Band’s Own Words",
+      "purpose": "Read the Band's account of the reservation record and changing woodlands, without treating an institutional date as the beginning of a people.",
+      "fact_ids": [
+        "bad-river-band-of-lake-superior-chippewa-us-wi-862deef5",
+        "bad-river-band-of-lake-superior-chippewa-us-wi-75dfa437"
+      ]
+    },
+    {
+      "nation": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "url": "https://www.badriver-nsn.gov/natural-resources/water-resources/",
+      "label": "Bad River: Water Resources",
+      "purpose": "Read the Band's water-management introduction and its stated 2011 adoption date. This is not a current legal or water-safety determination.",
+      "fact_ids": [
+        "bad-river-band-of-lake-superior-chippewa-us-wi-978f9d92"
+      ]
+    },
+    {
+      "nation": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "url": "https://www.badriver-nsn.gov/natural-resources/energy/",
+      "label": "Bad River: Energy Planning And Resilience",
+      "purpose": "Read the Band's account of flood-response planning and 2021 microgrid commissioning; distinguish completed projects from later plans.",
+      "fact_ids": [
+        "bad-river-band-of-lake-superior-chippewa-us-wi-e69bdd48"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:35:43.638505+00:00",
+      "sha256": "23f0db8c9433d2cbf661d11e07c95746649d0983337076ca01bb0d22b4b37985",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://www.badriver-nsn.gov/history/",
+        "final_url": "https://www.badriver-nsn.gov/history/",
+        "retrieved_at": "2026-10-29T00:26:28.881783+00:00",
+        "http_status": 200,
+        "sha256": "24392ffdf7077f992253f17cf062a81f4b7248035b5edae1f626aeaf8ed03d4d",
+        "body_bytes": 242800,
+        "receipt": "research/receipts/2026-10-29-bad-river-author-03.json"
+      },
+      {
+        "url": "https://www.badriver-nsn.gov/natural-resources/water-resources/",
+        "final_url": "https://www.badriver-nsn.gov/natural-resources/water-resources/",
+        "retrieved_at": "2026-10-29T00:26:47.809948+00:00",
+        "http_status": 200,
+        "sha256": "31bc5578f497209c05e41b6d88c14ed041932297468a897eb79699afb0b276a0",
+        "body_bytes": 234731,
+        "receipt": "research/receipts/2026-10-29-bad-river-author-04.json"
+      },
+      {
+        "url": "https://www.badriver-nsn.gov/natural-resources/energy/",
+        "final_url": "https://www.badriver-nsn.gov/natural-resources/energy/",
+        "retrieved_at": "2026-10-29T00:27:07.908692+00:00",
+        "http_status": 200,
+        "sha256": "2a5c2054a49796ee023d6e8539cd818d56e87054a6deb095593f3507d3486b02",
+        "body_bytes": 277469,
+        "receipt": "research/receipts/2026-10-29-bad-river-author-05.json"
+      }
+    ]
+  }
+}

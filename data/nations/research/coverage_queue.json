@@ -347,9 +347,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-fort-peck-assiniboine-sioux-us-mt-2026-10-29"
       ],
       "review": {
         "identity": "pending",
@@ -365,9 +366,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://fortpecktribes.org/",
+          "retrieved_at": "2026-10-29T00:26:18.978936+00:00",
+          "http_status": 200,
+          "sha256": "3c0eea047b75f31d0d27fd65087730746f935288c31bd7b3cc67ff92a0467118",
+          "source_id": "own-fort-peck-assiniboine-sioux-us-mt-2026-10-29",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-29-fort-peck-author-02.json",
+          "receipt_id": "r-d664fb428dc4d1ee"
+        }
+      ],
+      "updated_at": "2026-10-29T00:40:56.877010+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-29-fort-peck-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-f6cccc6dbe0d",
@@ -381,9 +398,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-augustine-band-of-cahuilla-indians-us-ca-2026-10-29"
       ],
       "review": {
         "identity": "pending",
@@ -399,9 +417,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://tribe.augustinetribe-nsn.gov/",
+          "retrieved_at": "2026-10-29T00:26:27.511606+00:00",
+          "http_status": 200,
+          "sha256": "c5489c4584a4a9e1075c85db1c5ba1c5ad2c1a173a04c599fe8f8c16dee00854",
+          "source_id": "own-augustine-band-of-cahuilla-indians-us-ca-2026-10-29",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-29-augustine-author-02.json",
+          "receipt_id": "r-37ebd7fa3ff028df"
+        }
+      ],
+      "updated_at": "2026-10-29T00:40:56.877010+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-29-augustine-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-226d9278475b",
@@ -415,9 +449,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-bad-river-band-of-lake-superior-chippewa-us-wi-2026-10-29"
       ],
       "review": {
         "identity": "pending",
@@ -433,9 +468,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.badriver-nsn.gov/",
+          "retrieved_at": "2026-10-29T00:26:06.297170+00:00",
+          "http_status": 200,
+          "sha256": "065c230b3aef1b9ea2c24dd17e0e92fbbdc5d425f40e13e49cc6e4ebe632bd57",
+          "source_id": "own-bad-river-band-of-lake-superior-chippewa-us-wi-2026-10-29",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-29-bad-river-author-02.json",
+          "receipt_id": "r-d4632f503a05e0dd"
+        }
+      ],
+      "updated_at": "2026-10-29T00:40:56.877010+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-29-bad-river-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-53b967cfa197",

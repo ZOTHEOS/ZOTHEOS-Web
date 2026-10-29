@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-29T00:40:57.004593+00:00",
+  "base_commit": "c040af30281d030cb993f83ce7809003b4be3130",
+  "measured_counts": {
+    "canonical_profiles": 483,
+    "raw_facts": 1393,
+    "new_profiles": 2,
+    "deepened_existing_profiles": 1,
+    "new_facts": 10,
+    "new_history_layers": 6,
+    "new_own_resources": 8,
+    "all_prior_facts_and_clocks_preserved": 1383,
+    "old_profiles_completely_preserved": 480,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 146,
+      "blocked": 11,
+      "pending": 1655
+    },
+    "other_queue_tasks_preserved": 1809,
+    "subjects_researched": 3,
+    "capture_metadata_receipts": 24,
+    "identity_receipts": 3
+  },
+  "independent_source_reviews": [
+    {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:36:51.992231+00:00",
+      "sha256": "3ff7483dd167987404c464b66e04432059ec49587d7557f0d73f4f0b5ac1a1a4",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    },
+    {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:35:43.572486+00:00",
+      "sha256": "09ec089aae045c8d0791c62c85a3d4c83fd6fc25ddba1ca3b3069b7c0800cd02",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    },
+    {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-29T00:35:43.638505+00:00",
+      "sha256": "23f0db8c9433d2cbf661d11e07c95746649d0983337076ca01bb0d22b4b37985",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review completed for the exact scoped proposal. Publication and fresh source verification remain separate."
+    }
+  ],
+  "verification": {
+    "facts_verified": 10,
+    "captured_responses": 10,
+    "unchanged_refresher_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "wrapper_sha256": "980b8a5d9f4e9cd19c79caec903d089272501bb3b5b66e54b0e9dd8ba89b5ec3",
+    "minimum_measured_post_response_gap_seconds": 10.811999999976251,
+    "redirects_followed": false,
+    "automatic_retries": 0,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  },
+  "capture_receipts": [
+    "research/receipts/2026-10-29-fort-peck-author-01.json",
+    "research/receipts/2026-10-29-fort-peck-author-02.json",
+    "research/receipts/2026-10-29-fort-peck-author-03.json",
+    "research/receipts/2026-10-29-fort-peck-author-04.json",
+    "research/receipts/2026-10-29-augustine-author-01.json",
+    "research/receipts/2026-10-29-augustine-author-02.json",
+    "research/receipts/2026-10-29-augustine-author-03.json",
+    "research/receipts/2026-10-29-augustine-author-04.json",
+    "research/receipts/2026-10-29-augustine-author-05.json",
+    "research/receipts/2026-10-29-bad-river-author-01.json",
+    "research/receipts/2026-10-29-bad-river-author-02.json",
+    "research/receipts/2026-10-29-bad-river-author-03.json",
+    "research/receipts/2026-10-29-bad-river-author-04.json",
+    "research/receipts/2026-10-29-bad-river-author-05.json",
+    "research/receipts/2026-10-29-verifier-01.json",
+    "research/receipts/2026-10-29-verifier-02.json",
+    "research/receipts/2026-10-29-verifier-03.json",
+    "research/receipts/2026-10-29-verifier-04.json",
+    "research/receipts/2026-10-29-verifier-05.json",
+    "research/receipts/2026-10-29-verifier-06.json",
+    "research/receipts/2026-10-29-verifier-07.json",
+    "research/receipts/2026-10-29-verifier-08.json",
+    "research/receipts/2026-10-29-verifier-09.json",
+    "research/receipts/2026-10-29-verifier-10.json"
+  ],
+  "identity_review_receipts": [
+    "receipts/2026-10-29-fort-peck-identity.json",
+    "receipts/2026-10-29-augustine-identity.json",
+    "receipts/2026-10-29-bad-river-identity.json"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-fed-13e8e53b298b",
+    "profile-us-fed-f6cccc6dbe0d",
+    "profile-us-fed-226d9278475b"
+  ],
+  "reading_experience": "Existing native reading/source navigation, Living Gallery, Paths To Action, Theater and all five appearances preserved. New notes/resources have explicit canonical fact dependencies. Schooling text retains the historical decade while optional date metadata remains null, avoiding invented year precision and game-card omission.",
+  "limits": "Coverage remains incomplete worldwide. Government lists are planning references, not definitions of Indigenous identity. Reservation, written constitution, water-standard adoption and energy commissioning dates are not origins, current legal findings or guaranteed environmental performance. All earlier facts/clocks, holds, source editions and other queue tasks remain exact. No human or Nation approval claimed.",
+  "publication_state": "Source and fresh-fact verification recorded; final review, release and live checks remain separate."
+}
