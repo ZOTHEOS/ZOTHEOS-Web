@@ -265,7 +265,7 @@ def page(builder):
            '<p class="lede">Start with a name. Follow its source. See what still needs research.</p>',
            '<div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search dated source records here. For histories and facts, <a href="/nations#find">search all researched profiles</a>. These are different routes; a missing result does not mean a Nation does not exist.</p>',
            '<div class="directory-controls"><div class="directory-query"><label for="directoryQuery">Find a name in this directory</label>',
-           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">',
+           '<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" maxlength="200" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">',
            '<button type="button" id="directoryClear" class="pill">Clear</button></div></div>',
            '<div class="directory-filter"><label for="directoryInventory">Source inventory</label>',
            '<select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option>'
@@ -274,6 +274,8 @@ def page(builder):
            '<p id="directoryProfileHint" class="note" hidden>Filters reviewed directory links; other researched profiles may not be linked here yet. <a href="/nations#find">Search all researched profiles</a>.</p>',
            '<p id="directoryResult" class="note" role="status" aria-live="polite">' + str(total) + ' directory records in ' + str(len(choices)) + ' differently scoped lists. All are shown.</p>',
            '<div class="directory-reading-actions"><button type="button" id="directoryReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></div>',
+           '<p class="directory-share"><a id="directoryShareLink" class="directory-share-link" href="/nations/directory#directoryNames" aria-describedby="directoryShareNote">Link To This Search</a></p>',
+           '<p id="directoryShareNote" class="note">Open or copy this link to share the current filters. Shared links contain the search text you entered.</p>',
            '<p id="directoryLimit" class="note"></p></div>',
            '<noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>',
            '<details class="directory-source"><summary>Understand These Records</summary>',
