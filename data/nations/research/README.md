@@ -644,3 +644,16 @@ failure has null response status, final URL, body length and body hash; its empt
 is separately identified. No publisher outage, compromise, legal ruling or emergency is inferred.
 No human review, permission or Nation endorsement is claimed. Existing mobile/desktop reading
 navigation, Living Gallery, Paths To Action and Theater output are preserved.
+
+
+## October 29 own-source histories
+
+Two distinct government profiles, Augustine and Bad River, join the existing Fort Peck profile
+through a bounded three-subject review. Fort Peck is deepened, not duplicated. Ten new facts,
+six reading layers and eight resources retain event dates separately from October 29 UTC checks.
+Three source-backed crosswalks are recorded; all other queue tasks, source editions and holds remain.
+Fourteen author responses and ten isolated fresh-verifier responses are measured HTTP 200 captures.
+The schooling fact keeps its decade in the prose with null optional date metadata, preventing a
+silent game-card omission without inventing a year. Public receipts omit bodies, personal contacts,
+raw headers and local paths. Source record: batches/2026-10-29-own-source-histories.json.
+Coverage remains incomplete, and no human review or Nation endorsement is implied.

@@ -18,6 +18,25 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
+The registry contains 483 researched profiles and 1,393 raw facts, retaining two existing
+publication holds. The October 29 UTC batch adds distinct Augustine and Bad River government
+profiles and deepens the existing Fort Peck profile rather than duplicating it. Ten new own-source
+facts support six digestible history layers and eight direct resources. Every earlier fact and
+check date remains exact; Fort Peck retains all its previous fields and facts alongside the additions.
+
+The histories distinguish agency administration and written constitutions from the origins of
+peoples, and reservation milestones from present land title. Bad River's water-standard adoption
+and microgrid commissioning remain dated institutional accounts. Augustine's renewable-energy
+history does not reproduce unverified performance equivalences. Decade-level schooling dates remain
+in the text without an invented exact year. New reading/resource dependencies preserve later holds.
+
+Three directory rows gain separately reviewed profile links; source editions and all other rows
+remain unchanged. The directory still holds 2,272 overlapping source records, not distinct Nations.
+Coverage is incomplete worldwide. All other queue tasks, existing source gaps, Paths To Action,
+Theater, Living Gallery and five website appearances are preserved. No human or Nation approval is claimed.
+
+## October 27: Coushatta Louisiana And Source Gaps
+
 The registry contains 481 researched profiles and 1,383 raw facts, with two existing publication
 holds retained. The October 27 UTC batch adds the Coushatta Tribe of Louisiana: four own-source
 facts, two readable history layers and three resources. All 480 earlier canonical objects and

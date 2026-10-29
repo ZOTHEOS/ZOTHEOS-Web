@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-27",
-  "count": 481,
-  "facts": 1383,
+  "generated": "2026-10-29",
+  "count": 483,
+  "facts": 1393,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -17,8 +17,8 @@
     "mx-north-us-southwest": 32,
     "oceania": 46,
     "us-east-southeast": 43,
-    "us-plains-midwest": 41,
-    "us-west-pacific": 29
+    "us-plains-midwest": 42,
+    "us-west-pacific": 30
   },
   "nations": [
     {
@@ -26818,6 +26818,54 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        },
+        {
+          "id": "fort-peck-assiniboine-sioux-us-mt-99a613a2",
+          "text": "The Tribes’ history dates the Fort Peck Agency’s relocation to Poplar to 1878, attributing the move to repeated flooding at its earlier site.",
+          "kind": "history",
+          "as_of": "1878",
+          "source": {
+            "title": "Tribal History",
+            "publisher": "Fort Peck Tribes",
+            "url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "In 1878, the Fort Peck Agency was relocated",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "fort-peck-assiniboine-sioux-us-mt-ff8b91a1",
+          "text": "The Tribes date their first written constitution to 1927 and a rewritten constitution’s adoption to 1960.",
+          "kind": "history",
+          "as_of": "1960",
+          "source": {
+            "title": "Tribal History",
+            "publisher": "Fort Peck Tribes",
+            "url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "written constitution in 1927",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "fort-peck-assiniboine-sioux-us-mt-fe69d79d",
+          "text": "The Tribes describe a government boarding-school program on the reservation that began in 1877 and ended in the 1920s.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "Tribal History",
+            "publisher": "Fort Peck Tribes",
+            "url": "https://fortpecktribes.org/visitor-opportunities/tribal-history/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "begun in 1877 and finally discontinued",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
         }
       ]
     },
@@ -29000,6 +29048,88 @@
       ]
     },
     {
+      "id": "bad-river-band-of-lake-superior-chippewa-us-wi",
+      "region": "us-plains-midwest",
+      "name": "Bad River Band of Lake Superior Chippewa",
+      "also": [
+        "Bad River Tribe",
+        "Mashkiiziibii"
+      ],
+      "pronounce": null,
+      "lands": "Along Lake Superior and Chequamegon Bay in northern Wisconsin.",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.badriver-nsn.gov/",
+      "name_source_url": "https://www.badriver-nsn.gov/",
+      "facts": [
+        {
+          "id": "bad-river-band-of-lake-superior-chippewa-us-wi-862deef5",
+          "text": "Its history dates the reservation's establishment to the 1854 Treaty of Lapointe.",
+          "kind": "history",
+          "as_of": "1854",
+          "source": {
+            "title": "History",
+            "publisher": "Bad River Band of Lake Superior Chippewa",
+            "url": "https://www.badriver-nsn.gov/history/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "Reservation was established by the 1854 Treaty of Lapointe",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "bad-river-band-of-lake-superior-chippewa-us-wi-75dfa437",
+          "text": "Its history describes pine clear-cutting on the reservation's woodlands between 1850 and 1920.",
+          "kind": "history",
+          "as_of": "1920",
+          "source": {
+            "title": "History",
+            "publisher": "Bad River Band of Lake Superior Chippewa",
+            "url": "https://www.badriver-nsn.gov/history/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "clear-cut of pine between 1850 and 1920",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "bad-river-band-of-lake-superior-chippewa-us-wi-978f9d92",
+          "text": "Its Water Resources page dates the Band's adoption of Water Quality Standards to July 6, 2011.",
+          "kind": "governance",
+          "as_of": "2011",
+          "source": {
+            "title": "Water Resources",
+            "publisher": "Bad River Band of Lake Superior Chippewa",
+            "url": "https://www.badriver-nsn.gov/natural-resources/water-resources/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "adopted Water Quality Standards (WQS) aligned with the Clean Water Act.",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "bad-river-band-of-lake-superior-chippewa-us-wi-e69bdd48",
+          "text": "The Band's Energy page dates completion and commissioning of its microgrids to May 2021, following emergency-planning changes after the 2016 flood.",
+          "kind": "achievement",
+          "as_of": "2021",
+          "source": {
+            "title": "Energy",
+            "publisher": "Bad River Band of Lake Superior Chippewa",
+            "url": "https://www.badriver-nsn.gov/natural-resources/energy/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "completed and fully commissioned by the Tribe in May of 2021",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        }
+      ]
+    },
+    {
       "id": "cahuilla-band-of-indians-us-ca",
       "region": "us-west-pacific",
       "name": "Cahuilla Band of Indians",
@@ -30806,6 +30936,72 @@
           "status": "verified",
           "checked": "2026-10-17",
           "last_verified": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "augustine-band-of-cahuilla-indians-us-ca",
+      "region": "us-west-pacific",
+      "name": "Augustine Band of Cahuilla Indians",
+      "also": [
+        "Augustine Band of Cahuilla Indians, California",
+        "Augustine Band"
+      ],
+      "pronounce": null,
+      "lands": "the Coachella Valley in southern California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://tribe.augustinetribe-nsn.gov/",
+      "name_source_url": "https://tribe.augustinetribe-nsn.gov/",
+      "facts": [
+        {
+          "id": "augustine-band-of-cahuilla-indians-us-ca-d3f1af9a",
+          "text": "The Tribe's site dates the formal establishment of the Augustine Reservation to December 29, 1891.",
+          "kind": "history",
+          "as_of": "1891",
+          "source": {
+            "title": "Augustine Band of Cahuilla Indians",
+            "publisher": "Augustine Band of Cahuilla Indians",
+            "url": "https://tribe.augustinetribe-nsn.gov/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "established the Augustine Reservation on December 29, 1891",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "augustine-band-of-cahuilla-indians-us-ca-1f7620d9",
+          "text": "Its stewardship account dates the development of a renewable-energy operation to 2008.",
+          "kind": "history",
+          "as_of": "2008",
+          "source": {
+            "title": "Stewardship - Augustine Band of Cahuilla Indians",
+            "publisher": "Augustine Band of Cahuilla Indians",
+            "url": "https://tribe.augustinetribe-nsn.gov/stewardship/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "In 2008, the Augustine Band of Cahuilla Indians",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
+        },
+        {
+          "id": "augustine-band-of-cahuilla-indians-us-ca-94d66c59",
+          "text": "Its environmental page describes a Tribal Environmental Protection Agency established to develop and carry out environmental programs.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Tribal EPA - Augustine Band of Cahuilla Indians",
+            "publisher": "Augustine Band of Cahuilla Indians",
+            "url": "https://tribe.augustinetribe-nsn.gov/tribal-epa/",
+            "accessed": "2026-10-29"
+          },
+          "evidence": "has established the Tribal Environmental Protection Agency",
+          "status": "verified",
+          "checked": "2026-10-29",
+          "last_verified": "2026-10-29"
         }
       ]
     }
