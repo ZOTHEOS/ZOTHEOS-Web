@@ -84,8 +84,12 @@
   var resultsIntro = document.getElementById('directoryResultsIntro'), resultsSummary = document.getElementById('directoryResultsSummary');
   var resultsEmpty = document.getElementById('directoryResultsEmpty'), resultsActions = document.getElementById('directoryResultsActions');
   var readFirst = document.getElementById('directoryReadFirst'), resultsReadFirst = document.getElementById('directoryResultsReadFirst');
+  var share = document.getElementById('directoryShareLink');
   if (!status || !clear) return;
-  var batch = 40, limit = batch, names = [], scopes = [], visible = [], i;
+  var batch = 40, limit = batch, names = [], scopes = [], visible = [], i, QMAX = 200, announceTurn = 0;
+  // The generated static href supplies the page path, so a request URL can never redirect the link elsewhere.
+  var sharePath = share ? (share.getAttribute('href') || '').split(/[?#]/)[0] : '';
+  if (!/^\/[A-Za-z0-9\/-]*$/.test(sharePath) || sharePath.charAt(1) === '/') share = null;
   var enhanced = !!(tools && inventory && more && limitNote);
   function fold(s) { return (s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s).toLowerCase(); }
   for (i = 0; i < rows.length; i++) {
@@ -108,11 +112,47 @@
     }
     return true;
   }
+  function shareHref(selected, readyOnly) {
+    var parts = [], q = input.value.trim().slice(0, QMAX), encoded;
+    if (q) {
+      try { encoded = encodeURIComponent(q); } catch (e) { encoded = encodeURIComponent(q.replace(/[\uD800-\uDFFF]/g, '\uFFFD')); }
+      parts.push('q=' + encoded);
+    }
+    if (selected !== 'all') parts.push('inventory=' + encodeURIComponent(selected));
+    if (readyOnly) parts.push('ready=1');
+    return sharePath + (parts.length ? '?' + parts.join('&') : '') + '#directoryNames';
+  }
+  // Only q, inventory and ready are read. The first copy of each wins; other parameters are ignored.
+  function sharedSearch() {
+    var raw = window.location.search, found = {}, used = false, invalid = false;
+    if (typeof raw !== 'string' || raw.length < 2) return null;
+    if (raw.length > 2048) return {invalid: true};
+    var pairs = raw.slice(1).split('&');
+    for (var j = 0; j < pairs.length; j++) {
+      var at = pairs[j].indexOf('='), key = at < 0 ? pairs[j] : pairs[j].slice(0, at);
+      if ((key !== 'q' && key !== 'inventory' && key !== 'ready') || Object.prototype.hasOwnProperty.call(found, key)) continue;
+      used = true;
+      try { found[key] = decodeURIComponent((at < 0 ? '' : pairs[j].slice(at + 1)).replace(/\+/g, ' ')); }
+      catch (e) { found[key] = null; invalid = true; }
+    }
+    if (!used) return null;
+    var out = {invalid: invalid};
+    if (typeof found.q === 'string') { if (found.q.length <= QMAX) out.q = found.q; else invalid = true; }
+    if (typeof found.inventory === 'string') {
+      for (j = 0; j < inventory.options.length; j++) if (inventory.options[j].value === found.inventory) out.inventory = found.inventory;
+      if (!out.inventory) invalid = true;
+    }
+    if (typeof found.ready === 'string') { if (found.ready === '1' && profilesOnly) out.ready = true; else invalid = true; }
+    out.invalid = invalid;
+    return out;
+  }
   function filter() {
     var words = fold(input.value).trim().split(/\s+/), count = 0, shown = 0;
     var selected = enhanced ? inventory.value : 'all';
     var readyOnly = !!(enhanced && profilesOnly && profilesOnly.checked);
     if (profileHint) profileHint.hidden = !readyOnly;
+    announceTurn++;
+    if (enhanced && share) share.setAttribute('href', shareHref(selected, readyOnly));
     visible = [];
     for (var j = 0; j < rows.length; j++) {
       var match = (selected === 'all' || scopes[j] === selected) && directoryMatches(names[j], words)
@@ -144,6 +184,9 @@
   input.addEventListener('input', function () { limit = batch; filter(); });
   clear.addEventListener('click', function () { input.value = ''; limit = batch; filter(); input.focus(); });
   if (!enhanced) return;
+  // The URL owns the filters, so the browser must not restore stale control values after Back/Forward.
+  inventory.setAttribute('autocomplete', 'off');
+  if (profilesOnly) profilesOnly.setAttribute('autocomplete', 'off');
   function readFirstMatch() {
     if (!visible.length) return;
     var name = visible[0].querySelector('.directory-name') || visible[0];
@@ -187,12 +230,48 @@
     else if (initial) window.requestAnimationFrame(function () { target.scrollIntoView(); });
     else target.scrollIntoView();
   }
-  var navHash = '';
+  function decodable(hash) { try { decodeURIComponent(hash || ''); return true; } catch (e) { return false; } }
+  function legacyTarget(target) { return !!(target && target !== list && target.closest('[data-directory-inventory]')); }
+  // The URL defines the search on load and on Back/Forward: q, inventory and ready, with omitted values meaning the
+  // defaults. A record or inventory fragment keeps its older deep-link meaning and takes precedence over them.
+  function applyUrl(initial) {
+    var target = hashTarget();
+    if (legacyTarget(target)) { reveal(target, initial, false); return; }
+    var shared = sharedSearch() || {};
+    input.value = typeof shared.q === 'string' ? shared.q : '';
+    inventory.value = shared.inventory || 'all';
+    if (profilesOnly) profilesOnly.checked = !!shared.ready;
+    limit = batch; filter();
+    var restored = initial && (typeof shared.q === 'string' || shared.inventory || shared.ready || shared.invalid);
+    if (!restored && !shared.invalid) return;
+    var turn = announceTurn, message = (restored ? 'Search restored from this link. ' : '') + (shared.invalid ? 'Some link settings were not recognized and were left out. ' : '') + status.textContent;
+    // Change the live region after it becomes visible so assistive technology announces the restored result.
+    var later = initial && window.setTimeout ? function (fn) { window.setTimeout(fn, 300); } : function (fn) { fn(); };
+    later(function () {
+      if (turn !== announceTurn) return;
+      status.textContent = message;
+      if (resultsSummary) resultsSummary.textContent = message;
+    });
+    if (initial && target === list) window.requestAnimationFrame(function () { list.scrollIntoView(); });
+  }
+  // In-page fragment links (Browse Matching Names, Adjust Filters, skip links) keep the current filters. A fragment
+  // change without a matching recent link activation is history traversal or an address edit, so the URL applies.
+  var navHash = '', linkHash = '', linkAt = 0;
+  if (document.addEventListener) document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null, href = a ? a.getAttribute('href') : '';
+    var target = a ? a.getAttribute('target') : '';
+    if (!a || a.getAttribute('download') !== null || (target && target.toLowerCase() !== '_self')) return;
+    if (href && href.charAt(0) === '#' && href !== window.location.hash) { linkHash = href; linkAt = Date.now(); }
+  }, true);
   window.addEventListener('hashchange', function () {
     var target = hashTarget(), focusInventory = target && navHash === target.id;
-    navHash = '';
-    if (target) reveal(target, false, focusInventory);
+    var inPage = linkHash !== '' && linkHash === window.location.hash && Date.now() - linkAt < 3000;
+    navHash = ''; linkHash = '';
+    if (legacyTarget(target)) reveal(target, false, focusInventory);
+    else if (!inPage && decodable(window.location.hash)) applyUrl(false);
   });
+  window.addEventListener('pageshow', function (e) { if (e && e.persisted) applyUrl(false); });
   var jumps = document.querySelectorAll('.directory-inventory-nav a');
   for (i = 0; i < jumps.length; i++) jumps[i].addEventListener('click', function (e) {
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -206,6 +285,5 @@
     else window.location.hash = href;
   });
   filter(); tools.hidden = false;
-  var target = hashTarget();
-  if (target) reveal(target, true, false);
+  applyUrl(true);
 })();
