@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "publisher": "ZOTHEOS",
+  "recorded_at": "2026-10-30T22:27:08.564728+00:00",
+  "parent_commit": "210b8c7420213e6e9ef61baf0b0e9983ad1b85d9",
+  "measured_counts": {
+    "canonical_profiles": 483,
+    "raw_facts": 1402,
+    "new_profiles": 0,
+    "deepened_existing_profiles": 3,
+    "new_facts": 9,
+    "new_history_layers": 6,
+    "new_own_resources": 7,
+    "old_facts_and_clocks_preserved": 1393,
+    "other_profiles_unchanged": 480,
+    "changed_queue_tasks": 3,
+    "queue_tasks": 1812,
+    "queue_by_status": {
+      "needs_review": 149,
+      "blocked": 11,
+      "pending": 1652
+    },
+    "author_HTTP200": 13,
+    "author_HTTP301": 1,
+    "pre_HTTP_environment_failures": 1,
+    "fresh_verifier_HTTP200": 9
+  },
+  "capture_receipts": [
+    "research/receipts/2026-10-30-ho-chunk-capture-01.json",
+    "research/receipts/2026-10-30-ho-chunk-capture-02.json",
+    "research/receipts/2026-10-30-ho-chunk-capture-03.json",
+    "research/receipts/2026-10-30-ho-chunk-capture-04.json",
+    "research/receipts/2026-10-30-ho-chunk-capture-05.json",
+    "research/receipts/2026-10-30-morongo-capture-06.json",
+    "research/receipts/2026-10-30-morongo-capture-07.json",
+    "research/receipts/2026-10-30-morongo-capture-08.json",
+    "research/receipts/2026-10-30-morongo-capture-09.json",
+    "research/receipts/2026-10-30-morongo-capture-10.json",
+    "research/receipts/2026-10-30-morongo-capture-11.json",
+    "research/receipts/2026-10-30-sault-capture-12.json",
+    "research/receipts/2026-10-30-sault-capture-13.json",
+    "research/receipts/2026-10-30-sault-capture-14.json",
+    "research/receipts/2026-10-30-sault-capture-15.json",
+    "research/receipts/2026-10-30-verifier-capture-16.json",
+    "research/receipts/2026-10-30-verifier-capture-17.json",
+    "research/receipts/2026-10-30-verifier-capture-18.json",
+    "research/receipts/2026-10-30-verifier-capture-19.json",
+    "research/receipts/2026-10-30-verifier-capture-20.json",
+    "research/receipts/2026-10-30-verifier-capture-21.json",
+    "research/receipts/2026-10-30-verifier-capture-22.json",
+    "research/receipts/2026-10-30-verifier-capture-23.json",
+    "research/receipts/2026-10-30-verifier-capture-24.json"
+  ],
+  "independent_review_receipts": [
+    "receipts/2026-10-30-morongo-independent-review.json",
+    "receipts/2026-10-30-ho-chunk-independent-review.json",
+    "receipts/2026-10-30-sault-independent-review.json"
+  ],
+  "identity_receipts": [
+    "receipts/2026-10-30-morongo-identity.json",
+    "receipts/2026-10-30-ho-chunk-identity.json",
+    "receipts/2026-10-30-sault-identity.json"
+  ],
+  "changed_queue_tasks": [
+    "profile-us-fed-4e9d7d2cc853",
+    "profile-us-fed-7b5f568dfa9f",
+    "profile-us-fed-655f6e919538"
+  ],
+  "fresh_verification": {
+    "facts_verified": 9,
+    "requests_sent": 9,
+    "timeout_seconds": 20,
+    "automatic_retries": 0,
+    "redirects_followed": false,
+    "unchanged_refresher_sha256": "b803b316ee53c3ddf658eed5e105ae7281a5341c1aecdc67fb55c4c7cf458220",
+    "wrapper_sha256": "de51625955ce095faa5971cedabef7ac2f39efcaca16fd68cae29450abe196e5",
+    "minimum_measured_post_response_gap_seconds": 10.802229600027204
+  },
+  "limits": "Coverage remains incomplete worldwide. These are existing government profiles, not three newly discovered Nations. Source-name geography does not define homelands; reservation, recognition and constitution dates do not date the origins of peoples. Existing aliases and modern time-sensitive facts are preserved without a new freshness claim. Undated Ho-Chunk representation has null optional effective-year metadata. Sault sovereignty is a2017-dated context link with a thematic recognition-fact hold dependency, not current law or that fact's mechanical source. Morongo acreage differences remain unresolved and no media/cultural material is reproduced. The Sault author35s timeout configuration defect remains disclosed; fresh verification used 20s.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "publication_state": "Reviewed and freshly verified candidate; final integration, protected preview and live publication remain separate."
+}

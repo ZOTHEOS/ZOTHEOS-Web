@@ -18,6 +18,21 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
+The registry contains 483 researched profiles and 1,402 raw facts, retaining the two existing
+publication holds. The October 30 candidate deepens Morongo, Ho-Chunk and Sault through nine
+new own-source facts, six short reading layers and seven direct resources. It adds no new profile.
+All 1,393 earlier facts, metadata and check dates remain exact. Three explicit directory crosswalks
+link the existing governments without changing source editions, other governments or broader peoples.
+
+Historical reservation, recognition and constitutional milestones are distinguished from origins
+of peoples. Ho-Chunk's undated electoral description does not receive an invented effective year.
+Sault's sovereignty explanation is visibly updated in 2017 and linked as dated context, not current
+legal advice. Morongo's differing land-area wording is not silently harmonized. Coverage remains
+incomplete worldwide. The proposed reading uses the established mobile/desktop layout and native
+source jumps; final browser and publication gates remain separate. No human or Nation approval is claimed.
+
+## October 29 Own-Source Histories
+
 The registry contains 483 researched profiles and 1,393 raw facts, retaining two existing
 publication holds. The October 29 UTC batch adds distinct Augustine and Bad River government
 profiles and deepens the existing Fort Peck profile rather than duplicating it. Ten new own-source
