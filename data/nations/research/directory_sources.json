@@ -1199,6 +1199,55 @@
       "discovery_date": "2026-10-29",
       "status": "source_located",
       "note": "Specific captured own-source pages passed separate automated meaning, identity and respect review. No blanket licence, new host, human review or Nation endorsement is implied."
+    },
+    {
+      "source_id": "own-morongo-depth-2026-10-30",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://morongonation.org/",
+      "allowed_hosts": [
+        "morongonation.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-30",
+      "status": "source_retrieved",
+      "note": "Exact-host access scopes were reviewed before captured reads; specific proposed facts and sources passed a separate automated meaning/identity/respect review. The original Ho-Chunk www301 and Morongo environment failure remain recorded. No blanket licence, new human review or Nation endorsement."
+    },
+    {
+      "source_id": "own-ho-chunk-depth-2026-10-30",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://ho-chunknation.com/",
+      "allowed_hosts": [
+        "ho-chunknation.com",
+        "www.ho-chunknation.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-30",
+      "status": "source_retrieved",
+      "note": "Exact-host access scopes were reviewed before captured reads; specific proposed facts and sources passed a separate automated meaning/identity/respect review. The original Ho-Chunk www301 and Morongo environment failure remain recorded. No blanket licence, new human review or Nation endorsement."
+    },
+    {
+      "source_id": "own-sault-depth-2026-10-30",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.saulttribe.com/about-us",
+      "allowed_hosts": [
+        "www.saulttribe.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-30",
+      "status": "source_retrieved",
+      "note": "Exact-host access scopes were reviewed before captured reads; specific proposed facts and sources passed a separate automated meaning/identity/respect review. The original Ho-Chunk www301 and Morongo environment failure remain recorded. No blanket licence, new human review or Nation endorsement."
     }
   ]
 }
