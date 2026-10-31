@@ -672,3 +672,10 @@ DNS failure and nine fresh-verifier HTTP200 responses are recorded separately. T
 configured 35s instead of canonical 20s; its responses completed in under 3s, and the defect is retained,
 not relabeled compliant. Fresh verification used 20s. Source record:
 batches/2026-10-30-own-source-depth.json. Final browser/release/live gates remain separate.
+
+
+## October 31 UTC: Bay Mills And Berry Creek
+
+Two previously directory-only government records now have own-source profiles: Bay Mills Indian Community and Berry Creek Rancheria of Tyme Maidu Indians of California. Seven new facts, four reading layers and five direct resources passed separate source-meaning/respect review and fresh verification. All 483 prior profiles, 1,402 earlier facts, check dates and existing holds remain exact. The exact source directory labels remain unchanged.
+
+Bay Mills distinguishes October 8, 1936 ratification from November 4 approval. Berry Creek retains its own Tyme Maidu name; a detailed dated political chronology remains a research gap. Ten actual author HTTP200 responses, one pre-HTTP restricted-execution DNS failure and seven fresh-verifier HTTP200 responses are recorded separately. No human review, Nation endorsement, urgent risk or complete-coverage claim is made. Batch: `batches/2026-10-31-bay-mills-berry-creek.json`.

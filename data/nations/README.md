@@ -18,6 +18,18 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
+The reviewed candidate contains 485 researched profiles and 1,409 raw facts. Bay Mills Indian
+Community and Berry Creek Rancheria of Tyme Maidu Indians of California add seven own-source
+facts, four short reading layers and five direct resources. All 483 earlier profiles, 1,402
+facts, source clocks and existing publication holds remain exact. Two source-backed directory
+crosswalks preserve the original directory labels and distinct government identities.
+
+Bay Mills separates constitutional ratification from federal approval. Berry Creek's own Tyme
+Maidu name is retained alongside its directory alias; a dated political chronology remains a gap.
+Coverage is incomplete. Final protected preview, merge and live verification remain separate.
+
+## October 30 Own-Source Depth
+
 The registry contains 483 researched profiles and 1,402 raw facts, retaining the two existing
 publication holds. The October 30 candidate deepens Morongo, Ho-Chunk and Sault through nine
 new own-source facts, six short reading layers and seven direct resources. It adds no new profile.

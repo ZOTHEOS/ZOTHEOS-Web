@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-30",
-  "count": 483,
-  "facts": 1402,
+  "generated": "2026-10-31",
+  "count": 485,
+  "facts": 1409,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -17,8 +17,8 @@
     "mx-north-us-southwest": 32,
     "oceania": 46,
     "us-east-southeast": 43,
-    "us-plains-midwest": 42,
-    "us-west-pacific": 30
+    "us-plains-midwest": 43,
+    "us-west-pacific": 31
   },
   "nations": [
     {
@@ -29226,6 +29226,88 @@
       ]
     },
     {
+      "id": "bay-mills-indian-community-us-mi",
+      "region": "us-plains-midwest",
+      "name": "Bay Mills Indian Community",
+      "also": [
+        "Bay Mills Indian Community, Michigan",
+        "Bay Mills"
+      ],
+      "pronounce": null,
+      "lands": "the Bay Mills Reservation in Michigan",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.baymills.org/",
+      "name_source_url": "https://www.baymills.org/tribal-constitution",
+      "facts": [
+        {
+          "id": "bay-mills-indian-community-us-mi-3a5aeab9",
+          "text": "The Community's published constitution records a ratification vote on October 8, 1936.",
+          "kind": "history",
+          "as_of": "1936",
+          "source": {
+            "title": "Constitution and Bylaws of the Bay Mills Indian Community",
+            "publisher": "Bay Mills Indian Community",
+            "url": "https://www.baymills.org/tribal-constitution",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "was on October 8, 1936, duly adopted",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        },
+        {
+          "id": "bay-mills-indian-community-us-mi-9e480e8c",
+          "text": "The History Department dates the Community's first Tribal election to March 6, 1937.",
+          "kind": "history",
+          "as_of": "1937",
+          "source": {
+            "title": "History Department: Bay Mills Indian Community",
+            "publisher": "Bay Mills Indian Community",
+            "url": "https://www.baymills.org/history-dept",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "On March 6, 1937 we held our first tribal election",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        },
+        {
+          "id": "bay-mills-indian-community-us-mi-e64d24b9",
+          "text": "Its constitution describes a General Tribal Council of qualified voters and an elected Executive Council exercising delegated powers.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Constitution and Bylaws of the Bay Mills Indian Community",
+            "publisher": "Bay Mills Indian Community",
+            "url": "https://www.baymills.org/tribal-constitution",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "shall be composed of all qualified voters of the Community",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        },
+        {
+          "id": "bay-mills-indian-community-us-mi-edc871f8",
+          "text": "The History Department describes its mission as protecting culture, history and traditions for present and future generations.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "History Department: Bay Mills Indian Community",
+            "publisher": "Bay Mills Indian Community",
+            "url": "https://www.baymills.org/history-dept",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "protect, manage and preserve our culture, history and traditions",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        }
+      ]
+    },
+    {
       "id": "cahuilla-band-of-indians-us-ca",
       "region": "us-west-pacific",
       "name": "Cahuilla Band of Indians",
@@ -31146,6 +31228,72 @@
           "status": "verified",
           "checked": "2026-10-29",
           "last_verified": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "id": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "region": "us-west-pacific",
+      "name": "Berry Creek Rancheria of Tyme Maidu Indians of California",
+      "also": [
+        "Berry Creek Rancheria of Maidu Indians of California",
+        "Berry Creek Rancheria"
+      ],
+      "pronounce": null,
+      "lands": "Oroville and the Tyme Maidu homelands in present-day Butte County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.berrycreekmaiduindians.org/",
+      "name_source_url": "https://www.berrycreekmaiduindians.org/",
+      "facts": [
+        {
+          "id": "berry-creek-rancheria-tyme-maidu-us-ca-5b59e748",
+          "text": "The Tribe's account places Tyme Maidu homelands in what is now Butte County, with a relationship extending since time immemorial.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "Our Story | Berry Creek Rancheria",
+            "publisher": "Berry Creek Rancheria of Tyme Maidu Indians of California",
+            "url": "https://www.berrycreekmaiduindians.org/ourstory",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "land now known as Butte County since time immemorial",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        },
+        {
+          "id": "berry-creek-rancheria-tyme-maidu-us-ca-c766dc97",
+          "text": "The Tribe reports hosting a community handgame tournament in June 2022.",
+          "kind": "history",
+          "as_of": "2022",
+          "source": {
+            "title": "Government | Berry Creek Rancheria of Maidu Indians of California",
+            "publisher": "Berry Creek Rancheria of Tyme Maidu Indians of California",
+            "url": "https://www.berrycreekmaiduindians.org/",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "In June 2022 Berry Creek Rancheria hosted its first",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
+        },
+        {
+          "id": "berry-creek-rancheria-tyme-maidu-us-ca-9767a5ce",
+          "text": "Its education page links Tribal members to education-support materials, college programs and Native American scholarship resources.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Education Support | Berry Creek Rancheria",
+            "publisher": "Berry Creek Rancheria of Tyme Maidu Indians of California",
+            "url": "https://www.berrycreekmaiduindians.org/education",
+            "accessed": "2026-10-31"
+          },
+          "evidence": "we've compiled assistance options and education support materials",
+          "status": "verified",
+          "checked": "2026-10-31",
+          "last_verified": "2026-10-31"
         }
       ]
     }
