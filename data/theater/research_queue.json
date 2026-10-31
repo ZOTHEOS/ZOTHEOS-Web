@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-16",
+  "updated": "2026-10-31",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -134,6 +134,53 @@
       "reason": "The About folder URL returned a recorded 302 to /en/the-saami-council; its same-host canonical page was read. The film article’s truncated playlist link was not used; the exact embedded original D7L4JmZXyLI establishes the selected recording.",
       "status": "research-note",
       "checked": "2026-10-16"
+    },
+    {
+      "id": "land-water-continuation-2026-10-31",
+      "status": "bounded-batch-reviewed",
+      "checked": "2026-10-31",
+      "records": [
+        "water-is-life-standing-rock-swamp",
+        "invasion-unistoten-gidimten",
+        "bad-river-documentary"
+      ],
+      "batch": "research/batches/2026-10-31-land-water-continuation.json",
+      "reason": "Two complete short editions and one trailer have distinct source-supported runtimes and provider thumbnails. This does not certify playback or caption accuracy.",
+      "next": "Review current authorized editions and caption availability; preserve original source clocks and editorial holds."
+    },
+    {
+      "id": "reciprocity-discovery-policy-2026-10-31",
+      "status": "source-policy-hold",
+      "checked": "2026-10-31",
+      "discovery_urls": [
+        "https://www.reciprocity.org/films/tayal-forest-club",
+        "https://www.reciprocity.org/films/enchukunoto",
+        "https://www.reciprocity.org/films/ahkuin",
+        "https://www.reciprocity.org/films/armea"
+      ],
+      "reason": "Four proposed records were not published. The retained source terms contain a monitoring/copy restriction not resolved by robots permission; Tayal story-country attribution also lacked explicit retained support.",
+      "next": "Do not repeat automated source reads or publish these candidates without a resolved source-policy review. No cause is inferred from two Vimeo metadata404 responses.",
+      "independent_review_sha256": "7a5d66ce2ba39f61a43393e9404ccd223c27dd02e8cdd11bf43c304e2d5fef68"
+    },
+    {
+      "id": "yintah-edition-review-2026-10-31",
+      "status": "needs-edition-context",
+      "checked": "2026-10-31",
+      "source_urls": [
+        "https://www.mutualaidmedia.com/yintah"
+      ],
+      "reason": "A discovered preview was not added because the exact edition label was not established by retained producer wording.",
+      "next": "Resolve the edition from a publisher source before counting it as a film or trailer."
+    },
+    {
+      "id": "nfb-source-policy-review-2026-10-31",
+      "status": "needs-source-policy-review",
+      "checked": "2026-10-31",
+      "source_urls": [
+        "https://help.nfb.ca/terms/"
+      ],
+      "reason": "A newly read terms page raises a framing and usage-scope question for future NFB additions. It has not been reconciled with publisher embed-specific permissions.",
+      "next": "Review the actual applicable permissions before new NFB additions. No conclusion about existing records or automatic removal is made."
     }
   ]
 }

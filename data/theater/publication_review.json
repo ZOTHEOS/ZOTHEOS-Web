@@ -1,88 +1,49 @@
 {
-  "version": 4,
-  "prepared_at": "2026-10-16T08:44:02.062653+00:00",
+  "version": 5,
+  "prepared_at": "2026-10-31T02:15:48.482552+00:00",
   "publisher": "ZOTHEOS",
-  "status": "reviewed-for-publication",
+  "status": "reviewed-candidate-awaiting-protected-browser-preview",
   "catalogue": {
-    "sha256": "10ad5ad03008dc1a89a548bf0daa691e9131ed614dbd309cf79089d5cfac5cd4",
-    "titles": 228,
-    "configured_players": 221,
+    "sha256": "41af7dfc9df179e842381822f2bbc341d6efddb216fd1a561dc4a275c5da375c",
+    "titles": 231,
+    "configured_players": 224,
     "source_only": 7,
-    "source_references": 451,
     "featured": "yanuni",
     "viewing": {
       "full-film": 18,
       "recorded-program": 67,
-      "trailer": 49,
-      "short": 66,
+      "trailer": 50,
+      "short": 68,
       "excerpt": 21,
       "official-page": 7
     }
   },
-  "request_revision": "Two missing US Tribal-government profiles with own sources; six worldwide publisher-linked selections; native per-story links and a Where To Watch discovery filter on responsive layouts.",
-  "review_artifact_sha256": {
-    "independent-data-integration-review.json": "caaefdafd314d48e6406bf87880b13304c309aeb238f1f0aa03dde6fde3baa9d",
-    "independent-final-code-output-review.json": "6539bb9f0615051d7dccba0643145bc4e304008fa5d84fc109e0bb74e12a2f74",
-    "independent-story-access-code-review.json": "096a8a7d5d33138b54407b8b3641c40f6ee5070ef24f47a9df6b26f6ceecce0f",
-    "independent-two-nations-source-review.json": "2538d12bcbf493db4409d1d6ccd9e263a3d116daac7264a54e451e076d54b1bd",
-    "independent-source-title-metadata-addendum.json": "38fd48ac4d1055d34b3d35e385034602cbd8d286abcc570cbb457552b2bf3a48",
-    "independent-theater-continuation-source-review.json": "ed97c007c9630034bb182960ee28bdc5564af2c9c7419daab85c72ee7fef2953",
-    "privacy-and-source-clock-review.json": "c6bf92fa4a9667cd9b2eee172d4e41717f8581a4ce045c13864aca60602868e1",
-    "browser-local-measurements.json": "8e6315a2ad23712890f055666fff0b8118f2f456b9571fe0a6e50278b500604b",
-    "browser-nations-measurements.json": "ba450be96a22576bdea5098f71361fe5974058c7be24580c3f2343e0d59c0a35",
-    "full-suite-results.xml": "c6d80a90511670e49ada560ad69108797383d8a7fbbe0cc08b15e53ca82c21b4"
+  "request_revision": "Source-backed land and water films, two missing Tribal-government profiles, and reviewed Theater filter clarity/recovery UI.",
+  "source_review": {
+    "batch": "research/batches/2026-10-31-land-water-continuation.json",
+    "sha256": "fc5c635cc50622bfd6a2d18e05a3b324717122c4f5578cb5bc3b924bc0f2f821"
   },
-  "source_reviews": "All six additions received independent retained-source meaning review; eight new Nation facts passed separate source meaning/respect review and the actual isolated source refresh.",
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
   "validation": {
-    "full_website_tests": 422,
-    "full_suite_seconds": 171.996,
-    "independent_script_interaction_cases": 39,
-    "independent_renderer_cases": 11,
-    "responsive_widths": [
-      320,
-      390,
-      768,
-      1280,
-      1440
-    ],
-    "theme_layouts_phone": 4,
-    "theme_layouts_desktop": 4,
-    "nations_build": {
-      "profiles": 467,
-      "pages": 591,
-      "public_facts": 1324,
-      "held_facts": 2
+    "automated_tests": {
+      "tests": 1072,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
     },
-    "game_source_export": {
-      "nations": 467,
-      "quick_facts": 928,
-      "nations_with_history": 85
-    },
-    "checks": "Build, link, font, contrast, visible-copy and CSP checks passed; full website regression suite passed. Actual browser observations are separately scoped below."
+    "full_suite_seconds": 230.1045503000496,
+    "completed_at": "2026-10-31T02:28:36.439517+00:00",
+    "build_stages_passed": 9,
+    "full_suite_xml_sha256": "0f1ff90f2d3b0becf576a734a138a8577138ad30d32d6f23e34a9e7c3a3e9377",
+    "build_results_sha256": "a5b54feea55f28ca8630ee2b4eb56944d1c57280bafa1a32659e0c0a08d3427b",
+    "scope": "All existing website automated tests; fonts, links, contrast, source/data and CSP contracts. Static markup and game export audited separately. Actual responsive browser, playback, caption and live deployment verification are not claimed."
   },
-  "browser_observations": [
-    "Direct NFB story startup mounted that exact provider without a featured YouTube player in the observed DOM/resource inventory. A fresh external-only link mounted zero provider frames. This is not a complete network trace.",
-    "The new Sámi essay presented its native provider Play control. No automatic playback or automatic next-story advance was introduced.",
-    "Watch Here selected221 configured records; Official Site selected7. Combined discovery retained the selected player; manual Next respected the matching records.",
-    "A native story link survived a fresh page load and exposed its selected card without initial focus theft. Normal selection did not rewrite the URL.",
-    "Measured widths had no horizontal overflow. Discovery controls were48 pixels high; four theme select/option pairs remained readable at phone and desktop sizes.",
-    "The phone menu opened Appearance. The new Coharie/Haliwa profiles and reviewed-profile directory links worked at phone/desktop sizes, with context headings below the fixed header."
-  ],
-  "preservation": [
-    "All465 earlier canonical Nation objects and all222 earlier film objects remain exact.",
-    "Exactly two NC identity links and two queue tasks change;1810 other tasks, existing holds, federal/VA inventories and source clocks remain unchanged.",
-    "Two older NC production-label strings use the ZOTHEOS alias, without altering their evidence, dates, source disagreement or status.",
-    "Homepage, original intro and gameplay bytes remain unchanged. Only generated game educational data receives the new profiles.",
-    "No new external origin or motion override is introduced. Static featured player remains available in noscript; every official source remains a native link."
-  ],
-  "limits": [
-    "JavaScript-disabled behavior was checked through static renderer tests, not an actual disabled-JavaScript browser session.",
-    "Configured players and caption metadata are not guarantees of worldwide playback, complete-film viewing or caption quality.",
-    "Haliwa-Saponi deeper dated history remains an explicit research gap; no unsupported founding date or recognition finding is added.",
-    "Coverage remains incomplete worldwide and within the US. Government lists are planning sources, not the definition of Indigenous identity.",
-    "No historical Git/cache erasure, human approval, community endorsement or universal safety promise is made.",
-    "Cinema package work remains a separate unfinished integration lane; no obsolete prototype or superseded render is published."
-  ]
+  "review_pins": {
+    "nation_integration": "333b807fb516a464442d73fc77afc0de3400dd7929b29a527e65d70bea3d8477",
+    "theater_sources": "3804d49e06b5fe748496ea38864758e25d73d21f7a848ccb5471933203e5a567",
+    "ui_canonical_patch": "c975e7b6153678a0d00af3475d9a56e4fe9408fd847c7db3649f8d6dd62a2bcf",
+    "homepage_count_fix": "e2ff480669e0febbd24de7586f527bdf1727b02077b650e4108bfb925d98887c",
+    "generated_reading": "aaf3b676e7aed10878c60ed7dabf6080c0ec2f5b2d8dd1402142e3fdb027294e"
+  }
 }

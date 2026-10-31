@@ -1,0 +1,90 @@
+{
+  "reviewed": "2026-10-31",
+  "public_notes": [
+    {
+      "nation": "bay-mills-indian-community-us-mi",
+      "reading_id": "a-vote-and-an-approval-are-different-events",
+      "title": "A Vote And An Approval Are Different Events",
+      "text": "The published constitution records a ratification vote on October 8, 1936, and federal approval on November 4. The History Department page uses November 4 for adoption; these are different descriptions of the constitutional process. Its account then dates the first Tribal election to March 6, 1937. These institutional milestones are not the beginning of the people. Bay Mills is a distinct government; this profile does not merge it with the Sault Ste. Marie Tribe of Chippewa Indians.",
+      "source_urls": [
+        "https://www.baymills.org/tribal-constitution",
+        "https://www.baymills.org/history-dept"
+      ],
+      "fact_ids": [
+        "bay-mills-indian-community-us-mi-3a5aeab9",
+        "bay-mills-indian-community-us-mi-9e480e8c"
+      ]
+    },
+    {
+      "nation": "bay-mills-indian-community-us-mi",
+      "reading_id": "governance-and-community-held-history",
+      "title": "Governance And Community-Held History",
+      "text": "The constitution places the General Tribal Council at the center of government and describes an Executive Council exercising delegated powers. The History Department describes its work as preserving culture, history and traditions across generations. Read these own accounts for institutional and historical context. A public source link does not grant permission to reuse community-held knowledge, photographs or cultural material; current legal advice and service access are not provided here.",
+      "source_urls": [
+        "https://www.baymills.org/tribal-constitution",
+        "https://www.baymills.org/history-dept"
+      ],
+      "fact_ids": [
+        "bay-mills-indian-community-us-mi-e64d24b9",
+        "bay-mills-indian-community-us-mi-edc871f8"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "bay-mills-indian-community-us-mi",
+      "url": "https://www.baymills.org/tribal-constitution",
+      "label": "Bay Mills: Its Published Constitution",
+      "purpose": "Read the constitutional text, including the separate ratification and federal approval dates. This is a source document, not legal advice.",
+      "fact_ids": [
+        "bay-mills-indian-community-us-mi-3a5aeab9",
+        "bay-mills-indian-community-us-mi-e64d24b9"
+      ]
+    },
+    {
+      "nation": "bay-mills-indian-community-us-mi",
+      "url": "https://www.baymills.org/history-dept",
+      "label": "Bay Mills: History In Its Own Account",
+      "purpose": "Begin with the History Department's account of constitutional history, the first election and preservation work. Cultural reuse permission is not implied.",
+      "fact_ids": [
+        "bay-mills-indian-community-us-mi-9e480e8c",
+        "bay-mills-indian-community-us-mi-edc871f8"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review; fresh verification and publication remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-31T02:05:28.685513+00:00",
+      "sha256": "5c248394696d694b116f776ff5646cacca4903fe88aa7d43367d2eb4b1f7935f",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review; fresh verification and publication remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://www.baymills.org/history-dept",
+        "final_url": "https://www.baymills.org/history-dept",
+        "retrieved_at": "2026-10-31T02:02:08.635381+00:00",
+        "http_status": 200,
+        "sha256": "16ec0dc840909b0175dfd1b497442f32ac60f1ee13410915993557339a911073",
+        "body_bytes": 735921,
+        "receipt": "research/receipts/2026-10-31-bay-mills-capture-03.json"
+      },
+      {
+        "url": "https://www.baymills.org/tribal-constitution",
+        "final_url": "https://www.baymills.org/tribal-constitution",
+        "retrieved_at": "2026-10-31T02:02:16.157951+00:00",
+        "http_status": 200,
+        "sha256": "a781708835bfde98611d3ef957c096b4c0cd4d0a94baf931bf292b137dfb0bd0",
+        "body_bytes": 765433,
+        "receipt": "research/receipts/2026-10-31-bay-mills-capture-04.json"
+      }
+    ]
+  }
+}
