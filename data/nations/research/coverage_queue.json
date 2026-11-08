@@ -840,9 +840,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-blue-lake-rancheria-2026-11-07"
       ],
       "review": {
         "identity": "pending",
@@ -858,9 +859,22 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "source_id": "own-blue-lake-rancheria-2026-11-07",
+          "url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+          "retrieved_at": "2026-11-07T20:26:32.319212Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "sha256": "4712f7c604d1a2329d13f8f6618a69dfec1225b3b6394d7c8d38e80cb25a3edb",
+          "evidence_receipt": "batches/2026-11-08-blue-lake-research-handoff.json",
+          "receipt_id": "r-925963a9b5670467"
+        }
+      ],
+      "updated_at": "2026-11-08T19:33:33.145017+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Blue Lake Rancheria own-source handoff: three proposed facts from November 7 retrievals. Identity, source and respect review, fresh verification, acreage and termination chronology remain pending."
     },
     {
       "task_id": "profile-us-fed-abcc6cf2b162",

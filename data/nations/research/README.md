@@ -679,3 +679,14 @@ batches/2026-10-30-own-source-depth.json. Final browser/release/live gates remai
 Two previously directory-only government records now have own-source profiles: Bay Mills Indian Community and Berry Creek Rancheria of Tyme Maidu Indians of California. Seven new facts, four reading layers and five direct resources passed separate source-meaning/respect review and fresh verification. All 483 prior profiles, 1,402 earlier facts, check dates and existing holds remain exact. The exact source directory labels remain unchanged.
 
 Bay Mills distinguishes October 8, 1936 ratification from November 4 approval. Berry Creek retains its own Tyme Maidu name; a detailed dated political chronology remains a research gap. Ten actual author HTTP200 responses, one pre-HTTP restricted-execution DNS failure and seven fresh-verifier HTTP200 responses are recorded separately. No human review, Nation endorsement, urgent risk or complete-coverage claim is made. Batch: `batches/2026-10-31-bay-mills-berry-creek.json`.
+
+
+## November 8 UTC: Blue Lake Rancheria research handoff
+
+The Blue Lake Rancheria, California directory record remains directory-only. The queue
+now holds three proposed facts for review, covering the Rancheria's account of its 1908
+reservation and restored recognition in 1983, and its sustainability department's stated
+resilience priorities. November 7 retrieval dates stay separate from the historical event
+years and publisher dates. Acreage and effective termination chronology need further
+evidence. This handoff makes no change to published coverage or recognition categories.
+Batch: `batches/2026-11-08-blue-lake-research-handoff.json`.
