@@ -100,5 +100,81 @@
     "Site-specific embedding permission and provider policy review",
     "Full-film editorial review and approved content guidance"
   ],
-  "catalog_changes": 0
+  "catalog_changes": 0,
+  "draft_record": {
+    "id": "as-long-as-the-rivers-run",
+    "title": "As Long As The Rivers Run",
+    "year": 1971,
+    "runtime": "60m 05s · YouTube Edition",
+    "credits": "Directed by Carol Burns and co-produced by Hank Adams.",
+    "publisher": "Salmon Defense",
+    "synopsis": "During the Fish Wars of the late 1960s and early 1970s, Native people in the Pacific Northwest asserted their treaty fishing rights.",
+    "topics": [
+      "land",
+      "sovereignty",
+      "resistance"
+    ],
+    "watch_url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+    "viewing": "full-film",
+    "availability": "Salmon Defense links to this full YouTube edition. Its metadata lists automatically generated English captions. Playback, regional access and caption quality remain unverified.",
+    "content_note": "Covers conflict over treaty fishing rights during the Fish Wars.",
+    "perspective": "Follows Native people asserting treaty fishing rights in the Pacific Northwest.",
+    "region": "north-america",
+    "form": "documentary",
+    "location": "Pacific Northwest, United States",
+    "youtube_id": null,
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "thumbnail_url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+    "thumbnail_credit": "Official YouTube preview for the Salmon Defense upload.",
+    "thumbnail_source": "https://www.youtube.com/watch?v=lN46NWkEFow",
+    "sources": [
+      {
+        "url": "https://salmondefense.org/projects/educate/as-long-as-the-rivers-run/",
+        "title": "As Long As The Rivers Run",
+        "publisher": "Salmon Defense",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:32:50.358287Z",
+        "http_status": 200,
+        "sha256": "caba24385e3ee879e5358fbb8e2099572dc32e9f9d27da25e6abf57bd8bb5922"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+        "title": "Official YouTube Edition Metadata",
+        "publisher": "Salmon Defense / YouTube",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:31:41.829468Z",
+        "http_status": 200,
+        "sha256": "f60cd8405824825fc6c5c83e1ad567d2452c574c60e2b002bcc1a360cc9a64ab"
+      },
+      {
+        "url": "https://archive.org/metadata/alatrr",
+        "title": "Archive Remaster Item Metadata",
+        "publisher": "Internet Archive",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:31:42.459392Z",
+        "http_status": 200,
+        "sha256": "0d6e7a950c2cab1c66f633ff9b9c1973c485e531c9efb0d72766e106fd2a5f25"
+      }
+    ]
+  },
+  "draft_validation": {
+    "reviewed": "2026-11-09",
+    "checks": [
+      "Independent source-only classification review.",
+      "Canonical catalog validation and in-memory Theater render.",
+      "Verified the official link, provider thumbnail, viewing label and empty player attributes."
+    ],
+    "hypothetical_counts": {
+      "titles": 232,
+      "full_films": 19,
+      "configured_players": 224,
+      "source_only": 8
+    },
+    "remaining": [
+      "Review exact source-only record and generated output before release.",
+      "Check protected preview and live deployment after approved publication."
+    ]
+  }
 }

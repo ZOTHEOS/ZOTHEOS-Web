@@ -690,3 +690,8 @@ resilience priorities. November 7 retrieval dates stay separate from the histori
 years and publisher dates. Acreage and effective termination chronology need further
 evidence. This handoff makes no change to published coverage or recognition categories.
 Batch: `batches/2026-11-08-blue-lake-research-handoff.json`.
+
+The November 9 independent source check found support for the three attributed claims.
+The batch includes draft facts, reading layers and links to the Rancheria's own pages.
+The two dated history facts are candidates for the game's history collection after
+profile review and publication. The directory row and existing game cards are unchanged.
