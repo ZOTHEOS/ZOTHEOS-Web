@@ -18,15 +18,15 @@ antagonist, on a fail screen or in scoring.
 
 ## Current Scope
 
-The reviewed candidate contains 485 researched profiles and 1,409 raw facts. Bay Mills Indian
-Community and Berry Creek Rancheria of Tyme Maidu Indians of California add seven own-source
-facts, four short reading layers and five direct resources. All 483 earlier profiles, 1,402
-facts, source clocks and existing publication holds remain exact. Two source-backed directory
-crosswalks preserve the original directory labels and distinct government identities.
+The November 10 local candidate contains 486 researched profiles and 1,412 raw facts.
+Blue Lake Rancheria adds three own-source facts, two reading layers and three links
+to the Rancheria's pages. The existing 485 profiles, source clocks and two holds
+carry forward. The dated directory label remains alongside the Rancheria's own name.
 
-Bay Mills separates constitutional ratification from federal approval. Berry Creek's own Tyme
-Maidu name is retained alongside its directory alias; a dated political chronology remains a gap.
-Coverage is incomplete. Final protected preview, merge and live verification remain separate.
+Blue Lake Rancheria's account distinguishes the creation of its reservation from
+the later restoration of federal recognition. Acreage and termination chronology
+remain open. The 1908 and 1983 facts appear in the candidate game's history data.
+Coverage remains incomplete. Protected preview review and publication are pending.
 
 ## October 30 Own-Source Depth
 

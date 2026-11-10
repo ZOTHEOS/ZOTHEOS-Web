@@ -695,3 +695,15 @@ The November 9 independent source check found support for the three attributed c
 The batch includes draft facts, reading layers and links to the Rancheria's own pages.
 The two dated history facts are candidates for the game's history collection after
 profile review and publication. The directory row and existing game cards are unchanged.
+
+## November 10 UTC candidate build
+
+Blue Lake Rancheria has a separately reviewed government crosswalk and a local
+candidate profile with three attributed facts. Its original November 7 retrievals,
+November 9 fresh checks and November 10 identity and respect review have distinct
+clocks. The candidate adds two game history facts. Protected preview review is pending.
+
+The Ute Mountain Ute park history lead separates a 1972 historic district listing
+from the Tribe's account of its first tours. The underlying National Register
+asset and restricted location details are outside this lead. The exact source
+checks are recorded in `batches/2026-11-10-ute-mountain-park-lead.json`.

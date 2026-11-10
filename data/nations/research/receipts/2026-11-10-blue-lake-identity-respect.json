@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "review_type": "Explicit source-backed government identity and respect review",
+  "reviewer": "ZOTHEOS",
+  "review_kind": "Independent AI-assisted retained-source review",
+  "reviewed_at": "2026-11-10T15:05:47Z",
+  "reviewed_batch": "batches/2026-11-08-blue-lake-research-handoff.json",
+  "reviewed_batch_sha256": "2ff4d102f358a6efb7e32af127cd07952c9e937c3d1544fa42fb97b9fdcb727c",
+  "directory_id": "us-fed-dad040fff2ca",
+  "directory_label": "Blue Lake Rancheria, California",
+  "registry_id": "blue-lake-rancheria-us-ca",
+  "own_published_name": "Blue Lake Rancheria",
+  "official_url": "https://www.bluelakerancheria-nsn.gov/",
+  "own_name_source": {
+    "url": "https://www.bluelakerancheria-nsn.gov/about/",
+    "final_url": "https://www.bluelakerancheria-nsn.gov/about/",
+    "retrieved_at": "2026-11-09T15:02:55.885038Z",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 125830,
+    "sha256": "7f2d575926c8dbd066a026ac889a2ba927d1aba49ccf151bd7130b4c2d30b942",
+    "redirects": [],
+    "cms_published_at": "2024-08-27T22:20:55Z",
+    "cms_modified_at": "2024-08-29T20:28:06Z",
+    "evidence_note": "Corroborates the 1908 reservation, 1983 restoration of recognition and Wiyot ancestral territory."
+  },
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "saved_bia_directory": "receipts/us-bia-directory.json",
+  "saved_bia_object_id": 394,
+  "identity_decision": "The dated federal record, saved BIA host and Rancheria's own government description support this crosswalk. The Wiyot people and Taos Pueblo's Blue Lake remain separate.",
+  "fact_decisions": [
+    {
+      "fact": 0,
+      "action": "keep",
+      "reason": "The Rancheria attributes the 1908 date to the creation of its reservation."
+    },
+    {
+      "fact": 1,
+      "action": "keep",
+      "reason": "The Rancheria attributes restored federal recognition to the 1983 Tillie Hardwick case."
+    },
+    {
+      "fact": 2,
+      "action": "keep",
+      "reason": "The department describes five resilience priorities without dating them or reporting outcomes."
+    }
+  ],
+  "reading_layers": "Keep both reviewed layers and all three own-source resources.",
+  "unresolved": [
+    "Reconcile the differing approximate acreage descriptions against a dated land record before citing acreage.",
+    "Check the original instruments before stating the effective termination chronology.",
+    "Verify any claims about resilience operations or outcomes separately.",
+    "Source-use permission remains unassessed."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
