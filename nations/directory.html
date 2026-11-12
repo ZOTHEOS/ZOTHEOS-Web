@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Ty4+gUeWck6/EYR+NHzmTLeFo2c0DSkooh7fOiKfV5o=' 'sha256-eogXPh0PJ6FqmrkJ2FvwzmbAAzaKvErXSuUOcvHrVQA=' 'sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'sha256-Ty4+gUeWck6/EYR+NHzmTLeFo2c0DSkooh7fOiKfV5o=' 'sha256-vBzYvEYVoOi1hBqptxNqAjtqe4rfPx9agByqDyAjrrA=' 'sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Directory | Indigenous nations today</title>
   <meta name="description" content="Browse separately typed Indigenous name inventories with sources, dates and openly tracked US and worldwide coverage gaps.">
@@ -93,7 +93,7 @@
       src: url(/static/fonts/zn-tifinagh.42be22c3.woff2) format('woff2');
       unicode-range: U+2D30-2D67, U+2D6F-2D70, U+2D7F; }
   </style>
-  <link rel="stylesheet" href="/static/nations/nations.00f48a59.css">
+  <link rel="stylesheet" href="/static/nations/nations.f5592ab5.css">
   <link rel="stylesheet" href="/static/appearance/calavera.css?v=aa497196e488">
   <noscript><style>.appearance-btn, .ns-appearance, .hr-btn, .hr-ring, #hrStatus { display: none !important; }</style></noscript>
 </head>
@@ -178,7 +178,7 @@
 <p class="lede">Start with a name. Follow its source. See what still needs research.</p>
 <div class="directory-search" id="directoryTools" hidden><h2>Find A Name</h2><p class="note">Search dated source records here. For histories and facts, <a href="/nations#find">search all researched profiles</a>. These are different routes; a missing result does not mean a Nation does not exist.</p>
 <div class="directory-controls"><div class="directory-query"><label for="directoryQuery">Find a name in this directory</label>
-<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">
+<div class="directory-inputs"><input id="directoryQuery" type="search" autocomplete="off" maxlength="200" placeholder="Try Ute or Apache" aria-controls="directoryNames" aria-describedby="directoryResult">
 <button type="button" id="directoryClear" class="pill">Clear</button></div></div>
 <div class="directory-filter"><label for="directoryInventory">Source inventory</label>
 <select id="directoryInventory" aria-controls="directoryNames"><option value="all">All source inventories</option><option value="us-directory">United States: Federal published names</option><option value="us-new-jersey">United States: New Jersey commission representation: Named tribal representation groups</option><option value="us-alabama">United States: Alabama tribal directory: Alabama commission directory listings</option><option value="us-virginia">United States: Virginia tribal directory: Virginia state directory listings</option><option value="us-north-carolina">United States: North Carolina tribal directory: North Carolina state directory listings</option><option value="canada-directory">Canada: 2024 administrative register groups</option><option value="canada-profiles">Canada: the First Nation Profiles search: First Nation profile search records</option><option value="brazil-census">Brazil: named 2022 census categories: Named census ethnicity, people or group categories</option></select></div></div>
@@ -186,6 +186,8 @@
 <p id="directoryProfileHint" class="note" hidden>Filters reviewed directory links; other researched profiles may not be linked here yet. <a href="/nations#find">Search all researched profiles</a>.</p>
 <p id="directoryResult" class="note" role="status" aria-live="polite">2272 directory records in 8 differently scoped lists. All are shown.</p>
 <div class="directory-reading-actions"><button type="button" id="directoryReadFirst" class="pill" aria-controls="directoryNames" hidden>Read First Matching Name</button><a class="directory-results-link" href="#directoryNames">Browse Matching Names</a></div>
+<p class="directory-share"><a id="directoryShareLink" class="directory-share-link" href="/nations/directory#directoryNames" aria-describedby="directoryShareNote">Link To This Search</a></p>
+<p id="directoryShareNote" class="note">Open or copy this link to share the current filters. Shared links contain the search text you entered.</p>
 <p id="directoryLimit" class="note"></p></div>
 <noscript><p>All names remain visible without JavaScript. Use your browser Find command or the source inventory links to browse.</p></noscript>
 <details class="directory-source"><summary>Understand These Records</summary>
@@ -8030,6 +8032,6 @@
 </footer>
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="fret-mini" viewBox="0 0 10 10"><path d="M0.75 9.25V6.6h2.7V3.95h2.7V1.3h3.1v3.8H7.3" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke" stroke-linecap="square" stroke-linejoin="miter"/></symbol></svg>
 
-<script src="/static/appearance/controls.js?v=7a88173e1d0f" integrity="sha256-eogXPh0PJ6FqmrkJ2FvwzmbAAzaKvErXSuUOcvHrVQA=" crossorigin="anonymous"></script><script defer src="/static/appearance/calavera.js?v=743c7ae3a5ed" integrity="sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=" crossorigin="anonymous"></script>
+<script src="/static/appearance/controls.js?v=bc1cd8bc4615" integrity="sha256-vBzYvEYVoOi1hBqptxNqAjtqe4rfPx9agByqDyAjrrA=" crossorigin="anonymous"></script><script defer src="/static/appearance/calavera.js?v=743c7ae3a5ed" integrity="sha256-dDx646XtBb65upYXzO1HzxV5lFj8X3MEZk4bnfFT0Mw=" crossorigin="anonymous"></script>
 </body>
 </html>

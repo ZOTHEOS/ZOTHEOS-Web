@@ -47,3 +47,13 @@ The independent muted-preview, command-order, selection-boundary and reading-lay
 contracts are in `tools/tests/test_theater_presentation_acceptance.py`,
 `test_theater_command_order.py`, `test_theater_story_preview_boundaries.py` and
 `test_theater_translation_layout.py`. Run the full website suite before publication.
+
+The Nations directory's Link To This Search writes only `q` (200 characters or
+fewer), an allowlisted `inventory` and `ready=1`, ending in `#directoryNames`.
+Typing updates the link, not the address bar or history. Opening such a URL,
+or returning to it with Back/Forward, applies those filters (omitted means
+default); in-page links such as Browse Matching Names keep current edits. Load
+restoration is announced; unknown parameters are ignored and
+malformed or oversized ones are reported and left out. A record or inventory
+fragment keeps its older meaning and takes precedence over these parameters.
+Contracts: `tools/tests/test_directory_share_link.py`.

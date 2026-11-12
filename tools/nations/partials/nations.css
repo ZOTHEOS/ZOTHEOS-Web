@@ -492,6 +492,10 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .directory-search #directoryResult { margin-top: 16px; color: var(--ink-2); }
 .directory-search #directoryLimit { margin-top: 8px; }
 .directory-results-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; }
+.directory-search .directory-share { margin-top: 12px; }
+.directory-share-link { display: inline-flex; align-items: center; min-height: 48px; padding-block: 12px; }
+.directory-share-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.directory-search #directoryShareNote { margin-top: 0; }
 #directoryNames { scroll-margin-top: 88px; }
 .directory-page .directory-results-intro { margin: 0 0 32px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--rule); }
 .directory-results-intro h2 { margin: 0 0 12px; }
@@ -534,7 +538,7 @@ html[data-theme="maya"][data-motion="living"] :is(.page-h, .n-h1) { animation: n
 .directory-actions a:focus-visible,.directory-reading-actions .pill:focus-visible {outline:2px solid var(--ink);outline-offset:4px;}
 @media(min-width:900px) {.directory-controls {grid-template-columns:1fr 1fr;gap:24px;}}
 @media(max-width:480px) {.directory-page .directory-list>li {padding:20px;}.directory-reading-actions .pill {width:100%;justify-content:center;text-align:center;}}
-@media print {.directory-reading-actions {display:none!important;}.directory-page .directory-list>li {background:transparent;break-inside:avoid;}}
+@media print {.directory-reading-actions,.directory-share,#directoryShareNote {display:none!important;}.directory-page .directory-list>li {background:transparent;break-inside:avoid;}}
 
 /* The hub's search column holds its place beside the ring while the ring is read; a long result list scrolls in
    the column, and the box stays in view. */
