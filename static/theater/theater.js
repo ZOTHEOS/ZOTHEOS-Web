@@ -758,17 +758,18 @@
   }
 
   /* ---------- collection: search, filters, paging ---------- */
-  function showMatches(reveal) {
+  function showMatches(reveal, note) {
     cards.forEach(function (card) { var i = matched.indexOf(card); card.hidden = i === -1 || i >= limit; });
     get('theaterEmpty').hidden = matched.length !== 0;
     var shownCount = Math.min(limit, matched.length);
-    get('theaterStatus').textContent = shownCount < matched.length ? 'Showing ' + shownCount + ' of ' + matched.length + ' stories.' : matched.length + (matched.length === 1 ? ' title' : ' titles') + ' in this selection.';
+    get('theaterStatus').textContent = (typeof note === 'string' && note ? note + ' ' : '') + (shownCount < matched.length ? 'Showing ' + shownCount + ' of ' + matched.length + ' stories.' : matched.length + (matched.length === 1 ? ' title' : ' titles') + ' in this selection.');
     if (more) { more.hidden = shownCount >= matched.length; more.textContent = 'Show ' + Math.min(STEP, matched.length - shownCount) + ' More Stories'; }
     if (progress) { progress.hidden = !matched.length; var bar = progress.firstElementChild; if (bar) bar.style.inlineSize = (matched.length ? Math.round(shownCount / matched.length * 1000) / 10 : 0) + '%'; }
     if (next) next.disabled = matched.length < 2;
     if (reveal) reveal.forEach(function (c) { if (!c.classList) return; c.classList.remove('th-revealed'); void c.offsetWidth; c.classList.add('th-revealed'); });
   }
-  function filter() {
+  /* note: a short line said before the count after a removal or recovery action (never per keystroke) */
+  function filter(note) {
     var words = fold(search.value.trim()).split(/\s+/).filter(Boolean);
     matched = cards.filter(function (card) {
       var h = words.length ? hayOf(card) : '';
@@ -780,27 +781,95 @@
           (access.value === 'official-site' && !playerURL(card)));
     });
     limit = more ? STEP : Infinity;
-    showMatches();
+    showMatches(null, note);
     countFilters();
+    renderActive();
+    renderRecovery();
     updateRail();
   }
+  var FACETS = [[topic, 'Subject'], [region, 'Region'], [viewing, 'Viewing Type'], [access, 'Where To Watch']].filter(function (f) { return !!f[0]; });
+  function setFacets() { return FACETS.filter(function (f) { return f[0].value !== 'all'; }); }
+  function searching() { return !!search.value.trim(); }
+  function choiceText(sel) {
+    var opts = sel.options || [];
+    for (var i = 0; i < opts.length; i++) if (opts[i].value === sel.value) return String(opts[i].textContent).replace(/\s+/g, ' ').trim();
+    return sel.value;
+  }
+  function showing(el) { return !!el && !el.hidden && !el.disabled && (!el.getClientRects || el.getClientRects().length > 0); }
+  function firstShowing(list) { for (var i = 0; i < list.length; i++) if (showing(list[i])) return list[i]; return null; }
   /* Phones fold the four selects behind one Filters button; the count says how many are set. */
   function countFilters() {
     if (!filterCount) return;
-    var n = [topic, region, viewing, access].filter(function (s) { return s && s.value !== 'all'; }).length;
+    var n = setFacets().length;
     filterCount.textContent = n ? String(n) : '';
     filterCount.hidden = !n;
     if (filtersToggle) filtersToggle.setAttribute('aria-label', n ? 'Filters, ' + n + ' set' : 'Filters');
   }
+  /* Selected choices stay readable outside the phone's folded panel. Each button removes only its own choice; the
+     search and every other choice stay as they are. */
+  var activeBox = get('theaterActive'), activeList = get('theaterActiveList'), activeKey = '';
+  function chips() { return activeList ? Array.prototype.slice.call(activeList.querySelectorAll('[data-facet]')) : []; }
+  function renderActive() {
+    if (!activeBox || !activeList || !document.createElement) return;
+    var set = setFacets(), key = set.map(function (f) { return f[0].id + '=' + f[0].value; }).join('&');
+    if (key === activeKey) return;
+    activeKey = key;
+    while (activeList.firstChild) activeList.removeChild(activeList.firstChild);
+    set.forEach(function (f) {
+      var li = document.createElement('li'), b = document.createElement('button');
+      var pre = document.createElement('span'), k = document.createElement('span'), sep = document.createElement('span'), v = document.createElement('span');
+      b.type = 'button'; b.className = 'th-chip'; b.setAttribute('data-facet', f[0].id);
+      pre.className = 'th-sr'; pre.textContent = 'Remove ';
+      k.className = 'th-chip-k'; k.textContent = f[1];
+      sep.className = 'th-sr'; sep.textContent = ': ';
+      v.className = 'th-chip-v'; v.textContent = choiceText(f[0]);
+      b.appendChild(pre); b.appendChild(k); b.appendChild(sep); b.appendChild(v);
+      b.addEventListener('click', function () { removeFacet(f); });
+      li.appendChild(b); activeList.appendChild(li);
+    });
+    activeBox.hidden = !set.length;
+  }
+  /* Focus moves to the next remaining choice, or to a visible collection control; the folded panel stays folded. */
+  function removeFacet(f) {
+    var at = chips().map(function (c) { return c.getAttribute('data-facet'); }).indexOf(f[0].id), name = choiceText(f[0]);
+    f[0].value = 'all';
+    filter('Removed ' + f[1] + ': ' + name + '.');
+    var left = chips();
+    var target = left.length ? left[Math.max(0, Math.min(at, left.length - 1))] : firstShowing([f[0], filtersToggle, search]);
+    if (target) target.focus({ preventScroll: true });
+  }
+  /* No matches: clear only the search, only the selected filters, or (explicitly) both. A control whose kind of input
+     is already empty stays hidden. */
+  var emptyText = get('theaterEmptyText'), clearSearch = get('theaterClearSearch'), clearFacets = get('theaterClearFacets'), resetAll = get('theaterReset');
+  function renderRecovery() {
+    var q = searching(), n = setFacets().length;
+    if (clearSearch) clearSearch.hidden = !q;
+    if (clearFacets) clearFacets.hidden = !n;
+    if (resetAll) resetAll.hidden = !(q && n);
+    if (emptyText) emptyText.textContent = q && n ? 'No story matches this search with the selected filters. Clear the search or the filters to see more.' :
+      q ? 'No story matches this search. Try fewer or different words.' : n ? 'No story matches every selected filter. Remove one above or clear the selected filters.' :
+      'Try a broader search or fewer filters to see the whole collection.';
+  }
+  function resetSearchAndFilters() {
+    search.value = ''; FACETS.forEach(function (f) { f[0].value = 'all'; });
+    filter('Search and filters reset.'); search.focus();
+  }
+  if (clearSearch) clearSearch.addEventListener('click', function () {
+    search.value = ''; filter('Search cleared. Selected filters kept.'); search.focus();
+  });
+  if (clearFacets) clearFacets.addEventListener('click', function () {
+    FACETS.forEach(function (f) { f[0].value = 'all'; });
+    filter('Selected filters cleared. Search kept.');
+    var target = firstShowing([topic, filtersToggle, search]); if (target) target.focus();
+  });
+  if (resetAll) resetAll.addEventListener('click', resetSearchAndFilters);
   if (filtersToggle && filterPanel) filtersToggle.addEventListener('click', function () {
     var open = filtersToggle.getAttribute('aria-expanded') !== 'true';
     filtersToggle.setAttribute('aria-expanded', String(open));
     if (filterPanel.classList) filterPanel.classList.toggle('is-open', open);
   });
-  search.addEventListener('input', filter); topic.addEventListener('change', filter);
-  if (region) region.addEventListener('change', filter);
-  if (viewing) viewing.addEventListener('change', filter);
-  if (access) access.addEventListener('change', filter);
+  FACETS.forEach(function (f) { f[0].addEventListener('change', function () { filter(); }); });
+  search.addEventListener('input', function () { filter(); });
   if (more) more.addEventListener('click', function () {
     var firstNew = matched[limit], start = limit;
     limit += STEP; showMatches(matched.slice(start, limit));
@@ -815,10 +884,7 @@
     originCard = matched[i];
     transition(null, null, function () { select(matched[i], { focus: true, keepFocus: true, gesture: true }); announceNow(); });
   });
-  get('theaterClear').addEventListener('click', function () {
-    search.value = ''; topic.value = 'all'; if (region) region.value = 'all'; if (viewing) viewing.value = 'all'; if (access) access.value = 'all';
-    filter(); search.focus();
-  });
+  get('theaterClear').addEventListener('click', resetSearchAndFilters);
   posters.forEach(function (button) {
     button.setAttribute('role', 'button');
     button.addEventListener('keydown', function (event) { if (event.key === ' ' && button.tagName === 'A') { event.preventDefault(); button.click(); } });

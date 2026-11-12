@@ -1248,6 +1248,38 @@
       "discovery_date": "2026-10-30",
       "status": "source_retrieved",
       "note": "Exact-host access scopes were reviewed before captured reads; specific proposed facts and sources passed a separate automated meaning/identity/respect review. The original Ho-Chunk www301 and Morongo environment failure remain recorded. No blanket licence, new human review or Nation endorsement."
+    },
+    {
+      "source_id": "own-bay-mills-2026-10-31",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.baymills.org/",
+      "allowed_hosts": [
+        "www.baymills.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-31",
+      "status": "source_retrieved",
+      "note": "Exact saved BIA host and own preferred name reviewed. Not a cultural reuse license, legal-status review or complete-coverage claim."
+    },
+    {
+      "source_id": "own-berry-creek-2026-10-31",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.berrycreekmaiduindians.org/",
+      "allowed_hosts": [
+        "www.berrycreekmaiduindians.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-10-31",
+      "status": "source_retrieved",
+      "note": "Exact saved BIA host and own preferred name reviewed. Not a cultural reuse license, legal-status review or complete-coverage claim."
     }
   ]
 }

@@ -500,9 +500,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-bay-mills-2026-10-31"
       ],
       "review": {
         "identity": "pending",
@@ -518,9 +519,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.baymills.org/",
+          "retrieved_at": "2026-10-31T02:02:02.606029+00:00",
+          "http_status": 200,
+          "sha256": "2c4ed59cb5791ec5db0c91183ae4f13f94e3fcfed7b53432e969c045afac04f6",
+          "source_id": "own-bay-mills-2026-10-31",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-31-bay-mills-capture-02.json",
+          "receipt_id": "r-bf4e3e6bbc398641"
+        }
+      ],
+      "updated_at": "2026-10-31T02:08:35.338060+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-31-bay-mills-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-02270d100f62",
@@ -568,9 +585,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-berry-creek-2026-10-31"
       ],
       "review": {
         "identity": "pending",
@@ -586,9 +604,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.berrycreekmaiduindians.org/",
+          "retrieved_at": "2026-10-31T02:02:24.551085+00:00",
+          "http_status": 200,
+          "sha256": "b740e93cb830f83a274ad941803a2d5524e4eb3c10a9f929ec63955c137c63a8",
+          "source_id": "own-berry-creek-2026-10-31",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-31-berry-creek-capture-08.json",
+          "receipt_id": "r-eafced1058f563ec"
+        }
+      ],
+      "updated_at": "2026-10-31T02:08:35.338072+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-31-berry-creek-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-5e8201b35177",

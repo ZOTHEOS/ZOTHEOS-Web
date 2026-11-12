@@ -413,7 +413,16 @@ def test_the_theater_build_rewrites_stale_doors_and_its_check_catches_them(tmp_p
     films = json.loads((root / 'data/theater/films.json').read_text(encoding='utf-8'))['films']
     good = f'{len(films)} records in '
     assert good in page
-    (root / 'index.html').write_text(page.replace(good, f'{len(films) + 1} records in '), encoding='utf-8', newline='')
+    stale_page = page.replace(good, f'{len(films) + 1} records in ')
+    # The same build must repair the showcase ledger and hero count, not just the Explore door.
+    for cls in ('tsc-n', 'tsc-state'):
+        old_count = f'<span class="{cls}">{len(films)}'
+        assert old_count in stale_page
+        stale_page = stale_page.replace(old_count, f'<span class="{cls}">{len(films) + 3}', 1)
+    hero_count = f'Indigenous voices first, {len(films)} selections'
+    assert hero_count in stale_page
+    stale_page = stale_page.replace(hero_count, f'Indigenous voices first, {len(films) + 4} selections', 1)
+    (root / 'index.html').write_text(stale_page, encoding='utf-8', newline='')
 
     def build(*args):
         return subprocess.run([sys.executable, str(root / 'tools' / 'theater_build.py'), '--root', str(root), *args],

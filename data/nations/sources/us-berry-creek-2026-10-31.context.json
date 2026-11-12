@@ -1,0 +1,104 @@
+{
+  "reviewed": "2026-10-31",
+  "public_notes": [
+    {
+      "nation": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "reading_id": "a-living-community-and-long-relationships",
+      "title": "A Living Community And Long Relationships",
+      "text": "The Tribe introduces Tyme Maidu relationships with the land and water of present-day Butte County as extending since time immemorial. This is its account of continuity, not a dated founding claim or a map of legal ownership. Its public homepage also records a community handgame tournament held in June 2022. This profile concerns Berry Creek Rancheria's government and community; it does not stand in for every Maidu people or government.",
+      "source_urls": [
+        "https://www.berrycreekmaiduindians.org/ourstory",
+        "https://www.berrycreekmaiduindians.org/"
+      ],
+      "fact_ids": [
+        "berry-creek-rancheria-tyme-maidu-us-ca-5b59e748",
+        "berry-creek-rancheria-tyme-maidu-us-ca-c766dc97"
+      ]
+    },
+    {
+      "nation": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "reading_id": "education-through-the-tribes-own-resources",
+      "title": "Education Through The Tribe's Own Resources",
+      "text": "The Tribe's education page gathers assistance information, college connections and scholarship resources for Tribal members. Follow those own-source links to understand the programs on their own terms. Listings can carry dated deadlines and eligibility conditions; this profile does not promise that an application is open or that funding is available. The page is a route to the Tribe's information, not a substitute for its decisions.",
+      "source_urls": [
+        "https://www.berrycreekmaiduindians.org/education"
+      ],
+      "fact_ids": [
+        "berry-creek-rancheria-tyme-maidu-us-ca-9767a5ce"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "url": "https://www.berrycreekmaiduindians.org/ourstory",
+      "label": "Berry Creek Rancheria: Its Own Account",
+      "purpose": "Read the Tribe's introduction to Tyme Maidu relationships with land and water. It does not supply a dated founding year or current title boundaries.",
+      "fact_ids": [
+        "berry-creek-rancheria-tyme-maidu-us-ca-5b59e748"
+      ]
+    },
+    {
+      "nation": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "url": "https://www.berrycreekmaiduindians.org/education",
+      "label": "Berry Creek Rancheria: Education Support",
+      "purpose": "Explore the Tribe's public college, education-support and scholarship links. Verify current deadlines, eligibility and availability with the published program information.",
+      "fact_ids": [
+        "berry-creek-rancheria-tyme-maidu-us-ca-9767a5ce"
+      ]
+    },
+    {
+      "nation": "berry-creek-rancheria-tyme-maidu-us-ca",
+      "url": "https://www.berrycreekmaiduindians.org/",
+      "label": "Berry Creek Rancheria: Community Updates",
+      "purpose": "Read the Tribe's notices, including its account of the June 2022 community handgame tournament. Check posting dates before treating a notice as current.",
+      "fact_ids": [
+        "berry-creek-rancheria-tyme-maidu-us-ca-c766dc97"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review; fresh verification and publication remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-31T02:04:44.447738+00:00",
+      "sha256": "d78afdfd5a520b31a5721b7a296c9845e512b521ca041435514084d590e9be25",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review; fresh verification and publication remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://www.berrycreekmaiduindians.org/",
+        "final_url": "https://www.berrycreekmaiduindians.org/",
+        "retrieved_at": "2026-10-31T02:02:24.551085+00:00",
+        "http_status": 200,
+        "sha256": "b740e93cb830f83a274ad941803a2d5524e4eb3c10a9f929ec63955c137c63a8",
+        "body_bytes": 1471659,
+        "receipt": "research/receipts/2026-10-31-berry-creek-capture-08.json"
+      },
+      {
+        "url": "https://www.berrycreekmaiduindians.org/education",
+        "final_url": "https://www.berrycreekmaiduindians.org/education",
+        "retrieved_at": "2026-10-31T02:03:02.214606+00:00",
+        "http_status": 200,
+        "sha256": "66124321a1be1f0000419dad19a61d3653a03ab4c32f4cb36542433c8c805333",
+        "body_bytes": 846450,
+        "receipt": "research/receipts/2026-10-31-berry-creek-capture-11.json"
+      },
+      {
+        "url": "https://www.berrycreekmaiduindians.org/ourstory",
+        "final_url": "https://www.berrycreekmaiduindians.org/ourstory",
+        "retrieved_at": "2026-10-31T02:02:30.350798+00:00",
+        "http_status": 200,
+        "sha256": "d9f2a932b1f0f0d12499dac800f79a6e9615cb820525ccb39fee9d4867de4ef6",
+        "body_bytes": 756951,
+        "receipt": "research/receipts/2026-10-31-berry-creek-capture-09.json"
+      }
+    ]
+  }
+}

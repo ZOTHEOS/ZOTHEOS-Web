@@ -14,6 +14,8 @@ The art switch is tools/zth_art.py ART_STEPS (plain until the owner's Roots deci
 nothing, so the page's script hashes and policies do not move. The Theater door keeps its class ws-theater, so the
 Theater chapter's pictogram stays where that chapter puts it.
 
+The Theater showcase ledger and hero-link counts use the same catalogue; missing or duplicate count markup fails the build.
+
 The builders keep the doors current, so a Nations or Theater data change rewrites them in the same run:
 tools/theater_build.py calls sync() after it writes theater.html (and checks it under --check), and
 tools/nations_build.py runs this tool in its scratch build and lists index.html among its outputs, so its --check
@@ -228,6 +230,36 @@ def apply(page, block):
     return page[:i] + block + page[j + len(END):]
 
 
+
+def showcase_counts(page, data):
+    """Keep the homepage's existing Theater ledger and hero link tied to the same catalogue as the doors."""
+    start, end = '<!-- theater-showcase:markup -->', '<!-- /theater-showcase:markup -->'
+    if start not in page and end not in page:
+        return page
+    if page.count(start) != 1 or page.count(end) != 1 or page.index(end) < page.index(start):
+        raise DoorsError('index.html needs exactly one complete Theater showcase block')
+    i, j = page.index(start), page.index(end) + len(end)
+    block = page[i:j]
+
+    def one(pattern, value, source):
+        result, count = re.subn(pattern, lambda _: value, source)
+        if count != 1:
+            raise DoorsError('Theater count markup changed; review the homepage ledger before rebuilding')
+        return result
+
+    block = one(r'<span class="tsc-n">[0-9]+</span>', f'<span class="tsc-n">{data["films"]}</span>', block)
+    block = one(r'<span class="tsc-state">[0-9]+ selections</span>', f'<span class="tsc-state">{data["films"]} selections</span>', block)
+    labels = {'full-film':'full films', 'short':'shorts', 'trailer':'trailers', 'excerpt':'excerpts',
+              'recorded-program':'recorded programs', 'official-page':'official pages'}
+    for kind, _, count in data['viewing']:
+        label = labels[kind]
+        block = one(r'<li><span class="tsc-c">[0-9]+</span>' + re.escape(label) + r'</li>',
+                    f'<li><span class="tsc-c">{count}</span>{label}</li>', block)
+    page = page[:i] + block + page[j:]
+    return one(r'<a class="hero-theater" href="#theater-screen">Watch in the Theater: Indigenous voices first, [0-9]+ selections</a>',
+               f'<a class="hero-theater" href="#theater-screen">Watch in the Theater: Indigenous voices first, {data["films"]} selections</a>', page)
+
+
 def install(page):
     if START in page:
         return page
@@ -247,7 +279,8 @@ def sync(root, page=None, check=False):
         text = f.read()
     if START not in text and END not in text:
         return 'skipped'
-    out = apply(text, render(gather(root)))
+    data = gather(root)
+    out = showcase_counts(apply(text, render(data)), data)
     if out == text:
         return 'current'
     if check:
@@ -270,7 +303,8 @@ def main(argv=None):
             page = f.read()
         if a.install:
             page = install(page)
-        out = apply(page, render(gather(a.root)))
+        data = gather(a.root)
+        out = showcase_counts(apply(page, render(data)), data)
         if a.check:
             if out != page:
                 print('landing_doors: index.html is out of date; run py -3.10 tools/landing_doors.py', file=sys.stderr)
