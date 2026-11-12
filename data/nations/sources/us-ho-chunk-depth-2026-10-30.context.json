@@ -1,0 +1,87 @@
+{
+  "reviewed": "2026-10-30",
+  "public_notes": [
+    {
+      "nation": "ho-chunk-nation-us-wi",
+      "reading_id": "constitutional-milestones-and-the-nations-name",
+      "title": "Constitutional Milestones And The Nation’s Name",
+      "text": "The Nation’s About page identifies constitutions of 1963 and 1994 as the basis of its constitutional government. Its homepage links adopting the present constitution in 1994 with reclaiming the name Ho-Chunk. These are modern institutional milestones within a longer people’s history, not dates for the people’s beginning.",
+      "source_urls": [
+        "https://ho-chunknation.com/about/",
+        "https://ho-chunknation.com/"
+      ],
+      "fact_ids": [
+        "ho-chunk-nation-us-wi-8e1aa465",
+        "ho-chunk-nation-us-wi-055b1e03"
+      ]
+    },
+    {
+      "nation": "ho-chunk-nation-us-wi",
+      "reading_id": "representation-within-and-beyond-wisconsin",
+      "title": "Representation Within And Beyond Wisconsin",
+      "text": "The Nation describes three legislative districts within Wisconsin and a fourth outside the state. This describes electoral representation rather than a homeland boundary. People represented by the present government live across state lines. Shared historical names do not make separate present-day governments interchangeable.",
+      "source_urls": [
+        "https://ho-chunknation.com/about/"
+      ],
+      "fact_ids": [
+        "ho-chunk-nation-us-wi-74cddf1f"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "ho-chunk-nation-us-wi",
+      "url": "https://ho-chunknation.com/about/",
+      "label": "Ho-Chunk Nation: Constitutional Government",
+      "purpose": "Read the Nation’s account of its constitutional framework and legislative representation.",
+      "fact_ids": [
+        "ho-chunk-nation-us-wi-055b1e03",
+        "ho-chunk-nation-us-wi-74cddf1f"
+      ]
+    },
+    {
+      "nation": "ho-chunk-nation-us-wi",
+      "url": "https://ho-chunknation.com/",
+      "label": "Ho-Chunk Nation: Name And Constitution",
+      "purpose": "Read the Nation’s public account linking its current name and the 1994 constitution.",
+      "fact_ids": [
+        "ho-chunk-nation-us-wi-8e1aa465"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review of the exact append proposal; fresh verification and publication remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-30T22:16:59.841587+00:00",
+      "sha256": "fa178cc373331f26c3a1103fd48c39fd6ca102f1559665e062857678a72d81a6",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review of the exact append proposal; fresh verification and publication remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://ho-chunknation.com/",
+        "final_url": "https://ho-chunknation.com/",
+        "retrieved_at": "2026-10-30T22:08:29.031250+00:00",
+        "http_status": 200,
+        "sha256": "c665a8d124f2ad0658e9834936df9055b968c9eb160de6dfb2823d042cd7361c",
+        "body_bytes": 359353,
+        "receipt": "research/receipts/2026-10-30-ho-chunk-capture-03.json"
+      },
+      {
+        "url": "https://ho-chunknation.com/about/",
+        "final_url": "https://ho-chunknation.com/about/",
+        "retrieved_at": "2026-10-30T22:08:41.369782+00:00",
+        "http_status": 200,
+        "sha256": "f3d06ce2b6c5ddc72f646024e4cc36038bd8d05fc3a66679f53dd7b9806e4cc3",
+        "body_bytes": 68889,
+        "receipt": "research/receipts/2026-10-30-ho-chunk-capture-04.json"
+      }
+    ]
+  }
+}

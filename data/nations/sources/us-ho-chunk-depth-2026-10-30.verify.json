@@ -1,0 +1,41 @@
+{
+  "region": "us-plains-midwest",
+  "checked": "2026-10-30",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-10-30T22:16:59.841587+00:00",
+    "sha256": "fa178cc373331f26c3a1103fd48c39fd6ca102f1559665e062857678a72d81a6",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review of the exact append proposal; fresh verification and publication remain separate."
+  },
+  "results": [
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Full source meaning independently reviewed; short anchor is not treated as proof of all wording by itself. Event dates and people/government distinctions retained."
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "Full source meaning independently reviewed; short anchor is not treated as proof of all wording by itself. Event dates and people/government distinctions retained."
+    },
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Full source meaning independently reviewed; short anchor is not treated as proof of all wording by itself. Event dates and people/government distinctions retained."
+    }
+  ],
+  "names": [
+    {
+      "id": "ho-chunk-nation-us-wi",
+      "verdict": "keep",
+      "note": "Existing named government profile reused; old metadata, broader people aliases and fact clocks are not freshly certified or rewritten."
+    }
+  ]
+}

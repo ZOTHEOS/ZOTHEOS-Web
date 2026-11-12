@@ -1,0 +1,95 @@
+{
+  "reviewed": "2026-10-30",
+  "public_notes": [
+    {
+      "nation": "sault-ste-marie-tribe-chippewa-us-mi",
+      "reading_id": "organizing-and-building-an-evidence-record",
+      "title": "Organizing And Building An Evidence Record",
+      "text": "The Tribe traces modern organizing to Sugar Island meetings in the 1940s and a named organization in 1953. It describes community members assembling archival and census records to support their case. This is institutional history within much longer Anishinaabeg continuity.",
+      "source_urls": [
+        "https://www.saulttribe.com/history-a-culture/story-of-our-people"
+      ],
+      "fact_ids": [
+        "sault-ste-marie-tribe-chippewa-us-mi-6221fc3e",
+        "sault-ste-marie-tribe-chippewa-us-mi-3e40a802"
+      ]
+    },
+    {
+      "nation": "sault-ste-marie-tribe-chippewa-us-mi",
+      "reading_id": "recognition-and-a-written-constitution",
+      "title": "Recognition And A Written Constitution",
+      "text": "The Tribe dates recognition to 1972 and constitution adoption to fall 1975. Those dates concern government institutions, not the origins of a people. Its separate sovereignty explanation provides a dated account rather than a current legal determination.",
+      "source_urls": [
+        "https://www.saulttribe.com/history-a-culture/story-of-our-people",
+        "https://www.saulttribe.com/history-a-culture/sovereignty"
+      ],
+      "fact_ids": [
+        "sault-ste-marie-tribe-chippewa-us-mi-3e40a802",
+        "sault-ste-marie-tribe-chippewa-us-mi-747682bb"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "sault-ste-marie-tribe-chippewa-us-mi",
+      "url": "https://www.saulttribe.com/history-a-culture/story-of-our-people",
+      "label": "Sault Tribe: Story Of Our People",
+      "purpose": "Read the Tribe's account of modern organizing, recognition and constitutional development.",
+      "fact_ids": [
+        "sault-ste-marie-tribe-chippewa-us-mi-6221fc3e",
+        "sault-ste-marie-tribe-chippewa-us-mi-3e40a802",
+        "sault-ste-marie-tribe-chippewa-us-mi-747682bb"
+      ]
+    },
+    {
+      "nation": "sault-ste-marie-tribe-chippewa-us-mi",
+      "url": "https://www.saulttribe.com/history-a-culture/sovereignty",
+      "label": "Sault Tribe: Sovereignty",
+      "purpose": "Read its sovereignty explanation, visibly updated in 2017; this is not current legal advice.",
+      "fact_ids": [
+        "sault-ste-marie-tribe-chippewa-us-mi-3e40a802"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "status": "Separate automated source meaning, identity and respect review of the exact append proposal; fresh verification and publication remain separate.",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-10-30T22:17:59.628650+00:00",
+      "sha256": "2c85ae7dc9ef40ebe7e403b102b8456a4260e4584fbec58c67cddf5141a3ea0d",
+      "human_review_claimed": false,
+      "nation_approval_claimed": false,
+      "status": "Separate automated source meaning, identity and respect review of the exact append proposal; fresh verification and publication remain separate."
+    },
+    "sources": [
+      {
+        "url": "https://www.saulttribe.com/history-a-culture/sovereignty",
+        "final_url": "https://www.saulttribe.com/history-a-culture/sovereignty",
+        "retrieved_at": "2026-10-30T22:09:07.430137+00:00",
+        "http_status": 200,
+        "sha256": "9f267752664658f58d4439fbeccff8c12d733d5d054d1c18b4e4a21b9a3a7eb8",
+        "body_bytes": 34703,
+        "receipt": "research/receipts/2026-10-30-sault-capture-15.json",
+        "publication_date": null,
+        "modified_date": "2017-01-28",
+        "visible_last_updated": "28 January 2017"
+      },
+      {
+        "url": "https://www.saulttribe.com/history-a-culture/story-of-our-people",
+        "final_url": "https://www.saulttribe.com/history-a-culture/story-of-our-people",
+        "retrieved_at": "2026-10-30T22:08:18.740295+00:00",
+        "http_status": 200,
+        "sha256": "2652c2b91d64446e9f65be63ab1a7a027722f18780af92151cf83f2d0ca18c43",
+        "body_bytes": 38171,
+        "receipt": "research/receipts/2026-10-30-sault-capture-14.json",
+        "publication_date": null,
+        "modified_date": "2017-01-28",
+        "visible_last_updated": "28 January 2017"
+      }
+    ]
+  }
+}

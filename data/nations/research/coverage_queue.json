@@ -3555,9 +3555,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-ho-chunk-depth-2026-10-30"
       ],
       "review": {
         "identity": "pending",
@@ -3573,9 +3574,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://ho-chunknation.com/",
+          "retrieved_at": "2026-10-30T22:08:29.031250+00:00",
+          "http_status": 200,
+          "sha256": "c665a8d124f2ad0658e9834936df9055b968c9eb160de6dfb2823d042cd7361c",
+          "source_id": "own-ho-chunk-depth-2026-10-30",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-30-ho-chunk-capture-03.json",
+          "receipt_id": "r-fc929f7e0c1d651b"
+        }
+      ],
+      "updated_at": "2026-10-30T22:27:08.453624+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-30-ho-chunk-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-b32eae673a12",
@@ -6006,9 +6023,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-morongo-depth-2026-10-30"
       ],
       "review": {
         "identity": "pending",
@@ -6024,9 +6042,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://morongonation.org/",
+          "retrieved_at": "2026-10-30T22:09:58.359780+00:00",
+          "http_status": 200,
+          "sha256": "dd8f50f2ca1e5fa24bf4a96f9e57be81b766cd0dfd3b97b841ffd2c334984846",
+          "source_id": "own-morongo-depth-2026-10-30",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-30-morongo-capture-08.json",
+          "receipt_id": "r-0027f645ed75e1da"
+        }
+      ],
+      "updated_at": "2026-10-30T22:27:08.453662+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-30-morongo-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-eaab4e063474",
@@ -9312,9 +9346,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-sault-depth-2026-10-30"
       ],
       "review": {
         "identity": "pending",
@@ -9330,9 +9365,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.saulttribe.com/about-us",
+          "retrieved_at": "2026-10-30T22:07:58.603488+00:00",
+          "http_status": 200,
+          "sha256": "50c2c36f2b3387e25148e1cdd3055cd2110ee16f66e777018f63eb90c6298f6f",
+          "source_id": "own-sault-depth-2026-10-30",
+          "retrieval_method": "http",
+          "evidence_receipt": "receipts/2026-10-30-sault-capture-13.json",
+          "receipt_id": "r-adc47613701789d0"
+        }
+      ],
+      "updated_at": "2026-10-30T22:27:08.453698+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Existing registry profile linked by an explicit identity-review receipt. Do not re-add it; existing source-refresh rules apply.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-10-30-sault-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-88c895d7c524",

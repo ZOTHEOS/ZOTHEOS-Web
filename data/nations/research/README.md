@@ -657,3 +657,18 @@ The schooling fact keeps its decade in the prose with null optional date metadat
 silent game-card omission without inventing a year. Public receipts omit bodies, personal contacts,
 raw headers and local paths. Source record: batches/2026-10-29-own-source-histories.json.
 Coverage remains incomplete, and no human review or Nation endorsement is implied.
+
+
+## October 30 existing-government depth
+
+Morongo, Ho-Chunk and Sault are three existing government profiles, not newly discovered Nations.
+Nine new own-source facts support six short reading layers and seven direct resources. Three
+previously unreviewed federal-directory crosswalks are explicitly resolved without changing
+the dated source names or merging broader peoples and other governments. All 1,393 earlier facts
+and their clocks remain exact; all other queue tasks and publication holds are preserved.
+
+Thirteen author HTTP200 responses, one original Ho-Chunk www301, one pre-HTTP restricted-execution
+DNS failure and nine fresh-verifier HTTP200 responses are recorded separately. The Sault author
+configured 35s instead of canonical 20s; its responses completed in under 3s, and the defect is retained,
+not relabeled compliant. Fresh verification used 20s. Source record:
+batches/2026-10-30-own-source-depth.json. Final browser/release/live gates remain separate.
