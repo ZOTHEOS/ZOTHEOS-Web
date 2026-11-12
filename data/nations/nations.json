@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-31",
-  "count": 485,
-  "facts": 1409,
+  "generated": "2026-11-10",
+  "count": 486,
+  "facts": 1412,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 31
+    "us-west-pacific": 32
   },
   "nations": [
     {
@@ -29304,6 +29304,71 @@
           "status": "verified",
           "checked": "2026-10-31",
           "last_verified": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "blue-lake-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Blue Lake Rancheria",
+      "also": [
+        "Blue Lake Rancheria, California"
+      ],
+      "pronounce": null,
+      "lands": "northwest California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.bluelakerancheria-nsn.gov/",
+      "name_source_url": "https://www.bluelakerancheria-nsn.gov/about/",
+      "facts": [
+        {
+          "id": "blue-lake-rancheria-us-ca-127b60d8",
+          "text": "Blue Lake Rancheria recounts that it began in 1908 as a small reservation for Native Americans who had been displaced.",
+          "kind": "history",
+          "as_of": "1908",
+          "source": {
+            "title": "March 23rd: Blue Lake Rancheria’s Independence Day",
+            "publisher": "Blue Lake Rancheria",
+            "url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+            "accessed": "2026-11-09"
+          },
+          "evidence": "founded in 1908 as a small reservation for displaced Native Americans",
+          "status": "verified",
+          "checked": "2026-11-09",
+          "last_verified": "2026-11-09"
+        },
+        {
+          "id": "blue-lake-rancheria-us-ca-ab21295e",
+          "text": "The Rancheria dates restoration of its federal recognition to 1983 through Tillie Hardwick v. U.S.",
+          "kind": "history",
+          "as_of": "1983",
+          "source": {
+            "title": "March 23rd: Blue Lake Rancheria’s Independence Day",
+            "publisher": "Blue Lake Rancheria",
+            "url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+            "accessed": "2026-11-09"
+          },
+          "evidence": "reinstated to federal recognition status in 1983",
+          "status": "verified",
+          "checked": "2026-11-09",
+          "last_verified": "2026-11-09"
+        },
+        {
+          "id": "blue-lake-rancheria-us-ca-d2a68f3d",
+          "text": "The Rancheria’s sustainability department identifies energy, water, food, communications and information technology, and transportation as priorities for resilience.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Sustainability & Resilience",
+            "publisher": "Blue Lake Rancheria",
+            "url": "https://www.bluelakerancheria-nsn.gov/departments/sustainability-and-resilience/",
+            "accessed": "2026-11-09"
+          },
+          "evidence": "Lifeline sectors include: energy, water, food, communication/IT, and transportation.",
+          "status": "verified",
+          "checked": "2026-11-09",
+          "last_verified": "2026-11-09"
         }
       ]
     },

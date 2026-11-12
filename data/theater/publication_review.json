@@ -1,27 +1,33 @@
 {
-  "version": 5,
-  "prepared_at": "2026-10-31T02:15:48.482552+00:00",
+  "version": 6,
+  "prepared_at": "2026-11-10T15:17:35.434687+00:00",
   "publisher": "ZOTHEOS",
-  "status": "reviewed-candidate-awaiting-protected-browser-preview",
+  "status": "reviewed-candidate-awaiting-publication",
+  "prior_review": {
+    "commit": "7e9b2bf45bee2526fe47efda0843ad3ec13215d0",
+    "version": 5,
+    "catalogue_sha256": "41af7dfc9df179e842381822f2bbc341d6efddb216fd1a561dc4a275c5da375c"
+  },
   "catalogue": {
-    "sha256": "41af7dfc9df179e842381822f2bbc341d6efddb216fd1a561dc4a275c5da375c",
-    "titles": 231,
+    "sha256": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404",
+    "titles": 232,
     "configured_players": 224,
-    "source_only": 7,
+    "source_only": 8,
     "featured": "yanuni",
     "viewing": {
-      "full-film": 18,
-      "recorded-program": 67,
-      "trailer": 50,
-      "short": 68,
       "excerpt": 21,
-      "official-page": 7
+      "full-film": 19,
+      "official-page": 7,
+      "recorded-program": 67,
+      "short": 68,
+      "trailer": 50
     }
   },
-  "request_revision": "Source-backed land and water films, two missing Tribal-government profiles, and reviewed Theater filter clarity/recovery UI.",
+  "request_revision": "Add Blue Lake Rancheria from its own sources and list one complete documentary with an official viewing link.",
   "source_review": {
-    "batch": "research/batches/2026-10-31-land-water-continuation.json",
-    "sha256": "fc5c635cc50622bfd6a2d18e05a3b324717122c4f5578cb5bc3b924bc0f2f821"
+    "batch": "research/batches/2026-11-08-as-long-as-the-rivers-run.json",
+    "sha256": "719a395c809fac12702c2c6a1c84b6884f3e99c9cc9df0755e0cce66c01999ad",
+    "finding": "Salmon Defense supplies the official YouTube edition. This record uses an official link."
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
@@ -32,18 +38,60 @@
       "errors": 0,
       "skipped": 0
     },
-    "full_suite_seconds": 230.1045503000496,
-    "completed_at": "2026-10-31T02:28:36.439517+00:00",
-    "build_stages_passed": 9,
-    "full_suite_xml_sha256": "0f1ff90f2d3b0becf576a734a138a8577138ad30d32d6f23e34a9e7c3a3e9377",
-    "build_results_sha256": "a5b54feea55f28ca8630ee2b4eb56944d1c57280bafa1a32659e0c0a08d3427b",
-    "scope": "All existing website automated tests; fonts, links, contrast, source/data and CSP contracts. Static markup and game export audited separately. Actual responsive browser, playback, caption and live deployment verification are not claimed."
+    "full_suite_wall_seconds": 382.9381066999922,
+    "full_suite_xml_sha256": "d711ab269a815b75b909174f309f1cfdff65218f78398354e7fb9c39490e58f8",
+    "canonical_build_check": {
+      "exit_code": 0,
+      "stdout_sha256": "e326b8a3fd94c6ee63fbf9129b4fb386244626a467a7a1ba0a859f6c74a7c7ea"
+    },
+    "registry_validator": {
+      "errors": 0,
+      "preexisting_warnings": 54
+    },
+    "game_data": {
+      "quick_cards": 486,
+      "profiles_with_history": 108,
+      "new_dated_facts": 2,
+      "skipped": 0
+    },
+    "scope": "Candidate source and identity review, complete local tests, canonical page and security checks, and educational data comparison.",
+    "browser": {
+      "reviewed_utc_date": "2026-11-12",
+      "method": "Independent headless Chrome run serving pinned website files and committed Vercel CSP in memory.",
+      "chrome_version": "157.0.8103.52",
+      "reviewed_commit": "d90af683d0108832eed53a9efb361976228ce6ea",
+      "viewport_pixels": [
+        [
+          390,
+          844
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "checks": [
+        "Blue Lake's historical facts, source links and keyboard history navigation.",
+        "Rivers Run's exact story link, Full Film and Official Site filters, and official viewing destination.",
+        "Phone Filters panel by touch, pointer and keyboard.",
+        "No horizontal overflow, page errors, CSP violations or player requests for the source-only card."
+      ],
+      "limitations": "External requests were blocked. Playback, caption quality, and production behavior are pending."
+    }
   },
   "review_pins": {
-    "nation_integration": "333b807fb516a464442d73fc77afc0de3400dd7929b29a527e65d70bea3d8477",
-    "theater_sources": "3804d49e06b5fe748496ea38864758e25d73d21f7a848ccb5471933203e5a567",
-    "ui_canonical_patch": "c975e7b6153678a0d00af3475d9a56e4fe9408fd847c7db3649f8d6dd62a2bcf",
-    "homepage_count_fix": "e2ff480669e0febbd24de7586f527bdf1727b02077b650e4108bfb925d98887c",
-    "generated_reading": "aaf3b676e7aed10878c60ed7dabf6080c0ec2f5b2d8dd1402142e3fdb027294e"
-  }
+    "data/nations/nations.json": "7471c253019d0bab3514b41a3b7f8672d609db735cf812758dea770d530a41af",
+    "data/nations/nations.min.json": "f8cdaf549129cefea2fdafa616ac6a10fe150e4af5c02f50ca82cc4f629777bc",
+    "data/nations/context_links.json": "3e47cdaf9de09502a81900ac163b32ecdaace87d129df9963f97d70e229c129c",
+    "data/nations/research/us_federal_directory.json": "fd0f1d5039b378f3ace61a1b96d8bba389ffed823963ad93b451bfab7275dff6",
+    "data/nations/research/coverage_queue.json": "bf741900de10165f90439a2b73702146b441e06135650598f762150eabfc4749",
+    "data/nations/research/batches/2026-11-10-ute-mountain-park-lead.json": "a5c033c1f838c8848ad1eca9d32ac3df6d823408248f712fdb781c79e22abab7",
+    "data/nations/research/receipts/2026-11-10-blue-lake-identity-respect.json": "d4c349f62a4d559ccd2e12ca6004e7990db92159dee2cb228b26ac99b76114eb",
+    "data/theater/films.json": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404"
+  },
+  "pending": [
+    "Production publication and verification",
+    "Actual film playback, visitor access and caption quality",
+    "Site embedding permission before any player is configured"
+  ]
 }

@@ -1,0 +1,120 @@
+{
+  "reviewed": "2026-11-10",
+  "public_notes": [
+    {
+      "nation": "blue-lake-rancheria-us-ca",
+      "reading_id": "reservation-and-restored-recognition",
+      "title": "Reservation And Restored Recognition",
+      "text": "Blue Lake Rancheria dates the creation of its reservation to 1908 and the restoration of its federal recognition to 1983. Its own account places the Rancheria in Wiyot ancestral territory. These dates describe events in the history of this government.",
+      "source_urls": [
+        "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+        "https://www.bluelakerancheria-nsn.gov/about/"
+      ],
+      "fact_ids": [
+        "blue-lake-rancheria-us-ca-127b60d8",
+        "blue-lake-rancheria-us-ca-ab21295e"
+      ]
+    },
+    {
+      "nation": "blue-lake-rancheria-us-ca",
+      "reading_id": "resilience-priorities",
+      "title": "Planning For Community Resilience",
+      "text": "The Rancheria's sustainability department describes five systems it considers essential to resilience. Its account covers energy, water, food, communications and transportation.",
+      "source_urls": [
+        "https://www.bluelakerancheria-nsn.gov/departments/sustainability-and-resilience/"
+      ],
+      "fact_ids": [
+        "blue-lake-rancheria-us-ca-d2a68f3d"
+      ]
+    }
+  ],
+  "official_resources": [
+    {
+      "nation": "blue-lake-rancheria-us-ca",
+      "url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+      "label": "Blue Lake Rancheria: Independence Day",
+      "purpose": "Read the Rancheria's account of the reservation and the restoration of federal recognition.",
+      "fact_ids": [
+        "blue-lake-rancheria-us-ca-127b60d8",
+        "blue-lake-rancheria-us-ca-ab21295e"
+      ]
+    },
+    {
+      "nation": "blue-lake-rancheria-us-ca",
+      "url": "https://www.bluelakerancheria-nsn.gov/departments/sustainability-and-resilience/",
+      "label": "Blue Lake Rancheria: Sustainability And Resilience",
+      "purpose": "See which systems the department prioritizes in its resilience work.",
+      "fact_ids": [
+        "blue-lake-rancheria-us-ca-d2a68f3d"
+      ]
+    },
+    {
+      "nation": "blue-lake-rancheria-us-ca",
+      "url": "https://www.bluelakerancheria-nsn.gov/about/",
+      "label": "Blue Lake Rancheria: About The Tribe",
+      "purpose": "Read the Tribe's introduction to its government and history.",
+      "fact_ids": [
+        "blue-lake-rancheria-us-ca-127b60d8",
+        "blue-lake-rancheria-us-ca-ab21295e"
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewer": "ZOTHEOS",
+    "independent_review": {
+      "reviewer": "ZOTHEOS",
+      "reviewed_at": "2026-11-10T15:05:47Z",
+      "evidence_receipt": "receipts/2026-11-10-blue-lake-identity-respect.json",
+      "review_kind": "Independent AI-assisted retained-source review"
+    },
+    "person_check_receipt": null,
+    "human_review_claimed": false,
+    "nation_approval_claimed": false,
+    "sources": [
+      {
+        "url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+        "final_url": "https://www.bluelakerancheria-nsn.gov/blue-lake-rancheria-independence-day/",
+        "retrieved_at": "2026-11-09T15:02:31.556357Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 153109,
+        "sha256": "d835987c26427bfc6aa70e0c10e25f2b1eac193ab828ce8319480a089b3fdca4",
+        "redirects": [],
+        "cms_published_at": "2026-04-28T16:37:54Z",
+        "observed_case_name": "Tillie Hardwick v. U.S.",
+        "evidence": [
+          "founded in 1908 as a small reservation for displaced Native Americans",
+          "reinstated to federal recognition status in 1983"
+        ]
+      },
+      {
+        "url": "https://www.bluelakerancheria-nsn.gov/departments/sustainability-and-resilience/",
+        "final_url": "https://www.bluelakerancheria-nsn.gov/departments/sustainability-and-resilience/",
+        "retrieved_at": "2026-11-09T15:02:44.037623Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 167849,
+        "sha256": "cabb0246becfe18bd685566f89a4bd3fe67dae0a25629c9fdc4cfa09608c37f3",
+        "redirects": [],
+        "cms_published_at": "2024-09-10T20:55:49Z",
+        "cms_modified_at": "2026-05-05T21:51:59Z",
+        "evidence": [
+          "Lifeline sectors include: energy, water, food, communication/IT, and transportation."
+        ]
+      },
+      {
+        "url": "https://www.bluelakerancheria-nsn.gov/about/",
+        "final_url": "https://www.bluelakerancheria-nsn.gov/about/",
+        "retrieved_at": "2026-11-09T15:02:55.885038Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 125830,
+        "sha256": "7f2d575926c8dbd066a026ac889a2ba927d1aba49ccf151bd7130b4c2d30b942",
+        "redirects": [],
+        "cms_published_at": "2024-08-27T22:20:55Z",
+        "cms_modified_at": "2024-08-29T20:28:06Z",
+        "evidence_note": "Corroborates the 1908 reservation, 1983 restoration of recognition and Wiyot ancestral territory."
+      }
+    ]
+  }
+}

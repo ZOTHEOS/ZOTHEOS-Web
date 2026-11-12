@@ -1,0 +1,40 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-09",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-10T15:05:47Z",
+    "evidence_receipt": "receipts/2026-11-10-blue-lake-identity-respect.json",
+    "review_kind": "Independent AI-assisted retained-source review"
+  },
+  "results": [
+    {
+      "id": "blue-lake-rancheria-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The Rancheria attributes the 1908 date to the creation of its reservation."
+    },
+    {
+      "id": "blue-lake-rancheria-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The Rancheria attributes restored federal recognition to the 1983 Tillie Hardwick case."
+    },
+    {
+      "id": "blue-lake-rancheria-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The department describes five resilience priorities without dating them or reporting outcomes."
+    }
+  ],
+  "names": [
+    {
+      "id": "blue-lake-rancheria-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "Own name and separate government identity supported by the retained source review."
+    }
+  ]
+}

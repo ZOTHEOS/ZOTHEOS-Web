@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-10",
+  "status": "research-lead",
+  "task_id": "history-ute-mountain-rights-water-education",
+  "government_id": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "proposed_claims": [
+    {
+      "text": "The Ute Mountain Ute Mancos Canyon Historic District was listed in the National Register on May 2, 1972.",
+      "event_date": "1972-05-02",
+      "source_urls": [
+        "https://www.utemountaintribalpark.info/history.html",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/72000273"
+      ]
+    },
+    {
+      "text": "The Tribe’s park history says its first tours took place under its first director, Arthur Cuthair.",
+      "event_date": null,
+      "source_urls": [
+        "https://www.utemountaintribalpark.info/history.html"
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://www.utemountainutetribe.com/",
+      "retrieved_at": "2026-11-10T15:05:17.722065Z",
+      "http_status": 200,
+      "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+      "observation": "The Tribe links to the park host using HTTP. The HTTPS history route was checked separately."
+    },
+    {
+      "url": "https://www.utemountaintribalpark.info/robots.txt",
+      "retrieved_at": "2026-11-10T15:05:18.088443Z",
+      "http_status": 404,
+      "body_bytes": 13,
+      "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402"
+    },
+    {
+      "url": "https://www.utemountaintribalpark.info/history.html",
+      "retrieved_at": "2026-11-10T15:05:38.826653Z",
+      "http_status": 200,
+      "body_bytes": 14183,
+      "sha256": "dee31119c4884088151176f6b85c06c4ffdacc96eb81cf6d7d7fc7d9ef2e5a0f",
+      "evidence": [
+        "Historical District On May 2, 1972",
+        "The first tours were conducted under the directorship of the first Tribal Park Director"
+      ],
+      "observation": "The account names Arthur Cuthair as the director."
+    },
+    {
+      "url": "https://npgallery.nps.gov/robots.txt",
+      "retrieved_at": "2026-11-10T15:06:16.548575Z",
+      "http_status": 404,
+      "body_bytes": 162,
+      "sha256": "82058c7518703dd48806ce8b4ca4663209cbeb645c9d4d1144114bcd64ae7f52"
+    },
+    {
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000273",
+      "retrieved_at": "2026-11-10T15:06:42.296839Z",
+      "http_status": 200,
+      "body_bytes": 28320,
+      "sha256": "b126bb289ee7edef4b1b3c99bfa552d8a9585aa70cd2d1fef6a858c8b32989d2",
+      "evidence": [
+        "Ute Mountain Ute Mancos Canyon Historic District",
+        "Date Published: 5/2/1972"
+      ],
+      "observation": "Public metadata marks the address restricted. The underlying asset was not opened."
+    }
+  ],
+  "source_limits": [
+    "Direct responses were hashed in memory. Bodies were not retained.",
+    "Keep listing and park establishment as separate events. The tour source identifies the director in office and leaves individual guides unspecified.",
+    "Review the linked park host, permissions and public wording before moving these claims into the profile. Leave restricted location and site details out."
+  ],
+  "publication_review": "pending"
+}

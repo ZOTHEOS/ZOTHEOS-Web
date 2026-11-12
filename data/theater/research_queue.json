@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-31",
+  "updated": "2026-11-12",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -181,6 +181,24 @@
       ],
       "reason": "A newly read terms page raises a framing and usage-scope question for future NFB additions. It has not been reconciled with publisher embed-specific permissions.",
       "next": "Review the actual applicable permissions before new NFB additions. No conclusion about existing records or automatic removal is made."
+    },
+    {
+      "id": "as-long-as-the-rivers-run-2026-11-08",
+      "title": "As Long As The Rivers Run",
+      "status": "research-note",
+      "checked": "2026-11-08",
+      "proposed_viewing_type": "Full Film",
+      "proposed_watch_mode": "official-source-only",
+      "batch": "research/batches/2026-11-08-as-long-as-the-rivers-run.json",
+      "source_urls": [
+        "https://salmondefense.org/projects/educate/as-long-as-the-rivers-run/",
+        "https://www.youtube.com/watch?v=lN46NWkEFow",
+        "https://archive.org/details/alatrr"
+      ],
+      "reason": "The rights holder directly links two versions of one complete documentary. Fresh provider metadata and the original YouTube thumbnail were checked. The two digital runtimes remain separate. No catalog entry is added by this handoff.",
+      "next": "Verify the merged Vercel production output. The film uses its official viewing link. Review playback, caption behavior and embedding permission before adding a player.",
+      "draft_reviewed": "2026-11-09",
+      "build_state": "local-candidate"
     }
   ]
 }

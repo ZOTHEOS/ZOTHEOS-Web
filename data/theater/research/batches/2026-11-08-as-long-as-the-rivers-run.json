@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-08",
+  "baseline_commit": "7e9b2bf45bee2526fe47efda0843ad3ec13215d0",
+  "status": "candidate",
+  "title": "As Long As The Rivers Run",
+  "year": 1971,
+  "proposed_viewing_type": "Full Film",
+  "proposed_watch_mode": "official-source-only",
+  "primary_official_viewing_url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+  "rights_holder_url": "https://salmondefense.org/projects/educate/as-long-as-the-rivers-run/",
+  "related_edition_url": "https://archive.org/details/alatrr",
+  "proposed_summary": "The documentary follows Native people in the Pacific Northwest asserting treaty fishing rights during the Fish Wars of the late 1960s and early 1970s.",
+  "acquisition": {
+    "robots_checks": {
+      "checked": "2026-11-08",
+      "http_status": 200,
+      "hosts": [
+        "salmondefense.org",
+        "www.youtube.com",
+        "archive.org",
+        "i.ytimg.com"
+      ],
+      "exact_retrieval_times_retained": false
+    },
+    "salmon_defense_crawl_delay_seconds": 60,
+    "capture_limit": "Bodies and thumbnails were hashed in memory. No video files, response bodies or images are retained."
+  },
+  "receipts": [
+    {
+      "retrieval_method": "http",
+      "http_status": 200,
+      "retrieved_at": "2026-11-08T19:32:50.358287Z",
+      "url": "https://salmondefense.org/projects/educate/as-long-as-the-rivers-run/",
+      "sha256": "caba24385e3ee879e5358fbb8e2099572dc32e9f9d27da25e6abf57bd8bb5922",
+      "observations": {
+        "title": "As Long As The Rivers Run",
+        "publisher": "Salmon Defense",
+        "publication_date": null,
+        "source_modified_at": "2024-12-24T04:41:29Z",
+        "evidence": "Salmon Defense states that it acquired the rights and digitally remastered the film. It credits director Carol Burns and co-producer Hank Adams and directly links the YouTube and Archive editions."
+      }
+    },
+    {
+      "retrieval_method": "http",
+      "http_status": 200,
+      "retrieved_at": "2026-11-08T19:31:41.829468Z",
+      "url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+      "sha256": "f60cd8405824825fc6c5c83e1ad567d2452c574c60e2b002bcc1a360cc9a64ab",
+      "observations": {
+        "publisher_channel": "salmondefense",
+        "upload_date": "2018-07-02",
+        "player_runtime_seconds": 3605,
+        "page_runtime_seconds": 3606,
+        "player_metadata_status": "OK",
+        "playable_in_embed_metadata": true,
+        "region_codes_observed": [
+          "US",
+          "CA"
+        ],
+        "captions_metadata": "Includes an English auto-generated track."
+      }
+    },
+    {
+      "retrieval_method": "http",
+      "http_status": 200,
+      "retrieved_at": "2026-11-08T19:31:42.459392Z",
+      "url": "https://archive.org/metadata/alatrr",
+      "sha256": "0d6e7a950c2cab1c66f633ff9b9c1973c485e531c9efb0d72766e106fd2a5f25",
+      "observations": {
+        "viewing_url": "https://archive.org/details/alatrr",
+        "archive_item_id": "alatrr",
+        "film_year": 1971,
+        "item_upload_date": "2024-12-24",
+        "original_mpeg4_runtime_seconds": 3578.31,
+        "item_license_label": "CC BY-NC-ND 4.0"
+      }
+    },
+    {
+      "retrieval_method": "http",
+      "http_status": 200,
+      "retrieved_at": "2026-11-08T19:32:24.478437Z",
+      "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+      "sha256": "a1cf8c3bda173c21810e543b3bc4100dc3d6839a366bb7cdfed6d8b230ffcd59",
+      "observations": {
+        "media_type": "image/jpeg",
+        "width": 480,
+        "height": 360,
+        "bytes": 11757,
+        "source": "og:image from the exact YouTube upload",
+        "retained": false
+      }
+    }
+  ],
+  "edition_note": "Keep both provider references under one film. The YouTube upload's player and page runtimes differ by one second. The Archive remaster metadata reports a shorter duration. No editorial difference or runtime discrepancy cause is inferred.",
+  "rights_note": "The self-identified rights holder supplies official links. The Archive item's license label and YouTube's embeddability flag do not establish permission for every use. Review applicable terms before configuring a player.",
+  "unverified": [
+    "Actual playback and availability for a given visitor",
+    "Caption availability during playback and caption accuracy",
+    "Site-specific embedding permission and provider policy review",
+    "Full-film editorial review and approved content guidance"
+  ],
+  "catalog_changes": 0,
+  "draft_record": {
+    "id": "as-long-as-the-rivers-run",
+    "title": "As Long As The Rivers Run",
+    "year": 1971,
+    "runtime": "60m 05s · YouTube Edition",
+    "credits": "Directed by Carol Burns and co-produced by Hank Adams.",
+    "publisher": "Salmon Defense",
+    "synopsis": "During the Fish Wars of the late 1960s and early 1970s, Native people in the Pacific Northwest asserted their treaty fishing rights.",
+    "topics": [
+      "land",
+      "sovereignty",
+      "resistance"
+    ],
+    "watch_url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+    "viewing": "full-film",
+    "availability": "Salmon Defense links to this full YouTube edition. Its metadata lists automatically generated English captions. Playback, regional access and caption quality remain unverified.",
+    "content_note": "Covers conflict over treaty fishing rights during the Fish Wars.",
+    "perspective": "Follows Native people asserting treaty fishing rights in the Pacific Northwest.",
+    "region": "north-america",
+    "form": "documentary",
+    "location": "Pacific Northwest, United States",
+    "youtube_id": null,
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "thumbnail_url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+    "thumbnail_credit": "Official YouTube preview for the Salmon Defense upload.",
+    "thumbnail_source": "https://www.youtube.com/watch?v=lN46NWkEFow",
+    "sources": [
+      {
+        "url": "https://salmondefense.org/projects/educate/as-long-as-the-rivers-run/",
+        "title": "As Long As The Rivers Run",
+        "publisher": "Salmon Defense",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:32:50.358287Z",
+        "http_status": 200,
+        "sha256": "caba24385e3ee879e5358fbb8e2099572dc32e9f9d27da25e6abf57bd8bb5922"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=lN46NWkEFow",
+        "title": "Official YouTube Edition Metadata",
+        "publisher": "Salmon Defense / YouTube",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:31:41.829468Z",
+        "http_status": 200,
+        "sha256": "f60cd8405824825fc6c5c83e1ad567d2452c574c60e2b002bcc1a360cc9a64ab"
+      },
+      {
+        "url": "https://archive.org/metadata/alatrr",
+        "title": "Archive Remaster Item Metadata",
+        "publisher": "Internet Archive",
+        "checked": "2026-11-08",
+        "checked_at": "2026-11-08T19:31:42.459392Z",
+        "http_status": 200,
+        "sha256": "0d6e7a950c2cab1c66f633ff9b9c1973c485e531c9efb0d72766e106fd2a5f25"
+      }
+    ]
+  },
+  "draft_validation": {
+    "reviewed": "2026-11-09",
+    "checks": [
+      "Independent source-only classification review.",
+      "Canonical catalog validation and in-memory Theater render.",
+      "Verified the official link, provider thumbnail, viewing label and empty player attributes."
+    ],
+    "hypothetical_counts": {
+      "titles": 232,
+      "full_films": 19,
+      "configured_players": 224,
+      "source_only": 8
+    },
+    "remaining": [
+      "Review exact source-only record and generated output before release.",
+      "Check protected preview and live deployment after approved publication."
+    ]
+  }
+}
