@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-10",
+  "generated": "2026-11-12",
   "count": 486,
-  "facts": 1412,
+  "facts": 1414,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -20391,6 +20391,38 @@
           "status": "verified",
           "checked": "2026-10-12",
           "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-9c633ecf",
+          "text": "The Ute Mountain Tribal Park’s history dates its historic district designation to May 2, 1972.",
+          "kind": "history",
+          "as_of": "1972",
+          "source": {
+            "title": "Ute Mountain Tribal Park History",
+            "publisher": "Ute Mountain Tribal Park",
+            "url": "https://www.utemountaintribalpark.info/history.html",
+            "accessed": "2026-11-12"
+          },
+          "evidence": "Historical District On May 2, 1972",
+          "status": "verified",
+          "checked": "2026-11-12",
+          "last_verified": "2026-11-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-e8311071",
+          "text": "The Tribal Park’s history says its first tours took place during the tenure of its first director, Arthur Cuthair.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "Ute Mountain Tribal Park History",
+            "publisher": "Ute Mountain Tribal Park",
+            "url": "https://www.utemountaintribalpark.info/history.html",
+            "accessed": "2026-11-12"
+          },
+          "evidence": "the first Tribal Park Director, the late Arthur Cuthair",
+          "status": "verified",
+          "checked": "2026-11-12",
+          "last_verified": "2026-11-12"
         }
       ]
     },

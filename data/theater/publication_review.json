@@ -1,33 +1,32 @@
 {
-  "version": 6,
-  "prepared_at": "2026-11-10T15:17:35.434687+00:00",
+  "version": 7,
+  "prepared_at": "2026-11-12T15:17:03.355283+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "7e9b2bf45bee2526fe47efda0843ad3ec13215d0",
-    "version": 5,
-    "catalogue_sha256": "41af7dfc9df179e842381822f2bbc341d6efddb216fd1a561dc4a275c5da375c"
+    "commit": "ec4f81baee62a3c8b9bc58ee514ddceb31a9cd68",
+    "version": 6,
+    "catalogue_sha256": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404"
   },
   "catalogue": {
-    "sha256": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404",
-    "titles": 232,
+    "sha256": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377",
+    "titles": 233,
     "configured_players": 224,
-    "source_only": 8,
+    "source_only": 9,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 19,
+      "full-film": 20,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
       "trailer": 50
     }
   },
-  "request_revision": "Add Blue Lake Rancheria from its own sources and list one complete documentary with an official viewing link.",
+  "request_revision": "Add two independently checked Ute Mountain Ute history facts and the official viewing link for Doctrine of Discovery: Stolen Lands, Strong Hearts.",
   "source_review": {
-    "batch": "research/batches/2026-11-08-as-long-as-the-rivers-run.json",
-    "sha256": "719a395c809fac12702c2c6a1c84b6884f3e99c9cc9df0755e0cce66c01999ad",
-    "finding": "Salmon Defense supplies the official YouTube edition. This record uses an official link."
+    "batch": "research/batches/2026-11-12-doctrine-of-discovery-source-only.json",
+    "sha256": "8dd881f5c7888573cd979df026226ac4550308b2080e8c6c4b9ffde47c647f0a"
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
@@ -38,28 +37,21 @@
       "errors": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 382.9381066999922,
-    "full_suite_xml_sha256": "d711ab269a815b75b909174f309f1cfdff65218f78398354e7fb9c39490e58f8",
-    "canonical_build_check": {
+    "full_suite_wall_seconds": 249.7869306000066,
+    "full_suite_xml_sha256": "6c4fceaf0f98674b65d036baeaed61b85b1917c22352e512ad318a100d06cb2b",
+    "canonical_build": {
       "exit_code": 0,
-      "stdout_sha256": "e326b8a3fd94c6ee63fbf9129b4fb386244626a467a7a1ba0a859f6c74a7c7ea"
-    },
-    "registry_validator": {
-      "errors": 0,
-      "preexisting_warnings": 54
+      "stdout_sha256": "2b1c56a48a1e3781e95d9debca11d8099453d8e416c04fa3a7e0ac284ab39e7d"
     },
     "game_data": {
       "quick_cards": 486,
       "profiles_with_history": 108,
-      "new_dated_facts": 2,
+      "new_ute_history_facts": 2,
       "skipped": 0
     },
-    "scope": "Candidate source and identity review, complete local tests, canonical page and security checks, and educational data comparison.",
     "browser": {
       "reviewed_utc_date": "2026-11-12",
-      "method": "Independent headless Chrome run serving pinned website files and committed Vercel CSP in memory.",
       "chrome_version": "157.0.8103.52",
-      "reviewed_commit": "d90af683d0108832eed53a9efb361976228ce6ea",
       "viewport_pixels": [
         [
           390,
@@ -70,24 +62,29 @@
           900
         ]
       ],
+      "method": "Independent offline Chrome run using the generated pages and committed Vercel response CSP.",
       "checks": [
-        "Blue Lake's historical facts, source links and keyboard history navigation.",
-        "Rivers Run's exact story link, Full Film and Official Site filters, and official viewing destination.",
-        "Phone Filters panel by touch, pointer and keyboard.",
-        "No horizontal overflow, page errors, CSP violations or player requests for the source-only card."
+        "Ute Mountain Ute history cards, source dates and keyboard citation focus.",
+        "The documentary’s exact story link, official viewing URL, title filters and provider thumbnail URL.",
+        "Touch, Space and Enter on the mobile Filters control.",
+        "Zero horizontal overflow, page errors, CSP violations and player frames in the tested source-only route."
       ],
-      "limitations": "External requests were blocked. Playback, caption quality, and production behavior are pending."
+      "limits": "External requests were blocked. Playback and caption behavior remain unverified."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "7471c253019d0bab3514b41a3b7f8672d609db735cf812758dea770d530a41af",
-    "data/nations/nations.min.json": "f8cdaf549129cefea2fdafa616ac6a10fe150e4af5c02f50ca82cc4f629777bc",
-    "data/nations/context_links.json": "3e47cdaf9de09502a81900ac163b32ecdaace87d129df9963f97d70e229c129c",
-    "data/nations/research/us_federal_directory.json": "fd0f1d5039b378f3ace61a1b96d8bba389ffed823963ad93b451bfab7275dff6",
-    "data/nations/research/coverage_queue.json": "bf741900de10165f90439a2b73702146b441e06135650598f762150eabfc4749",
-    "data/nations/research/batches/2026-11-10-ute-mountain-park-lead.json": "a5c033c1f838c8848ad1eca9d32ac3df6d823408248f712fdb781c79e22abab7",
-    "data/nations/research/receipts/2026-11-10-blue-lake-identity-respect.json": "d4c349f62a4d559ccd2e12ca6004e7990db92159dee2cb228b26ac99b76114eb",
-    "data/theater/films.json": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404"
+    "data/nations/nations.json": "a5835c7d14e117cf97b921413e6bd854f4acc599c60926e249159f408fe0cdc5",
+    "data/nations/nations.min.json": "6ef91473567a737dedb6adb0890eee3f2cbd75004b5e80745a3c5e76b31ba572",
+    "data/nations/research/batches/2026-11-12-ute-mountain-park-review.json": "5142af0385d133d27f4825ef9d1a3fc14f18c2a61bad74be45ee68c55b9f1532",
+    "data/nations/research/coverage_queue.json": "7d80a6f3342cceb33c806c65de9b23dcef67388115e1379c52828bc15303bb86",
+    "data/nations/sources/us-ute-mountain-park-2026-11-12.raw.json": "a9272751e901bb1dc613146aa56bc29430bfe7437307c14d390431e8ea54ddf8",
+    "data/nations/sources/us-ute-mountain-park-2026-11-12.verify.json": "e7214cb5798096c36866071bfa6ce964e662abc85eeb0a553a02780755756342",
+    "data/nations/sources/us-ute-mountain-park-2026-11-12.respect.json": "2a29380d66b21969d53077d4218a6440331f0df59cc5bfbcae62b895c01fa8b6",
+    "data/theater/films.json": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377",
+    "data/theater/research_queue.json": "2da2bc6b4a22cadf795d61a99f54dd9c5cf9ae86ad4390687a47cee946052bf1",
+    "data/theater/research/batches/2026-11-12-doctrine-of-discovery-source-only.json": "8dd881f5c7888573cd979df026226ac4550308b2080e8c6c4b9ffde47c647f0a",
+    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "108cc53112a4432e2dad8dbfb796caf565af7f99078e200f9ec1e5716f456f42",
+    "theater.html": "2184e32714caabd859117128004cd1cb09ce75c0664889b4a8eb47513292f017"
   },
   "pending": [
     "Production publication and verification",
