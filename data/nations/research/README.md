@@ -701,9 +701,19 @@ profile review and publication. The directory row and existing game cards are un
 Blue Lake Rancheria has a separately reviewed government crosswalk and a local
 candidate profile with three attributed facts. Its original November 7 retrievals,
 November 9 fresh checks and November 10 identity and respect review have distinct
-clocks. The candidate adds two game history facts. Local Chrome review passed at phone and desktop widths. Publication is pending.
+clocks. The candidate adds two game history facts. Local Chrome review passed at phone and desktop widths. Vercel production verification passed on November 12 UTC.
 
 The Ute Mountain Ute park history lead separates a 1972 historic district listing
 from the Tribe's account of its first tours. The underlying National Register
 asset and restricted location details are outside this lead. The exact source
 checks are recorded in `batches/2026-11-10-ute-mountain-park-lead.json`.
+
+## November 12 Ute Mountain Ute park history
+
+The November 12 review adds two attributed history facts to the existing
+government profile and candidate game history. The district designation is dated
+May 2, 1972. The date of the first tours remains unspecified. The research record
+links the park's public history and corroborating register metadata. The restricted
+location stays outside the scope of the release.
+
+Batch record `batches/2026-11-12-ute-mountain-park-review.json`.

@@ -196,9 +196,23 @@
         "https://archive.org/details/alatrr"
       ],
       "reason": "The rights holder directly links two versions of one complete documentary. Fresh provider metadata and the original YouTube thumbnail were checked. The two digital runtimes remain separate. No catalog entry is added by this handoff.",
-      "next": "Verify the merged Vercel production output. The film uses its official viewing link. Review playback, caption behavior and embedding permission before adding a player.",
+      "next": "The live card and its official viewing URL matched the reviewed files. Review playback, caption behavior and embedding permission before adding a player.",
       "draft_reviewed": "2026-11-09",
-      "build_state": "local-candidate"
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/46"
+    },
+    {
+      "id": "doctrine-of-discovery-stolen-lands-strong-hearts",
+      "status": "official-source-only",
+      "checked": "2026-11-12",
+      "batch": "research/batches/2026-11-12-doctrine-of-discovery-source-only.json",
+      "source_urls": [
+        "https://www.anglican.ca/resources/doctrine-of-discovery-stolen-lands-strong-hearts/",
+        "https://www.anglican.ca/resources/doctrine-of-discovery-stolen-lands-strong-hearts-study-guide/",
+        "https://www.anglican.ca/news/highlights-from-the-council-of-general-synod-march-15-2019/"
+      ],
+      "reason": "The Anglican Church of Canada identifies the complete documentary and links its official Vimeo edition.",
+      "next": "Verify the live card after the reviewed pull request. Review playback, captions and embedding permission before configuring a player."
     }
   ]
 }

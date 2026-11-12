@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-12",
+  "government_id": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "task_id": "history-ute-mountain-rights-water-education",
+  "prior_lead": "batches/2026-11-10-ute-mountain-park-lead.json",
+  "review_kind": "Independent AI-assisted fresh-source and meaning review",
+  "publisher_relationship": "The Tribe’s official homepage links to the park’s hostname as Tribal Parks. The park’s HTTPS history page identifies the park as Tribally owned and operated.",
+  "scope": "Two attributed historical facts. Location, access, and cultural details stay outside the scope of this review.",
+  "receipts": [
+    {
+      "url": "https://www.utemountainutetribe.com/",
+      "retrieved_at": "2026-11-12T15:06:15.350605Z",
+      "http_status": 200,
+      "body_bytes": 38588,
+      "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+      "redirects": [],
+      "evidence": "Tribal Parks",
+      "linked_url": "http://www.utemountaintribalpark.info/"
+    },
+    {
+      "url": "https://www.utemountaintribalpark.info/history.html",
+      "retrieved_at": "2026-11-12T15:06:15.497431Z",
+      "http_status": 200,
+      "body_bytes": 14183,
+      "sha256": "dee31119c4884088151176f6b85c06c4ffdacc96eb81cf6d7d7fc7d9ef2e5a0f",
+      "redirects": [],
+      "evidence": [
+        "Historical District On May 2, 1972",
+        "the first Tribal Park Director, the late Arthur Cuthair"
+      ]
+    },
+    {
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000273",
+      "retrieved_at": "2026-11-12T15:06:15.313566Z",
+      "http_status": 200,
+      "body_bytes": 28320,
+      "sha256": "b126bb289ee7edef4b1b3c99bfa552d8a9585aa70cd2d1fef6a858c8b32989d2",
+      "redirects": [],
+      "evidence": [
+        "Ute Mountain Ute Mancos Canyon Historic District",
+        "Date Published: 5/2/1972"
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.utemountainutetribe.com/robots.txt",
+      "retrieved_at": "2026-11-12T15:05:54.151285Z",
+      "http_status": 404,
+      "body_bytes": 13,
+      "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+      "redirects": []
+    },
+    {
+      "url": "https://www.utemountaintribalpark.info/robots.txt",
+      "retrieved_at": "2026-11-12T15:05:54.156618Z",
+      "http_status": 404,
+      "body_bytes": 13,
+      "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+      "redirects": []
+    },
+    {
+      "url": "https://npgallery.nps.gov/robots.txt",
+      "retrieved_at": "2026-11-12T15:05:54.006262Z",
+      "http_status": 404,
+      "body_bytes": 162,
+      "sha256": "82058c7518703dd48806ce8b4ca4663209cbeb645c9d4d1144114bcd64ae7f52",
+      "redirects": []
+    },
+    {
+      "url": "https://www.historycolorado.org/robots.txt",
+      "retrieved_at": "2026-11-12T15:05:53.816752Z",
+      "http_status": 202,
+      "body_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redirects": []
+    }
+  ],
+  "indexed_corroboration": {
+    "url": "https://www.historycolorado.org/location/ute-mountain-ute-mancos-canyon-historic-district",
+    "evidence": "The indexed State and National Register entry labels May 2, 1972 as the National Register date.",
+    "checked": "2026-11-12",
+    "access": "Indexed result"
+  },
+  "source_limits": [
+    "Direct responses were hashed in memory. The same source hashes were measured on November 10.",
+    "The NPS metadata marks the address restricted. The review used the public metadata page.",
+    "The park history includes a copyright marker. The proposed facts use original wording with short evidence anchors."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "candidate_fact_ids": [
+    "ute-mountain-ute-tribe-us-co-ut-nm-9c633ecf",
+    "ute-mountain-ute-tribe-us-co-ut-nm-e8311071"
+  ]
+}

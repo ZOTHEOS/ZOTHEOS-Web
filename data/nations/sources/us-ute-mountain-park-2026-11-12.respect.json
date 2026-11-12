@@ -1,0 +1,32 @@
+{
+  "region": "mx-north-us-southwest",
+  "reviewed": "2026-11-12",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed": "2026-11-12",
+    "evidence_receipt": "batches/2026-11-12-ute-mountain-park-review.json",
+    "review_kind": "Independent AI-assisted fresh-source and meaning review"
+  },
+  "items": [
+    {
+      "id": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "fact": null,
+      "action": "keep",
+      "reason": "The sources concern the existing Ute Mountain Ute Tribe government."
+    },
+    {
+      "id": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The park’s account and National Register metadata corroborate the May 2, 1972 date."
+    },
+    {
+      "id": "ute-mountain-ute-tribe-us-co-ut-nm",
+      "fact": 1,
+      "action": "keep",
+      "reason": "The park names its first director and places its earliest tours during his tenure."
+    }
+  ]
+}

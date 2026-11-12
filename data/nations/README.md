@@ -26,7 +26,14 @@ carry forward. The dated directory label remains alongside the Rancheria's own n
 Blue Lake Rancheria's account distinguishes the creation of its reservation from
 the later restoration of federal recognition. Acreage and termination chronology
 remain open. The 1908 and 1983 facts appear in the candidate game's history data.
-Coverage remains incomplete. Local Chrome review passed at phone and desktop widths. Publication is pending.
+Coverage remains incomplete. Local Chrome review passed at phone and desktop widths. Vercel production verification passed on November 12 UTC.
+
+## November 12 Ute Mountain Ute history candidate
+
+The candidate contains 486 profiles and 1,414 raw facts. Two new facts attribute
+the 1972 historic district designation and the account of the park's first tours
+to Ute Mountain Tribal Park history. The profile continues to cover the distinct
+Ute Mountain Ute government. Its prior sources retain their original review dates.
 
 ## October 30 Own-Source Depth
 
