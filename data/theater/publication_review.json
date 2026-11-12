@@ -2,7 +2,7 @@
   "version": 6,
   "prepared_at": "2026-11-10T15:17:35.434687+00:00",
   "publisher": "ZOTHEOS",
-  "status": "reviewed-local-candidate-awaiting-protected-browser-preview",
+  "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
     "commit": "7e9b2bf45bee2526fe47efda0843ad3ec13215d0",
     "version": 5,
@@ -54,20 +54,42 @@
       "new_dated_facts": 2,
       "skipped": 0
     },
-    "scope": "Candidate source and identity review, complete local tests, canonical page and security checks, and educational data comparison."
+    "scope": "Candidate source and identity review, complete local tests, canonical page and security checks, and educational data comparison.",
+    "browser": {
+      "reviewed_utc_date": "2026-11-12",
+      "method": "Independent headless Chrome run serving pinned website files and committed Vercel CSP in memory.",
+      "chrome_version": "157.0.8103.52",
+      "reviewed_commit": "d90af683d0108832eed53a9efb361976228ce6ea",
+      "viewport_pixels": [
+        [
+          390,
+          844
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "checks": [
+        "Blue Lake's historical facts, source links and keyboard history navigation.",
+        "Rivers Run's exact story link, Full Film and Official Site filters, and official viewing destination.",
+        "Phone Filters panel by touch, pointer and keyboard.",
+        "No horizontal overflow, page errors, CSP violations or player requests for the source-only card."
+      ],
+      "limitations": "External requests were blocked. Playback, caption quality, and production behavior are pending."
+    }
   },
   "review_pins": {
     "data/nations/nations.json": "7471c253019d0bab3514b41a3b7f8672d609db735cf812758dea770d530a41af",
     "data/nations/nations.min.json": "f8cdaf549129cefea2fdafa616ac6a10fe150e4af5c02f50ca82cc4f629777bc",
     "data/nations/context_links.json": "3e47cdaf9de09502a81900ac163b32ecdaace87d129df9963f97d70e229c129c",
     "data/nations/research/us_federal_directory.json": "fd0f1d5039b378f3ace61a1b96d8bba389ffed823963ad93b451bfab7275dff6",
-    "data/nations/research/coverage_queue.json": "bed20ff26f7c96fce47ddc80ebb503bed93a885176cc5c671ccfa9ebe3e830f6",
+    "data/nations/research/coverage_queue.json": "bf741900de10165f90439a2b73702146b441e06135650598f762150eabfc4749",
     "data/nations/research/batches/2026-11-10-ute-mountain-park-lead.json": "a5c033c1f838c8848ad1eca9d32ac3df6d823408248f712fdb781c79e22abab7",
     "data/nations/research/receipts/2026-11-10-blue-lake-identity-respect.json": "d4c349f62a4d559ccd2e12ca6004e7990db92159dee2cb228b26ac99b76114eb",
     "data/theater/films.json": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404"
   },
   "pending": [
-    "Authenticated responsive preview",
     "Production publication and verification",
     "Actual film playback, visitor access and caption quality",
     "Site embedding permission before any player is configured"

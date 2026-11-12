@@ -26,7 +26,7 @@ carry forward. The dated directory label remains alongside the Rancheria's own n
 Blue Lake Rancheria's account distinguishes the creation of its reservation from
 the later restoration of federal recognition. Acreage and termination chronology
 remain open. The 1908 and 1983 facts appear in the candidate game's history data.
-Coverage remains incomplete. Protected preview review and publication are pending.
+Coverage remains incomplete. Local Chrome review passed at phone and desktop widths. Publication is pending.
 
 ## October 30 Own-Source Depth
 
