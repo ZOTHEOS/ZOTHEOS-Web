@@ -506,13 +506,17 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "bridgeport-indian-colony-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-13-bridgeport-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": null,
+      "own_published_name": "Bridgeport Indian Colony"
     },
     {
       "directory_id": "us-fed-2d69b4b4a989",

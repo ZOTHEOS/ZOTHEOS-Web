@@ -717,3 +717,14 @@ links the park's public history and corroborating register metadata. The restric
 location stays outside the scope of the release.
 
 Batch record `batches/2026-11-12-ute-mountain-park-review.json`.
+
+## November 13 Bridgeport Indian Colony and Mexico research
+
+The Bridgeport Indian Colony profile links the existing federal directory entry
+to three dated or period-specific historical facts. Its prepared testimony and
+the land trust statute are documented in `batches/2026-11-13-bridgeport-indian-colony.json`.
+
+The Mexico queue records the N’dee/N’nee/Ndé letter published by INAH and the
+separate Coahuila constitutional text. Connections between signatories, the
+constitutional category and individual communities remain unresolved. See
+`batches/2026-11-13-ndee-nnee-nde-mexico.json`.

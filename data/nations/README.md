@@ -16,6 +16,14 @@ ZOTHEOS compiles facts from published sources with separate evidence and meaning
 requests from any nation are honored. Nothing here is a game object: nations never appear near the game's
 antagonist, on a fail screen or in scoring.
 
+## November 13 Bridgeport Indian Colony
+
+The candidate registry contains 487 profiles and 1,417 facts. Bridgeport Indian
+Colony adds three history facts. Its 2010 testimony recounts government
+organization in 1976 and clinic construction in the 1980s. The 1974 land trust
+law supplies a separate date. The official homepage and current clinic operations
+remain unresolved. The new facts appear in the candidate game history.
+
 ## Current Scope
 
 The November 10 local candidate contains 486 researched profiles and 1,412 raw facts.

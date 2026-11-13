@@ -1296,6 +1296,38 @@
       "discovery_date": "2026-11-07",
       "status": "source_retrieved",
       "note": "Saved BIA directory and own publisher name corroborate this exact host for research. Fact publication review remains pending."
+    },
+    {
+      "source_id": "bridgeport-colony-testimony-govinfo",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.govinfo.gov/content/pkg/CHRG-111hhrg57666/pdf/CHRG-111hhrg57666.pdf",
+      "allowed_hosts": [
+        "www.govinfo.gov"
+      ],
+      "stated_count": null,
+      "as_of": "2010-07-28",
+      "discovery_date": "2026-11-13",
+      "status": "source_retrieved",
+      "note": "Colony-authored testimony published in the House hearing record. Host is the federal archive."
+    },
+    {
+      "source_id": "mx-inah-ndee-letter",
+      "countries": [
+        "MX"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.inah.gob.mx/images/suplementos/20210208_gacetinah_003.pdf",
+      "allowed_hosts": [
+        "www.inah.gob.mx"
+      ],
+      "stated_count": null,
+      "as_of": "2020-09",
+      "discovery_date": "2026-11-13",
+      "status": "source_retrieved",
+      "note": "Public letter signed by Nación N’dee/N’nee/Ndé and published by INAH. Scope is the signatories’ account."
     }
   ]
 }

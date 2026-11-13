@@ -891,9 +891,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "bridgeport-colony-testimony-govinfo"
       ],
       "review": {
         "identity": "pending",
@@ -909,9 +910,27 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CHRG-111hhrg57666/pdf/CHRG-111hhrg57666.pdf",
+          "retrieval_method": "http",
+          "retrieved_at": "2026-11-13T15:01:11.304184Z",
+          "http_status": 200,
+          "body_bytes": 306587,
+          "sha256": "00d228891673530754b677942ac1a2db2899913a7e1b4be6720a08b6b9d44559",
+          "redirects": [],
+          "source_id": "bridgeport-colony-testimony-govinfo",
+          "evidence_receipt": "batches/2026-11-13-bridgeport-indian-colony.json",
+          "receipt_id": "r-5a92b2299294ab99"
+        }
+      ],
+      "updated_at": "2026-11-13T15:04:37.488876+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "The 2010 prepared testimony and 1974 land statute support three checked history facts. The proposed distinct government profile is ready for candidate testing.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-13-bridgeport-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-2d69b4b4a989",
@@ -62428,10 +62447,11 @@
       "region": "mx-north-us-southwest",
       "priority": 92,
       "priority_reason": "unresolved_source_difference_or_own_identity_gap",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
         "mx-inpi-catalogue",
-        "mx-inpi-map-ndee"
+        "mx-inpi-map-ndee",
+        "mx-inah-ndee-letter"
       ],
       "review": {
         "identity": "pending",
@@ -62442,10 +62462,23 @@
         "status": "unassessed",
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-15T07:18:41.774663+00:00",
-      "next_attempt_after": "2026-10-22T07:18:42.324211+00:00",
-      "note": "No routine repeat report for unchanged sources. No outreach or access-rule bypass; no canonical match or legal adjudication."
+      "receipts": [
+        {
+          "source_id": "mx-inah-ndee-letter",
+          "url": "https://www.inah.gob.mx/images/suplementos/20210208_gacetinah_003.pdf",
+          "retrieval_method": "http",
+          "retrieved_at": "2026-11-13T15:00:41.261089Z",
+          "http_status": 200,
+          "body_bytes": 703227,
+          "sha256": "d28512315f7c728e20c1071844450da4ec774c28fb432b17d4c83f43b98ea4d1",
+          "evidence_receipt": "batches/2026-11-13-ndee-nnee-nde-mexico.json",
+          "receipt_id": "r-29e1c87e443790af"
+        }
+      ],
+      "updated_at": "2026-11-13T15:05:28.532809+00:00",
+      "next_attempt_after": null,
+      "note": "The INAH-published letter and Coahuila constitutional provision support separately scoped dated research. Community and government crosswalks remain unresolved. See batches/2026-11-13-ndee-nnee-nde-mexico.json.",
+      "lease_until": null
     },
     {
       "task_id": "profile-us-state-al-southeastern-mvskoke-nation",

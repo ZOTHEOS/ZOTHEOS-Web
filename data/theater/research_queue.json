@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -212,7 +212,22 @@
         "https://www.anglican.ca/news/highlights-from-the-council-of-general-synod-march-15-2019/"
       ],
       "reason": "The Anglican Church of Canada identifies the complete documentary and links its official Vimeo edition.",
-      "next": "Verify the live card after the reviewed pull request. Review playback, captions and embedding permission before configuring a player."
+      "next": "The live card and official viewing URL matched the reviewed files. Playback, caption behavior and embedding permission remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/47"
+    },
+    {
+      "id": "indigenize-the-plate",
+      "status": "official-source-only",
+      "checked": "2026-11-13",
+      "batch": "research/batches/2026-11-13-indigenize-the-plate.json",
+      "source_urls": [
+        "https://www.tsenato.com/itp",
+        "https://visionmakermedia.org/film-library/indigenize-the-plate/",
+        "https://video.mpbonline.org/video/indigenize-the-plate-UlugDi/"
+      ],
+      "reason": "The Indigenous producer, film presenter and PBS station identify a complete documentary edition.",
+      "next": "Verify the live official viewing card after release. Playback, caption behavior and player permission remain open."
     }
   ]
 }

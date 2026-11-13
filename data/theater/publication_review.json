@@ -1,32 +1,32 @@
 {
-  "version": 7,
-  "prepared_at": "2026-11-12T15:17:03.355283+00:00",
+  "version": 8,
+  "prepared_at": "2026-11-13T15:11:49.860825+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "ec4f81baee62a3c8b9bc58ee514ddceb31a9cd68",
-    "version": 6,
-    "catalogue_sha256": "18bfa84be3db8e20bf47aee5d34caa588f8c2d1ad612a3fb7e01d0356eda7404"
+    "commit": "47ec8647eaa0c60e9c59b6a6d3df6277fdda7524",
+    "version": 7,
+    "catalogue_sha256": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377"
   },
   "catalogue": {
-    "sha256": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377",
-    "titles": 233,
+    "sha256": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb",
+    "titles": 234,
     "configured_players": 224,
-    "source_only": 9,
+    "source_only": 10,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 20,
+      "full-film": 21,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
       "trailer": 50
     }
   },
-  "request_revision": "Add two independently checked Ute Mountain Ute history facts and the official viewing link for Doctrine of Discovery: Stolen Lands, Strong Hearts.",
   "source_review": {
-    "batch": "research/batches/2026-11-12-doctrine-of-discovery-source-only.json",
-    "sha256": "8dd881f5c7888573cd979df026226ac4550308b2080e8c6c4b9ffde47c647f0a"
+    "batch": "research/batches/2026-11-13-indigenize-the-plate.json",
+    "sha256": "8231c3d3e1d7d73153546fb6f7c34b76c22715be6a5e1cc80b478a9f26bb5883",
+    "thumbnail_display": "Text cover while provider image permission remains unresolved."
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
@@ -37,20 +37,28 @@
       "errors": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 249.7869306000066,
-    "full_suite_xml_sha256": "6c4fceaf0f98674b65d036baeaed61b85b1917c22352e512ad318a100d06cb2b",
+    "full_suite_wall_seconds": 250.9936677000369,
+    "full_suite_xml_sha256": "b4d7895463ffdbb5f068442db9a808c6907251e615509db058086fe3c6060f75",
     "canonical_build": {
-      "exit_code": 0,
-      "stdout_sha256": "2b1c56a48a1e3781e95d9debca11d8099453d8e416c04fa3a7e0ac284ab39e7d"
+      "status": "passed",
+      "pages": 622,
+      "profiles": 487,
+      "visible_facts": 1415,
+      "held_facts": 2
+    },
+    "registry_validator": {
+      "errors": 0,
+      "preexisting_warnings": 54
     },
     "game_data": {
-      "quick_cards": 486,
-      "profiles_with_history": 108,
-      "new_ute_history_facts": 2,
+      "quick_cards": 487,
+      "profiles_with_history": 109,
+      "new_history_facts": 3,
       "skipped": 0
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-12",
+      "reviewed_utc_date": "2026-11-13",
+      "method": "Independent offline Chrome with exact generated files and Vercel CSP.",
       "chrome_version": "157.0.8103.52",
       "viewport_pixels": [
         [
@@ -62,33 +70,37 @@
           900
         ]
       ],
-      "method": "Independent offline Chrome run using the generated pages and committed Vercel response CSP.",
       "checks": [
-        "Ute Mountain Ute history cards, source dates and keyboard citation focus.",
-        "The documentary’s exact story link, official viewing URL, title filters and provider thumbnail URL.",
-        "Touch, Space and Enter on the mobile Filters control.",
-        "Zero horizontal overflow, page errors, CSP violations and player frames in the tested source-only route."
+        "Bridgeport directory search and keyboard navigation, all three history facts and exact citations.",
+        "Indigenize the Plate story link, official PBS destination, text cover, Full Film and Official Site filters.",
+        "Phone Filters touch, Space and Enter. Zero provider frames, page errors, CSP violations and overflow."
       ],
-      "limits": "External requests were blocked. Playback and caption behavior remain unverified."
+      "limits": "External image requests blocked. Actual playback, regional access and caption quality remain unverified."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "a5835c7d14e117cf97b921413e6bd854f4acc599c60926e249159f408fe0cdc5",
-    "data/nations/nations.min.json": "6ef91473567a737dedb6adb0890eee3f2cbd75004b5e80745a3c5e76b31ba572",
-    "data/nations/research/batches/2026-11-12-ute-mountain-park-review.json": "5142af0385d133d27f4825ef9d1a3fc14f18c2a61bad74be45ee68c55b9f1532",
-    "data/nations/research/coverage_queue.json": "7d80a6f3342cceb33c806c65de9b23dcef67388115e1379c52828bc15303bb86",
-    "data/nations/sources/us-ute-mountain-park-2026-11-12.raw.json": "a9272751e901bb1dc613146aa56bc29430bfe7437307c14d390431e8ea54ddf8",
-    "data/nations/sources/us-ute-mountain-park-2026-11-12.verify.json": "e7214cb5798096c36866071bfa6ce964e662abc85eeb0a553a02780755756342",
-    "data/nations/sources/us-ute-mountain-park-2026-11-12.respect.json": "2a29380d66b21969d53077d4218a6440331f0df59cc5bfbcae62b895c01fa8b6",
-    "data/theater/films.json": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377",
-    "data/theater/research_queue.json": "2da2bc6b4a22cadf795d61a99f54dd9c5cf9ae86ad4390687a47cee946052bf1",
-    "data/theater/research/batches/2026-11-12-doctrine-of-discovery-source-only.json": "8dd881f5c7888573cd979df026226ac4550308b2080e8c6c4b9ffde47c647f0a",
-    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "108cc53112a4432e2dad8dbfb796caf565af7f99078e200f9ec1e5716f456f42",
-    "theater.html": "2184e32714caabd859117128004cd1cb09ce75c0664889b4a8eb47513292f017"
+    "data/nations/nations.json": "d3f1540e75719de908f24e7a78dae37ff87964881e083fb2d75f366e5a9a18d3",
+    "data/nations/nations.min.json": "7da463ea436efe65e1ea931785c2dbfe02747c2d1c142bcae4b8c0d65f40d220",
+    "data/nations/research/coverage_queue.json": "abe79bdf65bdcd9567f6b07879b0cbc30a6880dbc17d9e22820c2863a87dd6f9",
+    "data/nations/research/directory_sources.json": "b62926b73fe5079d5110a6c97572babbe35f69fa05615bbcbec332ceb333547d",
+    "data/nations/research/us_federal_directory.json": "7f968f05cd8fa0806815a8976a9a5c329ad4feb9fc9ecef4190385dfd151d147",
+    "data/nations/research/receipts/2026-11-13-bridgeport-identity.json": "16db0393480f1269abfdd871f069fcd3caf57a01161793cf831c0966fa91b67f",
+    "data/nations/research/batches/2026-11-13-bridgeport-indian-colony.json": "1e35c2ebc471852a8ef27bab6b78b26e34581aa4aa01ced72d952bf8ed08fde7",
+    "data/nations/research/batches/2026-11-13-ndee-nnee-nde-mexico.json": "d1598d3efbaefe3b440661d7d9cf55e3416fdde43f08fad1250a0d336ac82e3d",
+    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.raw.json": "8662966020252e3a7bf5a800e4aa9dbf0e2f9f4ab3500df13504ba85436ca548",
+    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.verify.json": "e5e4b6b78449a14d2674f27df90cc41ca64205ae3173e00c282f7450500a4eca",
+    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.respect.json": "d42acdd36c77ebfbfd951bdfb83a5ba3fdc8ad291a358803afa150c074f37af3",
+    "data/theater/films.json": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb",
+    "data/theater/research_queue.json": "73e85e111117154f26a18b097b32efc28aef10fe4cd0cac073e7f469219a82dc",
+    "data/theater/research/batches/2026-11-13-indigenize-the-plate.json": "8231c3d3e1d7d73153546fb6f7c34b76c22715be6a5e1cc80b478a9f26bb5883",
+    "nations/directory.html": "eb12efdd732b0397cf75fbe3f8667f326c996e8dfc87077b342a25165887da3c",
+    "nations/bridgeport-indian-colony-us-ca.html": "4e19d80bd00881ca6d7d6b4f8353a5c492b2a464fb04d8e8e665ae474d46821f",
+    "theater.html": "f056d3810e82a6d52c4431a22466a5fdb28834ec5180f46f56e716ac3b2477b9",
+    "vercel.json": "a0fe855e7822201104ececa98fede616b4578a71d6ad1c8cc3e14c83a354c2d9"
   },
   "pending": [
-    "Production publication and verification",
-    "Actual film playback, visitor access and caption quality",
-    "Site embedding permission before any player is configured"
+    "Vercel production verification",
+    "Film playback, regional access and caption quality",
+    "Permission before adding an embedded player or provider image"
   ]
 }

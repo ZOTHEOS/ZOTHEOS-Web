@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-13",
+  "task_id": "followup-chiricahua-mexico-permissible-own-governments",
+  "status": "needs_review",
+  "letter": {
+    "source_id": "mx-inah-ndee-letter",
+    "url": "https://www.inah.gob.mx/images/suplementos/20210208_gacetinah_003.pdf",
+    "retrieval_method": "http",
+    "retrieved_at": "2026-11-13T15:00:41.261089Z",
+    "http_status": 200,
+    "body_bytes": 703227,
+    "sha256": "d28512315f7c728e20c1071844450da4ec774c28fb432b17d4c83f43b98ea4d1",
+    "evidence_receipt": "batches/2026-11-13-ndee-nnee-nde-mexico.json",
+    "publication_date": "2020-09",
+    "title": "GacetINAH No. 3, p. 6",
+    "author": "Nación N’dee/N’nee/Ndé",
+    "event_years": [
+      2017,
+      2019
+    ],
+    "evidence": "tenemos reuniones binacionales desde 2017 para buscar y lograr nuestra reorganización en 2019"
+  },
+  "coahuila": {
+    "url": "https://www.coahuilatransparente.gob.mx/RutaDataFiles/leyes/documentos_leyes/24.-Constitucion%20Coahuila%202025.pdf",
+    "retrieved_at": "2026-11-13T15:04:00.307817Z",
+    "http_status": 200,
+    "body_bytes": 1115913,
+    "sha256": "b4f8959e228b20f670d0648da24657e10662d399eff190772f35202892425540",
+    "evidence": "la comunidad y/o nación N’dee/ N’nee/ Ndé",
+    "decree_publication_date": "2022-12-13",
+    "decree_number": 312,
+    "annotated_reference": "https://www.te.gob.mx/legislacion/media/files/08df501ad23d005.htm",
+    "provision": "Article 7, fifth paragraph"
+  },
+  "robots": [
+    {
+      "url": "https://www.inah.gob.mx/robots.txt",
+      "retrieved_at": "2026-11-13T15:00:11.984987Z",
+      "http_status": 200,
+      "body_bytes": 829,
+      "sha256": "97c87f1e050ea0ead076373282f50734e90f71734b825931f9a4739ca0d5ace8"
+    },
+    {
+      "url": "https://www.coahuilatransparente.gob.mx/robots.txt",
+      "retrieved_at": "2026-11-13T15:03:59.418931Z",
+      "http_status": 200,
+      "body_bytes": 2676,
+      "sha256": "3073d1e371afb3271c7666148766fedc5145f7d8440f7114062db79b7bd58add",
+      "observation": "Wildcard access and reference use indicated. No crawl-delay reported."
+    }
+  ],
+  "unresolved": [
+    "The connection between the letter’s signatories and the constitutional category remains unresolved.",
+    "Individual Mexican community names and governing relationships remain unresolved.",
+    "Chihuahua’s final enacted text remains unverified. The agenda item and committee draft are insufficient.",
+    "The checked sources establish no identity link to U.S. Tribal governments."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
