@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-13",
+  "directory_id": "us-fed-abcc6cf2b162",
+  "registry_id": "bridgeport-indian-colony-us-ca",
+  "review_kind": "Independent AI-assisted source meaning, identity and respect review",
+  "identity": {
+    "name": "Bridgeport Indian Colony",
+    "government_unit": "Distinct tribal government",
+    "federal_label": "Bridgeport Indian Colony",
+    "saved_bia_object_id": 395,
+    "name_source_anchor": "Bridgeport Indian Colony, on H.R. 5468",
+    "name_source_page": "55 (printed)",
+    "official_url": null,
+    "website_status": "The BIA-listed domain’s HTTPS certificate failed verification."
+  },
+  "receipt_scope": "HTTP bodies hashed in memory. Source wording checked in the official indexed documents and independently corroborated in the chairman's own House-posted prepared testimony.",
+  "receipts": [
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CHRG-111hhrg57666/pdf/CHRG-111hhrg57666.pdf",
+      "retrieval_method": "http",
+      "retrieved_at": "2026-11-13T15:01:11.304184Z",
+      "http_status": 200,
+      "body_bytes": 306587,
+      "sha256": "00d228891673530754b677942ac1a2db2899913a7e1b4be6720a08b6b9d44559",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1368-2.pdf",
+      "retrieval_method": "http",
+      "retrieved_at": "2026-11-13T15:01:22.594330Z",
+      "http_status": 200,
+      "body_bytes": 250349,
+      "sha256": "ba20841b39f747de750663c2d1fc7f0b5bd60ce22c2c35f828a24020edea7cc3",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-112publ212/pdf/PLAW-112publ212.pdf",
+      "retrieval_method": "http",
+      "retrieved_at": "2026-11-13T15:01:33.820470Z",
+      "http_status": 200,
+      "body_bytes": 202535,
+      "sha256": "26e6a56a21d54592b3f6e9ea5dc38552b29bea23bae788dcc0b8cd1a7d0da498",
+      "redirects": []
+    }
+  ],
+  "robots": {
+    "url": "https://www.govinfo.gov/robots.txt",
+    "retrieved_at": "2026-11-13T15:00:33.802199Z",
+    "http_status": 200,
+    "body_bytes": 5092,
+    "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c"
+  },
+  "independent_corroboration": {
+    "url": "https://naturalresources.house.gov/uploadedfiles/samtestimony07.28.10.pdf",
+    "access": "Indexed official source",
+    "publication_date": "2010-07-28",
+    "pages": "1–2"
+  },
+  "events": [
+    {
+      "event_date": "1976",
+      "source_document_date": "2010-07-28"
+    },
+    {
+      "event_date": "1980s",
+      "source_document_date": "2010-07-28"
+    },
+    {
+      "event_date": "1974-10-18",
+      "source_document_date": "1974-10-18"
+    }
+  ],
+  "unresolved": [
+    "Exact recognition date",
+    "Verified government homepage",
+    "Present clinic operations",
+    "Current land boundaries or ownership"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "candidate_fact_ids": [
+    "bridgeport-indian-colony-us-ca-ecdf0e8b",
+    "bridgeport-indian-colony-us-ca-217f6776",
+    "bridgeport-indian-colony-us-ca-2ac684ad"
+  ]
+}

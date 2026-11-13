@@ -1,0 +1,40 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-13",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed": "2026-11-13",
+    "evidence_receipt": "batches/2026-11-13-bridgeport-indian-colony.json",
+    "review_kind": "Independent AI-assisted source meaning, identity and respect review"
+  },
+  "results": [
+    {
+      "id": "bridgeport-indian-colony-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The chairman dates formal tribal government organization to 1976."
+    },
+    {
+      "id": "bridgeport-indian-colony-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The Colony’s chairman places the clinic project in the 1980s and credits Toiyabe with coordinating it."
+    },
+    {
+      "id": "bridgeport-indian-colony-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "Public Law 93-451 declares a land trust interest. Its approval date is a land-law milestone."
+    }
+  ],
+  "names": [
+    {
+      "id": "bridgeport-indian-colony-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The government’s prepared statement and federal directory use the same name."
+    }
+  ]
+}
