@@ -944,9 +944,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-buena-vista-rancheria-2026-11-14"
       ],
       "review": {
         "identity": "pending",
@@ -962,9 +963,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.bvtribe.com/tribal-history.php",
+          "final_url": "https://www.bvtribe.com/tribal-history.php",
+          "retrieved_at": "2026-11-14T21:32:58.732006Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 20187,
+          "sha256": "4709d04683fb7490f2c071c432652bedd9ffcd925350ffb6d458c1f45b0b5296",
+          "redirects": [],
+          "source_id": "own-buena-vista-rancheria-2026-11-14",
+          "evidence_receipt": "batches/2026-11-14-buena-vista-rancheria.json",
+          "receipt_id": "r-0b2073aaeff4feab"
+        }
+      ],
+      "updated_at": "2026-11-14T21:41:03.653061+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Independent AI-assisted review confirmed the government identity and four dated facts after narrowing the 1983 court-victory wording. The checked profile is ready for candidate testing.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-14-buena-vista-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-dd8f23e56410",
@@ -62475,9 +62495,9 @@
           "receipt_id": "r-29e1c87e443790af"
         }
       ],
-      "updated_at": "2026-11-13T15:05:28.532809+00:00",
+      "updated_at": "2026-11-14T21:41:03.653061+00:00",
       "next_attempt_after": null,
-      "note": "The INAH-published letter and Coahuila constitutional provision support separately scoped dated research. Community and government crosswalks remain unresolved. See batches/2026-11-13-ndee-nnee-nde-mexico.json.",
+      "note": "The INAH-published letter and Coahuila constitutional provision support separately scoped dated research. Community and government crosswalks remain unresolved. See batches/2026-11-13-ndee-nnee-nde-mexico.json. November 14 legislative receipts confirm June 22 passage of LXVIII/RFLEY/0555/2026 VIII P.E. and June 23 transmittal. Gazette publication, effective date and community-defined governing identities remain open. See batches/2026-11-14-chihuahua-legislative-record.json.",
       "lease_until": null
     },
     {

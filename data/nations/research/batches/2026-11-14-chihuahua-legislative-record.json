@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-14",
+  "task_id": "followup-chiricahua-mexico-permissible-own-governments",
+  "status": "needs_review",
+  "instrument": "LXVIII/RFLEY/0555/2026 VIII P.E.",
+  "robots": [
+    {
+      "url": "https://www.congresochihuahua2.gob.mx/robots.txt",
+      "checked": "2026-11-14",
+      "evidence": "Wildcard user agent has an empty Disallow directive. The check recorded the body and date."
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://www.congresochihuahua2.gob.mx/biblioteca/debates/archivosDebates/3928.pdf",
+      "retrieved_at": "2026-11-14T21:36:24.5546168Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2078894,
+      "sha256": "4100ac96f97dba6e32ab88a5994b4088676c4858ac6d5ebdcefb2980c0b4fc42",
+      "title": "Chihuahua Congress Diario de los Debates No. 183",
+      "evidence": [
+        {
+          "pages": "PDF 167–168, printed 171–172",
+          "date": "2026-06-22",
+          "scope": "The floor approved the Article 9, fraction XXXIX amendment by 31 votes in favor. There were no votes against or abstentions. Two votes were unregistered.",
+          "anchors": [
+            "Se REFORMA el artículo 9, fracción XXXIX",
+            "N´dee/N´nee/Ndé o Apache",
+            "El presente Decreto entrará en vigor al día siguiente de su publicación en el Periódico Oficial del Estado."
+          ]
+        },
+        {
+          "pages": "PDF 161, printed 165",
+          "scope": "The legislative report attributes a request to use the name Apache Chiricahua to a group it identifies as Pueblo Chiricahua Apache, Comunidad Chihuahua. The original submission remains unverified."
+        }
+      ]
+    },
+    {
+      "url": "https://www.congresochihuahua2.gob.mx/biblioteca/debates/archivosDebates/3926.pdf",
+      "retrieved_at": "2026-11-14T21:36:25.5615638Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 448658,
+      "sha256": "c2cc9a12c234c6ca6ccf1653449c49f274c289f9afaa91c5552b1652dca0ab7d",
+      "title": "Chihuahua Congress Diario de los Debates No. 185",
+      "evidence": [
+        {
+          "pages": "PDF 7",
+          "date": "2026-06-23",
+          "scope": "The June 30 record reports transmittal to the governor by Oficio 763/2026 VIII P.E. ALJ-PLeg."
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "Gazette publication and the effective date of the amendment.",
+    "The original naming submission and community-defined identities and governance.",
+    "Relationships among Mexican communities, the legislative wording and any United States Tribal government."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

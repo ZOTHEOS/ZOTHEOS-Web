@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-14",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-14T21:35:25.811517+00:00",
+    "evidence_receipt": "batches/2026-11-14-buena-vista-rancheria.json",
+    "review_kind": "AI-assisted meaning, source and government identity review"
+  },
+  "results": [
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The Tribe dates the purchase of the Rancheria to 1927."
+    },
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The Tribe dates its reinstatement court victory to 1983. A 1984 Federal Register notice corroborates the order and names Buena Vista."
+    },
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The office dates presentation of its plan to 2010."
+    },
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The federal notice records May 11 approval and May 15 publication. The ordinance is the scope of this fact."
+    }
+  ],
+  "names": [
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "Own homepage and federal directory use the same government name."
+    }
+  ]
+}

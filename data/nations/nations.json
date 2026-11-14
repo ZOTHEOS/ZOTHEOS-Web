@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-13",
-  "count": 487,
-  "facts": 1417,
+  "generated": "2026-11-14",
+  "count": 488,
+  "facts": 1421,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 33
+    "us-west-pacific": 34
   },
   "nations": [
     {
@@ -29464,6 +29464,87 @@
           "status": "verified",
           "checked": "2026-11-13",
           "last_verified": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "buena-vista-rancheria-me-wuk-indians-us-ca",
+      "region": "us-west-pacific",
+      "name": "Buena Vista Rancheria of Me-Wuk Indians of California",
+      "also": [
+        "Buena Vista Rancheria of Me-Wuk Indians"
+      ],
+      "pronounce": null,
+      "lands": "Near Buena Vista in Amador County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://bvtribe.com/",
+      "name_source_url": "https://bvtribe.com/",
+      "facts": [
+        {
+          "id": "buena-vista-rancheria-me-wuk-indians-us-ca-9ca64229",
+          "text": "The Tribe’s history dates the federal purchase of Buena Vista Rancheria to 1927.",
+          "kind": "history",
+          "as_of": "1927",
+          "source": {
+            "title": "Tribal History",
+            "publisher": "Buena Vista Rancheria of Me-Wuk Indians of California",
+            "url": "https://www.bvtribe.com/tribal-history.php",
+            "accessed": "2026-11-14"
+          },
+          "evidence": "The United States purchased the Buena Vista Rancheria in 1927",
+          "status": "verified",
+          "checked": "2026-11-14",
+          "last_verified": "2026-11-14"
+        },
+        {
+          "id": "buena-vista-rancheria-me-wuk-indians-us-ca-809019dc",
+          "text": "The Tribe’s history dates its court victory for restored federal recognition to 1983.",
+          "kind": "history",
+          "as_of": "1983",
+          "source": {
+            "title": "Tribal History",
+            "publisher": "Buena Vista Rancheria of Me-Wuk Indians of California",
+            "url": "https://www.bvtribe.com/tribal-history.php",
+            "accessed": "2026-11-14"
+          },
+          "evidence": "win their lawsuit to be reinstated",
+          "status": "verified",
+          "checked": "2026-11-14",
+          "last_verified": "2026-11-14"
+        },
+        {
+          "id": "buena-vista-rancheria-me-wuk-indians-us-ca-8d69774d",
+          "text": "The Tribal Historic Preservation Office says it presented its preservation plan to the National Park Service in 2010.",
+          "kind": "history",
+          "as_of": "2010",
+          "source": {
+            "title": "Tribal Historic Preservation Office",
+            "publisher": "Buena Vista Rancheria of Me-Wuk Indians of California",
+            "url": "https://www.bvtribe.com/tribal-historic-preservation.php",
+            "accessed": "2026-11-14"
+          },
+          "evidence": "presented to the National Park Service (NPS) in 2010",
+          "status": "verified",
+          "checked": "2026-11-14",
+          "last_verified": "2026-11-14"
+        },
+        {
+          "id": "buena-vista-rancheria-me-wuk-indians-us-ca-7af8b5a1",
+          "text": "The Bureau of Indian Affairs reports that the Assistant Secretary for Indian Affairs approved the Tribe’s leasing ordinance under the HEARTH Act on May 11, 2026.",
+          "kind": "governance",
+          "as_of": "2026",
+          "source": {
+            "title": "HEARTH Act Approval of Buena Vista Rancheria Leasing Ordinance",
+            "publisher": "Bureau of Indian Affairs",
+            "url": "https://www.govinfo.gov/content/pkg/FR-2026-05-15/html/2026-09719.htm",
+            "accessed": "2026-11-14"
+          },
+          "evidence": "issued the approval on May 11, 2026",
+          "status": "verified",
+          "checked": "2026-11-14",
+          "last_verified": "2026-11-14"
         }
       ]
     },
