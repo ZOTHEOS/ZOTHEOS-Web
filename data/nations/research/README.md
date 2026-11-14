@@ -728,3 +728,24 @@ The Mexico queue records the N’dee/N’nee/Ndé letter published by INAH and t
 separate Coahuila constitutional text. Connections between signatories, the
 constitutional category and individual communities remain unresolved. See
 `batches/2026-11-13-ndee-nnee-nde-mexico.json`.
+
+## November 14 Buena Vista Rancheria of Me-Wuk Indians of California
+
+The candidate adds the Rancheria as a distinct Tribal government. The Tribe's
+history and preservation office describe the 1927 Rancheria purchase, the 1983
+court victory, and presentation of the preservation plan
+in 2010. The Bureau of Indian Affairs records the May 11, 2026 leasing ordinance
+approval. The candidate registry holds 488 profiles and 1,421 raw facts.
+
+Batch: `batches/2026-11-14-buena-vista-rancheria.json`.
+
+## November 14 Chihuahua legislative record
+
+The June 22 floor record confirms passage of a cultural heritage law amendment.
+The June 30 record reports its June 23 transmittal to the governor. Gazette
+publication and the effective date remain unverified. The legislative report
+separately records a naming request attributed to Pueblo Chiricahua Apache,
+Comunidad Chihuahua. The original statement and governing relationships remain
+open in the Mexico queue.
+
+Batch: `batches/2026-11-14-chihuahua-legislative-record.json`.

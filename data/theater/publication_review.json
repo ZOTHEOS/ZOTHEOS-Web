@@ -1,22 +1,22 @@
 {
-  "version": 8,
-  "prepared_at": "2026-11-13T15:11:49.860825+00:00",
+  "version": 9,
+  "prepared_at": "2026-11-14T21:48:41.943294+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "47ec8647eaa0c60e9c59b6a6d3df6277fdda7524",
-    "version": 7,
-    "catalogue_sha256": "544246dd12e535fdde0b11f4af1feabfe90b7efac3df7606058422b1d3fb3377"
+    "commit": "582f0d303da3e81274e4b2e8d509f1e28e73aacc",
+    "version": 8,
+    "catalogue_sha256": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb"
   },
   "catalogue": {
-    "sha256": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb",
-    "titles": 234,
+    "sha256": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c",
+    "titles": 235,
     "configured_players": 224,
-    "source_only": 10,
+    "source_only": 11,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 21,
+      "full-film": 22,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,8 +24,8 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-13-indigenize-the-plate.json",
-    "sha256": "8231c3d3e1d7d73153546fb6f7c34b76c22715be6a5e1cc80b478a9f26bb5883",
+    "batch": "research/batches/2026-11-14-kindred.json",
+    "sha256": "19fe9e243f54aa82e61a3bb5127fe0902add7c2ba859976034287b8e7a095f0e",
     "thumbnail_display": "Text cover while provider image permission remains unresolved."
   },
   "person_review_claimed": false,
@@ -37,13 +37,13 @@
       "errors": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 250.9936677000369,
-    "full_suite_xml_sha256": "b4d7895463ffdbb5f068442db9a808c6907251e615509db058086fe3c6060f75",
+    "full_suite_wall_seconds": 256.988847300061,
+    "full_suite_xml_sha256": "f09afaf1b320a13d713b20b2d17c05937459022f39008938f0f8980391450fe2",
     "canonical_build": {
       "status": "passed",
-      "pages": 622,
-      "profiles": 487,
-      "visible_facts": 1415,
+      "pages": 623,
+      "profiles": 488,
+      "visible_facts": 1419,
       "held_facts": 2
     },
     "registry_validator": {
@@ -51,14 +51,14 @@
       "preexisting_warnings": 54
     },
     "game_data": {
-      "quick_cards": 487,
-      "profiles_with_history": 109,
+      "quick_cards": 488,
+      "profiles_with_history": 110,
       "new_history_facts": 3,
       "skipped": 0
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-13",
-      "method": "Independent offline Chrome with exact generated files and Vercel CSP.",
+      "reviewed_utc_date": "2026-11-14",
+      "method": "Independent offline Chrome served exact generated files and route CSP.",
       "chrome_version": "157.0.8103.52",
       "viewport_pixels": [
         [
@@ -71,36 +71,39 @@
         ]
       ],
       "checks": [
-        "Bridgeport directory search and keyboard navigation, all three history facts and exact citations.",
-        "Indigenize the Plate story link, official PBS destination, text cover, Full Film and Official Site filters.",
-        "Phone Filters touch, Space and Enter. Zero provider frames, page errors, CSP violations and overflow."
+        "Buena Vista directory search, keyboard navigation, four sourced facts and source-link focus.",
+        "Kindred story permalink, official Tubi destination, text cover, Full Film and Official Site filters.",
+        "Phone filter opened by tap, closed with Space, and opened with Enter. No route errors, CSP violations, overflow, iframe or Kindred provider requests."
       ],
-      "limits": "External image requests blocked. Actual playback, regional access and caption quality remain unverified."
+      "limits": "Unrelated external thumbnails were blocked. The browser review did not test actual playback, regional access, subtitle timing or subtitle quality."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "d3f1540e75719de908f24e7a78dae37ff87964881e083fb2d75f366e5a9a18d3",
-    "data/nations/nations.min.json": "7da463ea436efe65e1ea931785c2dbfe02747c2d1c142bcae4b8c0d65f40d220",
-    "data/nations/research/coverage_queue.json": "abe79bdf65bdcd9567f6b07879b0cbc30a6880dbc17d9e22820c2863a87dd6f9",
-    "data/nations/research/directory_sources.json": "b62926b73fe5079d5110a6c97572babbe35f69fa05615bbcbec332ceb333547d",
-    "data/nations/research/us_federal_directory.json": "7f968f05cd8fa0806815a8976a9a5c329ad4feb9fc9ecef4190385dfd151d147",
-    "data/nations/research/receipts/2026-11-13-bridgeport-identity.json": "16db0393480f1269abfdd871f069fcd3caf57a01161793cf831c0966fa91b67f",
-    "data/nations/research/batches/2026-11-13-bridgeport-indian-colony.json": "1e35c2ebc471852a8ef27bab6b78b26e34581aa4aa01ced72d952bf8ed08fde7",
-    "data/nations/research/batches/2026-11-13-ndee-nnee-nde-mexico.json": "d1598d3efbaefe3b440661d7d9cf55e3416fdde43f08fad1250a0d336ac82e3d",
-    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.raw.json": "8662966020252e3a7bf5a800e4aa9dbf0e2f9f4ab3500df13504ba85436ca548",
-    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.verify.json": "e5e4b6b78449a14d2674f27df90cc41ca64205ae3173e00c282f7450500a4eca",
-    "data/nations/sources/us-bridgeport-indian-colony-2026-11-13.respect.json": "d42acdd36c77ebfbfd951bdfb83a5ba3fdc8ad291a358803afa150c074f37af3",
-    "data/theater/films.json": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb",
-    "data/theater/research_queue.json": "73e85e111117154f26a18b097b32efc28aef10fe4cd0cac073e7f469219a82dc",
-    "data/theater/research/batches/2026-11-13-indigenize-the-plate.json": "8231c3d3e1d7d73153546fb6f7c34b76c22715be6a5e1cc80b478a9f26bb5883",
-    "nations/directory.html": "eb12efdd732b0397cf75fbe3f8667f326c996e8dfc87077b342a25165887da3c",
-    "nations/bridgeport-indian-colony-us-ca.html": "4e19d80bd00881ca6d7d6b4f8353a5c492b2a464fb04d8e8e665ae474d46821f",
-    "theater.html": "f056d3810e82a6d52c4431a22466a5fdb28834ec5180f46f56e716ac3b2477b9",
-    "vercel.json": "a0fe855e7822201104ececa98fede616b4578a71d6ad1c8cc3e14c83a354c2d9"
+    "data/nations/nations.json": "be0411fa7621baaa46ba30f3388dd2087403f66572e95dbfc63797c376232904",
+    "data/nations/nations.min.json": "b2d93d7ce18b993d41a25c64c0c001cd1e8db5fe238528f02400457b53a65ee9",
+    "data/nations/research/coverage_queue.json": "a53f5c6f48d86564d0d466555e605418ae0e6adf37cbae1cbb4469826ce94a0f",
+    "data/nations/research/directory_sources.json": "647f1d9bd329d09cec42dda3358a8fa7cd6233e9f9605d04db02bd0446167ab4",
+    "data/nations/research/us_federal_directory.json": "b1a634f2801c721419d17ffe8ecbba3fdb928fcdb0bd75687f4b7a09beda00d2",
+    "data/nations/research/receipts/2026-11-14-buena-vista-identity.json": "c2993dfa80865a76102c87868d5cb185da2f0006f42c1f592de5b557398a3b2e",
+    "data/nations/research/batches/2026-11-14-buena-vista-rancheria.json": "66b3fa99113138cf971e1d288b05766eb6a37299eb989b9bd962bb8fc19c2e32",
+    "data/nations/research/batches/2026-11-14-chihuahua-legislative-record.json": "f783619da5d64bd0706685a7545c210627643997e41169a43c9f330afb986eae",
+    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.raw.json": "488ebb7038ce99433d39e4dccc2d7a4380077717a8c83d602ede514ca609a971",
+    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.verify.json": "171003e67a8f85669daaec3ea0c24d3ee6f5cfbce13175a161c9bdc4ad0dce6e",
+    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.respect.json": "5d9c0f69b9dd22abbfcdc845eff1cb09230343157a97d1eec90d434507c087f6",
+    "data/theater/films.json": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c",
+    "data/theater/research_queue.json": "9b80fff20cbfe18187078bfcae51504d3109e12b1d05e1d82ed8398c32d631b3",
+    "data/theater/research/batches/2026-11-14-kindred.json": "19fe9e243f54aa82e61a3bb5127fe0902add7c2ba859976034287b8e7a095f0e",
+    "nations/directory.html": "69ad7c32d1e194a7415244b35f6da5c14f14f090f3fbbb434fb5a2de7d40c5a3",
+    "nations/buena-vista-rancheria-me-wuk-indians-us-ca.html": "612139adc972a153260884c7609585ef0cd7c3e4a34fb3b0557afe15f1aefc43",
+    "static/nations/coverage.json": "2fe52c501df731b71e051bfc2817df8d82f68c06db8468a98603b55e7b2e9877",
+    "game/nations.json": "4d0e0691c7dffb7ac85485a851d75967b1818b4207ba5efcb5127d9f6bfcf818",
+    "game/history.json": "8f64d405d628d0c2782b922752beb0855364d0174254179858ae7ed201c46f16",
+    "theater.html": "9430648fd28cf1898781262edee66ec01f2717d73b78528f7382cd59aad4c5f6",
+    "vercel.json": "416983b9ab319847f8ae5fc411372457d2608fa1c11fcfe91d91fec4a55b1576"
   },
   "pending": [
     "Vercel production verification",
-    "Film playback, regional access and caption quality",
+    "Film playback, title-specific regional access and subtitle quality",
     "Permission before adding an embedded player or provider image"
   ]
 }
