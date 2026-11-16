@@ -1,22 +1,22 @@
 {
-  "version": 9,
-  "prepared_at": "2026-11-14T21:48:41.943294+00:00",
+  "version": 10,
+  "prepared_at": "2026-11-16T00:49:43.551908+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "582f0d303da3e81274e4b2e8d509f1e28e73aacc",
-    "version": 8,
-    "catalogue_sha256": "88e8c975eb7da948a82a47416f9aae07c25f0f822782fd29469b0479b9a4b8fb"
+    "commit": "a9d57ebaa0f869d44b8cb8a45aa9e816c9f0fba9",
+    "version": 9,
+    "catalogue_sha256": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c"
   },
   "catalogue": {
-    "sha256": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c",
-    "titles": 235,
+    "sha256": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d",
+    "titles": 236,
     "configured_players": 224,
-    "source_only": 11,
+    "source_only": 12,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 22,
+      "full-film": 23,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,26 +24,26 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-14-kindred.json",
-    "sha256": "19fe9e243f54aa82e61a3bb5127fe0902add7c2ba859976034287b8e7a095f0e",
-    "thumbnail_display": "Text cover while provider image permission remains unresolved."
+    "batch": "research/batches/2026-11-16-searching-for-sequoyah.json",
+    "sha256": "6e8c01da0c56fc9c7de7119a8511628b84c31a0278fa428626da5a662ef443a4",
+    "thumbnail_display": "Text cover while provider image use permission remains unresolved."
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
   "validation": {
     "automated_tests": {
       "tests": 1072,
-      "failures": 0,
       "errors": 0,
+      "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 256.988847300061,
-    "full_suite_xml_sha256": "f09afaf1b320a13d713b20b2d17c05937459022f39008938f0f8980391450fe2",
+    "full_suite_wall_seconds": 251.60561229998711,
+    "full_suite_xml_sha256": "289b90bbc48e6c5a5627b8e7a3d75241eca30068141ca3e690e2a9cb025ab076",
     "canonical_build": {
       "status": "passed",
-      "pages": 623,
-      "profiles": 488,
-      "visible_facts": 1419,
+      "pages": 624,
+      "profiles": 489,
+      "visible_facts": 1424,
       "held_facts": 2
     },
     "registry_validator": {
@@ -51,14 +51,14 @@
       "preexisting_warnings": 54
     },
     "game_data": {
-      "quick_cards": 488,
-      "profiles_with_history": 110,
+      "quick_cards": 489,
+      "profiles_with_history": 111,
       "new_history_facts": 3,
       "skipped": 0
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-14",
-      "method": "Independent offline Chrome served exact generated files and route CSP.",
+      "reviewed_utc_date": "2026-11-16",
+      "method": "Independent offline Chrome with checked-in files and Vercel CSP.",
       "chrome_version": "157.0.8103.52",
       "viewport_pixels": [
         [
@@ -71,39 +71,45 @@
         ]
       ],
       "checks": [
-        "Buena Vista directory search, keyboard navigation, four sourced facts and source-link focus.",
-        "Kindred story permalink, official Tubi destination, text cover, Full Film and Official Site filters.",
-        "Phone filter opened by tap, closed with Space, and opened with Enter. No route errors, CSP violations, overflow, iframe or Kindred provider requests."
+        "Burns Paiute exact directory result, Enter navigation, and four cited facts. Southern Ute agreement scope visible in the existing government profile.",
+        "Searching for Sequoyah story permalink, official PBS Wisconsin destination, and Full Film and Official Site filters.",
+        "Phone filter tap, Space and Enter. No third-party frame or media requests, page errors, CSP violations, missing routes or overflow."
       ],
-      "limits": "Unrelated external thumbnails were blocked. The browser review did not test actual playback, regional access, subtitle timing or subtitle quality."
+      "limits": "Unrelated external image requests were blocked. PBS Passport playback, regional access, caption quality, and accessibility beyond tested controls remain unverified."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "be0411fa7621baaa46ba30f3388dd2087403f66572e95dbfc63797c376232904",
-    "data/nations/nations.min.json": "b2d93d7ce18b993d41a25c64c0c001cd1e8db5fe238528f02400457b53a65ee9",
-    "data/nations/research/coverage_queue.json": "a53f5c6f48d86564d0d466555e605418ae0e6adf37cbae1cbb4469826ce94a0f",
-    "data/nations/research/directory_sources.json": "647f1d9bd329d09cec42dda3358a8fa7cd6233e9f9605d04db02bd0446167ab4",
-    "data/nations/research/us_federal_directory.json": "b1a634f2801c721419d17ffe8ecbba3fdb928fcdb0bd75687f4b7a09beda00d2",
-    "data/nations/research/receipts/2026-11-14-buena-vista-identity.json": "c2993dfa80865a76102c87868d5cb185da2f0006f42c1f592de5b557398a3b2e",
-    "data/nations/research/batches/2026-11-14-buena-vista-rancheria.json": "66b3fa99113138cf971e1d288b05766eb6a37299eb989b9bd962bb8fc19c2e32",
-    "data/nations/research/batches/2026-11-14-chihuahua-legislative-record.json": "f783619da5d64bd0706685a7545c210627643997e41169a43c9f330afb986eae",
-    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.raw.json": "488ebb7038ce99433d39e4dccc2d7a4380077717a8c83d602ede514ca609a971",
-    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.verify.json": "171003e67a8f85669daaec3ea0c24d3ee6f5cfbce13175a161c9bdc4ad0dce6e",
-    "data/nations/sources/us-buena-vista-rancheria-2026-11-14.respect.json": "5d9c0f69b9dd22abbfcdc845eff1cb09230343157a97d1eec90d434507c087f6",
-    "data/theater/films.json": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c",
-    "data/theater/research_queue.json": "9b80fff20cbfe18187078bfcae51504d3109e12b1d05e1d82ed8398c32d631b3",
-    "data/theater/research/batches/2026-11-14-kindred.json": "19fe9e243f54aa82e61a3bb5127fe0902add7c2ba859976034287b8e7a095f0e",
-    "nations/directory.html": "69ad7c32d1e194a7415244b35f6da5c14f14f090f3fbbb434fb5a2de7d40c5a3",
-    "nations/buena-vista-rancheria-me-wuk-indians-us-ca.html": "612139adc972a153260884c7609585ef0cd7c3e4a34fb3b0557afe15f1aefc43",
-    "static/nations/coverage.json": "2fe52c501df731b71e051bfc2817df8d82f68c06db8468a98603b55e7b2e9877",
-    "game/nations.json": "4d0e0691c7dffb7ac85485a851d75967b1818b4207ba5efcb5127d9f6bfcf818",
-    "game/history.json": "8f64d405d628d0c2782b922752beb0855364d0174254179858ae7ed201c46f16",
-    "theater.html": "9430648fd28cf1898781262edee66ec01f2717d73b78528f7382cd59aad4c5f6",
-    "vercel.json": "416983b9ab319847f8ae5fc411372457d2608fa1c11fcfe91d91fec4a55b1576"
+    "data/nations/nations.json": "91ad338e66dedd13153b44b77299e5f5cc1ac62a030c9cd721caeadaf9839097",
+    "data/nations/nations.min.json": "122d1eccb83845f289f04ffc1dbea793aa3d682d8855dfcfe2844ccf0c375098",
+    "data/nations/research/coverage_queue.json": "0a39b643830a3b51fda2e8a51b035cbebad624bbdb489adb1e0a00693309ef2a",
+    "data/nations/research/directory_sources.json": "c887d78303de6e4d794277f5ed005737e16e79a3179f179ba5c73af7d9e5fcf6",
+    "data/nations/research/us_federal_directory.json": "0eefe36f9102eed1388eaac7bbf70b596700798c718ec2ca928d40dfbc41dba1",
+    "data/nations/research/receipts/2026-11-16-burns-paiute-identity.json": "cef1be4a51bdb52e9b04a16157814f71089293c208d0caa316d1f27ab1ed7f03",
+    "data/nations/research/batches/2026-11-16-burns-paiute-tribe.json": "d0fb49fdbcda96bf0cecc19560c6b72f7b3614dcb4581f9277cee603d55f6b5a",
+    "data/nations/research/batches/2026-11-16-southern-ute-energy-agreement.json": "7b2c81aaab1a23bf50ba1022be32a1658e04fa349a8d54579c69933be65f35d9",
+    "data/nations/research/batches/2026-11-16-southern-ute-flood-recovery-lead.json": "fde9d1c58b26caefd973418a3e83ee72d641d08f6066d919b094edd87778b608",
+    "data/nations/research/batches/2026-11-16-chihuahua-electoral-sources.json": "90c8b25d94809aa760dc00aae4d486b14846d9e21042901bbee3b1615472644e",
+    "data/theater/films.json": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d",
+    "data/theater/research_queue.json": "b471909f37dbcdf7402b0c46b662f36c64d919e922bbaea860a48b41d1d964f2",
+    "data/theater/research/batches/2026-11-16-searching-for-sequoyah.json": "6e8c01da0c56fc9c7de7119a8511628b84c31a0278fa428626da5a662ef443a4",
+    "nations/directory.html": "aea85b55020071c9d615ee0df5584c531907ca0333b600378632b16a3f61a8da",
+    "nations/burns-paiute-tribe-us-or.html": "e8ed96e40a62d1a1b59a64541fa197eb6d61ede6424ac09bbfa9200b28faf4fa",
+    "nations/southern-ute-indian-tribe-us-co.html": "844037d630447365326d4a9e101ad129383414eb37007085f4ed1d63fa3c2aac",
+    "static/nations/coverage.json": "9e0254cbac5e5f16a6c521f056d8ad82351d44a3e214acf1d288f8fd219cafd3",
+    "game/nations.json": "f1a65007387c63825f829b9c2bd6ccd697c3d0398ab9524cf840d89f7a07d326",
+    "game/history.json": "6f2da4d7ba37b2e61d92fa742b957cf6ae9f06fb400f1284e6f8aa674dde3121",
+    "theater.html": "bfb6e6f9421093511940a02506df7a7548fd76f317cbb7121000039d5c1a5b14",
+    "vercel.json": "76842badc58ec03c4162d2e042736019eea3b1bd9ac693857caff4f73ff7b7ad",
+    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.raw.json": "a0b9e3d2591b4746532a032dd7b7316fe998d76d2e404e157482fa1bdeba92b3",
+    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.verify.json": "2378f8f7dfc3f3f36ec15e4a84358aac041d8b4babf623ecb518ca4c11daf85e",
+    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.respect.json": "75ebff8ffd0b7dce83c00f0e548667d9b116ef0bf5ab457680811aee5dba44df",
+    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.raw.json": "2fb903e8bf710570b8ddaa0ddc96080129e4a0bd386eaca079c31a3ada5229fe",
+    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.verify.json": "6391b445c0fb4a6d0d6421010fd08242c47e79e42cd720a477135214262c89b4",
+    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.respect.json": "524980a3f37dbd1e68d8a65b0eef536b1299ff293ecf45df2547ce887176a24a"
   },
   "pending": [
     "Vercel production verification",
-    "Film playback, title-specific regional access and subtitle quality",
-    "Permission before adding an embedded player or provider image"
+    "Film playback, regional access and caption quality",
+    "Media embedding and artwork permissions"
   ]
 }

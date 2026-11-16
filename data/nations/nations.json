@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-14",
-  "count": 488,
-  "facts": 1421,
+  "generated": "2026-11-16",
+  "count": 489,
+  "facts": 1426,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 34
+    "us-west-pacific": 35
   },
   "nations": [
     {
@@ -20163,6 +20163,22 @@
           "status": "verified",
           "checked": "2026-10-12",
           "last_verified": "2026-10-12"
+        },
+        {
+          "id": "southern-ute-indian-tribe-us-co-eb1796ed",
+          "text": "Under a May 11, 2026 agreement with Interior, the Southern Ute Indian Tribe can approve covered energy and mineral leases, agreements and rights-of-way on its reservation trust lands.",
+          "kind": "governance",
+          "as_of": "2026",
+          "source": {
+            "title": "Southern Ute Indian Tribe Celebrates Signing of Tribal Energy Resource Agreement",
+            "publisher": "Southern Ute Indian Tribe",
+            "url": "https://www.southernute-nsn.gov/2026/05/11/for-immediate-release-may-11-2026-southern-ute-indian-tribe-celebrates-historic-signing-of-tribal-energy-resource-agreement/",
+            "accessed": "2026-11-16"
+          },
+          "evidence": "approve energy- and mineral-related leases, agreements, and rights-of-way",
+          "status": "verified",
+          "checked": "2026-11-16",
+          "last_verified": "2026-11-16"
         }
       ]
     },
@@ -29545,6 +29561,85 @@
           "status": "verified",
           "checked": "2026-11-14",
           "last_verified": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "id": "burns-paiute-tribe-us-or",
+      "region": "us-west-pacific",
+      "name": "Burns Paiute Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "Near Burns in Harney County, Oregon",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://burnspaiute-nsn.gov/",
+      "name_source_url": "https://burnspaiute-nsn.gov/",
+      "facts": [
+        {
+          "id": "burns-paiute-tribe-us-or-6cbaa981",
+          "text": "The Tribe’s strategic plan recounts that Wadatika ancestors were forcibly marched to the Yakama Reservation in Washington in 1878.",
+          "kind": "history",
+          "as_of": "1878",
+          "source": {
+            "title": "2022-2026 Community Strategic Plan",
+            "publisher": "Burns Paiute Tribe",
+            "url": "https://burnspaiute-nsn.gov/wp-content/uploads/2022/10/Burns-Paiute-Tribe_Strategic-Plan-FINAL-Approved-by-Council-9.28.2022.pdf",
+            "accessed": "2026-11-16"
+          },
+          "evidence": "forcibly marched to the Yakama Indian Reservation in Washington",
+          "status": "verified",
+          "checked": "2026-11-16",
+          "last_verified": "2026-11-16"
+        },
+        {
+          "id": "burns-paiute-tribe-us-or-02e77133",
+          "text": "The Tribe recounts that Wadatika children kept speaking Paiute outside school after a small Tribal school opened in the 1920s.",
+          "kind": "history",
+          "as_of": null,
+          "source": {
+            "title": "About BPT",
+            "publisher": "Burns Paiute Tribe",
+            "url": "https://burnspaiute-nsn.gov/about-bpt/",
+            "accessed": "2026-11-16"
+          },
+          "evidence": "continued to use their Paiute language outside of school hours",
+          "status": "verified",
+          "checked": "2026-11-16",
+          "last_verified": "2026-11-16"
+        },
+        {
+          "id": "burns-paiute-tribe-us-or-116fc788",
+          "text": "On October 13, 1972, Congress established the Burns Paiute Reservation in trust for the Burns Indian Colony.",
+          "kind": "history",
+          "as_of": "1972",
+          "source": {
+            "title": "Public Law 92-488, Sections 1 and 2",
+            "publisher": "United States Congress",
+            "url": "https://www.govinfo.gov/content/pkg/STATUTE-86/pdf/STATUTE-86-Pg804.pdf",
+            "accessed": "2026-11-16"
+          },
+          "evidence": "an Indian reservation for the use and benefit of said colony",
+          "status": "verified",
+          "checked": "2026-11-16",
+          "last_verified": "2026-11-16"
+        },
+        {
+          "id": "burns-paiute-tribe-us-or-233b18ed",
+          "text": "On February 2, 2017, the Tribal Council recognized a state of emergency for the Wadatika dialect of Northern Paiute and called for a language plan.",
+          "kind": "language",
+          "as_of": "2017",
+          "source": {
+            "title": "Burns Paiute Tribal Council Resolution No. 2017-03",
+            "publisher": "Burns Paiute Tribe",
+            "url": "https://burnspaiute-nsn.gov/wp-content/uploads/2020/09/language-resolution.pdf",
+            "accessed": "2026-11-16"
+          },
+          "evidence": "State of Emergency of the Wadatika Dialect",
+          "status": "verified",
+          "checked": "2026-11-16",
+          "last_verified": "2026-11-16"
         }
       ]
     },

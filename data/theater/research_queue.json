@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -242,7 +242,25 @@
         "https://www.sbs.com.au/ondemand/movie/kindred/2336873027687"
       ],
       "reason": "Tubi lists the full documentary. The distributor’s director statement and the SBS listing corroborate the film identity.",
-      "next": "Verify the live official viewing card after release. Title-specific regional access, playback, subtitle timing and quality, and embedding permission remain open."
+      "next": "The live card and official viewing URL matched the reviewed files. Title-specific regional access, playback, subtitle timing and quality, and embedding permission remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/49"
+    },
+    {
+      "id": "searching-for-sequoyah",
+      "status": "official-source-only",
+      "checked": "2026-11-16",
+      "batch": "research/batches/2026-11-16-searching-for-sequoyah.json",
+      "source_urls": [
+        "https://pbswisconsin.org/watch/searching-sequoyah/searching-for-sequoyah-bdboom/",
+        "https://watch.montanapbs.org/video/searching-for-sequoyah-bdboom/",
+        "https://searchingforsequoyah.com/",
+        "https://searchingforsequoyah.com/purchase/",
+        "https://searchingforsequoyah.com/filmmakers/",
+        "https://worldchannel.org/press/article/native-american-heritage-month-2021-viewers-guide/"
+      ],
+      "reason": "The filmmaker identifies the complete broadcast cut and PBS Wisconsin lists the exact broadcast edition.",
+      "next": "Verify the live official viewing card after release. Playback, regional access, caption behavior and embedding permission remain open."
     }
   ]
 }

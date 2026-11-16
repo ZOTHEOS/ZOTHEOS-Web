@@ -998,9 +998,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-burns-paiute-tribe-2026-11-16"
       ],
       "review": {
         "identity": "pending",
@@ -1016,9 +1017,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://burnspaiute-nsn.gov/about-bpt/",
+          "final_url": "https://burnspaiute-nsn.gov/about-bpt/",
+          "retrieved_at": "2026-11-16T00:35:58.406485Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 258950,
+          "sha256": "b82ae70d88eef4a9c5a97c9ad631372060b1f752861fe163000bc12b84d2975e",
+          "redirects": [],
+          "source_id": "own-burns-paiute-tribe-2026-11-16",
+          "evidence_receipt": "batches/2026-11-16-burns-paiute-tribe.json",
+          "receipt_id": "r-b18eedc890b50f6a"
+        }
+      ],
+      "updated_at": "2026-11-16T00:41:53.641242+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "The own-source profile covers forced relocation, language continuity, the 1972 reservation law, and the 2017 language resolution.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-16-burns-paiute-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-bd5ed0b7839f",
@@ -62495,9 +62515,9 @@
           "receipt_id": "r-29e1c87e443790af"
         }
       ],
-      "updated_at": "2026-11-14T21:41:03.653061+00:00",
+      "updated_at": "2026-11-16T00:43:34.675570+00:00",
       "next_attempt_after": null,
-      "note": "The INAH-published letter and Coahuila constitutional provision support separately scoped dated research. Community and government crosswalks remain unresolved. See batches/2026-11-13-ndee-nnee-nde-mexico.json. November 14 legislative receipts confirm June 22 passage of LXVIII/RFLEY/0555/2026 VIII P.E. and June 23 transmittal. Gazette publication, effective date and community-defined governing identities remain open. See batches/2026-11-14-chihuahua-legislative-record.json.",
+      "note": "The INAH-published letter and Coahuila constitutional provision support separately scoped dated research. Community and government crosswalks remain unresolved. See batches/2026-11-13-ndee-nnee-nde-mexico.json. November 14 legislative receipts confirm June 22 passage of LXVIII/RFLEY/0555/2026 VIII P.E. and June 23 transmittal. Gazette publication, effective date and community-defined governing identities remain open. See batches/2026-11-14-chihuahua-legislative-record.json. November 16: a separate March electoral ruling and the October implementing order document reduced voter-support thresholds for qualifying Indigenous independent candidates. See batches/2026-11-16-chihuahua-electoral-sources.json. Cultural heritage Gazette publication remains unresolved.",
       "lease_until": null
     },
     {
@@ -63223,12 +63243,25 @@
           "retrieval_method": "http",
           "evidence_receipt": "receipts/us-southern-ute-southern-ute-history-2026-10-15-checked-2026-10-15.receipt.json",
           "receipt_id": "r-5886bef0ef5afbaf"
+        },
+        {
+          "url": "https://www.southernute-nsn.gov/2026/05/11/for-immediate-release-may-11-2026-southern-ute-indian-tribe-celebrates-historic-signing-of-tribal-energy-resource-agreement/",
+          "final_url": "https://www.southernute-nsn.gov/2026/05/11/for-immediate-release-may-11-2026-southern-ute-indian-tribe-celebrates-historic-signing-of-tribal-energy-resource-agreement/",
+          "retrieved_at": "2026-11-16T00:37:44.227703Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 146981,
+          "sha256": "cc06f11f0e97e16b9c214df6833414317dace47c44888daab2efa5caa3161c4a",
+          "redirects": [],
+          "source_id": "priority-southern-ute",
+          "evidence_receipt": "batches/2026-11-16-southern-ute-energy-agreement.json",
+          "receipt_id": "r-10942bb6b5fe1db8"
         }
       ],
-      "updated_at": "2026-10-15T16:46:31.121043+00:00",
+      "updated_at": "2026-11-16T00:43:34.675570+00:00",
       "next_attempt_after": null,
       "lease_until": null,
-      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented."
+      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented. The November 16 source check records the May 11 energy agreement’s specific approval scope. See batches/2026-11-16-southern-ute-energy-agreement.json. The November 13 dated flood recovery report and local displacement notice are retained in batches/2026-11-16-southern-ute-flood-recovery-lead.json. Program availability remains unverified."
     },
     {
       "task_id": "history-ute-indian-land-water-context",

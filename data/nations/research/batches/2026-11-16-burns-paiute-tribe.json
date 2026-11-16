@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-16",
+  "registry_id": "burns-paiute-tribe-us-or",
+  "directory_id": "us-fed-dd8f23e56410",
+  "review_kind": "AI-assisted source, government identity and chronology review",
+  "receipts": [
+    {
+      "url": "https://burnspaiute-nsn.gov/",
+      "final_url": "https://burnspaiute-nsn.gov/",
+      "retrieved_at": "2026-11-16T00:35:56.790255Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 276291,
+      "sha256": "02c3ef5c521d75899b0233eaa488843bccec9e9af70b1948e8770badc999e446",
+      "redirects": [],
+      "evidence": "Burns Paiute Tribe"
+    },
+    {
+      "url": "https://burnspaiute-nsn.gov/about-bpt/",
+      "final_url": "https://burnspaiute-nsn.gov/about-bpt/",
+      "retrieved_at": "2026-11-16T00:35:58.406485Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 258950,
+      "sha256": "b82ae70d88eef4a9c5a97c9ad631372060b1f752861fe163000bc12b84d2975e",
+      "redirects": []
+    },
+    {
+      "url": "https://burnspaiute-nsn.gov/wp-content/uploads/2022/10/Burns-Paiute-Tribe_Strategic-Plan-FINAL-Approved-by-Council-9.28.2022.pdf",
+      "final_url": "https://burnspaiute-nsn.gov/wp-content/uploads/2022/10/Burns-Paiute-Tribe_Strategic-Plan-FINAL-Approved-by-Council-9.28.2022.pdf",
+      "retrieved_at": "2026-11-16T00:36:03.659612Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 424819,
+      "sha256": "3573b996229a24efd596e3bc409325cec43cb0c0b1159d62827aa09248770f56",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-86/pdf/STATUTE-86-Pg804.pdf",
+      "final_url": "https://www.govinfo.gov/content/pkg/STATUTE-86/pdf/STATUTE-86-Pg804.pdf",
+      "retrieved_at": "2026-11-16T00:36:49.564329Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 714028,
+      "sha256": "bc4d1e4066a5c21b439a8a3d84e5d3bd0b3b895a4ec22a27325481064c1babf6",
+      "redirects": []
+    },
+    {
+      "url": "https://burnspaiute-nsn.gov/wp-content/uploads/2020/09/language-resolution.pdf",
+      "final_url": "https://burnspaiute-nsn.gov/wp-content/uploads/2020/09/language-resolution.pdf",
+      "retrieved_at": "2026-11-16T00:38:10.063656Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 835733,
+      "sha256": "d051175f2cda5b150295ddb079d238875ca5f476d7610ea7f0aeb6366805b4c2",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-16T00:36:51.650530Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://burnspaiute-nsn.gov/robots.txt",
+      "final_url": "https://burnspaiute-nsn.gov/robots.txt",
+      "retrieved_at": "2026-11-16T00:35:25.171366Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 171,
+      "sha256": "e8365d58b3c5e194271f168e99a1390ff08d6d7191176fa52743a504eda273d0",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-16T00:35:25.340728Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1878",
+      "receipt_index": 2,
+      "page": "Printed p. 1",
+      "evidence": "forcibly marched to the Yakama Indian Reservation in Washington"
+    },
+    {
+      "event_period": "1920s",
+      "receipt_index": 1,
+      "evidence": "continued to use their Paiute language outside of school hours"
+    },
+    {
+      "event_date": "1972-10-13",
+      "receipt_index": 3,
+      "page": "86 Stat. 806, PDF p. 3",
+      "evidence": "an Indian reservation for the use and benefit of said colony"
+    },
+    {
+      "event_date": "2017-02-02",
+      "receipt_index": 4,
+      "pages": "PDF pp. 1 and 2",
+      "evidence": [
+        "State of Emergency of the Wadatika Dialect",
+        "development of a Language Plan to support short, medium range"
+      ],
+      "date_basis": "Date certified on the resolution. The later online directory listing date is separate."
+    }
+  ],
+  "candidate_fact_ids": [
+    "burns-paiute-tribe-us-or-6cbaa981",
+    "burns-paiute-tribe-us-or-02e77133",
+    "burns-paiute-tribe-us-or-116fc788",
+    "burns-paiute-tribe-us-or-233b18ed"
+  ],
+  "source_limits": [
+    "This profile covers the Burns Paiute Tribal government and attributes the account of Wadatika ancestors to the Tribe. It does not create a profile for the entire Northern Paiute people.",
+    "Modern population, differing recognition chronology and land acreage are outside scope. The 1972 law establishes the reservation in trust. The 2017 resolution documents action on that date without claiming current language conditions or implementation outcomes."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

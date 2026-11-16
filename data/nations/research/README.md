@@ -749,3 +749,24 @@ Comunidad Chihuahua. The original statement and governing relationships remain
 open in the Mexico queue.
 
 Batch: `batches/2026-11-14-chihuahua-legislative-record.json`.
+
+## November 16 Burns Paiute history and Southern Ute governance
+
+The Burns Paiute Tribe now has a distinct candidate profile. Its own records
+describe the 1878 forced march, retention of Paiute outside school in the 1920s,
+and the 2017 Tribal Council language resolution. The 1972 statute establishes the
+Burns Paiute Reservation in trust. See `batches/2026-11-16-burns-paiute-tribe.json`.
+
+The Southern Ute Indian Tribe's profile adds the May 11, 2026 energy agreement
+with the Department of the Interior. The approval authority covers specified
+actions on reservation lands held in trust for the Tribe. See `batches/2026-11-16-southern-ute-energy-agreement.json`.
+The candidate registry contains 489 profiles and 1,426 raw facts.
+
+The dated Southern Ute flood recovery report and the local displacement notice
+are recorded in `batches/2026-11-16-southern-ute-flood-recovery-lead.json`. The notice is not a live
+availability check.
+
+The Chihuahua queue tracks a separate electoral court ruling and October
+implementation order, with the applicant self-identification and voting rules
+scoped to those records. See `batches/2026-11-16-chihuahua-electoral-sources.json`.
+Publication of the cultural heritage decree remains unresolved.

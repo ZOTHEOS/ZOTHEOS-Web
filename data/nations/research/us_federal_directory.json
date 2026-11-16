@@ -559,13 +559,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "burns-paiute-tribe-us-or",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-16-burns-paiute-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://burnspaiute-nsn.gov/",
+      "own_published_name": "Burns Paiute Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-16-burns-paiute-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-bd5ed0b7839f",

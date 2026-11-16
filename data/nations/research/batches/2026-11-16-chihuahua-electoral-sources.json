@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-16",
+  "status": "needs_review",
+  "task_id": "followup-chiricahua-mexico-permissible-own-governments",
+  "scope": "Electoral rules for the 2026-2027 Chihuahua local election process. The electoral documents do not establish the status of the separate heritage bill or community and government relationships.",
+  "events": [
+    {
+      "date": "2026-03-23",
+      "source_index": 0,
+      "detail": "The Guadalajara regional ruling records N’dee/N’nee/Ndé self-identification by some of the petitioners and directs electoral measures under stated conditions."
+    },
+    {
+      "date": "2026-10-01",
+      "public_notice_date": "2026-10-02",
+      "source_index": 2,
+      "detail": "The state electoral institute approved reduced voter-support thresholds for qualifying Indigenous independent candidates under Section 5. The order cites the Guadalajara case and separate local electoral proceedings."
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://www.te.gob.mx/sentenciasHTML/convertir/expediente/SG-JDC-0018-2026-",
+      "final_url": "https://www.te.gob.mx/sentenciasHTML/convertir/expediente/SG-JDC-0018-2026-",
+      "retrieved_at": "2026-11-16T00:41:18.111813Z",
+      "http_status": 200,
+      "body_bytes": 118371,
+      "sha256": "99c6a99bff8e2d64a99ca5b49136946bc8625630c833d1519c232539c3fef753",
+      "redirects": [],
+      "title": "Guadalajara Regional Electoral Court SG-JDC-18/2026 and consolidated cases",
+      "sections": "Background item 23 and operative effects section",
+      "evidence": [
+        "COMUNIDAD DE AUTOADSCRIPCIÓN",
+        "N´dee/N´nee/Ndé"
+      ]
+    },
+    {
+      "url": "https://www.te.gob.mx/EE/SG/2026/JDC/18/SG_2026_JDC_18-1694946.pdf",
+      "final_url": "https://www.te.gob.mx/EE/SG/2026/JDC/18/SG_2026_JDC_18-1694946.pdf",
+      "retrieved_at": "2026-11-16T00:41:16.413774Z",
+      "http_status": 200,
+      "body_bytes": 551426,
+      "sha256": "e9a89dddabc5a5bc296167194d434b8dcb81afd7ed965a55ab5e758b29c8b748",
+      "redirects": [],
+      "title": "Authenticated Guadalajara judgment linked by the electoral institute"
+    },
+    {
+      "url": "https://ieechihuahua.org.mx/estrados/0/1/19130.pdf",
+      "final_url": "https://ieechihuahua.org.mx/estrados/0/1/19130.pdf",
+      "retrieved_at": "2026-11-16T00:40:14.156250Z",
+      "http_status": 200,
+      "body_bytes": 4802880,
+      "sha256": "ce4f20e76b010b181148f155f8e0cdc40b3bdd15642f0e14eb937df06dcbf07c",
+      "redirects": [],
+      "title": "Chihuahua State Electoral Institute Order IEE/CE94/2026",
+      "pages": "Section 5.2.2 and operative clauses 5 and 6, approval and public notice on printed pages 69 and 70",
+      "evidence": [
+        "porcentaje menor de respaldo ciudadano para las personas indígenas",
+        "un régimen especial para candidaturas independientes indígenas"
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://ieechihuahua.org.mx/robots.txt",
+      "final_url": "https://ieechihuahua.org.mx/robots.txt",
+      "retrieved_at": "2026-11-16T00:40:11.369904Z",
+      "http_status": 200,
+      "body_bytes": 24,
+      "sha256": "2c0f76ae2d26f13dbdfc883e6814ac8b7d67f808fd3ab15f182b33327f72427f",
+      "redirects": []
+    },
+    {
+      "url": "https://www.te.gob.mx/robots.txt",
+      "retrieved_at": "2026-11-16T00:40:11.185005Z",
+      "http_status": 404
+    }
+  ],
+  "unresolved": [
+    "Gazette publication and the effective date for LXVIII/RFLEY/0555/2026 VIII P.E. remain unresolved. A bounded June through August archive search was inconclusive. Scanned pages and excluded larger files limit that search.",
+    "The electoral record describes petitioners and procedural measures. First-person community statements and current governing relationships remain open."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
