@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-16",
+  "government_id": "southern-ute-indian-tribe-us-co",
+  "task_id": "history-southern-ute-allotment-restoration-education",
+  "review_kind": "Independent AI-assisted Tribal and Interior source and scope review",
+  "event_date": "2026-05-11",
+  "publisher_modified_date": "2026-05-12",
+  "candidate_fact_ids": [
+    "southern-ute-indian-tribe-us-co-eb1796ed"
+  ],
+  "receipts": [
+    {
+      "url": "https://www.southernute-nsn.gov/2026/05/11/for-immediate-release-may-11-2026-southern-ute-indian-tribe-celebrates-historic-signing-of-tribal-energy-resource-agreement/",
+      "final_url": "https://www.southernute-nsn.gov/2026/05/11/for-immediate-release-may-11-2026-southern-ute-indian-tribe-celebrates-historic-signing-of-tribal-energy-resource-agreement/",
+      "retrieved_at": "2026-11-16T00:37:44.227703Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 146981,
+      "sha256": "cc06f11f0e97e16b9c214df6833414317dace47c44888daab2efa5caa3161c4a",
+      "redirects": [],
+      "evidence": [
+        "approve energy- and mineral-related leases, agreements, and rights-of-way",
+        "the Reservation held in trust by the United States for the Tribe."
+      ]
+    },
+    {
+      "url": "https://www.doi.gov/pressreleases/interior-enters-nations-first-ever-tribal-energy-agreement",
+      "final_url": "https://www.doi.gov/pressreleases/interior-enters-nations-first-ever-tribal-energy-agreement",
+      "retrieved_at": "2026-11-16T00:37:47.065640Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 60499,
+      "sha256": "ff2e92783bc8c23b5b11da7c48d255ec5f23a9c803299e575fdd0b1ba70cc862",
+      "redirects": [],
+      "evidence": [
+        "without obtaining approval from Interior for each lease, right-of-way, or agreement"
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.southernute-nsn.gov/robots.txt",
+      "final_url": "https://www.southernute-nsn.gov/robots.txt",
+      "retrieved_at": "2026-11-16T00:37:33.262108Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 139,
+      "sha256": "686ca9dced97ba1e383988e89962f5081e23f9eee335cd63a894604193c28a15",
+      "redirects": []
+    },
+    {
+      "url": "https://www.doi.gov/robots.txt",
+      "final_url": "https://www.doi.gov/robots.txt",
+      "retrieved_at": "2026-11-16T00:37:44.579119Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2403,
+      "sha256": "85954b11b76ad59e710a302ee8cb834529dde976c8f297a07a7cef258483c2fc",
+      "redirects": []
+    }
+  ],
+  "source_limits": [
+    "This is an agreement governing covered energy and mineral actions on reservation lands held in trust for the Tribe. The record does not infer approval of individual projects or changed jurisdiction or land boundaries.",
+    "The Southern Ute Indian Tribe, the Ute Mountain Ute Tribe and the Ute Indian Tribe of the Uintah and Ouray Reservation remain distinct."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
