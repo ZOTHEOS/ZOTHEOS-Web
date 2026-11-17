@@ -1,0 +1,28 @@
+{
+  "region": "mx-north-us-southwest",
+  "checked": "2026-11-17",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-17T02:57:08.852235+00:00",
+    "evidence_receipt": "batches/2026-11-17-ute-indian-thpo-agreement.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "results": [
+    {
+      "id": "ute-indian-tribe-uintah-ouray-us-ut",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The Tribe authored the September 30 release. It separately dates agreement finalization to September 22, 2021. The National Park Service corroborates the Tribe and the specific transfer of responsibilities."
+    }
+  ],
+  "names": [
+    {
+      "id": "ute-indian-tribe-uintah-ouray-us-ut",
+      "ok": true,
+      "verdict": "keep",
+      "note": "This date and agreement belong to the Ute Indian Tribe of the Uintah and Ouray Reservation. The other Ute Tribal governments have their own profiles and agreements."
+    }
+  ]
+}

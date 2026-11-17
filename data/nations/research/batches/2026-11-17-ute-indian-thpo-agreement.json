@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-17",
+  "government_id": "ute-indian-tribe-uintah-ouray-us-ut",
+  "task_id": "history-ute-indian-land-water-context",
+  "review_kind": "Independent AI-assisted source and meaning review",
+  "event_date": "2021-09-22",
+  "tribal_release_date": "2021-09-30",
+  "republication_updated_date": "2025-11-28",
+  "candidate_fact_ids": [
+    "ute-indian-tribe-uintah-ouray-us-ut-57aecbea"
+  ],
+  "receipts": [
+    {
+      "url": "https://ictnews.org/the-press-pool/ute-indian-tribal-historic-preservation-office-agreement-effective-immediately/",
+      "final_url": "https://ictnews.org/the-press-pool/ute-indian-tribal-historic-preservation-office-agreement-effective-immediately/",
+      "retrieved_at": "2026-11-17T02:55:38.648334Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 248349,
+      "sha256": "de716ff3332aef3a84b6a0a82e267c89409a9dceda23754008f56cfc1ead9252",
+      "redirects": [],
+      "title": "Ute Indian Tribal Historic Preservation Office agreement effective immediately",
+      "author": "Ute Indian Tribe of the Uintah and Ouray Reservation, via ICT Press Pool",
+      "evidence": [
+        "On September 22, 2021",
+        "to exercise certain cultural and historic preservation activities"
+      ]
+    },
+    {
+      "url": "https://www.nps.gov/orgs/1207/2021-thpo-agreements.htm",
+      "final_url": "https://www.nps.gov/orgs/1207/2021-thpo-agreements.htm",
+      "retrieved_at": "2026-11-17T02:55:14.989653Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 43918,
+      "sha256": "8cf445c86381175df751e1444cd39e855c4e061d73ca0775047b1f69713df12f",
+      "redirects": [],
+      "title": "Seven Tribes sign preservation agreements with the National Park Service",
+      "publication_date": "2021-11-24",
+      "evidence": [
+        "Ute Indian Tribe of the Uintah and Ouray Reservation",
+        "transfer certain historic preservation responsibilities"
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://ictnews.org/robots.txt",
+      "final_url": "https://ictnews.org/robots.txt",
+      "retrieved_at": "2026-11-17T02:55:14.822904Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 256,
+      "sha256": "98709bb8ecd36957a862e149f0c68388eb3f089c6bce9316a38f314f453d0e65",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nps.gov/robots.txt",
+      "final_url": "https://www.nps.gov/robots.txt",
+      "retrieved_at": "2026-11-17T02:54:34.016465Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 178,
+      "sha256": "7fdf9eb41209068c7a8663b838beb34efcf30f31dd709b1643c724554b4e2a8c",
+      "redirects": []
+    },
+    {
+      "url": "https://utetribe.com/robots.txt",
+      "final_url": "https://utetribe.com/robots.txt",
+      "retrieved_at": "2026-11-17T02:54:33.824985Z",
+      "retrieval_method": "http",
+      "http_status": 403,
+      "body_bytes": 52,
+      "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3",
+      "redirects": []
+    }
+  ],
+  "source_limits": [
+    "The Tribe-authored release was available in ICT’s Press Pool. The direct Tribal website’s robots check returned HTTP 403. No direct Tribal PDF request or successful retrieval is claimed.",
+    "The agreement covers defined historic preservation responsibilities. The record makes no broader jurisdiction, funding, location or implementation claim."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

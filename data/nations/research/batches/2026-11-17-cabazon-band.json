@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-17",
+  "registry_id": "cabazon-band-of-cahuilla-indians-us-ca",
+  "directory_id": "us-fed-bd5ed0b7839f",
+  "review_kind": "AI-assisted source, government identity and scope review",
+  "receipts": [
+    {
+      "url": "https://www.fantasyspringsresort.com/gaming-commission/",
+      "final_url": "https://www.fantasyspringsresort.com/gaming-commission/",
+      "retrieved_at": "2026-11-17T02:55:57.361036Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 216629,
+      "sha256": "698f16e876a9d84cce154c9b8114f93de6aef5c4de2940d4910288053bc19cc6",
+      "redirects": [],
+      "evidence": [
+        "sovereign government of the Cabazon Band of Cahuilla Indians",
+        "The Commission is established by Tribal Ordinance"
+      ]
+    },
+    {
+      "url": "https://www.fantasyspringsresort.com/cbmi/",
+      "final_url": "https://www.fantasyspringsresort.com/cbmi/",
+      "retrieved_at": "2026-11-17T02:58:03.046108Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1667,
+      "sha256": "e8b6c9def1ba0b332da12e078722c70ae9a4b2fe095ad74af3121b49838e00ba",
+      "redirects": [],
+      "observation": "The page title uses the government’s current name. The page otherwise supplies an uncaptioned image, so the commission statement provides the readable name source."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/USREPORTS-480/pdf/USREPORTS-480-202.pdf",
+      "final_url": "https://www.govinfo.gov/content/pkg/USREPORTS-480/pdf/USREPORTS-480-202.pdf",
+      "retrieved_at": "2026-11-17T02:56:44.200902Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 7756707,
+      "sha256": "d4b4ea516501e00a4d67e00e438969f4948cc7c4c42d1b4ce83c73012c851010",
+      "redirects": []
+    },
+    {
+      "url": "https://www.epa.gov/system/files/documents/2022-11/r9-cwa-financial-assistance-eligibility-handbook-for-indian-tribes.pdf",
+      "final_url": "https://www.epa.gov/system/files/documents/2022-11/r9-cwa-financial-assistance-eligibility-handbook-for-indian-tribes.pdf",
+      "retrieved_at": "2026-11-17T02:58:03.045830Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1575730,
+      "sha256": "5ec21c116e1aee9e6fc51dd1d694cbef78b0802c280eaca25b8d0c52093b231b",
+      "redirects": [],
+      "title": "Cabazon Band Narrative Statement, Exhibit II",
+      "page": "Printed p. 16"
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2020-04/documents/cbmi-decision-document-final.pdf",
+      "final_url": "https://www.epa.gov/sites/default/files/2020-04/documents/cbmi-decision-document-final.pdf",
+      "retrieved_at": "2026-11-17T02:56:48.717559Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 360826,
+      "sha256": "266add9f55b85631fa2ff477924baaca0a975c4a3406fca6811caf7f0325958c",
+      "redirects": []
+    },
+    {
+      "url": "https://www.epa.gov/wqs-tech/water-quality-standards-regulations-cabazon-band-mission-indians",
+      "final_url": "https://www.epa.gov/wqs-tech/water-quality-standards-regulations-cabazon-band-mission-indians",
+      "retrieved_at": "2026-11-17T02:56:44.247773Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 56649,
+      "sha256": "12efeb0859a830d96236a7224f26d8a05b256369c02c4bb6f6e4b7e0cfd7fc27",
+      "redirects": [],
+      "evidence": "was granted treatment in a manner similar to a state (TAS) on April 13, 2020"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-17T02:56:54.281696Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": [],
+      "evidence": "Cabazon Band of Cahuilla Indians (previously listed as Cabazon Band of Mission Indians, California)"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.fantasyspringsresort.com/robots.txt",
+      "final_url": "https://www.fantasyspringsresort.com/robots.txt",
+      "retrieved_at": "2026-11-17T02:55:18.770664Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 58,
+      "sha256": "b5e7657a65d334956ae70770e20e1516bb86844a1fd80ae074cb515d1221277a",
+      "redirects": []
+    },
+    {
+      "url": "https://www.epa.gov/robots.txt",
+      "final_url": "https://www.epa.gov/robots.txt",
+      "retrieved_at": "2026-11-17T02:55:18.867552Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2035,
+      "sha256": "48c441ffe97205c15534e9827d603504d44aeef04ab57e0f6772fdbd9bf49db5",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-17T02:55:18.770562Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1876-05-15",
+      "receipt_index": 2,
+      "locator": "480 U.S. at 204 n. 1",
+      "evidence": "by Executive Order of May 15, 1876",
+      "corroborating_receipt_index": 3
+    },
+    {
+      "event_date": "1980",
+      "receipt_index": 3,
+      "locator": "Printed page 16, Exhibit II",
+      "evidence": "After reorganizing themselves in 1980, the Tribe has developed"
+    },
+    {
+      "event_date": "1987-02-25",
+      "receipt_index": 2,
+      "locator": "480 U.S. at 202-203 and 221-222",
+      "evidence": "the state and county laws are pre-empted"
+    },
+    {
+      "event_date": "2020-04-13",
+      "receipt_index": 4,
+      "locator": "Decision introduction and conclusion",
+      "evidence": "water quality standards and certification programs under Sections",
+      "date_receipt_index": 5
+    }
+  ],
+  "candidate_fact_ids": [
+    "cabazon-band-of-cahuilla-indians-us-ca-84385677",
+    "cabazon-band-of-cahuilla-indians-us-ca-bee2b462",
+    "cabazon-band-of-cahuilla-indians-us-ca-5426bbbf",
+    "cabazon-band-of-cahuilla-indians-us-ca-a6ba815b"
+  ],
+  "source_limits": [
+    "The Band’s own commission statement is hosted on its resort’s domain. Its general Tribal website remains unverified. The archived BIA directory links to a separate coalition site.",
+    "The former federal listing remains useful for finding dated records. The profile does not infer a specific change date.",
+    "The water program decision establishes program authority for specified reservation waters. It does not establish adoption of specific water quality standards or current conditions."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

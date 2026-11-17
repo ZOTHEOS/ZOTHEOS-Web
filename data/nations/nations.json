@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-16",
-  "count": 489,
-  "facts": 1426,
+  "generated": "2026-11-17",
+  "count": 490,
+  "facts": 1431,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 35
+    "us-west-pacific": 36
   },
   "nations": [
     {
@@ -20326,6 +20326,22 @@
           "status": "verified",
           "checked": "2026-10-12",
           "last_verified": "2026-10-12"
+        },
+        {
+          "id": "ute-indian-tribe-uintah-ouray-us-ut-57aecbea",
+          "text": "On September 22, 2021, the Ute Indian Tribe and National Park Service finalized an agreement for the Tribe’s Historic Preservation Office to assume certain duties on Tribal lands.",
+          "kind": "history",
+          "as_of": "2021",
+          "source": {
+            "title": "Ute Indian Tribal Historic Preservation Office agreement effective immediately",
+            "publisher": "Ute Indian Tribe of the Uintah and Ouray Reservation, via ICT Press Pool",
+            "url": "https://ictnews.org/the-press-pool/ute-indian-tribal-historic-preservation-office-agreement-effective-immediately/",
+            "accessed": "2026-11-17"
+          },
+          "evidence": "to exercise certain cultural and historic preservation activities",
+          "status": "verified",
+          "checked": "2026-11-17",
+          "last_verified": "2026-11-17"
         }
       ]
     },
@@ -29640,6 +29656,87 @@
           "status": "verified",
           "checked": "2026-11-16",
           "last_verified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "cabazon-band-of-cahuilla-indians-us-ca",
+      "region": "us-west-pacific",
+      "name": "Cabazon Band of Cahuilla Indians",
+      "also": [
+        "Cabazon Band of Mission Indians"
+      ],
+      "pronounce": null,
+      "lands": "Cabazon Reservation in the eastern Coachella Valley, Riverside County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": null,
+      "name_source_url": "https://www.fantasyspringsresort.com/gaming-commission/",
+      "facts": [
+        {
+          "id": "cabazon-band-of-cahuilla-indians-us-ca-84385677",
+          "text": "A May 15, 1876 executive order set apart the Cabazon Reservation for the Band’s use and occupancy.",
+          "kind": "history",
+          "as_of": "1876",
+          "source": {
+            "title": "California v. Cabazon Band of Mission Indians, 480 U.S. 202",
+            "publisher": "U.S. Supreme Court",
+            "url": "https://www.govinfo.gov/content/pkg/USREPORTS-480/pdf/USREPORTS-480-202.pdf",
+            "accessed": "2026-11-17"
+          },
+          "evidence": "by Executive Order of May 15, 1876",
+          "status": "verified",
+          "checked": "2026-11-17",
+          "last_verified": "2026-11-17"
+        },
+        {
+          "id": "cabazon-band-of-cahuilla-indians-us-ca-bee2b462",
+          "text": "In a narrative published by the EPA, the Cabazon Band dates its Tribal government reorganization to 1980.",
+          "kind": "history",
+          "as_of": "1980",
+          "source": {
+            "title": "Cabazon Band narrative, Exhibit II of the Financial Assistance Eligibility Handbook",
+            "publisher": "Cabazon Band of Cahuilla Indians via U.S. EPA",
+            "url": "https://www.epa.gov/system/files/documents/2022-11/r9-cwa-financial-assistance-eligibility-handbook-for-indian-tribes.pdf",
+            "accessed": "2026-11-17"
+          },
+          "evidence": "After reorganizing themselves in 1980, the Tribe has developed",
+          "status": "verified",
+          "checked": "2026-11-17",
+          "last_verified": "2026-11-17"
+        },
+        {
+          "id": "cabazon-band-of-cahuilla-indians-us-ca-5426bbbf",
+          "text": "On February 25, 1987, the U.S. Supreme Court ruled against applying California’s bingo rules on the Cabazon and Morongo reservations and Riverside County’s rules on Cabazon’s card club.",
+          "kind": "history",
+          "as_of": "1987",
+          "source": {
+            "title": "California v. Cabazon Band of Mission Indians, 480 U.S. 202",
+            "publisher": "U.S. Supreme Court",
+            "url": "https://www.govinfo.gov/content/pkg/USREPORTS-480/pdf/USREPORTS-480-202.pdf",
+            "accessed": "2026-11-17"
+          },
+          "evidence": "the state and county laws are pre-empted",
+          "status": "verified",
+          "checked": "2026-11-17",
+          "last_verified": "2026-11-17"
+        },
+        {
+          "id": "cabazon-band-of-cahuilla-indians-us-ca-a6ba815b",
+          "text": "On April 13, 2020, the EPA approved the Tribe to administer Clean Water Act programs for water quality standards and certification for surface waters within its reservation.",
+          "kind": "governance",
+          "as_of": "2020",
+          "source": {
+            "title": "Decision on the Cabazon Band’s Clean Water Act application",
+            "publisher": "U.S. Environmental Protection Agency",
+            "url": "https://www.epa.gov/sites/default/files/2020-04/documents/cbmi-decision-document-final.pdf",
+            "accessed": "2026-11-17"
+          },
+          "evidence": "water quality standards and certification programs under Sections",
+          "status": "verified",
+          "checked": "2026-11-17",
+          "last_verified": "2026-11-17"
         }
       ]
     },

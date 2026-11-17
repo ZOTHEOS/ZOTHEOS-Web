@@ -1,22 +1,22 @@
 {
-  "version": 10,
-  "prepared_at": "2026-11-16T00:49:43.551908+00:00",
+  "version": 11,
+  "prepared_at": "2026-11-17T03:09:19.670062+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "a9d57ebaa0f869d44b8cb8a45aa9e816c9f0fba9",
-    "version": 9,
-    "catalogue_sha256": "62741eba29ce7f458d5f982663a1485f13928a1a058adff32153783e3e76744c"
+    "commit": "0e5da72afa1e57a49a89adeec6297367c05381e0",
+    "version": 10,
+    "catalogue_sha256": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d"
   },
   "catalogue": {
-    "sha256": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d",
-    "titles": 236,
+    "sha256": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a",
+    "titles": 237,
     "configured_players": 224,
-    "source_only": 12,
+    "source_only": 13,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 23,
+      "full-film": 24,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,9 +24,9 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-16-searching-for-sequoyah.json",
-    "sha256": "6e8c01da0c56fc9c7de7119a8511628b84c31a0278fa428626da5a662ef443a4",
-    "thumbnail_display": "Text cover while provider image use permission remains unresolved."
+    "batch": "research/batches/2026-11-17-native-way-forward.json",
+    "sha256": "0615939ddb85e4456edba84f5eb013b1d723f60ae11a3b0df171279f4195735d",
+    "thumbnail_display": "Text cover while reuse permission remains unresolved."
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
@@ -37,13 +37,13 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 251.60561229998711,
-    "full_suite_xml_sha256": "289b90bbc48e6c5a5627b8e7a3d75241eca30068141ca3e690e2a9cb025ab076",
+    "full_suite_wall_seconds": 397.9013523,
+    "full_suite_xml_sha256": "1299024048c0be00de9790fbf70006045265961c9dc7eb4c1b76bfdb987ecc9e",
     "canonical_build": {
       "status": "passed",
-      "pages": 624,
-      "profiles": 489,
-      "visible_facts": 1424,
+      "pages": 625,
+      "profiles": 490,
+      "visible_facts": 1429,
       "held_facts": 2
     },
     "registry_validator": {
@@ -51,15 +51,15 @@
       "preexisting_warnings": 54
     },
     "game_data": {
-      "quick_cards": 489,
-      "profiles_with_history": 111,
-      "new_history_facts": 3,
+      "quick_cards": 490,
+      "profiles_with_history": 112,
+      "new_history_facts": 4,
       "skipped": 0
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-16",
-      "method": "Independent offline Chrome with checked-in files and Vercel CSP.",
-      "chrome_version": "157.0.8103.52",
+      "reviewed_utc_date": "2026-11-17",
+      "method": "Independent offline Chrome served exact static files and Vercel CSP.",
+      "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
         [
           390,
@@ -71,45 +71,43 @@
         ]
       ],
       "checks": [
-        "Burns Paiute exact directory result, Enter navigation, and four cited facts. Southern Ute agreement scope visible in the existing government profile.",
-        "Searching for Sequoyah story permalink, official PBS Wisconsin destination, and Full Film and Official Site filters.",
-        "Phone filter tap, Space and Enter. No third-party frame or media requests, page errors, CSP violations, missing routes or overflow."
+        "Cabazon exact-name directory search, keyboard navigation, four cited facts, and the distinct Uintah and Ouray 2021 agreement.",
+        "Native Way Forward permalink, WHYY source link, Full Film and Official Site filters.",
+        "Mobile filter touch and keyboard controls. No overflow, runtime errors, CSP violations or third-party player requests."
       ],
-      "limits": "Unrelated external image requests were blocked. PBS Passport playback, regional access, caption quality, and accessibility beyond tested controls remain unverified."
+      "limits": "Unrelated external requests were blocked. Real-device, provider playback and caption quality beyond listed metadata remain unverified."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "91ad338e66dedd13153b44b77299e5f5cc1ac62a030c9cd721caeadaf9839097",
-    "data/nations/nations.min.json": "122d1eccb83845f289f04ffc1dbea793aa3d682d8855dfcfe2844ccf0c375098",
-    "data/nations/research/coverage_queue.json": "0a39b643830a3b51fda2e8a51b035cbebad624bbdb489adb1e0a00693309ef2a",
-    "data/nations/research/directory_sources.json": "c887d78303de6e4d794277f5ed005737e16e79a3179f179ba5c73af7d9e5fcf6",
-    "data/nations/research/us_federal_directory.json": "0eefe36f9102eed1388eaac7bbf70b596700798c718ec2ca928d40dfbc41dba1",
-    "data/nations/research/receipts/2026-11-16-burns-paiute-identity.json": "cef1be4a51bdb52e9b04a16157814f71089293c208d0caa316d1f27ab1ed7f03",
-    "data/nations/research/batches/2026-11-16-burns-paiute-tribe.json": "d0fb49fdbcda96bf0cecc19560c6b72f7b3614dcb4581f9277cee603d55f6b5a",
-    "data/nations/research/batches/2026-11-16-southern-ute-energy-agreement.json": "7b2c81aaab1a23bf50ba1022be32a1658e04fa349a8d54579c69933be65f35d9",
-    "data/nations/research/batches/2026-11-16-southern-ute-flood-recovery-lead.json": "fde9d1c58b26caefd973418a3e83ee72d641d08f6066d919b094edd87778b608",
-    "data/nations/research/batches/2026-11-16-chihuahua-electoral-sources.json": "90c8b25d94809aa760dc00aae4d486b14846d9e21042901bbee3b1615472644e",
-    "data/theater/films.json": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d",
-    "data/theater/research_queue.json": "b471909f37dbcdf7402b0c46b662f36c64d919e922bbaea860a48b41d1d964f2",
-    "data/theater/research/batches/2026-11-16-searching-for-sequoyah.json": "6e8c01da0c56fc9c7de7119a8511628b84c31a0278fa428626da5a662ef443a4",
-    "nations/directory.html": "aea85b55020071c9d615ee0df5584c531907ca0333b600378632b16a3f61a8da",
-    "nations/burns-paiute-tribe-us-or.html": "e8ed96e40a62d1a1b59a64541fa197eb6d61ede6424ac09bbfa9200b28faf4fa",
-    "nations/southern-ute-indian-tribe-us-co.html": "844037d630447365326d4a9e101ad129383414eb37007085f4ed1d63fa3c2aac",
-    "static/nations/coverage.json": "9e0254cbac5e5f16a6c521f056d8ad82351d44a3e214acf1d288f8fd219cafd3",
-    "game/nations.json": "f1a65007387c63825f829b9c2bd6ccd697c3d0398ab9524cf840d89f7a07d326",
-    "game/history.json": "6f2da4d7ba37b2e61d92fa742b957cf6ae9f06fb400f1284e6f8aa674dde3121",
-    "theater.html": "bfb6e6f9421093511940a02506df7a7548fd76f317cbb7121000039d5c1a5b14",
-    "vercel.json": "76842badc58ec03c4162d2e042736019eea3b1bd9ac693857caff4f73ff7b7ad",
-    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.raw.json": "a0b9e3d2591b4746532a032dd7b7316fe998d76d2e404e157482fa1bdeba92b3",
-    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.verify.json": "2378f8f7dfc3f3f36ec15e4a84358aac041d8b4babf623ecb518ca4c11daf85e",
-    "data/nations/sources/us-burns-paiute-tribe-2026-11-16.respect.json": "75ebff8ffd0b7dce83c00f0e548667d9b116ef0bf5ab457680811aee5dba44df",
-    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.raw.json": "2fb903e8bf710570b8ddaa0ddc96080129e4a0bd386eaca079c31a3ada5229fe",
-    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.verify.json": "6391b445c0fb4a6d0d6421010fd08242c47e79e42cd720a477135214262c89b4",
-    "data/nations/sources/us-southern-ute-energy-agreement-2026-11-16.respect.json": "524980a3f37dbd1e68d8a65b0eef536b1299ff293ecf45df2547ce887176a24a"
+    "data/nations/nations.json": "171dae1892a30361739070226e510ebc9f16d8cea54742d0168fdbda76465633",
+    "data/nations/nations.min.json": "1622999b63ad157968eb283fdd5fc65a2b03642f338232d47a82d0ba6a7b82e9",
+    "data/nations/research/coverage_queue.json": "25041cb5140f14ce0c91552aeb16809163add045020677f41975acf749ba7a6b",
+    "data/nations/research/directory_sources.json": "28d0c00c8a2b5348e78c3868c4ae65f39758522d75464f19b5a55df7baaae5c7",
+    "data/nations/research/us_federal_directory.json": "0a6433e0406ad168c4007481a2c0a0eac34984dbe8ec5f2c3c1868c433a1686f",
+    "data/nations/research/receipts/2026-11-17-cabazon-band-identity.json": "99f94b35e844a565c587a1a2fe24ef1cbd8e1bc5f2e5d0ddfebcc43eb56a4d7e",
+    "data/nations/research/batches/2026-11-17-cabazon-band.json": "9b77ae30990098b3e9a53bd1c2fb7554d604bfe778f90861a4440a5c4d909123",
+    "data/nations/research/batches/2026-11-17-ute-indian-thpo-agreement.json": "82afb3e5860a6173770d72badb21188143aaf92aed790614bc899ac8295f0ef0",
+    "data/theater/films.json": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a",
+    "data/theater/research_queue.json": "347982277cde49cee51cec63602aed38c395e95067fe698aa56c21716bcec1c5",
+    "data/theater/research/batches/2026-11-17-native-way-forward.json": "0615939ddb85e4456edba84f5eb013b1d723f60ae11a3b0df171279f4195735d",
+    "static/nations/coverage.json": "1e5661570f4eba7baed18089a8ebe479d7787fa84140dcf083b24ebd8548094c",
+    "game/nations.json": "9708d86b6455080eb1e5d849b381081ebcb31150c69c39272d30789ac6c4d2ff",
+    "game/history.json": "db41e7310837a313f8a85cedbb9ecbf383e827d2312a9b1a09b8530f23803f70",
+    "data/nations/sources/us-cabazon-band-2026-11-17.raw.json": "612f74f5750c10d8a692bbf201cdb3546219053970b7e9eb28ad5bc283b9b524",
+    "data/nations/sources/us-cabazon-band-2026-11-17.verify.json": "406324640c79b198d8f5aac5d70b3116e273cc7b3451392b12a41e720ccb512e",
+    "data/nations/sources/us-cabazon-band-2026-11-17.respect.json": "b32c4a36e1b6949e90d46d92759425dcd1f163c34c9030794ad3b74b3c669429",
+    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.raw.json": "8f0c291dcbad541ab7663c60cabb4e8377e0dcb955b273740e5ab6356c149c10",
+    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.verify.json": "df44696754dd5ef0657ba45e67481a4c5b9fdf4c469eb9fe306294a6952590f0",
+    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.respect.json": "d33ad80493327161fe50a3e16cc75ce7e5dd44d2901ed65dd009ea74e33d61f5",
+    "nations/directory.html": "3b41ccc651fd319d93b3d11759032ee7ce4be05c071be8bf50de991d0d42f2ec",
+    "nations/cabazon-band-of-cahuilla-indians-us-ca.html": "620755b0eb1dc0d2c4d1dbcfca3e475eb00ec93af76cb51092d9612b5eb36a0f",
+    "nations/ute-indian-tribe-uintah-ouray-us-ut.html": "1aa36b26491860d3ac332d84c7484dbd1112d03f7d504aabb33274d64047741d",
+    "theater.html": "af701b0573a23d41bb3d27dbec96f1bc424f446302af8d7fecda3c983a1694fc",
+    "vercel.json": "cc902934ec682fed49b932bc96dc3ed04d5c41c14507db82ee932fc5233a7962"
   },
   "pending": [
     "Vercel production verification",
-    "Film playback, regional access and caption quality",
-    "Media embedding and artwork permissions"
+    "Actual playback, regional access and caption quality",
+    "Third-party artwork display and site embedding permissions"
   ]
 }
