@@ -277,7 +277,23 @@
         "https://buffalonickelcreative.com/ryan-redcorn/"
       ],
       "reason": "The producer and PBS stations identify the documentary and its complete broadcast edition.",
-      "next": "Verify the official viewing card after publication. Caption behavior, title-specific regional access, player permission and playback remain open."
+      "next": "The live card and official viewing URL matched the reviewed files. Caption behavior, title-specific regional access, player permission and playback remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/51"
+    },
+    {
+      "id": "the-electric-indian",
+      "status": "official-source-only",
+      "checked": "2026-11-17",
+      "batch": "research/batches/2026-11-17-the-electric-indian.json",
+      "source_urls": [
+        "https://video.ksps.org/video/the-electric-indian-ubavlq/",
+        "https://pbswisconsin.org/watch/the-electric-indian/the-electric-indian-ubavlq/",
+        "https://visionmakermedia.org/film-library/the-electric-indian/",
+        "https://discover.minnesotapbs.org/blog/twin-cities-pbs-filmmaker-leya-hale-honored-with-minnesota-filmmaker-award"
+      ],
+      "reason": "Vision Maker Media identifies the feature and KSPS lists its complete PBS broadcast edition.",
+      "next": "Verify the live official viewing card after release. Title-specific regional access, caption behavior, player permission and playback remain open."
     }
   ]
 }

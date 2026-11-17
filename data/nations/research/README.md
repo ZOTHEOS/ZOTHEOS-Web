@@ -783,3 +783,16 @@ The Ute Indian Tribe of the Uintah and Ouray Reservation’s 2021 agreement
 with the National Park Service adds a dated historic preservation fact to its
 existing profile. See `batches/2026-11-17-ute-indian-thpo-agreement.json`.
 The candidate registry contains 490 profiles and 1,431 raw facts.
+
+## November 17 Colusa and Chiricahua cultural work
+
+The Cachil DeHe Band of Wintun Indians of the Colusa Indian Community has a
+distinct candidate profile with 1941 constitutional ratification, the 2004
+language book and the Community Council’s 2023 report of connections for 33
+households. See `batches/2026-11-17-cachil-dehe-colusa.json`.
+
+The Chiricahua Apache Nation’s profile records the public Nde benah exhibition
+and its named community collaboration in Las Cruces. Its identity review
+remains unresolved. See `batches/2026-11-17-chiricahua-nde-benah.json`.
+
+The candidate registry contains 491 profiles and 1,435 raw facts.

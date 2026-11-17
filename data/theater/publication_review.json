@@ -1,22 +1,22 @@
 {
-  "version": 11,
-  "prepared_at": "2026-11-17T03:09:19.670062+00:00",
+  "version": 12,
+  "prepared_at": "2026-11-17T15:12:54.255807+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "0e5da72afa1e57a49a89adeec6297367c05381e0",
-    "version": 10,
-    "catalogue_sha256": "fc95bad4144063e1fc4d54950f8dd481b994d8f33f66675489bc0353aa76d96d"
+    "commit": "aa9b79fefc8979d4f27e5ee3d1c5ee477fb31be2",
+    "version": 11,
+    "catalogue_sha256": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a"
   },
   "catalogue": {
-    "sha256": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a",
-    "titles": 237,
+    "sha256": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6",
+    "titles": 238,
     "configured_players": 224,
-    "source_only": 13,
+    "source_only": 14,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 24,
+      "full-film": 25,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,36 +24,41 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-17-native-way-forward.json",
-    "sha256": "0615939ddb85e4456edba84f5eb013b1d723f60ae11a3b0df171279f4195735d",
-    "thumbnail_display": "Text cover while reuse permission remains unresolved."
+    "batch": "research/batches/2026-11-17-the-electric-indian.json",
+    "sha256": "0e28360dd1dcc1c388745aea39255cb87251d7a3509b0a705dff990b20115327",
+    "thumbnail_display": "Text cover while artwork permission remains unresolved."
   },
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
   "validation": {
     "automated_tests": {
       "tests": 1072,
-      "errors": 0,
       "failures": 0,
+      "errors": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 397.9013523,
-    "full_suite_xml_sha256": "1299024048c0be00de9790fbf70006045265961c9dc7eb4c1b76bfdb987ecc9e",
+    "full_suite_wall_seconds": 242.36305519999587,
+    "full_suite_xml_sha256": "840d955ca8988ec01d12904402c41f346ab79c8f79baaef5c59f42b14a5555e9",
     "canonical_build": {
       "status": "passed",
-      "pages": 625,
-      "profiles": 490,
-      "visible_facts": 1429,
+      "pages": 626,
+      "profiles": 491,
+      "visible_facts": 1433,
       "held_facts": 2
     },
     "registry_validator": {
       "errors": 0,
       "preexisting_warnings": 54
     },
+    "page_lint": {
+      "errors": 0,
+      "warnings": 1,
+      "review": "The full Colusa name triggers the long-name check. At 320, 390 and 1440 pixels it wraps within the viewport."
+    },
     "game_data": {
-      "quick_cards": 490,
-      "profiles_with_history": 112,
-      "new_history_facts": 4,
+      "quick_cards": 491,
+      "profiles_with_history": 113,
+      "new_history_facts": 1,
       "skipped": 0
     },
     "browser": {
@@ -70,44 +75,49 @@
           900
         ]
       ],
-      "checks": [
-        "Cabazon exact-name directory search, keyboard navigation, four cited facts, and the distinct Uintah and Ouray 2021 agreement.",
-        "Native Way Forward permalink, WHYY source link, Full Film and Official Site filters.",
-        "Mobile filter touch and keyboard controls. No overflow, runtime errors, CSP violations or third-party player requests."
+      "colusa_heading_viewport_pixels": [
+        320,
+        760
       ],
-      "limits": "Unrelated external requests were blocked. Real-device, provider playback and caption quality beyond listed metadata remain unverified."
+      "checks": [
+        "Colusa full name and aliases, exact directory match, keyboard access, three cited facts and checked dates.",
+        "Chiricahua exhibition dates and exact City of Las Cruces citation.",
+        "The Electric Indian story link, KSPS destination, text cover, Full Film and Official Site filters. Mobile touch and keyboard worked.",
+        "Zero page errors, CSP violations, overflow, missing local routes or third-party player requests."
+      ],
+      "limits": "Unrelated external image requests were blocked. No physical-device or actual provider playback, access, or captions were tested."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "171dae1892a30361739070226e510ebc9f16d8cea54742d0168fdbda76465633",
-    "data/nations/nations.min.json": "1622999b63ad157968eb283fdd5fc65a2b03642f338232d47a82d0ba6a7b82e9",
-    "data/nations/research/coverage_queue.json": "25041cb5140f14ce0c91552aeb16809163add045020677f41975acf749ba7a6b",
-    "data/nations/research/directory_sources.json": "28d0c00c8a2b5348e78c3868c4ae65f39758522d75464f19b5a55df7baaae5c7",
-    "data/nations/research/us_federal_directory.json": "0a6433e0406ad168c4007481a2c0a0eac34984dbe8ec5f2c3c1868c433a1686f",
-    "data/nations/research/receipts/2026-11-17-cabazon-band-identity.json": "99f94b35e844a565c587a1a2fe24ef1cbd8e1bc5f2e5d0ddfebcc43eb56a4d7e",
-    "data/nations/research/batches/2026-11-17-cabazon-band.json": "9b77ae30990098b3e9a53bd1c2fb7554d604bfe778f90861a4440a5c4d909123",
-    "data/nations/research/batches/2026-11-17-ute-indian-thpo-agreement.json": "82afb3e5860a6173770d72badb21188143aaf92aed790614bc899ac8295f0ef0",
-    "data/theater/films.json": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a",
-    "data/theater/research_queue.json": "347982277cde49cee51cec63602aed38c395e95067fe698aa56c21716bcec1c5",
-    "data/theater/research/batches/2026-11-17-native-way-forward.json": "0615939ddb85e4456edba84f5eb013b1d723f60ae11a3b0df171279f4195735d",
-    "static/nations/coverage.json": "1e5661570f4eba7baed18089a8ebe479d7787fa84140dcf083b24ebd8548094c",
-    "game/nations.json": "9708d86b6455080eb1e5d849b381081ebcb31150c69c39272d30789ac6c4d2ff",
-    "game/history.json": "db41e7310837a313f8a85cedbb9ecbf383e827d2312a9b1a09b8530f23803f70",
-    "data/nations/sources/us-cabazon-band-2026-11-17.raw.json": "612f74f5750c10d8a692bbf201cdb3546219053970b7e9eb28ad5bc283b9b524",
-    "data/nations/sources/us-cabazon-band-2026-11-17.verify.json": "406324640c79b198d8f5aac5d70b3116e273cc7b3451392b12a41e720ccb512e",
-    "data/nations/sources/us-cabazon-band-2026-11-17.respect.json": "b32c4a36e1b6949e90d46d92759425dcd1f163c34c9030794ad3b74b3c669429",
-    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.raw.json": "8f0c291dcbad541ab7663c60cabb4e8377e0dcb955b273740e5ab6356c149c10",
-    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.verify.json": "df44696754dd5ef0657ba45e67481a4c5b9fdf4c469eb9fe306294a6952590f0",
-    "data/nations/sources/us-ute-indian-thpo-agreement-2026-11-17.respect.json": "d33ad80493327161fe50a3e16cc75ce7e5dd44d2901ed65dd009ea74e33d61f5",
-    "nations/directory.html": "3b41ccc651fd319d93b3d11759032ee7ce4be05c071be8bf50de991d0d42f2ec",
-    "nations/cabazon-band-of-cahuilla-indians-us-ca.html": "620755b0eb1dc0d2c4d1dbcfca3e475eb00ec93af76cb51092d9612b5eb36a0f",
-    "nations/ute-indian-tribe-uintah-ouray-us-ut.html": "1aa36b26491860d3ac332d84c7484dbd1112d03f7d504aabb33274d64047741d",
-    "theater.html": "af701b0573a23d41bb3d27dbec96f1bc424f446302af8d7fecda3c983a1694fc",
-    "vercel.json": "cc902934ec682fed49b932bc96dc3ed04d5c41c14507db82ee932fc5233a7962"
+    "data/nations/nations.json": "f0d503c3472b722d1a20ea5ba1c6007eb1543c13cd7b27e7f3e3b06ef0742a99",
+    "data/nations/nations.min.json": "4084c7f384e330b6d6940ca357e4b07c13671821e4109739e5b0ff4eb0e94d04",
+    "data/nations/research/coverage_queue.json": "6c5877745e307bcb108da9bd1ddbd5cb9f4bed33f431eff54250e711ad2a46f5",
+    "data/nations/research/us_federal_directory.json": "8120d377f91eee031365963dd8a805a58d72fcb7df6ea3acec80734a6c4bb230",
+    "data/nations/research/directory_sources.json": "0a2b607743588f19ae005a00b877b9ca22aa7e594c0576e3db36ecb4a5386178",
+    "data/nations/research/batches/2026-11-17-chiricahua-nde-benah.json": "7b5e643d538eda8cf8c44b15fba87bbfb267c27e090a8d99020ca7b109af9b3f",
+    "data/nations/research/batches/2026-11-17-cachil-dehe-colusa.json": "a3c43a3fa153b0fcdf30b810905cc432523a85c8d966ab66f6e11b3553500fd0",
+    "data/nations/research/receipts/2026-11-17-cachil-dehe-colusa-identity.json": "f885ed082b0c55fa302b5c744ab8a7face9123414de72143cba030b3bc0279c0",
+    "static/nations/coverage.json": "55b56448b23c5f82c6e74483cafcbe810ef208f8b535337d76e69ffe4f167323",
+    "game/nations.json": "9baa941cef6059d572bd07a2d8034b59129cebc0ddc9e717780160b4d98009df",
+    "game/history.json": "49dc267fac65767e9919d83ccc735b751b38638c5f53304b05dac69b45de6695",
+    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.raw.json": "3fbddadf2158cf8632bf9414024b2620ef3bfc48adb4789b7f8181ad109994e3",
+    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.verify.json": "54c7a56f0b82c3acd66cd4f463ed3caeb3d3689ebad52d431d7ac0095efc9fad",
+    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.respect.json": "b17341d1487964a8d70c950b688abf75f7ceba865a151fb97beae88129f770d7",
+    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.raw.json": "08ca2b4c2798b27321f61caec528dbf3054ead5f81b856e8dbb202f45ed2a69f",
+    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.verify.json": "5b533f845142714fffdab080e55b995c9b179552832df890d580a58d35b9ec78",
+    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.respect.json": "8af458295a7aa73d0a6770a363e53e8aec20973f535190e7c3616c5ede103843",
+    "nations/directory.html": "3c32ff77c3fd1a3c19704c1ef1400f4ea66ea4695f0e7839cfe31e0757c6a325",
+    "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "6ea99101b33391aaf27416d07e9591c09187eacce0058d137f5476b28190f2dd",
+    "nations/chiricahua-apache-nation-us-nm.html": "1007b443e209d1aaa8c460bbe09e7fdcef54e8ddb1cde49dd9efac1cba50156c",
+    "theater.html": "eb91b6b033b7be688f256a79ec81b02276e89744c9ed4cdfdac926ef60b7cef4",
+    "vercel.json": "b653e263f7182415ce3ce852ee3904645ae16a47d631bc699c63395bf656e424",
+    "data/theater/films.json": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6",
+    "data/theater/research/batches/2026-11-17-the-electric-indian.json": "0e28360dd1dcc1c388745aea39255cb87251d7a3509b0a705dff990b20115327",
+    "data/theater/research_queue.json": "a6710bf41bbf7a5f8449e3d888e3fd0b32510cecec4ef263c67256ab5ef068c8"
   },
   "pending": [
     "Vercel production verification",
-    "Actual playback, regional access and caption quality",
-    "Third-party artwork display and site embedding permissions"
+    "Provider playback, regional access and caption timing or quality",
+    "Embedding and artwork permissions"
   ]
 }
