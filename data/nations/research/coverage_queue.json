@@ -1052,9 +1052,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-cabazon-commission-2026-11-17"
       ],
       "review": {
         "identity": "pending",
@@ -1070,9 +1071,32 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.fantasyspringsresort.com/gaming-commission/",
+          "final_url": "https://www.fantasyspringsresort.com/gaming-commission/",
+          "retrieved_at": "2026-11-17T02:55:57.361036Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 216629,
+          "sha256": "698f16e876a9d84cce154c9b8114f93de6aef5c4de2940d4910288053bc19cc6",
+          "redirects": [],
+          "evidence": [
+            "sovereign government of the Cabazon Band of Cahuilla Indians",
+            "The Commission is established by Tribal Ordinance"
+          ],
+          "source_id": "own-cabazon-commission-2026-11-17",
+          "evidence_receipt": "batches/2026-11-17-cabazon-band.json",
+          "receipt_id": "r-3408a2b5aaa26b9d"
+        }
+      ],
+      "updated_at": "2026-11-17T03:00:18.420392+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "The first four facts cover the reservation set-aside, Tribal government reorganization, gaming decision and water quality programs. General website verification remains open.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-17-cabazon-band-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-179a4fdfc859",
@@ -63277,7 +63301,8 @@
       "priority_reason": "owner_priority_inclusive_us_coverage",
       "status": "needs_review",
       "allowed_source_ids": [
-        "priority-ute-indian"
+        "priority-ute-indian",
+        "ute-indian-tribe-press-pool-2026-11-17"
       ],
       "review": {
         "identity": "pending",
@@ -63305,12 +63330,25 @@
           "retrieval_method": "http",
           "evidence_receipt": "receipts/us-ute-indian-ute-indian-water-case-2025-checked-2026-10-15.receipt.json",
           "receipt_id": "r-5edf98ec3255ca1f"
+        },
+        {
+          "url": "https://ictnews.org/the-press-pool/ute-indian-tribal-historic-preservation-office-agreement-effective-immediately/",
+          "final_url": "https://ictnews.org/the-press-pool/ute-indian-tribal-historic-preservation-office-agreement-effective-immediately/",
+          "retrieved_at": "2026-11-17T02:55:38.648334Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 248349,
+          "sha256": "de716ff3332aef3a84b6a0a82e267c89409a9dceda23754008f56cfc1ead9252",
+          "redirects": [],
+          "source_id": "ute-indian-tribe-press-pool-2026-11-17",
+          "evidence_receipt": "batches/2026-11-17-ute-indian-thpo-agreement.json",
+          "receipt_id": "r-2a535c46ed75648e"
         }
       ],
-      "updated_at": "2026-10-15T16:46:31.347444+00:00",
+      "updated_at": "2026-11-17T02:57:08.852235+00:00",
       "next_attempt_after": null,
       "lease_until": null,
-      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented."
+      "note": "Attributed historical context independently meaning/respect reviewed. No canonical fact-date, identity, current legal outcome or urgency change. Source captures preceded this integration lease; no earlier lease invented. The November 17 review adds a checked fact about the September 22, 2021 preservation agreement. See batches/2026-11-17-ute-indian-thpo-agreement.json."
     },
     {
       "task_id": "history-ute-mountain-rights-water-education",

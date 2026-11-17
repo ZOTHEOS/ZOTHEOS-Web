@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -260,7 +260,24 @@
         "https://worldchannel.org/press/article/native-american-heritage-month-2021-viewers-guide/"
       ],
       "reason": "The filmmaker identifies the complete broadcast cut and PBS Wisconsin lists the exact broadcast edition.",
-      "next": "Verify the live official viewing card after release. Playback, regional access, caption behavior and embedding permission remain open."
+      "next": "The live card and official viewing URL matched the reviewed files. Playback, regional access, caption behavior and embedding permission remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/50"
+    },
+    {
+      "id": "native-way-forward",
+      "status": "official-source-only",
+      "checked": "2026-11-17",
+      "batch": "research/batches/2026-11-17-native-way-forward.json",
+      "source_urls": [
+        "https://video.whyy.org/video/native-way-forward-fapjrf/",
+        "https://pbswisconsin.org/watch/roadtrip-nation/native-way-forward-fapjrf/",
+        "https://roadtripnation.com/roadtrip/native-american-documentary",
+        "https://www.kpbs.org/news/2022/07/08/roadtrip-nation-native-way-forward",
+        "https://buffalonickelcreative.com/ryan-redcorn/"
+      ],
+      "reason": "The producer and PBS stations identify the documentary and its complete broadcast edition.",
+      "next": "Verify the official viewing card after publication. Caption behavior, title-specific regional access, player permission and playback remain open."
     }
   ]
 }

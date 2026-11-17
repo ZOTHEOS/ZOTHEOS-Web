@@ -770,3 +770,16 @@ The Chihuahua queue tracks a separate electoral court ruling and October
 implementation order, with the applicant self-identification and voting rules
 scoped to those records. See `batches/2026-11-16-chihuahua-electoral-sources.json`.
 Publication of the cultural heritage decree remains unresolved.
+
+## November 17 Cabazon and Uintah and Ouray
+
+The Cabazon Band of Cahuilla Indians has a distinct candidate profile. Its own
+sources and federal records cover the 1876 reservation order, the Band’s
+1980 reorganization, the 1987 Cabazon and Morongo ruling, and the 2020 EPA
+approval of reservation water programs. The former federal listing is retained
+for historical search. See `batches/2026-11-17-cabazon-band.json`.
+
+The Ute Indian Tribe of the Uintah and Ouray Reservation’s 2021 agreement
+with the National Park Service adds a dated historic preservation fact to its
+existing profile. See `batches/2026-11-17-ute-indian-thpo-agreement.json`.
+The candidate registry contains 490 profiles and 1,431 raw facts.
