@@ -1110,9 +1110,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "own-cachil-dehe-colusa-2026-11-17"
       ],
       "review": {
         "identity": "pending",
@@ -1128,9 +1129,29 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.colusa-nsn.gov/government/heritage/",
+          "final_url": "https://www.colusa-nsn.gov/government/heritage/",
+          "retrieved_at": "2026-11-17T15:02:19.957089Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 53267,
+          "sha256": "9eaaadd10b229ca5a85652f5b58246a2f9cf20791e87973a4a9fe8dc82c783b2",
+          "redirects": [],
+          "title": "Heritage",
+          "source_id": "own-cachil-dehe-colusa-2026-11-17",
+          "evidence_receipt": "batches/2026-11-17-cachil-dehe-colusa.json",
+          "receipt_id": "r-7050821388b1bf85"
+        }
+      ],
+      "updated_at": "2026-11-17T15:05:16.173894+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Three checked claims cover constitutional ratification, language work and the Community Council’s electric distribution project. Parcel dates remain open.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-17-cachil-dehe-colusa-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-37693d43338c",
@@ -20903,12 +20924,26 @@
           "outcome": "readable",
           "capture_retention": "Full public-source capture retained locally in this run artifact folder; not a repository body file.",
           "receipt_id": "r-bd0c90c3feb55532"
+        },
+        {
+          "url": "https://chiricahuaapachenation.org/",
+          "final_url": "https://chiricahuaapachenation.org/",
+          "retrieved_at": "2026-11-17T15:02:39.760006Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 15477,
+          "sha256": "b66399e150fb64d5852d307d3355a6b2d75a7ab37d3c581b27e9d86b2b90b47b",
+          "redirects": [],
+          "evidence": "November 7, 2026 - January 30, 2027: Chiricahua Apache Nation",
+          "source_id": "priority-chiricahua-nation",
+          "evidence_receipt": "batches/2026-11-17-chiricahua-nde-benah.json",
+          "receipt_id": "r-d9924a62fc595855"
         }
       ],
-      "updated_at": "2026-10-12T14:20:55.666260+00:00",
+      "updated_at": "2026-11-17T15:05:15.600468+00:00",
       "next_attempt_after": null,
       "lease_until": null,
-      "note": "Scoped source guide reviewed. The three US records remain separate. INPI concerns a broader people-level category. Named Mexican communities and governing bodies remain unresolved and need their own sources. No recognition inference or emergency claim.",
+      "note": "Scoped source guide reviewed. The three US records remain separate. INPI concerns a broader people-level category. Named Mexican communities and governing bodies remain unresolved and need their own sources. No recognition inference or emergency claim. The November 17 review documents the Las Cruces exhibit schedule and named community collaboration. See batches/2026-11-17-chiricahua-nde-benah.json.",
       "review_receipt": "batches/2026-10-12-140316.json"
     },
     {

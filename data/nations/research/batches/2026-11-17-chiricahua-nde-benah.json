@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-17",
+  "registry_id": "chiricahua-apache-nation-us-nm",
+  "task_id": "identity-chiricahua-contemporary-bodies",
+  "review_kind": "Independent AI-assisted source and scope review",
+  "exhibition": {
+    "venue": "Branigan Cultural Center, Las Cruces",
+    "title": "Land of the People: Nde benah",
+    "scheduled_start": "2026-11-07",
+    "scheduled_end": "2027-01-30"
+  },
+  "receipts": [
+    {
+      "url": "https://chiricahuaapachenation.org/",
+      "final_url": "https://chiricahuaapachenation.org/",
+      "retrieved_at": "2026-11-17T15:02:39.760006Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 15477,
+      "sha256": "b66399e150fb64d5852d307d3355a6b2d75a7ab37d3c581b27e9d86b2b90b47b",
+      "redirects": [],
+      "evidence": "November 7, 2026 - January 30, 2027: Chiricahua Apache Nation"
+    },
+    {
+      "url": "https://lascruces.gov/arts-and-leisure/museums/branigan-cultural-center/land-of-the-people/",
+      "final_url": "https://lascruces.gov/arts-and-leisure/museums/branigan-cultural-center/land-of-the-people/",
+      "retrieved_at": "2026-11-17T15:02:46.038341Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 482436,
+      "sha256": "b48fc832a409eb43091ed4a7012ddcc18017de2c144db79a01a17885544d6daf",
+      "redirects": [],
+      "evidence": "created in collaboration with community members of Chiricahua Apache Nation"
+    },
+    {
+      "url": "https://lascruces.gov/land-of-the-people-nde-benah-opens-at-the-branigan-cultural-center/",
+      "final_url": "https://lascruces.gov/land-of-the-people-nde-benah-opens-at-the-branigan-cultural-center/",
+      "retrieved_at": "2026-11-17T15:02:41.967146Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 502123,
+      "sha256": "5dcb9c48436865925df8930143d2f805b1287b4d787bb4de5e8d2b4d3c68a8ad",
+      "redirects": [],
+      "publication_date": "2026-11-02"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://chiricahuaapachenation.org/robots.txt",
+      "final_url": "https://chiricahuaapachenation.org/robots.txt",
+      "retrieved_at": "2026-11-17T15:02:18.543819Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redirects": []
+    },
+    {
+      "url": "https://lascruces.gov/robots.txt",
+      "final_url": "https://lascruces.gov/robots.txt",
+      "retrieved_at": "2026-11-17T15:02:18.737393Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 280,
+      "sha256": "981c9a534ab545fb88253dd7b258525f410c46e58d930cf0cfe43189b49f81b6",
+      "redirects": []
+    }
+  ],
+  "candidate_fact_ids": [
+    "chiricahua-apache-nation-us-nm-29f20137"
+  ],
+  "source_limits": [
+    "The own source and museum lists verify the public schedule, not an eyewitness account or current visiting hours.",
+    "This named community’s collaboration supplies no proof of recognition, enrollment or governing relationships. The separate Mexico and other Apache research tasks remain open."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
