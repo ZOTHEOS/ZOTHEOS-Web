@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-18",
+  "registry_id": "cahto-tribe-laytonville-rancheria-us-ca",
+  "directory_id": "us-fed-989372d07f81",
+  "review_kind": "AI-assisted Tribal-authored source, identity and chronology review",
+  "receipts": [
+    {
+      "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+      "final_url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+      "retrieved_at": "2026-11-18T14:59:48.047921Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 60461,
+      "sha256": "b4a600e072f081ffe33717f9c3481f7163b40d49cc9eaee218f0b9c46a82442a",
+      "redirects": [],
+      "publication_date": "2011-02-16"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-18T14:59:47.845902Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bia.gov/regional-offices/pacific/tribes-served",
+      "final_url": "https://www.bia.gov/regional-offices/pacific/tribes-served",
+      "retrieved_at": "2026-11-18T14:59:47.890830Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 53329,
+      "sha256": "f881e121cad45b72b7a545d1fa0f7d7e560124a4e1c1c22cb3ac279e9f2eb739",
+      "redirects": []
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.epa.gov/robots.txt",
+      "final_url": "https://www.epa.gov/robots.txt",
+      "retrieved_at": "2026-11-18T14:59:20.549190Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2035,
+      "sha256": "48c441ffe97205c15534e9827d603504d44aeef04ab57e0f6772fdbd9bf49db5",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-18T14:59:20.590781Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bia.gov/robots.txt",
+      "final_url": "https://www.bia.gov/robots.txt",
+      "retrieved_at": "2026-11-18T14:59:20.571320Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2141,
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cahtotribe-nsn.gov/robots.txt",
+      "checked_at": "2026-11-18T14:59:20.697118+00:00",
+      "outcome": "tls-certificate-hostname-mismatch",
+      "detail": "Certificate hostname validation failed before an HTTP response was received."
+    }
+  ],
+  "candidate_fact_ids": [
+    "cahto-tribe-laytonville-rancheria-us-ca-73c5b1a2",
+    "cahto-tribe-laytonville-rancheria-us-ca-3de47f21",
+    "cahto-tribe-laytonville-rancheria-us-ca-5c8c59f6",
+    "cahto-tribe-laytonville-rancheria-us-ca-71c9dbf6"
+  ],
+  "events": [
+    {
+      "event_date": "1908",
+      "receipt_index": 0,
+      "page": "Printed 1, PDF 3",
+      "evidence": "for the Cahto Tribe in 1908"
+    },
+    {
+      "event_date": "1967-02-12",
+      "approval_date": "1967-07-21",
+      "receipt_index": 0,
+      "page": "Printed 1, PDF 3",
+      "evidence": "Tribally-adopted on February 12, 1967"
+    },
+    {
+      "event_date": "2001-04-27",
+      "receipt_index": 0,
+      "page": "Printed 2, PDF 4",
+      "evidence": "approved on April 27, 2001"
+    },
+    {
+      "publication_date": "2011-02-16",
+      "planning_period": [
+        "2011",
+        "2015"
+      ],
+      "receipt_index": 0,
+      "page": "Printed 3, PDF 5",
+      "evidence": "restore impaired wetlands functions and extent"
+    }
+  ],
+  "source_limits": [
+    "The cited plan is authored by the Tribe’s Environmental Protection Department and hosted by EPA. The certificate failure on the own-site robots endpoint was not bypassed.",
+    "The source describes historical decisions and goals. Present legal status, water conditions and completion of restoration were not verified."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

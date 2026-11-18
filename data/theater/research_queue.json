@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -293,7 +293,23 @@
         "https://discover.minnesotapbs.org/blog/twin-cities-pbs-filmmaker-leya-hale-honored-with-minnesota-filmmaker-award"
       ],
       "reason": "Vision Maker Media identifies the feature and KSPS lists its complete PBS broadcast edition.",
-      "next": "Verify the live official viewing card after release. Title-specific regional access, caption behavior, player permission and playback remain open."
+      "next": "The live card and official viewing URL matched the reviewed files. Title-specific regional access, caption behavior, player permission and playback remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/52"
+    },
+    {
+      "id": "the-peoples-protectors",
+      "status": "official-source-only",
+      "checked": "2026-11-18",
+      "batch": "research/batches/2026-11-18-the-peoples-protectors.json",
+      "source_urls": [
+        "https://video.minnesotapbs.org/video/the-peoples-protectors-w6czvp/",
+        "https://visionmakermedia.org/film-library/the-peoples-protectors/",
+        "https://www.mnvietnam.org/the-peoples-protectors/index.html",
+        "https://discover.minnesotapbs.org/blog/twin-cities-pbs-filmmaker-leya-hale-honored-with-minnesota-filmmaker-award"
+      ],
+      "reason": "The Indigenous director’s producer page and the station identify the complete Minnesota PBS edition.",
+      "next": "Review the generated card and live official viewing URL after publication. Playback, caption quality, region and account requirements, artwork and embedding permission remain open."
     }
   ]
 }

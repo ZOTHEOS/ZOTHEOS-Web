@@ -796,3 +796,22 @@ and its named community collaboration in Las Cruces. Its identity review
 remains unresolved. See `batches/2026-11-17-chiricahua-nde-benah.json`.
 
 The candidate registry contains 491 profiles and 1,435 raw facts.
+
+## November 18 Cahto, Kwiyagat and an energy-planning exercise
+
+The Cahto Tribe of the Laytonville Rancheria has a distinct candidate profile.
+Its department-authored 2011 plan records the 1908 land establishment, the 1967
+Articles of Association, the 2001 water ordinance and the 2011 to 2015 wetland
+goals. Own-site certificate validation remains unresolved.
+See `batches/2026-11-18-cahto-wetland-history.json`.
+
+The Ute Mountain Ute history adds Kwiyagat Community Academy’s fall 2021 opening.
+The school’s own account and audited report establish its Tribal relationship.
+See `batches/2026-11-18-ute-mountain-kwiyagat.json`.
+
+Paths To Action adds a private planning exercise using the Colusa Community
+Council’s documented energy project. It asks readers to distinguish reported
+results, estimates, decision authority and maintenance questions.
+See `batches/2026-11-18-pathways-colusa-energy.json`.
+
+The candidate registry contains 492 profiles and 1,440 raw facts.

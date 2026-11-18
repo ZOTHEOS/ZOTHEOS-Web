@@ -1,22 +1,22 @@
 {
-  "version": 12,
-  "prepared_at": "2026-11-17T15:12:54.255807+00:00",
+  "version": 13,
+  "prepared_at": "2026-11-18T15:13:51.062683+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "aa9b79fefc8979d4f27e5ee3d1c5ee477fb31be2",
-    "version": 11,
-    "catalogue_sha256": "5db3ed6046f14c854092deedf45661036b3fa3841434b68e17b0abb87db22d4a"
+    "commit": "13df82a2ffb744a9b152d519154f93c3951067bf",
+    "version": 12,
+    "catalogue_sha256": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6"
   },
   "catalogue": {
-    "sha256": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6",
-    "titles": 238,
+    "sha256": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34",
+    "titles": 239,
     "configured_players": 224,
-    "source_only": 14,
+    "source_only": 15,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 25,
+      "full-film": 26,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,26 +24,45 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-17-the-electric-indian.json",
-    "sha256": "0e28360dd1dcc1c388745aea39255cb87251d7a3509b0a705dff990b20115327",
+    "batch": "research/batches/2026-11-18-the-peoples-protectors.json",
+    "sha256": "a8cdacd6bf62058f5f02975eb1c88d04074e9c1deef9a71fa031ab1480753cd0",
     "thumbnail_display": "Text cover while artwork permission remains unresolved."
   },
+  "independent_reviews": [
+    {
+      "kind": "AI-assisted Cahto identity, chronology, receipts and Colusa exercise review",
+      "reviewed_date": "2026-11-18",
+      "result": "passed"
+    },
+    {
+      "kind": "AI-assisted Ute Mountain Ute school, receipts and Colusa exercise review",
+      "reviewed_date": "2026-11-18",
+      "result": "passed"
+    },
+    {
+      "kind": "AI-assisted documentary edition, director, receipts and access-limit review",
+      "reviewed_date": "2026-11-18",
+      "result": "passed",
+      "correction": "Removed an uncited discovery-edition comparison from the evidence ledger."
+    }
+  ],
   "person_review_claimed": false,
   "nation_endorsement_claimed": false,
   "validation": {
     "automated_tests": {
       "tests": 1072,
-      "failures": 0,
       "errors": 0,
+      "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 242.36305519999587,
-    "full_suite_xml_sha256": "840d955ca8988ec01d12904402c41f346ab79c8f79baaef5c59f42b14a5555e9",
+    "full_suite_wall_seconds": 253.70835950000037,
+    "full_suite_xml_sha256": "5547e544982587319e6da8d132a74d7cdd6c8908941e602ae89f5e884b41225b",
+    "full_suite_finished_at": "2026-11-18T15:12:43.012648+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 626,
-      "profiles": 491,
-      "visible_facts": 1433,
+      "pages": 627,
+      "profiles": 492,
+      "visible_facts": 1438,
       "held_facts": 2
     },
     "registry_validator": {
@@ -53,71 +72,101 @@
     "page_lint": {
       "errors": 0,
       "warnings": 1,
-      "review": "The full Colusa name triggers the long-name check. At 320, 390 and 1440 pixels it wraps within the viewport."
+      "review": "The preexisting full Colusa name triggers the long-name check. The responsive viewport review is recorded below."
     },
     "game_data": {
-      "quick_cards": 491,
-      "profiles_with_history": 113,
-      "new_history_facts": 1,
+      "quick_cards": 492,
+      "profiles_with_history": 114,
+      "new_history_facts": 3,
       "skipped": 0
     },
+    "exact_scope_audit": {
+      "status": "passed",
+      "prior_profiles": 491,
+      "added_profiles": 1,
+      "existing_profiles_with_added_facts": 1,
+      "added_raw_facts": 5,
+      "new_practice_examples": 1,
+      "new_films": 1,
+      "prior_game_quick_cards_preserved": true,
+      "publication_holds_preserved": true,
+      "player_policies_preserved": true,
+      "game_mechanics_preserved": true
+    },
     "browser": {
-      "reviewed_utc_date": "2026-11-17",
-      "method": "Independent offline Chrome served exact static files and Vercel CSP.",
+      "reviewed_utc_date": "2026-11-18",
+      "method": "Independent offline Chrome served exact static files with committed Vercel headers and blocked external requests.",
       "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
+        [
+          1440,
+          900
+        ],
         [
           390,
           844
         ],
         [
-          1440,
-          900
+          320,
+          844
         ]
       ],
-      "colusa_heading_viewport_pixels": [
-        320,
-        760
-      ],
+      "page_viewport_checks": 18,
       "checks": [
-        "Colusa full name and aliases, exact directory match, keyboard access, three cited facts and checked dates.",
-        "Chiricahua exhibition dates and exact City of Las Cruces citation.",
-        "The Electric Indian story link, KSPS destination, text cover, Full Film and Official Site filters. Mobile touch and keyboard worked.",
-        "Zero page errors, CSP violations, overflow, missing local routes or third-party player requests."
+        "Cahto profile shows four dated facts, exact source links and one ready directory result. Activating Read First with Enter focuses the profile heading.",
+        "Ute Mountain Ute school-opening fact and official school source are visible.",
+        "Colusa hypothetical planning exercise and case-index and blank-brief navigation work by keyboard. Its historical source-check date remains November 17.",
+        "The People’s Protectors selects from its deep link, exposes the exact Minnesota PBS URL, appears under Full Film and Official Site, and is excluded by Watch Here.",
+        "All eighteen page and viewport combinations have zero horizontal overflow, page errors, CSP violations or missing local assets.",
+        "The new source-only film has zero iframes and zero external non-image requests."
       ],
-      "limits": "Unrelated external image requests were blocked. No physical-device or actual provider playback, access, or captions were tested."
+      "source_pins": {
+        "nations/directory.html": "65835b8fd61e4f477a0bd48a997e990054a4d64cf8fdfe41a85b2577ebb1b0eb",
+        "nations/cahto-tribe-laytonville-rancheria-us-ca.html": "d9ed34d731cb75080221feff93111785eb8b1254b92ae17cc2a9bb9e6fecc089",
+        "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "e988b30e61bf3a257576a0d9a22b0e026aacc661d39257c16e482739948437c4",
+        "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "2eacb5ff7fd1656b80eec8475e11ceb2934f9819c16400436946c8e1a917c52b",
+        "nations/paths-to-action.html": "148574778c5c990345a1e7184908116006ba1639ad028a2a2cc9c9990fb6125b",
+        "theater.html": "989f83cbdaa782dee708900b445e5ce05fab4d15fa541497201acabfc9a04efd",
+        "vercel.json": "d3d1df11ab0cf4a4a69c0630ce8ec4a29dcd103ffc7cd4a9e9e859a389853e96"
+      },
+      "limits": "Nineteen unrelated external image requests were aborted. No physical device, actual provider playback, regional access, account requirements or caption timing and quality were tested. Directory input Enter has no assigned shortcut, while the Read First button supports keyboard activation."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "f0d503c3472b722d1a20ea5ba1c6007eb1543c13cd7b27e7f3e3b06ef0742a99",
-    "data/nations/nations.min.json": "4084c7f384e330b6d6940ca357e4b07c13671821e4109739e5b0ff4eb0e94d04",
-    "data/nations/research/coverage_queue.json": "6c5877745e307bcb108da9bd1ddbd5cb9f4bed33f431eff54250e711ad2a46f5",
-    "data/nations/research/us_federal_directory.json": "8120d377f91eee031365963dd8a805a58d72fcb7df6ea3acec80734a6c4bb230",
-    "data/nations/research/directory_sources.json": "0a2b607743588f19ae005a00b877b9ca22aa7e594c0576e3db36ecb4a5386178",
-    "data/nations/research/batches/2026-11-17-chiricahua-nde-benah.json": "7b5e643d538eda8cf8c44b15fba87bbfb267c27e090a8d99020ca7b109af9b3f",
-    "data/nations/research/batches/2026-11-17-cachil-dehe-colusa.json": "a3c43a3fa153b0fcdf30b810905cc432523a85c8d966ab66f6e11b3553500fd0",
-    "data/nations/research/receipts/2026-11-17-cachil-dehe-colusa-identity.json": "f885ed082b0c55fa302b5c744ab8a7face9123414de72143cba030b3bc0279c0",
-    "static/nations/coverage.json": "55b56448b23c5f82c6e74483cafcbe810ef208f8b535337d76e69ffe4f167323",
-    "game/nations.json": "9baa941cef6059d572bd07a2d8034b59129cebc0ddc9e717780160b4d98009df",
-    "game/history.json": "49dc267fac65767e9919d83ccc735b751b38638c5f53304b05dac69b45de6695",
-    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.raw.json": "3fbddadf2158cf8632bf9414024b2620ef3bfc48adb4789b7f8181ad109994e3",
-    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.verify.json": "54c7a56f0b82c3acd66cd4f463ed3caeb3d3689ebad52d431d7ac0095efc9fad",
-    "data/nations/sources/us-cachil-dehe-colusa-2026-11-17.respect.json": "b17341d1487964a8d70c950b688abf75f7ceba865a151fb97beae88129f770d7",
-    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.raw.json": "08ca2b4c2798b27321f61caec528dbf3054ead5f81b856e8dbb202f45ed2a69f",
-    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.verify.json": "5b533f845142714fffdab080e55b995c9b179552832df890d580a58d35b9ec78",
-    "data/nations/sources/us-chiricahua-nde-benah-2026-11-17.respect.json": "8af458295a7aa73d0a6770a363e53e8aec20973f535190e7c3616c5ede103843",
-    "nations/directory.html": "3c32ff77c3fd1a3c19704c1ef1400f4ea66ea4695f0e7839cfe31e0757c6a325",
-    "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "6ea99101b33391aaf27416d07e9591c09187eacce0058d137f5476b28190f2dd",
-    "nations/chiricahua-apache-nation-us-nm.html": "1007b443e209d1aaa8c460bbe09e7fdcef54e8ddb1cde49dd9efac1cba50156c",
-    "theater.html": "eb91b6b033b7be688f256a79ec81b02276e89744c9ed4cdfdac926ef60b7cef4",
-    "vercel.json": "b653e263f7182415ce3ce852ee3904645ae16a47d631bc699c63395bf656e424",
-    "data/theater/films.json": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6",
-    "data/theater/research/batches/2026-11-17-the-electric-indian.json": "0e28360dd1dcc1c388745aea39255cb87251d7a3509b0a705dff990b20115327",
-    "data/theater/research_queue.json": "a6710bf41bbf7a5f8449e3d888e3fd0b32510cecec4ef263c67256ab5ef068c8"
+    "data/nations/nations.json": "d58ba8748bcc3e2787d5efd04130ca9038a067d50409559a80f5bd73a93411f2",
+    "data/nations/nations.min.json": "ee78e248ba950a55c9a34000f2805d287cf11b5a5eff535fb4a079ba977c72ce",
+    "data/nations/pathways.json": "46e7c986c6f9eb8dec1bcde64cca6bf622b22701f4daacf7974e330f6cc9c7e2",
+    "data/nations/research/coverage_queue.json": "bf1bd3b246b32e8b5efbd4e1755f213809d809033ab82267d15b3dea483d6421",
+    "data/nations/research/us_federal_directory.json": "63435a616fe32d1bcb6c81d9cda4775a328882c602d4ec973080f91ca58a850b",
+    "data/nations/research/directory_sources.json": "4f023ab819c90004e01ae3613102abbf839c84943f483b6b5014856ed6c6467b",
+    "static/nations/coverage.json": "4a647879442e9bb95b23b48730c4eff4ed727d18e296892abcbf37d28f0713c2",
+    "game/nations.json": "c4bbeb9d1f35d7392b674c3dc9de4db659f2db6f565c50f1fbb88764684bf6d6",
+    "game/history.json": "cb30df8e220c4a9c85bad5062ecad86c0fedabc0a6d969aa2b2da391cea44be8",
+    "nations/directory.html": "65835b8fd61e4f477a0bd48a997e990054a4d64cf8fdfe41a85b2577ebb1b0eb",
+    "nations/cahto-tribe-laytonville-rancheria-us-ca.html": "d9ed34d731cb75080221feff93111785eb8b1254b92ae17cc2a9bb9e6fecc089",
+    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "e988b30e61bf3a257576a0d9a22b0e026aacc661d39257c16e482739948437c4",
+    "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "2eacb5ff7fd1656b80eec8475e11ceb2934f9819c16400436946c8e1a917c52b",
+    "nations/paths-to-action.html": "148574778c5c990345a1e7184908116006ba1639ad028a2a2cc9c9990fb6125b",
+    "theater.html": "989f83cbdaa782dee708900b445e5ce05fab4d15fa541497201acabfc9a04efd",
+    "vercel.json": "d3d1df11ab0cf4a4a69c0630ce8ec4a29dcd103ffc7cd4a9e9e859a389853e96",
+    "data/theater/films.json": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34",
+    "data/theater/research_queue.json": "e1ea43ed8f18f16bb66c12170382c2292f12f07d52715073d691005ebc34d983",
+    "data/theater/research/batches/2026-11-18-the-peoples-protectors.json": "a8cdacd6bf62058f5f02975eb1c88d04074e9c1deef9a71fa031ab1480753cd0",
+    "data/nations/research/batches/2026-11-18-cahto-wetland-history.json": "fe213b9515d96743253ca41886d58527549a8284d6eae3dfe41659a32200d1c9",
+    "data/nations/research/batches/2026-11-18-ute-mountain-kwiyagat.json": "a237032c42b68f3efafd2ded1a05624a8b29d0cf61c05f6292bc13e62e57df66",
+    "data/nations/research/batches/2026-11-18-pathways-colusa-energy.json": "6b37674afd0e7b2d3558a18e6ad843c3930424a43b79c3a7f148cbdb12e8d48d",
+    "data/nations/research/receipts/2026-11-18-cahto-identity.json": "a07ce150d4297025ebb88dec862390b3ddc64cf55096cf4d3b973c439a693638",
+    "data/nations/sources/us-cahto-wetland-history-2026-11-18.raw.json": "0c22f4e98e29998024c0c5390b2b6861814880e3e6781dde852f09c2ed74635d",
+    "data/nations/sources/us-cahto-wetland-history-2026-11-18.verify.json": "06ca50082a4b476067b7fa7f26aa375861c450dedf5c3918f88a860d53805ca1",
+    "data/nations/sources/us-cahto-wetland-history-2026-11-18.respect.json": "708567e1c9ca6e8e3041b2a57b860b1189f12ea10636468f1f5a7c8b93cb6cb6",
+    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.raw.json": "61c7f7272712657ba6dfbf54a2b9f0946ab8dbba22d2bec1bd4862a5046fd995",
+    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.verify.json": "87be0dd2e4b80980c60b6077dbb68bd9ceedb638323f9c95d72247e49dcc712e",
+    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.respect.json": "fdbad4a3033647c07cf4d2e26551d76e38e5074d01506475c608a5834aa544b9"
   },
   "pending": [
     "Vercel production verification",
-    "Provider playback, regional access and caption timing or quality",
-    "Embedding and artwork permissions"
+    "Provider playback, title-specific region and account requirements, and caption timing or quality",
+    "Embedding and artwork permissions",
+    "Cahto general website certificate validation"
   ]
 }
