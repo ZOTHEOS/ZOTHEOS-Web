@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-18",
+  "government_id": "ute-mountain-ute-tribe-us-co-ut-nm",
+  "task_id": "history-ute-mountain-rights-water-education",
+  "review_kind": "Independent AI-assisted own school, Tribal and audited source review",
+  "school_opening_period": "Fall 2021",
+  "tribal_charter_adoption_date": "2020-11-18",
+  "receipts": [
+    {
+      "url": "https://www.utemountainutetribe.com/",
+      "final_url": "https://www.utemountainutetribe.com/",
+      "retrieved_at": "2026-11-18T14:59:48.445691Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 38588,
+      "sha256": "4d42877082fa239acc79657f5bb94c9a9df358b07b7876e91ad1c7a654ffe5ca",
+      "redirects": [],
+      "evidence": "Kwiyagat Community Academy"
+    },
+    {
+      "url": "https://utekca.org/",
+      "final_url": "https://utekca.org/",
+      "retrieved_at": "2026-11-18T14:59:49.756799Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 181336,
+      "sha256": "219dc891d7b204b1cc56c231781c0c18c2d1de72d4a1a23a32262d27b2422390",
+      "redirects": [],
+      "evidence": [
+        "Kwiyagat Community Academy opened in Fall 2021",
+        "KCA is guided by Ute language and culture"
+      ]
+    },
+    {
+      "url": "https://utekca.org/wp-content/uploads/2025/07/Kwiyagat-Community-Academy-FY22-Final-Audit.pdf",
+      "final_url": "https://utekca.org/wp-content/uploads/2025/07/Kwiyagat-Community-Academy-FY22-Final-Audit.pdf",
+      "retrieved_at": "2026-11-18T15:00:17.122871Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 650087,
+      "sha256": "c436cb1c4d0ea81285a88e967dc01ee2ce96c4af97a9c463bc52a8106b604b27",
+      "redirects": [],
+      "reporting_period_end": "2022-06-30",
+      "auditor_report_date": "2022-10-11",
+      "evidence": [
+        "An Agency of the Ute Mountain Ute Tribe",
+        "The School opened to students in the fall of 2021"
+      ],
+      "pages": "PDF 7 and 17, printed 4 and 13"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.utemountainutetribe.com/robots.txt",
+      "final_url": "https://www.utemountainutetribe.com/robots.txt",
+      "retrieved_at": "2026-11-18T14:59:28.588251Z",
+      "retrieval_method": "http",
+      "http_status": 404,
+      "body_bytes": 13,
+      "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+      "redirects": []
+    },
+    {
+      "url": "https://utekca.org/robots.txt",
+      "final_url": "https://utekca.org/robots.txt",
+      "retrieved_at": "2026-11-18T14:59:29.293155Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 114,
+      "sha256": "026f1ebdecd6e3f2edf4ae92e20169c5c66c241f21304779ca2b21de6898bb3d",
+      "redirects": []
+    }
+  ],
+  "candidate_fact_ids": [
+    "ute-mountain-ute-tribe-us-co-ut-nm-fbcb871d"
+  ],
+  "source_limits": [
+    "This is a dated school-opening fact. It makes no present enrollment, achievement or outcome claim.",
+    "The audited report concerns fiscal year 2022. Its 2025 upload path is separate from the reported dates.",
+    "School webpage testimonials and current timetable entries were not used."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

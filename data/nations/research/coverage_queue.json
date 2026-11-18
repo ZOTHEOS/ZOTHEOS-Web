@@ -1145,10 +1145,10 @@
           "receipt_id": "r-7050821388b1bf85"
         }
       ],
-      "updated_at": "2026-11-17T15:05:16.173894+00:00",
+      "updated_at": "2026-11-18T15:02:56.765926+00:00",
       "next_attempt_after": null,
       "lease_until": null,
-      "note": "Three checked claims cover constitutional ratification, language work and the Community Council’s electric distribution project. Parcel dates remain open.",
+      "note": "Three checked claims cover constitutional ratification, language work and the Community Council’s electric distribution project. Parcel dates remain open. November 18: its published energy project now supports a hypothetical Paths To Action planning exercise. See batches/2026-11-18-pathways-colusa-energy.json.",
       "profile_disposition": "exists_in_registry",
       "identity_receipt": "receipts/2026-11-17-cachil-dehe-colusa-identity.json",
       "identity_review_kind": "Explicit source-backed identity review"
@@ -1216,9 +1216,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "cahto-department-wetland-plan-2026-11-18"
       ],
       "review": {
         "identity": "pending",
@@ -1234,9 +1235,29 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+          "final_url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+          "retrieved_at": "2026-11-18T14:59:48.047921Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 60461,
+          "sha256": "b4a600e072f081ffe33717f9c3481f7163b40d49cc9eaee218f0b9c46a82442a",
+          "redirects": [],
+          "publication_date": "2011-02-16",
+          "source_id": "cahto-department-wetland-plan-2026-11-18",
+          "evidence_receipt": "batches/2026-11-18-cahto-wetland-history.json",
+          "receipt_id": "r-902485beb7e21e59"
+        }
+      ],
+      "updated_at": "2026-11-18T15:02:57.385091+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Four dated facts from the Tribe-authored wetland plan support this distinct government profile. The own-site TLS error remains unresolved.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-18-cahto-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-1bc48d83ee4e",
@@ -63399,7 +63420,8 @@
       "priority_reason": "owner_priority_inclusive_us_coverage",
       "status": "needs_review",
       "allowed_source_ids": [
-        "priority-ute-mountain"
+        "priority-ute-mountain",
+        "ute-mountain-kwiyagat-school-2026-11-18"
       ],
       "review": {
         "identity": "pending",
@@ -63427,11 +63449,24 @@
           "retrieval_method": "http",
           "evidence_receipt": "receipts/us-next-history-ute-mountain-natural-resources.receipt.json",
           "receipt_id": "r-3819e2f82f6f5dc9"
+        },
+        {
+          "url": "https://utekca.org/",
+          "final_url": "https://utekca.org/",
+          "retrieved_at": "2026-11-18T14:59:49.756799Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 181336,
+          "sha256": "219dc891d7b204b1cc56c231781c0c18c2d1de72d4a1a23a32262d27b2422390",
+          "redirects": [],
+          "source_id": "ute-mountain-kwiyagat-school-2026-11-18",
+          "evidence_receipt": "batches/2026-11-18-ute-mountain-kwiyagat.json",
+          "receipt_id": "r-b2821b7657107e92"
         }
       ],
-      "updated_at": "2026-11-12T15:08:45.490709+00:00",
+      "updated_at": "2026-11-18T15:02:56.765926+00:00",
       "next_attempt_after": null,
-      "note": "Own-source historical layers independently AI meaning/respect reviewed; reviewed PR controls release. No identity, canonical fact-date, current legal outcome, program-operation, measured outcome or urgency change. Captures preceded this integration lease; no earlier lease invented. The November 10 park history lead is recorded in batches/2026-11-10-ute-mountain-park-lead.json. The November 12 independent review supports two historical facts in the candidate registry. See batches/2026-11-12-ute-mountain-park-review.json.",
+      "note": "Own-source historical layers independently AI meaning/respect reviewed; reviewed PR controls release. No identity, canonical fact-date, current legal outcome, program-operation, measured outcome or urgency change. Captures preceded this integration lease; no earlier lease invented. The November 10 park history lead is recorded in batches/2026-11-10-ute-mountain-park-lead.json. The November 12 independent review supports two historical facts in the candidate registry. See batches/2026-11-12-ute-mountain-park-review.json. November 18 review records Kwiyagat Community Academy’s fall 2021 opening in batches/2026-11-18-ute-mountain-kwiyagat.json.",
       "lease_until": null
     },
     {

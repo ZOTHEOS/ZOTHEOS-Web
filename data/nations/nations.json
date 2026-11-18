@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-17",
-  "count": 491,
-  "facts": 1435,
+  "generated": "2026-11-18",
+  "count": 492,
+  "facts": 1440,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 37
+    "us-west-pacific": 38
   },
   "nations": [
     {
@@ -20471,6 +20471,22 @@
           "status": "verified",
           "checked": "2026-11-12",
           "last_verified": "2026-11-12"
+        },
+        {
+          "id": "ute-mountain-ute-tribe-us-co-ut-nm-fbcb871d",
+          "text": "The Ute Mountain Ute Tribe’s Kwiyagat Community Academy opened in Towaoc in fall 2021, with education guided by Ute language and culture.",
+          "kind": "history",
+          "as_of": "2021",
+          "source": {
+            "title": "Kwiyagat Community Academy",
+            "publisher": "Kwiyagat Community Academy",
+            "url": "https://utekca.org/",
+            "accessed": "2026-11-18"
+          },
+          "evidence": "Kwiyagat Community Academy opened in Fall 2021",
+          "status": "verified",
+          "checked": "2026-11-18",
+          "last_verified": "2026-11-18"
         }
       ]
     },
@@ -29819,6 +29835,85 @@
           "status": "verified",
           "checked": "2026-11-17",
           "last_verified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Cahto Tribe of the Laytonville Rancheria",
+      "also": [],
+      "pronounce": null,
+      "lands": "Laytonville Rancheria in Mendocino County, northern California",
+      "countries": [
+        "US"
+      ],
+      "official_url": null,
+      "name_source_url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+      "facts": [
+        {
+          "id": "cahto-tribe-laytonville-rancheria-us-ca-73c5b1a2",
+          "text": "The Tribe’s 2011 wetland plan dates the establishment of land for the Laytonville Rancheria to 1908.",
+          "kind": "history",
+          "as_of": "1908",
+          "source": {
+            "title": "Tribal Wetland Program Plan for the Cahto Tribe of the Laytonville Rancheria",
+            "publisher": "Cahto Environmental Protection Department via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+            "accessed": "2026-11-18"
+          },
+          "evidence": "for the Cahto Tribe in 1908",
+          "status": "verified",
+          "checked": "2026-11-18",
+          "last_verified": "2026-11-18"
+        },
+        {
+          "id": "cahto-tribe-laytonville-rancheria-us-ca-3de47f21",
+          "text": "The Tribe’s wetland plan records Tribal adoption of its Articles of Association on February 12, 1967, followed by Interior approval on July 21, 1967.",
+          "kind": "history",
+          "as_of": "1967",
+          "source": {
+            "title": "Tribal Wetland Program Plan for the Cahto Tribe of the Laytonville Rancheria",
+            "publisher": "Cahto Environmental Protection Department via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+            "accessed": "2026-11-18"
+          },
+          "evidence": "Tribally-adopted on February 12, 1967",
+          "status": "verified",
+          "checked": "2026-11-18",
+          "last_verified": "2026-11-18"
+        },
+        {
+          "id": "cahto-tribe-laytonville-rancheria-us-ca-5c8c59f6",
+          "text": "The Tribe’s wetland plan records an April 27, 2001 water quality ordinance prohibiting pollutant discharge into waters within the Laytonville Rancheria.",
+          "kind": "governance",
+          "as_of": "2001",
+          "source": {
+            "title": "Tribal Wetland Program Plan for the Cahto Tribe of the Laytonville Rancheria",
+            "publisher": "Cahto Environmental Protection Department via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+            "accessed": "2026-11-18"
+          },
+          "evidence": "approved on April 27, 2001",
+          "status": "verified",
+          "checked": "2026-11-18",
+          "last_verified": "2026-11-18"
+        },
+        {
+          "id": "cahto-tribe-laytonville-rancheria-us-ca-71c9dbf6",
+          "text": "In its 2011 to 2015 wetland plan, the Tribe set a goal to restore impaired wetlands and maintain healthy wetlands within the Laytonville Rancheria.",
+          "kind": "land",
+          "as_of": "2011",
+          "source": {
+            "title": "Tribal Wetland Program Plan for the Cahto Tribe of the Laytonville Rancheria",
+            "publisher": "Cahto Environmental Protection Department via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+            "accessed": "2026-11-18"
+          },
+          "evidence": "restore impaired wetlands functions and extent",
+          "status": "verified",
+          "checked": "2026-11-18",
+          "last_verified": "2026-11-18"
         }
       ]
     },

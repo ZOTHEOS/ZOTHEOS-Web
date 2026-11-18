@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-18",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-18T15:02:56.765926+00:00",
+    "evidence_receipt": "batches/2026-11-18-cahto-wetland-history.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "results": [
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The Tribal-authored plan dates the land establishment to 1908. No current acreage or original recognition date is inferred."
+    },
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The plan separately dates Tribal adoption and Interior approval in 1967. No current constitutional version is asserted."
+    },
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The plan records the 2001 ordinance. The fact describes the recorded action and no current regulatory determination."
+    },
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The document sets goals for 2011 to 2015. The fact makes no claim about completed restoration or present conditions."
+    }
+  ],
+  "names": [
+    {
+      "id": "cahto-tribe-laytonville-rancheria-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The Tribe’s own department authored this named government’s plan. The federal directories corroborate the spelling. The broader Cahto people and other governments remain separate."
+    }
+  ]
+}

@@ -1409,6 +1409,38 @@
       "discovery_date": "2026-11-17",
       "status": "source_retrieved",
       "note": "The government’s own Heritage page and homepage supply the checked name and history."
+    },
+    {
+      "source_id": "cahto-department-wetland-plan-2026-11-18",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.epa.gov/sites/default/files/2015-10/documents/cahto_tribe_wpp.pdf",
+      "allowed_hosts": [
+        "www.epa.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-18",
+      "status": "source_retrieved",
+      "note": "Cahto Environmental Protection Department-authored 2011 plan, published by EPA."
+    },
+    {
+      "source_id": "ute-mountain-kwiyagat-school-2026-11-18",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://utekca.org/",
+      "allowed_hosts": [
+        "utekca.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-18",
+      "status": "source_retrieved",
+      "note": "The Tribe’s wholly owned school. The fiscal year 2022 report confirms its governmental relationship."
     }
   ]
 }
