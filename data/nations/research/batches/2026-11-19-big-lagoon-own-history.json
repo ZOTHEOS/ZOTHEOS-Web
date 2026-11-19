@@ -1,0 +1,184 @@
+{
+  "receipts": [
+    {
+      "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+      "final_url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+      "retrieved_at": "2026-11-19T15:04:42.494789Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 42975,
+      "sha256": "c32b6708ad48666c26f24ab5fd2a94ce661281a5a86dd7dc702b0ee5c88766dc",
+      "redirects": []
+    },
+    {
+      "url": "https://twofeathers-nafs.org/about-us/",
+      "final_url": "https://twofeathers-nafs.org/about-us/",
+      "retrieved_at": "2026-11-19T15:07:19.696595Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 153652,
+      "sha256": "2b523908991811a7087c6907e1bff4788c523da7067822df8d51ebf714348587",
+      "redirects": []
+    },
+    {
+      "url": "https://twofeathers-nafs.org/2025-acorn-youth-wellness-program-year-in-review/",
+      "final_url": "https://twofeathers-nafs.org/2025-acorn-youth-wellness-program-year-in-review/",
+      "retrieved_at": "2026-11-19T15:07:22.232252Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 162257,
+      "sha256": "874ffb8f0b9e1bd99afbe0e08695a2e5dd25c49c617669eb8e920d6d32471280",
+      "redirects": [],
+      "publication_date": "2025-05-13T20:56:34+00:00"
+    },
+    {
+      "url": "https://caltribalfamilies.org/places/big-lagoon-rancheria/",
+      "final_url": "https://caltribalfamilies.org/places/big-lagoon-rancheria/",
+      "retrieved_at": "2026-11-19T15:04:42.495449Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 394930,
+      "sha256": "50e72617294f9dd76ab6046078b5d0723dc1e69667ce6749787c3116e16ffcf7",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-19T15:04:42.495569Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bia.gov/regional-offices/pacific/tribes-served",
+      "final_url": "https://www.bia.gov/regional-offices/pacific/tribes-served",
+      "retrieved_at": "2026-11-19T15:06:39.433496Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 52284,
+      "sha256": "68fd212a28a67d6da45046b6c33bec03967bfe053142a3f67ea1a056c4ea2516",
+      "redirects": []
+    },
+    {
+      "url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=OBJECTID%3D389&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&f=json",
+      "final_url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=OBJECTID%3D389&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&f=json",
+      "retrieved_at": "2026-11-19T15:06:02.746917Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1899,
+      "sha256": "88c8d89b1b7f262a10255e179a121e34341d7a0a280b4290cf15a670a2e86ff5",
+      "redirects": []
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://narf.org/robots.txt",
+      "final_url": "https://narf.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:17.090789Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 254,
+      "sha256": "995779467230468fc1129d58912170c1a33f8cb0339ddea815bbf24dd5fa2ef2",
+      "redirects": []
+    },
+    {
+      "url": "https://twofeathers-nafs.org/robots.txt",
+      "final_url": "https://twofeathers-nafs.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:07:17.182225Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 118,
+      "sha256": "4dd45cb9bcad572419ced72cde71efc171762e5ef7220fb195d314b60ae7d245",
+      "redirects": []
+    },
+    {
+      "url": "https://caltribalfamilies.org/robots.txt",
+      "final_url": "https://caltribalfamilies.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:17.091359Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 125,
+      "sha256": "0795ffc2630ddc49b45ae06f31f54c8fd466e33cbd9009ba31c2bfdbd6a5ad5e",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:17.345997Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bia.gov/robots.txt",
+      "final_url": "https://www.bia.gov/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:17.466963Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2141,
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "redirects": []
+    },
+    {
+      "url": "https://services1.arcgis.com/robots.txt",
+      "final_url": "https://services1.arcgis.com/robots.txt",
+      "retrieved_at": "2026-11-19T15:05:30.378800Z",
+      "retrieval_method": "http",
+      "http_status": 403,
+      "body_bytes": 11,
+      "sha256": "82e45382e7d625da9fd553fe7ffad1cc3723573f619e00b822f856bfa7919749",
+      "redirects": [],
+      "observation": "Invalid URL response. Robots unavailable; no explicit allowance is claimed."
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1985-05-05",
+      "signature_date": "1985-05-20",
+      "receipt_index": 0,
+      "locator": "Articles V and XIII, final approval line"
+    },
+    {
+      "event_date": "1918-07-10",
+      "source_edition": "1985",
+      "receipt_index": 0,
+      "locator": "Article II(a)"
+    },
+    {
+      "event_date": "2002",
+      "receipt_index": 1,
+      "locator": "Two Feathers Today"
+    },
+    {
+      "event_date": "2025-05-04",
+      "publication_date": "2025-05-13",
+      "receipt_index": 2,
+      "locator": "May 4, Big Lagoon section"
+    }
+  ],
+  "crawl_policy": "Robots were read before corresponding content, with subsequent content reads paced at least two seconds apart. The ArcGIS robots response was unavailable; the normal BIA public row query succeeded.",
+  "source_limits": [
+    "This is the constitutional edition approved May 5 and signed May 20, 1985. No later amendment, current election rule or current officeholder is inferred.",
+    "Article II(a) supplies a historical territorial reference. It does not establish the origin of a people, present land title or a map boundary.",
+    "The organization’s own history distinguishes its 1998 several-Tribe consortium founding from the 2002 Big Lagoon charter. No current service eligibility is inferred.",
+    "The dated provider account reports the May 4, 2025 event. No participant count, clinical outcome, permission to reproduce cultural practices or current event availability is inferred.",
+    "A separate government-owned website has not been identified. The BIA website points to an Indigenous-led coalition directory. Big Lagoon is kept distinct from broader peoples and other governments."
+  ],
+  "schema_version": 1,
+  "checked": "2026-11-19",
+  "registry_id": "big-lagoon-rancheria-us-ca",
+  "directory_id": "us-fed-5e8201b35177",
+  "review_kind": "AI-assisted own-source, identity, chronology and respect review",
+  "candidate_fact_ids": [
+    "big-lagoon-rancheria-us-ca-01d8ea3f",
+    "big-lagoon-rancheria-us-ca-b71964f0",
+    "big-lagoon-rancheria-us-ca-a5575fac",
+    "big-lagoon-rancheria-us-ca-8253937a"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

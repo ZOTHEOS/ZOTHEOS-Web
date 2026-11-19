@@ -1,22 +1,22 @@
 {
-  "version": 13,
-  "prepared_at": "2026-11-18T15:13:51.062683+00:00",
+  "version": 14,
+  "prepared_at": "2026-11-19T15:22:35.337037+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "13df82a2ffb744a9b152d519154f93c3951067bf",
-    "version": 12,
-    "catalogue_sha256": "5c3fed5303b0eee0a20f93c458e787c17f5dfcb215bc461afcdee68071935ff6"
+    "commit": "b5a4b4d09236ace22edf23f34aabb0a2d71e0f06",
+    "version": 13,
+    "catalogue_sha256": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34"
   },
   "catalogue": {
-    "sha256": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34",
-    "titles": 239,
+    "sha256": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5",
+    "titles": 240,
     "configured_players": 224,
-    "source_only": 15,
+    "source_only": 16,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 26,
+      "full-film": 27,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,26 +24,31 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-18-the-peoples-protectors.json",
-    "sha256": "a8cdacd6bf62058f5f02975eb1c88d04074e9c1deef9a71fa031ab1480753cd0",
-    "thumbnail_display": "Text cover while artwork permission remains unresolved."
+    "batch": "research/batches/2026-11-19-chasing-voices.json",
+    "sha256": "8189e5c3b1d538910dc00275fa4b0b63a60867d1eb1988573503496543f0279b",
+    "thumbnail_display": "Text cover while artwork permission remains unresolved.",
+    "viewing_access": "PBS member access. Metadata blocks playback while signed out."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Cahto identity, chronology, receipts and Colusa exercise review",
-      "reviewed_date": "2026-11-18",
+      "kind": "AI-assisted Bear River source, identity, dates and respect cross-review",
+      "reviewed_date": "2026-11-19",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Ute Mountain Ute school, receipts and Colusa exercise review",
-      "reviewed_date": "2026-11-18",
+      "kind": "AI-assisted Big Lagoon constitution, nonprofit charter, dated event and identity cross-review",
+      "reviewed_date": "2026-11-19",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted documentary edition, director, receipts and access-limit review",
-      "reviewed_date": "2026-11-18",
-      "result": "passed",
-      "correction": "Removed an uncited discovery-edition comparison from the evidence ledger."
+      "kind": "AI-assisted cultural-permissions exercise review",
+      "reviewed_date": "2026-11-19",
+      "result": "passed"
+    },
+    {
+      "kind": "AI-assisted film edition, creator, access and exact receipt review",
+      "reviewed_date": "2026-11-19",
+      "result": "passed"
     }
   ],
   "person_review_claimed": false,
@@ -55,14 +60,14 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 253.70835950000037,
-    "full_suite_xml_sha256": "5547e544982587319e6da8d132a74d7cdd6c8908941e602ae89f5e884b41225b",
-    "full_suite_finished_at": "2026-11-18T15:12:43.012648+00:00",
+    "full_suite_wall_seconds": 252.1934753000096,
+    "full_suite_xml_sha256": "e7a07eb34e004ac80f9616f8e1cbca27f603eeeeb1e281421d7c125573d7a6f9",
+    "full_suite_finished_at": "2026-11-19T15:22:00.481045+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 627,
-      "profiles": 492,
-      "visible_facts": 1438,
+      "pages": 629,
+      "profiles": 494,
+      "visible_facts": 1446,
       "held_facts": 2
     },
     "registry_validator": {
@@ -72,30 +77,32 @@
     "page_lint": {
       "errors": 0,
       "warnings": 1,
-      "review": "The preexisting full Colusa name triggers the long-name check. The responsive viewport review is recorded below."
+      "review": "The preexisting full Colusa name triggers the long-name check. Shared reading styles are unchanged."
     },
     "game_data": {
-      "quick_cards": 492,
-      "profiles_with_history": 114,
+      "quick_cards": 494,
+      "quick_facts": 982,
+      "profiles_with_history": 116,
       "new_history_facts": 3,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 491,
-      "added_profiles": 1,
-      "existing_profiles_with_added_facts": 1,
-      "added_raw_facts": 5,
+      "prior_profiles": 492,
+      "added_profiles": 2,
+      "existing_profiles_changed": 0,
+      "added_raw_facts": 8,
       "new_practice_examples": 1,
       "new_films": 1,
-      "prior_game_quick_cards_preserved": true,
+      "prior_game_records_preserved": true,
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
       "game_mechanics_preserved": true
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-18",
-      "method": "Independent offline Chrome served exact static files with committed Vercel headers and blocked external requests.",
+      "reviewed_utc_date": "2026-11-19",
+      "observed_at": "2026-11-19T15:19:08.229103Z to 2026-11-19T15:19:18.100329Z, with targeted directory assertions rechecked afterward.",
+      "method": "Independent offline Chrome served exact local static files with Vercel headers and blocked external traffic.",
       "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
         [
@@ -111,62 +118,63 @@
           844
         ]
       ],
-      "page_viewport_checks": 18,
+      "page_viewport_checks": 15,
       "checks": [
-        "Cahto profile shows four dated facts, exact source links and one ready directory result. Activating Read First with Enter focuses the profile heading.",
-        "Ute Mountain Ute school-opening fact and official school source are visible.",
-        "Colusa hypothetical planning exercise and case-index and blank-brief navigation work by keyboard. Its historical source-check date remains November 17.",
-        "The People’s Protectors selects from its deep link, exposes the exact Minnesota PBS URL, appears under Full Film and Official Site, and is excluded by Watch Here.",
-        "All eighteen page and viewport combinations have zero horizontal overflow, page errors, CSP violations or missing local assets.",
-        "The new source-only film has zero iframes and zero external non-image requests."
+        "Both directory queries return one researched profile. Enter on Read First focuses the correct source-name heading and entity.",
+        "Both new profiles show four cited facts and November 19 check dates. Bear River’s undated descriptions have no invented event year. Big Lagoon has no false government-website link.",
+        "The data-sovereignty permissions exercise and case and brief keyboard navigation work.",
+        "Chasing Voices displays PBS Member Access, exact runtime and access limits, uses the exact Nine PBS viewing URL, appears under Full Film and Official Site, and is excluded by Watch Here.",
+        "Zero horizontal overflow, page errors, CSP violations or missing local assets across all fifteen page and viewport combinations.",
+        "The new film selection creates zero iframes or external non-image requests."
       ],
+      "test_harness_correction": "The initial directory assertion omitted the preserved California suffix. Corrected assertions passed for both queries at all three viewports. No source change was needed.",
       "source_pins": {
-        "nations/directory.html": "65835b8fd61e4f477a0bd48a997e990054a4d64cf8fdfe41a85b2577ebb1b0eb",
-        "nations/cahto-tribe-laytonville-rancheria-us-ca.html": "d9ed34d731cb75080221feff93111785eb8b1254b92ae17cc2a9bb9e6fecc089",
-        "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "e988b30e61bf3a257576a0d9a22b0e026aacc661d39257c16e482739948437c4",
-        "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "2eacb5ff7fd1656b80eec8475e11ceb2934f9819c16400436946c8e1a917c52b",
-        "nations/paths-to-action.html": "148574778c5c990345a1e7184908116006ba1639ad028a2a2cc9c9990fb6125b",
-        "theater.html": "989f83cbdaa782dee708900b445e5ce05fab4d15fa541497201acabfc9a04efd",
-        "vercel.json": "d3d1df11ab0cf4a4a69c0630ce8ec4a29dcd103ffc7cd4a9e9e859a389853e96"
+        "nations/directory.html": "d80aa004e053dcda06d91af0da373ce8d0f8ef4b9ae86ba8e9b6d18039dd791d",
+        "nations/bear-river-band-rohnerville-rancheria-us-ca.html": "c3f0d38757f40105bab6ecb168bc75bf901e98167329ad241161dae7e56baf9d",
+        "nations/big-lagoon-rancheria-us-ca.html": "14073b66fe93500fee4433b9aeb2f17baca46d0010a381dc892c8c95a77dd904",
+        "nations/paths-to-action.html": "958bc743bf58362b3902d8072776c66052331af031a61f6110c47d7628191025",
+        "theater.html": "0af997a73cf4c0f0174fb22aa9d232683e52b3d721f540f7815cb338b362fcb7",
+        "vercel.json": "4dc9380e0a148c70991d935f31c9544a83e412cbacf62201d550d85bd54ca2e6"
       },
-      "limits": "Nineteen unrelated external image requests were aborted. No physical device, actual provider playback, regional access, account requirements or caption timing and quality were tested. Directory input Enter has no assigned shortcut, while the Read First button supports keyboard activation."
+      "limits": "Twenty-nine unrelated external image requests were aborted. Actual provider playback, member-account eligibility, regional access, caption quality and physical devices were not tested."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "d58ba8748bcc3e2787d5efd04130ca9038a067d50409559a80f5bd73a93411f2",
-    "data/nations/nations.min.json": "ee78e248ba950a55c9a34000f2805d287cf11b5a5eff535fb4a079ba977c72ce",
-    "data/nations/pathways.json": "46e7c986c6f9eb8dec1bcde64cca6bf622b22701f4daacf7974e330f6cc9c7e2",
-    "data/nations/research/coverage_queue.json": "bf1bd3b246b32e8b5efbd4e1755f213809d809033ab82267d15b3dea483d6421",
-    "data/nations/research/us_federal_directory.json": "63435a616fe32d1bcb6c81d9cda4775a328882c602d4ec973080f91ca58a850b",
-    "data/nations/research/directory_sources.json": "4f023ab819c90004e01ae3613102abbf839c84943f483b6b5014856ed6c6467b",
-    "static/nations/coverage.json": "4a647879442e9bb95b23b48730c4eff4ed727d18e296892abcbf37d28f0713c2",
-    "game/nations.json": "c4bbeb9d1f35d7392b674c3dc9de4db659f2db6f565c50f1fbb88764684bf6d6",
-    "game/history.json": "cb30df8e220c4a9c85bad5062ecad86c0fedabc0a6d969aa2b2da391cea44be8",
-    "nations/directory.html": "65835b8fd61e4f477a0bd48a997e990054a4d64cf8fdfe41a85b2577ebb1b0eb",
-    "nations/cahto-tribe-laytonville-rancheria-us-ca.html": "d9ed34d731cb75080221feff93111785eb8b1254b92ae17cc2a9bb9e6fecc089",
-    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "e988b30e61bf3a257576a0d9a22b0e026aacc661d39257c16e482739948437c4",
-    "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "2eacb5ff7fd1656b80eec8475e11ceb2934f9819c16400436946c8e1a917c52b",
-    "nations/paths-to-action.html": "148574778c5c990345a1e7184908116006ba1639ad028a2a2cc9c9990fb6125b",
-    "theater.html": "989f83cbdaa782dee708900b445e5ce05fab4d15fa541497201acabfc9a04efd",
-    "vercel.json": "d3d1df11ab0cf4a4a69c0630ce8ec4a29dcd103ffc7cd4a9e9e859a389853e96",
-    "data/theater/films.json": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34",
-    "data/theater/research_queue.json": "e1ea43ed8f18f16bb66c12170382c2292f12f07d52715073d691005ebc34d983",
-    "data/theater/research/batches/2026-11-18-the-peoples-protectors.json": "a8cdacd6bf62058f5f02975eb1c88d04074e9c1deef9a71fa031ab1480753cd0",
-    "data/nations/research/batches/2026-11-18-cahto-wetland-history.json": "fe213b9515d96743253ca41886d58527549a8284d6eae3dfe41659a32200d1c9",
-    "data/nations/research/batches/2026-11-18-ute-mountain-kwiyagat.json": "a237032c42b68f3efafd2ded1a05624a8b29d0cf61c05f6292bc13e62e57df66",
-    "data/nations/research/batches/2026-11-18-pathways-colusa-energy.json": "6b37674afd0e7b2d3558a18e6ad843c3930424a43b79c3a7f148cbdb12e8d48d",
-    "data/nations/research/receipts/2026-11-18-cahto-identity.json": "a07ce150d4297025ebb88dec862390b3ddc64cf55096cf4d3b973c439a693638",
-    "data/nations/sources/us-cahto-wetland-history-2026-11-18.raw.json": "0c22f4e98e29998024c0c5390b2b6861814880e3e6781dde852f09c2ed74635d",
-    "data/nations/sources/us-cahto-wetland-history-2026-11-18.verify.json": "06ca50082a4b476067b7fa7f26aa375861c450dedf5c3918f88a860d53805ca1",
-    "data/nations/sources/us-cahto-wetland-history-2026-11-18.respect.json": "708567e1c9ca6e8e3041b2a57b860b1189f12ea10636468f1f5a7c8b93cb6cb6",
-    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.raw.json": "61c7f7272712657ba6dfbf54a2b9f0946ab8dbba22d2bec1bd4862a5046fd995",
-    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.verify.json": "87be0dd2e4b80980c60b6077dbb68bd9ceedb638323f9c95d72247e49dcc712e",
-    "data/nations/sources/us-ute-mountain-kwiyagat-2026-11-18.respect.json": "fdbad4a3033647c07cf4d2e26551d76e38e5074d01506475c608a5834aa544b9"
+    "data/nations/nations.json": "67ce13acd5c9d9d0418fd2e38b4207caa9d4636ff05e457101ebc1168bd800bb",
+    "data/nations/nations.min.json": "684cfe24aa40e01eab3c027aba0d6304c4436d34bf38c61e23d567b0c092d8e1",
+    "data/nations/pathways.json": "a6692abefa2319cc7769340628614f97b9af7ee56115117fdba5f93b1df5a086",
+    "data/nations/research/coverage_queue.json": "74472d707edfbdf4ba3cf01353938ca93eb2f51bafe7d421cd2293bd3f7fa00f",
+    "data/nations/research/us_federal_directory.json": "85e4446bb1a886500e7be5368a059d9a986191cbf6e1272cb3102b2bab91f82f",
+    "data/nations/research/directory_sources.json": "c5b7bc3e03912a0158d5644e258fa22daa1acf4cecd17c4fd757e8595fdb2621",
+    "static/nations/coverage.json": "eacc06068f512e9971e02b12988241185073d3c9a69864ddc3a460a1fb42b324",
+    "game/nations.json": "a902ca9b17e4deff96806befc8bda124c2801f6edc0a4f8fd9063cdbe05f1f88",
+    "game/history.json": "3acab0bfcd8465c166dd39cca6cf1b836beaeabb7648ee192aaaf64ee87bec52",
+    "nations/directory.html": "d80aa004e053dcda06d91af0da373ce8d0f8ef4b9ae86ba8e9b6d18039dd791d",
+    "nations/bear-river-band-rohnerville-rancheria-us-ca.html": "c3f0d38757f40105bab6ecb168bc75bf901e98167329ad241161dae7e56baf9d",
+    "nations/big-lagoon-rancheria-us-ca.html": "14073b66fe93500fee4433b9aeb2f17baca46d0010a381dc892c8c95a77dd904",
+    "nations/paths-to-action.html": "958bc743bf58362b3902d8072776c66052331af031a61f6110c47d7628191025",
+    "theater.html": "0af997a73cf4c0f0174fb22aa9d232683e52b3d721f540f7815cb338b362fcb7",
+    "vercel.json": "4dc9380e0a148c70991d935f31c9544a83e412cbacf62201d550d85bd54ca2e6",
+    "data/theater/films.json": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5",
+    "data/theater/research_queue.json": "0a3ce4b67ee933e559616c31d7ac98498f1314e71c3af9a96dec06a8183a5063",
+    "data/theater/research/batches/2026-11-19-chasing-voices.json": "8189e5c3b1d538910dc00275fa4b0b63a60867d1eb1988573503496543f0279b",
+    "data/nations/research/batches/2026-11-19-bear-river-own-history.json": "7dcc36b61b56af3ba5b2d7904fdbf7929d68c1cc40f250bd145a0bb06185545a",
+    "data/nations/research/batches/2026-11-19-big-lagoon-own-history.json": "6610f8cb5963991f400b9b42f1debefa0ac4907857436797b4dded00ccb72f0e",
+    "data/nations/research/batches/2026-11-19-pathways-cultural-permissions.json": "324f8e1f0963448ad31ddda9ea0071c3c729a25cee882c20d3768743ff6f6035",
+    "data/nations/research/receipts/2026-11-19-bear-river-identity.json": "704be6fafee0a0903039c72cf0f8f517ef6326812cdbc516228048f3e23b0e34",
+    "data/nations/research/receipts/2026-11-19-big-lagoon-identity.json": "8c500b09ed14cb66cf060b92a467555ff97c1b9bc17189ef201b06b2d4a674be",
+    "data/nations/sources/us-bear-river-own-history-2026-11-19.raw.json": "468f0ac87f549b4b797d05031af55c75be8fa1e1cb81a06e29744137ac2af1ee",
+    "data/nations/sources/us-bear-river-own-history-2026-11-19.verify.json": "ae87f737d6b25da6ccebb2105613657aebf7e423d31160be33c1709f0400c0ea",
+    "data/nations/sources/us-bear-river-own-history-2026-11-19.respect.json": "fa0a2cb002ffa1a6fbed0e006fdba34d9065b795dfff871a29bf0830796187d1",
+    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.raw.json": "9b39b46cf3a8f448bcabf8a948ea6778816bceef1f11b44c3a7ac514a3073192",
+    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.verify.json": "97f27d32f5ad53a135289ebc9f08afa5689bf9188362ffa9e629bcd9ba0aaa0e",
+    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.respect.json": "12a02a925c13571c8dbb5208dda45000c78b666db4cb89f319071837064259c2"
   },
   "pending": [
     "Vercel production verification",
-    "Provider playback, title-specific region and account requirements, and caption timing or quality",
-    "Embedding and artwork permissions",
-    "Cahto general website certificate validation"
+    "Member-account eligibility, actual playback and regional access",
+    "Caption timing and quality",
+    "Artwork and embedding permissions",
+    "An independently identified Big Lagoon government website"
   ]
 }

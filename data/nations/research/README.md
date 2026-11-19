@@ -815,3 +815,25 @@ results, estimates, decision authority and maintenance questions.
 See `batches/2026-11-18-pathways-colusa-energy.json`.
 
 The candidate registry contains 492 profiles and 1,440 raw facts.
+
+
+## November 19 Bear River, Big Lagoon and cultural permissions
+
+Bear River Band of the Rohnerville Rancheria has a distinct candidate profile.
+Its own history records the 1910 administrative milestone and 1983 restoration.
+Its public pages describe preservation and language responsibilities without
+an inferred program start date. See
+`batches/2026-11-19-bear-river-own-history.json`.
+
+Big Lagoon Rancheria has a distinct candidate profile. Its own constitutional
+text, published by NILL, records the 1985 governmental framework and a 1918
+territorial reference. Two Feathers describes its 2002 Big Lagoon charter
+and reports a May 4, 2025 youth cultural gathering. The government website
+remains unidentified. See `batches/2026-11-19-big-lagoon-own-history.json`.
+
+Paths To Action adds a hypothetical permissions register using the Bear River
+office’s public role as an example. The exercise leaves access decisions with
+the relevant community and custodians. See
+`batches/2026-11-19-pathways-cultural-permissions.json`.
+
+The candidate registry contains 494 profiles and 1,448 raw facts.

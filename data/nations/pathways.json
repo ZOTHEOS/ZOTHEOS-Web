@@ -424,7 +424,24 @@
         "care",
         "ocap"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "bear-river-band-rohnerville-rancheria-us-ca",
+          "fact_ids": [
+            "bear-river-band-rohnerville-rancheria-us-ca-039c6402"
+          ],
+          "practice": {
+            "question": "Hypothetical reader question: What would I need to decide before sharing a description of a cultural collection I am authorized to work with?",
+            "steps": [
+              "Read the Band’s Tribal Historic Preservation Office page. In a private note, identify the museum and cultural program responsibilities it describes, with the source URL and check date.",
+              "Prepare a blank permissions register with fields for the custodian, proposed audience, purpose, permitted uses, attribution, access conditions and review date. Mark unanswered fields as unresolved.",
+              "For a project you are authorized to plan, identify who can approve each proposed use. Keep unanswered questions visible and arrange review before preparing material for publication."
+            ],
+            "boundary": "This private planning exercise draws on the Band’s public description. Communities set their own rules for cultural material. Apply those rules and the relevant permissions to any real project.",
+            "reflection": "Who can approve the proposed use, and how would the plan respond if a custodian limits access or requests removal?"
+          }
+        }
+      ]
     },
     {
       "id": "children-and-families",

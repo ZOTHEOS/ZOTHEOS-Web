@@ -1441,6 +1441,54 @@
       "discovery_date": "2026-11-18",
       "status": "source_retrieved",
       "note": "The Tribe’s wholly owned school. The fiscal year 2022 report confirms its governmental relationship."
+    },
+    {
+      "source_id": "bear-river-own-site-2026-11-19",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.bearriverrancheria.org/",
+      "allowed_hosts": [
+        "www.bearriverrancheria.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-19",
+      "status": "source_retrieved",
+      "note": "The Band’s own government website, corroborated by the saved BIA link and its own named homepage."
+    },
+    {
+      "source_id": "big-lagoon-constitution-2026-11-19",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+      "allowed_hosts": [
+        "narf.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-19",
+      "status": "source_retrieved",
+      "note": "The Tribe’s 1985 constitutional text published by the National Indian Law Library."
+    },
+    {
+      "source_id": "big-lagoon-two-feathers-2026-11-19",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://twofeathers-nafs.org/about-us/",
+      "allowed_hosts": [
+        "twofeathers-nafs.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-19",
+      "status": "source_retrieved",
+      "note": "The Tribal nonprofit’s own charter history and 2025 public event report."
     }
   ]
 }
