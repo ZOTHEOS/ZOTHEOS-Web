@@ -551,9 +551,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "bear-river-own-site-2026-11-19"
       ],
       "review": {
         "identity": "pending",
@@ -569,9 +570,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.bearriverrancheria.org/",
+          "final_url": "https://www.bearriverrancheria.org/",
+          "retrieved_at": "2026-11-19T15:03:58.618158Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 564564,
+          "sha256": "12113dd986df7f54ba762e183841a620f6ec366d95117cb775ee1421eb46d6b7",
+          "redirects": [],
+          "source_id": "bear-river-own-site-2026-11-19",
+          "evidence_receipt": "batches/2026-11-19-bear-river-own-history.json",
+          "receipt_id": "r-1fcc3c1465cd8fec"
+        }
+      ],
+      "updated_at": "2026-11-19T15:15:02.045734+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Distinct profile prepared through the canonical assembler with own-source identity and respect review. Independent review and reviewed pull request control publication. No human or Nation approval is claimed. Paths To Action also includes a hypothetical permissions-register exercise. See batches/2026-11-19-pathways-cultural-permissions.json.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-19-bear-river-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-b001a4e00c3d",
@@ -636,9 +656,11 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "big-lagoon-constitution-2026-11-19",
+        "big-lagoon-two-feathers-2026-11-19"
       ],
       "review": {
         "identity": "pending",
@@ -654,9 +676,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+          "final_url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+          "retrieved_at": "2026-11-19T15:04:42.494789Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 42975,
+          "sha256": "c32b6708ad48666c26f24ab5fd2a94ce661281a5a86dd7dc702b0ee5c88766dc",
+          "redirects": [],
+          "source_id": "big-lagoon-constitution-2026-11-19",
+          "evidence_receipt": "batches/2026-11-19-big-lagoon-own-history.json",
+          "receipt_id": "r-9ed2fd7288c8320c"
+        }
+      ],
+      "updated_at": "2026-11-19T15:11:55.020110+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Distinct profile prepared through the canonical assembler with own-source identity and respect review. Independent review and reviewed pull request control publication. No human or Nation approval is claimed.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-19-big-lagoon-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-986316a30e75",

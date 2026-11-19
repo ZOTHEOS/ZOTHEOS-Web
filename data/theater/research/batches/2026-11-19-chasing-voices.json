@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-19",
+  "status": "source-only-candidate",
+  "record": {
+    "id": "chasing-voices",
+    "title": "Chasing Voices",
+    "year": 2021,
+    "runtime": "56m 44s · PBS Member Access",
+    "credits": "Directed by Daniel Golding. Presented by Vision Maker Media and distributed nationally by American Public Television.",
+    "publisher": "Nine PBS / Vision Maker Media",
+    "viewing": "full-film",
+    "form": "documentary",
+    "region": "north-america",
+    "location": "United States",
+    "synopsis": "Quechan filmmaker Daniel Golding examines John Peabody Harrington’s language archive and Native communities’ work to reclaim languages from records and living knowledge.",
+    "perspective": "An Indigenous filmmaker connects archival language records with Native communities’ continuing language reclamation.",
+    "availability": "PBS lists member access with closed captions, expiring April 30, 2027 UTC. The listing blocks playback while signed out. Regional and account eligibility, playback and caption quality remain unverified.",
+    "content_note": "Discusses language loss and the history of collecting Native language records.",
+    "topics": [
+      "language",
+      "continuity"
+    ],
+    "watch_url": "https://video.ninepbs.org/video/chasing-voices-dglhzr/",
+    "youtube_id": null,
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "sources": [
+      {
+        "url": "https://video.ninepbs.org/video/chasing-voices-dglhzr/",
+        "title": "Chasing Voices",
+        "publisher": "Nine PBS",
+        "checked_at": "2026-11-19T15:07:28.445429Z",
+        "http_status": 200,
+        "sha256": "88187ab982870d6e1aca15578837b487400c461d999daf382f9fca2e1a1a5fa0",
+        "checked": "2026-11-19"
+      },
+      {
+        "url": "https://visionmakermedia.org/film-library/chasing-voices/",
+        "title": "Chasing Voices",
+        "publisher": "Vision Maker Media",
+        "checked_at": "2026-11-19T15:06:39.819146Z",
+        "http_status": 200,
+        "sha256": "8238b6c58d9cdfcd9fdb98b46c47ee39dc2d4bd1461dc5b20b70e3e121f7a45d",
+        "checked": "2026-11-19"
+      },
+      {
+        "url": "https://www.hokanmedia.com/chasingvoices",
+        "title": "Chasing Voices",
+        "publisher": "Hokan Media",
+        "checked_at": "2026-11-19T15:06:58.441497Z",
+        "http_status": 200,
+        "sha256": "1d0aed8df52e4b54f746ff67564ee7f9b98642793eadf2dc9dac7855f51c91e1",
+        "checked": "2026-11-19"
+      },
+      {
+        "url": "https://mintfilmfestival.org/2021-festival/2021-mint-schedule/",
+        "title": "2021 MINT Schedule and Filmmaker Biography",
+        "publisher": "MINT Film Festival",
+        "checked_at": "2026-11-19T15:07:56.953944Z",
+        "http_status": 200,
+        "sha256": "b1f55bb9b212c531886b0be6e0fdfcaa9abe5ce5af36655301043b80acb6bc12",
+        "checked": "2026-11-19"
+      }
+    ]
+  },
+  "review_kind": "Independent AI-assisted film edition, creator, access and source review",
+  "edition": {
+    "duration_seconds": 3404,
+    "station_listing_date": "2021-04-30",
+    "online_availability": "2021-11-15",
+    "station_expiration": "2027-04-30T03:59:59Z",
+    "station_license_term": [
+      "2024-04-29",
+      "2027-04-29"
+    ],
+    "scope": "Complete PBS edition with member access. The producer links a trailer; no freely accessible complete edition was established.",
+    "listing_flags": {
+      "availability": "available",
+      "is_mvod": true,
+      "is_playable": false,
+      "explanation": [
+        "mvod_logic"
+      ],
+      "has_captions": true
+    },
+    "captions": "The provider lists English caption tracks and English audio. Caption timing and accuracy remain untested.",
+    "rights_scope": "The distributor describes station broadcast and VOD rights. This does not establish ZOTHEOS redistribution, rehosting or title-specific embedding permission."
+  },
+  "receipts": [
+    {
+      "url": "https://video.ninepbs.org/video/chasing-voices-dglhzr/",
+      "final_url": "https://video.ninepbs.org/video/chasing-voices-dglhzr/",
+      "retrieved_at": "2026-11-19T15:07:28.445429Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 374055,
+      "sha256": "88187ab982870d6e1aca15578837b487400c461d999daf382f9fca2e1a1a5fa0",
+      "redirects": [],
+      "title": "Chasing Voices",
+      "publisher": "Nine PBS",
+      "evidence": [
+        "Special, 56m 44s, CC",
+        "Listing date April 30, 2021",
+        "Member-access metadata with is_mvod true, is_playable false and mvod_logic explanation.",
+        "Expires April 30, 2027 at 03:59:59 UTC."
+      ]
+    },
+    {
+      "url": "https://visionmakermedia.org/film-library/chasing-voices/",
+      "final_url": "https://visionmakermedia.org/film-library/chasing-voices/",
+      "retrieved_at": "2026-11-19T15:06:39.819146Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 47830,
+      "sha256": "8238b6c58d9cdfcd9fdb98b46c47ee39dc2d4bd1461dc5b20b70e3e121f7a45d",
+      "redirects": [],
+      "title": "Chasing Voices",
+      "publisher": "Vision Maker Media",
+      "evidence": [
+        "Documentary Feature In PBS Broadcast",
+        "Director: Daniel Golding",
+        "Release: 2021",
+        "Extended station license April 29, 2024 to April 29, 2027, including VOD."
+      ]
+    },
+    {
+      "url": "https://www.hokanmedia.com/chasingvoices",
+      "final_url": "https://www.hokanmedia.com/chasingvoices",
+      "retrieved_at": "2026-11-19T15:06:58.441497Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 292548,
+      "sha256": "1d0aed8df52e4b54f746ff67564ee7f9b98642793eadf2dc9dac7855f51c91e1",
+      "redirects": [],
+      "title": "Chasing Voices",
+      "publisher": "Hokan Media",
+      "evidence": [
+        "Director: Daniel Golding",
+        "Coming to PBS stations starting April 30th 2021.",
+        "The producer describes language records and their role in contemporary Tribal language work."
+      ]
+    },
+    {
+      "url": "https://mintfilmfestival.org/2021-festival/2021-mint-schedule/",
+      "final_url": "https://mintfilmfestival.org/2021-festival/2021-mint-schedule/",
+      "retrieved_at": "2026-11-19T15:07:56.953944Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 226289,
+      "sha256": "b1f55bb9b212c531886b0be6e0fdfcaa9abe5ce5af36655301043b80acb6bc12",
+      "redirects": [],
+      "title": "2021 MINT Schedule and Filmmaker Biography",
+      "publisher": "MINT Film Festival",
+      "evidence": [
+        "The filmmaker panel biography identifies Golding as an enrolled Quechan Tribe member and Chasing Voices director."
+      ]
+    },
+    {
+      "url": "https://help.pbs.org/support/solutions/articles/5000673769-i-want-to-use-pbs-org-content-images-text-clips-video-can-i-do-that-",
+      "final_url": "https://help.pbs.org/support/solutions/articles/5000673769-i-want-to-use-pbs-org-content-images-text-clips-video-can-i-do-that-",
+      "retrieved_at": "2026-11-19T15:05:07.174854Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 30983,
+      "sha256": "6d0d67624cda62eb01b1fb9aa42378584a06faf75889847fd8bbe5e85803ce0a",
+      "redirects": [],
+      "title": "PBS Content Reuse",
+      "publisher": "PBS Help",
+      "evidence": [
+        "PBS directs reuse permission requests to the producer."
+      ]
+    },
+    {
+      "url": "https://help.pbs.org/support/solutions/articles/5000673797-i-live-outside-the-united-states-why-can-t-i-stream-pbs-content-from-pbs-org-",
+      "final_url": "https://help.pbs.org/support/solutions/articles/5000673797-i-live-outside-the-united-states-why-can-t-i-stream-pbs-content-from-pbs-org-",
+      "retrieved_at": "2026-11-19T15:05:07.191447Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 32916,
+      "sha256": "7c44dda4ce3ef87d9000ac9834a8a9356f62756538795277456036e47173dc42",
+      "redirects": [],
+      "title": "PBS Regional Streaming Restrictions",
+      "publisher": "PBS Help",
+      "evidence": [
+        "Geographic restrictions depend on the program’s granted rights."
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://video.ninepbs.org/robots.txt",
+      "final_url": "https://video.ninepbs.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:06:15.942725Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 226,
+      "sha256": "7f8d1d8985e194a077b80a3a33c39a3b22ad291d1a434ae20b4befb5be6e0622",
+      "redirects": []
+    },
+    {
+      "url": "https://visionmakermedia.org/robots.txt",
+      "final_url": "https://visionmakermedia.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:05.788999Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "redirects": []
+    },
+    {
+      "url": "https://www.hokanmedia.com/robots.txt",
+      "final_url": "https://www.hokanmedia.com/robots.txt",
+      "retrieved_at": "2026-11-19T15:06:15.955355Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1509,
+      "sha256": "f4fb29f1721cecdb3beb2e10a0f95c9ebc405754d18299de7e8677a40d7abe0e",
+      "redirects": []
+    },
+    {
+      "url": "https://mintfilmfestival.org/robots.txt",
+      "final_url": "https://mintfilmfestival.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:07:28.818648Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 173,
+      "sha256": "3d8bafb7eec2d63d2e5749820c54c76263f1449ba40dc910868ce0ff298eb6f9",
+      "redirects": []
+    },
+    {
+      "url": "https://help.pbs.org/robots.txt",
+      "final_url": "https://help.pbs.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:45.793621Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 506,
+      "sha256": "af2f5e3d36654577df55b75c254079b0ab75a6895c88df1c8dbcf870a5556ff8",
+      "redirects": []
+    },
+    {
+      "url": "https://image.pbs.org/robots.txt",
+      "final_url": "https://image.pbs.org/robots.txt",
+      "retrieved_at": "2026-11-19T15:04:45.740278Z",
+      "retrieval_method": "http",
+      "http_status": 404,
+      "body_bytes": 207,
+      "sha256": "e9639e3c4681ce85f852fbac48e2eeee5ba51296dbfec57c200d59b76237ab80",
+      "redirects": []
+    }
+  ],
+  "crawl_policy": "Robots were fetched before corresponding content. Nine PBS ten-second and Vision Maker Media three-second delays were observed.",
+  "thumbnail_review": {
+    "provider_url": "https://image.pbs.org/video-assets/7U5BMzT-asset-kids-mezzanine1-16x9-W2p73QD.jpg",
+    "checked_at": "2026-11-19T15:07:57.371007Z",
+    "http_method": "HEAD",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "content_length": 334422,
+    "body_bytes_read": 0,
+    "redirects": [],
+    "status": "permission-unresolved",
+    "display": "Theater text cover",
+    "policy_url": "https://help.pbs.org/support/solutions/articles/5000673769-i-want-to-use-pbs-org-content-images-text-clips-video-can-i-do-that-"
+  },
+  "pending": [
+    "Member-account eligibility and actual playback",
+    "Regional access",
+    "Caption timing and accuracy",
+    "Artwork display and title-specific embedding permission"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

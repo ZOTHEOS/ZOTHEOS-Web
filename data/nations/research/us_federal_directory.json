@@ -308,13 +308,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "bear-river-band-rohnerville-rancheria-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-19-bear-river-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://www.bearriverrancheria.org/",
+      "own_published_name": "Bear River Band of the Rohnerville Rancheria",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-19-bear-river-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-b001a4e00c3d",
@@ -357,13 +366,17 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "big-lagoon-rancheria-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-19-big-lagoon-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": null,
+      "own_published_name": "Big Lagoon Rancheria"
     },
     {
       "directory_id": "us-fed-986316a30e75",

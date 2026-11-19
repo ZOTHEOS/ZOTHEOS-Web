@@ -1,0 +1,42 @@
+{
+  "own_name_source": {
+    "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+    "final_url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+    "retrieved_at": "2026-11-19T15:04:42.494789Z",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 42975,
+    "sha256": "c32b6708ad48666c26f24ab5fd2a94ce661281a5a86dd7dc702b0ee5c88766dc",
+    "redirects": []
+  },
+  "current_bia_object_id": 389,
+  "current_bia_row": {
+    "url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=OBJECTID%3D389&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&f=json",
+    "final_url": "https://services1.arcgis.com/UxqqIfhng71wUT9x/arcgis/rest/services/TribalLeadership_Directory/FeatureServer/0/query?where=OBJECTID%3D389&outFields=OBJECTID,tribefullname,tribealternatename,tribeshortname,tribalcomponent,tribalcomponentname,website,state,biaregion&returnGeometry=false&f=json",
+    "retrieved_at": "2026-11-19T15:06:02.746917Z",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 1899,
+    "sha256": "88c8d89b1b7f262a10255e179a121e34341d7a0a280b4290cf15a670a2e86ff5",
+    "redirects": []
+  },
+  "current_bia_website": "https://caltribalfamilies.org/places/big-lagoon-rancheria/",
+  "website_scope": "Indigenous-led coalition directory entry; no independent government website established.",
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f"
+  },
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-19T15:11:54.476052+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity review",
+  "directory_id": "us-fed-5e8201b35177",
+  "registry_id": "big-lagoon-rancheria-us-ca",
+  "own_published_name": "Big Lagoon Rancheria",
+  "official_url": null,
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "batch": "batches/2026-11-19-big-lagoon-own-history.json",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

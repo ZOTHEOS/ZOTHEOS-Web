@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-18",
-  "count": 492,
-  "facts": 1440,
+  "generated": "2026-11-19",
+  "count": 494,
+  "facts": 1448,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 38
+    "us-west-pacific": 40
   },
   "nations": [
     {
@@ -31904,6 +31904,166 @@
           "status": "verified",
           "checked": "2026-10-31",
           "last_verified": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "bear-river-band-rohnerville-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Bear River Band of the Rohnerville Rancheria",
+      "also": [
+        "Rohnerville Rancheria"
+      ],
+      "pronounce": null,
+      "lands": "Eel River Basin, northern California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.bearriverrancheria.org/",
+      "name_source_url": "https://www.bearriverrancheria.org/",
+      "facts": [
+        {
+          "id": "bear-river-band-rohnerville-rancheria-us-ca-3c18a438",
+          "text": "The Band’s published history links 1910 to the creation of a home for landless Native people.",
+          "kind": "history",
+          "as_of": "1910",
+          "source": {
+            "title": "Our Story",
+            "publisher": "Bear River Band of the Rohnerville Rancheria",
+            "url": "https://www.bearriverrancheria.org/our-story",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "originally established in 1910 as a home",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "bear-river-band-rohnerville-rancheria-us-ca-f9ce2da8",
+          "text": "The Band says it regained federal recognition in 1983 through the Tillie-Hardwick class action.",
+          "kind": "history",
+          "as_of": "1983",
+          "source": {
+            "title": "Our Story",
+            "publisher": "Bear River Band of the Rohnerville Rancheria",
+            "url": "https://www.bearriverrancheria.org/our-story",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "regained its federal recognition status",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "bear-river-band-rohnerville-rancheria-us-ca-039c6402",
+          "text": "The Band’s Tribal Historic Preservation Office describes overseeing its museum and administering its cultural program.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "THPO/Cultural Development",
+            "publisher": "Bear River Band of the Rohnerville Rancheria",
+            "url": "https://www.bearriverrancheria.org/thpo-cultural-development",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "oversees the Bear River Band Museum",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "bear-river-band-rohnerville-rancheria-us-ca-700e7ca8",
+          "text": "The Band’s Culture page describes documenting language through interviews with Elders.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Culture",
+            "publisher": "Bear River Band of the Rohnerville Rancheria",
+            "url": "https://www.bearriverrancheria.org/copy-of-compliance-review",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "document language through interviews with Elders",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "big-lagoon-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Big Lagoon Rancheria",
+      "also": [],
+      "pronounce": null,
+      "lands": "Big Lagoon Rancheria, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": null,
+      "name_source_url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+      "facts": [
+        {
+          "id": "big-lagoon-rancheria-us-ca-01d8ea3f",
+          "text": "In the constitution approved May 5, 1985, Big Lagoon Rancheria names the General Council as its governing body and delegates business to an elected Business Council.",
+          "kind": "governance",
+          "as_of": "1985",
+          "source": {
+            "title": "Constitution of the Big Lagoon Rancheria",
+            "publisher": "Big Lagoon Rancheria via Native American Rights Fund / National Indian Law Library",
+            "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "governing body of the tribe",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "big-lagoon-rancheria-us-ca-b71964f0",
+          "text": "Big Lagoon Rancheria’s 1985 constitution links its territorial provisions to Rancheria boundaries established under federal authority on July 10, 1918.",
+          "kind": "history",
+          "as_of": "1918",
+          "source": {
+            "title": "Constitution of the Big Lagoon Rancheria",
+            "publisher": "Big Lagoon Rancheria via Native American Rights Fund / National Indian Law Library",
+            "url": "https://narf.org/nill/constitutions/big_lagoon/biglagconst.html",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "Interior dated July 10, 1918",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "big-lagoon-rancheria-us-ca-a5575fac",
+          "text": "Two Feathers Native American Family Services says it became a tribal nonprofit chartered under Big Lagoon Rancheria in 2002.",
+          "kind": "achievement",
+          "as_of": "2002",
+          "source": {
+            "title": "About Two Feathers",
+            "publisher": "Two Feathers Native American Family Services",
+            "url": "https://twofeathers-nafs.org/about-us/",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "Big Lagoon Rancheria in 2002",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
+        },
+        {
+          "id": "big-lagoon-rancheria-us-ca-8253937a",
+          "text": "In its May 2025 ACORN review, Two Feathers reported that youth paddled redwood canoes from Big Lagoon Rancheria during a May 4 gathering at Big Lagoon.",
+          "kind": "culture",
+          "as_of": "2025",
+          "source": {
+            "title": "2025 ACORN Youth Wellness Program: Year in Review",
+            "publisher": "Two Feathers Native American Family Services",
+            "url": "https://twofeathers-nafs.org/2025-acorn-youth-wellness-program-year-in-review/",
+            "accessed": "2026-11-19"
+          },
+          "evidence": "Youth paddled redwood canoes from Big Lagoon Rancheria",
+          "status": "verified",
+          "checked": "2026-11-19",
+          "last_verified": "2026-11-19"
         }
       ]
     }

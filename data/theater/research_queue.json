@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -309,7 +309,23 @@
         "https://discover.minnesotapbs.org/blog/twin-cities-pbs-filmmaker-leya-hale-honored-with-minnesota-filmmaker-award"
       ],
       "reason": "The Indigenous director’s producer page and the station identify the complete Minnesota PBS edition.",
-      "next": "Review the generated card and live official viewing URL after publication. Playback, caption quality, region and account requirements, artwork and embedding permission remain open."
+      "next": "The live card and official viewing URL matched the reviewed files. Playback, region and account access, caption quality, artwork and embedding permission remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/53"
+    },
+    {
+      "id": "chasing-voices",
+      "status": "official-source-only",
+      "checked": "2026-11-19",
+      "batch": "research/batches/2026-11-19-chasing-voices.json",
+      "source_urls": [
+        "https://video.ninepbs.org/video/chasing-voices-dglhzr/",
+        "https://visionmakermedia.org/film-library/chasing-voices/",
+        "https://www.hokanmedia.com/chasingvoices",
+        "https://mintfilmfestival.org/2021-festival/2021-mint-schedule/"
+      ],
+      "reason": "The Indigenous producer and authorized broadcasters identify the complete documentary. The selected edition requires PBS member access.",
+      "next": "Verify the generated and live member-access card. Account and regional eligibility, playback, caption timing and accuracy, artwork and embedding permission remain open."
     }
   ]
 }
