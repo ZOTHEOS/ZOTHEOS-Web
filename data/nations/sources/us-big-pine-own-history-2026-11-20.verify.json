@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-20",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-20T15:12:54.101187+00:00",
+    "evidence_receipt": "batches/2026-11-20-big-pine-own-history.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "results": [
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The historical exchange is attributed to the Tribe’s 2005 account. It establishes no present title, acreage, boundary or peoplehood-origin finding."
+    },
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The current EPA page and PDF cover both record January 24, 2006 for the standards. The separate TAS-year discrepancy remains unresolved and is excluded from this fact."
+    },
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The November 2005 standards designate CULT for Big Pine Creek. No universal legal rule, present water-safety condition or claim about every provision’s current legal effect is inferred."
+    },
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The own Education page describes its approach. No program inception date, present staffing, eligibility, capacity or outcome is inferred."
+    }
+  ],
+  "names": [
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The own About heading gives the exact government name. Federal notice and saved BIA390 corroborate its website and identity. Other Paiute governments and broader peoples remain distinct."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -325,7 +325,56 @@
         "https://mintfilmfestival.org/2021-festival/2021-mint-schedule/"
       ],
       "reason": "The Indigenous producer and authorized broadcasters identify the complete documentary. The selected edition requires PBS member access.",
-      "next": "Verify the generated and live member-access card. Account and regional eligibility, playback, caption timing and accuracy, artwork and embedding permission remain open."
+      "next": "The live member-access card and official viewing URL matched the reviewed files. Member/account eligibility, regional access, playback, caption quality and reuse permissions remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/54"
+    },
+    {
+      "id": "a-sacred-thread",
+      "status": "official-source-only",
+      "checked": "2026-11-20",
+      "batch": "research/batches/2026-11-20-a-sacred-thread.json",
+      "source_urls": [
+        "https://video.pbsnc.org/video/a-sacred-thread-jj9rrm/",
+        "https://theonefeather.com/2025/08/09/a-sacred-thread-showcases-the-snowbird-communitys-language-culture-and-land-back-efforts/"
+      ],
+      "reason": "The producer lists the complete documentary and the Cherokee One Feather reports community perspective and credits.",
+      "next": "Verify the generated and live official-source card. Playback, region and account eligibility, caption quality, artwork and embedding permission remain open."
+    },
+    {
+      "id": "we-breathe-again-availability",
+      "title": "We Breathe Again",
+      "status": "needs-availability-review",
+      "checked": "2026-11-20",
+      "source_urls": [
+        "https://www.amdoc.org/watch/we-breathe-again",
+        "https://player.pbs.org/viralplayer/3001911875/",
+        "https://player.pbs.org/viralplayer/3001911576/"
+      ],
+      "reason": "The linked full-film PBS destination returned a blank shell. The other inspected edition is a 54-second trailer with embedding disabled. Neither is added to the catalog.",
+      "receipts": [
+        {
+          "url": "https://player.pbs.org/viralplayer/3001911875/",
+          "final_url": "https://player.pbs.org/viralplayer/3001911875/",
+          "retrieved_at": "2026-11-20T15:07:51.725507Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 2185,
+          "sha256": "98cf76190cf5ceb40edbb87975dc8e7290d4df9a7b45e9b7e304594662aef5b0",
+          "redirects": []
+        },
+        {
+          "url": "https://player.pbs.org/viralplayer/3001911576/",
+          "final_url": "https://player.pbs.org/viralplayer/3001911576/",
+          "retrieved_at": "2026-11-20T15:07:55.211526Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 5562,
+          "sha256": "85cb290115d34be8cc8a60519f0851c338e9969cdf4706d423c88435b5fe0f10",
+          "redirects": []
+        }
+      ],
+      "next": "Find and inspect an available authorized complete edition before proposing a catalog entry. These metadata observations establish no playback result."
     }
   ]
 }
