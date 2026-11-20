@@ -837,3 +837,25 @@ the relevant community and custodians. See
 `batches/2026-11-19-pathways-cultural-permissions.json`.
 
 The candidate registry contains 494 profiles and 1,448 raw facts.
+
+
+## November 20 Big Pine, Big Sandy and water-use planning
+
+Big Pine Paiute Tribe of the Owens Valley has a distinct candidate profile.
+Tribe-authored water standards provide the dated land-exchange account and
+cultural water-use designation. EPA’s separate standards approval and the
+Tribe’s Education description add governance and community context. A TAS-year
+wording discrepancy remains open in the queue. See
+`batches/2026-11-20-big-pine-own-history.json`.
+
+Big Sandy Rancheria has a distinct candidate profile. Its own pages record the
+1909 land-purchase milestone and describe water monitoring, environmental
+education and the Head Start mission. Undated program descriptions remain
+undated. See `batches/2026-11-20-big-sandy-own-history.json`.
+
+Paths To Action adds a hypothetical water-use planning table, using Big Pine’s
+dated cultural-use designation as a learning example. Community authority,
+evidence gaps and qualified review remain explicit. See
+`batches/2026-11-20-pathways-water-uses.json`.
+
+The candidate registry contains 496 profiles and 1,456 raw facts.

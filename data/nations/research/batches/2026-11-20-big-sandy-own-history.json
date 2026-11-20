@@ -1,0 +1,109 @@
+{
+  "receipts": [
+    {
+      "url": "https://www.bigsandyrancheria.com/",
+      "final_url": "https://www.bigsandyrancheria.com/",
+      "retrieved_at": "2026-11-20T15:07:06.253623Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1185693,
+      "sha256": "27d068cd8df8938233f428dd7be605564e08b40427ca99a5a4c8c7cf75f31e17",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bigsandyrancheria.com/copy-of-housing-assistance-1",
+      "final_url": "https://www.bigsandyrancheria.com/copy-of-housing-assistance-1",
+      "retrieved_at": "2026-11-20T15:08:01.877420Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 832555,
+      "sha256": "aa96da8d8a12bbf7e991d08b1ec1e8ed7895ae4bed01961a5f0bcf8f10916f62",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bigsandyrancheria.com/governance-administration",
+      "final_url": "https://www.bigsandyrancheria.com/governance-administration",
+      "retrieved_at": "2026-11-20T15:08:04.158178Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 840712,
+      "sha256": "63cd63b7d2210da4526bc5788133f7f93d5427ec672385231f5c7acd42f44bf6",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-20T15:07:08.583237Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.bigsandyrancheria.com/robots.txt",
+      "final_url": "https://www.bigsandyrancheria.com/robots.txt",
+      "retrieved_at": "2026-11-20T15:06:47.200210Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 499,
+      "sha256": "302ebedd77d7190f049cbb359ae31987f437be0772c81b8c495deeb48a75d1e8",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-20T15:06:47.337973Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1909",
+      "receipt_index": 0,
+      "locator": "Opening historical paragraph"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 1,
+      "locator": "What We Do, water testing"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 1,
+      "locator": "What We Do, youth education"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 2,
+      "locator": "Head Start mission"
+    }
+  ],
+  "crawl_policy": "Robots preceded content. Requests used two-second sequential pacing. The named-bot delays did not apply to the declared reader.",
+  "source_limits": [
+    "The own homepage dates a BIA land purchase. No origin of the Western Mono people, current acreage or title determination is inferred.",
+    "An undated department description reports a monitoring role. No measured water-quality result, drinking-water safety claim or present grant cycle is inferred.",
+    "An undated page describes environmental education. No event date, current schedule, attendance or outcome is inferred.",
+    "The mission description is used without current child counts, staffing, eligibility, capacity or clinical outcome claims.",
+    "The genuine Environmental and Early Childhood Education pages have misleading URL path names; their visible headings control the citations. Broader Western Mono people remain distinct."
+  ],
+  "schema_version": 1,
+  "checked": "2026-11-20",
+  "registry_id": "big-sandy-rancheria-us-ca",
+  "directory_id": "us-fed-dfb4850dc610",
+  "review_kind": "AI-assisted own-source, identity, chronology and respect review",
+  "candidate_fact_ids": [
+    "big-sandy-rancheria-us-ca-b846c2a1",
+    "big-sandy-rancheria-us-ca-c503968e",
+    "big-sandy-rancheria-us-ca-d01979dc",
+    "big-sandy-rancheria-us-ca-f1014f59"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

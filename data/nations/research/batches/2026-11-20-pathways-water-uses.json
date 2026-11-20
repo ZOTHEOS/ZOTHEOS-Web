@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-20",
+  "review_kind": "AI-assisted factual and reader-planning scope review",
+  "chapter": "land-and-water",
+  "nation": "big-pine-paiute-tribe-owens-valley-us-ca",
+  "fact_ids": [
+    "big-pine-paiute-tribe-owens-valley-us-ca-f0f51ddf"
+  ],
+  "source": {
+    "batch": "2026-11-20-big-pine-own-history.json",
+    "receipt_index": 5,
+    "url": "https://www.epa.gov/sites/default/files/2014-12/documents/bigpine-tribe.pdf",
+    "source_title": "Water Quality Standards, Big Pine Indian Reservation",
+    "checked": "2026-11-20",
+    "source_edition": "2005-11",
+    "locator": "Section IV, PDF7 to8, printed4 to5",
+    "evidence": "support the past and present indigenous culture"
+  },
+  "practice": {
+    "question": "Hypothetical reader question: Which water uses should I consider before comparing proposals for a project I am authorized to plan?",
+    "steps": [
+      "Read section IV of the Tribe’s November 2005 standards. Note the cultural use designated for Big Pine Creek, the document date and the source page.",
+      "Using public information, list the water uses a proposed project might affect. Identify who has authority to decide which uses need protection and what community input or review is needed.",
+      "Prepare a private table for documented uses, applicable standards, measured observations and unanswered questions. Ask qualified reviewers to address the gaps before drawing conclusions about compliance or water safety."
+    ],
+    "boundary": "This exercise uses one Tribe’s dated standards as a learning example. Any real project needs the relevant community’s authority, applicable rules and qualified review.",
+    "reflection": "Who decides which uses matter, and what evidence is still missing before the proposal can be assessed?"
+  },
+  "source_limits": [
+    "The example describes a designated cultural use in the Tribe’s 2005 standards. It establishes no current water-safety result or universal legal requirement.",
+    "The reader exercise is a ZOTHEOS proposal and has no claimed Nation endorsement. It provides no sampling method or independent compliance determination."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

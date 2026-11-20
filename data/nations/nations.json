@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-19",
-  "count": 494,
-  "facts": 1448,
+  "generated": "2026-11-20",
+  "count": 496,
+  "facts": 1456,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 40
+    "us-west-pacific": 42
   },
   "nations": [
     {
@@ -32064,6 +32064,168 @@
           "status": "verified",
           "checked": "2026-11-19",
           "last_verified": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "big-pine-paiute-tribe-owens-valley-us-ca",
+      "region": "us-west-pacific",
+      "name": "Big Pine Paiute Tribe of the Owens Valley",
+      "also": [
+        "Big Pine Paiute Tribe"
+      ],
+      "pronounce": null,
+      "lands": "Big Pine Indian Reservation in Big Pine, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://bigpinepaiute.org/",
+      "name_source_url": "https://bigpinepaiute.org/about-the-tribe/",
+      "facts": [
+        {
+          "id": "big-pine-paiute-tribe-owens-valley-us-ca-794ac896",
+          "text": "The Tribe’s 2005 water standards recount that a June 26, 1939 land exchange supplied the parcels used for the Big Pine, Bishop and Lone Pine reservations.",
+          "kind": "history",
+          "as_of": "1939",
+          "source": {
+            "title": "Water Quality Standards, Big Pine Indian Reservation",
+            "publisher": "Big Pine Paiute Tribe of the Owens Valley via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2014-12/documents/bigpine-tribe.pdf",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "On June 26, 1939, a deed",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-pine-paiute-tribe-owens-valley-us-ca-34a2b74e",
+          "text": "EPA records January 24, 2006 approval of the Tribe’s water quality standards.",
+          "kind": "governance",
+          "as_of": "2006",
+          "source": {
+            "title": "Water Quality Standards Regulations: Big Pine Paiute Tribe of the Owens Valley",
+            "publisher": "U.S. EPA",
+            "url": "https://www.epa.gov/wqs-tech/water-quality-standards-regulations-big-pine-paiute-tribe-owens-valley",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "were approved on January 24, 2006",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-pine-paiute-tribe-owens-valley-us-ca-f0f51ddf",
+          "text": "In its November 2005 water standards, the Tribe designated a cultural use for Big Pine Creek supporting Indigenous culture and way of life.",
+          "kind": "culture",
+          "as_of": "2005",
+          "source": {
+            "title": "Water Quality Standards, Big Pine Indian Reservation",
+            "publisher": "Big Pine Paiute Tribe of the Owens Valley via U.S. EPA",
+            "url": "https://www.epa.gov/sites/default/files/2014-12/documents/bigpine-tribe.pdf",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "support the past and present indigenous culture",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-pine-paiute-tribe-owens-valley-us-ca-742e6dd4",
+          "text": "The Tribe’s Education page describes combining academic support, cultural activities and fitness through the Big Pine Indian Education Center.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "Education",
+            "publisher": "Big Pine Paiute Tribe of the Owens Valley",
+            "url": "https://bigpinepaiute.org/departments/education/",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "academic, cultural and wellness programs",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Big Sandy Rancheria",
+      "also": [
+        "Big Sandy Rancheria of Western Mono Indians of California"
+      ],
+      "pronounce": null,
+      "lands": "Auberry, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.bigsandyrancheria.com/",
+      "name_source_url": "https://www.bigsandyrancheria.com/",
+      "facts": [
+        {
+          "id": "big-sandy-rancheria-us-ca-b846c2a1",
+          "text": "The Rancheria’s homepage says the BIA purchased 280 acres in 1909 to be held in trust for the San Joaquin or Big Sandy Band of Western Mono Indians.",
+          "kind": "history",
+          "as_of": "1909",
+          "source": {
+            "title": "Big Sandy Rancheria Homepage",
+            "publisher": "Big Sandy Rancheria",
+            "url": "https://www.bigsandyrancheria.com/",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "purchased 280 acres of land",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-sandy-rancheria-us-ca-c503968e",
+          "text": "Its Environmental Department page describes routine contaminant testing of groundwater and surface water, including attention to the wider watershed.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Environmental Department",
+            "publisher": "Big Sandy Rancheria",
+            "url": "https://www.bigsandyrancheria.com/copy-of-housing-assistance-1",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "routine testing and tracking of ground and surface water",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-sandy-rancheria-us-ca-d01979dc",
+          "text": "The department also describes Earth Day events and environmental learning for youth programs after school and during summer.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Environmental Department",
+            "publisher": "Big Sandy Rancheria",
+            "url": "https://www.bigsandyrancheria.com/copy-of-housing-assistance-1",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "environmental education activities for the after-school and summer youth programs",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
+        },
+        {
+          "id": "big-sandy-rancheria-us-ca-f1014f59",
+          "text": "Its Early Childhood Education page describes a Tribal Head Start mission covering early learning, nutrition, and family and community partnerships.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Early Childhood Education",
+            "publisher": "Big Sandy Rancheria",
+            "url": "https://www.bigsandyrancheria.com/governance-administration",
+            "accessed": "2026-11-20"
+          },
+          "evidence": "a strong Family and Community Partnership",
+          "status": "verified",
+          "checked": "2026-11-20",
+          "last_verified": "2026-11-20"
         }
       ]
     }

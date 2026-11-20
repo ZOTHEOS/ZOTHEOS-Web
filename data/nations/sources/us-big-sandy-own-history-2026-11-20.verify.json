@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-20",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-20T15:12:54.101187+00:00",
+    "evidence_receipt": "batches/2026-11-20-big-sandy-own-history.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "results": [
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The own homepage dates a BIA land purchase. No origin of the Western Mono people, current acreage or title determination is inferred."
+    },
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "An undated department description reports a monitoring role. No measured water-quality result, drinking-water safety claim or present grant cycle is inferred."
+    },
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "An undated page describes environmental education. No event date, current schedule, attendance or outcome is inferred."
+    },
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The mission description is used without current child counts, staffing, eligibility, capacity or clinical outcome claims."
+    }
+  ],
+  "names": [
+    {
+      "id": "big-sandy-rancheria-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The own heading and footer identify Big Sandy Rancheria. Its full federal name and saved BIA391 corroborate this named government and website, distinct from the broader Western Mono people."
+    }
+  ]
+}

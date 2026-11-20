@@ -1,22 +1,22 @@
 {
-  "version": 14,
-  "prepared_at": "2026-11-19T15:22:35.337037+00:00",
+  "version": 15,
+  "prepared_at": "2026-11-20T15:22:11.137952+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "b5a4b4d09236ace22edf23f34aabb0a2d71e0f06",
-    "version": 13,
-    "catalogue_sha256": "8da05a7da1c5ef2323b923ddcbe1cc2a8abe22e1862ddb14ca63d2a6304f8a34"
+    "commit": "abbf8dc56fd18d6d2f15a71357ba2d77b68e7f6d",
+    "version": 14,
+    "catalogue_sha256": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5"
   },
   "catalogue": {
-    "sha256": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5",
-    "titles": 240,
+    "sha256": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c",
+    "titles": 241,
     "configured_players": 224,
-    "source_only": 16,
+    "source_only": 17,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 27,
+      "full-film": 28,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,30 +24,30 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-19-chasing-voices.json",
-    "sha256": "8189e5c3b1d538910dc00275fa4b0b63a60867d1eb1988573503496543f0279b",
+    "batch": "research/batches/2026-11-20-a-sacred-thread.json",
+    "sha256": "677002e90bc2872e9bbe36922e09129af1cbdc924ec92cbf47c238590c55e943",
     "thumbnail_display": "Text cover while artwork permission remains unresolved.",
-    "viewing_access": "PBS member access. Metadata blocks playback while signed out."
+    "viewing_access": "No member-access flag in the checked PBS NC listing. Actual access and playback remain unverified."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Bear River source, identity, dates and respect cross-review",
-      "reviewed_date": "2026-11-19",
+      "kind": "AI-assisted Big Pine history, standards chronology, identity and respect cross-review",
+      "reviewed_date": "2026-11-20",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Big Lagoon constitution, nonprofit charter, dated event and identity cross-review",
-      "reviewed_date": "2026-11-19",
+      "kind": "AI-assisted Big Sandy history, undated programs, identity and respect cross-review",
+      "reviewed_date": "2026-11-20",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted cultural-permissions exercise review",
-      "reviewed_date": "2026-11-19",
+      "kind": "AI-assisted water-use planning exercise review",
+      "reviewed_date": "2026-11-20",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted film edition, creator, access and exact receipt review",
-      "reviewed_date": "2026-11-19",
+      "kind": "AI-assisted complete film edition, community perspective and exact receipt review",
+      "reviewed_date": "2026-11-20",
       "result": "passed"
     }
   ],
@@ -60,14 +60,14 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 252.1934753000096,
-    "full_suite_xml_sha256": "e7a07eb34e004ac80f9616f8e1cbca27f603eeeeb1e281421d7c125573d7a6f9",
-    "full_suite_finished_at": "2026-11-19T15:22:00.481045+00:00",
+    "full_suite_wall_seconds": 252.04548309999518,
+    "full_suite_xml_sha256": "8f967d64b3bbc1b91a17eae9b32edb819308c15ab18eebf05788b8da24272c5d",
+    "full_suite_finished_at": "2026-11-20T15:21:35.761931+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 629,
-      "profiles": 494,
-      "visible_facts": 1446,
+      "pages": 631,
+      "profiles": 496,
+      "visible_facts": 1454,
       "held_facts": 2
     },
     "registry_validator": {
@@ -77,32 +77,33 @@
     "page_lint": {
       "errors": 0,
       "warnings": 1,
-      "review": "The preexisting full Colusa name triggers the long-name check. Shared reading styles are unchanged."
+      "review": "The preexisting full Colusa name triggers the long-name check."
     },
     "game_data": {
-      "quick_cards": 494,
-      "quick_facts": 982,
-      "profiles_with_history": 116,
-      "new_history_facts": 3,
+      "quick_cards": 496,
+      "quick_facts": 986,
+      "profiles_with_history": 118,
+      "new_history_facts": 2,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 492,
+      "prior_profiles": 494,
       "added_profiles": 2,
       "existing_profiles_changed": 0,
       "added_raw_facts": 8,
       "new_practice_examples": 1,
       "new_films": 1,
+      "research_only_failed_film": 1,
       "prior_game_records_preserved": true,
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
       "game_mechanics_preserved": true
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-19",
-      "observed_at": "2026-11-19T15:19:08.229103Z to 2026-11-19T15:19:18.100329Z, with targeted directory assertions rechecked afterward.",
-      "method": "Independent offline Chrome served exact local static files with Vercel headers and blocked external traffic.",
+      "reviewed_utc_date": "2026-11-20",
+      "observed_at": "2026-11-20T15:18:41.896919Z to 2026-11-20T15:18:50.684485Z",
+      "method": "Independent offline Chrome served exact local files with Vercel headers and blocked all external requests.",
       "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
         [
@@ -120,61 +121,60 @@
       ],
       "page_viewport_checks": 15,
       "checks": [
-        "Both directory queries return one researched profile. Enter on Read First focuses the correct source-name heading and entity.",
-        "Both new profiles show four cited facts and November 19 check dates. Bear River’s undated descriptions have no invented event year. Big Lagoon has no false government-website link.",
-        "The data-sovereignty permissions exercise and case and brief keyboard navigation work.",
-        "Chasing Voices displays PBS Member Access, exact runtime and access limits, uses the exact Nine PBS viewing URL, appears under Full Film and Official Site, and is excluded by Watch Here.",
-        "Zero horizontal overflow, page errors, CSP violations or missing local assets across all fifteen page and viewport combinations.",
-        "The new film selection creates zero iframes or external non-image requests."
+        "Exact directory queries each return one researched profile. Keyboard Read First focuses the correct federal source-name heading and entity.",
+        "Both profiles show four cited facts with November 20 source checks. Big Pine’s 1939 land account, 2005 standards and 2006 approval remain distinct. Undated descriptions retain null event dates.",
+        "The water-use planning exercise and case and brief links work by keyboard at all three widths.",
+        "A Sacred Thread shows the exact PBS NC viewing URL, 56m 46s and access limits. Full Film and Official Site include it, while Watch Here excludes it.",
+        "All fifteen page and viewport checks have zero failures, horizontal overflow, page errors, CSP violations or missing local assets.",
+        "The new film selection creates no iframe or external non-image request."
       ],
-      "test_harness_correction": "The initial directory assertion omitted the preserved California suffix. Corrected assertions passed for both queries at all three viewports. No source change was needed.",
       "source_pins": {
-        "nations/directory.html": "d80aa004e053dcda06d91af0da373ce8d0f8ef4b9ae86ba8e9b6d18039dd791d",
-        "nations/bear-river-band-rohnerville-rancheria-us-ca.html": "c3f0d38757f40105bab6ecb168bc75bf901e98167329ad241161dae7e56baf9d",
-        "nations/big-lagoon-rancheria-us-ca.html": "14073b66fe93500fee4433b9aeb2f17baca46d0010a381dc892c8c95a77dd904",
-        "nations/paths-to-action.html": "958bc743bf58362b3902d8072776c66052331af031a61f6110c47d7628191025",
-        "theater.html": "0af997a73cf4c0f0174fb22aa9d232683e52b3d721f540f7815cb338b362fcb7",
-        "vercel.json": "4dc9380e0a148c70991d935f31c9544a83e412cbacf62201d550d85bd54ca2e6"
+        "nations/directory.html": "08b2508e66bdad9258c39c48046cbc8c9a55f3fa878a6abef44af814dd3a2415",
+        "nations/big-pine-paiute-tribe-owens-valley-us-ca.html": "530d2b8c294694d0a920b040c22b33826350efc03015443121a3bde34108d1e2",
+        "nations/big-sandy-rancheria-us-ca.html": "b82144c57564b1e09ca716faed4ef6596744e06a3610d127ebc1587efd48f14b",
+        "nations/paths-to-action.html": "0ec5339fe197c44a46a8fd584d0f3c7bf3586a74a7fc61fe6387e21f766f3314",
+        "theater.html": "ca2c0a687e5e1b2545ac95354c21a2afdebcb0a98f3ae3e9ccd2a711bd06db2f",
+        "vercel.json": "e12bc92fe9ec55f6566bec5594107ba2222acb7774d7ec40086fd86cb6da6ca8"
       },
-      "limits": "Twenty-nine unrelated external image requests were aborted. Actual provider playback, member-account eligibility, regional access, caption quality and physical devices were not tested."
+      "limits": "Fifteen unrelated external image requests were aborted. Actual provider playback, account/region eligibility, caption quality and physical devices were not tested."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "67ce13acd5c9d9d0418fd2e38b4207caa9d4636ff05e457101ebc1168bd800bb",
-    "data/nations/nations.min.json": "684cfe24aa40e01eab3c027aba0d6304c4436d34bf38c61e23d567b0c092d8e1",
-    "data/nations/pathways.json": "a6692abefa2319cc7769340628614f97b9af7ee56115117fdba5f93b1df5a086",
-    "data/nations/research/coverage_queue.json": "74472d707edfbdf4ba3cf01353938ca93eb2f51bafe7d421cd2293bd3f7fa00f",
-    "data/nations/research/us_federal_directory.json": "85e4446bb1a886500e7be5368a059d9a986191cbf6e1272cb3102b2bab91f82f",
-    "data/nations/research/directory_sources.json": "c5b7bc3e03912a0158d5644e258fa22daa1acf4cecd17c4fd757e8595fdb2621",
-    "static/nations/coverage.json": "eacc06068f512e9971e02b12988241185073d3c9a69864ddc3a460a1fb42b324",
-    "game/nations.json": "a902ca9b17e4deff96806befc8bda124c2801f6edc0a4f8fd9063cdbe05f1f88",
-    "game/history.json": "3acab0bfcd8465c166dd39cca6cf1b836beaeabb7648ee192aaaf64ee87bec52",
-    "nations/directory.html": "d80aa004e053dcda06d91af0da373ce8d0f8ef4b9ae86ba8e9b6d18039dd791d",
-    "nations/bear-river-band-rohnerville-rancheria-us-ca.html": "c3f0d38757f40105bab6ecb168bc75bf901e98167329ad241161dae7e56baf9d",
-    "nations/big-lagoon-rancheria-us-ca.html": "14073b66fe93500fee4433b9aeb2f17baca46d0010a381dc892c8c95a77dd904",
-    "nations/paths-to-action.html": "958bc743bf58362b3902d8072776c66052331af031a61f6110c47d7628191025",
-    "theater.html": "0af997a73cf4c0f0174fb22aa9d232683e52b3d721f540f7815cb338b362fcb7",
-    "vercel.json": "4dc9380e0a148c70991d935f31c9544a83e412cbacf62201d550d85bd54ca2e6",
-    "data/theater/films.json": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5",
-    "data/theater/research_queue.json": "0a3ce4b67ee933e559616c31d7ac98498f1314e71c3af9a96dec06a8183a5063",
-    "data/theater/research/batches/2026-11-19-chasing-voices.json": "8189e5c3b1d538910dc00275fa4b0b63a60867d1eb1988573503496543f0279b",
-    "data/nations/research/batches/2026-11-19-bear-river-own-history.json": "7dcc36b61b56af3ba5b2d7904fdbf7929d68c1cc40f250bd145a0bb06185545a",
-    "data/nations/research/batches/2026-11-19-big-lagoon-own-history.json": "6610f8cb5963991f400b9b42f1debefa0ac4907857436797b4dded00ccb72f0e",
-    "data/nations/research/batches/2026-11-19-pathways-cultural-permissions.json": "324f8e1f0963448ad31ddda9ea0071c3c729a25cee882c20d3768743ff6f6035",
-    "data/nations/research/receipts/2026-11-19-bear-river-identity.json": "704be6fafee0a0903039c72cf0f8f517ef6326812cdbc516228048f3e23b0e34",
-    "data/nations/research/receipts/2026-11-19-big-lagoon-identity.json": "8c500b09ed14cb66cf060b92a467555ff97c1b9bc17189ef201b06b2d4a674be",
-    "data/nations/sources/us-bear-river-own-history-2026-11-19.raw.json": "468f0ac87f549b4b797d05031af55c75be8fa1e1cb81a06e29744137ac2af1ee",
-    "data/nations/sources/us-bear-river-own-history-2026-11-19.verify.json": "ae87f737d6b25da6ccebb2105613657aebf7e423d31160be33c1709f0400c0ea",
-    "data/nations/sources/us-bear-river-own-history-2026-11-19.respect.json": "fa0a2cb002ffa1a6fbed0e006fdba34d9065b795dfff871a29bf0830796187d1",
-    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.raw.json": "9b39b46cf3a8f448bcabf8a948ea6778816bceef1f11b44c3a7ac514a3073192",
-    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.verify.json": "97f27d32f5ad53a135289ebc9f08afa5689bf9188362ffa9e629bcd9ba0aaa0e",
-    "data/nations/sources/us-big-lagoon-own-history-2026-11-19.respect.json": "12a02a925c13571c8dbb5208dda45000c78b666db4cb89f319071837064259c2"
+    "data/nations/nations.json": "ac1e14bda95b825a7b8955b2072ce56fd7278ab8014a34163bffdbcff460410e",
+    "data/nations/nations.min.json": "440dc34e4e9d720b0b349e12d804e5b0c8b8603bbefb1f00a5e07d6f8928d51e",
+    "data/nations/pathways.json": "b0aa042a2bc5494264c033a47a3a8285068e9f004e7f66febc81a369375f55b3",
+    "data/nations/research/coverage_queue.json": "58327bbb3df8ea987350cbf378c004d30988368d764767754aecfbad629b9c01",
+    "data/nations/research/us_federal_directory.json": "2db7f4fb5c8148b98c9543e49ef638d936b3ebd20bffd0359f3528186717af72",
+    "data/nations/research/directory_sources.json": "d61bf2c62d57b6ad562166a67b47eb7297d91f0bbe1f81706a472446dc4fcc3a",
+    "static/nations/coverage.json": "220bd00d17232407d28b3f7d82a83b2b57da03956b9ec58e44fd1ec5054d301d",
+    "game/nations.json": "3d2d87c650dd870e87fc73d9704316cf02ae9317becc3094d145e8865c50622a",
+    "game/history.json": "a204c4378568370e5c2854d180869e9ac6498b757cb3c87aa8e6bdcb0def78d5",
+    "nations/directory.html": "08b2508e66bdad9258c39c48046cbc8c9a55f3fa878a6abef44af814dd3a2415",
+    "nations/big-pine-paiute-tribe-owens-valley-us-ca.html": "530d2b8c294694d0a920b040c22b33826350efc03015443121a3bde34108d1e2",
+    "nations/big-sandy-rancheria-us-ca.html": "b82144c57564b1e09ca716faed4ef6596744e06a3610d127ebc1587efd48f14b",
+    "nations/paths-to-action.html": "0ec5339fe197c44a46a8fd584d0f3c7bf3586a74a7fc61fe6387e21f766f3314",
+    "theater.html": "ca2c0a687e5e1b2545ac95354c21a2afdebcb0a98f3ae3e9ccd2a711bd06db2f",
+    "vercel.json": "e12bc92fe9ec55f6566bec5594107ba2222acb7774d7ec40086fd86cb6da6ca8",
+    "data/theater/films.json": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c",
+    "data/theater/research_queue.json": "d227be15b5b0b34896b602e6e0f91f5099c9e522b5d95f2dc73bd12aba655423",
+    "data/theater/research/batches/2026-11-20-a-sacred-thread.json": "677002e90bc2872e9bbe36922e09129af1cbdc924ec92cbf47c238590c55e943",
+    "data/nations/research/batches/2026-11-20-big-pine-own-history.json": "3c4584eaae3d4b774c47c92aecf20d404654ac3bba5e1c01c5680b28baf7a98f",
+    "data/nations/research/batches/2026-11-20-big-sandy-own-history.json": "3e1d66deea5bd3d0b11a80a59d54ba915b38286a807832bb40029f20913026ac",
+    "data/nations/research/batches/2026-11-20-pathways-water-uses.json": "a499eb5cbfb48ac53893e521e00000ef12a24ef35c108fef5a2bfbcf1812f205",
+    "data/nations/research/receipts/2026-11-20-big-pine-identity.json": "1ead23617cb8b49b76c75a2f76655fc1256d099471bfdcf3d567caf83f82e0d6",
+    "data/nations/research/receipts/2026-11-20-big-sandy-identity.json": "328df2d6472e826b36b16cf12911e8758a5a5f53a5d4e249e15366f57f2eca88",
+    "data/nations/sources/us-big-pine-own-history-2026-11-20.raw.json": "5da5d79316d5ead54a3043a78efc76efe716e5dc23639441c106d11df5a106d5",
+    "data/nations/sources/us-big-pine-own-history-2026-11-20.verify.json": "458189a21bfeea281436894618a9cc359ad15eed2803d995eb16cb6786040ef9",
+    "data/nations/sources/us-big-pine-own-history-2026-11-20.respect.json": "f23916873cfdedf005187edd76a759b27d003253bff5b8e3335e539e71b8e4d2",
+    "data/nations/sources/us-big-sandy-own-history-2026-11-20.raw.json": "b34dfe6115de9b4c22842aa8f06fcac195cbb7c72bca4386765dec4d154200a8",
+    "data/nations/sources/us-big-sandy-own-history-2026-11-20.verify.json": "1cf8ad06fc9a6aafcb67edc11cdacba1adb0f7ca9f7b32e7ec3f1131a1fbda77",
+    "data/nations/sources/us-big-sandy-own-history-2026-11-20.respect.json": "4b7aff46a490542b0e8a8600b16f8b89cc130c30749991948f7f290e4be664a1"
   },
   "pending": [
     "Vercel production verification",
-    "Member-account eligibility, actual playback and regional access",
-    "Caption timing and quality",
-    "Artwork and embedding permissions",
-    "An independently identified Big Lagoon government website"
+    "Actual playback, geographic and account eligibility",
+    "Caption timing, accuracy and treatment of Cherokee dialogue",
+    "Artwork display and embedding permission",
+    "Big Pine TAS-year source discrepancy retained under followup-big-pine-tas-year"
   ]
 }

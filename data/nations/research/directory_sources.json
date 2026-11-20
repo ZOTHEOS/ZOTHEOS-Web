@@ -1489,6 +1489,54 @@
       "discovery_date": "2026-11-19",
       "status": "source_retrieved",
       "note": "The Tribal nonprofit’s own charter history and 2025 public event report."
+    },
+    {
+      "source_id": "big-pine-own-site-2026-11-20",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://bigpinepaiute.org/",
+      "allowed_hosts": [
+        "bigpinepaiute.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-20",
+      "status": "source_retrieved",
+      "note": "The Tribe’s own government website, corroborated by the saved BIA link and named About page."
+    },
+    {
+      "source_id": "big-pine-water-standards-2026-11-20",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.epa.gov/wqs-tech/water-quality-standards-regulations-big-pine-paiute-tribe-owens-valley",
+      "allowed_hosts": [
+        "www.epa.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-20",
+      "status": "source_retrieved",
+      "note": "EPA’s approval record and the Tribe-authored November 2005 standards, with distinct document and approval dates."
+    },
+    {
+      "source_id": "big-sandy-own-site-2026-11-20",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.bigsandyrancheria.com/",
+      "allowed_hosts": [
+        "www.bigsandyrancheria.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-20",
+      "status": "source_retrieved",
+      "note": "The government’s own homepage and department descriptions, corroborated by the saved BIA website."
     }
   ]
 }
