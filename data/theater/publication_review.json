@@ -1,22 +1,22 @@
 {
-  "version": 15,
-  "prepared_at": "2026-11-20T15:22:11.137952+00:00",
+  "version": 16,
+  "prepared_at": "2026-11-21T18:48:51.484766+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "abbf8dc56fd18d6d2f15a71357ba2d77b68e7f6d",
-    "version": 14,
-    "catalogue_sha256": "406bedfb282881578ba58fb14bebd51ee7f88cf0930a9467046ab9a3977fa5b5"
+    "commit": "5938961a89cebd4b5587bbc33b5ce129ba83ae57",
+    "version": 15,
+    "catalogue_sha256": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c"
   },
   "catalogue": {
-    "sha256": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c",
-    "titles": 241,
+    "sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
+    "titles": 242,
     "configured_players": 224,
-    "source_only": 17,
+    "source_only": 18,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 28,
+      "full-film": 29,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,30 +24,30 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-20-a-sacred-thread.json",
-    "sha256": "677002e90bc2872e9bbe36922e09129af1cbdc924ec92cbf47c238590c55e943",
+    "batch": "research/batches/2026-11-21-racing-the-rez.json",
+    "sha256": "838434794a28d8d30985b79113d8ef491e198b60bacda2437495f845cf732350",
     "thumbnail_display": "Text cover while artwork permission remains unresolved.",
-    "viewing_access": "No member-access flag in the checked PBS NC listing. Actual access and playback remain unverified."
+    "viewing_access": "PBS member access. The checked listing blocks playback while signed out."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Big Pine history, standards chronology, identity and respect cross-review",
-      "reviewed_date": "2026-11-20",
+      "kind": "AI-assisted Big Valley own-HTML history, monitoring, identity and respect cross-review",
+      "reviewed_date": "2026-11-21",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Big Sandy history, undated programs, identity and respect cross-review",
-      "reviewed_date": "2026-11-20",
+      "kind": "AI-assisted Bishop timeline, cultural-center support, Education and broadband cross-review",
+      "reviewed_date": "2026-11-21",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted water-use planning exercise review",
-      "reviewed_date": "2026-11-20",
+      "kind": "AI-assisted dependency-register planning exercise review",
+      "reviewed_date": "2026-11-21",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted complete film edition, community perspective and exact receipt review",
-      "reviewed_date": "2026-11-20",
+      "kind": "AI-assisted film edition, credits, member access and exact receipt review",
+      "reviewed_date": "2026-11-21",
       "result": "passed"
     }
   ],
@@ -60,14 +60,14 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 252.04548309999518,
-    "full_suite_xml_sha256": "8f967d64b3bbc1b91a17eae9b32edb819308c15ab18eebf05788b8da24272c5d",
-    "full_suite_finished_at": "2026-11-20T15:21:35.761931+00:00",
+    "full_suite_wall_seconds": 270.30641489999834,
+    "full_suite_xml_sha256": "63edc94ba9f118f35241626798bfc4b3e8fc09ac3ec77f3752348f8fbfbb4fa4",
+    "full_suite_finished_at": "2026-11-21T18:47:45.465781+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 631,
-      "profiles": 496,
-      "visible_facts": 1454,
+      "pages": 633,
+      "profiles": 498,
+      "visible_facts": 1462,
       "held_facts": 2
     },
     "registry_validator": {
@@ -80,30 +80,29 @@
       "review": "The preexisting full Colusa name triggers the long-name check."
     },
     "game_data": {
-      "quick_cards": 496,
-      "quick_facts": 986,
-      "profiles_with_history": 118,
-      "new_history_facts": 2,
+      "quick_cards": 498,
+      "quick_facts": 990,
+      "profiles_with_history": 120,
+      "new_history_facts": 5,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 494,
+      "prior_profiles": 496,
       "added_profiles": 2,
       "existing_profiles_changed": 0,
       "added_raw_facts": 8,
       "new_practice_examples": 1,
       "new_films": 1,
-      "research_only_failed_film": 1,
       "prior_game_records_preserved": true,
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
       "game_mechanics_preserved": true
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-20",
-      "observed_at": "2026-11-20T15:18:41.896919Z to 2026-11-20T15:18:50.684485Z",
-      "method": "Independent offline Chrome served exact local files with Vercel headers and blocked all external requests.",
+      "reviewed_utc_date": "2026-11-21",
+      "observed_at": "2026-11-21T18:46:32.437952Z to 2026-11-21T18:46:35.787683Z",
+      "method": "Independent offline Chrome served exact local files with Vercel headers and blocked external traffic.",
       "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
         [
@@ -121,60 +120,61 @@
       ],
       "page_viewport_checks": 15,
       "checks": [
-        "Exact directory queries each return one researched profile. Keyboard Read First focuses the correct federal source-name heading and entity.",
-        "Both profiles show four cited facts with November 20 source checks. Big Pine’s 1939 land account, 2005 standards and 2006 approval remain distinct. Undated descriptions retain null event dates.",
-        "The water-use planning exercise and case and brief links work by keyboard at all three widths.",
-        "A Sacred Thread shows the exact PBS NC viewing URL, 56m 46s and access limits. Full Film and Official Site include it, while Watch Here excludes it.",
-        "All fifteen page and viewport checks have zero failures, horizontal overflow, page errors, CSP violations or missing local assets.",
-        "The new film selection creates no iframe or external non-image request."
+        "Exact directory queries each return one ready profile. Keyboard Read First focuses the correct source-name heading and profile link.",
+        "Both profiles display four matching facts and citations with November 21 check dates. Historical and undated scopes are preserved.",
+        "The Bishop dependency register and case and brief keyboard navigation work.",
+        "Racing the Rez displays 58m 59s, PBS Member Access, the exact WETA viewing URL and limits. Full Film and Official Site include it. Watch Here excludes it.",
+        "Zero horizontal overflow, page errors, CSP violations or missing local assets across the matrix.",
+        "The selected source-only film creates no iframe or external non-image request."
       ],
+      "test_harness_correction": "The first harness selected a control inside the closed filter panel. Opening Filters through keyboard on desktop and touch at phone widths completed the checks. No source change was needed.",
       "source_pins": {
-        "nations/directory.html": "08b2508e66bdad9258c39c48046cbc8c9a55f3fa878a6abef44af814dd3a2415",
-        "nations/big-pine-paiute-tribe-owens-valley-us-ca.html": "530d2b8c294694d0a920b040c22b33826350efc03015443121a3bde34108d1e2",
-        "nations/big-sandy-rancheria-us-ca.html": "b82144c57564b1e09ca716faed4ef6596744e06a3610d127ebc1587efd48f14b",
-        "nations/paths-to-action.html": "0ec5339fe197c44a46a8fd584d0f3c7bf3586a74a7fc61fe6387e21f766f3314",
-        "theater.html": "ca2c0a687e5e1b2545ac95354c21a2afdebcb0a98f3ae3e9ccd2a711bd06db2f",
-        "vercel.json": "e12bc92fe9ec55f6566bec5594107ba2222acb7774d7ec40086fd86cb6da6ca8"
+        "nations/directory.html": "8fcaff6b5cc6a9166dfcbac708631ba5d6cc60a35d7ac1cf239f2c8983b96d25",
+        "nations/big-valley-band-pomo-indians-us-ca.html": "1b0889bb7532f267a59806d4a260ec659c55a682acae7bea78a4b6e4b75584e2",
+        "nations/bishop-paiute-tribe-us-ca.html": "ece87585b05fe07eb6ade47c214eebee504340072a1a3b61d3cbc4088a85aacf",
+        "nations/paths-to-action.html": "33b4a16a9a63c3855d0fd20750e1e20af042f1b2cd7783d26cacaf80289eb54a",
+        "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
+        "vercel.json": "19ca3a09e2c1953ed469edd76e4e8088008393bc6dc34b5067cc729ba85a3696"
       },
-      "limits": "Fifteen unrelated external image requests were aborted. Actual provider playback, account/region eligibility, caption quality and physical devices were not tested."
+      "limits": "Fifty-seven unrelated external image requests were aborted. Actual provider playback, account or regional eligibility, caption quality and physical devices were not tested."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "ac1e14bda95b825a7b8955b2072ce56fd7278ab8014a34163bffdbcff460410e",
-    "data/nations/nations.min.json": "440dc34e4e9d720b0b349e12d804e5b0c8b8603bbefb1f00a5e07d6f8928d51e",
-    "data/nations/pathways.json": "b0aa042a2bc5494264c033a47a3a8285068e9f004e7f66febc81a369375f55b3",
-    "data/nations/research/coverage_queue.json": "58327bbb3df8ea987350cbf378c004d30988368d764767754aecfbad629b9c01",
-    "data/nations/research/us_federal_directory.json": "2db7f4fb5c8148b98c9543e49ef638d936b3ebd20bffd0359f3528186717af72",
-    "data/nations/research/directory_sources.json": "d61bf2c62d57b6ad562166a67b47eb7297d91f0bbe1f81706a472446dc4fcc3a",
-    "static/nations/coverage.json": "220bd00d17232407d28b3f7d82a83b2b57da03956b9ec58e44fd1ec5054d301d",
-    "game/nations.json": "3d2d87c650dd870e87fc73d9704316cf02ae9317becc3094d145e8865c50622a",
-    "game/history.json": "a204c4378568370e5c2854d180869e9ac6498b757cb3c87aa8e6bdcb0def78d5",
-    "nations/directory.html": "08b2508e66bdad9258c39c48046cbc8c9a55f3fa878a6abef44af814dd3a2415",
-    "nations/big-pine-paiute-tribe-owens-valley-us-ca.html": "530d2b8c294694d0a920b040c22b33826350efc03015443121a3bde34108d1e2",
-    "nations/big-sandy-rancheria-us-ca.html": "b82144c57564b1e09ca716faed4ef6596744e06a3610d127ebc1587efd48f14b",
-    "nations/paths-to-action.html": "0ec5339fe197c44a46a8fd584d0f3c7bf3586a74a7fc61fe6387e21f766f3314",
-    "theater.html": "ca2c0a687e5e1b2545ac95354c21a2afdebcb0a98f3ae3e9ccd2a711bd06db2f",
-    "vercel.json": "e12bc92fe9ec55f6566bec5594107ba2222acb7774d7ec40086fd86cb6da6ca8",
-    "data/theater/films.json": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c",
-    "data/theater/research_queue.json": "d227be15b5b0b34896b602e6e0f91f5099c9e522b5d95f2dc73bd12aba655423",
-    "data/theater/research/batches/2026-11-20-a-sacred-thread.json": "677002e90bc2872e9bbe36922e09129af1cbdc924ec92cbf47c238590c55e943",
-    "data/nations/research/batches/2026-11-20-big-pine-own-history.json": "3c4584eaae3d4b774c47c92aecf20d404654ac3bba5e1c01c5680b28baf7a98f",
-    "data/nations/research/batches/2026-11-20-big-sandy-own-history.json": "3e1d66deea5bd3d0b11a80a59d54ba915b38286a807832bb40029f20913026ac",
-    "data/nations/research/batches/2026-11-20-pathways-water-uses.json": "a499eb5cbfb48ac53893e521e00000ef12a24ef35c108fef5a2bfbcf1812f205",
-    "data/nations/research/receipts/2026-11-20-big-pine-identity.json": "1ead23617cb8b49b76c75a2f76655fc1256d099471bfdcf3d567caf83f82e0d6",
-    "data/nations/research/receipts/2026-11-20-big-sandy-identity.json": "328df2d6472e826b36b16cf12911e8758a5a5f53a5d4e249e15366f57f2eca88",
-    "data/nations/sources/us-big-pine-own-history-2026-11-20.raw.json": "5da5d79316d5ead54a3043a78efc76efe716e5dc23639441c106d11df5a106d5",
-    "data/nations/sources/us-big-pine-own-history-2026-11-20.verify.json": "458189a21bfeea281436894618a9cc359ad15eed2803d995eb16cb6786040ef9",
-    "data/nations/sources/us-big-pine-own-history-2026-11-20.respect.json": "f23916873cfdedf005187edd76a759b27d003253bff5b8e3335e539e71b8e4d2",
-    "data/nations/sources/us-big-sandy-own-history-2026-11-20.raw.json": "b34dfe6115de9b4c22842aa8f06fcac195cbb7c72bca4386765dec4d154200a8",
-    "data/nations/sources/us-big-sandy-own-history-2026-11-20.verify.json": "1cf8ad06fc9a6aafcb67edc11cdacba1adb0f7ca9f7b32e7ec3f1131a1fbda77",
-    "data/nations/sources/us-big-sandy-own-history-2026-11-20.respect.json": "4b7aff46a490542b0e8a8600b16f8b89cc130c30749991948f7f290e4be664a1"
+    "data/nations/nations.json": "eb7b20d6e30e1246ed1b718aedb2d078eeceb1abf741b688afe511560ba6fa5e",
+    "data/nations/nations.min.json": "2b6c28f82774289f4b3590292716c48772c40c84ed01d1ae94fa7fbc44c956b2",
+    "data/nations/pathways.json": "0ab64b7ea2ac418da333d38c963e3a3e02331642a79828769e89421651e17f93",
+    "data/nations/research/coverage_queue.json": "0625cbb437b57376204ae77a67f36ff1712ace8cada94ee99fb02832de9b7b86",
+    "data/nations/research/us_federal_directory.json": "29d647974307c7829769356cb6279949019ea6da0d57fd13860361034ea74d88",
+    "data/nations/research/directory_sources.json": "a507002455002b0a1f255f9007263de346e8d0867f3e8e72d92ef13dd3097df8",
+    "static/nations/coverage.json": "21baf4aa7cefab4579e3b970e4d4ee2c61aad05e2acf6897f3fbc1975beb24f8",
+    "game/nations.json": "310dc1c3aff52250ee9da6c1b76b6802bd1672ea31708b1ea25dfb6b478f013c",
+    "game/history.json": "444d4156a6a111d86712feaef61f4bc1f262309a69833a6e7ffb211b524ec5b2",
+    "nations/directory.html": "8fcaff6b5cc6a9166dfcbac708631ba5d6cc60a35d7ac1cf239f2c8983b96d25",
+    "nations/big-valley-band-pomo-indians-us-ca.html": "1b0889bb7532f267a59806d4a260ec659c55a682acae7bea78a4b6e4b75584e2",
+    "nations/bishop-paiute-tribe-us-ca.html": "ece87585b05fe07eb6ade47c214eebee504340072a1a3b61d3cbc4088a85aacf",
+    "nations/paths-to-action.html": "33b4a16a9a63c3855d0fd20750e1e20af042f1b2cd7783d26cacaf80289eb54a",
+    "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
+    "vercel.json": "19ca3a09e2c1953ed469edd76e4e8088008393bc6dc34b5067cc729ba85a3696",
+    "data/theater/films.json": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
+    "data/theater/research_queue.json": "1f0c81f03c43568b0df4ce99589397ee9320abc09c4ca8117fa534e1e86dd04d",
+    "data/theater/research/batches/2026-11-21-racing-the-rez.json": "838434794a28d8d30985b79113d8ef491e198b60bacda2437495f845cf732350",
+    "data/nations/research/batches/2026-11-21-big-valley-own-history.json": "f4366928a586a218e5157f9bbaf4f954c6f0645c6129fd43abf5a8f1f65957bf",
+    "data/nations/research/batches/2026-11-21-bishop-own-history.json": "2cf88675ae56ac54e112a1b83fce0f44e5ef521296f1e3794a65d7bc36e4006d",
+    "data/nations/research/batches/2026-11-21-pathways-project-dependencies.json": "91622490de4d5824e8b58897aab4c9d899709037e89e5525788ecdd80569a427",
+    "data/nations/research/receipts/2026-11-21-big-valley-identity.json": "152d6104f7881a1c95e50e754b3b6fd7ae7600b1aaa53a3adf3be14654c3acec",
+    "data/nations/research/receipts/2026-11-21-bishop-identity.json": "d4f1ed6c995bb22c83a6627972f5951f0860e781154bcead795775f0686f055c",
+    "data/nations/sources/us-big-valley-own-history-2026-11-21.raw.json": "721caaf8065c8e3e85ff5fca5338d462736b54fee0e8d22eef362bda61026185",
+    "data/nations/sources/us-big-valley-own-history-2026-11-21.verify.json": "025be217ae33e003475ae54dfcf70decbf32da4c6cce50532996674aee7371d1",
+    "data/nations/sources/us-big-valley-own-history-2026-11-21.respect.json": "160d80afbc4627e5799ad295e95bb2e41e8859a5c89f75f6dc8a3f84c5c5a651",
+    "data/nations/sources/us-bishop-own-history-2026-11-21.raw.json": "d84cc3ba05ed82057f5de002df03e6f43e42b09cc35fe4a0899cac73d225b54f",
+    "data/nations/sources/us-bishop-own-history-2026-11-21.verify.json": "67158a6cd30d8eee4f9d32f6d5bf0dc5739360a8029b933812d9d82408742875",
+    "data/nations/sources/us-bishop-own-history-2026-11-21.respect.json": "333639615544c25737728f67e17baf14283d3874f1832a56f7177952f4afdf8f"
   },
   "pending": [
     "Vercel production verification",
-    "Actual playback, geographic and account eligibility",
-    "Caption timing, accuracy and treatment of Cherokee dialogue",
+    "Member/account eligibility, geographic access and successful playback",
+    "Caption timing and accuracy",
     "Artwork display and embedding permission",
-    "Big Pine TAS-year source discrepancy retained under followup-big-pine-tas-year"
+    "Owens Valley 1936/1939 exchange stages retained under followup-owens-valley-exchange-stages"
   ]
 }

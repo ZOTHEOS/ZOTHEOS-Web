@@ -1537,6 +1537,38 @@
       "discovery_date": "2026-11-20",
       "status": "source_retrieved",
       "note": "The government’s own homepage and department descriptions, corroborated by the saved BIA website."
+    },
+    {
+      "source_id": "big-valley-own-site-2026-11-21",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.bvrancheria.com/",
+      "allowed_hosts": [
+        "www.bvrancheria.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-21",
+      "status": "source_retrieved",
+      "note": "The government’s own history, environment and monitoring pages, corroborated by the BIA archive link."
+    },
+    {
+      "source_id": "bishop-own-site-2026-11-21",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://bishoppaiute.net/",
+      "allowed_hosts": [
+        "bishoppaiute.net"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-21",
+      "status": "source_retrieved",
+      "note": "The government’s current own site, corroborated by its named heading and measured redirect from the archived BIA homepage."
     }
   ]
 }

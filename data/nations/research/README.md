@@ -859,3 +859,25 @@ evidence gaps and qualified review remain explicit. See
 `batches/2026-11-20-pathways-water-uses.json`.
 
 The candidate registry contains 496 profiles and 1,456 raw facts.
+
+
+## November 21 Big Valley, Bishop and project dependencies
+
+Big Valley Band of Pomo Indians has a distinct candidate profile. Its own
+history supplies the 1914, 1983 and 1999 milestones, and its monitoring page
+describes the 2014 collaboration with Elem Indian Colony. The redirected
+consultant report supplies no candidate fact. See
+`batches/2026-11-21-big-valley-own-history.json`.
+
+Bishop Paiute Tribe has a distinct candidate profile, with the legacy website
+redirect documented. Its timeline’s reservation and revocation, the Cultural
+Center support resolution, Education goals and dated broadband update keep
+their scopes. A separate 1936/1939 exchange-chronology question remains open.
+See `batches/2026-11-21-bishop-own-history.json`.
+
+Paths To Action adds a hypothetical dependency register using the July 2026
+broadband update as an example. Reported work, plans, prerequisites and proof
+of usable service remain distinct. See
+`batches/2026-11-21-pathways-project-dependencies.json`.
+
+The candidate registry contains 498 profiles and 1,464 raw facts.

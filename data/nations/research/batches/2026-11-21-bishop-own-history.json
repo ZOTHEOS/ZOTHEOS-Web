@@ -1,0 +1,157 @@
+{
+  "receipts": [
+    {
+      "url": "https://bishoppaiute.net/",
+      "final_url": "https://bishoppaiute.net/",
+      "retrieved_at": "2026-11-21T18:31:59.526399Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 260245,
+      "sha256": "6f722a64e779cb111d099ca5e998ff892d36b68c423ebdf2a5d7d9da2a5e37da",
+      "redirects": []
+    },
+    {
+      "url": "https://bishoppaiute.net/about-us/",
+      "final_url": "https://bishoppaiute.net/about-us/",
+      "retrieved_at": "2026-11-21T18:32:20.166959Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 239497,
+      "sha256": "41a566197c4c906e833037cb51ea1ee388cef775662ede1dd1d6b2a17d9c9516",
+      "redirects": []
+    },
+    {
+      "url": "https://bishoppaiute.net/owens-valley-paiute-shoshone-cultural-center/",
+      "final_url": "https://bishoppaiute.net/owens-valley-paiute-shoshone-cultural-center/",
+      "retrieved_at": "2026-11-21T18:32:22.301014Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 218199,
+      "sha256": "1b2ea70dfbd1a613f1577291be0e574fa143f7417ea7f175c470b61d3bcd08ee",
+      "redirects": []
+    },
+    {
+      "url": "https://bishoppaiute.net/tribal-fiber-broadband-project/",
+      "final_url": "https://bishoppaiute.net/tribal-fiber-broadband-project/",
+      "retrieved_at": "2026-11-21T18:32:24.454689Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 242385,
+      "sha256": "513a86eb19173240c808fa12b2108aef83f9da272a5dba0c5d3cf35d41b2aab2",
+      "redirects": []
+    },
+    {
+      "url": "https://bishoppaiute.net/programs/education/",
+      "final_url": "https://bishoppaiute.net/programs/education/",
+      "retrieved_at": "2026-11-21T18:32:26.577580Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 294954,
+      "sha256": "de19e310c838218a5aedb4c9512a9e61bcaf41f1385abab1d50afe4c91949a4e",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-21T18:32:04.004487Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bishoppaiutetribe.com/",
+      "final_url": "https://bishoppaiute.net/",
+      "retrieved_at": "2026-11-21T18:32:01.672715Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 260245,
+      "sha256": "6f722a64e779cb111d099ca5e998ff892d36b68c423ebdf2a5d7d9da2a5e37da",
+      "redirects": [
+        {
+          "status": 301,
+          "from_url": "https://www.bishoppaiutetribe.com/",
+          "to_url": "https://bishoppaiute.net/"
+        }
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://bishoppaiute.net/robots.txt",
+      "final_url": "https://bishoppaiute.net/robots.txt",
+      "retrieved_at": "2026-11-21T18:31:42.046458Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 114,
+      "sha256": "5485a9cb49df93dc81d5048d5e1ceca3e862ead8672e87fc91b078dc30b83bb7",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-21T18:31:42.157199Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1912",
+      "subsequent_event": "1932",
+      "receipt_index": 1,
+      "locator": "Historical Timeline"
+    },
+    {
+      "event_date": "1978-06-13",
+      "receipt_index": 2,
+      "locator": "Past. Present. Future."
+    },
+    {
+      "event_date": null,
+      "receipt_index": 4,
+      "locator": "Opening goal statement"
+    },
+    {
+      "event_date": "2026-07-07",
+      "receipt_index": 3,
+      "locator": "Fiber Construction Meeting"
+    }
+  ],
+  "unresolved_claims": [
+    {
+      "subject": "Owens Valley land exchange stages",
+      "bishop_timeline_year": "1936",
+      "big_pine_existing_fact": "big-pine-paiute-tribe-owens-valley-us-ca-794ac896",
+      "big_pine_attributed_deed_date": "1939-06-26",
+      "status": "unresolved",
+      "scope": "These may describe separate stages. No Bishop exchange-year fact is proposed, and the existing Big Pine source clock is unchanged."
+    }
+  ],
+  "crawl_policy": "Actual destination-host robots preceded factual reads, with at least two-second content pacing. The legacy robots URL redirected to a homepage and was not treated as robots permission.",
+  "source_limits": [
+    "Both the 1912 reservation and its 1932 revocation are in the Tribe’s timeline. The account concerns Owens Valley peoples and establishes no current title, boundary or exclusive Bishop ownership.",
+    "The 1978 date is the Board’s support resolution, not a verified museum opening. The shared center describes Nuumu and Newe culture.",
+    "An undated goal statement is used without current staffing, capacity, eligibility, deadlines or outcomes.",
+    "This is the July 7, 2026 meeting update. It establishes no completed network, present service availability, speed, cost or installation permission.",
+    "The BIA archive’s legacy homepage now makes the recorded redirect to the current own website. Its archived URL and retrieval date remain historical.",
+    "The timeline’s 1936 trade wording and Big Pine’s attributed 1939 deed require primary-record chronology review. No current officeholder, enrollment rank or sensitive cultural detail is inferred."
+  ],
+  "schema_version": 1,
+  "checked": "2026-11-21",
+  "registry_id": "bishop-paiute-tribe-us-ca",
+  "directory_id": "us-fed-a13f0a450c8d",
+  "review_kind": "AI-assisted own-source, identity, chronology and respect review",
+  "candidate_fact_ids": [
+    "bishop-paiute-tribe-us-ca-47561e10",
+    "bishop-paiute-tribe-us-ca-f7bf62d7",
+    "bishop-paiute-tribe-us-ca-509d45a2",
+    "bishop-paiute-tribe-us-ca-27a1b4b3"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

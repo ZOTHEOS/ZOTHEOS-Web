@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-20",
-  "count": 496,
-  "facts": 1456,
+  "generated": "2026-11-21",
+  "count": 498,
+  "facts": 1464,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 42
+    "us-west-pacific": 44
   },
   "nations": [
     {
@@ -32226,6 +32226,166 @@
           "status": "verified",
           "checked": "2026-11-20",
           "last_verified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "big-valley-band-pomo-indians-us-ca",
+      "region": "us-west-pacific",
+      "name": "Big Valley Band of Pomo Indians",
+      "also": [
+        "Big Valley Rancheria"
+      ],
+      "pronounce": null,
+      "lands": "Clear Lake area, Lake County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://www.bvrancheria.com/",
+      "name_source_url": "https://www.bvrancheria.com/",
+      "facts": [
+        {
+          "id": "big-valley-band-pomo-indians-us-ca-71d5108b",
+          "text": "The Tribe’s own history dates the Interior Department’s purchase of land for the Rancheria to 1914.",
+          "kind": "history",
+          "as_of": "1914",
+          "source": {
+            "title": "About Us",
+            "publisher": "Big Valley Band of Pomo Indians",
+            "url": "https://www.bvrancheria.com/copy-of-about-us",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "In 1914 the U.S. Department of Interior",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "big-valley-band-pomo-indians-us-ca-6fa1c47d",
+          "text": "The Tribe’s history records restoration as a federally recognized Tribal entity by court order in 1983 under Tillie-Hardwick.",
+          "kind": "history",
+          "as_of": "1983",
+          "source": {
+            "title": "About Us",
+            "publisher": "Big Valley Band of Pomo Indians",
+            "url": "https://www.bvrancheria.com/copy-of-about-us",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "federally recognized tribal entity in 1983",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "big-valley-band-pomo-indians-us-ca-c159cec9",
+          "text": "Its history page reports adoption of a Master Land Use Plan in 1999, with a mission linking development, environmental protection and teaching Pomo culture.",
+          "kind": "governance",
+          "as_of": "1999",
+          "source": {
+            "title": "About Us",
+            "publisher": "Big Valley Band of Pomo Indians",
+            "url": "https://www.bvrancheria.com/copy-of-about-us",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "In 1999 the Big Valley Tribe adopted",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "big-valley-band-pomo-indians-us-ca-5509147b",
+          "text": "Big Valley’s monitoring page says it began Clear Lake cyanobacteria and cyanotoxin monitoring with Elem Indian Colony in 2014.",
+          "kind": "achievement",
+          "as_of": "2014",
+          "source": {
+            "title": "Clear Lake Cyanobacteria and Cyanotoxins Monitoring Program",
+            "publisher": "Big Valley Band of Pomo Indians",
+            "url": "https://www.bvrancheria.com/clearlakecyanotoxins",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "began a cyanobacteria and cyanotoxin monitoring program",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "region": "us-west-pacific",
+      "name": "Bishop Paiute Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "Bishop, California, at the eastern Sierra Nevada",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://bishoppaiute.net/",
+      "name_source_url": "https://bishoppaiute.net/",
+      "facts": [
+        {
+          "id": "bishop-paiute-tribe-us-ca-47561e10",
+          "text": "The Tribe’s timeline recounts a 1912 reservation of more than 67,000 acres in the Owens Valley and its federal revocation in 1932.",
+          "kind": "history",
+          "as_of": "1932",
+          "source": {
+            "title": "About Us",
+            "publisher": "Bishop Paiute Tribe",
+            "url": "https://bishoppaiute.net/about-us/",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "reserved over 67,000 acres of lands",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "bishop-paiute-tribe-us-ca-f7bf62d7",
+          "text": "The Tribe’s Cultural Center page records a June 13, 1978 resolution by the Owens Valley Board of Trustees to support a permanent cultural center.",
+          "kind": "history",
+          "as_of": "1978",
+          "source": {
+            "title": "Owens Valley Paiute Shoshone Cultural Center",
+            "publisher": "Bishop Paiute Tribe",
+            "url": "https://bishoppaiute.net/owens-valley-paiute-shoshone-cultural-center/",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "a resolution was signed by the Owens Valley",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "bishop-paiute-tribe-us-ca-509d45a2",
+          "text": "The Education Center page describes goals for tutoring, college and career guidance, and support for students and parents.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Bishop Indian Education Center",
+            "publisher": "Bishop Paiute Tribe",
+            "url": "https://bishoppaiute.net/programs/education/",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "offer tutorial services, workshops, scholarship opportunities",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
+        },
+        {
+          "id": "bishop-paiute-tribe-us-ca-27a1b4b3",
+          "text": "In its July 7, 2026 broadband meeting update, the Tribe reported trenching progress and planning for home equipment installations.",
+          "kind": "history",
+          "as_of": "2026",
+          "source": {
+            "title": "Tribal Fiber Broadband Project",
+            "publisher": "Bishop Paiute Tribe",
+            "url": "https://bishoppaiute.net/tribal-fiber-broadband-project/",
+            "accessed": "2026-11-21"
+          },
+          "evidence": "Planning for house installs",
+          "status": "verified",
+          "checked": "2026-11-21",
+          "last_verified": "2026-11-21"
         }
       ]
     }

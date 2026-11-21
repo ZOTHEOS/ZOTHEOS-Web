@@ -820,9 +820,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "big-valley-own-site-2026-11-21"
       ],
       "review": {
         "identity": "pending",
@@ -838,9 +839,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.bvrancheria.com/",
+          "final_url": "https://www.bvrancheria.com/",
+          "retrieved_at": "2026-11-21T18:31:34.811732Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 606733,
+          "sha256": "9a160f48fb68a4cd403190c492c8d6898f945783b0fd3d2ec2a34132587f37e5",
+          "redirects": [],
+          "source_id": "big-valley-own-site-2026-11-21",
+          "evidence_receipt": "batches/2026-11-21-big-valley-own-history.json",
+          "receipt_id": "r-5abf182fc916cefa"
+        }
+      ],
+      "updated_at": "2026-11-21T18:38:06.477888+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Distinct profile prepared through the canonical assembler with own-source identity and respect review. Independent review and a reviewed pull request control publication. No human or Nation approval is claimed.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-21-big-valley-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-a13f0a450c8d",
@@ -854,9 +874,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "bishop-own-site-2026-11-21"
       ],
       "review": {
         "identity": "pending",
@@ -872,9 +893,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://bishoppaiute.net/",
+          "final_url": "https://bishoppaiute.net/",
+          "retrieved_at": "2026-11-21T18:31:59.526399Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 260245,
+          "sha256": "6f722a64e779cb111d099ca5e998ff892d36b68c423ebdf2a5d7d9da2a5e37da",
+          "redirects": [],
+          "source_id": "bishop-own-site-2026-11-21",
+          "evidence_receipt": "batches/2026-11-21-bishop-own-history.json",
+          "receipt_id": "r-3695eda96f9f9395"
+        }
+      ],
+      "updated_at": "2026-11-21T18:40:08.825893+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Distinct profile prepared through the canonical assembler with own-source identity and respect review. Independent review and a reviewed pull request control publication. No human or Nation approval is claimed. Paths To Action includes a hypothetical project-dependency register. The separate Owens Valley exchange chronology remains open under followup-owens-valley-exchange-stages.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-21-bishop-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-917f4283ffad",
@@ -63709,6 +63749,37 @@
       "updated_at": "2026-11-20T15:12:54.101187+00:00",
       "next_attempt_after": null,
       "note": "The Tribe’s Environmental page associates TAS with 2006; EPA records October 24, 2005. Retain both wordings until a primary decision record supports reconciliation. The published candidate is limited to EPA’s separately corroborated January 24, 2006 standards record."
+    },
+    {
+      "task_id": "followup-owens-valley-exchange-stages",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Owens Valley exchange chronology in Bishop and Big Pine accounts",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-own-source-history",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_history_difference",
+      "status": "pending",
+      "allowed_source_ids": [
+        "bishop-own-site-2026-11-21",
+        "big-pine-water-standards-2026-11-20"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-21T18:38:06.199248+00:00",
+      "next_attempt_after": null,
+      "note": "Bishop’s current timeline narrates a land trade under 1936. Existing Big Pine fact 794ac896 attributes a June 26, 1939 deed to its 2005 standards. These may concern separate stages. Compare primary decision/deed records before reconciliation. No Bishop exchange-year fact is published by this batch."
     }
   ]
 }

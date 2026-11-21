@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-21",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-21T18:38:06.199248+00:00",
+    "evidence_receipt": "batches/2026-11-21-bishop-own-history.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "results": [
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Both the 1912 reservation and its 1932 revocation are in the Tribe’s timeline. The account concerns Owens Valley peoples and establishes no current title, boundary or exclusive Bishop ownership."
+    },
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The 1978 date is the Board’s support resolution, not a verified museum opening. The shared center describes Nuumu and Newe culture."
+    },
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "An undated goal statement is used without current staffing, capacity, eligibility, deadlines or outcomes."
+    },
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "This is the July 7, 2026 meeting update. It establishes no completed network, present service availability, speed, cost or installation permission."
+    }
+  ],
+  "names": [
+    {
+      "id": "bishop-paiute-tribe-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The destination identifies itself as the Bishop Paiute Tribe’s official site. The archived BIA393 homepage redirects there, and the federal name corroborates the government. Other Paiute governments and broader peoples remain distinct."
+    }
+  ]
+}

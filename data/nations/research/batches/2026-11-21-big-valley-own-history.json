@@ -1,0 +1,118 @@
+{
+  "receipts": [
+    {
+      "url": "https://www.bvrancheria.com/",
+      "final_url": "https://www.bvrancheria.com/",
+      "retrieved_at": "2026-11-21T18:31:34.811732Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 606733,
+      "sha256": "9a160f48fb68a4cd403190c492c8d6898f945783b0fd3d2ec2a34132587f37e5",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bvrancheria.com/copy-of-about-us",
+      "final_url": "https://www.bvrancheria.com/copy-of-about-us",
+      "retrieved_at": "2026-11-21T18:31:52.166259Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 595915,
+      "sha256": "64035310b33740288b8c388333b1a79f8c628b48208375f9d96ca6974f5d3889",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bvrancheria.com/epa",
+      "final_url": "https://www.bvrancheria.com/epa",
+      "retrieved_at": "2026-11-21T18:31:54.527729Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 676669,
+      "sha256": "2d142ec7d6549425a9d67b834ecb848574b90d262c3b83e3c4b7b0fd35eed378",
+      "redirects": []
+    },
+    {
+      "url": "https://www.bvrancheria.com/clearlakecyanotoxins",
+      "final_url": "https://www.bvrancheria.com/clearlakecyanotoxins",
+      "retrieved_at": "2026-11-21T18:31:56.781599Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 618869,
+      "sha256": "3de74fef68cd60fee3f884541ff5a4bcb0f2969ac3ae08ff47f140e9e5d39901",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-21T18:33:39.528373Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": []
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.bvrancheria.com/robots.txt",
+      "final_url": "https://www.bvrancheria.com/robots.txt",
+      "retrieved_at": "2026-11-21T18:31:20.392556Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 493,
+      "sha256": "ac2c21cfdc82ea07a824be45bd3d8ded41e8b43d6d905bfb243e09049abca908",
+      "redirects": []
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-21T18:33:16.080679Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": []
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1914",
+      "receipt_index": 1
+    },
+    {
+      "event_date": "1983",
+      "receipt_index": 1
+    },
+    {
+      "event_date": "1999",
+      "receipt_index": 1,
+      "locator": "Master Land Use Plan and Mission paragraph"
+    },
+    {
+      "event_date": "2014",
+      "receipt_index": 3,
+      "locator": "Program history, Elem collaboration"
+    }
+  ],
+  "crawl_policy": "Own-site and Govinfo robots preceded corresponding content. Own requests were paced at least two seconds apart. Named-bot delays did not apply to the declared reader.",
+  "source_limits": [
+    "The dated administrative land purchase is attributed to the Tribe’s history. No origin of a people, present acreage or title finding is inferred.",
+    "The Tribe’s own account dates restoration under Tillie-Hardwick to 1983. No other government’s status is inferred.",
+    "The history records the 1999 plan and its mission. No implementation, current legal effect or cultural-teaching outcome is inferred.",
+    "The page names a 2014 collaboration with Elem Indian Colony, a separate Tribe. It establishes no current toxin concentration, water-safety result or exclusive representation.",
+    "The About page contains older future construction language and historical finances. No current facility, staffing, acreage or economic result is inferred.",
+    "The consultant’s 2020 adaptation report was a discovery read with a new external host. Its robots check returned 403 after the initial redirect. This profile uses own HTML pages for all facts."
+  ],
+  "schema_version": 1,
+  "checked": "2026-11-21",
+  "registry_id": "big-valley-band-pomo-indians-us-ca",
+  "directory_id": "us-fed-6ab738708968",
+  "review_kind": "AI-assisted own-source, identity, chronology and respect review",
+  "candidate_fact_ids": [
+    "big-valley-band-pomo-indians-us-ca-71d5108b",
+    "big-valley-band-pomo-indians-us-ca-6fa1c47d",
+    "big-valley-band-pomo-indians-us-ca-c159cec9",
+    "big-valley-band-pomo-indians-us-ca-5509147b"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
