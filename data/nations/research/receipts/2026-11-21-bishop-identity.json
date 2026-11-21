@@ -1,0 +1,47 @@
+{
+  "own_name_source": {
+    "url": "https://bishoppaiute.net/",
+    "final_url": "https://bishoppaiute.net/",
+    "retrieved_at": "2026-11-21T18:31:59.526399Z",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 260245,
+    "sha256": "6f722a64e779cb111d099ca5e998ff892d36b68c423ebdf2a5d7d9da2a5e37da",
+    "redirects": []
+  },
+  "saved_bia_object_id": 393,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://www.bishoppaiutetribe.com/"
+  },
+  "legacy_website_redirect": {
+    "url": "https://www.bishoppaiutetribe.com/",
+    "final_url": "https://bishoppaiute.net/",
+    "retrieved_at": "2026-11-21T18:32:01.672715Z",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 260245,
+    "sha256": "6f722a64e779cb111d099ca5e998ff892d36b68c423ebdf2a5d7d9da2a5e37da",
+    "redirects": [
+      {
+        "status": 301,
+        "from_url": "https://www.bishoppaiutetribe.com/",
+        "to_url": "https://bishoppaiute.net/"
+      }
+    ]
+  },
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-21T18:38:06.199248+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity review",
+  "directory_id": "us-fed-a13f0a450c8d",
+  "registry_id": "bishop-paiute-tribe-us-ca",
+  "own_published_name": "Bishop Paiute Tribe",
+  "official_url": "https://bishoppaiute.net/",
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "batch": "batches/2026-11-21-bishop-own-history.json",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

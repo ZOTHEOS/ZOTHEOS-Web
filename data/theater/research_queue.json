@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -339,7 +339,9 @@
         "https://theonefeather.com/2025/08/09/a-sacred-thread-showcases-the-snowbird-communitys-language-culture-and-land-back-efforts/"
       ],
       "reason": "The producer lists the complete documentary and the Cherokee One Feather reports community perspective and credits.",
-      "next": "Verify the generated and live official-source card. Playback, region and account eligibility, caption quality, artwork and embedding permission remain open."
+      "next": "The live official-source card and viewing URL matched the reviewed files. Playback, access, caption quality, artwork and embedding permission remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/55"
     },
     {
       "id": "we-breathe-again-availability",
@@ -375,6 +377,19 @@
         }
       ],
       "next": "Find and inspect an available authorized complete edition before proposing a catalog entry. These metadata observations establish no playback result."
+    },
+    {
+      "id": "racing-the-rez",
+      "status": "official-source-only",
+      "checked": "2026-11-21",
+      "batch": "research/batches/2026-11-21-racing-the-rez.json",
+      "source_urls": [
+        "https://watch.weta.org/video/racing-the-rez-tZaUtr/",
+        "https://racingtherez.com/",
+        "https://visionmakermedia.org/film-library/racing-the-rez/"
+      ],
+      "reason": "The own producer and authorized broadcasters identify the complete documentary and the selected WETA member-access edition.",
+      "next": "Verify the generated and live member-access card. Actual access, playback, captions, artwork and embedding permission remain open."
     }
   ]
 }
