@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T17:40:49.543145+00:00",
+  "review_kind": "Independent AI-assisted saved-source, history, archival governance, identity and respect cross-review",
+  "registry_id": "cedarville-rancheria-us-ca",
+  "directory_id": "us-fed-65f53e1a524a",
+  "result": "passed",
+  "checks": [
+    "All five saved factual response bodies and three robots configurations match their measured lengths and SHA-256 values.",
+    "All four source-packet anchors match normalized saved text and satisfy the fact length and evidence-word contracts.",
+    "The own history attributes Rancheria formation to 1914; this is not an origin date for a people.",
+    "Ancestral lands across California, Nevada and Oregon are attributed to the Rancheria, without legal boundaries, current ownership, title or exclusivity.",
+    "The governance fact explicitly describes the constitutional text NARF received in 2003. That receipt year is not an adoption, approval, effective or amendment date, and current governance is not independently established.",
+    "The Social Services fact describes the undated program mission. Amounts, eligibility, frequency, deadlines, outcome and guaranteed assistance are not asserted.",
+    "The program page’s once-a-year design and later twice-yearly limit are both visible; their unresolved inconsistency is recorded without selecting a current rule.",
+    "Own homepage and About text, the federal listing and saved BIA406 corroborate this distinct government and current HTTPS site. Broader Northern Paiute people and the separate Alturas government are not merged.",
+    "Own, NARF and Govinfo robots permit the factual paths. Own content reads are spaced more than two seconds apart.",
+    "All individual receipt capture_retention fields are strings containing local. Full factual bodies are local review captures for removal before publication, not public artifacts."
+  ],
+  "body_receipt_matches": 8,
+  "source_pins": {
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.raw.json": "4202b63c606cd7bee2bc2a0dcd8bf7d1f92da3956042ff3831ffab9b99dddf82",
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.verify.json": "49dee212efe067565b0cd45bba125e0af1dc62e7518b5a757a92f7557fa897b2",
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.respect.json": "666e6369df3f4204c5a37d71f13a1f97d8a506f794a34ebedba473abc00f1250",
+    "data/nations/research/batches/2026-11-23b-cedarville-own-history.json": "759ecf31e1ecbc0163622513cc9691099f0975ad46d93b2461f412e945fd63f7",
+    "data/nations/research/receipts/2026-11-23b-cedarville-identity.json": "a3aba9790d52f3fde89edf2af9004042fb93b6ebf9708135dc2821d2e6da1377"
+  },
+  "base_commit_for_identity_duplicate_check": "c0428f0d79a071300b40156ce3f71022949073b4",
+  "publication_holds_checked": true,
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "capture_retention": "Full factual captures were present during this local review and are excluded from the public PR. Exact source receipts, hashes, concise original summaries and short evidence remain.",
+  "pending": [
+    "Root complete required checks",
+    "Root removal of owned local full factual capture folder before public publication"
+  ],
+  "integration_review": {
+    "reviewed_at": "2026-11-23T17:41:35.824027+00:00",
+    "result": "passed",
+    "checks": [
+      "All four canonical Cedarville facts exactly match the source packet and assembler-derived IDs plus verification fields.",
+      "Cedarville metadata matches the packet; its administrative geography is general location context, not a title or boundary finding.",
+      "The exact Cedarville directory row links the new government profile with the reviewed own name and current HTTPS website.",
+      "The Cedarville task is needs_review, with original pending review fields and unassessed risk preserved.",
+      "Every prior canonical profile and fact remains equal to the base commit; only Cedarville and Chemehuevi profiles are added.",
+      "The own-history batch lists exactly the four assembler-produced candidate fact IDs. All pinned source artifacts remain equal to the source-review hashes."
+    ],
+    "base_commit": "c0428f0d79a071300b40156ce3f71022949073b4",
+    "prior_profiles_preserved": 499,
+    "new_profiles": 2,
+    "raw_profile_count": 501,
+    "raw_fact_count": 1480,
+    "repinned_artifacts": {},
+    "person_review_claimed": false,
+    "nation_endorsement_claimed": false
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "registry_id": "cedarville-rancheria-us-ca",
+  "directory_id": "us-fed-65f53e1a524a",
+  "status": "candidate-for-independent-review",
+  "review_kind": "AI-assisted own-source history, archival governance, identity and respect research",
+  "receipts": [
+    {
+      "url": "https://cedarvillerancheria.com/",
+      "final_url": "https://cedarvillerancheria.com/",
+      "retrieved_at": "2026-11-23T17:34:06.596474+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 131453,
+      "sha256": "b2fbc24b25b75a8698c8709ae9f0a3e792b0ff30e9579390757f75af6c0661de",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "home.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://cedarvillerancheria.com/about/",
+      "final_url": "https://cedarvillerancheria.com/about/",
+      "retrieved_at": "2026-11-23T17:34:09.212898+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 124012,
+      "sha256": "eb4b1d084de7f72644cab4c6cd5c9c110687ceda1c3e3d78a335c24f1e90ebcc",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "about.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://cedarvillerancheria.com/services/",
+      "final_url": "https://cedarvillerancheria.com/services/",
+      "retrieved_at": "2026-11-23T17:34:37.981537+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 137098,
+      "sha256": "e681d5f5a17531ca814d995f33a0cbad95241f3bb425eb850b888d46c3160b59",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "services.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://narf.org/nill/constitutions/cedarville/cedarvlconst.html",
+      "final_url": "https://narf.org/nill/constitutions/cedarville/cedarvlconst.html",
+      "retrieved_at": "2026-11-23T17:34:51.347058+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 25886,
+      "sha256": "950ee2d6fa76e97730e6ee1ab7cdad20c34b983a0ecbd86e43242981c39b6446",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "constitution.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-23T17:34:09.728345+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "federal.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://cedarvillerancheria.com/robots.txt",
+      "final_url": "https://cedarvillerancheria.com/robots.txt",
+      "retrieved_at": "2026-11-23T17:33:45.442996+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 178,
+      "sha256": "264f2bd49390c0aeeda31ec9b6d7770f7796dbce0f61eef9e005fcb40936db47",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "own-robots.txt",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://narf.org/robots.txt",
+      "final_url": "https://narf.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:35.569904+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 254,
+      "sha256": "995779467230468fc1129d58912170c1a33f8cb0339ddea815bbf24dd5fa2ef2",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "narf-robots.txt",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-23T17:33:47.895375+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": [],
+      "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "federal-robots.txt",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1914",
+      "receipt_index": 1,
+      "locator": "Rancheria formation sentence"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 1,
+      "locator": "Ancestral Lands sentence"
+    },
+    {
+      "event_date": null,
+      "source_archive_received": "2003",
+      "receipt_index": 3,
+      "locator": "Received: 2003 and Article IV, Section 2",
+      "scope": "Archive receipt year, not an established adoption or effective date"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 2,
+      "locator": "Our Services and Our Mission opening"
+    }
+  ],
+  "source_limits": [
+    "The own About page dates the Rancheria’s formation to 1914. This is an attributed administrative history, not an origin date for the Northern Paiute people.",
+    "The own account describes ancestral lands across parts of three states. It establishes no complete boundary, exclusive title, present ownership or authority over other governments.",
+    "The constitutional text is labeled Received: 2003 by NARF. That is the archive’s receipt year, not an established adoption, approval, effective or amendment date. The sentence describes that text, not a verified current governing arrangement or present officeholder.",
+    "The Services page’s mission is used without a publication date or current capacity, eligibility, payment, deadline, referral success, protection outcome or service guarantee.",
+    "The own About page identifies a Tribal Operations Office in neighboring Alturas. Office location is not an identity merger with the separate Alturas government.",
+    "Present leadership, membership counts, enrollment decisions and sensitive family or cultural information are excluded.",
+    "The Services page includes payment amounts, program restrictions and inconsistent frequency descriptions. Those details are excluded from all proposed facts."
+  ],
+  "unresolved_claims": [
+    {
+      "subject": "Direct-assistance frequency and current program rules",
+      "source_url": "https://cedarvillerancheria.com/services/",
+      "receipt_index": 2,
+      "status": "unresolved",
+      "observation": "The same undated description gives an annual design and later a twice-yearly limit. No program frequency, payment amount, current eligibility or application advice is proposed."
+    },
+    {
+      "subject": "Constitution approval and current amendments",
+      "source_url": "https://narf.org/nill/constitutions/cedarville/cedarvlconst.html",
+      "receipt_index": 3,
+      "status": "unresolved",
+      "observation": "NARF labels the text received in 2003; this is not a dated approval certificate or a complete amendment history. The proposed fact is explicitly about that archival text."
+    }
+  ],
+  "crawl_policy": "Cedarville, NARF and Govinfo robots were read first and permit the cited factual paths. There was no declared crawl delay. Own content requests were paced at least two seconds apart. No contact, form, share link or restricted path was used.",
+  "capture_retention": "Full factual bodies are local temporary review captures only. They are excluded from the public PR; individual exact retrieval receipts, hashes, original concise summaries and short anchors are retained.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "candidate_fact_ids": [
+    "cedarville-rancheria-us-ca-5d161a7a",
+    "cedarville-rancheria-us-ca-2aee9ab8",
+    "cedarville-rancheria-us-ca-e7b112ec",
+    "cedarville-rancheria-us-ca-6507f43d"
+  ]
+}

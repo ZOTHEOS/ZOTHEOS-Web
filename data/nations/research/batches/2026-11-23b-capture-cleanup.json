@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-23T17:47:18.698223+00:00",
+  "review_kind": "AI-assisted exact-byte local capture cleanup verification",
+  "local_captures_removed": 41,
+  "captures": [
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/about.html",
+      "bytes": 124012,
+      "sha256": "eb4b1d084de7f72644cab4c6cd5c9c110687ceda1c3e3d78a335c24f1e90ebcc",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/constitution.html",
+      "bytes": 25886,
+      "sha256": "950ee2d6fa76e97730e6ee1ab7cdad20c34b983a0ecbd86e43242981c39b6446",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/federal-robots.txt",
+      "bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/federal.html",
+      "bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/home.html",
+      "bytes": 131453,
+      "sha256": "b2fbc24b25b75a8698c8709ae9f0a3e792b0ff30e9579390757f75af6c0661de",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/narf-robots.txt",
+      "bytes": 254,
+      "sha256": "995779467230468fc1129d58912170c1a33f8cb0339ddea815bbf24dd5fa2ef2",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/own-robots.txt",
+      "bytes": 178,
+      "sha256": "264f2bd49390c0aeeda31ec9b6d7770f7796dbce0f61eef9e005fcb40936db47",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-cedarville-1123b/services.html",
+      "bytes": 137098,
+      "sha256": "e681d5f5a17531ca814d995f33a0cbad95241f3bb425eb850b888d46c3160b59",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-about.body.html",
+      "bytes": 155164,
+      "sha256": "708113c2acf7a434723c8d571420f427fe009ca014fd8e6e335acd859b1df855",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-attorney.body.html",
+      "bytes": 155803,
+      "sha256": "a2e854a7b03d53ab1488db46d48ec1bc2be6cb91beabb8d20d1c13230a97bbc9",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-council.body.html",
+      "bytes": 182251,
+      "sha256": "9294cf640f0956eb400b810e34db4264925ab088dffefccda627c1dc07687c88",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-court.body.html",
+      "bytes": 278143,
+      "sha256": "7464ccb49d3f7e131a79078f955139c75e405d5e693dd45241e1a8a992f5fa2b",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-cultural.body.html",
+      "bytes": 172618,
+      "sha256": "da319c2782f6d8270760bb8e4c4f2c226fddbeb9dee1dd0b4451c127a17251ff",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-education.body.html",
+      "bytes": 177489,
+      "sha256": "7e4749eeb9ed1185e2bda3a830da187e1981bfabd615c5f417454afece521ccc",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-enterprises.body.html",
+      "bytes": 175182,
+      "sha256": "89456e7e9e32e7203171071214516dae517124831cf7ffd3cde85d9326e8616c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-environment.body.html",
+      "bytes": 207403,
+      "sha256": "91a5362ecc3edd42ab8cf9cd840a786e192f5358ce0aa03ec5210ba3aca18717",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-federal.body.html",
+      "bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-home.body.html",
+      "bytes": 206452,
+      "sha256": "8b767b4c8717ac9f5d6fa95b98dc38e45c4d917764f43209073b93bf3433c8f6",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-water.body.html",
+      "bytes": 183009,
+      "sha256": "2e963811480844a70dc4d53e84bdad7a41815ab7d2fc172e4e0885b9527530fd",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-own-robots.body.txt",
+      "bytes": 1518,
+      "sha256": "a1a4737ebc87839023e5d156c3a28527f9b5c5a1cba619dca1f27195f75d7f66",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-vmm-robots.body.txt",
+      "bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-vmm.body.html",
+      "bytes": 47612,
+      "sha256": "2c74b3ca00ebd6676317db06b4330a0c976d4b6a89e4df602685f5d161aa10e3",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-watch-weta-film.body.html",
+      "bytes": 195604,
+      "sha256": "8cfd69e385cc3975a652581021eeb32e9aed7b4a23a455f962944500e5008391",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-watch-weta-robots.body.txt",
+      "bytes": 226,
+      "sha256": "7f8d1d8985e194a077b80a3a33c39a3b22ad291d1a434ae20b4befb5be6e0622",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-watch-weta-show.body.html",
+      "bytes": 199103,
+      "sha256": "56093d86207ae41bd6d4401a1ba5f7dd45899d91387a7e22d157978ac6455d53",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-weta-robots.body.txt",
+      "bytes": 2141,
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-weta.body.html",
+      "bytes": 76446,
+      "sha256": "bf5aefb70d35caf8ac1c5cb3760b8a0e988643a6d9a9b6c4d520933eb448440a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-wetaplus-robots.body.txt",
+      "bytes": 17097,
+      "sha256": "84a868193f99398ccc8ce427750a0e5a640b33490b15570130e502fb6cb4cfda",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/almost-island-wetaplus-show.body.html",
+      "bytes": 23750,
+      "sha256": "79e9167767ed71490d33b86a97449053328a3dd5ea78e60fe39378da6866d3c1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-own-robots.body.txt",
+      "bytes": 78,
+      "sha256": "0221ca33afda3959e81ac377e5aa591667a78ef3c314e1f29fbe53948c12e98a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-image-robots.body.txt",
+      "bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-own-crew.body.txt",
+      "bytes": 86902,
+      "sha256": "78c21ad5fb159755dc8e52818d839be55d90cfb7a0f9f4dcd8c8e25ca52e3875",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-own-full.body.html",
+      "bytes": 84362,
+      "sha256": "110f246a6e695a81dbcdfbb018291fe7e6c94d5c543e94601e953769f57250e3",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-own-home.body.html",
+      "bytes": 83321,
+      "sha256": "186652d60bc574ed71f5e829cac1ea3288c877123064e8d7e17592209f35d603",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-vmm.body.txt",
+      "bytes": 47827,
+      "sha256": "73a35e9c9a5fc41bbd0f40719c14d91451fd727a263f102225d45a54341be75c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/rising-voices-yt-watch.body.html",
+      "bytes": 1481899,
+      "sha256": "d9adc064fa661299db0cdf27d4455c2f717b4707aeb634111d7d42da0266848d",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-23b/yt-robots.body.txt",
+      "bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-afn-about.html",
+      "bytes": 275523,
+      "sha256": "d44ffee6c25a4173e86c644dcbe2650baf3d9eb0e6bb8fc40ca73d3c9e2441b4",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-afn-history.html",
+      "bytes": 169931,
+      "sha256": "8e0b72fe5ed7cdefd1f2fb37232a31ce6bdfa9c0b90a29cee88d529982e935ba",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-23b-chemehuevi-federal-robots.body.txt",
+      "bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-23b-chemehuevi-own-robots.body.txt",
+      "bytes": 56,
+      "sha256": "9b20a3ec1f920f4568f6d13309cbd8e12b958bccda3981c30656063110a148ff",
+      "publicly_retained": false
+    }
+  ],
+  "scope": "Every removed file was an owned untracked temporary capture under this isolated worktree, matched to measured response bytes and SHA before removal. Full factual HTML is excluded from public publication; exact receipts and short evidence remain. No source text, clock or fact changed.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

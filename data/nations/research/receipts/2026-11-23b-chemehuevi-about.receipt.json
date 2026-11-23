@@ -1,0 +1,22 @@
+{
+  "url": "https://chemehuevi.org/about-us",
+  "final_url": "https://chemehuevi.org/m/login?r=%2Fabout-us",
+  "retrieved_at": "2026-11-23T17:34:50.114769+00:00",
+  "retrieval_method": "http",
+  "http_status": 200,
+  "body_bytes": 155164,
+  "sha256": "708113c2acf7a434723c8d571420f427fe009ca014fd8e6e335acd859b1df855",
+  "redirects": [
+    {
+      "status": 302,
+      "from_url": "https://chemehuevi.org/about-us",
+      "to_url": "https://chemehuevi.org/m/login?r=%2Fabout-us"
+    }
+  ],
+  "user_agent": "ZOTHEOSResearch/1.0",
+  "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+  "local_capture_at_review": {
+    "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-about.body.html",
+    "publicly_retained": false
+  }
+}

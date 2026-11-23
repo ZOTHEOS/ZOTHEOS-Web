@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T17:42:24.063155+00:00",
+  "review_kind": "Independent AI-assisted Chemehuevi own-source, chronology, identity, respect and integration cross-review",
+  "registry_id": "chemehuevi-indian-tribe-us-ca",
+  "result": "passed",
+  "source_body_checks": [
+    {
+      "url": "https://chemehuevi.org/",
+      "body_bytes": 206452,
+      "sha256": "8b767b4c8717ac9f5d6fa95b98dc38e45c4d917764f43209073b93bf3433c8f6",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/about-us",
+      "body_bytes": 155164,
+      "sha256": "708113c2acf7a434723c8d571420f427fe009ca014fd8e6e335acd859b1df855",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-council",
+      "body_bytes": 182251,
+      "sha256": "9294cf640f0956eb400b810e34db4264925ab088dffefccda627c1dc07687c88",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/cultural-center",
+      "body_bytes": 172618,
+      "sha256": "da319c2782f6d8270760bb8e4c4f2c226fddbeb9dee1dd0b4451c127a17251ff",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/environmental",
+      "body_bytes": 207403,
+      "sha256": "91a5362ecc3edd42ab8cf9cd840a786e192f5358ce0aa03ec5210ba3aca18717",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/water",
+      "body_bytes": 183009,
+      "sha256": "2e963811480844a70dc4d53e84bdad7a41815ab7d2fc172e4e0885b9527530fd",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-enterprises",
+      "body_bytes": 175182,
+      "sha256": "89456e7e9e32e7203171071214516dae517124831cf7ffd3cde85d9326e8616c",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/education",
+      "body_bytes": 177489,
+      "sha256": "7e4749eeb9ed1185e2bda3a830da187e1981bfabd615c5f417454afece521ccc",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-court",
+      "body_bytes": 278143,
+      "sha256": "7464ccb49d3f7e131a79078f955139c75e405d5e693dd45241e1a8a992f5fa2b",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-attorney",
+      "body_bytes": 155803,
+      "sha256": "a2e854a7b03d53ab1488db46d48ec1bc2be6cb91beabb8d20d1c13230a97bbc9",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://chemehuevi.org/robots.txt",
+      "body_bytes": 56,
+      "sha256": "9b20a3ec1f920f4568f6d13309cbd8e12b958bccda3981c30656063110a148ff",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "result": "matched local review bytes"
+    }
+  ],
+  "checks": [
+    "All eleven factual response bodies and two robots configuration bodies match exact recorded lengths and hashes. All four normalized evidence anchors match the cited saved source text.",
+    "The Attorney page explicitly separates establishment by contract in 1978 from creation by Tribal law through the Administrative Code in 2000. The fact preserves both stages.",
+    "The Council purpose, Cultural Center intergenerational mission and language-service list are undated attributed page descriptions, without inferred start dates or present service, staffing, enrollment or fluency results.",
+    "Own homepage, Council geographic account, fresh federal notice and measured historical BIA548 archive corroborate the distinct government and website. Broader Chemehuevi and Southern Paiute identities and the Colorado River Indian Tribes government are not merged.",
+    "The About route’s login redirect supplies no fact and was not bypassed. Undated COVID-era environmental claims, water-report filenames, officeholders, schedules, contacts, posted meeting access details and restricted cultural material are excluded.",
+    "Facts meet the 200-character, 4-to-12-word-anchor and source-date contracts; no human review, Nation endorsement or permission to reproduce cultural knowledge is claimed.",
+    "Against base c0428f0d79a071300b40156ce3f71022949073b4, all 499 prior profiles remain equal. Exactly Cedarville and Chemehuevi are added with four facts each. The Chemehuevi canonical metadata and four fact contents equal its source packet, with actual November23 check dates."
+  ],
+  "source_pins": {
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.raw.json": "a50673c785b654f140f29a9fadce8c2890d58918ef4e429eccaad691ea5df307",
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.verify.json": "501903bd641fb5f07072d395a1a7e58107ea2c7127728770f4c5935bb817ebd8",
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.respect.json": "6f3f51ab398ee9b8a7208094816820bac03e9b4dd00bfc316e855577687efe2b",
+    "data/nations/research/batches/2026-11-23b-chemehuevi-own-history.json": "0f3eac9c9488a55f38ea286e12fd53364b7c05ea1e88c192ef8c4c6d3654956f",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-identity.json": "8144726fc74dd7d54468f86934e6daa39416b88348366921d0ffd7c2573fb686",
+    "data/nations/nations.json": "34ba3f3d24f4365b6259131a0a8e34fef4cca994148c82e717082ecf27aa8f57"
+  },
+  "capture_retention": "Full factual source captures remain temporary local files for root cleanup before public publication. Exact retrieval receipts, short anchors, original summaries and this review remain.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T17:45:53.261945+00:00",
+  "review_kind": "Independent AI-assisted official-project, provider-edition, distribution, embedding, credits and perspective cross-review",
+  "film_id": "rising-voices-hotaninpi",
+  "result": "passed",
+  "body_receipt_matches": 9,
+  "checks": [
+    "The film project explicitly offers public streaming and supplies an external iframe for exact video Wr-jackHWCw. Its production association with The Language Conservancy is separately supported; the upload identifies that channel.",
+    "The official project and publisher support the directors, production credits, 2015 release, Lakota participant perspectives and Lakota short-film contributions. The unsupported VMM presenter clause was removed before this final review.",
+    "The public provider response separately reports 3403 and 3404 seconds, the February 21, 2016 upload, embedding enabled and playability status OK. The displayed 56-minute edition is distinguished from the 57-minute broadcast catalogue entry.",
+    "The synopsis and content note are supported by the project and publisher accounts. The perspective describes participants and production context of the 2015 film without claiming present endorsement, exclusive representation or Indigenous authorship of the entire production.",
+    "The provider supplies the exact maximum-resolution thumbnail URL used by the record. The recorded HEAD result reports HTTP200 and image/jpeg; zero image body bytes were read. This establishes provenance and response headers rather than an independent artwork or copyright review.",
+    "English automatic and English (United States) caption tracks are listed separately. The second track is not marked ASR; human authorship and caption accuracy are not inferred.",
+    "All five factual response bodies and four robots configurations match their measured byte lengths and hashes at local review. Robots permit the reviewed public paths.",
+    "The existing canonical Theater catalogue validator passes. All prior film records remain equal to the base commit; one new distinct complete-film record is appended, with exactly the reviewed batch record.",
+    "Almost an Island remains absent from the catalogue. Its deferred member-access and producer-source limitations are not used to assert available playback."
+  ],
+  "distribution_and_embedding_scope": "Evidence supports using this project-offered co-producer upload through the official YouTube player. Provider embedding flags are considered separately from the project’s distribution statement. No download, proxy, re-upload, public-screening, derivative-art or general media-reuse permission is inferred.",
+  "playback_review": "No audiovisual playback, complete editorial review, account/device eligibility, geographic availability or caption text/timing/accuracy was tested. Provider metadata is not proof of successful playback.",
+  "source_pins": {
+    "data/theater/research/batches/2026-11-23b-rising-voices.json": "21d93ef59b5efda18cc477f3b66406ec632a5d56145e98258b6de8a2f56a2d96",
+    "data/theater/films.json": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443"
+  },
+  "record_sha256": "a4bcde2e7f1573e045a77a6db2222e4cf8106abb7faf298705b804fd05159cd8",
+  "base_commit_for_duplicate_check": "c0428f0d79a071300b40156ce3f71022949073b4",
+  "capture_retention": "Full factual responses were present for this local review and are excluded from the public PR. Exact source receipts, hashes, source URLs, concise original summaries and short evidence remain.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "pending": [
+    "Root complete required checks and browser review",
+    "Root remove owned local full factual captures before publication",
+    "Actual playback, regional/account/device eligibility and caption quality remain unverified"
+  ]
+}

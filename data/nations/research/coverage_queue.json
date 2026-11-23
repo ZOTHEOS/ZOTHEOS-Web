@@ -1643,9 +1643,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "cedarville-own-site-2026-11-23b"
       ],
       "review": {
         "identity": "pending",
@@ -1661,9 +1662,29 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://cedarvillerancheria.com/",
+          "final_url": "https://cedarvillerancheria.com/",
+          "retrieved_at": "2026-11-23T17:34:06.596474+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 131453,
+          "sha256": "b2fbc24b25b75a8698c8709ae9f0a3e792b0ff30e9579390757f75af6c0661de",
+          "redirects": [],
+          "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+          "source_id": "cedarville-own-site-2026-11-23b",
+          "evidence_receipt": "receipts/2026-11-23b-cedarville-identity.json",
+          "receipt_id": "r-757a59d8f9df0189"
+        }
+      ],
+      "updated_at": "2026-11-23T17:40:17.032774+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "New distinct government profile from its own public sources, with AI-assisted source, identity and respect handoff. Historical stages, archival dates and undated program purposes remain distinct.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-23b-cedarville-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-d3e7006ab6a4",
@@ -1677,9 +1698,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "chemehuevi-own-site-2026-11-23b"
       ],
       "review": {
         "identity": "pending",
@@ -1695,9 +1717,30 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://chemehuevi.org/",
+          "final_url": "https://chemehuevi.org/",
+          "retrieved_at": "2026-11-23T17:34:16.615551+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 206452,
+          "sha256": "8b767b4c8717ac9f5d6fa95b98dc38e45c4d917764f43209073b93bf3433c8f6",
+          "redirects": [],
+          "user_agent": "ZOTHEOSResearch/1.0",
+          "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+          "source_id": "chemehuevi-own-site-2026-11-23b",
+          "evidence_receipt": "receipts/2026-11-23b-chemehuevi-identity.json",
+          "receipt_id": "r-fc0eac63c9e82190"
+        }
+      ],
+      "updated_at": "2026-11-23T17:40:17.132948+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "New distinct government profile from its own public sources, with AI-assisted source, identity and respect handoff. Historical stages, archival dates and undated program purposes remain distinct.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-23b-chemehuevi-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-dcfc3cfbb207",
@@ -62507,8 +62550,10 @@
       "region": "us-inclusion-special-scopes",
       "priority": 94,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
-      "allowed_source_ids": [],
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "alaska-afn-own-institutions-2026-11-23b"
+      ],
       "review": {
         "identity": "pending",
         "sources": "pending",
@@ -62525,9 +62570,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://nativefederation.org/about-afn/",
+          "final_url": "https://nativefederation.org/about-afn/",
+          "retrieved_at": "2026-11-23T17:34:16.262519+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 275523,
+          "sha256": "d44ffee6c25a4173e86c644dcbe2650baf3d9eb0e6bb8fc40ca73d3c9e2441b4",
+          "capture_retention": "Measured during local source review. Full factual page captures are excluded from public publication; exact receipts and short evidence remain.",
+          "source_id": "alaska-afn-own-institutions-2026-11-23b",
+          "evidence_receipt": "batches/2026-11-23b-afn-institutions.json",
+          "receipt_id": "r-7647f6f8a36cdc1e"
+        }
+      ],
+      "updated_at": "2026-11-23T17:36:11.067934+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Bounded own-source institutional inventory handoff. AFN membership categories are recorded distinctly, not treated as a complete list of Alaska peoples or governments. Complete typed enumeration remains open under followup-alaska-typed-inventory."
     },
     {
       "task_id": "discover-us-borders-and-territories",
@@ -63880,6 +63941,104 @@
       "updated_at": "2026-11-23T08:39:03.186799+00:00",
       "next_attempt_after": null,
       "note": "This batch links only the existing US Blackfeet Nation government. Existing generic branches fact57c5ae28 and broader aliases require a separate naming-scope review against Nations’ own accounts. Distinct Siksika, Kainai and Piikani governments in Canada must not be merged with the US government. Existing facts and their October8source clocks are preserved, with no corrected relationship inferred from a name match."
+    },
+    {
+      "task_id": "followup-alaska-typed-inventory",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Alaska typed community, government and representative-organization inventory",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "alaska-afn-own-institutions-2026-11-23b",
+        "us-fr-2026"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-23T17:36:11.092468+00:00",
+      "next_attempt_after": null,
+      "note": "Use AFN as an Indigenous-led discovery source, then verify each entity through its own published account and appropriate typed directories. Membership is not all Alaska, and corporations are not automatically governments or peoples. No completeness denominator or identity crosswalk is approved."
+    },
+    {
+      "task_id": "followup-cedarville-constitutional-version",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Cedarville constitutional approval and amendment chronology",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-own-source-history",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_scope",
+      "status": "pending",
+      "allowed_source_ids": [
+        "cedarville-own-site-2026-11-23b"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-23T17:40:17.163998+00:00",
+      "next_attempt_after": null,
+      "note": "NARF labels the mirrored Tribe-authored constitutional text Received2003. Its effective/adoption date and current amendments are unresolved. The published fact explicitly describes that archival text, not present law or current officeholders. Verify the Tribe’s own current public records before making a current governance claim."
+    },
+    {
+      "task_id": "followup-cedarville-services-frequency",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Cedarville assistance-program description scope",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-own-source-history",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_scope",
+      "status": "pending",
+      "allowed_source_ids": [
+        "cedarville-own-site-2026-11-23b"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-23T17:40:17.163998+00:00",
+      "next_attempt_after": null,
+      "note": "The own Services page contains annual and twice-yearly assistance-frequency wording. Amounts, eligibility, application instructions and promised benefits are excluded from this batch; only the undated mission is summarized. A current program detail requires a clear dated own source. This is no urgent-risk or present-entitlement finding."
     }
   ]
 }

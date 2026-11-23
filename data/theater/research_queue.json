@@ -406,6 +406,38 @@
       "reason": "Vision Maker Media links an authorized paid educational distributor. Its complete 64-minute edition is distinct from the 57-minute broadcast catalog. An available complete consumer viewing edition has not been verified.",
       "next": "Verify an authorized complete consumer edition, its viewing access and any permitted embedding before proposing a catalog record. No film or full-film count was added.",
       "build_state": "research-only"
+    },
+    {
+      "id": "rising-voices-hotaninpi",
+      "status": "full-film-candidate",
+      "checked": "2026-11-23",
+      "batch": "research/batches/2026-11-23b-rising-voices.json",
+      "source_urls": [
+        "https://risingvoicesfilm.com/watch-full-film/",
+        "https://risingvoicesfilm.com/",
+        "https://visionmakermedia.org/film-library/rising-voices/",
+        "https://www.youtube.com/watch?v=Wr-jackHWCw"
+      ],
+      "reason": "The official project offers the full film and embeds the co-producer’s exact public YouTube upload; provider embedding status and thumbnail provenance were checked separately.",
+      "next": "Verify generated and live ready-player behavior, actual provider thumbnail and labels. Actual playback, geographic/account access and caption quality remain unverified.",
+      "build_state": "reviewed-candidate"
+    },
+    {
+      "id": "almost-an-island-availability",
+      "title": "Almost an Island",
+      "status": "member-access-edition-deferred",
+      "checked": "2026-11-23",
+      "batch": "research/batches/2026-11-23b-almost-island.json",
+      "source_urls": [
+        "https://visionmakermedia.org/film-library/almost-an-island/",
+        "https://weta.org/watch/shows/almost-island",
+        "https://wetaplus.org/show/almost-island",
+        "https://watch.weta.org/show/almost-island/",
+        "https://watch.weta.org/video/almost-an-island-xlfgol/"
+      ],
+      "reason": "A complete WETA consumer edition is verified but requires PBS member access while signed out. This batch publishes Rising Voices instead; no Almost an Island record or full-film count is added.",
+      "next": "If selected for a later bounded batch, retain the member-access restriction and review official-source-only use. The rejected producer-page read is not bypassed; actual playback and eligibility remain unverified.",
+      "build_state": "research-only"
     }
   ]
 }

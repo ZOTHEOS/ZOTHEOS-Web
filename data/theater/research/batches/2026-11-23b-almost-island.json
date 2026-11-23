@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "prepared_at": "2026-11-23T17:40:32.961440+00:00",
+  "status": "verified-member-edition-deferred",
+  "candidate_id": "almost-an-island-member-edition",
+  "title": "Almost an Island",
+  "catalogue_disposition": "Research only this batch. The free authorized Rising Voices full edition is the selected candidate; this member-gated edition is not added to the catalogue or counted as a new full film.",
+  "edition": {
+    "film_release_year": 2021,
+    "director": "Jonathan VanBallenberghe",
+    "broadcast_catalog_runtime_minutes": 57,
+    "selected_consumer_runtime": "56m 46s",
+    "selected_consumer_duration_seconds": 3406,
+    "watch_url": "https://watch.weta.org/video/almost-an-island-xlfgol/",
+    "station_premiere": "2021-11-02",
+    "station_expiration": "2027-11-02",
+    "provider_flags": {
+      "is_mvod": true,
+      "is_playable": false,
+      "is_playable_explanation": [
+        "mvod_logic"
+      ],
+      "has_captions": true,
+      "can_embed_player": true
+    },
+    "access": "The actual WETA film page identifies the complete consumer edition, but its signed-out metadata blocks playback for member-access logic. It must not be presented as free. Account/member eligibility, geographic access and successful playback are unverified.",
+    "perspective": "WETA and Vision Maker Media describe three generations of the Goodwin Inupiaq family living in Kotzebue, Alaska, observed over four years. This does not represent every Alaska Native community.",
+    "rights_scope": "VMM names APT as distributor. Its broadcast-term and embed metadata do not establish ZOTHEOS artwork or screening permission. A future record should use an official viewing link unless actual embedding scope is resolved.",
+    "caption_scope": "The provider lists closed captions. The caption file, timing and accuracy were not reviewed.",
+    "broadcast_term": [
+      "2021-11-02",
+      "2024-11-01"
+    ],
+    "rebroadcast_end": "2027-11-01",
+    "date_scope": "VMM’s broadcast/rebroadcast dates and WETA’s consumer expiration date are recorded separately; neither is a ZOTHEOS license."
+  },
+  "receipts": [
+    {
+      "url": "https://visionmakermedia.org/film-library/almost-an-island/",
+      "final_url": "https://visionmakermedia.org/film-library/almost-an-island1/",
+      "retrieved_at": "2026-11-23T17:34:54.266293+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 47612,
+      "sha256": "2c74b3ca00ebd6676317db06b4330a0c976d4b6a89e4df602685f5d161aa10e3",
+      "redirects": [
+        {
+          "status": 301,
+          "from_url": "https://visionmakermedia.org/film-library/almost-an-island/",
+          "to_url": "https://visionmakermedia.org/film-library/almost-an-island1/"
+        }
+      ],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-vmm.body.html"
+    },
+    {
+      "url": "https://weta.org/watch/shows/almost-island",
+      "final_url": "https://weta.org/watch/shows/almost-island",
+      "retrieved_at": "2026-11-23T17:34:58.290594+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 76446,
+      "sha256": "bf5aefb70d35caf8ac1c5cb3760b8a0e988643a6d9a9b6c4d520933eb448440a",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-weta.body.html"
+    },
+    {
+      "url": "https://wetaplus.org/show/almost-island",
+      "final_url": "https://wetaplus.org/show/almost-island/",
+      "retrieved_at": "2026-11-23T17:35:42.793705+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 23750,
+      "sha256": "79e9167767ed71490d33b86a97449053328a3dd5ea78e60fe39378da6866d3c1",
+      "redirects": [
+        {
+          "status": 308,
+          "from_url": "https://wetaplus.org/show/almost-island",
+          "to_url": "/show/almost-island/"
+        }
+      ],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-wetaplus-show.body.html"
+    },
+    {
+      "url": "https://watch.weta.org/show/almost-island/",
+      "final_url": "https://watch.weta.org/show/almost-island/",
+      "retrieved_at": "2026-11-23T17:35:53.597739+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 199103,
+      "sha256": "56093d86207ae41bd6d4401a1ba5f7dd45899d91387a7e22d157978ac6455d53",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-watch-weta-show.body.html"
+    },
+    {
+      "url": "https://watch.weta.org/video/almost-an-island-xlfgol/",
+      "final_url": "https://watch.weta.org/video/almost-an-island-xlfgol/",
+      "retrieved_at": "2026-11-23T17:36:20.374438+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 195604,
+      "sha256": "8cfd69e385cc3975a652581021eeb32e9aed7b4a23a455f962944500e5008391",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-watch-weta-film.body.html"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://visionmakermedia.org/robots.txt",
+      "final_url": "https://visionmakermedia.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:33:59.002462+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-vmm-robots.body.txt"
+    },
+    {
+      "url": "https://weta.org/robots.txt",
+      "final_url": "https://weta.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:01.329991+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 2141,
+      "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-weta-robots.body.txt"
+    },
+    {
+      "url": "https://watch.weta.org/robots.txt",
+      "final_url": "https://watch.weta.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:03.714076+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 226,
+      "sha256": "7f8d1d8985e194a077b80a3a33c39a3b22ad291d1a434ae20b4befb5be6e0622",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-watch-weta-robots.body.txt"
+    },
+    {
+      "url": "https://wetaplus.org/robots.txt",
+      "final_url": "https://wetaplus.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:35:22.782174+00:00",
+      "retrieval_method": "http",
+      "http_status": 404,
+      "body_bytes": 17097,
+      "sha256": "84a868193f99398ccc8ce427750a0e5a640b33490b15570130e502fb6cb4cfda",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-wetaplus-robots.body.txt"
+    },
+    {
+      "url": "https://www.almostanislandmovie.com/robots.txt",
+      "final_url": "https://www.almostanislandmovie.com/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:06.138901+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1518,
+      "sha256": "a1a4737ebc87839023e5d156c3a28527f9b5c5a1cba619dca1f27195f75d7f66",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-own-robots.body.txt"
+    }
+  ],
+  "source_limits": [
+    "The WETA+ destination returned a JavaScript title shell, not proof of playback. Its robots endpoint returned404, preserved as an actual response.",
+    "The producer’s content pages were not fetched: automatic approval review rejected their inclusion after interpreting the producer’s robots as restricting AI agents. No identity or URL workaround was attempted.",
+    "The actual WETA consumer listing, not a shop or trailer, establishes the member-gated complete edition. Metadata is not successful playback."
+  ],
+  "pending": [
+    "Owner prioritization of a member-access edition after the selected free full-film addition",
+    "Member/account and geographic eligibility",
+    "Actual playback and caption quality",
+    "Artwork and embedding permission",
+    "Complete audiovisual editorial review"
+  ],
+  "capture_policy": "Every page and robots body is local-only; individual receipts carry capture_retention:local and exact measured hashes.",
+  "crawl_policy": "Permitted broadcaster and VMM paths were read after robots checks; WETA10-second and VMM3-second content pacing were honored. No media file, API endpoint, contact form or account was accessed.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

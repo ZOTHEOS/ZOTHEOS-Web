@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
+  "result": "passed",
+  "reviewed_at_start": "2026-11-23T17:50:11.941827+00:00",
+  "reviewed_at_end": "2026-11-23T17:50:16.070745+00:00",
+  "chrome_version": "157.0.8103.79",
+  "method": "Chrome through Playwright; exact local files served at zotheos.org with committed Vercel headers, all external traffic aborted.",
+  "viewport_pixels": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      844
+    ]
+  ],
+  "page_viewport_checks": 15,
+  "observations": [
+    {
+      "page": "directory",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "cedarville-rancheria-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "chemehuevi-indian-tribe-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "cedarville-rancheria-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "chemehuevi-indian-tribe-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "cedarville-rancheria-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "chemehuevi-indian-tribe-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        }
+      ]
+    }
+  ],
+  "source_pins": {
+    "nations/directory.html": "177a37dc04b0a8befda24b57cf5874761a14936b0c8fe10acd1b6071b763a524",
+    "nations/cedarville-rancheria-us-ca.html": "f826b1a87c999601cf7f4c28ba54e0c6d0666d0ed042967628b5b555802467a1",
+    "nations/chemehuevi-indian-tribe-us-ca.html": "5272d3f1dc74ead2da00515fede0fc2f1283c539353e9189098fd4e9323e49ff",
+    "nations/paths-to-action.html": "20bed7f9c917430abf674190d22ba9530875c72080e834dce075b3226b51fc0f",
+    "theater.html": "cccd2b8b007192318fc86130604ba0aaeb5b6edac398fd5d48b1411d3b39d2fa",
+    "vercel.json": "21c52128d17f3317ec806733c6790c7e4068921131cf757d05861ea1ea2e503e"
+  },
+  "horizontal_overflow": 0,
+  "page_errors": [],
+  "csp_violations": [],
+  "missing_local_assets": [],
+  "external_requests_aborted": [
+    {
+      "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    }
+  ],
+  "external_image_requests_aborted": 39,
+  "external_non_image_requests_aborted": 3,
+  "visual_critique": {
+    "screenshots_inspected": 6,
+    "widths": [
+      390,
+      1440
+    ],
+    "pages": [
+      "Cedarville profile",
+      "Chemehuevi profile",
+      "AFN representation step"
+    ],
+    "result": "The new historical paragraphs, archival receipt year, event dates, source links and actual check dates remain readable. The longer NARF citation wraps across lines without overflow. AFN’s institution categories and private decision-map boundary fit within the phone reading column; desktop chapter navigation remains separate. No material visual defect was observed.",
+    "capture_scope": "Six temporary viewport captures at normal reading positions below fixed navigation; all were inspected and will be removed after review."
+  },
+  "limits": "No physical devices, successful provider playback, loaded thumbnail pixels, account/region eligibility, caption timing or accuracy were tested. The external iframe and image requests were intentionally blocked; DOM configuration does not prove playback.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "visual_reviewed_at": "2026-11-23T17:51:27.144890+00:00",
+  "harness_corrections": [
+    "The initial harness traversed from the player to a distant library disclosure before positioning that summary for the next action. Explicitly scrolling the summary into view and tracing its event target completed desktop keyboard and both phone touch checks. Final events targeted SUMMARY at all three widths. No production change was needed."
+  ],
+  "player_policy_observation": "Rising uses the existing hold-full policy. Its single ready iframe has autoplay=0 and playsinline=1, with the message API and caption preference configured. It retains a normal Play address rather than a muted page-started preview address. Scrolling the player into view does not change that address. Provider messages, successful playback and actual sound were not tested.",
+  "temporary_screenshot_pins": {
+    "afn-paths-1440.png": "511168644a0396a2e4170b7f89a28e312491c248ffbc445aefebc1a2567b2c23",
+    "afn-paths-390.png": "86fd551f5f61087cb9e0b262e035814a2f23025af7b51205965fa5d07a05c25d",
+    "cedarville-rancheria-us-ca-1440.png": "dc03f1f232ecc8ce0e0466f7b4137d37b137dbb5bf3b756ce64f584044e6af6b",
+    "cedarville-rancheria-us-ca-390.png": "917ba4ff6a869e6c4ab1dbedf9fdf2c3417dc87981d4d7ba7fa576a5c8e2f1d3",
+    "chemehuevi-indian-tribe-us-ca-1440.png": "a2857c97859386f7f611638f71441b872282977c46a4b9770c37226cd916df38",
+    "chemehuevi-indian-tribe-us-ca-390.png": "5cbeaa685753693a0f27593c037d5a97bd97c026b4fae2229fd6c98c36d06c6e"
+  }
+}
