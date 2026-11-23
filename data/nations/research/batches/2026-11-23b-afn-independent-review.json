@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T17:39:31.992852+00:00",
+  "review_kind": "Independent AI-assisted AFN source-inventory, institutional categories, scope and Paths exercise cross-review",
+  "result": "passed",
+  "source_body_checks": [
+    {
+      "url": "https://nativefederation.org/about-afn/",
+      "body_bytes": 275523,
+      "sha256": "d44ffee6c25a4173e86c644dcbe2650baf3d9eb0e6bb8fc40ca73d3c9e2441b4",
+      "result": "matched local review capture"
+    },
+    {
+      "url": "https://nativefederation.org/history/",
+      "body_bytes": 169931,
+      "sha256": "8e0b72fe5ed7cdefd1f2fb37232a31ce6bdfa9c0b90a29cee88d529982e935ba",
+      "result": "matched local review capture"
+    }
+  ],
+  "checks": [
+    "The two full factual captures match their exact receipt lengths and hashes; the short anchors and reported category counts match source text.",
+    "The public copy now retains AFN’s actual federally recognized tribes category and regional nonprofit or Tribal consortium scope. No individual recognition status or government identity is inferred from membership.",
+    "The 192/152/11/11 observations remain internal, undated page values, without a statewide coverage denominator, unique-member total or completeness claim.",
+    "Own-reported October 1966 and early 1967 history is recorded for research only. Differing 400/250 conference accounts remain unresolved and no attendance figure is published.",
+    "The private decision-map exercise distinguishes institutions, their claimed authority, federation membership, corporate shareholding and Tribal citizenship. It is nonpartisan and gives no participation eligibility, legal representation, ownership or consent finding.",
+    "Only the intended representation step text/source IDs, chapter source IDs and appended verification sentence, plus the single new source, change in Paths. Prior examples, capability copy, all other chapters and earlier sources are preserved.",
+    "The source-inventory task hands off to needs_review; the typed-inventory follow-up remains pending. The source is typed as a representative organization, with no stated count or as-of year.",
+    "No Alaska directory crosswalk or canonical Alaska profile is added or changed."
+  ],
+  "robot_review_limit": "The dated robots receipt precedes both factual reads. Its response body was not retained for this independent check, so its recorded 24-byte hash was not independently recomputed. No additional source request was made.",
+  "source_pins": {
+    "data/nations/research/batches/2026-11-23b-afn-institutions.json": "19c65de002bb59508fd44be059ea51be956180627d6ddb7245720dd292edd4ce",
+    "data/nations/pathways.json": "7df70d2f22ae9f3b5a3b484ac843628bef7f0c4ca62a9e7498f5710dfa6e94dc",
+    "data/nations/research/receipts/2026-11-23b-afn-about.receipt.json": "5e3c726e6022aa7ff523f7b081ba8c425107e78622aca36e979b14a6749fe726",
+    "data/nations/research/receipts/2026-11-23b-afn-history.receipt.json": "7422cc55dccaa15ca26d4332dc3e9abdefa8d70c2b32d7b079fd73b8299fbbb4",
+    "data/nations/research/receipts/2026-11-23b-afn-robots.receipt.json": "6f2dd2e5d13e5b7f3d6867cb0d39b5460e41f2a8965436b9a8a3ee8aaf81697a"
+  },
+  "scope_projection_pins": {
+    "afn_directory_source_sha256": "a13dd664b1e0c50f3d8a951a2e96a48e386d76243b82f36261de74eb20d98815",
+    "afn_inventory_tasks_sha256": "5ad4561391a0103a2a1034978b7890abca566c599582bcac32ae2e70e02253bb"
+  },
+  "capture_retention": "Factual source captures remain temporary local review files for root cleanup before publication; exact receipts, short anchors and original summaries are retained.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "contract_adjustment_reviewed_at": "2026-11-23T17:45:16.128211+00:00",
+  "contract_adjustment": "The new Paths source omits the unknown as_of property to follow the existing optional calendar-field contract. It retains its actual November23 review date. No publication or effective year is invented; the research batch still records the unknown publication date explicitly."
+}

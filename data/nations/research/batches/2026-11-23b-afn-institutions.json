@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "review_kind": "AI-assisted Indigenous-led Alaska source discovery and institution-scope research",
+  "source_id": "alaska-afn-own-institutions-2026-11-23b",
+  "task_id": "discover-us-alaska-communities",
+  "receipts": [
+    {
+      "url": "https://nativefederation.org/about-afn/",
+      "final_url": "https://nativefederation.org/about-afn/",
+      "retrieved_at": "2026-11-23T17:34:16.262519+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 275523,
+      "sha256": "d44ffee6c25a4173e86c644dcbe2650baf3d9eb0e6bb8fc40ca73d3c9e2441b4",
+      "capture_retention": "Measured during local source review. Full factual page captures are excluded from public publication; exact receipts and short evidence remain."
+    },
+    {
+      "url": "https://nativefederation.org/history/",
+      "final_url": "https://nativefederation.org/history/",
+      "retrieved_at": "2026-11-23T17:34:19.515162+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 169931,
+      "sha256": "8e0b72fe5ed7cdefd1f2fb37232a31ce6bdfa9c0b90a29cee88d529982e935ba",
+      "capture_retention": "Measured during local source review. Full factual page captures are excluded from public publication; exact receipts and short evidence remain."
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://nativefederation.org/robots.txt",
+      "final_url": "https://nativefederation.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:13.010168+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 24,
+      "sha256": "e1f21c9aa28d50ca112ed357f34b67c550597effd4d42fd55b4e27300dd8f9c1",
+      "capture_retention": "Measured during local source review. Full factual page captures are excluded from public publication; exact receipts and short evidence remain."
+    }
+  ],
+  "event_dates": {
+    "organization_conference": "1966-10",
+    "own_reported_incorporation": "early 1967",
+    "about_page_publication_date": null
+  },
+  "observations": [
+    {
+      "url": "https://nativefederation.org/about-afn/",
+      "original_summary": "AFN’s own membership account lists federally recognized tribes, village corporations, regional corporations, and regional nonprofit or Tribal consortium bodies. This is the federation’s organizational scope; these categories are not interchangeable entities or a complete statewide Indigenous-identity denominator.",
+      "evidence": "tribes, 152 village corporations, 11 regional corporations",
+      "observed_membership_counts": {
+        "federally_recognized_tribes": 192,
+        "village_corporations": 152,
+        "regional_corporations": 11,
+        "regional_nonprofit_and_tribal_consortiums": 11
+      },
+      "counts_scope": "Undated page values observed on the actual check date. Not effective dates, independent current-status findings, unique-member totals or coverage denominators."
+    },
+    {
+      "url": "https://nativefederation.org/history/",
+      "original_summary": "AFN’s own history describes an October 1966 statewide conference and nonprofit incorporation in early 1967. It discusses a coalition of institutions; neither its origin account nor later corporate structures establish a single government for all Alaska Native peoples.",
+      "evidence": "non-profit articles of incorporation"
+    }
+  ],
+  "pathways_change": {
+    "chapter": "representation-and-power",
+    "step": "Name The Decision And The Seat",
+    "source_id": "afn-institutions",
+    "text": "Separate a public-election goal from a Nation’s own governance process. For the issue you choose, identify the council, school board, agency, legislature or other body with actual authority. Write the decision sought, who is affected and how representatives will report back. Verify current eligibility, deadlines and voting rules through official channels. In Alaska, AFN’s own membership account lists federally recognized tribes, village corporations, regional corporations, and regional nonprofit or Tribal consortium bodies. In your private decision map, identify which institution issued each record and the authority it claims. Do not treat federation membership, corporate shareholding and Tribal citizenship as interchangeable.",
+    "verify_added": "AFN’s membership account is not a complete inventory of Alaska Native peoples or governments. Verify the relevant Nation’s own account and the specific institution’s public rules before assigning decision-making authority.",
+    "scope": "Nonpartisan private reading and decision-map preparation. No election eligibility, legal representation, corporate right, Tribal citizenship, consent or current authority is determined."
+  },
+  "coverage_limits": [
+    "No directory entities or canonical profiles are added from this source inventory.",
+    "A federation, member government, village corporation, regional corporation, nonprofit, consortium, community and broader people remain different units. No government-to-corporation or people-to-member crosswalk is approved.",
+    "The About page has no established publication date, and current officeholder names are excluded.",
+    "The history page uses more than400 in its opening conference account and over250 in its First Meeting account. These may concern different scopes; no attendee count is published.",
+    "Alaska community, organization and people enumeration remains incomplete and is carried in a separate pending follow-up."
+  ],
+  "capture_retention": "Full page bodies are temporary local review captures, not public repository artifacts. Exact HTTP receipts, measured hashes, short evidence and original summaries are retained.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

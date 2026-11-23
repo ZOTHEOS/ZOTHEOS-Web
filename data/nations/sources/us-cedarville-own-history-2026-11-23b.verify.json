@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-23",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-23T17:36:39.523598+00:00",
+    "evidence_receipt": "batches/2026-11-23b-cedarville-own-history.json",
+    "review_kind": "AI-assisted own-source, archival-text scope and respect research"
+  },
+  "results": [
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The own About page dates the Rancheria’s formation to 1914. This is an attributed administrative history, not an origin date for the Northern Paiute people."
+    },
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The own account describes ancestral lands across parts of three states. It establishes no complete boundary, exclusive title, present ownership or authority over other governments."
+    },
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The constitutional text is labeled Received: 2003 by NARF. That is the archive’s receipt year, not an established adoption, approval, effective or amendment date. The sentence describes that text, not a verified current governing arrangement or present officeholder."
+    },
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The Services page’s mission is used without a publication date or current capacity, eligibility, payment, deadline, referral success, protection outcome or service guarantee."
+    }
+  ],
+  "names": [
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The government names itself Cedarville Rancheria on its own homepage and About page. The federal name and saved BIA406 corroborate that government and website. It is kept distinct from the broader Northern Paiute people and neighboring Alturas government; no broader representation is inferred."
+    }
+  ]
+}

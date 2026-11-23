@@ -893,13 +893,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "cedarville-rancheria-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-23b-cedarville-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://cedarvillerancheria.com/",
+      "own_published_name": "Cedarville Rancheria",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-23b-cedarville-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-d3e7006ab6a4",
@@ -913,13 +922,22 @@
       "directory_group": "contiguous",
       "recognition_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
       "recognition_as_of": "2026-01-30",
-      "profile_status": "directory_only",
+      "profile_status": "researched_profile",
       "registry_crosswalk": {
-        "status": "unreviewed",
-        "registry_id": null,
-        "candidates": []
+        "status": "confirmed",
+        "registry_id": "chemehuevi-indian-tribe-us-ca",
+        "candidates": [],
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-23b-chemehuevi-identity.json",
+        "review_kind": "Explicit source-backed identity review"
       },
-      "official_url": null
+      "official_url": "https://chemehuevi.org/",
+      "own_published_name": "Chemehuevi Indian Tribe",
+      "official_url_review": {
+        "status": "verified",
+        "reviewer": "ZOTHEOS",
+        "evidence_receipt": "receipts/2026-11-23b-chemehuevi-identity.json"
+      }
     },
     {
       "directory_id": "us-fed-dcfc3cfbb207",

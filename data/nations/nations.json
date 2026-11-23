@@ -1,8 +1,8 @@
 {
   "version": "1",
   "generated": "2026-11-23",
-  "count": 499,
-  "facts": 1472,
+  "count": 501,
+  "facts": 1480,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 45
+    "us-west-pacific": 47
   },
   "nations": [
     {
@@ -32526,6 +32526,164 @@
             "accessed": "2026-11-23"
           },
           "evidence": "work with the San Diego Botanic Garden",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cedarville-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Cedarville Rancheria",
+      "also": [],
+      "pronounce": null,
+      "lands": "Surprise Valley, Modoc County, northeastern California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://cedarvillerancheria.com/",
+      "name_source_url": "https://cedarvillerancheria.com/",
+      "facts": [
+        {
+          "id": "cedarville-rancheria-us-ca-5d161a7a",
+          "text": "The Rancheria’s own history dates its formation to 1914.",
+          "kind": "history",
+          "as_of": "1914",
+          "source": {
+            "title": "About",
+            "publisher": "Cedarville Rancheria",
+            "url": "https://cedarvillerancheria.com/about/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "The Rancheria was formed in 1914",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "cedarville-rancheria-us-ca-2aee9ab8",
+          "text": "The Rancheria’s own account places its members’ ancestral lands in areas of California, Nevada and Oregon.",
+          "kind": "land",
+          "as_of": null,
+          "source": {
+            "title": "About",
+            "publisher": "Cedarville Rancheria",
+            "url": "https://cedarvillerancheria.com/about/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "are spread throughout areas of",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "cedarville-rancheria-us-ca-e7b112ec",
+          "text": "In the constitutional text NARF received in 2003, the Community Council elects an executive committee.",
+          "kind": "governance",
+          "as_of": "2003",
+          "source": {
+            "title": "Constitution and Bylaws of the Cedarville Rancheria",
+            "publisher": "Cedarville Rancheria; hosted by NARF National Indian Law Library",
+            "url": "https://narf.org/nill/constitutions/cedarville/cedarvlconst.html",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "community council shall elect from its",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "cedarville-rancheria-us-ca-6507f43d",
+          "text": "The Social Services Program states a mission of supporting Tribal members’ self-sufficiency and family stability.",
+          "kind": "today",
+          "as_of": null,
+          "source": {
+            "title": "Services",
+            "publisher": "Cedarville Rancheria",
+            "url": "https://cedarvillerancheria.com/services/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "achieving self-sufficiency and family stability",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "region": "us-west-pacific",
+      "name": "Chemehuevi Indian Tribe",
+      "also": [],
+      "pronounce": null,
+      "lands": "Chemehuevi Valley, San Bernardino County, California, along the Colorado River",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://chemehuevi.org/",
+      "name_source_url": "https://chemehuevi.org/",
+      "facts": [
+        {
+          "id": "chemehuevi-indian-tribe-us-ca-2f4d551f",
+          "text": "The Tribe’s Attorney page dates the office’s establishment by contract to 1978 and its creation in Tribal law under the Administrative Code to 2000.",
+          "kind": "history",
+          "as_of": "2000",
+          "source": {
+            "title": "Tribal Attorney",
+            "publisher": "Chemehuevi Indian Tribe",
+            "url": "https://chemehuevi.org/tribal-attorney",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "first established by contract in 1978",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "chemehuevi-indian-tribe-us-ca-d8fd3dc6",
+          "text": "The Council page’s purpose statement links development of the Reservation and its people to management by the Chemehuevi Indian Tribe.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Tribal Council",
+            "publisher": "Chemehuevi Indian Tribe",
+            "url": "https://chemehuevi.org/tribal-council",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "under the management of the Chemehuevi",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "chemehuevi-indian-tribe-us-ca-a42f4340",
+          "text": "The Cultural Center describes elders and culture bearers contributing to the education of younger Chemehuevi generations.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "Cultural Center",
+            "publisher": "Chemehuevi Indian Tribe",
+            "url": "https://chemehuevi.org/cultural-center",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "elders and culture bearers contribute",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "chemehuevi-indian-tribe-us-ca-7a1f2759",
+          "text": "The Cultural Center lists Chemehuevi language classes, language revitalization and preservation among its services.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Cultural Center",
+            "publisher": "Chemehuevi Indian Tribe",
+            "url": "https://chemehuevi.org/cultural-center",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "Language Revitalization and Preservation",
           "status": "verified",
           "checked": "2026-11-23",
           "last_verified": "2026-11-23"

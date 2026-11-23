@@ -1,0 +1,68 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-23T17:36:39.523598+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity research",
+  "directory_id": "us-fed-65f53e1a524a",
+  "registry_id": "cedarville-rancheria-us-ca",
+  "own_published_name": "Cedarville Rancheria",
+  "official_url": "https://cedarvillerancheria.com/",
+  "own_name_source": {
+    "url": "https://cedarvillerancheria.com/",
+    "final_url": "https://cedarvillerancheria.com/",
+    "retrieved_at": "2026-11-23T17:34:06.596474+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 131453,
+    "sha256": "b2fbc24b25b75a8698c8709ae9f0a3e792b0ff30e9579390757f75af6c0661de",
+    "redirects": [],
+    "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+    "local_capture_at_review": {
+      "filename": "home.html",
+      "publicly_retained": false
+    }
+  },
+  "own_history_source": {
+    "url": "https://cedarvillerancheria.com/about/",
+    "final_url": "https://cedarvillerancheria.com/about/",
+    "retrieved_at": "2026-11-23T17:34:09.212898+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 124012,
+    "sha256": "eb4b1d084de7f72644cab4c6cd5c9c110687ceda1c3e3d78a335c24f1e90ebcc",
+    "redirects": [],
+    "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+    "local_capture_at_review": {
+      "filename": "about.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-23T17:34:09.728345+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "capture_retention": "Measured during local source review. Full source bodies are not publicly retained; exact response metadata, hashes and short evidence remain.",
+    "local_capture_at_review": {
+      "filename": "federal.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 406,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://cedarvillerancheria.com/",
+    "component": "Tribe"
+  },
+  "identity_scope": "The government names itself Cedarville Rancheria on its own homepage and About page. The federal name and saved BIA406 corroborate that government and website. It is kept distinct from the broader Northern Paiute people and neighboring Alturas government; no broader representation is inferred.",
+  "batch": "batches/2026-11-23b-cedarville-own-history.json",
+  "capture_retention": "Full factual bodies are local temporary review captures only. They are excluded from the public PR; individual exact retrieval receipts, hashes, original concise summaries and short anchors are retained.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

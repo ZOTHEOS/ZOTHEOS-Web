@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "prepared_at": "2026-11-23T17:39:53.491396+00:00",
+  "status": "full-film-candidate",
+  "review_kind": "AI-assisted source, edition, distribution, provider embedding and perspective review",
+  "record": {
+    "id": "rising-voices-hotaninpi",
+    "title": "Rising Voices / Hótȟaŋiŋpi",
+    "year": 2015,
+    "year_scope": "Original film release year stated by the project and Vision Maker Media. The official YouTube full-film edition was posted February 21, 2016.",
+    "runtime": "56 min · YouTube Edition",
+    "credits": "Directed by Lawrence Hott and Diane Garey. Produced by Florentine Films/Hott Productions in association with The Language Conservancy.",
+    "publisher": "Florentine Films/Hott Productions / The Language Conservancy",
+    "viewing": "full-film",
+    "youtube_kind": "full-film",
+    "form": "documentary",
+    "region": "north-america",
+    "location": "Lakota communities, United States",
+    "synopsis": "Lakota speakers, teachers and families work to carry their language across generations. Historical context and short films by Lakota artists explore learning, identity and language renewal.",
+    "perspective": "Features Lakota speakers, teachers and families, with short films by Lakota filmmakers, within a Florentine/Hott production with The Language Conservancy. The participants’ perspectives are situated in the 2015 film.",
+    "availability": "The film project offers this co-producer YouTube upload as the full film for public streaming. YouTube lists English (United States) and automatic English captions. Playback, regional access and caption quality are unverified.",
+    "content_note": "Discusses forced assimilation, suppression of Indigenous languages and language loss.",
+    "topics": [
+      "language",
+      "continuity"
+    ],
+    "watch_url": "https://www.youtube.com/watch?v=Wr-jackHWCw",
+    "youtube_id": "Wr-jackHWCw",
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "thumbnail_url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+    "thumbnail_source": "https://www.youtube.com/watch?v=Wr-jackHWCw",
+    "sources": [
+      {
+        "url": "https://risingvoicesfilm.com/watch-full-film/",
+        "title": "Watch Full Film",
+        "publisher": "Rising Voices film project",
+        "checked_at": "2026-11-23T17:37:26.380068+00:00",
+        "http_status": 200,
+        "sha256": "110f246a6e695a81dbcdfbb018291fe7e6c94d5c543e94601e953769f57250e3",
+        "checked": "2026-11-23"
+      },
+      {
+        "url": "https://risingvoicesfilm.com/",
+        "title": "Rising Voices / Hótȟaŋiŋpi",
+        "publisher": "Rising Voices film project",
+        "checked_at": "2026-11-23T17:37:29.082249+00:00",
+        "http_status": 200,
+        "sha256": "186652d60bc574ed71f5e829cac1ea3288c877123064e8d7e17592209f35d603",
+        "checked": "2026-11-23"
+      },
+      {
+        "url": "https://visionmakermedia.org/film-library/rising-voices/",
+        "title": "Rising Voices",
+        "publisher": "Vision Maker Media",
+        "checked_at": "2026-11-23T17:38:20.300653+00:00",
+        "http_status": 200,
+        "sha256": "73a35e9c9a5fc41bbd0f40719c14d91451fd727a263f102225d45a54341be75c",
+        "checked": "2026-11-23"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Wr-jackHWCw",
+        "title": "Rising Voices / Hótȟaŋiŋpi - Revitalizing the Lakota Language",
+        "publisher": "The Language Conservancy",
+        "checked_at": "2026-11-23T17:37:32.025831+00:00",
+        "http_status": 200,
+        "sha256": "d9adc064fa661299db0cdf27d4455c2f717b4707aeb634111d7d42da0266848d",
+        "checked": "2026-11-23"
+      }
+    ]
+  },
+  "edition": {
+    "duration_seconds_video_details": 3403,
+    "duration_seconds_microformat": 3404,
+    "runtime_scope": "The two provider fields differ by one second (3403 and3404). Display uses56min for the YouTube edition; the rounded broadcast catalogue runtime is57min.",
+    "film_release_year": 2015,
+    "provider_upload_date": "2016-02-21T11:42:30-08:00",
+    "broadcast_catalog_runtime_minutes": 57,
+    "broadcast_term": [
+      "2023-10-31",
+      "2027-10-31"
+    ],
+    "broadcast_term_scope": "VMM’s dated broadcast term describes station distribution, not a ZOTHEOS screening or rehosting license.",
+    "provider_channel": "The Language Conservancy",
+    "provider_channel_id": "UCB18567ejA9U_p52Vw99SqA",
+    "provider_flags": {
+      "playability_status": "OK",
+      "playable_in_embed": true,
+      "is_private": false,
+      "is_unlisted": false,
+      "has_ypc_metadata": false
+    },
+    "caption_tracks": [
+      {
+        "name": "English (auto-generated)",
+        "language_code": "en",
+        "kind": "asr",
+        "scope": "Provider-listed only; text, timing and accuracy unreviewed."
+      },
+      {
+        "name": "English (United States)",
+        "language_code": "en-US",
+        "kind": "not-marked-asr",
+        "scope": "Provider-listed only; text, timing and accuracy unreviewed."
+      }
+    ],
+    "geographic_scope": "YouTube metadata lists many countries including US. No worldwide, account, device or regional playback guarantee is inferred.",
+    "distribution_scope": "The project’s actual Watch Full Film page explicitly offers public YouTube streaming and embeds exact videoWr-jackHWCw. The project identifies The Language Conservancy as an associated producer, matching the actual upload channel.",
+    "embedding_scope": "The official project publishes an external YouTube iframe for this exact complete film, and the provider’s public page reports playableInEmbed:true with an embed URL. Use only the official player through the existing Theater contract; no download, proxy, re-upload, public-screening or derivative-art permission is inferred.",
+    "playback_scope": "Actual audiovisual playback and complete editorial review were not performed. Provider metadata is not evidence of successful playback."
+  },
+  "receipts": [
+    {
+      "url": "https://risingvoicesfilm.com/watch-full-film/",
+      "final_url": "https://risingvoicesfilm.com/watch-full-film/",
+      "retrieved_at": "2026-11-23T17:37:26.380068+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 84362,
+      "sha256": "110f246a6e695a81dbcdfbb018291fe7e6c94d5c543e94601e953769f57250e3",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-own-full.body.html"
+    },
+    {
+      "url": "https://risingvoicesfilm.com/",
+      "final_url": "https://risingvoicesfilm.com/",
+      "retrieved_at": "2026-11-23T17:37:29.082249+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 83321,
+      "sha256": "186652d60bc574ed71f5e829cac1ea3288c877123064e8d7e17592209f35d603",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-own-home.body.html"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Wr-jackHWCw",
+      "final_url": "https://www.youtube.com/watch?v=Wr-jackHWCw",
+      "retrieved_at": "2026-11-23T17:37:32.025831+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1481899,
+      "sha256": "d9adc064fa661299db0cdf27d4455c2f717b4707aeb634111d7d42da0266848d",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-yt-watch.body.html"
+    },
+    {
+      "url": "https://risingvoicesfilm.com/the-project/partners/",
+      "final_url": "https://risingvoicesfilm.com/the-project/partners/",
+      "retrieved_at": "2026-11-23T17:38:16.094667+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 86902,
+      "sha256": "78c21ad5fb159755dc8e52818d839be55d90cfb7a0f9f4dcd8c8e25ca52e3875",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-own-crew.body.txt"
+    },
+    {
+      "url": "https://visionmakermedia.org/film-library/rising-voices/",
+      "final_url": "https://visionmakermedia.org/film-library/rising-voices/",
+      "retrieved_at": "2026-11-23T17:38:20.300653+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 47827,
+      "sha256": "73a35e9c9a5fc41bbd0f40719c14d91451fd727a263f102225d45a54341be75c",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-vmm.body.txt"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://risingvoicesfilm.com/robots.txt",
+      "final_url": "https://risingvoicesfilm.com/robots.txt",
+      "retrieved_at": "2026-11-23T17:37:01.020010+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 78,
+      "sha256": "0221ca33afda3959e81ac377e5aa591667a78ef3c314e1f29fbe53948c12e98a",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-own-robots.body.txt"
+    },
+    {
+      "url": "https://www.youtube.com/robots.txt",
+      "final_url": "https://www.youtube.com/robots.txt",
+      "retrieved_at": "2026-11-23T17:37:03.285247+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/yt-robots.body.txt"
+    },
+    {
+      "url": "https://i.ytimg.com/robots.txt",
+      "final_url": "https://i.ytimg.com/robots.txt",
+      "retrieved_at": "2026-11-23T17:38:23.609092+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/rising-voices-image-robots.body.txt"
+    },
+    {
+      "url": "https://visionmakermedia.org/robots.txt",
+      "final_url": "https://visionmakermedia.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:33:59.002462+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-23b/almost-island-vmm-robots.body.txt"
+    }
+  ],
+  "evidence_locators": [
+    {
+      "receipt": "own-full",
+      "locator": "Main article and iframe",
+      "anchor": "available for public streaming on YouTube",
+      "supports": "Explicit complete-film publication and exact official YouTube embed."
+    },
+    {
+      "receipt": "own-home",
+      "locator": "The Project",
+      "anchor": "Released in 2015",
+      "supports": "Project year, production company and association with The Language Conservancy."
+    },
+    {
+      "receipt": "vmm",
+      "locator": "Director and catalogue metadata",
+      "anchor": "Lawrence Hott & Diane Garey",
+      "supports": "Directors,57-minute broadcast catalogue and2015release; synopsis credits Lakota filmmakers."
+    },
+    {
+      "receipt": "yt-watch",
+      "locator": "ytInitialPlayerResponse",
+      "supports": "Exact video ID/title/channel, duration fields, embedding flags, captions listing and supplied thumbnail URL."
+    }
+  ],
+  "thumbnail_review": {
+    "provider_url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+    "checked_at": "2026-11-23T17:39:02.854773+00:00",
+    "http_method": "HEAD",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "content_length": 137683,
+    "body_bytes_read": 0,
+    "redirects": [],
+    "provenance": "Exact maximum-resolution thumbnail URL supplied in the public official YouTube edition’s videoDetails and microformat metadata.",
+    "display": "Official provider thumbnail through the existing Theater YouTube card contract; no image rehosting.",
+    "scope": "This verifies the provider URL and headers, not copyright ownership independent of the co-producer posting or any permission to re-upload or modify artwork."
+  },
+  "capture_policy": "Every fetched HTML and robots body is retained only in a local scoped scratch folder for exact-source review. Each receipt marks capture_retention:local; factual page bodies are excluded from the proposed public repository changes.",
+  "crawl_policy": "Robots checks preceded content reads. The film project and YouTube allowed the cited public paths; no private account, API, caption-download or media-stream endpoint was fetched. Vision Maker Media’s three-second delay was honored.",
+  "pending": [
+    "Actual provider playback and geographic/account/device eligibility",
+    "Caption text, timing and accuracy",
+    "Complete audiovisual editorial review"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "root_source_review": {
+    "reviewed_at": "2026-11-23T17:42:14.315956+00:00",
+    "kind": "AI-assisted official-project, publisher and exact provider-response cross-review",
+    "observations": [
+      "The own project explicitly offers public streaming and embeds exact Wr-jackHWCw; co-producer channel identity is verified separately.",
+      "The official publisher confirms the directors,2015release,57-minute broadcast catalogue and Lakota short-film contributions.",
+      "The provider response separately identifies3403/3404seconds,2016upload,playabilityOK,embeddingenabledandcaptiontypes. No playback or global access is inferred."
+    ],
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  }
+}

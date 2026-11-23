@@ -1,0 +1,72 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-23T17:38:43.330928+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity research",
+  "directory_id": "us-fed-d3e7006ab6a4",
+  "registry_id": "chemehuevi-indian-tribe-us-ca",
+  "own_published_name": "Chemehuevi Indian Tribe",
+  "official_url": "https://chemehuevi.org/",
+  "own_name_source": {
+    "url": "https://chemehuevi.org/",
+    "final_url": "https://chemehuevi.org/",
+    "retrieved_at": "2026-11-23T17:34:16.615551+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 206452,
+    "sha256": "8b767b4c8717ac9f5d6fa95b98dc38e45c4d917764f43209073b93bf3433c8f6",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-home.body.html",
+      "publicly_retained": false
+    }
+  },
+  "own_government_scope_source": {
+    "url": "https://chemehuevi.org/tribal-council",
+    "final_url": "https://chemehuevi.org/tribal-council",
+    "retrieved_at": "2026-11-23T17:34:52.557902+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 182251,
+    "sha256": "9294cf640f0956eb400b810e34db4264925ab088dffefccda627c1dc07687c88",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-council.body.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "federal_directory_receipt": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-23T17:35:38.906689+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-federal.body.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 548,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://chemehuevi.org/",
+    "tribefullname": "Chemehuevi Indian Tribe of the Chemehuevi Reservation, California"
+  },
+  "scope_note": "The current own homepage identifies Chemehuevi Indian Tribe. Its Council mission locates Tribal lands in Chemehuevi Valley, San Bernardino County, along the Colorado River. The federal notice and saved BIA548 corroborate this distinct government and website. Broader Chemehuevi and Southern Paiute peoples and the separate Colorado River Indian Tribes government are not merged into this profile.",
+  "batch": "batches/2026-11-23b-chemehuevi-own-history.json",
+  "capture_retention": "Full factual HTML captures were read and hashed during local review and are local only, excluded from public publication. Exact URL/status/time/byte-count/hash receipts, short evidence anchors and original summaries are retained; robots configuration captures may remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

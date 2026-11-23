@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-23",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-23T17:38:43.330928+00:00",
+    "evidence_receipt": "batches/2026-11-23b-chemehuevi-own-history.json",
+    "review_kind": "AI-assisted own-source, chronology, identity and respect research"
+  },
+  "results": [
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The source explicitly separates the 1978 contract from creation by Tribal law through the Administrative Code in 2000. Neither date is a people’s origin, a present-law determination or a claim about current staffing."
+    },
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "This is the Council page’s undated statement of purpose. The underlying Constitution’s full text and current legal effect were not independently reviewed; no officeholder, current policy result or recognition finding is inferred."
+    },
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The public mission describes intergenerational education. No age, enrollment, current staffing, program start date, measured outcome or cultural-use permission is inferred."
+    },
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The undated public services list supports this summary. It establishes no present schedule, enrollment eligibility, teaching content, fluency outcome or permission to reproduce restricted knowledge."
+    }
+  ],
+  "names": [
+    {
+      "id": "chemehuevi-indian-tribe-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The current own homepage identifies Chemehuevi Indian Tribe. Its Council mission locates Tribal lands in Chemehuevi Valley, San Bernardino County, along the Colorado River. The federal notice and saved BIA548 corroborate this distinct government and website. Broader Chemehuevi and Southern Paiute peoples and the separate Colorado River Indian Tribes government are not merged into this profile."
+    }
+  ]
+}

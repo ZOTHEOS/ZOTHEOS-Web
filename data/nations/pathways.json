@@ -86,6 +86,13 @@
       "publisher": "Native CDFI Network",
       "url": "https://nativecdfi.net/",
       "reviewed": "2026-10-16"
+    },
+    {
+      "id": "afn-institutions",
+      "title": "About AFN",
+      "publisher": "Alaska Federation of Natives",
+      "url": "https://nativefederation.org/about-afn/",
+      "reviewed": "2026-11-23"
     }
   ],
   "chapters": [
@@ -211,11 +218,12 @@
         },
         {
           "title": "Name The Decision And The Seat",
-          "text": "Separate a public-election goal from a Nation’s own governance process. For the issue you choose, identify the council, school board, agency, legislature or other body with actual authority. Write the decision sought, who is affected and how representatives will report back. Verify current eligibility, deadlines and voting rules through official channels.",
+          "text": "Separate a public-election goal from a Nation’s own governance process. For the issue you choose, identify the council, school board, agency, legislature or other body with actual authority. Write the decision sought, who is affected and how representatives will report back. Verify current eligibility, deadlines and voting rules through official channels. In Alaska, AFN’s own membership account lists federally recognized tribes, village corporations, regional corporations, and regional nonprofit or Tribal consortium bodies. In your private decision map, identify which institution issued each record and the authority it claims. Do not treat federation membership, corporate shareholding and Tribal citizenship as interchangeable.",
           "scope": "reader-controlled",
           "source_ids": [
             "native-voting",
-            "un-declaration"
+            "un-declaration",
+            "afn-institutions"
           ]
         },
         {
@@ -230,7 +238,8 @@
       ],
       "verify": [
         "National representation does not replace a Nation’s own authority or consent. Who represents a Nation is for its own procedures, not ZOTHEOS, to decide.",
-        "Check current election and participation requirements. This guide is nonpartisan public information, not campaign or legal representation."
+        "Check current election and participation requirements. This guide is nonpartisan public information, not campaign or legal representation.",
+        "AFN’s membership account is not a complete inventory of Alaska Native peoples or governments. Verify the relevant Nation’s own account and the specific institution’s public rules before assigning decision-making authority."
       ],
       "deliverable": "A decision map connecting one issue to the institution that can act, the participation route, a verified date and a public accountability question.",
       "plate": {
@@ -246,7 +255,8 @@
       "reflection": "Would a person at the table have a meaningful say, resources and accountability to the people affected?",
       "source_ids": [
         "native-voting",
-        "un-declaration"
+        "un-declaration",
+        "afn-institutions"
       ],
       "examples": [
         {

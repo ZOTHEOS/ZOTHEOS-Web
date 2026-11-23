@@ -1,53 +1,56 @@
 {
-  "version": 17,
-  "prepared_at": "2026-11-23T08:52:58.154943+00:00",
+  "version": 18,
+  "prepared_at": "2026-11-23T17:52:29.415885+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "78c9df0531a3a1260914d15a880c9da66c470799",
-    "version": 16,
+    "commit": "c0428f0d79a071300b40156ce3f71022949073b4",
+    "version": 17,
     "catalogue_sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce"
   },
   "catalogue": {
-    "sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
-    "titles": 242,
-    "configured_players": 224,
+    "sha256": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443",
+    "titles": 243,
+    "configured_players": 225,
     "source_only": 18,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 29,
+      "full-film": 30,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
       "trailer": 50
-    },
-    "changed_in_this_batch": false
+    }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-23-warrior-women.json",
-    "sha256": "f73c027247fcd9bebf4fc93a0706102bdf5bca08ce637125b33e3c471780e79e",
-    "disposition": "Research queue only. Paid institutional licensing is verified; a complete consumer viewing edition remains unverified. No title or full-film count is added."
+    "batch": "research/batches/2026-11-23b-rising-voices.json",
+    "sha256": "21d93ef59b5efda18cc477f3b66406ec632a5d56145e98258b6de8a2f56a2d96",
+    "edition": "Official complete co-producer YouTube edition Wr-jackHWCw. Project distribution and provider embedding are verified separately.",
+    "thumbnail_display": "Actual provider-supplied YouTube thumbnail; no image rehosting.",
+    "viewing_access": "Official project offers public streaming. Actual audiovisual playback, account/device/geographic access and caption quality remain unverified.",
+    "deferred": "Almost an Island remains research-only with its PBS member gate; rejected producer-page access was not bypassed."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Blackfeet own-source, government-identity, chronology, respect and Paths cross-review",
-      "record": "data/nations/research/batches/2026-11-23-blackfeet-independent-review.json",
+      "kind": "AI-assisted Cedarville own history, archival governance, identity, respect and integration cross-review",
+      "record": "data/nations/research/batches/2026-11-23b-cedarville-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Campo own-agency, identity, chronology, respect and integration cross-review",
-      "record": "data/nations/research/batches/2026-11-23-campo-independent-review.json",
+      "kind": "AI-assisted Chemehuevi office chronology, governance, culture, language, identity and respect cross-review",
+      "record": "data/nations/research/batches/2026-11-23b-chemehuevi-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted receipt-only publication retention review",
-      "result": "passed",
-      "scope": "Exact local retrieval metadata and short evidence retained; full factual HTML excluded from public publication."
+      "kind": "AI-assisted AFN source inventory and Paths institution distinctions cross-review",
+      "record": "data/nations/research/batches/2026-11-23b-afn-independent-review.json",
+      "result": "passed"
     },
     {
-      "kind": "AI-assisted Warrior Women authorized educational edition and consumer-access boundary cross-review",
-      "result": "queue-only"
+      "kind": "AI-assisted Rising Voices edition, source, credits, permitted provider embedding and thumbnail cross-review",
+      "record": "data/theater/research/batches/2026-11-23b-rising-voices-independent-review.json",
+      "result": "passed"
     }
   ],
   "person_review_claimed": false,
@@ -59,30 +62,19 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 248.03444459999446,
-    "full_suite_xml_sha256": "f4829be18c4fbcdf2c7d26a3ff4c0bdec9dc1c6f248473025a439d6815d2b1aa",
-    "full_suite_finished_at": "2026-11-23T08:51:43.834779+00:00",
-    "resolved_validation_findings": [
-      {
-        "check": "test_public_source_captures_preserve_measured_bytes_and_hashes",
-        "failed_suite": {
-          "exit": 1,
-          "tests": 1072,
-          "errors": 0,
-          "failures": 1,
-          "skipped": 0,
-          "wall_seconds": 278.29829840001184,
-          "xml_sha256": "a8f5da7daef24e75e08c20ec4396c6b0b305ea7c165553853de02bf94a28b6fd",
-          "finished_at": "2026-11-23T08:47:02.986776+00:00"
-        },
-        "correction": "Recorded the required explicit local-capture retention field on each new individual receipt. No factual or runtime change; no full factual HTML published."
-      }
+    "full_suite_wall_seconds": 265.81254439998884,
+    "full_suite_xml_sha256": "fe43e25986f72e0f1e04351593892441f7ce4904fb64b2b4597ddd6259eb3617",
+    "full_suite_finished_at": "2026-11-23T17:51:49.643997+00:00",
+    "resolved_review_findings": [
+      "Removed an unsupported Vision Maker Media presenter credit; retained the verified producer/director and publisher source distinctions.",
+      "Omitted the unknown effective date for the undated AFN source after the builder rejected null. Its actual review date is retained.",
+      "Narrowed AFN membership-category wording to its own account rather than identifying every institution as a government."
     ],
     "canonical_build": {
       "status": "passed",
-      "pages": 634,
-      "profiles": 499,
-      "visible_facts": 1470,
+      "pages": 636,
+      "profiles": 501,
+      "visible_facts": 1478,
       "held_facts": 2
     },
     "registry_validator": {
@@ -92,37 +84,38 @@
     "page_lint": {
       "errors": 0,
       "warnings": 1,
-      "review": "The preexisting full Colusa name triggers the long-name check."
+      "review": "Preexisting full Colusa name triggers the long-name check."
     },
     "game_data": {
-      "quick_cards": 499,
-      "quick_facts": 992,
-      "profiles_with_history": 122,
-      "new_history_facts": 3,
+      "quick_cards": 501,
+      "quick_facts": 996,
+      "profiles_with_history": 124,
+      "new_history_facts": 2,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 498,
-      "added_profiles": 1,
-      "existing_profiles_changed": 1,
+      "prior_profiles": 499,
+      "added_profiles": 2,
+      "existing_profiles_changed": 0,
       "added_raw_facts": 8,
-      "new_practice_examples": 1,
-      "new_films": 0,
-      "unrelated_game_records_preserved": true,
-      "blackfeet_quick_card": "Existing canonical kind ordering selects the two newly sourced governance facts.",
+      "new_practice_sources": 1,
+      "expanded_representation_step": 1,
+      "new_films": 1,
+      "prior_game_records_preserved": true,
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
       "game_mechanics_preserved": true,
-      "observed_at": "2026-11-23T08:49:04.844068+00:00"
+      "observed_at": "2026-11-23T17:47:23.463703+00:00"
     },
     "browser": {
-      "record": "data/nations/research/batches/2026-11-23-browser-review.json",
-      "record_sha256": "b2e8edf98ede241a90e4e9baf1e3182d62e1c5660501df329a0245985bf4379b",
-      "observed_at_start": "2026-11-23T08:45:08.936029+00:00",
-      "observed_at_end": "2026-11-23T08:45:13.249727+00:00",
-      "method": "Chrome through Playwright, exact local files routed to zotheos.org with committed Vercel headers; all external traffic aborted.",
+      "schema_version": 1,
+      "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
+      "result": "passed",
+      "reviewed_at_start": "2026-11-23T17:50:11.941827+00:00",
+      "reviewed_at_end": "2026-11-23T17:50:16.070745+00:00",
       "chrome_version": "157.0.8103.79",
+      "method": "Chrome through Playwright; exact local files served at zotheos.org with committed Vercel headers, all external traffic aborted.",
       "viewport_pixels": [
         [
           1440,
@@ -138,20 +131,549 @@
         ]
       ],
       "page_viewport_checks": 15,
+      "observations": [
+        {
+          "page": "directory",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "cedarville-rancheria-us-ca",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "chemehuevi-indian-tribe-us-ca",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "paths-to-action",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "theater",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          },
+          "external_requests_aborted": [
+            {
+              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "resource_type": "document"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            }
+          ]
+        },
+        {
+          "page": "directory",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "cedarville-rancheria-us-ca",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "chemehuevi-indian-tribe-us-ca",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "paths-to-action",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "theater",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          },
+          "external_requests_aborted": [
+            {
+              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "resource_type": "document"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+              "resource_type": "image"
+            }
+          ]
+        },
+        {
+          "page": "directory",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "cedarville-rancheria-us-ca",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "chemehuevi-indian-tribe-us-ca",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "paths-to-action",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "theater",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          },
+          "external_requests_aborted": [
+            {
+              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "resource_type": "document"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            }
+          ]
+        }
+      ],
       "source_pins": {
-        "nations/directory.html": "3cb9c66e3d46f90c10c2abfa4d8774e18b25fbb870a77284670a63b10bd4182b",
-        "nations/campo-band-kumeyaay-indians-us-ca.html": "ea2d07c3cd5c7c9dc59de866815754ccc5aa7966ce1360e34c553d5eb92e5f40",
-        "nations/blackfeet-nation-us-mt.html": "fee91eedabc34ac802235084bf1927682990419fcfdd8aefe1d0ac36d56a2b24",
-        "nations/paths-to-action.html": "e5adc46db564eef8aec25b3c0ae3c2d6657d67d1da8f83beeae8e46afa5b6aff",
-        "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
-        "vercel.json": "2457f937febe801bc505970b14e597a0ba565f9568f779a3d46640b7200ec81b"
+        "nations/directory.html": "177a37dc04b0a8befda24b57cf5874761a14936b0c8fe10acd1b6071b763a524",
+        "nations/cedarville-rancheria-us-ca.html": "f826b1a87c999601cf7f4c28ba54e0c6d0666d0ed042967628b5b555802467a1",
+        "nations/chemehuevi-indian-tribe-us-ca.html": "5272d3f1dc74ead2da00515fede0fc2f1283c539353e9189098fd4e9323e49ff",
+        "nations/paths-to-action.html": "20bed7f9c917430abf674190d22ba9530875c72080e834dce075b3226b51fc0f",
+        "theater.html": "cccd2b8b007192318fc86130604ba0aaeb5b6edac398fd5d48b1411d3b39d2fa",
+        "vercel.json": "21c52128d17f3317ec806733c6790c7e4068921131cf757d05861ea1ea2e503e"
       },
       "horizontal_overflow": 0,
       "page_errors": [],
       "csp_violations": [],
       "missing_local_assets": [],
-      "external_image_requests_aborted": 29,
-      "external_non_image_requests_aborted": 0,
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        }
+      ],
+      "external_image_requests_aborted": 39,
+      "external_non_image_requests_aborted": 3,
       "visual_critique": {
         "screenshots_inspected": 6,
         "widths": [
@@ -159,100 +681,128 @@
           1440
         ],
         "pages": [
-          "Campo profile",
-          "Blackfeet profile",
-          "Blackfeet Paths case"
+          "Cedarville profile",
+          "Chemehuevi profile",
+          "AFN representation step"
         ],
-        "result": "The new historical paragraphs, distinct event/check dates and source links wrap readably. The desktop chapter navigation stays separate from the case. Phone text and citations remain inside the reading column. No material visual defect was observed.",
-        "capture_scope": "Temporary viewport images at normal reading positions below the fixed navigation. All six were inspected and removed after review."
+        "result": "The new historical paragraphs, archival receipt year, event dates, source links and actual check dates remain readable. The longer NARF citation wraps across lines without overflow. AFN’s institution categories and private decision-map boundary fit within the phone reading column; desktop chapter navigation remains separate. No material visual defect was observed.",
+        "capture_scope": "Six temporary viewport captures at normal reading positions below fixed navigation; all were inspected and will be removed after review."
       },
+      "limits": "No physical devices, successful provider playback, loaded thumbnail pixels, account/region eligibility, caption timing or accuracy were tested. The external iframe and image requests were intentionally blocked; DOM configuration does not prove playback.",
+      "person_review_claimed": false,
+      "nation_endorsement_claimed": false,
+      "visual_reviewed_at": "2026-11-23T17:51:27.144890+00:00",
       "harness_corrections": [
-        "Matched profile facts by canonical text rather than assuming the intentional display order equaled raw registry order.",
-        "Opened the actual viewing-notes disclosure before asserting restriction text.",
-        "Reframed long element screenshots as real viewport captures to avoid fixed-navigation artifacts in oversized element captures. No production content change was needed."
+        "The initial harness traversed from the player to a distant library disclosure before positioning that summary for the next action. Explicitly scrolling the summary into view and tracing its event target completed desktop keyboard and both phone touch checks. Final events targeted SUMMARY at all three widths. No production change was needed."
       ],
-      "limits": "No physical devices, provider playback, member/account eligibility, regional access or caption timing and accuracy tested."
+      "player_policy_observation": "Rising uses the existing hold-full policy. Its single ready iframe has autoplay=0 and playsinline=1, with the message API and caption preference configured. It retains a normal Play address rather than a muted page-started preview address. Scrolling the player into view does not change that address. Provider messages, successful playback and actual sound were not tested.",
+      "temporary_screenshot_pins": {
+        "afn-paths-1440.png": "511168644a0396a2e4170b7f89a28e312491c248ffbc445aefebc1a2567b2c23",
+        "afn-paths-390.png": "86fd551f5f61087cb9e0b262e035814a2f23025af7b51205965fa5d07a05c25d",
+        "cedarville-rancheria-us-ca-1440.png": "dc03f1f232ecc8ce0e0466f7b4137d37b137dbb5bf3b756ce64f584044e6af6b",
+        "cedarville-rancheria-us-ca-390.png": "917ba4ff6a869e6c4ab1dbedf9fdf2c3417dc87981d4d7ba7fa576a5c8e2f1d3",
+        "chemehuevi-indian-tribe-us-ca-1440.png": "a2857c97859386f7f611638f71441b872282977c46a4b9770c37226cd916df38",
+        "chemehuevi-indian-tribe-us-ca-390.png": "5cbeaa685753693a0f27593c037d5a97bd97c026b4fae2229fd6c98c36d06c6e"
+      },
+      "record": "data/nations/research/batches/2026-11-23b-browser-review.json",
+      "record_sha256": "6c255bb48e89def754b3d277cceeb359eae88b5a54b0463eb1cfb814eb96f376"
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "ad371052488dde685b99e90de04b963229dbd43d74a4e26181d23b340d92cb17",
-    "data/nations/nations.min.json": "a707251058df275a1b546629ea355f3b7df306b6904ecb00fb0ffac8a435b820",
-    "data/nations/pathways.json": "204275de8cf1d5809d6336b85bbafc23e2cea919892bef67609b8f363ac84aee",
-    "data/nations/research/batches/2026-11-23-blackfeet-independent-review.json": "3c254a85352ba21c9abeb04eee0dbe42054a8e8c51cf7601a293052bfde190ef",
-    "data/nations/research/batches/2026-11-23-blackfeet-own-history.json": "750e87f2e2288a30f2aefa9cfab71590b76aaa17caa6d82eb340d688d1a9009d",
-    "data/nations/research/batches/2026-11-23-browser-review.json": "b2e8edf98ede241a90e4e9baf1e3182d62e1c5660501df329a0245985bf4379b",
-    "data/nations/research/batches/2026-11-23-campo-independent-review.json": "2a92a363e432d02859bb3ecc0c7852abf7289f9c56fe9a0219dd79f6718073ce",
-    "data/nations/research/batches/2026-11-23-campo-own-history.json": "4f48738b97d3abb4f6a7c1c25bc5a9cc402a72a25ca7181fc3783212f5ef16df",
-    "data/nations/research/coverage_queue.json": "5846f4b709ad94b622c4ddb32750ce39dcce3bb4abe288d0f1225a7aef2fb108",
-    "data/nations/research/directory_sources.json": "2ddd85e513926f0d35950db7908df2e5ea5f2e741ab8fc96ac7449067a7447bb",
-    "data/nations/research/receipts/2026-11-23-blackfeet-chronology.receipt.json": "b8289ff5976216b94e30689cef219f1370b686ec00cdeb8f968900cb4b5ea97f",
-    "data/nations/research/receipts/2026-11-23-blackfeet-compact-faq.receipt.json": "361a35fda912b653650fdbb217f22adb2eeb22f36a0338fa77ed00b56b538a00",
-    "data/nations/research/receipts/2026-11-23-blackfeet-compact.receipt.json": "46e09e3a3525b40e996a2fa980bd8950b33e47f197d4f054935705207814c5db",
-    "data/nations/research/receipts/2026-11-23-blackfeet-federal-robots.body.txt": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
-    "data/nations/research/receipts/2026-11-23-blackfeet-federal-robots.receipt.json": "2d4d715b71af656fdcc968562f9e7b9206da681c556555282989717beef76f17",
-    "data/nations/research/receipts/2026-11-23-blackfeet-federal.receipt.json": "dce3f75fb8651e43ddd0821e909171dffaab4f5d7ea646d5fceddb25a29ea633",
-    "data/nations/research/receipts/2026-11-23-blackfeet-government.receipt.json": "92256e7e34fda38b5922a5d6a3c73719b85bca8b505cec3c941470b6c4e7526a",
-    "data/nations/research/receipts/2026-11-23-blackfeet-home.receipt.json": "23003c319dcda362856d1d5932a926f21bb1dca329cc204120dfb71773197d56",
-    "data/nations/research/receipts/2026-11-23-blackfeet-identity.json": "160a7d988f71bba3ddf8b0392187654dd671520a0718843225880bca62a7ebf4",
-    "data/nations/research/receipts/2026-11-23-blackfeet-lands.receipt.json": "c249d4983759e5b5710ab98a2358beb539344995644b305bd9e66785c3167279",
-    "data/nations/research/receipts/2026-11-23-blackfeet-legacy-home.receipt.json": "5857c558790e327d9d412c1ca1441b6388107d985de08b97d766334c28d3da9d",
-    "data/nations/research/receipts/2026-11-23-blackfeet-own-robots.body.txt": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
-    "data/nations/research/receipts/2026-11-23-blackfeet-own-robots.receipt.json": "a16b1cdf479ab2158edb5729da3145333bdbf3990f97556890f72a6533d6248e",
-    "data/nations/research/receipts/2026-11-23-blackfeet-www-robots.body.txt": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
-    "data/nations/research/receipts/2026-11-23-blackfeet-www-robots.receipt.json": "2e81399541d1da44e2f3d71206e815a28dad35ead612939837729e018f6c1ec0",
-    "data/nations/research/receipts/2026-11-23-campo-cepa-about.receipt.json": "21e16774bf0d9acc0a911559b73d63a67d5d577042dcf953866884b3cc8de860",
-    "data/nations/research/receipts/2026-11-23-campo-cepa-home.receipt.json": "2c6ffa701fd123c19db690beb03639b0fdb72b7e43cc1c6b9a738fde40a5f87f",
-    "data/nations/research/receipts/2026-11-23-campo-cepa-robots.body.txt": "13a4dc0102827f3e425e5d1476d966519b51c01b033d74d3f852725ad0aef3b2",
-    "data/nations/research/receipts/2026-11-23-campo-cepa-robots.receipt.json": "e03babf3ccb27ec21d34f24727bc825a2011f738dd0a4da0531f26c00c5950e0",
-    "data/nations/research/receipts/2026-11-23-campo-federal-robots.body.txt": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
-    "data/nations/research/receipts/2026-11-23-campo-federal-robots.receipt.json": "bd11d41b976bbae518d2d17ea3de4102ab592a2a9ebdb02e7bd558f2670f85eb",
-    "data/nations/research/receipts/2026-11-23-campo-federal-source.receipt.json": "2d3427f4ab4decf080a37f0ab3f2995f5c6564d61db7ece43019194085f35dba",
-    "data/nations/research/receipts/2026-11-23-campo-identity.json": "0a2c63edc433e6a79f8d7df4675da4e25edd775699a26d3afc4a480b888991a1",
-    "data/nations/research/receipts/2026-11-23-campo-sctca-robots.body.txt": "d256afb3825e1ccf2ad2317aa552e5c9a30e57e7cd77eb14207619787af8b59b",
-    "data/nations/research/receipts/2026-11-23-campo-sctca-robots.receipt.json": "6513abad9ad85498edb19577666216cf53009b0d2d83c4880bc54a8631255f99",
-    "data/nations/research/receipts/2026-11-23-campo-sctca-source.receipt.json": "681519c6bde9b96d7d7b17d0d6240226ad377ff2a5bfb42c8861443f4da33160",
-    "data/nations/research/us_federal_directory.json": "ec0738742b0815446819bc5e9f69fa9f07d85a10602e8ebc175594b22eb409b8",
-    "data/nations/sources/us-blackfeet-own-history-2026-11-23.raw.json": "e434e1c28080a21e7d4359158744835d029f42986b3a361d3d705893c3ab82c8",
-    "data/nations/sources/us-blackfeet-own-history-2026-11-23.respect.json": "5ccee39a671ae9dcce3a218a33c6488ec69a043847701cfb46f49b7cbe49601e",
-    "data/nations/sources/us-blackfeet-own-history-2026-11-23.verify.json": "15c661499f76b3a0d5bcd9f0e79376667fb385560bd1c76651b93cd2e67902da",
-    "data/nations/sources/us-campo-own-history-2026-11-23.raw.json": "8b22ef4f5ddfa9881ea6913ab9ec221829b8efaf7eb59d4d28089ec4e58ffaec",
-    "data/nations/sources/us-campo-own-history-2026-11-23.respect.json": "ef73965fe6f372113dfbc3ddcd0ec02d30ed4056e0cf883b0b05145bf856eb59",
-    "data/nations/sources/us-campo-own-history-2026-11-23.verify.json": "20f725feff8b3f8678bb5af7eec4753e729507b20d3c81caa14f7d8bfcc2b8e8",
-    "data/theater/films.json": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
-    "data/theater/research/batches/2026-11-23-warrior-women-artwork.receipt.json": "3dc81617ccd0239488da9d40b5a86e6b8c65df56f2f3467aee0ff1b773e5675d",
-    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs-robots.body.txt": "5f21f50437b012701bef3be44309606f35d953d0a124075d82269a871a45d9d7",
-    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs-robots.receipt.json": "5af8abf5612b16ac140b1733c5de9ac01b48cf08199d7d69d9b36c4040adab63",
-    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs.receipt.json": "760dd8484861411be4d042bca23d432aa77d16e3023e1e983dcc8bb95bffeac9",
-    "data/theater/research/batches/2026-11-23-warrior-women-own-robots.body.txt": "cd10a436c8ffa7f9353c66977a378b455dc80de0da2e95d9a07c116435de9883",
-    "data/theater/research/batches/2026-11-23-warrior-women-own-robots.receipt.json": "7c2fe6a934bc6bf6b60b7e2cf1074a2800b9b112de8544cedccc3f68c2072a54",
-    "data/theater/research/batches/2026-11-23-warrior-women-vimeo-robots.receipt.json": "ddf1faef0ec430bbf4967ae528d77b9262ef7c875f9a031f8a14faedbd450155",
-    "data/theater/research/batches/2026-11-23-warrior-women-vmm-robots.body.txt": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
-    "data/theater/research/batches/2026-11-23-warrior-women-vmm-robots.receipt.json": "979f096d477768c4db290afd1be37455513c5074122adffb506e038214f7f16e",
-    "data/theater/research/batches/2026-11-23-warrior-women-vmm.receipt.json": "a17ea06d8f573bb55df14f879e80e99f36725fc7dacd3cebb87d1317265544f4",
-    "data/theater/research/batches/2026-11-23-warrior-women.json": "f73c027247fcd9bebf4fc93a0706102bdf5bca08ce637125b33e3c471780e79e",
-    "data/theater/research_queue.json": "d720f1dc62a46e0525fec9cfcb462c9e05466d246ecfcc8cf25e7149c1a7d961",
-    "game/data/n-2603c13ad9d469191c20dfccae1188fb.json": "2603c13ad9d469191c20dfccae1188fb10d90f4c647d3fabbe3c17644a96a6ec",
-    "game/data/n-394f2993c03cfa74906d1e6dc21057ab.json": "394f2993c03cfa74906d1e6dc21057ab9a5f7cb1fa8116c953ffac812df52723",
-    "game/history.json": "875334b392a9b590bfcccf3eac3ff521b005725f1bf88656b55304e7454769bb",
-    "game/nations.json": "494d803c224b767ce028dc91ed65db77049db545ce6f2facd5c527093de05a7c",
-    "index.html": "4fbf1a1cbf63ddd9f1dfe003e042f57ae142b04b8d31f3b73dae77bc1e74ffe9",
-    "nations/blackfeet-nation-us-mt.html": "fee91eedabc34ac802235084bf1927682990419fcfdd8aefe1d0ac36d56a2b24",
-    "nations/campo-band-kumeyaay-indians-us-ca.html": "ea2d07c3cd5c7c9dc59de866815754ccc5aa7966ce1360e34c553d5eb92e5f40",
-    "nations/coverage.html": "a352a00802a7095343adfc26ec32e283ebcd0e4606f2c4cdd46e74f49d68d018",
-    "nations/directory.html": "3cb9c66e3d46f90c10c2abfa4d8774e18b25fbb870a77284670a63b10bd4182b",
-    "nations/paths-to-action.html": "e5adc46db564eef8aec25b3c0ae3c2d6657d67d1da8f83beeae8e46afa5b6aff",
-    "static/nations/coverage.json": "98b481de33ee37b9b13e85cddc8484f4fc9794a8a918c9ab3ab5a9f0ee5591ad",
-    "static/nations/index.json": "7a5d2289c650a2ee14ad6760edbd7148074bafb0e58782776ae52ba7c37c0b1a",
-    "static/nations/us-plains-midwest.3d9a8afd.json": "3d9a8afd2c61ee1b495d8ee3713eeb56010cbacf96cc36e76af780fec862d425",
-    "static/nations/us-west-pacific.d40ffd93.json": "d40ffd93b7c52cc39a7bee879063801ad98c1728ba82ca8641ba4c020b6406c8",
-    "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
-    "vercel.json": "2457f937febe801bc505970b14e597a0ba565f9568f779a3d46640b7200ec81b"
+    "data/nations/nations.json": "34ba3f3d24f4365b6259131a0a8e34fef4cca994148c82e717082ecf27aa8f57",
+    "data/nations/nations.min.json": "78293f6f4b7708c16ff769b1867521b774f398a02737017fe282817fdf60514d",
+    "data/nations/pathways.json": "7df70d2f22ae9f3b5a3b484ac843628bef7f0c4ca62a9e7498f5710dfa6e94dc",
+    "data/nations/research/batches/2026-11-23b-afn-independent-review.json": "7d87ec599037bc622797fb7684cac2b6cd9928c417cbe95a525eb487603701e0",
+    "data/nations/research/batches/2026-11-23b-afn-institutions.json": "19c65de002bb59508fd44be059ea51be956180627d6ddb7245720dd292edd4ce",
+    "data/nations/research/batches/2026-11-23b-browser-review.json": "6c255bb48e89def754b3d277cceeb359eae88b5a54b0463eb1cfb814eb96f376",
+    "data/nations/research/batches/2026-11-23b-capture-cleanup.json": "d11bd195f968dfe73ba122fb86dc106b5693c55054e0a9aa5797d9168968db17",
+    "data/nations/research/batches/2026-11-23b-cedarville-independent-review.json": "3128139e4d565e0e5f7434ddd25eb4317070b9aaa2babc032c1d5d4ce5b00328",
+    "data/nations/research/batches/2026-11-23b-cedarville-own-history.json": "759ecf31e1ecbc0163622513cc9691099f0975ad46d93b2461f412e945fd63f7",
+    "data/nations/research/batches/2026-11-23b-chemehuevi-independent-review.json": "5137c84a36f712e6c3932d3b2ca42bd2d8d1bf1e2f53b1cada29faf5a0804b72",
+    "data/nations/research/batches/2026-11-23b-chemehuevi-own-history.json": "0f3eac9c9488a55f38ea286e12fd53364b7c05ea1e88c192ef8c4c6d3654956f",
+    "data/nations/research/coverage_queue.json": "e8588158f4df8d5395d6c7163fd176cc211487d55ade3b8458211726f762a4ff",
+    "data/nations/research/directory_sources.json": "53063ef0ed29104c4d74d238eb0fa45673d348a5f3a4b69ba8de005632d8282d",
+    "data/nations/research/receipts/2026-11-23b-afn-about.receipt.json": "5e3c726e6022aa7ff523f7b081ba8c425107e78622aca36e979b14a6749fe726",
+    "data/nations/research/receipts/2026-11-23b-afn-history.receipt.json": "7422cc55dccaa15ca26d4332dc3e9abdefa8d70c2b32d7b079fd73b8299fbbb4",
+    "data/nations/research/receipts/2026-11-23b-afn-robots.receipt.json": "6f2dd2e5d13e5b7f3d6867cb0d39b5460e41f2a8965436b9a8a3ee8aaf81697a",
+    "data/nations/research/receipts/2026-11-23b-cedarville-about.receipt.json": "a498de1d6004c3c45bc1f638320c82ba302e487458c6b3a4b909c9e0ad1aacec",
+    "data/nations/research/receipts/2026-11-23b-cedarville-constitution.receipt.json": "fa7007cb4d5d258f8d11fbd87a4d4351cad9f94be3374debbea2287591f88449",
+    "data/nations/research/receipts/2026-11-23b-cedarville-federal-robots.receipt.json": "2aabe098303ec480edaf0e2ec50fb185381d58695518a5459f471c2104ccd220",
+    "data/nations/research/receipts/2026-11-23b-cedarville-federal.receipt.json": "405c1c1b164b6e2fd78183714163e045785bba60f2d243360affcac093fea1c9",
+    "data/nations/research/receipts/2026-11-23b-cedarville-home.receipt.json": "c98240da0f22680a3b631e6ab78595b7ac4829fe5b668d1cf7c81439e045181e",
+    "data/nations/research/receipts/2026-11-23b-cedarville-identity.json": "a3aba9790d52f3fde89edf2af9004042fb93b6ebf9708135dc2821d2e6da1377",
+    "data/nations/research/receipts/2026-11-23b-cedarville-narf-robots.receipt.json": "7229d7a577107c6d56f5f5567c2e2c1d3f6fd6e14dea113769bf1b8ba3e81ad8",
+    "data/nations/research/receipts/2026-11-23b-cedarville-own-robots.receipt.json": "aa9c9902f48dc5414fa91450461c465b5f13a458281db14f623be2abf575cdea",
+    "data/nations/research/receipts/2026-11-23b-cedarville-services.receipt.json": "ff742a87ff64c853d3b0cf36f085309be733c452772bf9875eeac2f8ab60fb2d",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-about.receipt.json": "721885cd9fc2e0f4b962798042f818fd26b226d0325f48594af667a85aae82e6",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-attorney.receipt.json": "ebf2627c1cb0184098b56935c08f645fba087391ee7593df7b3a87095cbe16b5",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-council.receipt.json": "b451c0e19575f77e1b2ef23dd7657c37b2973882a891f252ed9613be5a9b22cb",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-court.receipt.json": "26fd425dd108be072ac101cdb2a5283acf0a4a343e574ee995c85fbbd4b68584",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-cultural.receipt.json": "5ee6a8ebae370dfdebbf0bd41e2d60159d3997ffa4da1a84121b9c6f0591edb2",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-education.receipt.json": "6fb6f57b7167d45bf5e402551cfcd28e21dd7f7454e5e12ed92c5ab8b5b61bc2",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-enterprises.receipt.json": "cd070a5965982bc7322d8946b52e7854190a12d868534751800503b82bdc2b08",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-environment.receipt.json": "45cc4a60ee2699c5d3b13906d465416bd8820ad7a6133a74738524baae3d57c4",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-federal-robots.receipt.json": "7f9e7f8fd3267d8afa42bef71e49971db14b68e1232b6645e77508a54ac5d441",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-federal.receipt.json": "a1c2a32ff1a5702102bd5e6024c2ba73ddbe0f50eb0c04e2b272d839f40feea4",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-home.receipt.json": "974a8a94ec75fdbb48d641fb75670aa4c050022e08edf0c838be898a3c189730",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-identity.json": "8144726fc74dd7d54468f86934e6daa39416b88348366921d0ffd7c2573fb686",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-own-robots.receipt.json": "7536a9332ecd44d5fe737d8c2afb7601000a2d7fc5229ad5223d0fe372404c4c",
+    "data/nations/research/receipts/2026-11-23b-chemehuevi-water.receipt.json": "b1450091f014953db0e31fb9c58bf5d92cf29518e50e89005720705fdc5187c9",
+    "data/nations/research/us_federal_directory.json": "1df4d38e2e34a5f4017c6311f5ddda155e72ae23c0038280398e2becca653ea9",
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.raw.json": "4202b63c606cd7bee2bc2a0dcd8bf7d1f92da3956042ff3831ffab9b99dddf82",
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.respect.json": "666e6369df3f4204c5a37d71f13a1f97d8a506f794a34ebedba473abc00f1250",
+    "data/nations/sources/us-cedarville-own-history-2026-11-23b.verify.json": "49dee212efe067565b0cd45bba125e0af1dc62e7518b5a757a92f7557fa897b2",
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.raw.json": "a50673c785b654f140f29a9fadce8c2890d58918ef4e429eccaad691ea5df307",
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.respect.json": "6f3f51ab398ee9b8a7208094816820bac03e9b4dd00bfc316e855577687efe2b",
+    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.verify.json": "501903bd641fb5f07072d395a1a7e58107ea2c7127728770f4c5935bb817ebd8",
+    "data/theater/films.json": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443",
+    "data/theater/research/batches/2026-11-23b-almost-island-own-robots.receipt.json": "574092ac8b63029d5d3533a06fef33094671c7851b180be70ddde28955654e8a",
+    "data/theater/research/batches/2026-11-23b-almost-island-vmm-robots.receipt.json": "74796de34646eac0a3c279b6d53d8361b94763a2d2cec899571cd1ae9b683f2b",
+    "data/theater/research/batches/2026-11-23b-almost-island-vmm.receipt.json": "0228f3de6c8ccba5a0138a397552c48dde8bbde6fa9cd499577f7ad88a69b43b",
+    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-film.receipt.json": "54f8d2646be3361296592c8cf78fced3cef9b504dc44e8c2955ab6252e206df0",
+    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-robots.receipt.json": "7603937011e8edb4537054fe822069ac304d9a4517411f9e9b2236e294ecde53",
+    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-show.receipt.json": "94f3fbd318bc46503e569b51c4565cfbb5082f188c4ce521b307031a11338ccc",
+    "data/theater/research/batches/2026-11-23b-almost-island-weta-robots.receipt.json": "4490f2ad628e6744659a9fe19a6386267d03172207d861db7cb163c6b05fde9d",
+    "data/theater/research/batches/2026-11-23b-almost-island-weta.receipt.json": "05421fc7064332efa8486233851bf50468300404de837ba9b783b355e198ffbe",
+    "data/theater/research/batches/2026-11-23b-almost-island-wetaplus-robots.receipt.json": "587a55d85385423c4860823dc3946b011d3de108c3aefd8ec351a106dc57d1ee",
+    "data/theater/research/batches/2026-11-23b-almost-island-wetaplus-show.receipt.json": "a61e4bf635b90382a6c1eee9e08ca93ca30c20c8cc24edad23f0e5a84c0d7b61",
+    "data/theater/research/batches/2026-11-23b-almost-island.json": "5dee3cf5ed41381f5f2404461129921b027d9304b2a24b1a0af2c3cc1ee9c720",
+    "data/theater/research/batches/2026-11-23b-rising-voices-image-robots.receipt.json": "25f6cecece725daab73cc01d3826bc171fd9b813eaec659cd7f773b37a41ea6b",
+    "data/theater/research/batches/2026-11-23b-rising-voices-independent-review.json": "4639d0ce0a10a098ed606c73b034c249935ce34b6f2814f783660b8f780b8aef",
+    "data/theater/research/batches/2026-11-23b-rising-voices-own-crew.receipt.json": "6a3b1383fa4fda5a31525ab7cce7418b0921933bde62dfb6a04eae23ee17b254",
+    "data/theater/research/batches/2026-11-23b-rising-voices-own-full.receipt.json": "4a560b71a93a9cd3aff47e3c47fab76a76036c914192668336b114556fb36b63",
+    "data/theater/research/batches/2026-11-23b-rising-voices-own-home.receipt.json": "925859025975217c2fc7b24f0d8c201539419cae5a0669135fd5364aa36db1ee",
+    "data/theater/research/batches/2026-11-23b-rising-voices-rising-own-robots.receipt.json": "85d0601d6938bd45511a1d9bbb6a6ebbdacb45ab5033cff307a790741d3b25b1",
+    "data/theater/research/batches/2026-11-23b-rising-voices-thumbnail.receipt.json": "05d911410662f539eee5ba4e020e8eeb8cd07b9c672dc0e9d585a7cab559d157",
+    "data/theater/research/batches/2026-11-23b-rising-voices-vmm.receipt.json": "6fb94c322c10d03e96e55a71a4c0d850019510b3bcc158f0f5ba1d30450b2675",
+    "data/theater/research/batches/2026-11-23b-rising-voices-yt-robots.receipt.json": "2bc3cc59e42169ec503d883f37af3335239a39cde474e2d08780f5d913554054",
+    "data/theater/research/batches/2026-11-23b-rising-voices-yt-watch.receipt.json": "01c4a210d279c77ab9034716083ac63f788dc557a6fee0b6134d3940de32e81e",
+    "data/theater/research/batches/2026-11-23b-rising-voices.json": "21d93ef59b5efda18cc477f3b66406ec632a5d56145e98258b6de8a2f56a2d96",
+    "data/theater/research_queue.json": "8e6be4e409a8bef96e9bc9a0d186326e452a39c2968fd04a04f6d8ceb3f6f3ab",
+    "game/data/n-1567ced5b5b618222f6a5c0006167bf7.json": "1567ced5b5b618222f6a5c0006167bf77301283522728d21790a59c7d485cb1b",
+    "game/data/n-338d0e12d1aa9900405d5b45112fc919.json": "338d0e12d1aa9900405d5b45112fc9195be2d073385a89b8710049bd5b577fcd",
+    "game/history.json": "3f44003d981d835e3cd1c0e4b380539fef7eb9642f799e65a89704356429663a",
+    "game/nations.json": "31e5748157ab32d67d3bbfc6e76cbac3abc002593bc5dfadcdad6d2d04d7603d",
+    "index.html": "b945975d3c5f02fbc31119fcd8b55dfbd903c67123b1f1c5640481e945b359e5",
+    "nations/brief/representation-and-power.html": "d007828d84c467fe0f215bf229c7f4131365c8291de9669923613b1aa9f0ae2c",
+    "nations/cedarville-rancheria-us-ca.html": "f826b1a87c999601cf7f4c28ba54e0c6d0666d0ed042967628b5b555802467a1",
+    "nations/chemehuevi-indian-tribe-us-ca.html": "5272d3f1dc74ead2da00515fede0fc2f1283c539353e9189098fd4e9323e49ff",
+    "nations/coverage.html": "d7d1e5936cdfd4dd313445de7d038d4fa64a6622929cc2fc0e90add280f915d2",
+    "nations/directory.html": "177a37dc04b0a8befda24b57cf5874761a14936b0c8fe10acd1b6071b763a524",
+    "nations/paths-to-action.html": "20bed7f9c917430abf674190d22ba9530875c72080e834dce075b3226b51fc0f",
+    "static/nations/action-brief-representation-and-power.txt": "f3823820c321f0716d5295a54ec4c06e90f828b47cfa4f4e6199daaea097ed62",
+    "static/nations/coverage.json": "69f83e07f96fc55c2f5c495d432c506f02f41957f05388dd1376a5adfb4b935d",
+    "static/nations/index.json": "4c7c0df31d0bf765d3813b5d01bd8de9bea037046cfd0478b8070f186c1896c4",
+    "static/nations/us-west-pacific.5f0d4c3b.json": "5f0d4c3b05ff3981ca2eaf759c328112751bf8d32dcf550936a91823c4315c2b",
+    "theater.html": "cccd2b8b007192318fc86130604ba0aaeb5b6edac398fd5d48b1411d3b39d2fa",
+    "vercel.json": "21c52128d17f3317ec806733c6790c7e4068921131cf757d05861ea1ea2e503e"
   },
   "pending": [
     "Vercel production verification",
-    "Blackfeet 2025 enforceability primary-record follow-up",
-    "Blackfeet government/Confederacy naming scope follow-up",
-    "Warrior Women complete authorized consumer edition and actual access/playback",
-    "Caption timing and accuracy, artwork display and embedding permission"
+    "Cedarville constitutional adoption/effective date and subsequent amendments",
+    "Cedarville program-frequency descriptions; no benefits, amounts or eligibility published",
+    "Alaska typed community/government/organization inventory remains incomplete",
+    "Actual provider playback and account, geographic or device access",
+    "Caption text, timing and accuracy and complete audiovisual editorial review"
   ]
 }

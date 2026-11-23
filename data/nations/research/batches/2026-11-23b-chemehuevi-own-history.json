@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "registry_id": "chemehuevi-indian-tribe-us-ca",
+  "directory_id": "us-fed-d3e7006ab6a4",
+  "review_kind": "AI-assisted own-source history, governance, language, identity and respect research",
+  "receipts": [
+    {
+      "url": "https://chemehuevi.org/",
+      "final_url": "https://chemehuevi.org/",
+      "retrieved_at": "2026-11-23T17:34:16.615551+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 206452,
+      "sha256": "8b767b4c8717ac9f5d6fa95b98dc38e45c4d917764f43209073b93bf3433c8f6",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-home.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/about-us",
+      "final_url": "https://chemehuevi.org/m/login?r=%2Fabout-us",
+      "retrieved_at": "2026-11-23T17:34:50.114769+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 155164,
+      "sha256": "708113c2acf7a434723c8d571420f427fe009ca014fd8e6e335acd859b1df855",
+      "redirects": [
+        {
+          "status": 302,
+          "from_url": "https://chemehuevi.org/about-us",
+          "to_url": "https://chemehuevi.org/m/login?r=%2Fabout-us"
+        }
+      ],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-about.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-council",
+      "final_url": "https://chemehuevi.org/tribal-council",
+      "retrieved_at": "2026-11-23T17:34:52.557902+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 182251,
+      "sha256": "9294cf640f0956eb400b810e34db4264925ab088dffefccda627c1dc07687c88",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-council.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/cultural-center",
+      "final_url": "https://chemehuevi.org/cultural-center",
+      "retrieved_at": "2026-11-23T17:34:54.827449+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 172618,
+      "sha256": "da319c2782f6d8270760bb8e4c4f2c226fddbeb9dee1dd0b4451c127a17251ff",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-cultural.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/environmental",
+      "final_url": "https://chemehuevi.org/environmental",
+      "retrieved_at": "2026-11-23T17:34:57.149167+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 207403,
+      "sha256": "91a5362ecc3edd42ab8cf9cd840a786e192f5358ce0aa03ec5210ba3aca18717",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-environment.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/water",
+      "final_url": "https://chemehuevi.org/water",
+      "retrieved_at": "2026-11-23T17:35:31.925212+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 183009,
+      "sha256": "2e963811480844a70dc4d53e84bdad7a41815ab7d2fc172e4e0885b9527530fd",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-water.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-enterprises",
+      "final_url": "https://chemehuevi.org/tribal-enterprises",
+      "retrieved_at": "2026-11-23T17:35:34.230848+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 175182,
+      "sha256": "89456e7e9e32e7203171071214516dae517124831cf7ffd3cde85d9326e8616c",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-enterprises.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/education",
+      "final_url": "https://chemehuevi.org/education",
+      "retrieved_at": "2026-11-23T17:35:36.488845+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 177489,
+      "sha256": "7e4749eeb9ed1185e2bda3a830da187e1981bfabd615c5f417454afece521ccc",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-education.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-23T17:35:38.906689+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-federal.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-court",
+      "final_url": "https://chemehuevi.org/tribal-court",
+      "retrieved_at": "2026-11-23T17:36:05.685290+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 278143,
+      "sha256": "7464ccb49d3f7e131a79078f955139c75e405d5e693dd45241e1a8a992f5fa2b",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-court.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://chemehuevi.org/tribal-attorney",
+      "final_url": "https://chemehuevi.org/tribal-attorney",
+      "retrieved_at": "2026-11-23T17:37:02.278197+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 155803,
+      "sha256": "a2e854a7b03d53ab1488db46d48ec1bc2be6cb91beabb8d20d1c13230a97bbc9",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "local_capture_at_review": {
+        "filename": ".local-2026-11-23b-chemehuevi/2026-11-23b-chemehuevi-attorney.body.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://chemehuevi.org/robots.txt",
+      "final_url": "https://chemehuevi.org/robots.txt",
+      "retrieved_at": "2026-11-23T17:34:14.314978+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 56,
+      "sha256": "9b20a3ec1f920f4568f6d13309cbd8e12b958bccda3981c30656063110a148ff",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "body_file": "data/nations/research/receipts/2026-11-23b-chemehuevi-own-robots.body.txt"
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-23T17:35:36.806438+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+      "body_file": "data/nations/research/receipts/2026-11-23b-chemehuevi-federal-robots.body.txt"
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1978",
+      "later_event_date": "2000",
+      "receipt_index": 10,
+      "locator": "Department Mission & History / Department History",
+      "scope": "Contract establishment and creation by Tribal law are distinct stages."
+    },
+    {
+      "event_date": null,
+      "receipt_index": 2,
+      "locator": "Purpose Statement"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 3,
+      "locator": "Mission"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 3,
+      "locator": "Services Provided"
+    }
+  ],
+  "source_limits": [
+    "The source explicitly separates the 1978 contract from creation by Tribal law through the Administrative Code in 2000. Neither date is a people’s origin, a present-law determination or a claim about current staffing.",
+    "This is the Council page’s undated statement of purpose. The underlying Constitution’s full text and current legal effect were not independently reviewed; no officeholder, current policy result or recognition finding is inferred.",
+    "The public mission describes intergenerational education. No age, enrollment, current staffing, program start date, measured outcome or cultural-use permission is inferred.",
+    "The undated public services list supports this summary. It establishes no present schedule, enrollment eligibility, teaching content, fluency outcome or permission to reproduce restricted knowledge.",
+    "The About Us route returned a 302 redirect to an account-login page followed by HTTP200. This is a protected route, not accessible historical content; no login, form or access bypass was attempted.",
+    "The homepage title supplies the government’s own name. Nuwu and broader people labels are not added as government aliases. The general geographic lands description is not a legal boundary, title, acreage or exclusive-territory finding.",
+    "The environmental page uses undated COVID-era wording. Its personnel, environmental claims, energy-saving estimates and current-risk implications are not published as facts.",
+    "The Water page lists dated report filenames; no report contents, present drinking-water condition or successful service result is inferred from those filenames.",
+    "Staff names, contact information, schedules, account fields, court procedures and posted cultural-page meeting details are excluded from the factual packet. No private/member-only content, cultural material or files behind login were accessed.",
+    "The public Tribe-authored Attorney page supplies the two dated administrative stages; no restricted full-text Constitution is reproduced or bypassed. No present constitutional interpretation or legal advice is supplied."
+  ],
+  "crawl_policy": "Actual own and Govinfo robots checks preceded factual reads. Both allow the reviewed paths for ZOTHEOSResearch/1.0; own-origin content requests were paced at least two seconds apart. The About redirect stayed on the reviewed HTTPS host and was not bypassed.",
+  "capture_retention": "Full factual HTML captures were read and hashed during local review and are local only, excluded from public publication. Exact URL/status/time/byte-count/hash receipts, short evidence anchors and original summaries are retained; robots configuration captures may remain.",
+  "candidate_fact_ids": [
+    "chemehuevi-indian-tribe-us-ca-2f4d551f",
+    "chemehuevi-indian-tribe-us-ca-d8fd3dc6",
+    "chemehuevi-indian-tribe-us-ca-a42f4340",
+    "chemehuevi-indian-tribe-us-ca-7a1f2759"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
