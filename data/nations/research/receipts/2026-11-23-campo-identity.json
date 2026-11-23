@@ -1,0 +1,106 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-23T08:38:57.504762+00:00",
+  "review_kind": "Independent AI-assisted explicit source-backed government identity review",
+  "directory_id": "us-fed-a9fdf1462e2c",
+  "registry_id": "campo-band-kumeyaay-indians-us-ca",
+  "own_published_name": "Campo Band of Kumeyaay Indians",
+  "official_url": null,
+  "own_name_source": {
+    "url": "https://www.campoepa.com/about-us",
+    "final_url": "https://www.campoepa.com/about-us",
+    "retrieved_at": "2026-11-23T08:37:47.476190+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 464572,
+    "sha256": "4d1c5b2ae171d837b8f1f52d0aec349f4529090adee034c2f70cc11a4865b6cb",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "local_capture_at_review": {
+      "filename": "2026-11-23-campo-cepa-about.body.html",
+      "publicly_retained": false
+    }
+  },
+  "agency_relationship": "The agency’s own account names the Band’s General Council and dates its creation to July 1990.",
+  "indigenous_led_directory_source": {
+    "url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+    "final_url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+    "retrieved_at": "2026-11-23T08:37:49.860476+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 68141,
+    "sha256": "5ce90785dfea75a25a1594751fef5d8e0a5924e741816636ca5ba6fb92a07b23",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "local_capture_at_review": {
+      "filename": "2026-11-23-campo-sctca-source.body.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "saved_bia_object_id": 402,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://www.campo-nsn.gov/",
+    "alternate_name": "Campo Indian Reservation"
+  },
+  "general_government_site": {
+    "status": "robots-unavailable",
+    "robot_receipt": {
+      "url": "https://www.campo-nsn.gov/robots.txt",
+      "final_url": "https://www.campo-nsn.gov/robots.txt",
+      "retrieved_at": "2026-11-23T08:29:46.721324Z",
+      "retrieval_method": "http",
+      "http_status": 500,
+      "body_bytes": 732,
+      "sha256": "8e3822de19da2c274a31f26171cad406e0ff63db86f541345a9aa4f1678feaa4",
+      "redirects": []
+    },
+    "note": "No factual origin fetch followed the HTTP 500; this URL is not promoted to a verified current official website."
+  },
+  "batch": "batches/2026-11-23-campo-own-history.json",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "pre_restart_observations": {
+    "reviewed_at": "2026-11-23T08:34:36.614804+00:00",
+    "own_name_source": {
+      "url": "https://www.campoepa.com/about-us",
+      "final_url": "https://www.campoepa.com/about-us",
+      "retrieved_at": "2026-11-23T08:30:55.740130Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 464572,
+      "sha256": "4d1c5b2ae171d837b8f1f52d0aec349f4529090adee034c2f70cc11a4865b6cb",
+      "redirects": []
+    },
+    "indigenous_led_directory_source": {
+      "url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+      "final_url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+      "retrieved_at": "2026-11-23T08:30:57.942077Z",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 68141,
+      "sha256": "5ce90785dfea75a25a1594751fef5d8e0a5924e741816636ca5ba6fb92a07b23",
+      "redirects": []
+    }
+  },
+  "federal_directory_receipt": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-23T08:37:52.596655+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "local_capture_at_review": {
+      "filename": "2026-11-23-campo-federal-source.body.html",
+      "publicly_retained": false
+    }
+  },
+  "capture_retention": "Full factual HTML captures were read and hashed during isolated local review, then excluded from public publication. Exact retrieval receipts, hashes, short evidence anchors and original summaries are retained. Robots configuration captures remain available."
+}

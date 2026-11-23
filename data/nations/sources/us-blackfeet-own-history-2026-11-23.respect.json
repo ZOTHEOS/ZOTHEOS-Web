@@ -1,0 +1,44 @@
+{
+  "region": "us-plains-midwest",
+  "reviewed": "2026-11-23",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-23T08:35:35.855180+00:00",
+    "evidence_receipt": "batches/2026-11-23-blackfeet-own-history.json",
+    "review_kind": "AI-assisted source, scope and respect review"
+  },
+  "items": [
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": null,
+      "action": "keep",
+      "reason": "The US government is identified on its own homepage and government page as Blackfeet Nation, governed by the Blackfeet Tribal Business Council under its Constitution and By-laws. Federal listing and archived BIA490 corroborate the identity/site. Existing profile aliases are preserved, without equating the US government with distinct Canadian governments or independently revalidating all broader peoplehood names."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The own lands page provides a historical account. This establishes no current land title, boundary, acreage or exclusive representation of the wider Confederacy."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 1,
+      "action": "keep",
+      "reason": "The same own chronology separately dates Montana legislative ratification and Congressional approval plus presidential signing. No present funding, water quantity or legal compliance conclusion is inferred."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 2,
+      "action": "keep",
+      "reason": "The own page records a specific Tribal vote date. The wording establishes no present voting tally, eligibility rule, universal representation or current implementation result."
+    },
+    {
+      "id": "blackfeet-nation-us-mt",
+      "fact": 3,
+      "action": "keep",
+      "reason": "The own chronology dates department establishment by resolution to 2018. No current staffing, program capacity, funding delivery or measured outcome is inferred."
+    }
+  ]
+}

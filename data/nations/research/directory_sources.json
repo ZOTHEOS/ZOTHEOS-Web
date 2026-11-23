@@ -1569,6 +1569,38 @@
       "discovery_date": "2026-11-21",
       "status": "source_retrieved",
       "note": "The government’s current own site, corroborated by its named heading and measured redirect from the archived BIA homepage."
+    },
+    {
+      "source_id": "blackfeet-own-site-2026-11-23",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://blackfeetnation.com/",
+      "allowed_hosts": [
+        "blackfeetnation.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-23",
+      "status": "source_retrieved",
+      "note": "The US government’s own history and compact pages, with source-backed identity linked to the existing profile."
+    },
+    {
+      "source_id": "campo-own-agency-2026-11-23",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.campoepa.com/about-us",
+      "allowed_hosts": [
+        "www.campoepa.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-23",
+      "status": "source_retrieved",
+      "note": "The Band’s own Environmental Protection Agency, explicitly created by its General Council. General government site remains unavailable; no current official homepage is promoted."
     }
   ]
 }

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T08:37:41.327547+00:00",
+  "review_kind": "Independent AI-assisted saved-source, chronology, identity and respect cross-review",
+  "reviewer": "ZOTHEOS",
+  "registry_id": "blackfeet-nation-us-mt",
+  "result": "passed",
+  "checks": [
+    "All eleven saved bodies match their recorded byte lengths and SHA-256 values.",
+    "All four fact anchors match normalized saved source text; facts satisfy the length, evidence and date contracts.",
+    "Own lands, compact and chronology pages support the historical dates. The 2025 enforceability entry is excluded from completed-funding or current-access claims.",
+    "The federal notice and saved BIA490 support the crosswalk to the existing US government. Distinct Canadian governments and broader Confederacy identities are not merged.",
+    "Robots permit the factual paths; recorded own-content requests are separated by at least eleven seconds.",
+    "No present leadership, title, acreage, water quantity, funding outcome or Nation endorsement is inferred.",
+    "Integration appends the four source-packet facts to the three unchanged prior Blackfeet facts; profile metadata and original source clocks are preserved.",
+    "The sole Paths addition matches the batch example and canonical fact IDs. It separates state, federal and Tribal decisions from administrative and funding outcomes in a hypothetical private reader exercise.",
+    "The example preserves the 2025 milestone uncertainty, qualified human review, distinct legal processes and sensitive-information boundaries. No current delivery or legal outcome is promised.",
+    "All prior Paths text, examples, capability statements and unrelated chapter fields remain equal to the base commit."
+  ],
+  "source_pins": {
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.raw.json": "e434e1c28080a21e7d4359158744835d029f42986b3a361d3d705893c3ab82c8",
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.verify.json": "15c661499f76b3a0d5bcd9f0e79376667fb385560bd1c76651b93cd2e67902da",
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.respect.json": "5ccee39a671ae9dcce3a218a33c6488ec69a043847701cfb46f49b7cbe49601e",
+    "data/nations/research/batches/2026-11-23-blackfeet-own-history.json": "750e87f2e2288a30f2aefa9cfab71590b76aaa17caa6d82eb340d688d1a9009d",
+    "data/nations/research/receipts/2026-11-23-blackfeet-identity.json": "160a7d988f71bba3ddf8b0392187654dd671520a0718843225880bca62a7ebf4",
+    "data/nations/pathways.json": "204275de8cf1d5809d6336b85bbafc23e2cea919892bef67609b8f363ac84aee",
+    "data/nations/nations.json": "ad371052488dde685b99e90de04b963229dbd43d74a4e26181d23b340d92cb17"
+  },
+  "integration_checks_pending": [],
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "integration_reviewed_at": "2026-11-23T08:39:23.750525+00:00",
+  "publication_retention_review": {
+    "reviewed_at": "2026-11-23T08:47:16.208476+00:00",
+    "review_kind": "Independent AI-assisted receipt-only publication retention and source-pin review",
+    "result": "passed",
+    "checks": [
+      "No factual HTML remains in the owned public packet; each local-capture descriptor explicitly sets publicly_retained false.",
+      "No HTML body_file or archive_body references remain in the reviewed receipts, batches or identities. Retained robots bodies match their byte counts and hashes.",
+      "Reversing only the retention descriptors and disclosure changes reconstructs the exact prior pinned hashes for the own-history batch and identity receipt.",
+      "Raw, verification and respect sidecar hashes are unchanged; fact text, event dates, source-check clocks and prior review times are preserved."
+    ],
+    "local_capture_scope": "Earlier body-match counts describe the local captures present at the stated review times. Full factual HTML is excluded from public publication; exact retrieval receipts, source URLs, short evidence and original summaries remain.",
+    "repinned_artifacts": {
+      "data/nations/research/batches/2026-11-23-blackfeet-own-history.json": {
+        "prior_review_sha256": "a8b2b4398ad7af9fea7228780c818f73190fe26ae55a7435bd9fff4e5ed7439d",
+        "receipt_only_sha256": "750e87f2e2288a30f2aefa9cfab71590b76aaa17caa6d82eb340d688d1a9009d"
+      },
+      "data/nations/research/receipts/2026-11-23-blackfeet-identity.json": {
+        "prior_review_sha256": "af3351de58a62e654c9599b07f7b7a1594bc913f52a9ca173626c82eb20da53b",
+        "receipt_only_sha256": "160a7d988f71bba3ddf8b0392187654dd671520a0718843225880bca62a7ebf4"
+      }
+    },
+    "person_review_claimed": false,
+    "nation_endorsement_claimed": false
+  },
+  "capture_retention": "Full factual HTML was available for the recorded local review and is not publicly retained. Exact receipts and source hashes remain; robots configurations remain available."
+}

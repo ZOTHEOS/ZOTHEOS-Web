@@ -1,0 +1,90 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-23T08:35:35.855180+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity review",
+  "directory_id": "us-fed-917f4283ffad",
+  "registry_id": "blackfeet-nation-us-mt",
+  "own_published_name": "Blackfeet Nation",
+  "official_url": "https://blackfeetnation.com",
+  "own_name_source": {
+    "url": "https://blackfeetnation.com/",
+    "final_url": "https://blackfeetnation.com/",
+    "http_status": 200,
+    "retrieved_at": "2026-11-23T08:30:13.396205+00:00",
+    "retrieval_method": "http",
+    "body_bytes": 94083,
+    "sha256": "1a1935c6b86454d81262cd636ee6dc960f4f406b264a8910a2b0da8804769c46",
+    "redirects": [],
+    "local_capture_at_review": {
+      "filename": "2026-11-23-blackfeet-home.body.html",
+      "publicly_retained": false
+    }
+  },
+  "government_source": {
+    "url": "https://blackfeetnation.com/government/",
+    "final_url": "https://blackfeetnation.com/government/",
+    "http_status": 200,
+    "retrieved_at": "2026-11-23T08:31:21.226929+00:00",
+    "retrieval_method": "http",
+    "body_bytes": 71836,
+    "sha256": "bd1e6977e513a72a2f4f004e1cd32613ecd0b6ad05ef84c5dc4f009a9163c4f1",
+    "redirects": [],
+    "local_capture_at_review": {
+      "filename": "2026-11-23-blackfeet-government.body.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "http_status": 200,
+    "retrieved_at": "2026-11-23T08:30:13.543754+00:00",
+    "retrieval_method": "http",
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "local_capture_at_review": {
+      "filename": "2026-11-23-blackfeet-federal.body.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 490,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://www.blackfeetnation.com",
+    "component": "Tribe"
+  },
+  "legacy_website_redirect": {
+    "url": "https://www.blackfeetnation.com",
+    "final_url": "https://blackfeetnation.com/",
+    "http_status": 200,
+    "retrieved_at": "2026-11-23T08:34:13.307978+00:00",
+    "retrieval_method": "http",
+    "body_bytes": 94083,
+    "sha256": "bc673c0174eca9ff0864f19c090d82289d6ad80cfa2461f1f3cc8c65ed311eb5",
+    "redirects": [
+      {
+        "status": 301,
+        "from_url": "https://www.blackfeetnation.com",
+        "to_url": "http://blackfeetnation.com/"
+      },
+      {
+        "status": 301,
+        "from_url": "http://blackfeetnation.com/",
+        "to_url": "https://blackfeetnation.com/"
+      }
+    ],
+    "local_capture_at_review": {
+      "filename": "2026-11-23-blackfeet-legacy-home.body.html",
+      "publicly_retained": false
+    }
+  },
+  "batch": "batches/2026-11-23-blackfeet-own-history.json",
+  "identity_scope": "This resolves the federal directory record to the existing US Blackfeet Nation government profile. It establishes no merger, representation or identity finding for Siksika, Kainai or Piikani governments in Canada.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "capture_retention": "Full factual HTML captures were read and hashed during isolated local review, then excluded from public publication. Exact retrieval receipts, hashes, short evidence anchors and original summaries are retained. Robots configuration captures remain available."
+}

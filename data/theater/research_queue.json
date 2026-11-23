@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-21",
+  "updated": "2026-11-23",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -389,7 +389,23 @@
         "https://visionmakermedia.org/film-library/racing-the-rez/"
       ],
       "reason": "The own producer and authorized broadcasters identify the complete documentary and the selected WETA member-access edition.",
-      "next": "Verify the generated and live member-access card. Actual access, playback, captions, artwork and embedding permission remain open."
+      "next": "The live member-access card and official viewing URL matched the reviewed files. Member/account eligibility, regional access, playback, caption quality and reuse permissions remain open.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/56"
+    },
+    {
+      "id": "warrior-women-availability",
+      "title": "Warrior Women",
+      "status": "needs-consumer-full-edition-review",
+      "checked": "2026-11-23",
+      "batch": "research/batches/2026-11-23-warrior-women.json",
+      "source_urls": [
+        "https://visionmakermedia.org/film-library/warrior-women/",
+        "https://gooddocs.net/products/warrior-women"
+      ],
+      "reason": "Vision Maker Media links an authorized paid educational distributor. Its complete 64-minute edition is distinct from the 57-minute broadcast catalog. An available complete consumer viewing edition has not been verified.",
+      "next": "Verify an authorized complete consumer edition, its viewing access and any permitted embedding before proposing a catalog record. No film or full-film count was added.",
+      "build_state": "research-only"
     }
   ]
 }

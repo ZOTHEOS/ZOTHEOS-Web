@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-23T08:39:45.312399+00:00",
+  "review_kind": "Independent AI-assisted source, identity, chronology and respect cross-review",
+  "registry_id": "campo-band-kumeyaay-indians-us-ca",
+  "directory_id": "us-fed-a9fdf1462e2c",
+  "result": "passed",
+  "body_receipt_matches": 7,
+  "source_check_date": "2026-11-23",
+  "facts_supported": [
+    {
+      "index": 0,
+      "event_date": "1990-07",
+      "scope": "Agency creation by the Band’s General Council, not a finding about current jurisdiction."
+    },
+    {
+      "index": 1,
+      "event_date": "1992",
+      "scope": "Installation date of erosion structures, not a present environmental outcome."
+    },
+    {
+      "index": 2,
+      "event_date": "1995-01-01",
+      "scope": "Reported effective date of the historical grazing vote, not current enforcement."
+    },
+    {
+      "index": 3,
+      "event_date": "2026",
+      "scope": "Summer feature of work with the Botanic Garden, not project inception, funding or measured conservation results."
+    }
+  ],
+  "identity": "The CEPA own account names the Band and General Council. SCTCA uses the Band’s name and identifies Campo Reservation; saved BIA402 links the federal-listed government and reservation. Broader Kumeyaay peoples and other governments remain separate.",
+  "source_limits": [
+    "No new request to the unavailable general-government origin. Its earlier reported 500 retains its date and is not promoted to a current verified website.",
+    "official_url remains null; the primary fact and name source is the Band-created environmental agency.",
+    "The BIA archive remains dated October 12; the federal notice is dated January 30, 2026. The notice is planning corroboration, not the definition of Indigenous identity.",
+    "Only public administrative and environmental summaries are used; restricted traditional specialist and ceremonial details are excluded.",
+    "No current leaders, population, land title, health-safety conclusion or ecological measurements are inferred."
+  ],
+  "publication_holds_checked": true,
+  "new_duplicate_profile_found": false,
+  "base_commit_for_duplicate_check": "78c9df0531a3a1260914d15a880c9da66c470799",
+  "artifact_pins": {
+    "data/nations/sources/us-campo-own-history-2026-11-23.raw.json": "8b22ef4f5ddfa9881ea6913ab9ec221829b8efaf7eb59d4d28089ec4e58ffaec",
+    "data/nations/sources/us-campo-own-history-2026-11-23.verify.json": "20f725feff8b3f8678bb5af7eec4753e729507b20d3c81caa14f7d8bfcc2b8e8",
+    "data/nations/sources/us-campo-own-history-2026-11-23.respect.json": "ef73965fe6f372113dfbc3ddcd0ec02d30ed4056e0cf883b0b05145bf856eb59",
+    "data/nations/research/batches/2026-11-23-campo-own-history.json": "4f48738b97d3abb4f6a7c1c25bc5a9cc402a72a25ca7181fc3783212f5ef16df",
+    "data/nations/research/receipts/2026-11-23-campo-identity.json": "0a2c63edc433e6a79f8d7df4675da4e25edd775699a26d3afc4a480b888991a1"
+  },
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "publication_retention_review": {
+    "reviewed_at": "2026-11-23T08:47:16.208476+00:00",
+    "review_kind": "Independent AI-assisted receipt-only publication retention and source-pin review",
+    "result": "passed",
+    "checks": [
+      "No factual HTML remains in the owned public packet; each local-capture descriptor explicitly sets publicly_retained false.",
+      "No HTML body_file or archive_body references remain in the reviewed receipts, batches or identities. Retained robots bodies match their byte counts and hashes.",
+      "Reversing only the retention descriptors and disclosure changes reconstructs the exact prior pinned hashes for the own-history batch and identity receipt.",
+      "Raw, verification and respect sidecar hashes are unchanged; fact text, event dates, source-check clocks and prior review times are preserved."
+    ],
+    "local_capture_scope": "Earlier body-match counts describe the local captures present at the stated review times. Full factual HTML is excluded from public publication; exact retrieval receipts, source URLs, short evidence and original summaries remain.",
+    "repinned_artifacts": {
+      "data/nations/research/batches/2026-11-23-campo-own-history.json": {
+        "prior_review_sha256": "96e0276f38856d36bcff5ca519f6d7d7c4aef02a0ab6570e81ffa19da34d1af9",
+        "receipt_only_sha256": "4f48738b97d3abb4f6a7c1c25bc5a9cc402a72a25ca7181fc3783212f5ef16df"
+      },
+      "data/nations/research/receipts/2026-11-23-campo-identity.json": {
+        "prior_review_sha256": "d0bd74a93728157e50fea9038e9d81bdc62ea858fa6b883bad47d6e89e397e3e",
+        "receipt_only_sha256": "0a2c63edc433e6a79f8d7df4675da4e25edd775699a26d3afc4a480b888991a1"
+      }
+    },
+    "person_review_claimed": false,
+    "nation_endorsement_claimed": false
+  },
+  "capture_retention": "Full factual HTML was available for the recorded local review and is not publicly retained. Exact receipts and source hashes remain; robots configurations remain available."
+}

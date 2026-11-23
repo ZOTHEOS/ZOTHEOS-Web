@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-21",
-  "count": 498,
-  "facts": 1464,
+  "generated": "2026-11-23",
+  "count": 499,
+  "facts": 1472,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 44
+    "us-west-pacific": 45
   },
   "nations": [
     {
@@ -26510,6 +26510,70 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        },
+        {
+          "id": "blackfeet-nation-us-mt-b2f4e6a0",
+          "text": "The Nation’s lands page describes its original 1855 reservation as encompassing much of northern Montana.",
+          "kind": "history",
+          "as_of": "1855",
+          "source": {
+            "title": "Our Lands",
+            "publisher": "Blackfeet Nation",
+            "url": "https://blackfeetnation.com/lands/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "original 1855 Blackfeet Indian Reservation encompassed",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "blackfeet-nation-us-mt-c5e282d0",
+          "text": "The Nation’s water chronology records Montana ratification in 2009 and federal enactment of the Blackfeet Water Rights Settlement Act in 2016.",
+          "kind": "history",
+          "as_of": "2016",
+          "source": {
+            "title": "Water Compact: Chronology",
+            "publisher": "Blackfeet Nation",
+            "url": "https://blackfeetnation.com/watercompact/chronology/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "President Obama signs the Blackfeet Water Rights Settlement Act",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "blackfeet-nation-us-mt-1a0c46ea",
+          "text": "The Nation’s compact page records an April 20, 2017 vote by Tribal members in favor of the Blackfeet Water Compact and Settlement Act.",
+          "kind": "governance",
+          "as_of": "2017",
+          "source": {
+            "title": "Water Compact",
+            "publisher": "Blackfeet Nation",
+            "url": "https://blackfeetnation.com/watercompact/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "In a historic vote on April 20, 2017",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "blackfeet-nation-us-mt-300f70d1",
+          "text": "The Nation’s water chronology dates establishment of a Water Department by resolution to 2018.",
+          "kind": "governance",
+          "as_of": "2018",
+          "source": {
+            "title": "Water Compact: Chronology",
+            "publisher": "Blackfeet Nation",
+            "url": "https://blackfeetnation.com/watercompact/chronology/",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "Water Department Established via Resolution",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
         }
       ]
     },
@@ -32386,6 +32450,85 @@
           "status": "verified",
           "checked": "2026-11-21",
           "last_verified": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": "campo-band-kumeyaay-indians-us-ca",
+      "region": "us-west-pacific",
+      "name": "Campo Band of Kumeyaay Indians",
+      "also": [],
+      "pronounce": null,
+      "lands": "Laguna Mountains, southeastern San Diego County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": null,
+      "name_source_url": "https://www.campoepa.com/about-us",
+      "facts": [
+        {
+          "id": "campo-band-kumeyaay-indians-us-ca-01fcd2a6",
+          "text": "Campo’s Environmental Protection Agency says it was created by order of the Band’s General Council in July 1990.",
+          "kind": "history",
+          "as_of": "1990",
+          "source": {
+            "title": "Campo EPA About Us",
+            "publisher": "Campo Environmental Protection Agency",
+            "url": "https://www.campoepa.com/about-us",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "order of the General Council",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "campo-band-kumeyaay-indians-us-ca-0bd5da0d",
+          "text": "The agency’s account dates structures installed to control erosion in the Diebold Creek wetlands restoration project to 1992.",
+          "kind": "land",
+          "as_of": "1992",
+          "source": {
+            "title": "Campo EPA About Us",
+            "publisher": "Campo Environmental Protection Agency",
+            "url": "https://www.campoepa.com/about-us",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "erosion structures were emplaced in 1992",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "campo-band-kumeyaay-indians-us-ca-24613b45",
+          "text": "The agency reports that the Campo Band voted to end commercial grazing on Tribal lands effective January 1, 1995.",
+          "kind": "governance",
+          "as_of": "1995",
+          "source": {
+            "title": "Campo EPA About Us",
+            "publisher": "Campo Environmental Protection Agency",
+            "url": "https://www.campoepa.com/about-us",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "effective January 1, 1995",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
+        },
+        {
+          "id": "campo-band-kumeyaay-indians-us-ca-08323a22",
+          "text": "The agency’s About page reports work with the San Diego Botanic Garden that was featured in summer 2026.",
+          "kind": "achievement",
+          "as_of": "2026",
+          "source": {
+            "title": "Campo EPA About Us",
+            "publisher": "Campo Environmental Protection Agency",
+            "url": "https://www.campoepa.com/about-us",
+            "accessed": "2026-11-23"
+          },
+          "evidence": "work with the San Diego Botanic Garden",
+          "status": "verified",
+          "checked": "2026-11-23",
+          "last_verified": "2026-11-23"
         }
       ]
     }

@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "registry_id": "blackfeet-nation-us-mt",
+  "directory_id": "us-fed-917f4283ffad",
+  "review_kind": "AI-assisted own-source, historical chronology, government identity and respect review",
+  "status": "candidate-for-independent-review",
+  "receipts": [
+    {
+      "url": "https://blackfeetnation.com/",
+      "final_url": "https://blackfeetnation.com/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:30:13.396205+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 94083,
+      "sha256": "1a1935c6b86454d81262cd636ee6dc960f4f406b264a8910a2b0da8804769c46",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-home.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://blackfeetnation.com/lands/",
+      "final_url": "https://blackfeetnation.com/lands/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:32:17.771208+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 76412,
+      "sha256": "a455b815c3c78e52015410a2faa23f2d7ea501c75cabefe61d0aff20e57c40b5",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-lands.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://blackfeetnation.com/watercompact/chronology/",
+      "final_url": "https://blackfeetnation.com/watercompact/chronology/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:32:29.009201+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 82127,
+      "sha256": "8b9a980438bc1bc890c856292c3857a00c10b1f9f58af6f45173eb4cc528c767",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-chronology.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://blackfeetnation.com/watercompact/",
+      "final_url": "https://blackfeetnation.com/watercompact/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:31:10.068851+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 80964,
+      "sha256": "803bcfe1de5c14c59f991eccb430aca54faa87b2bd307b286e47a67237f36f02",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-compact.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://blackfeetnation.com/government/",
+      "final_url": "https://blackfeetnation.com/government/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:31:21.226929+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 71836,
+      "sha256": "bd1e6977e513a72a2f4f004e1cd32613ecd0b6ad05ef84c5dc4f009a9163c4f1",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-government.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://blackfeetnation.com/watercompact/faqs/",
+      "final_url": "https://blackfeetnation.com/watercompact/faqs/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:32:40.234868+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 87769,
+      "sha256": "3c121afdc6e08bdcb3a3af3bedb1fee6b8b86188a0145302828a8c37ebc44fbf",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-compact-faq.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:30:13.543754+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": [],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-federal.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.blackfeetnation.com",
+      "final_url": "https://blackfeetnation.com/",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:34:13.307978+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 94083,
+      "sha256": "bc673c0174eca9ff0864f19c090d82289d6ad80cfa2461f1f3cc8c65ed311eb5",
+      "redirects": [
+        {
+          "status": 301,
+          "from_url": "https://www.blackfeetnation.com",
+          "to_url": "http://blackfeetnation.com/"
+        },
+        {
+          "status": 301,
+          "from_url": "http://blackfeetnation.com/",
+          "to_url": "https://blackfeetnation.com/"
+        }
+      ],
+      "local_capture_at_review": {
+        "filename": "2026-11-23-blackfeet-legacy-home.body.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://blackfeetnation.com/robots.txt",
+      "final_url": "https://blackfeetnation.com/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:29:45.261627+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 135,
+      "sha256": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
+      "redirects": [],
+      "body_file": "data/nations/research/receipts/2026-11-23-blackfeet-own-robots.body.txt"
+    },
+    {
+      "url": "https://www.blackfeetnation.com/robots.txt",
+      "final_url": "http://blackfeetnation.com/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:29:45.600847+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 135,
+      "sha256": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
+      "redirects": [
+        {
+          "status": 301,
+          "from_url": "https://www.blackfeetnation.com/robots.txt",
+          "to_url": "http://blackfeetnation.com/robots.txt"
+        }
+      ],
+      "body_file": "data/nations/research/receipts/2026-11-23-blackfeet-www-robots.body.txt"
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-11-23T08:29:45.729336+00:00",
+      "retrieval_method": "http",
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": [],
+      "body_file": "data/nations/research/receipts/2026-11-23-blackfeet-federal-robots.body.txt"
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1855",
+      "receipt_index": 1,
+      "locator": "Our Lands historical opening"
+    },
+    {
+      "event_date": "2009",
+      "subsequent_event": "2016",
+      "receipt_index": 2,
+      "locator": "2000 and 2016 chronology headings"
+    },
+    {
+      "event_date": "2017-04-20",
+      "receipt_index": 3,
+      "locator": "Opening Tribal vote statement"
+    },
+    {
+      "event_date": "2018",
+      "receipt_index": 2,
+      "locator": "Water Department Established via Resolution"
+    }
+  ],
+  "source_limits": [
+    "The own lands page provides a historical account. This establishes no current land title, boundary, acreage or exclusive representation of the wider Confederacy.",
+    "The same own chronology separately dates Montana legislative ratification and Congressional approval plus presidential signing. No present funding, water quantity or legal compliance conclusion is inferred.",
+    "The own page records a specific Tribal vote date. The wording establishes no present voting tally, eligibility rule, universal representation or current implementation result.",
+    "The own chronology dates department establishment by resolution to 2018. No current staffing, program capacity, funding delivery or measured outcome is inferred.",
+    "The government page’s official names and 2020 to 2024 committee material were not used as current 2026 leadership evidence.",
+    "The existing membership, current-land and generic-branches facts and their original source clocks are outside this packet and require no alteration for these additions.",
+    "The broader Blackfoot Confederacy and distinct Canadian governments are not merged with this US government. Existing broader aliases/branches wording remains a separate scope question.",
+    "The compact FAQ contains prospective water/funding and litigation descriptions. No current water entitlement quantity, funding delivery, individual claim determination or legal advice is inferred."
+  ],
+  "unresolved_claims": [
+    {
+      "subject": "2025 enforceability entry",
+      "source_url": "https://blackfeetnation.com/watercompact/chronology/",
+      "source_receipt_index": 2,
+      "source_year": "2025",
+      "status": "unresolved",
+      "observation": "The chronology labels Enforceability in 2025 and describes it as a finality benchmark. It does not identify a separate dated decision or document within that entry. A completed-funding or current-access conclusion is excluded pending primary-record chronology review."
+    }
+  ],
+  "crawl_policy": "Own apex robots require a ten-second delay. Selected content requests on that host were paced at least eleven seconds apart. Federal robots preceded the federal notice. The archived BIA www hostname has a measured legacy homepage redirect through HTTP to the current HTTPS apex; exact chains are retained.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "candidate_fact_ids": [
+    "blackfeet-nation-us-mt-b2f4e6a0",
+    "blackfeet-nation-us-mt-c5e282d0",
+    "blackfeet-nation-us-mt-1a0c46ea",
+    "blackfeet-nation-us-mt-300f70d1"
+  ],
+  "pathways_practice": {
+    "chapter": "land-and-water",
+    "example": {
+      "nation": "blackfeet-nation-us-mt",
+      "fact_ids": [
+        "blackfeet-nation-us-mt-c5e282d0",
+        "blackfeet-nation-us-mt-1a0c46ea",
+        "blackfeet-nation-us-mt-300f70d1"
+      ],
+      "practice": {
+        "question": "Hypothetical reader question: How could I separate a water agreement’s different approvals from the later work of implementation?",
+        "steps": [
+          "Read the Blackfeet Nation’s own compact and chronology pages. In a private timeline, enter Montana ratification in 2009, federal legislation in 2016, the Tribal-member vote on April 20, 2017 and establishment of the Water Department in 2018 as separate events. Keep each source link and event date beside its entry.",
+          "For a public agreement you are studying, make separate rows for the authorized decision-maker, approval, administrative responsibility, funding and implementation evidence. Mark an unknown as unknown. One approval does not demonstrate that another authority has acted or that a project is complete.",
+          "Prepare one precise question about a missing stage and identify the public record that could answer it. Leave the chronology’s 2025 enforceability entry unresolved unless a separate dated record establishes its status. Preserve the Nation’s own description rather than turning a benchmark into a claim that funds were received or spent.",
+          "Finish a one-page sequence of decisions with the evidence checked, remaining questions and your next review date. Use it to prepare for qualified human review; keep private community information and sensitive places out of the note."
+        ],
+        "boundary": "This is an evidence-organizing exercise based on the Nation’s published account. It is not legal advice, a water-rights determination, proof of current funding or service, or authority to act for the Blackfeet Nation. Other Nations and jurisdictions may use different processes.",
+        "reflection": "Which decision belongs to the rights holders, which belongs to another authority, and what evidence would distinguish an approval from a benefit actually delivered?"
+      }
+    },
+    "source_packet": "sources/us-blackfeet-own-history-2026-11-23.raw.json",
+    "source_fact_indexes": [
+      1,
+      2,
+      3
+    ],
+    "events": [
+      {
+        "date": "2009",
+        "locator": "Montana legislative ratification"
+      },
+      {
+        "date": "2016",
+        "locator": "Congressional approval and presidential signing"
+      },
+      {
+        "date": "2017-04-20",
+        "locator": "Tribal-member vote"
+      },
+      {
+        "date": "2018",
+        "locator": "Water Department established by resolution"
+      }
+    ],
+    "scope": "Hypothetical private reader exercise, not a current funding or service finding, a legal determination, or authority to act for the Nation. The 2025 milestone remains unresolved."
+  },
+  "capture_retention": "Full factual HTML captures were read and hashed during isolated local review, then excluded from public publication. Exact retrieval receipts, hashes, short evidence anchors and original summaries are retained. Robots configuration captures remain available."
+}
