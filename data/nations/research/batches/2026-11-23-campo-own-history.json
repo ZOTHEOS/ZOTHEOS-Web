@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "registry_id": "campo-band-kumeyaay-indians-us-ca",
+  "directory_id": "us-fed-a9fdf1462e2c",
+  "review_kind": "AI-assisted own-agency source, identity, chronology and respect research",
+  "receipts": [
+    {
+      "url": "https://www.campoepa.com/",
+      "final_url": "https://www.campoepa.com/",
+      "retrieved_at": "2026-11-23T08:37:45.275459+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 504818,
+      "sha256": "db253639797f35d346ddf1be30331006f0373e66462fb8f6c34a04a6b1b0633a",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "local_capture_at_review": {
+        "filename": "2026-11-23-campo-cepa-home.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.campoepa.com/about-us",
+      "final_url": "https://www.campoepa.com/about-us",
+      "retrieved_at": "2026-11-23T08:37:47.476190+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 464572,
+      "sha256": "4d1c5b2ae171d837b8f1f52d0aec349f4529090adee034c2f70cc11a4865b6cb",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "local_capture_at_review": {
+        "filename": "2026-11-23-campo-cepa-about.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+      "final_url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+      "retrieved_at": "2026-11-23T08:37:49.860476+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 68141,
+      "sha256": "5ce90785dfea75a25a1594751fef5d8e0a5924e741816636ca5ba6fb92a07b23",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "local_capture_at_review": {
+        "filename": "2026-11-23-campo-sctca-source.body.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "retrieved_at": "2026-11-23T08:37:52.596655+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "local_capture_at_review": {
+        "filename": "2026-11-23-campo-federal-source.body.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.campo-nsn.gov/robots.txt",
+      "final_url": "https://www.campo-nsn.gov/robots.txt",
+      "retrieved_at": "2026-11-23T08:29:46.721324Z",
+      "retrieval_method": "http",
+      "http_status": 500,
+      "body_bytes": 732,
+      "sha256": "8e3822de19da2c274a31f26171cad406e0ff63db86f541345a9aa4f1678feaa4",
+      "redirects": []
+    },
+    {
+      "url": "https://www.campoepa.com/robots.txt",
+      "final_url": "https://www.campoepa.com/robots.txt",
+      "retrieved_at": "2026-11-23T08:37:43.152488+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 490,
+      "sha256": "13a4dc0102827f3e425e5d1476d966519b51c01b033d74d3f852725ad0aef3b2",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "archive_body": "2026-11-23-campo-cepa-robots.body.txt"
+    },
+    {
+      "url": "https://sctca.net/robots.txt",
+      "final_url": "https://sctca.net/robots.txt",
+      "retrieved_at": "2026-11-23T08:37:47.687774+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 922,
+      "sha256": "d256afb3825e1ccf2ad2317aa552e5c9a30e57e7cd77eb14207619787af8b59b",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "archive_body": "2026-11-23-campo-sctca-robots.body.txt"
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "final_url": "https://www.govinfo.gov/robots.txt",
+      "retrieved_at": "2026-11-23T08:37:50.335270+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "redirects": [],
+      "user_agent": "ZOTHEOSResearch/1.0",
+      "archive_body": "2026-11-23-campo-federal-robots.body.txt"
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1990-07",
+      "receipt_index": 1,
+      "locator": "Historically, CEPA creation paragraph"
+    },
+    {
+      "event_date": "1992",
+      "receipt_index": 1,
+      "locator": "What we do, Diebold Creek project paragraph"
+    },
+    {
+      "event_date": "1995-01-01",
+      "receipt_index": 1,
+      "locator": "What we do, grazing-vote paragraph"
+    },
+    {
+      "event_date": "2026",
+      "event_period": "summer",
+      "receipt_index": 1,
+      "locator": "What we do, San Diego Botanic Garden feature paragraph"
+    }
+  ],
+  "source_limits": [
+    "The agency’s own account dates its creation by the Band’s General Council to July 1990. No present composition, jurisdiction ruling or U.S. EPA identity is inferred.",
+    "The account dates installation of erosion structures to 1992. It supplies no independently measured present stream flow, water quality or ecological condition.",
+    "The historical vote and effective date are attributed to the agency. Present land use, enforcement, income and environmental outcomes are not established.",
+    "The source dates the feature to summer 2026 and describes work with the named Garden. It establishes no measured conservation result or present funding.",
+    "The general government robots endpoint returned HTTP 500. No subsequent factual requests were made to that origin, and the historical BIA URL is not treated as a currently verified website.",
+    "The agency site was read after its independent robots rules allowed the cited paths. Its About page explicitly identifies the Band and the General Council that created CEPA.",
+    "The SCTCA directory contains historical compiled background and officeholder names. No current leaders, population, acreage, all-Kumeyaay representation or present legal status claim is derived from it.",
+    "Traditional specialist descriptions, ceremonial details, contacts and locations of cultural activity are excluded. No general permission to use cultural knowledge or Nation endorsement is claimed.",
+    "The About page has no established publication date. Event years are taken from its text; November 23, 2026 is the retrieval date. No current ecological-success or health-safety guarantee is inferred."
+  ],
+  "crawl_policy": "Permitted own-agency, SCTCA and Govinfo paths were read after robots checks, with at least two-second content pacing. No crawl delay applied to the declared ZOTHEOSResearch/1.0 reader. The government-origin HTTP 500 was not bypassed.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "candidate_fact_ids": [
+    "campo-band-kumeyaay-indians-us-ca-01fcd2a6",
+    "campo-band-kumeyaay-indians-us-ca-0bd5da0d",
+    "campo-band-kumeyaay-indians-us-ca-24613b45",
+    "campo-band-kumeyaay-indians-us-ca-08323a22"
+  ],
+  "pre_restart_observations": {
+    "receipts": [
+      {
+        "url": "https://www.campoepa.com/",
+        "final_url": "https://www.campoepa.com/",
+        "retrieved_at": "2026-11-23T08:30:53.473484Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 504818,
+        "sha256": "db253639797f35d346ddf1be30331006f0373e66462fb8f6c34a04a6b1b0633a",
+        "redirects": []
+      },
+      {
+        "url": "https://www.campoepa.com/about-us",
+        "final_url": "https://www.campoepa.com/about-us",
+        "retrieved_at": "2026-11-23T08:30:55.740130Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 464572,
+        "sha256": "4d1c5b2ae171d837b8f1f52d0aec349f4529090adee034c2f70cc11a4865b6cb",
+        "redirects": []
+      },
+      {
+        "url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+        "final_url": "https://sctca.net/campo-band-of-kumeyaay-indians/",
+        "retrieved_at": "2026-11-23T08:30:57.942077Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 68141,
+        "sha256": "5ce90785dfea75a25a1594751fef5d8e0a5924e741816636ca5ba6fb92a07b23",
+        "redirects": []
+      },
+      {
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+        "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+        "retrieved_at": "2026-11-23T08:32:57.884354Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 27547,
+        "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+        "redirects": []
+      }
+    ],
+    "robots": [
+      {
+        "url": "https://www.campo-nsn.gov/robots.txt",
+        "final_url": "https://www.campo-nsn.gov/robots.txt",
+        "retrieved_at": "2026-11-23T08:29:46.721324Z",
+        "retrieval_method": "http",
+        "http_status": 500,
+        "body_bytes": 732,
+        "sha256": "8e3822de19da2c274a31f26171cad406e0ff63db86f541345a9aa4f1678feaa4",
+        "redirects": []
+      },
+      {
+        "url": "https://www.campoepa.com/robots.txt",
+        "final_url": "https://www.campoepa.com/robots.txt",
+        "retrieved_at": "2026-11-23T08:30:37.526813Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 490,
+        "sha256": "13a4dc0102827f3e425e5d1476d966519b51c01b033d74d3f852725ad0aef3b2",
+        "redirects": []
+      },
+      {
+        "url": "https://sctca.net/robots.txt",
+        "final_url": "https://sctca.net/robots.txt",
+        "retrieved_at": "2026-11-23T08:30:37.681935Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 922,
+        "sha256": "d256afb3825e1ccf2ad2317aa552e5c9a30e57e7cd77eb14207619787af8b59b",
+        "redirects": []
+      },
+      {
+        "url": "https://www.govinfo.gov/robots.txt",
+        "final_url": "https://www.govinfo.gov/robots.txt",
+        "retrieved_at": "2026-11-23T08:29:47.581147Z",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 5092,
+        "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+        "redirects": []
+      }
+    ],
+    "archive_limit": "These earlier observations were preserved in the interrupted packet but their response bodies were not retained before the desktop restart. The sources below were reread and archived; identical byte counts and hashes were observed."
+  },
+  "recovery_review": {
+    "reviewed_at": "2026-11-23T08:38:57.504762+00:00",
+    "review_kind": "Independent AI-assisted source reread, exact evidence, identity and respect review",
+    "result": "supported",
+    "archive_note": "At the stated local review time, all four cited/corroborating successful responses and three robots responses matched their captured bytes. Full factual HTML is excluded from public publication; exact receipts and hashes remain. The earlier government-origin HTTP500 has no retained body and was not requested again.",
+    "evidence_words_per_cited_page": 23,
+    "person_review_claimed": false,
+    "nation_endorsement_claimed": false
+  },
+  "capture_retention": "Full factual HTML captures were read and hashed during isolated local review, then excluded from public publication. Exact retrieval receipts, hashes, short evidence anchors and original summaries are retained. Robots configuration captures remain available."
+}

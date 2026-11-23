@@ -928,9 +928,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "blackfeet-own-site-2026-11-23"
       ],
       "review": {
         "identity": "pending",
@@ -946,9 +947,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://blackfeetnation.com/",
+          "final_url": "https://blackfeetnation.com/",
+          "http_status": 200,
+          "retrieved_at": "2026-11-23T08:30:13.396205+00:00",
+          "retrieval_method": "http",
+          "body_bytes": 94083,
+          "sha256": "1a1935c6b86454d81262cd636ee6dc960f4f406b264a8910a2b0da8804769c46",
+          "redirects": [],
+          "source_id": "blackfeet-own-site-2026-11-23",
+          "evidence_receipt": "receipts/2026-11-23-blackfeet-identity.json",
+          "receipt_id": "r-2246a1459ab0ced9"
+        }
+      ],
+      "updated_at": "2026-11-23T08:38:08.819976+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Own-source facts and explicit government identity have an AI-assisted review handoff. Existing profile deepened without duplication.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-23-blackfeet-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-dad040fff2ca",
@@ -1463,9 +1483,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "campo-own-agency-2026-11-23"
       ],
       "review": {
         "identity": "pending",
@@ -1481,9 +1502,28 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.campoepa.com/about-us",
+          "final_url": "https://www.campoepa.com/about-us",
+          "retrieved_at": "2026-11-23T08:30:55.740130Z",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 464572,
+          "sha256": "4d1c5b2ae171d837b8f1f52d0aec349f4529090adee034c2f70cc11a4865b6cb",
+          "redirects": [],
+          "source_id": "campo-own-agency-2026-11-23",
+          "evidence_receipt": "receipts/2026-11-23-campo-identity.json",
+          "receipt_id": "r-c45935e1c90ddd71"
+        }
+      ],
+      "updated_at": "2026-11-23T08:38:08.920462+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "New distinct government profile sourced to its own Environmental Protection Agency. General website robots failure is preserved; no current official homepage is promoted.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-23-campo-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-509b17903f33",
@@ -63780,6 +63820,66 @@
       "updated_at": "2026-11-21T18:38:06.199248+00:00",
       "next_attempt_after": null,
       "note": "Bishop’s current timeline narrates a land trade under 1936. Existing Big Pine fact 794ac896 attributes a June 26, 1939 deed to its 2005 standards. These may concern separate stages. Compare primary decision/deed records before reconciliation. No Bishop exchange-year fact is published by this batch."
+    },
+    {
+      "task_id": "followup-blackfeet-2025-enforceability",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Blackfeet chronology’s 2025 enforceability milestone",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-own-source-history",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_scope",
+      "status": "pending",
+      "allowed_source_ids": [
+        "blackfeet-own-site-2026-11-23"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-23T08:39:03.186799+00:00",
+      "next_attempt_after": null,
+      "note": "The Nation’s chronology labels a 2025 enforceability benchmark without a separate dated decision linked in that entry. Preserve it as unresolved until primary implementation records establish the stage. No current funding-access, disbursement, compliance or service-delivery finding is published. Source: https://blackfeetnation.com/watercompact/chronology/ ; batch2026-11-23-blackfeet-own-history.json."
+    },
+    {
+      "task_id": "followup-blackfeet-confederacy-name-scope",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Blackfeet government, broader aliases and Confederacy divisions",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-own-source-history",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_scope",
+      "status": "pending",
+      "allowed_source_ids": [
+        "blackfeet-own-site-2026-11-23"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-23T08:39:03.186799+00:00",
+      "next_attempt_after": null,
+      "note": "This batch links only the existing US Blackfeet Nation government. Existing generic branches fact57c5ae28 and broader aliases require a separate naming-scope review against Nations’ own accounts. Distinct Siksika, Kainai and Piikani governments in Canada must not be merged with the US government. Existing facts and their October8source clocks are preserved, with no corrected relationship inferred from a name match."
     }
   ]
 }

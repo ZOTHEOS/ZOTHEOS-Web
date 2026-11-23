@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-23",
+  "prepared_at": "2026-11-23T08:41:01.919735+00:00",
+  "status": "needs-consumer-full-edition-review",
+  "title": "Warrior Women",
+  "candidate_id": "warrior-women-availability",
+  "review_kind": "AI-assisted authorized-edition, distribution scope and availability research",
+  "catalogue_disposition": "Queue only. No new film record, player, full-film count or free-viewing claim is proposed.",
+  "edition": {
+    "title": "Warrior Women",
+    "completion_year": 2018,
+    "educational_distributor_runtime_minutes": 64,
+    "broadcast_catalog_runtime_minutes": 57,
+    "directors": [
+      "Christina D. King",
+      "Elizabeth A. Castle"
+    ],
+    "producer": "Anna Marie Pitman",
+    "perspective": "Centers Madonna Thunder Hawk and her daughter Marcella (Marcy) Gilbert, including their experiences of the American Indian Movement and Native alternative education. The distributor identifies Thunder Hawk as Oohenumpa Lakota and Gilbert as Lakota and Dakota.",
+    "scope": "The complete 64-minute educational edition and the 57-minute broadcast catalogue duration are separate. No consumer edition duration is independently verified.",
+    "captions": "GOOD DOCS lists English and captions. No caption file, timing, accuracy or accessibility review was performed.",
+    "authorized_distribution": "Vision Maker Media links GOOD DOCS as the educational DVD and streaming distributor for this title.",
+    "access": "GOOD DOCS offers paid educational and institutional licenses, including 14-day hosted streaming with different internal-use, public-screening and fundraiser terms. This product page is not a ready-to-watch free consumer edition.",
+    "geographic_scope": "Consumer geographic eligibility is unverified. A search snapshot described worldwide Vimeo access, but the actual opened Vimeo page exposed only the title shell; the snapshot is not treated as current access verification.",
+    "rights_scope": "No license is purchased, no payment or contact form is submitted, and no permission to host, embed or publicly screen the film is inferred."
+  },
+  "receipts": [
+    {
+      "url": "https://visionmakermedia.org/film-library/warrior-women/",
+      "final_url": "https://visionmakermedia.org/film-library/warrior-women/",
+      "retrieved_at": "2026-11-23T08:38:32.901557+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 47281,
+      "sha256": "3c8376dc71dbd4f9a5221cd6bd65569b5154167e8bf992fed8a888a9dde6a74f",
+      "redirects": [],
+      "title": "Warrior Women",
+      "publisher": "Vision Maker Media",
+      "evidence": [
+        "Run Time: 57 min",
+        "Release: 2018"
+      ],
+      "source_scope": "Indigenous-led film catalogue links authorized educational distributor and names directors."
+    },
+    {
+      "url": "https://gooddocs.net/products/warrior-women",
+      "final_url": "https://gooddocs.net/products/warrior-women",
+      "retrieved_at": "2026-11-23T08:39:33.897534+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 560140,
+      "sha256": "a55fabbd6e65b99309a83345d66e78553e960e66a22d617ded1e7493185eeede",
+      "redirects": [],
+      "title": "WARRIOR WOMEN",
+      "publisher": "GOOD DOCS",
+      "evidence": [
+        "Run Time: 64 minutes",
+        "Captions: Yes"
+      ],
+      "source_scope": "The complete film’s license options, completion year, credits and participant accounts appear on the distributor product page."
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.warriorwomen.org/robots.txt",
+      "final_url": "https://www.warriorwomen.org/robots.txt",
+      "retrieved_at": "2026-11-23T08:37:57.944339+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 4770,
+      "sha256": "cd10a436c8ffa7f9353c66977a378b455dc80de0da2e95d9a07c116435de9883",
+      "redirects": []
+    },
+    {
+      "url": "https://vimeo.com/robots.txt",
+      "final_url": "https://vimeo.com/robots.txt",
+      "retrieved_at": "2026-11-23T08:38:00.186567+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 30242,
+      "sha256": "b076c41a641a33acc075b9275c9edb0cb100308adcf93a9ee4ca326a005b81a9",
+      "redirects": []
+    },
+    {
+      "url": "https://visionmakermedia.org/robots.txt",
+      "final_url": "https://visionmakermedia.org/robots.txt",
+      "retrieved_at": "2026-11-23T08:38:02.594810+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "redirects": []
+    },
+    {
+      "url": "https://gooddocs.net/robots.txt",
+      "final_url": "https://gooddocs.net/robots.txt",
+      "retrieved_at": "2026-11-23T08:39:19.125704+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 3678,
+      "sha256": "5f21f50437b012701bef3be44309606f35d953d0a124075d82269a871a45d9d7",
+      "redirects": []
+    }
+  ],
+  "crawl_policy": "Robots checks preceded HTTP content reads. The Vision Maker Media three-second delay was honored. GOOD DOCS permits the public product path. No factual HTTP fetch was made to the Warrior Women Project after its robots restricted AI assistant user agents. No direct automated content fetch was made to Vimeo after reading its automated-access restrictions.",
+  "browser_observations": [
+    {
+      "url": "https://vimeo.com/ondemand/warriorwomen",
+      "retrieval_method": "browser_tool",
+      "observed_on": "2026-11-23",
+      "source_title": "Watch Warrior Women Online | Vimeo On Demand on Vimeo",
+      "evidence": "The opened public page showed the Warrior Women heading and image link, with navigation and footer. It did not expose rental options, runtime, caption details or complete playback. HTTP status and body hash were not supplied by the tool and are omitted."
+    }
+  ],
+  "thumbnail_review": {
+    "provider_url": "https://gooddocs.net/cdn/shop/products/ww_pt_1200x630.jpg?v=1583799927",
+    "checked_at": "2026-11-23T08:40:11.209474+00:00",
+    "http_method": "HEAD",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "content_length": 136349,
+    "body_bytes_read": 0,
+    "redirects": [],
+    "status": "permission-unresolved",
+    "display": "Not published; a future card would use a text cover while artwork permission remains unresolved.",
+    "scope": "Artwork URL is supplied by the authorized distributor’s og:image:secure_url metadata. No permission to reproduce or display this artwork on ZOTHEOS is established."
+  },
+  "pending": [
+    "Available authorized complete consumer edition",
+    "Consumer price, account and geographic access",
+    "Successful playback",
+    "Caption timing and accuracy",
+    "Artwork display and embedding permission",
+    "Complete audiovisual editorial review"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "root_review": {
+    "reviewed_at": "2026-11-23T08:42:00.993287+00:00",
+    "kind": "AI-assisted archived source and scope cross-review",
+    "result": "queue-only",
+    "scope": "Verified educational licensing is not presented as a ready-to-watch consumer edition. No film, player or full-film count is added."
+  },
+  "capture_retention": "Full factual HTML and the Vimeo robots capture were read and hash-checked locally, then excluded from public publication. Exact receipts, hashes and short evidence remain. Other retained robots configurations preserve their exact bytes."
+}

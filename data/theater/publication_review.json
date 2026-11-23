@@ -1,12 +1,12 @@
 {
-  "version": 16,
-  "prepared_at": "2026-11-21T18:48:51.484766+00:00",
+  "version": 17,
+  "prepared_at": "2026-11-23T08:52:58.154943+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "5938961a89cebd4b5587bbc33b5ce129ba83ae57",
-    "version": 15,
-    "catalogue_sha256": "63bb38ace25cec5be3abee2e785996768103dc557c961421abc5937972abc02c"
+    "commit": "78c9df0531a3a1260914d15a880c9da66c470799",
+    "version": 16,
+    "catalogue_sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce"
   },
   "catalogue": {
     "sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
@@ -21,34 +21,33 @@
       "recorded-program": 67,
       "short": 68,
       "trailer": 50
-    }
+    },
+    "changed_in_this_batch": false
   },
   "source_review": {
-    "batch": "research/batches/2026-11-21-racing-the-rez.json",
-    "sha256": "838434794a28d8d30985b79113d8ef491e198b60bacda2437495f845cf732350",
-    "thumbnail_display": "Text cover while artwork permission remains unresolved.",
-    "viewing_access": "PBS member access. The checked listing blocks playback while signed out."
+    "batch": "research/batches/2026-11-23-warrior-women.json",
+    "sha256": "f73c027247fcd9bebf4fc93a0706102bdf5bca08ce637125b33e3c471780e79e",
+    "disposition": "Research queue only. Paid institutional licensing is verified; a complete consumer viewing edition remains unverified. No title or full-film count is added."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Big Valley own-HTML history, monitoring, identity and respect cross-review",
-      "reviewed_date": "2026-11-21",
+      "kind": "AI-assisted Blackfeet own-source, government-identity, chronology, respect and Paths cross-review",
+      "record": "data/nations/research/batches/2026-11-23-blackfeet-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Bishop timeline, cultural-center support, Education and broadband cross-review",
-      "reviewed_date": "2026-11-21",
+      "kind": "AI-assisted Campo own-agency, identity, chronology, respect and integration cross-review",
+      "record": "data/nations/research/batches/2026-11-23-campo-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted dependency-register planning exercise review",
-      "reviewed_date": "2026-11-21",
-      "result": "passed"
+      "kind": "AI-assisted receipt-only publication retention review",
+      "result": "passed",
+      "scope": "Exact local retrieval metadata and short evidence retained; full factual HTML excluded from public publication."
     },
     {
-      "kind": "AI-assisted film edition, credits, member access and exact receipt review",
-      "reviewed_date": "2026-11-21",
-      "result": "passed"
+      "kind": "AI-assisted Warrior Women authorized educational edition and consumer-access boundary cross-review",
+      "result": "queue-only"
     }
   ],
   "person_review_claimed": false,
@@ -60,14 +59,30 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 270.30641489999834,
-    "full_suite_xml_sha256": "63edc94ba9f118f35241626798bfc4b3e8fc09ac3ec77f3752348f8fbfbb4fa4",
-    "full_suite_finished_at": "2026-11-21T18:47:45.465781+00:00",
+    "full_suite_wall_seconds": 248.03444459999446,
+    "full_suite_xml_sha256": "f4829be18c4fbcdf2c7d26a3ff4c0bdec9dc1c6f248473025a439d6815d2b1aa",
+    "full_suite_finished_at": "2026-11-23T08:51:43.834779+00:00",
+    "resolved_validation_findings": [
+      {
+        "check": "test_public_source_captures_preserve_measured_bytes_and_hashes",
+        "failed_suite": {
+          "exit": 1,
+          "tests": 1072,
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "wall_seconds": 278.29829840001184,
+          "xml_sha256": "a8f5da7daef24e75e08c20ec4396c6b0b305ea7c165553853de02bf94a28b6fd",
+          "finished_at": "2026-11-23T08:47:02.986776+00:00"
+        },
+        "correction": "Recorded the required explicit local-capture retention field on each new individual receipt. No factual or runtime change; no full factual HTML published."
+      }
+    ],
     "canonical_build": {
       "status": "passed",
-      "pages": 633,
-      "profiles": 498,
-      "visible_facts": 1462,
+      "pages": 634,
+      "profiles": 499,
+      "visible_facts": 1470,
       "held_facts": 2
     },
     "registry_validator": {
@@ -80,29 +95,33 @@
       "review": "The preexisting full Colusa name triggers the long-name check."
     },
     "game_data": {
-      "quick_cards": 498,
-      "quick_facts": 990,
-      "profiles_with_history": 120,
-      "new_history_facts": 5,
+      "quick_cards": 499,
+      "quick_facts": 992,
+      "profiles_with_history": 122,
+      "new_history_facts": 3,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 496,
-      "added_profiles": 2,
-      "existing_profiles_changed": 0,
+      "prior_profiles": 498,
+      "added_profiles": 1,
+      "existing_profiles_changed": 1,
       "added_raw_facts": 8,
       "new_practice_examples": 1,
-      "new_films": 1,
-      "prior_game_records_preserved": true,
+      "new_films": 0,
+      "unrelated_game_records_preserved": true,
+      "blackfeet_quick_card": "Existing canonical kind ordering selects the two newly sourced governance facts.",
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
-      "game_mechanics_preserved": true
+      "game_mechanics_preserved": true,
+      "observed_at": "2026-11-23T08:49:04.844068+00:00"
     },
     "browser": {
-      "reviewed_utc_date": "2026-11-21",
-      "observed_at": "2026-11-21T18:46:32.437952Z to 2026-11-21T18:46:35.787683Z",
-      "method": "Independent offline Chrome served exact local files with Vercel headers and blocked external traffic.",
+      "record": "data/nations/research/batches/2026-11-23-browser-review.json",
+      "record_sha256": "b2e8edf98ede241a90e4e9baf1e3182d62e1c5660501df329a0245985bf4379b",
+      "observed_at_start": "2026-11-23T08:45:08.936029+00:00",
+      "observed_at_end": "2026-11-23T08:45:13.249727+00:00",
+      "method": "Chrome through Playwright, exact local files routed to zotheos.org with committed Vercel headers; all external traffic aborted.",
       "chrome_version": "157.0.8103.79",
       "viewport_pixels": [
         [
@@ -119,62 +138,121 @@
         ]
       ],
       "page_viewport_checks": 15,
-      "checks": [
-        "Exact directory queries each return one ready profile. Keyboard Read First focuses the correct source-name heading and profile link.",
-        "Both profiles display four matching facts and citations with November 21 check dates. Historical and undated scopes are preserved.",
-        "The Bishop dependency register and case and brief keyboard navigation work.",
-        "Racing the Rez displays 58m 59s, PBS Member Access, the exact WETA viewing URL and limits. Full Film and Official Site include it. Watch Here excludes it.",
-        "Zero horizontal overflow, page errors, CSP violations or missing local assets across the matrix.",
-        "The selected source-only film creates no iframe or external non-image request."
-      ],
-      "test_harness_correction": "The first harness selected a control inside the closed filter panel. Opening Filters through keyboard on desktop and touch at phone widths completed the checks. No source change was needed.",
       "source_pins": {
-        "nations/directory.html": "8fcaff6b5cc6a9166dfcbac708631ba5d6cc60a35d7ac1cf239f2c8983b96d25",
-        "nations/big-valley-band-pomo-indians-us-ca.html": "1b0889bb7532f267a59806d4a260ec659c55a682acae7bea78a4b6e4b75584e2",
-        "nations/bishop-paiute-tribe-us-ca.html": "ece87585b05fe07eb6ade47c214eebee504340072a1a3b61d3cbc4088a85aacf",
-        "nations/paths-to-action.html": "33b4a16a9a63c3855d0fd20750e1e20af042f1b2cd7783d26cacaf80289eb54a",
+        "nations/directory.html": "3cb9c66e3d46f90c10c2abfa4d8774e18b25fbb870a77284670a63b10bd4182b",
+        "nations/campo-band-kumeyaay-indians-us-ca.html": "ea2d07c3cd5c7c9dc59de866815754ccc5aa7966ce1360e34c553d5eb92e5f40",
+        "nations/blackfeet-nation-us-mt.html": "fee91eedabc34ac802235084bf1927682990419fcfdd8aefe1d0ac36d56a2b24",
+        "nations/paths-to-action.html": "e5adc46db564eef8aec25b3c0ae3c2d6657d67d1da8f83beeae8e46afa5b6aff",
         "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
-        "vercel.json": "19ca3a09e2c1953ed469edd76e4e8088008393bc6dc34b5067cc729ba85a3696"
+        "vercel.json": "2457f937febe801bc505970b14e597a0ba565f9568f779a3d46640b7200ec81b"
       },
-      "limits": "Fifty-seven unrelated external image requests were aborted. Actual provider playback, account or regional eligibility, caption quality and physical devices were not tested."
+      "horizontal_overflow": 0,
+      "page_errors": [],
+      "csp_violations": [],
+      "missing_local_assets": [],
+      "external_image_requests_aborted": 29,
+      "external_non_image_requests_aborted": 0,
+      "visual_critique": {
+        "screenshots_inspected": 6,
+        "widths": [
+          390,
+          1440
+        ],
+        "pages": [
+          "Campo profile",
+          "Blackfeet profile",
+          "Blackfeet Paths case"
+        ],
+        "result": "The new historical paragraphs, distinct event/check dates and source links wrap readably. The desktop chapter navigation stays separate from the case. Phone text and citations remain inside the reading column. No material visual defect was observed.",
+        "capture_scope": "Temporary viewport images at normal reading positions below the fixed navigation. All six were inspected and removed after review."
+      },
+      "harness_corrections": [
+        "Matched profile facts by canonical text rather than assuming the intentional display order equaled raw registry order.",
+        "Opened the actual viewing-notes disclosure before asserting restriction text.",
+        "Reframed long element screenshots as real viewport captures to avoid fixed-navigation artifacts in oversized element captures. No production content change was needed."
+      ],
+      "limits": "No physical devices, provider playback, member/account eligibility, regional access or caption timing and accuracy tested."
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "eb7b20d6e30e1246ed1b718aedb2d078eeceb1abf741b688afe511560ba6fa5e",
-    "data/nations/nations.min.json": "2b6c28f82774289f4b3590292716c48772c40c84ed01d1ae94fa7fbc44c956b2",
-    "data/nations/pathways.json": "0ab64b7ea2ac418da333d38c963e3a3e02331642a79828769e89421651e17f93",
-    "data/nations/research/coverage_queue.json": "0625cbb437b57376204ae77a67f36ff1712ace8cada94ee99fb02832de9b7b86",
-    "data/nations/research/us_federal_directory.json": "29d647974307c7829769356cb6279949019ea6da0d57fd13860361034ea74d88",
-    "data/nations/research/directory_sources.json": "a507002455002b0a1f255f9007263de346e8d0867f3e8e72d92ef13dd3097df8",
-    "static/nations/coverage.json": "21baf4aa7cefab4579e3b970e4d4ee2c61aad05e2acf6897f3fbc1975beb24f8",
-    "game/nations.json": "310dc1c3aff52250ee9da6c1b76b6802bd1672ea31708b1ea25dfb6b478f013c",
-    "game/history.json": "444d4156a6a111d86712feaef61f4bc1f262309a69833a6e7ffb211b524ec5b2",
-    "nations/directory.html": "8fcaff6b5cc6a9166dfcbac708631ba5d6cc60a35d7ac1cf239f2c8983b96d25",
-    "nations/big-valley-band-pomo-indians-us-ca.html": "1b0889bb7532f267a59806d4a260ec659c55a682acae7bea78a4b6e4b75584e2",
-    "nations/bishop-paiute-tribe-us-ca.html": "ece87585b05fe07eb6ade47c214eebee504340072a1a3b61d3cbc4088a85aacf",
-    "nations/paths-to-action.html": "33b4a16a9a63c3855d0fd20750e1e20af042f1b2cd7783d26cacaf80289eb54a",
-    "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
-    "vercel.json": "19ca3a09e2c1953ed469edd76e4e8088008393bc6dc34b5067cc729ba85a3696",
+    "data/nations/nations.json": "ad371052488dde685b99e90de04b963229dbd43d74a4e26181d23b340d92cb17",
+    "data/nations/nations.min.json": "a707251058df275a1b546629ea355f3b7df306b6904ecb00fb0ffac8a435b820",
+    "data/nations/pathways.json": "204275de8cf1d5809d6336b85bbafc23e2cea919892bef67609b8f363ac84aee",
+    "data/nations/research/batches/2026-11-23-blackfeet-independent-review.json": "3c254a85352ba21c9abeb04eee0dbe42054a8e8c51cf7601a293052bfde190ef",
+    "data/nations/research/batches/2026-11-23-blackfeet-own-history.json": "750e87f2e2288a30f2aefa9cfab71590b76aaa17caa6d82eb340d688d1a9009d",
+    "data/nations/research/batches/2026-11-23-browser-review.json": "b2e8edf98ede241a90e4e9baf1e3182d62e1c5660501df329a0245985bf4379b",
+    "data/nations/research/batches/2026-11-23-campo-independent-review.json": "2a92a363e432d02859bb3ecc0c7852abf7289f9c56fe9a0219dd79f6718073ce",
+    "data/nations/research/batches/2026-11-23-campo-own-history.json": "4f48738b97d3abb4f6a7c1c25bc5a9cc402a72a25ca7181fc3783212f5ef16df",
+    "data/nations/research/coverage_queue.json": "5846f4b709ad94b622c4ddb32750ce39dcce3bb4abe288d0f1225a7aef2fb108",
+    "data/nations/research/directory_sources.json": "2ddd85e513926f0d35950db7908df2e5ea5f2e741ab8fc96ac7449067a7447bb",
+    "data/nations/research/receipts/2026-11-23-blackfeet-chronology.receipt.json": "b8289ff5976216b94e30689cef219f1370b686ec00cdeb8f968900cb4b5ea97f",
+    "data/nations/research/receipts/2026-11-23-blackfeet-compact-faq.receipt.json": "361a35fda912b653650fdbb217f22adb2eeb22f36a0338fa77ed00b56b538a00",
+    "data/nations/research/receipts/2026-11-23-blackfeet-compact.receipt.json": "46e09e3a3525b40e996a2fa980bd8950b33e47f197d4f054935705207814c5db",
+    "data/nations/research/receipts/2026-11-23-blackfeet-federal-robots.body.txt": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+    "data/nations/research/receipts/2026-11-23-blackfeet-federal-robots.receipt.json": "2d4d715b71af656fdcc968562f9e7b9206da681c556555282989717beef76f17",
+    "data/nations/research/receipts/2026-11-23-blackfeet-federal.receipt.json": "dce3f75fb8651e43ddd0821e909171dffaab4f5d7ea646d5fceddb25a29ea633",
+    "data/nations/research/receipts/2026-11-23-blackfeet-government.receipt.json": "92256e7e34fda38b5922a5d6a3c73719b85bca8b505cec3c941470b6c4e7526a",
+    "data/nations/research/receipts/2026-11-23-blackfeet-home.receipt.json": "23003c319dcda362856d1d5932a926f21bb1dca329cc204120dfb71773197d56",
+    "data/nations/research/receipts/2026-11-23-blackfeet-identity.json": "160a7d988f71bba3ddf8b0392187654dd671520a0718843225880bca62a7ebf4",
+    "data/nations/research/receipts/2026-11-23-blackfeet-lands.receipt.json": "c249d4983759e5b5710ab98a2358beb539344995644b305bd9e66785c3167279",
+    "data/nations/research/receipts/2026-11-23-blackfeet-legacy-home.receipt.json": "5857c558790e327d9d412c1ca1441b6388107d985de08b97d766334c28d3da9d",
+    "data/nations/research/receipts/2026-11-23-blackfeet-own-robots.body.txt": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
+    "data/nations/research/receipts/2026-11-23-blackfeet-own-robots.receipt.json": "a16b1cdf479ab2158edb5729da3145333bdbf3990f97556890f72a6533d6248e",
+    "data/nations/research/receipts/2026-11-23-blackfeet-www-robots.body.txt": "7854274f63c033bd2d9c8e9fd8fe57298c573ae901efd67966d4ec6e99cb75a1",
+    "data/nations/research/receipts/2026-11-23-blackfeet-www-robots.receipt.json": "2e81399541d1da44e2f3d71206e815a28dad35ead612939837729e018f6c1ec0",
+    "data/nations/research/receipts/2026-11-23-campo-cepa-about.receipt.json": "21e16774bf0d9acc0a911559b73d63a67d5d577042dcf953866884b3cc8de860",
+    "data/nations/research/receipts/2026-11-23-campo-cepa-home.receipt.json": "2c6ffa701fd123c19db690beb03639b0fdb72b7e43cc1c6b9a738fde40a5f87f",
+    "data/nations/research/receipts/2026-11-23-campo-cepa-robots.body.txt": "13a4dc0102827f3e425e5d1476d966519b51c01b033d74d3f852725ad0aef3b2",
+    "data/nations/research/receipts/2026-11-23-campo-cepa-robots.receipt.json": "e03babf3ccb27ec21d34f24727bc825a2011f738dd0a4da0531f26c00c5950e0",
+    "data/nations/research/receipts/2026-11-23-campo-federal-robots.body.txt": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+    "data/nations/research/receipts/2026-11-23-campo-federal-robots.receipt.json": "bd11d41b976bbae518d2d17ea3de4102ab592a2a9ebdb02e7bd558f2670f85eb",
+    "data/nations/research/receipts/2026-11-23-campo-federal-source.receipt.json": "2d3427f4ab4decf080a37f0ab3f2995f5c6564d61db7ece43019194085f35dba",
+    "data/nations/research/receipts/2026-11-23-campo-identity.json": "0a2c63edc433e6a79f8d7df4675da4e25edd775699a26d3afc4a480b888991a1",
+    "data/nations/research/receipts/2026-11-23-campo-sctca-robots.body.txt": "d256afb3825e1ccf2ad2317aa552e5c9a30e57e7cd77eb14207619787af8b59b",
+    "data/nations/research/receipts/2026-11-23-campo-sctca-robots.receipt.json": "6513abad9ad85498edb19577666216cf53009b0d2d83c4880bc54a8631255f99",
+    "data/nations/research/receipts/2026-11-23-campo-sctca-source.receipt.json": "681519c6bde9b96d7d7b17d0d6240226ad377ff2a5bfb42c8861443f4da33160",
+    "data/nations/research/us_federal_directory.json": "ec0738742b0815446819bc5e9f69fa9f07d85a10602e8ebc175594b22eb409b8",
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.raw.json": "e434e1c28080a21e7d4359158744835d029f42986b3a361d3d705893c3ab82c8",
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.respect.json": "5ccee39a671ae9dcce3a218a33c6488ec69a043847701cfb46f49b7cbe49601e",
+    "data/nations/sources/us-blackfeet-own-history-2026-11-23.verify.json": "15c661499f76b3a0d5bcd9f0e79376667fb385560bd1c76651b93cd2e67902da",
+    "data/nations/sources/us-campo-own-history-2026-11-23.raw.json": "8b22ef4f5ddfa9881ea6913ab9ec221829b8efaf7eb59d4d28089ec4e58ffaec",
+    "data/nations/sources/us-campo-own-history-2026-11-23.respect.json": "ef73965fe6f372113dfbc3ddcd0ec02d30ed4056e0cf883b0b05145bf856eb59",
+    "data/nations/sources/us-campo-own-history-2026-11-23.verify.json": "20f725feff8b3f8678bb5af7eec4753e729507b20d3c81caa14f7d8bfcc2b8e8",
     "data/theater/films.json": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce",
-    "data/theater/research_queue.json": "1f0c81f03c43568b0df4ce99589397ee9320abc09c4ca8117fa534e1e86dd04d",
-    "data/theater/research/batches/2026-11-21-racing-the-rez.json": "838434794a28d8d30985b79113d8ef491e198b60bacda2437495f845cf732350",
-    "data/nations/research/batches/2026-11-21-big-valley-own-history.json": "f4366928a586a218e5157f9bbaf4f954c6f0645c6129fd43abf5a8f1f65957bf",
-    "data/nations/research/batches/2026-11-21-bishop-own-history.json": "2cf88675ae56ac54e112a1b83fce0f44e5ef521296f1e3794a65d7bc36e4006d",
-    "data/nations/research/batches/2026-11-21-pathways-project-dependencies.json": "91622490de4d5824e8b58897aab4c9d899709037e89e5525788ecdd80569a427",
-    "data/nations/research/receipts/2026-11-21-big-valley-identity.json": "152d6104f7881a1c95e50e754b3b6fd7ae7600b1aaa53a3adf3be14654c3acec",
-    "data/nations/research/receipts/2026-11-21-bishop-identity.json": "d4f1ed6c995bb22c83a6627972f5951f0860e781154bcead795775f0686f055c",
-    "data/nations/sources/us-big-valley-own-history-2026-11-21.raw.json": "721caaf8065c8e3e85ff5fca5338d462736b54fee0e8d22eef362bda61026185",
-    "data/nations/sources/us-big-valley-own-history-2026-11-21.verify.json": "025be217ae33e003475ae54dfcf70decbf32da4c6cce50532996674aee7371d1",
-    "data/nations/sources/us-big-valley-own-history-2026-11-21.respect.json": "160d80afbc4627e5799ad295e95bb2e41e8859a5c89f75f6dc8a3f84c5c5a651",
-    "data/nations/sources/us-bishop-own-history-2026-11-21.raw.json": "d84cc3ba05ed82057f5de002df03e6f43e42b09cc35fe4a0899cac73d225b54f",
-    "data/nations/sources/us-bishop-own-history-2026-11-21.verify.json": "67158a6cd30d8eee4f9d32f6d5bf0dc5739360a8029b933812d9d82408742875",
-    "data/nations/sources/us-bishop-own-history-2026-11-21.respect.json": "333639615544c25737728f67e17baf14283d3874f1832a56f7177952f4afdf8f"
+    "data/theater/research/batches/2026-11-23-warrior-women-artwork.receipt.json": "3dc81617ccd0239488da9d40b5a86e6b8c65df56f2f3467aee0ff1b773e5675d",
+    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs-robots.body.txt": "5f21f50437b012701bef3be44309606f35d953d0a124075d82269a871a45d9d7",
+    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs-robots.receipt.json": "5af8abf5612b16ac140b1733c5de9ac01b48cf08199d7d69d9b36c4040adab63",
+    "data/theater/research/batches/2026-11-23-warrior-women-gooddocs.receipt.json": "760dd8484861411be4d042bca23d432aa77d16e3023e1e983dcc8bb95bffeac9",
+    "data/theater/research/batches/2026-11-23-warrior-women-own-robots.body.txt": "cd10a436c8ffa7f9353c66977a378b455dc80de0da2e95d9a07c116435de9883",
+    "data/theater/research/batches/2026-11-23-warrior-women-own-robots.receipt.json": "7c2fe6a934bc6bf6b60b7e2cf1074a2800b9b112de8544cedccc3f68c2072a54",
+    "data/theater/research/batches/2026-11-23-warrior-women-vimeo-robots.receipt.json": "ddf1faef0ec430bbf4967ae528d77b9262ef7c875f9a031f8a14faedbd450155",
+    "data/theater/research/batches/2026-11-23-warrior-women-vmm-robots.body.txt": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+    "data/theater/research/batches/2026-11-23-warrior-women-vmm-robots.receipt.json": "979f096d477768c4db290afd1be37455513c5074122adffb506e038214f7f16e",
+    "data/theater/research/batches/2026-11-23-warrior-women-vmm.receipt.json": "a17ea06d8f573bb55df14f879e80e99f36725fc7dacd3cebb87d1317265544f4",
+    "data/theater/research/batches/2026-11-23-warrior-women.json": "f73c027247fcd9bebf4fc93a0706102bdf5bca08ce637125b33e3c471780e79e",
+    "data/theater/research_queue.json": "d720f1dc62a46e0525fec9cfcb462c9e05466d246ecfcc8cf25e7149c1a7d961",
+    "game/data/n-2603c13ad9d469191c20dfccae1188fb.json": "2603c13ad9d469191c20dfccae1188fb10d90f4c647d3fabbe3c17644a96a6ec",
+    "game/data/n-394f2993c03cfa74906d1e6dc21057ab.json": "394f2993c03cfa74906d1e6dc21057ab9a5f7cb1fa8116c953ffac812df52723",
+    "game/history.json": "875334b392a9b590bfcccf3eac3ff521b005725f1bf88656b55304e7454769bb",
+    "game/nations.json": "494d803c224b767ce028dc91ed65db77049db545ce6f2facd5c527093de05a7c",
+    "index.html": "4fbf1a1cbf63ddd9f1dfe003e042f57ae142b04b8d31f3b73dae77bc1e74ffe9",
+    "nations/blackfeet-nation-us-mt.html": "fee91eedabc34ac802235084bf1927682990419fcfdd8aefe1d0ac36d56a2b24",
+    "nations/campo-band-kumeyaay-indians-us-ca.html": "ea2d07c3cd5c7c9dc59de866815754ccc5aa7966ce1360e34c553d5eb92e5f40",
+    "nations/coverage.html": "a352a00802a7095343adfc26ec32e283ebcd0e4606f2c4cdd46e74f49d68d018",
+    "nations/directory.html": "3cb9c66e3d46f90c10c2abfa4d8774e18b25fbb870a77284670a63b10bd4182b",
+    "nations/paths-to-action.html": "e5adc46db564eef8aec25b3c0ae3c2d6657d67d1da8f83beeae8e46afa5b6aff",
+    "static/nations/coverage.json": "98b481de33ee37b9b13e85cddc8484f4fc9794a8a918c9ab3ab5a9f0ee5591ad",
+    "static/nations/index.json": "7a5d2289c650a2ee14ad6760edbd7148074bafb0e58782776ae52ba7c37c0b1a",
+    "static/nations/us-plains-midwest.3d9a8afd.json": "3d9a8afd2c61ee1b495d8ee3713eeb56010cbacf96cc36e76af780fec862d425",
+    "static/nations/us-west-pacific.d40ffd93.json": "d40ffd93b7c52cc39a7bee879063801ad98c1728ba82ca8641ba4c020b6406c8",
+    "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
+    "vercel.json": "2457f937febe801bc505970b14e597a0ba565f9568f779a3d46640b7200ec81b"
   },
   "pending": [
     "Vercel production verification",
-    "Member/account eligibility, geographic access and successful playback",
-    "Caption timing and accuracy",
-    "Artwork display and embedding permission",
-    "Owens Valley 1936/1939 exchange stages retained under followup-owens-valley-exchange-stages"
+    "Blackfeet 2025 enforceability primary-record follow-up",
+    "Blackfeet government/Confederacy naming scope follow-up",
+    "Warrior Women complete authorized consumer edition and actual access/playback",
+    "Caption timing and accuracy, artwork display and embedding permission"
   ]
 }

@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted offline Chrome functional and layout review",
+  "reviewed_at_start": "2026-11-23T08:45:08.936029+00:00",
+  "reviewed_at_end": "2026-11-23T08:45:13.249727+00:00",
+  "chrome_version": "157.0.8103.79",
+  "method": "Chrome through Playwright, exact local files routed to zotheos.org with committed Vercel headers; all external traffic aborted.",
+  "viewport_pixels": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      844
+    ]
+  ],
+  "page_viewport_checks": 15,
+  "observations": [
+    {
+      "page": "directory",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Two exact queries, one ready match each; keyboard Read First focuses correct H4 and exposes profile link.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "campo-band-kumeyaay-indians-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "4 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "blackfeet-nation-us-mt",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "7 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Blackfeet case, three source facts, distinct approval dates, uncertainty and boundaries, keyboard brief anchor.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "242 records / 29 full films; exact source-only WETA URL, runtime and member restriction; filters distinguish Official Site and Watch Here, with zero iframe or external non-image request.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Two exact queries, one ready match each; keyboard Read First focuses correct H4 and exposes profile link.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "campo-band-kumeyaay-indians-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "4 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "blackfeet-nation-us-mt",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "7 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Blackfeet case, three source facts, distinct approval dates, uncertainty and boundaries, keyboard brief anchor.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "242 records / 29 full films; exact source-only WETA URL, runtime and member restriction; filters distinguish Official Site and Watch Here, with zero iframe or external non-image request.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Two exact queries, one ready match each; keyboard Read First focuses correct H4 and exposes profile link.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "campo-band-kumeyaay-indians-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "4 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "blackfeet-nation-us-mt",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "7 facts, exact canonical text/citation/check dates.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "paths-to-action",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Blackfeet case, three source facts, distinct approval dates, uncertainty and boundaries, keyboard brief anchor.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "theater",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "242 records / 29 full films; exact source-only WETA URL, runtime and member restriction; filters distinguish Official Site and Watch Here, with zero iframe or external non-image request.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    }
+  ],
+  "source_pins": {
+    "nations/directory.html": "3cb9c66e3d46f90c10c2abfa4d8774e18b25fbb870a77284670a63b10bd4182b",
+    "nations/campo-band-kumeyaay-indians-us-ca.html": "ea2d07c3cd5c7c9dc59de866815754ccc5aa7966ce1360e34c553d5eb92e5f40",
+    "nations/blackfeet-nation-us-mt.html": "fee91eedabc34ac802235084bf1927682990419fcfdd8aefe1d0ac36d56a2b24",
+    "nations/paths-to-action.html": "e5adc46db564eef8aec25b3c0ae3c2d6657d67d1da8f83beeae8e46afa5b6aff",
+    "theater.html": "96af83a683960644d7958cd524297977a79186c457cccd8f7897b9dfbc8fcfa8",
+    "vercel.json": "2457f937febe801bc505970b14e597a0ba565f9568f779a3d46640b7200ec81b"
+  },
+  "horizontal_overflow": 0,
+  "page_errors": [],
+  "csp_violations": [],
+  "missing_local_assets": [],
+  "external_image_requests_aborted": 29,
+  "external_non_image_requests_aborted": 0,
+  "visual_critique": {
+    "screenshots_inspected": 6,
+    "widths": [
+      390,
+      1440
+    ],
+    "pages": [
+      "Campo profile",
+      "Blackfeet profile",
+      "Blackfeet Paths case"
+    ],
+    "result": "The new historical paragraphs, distinct event/check dates and source links wrap readably. The desktop chapter navigation stays separate from the case. Phone text and citations remain inside the reading column. No material visual defect was observed.",
+    "capture_scope": "Temporary viewport images at normal reading positions below the fixed navigation. All six were inspected and removed after review."
+  },
+  "limits": "No physical devices, provider playback, member/account eligibility, regional access or caption timing and accuracy tested.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "result": "passed",
+  "visual_reviewed_at": "2026-11-23T08:46:49.224424+00:00",
+  "harness_corrections": [
+    "Matched profile facts by canonical text rather than assuming the intentional display order equaled raw registry order.",
+    "Opened the actual viewing-notes disclosure before asserting restriction text.",
+    "Reframed long element screenshots as real viewport captures to avoid fixed-navigation artifacts in oversized element captures. No production content change was needed."
+  ],
+  "temporary_screenshot_pins": {
+    "blackfeet-nation-us-mt-1440.png": "9983a539bd4530c058f5e0b57e9d10397ab87a16c4e5ff98875067d2a6ca5efe",
+    "blackfeet-nation-us-mt-390.png": "b9c3255ac73e77ab87de8b0f0418693a361c8c15c9f59230faf43f6cbea0f169",
+    "blackfeet-paths-1440.png": "aaa3003c2df4af5ecf29b18544fda6ecea8d34ec67093b6b337cd2ce9a4255dd",
+    "blackfeet-paths-390.png": "e05db77912589cb9f804c364bbc11dfdd205be8e95822f7082afdde86e6f196e",
+    "campo-band-kumeyaay-indians-us-ca-1440.png": "efd7a8bfd7e39faffc1501d9d2bdf54ffef3efd820b64b823c95d1886b82eaf7",
+    "campo-band-kumeyaay-indians-us-ca-390.png": "fb122667bc9ad36eded91ac2552ecb939c4edf2c0f6467ea3cb79f54d8634c5a"
+  }
+}
