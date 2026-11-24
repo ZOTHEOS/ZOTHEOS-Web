@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-24T20:05:01.280420+00:00",
+  "review_kind": "Independent AI-assisted own-source, exact-evidence, chronology, identity, respect and append-only integration cross-review",
+  "reviewer_role": "Independent sibling agent; not the Cheyenne and Arapaho packet author",
+  "reviewer_agent": "/root/theater_1123",
+  "result": "passed",
+  "registry_id": "cheyenne-and-arapaho-tribes-us-ok",
+  "directory_id": "us-fed-338d60ee3230",
+  "candidate_fact_ids": [
+    "cheyenne-and-arapaho-tribes-us-ok-546b1dd0",
+    "cheyenne-and-arapaho-tribes-us-ok-c1a467c8",
+    "cheyenne-and-arapaho-tribes-us-ok-f4d90233",
+    "cheyenne-and-arapaho-tribes-us-ok-ea03660d"
+  ],
+  "body_receipt_validation": {
+    "content_receipts": 16,
+    "robots_receipts": 5,
+    "body_hash_mismatches": 0,
+    "verified_total": 21,
+    "scope": "All 16 content and 5 robots captures matched the recorded exact byte length and SHA256, including both 403 document-host failures. No new fetch was performed for this review."
+  },
+  "findings": [
+    {
+      "fact_index": 0,
+      "result": "supported",
+      "note": "The actual Council page attributes exclusive annual-budget approval to the Tribal Council under the 2006 Constitution. The public text attributes this to that page; it does not assert an independently read constitutional adoption date, amendment status or present legal ruling."
+    },
+    {
+      "fact_index": 1,
+      "result": "supported",
+      "note": "The actual Records Management page explicitly dates establishment to 2010, describes record preservation and labels its last update March 15, 2022. The future database is not represented as complete or presently available."
+    },
+    {
+      "fact_index": 2,
+      "result": "supported",
+      "note": "The article body explicitly says Today, June 4 and identifies the signed Geary/BIA agreement; its visible time element and publication metadata identify June 4, 2020. The year and day are not inferred solely from the URL. April 16 decision and May 1 public notice remain distinct; first-ever claims are omitted."
+    },
+    {
+      "fact_index": 3,
+      "result": "supported",
+      "note": "The July 3, 2024 article visibly reports 93.43 El Reno acres and a July 2 deed-and-acceptance signing. Its visible time element confirms July 3 publication. Reported milestones remain attributed; no current title, full homeland return or general jurisdiction conclusion is inferred."
+    }
+  ],
+  "identity_review": {
+    "result": "supported",
+    "basis": "Current government homepage and government pages identify the existing Oklahoma Cheyenne and Arapaho Tribes government. Historical BIA 502 names that same government and domain; archive SHA256 153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f was independently rechecked. The fresh federal source identifies the exact directory name.",
+    "distinct_units_preserved": [
+      "Northern Cheyenne government",
+      "Northern Arapaho government",
+      "broader Cheyenne and Arapaho peoples"
+    ],
+    "publisher_provenance": "The government release wrapper visibly directs readers to the Tribal Tribune WordPress domain. The government Public Affairs page names the Tribal Tribune and contains an Official WordPress link to that exact domain."
+  },
+  "respect_and_access": {
+    "result": "passed",
+    "scope": "All 4 exact evidence anchors occur in the matching public source text; each fact is under 200 characters and has an explicit historical as_of value. No private records, restricted cultural detail, officeholder freshness, staff capacity or database-access entitlement is added.",
+    "blocked_sources": "Both Webflow/CDN robots responses are 403. The retained receipt log contains no factual PDF or image fetch from those blocked hosts. The constitutional PDF and headline-only development details remain unresolved; no proxy or alternate-host reconstruction is cited."
+  },
+  "integration": {
+    "base_commit": "319d911cfa3a81cf71eb1c2b45ddbf7ac925be0a",
+    "base_existing_facts": 3,
+    "current_existing_facts": 7,
+    "all_prior_metadata_preserved": true,
+    "all_three_october_8_facts_and_source_clocks_preserved": true,
+    "appended_facts_match_raw_packet": true,
+    "candidate_ids_match_batch": true,
+    "registry_sha256_at_review": "574a8631cc9fc6f724d04ff139fc83b98c0eaa980c44628b649fda89bf185cec"
+  },
+  "source_pins": {
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.raw.json": "4dfe0530a6d29ae857a7c9d6fb9fb2f735b569da7b0730f7e79fdacc3cdfa51f",
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.verify.json": "b28861d83d6e43290664c4cb97d67896e764dea0bb376e8f9524d1ff6d104dd9",
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.respect.json": "dc85fa199e7231439152e7f405ab998972d5cf0b3f063bd46af375521b2c170d",
+    "data/nations/research/batches/2026-11-24-cheyenne-arapaho-own-history.json": "0580bc3365db39c3592452c543f61511905dffabc5fb26c938879ea619d5a4fa",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-identity.json": "2e04a3867676cd3d4d901bf4e232d720097225e69922ad468ad7dcdc24ccd572"
+  },
+  "verified_body_pins": [
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/",
+      "sha256": "faebadd1f00fc6d0aadb15cd87c2b713d788cf49b3b35bb28c97e9b822756fde",
+      "body_bytes": 73595,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/government",
+      "sha256": "b24bc9b024327fd9997efca8bf48ddf0ca13f6f728461203195c5f49929af38e",
+      "body_bytes": 29028,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/government/legislative",
+      "sha256": "c0459bd966b29de2aff3457ba265574cb7fa36e7e0ab07c962cad4d32ecaeaf3",
+      "body_bytes": 83924,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/government/tribal-council-branch",
+      "sha256": "43a4fd3ca31dbc316cc7c49bfd415cf07aa5c77fd9007f0a092c2dc334ad532e",
+      "body_bytes": 52500,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/news/data-centers-our-future",
+      "sha256": "6418b74fede4349e2ab3e5df2f4c821187b7444e07deda8496c9871cf56ef180",
+      "body_bytes": 34864,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/executive/fortmarion",
+      "sha256": "af5dccaffea536b8e80255b10fa8918d4f34cf122f27466f0f4ff8f9e846f3d9",
+      "body_bytes": 29062,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/sitemap.xml",
+      "sha256": "971908a931c062ece773931b9b051446f0dc2d9cd1c03e21e1489629a0cb10f1",
+      "body_bytes": 151985,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/news/cheyenne-and-arapaho-tribes-finalize-historic-land-into-trust-transfer",
+      "sha256": "b8491d139f40e9157ba8805a872a9403de248d439bf296b08cd44b940d23eecc",
+      "body_bytes": 35743,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/news/land-into-trust-success-for-the-cheyenne-and-arapaho-tribes",
+      "sha256": "1bd59f9b4a60b2d2d095ae74e419a4b151a10d5689315fecdea12adc2efc70d1",
+      "body_bytes": 35412,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/files/constitution",
+      "sha256": "032c6f28ee5a6ba913f58aee3c90bbf70f22a2f09ca5bdcd5d19ea0acf292bcf",
+      "body_bytes": 4347,
+      "http_status": 200
+    },
+    {
+      "url": "https://cheyennearapahotribaltribune.wordpress.com/2020/06/04/cheyenne-and-arapaho-tribes-governor-signs-first-successful-land-into-trust-agreement/",
+      "sha256": "591618adb0c7f6145803d6b69c59571540a0fc1640ee2fd031cf3b41c6be64e6",
+      "body_bytes": 108206,
+      "http_status": 200
+    },
+    {
+      "url": "https://cheyennearapahotribaltribune.wordpress.com/2024/07/03/cheyenne-and-arapaho-tribes-finalize-historic-land-into-trust-transfer/",
+      "sha256": "9c6c9b315a89872d779442de3b45b10074d377a328d15580d9e976ad81b4824a",
+      "body_bytes": 108100,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/administration",
+      "sha256": "8bdd066676d1db049732522c90589215323d882dddd79ef571666a7573044411",
+      "body_bytes": 85501,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/administration/office-of-records-management",
+      "sha256": "8383a0309697372ed45bacca0937301d2137832a9893570399dac56b6222f8ec",
+      "body_bytes": 29143,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "body_bytes": 27547,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/public-affairs/tribal-tribune",
+      "sha256": "b1cbb2b62d0abe22ca5bfa39b852df62fb33059ce2ce8d669278309e40743a5a",
+      "body_bytes": 66803,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.cheyenneandarapaho-nsn.gov/robots.txt",
+      "sha256": "8d6794b443b80d6a8179d7b4bfc48f4c1f75a094f1fe94829c244a3b06bd0b84",
+      "body_bytes": 59,
+      "http_status": 200
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/robots.txt",
+      "sha256": "96311e18acded24e1554f1cfcff03d18e9f6ddfd9ec416f838307570f338ad9c",
+      "body_bytes": 243,
+      "http_status": 403
+    },
+    {
+      "url": "https://uploads-ssl.webflow.com/robots.txt",
+      "sha256": "94b7ea74ea989af56aa27b966f6f5a13860560463a5a96301a999ddd6813a115",
+      "body_bytes": 243,
+      "http_status": 403
+    },
+    {
+      "url": "https://cheyennearapahotribaltribune.wordpress.com/robots.txt",
+      "sha256": "efa9a96e188ebe691610497239cfebdf98f1d2a5f791f9fcd26cb2eec674a471",
+      "body_bytes": 684,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.govinfo.gov/robots.txt",
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "body_bytes": 5092,
+      "http_status": 200
+    }
+  ],
+  "limits": [
+    "This is AI-assisted source review, not a human or Nation review.",
+    "The review supports the bounded attributed history packet, not a complete coverage claim or independent title or legal examination.",
+    "Any factual text, source URL, identity mapping or body hash change requires another review; local capture retention metadata may be normalized without changing factual evidence."
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

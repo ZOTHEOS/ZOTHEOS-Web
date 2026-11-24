@@ -1,0 +1,41 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-24T19:56:18.116700+00:00",
+  "review_kind": "AI-assisted explicit own-published identity and naming research",
+  "registry_id": "fernandeno-tataviam-band-mission-indians-us-ca",
+  "own_published_name": "Fernandeño Tataviam Band of Mission Indians",
+  "official_url": "https://www.tataviam-nsn.us/",
+  "own_name_source": {
+    "url": "https://www.tataviam-nsn.us/",
+    "final_url": "https://www.tataviam-nsn.us/",
+    "retrieved_at": "2026-11-24T19:53:35.562728+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 328921,
+    "sha256": "fd46efbbe5f6b00fe51dc58cc9649fec8cc3ed6576187102031c657f8c9403ff",
+    "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+    "local_capture_at_review": {
+      "filename": "home.html",
+      "publicly_retained": false
+    }
+  },
+  "own_government_source": {
+    "url": "https://www.tataviam-nsn.us/government/",
+    "final_url": "https://www.tataviam-nsn.us/government/",
+    "retrieved_at": "2026-11-24T19:53:46.501181+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 140885,
+    "sha256": "f79ce696df052c17393c0d3f7ee7b44e6599660e4d0fe403d122392be04d5ec1",
+    "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+    "local_capture_at_review": {
+      "filename": "government.html",
+      "publicly_retained": false
+    }
+  },
+  "identity_scope": "A distinct self-published Band, not a profile for every Tataviam/Fernandeño/Tongva person or government. It receives no federal-directory crosswalk or recognition-status field from this batch. Government lists are not the definition of who is Indigenous.",
+  "recognition_scope": "The dated own release reports a positive PhaseI proposed finding and expressly says no final determination had been made at that report. Current legal recognition status is not resolved by this research; primary federal chronology remains a separate pending follow-up.",
+  "batch": "batches/2026-11-24-tataviam-own-history.json",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

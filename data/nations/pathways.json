@@ -532,7 +532,24 @@
       "source_ids": [
         "families"
       ],
-      "examples": []
+      "examples": [
+        {
+          "nation": "fernandeno-tataviam-band-mission-indians-us-ca",
+          "fact_ids": [
+            "fernandeno-tataviam-band-mission-indians-us-ca-1a87bda7"
+          ],
+          "practice": {
+            "question": "How can a person distinguish an organization’s history from the information needed to seek help today?",
+            "steps": [
+              "Read the Band’s own timeline entry for Pukúu Cultural Community Services. In a private note, record its reported 1974 origins and 2000 incorporation as separate stages, with the source URL and the date you read it. Keep the named nonprofit and the Band’s government distinct.",
+              "For a service you are researching, use that provider’s current public information. Separate its stated purpose, whom it says it serves, where it operates and how to verify that the information is current. Mark anything the checked source does not establish as unknown.",
+              "Prepare a short list of missing public details and questions for qualified human review. Use placeholders in drafts; leave names, Tribal citizenship documents, health records and children’s information out. Keep the note private and unsubmitted."
+            ],
+            "boundary": "A historical incorporation entry does not establish present service availability or eligibility. This is private preparation, with no application, representation or disclosure of personal records.",
+            "reflection": "Which facts concern the organization’s past, which describe a service now, and which questions still need an authorized answer?"
+          }
+        }
+      ]
     },
     {
       "id": "community-economies",

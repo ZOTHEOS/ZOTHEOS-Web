@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-24T20:01:41.919265+00:00",
+  "review_kind": "Independent AI-assisted Fernandeño Tataviam own-source chronology, naming, respect and private Paths draft cross-review",
+  "registry_id": "fernandeno-tataviam-band-mission-indians-us-ca",
+  "result": "source, identity, canonical integration and public Paths case passed",
+  "source_body_checks": [
+    {
+      "url": "https://www.tataviam-nsn.us/",
+      "body_bytes": 328921,
+      "sha256": "fd46efbbe5f6b00fe51dc58cc9649fec8cc3ed6576187102031c657f8c9403ff",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/heritage/history/",
+      "body_bytes": 286425,
+      "sha256": "df4238138ab8408b92835a045611d623099ab2d7508c40a573a95c7b6f376695",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/moves-to-phase-ii/",
+      "body_bytes": 128923,
+      "sha256": "4f8faeba7fa0772e3171dbcb86da4f2a20ffd2d8f9536cb7a43b320251d5268c",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/government/",
+      "body_bytes": 140885,
+      "sha256": "f79ce696df052c17393c0d3f7ee7b44e6599660e4d0fe403d122392be04d5ec1",
+      "result": "matched local review bytes"
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/robots.txt",
+      "body_bytes": 140,
+      "sha256": "50499dc512de3111eeb2e13976e6f8e34c89c4b28e875b824a578538fe826f1a",
+      "result": "matched local review bytes"
+    }
+  ],
+  "checks": [
+    "All four factual captures and the robots capture match their exact recorded byte counts and SHA-256 values. All four normalized anchors match the cited public source text.",
+    "The land-loss sentence remains explicitly attributed to the Band’s account. It supplies no present title, legal cause, citizenship, population or exclusive-boundary finding.",
+    "The Pukúu timeline text explicitly separates origins in 1974 from incorporation in 2000; the data-year1974 card label is not substituted for the incorporation date.",
+    "The State Parks cooperation card has data-year2023 and describes natural and cultural resources and interpretation. The fact is framed as a timeline observation, without a title transfer, current legal effect or implementation outcome.",
+    "The own government page links Executive and Legislative branches and describes duties to defend its Constitution and people’s rights. The undated fact asserts no constitutional date, current official or external recognition determination.",
+    "Own name and acronym are preserved, including ñ in Fernandeño and ú in Pukúu. The Band remains distinct from broader Tataviam and Tongva peoples and other governments; no federal/state inventory crosswalk or recognition-status field is created.",
+    "The June2026 release reports a proposed PhaseI finding and expressly says no final determination had been made at that report. The June18 homepage label versus June19 article metadata remains flagged; no exact recognition event date or current status is published.",
+    "The history’s nineteenth-century legal summary, genealogy, population, ceremonial details, sacred and burial locations, contacts and forms are excluded. Recorded factual paths are permitted by the saved robots and the receipts show more than three seconds between content reads.",
+    "The children-and-families draft accurately distinguishes an organization’s history from current service evidence, the nonprofit from the Band’s government, and unknown details from eligibility or availability. It keeps placeholders, private notes and qualified human review, with no application, outreach or personal-record submission.",
+    "The draft’s single fact ID equals the canonical assembler’s computation for source fact index1; its source packet and two event dates match that fact.",
+    "Canonical integration preserves the four Tataviam source-packet facts and metadata, assigns their computed IDs, and records actual November24 check dates. No external recognition-status field or directory crosswalk is created.",
+    "The public children-and-families case exactly equals the independently reviewed draft and canonical Pukúu fact ID. All earlier examples, sources, chapter fields and global capability copy remain unchanged.",
+    "The two new profiles are Trinidad and the named Tataviam Band. The sole changed prior profile is Cheyenne, with four appended facts and all prior metadata, facts and clocks preserved.",
+    "The outside-recognition source-discovery task remains needs_review, with nested review states pending and risk unassessed. Further inventory and recognition chronology research remain open."
+  ],
+  "pathways_draft_sha256": "4038fdfe57f03856bbf55d883f175fcad0a08593ed1aeb18ec1e10802effd028",
+  "source_pins": {
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.raw.json": "3700ad91822eed731eb3357e90b9547a5c92c7413ee02fbc313f4ecbd13e26d8",
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.verify.json": "89ff6d8e6025a6d48aae6c479aea147f899d1279e5067449277e5b7ed8a3efb8",
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.respect.json": "2a28dac858c7824ec2f22c9dd06251bc55d13495176e5fee0bcc29e59e1174a8",
+    "data/nations/research/batches/2026-11-24-tataviam-own-history.json": "e8b3ce7a583a6cec1614174192166c51b7bef54eb8b71b86533dfd092a81595f",
+    "data/nations/research/receipts/2026-11-24-tataviam-identity.json": "9940d5f2809224a772205392fb24b1d1f8e61bc7e4c5ad3d2455c9c72678326d",
+    "data/nations/research/receipts/2026-11-24-tataviam-government.receipt.json": "a76afb7c58f1bfaa40da49c82bda9f24b55e8afa850851532a82cf16e401a132",
+    "data/nations/research/receipts/2026-11-24-tataviam-history.receipt.json": "014b54df3c62e2e4ba66f28728928ea8055559f0bf36904c3e8cf1823db96e68",
+    "data/nations/research/receipts/2026-11-24-tataviam-home.receipt.json": "dd02ae9339fdb49aee5f1b5f7bc45efec2ae79fffcb8e15f75fbed1519ecfcec",
+    "data/nations/research/receipts/2026-11-24-tataviam-recognition.receipt.json": "9d41733c61fc6fa60f1d6059041af225356250f4846d96c14bc17b61efdac250",
+    "data/nations/research/receipts/2026-11-24-tataviam-robots.receipt.json": "409fabfcb18457b3138db94a30e8f2d0ae75e74a86689430480a439f1825ee18",
+    "data/nations/nations.json": "574a8631cc9fc6f724d04ff139fc83b98c0eaa980c44628b649fda89bf185cec",
+    "data/nations/pathways.json": "893f8813a32e0d0202a19c313f04a01e22a8deb3471b381c84664630fe15106c"
+  },
+  "integration_checks_pending": [],
+  "capture_retention": "Full factual captures remain temporary local review files for root cleanup before public publication. Exact receipts, short anchors, original summaries and this review remain.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "integration_reviewed_at": "2026-11-24T20:04:51.142353+00:00"
+}

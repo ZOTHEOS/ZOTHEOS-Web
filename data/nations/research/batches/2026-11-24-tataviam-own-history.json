@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-24",
+  "registry_id": "fernandeno-tataviam-band-mission-indians-us-ca",
+  "source_inventory_task": "discover-us-outside-recognition",
+  "review_kind": "AI-assisted own-source history, institution, identity and respect research",
+  "status": "candidate-for-independent-review",
+  "receipts": [
+    {
+      "url": "https://www.tataviam-nsn.us/",
+      "final_url": "https://www.tataviam-nsn.us/",
+      "retrieved_at": "2026-11-24T19:53:35.562728+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 328921,
+      "sha256": "fd46efbbe5f6b00fe51dc58cc9649fec8cc3ed6576187102031c657f8c9403ff",
+      "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "home.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/heritage/history/",
+      "final_url": "https://www.tataviam-nsn.us/heritage/history/",
+      "retrieved_at": "2026-11-24T19:53:39.295844+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 286425,
+      "sha256": "df4238138ab8408b92835a045611d623099ab2d7508c40a573a95c7b6f376695",
+      "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "history.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/moves-to-phase-ii/",
+      "final_url": "https://www.tataviam-nsn.us/moves-to-phase-ii/",
+      "retrieved_at": "2026-11-24T19:53:42.943462+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 128923,
+      "sha256": "4f8faeba7fa0772e3171dbcb86da4f2a20ffd2d8f9536cb7a43b320251d5268c",
+      "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "recognition.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.tataviam-nsn.us/government/",
+      "final_url": "https://www.tataviam-nsn.us/government/",
+      "retrieved_at": "2026-11-24T19:53:46.501181+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 140885,
+      "sha256": "f79ce696df052c17393c0d3f7ee7b44e6599660e4d0fe403d122392be04d5ec1",
+      "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "government.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.tataviam-nsn.us/robots.txt",
+      "final_url": "https://www.tataviam-nsn.us/robots.txt",
+      "retrieved_at": "2026-11-24T19:53:31.944536+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 140,
+      "sha256": "50499dc512de3111eeb2e13976e6f8e34c89c4b28e875b824a578538fe826f1a",
+      "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "robots.txt",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_date": "1900",
+      "receipt_index": 1,
+      "locator": "American Colonization: By1900land-loss sentence"
+    },
+    {
+      "event_date": "2000",
+      "earlier_stage": "1974",
+      "receipt_index": 1,
+      "locator": "First LA Tribe Social Services Non-Profit Established, data-year1974, explicit2000incorporation"
+    },
+    {
+      "event_date": "2023",
+      "receipt_index": 1,
+      "locator": "First LA Tribe MOU with CA State Parks, timeline card data-year2023"
+    },
+    {
+      "event_date": null,
+      "receipt_index": 3,
+      "locator": "Government: Executive Branch and Legislative Branch links; Constitution and Code description"
+    }
+  ],
+  "source_limits": [
+    "The history’s own land-loss account is explicitly attributed. It establishes no present title, exclusive boundary, legal cause or judicial result.",
+    "The explicit2000incorporation and1974origin are separate stages. No present service availability, program eligibility, funding or outcomes are inferred.",
+    "The timeline card has data-year2023 and describes cooperation, natural/cultural resources and interpretation. No conveyance of title, present legal effect or measured implementation is inferred.",
+    "The own public government description identifies branches. No constitutional adoption date, present officeholder, external recognition status or legal-jurisdiction determination is inferred.",
+    "No current population, lineage count, citizenship criteria or genealogical detail is used. Ceremonial descriptions, sacred places, burial details, addresses, forms and cultural-access instructions remain excluded.",
+    "The history page’s summary of nineteenth-century land law is not used as a legal account. Only the explicitly attributed historical land-loss sentence is summarized.",
+    "The own homepage labels the recognition release June18,2026 while article metadata is June19,2026. No exact event date or current final recognition status is published.",
+    "The Band is not inserted into a federal or state recognition inventory. Complete outside-recognition source coverage remains pending; one own-published example is not a complete directory."
+  ],
+  "crawl_policy": "Own robots200 preceded all factual reads. Paths were permitted for the declared reader and ChatGPT-User; content reads were at least3seconds apart. No forms, account areas, private files, API or contacts were accessed.",
+  "capture_retention": "Full source captures are temporary local review material only and excluded from public publication. Exact receipts, measured hashes, short anchors and original summaries remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "pathways_practice": {
+    "chapter": "children-and-families",
+    "example": {
+      "nation": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact_ids": [
+        "fernandeno-tataviam-band-mission-indians-us-ca-1a87bda7"
+      ],
+      "practice": {
+        "question": "How can a person distinguish an organization’s history from the information needed to seek help today?",
+        "steps": [
+          "Read the Band’s own timeline entry for Pukúu Cultural Community Services. In a private note, record its reported 1974 origins and 2000 incorporation as separate stages, with the source URL and the date you read it. Keep the named nonprofit and the Band’s government distinct.",
+          "For a service you are researching, use that provider’s current public information. Separate its stated purpose, whom it says it serves, where it operates and how to verify that the information is current. Mark anything the checked source does not establish as unknown.",
+          "Prepare a short list of missing public details and questions for qualified human review. Use placeholders in drafts; leave names, Tribal citizenship documents, health records and children’s information out. Keep the note private and unsubmitted."
+        ],
+        "boundary": "A historical incorporation entry does not establish present service availability or eligibility. This is private preparation, with no application, representation or disclosure of personal records.",
+        "reflection": "Which facts concern the organization’s past, which describe a service now, and which questions still need an authorized answer?"
+      }
+    },
+    "source_packet": "sources/us-tataviam-own-history-2026-11-24.raw.json",
+    "source_fact_indexes": [
+      1
+    ],
+    "event_dates": [
+      "1974",
+      "2000"
+    ],
+    "scope": "Private reading and preparation, not current eligibility, service availability, representation, an application route or collection of personal records."
+  },
+  "candidate_fact_ids": [
+    "fernandeno-tataviam-band-mission-indians-us-ca-2d4e81b9",
+    "fernandeno-tataviam-band-mission-indians-us-ca-1a87bda7",
+    "fernandeno-tataviam-band-mission-indians-us-ca-91dc1a50",
+    "fernandeno-tataviam-band-mission-indians-us-ca-5436e001"
+  ]
+}

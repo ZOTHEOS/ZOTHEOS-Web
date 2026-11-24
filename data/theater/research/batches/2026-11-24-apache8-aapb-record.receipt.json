@@ -1,0 +1,18 @@
+{
+  "url": "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+  "final_url": "https://americanarchive.org/challenge?destination=%2Fcatalog%2Fcpb-aacip_508-125q815826",
+  "retrieved_at": "2026-11-24T19:54:34.300458+00:00",
+  "retrieval_method": "http",
+  "http_status": 200,
+  "body_bytes": 851,
+  "sha256": "876d1822114882dcd6bf9361f0e097ad3f3dfcc58d99c5ca451819fba4b4c898",
+  "redirects": [
+    {
+      "status": 302,
+      "from_url": "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+      "to_url": "/challenge?destination=%2Fcatalog%2Fcpb-aacip_508-125q815826"
+    }
+  ],
+  "capture_retention": "local",
+  "local_capture": ".theater-research-2026-11-24/apache8-aapb-record.body.html"
+}

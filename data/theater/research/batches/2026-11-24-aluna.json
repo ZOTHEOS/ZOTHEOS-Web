@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-24",
+  "prepared_at": "2026-11-24T19:59:35.298882+00:00",
+  "status": "full-film-candidate",
+  "review_kind": "AI-assisted official edition, source integrity, rights-chain, embedding, captions and perspective research",
+  "record": {
+    "id": "aluna",
+    "title": "Aluna",
+    "year": 2012,
+    "year_scope": "Film year stated by Tairona Heritage Trust and The Film Collaborative; the selected official YouTube edition was uploaded February 4, 2018.",
+    "runtime": "88m 57s · YouTube Edition",
+    "credits": "Directed and produced by Alan Ereira; executive producer Ben Woolford.",
+    "publisher": "Aluna - The Movie / Tairona Heritage Trust",
+    "viewing": "full-film",
+    "youtube_kind": "full-film",
+    "form": "documentary",
+    "region": "south-america",
+    "location": "Sierra Nevada de Santa Marta and Caribbean coast, Colombia",
+    "synopsis": "Kogi participants explore links between land and ecological change along Colombia’s Caribbean coast. Their own footage and commentary from Western scientists convey an environmental warning.",
+    "perspective": "The Tairona Heritage Trust describes a film made with Kogi participants, including footage they shot themselves. It presents those participants’ perspectives and does not speak for every Kogi person or Indigenous community.",
+    "availability": "The official film channel publishes this complete edition free on YouTube. Only English auto-generated captions are listed. Regional or account limits may apply; actual playback and caption quality are unverified.",
+    "content_note": "Discusses ecological damage and threats to land and water.",
+    "topics": [
+      "land",
+      "environment"
+    ],
+    "watch_url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+    "youtube_id": "ftFbCwJfs1I",
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "thumbnail_url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+    "thumbnail_source": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+    "sources": [
+      {
+        "url": "https://www.taironatrust.org/the-films",
+        "title": "The Films: Aluna",
+        "publisher": "Tairona Heritage Trust",
+        "checked_at": "2026-11-24T19:56:38.801279+00:00",
+        "http_status": 200,
+        "sha256": "79aa05025f6f0ddf7fc1247eb872808f404b261787bf5750906255f453f828d8",
+        "checked": "2026-11-24"
+      },
+      {
+        "url": "https://www.thefilmcollaborative.org/films/aluna",
+        "title": "Aluna",
+        "publisher": "The Film Collaborative",
+        "checked_at": "2026-11-24T19:58:19.599903+00:00",
+        "http_status": 200,
+        "sha256": "c467665725c498f10ae147da68342f36ab0ced0c49f6401eb20e2965155eb140",
+        "checked": "2026-11-24"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+        "title": "Aluna - An Ecological Warning by the Kogi People",
+        "publisher": "Aluna - The Movie",
+        "checked_at": "2026-11-24T19:57:11.734289+00:00",
+        "http_status": 200,
+        "sha256": "7f776190035332b929fe736cf5f8f964a5fdf75df80b1342eac44b9cf6936a89",
+        "checked": "2026-11-24"
+      }
+    ]
+  },
+  "duplicate_check": {
+    "existing_catalogue_records": 243,
+    "title_or_provider_id_match": false,
+    "method": "Parsed every current title,canonicalID and YouTubeID before proposing this single record."
+  },
+  "edition": {
+    "duration_seconds_video_details": 5337,
+    "duration_seconds_microformat": 5337,
+    "film_release_year": 2012,
+    "catalogue_runtime_minutes": 88,
+    "provider_upload_date": "2018-02-04T05:37:02-08:00",
+    "provider_channel": "Aluna - The Movie",
+    "provider_channel_id": "UCP0Bje534UDILypObxrCTww",
+    "provider_flags": {
+      "playability_status": "OK",
+      "playable_in_embed": true,
+      "is_private": false,
+      "is_unlisted": false,
+      "has_ypc_metadata": false
+    },
+    "distribution_scope": "The current Tairona Heritage Trust film page embeds the exact official Aluna video ftFbCwJfs1I. That channel links back to the film site and explicitly offers the film free. The Film Collaborative independently identifies the2012feature, director and producer. This is not an anonymous upload or trailer.",
+    "embedding_scope": "The Trust’s actual page includes a provider-supplied iframe in its Squarespace data-html field for this exact film. The provider public page reports playableInEmbed:true and an official embed URL. Use the existing official YouTube player contract; do not download,proxy,re-upload,modify artwork or infer public-screening rights.",
+    "caption_tracks": [
+      {
+        "language_code": "en",
+        "name": "English (auto-generated)",
+        "kind": "asr",
+        "scope": "Metadata only. No track body,timing,translation accuracy or accessibility review."
+      }
+    ],
+    "geographic_scope": "No per-country playback test or worldwide guarantee. Public/free posting and metadata OK do not establish successful playback for a particular viewer.",
+    "playback_scope": "No actual audiovisual playback or complete editorial review was performed. Metadata is not playback evidence.",
+    "quality_metadata_scope": "YouTube also reports a pay-gated super-resolution quality option. This is not interpreted as a purchase gate for the complete public film; no paid-quality feature was requested."
+  },
+  "receipts": [
+    {
+      "url": "https://www.taironatrust.org/the-films",
+      "final_url": "https://www.taironatrust.org/the-films",
+      "retrieved_at": "2026-11-24T19:56:38.801279+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 230310,
+      "sha256": "79aa05025f6f0ddf7fc1247eb872808f404b261787bf5750906255f453f828d8",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-trust-films.body.html"
+    },
+    {
+      "url": "https://www.thefilmcollaborative.org/films/aluna",
+      "final_url": "https://www.thefilmcollaborative.org/films/aluna",
+      "retrieved_at": "2026-11-24T19:58:19.599903+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 32023,
+      "sha256": "c467665725c498f10ae147da68342f36ab0ced0c49f6401eb20e2965155eb140",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-collaborative.body.html"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+      "final_url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+      "retrieved_at": "2026-11-24T19:57:11.734289+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1515732,
+      "sha256": "7f776190035332b929fe736cf5f8f964a5fdf75df80b1342eac44b9cf6936a89",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-youtube.body.html"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.taironatrust.org/robots.txt",
+      "final_url": "https://www.taironatrust.org/robots.txt",
+      "retrieved_at": "2026-11-24T19:55:53.572864+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1511,
+      "sha256": "1899ad9ce74a2bd9f58e20e10e28abe5aa2d9a873d04305577fe54e22b8614fd",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-trust-robots.body.txt"
+    },
+    {
+      "url": "https://www.youtube.com/robots.txt",
+      "final_url": "https://www.youtube.com/robots.txt",
+      "retrieved_at": "2026-11-24T19:55:55.854809+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-yt-robots.body.txt"
+    },
+    {
+      "url": "https://i.ytimg.com/robots.txt",
+      "final_url": "https://i.ytimg.com/robots.txt",
+      "retrieved_at": "2026-11-24T19:57:51.133690+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-image-robots.body.txt"
+    },
+    {
+      "url": "https://www.thefilmcollaborative.org/robots.txt",
+      "final_url": "https://www.thefilmcollaborative.org/404.php",
+      "retrieved_at": "2026-11-24T19:57:48.823351+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 20605,
+      "sha256": "49c314326de1ef2069d81e023ec2aaa3d9203e99090bd7c6c8580c1d48e2a63a",
+      "redirects": [
+        {
+          "status": 302,
+          "from_url": "https://www.thefilmcollaborative.org/robots.txt",
+          "to_url": "https://www.thefilmcollaborative.org/404.php"
+        }
+      ],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/aluna-collaborative-robots.body.txt"
+    }
+  ],
+  "crawl_policy": "Robots checks preceded reads. Trust public/the-films,YouTube public/watch and thumbnail paths were outside disallowed paths. The Film Collaborative robots URL redirected to its soft404HTML page; that response is not claimed to be a valid robots policy. Only the known public film catalogue was read there. No media file, private account, API, caption-download or form endpoint was accessed.",
+  "capture_policy": "All factual HTML and robots captures remain in the scoped local scratch directory. Individual receipts mark capture_retention:local. Only short original summaries,metadata and measured receipt hashes are proposed for Git.",
+  "thumbnail_review": {
+    "provider_url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+    "checked_at": "2026-11-24T19:58:21.895964+00:00",
+    "http_method": "HEAD",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "content_length": 154393,
+    "body_bytes_read": 0,
+    "redirects": [],
+    "source": "Exact thumbnail supplied by the linked official YouTube edition’s public videoDetails and microformat metadata.",
+    "display": "Official provider thumbnail through the existing Theater YouTube contract. No image rehosting."
+  },
+  "source_integrity_review": {
+    "status": "legacy-film-origin-excluded-from-public-sources",
+    "source_url": "https://www.alunathemovie.com/",
+    "observation": "The film homepage contained unrelated shoe/commercial link text alongside the official film material. No unrelated destination was followed. This is a source-quality warning, not a proven diagnosis of server compromise.",
+    "public_handling": "Legacy homepage and credits URLs are excluded from the proposed public sources and watch destination. Current Tairona Heritage Trust exact embed,independent Film Collaborative credits and provider data support the selected edition.",
+    "internal_receipts": [
+      {
+        "url": "https://www.alunathemovie.com/",
+        "final_url": "https://www.alunathemovie.com/",
+        "retrieved_at": "2026-11-24T19:56:14.853613+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 268700,
+        "sha256": "caf4424445e4737e230c92c0d4f6100ece34f30e02e28bf3e64fe5e1f9d4804a",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-24/aluna-own-home.body.html"
+      },
+      {
+        "url": "https://www.alunathemovie.com/credits",
+        "final_url": "https://www.alunathemovie.com/credits",
+        "retrieved_at": "2026-11-24T19:58:16.208650+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 257099,
+        "sha256": "cf2cb41d7cd18d54cf5298314c70931240f2620869b708a0031b71909f04f01e",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-24/aluna-own-credits.body.html"
+      },
+      {
+        "url": "https://www.alunathemovie.com/robots.txt",
+        "final_url": "https://www.alunathemovie.com/robots.txt",
+        "retrieved_at": "2026-11-24T19:55:51.086089+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 125,
+        "sha256": "e0814c3c94faf69b2e3aca1b4d9f208b4d12b5b6aa3819668077f283403d6d42",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-24/aluna-own-robots.body.txt"
+      }
+    ],
+    "follow_up": "Review the legacy film-origin integrity separately before citing its general cultural,demographic,historical or present-day claims. No such claims are published in this candidate."
+  },
+  "evidence_locators": [
+    {
+      "receipt": "trust-films",
+      "locator": "ALUNA:The Movie section and data-html YouTube iframe",
+      "anchor": "film includes their own footage",
+      "supports": "2012release,Kogi participants and self-filmed footage,Caribbean-coast environmental warning and exactofficialembed."
+    },
+    {
+      "receipt": "collaborative",
+      "locator": "Top catalogue line and credit list",
+      "anchor": "2012 | Colombia/UK | 88 min",
+      "supports": "Original film year,rounded catalogue runtime,director/producer Alan Ereira and executiveproducer Ben Woolford."
+    },
+    {
+      "receipt": "youtube",
+      "locator": "ytInitialPlayerResponse.videoDetails,microformat,playabilityStatus,captions",
+      "supports": "Exactvideo/channel,5337-secondcompleteedition,2018upload,public/free description,embedding enabled,EnglishASRonly and actualsuppliedthumbnail."
+    }
+  ],
+  "pending": [
+    "Actual audiovisual playback",
+    "Per-region,account and device eligibility",
+    "English auto-generated caption accuracy and timing",
+    "Complete audiovisual editorial review",
+    "Separate legacy film-origin source-integrity review"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "root_source_review": {
+    "reviewed_at": "2026-11-24T20:01:56.100512+00:00",
+    "review_kind": "AI-assisted source-chain, credits, exact provider metadata and scope cross-review",
+    "correction": "Narrowed the synopsis to the land/ecological relationships explicitly described by the selected current sources; no unverified river-specific scene claim.",
+    "source_integrity_scope": "Legacy film-origin SEO contamination is recorded internally; public viewing/citations use the current Trust, Film Collaborative and official YouTube edition.",
+    "caption_scope": "The provider description advertises15languages, but the actual caption-track list contains only English ASR. No15-language caption or translation-quality promise is made.",
+    "human_review_claimed": false,
+    "nation_approval_claimed": false
+  }
+}

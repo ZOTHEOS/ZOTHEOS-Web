@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "topics": [
     {
       "id": "family",
@@ -12545,6 +12545,64 @@
           "http_status": 200,
           "sha256": "d9adc064fa661299db0cdf27d4455c2f717b4707aeb634111d7d42da0266848d",
           "checked": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "aluna",
+      "title": "Aluna",
+      "year": 2012,
+      "year_scope": "Film year stated by Tairona Heritage Trust and The Film Collaborative; the selected official YouTube edition was uploaded February 4, 2018.",
+      "runtime": "88m 57s · YouTube Edition",
+      "credits": "Directed and produced by Alan Ereira; executive producer Ben Woolford.",
+      "publisher": "Aluna - The Movie / Tairona Heritage Trust",
+      "viewing": "full-film",
+      "youtube_kind": "full-film",
+      "form": "documentary",
+      "region": "south-america",
+      "location": "Sierra Nevada de Santa Marta and Caribbean coast, Colombia",
+      "synopsis": "Kogi participants explore links between land and ecological change along Colombia’s Caribbean coast. Their own footage and commentary from Western scientists convey an environmental warning.",
+      "perspective": "The Tairona Heritage Trust describes a film made with Kogi participants, including footage they shot themselves. It presents those participants’ perspectives and does not speak for every Kogi person or Indigenous community.",
+      "availability": "The official film channel publishes this complete edition free on YouTube. Only English auto-generated captions are listed. Regional or account limits may apply; actual playback and caption quality are unverified.",
+      "content_note": "Discusses ecological damage and threats to land and water.",
+      "topics": [
+        "land",
+        "environment"
+      ],
+      "watch_url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+      "youtube_id": "ftFbCwJfs1I",
+      "vimeo_id": null,
+      "pbs_id": null,
+      "nfb_slug": null,
+      "thumbnail_url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "thumbnail_source": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+      "sources": [
+        {
+          "url": "https://www.taironatrust.org/the-films",
+          "title": "The Films: Aluna",
+          "publisher": "Tairona Heritage Trust",
+          "checked_at": "2026-11-24T19:56:38.801279+00:00",
+          "http_status": 200,
+          "sha256": "79aa05025f6f0ddf7fc1247eb872808f404b261787bf5750906255f453f828d8",
+          "checked": "2026-11-24"
+        },
+        {
+          "url": "https://www.thefilmcollaborative.org/films/aluna",
+          "title": "Aluna",
+          "publisher": "The Film Collaborative",
+          "checked_at": "2026-11-24T19:58:19.599903+00:00",
+          "http_status": 200,
+          "sha256": "c467665725c498f10ae147da68342f36ab0ced0c49f6401eb20e2965155eb140",
+          "checked": "2026-11-24"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ftFbCwJfs1I",
+          "title": "Aluna - An Ecological Warning by the Kogi People",
+          "publisher": "Aluna - The Movie",
+          "checked_at": "2026-11-24T19:57:11.734289+00:00",
+          "http_status": 200,
+          "sha256": "7f776190035332b929fe736cf5f8f964a5fdf75df80b1342eac44b9cf6936a89",
+          "checked": "2026-11-24"
         }
       ]
     }

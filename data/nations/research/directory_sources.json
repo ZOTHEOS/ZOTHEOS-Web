@@ -1649,6 +1649,55 @@
       "discovery_date": "2026-11-23",
       "status": "source_retrieved",
       "note": "The government’s own public attorney, Council and Cultural Center pages; login-protected history was not accessed."
+    },
+    {
+      "source_id": "trinidad-own-site-2026-11-24",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://trinidad-rancheria.org/",
+      "allowed_hosts": [
+        "trinidad-rancheria.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-24",
+      "status": "source_retrieved",
+      "note": "The government’s own history, Council, cultural priorities and Environmental Program; distinct from neighboring peoples/governments."
+    },
+    {
+      "source_id": "cheyenne-arapaho-own-site-2026-11-24",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.cheyenneandarapaho-nsn.gov/",
+      "allowed_hosts": [
+        "www.cheyenneandarapaho-nsn.gov",
+        "cheyennearapahotribaltribune.wordpress.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-24",
+      "status": "source_retrieved",
+      "note": "The government’s own public departments and its linked Tribal Tribune’s separate dated public HTML reports; blocked document-host assets were not fetched."
+    },
+    {
+      "source_id": "tataviam-own-site-2026-11-24",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.tataviam-nsn.us/",
+      "allowed_hosts": [
+        "www.tataviam-nsn.us"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-24",
+      "status": "source_retrieved",
+      "note": "One own-published Band example for inclusive discovery. Recognition status is not adjudicated and no federal/state directory crosswalk is inferred."
     }
   ]
 }

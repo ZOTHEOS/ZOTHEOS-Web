@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-24T20:08:30.860164+00:00",
+  "review_kind": "AI-assisted exact-byte local source-capture cleanup verification",
+  "local_captures_removed": 48,
+  "captures": [
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/about.html",
+      "bytes": 51914,
+      "sha256": "30db3f896e288640797f893498e0c95472bcb858b6875537301ab9a386ae7701",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/council.html",
+      "bytes": 51626,
+      "sha256": "cf452114cc7b83c22250305e128138249e1e5e0560c15ecc1cac24eee316c65c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/cultural.html",
+      "bytes": 56956,
+      "sha256": "067536320e9036a4d325484e7bd8cc728a3a8ac46344a56cc28d6b71bac1de05",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/environment.html",
+      "bytes": 63171,
+      "sha256": "203662d1d3ecc04b4b6ab21548acd464fd8029a969be791bc59b4d1cd0d110fe",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/federal-robots.txt",
+      "bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/federal.html",
+      "bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/home.html",
+      "bytes": 52278,
+      "sha256": "e72da62dfbbe9a9714f49794a1f0e8132d53639e8b5be933f30d68757a67f940",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-trinidad-1124/own-robots.txt",
+      "bytes": 153,
+      "sha256": "4fb22bc2c316a4919edb5e7c7f4cdcc56beffffe2d6b49928d92df0def59ab17",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-tataviam-1124/government.html",
+      "bytes": 140885,
+      "sha256": "f79ce696df052c17393c0d3f7ee7b44e6599660e4d0fe403d122392be04d5ec1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-tataviam-1124/history.html",
+      "bytes": 286425,
+      "sha256": "df4238138ab8408b92835a045611d623099ab2d7508c40a573a95c7b6f376695",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-tataviam-1124/home.html",
+      "bytes": 328921,
+      "sha256": "fd46efbbe5f6b00fe51dc58cc9649fec8cc3ed6576187102031c657f8c9403ff",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-tataviam-1124/recognition.html",
+      "bytes": 128923,
+      "sha256": "4f8faeba7fa0772e3171dbcb86da4f2a20ffd2d8f9536cb7a43b320251d5268c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "steward-local-tataviam-1124/robots.txt",
+      "bytes": 140,
+      "sha256": "50499dc512de3111eeb2e13976e6f8e34c89c4b28e875b824a578538fe826f1a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-administration.body.html",
+      "bytes": 85501,
+      "sha256": "8bdd066676d1db049732522c90589215323d882dddd79ef571666a7573044411",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-constitution-page.body.html",
+      "bytes": 4347,
+      "sha256": "032c6f28ee5a6ba913f58aee3c90bbf70f22a2f09ca5bdcd5d19ea0acf292bcf",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-council.body.html",
+      "bytes": 52500,
+      "sha256": "43a4fd3ca31dbc316cc7c49bfd415cf07aa5c77fd9007f0a092c2dc334ad532e",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-data-centers.body.html",
+      "bytes": 34864,
+      "sha256": "6418b74fede4349e2ab3e5df2f4c821187b7444e07deda8496c9871cf56ef180",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-el-reno-transfer.body.html",
+      "bytes": 108100,
+      "sha256": "9c6c9b315a89872d779442de3b45b10074d377a328d15580d9e976ad81b4824a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-federal.body.html",
+      "bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-fort-marion.body.html",
+      "bytes": 29062,
+      "sha256": "af5dccaffea536b8e80255b10fa8918d4f34cf122f27466f0f4ff8f9e846f3d9",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-geary-agreement.body.html",
+      "bytes": 108206,
+      "sha256": "591618adb0c7f6145803d6b69c59571540a0fc1640ee2fd031cf3b41c6be64e6",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-government.body.html",
+      "bytes": 29028,
+      "sha256": "b24bc9b024327fd9997efca8bf48ddf0ca13f6f728461203195c5f49929af38e",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-home.body.html",
+      "bytes": 73595,
+      "sha256": "faebadd1f00fc6d0aadb15cd87c2b713d788cf49b3b35bb28c97e9b822756fde",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-legislative.body.html",
+      "bytes": 83924,
+      "sha256": "c0459bd966b29de2aff3457ba265574cb7fa36e7e0ab07c962cad4d32ecaeaf3",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-records-management.body.html",
+      "bytes": 29143,
+      "sha256": "8383a0309697372ed45bacca0937301d2137832a9893570399dac56b6222f8ec",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-sitemap.body.html",
+      "bytes": 151985,
+      "sha256": "971908a931c062ece773931b9b051446f0dc2d9cd1c03e21e1489629a0cb10f1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-tribune-own-page.body.html",
+      "bytes": 66803,
+      "sha256": "b1cbb2b62d0abe22ca5bfa39b852df62fb33059ce2ce8d669278309e40743a5a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-trust-success.body.html",
+      "bytes": 35412,
+      "sha256": "1bd59f9b4a60b2d2d095ae74e419a4b151a10d5689315fecdea12adc2efc70d1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/.local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-trust-transfer.body.html",
+      "bytes": 35743,
+      "sha256": "b8491d139f40e9157ba8805a872a9403de248d439bf296b08cd44b940d23eecc",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-collaborative-robots.body.txt",
+      "bytes": 20605,
+      "sha256": "49c314326de1ef2069d81e023ec2aaa3d9203e99090bd7c6c8580c1d48e2a63a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-collaborative.body.html",
+      "bytes": 32023,
+      "sha256": "c467665725c498f10ae147da68342f36ab0ced0c49f6401eb20e2965155eb140",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-image-robots.body.txt",
+      "bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-own-credits.body.html",
+      "bytes": 257099,
+      "sha256": "cf2cb41d7cd18d54cf5298314c70931240f2620869b708a0031b71909f04f01e",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-own-home.body.html",
+      "bytes": 268700,
+      "sha256": "caf4424445e4737e230c92c0d4f6100ece34f30e02e28bf3e64fe5e1f9d4804a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-own-robots.body.txt",
+      "bytes": 125,
+      "sha256": "e0814c3c94faf69b2e3aca1b4d9f208b4d12b5b6aa3819668077f283403d6d42",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-trust-films.body.html",
+      "bytes": 230310,
+      "sha256": "79aa05025f6f0ddf7fc1247eb872808f404b261787bf5750906255f453f828d8",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-trust-robots.body.txt",
+      "bytes": 1511,
+      "sha256": "1899ad9ce74a2bd9f58e20e10e28abe5aa2d9a873d04305577fe54e22b8614fd",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-youtube.body.html",
+      "bytes": 1515732,
+      "sha256": "7f776190035332b929fe736cf5f8f964a5fdf75df80b1342eac44b9cf6936a89",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/aluna-yt-robots.body.txt",
+      "bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/apache8-aapb-record.body.html",
+      "bytes": 851,
+      "sha256": "876d1822114882dcd6bf9361f0e097ad3f3dfcc58d99c5ca451819fba4b4c898",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/apache8-aapb-robots.body.txt",
+      "bytes": 247,
+      "sha256": "39f0d52ee5cc2f372ebd462d8f706cc5a0c9fcaf6444b79ec26747ab2ceda032",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/apache8-vmm-robots.body.txt",
+      "bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": ".theater-research-2026-11-24/apache8-vmm.body.html",
+      "bytes": 47325,
+      "sha256": "2a2294a08f82680109db161bd306de1e366ab1d842e6bbcd5b0107e90e99309a",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-cdn-robots.body.txt",
+      "bytes": 243,
+      "sha256": "96311e18acded24e1554f1cfcff03d18e9f6ddfd9ec416f838307570f338ad9c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-federal-robots.body.txt",
+      "bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-own-robots.body.txt",
+      "bytes": 59,
+      "sha256": "8d6794b443b80d6a8179d7b4bfc48f4c1f75a094f1fe94829c244a3b06bd0b84",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-tribune-robots.body.txt",
+      "bytes": 684,
+      "sha256": "efa9a96e188ebe691610497239cfebdf98f1d2a5f791f9fcd26cb2eec674a471",
+      "publicly_retained": false
+    },
+    {
+      "local_capture_at_review": "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-uploads-robots.body.txt",
+      "bytes": 243,
+      "sha256": "94b7ea74ea989af56aa27b966f6f5a13860560463a5a96301a999ddd6813a115",
+      "publicly_retained": false
+    }
+  ],
+  "scope": "Every removed file was an owned untracked local capture inside this isolated worktree and matched measured response bytes and SHA before removal. Full source pages, forms and challenge bodies are excluded from publication; exact receipts, short evidence and original summaries remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

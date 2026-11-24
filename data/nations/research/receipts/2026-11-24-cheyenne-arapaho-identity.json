@@ -1,0 +1,73 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-24T20:01:07.867036+00:00",
+  "review_kind": "AI-assisted explicit source-backed existing-government identity research",
+  "directory_id": "us-fed-338d60ee3230",
+  "registry_id": "cheyenne-and-arapaho-tribes-us-ok",
+  "own_published_name": "Cheyenne and Arapaho Tribes",
+  "official_url": "https://www.cheyenneandarapaho-nsn.gov/",
+  "own_name_source": {
+    "url": "https://www.cheyenneandarapaho-nsn.gov/",
+    "final_url": "https://www.cheyenneandarapaho-nsn.gov/",
+    "retrieved_at": "2026-11-24T19:53:46.660481+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 73595,
+    "sha256": "faebadd1f00fc6d0aadb15cd87c2b713d788cf49b3b35bb28c97e9b822756fde",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-home.body.html",
+      "publicly_retained": false
+    }
+  },
+  "own_government_scope_source": {
+    "url": "https://www.cheyenneandarapaho-nsn.gov/government",
+    "final_url": "https://www.cheyenneandarapaho-nsn.gov/government",
+    "retrieved_at": "2026-11-24T19:54:06.590774+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 29028,
+    "sha256": "b24bc9b024327fd9997efca8bf48ddf0ca13f6f728461203195c5f49929af38e",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-government.body.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+  "federal_directory_receipt": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-24T19:58:17.465512+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-24-cheyenne-arapaho/2026-11-24-cheyenne-arapaho-federal.body.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 502,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://www.cheyenneandarapaho-nsn.gov/",
+    "tribefullname": "Cheyenne and Arapaho Tribes, Oklahoma"
+  },
+  "scope_note": "The current official homepage and government pages identify the existing Oklahoma Cheyenne and Arapaho Tribes government. The fresh federal name and historical BIA502 corroborate this exact government and domain. Northern Cheyenne and Northern Arapaho governments and broader peoples are not merged or added as new aliases. All existing canonical metadata and three October 8 language/culture facts are to remain unchanged.",
+  "existing_profile_disposition": "append-only; no duplicate profile",
+  "batch": "batches/2026-11-24-cheyenne-arapaho-own-history.json",
+  "capture_retention": "Full factual HTML and XML captures were read and hashed during local review and remain local only for root review/removal before publication. Exact receipts, source URLs, short anchors and original summaries are retained; separately identified robots bodies may remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

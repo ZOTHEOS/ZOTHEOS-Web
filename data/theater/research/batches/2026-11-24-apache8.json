@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-24",
+  "prepared_at": "2026-11-24T20:00:13.154511+00:00",
+  "status": "needs-archive-access-and-credits-review",
+  "candidate_id": "apache-8-availability",
+  "title": "Apache 8",
+  "catalogue_disposition": "Queue only. No film record, player or full-film count is proposed. Aluna is the selected complete public edition for this batch.",
+  "actual_observations": {
+    "archive": "The exact AAPB record request redirected to a connection-verification challenge. Final HTTP200 describes the challenge response, not a successful film page or player. No challenge was bypassed and no alternate-client or URL workaround was attempted.",
+    "distributor": "The actual Vision Maker Media page identifies a2011 documentary feature,57-minute catalogue runtime and a trailer link. Its page names Sande Zeig and Heather Rae as directors. It links Women Make Movies for educational distribution.",
+    "perspective": "VMM describes White Mountain Apache women firefighters. No current crew composition, employment outcome or Nation endorsement is inferred.",
+    "unresolved_credits": "A previously displayed web-search snapshot of the AAPB record listed Sande Zeig as director, differing from the current VMM listing. Resolve this against actual authoritative edition credits before proposing public credit text."
+  },
+  "search_snapshot_limits": {
+    "source_url": "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+    "retrieval_method": "browser_tool",
+    "observed_on": "2026-11-24",
+    "source_title": "Apache 8 - American Archive of Public Broadcasting",
+    "evidence": "The search result displayed a56:43 programme,2011 Apache8LLC copyright,Vision Maker Media contribution and an embed-code description. After the actual origin returned a challenge, these cached details were not treated as verified current availability, permitted embedding, source rights or playback."
+  },
+  "receipts": [
+    {
+      "url": "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+      "final_url": "https://americanarchive.org/challenge?destination=%2Fcatalog%2Fcpb-aacip_508-125q815826",
+      "retrieved_at": "2026-11-24T19:54:34.300458+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 851,
+      "sha256": "876d1822114882dcd6bf9361f0e097ad3f3dfcc58d99c5ca451819fba4b4c898",
+      "redirects": [
+        {
+          "status": 302,
+          "from_url": "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+          "to_url": "/challenge?destination=%2Fcatalog%2Fcpb-aacip_508-125q815826"
+        }
+      ],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/apache8-aapb-record.body.html"
+    },
+    {
+      "url": "https://visionmakermedia.org/film-library/apache-8/",
+      "final_url": "https://visionmakermedia.org/film-library/apache-8/",
+      "retrieved_at": "2026-11-24T19:54:38.128388+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 47325,
+      "sha256": "2a2294a08f82680109db161bd306de1e366ab1d842e6bbcd5b0107e90e99309a",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/apache8-vmm.body.html"
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://americanarchive.org/robots.txt",
+      "final_url": "https://americanarchive.org/robots.txt",
+      "retrieved_at": "2026-11-24T19:54:06.414209+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 247,
+      "sha256": "39f0d52ee5cc2f372ebd462d8f706cc5a0c9fcaf6444b79ec26747ab2ceda032",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/apache8-aapb-robots.body.txt"
+    },
+    {
+      "url": "https://visionmakermedia.org/robots.txt",
+      "final_url": "https://visionmakermedia.org/robots.txt",
+      "retrieved_at": "2026-11-24T19:54:10.007963+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 156,
+      "sha256": "b2385f54624d3efead9d859c0223b74e0b0fc18af0df87de4620724620adecac",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-24/apache8-vmm-robots.body.txt"
+    }
+  ],
+  "crawl_policy": "Robots preceded content. AAPB permitted the exact record path and disallowed search and thumbnail paths; neither disallowed path was fetched. Vision Maker Media’s three-second pacing was honored. No movie file, caption file, account or form was accessed.",
+  "capture_policy": "Factual HTML and robots captures are local-only. Every HTTP receipt marks capture_retention:local and supplies actual measured status,body length and hash.",
+  "pending": [
+    "Actual permitted archive record and complete-film access",
+    "Edition runtime and credit reconciliation",
+    "Distribution and embedding scope",
+    "Actual provider thumbnail provenance and display permission",
+    "Captions and actual playback"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
