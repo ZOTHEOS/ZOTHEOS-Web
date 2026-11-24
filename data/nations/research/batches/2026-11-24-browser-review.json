@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
+  "result": "passed",
+  "reviewed_at_start": "2026-11-24T20:11:20.854747+00:00",
+  "reviewed_at_end": "2026-11-24T20:11:26.200222+00:00",
+  "chrome_version": "158.0.8127.38",
+  "method": "Chrome through Playwright; exact local files routed to zotheos.org with committed Vercel headers, all external traffic aborted.",
+  "viewport_pixels": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      844
+    ]
+  ],
+  "page_viewport_checks": 21,
+  "observations": [
+    {
+      "page": "directory",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "Nations hub",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "trinidad-rancheria-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "cheyenne-and-arapaho-tribes-us-ok",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "responsive desktop panel already visible",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "Nations hub",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "trinidad-rancheria-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "cheyenne-and-arapaho-tribes-us-ok",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "disclosed through actual keyboard/touch toggle",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "Nations hub",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "trinidad-rancheria-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "cheyenne-and-arapaho-tribes-us-ok",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "disclosed through actual keyboard/touch toggle",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        }
+      ]
+    }
+  ],
+  "source_pins": {
+    "nations/directory.html": "d6e0dde3867f312590d6947b0c7f38b431df8d1e0bd86dda2b601ffcfda327c6",
+    "nations.html": "20277e685306d3a915c2d436e43dfc596157943419045599c02f2b5c66ecd1e7",
+    "nations/trinidad-rancheria-us-ca.html": "4fd53d55212f8cb16fc0577a44f98bcaf8ebea2b11a5c22e4a45a6aca5994c5e",
+    "nations/cheyenne-and-arapaho-tribes-us-ok.html": "4607bc8c911fefefa986a405ea5791782b5515929e169c74404b5da5e17ca499",
+    "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "a2d686304b97a6c94d752de3c6c9e42ea09ab28d2b1b8e5575eae4f4ab169386",
+    "nations/paths-to-action.html": "3b50cfc408616e02780acf779a635681a8d17e37a7d93cac9846705ebf53f43e",
+    "theater.html": "d4355dc7d4867533ee77ab9ed16fcd33ff4d131bcfe271a12fff178615ef01f2",
+    "vercel.json": "2e40d244d49037a7a96332f9a5ac02da441f6452856ac78647f270beb7a2283d"
+  },
+  "horizontal_overflow": 0,
+  "page_errors": [],
+  "csp_violations": [],
+  "missing_local_assets": [],
+  "external_requests_aborted": [
+    {
+      "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    }
+  ],
+  "external_image_requests_aborted": 42,
+  "external_non_image_requests_aborted": 3,
+  "visual_critique": {
+    "screenshots_inspected": 6,
+    "widths": [
+      390,
+      1440
+    ],
+    "pages": [
+      "Trinidad profile",
+      "Fernandeño Tataviam profile",
+      "Pukúu Paths case"
+    ],
+    "result": "Historical stages, source links, actual check dates and the long Band name remain readable at both widths. The ñ and ú characters render without substitution. Phone paragraphs and citations stay within the reading column; desktop navigation stays separate from the case. No material visual defect was observed.",
+    "capture_scope": "Six temporary viewport captures at normal reading positions below the fixed navigation; all were inspected and will be removed after review."
+  },
+  "limits": "No physical devices, audiovisual playback, loaded provider-thumbnail pixels, account/region eligibility or caption timing/accuracy were tested. External iframe/image requests were intentionally blocked; DOM configuration does not prove playback.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "visual_reviewed_at": "2026-11-24T20:12:26.676350+00:00",
+  "harness_corrections": [
+    "At desktop width the existing responsive layout exposes the filter panel and hides its toggle. The final harness uses that already-visible panel and the actual toggle at both phone widths. No production change was needed."
+  ],
+  "player_policy_observation": "Aluna uses the existing hold-full policy: one YouTube-nocookie ready iframe, autoplay=0 and playsinline=1. Scrolling it into view preserves the normal Play address. English auto-generated captions are the only listed track type in the viewing limits; actual playback, sound and caption quality are unverified.",
+  "temporary_screenshot_pins": {
+    "fernandeno-tataviam-band-mission-indians-us-ca-1440.png": "546a663a3f2b7b39544c45bdf019f0fe477ba497e57bad95da52f28ddaadca1e",
+    "fernandeno-tataviam-band-mission-indians-us-ca-390.png": "879c355f25b638ba911b7942bf07fc498eef11d0c98efaf76995362b657fd2bd",
+    "pukuu-paths-1440.png": "55f4e4918845228da9720aef4cf2a01a0df49ac2cb747ecdb67009dd9f1a7b0c",
+    "pukuu-paths-390.png": "ef17e6e80f5d868040c87c66b489492be932b97fb479d66e9f7e6d1d14fb4732",
+    "trinidad-rancheria-us-ca-1440.png": "242b2791b6ae54fa24338d246c2c47a1b6d0733670eddf8ec6e09568d7aad4e1",
+    "trinidad-rancheria-us-ca-390.png": "dd5fe3c2e2c926c4a90ff4d4edaecbd0859ad7f207dd6d47f69645a8f379a7f2"
+  }
+}

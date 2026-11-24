@@ -1,0 +1,89 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-24T19:56:28.417182+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity research",
+  "directory_id": "us-fed-dcfc3cfbb207",
+  "registry_id": "trinidad-rancheria-us-ca",
+  "own_published_name": "Trinidad Rancheria",
+  "own_full_name": "Cher-Ae Heights Indian Community of the Trinidad Rancheria",
+  "official_url": "https://trinidad-rancheria.org/",
+  "own_name_source": {
+    "url": "https://trinidad-rancheria.org/",
+    "final_url": "https://trinidad-rancheria.org/",
+    "retrieved_at": "2026-11-24T19:53:49.857807+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 52278,
+    "sha256": "e72da62dfbbe9a9714f49794a1f0e8132d53639e8b5be933f30d68757a67f940",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-trinidad-1124/home.html",
+      "publicly_retained": false
+    }
+  },
+  "own_government_source": {
+    "url": "https://trinidad-rancheria.org/tribal-council/",
+    "final_url": "https://trinidad-rancheria.org/tribal-council/",
+    "retrieved_at": "2026-11-24T19:53:52.504290+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 51626,
+    "sha256": "cf452114cc7b83c22250305e128138249e1e5e0560c15ecc1cac24eee316c65c",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-trinidad-1124/council.html",
+      "publicly_retained": false
+    }
+  },
+  "own_history_source": {
+    "url": "https://trinidad-rancheria.org/about/",
+    "final_url": "https://trinidad-rancheria.org/about/",
+    "retrieved_at": "2026-11-24T19:54:24.756864+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 51914,
+    "sha256": "30db3f896e288640797f893498e0c95472bcb858b6875537301ab9a386ae7701",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-trinidad-1124/about.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-24T19:53:55.709461+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-trinidad-1124/federal.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 407,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://trinidad-rancheria.org/",
+    "tribefullname": "Cher-Ae Heights Indian Community of the Trinidad Rancheria, California",
+    "alternate_name": "Trinidad Rancheria"
+  },
+  "scope_note": "The own homepage brands the government as Trinidad Rancheria and its mission supplies the full Cher-Ae Heights Indian Community of the Trinidad Rancheria name. The federal notice and saved BIA407 corroborate both forms and the own HTTPS site. The government is not merged with the Yurok Tribe or broader Yurok, Wiyot or Tolowa peoples; ancestral relationships do not establish exclusive representation.",
+  "batch": "batches/2026-11-24-trinidad-own-history.json",
+  "capture_retention": "Full factual source captures are local temporary review files only, excluded from public publication. Exact URL/status/time/length/hash receipts, short anchors and original summaries remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

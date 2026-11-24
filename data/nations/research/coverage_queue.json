@@ -1754,9 +1754,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "trinidad-own-site-2026-11-24"
       ],
       "review": {
         "identity": "pending",
@@ -1772,9 +1773,30 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://trinidad-rancheria.org/",
+          "final_url": "https://trinidad-rancheria.org/",
+          "retrieved_at": "2026-11-24T19:53:49.857807+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 52278,
+          "sha256": "e72da62dfbbe9a9714f49794a1f0e8132d53639e8b5be933f30d68757a67f940",
+          "redirects": [],
+          "user_agent": "ZOTHEOSResearch/1.0",
+          "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+          "source_id": "trinidad-own-site-2026-11-24",
+          "evidence_receipt": "receipts/2026-11-24-trinidad-identity.json",
+          "receipt_id": "r-6f6f6b9d7e798a33"
+        }
+      ],
+      "updated_at": "2026-11-24T20:03:54.490018+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "A distinct government profile is added from its own sources; historical stages and current-outcome limits remain explicit.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-24-trinidad-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-9115f40f936a",
@@ -1824,9 +1846,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "cheyenne-arapaho-own-site-2026-11-24"
       ],
       "review": {
         "identity": "pending",
@@ -1842,9 +1865,30 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.cheyenneandarapaho-nsn.gov/",
+          "final_url": "https://www.cheyenneandarapaho-nsn.gov/",
+          "retrieved_at": "2026-11-24T19:53:46.660481+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 73595,
+          "sha256": "faebadd1f00fc6d0aadb15cd87c2b713d788cf49b3b35bb28c97e9b822756fde",
+          "redirects": [],
+          "user_agent": "ZOTHEOSResearch/1.0",
+          "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+          "source_id": "cheyenne-arapaho-own-site-2026-11-24",
+          "evidence_receipt": "receipts/2026-11-24-cheyenne-arapaho-identity.json",
+          "receipt_id": "r-ddfd6d28871d77e6"
+        }
+      ],
+      "updated_at": "2026-11-24T20:03:54.593932+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Own-source additions and explicit identity handoff. The existing government profile is deepened without duplication.",
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-24-cheyenne-arapaho-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review"
     },
     {
       "task_id": "profile-us-fed-7417555e7abc",
@@ -62482,8 +62526,10 @@
       "region": "us-inclusion-special-scopes",
       "priority": 94,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
-      "allowed_source_ids": [],
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "tataviam-own-site-2026-11-24"
+      ],
       "review": {
         "identity": "pending",
         "sources": "pending",
@@ -62500,9 +62546,25 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.tataviam-nsn.us/",
+          "final_url": "https://www.tataviam-nsn.us/",
+          "retrieved_at": "2026-11-24T19:53:35.562728+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 328921,
+          "sha256": "fd46efbbe5f6b00fe51dc58cc9649fec8cc3ed6576187102031c657f8c9403ff",
+          "capture_retention": "Measured during local source review. Full source captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+          "source_id": "tataviam-own-site-2026-11-24",
+          "evidence_receipt": "receipts/2026-11-24-tataviam-identity.json",
+          "receipt_id": "r-fc19d5256802c7dc"
+        }
+      ],
+      "updated_at": "2026-11-24T20:03:54.697680+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Partial inclusive-source discovery adds the Band’s own published profile without inserting it into a government recognition inventory. Current federal acknowledgment status is not determined; complete typed source coverage remains open."
     },
     {
       "task_id": "discover-us-native-hawaiian",
@@ -64039,6 +64101,66 @@
       "updated_at": "2026-11-23T17:40:17.163998+00:00",
       "next_attempt_after": null,
       "note": "The own Services page contains annual and twice-yearly assistance-frequency wording. Amounts, eligibility, application instructions and promised benefits are excluded from this batch; only the undated mission is summarized. A current program detail requires a clear dated own source. This is no urgent-risk or present-entitlement finding."
+    },
+    {
+      "task_id": "followup-us-outside-recognition-typed-sources",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Own-source communities beyond government recognition inventories",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "tataviam-own-site-2026-11-24"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-24T20:03:54.724172+00:00",
+      "next_attempt_after": null,
+      "note": "The Tataviam own-source example does not enumerate all communities or resolve recognition status. Expand typed own-source discovery with preferred names, identities and distinct peoples/governments, using lists as planning references rather than Indigenous-identity definitions."
+    },
+    {
+      "task_id": "followup-tataviam-acknowledgment-chronology",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Tataviam federal acknowledgment chronology and source dates",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 90,
+      "priority_reason": "unresolved_own_source_scope",
+      "status": "pending",
+      "allowed_source_ids": [
+        "tataviam-own-site-2026-11-24"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-24T20:03:54.724172+00:00",
+      "next_attempt_after": null,
+      "note": "The Band’s own June 2026 release reports a Positive Phase I Proposed Finding and expressly says no final determination had been made. Its homepage displays June 18 while article metadata displays June 19. Check the linked primary OFA decision and later official records before publishing an exact event date or current recognition statement. No federal/state inventory crosswalk or recognition status is added by this batch."
     }
   ]
 }

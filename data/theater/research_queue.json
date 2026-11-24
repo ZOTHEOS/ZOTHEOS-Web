@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -419,8 +419,9 @@
         "https://www.youtube.com/watch?v=Wr-jackHWCw"
       ],
       "reason": "The official project offers the full film and embeds the co-producer’s exact public YouTube upload; provider embedding status and thumbnail provenance were checked separately.",
-      "next": "Verify generated and live ready-player behavior, actual provider thumbnail and labels. Actual playback, geographic/account access and caption quality remain unverified.",
-      "build_state": "reviewed-candidate"
+      "next": "The live ready-player markup, provider thumbnail and labels matched the reviewed files. Actual audiovisual playback, account/region/device eligibility and caption quality remain unverified.",
+      "build_state": "published-verified",
+      "publication_pr": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/58"
     },
     {
       "id": "almost-an-island-availability",
@@ -437,6 +438,34 @@
       ],
       "reason": "A complete WETA consumer edition is verified but requires PBS member access while signed out. This batch publishes Rising Voices instead; no Almost an Island record or full-film count is added.",
       "next": "If selected for a later bounded batch, retain the member-access restriction and review official-source-only use. The rejected producer-page read is not bypassed; actual playback and eligibility remain unverified.",
+      "build_state": "research-only"
+    },
+    {
+      "id": "aluna",
+      "status": "full-film-candidate",
+      "checked": "2026-11-24",
+      "batch": "research/batches/2026-11-24-aluna.json",
+      "source_urls": [
+        "https://www.taironatrust.org/the-films",
+        "https://www.thefilmcollaborative.org/films/aluna",
+        "https://www.youtube.com/watch?v=ftFbCwJfs1I"
+      ],
+      "reason": "The current Trust embeds the exact official complete film, corroborated by the independent film distributor and actual provider metadata. The legacy film origin is excluded from public citations after an unrelated-link integrity flag.",
+      "next": "Verify generated and live ready-player/thumbnail/caption-limit behavior under the unchanged full-film contract. Actual audiovisual playback and regional/account access remain unverified.",
+      "build_state": "reviewed-candidate"
+    },
+    {
+      "id": "apache-8-availability-and-credits",
+      "title": "Apache 8",
+      "status": "needs-availability-and-credits-review",
+      "checked": "2026-11-24",
+      "batch": "research/batches/2026-11-24-apache8.json",
+      "source_urls": [
+        "https://americanarchive.org/catalog/cpb-aacip_508-125q815826",
+        "https://visionmakermedia.org/film-library/apache-8/"
+      ],
+      "reason": "The archive returned a verification challenge rather than an available film page. Publisher and archive credit descriptions need reconciliation. No film record or full-film count is added.",
+      "next": "Find and inspect an accessible authorized complete edition and reconcile credits without bypassing the archive challenge. Search snapshots and metadata are not playback or access evidence.",
       "build_state": "research-only"
     }
   ]

@@ -1,0 +1,46 @@
+{
+  "region": "us-west-pacific",
+  "checked": "2026-11-24",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-24T19:56:28.417182+00:00",
+    "evidence_receipt": "batches/2026-11-24-trinidad-own-history.json",
+    "review_kind": "AI-assisted own-source chronology, identity, scope and respect research"
+  },
+  "results": [
+    {
+      "id": "trinidad-rancheria-us-ca",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "The own history attributes congressional land-purchase authority to 1906 and a later land purchase to 1908. These are administrative stages, not an origin date for the peoples, a current title finding or a claim that an acreage remains unchanged."
+    },
+    {
+      "id": "trinidad-rancheria-us-ca",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The own Council page separately dates organization under Articles of Association to 1961 and Constitution approval to June 2008. The full Articles, Constitution, amendments and present legal effect were not independently reviewed; no current officeholder or participation rule is inferred."
+    },
+    {
+      "id": "trinidad-rancheria-us-ca",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The Cultural Resources page is undated. It supports the stated priorities and educational partnerships without establishing a current class schedule, enrollment eligibility, start date, teaching content, fluency outcome or cultural-use permission."
+    },
+    {
+      "id": "trinidad-rancheria-us-ca",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "The Environmental Program attributes the pier replacement and engineered stormwater feature to 2012. This establishes no present maintenance condition, measured runoff capture, water-quality result, current permit compliance or public-access guarantee."
+    }
+  ],
+  "names": [
+    {
+      "id": "trinidad-rancheria-us-ca",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The own homepage brands the government as Trinidad Rancheria and its mission supplies the full Cher-Ae Heights Indian Community of the Trinidad Rancheria name. The federal notice and saved BIA407 corroborate both forms and the own HTTPS site. The government is not merged with the Yurok Tribe or broader Yurok, Wiyot or Tolowa peoples; ancestral relationships do not establish exclusive representation."
+    }
+  ]
+}

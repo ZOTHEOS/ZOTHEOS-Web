@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-24T20:05:32.983662+00:00",
+  "review_kind": "Independent AI-assisted current-Trust source, official provider edition, credits, distribution, embedding, thumbnail and scope cross-review",
+  "film_id": "aluna",
+  "result": "passed",
+  "body_receipt_matches": 10,
+  "checks": [
+    "The current Trust film page publishes an embedded iframe for exact video ftFbCwJfs1I. The linked channel is Aluna - The Movie and offers the film free; provider embedding flags are checked separately.",
+    "The Trust supports the 2012 film year, Kogi participant-shot footage, Caribbean-coast ecological focus and Western-scientist commentary. The narrowed synopsis and content note stay within that account.",
+    "The Film Collaborative explicitly credits Alan Ereira as director and producer and Ben Woolford as executive producer. Its 88-minute catalogue entry is separate from the selected 88m57s provider edition.",
+    "Actual public provider JSON reports 5337seconds in both duration fields, the February4,2018upload, public/unlisted flags, playabilityOK and embedding enabled. These are metadata observations rather than playback results.",
+    "The description advertises15languages, but the actual captionTracks list contains only English ASR. The record correctly describes that one listed track without a translation, human-caption or accuracy promise.",
+    "The exact maximum-resolution thumbnail URL comes from the selected provider response. The recorded HEAD200 image/jpeg result read zero body bytes; artwork content and independent copyright ownership were not separately reviewed.",
+    "All three public-source factual responses, four robots responses and three excluded legacy-origin responses match their measured hashes and byte counts at local review.",
+    "The Trust, YouTube and image robots permit the reviewed public paths. The Film Collaborative response is correctly disclosed as a redirect to soft404HTML, not represented as a valid robots policy.",
+    "The legacy film-origin homepage and credits URLs are excluded from public sources. Source-quality concerns remain separate from any unproven compromise diagnosis; no unrelated outbound commercial link was followed.",
+    "No current Kogi-government endorsement, universal representation, general scientific validation or permission to reproduce restricted cultural material is inferred.",
+    "Candidate is not yet appended; all current film records are unchanged. The proposed append was validated in memory.",
+    "The existing canonical Theater catalogue validator passes for this single proposed append. No new Apache8 record or disputed credit is approved by this review."
+  ],
+  "distribution_and_embedding_scope": "Evidence supports using the Trust-linked official full-film YouTube edition through the existing official player. The project-linked publication and free-posting statement support distribution provenance; provider embedding metadata is considered separately. No download, proxy, re-upload, derivative-art, public-screening or general reuse permission is inferred.",
+  "playback_review": "No audiovisual playback, full editorial viewing, geographic/account/device eligibility, caption timing or caption accuracy was tested. The catalogue must retain those limits.",
+  "source_pins": {
+    "data/theater/research/batches/2026-11-24-aluna.json": "aca9f22c80c1f2a61285fe50fc90b7f859f07cc08d96113017fe84abc5f052bf"
+  },
+  "candidate_record_sha256": "706890b4e764a00db4cc3f3e0e81a331780f6004280e477649b23881c6f83431",
+  "base_commit_for_duplicate_check": "319d911cfa3a81cf71eb1c2b45ddbf7ac925be0a",
+  "prior_catalogue_records": 243,
+  "capture_retention": "All source captures were present during this local review and are excluded from the public PR. Only exact receipts, source URLs, hashes, concise original summaries and short evidence remain.",
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "pending": [
+    "Root complete required checks and browser review",
+    "Root remove owned local factual captures before publication",
+    "Actual playback, account/device/geographic eligibility, captions and complete editorial review remain unverified",
+    "Legacy film-origin source-integrity review remains separate"
+  ]
+}

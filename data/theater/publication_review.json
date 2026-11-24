@@ -1,22 +1,22 @@
 {
-  "version": 18,
-  "prepared_at": "2026-11-23T17:52:29.415885+00:00",
+  "version": 19,
+  "prepared_at": "2026-11-24T20:15:01.933574+00:00",
   "publisher": "ZOTHEOS",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "c0428f0d79a071300b40156ce3f71022949073b4",
-    "version": 17,
-    "catalogue_sha256": "70c6c5435b2b9b1864a62833148b24a05db2293ce29b9a80598ae9b85f99b3ce"
+    "commit": "319d911cfa3a81cf71eb1c2b45ddbf7ac925be0a",
+    "version": 18,
+    "catalogue_sha256": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443"
   },
   "catalogue": {
-    "sha256": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443",
-    "titles": 243,
-    "configured_players": 225,
+    "sha256": "bd00c5c5bea7b7c83f52a9825238e44d260967850f138c7247d52987ba99dd0a",
+    "titles": 244,
+    "configured_players": 226,
     "source_only": 18,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 30,
+      "full-film": 31,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,32 +24,33 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-23b-rising-voices.json",
-    "sha256": "21d93ef59b5efda18cc477f3b66406ec632a5d56145e98258b6de8a2f56a2d96",
-    "edition": "Official complete co-producer YouTube edition Wr-jackHWCw. Project distribution and provider embedding are verified separately.",
+    "batch": "research/batches/2026-11-24-aluna.json",
+    "sha256": "aca9f22c80c1f2a61285fe50fc90b7f859f07cc08d96113017fe84abc5f052bf",
+    "edition": "Official complete YouTube edition ftFbCwJfs1I, linked and embedded by the current Tairona Heritage Trust. Distribution and provider embedding are reviewed separately.",
     "thumbnail_display": "Actual provider-supplied YouTube thumbnail; no image rehosting.",
-    "viewing_access": "Official project offers public streaming. Actual audiovisual playback, account/device/geographic access and caption quality remain unverified.",
-    "deferred": "Almost an Island remains research-only with its PBS member gate; rejected producer-page access was not bypassed."
+    "viewing_access": "Official channel offers public free streaming. Actual audiovisual playback and regional/account/device access remain unverified. Only English ASR captions are listed; text, timing and accuracy are unreviewed.",
+    "source_integrity": "Legacy origin with unrelated SEO links is excluded from public viewing/citations. Current Trust, Film Collaborative and YouTube sources support the selected edition.",
+    "deferred": "Apache 8 remains research-only after an archive challenge and unresolved credit descriptions."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Cedarville own history, archival governance, identity, respect and integration cross-review",
-      "record": "data/nations/research/batches/2026-11-23b-cedarville-independent-review.json",
+      "kind": "AI-assisted Trinidad own history, constitutional stages, language priorities, infrastructure, identity and respect review",
+      "record": "data/nations/research/batches/2026-11-24-trinidad-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Chemehuevi office chronology, governance, culture, language, identity and respect cross-review",
-      "record": "data/nations/research/batches/2026-11-23b-chemehuevi-independent-review.json",
+      "kind": "AI-assisted Cheyenne and Arapaho government/records history, separate land reports, identity and integration review",
+      "record": "data/nations/research/batches/2026-11-24-cheyenne-arapaho-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted AFN source inventory and Paths institution distinctions cross-review",
-      "record": "data/nations/research/batches/2026-11-23b-afn-independent-review.json",
+      "kind": "AI-assisted Tataviam own identity, historical scope, private Paths case and recognition-boundary review",
+      "record": "data/nations/research/batches/2026-11-24-tataviam-independent-review.json",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Rising Voices edition, source, credits, permitted provider embedding and thumbnail cross-review",
-      "record": "data/theater/research/batches/2026-11-23b-rising-voices-independent-review.json",
+      "kind": "AI-assisted Aluna source-chain, credits, complete edition, provider embedding and thumbnail review",
+      "record": "data/theater/research/batches/2026-11-24-aluna-independent-review.json",
       "result": "passed"
     }
   ],
@@ -62,19 +63,14 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 265.81254439998884,
-    "full_suite_xml_sha256": "fe43e25986f72e0f1e04351593892441f7ce4904fb64b2b4597ddd6259eb3617",
-    "full_suite_finished_at": "2026-11-23T17:51:49.643997+00:00",
-    "resolved_review_findings": [
-      "Removed an unsupported Vision Maker Media presenter credit; retained the verified producer/director and publisher source distinctions.",
-      "Omitted the unknown effective date for the undated AFN source after the builder rejected null. Its actual review date is retained.",
-      "Narrowed AFN membership-category wording to its own account rather than identifying every institution as a government."
-    ],
+    "full_suite_wall_seconds": 272.93694459996186,
+    "full_suite_xml_sha256": "24ab0d921b3ffbf816e261faed4bc8b3e2379a18d4a1f7e78dce8a2143d8f236",
+    "full_suite_finished_at": "2026-11-24T20:13:07.172306+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 636,
-      "profiles": 501,
-      "visible_facts": 1478,
+      "pages": 638,
+      "profiles": 503,
+      "visible_facts": 1490,
       "held_facts": 2
     },
     "registry_validator": {
@@ -87,35 +83,36 @@
       "review": "Preexisting full Colusa name triggers the long-name check."
     },
     "game_data": {
-      "quick_cards": 501,
-      "quick_facts": 996,
-      "profiles_with_history": 124,
-      "new_history_facts": 2,
+      "quick_cards": 503,
+      "quick_facts": 1000,
+      "profiles_with_history": 127,
+      "new_history_facts": 3,
       "skipped": 0
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 499,
+      "prior_profiles": 501,
       "added_profiles": 2,
-      "existing_profiles_changed": 0,
-      "added_raw_facts": 8,
-      "new_practice_sources": 1,
-      "expanded_representation_step": 1,
+      "existing_profiles_changed": 1,
+      "added_raw_facts": 12,
+      "new_practice_examples": 1,
       "new_films": 1,
-      "prior_game_records_preserved": true,
+      "unrelated_game_records_preserved": true,
+      "cheyenne_quick_card": "Existing kind ordering selects a newly sourced governance fact alongside an unchanged prior fact.",
       "publication_holds_preserved": true,
       "player_policies_preserved": true,
       "game_mechanics_preserved": true,
-      "observed_at": "2026-11-23T17:47:23.463703+00:00"
+      "recognition_inventory_not_extended_by_self_published_example": true,
+      "observed_at": "2026-11-24T20:10:05.396773+00:00"
     },
     "browser": {
       "schema_version": 1,
       "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
       "result": "passed",
-      "reviewed_at_start": "2026-11-23T17:50:11.941827+00:00",
-      "reviewed_at_end": "2026-11-23T17:50:16.070745+00:00",
-      "chrome_version": "157.0.8103.79",
-      "method": "Chrome through Playwright; exact local files served at zotheos.org with committed Vercel headers, all external traffic aborted.",
+      "reviewed_at_start": "2026-11-24T20:11:20.854747+00:00",
+      "reviewed_at_end": "2026-11-24T20:11:26.200222+00:00",
+      "chrome_version": "158.0.8127.38",
+      "method": "Chrome through Playwright; exact local files routed to zotheos.org with committed Vercel headers, all external traffic aborted.",
       "viewport_pixels": [
         [
           1440,
@@ -130,7 +127,7 @@
           844
         ]
       ],
-      "page_viewport_checks": 15,
+      "page_viewport_checks": 21,
       "observations": [
         {
           "page": "directory",
@@ -138,64 +135,117 @@
             1440,
             900
           ],
-          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "cedarville-rancheria-us-ca",
+          "page": "Nations hub",
           "viewport": [
             1440,
             900
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "chemehuevi-indian-tribe-us-ca",
+          "page": "trinidad-rancheria-us-ca",
           "viewport": [
             1440,
             900
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "paths-to-action",
+          "page": "cheyenne-and-arapaho-tribes-us-ok",
           "viewport": [
             1440,
             900
           ],
-          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "theater",
+          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
           "viewport": [
             1440,
             900
           ],
-          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "Paths",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+          "layout": {
+            "viewport": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "page": "Theater",
+          "viewport": [
+            1440,
+            900
+          ],
+          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "filter_mode": "responsive desktop panel already visible",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           },
           "external_requests_aborted": [
             {
-              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
               "resource_type": "document"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+              "resource_type": "image"
             },
             {
               "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
@@ -224,30 +274,6 @@
             {
               "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
               "resource_type": "image"
-            },
-            {
-              "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-              "resource_type": "image"
             }
           ]
         },
@@ -257,63 +283,88 @@
             390,
             844
           ],
-          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "cedarville-rancheria-us-ca",
+          "page": "Nations hub",
           "viewport": [
             390,
             844
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "chemehuevi-indian-tribe-us-ca",
+          "page": "trinidad-rancheria-us-ca",
           "viewport": [
             390,
             844
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "paths-to-action",
+          "page": "cheyenne-and-arapaho-tribes-us-ok",
           "viewport": [
             390,
             844
           ],
-          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "theater",
+          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
           "viewport": [
             390,
             844
           ],
-          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "Paths",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+          "layout": {
+            "viewport": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "page": "Theater",
+          "viewport": [
+            390,
+            844
+          ],
+          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "filter_mode": "disclosed through actual keyboard/touch toggle",
           "layout": {
             "viewport": 390,
             "scroll": 390
           },
           "external_requests_aborted": [
             {
-              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
               "resource_type": "document"
             },
             {
@@ -342,6 +393,10 @@
             },
             {
               "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
               "resource_type": "image"
             },
             {
@@ -384,68 +439,89 @@
             320,
             844
           ],
-          "checks": "Two exact source-name queries each return one ready profile. Keyboard Read First focuses the correct H4 and exposes the correct profile link.",
+          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
           "layout": {
             "viewport": 320,
             "scroll": 320
           }
         },
         {
-          "page": "cedarville-rancheria-us-ca",
+          "page": "Nations hub",
           "viewport": [
             320,
             844
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
           "layout": {
             "viewport": 320,
             "scroll": 320
           }
         },
         {
-          "page": "chemehuevi-indian-tribe-us-ca",
+          "page": "trinidad-rancheria-us-ca",
           "viewport": [
             320,
             844
           ],
-          "checks": "Four exact canonical facts, citations and November23 check dates. Archival year and historical stages remain explicit.",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 320,
             "scroll": 320
           }
         },
         {
-          "page": "paths-to-action",
+          "page": "cheyenne-and-arapaho-tribes-us-ok",
           "viewport": [
             320,
             844
           ],
-          "checks": "AFN categories, private institution map, non-interchangeable citizenship/shareholding, source and inventory limit; keyboard action-brief anchor.",
+          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
           "layout": {
             "viewport": 320,
             "scroll": 320
           }
         },
         {
-          "page": "theater",
+          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
           "viewport": [
             320,
             844
           ],
-          "checks": "243 records /30 full films; Rising exact full-film label, runtime, provider thumbnail/alt and caption limits. Full Film + Watch Here includes it. One exact YouTube-nocookie ready iframe remains autoplay=0, playsinline=1, with existing hold-full policy; no mute parameter because it is not an eligible page-started preview.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "Paths",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "Theater",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "filter_mode": "disclosed through actual keyboard/touch toggle",
           "layout": {
             "viewport": 320,
             "scroll": 320
           },
           "external_requests_aborted": [
             {
-              "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
               "resource_type": "document"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-              "resource_type": "image"
             },
             {
               "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
@@ -472,6 +548,14 @@
               "resource_type": "image"
             },
             {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
               "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
               "resource_type": "image"
             },
@@ -491,12 +575,14 @@
         }
       ],
       "source_pins": {
-        "nations/directory.html": "177a37dc04b0a8befda24b57cf5874761a14936b0c8fe10acd1b6071b763a524",
-        "nations/cedarville-rancheria-us-ca.html": "f826b1a87c999601cf7f4c28ba54e0c6d0666d0ed042967628b5b555802467a1",
-        "nations/chemehuevi-indian-tribe-us-ca.html": "5272d3f1dc74ead2da00515fede0fc2f1283c539353e9189098fd4e9323e49ff",
-        "nations/paths-to-action.html": "20bed7f9c917430abf674190d22ba9530875c72080e834dce075b3226b51fc0f",
-        "theater.html": "cccd2b8b007192318fc86130604ba0aaeb5b6edac398fd5d48b1411d3b39d2fa",
-        "vercel.json": "21c52128d17f3317ec806733c6790c7e4068921131cf757d05861ea1ea2e503e"
+        "nations/directory.html": "d6e0dde3867f312590d6947b0c7f38b431df8d1e0bd86dda2b601ffcfda327c6",
+        "nations.html": "20277e685306d3a915c2d436e43dfc596157943419045599c02f2b5c66ecd1e7",
+        "nations/trinidad-rancheria-us-ca.html": "4fd53d55212f8cb16fc0577a44f98bcaf8ebea2b11a5c22e4a45a6aca5994c5e",
+        "nations/cheyenne-and-arapaho-tribes-us-ok.html": "4607bc8c911fefefa986a405ea5791782b5515929e169c74404b5da5e17ca499",
+        "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "a2d686304b97a6c94d752de3c6c9e42ea09ab28d2b1b8e5575eae4f4ab169386",
+        "nations/paths-to-action.html": "3b50cfc408616e02780acf779a635681a8d17e37a7d93cac9846705ebf53f43e",
+        "theater.html": "d4355dc7d4867533ee77ab9ed16fcd33ff4d131bcfe271a12fff178615ef01f2",
+        "vercel.json": "2e40d244d49037a7a96332f9a5ac02da441f6452856ac78647f270beb7a2283d"
       },
       "horizontal_overflow": 0,
       "page_errors": [],
@@ -504,8 +590,36 @@
       "missing_local_assets": [],
       "external_requests_aborted": [
         {
-          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "resource_type": "document"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
         },
         {
           "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
@@ -536,31 +650,7 @@
           "resource_type": "image"
         },
         {
-          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "resource_type": "document"
         },
         {
@@ -589,6 +679,10 @@
         },
         {
           "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
           "resource_type": "image"
         },
         {
@@ -624,12 +718,8 @@
           "resource_type": "image"
         },
         {
-          "url": "https://www.youtube-nocookie.com/embed/Wr-jackHWCw?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "resource_type": "document"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-          "resource_type": "image"
         },
         {
           "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
@@ -656,6 +746,14 @@
           "resource_type": "image"
         },
         {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
           "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
           "resource_type": "image"
         },
@@ -672,7 +770,7 @@
           "resource_type": "image"
         }
       ],
-      "external_image_requests_aborted": 39,
+      "external_image_requests_aborted": 42,
       "external_non_image_requests_aborted": 3,
       "visual_critique": {
         "screenshots_inspected": 6,
@@ -681,128 +779,140 @@
           1440
         ],
         "pages": [
-          "Cedarville profile",
-          "Chemehuevi profile",
-          "AFN representation step"
+          "Trinidad profile",
+          "Fernandeño Tataviam profile",
+          "Pukúu Paths case"
         ],
-        "result": "The new historical paragraphs, archival receipt year, event dates, source links and actual check dates remain readable. The longer NARF citation wraps across lines without overflow. AFN’s institution categories and private decision-map boundary fit within the phone reading column; desktop chapter navigation remains separate. No material visual defect was observed.",
-        "capture_scope": "Six temporary viewport captures at normal reading positions below fixed navigation; all were inspected and will be removed after review."
+        "result": "Historical stages, source links, actual check dates and the long Band name remain readable at both widths. The ñ and ú characters render without substitution. Phone paragraphs and citations stay within the reading column; desktop navigation stays separate from the case. No material visual defect was observed.",
+        "capture_scope": "Six temporary viewport captures at normal reading positions below the fixed navigation; all were inspected and will be removed after review."
       },
-      "limits": "No physical devices, successful provider playback, loaded thumbnail pixels, account/region eligibility, caption timing or accuracy were tested. The external iframe and image requests were intentionally blocked; DOM configuration does not prove playback.",
+      "limits": "No physical devices, audiovisual playback, loaded provider-thumbnail pixels, account/region eligibility or caption timing/accuracy were tested. External iframe/image requests were intentionally blocked; DOM configuration does not prove playback.",
       "person_review_claimed": false,
       "nation_endorsement_claimed": false,
-      "visual_reviewed_at": "2026-11-23T17:51:27.144890+00:00",
+      "visual_reviewed_at": "2026-11-24T20:12:26.676350+00:00",
       "harness_corrections": [
-        "The initial harness traversed from the player to a distant library disclosure before positioning that summary for the next action. Explicitly scrolling the summary into view and tracing its event target completed desktop keyboard and both phone touch checks. Final events targeted SUMMARY at all three widths. No production change was needed."
+        "At desktop width the existing responsive layout exposes the filter panel and hides its toggle. The final harness uses that already-visible panel and the actual toggle at both phone widths. No production change was needed."
       ],
-      "player_policy_observation": "Rising uses the existing hold-full policy. Its single ready iframe has autoplay=0 and playsinline=1, with the message API and caption preference configured. It retains a normal Play address rather than a muted page-started preview address. Scrolling the player into view does not change that address. Provider messages, successful playback and actual sound were not tested.",
+      "player_policy_observation": "Aluna uses the existing hold-full policy: one YouTube-nocookie ready iframe, autoplay=0 and playsinline=1. Scrolling it into view preserves the normal Play address. English auto-generated captions are the only listed track type in the viewing limits; actual playback, sound and caption quality are unverified.",
       "temporary_screenshot_pins": {
-        "afn-paths-1440.png": "511168644a0396a2e4170b7f89a28e312491c248ffbc445aefebc1a2567b2c23",
-        "afn-paths-390.png": "86fd551f5f61087cb9e0b262e035814a2f23025af7b51205965fa5d07a05c25d",
-        "cedarville-rancheria-us-ca-1440.png": "dc03f1f232ecc8ce0e0466f7b4137d37b137dbb5bf3b756ce64f584044e6af6b",
-        "cedarville-rancheria-us-ca-390.png": "917ba4ff6a869e6c4ab1dbedf9fdf2c3417dc87981d4d7ba7fa576a5c8e2f1d3",
-        "chemehuevi-indian-tribe-us-ca-1440.png": "a2857c97859386f7f611638f71441b872282977c46a4b9770c37226cd916df38",
-        "chemehuevi-indian-tribe-us-ca-390.png": "5cbeaa685753693a0f27593c037d5a97bd97c026b4fae2229fd6c98c36d06c6e"
+        "fernandeno-tataviam-band-mission-indians-us-ca-1440.png": "546a663a3f2b7b39544c45bdf019f0fe477ba497e57bad95da52f28ddaadca1e",
+        "fernandeno-tataviam-band-mission-indians-us-ca-390.png": "879c355f25b638ba911b7942bf07fc498eef11d0c98efaf76995362b657fd2bd",
+        "pukuu-paths-1440.png": "55f4e4918845228da9720aef4cf2a01a0df49ac2cb747ecdb67009dd9f1a7b0c",
+        "pukuu-paths-390.png": "ef17e6e80f5d868040c87c66b489492be932b97fb479d66e9f7e6d1d14fb4732",
+        "trinidad-rancheria-us-ca-1440.png": "242b2791b6ae54fa24338d246c2c47a1b6d0733670eddf8ec6e09568d7aad4e1",
+        "trinidad-rancheria-us-ca-390.png": "dd5fe3c2e2c926c4a90ff4d4edaecbd0859ad7f207dd6d47f69645a8f379a7f2"
       },
-      "record": "data/nations/research/batches/2026-11-23b-browser-review.json",
-      "record_sha256": "6c255bb48e89def754b3d277cceeb359eae88b5a54b0463eb1cfb814eb96f376"
+      "record": "data/nations/research/batches/2026-11-24-browser-review.json",
+      "record_sha256": "971acd08da778942d9992518adfc959943555c60351bc478439693d06d8798a6"
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "34ba3f3d24f4365b6259131a0a8e34fef4cca994148c82e717082ecf27aa8f57",
-    "data/nations/nations.min.json": "78293f6f4b7708c16ff769b1867521b774f398a02737017fe282817fdf60514d",
-    "data/nations/pathways.json": "7df70d2f22ae9f3b5a3b484ac843628bef7f0c4ca62a9e7498f5710dfa6e94dc",
-    "data/nations/research/batches/2026-11-23b-afn-independent-review.json": "7d87ec599037bc622797fb7684cac2b6cd9928c417cbe95a525eb487603701e0",
-    "data/nations/research/batches/2026-11-23b-afn-institutions.json": "19c65de002bb59508fd44be059ea51be956180627d6ddb7245720dd292edd4ce",
-    "data/nations/research/batches/2026-11-23b-browser-review.json": "6c255bb48e89def754b3d277cceeb359eae88b5a54b0463eb1cfb814eb96f376",
-    "data/nations/research/batches/2026-11-23b-capture-cleanup.json": "d11bd195f968dfe73ba122fb86dc106b5693c55054e0a9aa5797d9168968db17",
-    "data/nations/research/batches/2026-11-23b-cedarville-independent-review.json": "3128139e4d565e0e5f7434ddd25eb4317070b9aaa2babc032c1d5d4ce5b00328",
-    "data/nations/research/batches/2026-11-23b-cedarville-own-history.json": "759ecf31e1ecbc0163622513cc9691099f0975ad46d93b2461f412e945fd63f7",
-    "data/nations/research/batches/2026-11-23b-chemehuevi-independent-review.json": "5137c84a36f712e6c3932d3b2ca42bd2d8d1bf1e2f53b1cada29faf5a0804b72",
-    "data/nations/research/batches/2026-11-23b-chemehuevi-own-history.json": "0f3eac9c9488a55f38ea286e12fd53364b7c05ea1e88c192ef8c4c6d3654956f",
-    "data/nations/research/coverage_queue.json": "e8588158f4df8d5395d6c7163fd176cc211487d55ade3b8458211726f762a4ff",
-    "data/nations/research/directory_sources.json": "53063ef0ed29104c4d74d238eb0fa45673d348a5f3a4b69ba8de005632d8282d",
-    "data/nations/research/receipts/2026-11-23b-afn-about.receipt.json": "5e3c726e6022aa7ff523f7b081ba8c425107e78622aca36e979b14a6749fe726",
-    "data/nations/research/receipts/2026-11-23b-afn-history.receipt.json": "7422cc55dccaa15ca26d4332dc3e9abdefa8d70c2b32d7b079fd73b8299fbbb4",
-    "data/nations/research/receipts/2026-11-23b-afn-robots.receipt.json": "6f2dd2e5d13e5b7f3d6867cb0d39b5460e41f2a8965436b9a8a3ee8aaf81697a",
-    "data/nations/research/receipts/2026-11-23b-cedarville-about.receipt.json": "a498de1d6004c3c45bc1f638320c82ba302e487458c6b3a4b909c9e0ad1aacec",
-    "data/nations/research/receipts/2026-11-23b-cedarville-constitution.receipt.json": "fa7007cb4d5d258f8d11fbd87a4d4351cad9f94be3374debbea2287591f88449",
-    "data/nations/research/receipts/2026-11-23b-cedarville-federal-robots.receipt.json": "2aabe098303ec480edaf0e2ec50fb185381d58695518a5459f471c2104ccd220",
-    "data/nations/research/receipts/2026-11-23b-cedarville-federal.receipt.json": "405c1c1b164b6e2fd78183714163e045785bba60f2d243360affcac093fea1c9",
-    "data/nations/research/receipts/2026-11-23b-cedarville-home.receipt.json": "c98240da0f22680a3b631e6ab78595b7ac4829fe5b668d1cf7c81439e045181e",
-    "data/nations/research/receipts/2026-11-23b-cedarville-identity.json": "a3aba9790d52f3fde89edf2af9004042fb93b6ebf9708135dc2821d2e6da1377",
-    "data/nations/research/receipts/2026-11-23b-cedarville-narf-robots.receipt.json": "7229d7a577107c6d56f5f5567c2e2c1d3f6fd6e14dea113769bf1b8ba3e81ad8",
-    "data/nations/research/receipts/2026-11-23b-cedarville-own-robots.receipt.json": "aa9c9902f48dc5414fa91450461c465b5f13a458281db14f623be2abf575cdea",
-    "data/nations/research/receipts/2026-11-23b-cedarville-services.receipt.json": "ff742a87ff64c853d3b0cf36f085309be733c452772bf9875eeac2f8ab60fb2d",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-about.receipt.json": "721885cd9fc2e0f4b962798042f818fd26b226d0325f48594af667a85aae82e6",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-attorney.receipt.json": "ebf2627c1cb0184098b56935c08f645fba087391ee7593df7b3a87095cbe16b5",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-council.receipt.json": "b451c0e19575f77e1b2ef23dd7657c37b2973882a891f252ed9613be5a9b22cb",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-court.receipt.json": "26fd425dd108be072ac101cdb2a5283acf0a4a343e574ee995c85fbbd4b68584",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-cultural.receipt.json": "5ee6a8ebae370dfdebbf0bd41e2d60159d3997ffa4da1a84121b9c6f0591edb2",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-education.receipt.json": "6fb6f57b7167d45bf5e402551cfcd28e21dd7f7454e5e12ed92c5ab8b5b61bc2",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-enterprises.receipt.json": "cd070a5965982bc7322d8946b52e7854190a12d868534751800503b82bdc2b08",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-environment.receipt.json": "45cc4a60ee2699c5d3b13906d465416bd8820ad7a6133a74738524baae3d57c4",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-federal-robots.receipt.json": "7f9e7f8fd3267d8afa42bef71e49971db14b68e1232b6645e77508a54ac5d441",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-federal.receipt.json": "a1c2a32ff1a5702102bd5e6024c2ba73ddbe0f50eb0c04e2b272d839f40feea4",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-home.receipt.json": "974a8a94ec75fdbb48d641fb75670aa4c050022e08edf0c838be898a3c189730",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-identity.json": "8144726fc74dd7d54468f86934e6daa39416b88348366921d0ffd7c2573fb686",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-own-robots.receipt.json": "7536a9332ecd44d5fe737d8c2afb7601000a2d7fc5229ad5223d0fe372404c4c",
-    "data/nations/research/receipts/2026-11-23b-chemehuevi-water.receipt.json": "b1450091f014953db0e31fb9c58bf5d92cf29518e50e89005720705fdc5187c9",
-    "data/nations/research/us_federal_directory.json": "1df4d38e2e34a5f4017c6311f5ddda155e72ae23c0038280398e2becca653ea9",
-    "data/nations/sources/us-cedarville-own-history-2026-11-23b.raw.json": "4202b63c606cd7bee2bc2a0dcd8bf7d1f92da3956042ff3831ffab9b99dddf82",
-    "data/nations/sources/us-cedarville-own-history-2026-11-23b.respect.json": "666e6369df3f4204c5a37d71f13a1f97d8a506f794a34ebedba473abc00f1250",
-    "data/nations/sources/us-cedarville-own-history-2026-11-23b.verify.json": "49dee212efe067565b0cd45bba125e0af1dc62e7518b5a757a92f7557fa897b2",
-    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.raw.json": "a50673c785b654f140f29a9fadce8c2890d58918ef4e429eccaad691ea5df307",
-    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.respect.json": "6f3f51ab398ee9b8a7208094816820bac03e9b4dd00bfc316e855577687efe2b",
-    "data/nations/sources/us-chemehuevi-own-history-2026-11-23b.verify.json": "501903bd641fb5f07072d395a1a7e58107ea2c7127728770f4c5935bb817ebd8",
-    "data/theater/films.json": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443",
-    "data/theater/research/batches/2026-11-23b-almost-island-own-robots.receipt.json": "574092ac8b63029d5d3533a06fef33094671c7851b180be70ddde28955654e8a",
-    "data/theater/research/batches/2026-11-23b-almost-island-vmm-robots.receipt.json": "74796de34646eac0a3c279b6d53d8361b94763a2d2cec899571cd1ae9b683f2b",
-    "data/theater/research/batches/2026-11-23b-almost-island-vmm.receipt.json": "0228f3de6c8ccba5a0138a397552c48dde8bbde6fa9cd499577f7ad88a69b43b",
-    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-film.receipt.json": "54f8d2646be3361296592c8cf78fced3cef9b504dc44e8c2955ab6252e206df0",
-    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-robots.receipt.json": "7603937011e8edb4537054fe822069ac304d9a4517411f9e9b2236e294ecde53",
-    "data/theater/research/batches/2026-11-23b-almost-island-watch-weta-show.receipt.json": "94f3fbd318bc46503e569b51c4565cfbb5082f188c4ce521b307031a11338ccc",
-    "data/theater/research/batches/2026-11-23b-almost-island-weta-robots.receipt.json": "4490f2ad628e6744659a9fe19a6386267d03172207d861db7cb163c6b05fde9d",
-    "data/theater/research/batches/2026-11-23b-almost-island-weta.receipt.json": "05421fc7064332efa8486233851bf50468300404de837ba9b783b355e198ffbe",
-    "data/theater/research/batches/2026-11-23b-almost-island-wetaplus-robots.receipt.json": "587a55d85385423c4860823dc3946b011d3de108c3aefd8ec351a106dc57d1ee",
-    "data/theater/research/batches/2026-11-23b-almost-island-wetaplus-show.receipt.json": "a61e4bf635b90382a6c1eee9e08ca93ca30c20c8cc24edad23f0e5a84c0d7b61",
-    "data/theater/research/batches/2026-11-23b-almost-island.json": "5dee3cf5ed41381f5f2404461129921b027d9304b2a24b1a0af2c3cc1ee9c720",
-    "data/theater/research/batches/2026-11-23b-rising-voices-image-robots.receipt.json": "25f6cecece725daab73cc01d3826bc171fd9b813eaec659cd7f773b37a41ea6b",
-    "data/theater/research/batches/2026-11-23b-rising-voices-independent-review.json": "4639d0ce0a10a098ed606c73b034c249935ce34b6f2814f783660b8f780b8aef",
-    "data/theater/research/batches/2026-11-23b-rising-voices-own-crew.receipt.json": "6a3b1383fa4fda5a31525ab7cce7418b0921933bde62dfb6a04eae23ee17b254",
-    "data/theater/research/batches/2026-11-23b-rising-voices-own-full.receipt.json": "4a560b71a93a9cd3aff47e3c47fab76a76036c914192668336b114556fb36b63",
-    "data/theater/research/batches/2026-11-23b-rising-voices-own-home.receipt.json": "925859025975217c2fc7b24f0d8c201539419cae5a0669135fd5364aa36db1ee",
-    "data/theater/research/batches/2026-11-23b-rising-voices-rising-own-robots.receipt.json": "85d0601d6938bd45511a1d9bbb6a6ebbdacb45ab5033cff307a790741d3b25b1",
-    "data/theater/research/batches/2026-11-23b-rising-voices-thumbnail.receipt.json": "05d911410662f539eee5ba4e020e8eeb8cd07b9c672dc0e9d585a7cab559d157",
-    "data/theater/research/batches/2026-11-23b-rising-voices-vmm.receipt.json": "6fb94c322c10d03e96e55a71a4c0d850019510b3bcc158f0f5ba1d30450b2675",
-    "data/theater/research/batches/2026-11-23b-rising-voices-yt-robots.receipt.json": "2bc3cc59e42169ec503d883f37af3335239a39cde474e2d08780f5d913554054",
-    "data/theater/research/batches/2026-11-23b-rising-voices-yt-watch.receipt.json": "01c4a210d279c77ab9034716083ac63f788dc557a6fee0b6134d3940de32e81e",
-    "data/theater/research/batches/2026-11-23b-rising-voices.json": "21d93ef59b5efda18cc477f3b66406ec632a5d56145e98258b6de8a2f56a2d96",
-    "data/theater/research_queue.json": "8e6be4e409a8bef96e9bc9a0d186326e452a39c2968fd04a04f6d8ceb3f6f3ab",
-    "game/data/n-1567ced5b5b618222f6a5c0006167bf7.json": "1567ced5b5b618222f6a5c0006167bf77301283522728d21790a59c7d485cb1b",
-    "game/data/n-338d0e12d1aa9900405d5b45112fc919.json": "338d0e12d1aa9900405d5b45112fc9195be2d073385a89b8710049bd5b577fcd",
-    "game/history.json": "3f44003d981d835e3cd1c0e4b380539fef7eb9642f799e65a89704356429663a",
-    "game/nations.json": "31e5748157ab32d67d3bbfc6e76cbac3abc002593bc5dfadcdad6d2d04d7603d",
-    "index.html": "b945975d3c5f02fbc31119fcd8b55dfbd903c67123b1f1c5640481e945b359e5",
-    "nations/brief/representation-and-power.html": "d007828d84c467fe0f215bf229c7f4131365c8291de9669923613b1aa9f0ae2c",
-    "nations/cedarville-rancheria-us-ca.html": "f826b1a87c999601cf7f4c28ba54e0c6d0666d0ed042967628b5b555802467a1",
-    "nations/chemehuevi-indian-tribe-us-ca.html": "5272d3f1dc74ead2da00515fede0fc2f1283c539353e9189098fd4e9323e49ff",
-    "nations/coverage.html": "d7d1e5936cdfd4dd313445de7d038d4fa64a6622929cc2fc0e90add280f915d2",
-    "nations/directory.html": "177a37dc04b0a8befda24b57cf5874761a14936b0c8fe10acd1b6071b763a524",
-    "nations/paths-to-action.html": "20bed7f9c917430abf674190d22ba9530875c72080e834dce075b3226b51fc0f",
-    "static/nations/action-brief-representation-and-power.txt": "f3823820c321f0716d5295a54ec4c06e90f828b47cfa4f4e6199daaea097ed62",
-    "static/nations/coverage.json": "69f83e07f96fc55c2f5c495d432c506f02f41957f05388dd1376a5adfb4b935d",
-    "static/nations/index.json": "4c7c0df31d0bf765d3813b5d01bd8de9bea037046cfd0478b8070f186c1896c4",
-    "static/nations/us-west-pacific.5f0d4c3b.json": "5f0d4c3b05ff3981ca2eaf759c328112751bf8d32dcf550936a91823c4315c2b",
-    "theater.html": "cccd2b8b007192318fc86130604ba0aaeb5b6edac398fd5d48b1411d3b39d2fa",
-    "vercel.json": "21c52128d17f3317ec806733c6790c7e4068921131cf757d05861ea1ea2e503e"
+    "data/nations/nations.json": "574a8631cc9fc6f724d04ff139fc83b98c0eaa980c44628b649fda89bf185cec",
+    "data/nations/nations.min.json": "fa901e69386e02b4f566fd989c72f8cd6ba268420cd4114ceae814adaff8af77",
+    "data/nations/pathways.json": "893f8813a32e0d0202a19c313f04a01e22a8deb3471b381c84664630fe15106c",
+    "data/nations/research/batches/2026-11-24-browser-review.json": "971acd08da778942d9992518adfc959943555c60351bc478439693d06d8798a6",
+    "data/nations/research/batches/2026-11-24-capture-cleanup.json": "d8ce8b868e1156836cfd0bce99f2d966043a0fde04bf6b906260a3472d953ebd",
+    "data/nations/research/batches/2026-11-24-cheyenne-arapaho-independent-review.json": "b25c269174369bbc901941dbdad2128234cd567515dcc8608c36f45e90ed97e5",
+    "data/nations/research/batches/2026-11-24-cheyenne-arapaho-own-history.json": "0580bc3365db39c3592452c543f61511905dffabc5fb26c938879ea619d5a4fa",
+    "data/nations/research/batches/2026-11-24-tataviam-independent-review.json": "22c2d45b484b11f963dd54f96ed095192632f9d45b9c57429f2e0b5bc49c311d",
+    "data/nations/research/batches/2026-11-24-tataviam-own-history.json": "e8b3ce7a583a6cec1614174192166c51b7bef54eb8b71b86533dfd092a81595f",
+    "data/nations/research/batches/2026-11-24-trinidad-independent-review.json": "c731b7696e203c9afbf0dd1fe1e34ca8355c8120ad36921a9daf2ed9f2385f5b",
+    "data/nations/research/batches/2026-11-24-trinidad-own-history.json": "505bc1114f98841ad7416170aaf995e4a268dd95b2eda2f444188151ec5fda5f",
+    "data/nations/research/coverage_queue.json": "25b94337a6b431536e87e59513451e053539cbdcb2239917b3ef647eb3d6e6ef",
+    "data/nations/research/directory_sources.json": "2a7b2e65fd0f904ae7249dbf2b80ed4cadc0ee0118429eeaf440cde7dfa97ae5",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-administration.receipt.json": "1bd3bd4443205d7644e18b5986f0c11ec9fcf51e1a3a8412960b9fc3e8e41d48",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-cdn-robots.receipt.json": "fabeacad23351f4c699dc611d7b297e0a0f897024ab7481de48d0bb0a42b6f15",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-constitution-page.receipt.json": "25c33e601938970b305494ecb5d766411d754d4bfb51953553ee57b265eb6066",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-council.receipt.json": "05f5c28061f2aa0c57184ce3aaf1e731ef1f2d8407a95e93d1c268af264f2273",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-data-centers.receipt.json": "128815095c06d1f15174b31aaa2d9197f26679f096eca3f07d863d81f6e29ff4",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-el-reno-transfer.receipt.json": "8146e17d7ae25f007f2322c68e9617c5127081bff60969e4e41547d0d2f9f0e9",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-federal-robots.receipt.json": "21def1c4763f13181e13be7d84b663669c0706ecfbd7cf8ae0b209640a034c18",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-federal.receipt.json": "88b2889229423880866e824151ba8ca91e6d435a3cef617e00ce72985f4e8b70",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-fort-marion.receipt.json": "ba2f32f87af55f2297906eb4548f29f65802d4a089edfb89f325ed5434d16b04",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-geary-agreement.receipt.json": "4d603ebadd287613228b0c3bbdf28e5ec9f79da0ab51d579117a56d67550dd1c",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-government.receipt.json": "5a4610dc1c66a68e0f05a14e63247156f80eff5cda376a65fbda0f6f91ee2f78",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-home.receipt.json": "ac99b83c344c221f1dc75070b47fd155accfb3adc7596bd159370c3c2f379aaf",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-identity.json": "2e04a3867676cd3d4d901bf4e232d720097225e69922ad468ad7dcdc24ccd572",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-legislative.receipt.json": "71b6fe100aeca5cf883eaa5a63c8c7f0924b5bb9bfd7c6a899cfbe41655567b7",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-own-robots.receipt.json": "65e70a7d6841c62284cf94049e7f5d0b37d4991434d09ca09537f09295c69425",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-records-management.receipt.json": "842129e3076f73e64ba26f8f583ee456cd7d03d87997f0fa649da70cc8ec829e",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-sitemap.receipt.json": "4fb95539abe4dacb8fddba36a8f230f9bce88a2cc2986c04bc7c0fe6d4d12168",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-tribune-own-page.receipt.json": "c86a0dfa6b62c3e5eb954e96003513d51e16a97a92108ecb7d89c2e31a9a262f",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-tribune-robots.receipt.json": "a63c70c2737cfca1a12158c9c6a626d64a0a18a7c7fc2b82a3492e579019d610",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-trust-success.receipt.json": "23f0920d959827a6010cae5b4dd4fba7c307dea26483cdf432ff823f21957e36",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-trust-transfer.receipt.json": "f036d230e217eb7138f8da163d2739ebc17d344a5fca6a649bec9172a062edff",
+    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-uploads-robots.receipt.json": "1c75629968f7b8ef76c4aeb5b5457b88850b06ce90855fd30a71bd21ad4a7ef7",
+    "data/nations/research/receipts/2026-11-24-tataviam-government.receipt.json": "a76afb7c58f1bfaa40da49c82bda9f24b55e8afa850851532a82cf16e401a132",
+    "data/nations/research/receipts/2026-11-24-tataviam-history.receipt.json": "014b54df3c62e2e4ba66f28728928ea8055559f0bf36904c3e8cf1823db96e68",
+    "data/nations/research/receipts/2026-11-24-tataviam-home.receipt.json": "dd02ae9339fdb49aee5f1b5f7bc45efec2ae79fffcb8e15f75fbed1519ecfcec",
+    "data/nations/research/receipts/2026-11-24-tataviam-identity.json": "9940d5f2809224a772205392fb24b1d1f8e61bc7e4c5ad3d2455c9c72678326d",
+    "data/nations/research/receipts/2026-11-24-tataviam-recognition.receipt.json": "9d41733c61fc6fa60f1d6059041af225356250f4846d96c14bc17b61efdac250",
+    "data/nations/research/receipts/2026-11-24-tataviam-robots.receipt.json": "409fabfcb18457b3138db94a30e8f2d0ae75e74a86689430480a439f1825ee18",
+    "data/nations/research/receipts/2026-11-24-trinidad-about.receipt.json": "73580d63fa3e84181603d285a63cfe8966d3ec8a520576e39d9a01c7e192ecbd",
+    "data/nations/research/receipts/2026-11-24-trinidad-council.receipt.json": "52ac77842e60482fe07137493b80dfff4e277aefd216ef4e8bc49351a16ebec0",
+    "data/nations/research/receipts/2026-11-24-trinidad-cultural.receipt.json": "acb515234ded10937efb9fc53a50c4a2653c8b51e5db735ee5b8942b44d8bb87",
+    "data/nations/research/receipts/2026-11-24-trinidad-environment.receipt.json": "adae64ea36606012bbb9efe80987f477aa492e9ae2cd7207a65b5f25f91d1de3",
+    "data/nations/research/receipts/2026-11-24-trinidad-federal-robots.receipt.json": "13415619af257cb256df6ac1688cb40991d75c1d45cb2b833d70fb8300a534bc",
+    "data/nations/research/receipts/2026-11-24-trinidad-federal.receipt.json": "266dba3fc53b02d97c09fbeeb6b591b9c886d9b6a4db523a0f3c1dfacde82394",
+    "data/nations/research/receipts/2026-11-24-trinidad-home.receipt.json": "7361806faddf1b1542099feb0925e91cc3e50a711611a400159a57ab1ec1ddd6",
+    "data/nations/research/receipts/2026-11-24-trinidad-identity.json": "fc0bffcf5a6c841bcfb9c7583770e02ffd0fbd1df2d1e442a3d1ff372b3d5bc0",
+    "data/nations/research/receipts/2026-11-24-trinidad-own-robots.receipt.json": "2e60c3361cf2a4278b766d8e8a414ef36343ffcfdf2399716faab1c8d4355168",
+    "data/nations/research/us_federal_directory.json": "dda45c227eab9a5f3a23962d1ddb5af8461b704bd97d25cc925ae39fca087730",
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.raw.json": "4dfe0530a6d29ae857a7c9d6fb9fb2f735b569da7b0730f7e79fdacc3cdfa51f",
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.respect.json": "dc85fa199e7231439152e7f405ab998972d5cf0b3f063bd46af375521b2c170d",
+    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.verify.json": "b28861d83d6e43290664c4cb97d67896e764dea0bb376e8f9524d1ff6d104dd9",
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.raw.json": "3700ad91822eed731eb3357e90b9547a5c92c7413ee02fbc313f4ecbd13e26d8",
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.respect.json": "2a28dac858c7824ec2f22c9dd06251bc55d13495176e5fee0bcc29e59e1174a8",
+    "data/nations/sources/us-tataviam-own-history-2026-11-24.verify.json": "89ff6d8e6025a6d48aae6c479aea147f899d1279e5067449277e5b7ed8a3efb8",
+    "data/nations/sources/us-trinidad-own-history-2026-11-24.raw.json": "3f8dc81489af6078338f84d73d8cbf54e218aabf51f4a14d331e60ae1c31a0c1",
+    "data/nations/sources/us-trinidad-own-history-2026-11-24.respect.json": "f741337dd5be31241d1f408f469132b7d3a502a8445e38807dc9013e58eb1597",
+    "data/nations/sources/us-trinidad-own-history-2026-11-24.verify.json": "003e2cc99008c46c96a00e7a7059ef8ca29d96b441c55599464fb9ab91141870",
+    "data/theater/films.json": "bd00c5c5bea7b7c83f52a9825238e44d260967850f138c7247d52987ba99dd0a",
+    "data/theater/research/batches/2026-11-24-aluna-collaborative-robots.receipt.json": "e7d0e3d8ecc9d73086ca7ef0ebc5d854e801a7d5fdf93a2e2397b82b3203d4e0",
+    "data/theater/research/batches/2026-11-24-aluna-collaborative.receipt.json": "e17af0f32997ed579967d09a28f3d0da9cffd25e831b41a4d99be4d3197c9879",
+    "data/theater/research/batches/2026-11-24-aluna-image-robots.receipt.json": "3c3dd938686ae90582b2e2e686432ffb4edccfad85aba7c107bfc23ded14872b",
+    "data/theater/research/batches/2026-11-24-aluna-independent-review.json": "cda4578fc1108cca6866914eaf15a45043c4d0b61500f028c92f5eb58a3d0162",
+    "data/theater/research/batches/2026-11-24-aluna-own-credits.receipt.json": "b091650bb9f3eac515e2d677529b9a1f5d9b1425daabee6c5e0328cc29b3853c",
+    "data/theater/research/batches/2026-11-24-aluna-own-home.receipt.json": "3a24581a77825ef9ee8bfb66e1b5c5df01027c685399944522b66a21ca2b8f90",
+    "data/theater/research/batches/2026-11-24-aluna-own-robots.receipt.json": "cce581e72598dbd7b9c5f4731ee49cedf8b11fac2b69e3c45f8ddcf1802ca709",
+    "data/theater/research/batches/2026-11-24-aluna-thumbnail.receipt.json": "8dd9e090dc86b0adfbf4b3cfd0dea7244540f369a8b4c3e892beeec2fb8b11fa",
+    "data/theater/research/batches/2026-11-24-aluna-trust-films.receipt.json": "25316059bedeef0c82a2dc46ecf7726f69fe4c383b8e37127b2abb571fc09970",
+    "data/theater/research/batches/2026-11-24-aluna-trust-robots.receipt.json": "47029379e203a6c325c77e2559a91719a3fe18141df3b53fca1f96a5f7e65886",
+    "data/theater/research/batches/2026-11-24-aluna-youtube.receipt.json": "c8c5911275ff987a054326f4273a6c90cec61d7d5bb9165182cfae90f6cf16bd",
+    "data/theater/research/batches/2026-11-24-aluna-yt-robots.receipt.json": "a8e9696ee241c8efba796ffe84152f78c7db4a26cb553174c2e3a8c4c00afd2c",
+    "data/theater/research/batches/2026-11-24-aluna.json": "aca9f22c80c1f2a61285fe50fc90b7f859f07cc08d96113017fe84abc5f052bf",
+    "data/theater/research/batches/2026-11-24-apache8-aapb-record.receipt.json": "c8b49c2b38dea0b42b1e3d2af857a93ccbb6910de46f62209da6d525a396e3fb",
+    "data/theater/research/batches/2026-11-24-apache8-aapb-robots.receipt.json": "615d75a8b38e585ac61bcd685c25b93bd34c5fff57cbcc15c13b99ab8de5ea15",
+    "data/theater/research/batches/2026-11-24-apache8-vmm-robots.receipt.json": "9e3c1f8d1169745e3c323934e4f9ec12abec3e330dfb15f7fb85a1508961220b",
+    "data/theater/research/batches/2026-11-24-apache8-vmm.receipt.json": "79a1a74253891d50987756b35c745e3a9cdb6a201742f987704e903a863b2e13",
+    "data/theater/research/batches/2026-11-24-apache8.json": "7fb79a0f21e249ee2447ad8f584230f8c3862470278f26be7029df60b350d3cb",
+    "data/theater/research_queue.json": "0e7fc985ab183e5ce60bc12cf31a77ff490d6b945ecab2c497bed795ef4c5d3e",
+    "game/data/n-70baa8cfe07a5a44dcfdd4c5b64533b4.json": "70baa8cfe07a5a44dcfdd4c5b64533b48f8f2b2ec5b20c2aa3d96b0d45454968",
+    "game/data/n-806a8a00e211a392f6b9f137bd39bb72.json": "806a8a00e211a392f6b9f137bd39bb7251723f5a3142347c3421418c9bb46c4a",
+    "game/history.json": "0308a8cb2f559a79c51ffebaef48e86a5cda74e0ef274abb4a39843064258286",
+    "game/nations.json": "7e83bbc1301b3003011ecbcb92678552a8dc2d0199104ff6baa7245c58fcb5c7",
+    "index.html": "2ed21ad9bb9966d3cc2c2badf1b31551e2bf6e0472252855cc5eb7c4c4aceb8b",
+    "nations.html": "20277e685306d3a915c2d436e43dfc596157943419045599c02f2b5c66ecd1e7",
+    "nations/brief/children-and-families.html": "a533292b3377278f3c62ae7cf1b291fc3acff3257732da17d9663243d5d64a5a",
+    "nations/cheyenne-and-arapaho-tribes-us-ok.html": "4607bc8c911fefefa986a405ea5791782b5515929e169c74404b5da5e17ca499",
+    "nations/coverage.html": "de07308a81ab84183088420033e8b9488890f73f5774e140b446d10cd2bc48b7",
+    "nations/directory.html": "d6e0dde3867f312590d6947b0c7f38b431df8d1e0bd86dda2b601ffcfda327c6",
+    "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "a2d686304b97a6c94d752de3c6c9e42ea09ab28d2b1b8e5575eae4f4ab169386",
+    "nations/paths-to-action.html": "3b50cfc408616e02780acf779a635681a8d17e37a7d93cac9846705ebf53f43e",
+    "nations/trinidad-rancheria-us-ca.html": "4fd53d55212f8cb16fc0577a44f98bcaf8ebea2b11a5c22e4a45a6aca5994c5e",
+    "static/nations/coverage.json": "ef8dbe2f62b18dee17905841a7decd8b128a30cf372b1f55f2fda467737330b2",
+    "static/nations/index.json": "fa5ffb65b29cd20baee9d1b564d15f6c8b08ca2f2800a8d92251305b06794c21",
+    "static/nations/us-plains-midwest.fe88a957.json": "fe88a95735610e7f3f029037e7874a45f3a060a5d22b5ade0d66e287189a3b79",
+    "static/nations/us-west-pacific.db6b68d5.json": "db6b68d55c630f1f8afca9b3615757d35d02e660c470ab3dbbc104e236075edd",
+    "theater.html": "d4355dc7d4867533ee77ab9ed16fcd33ff4d131bcfe271a12fff178615ef01f2",
+    "vercel.json": "2e40d244d49037a7a96332f9a5ac02da441f6452856ac78647f270beb7a2283d"
   },
   "pending": [
     "Vercel production verification",
-    "Cedarville constitutional adoption/effective date and subsequent amendments",
-    "Cedarville program-frequency descriptions; no benefits, amounts or eligibility published",
-    "Alaska typed community/government/organization inventory remains incomplete",
-    "Actual provider playback and account, geographic or device access",
-    "Caption text, timing and accuracy and complete audiovisual editorial review"
+    "Complete inclusive own-source inventory beyond recognition lists",
+    "Tataviam primary federal acknowledgment chronology and source-date difference; no current status assigned",
+    "Apache 8 accessible authorized edition and credit reconciliation",
+    "Actual provider playback and regional/account/device access",
+    "Caption text, timing, accuracy and complete audiovisual editorial review"
   ]
 }

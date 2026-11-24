@@ -1,0 +1,44 @@
+{
+  "region": "us-west-pacific",
+  "reviewed": "2026-11-24",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-24T19:56:18.116700+00:00",
+    "evidence_receipt": "batches/2026-11-24-tataviam-own-history.json",
+    "review_kind": "AI-assisted own-source, historical-scope, naming and respect research handoff"
+  },
+  "items": [
+    {
+      "id": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact": null,
+      "action": "keep",
+      "reason": "Use the Band’s own published name, including ñ. FTBMI is its own acronym, not an alias for all Tataviam or Tongva people."
+    },
+    {
+      "id": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact": 0,
+      "action": "keep",
+      "reason": "The history’s own land-loss account is explicitly attributed. It establishes no present title, exclusive boundary, legal cause or judicial result."
+    },
+    {
+      "id": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact": 1,
+      "action": "keep",
+      "reason": "The explicit2000incorporation and1974origin are separate stages. No present service availability, program eligibility, funding or outcomes are inferred."
+    },
+    {
+      "id": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact": 2,
+      "action": "keep",
+      "reason": "The timeline card has data-year2023 and describes cooperation, natural/cultural resources and interpretation. No conveyance of title, present legal effect or measured implementation is inferred."
+    },
+    {
+      "id": "fernandeno-tataviam-band-mission-indians-us-ca",
+      "fact": 3,
+      "action": "keep",
+      "reason": "The own public government description identifies branches. No constitutional adoption date, present officeholder, external recognition status or legal-jurisdiction determination is inferred."
+    }
+  ]
+}
