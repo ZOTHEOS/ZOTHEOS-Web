@@ -93,6 +93,13 @@
       "publisher": "Alaska Federation of Natives",
       "url": "https://nativefederation.org/about-afn/",
       "reviewed": "2026-11-23"
+    },
+    {
+      "id": "icc-institutions",
+      "title": "ICC International",
+      "publisher": "Inuit Circumpolar Council Canada",
+      "url": "https://www.inuitcircumpolar.com/icc-international/",
+      "reviewed": "2026-11-26"
     }
   ],
   "chapters": [
@@ -741,11 +748,12 @@
         },
         {
           "title": "Find The Applicable Process",
-          "text": "Identify the decision, the relevant jurisdiction and the community-authorized institution or adviser. Ask which domestic, regional, treaty or international process is actually available, with what requirements and risks. A general rights statement does not by itself establish an enforceable remedy, an admissible complaint or a guaranteed response.",
+          "text": "Identify the decision, the relevant jurisdiction and the community-authorized institution or adviser. Ask which domestic, regional, treaty or international process is actually available, with what requirements and risks. A general rights statement does not by itself establish an enforceable remedy, an admissible complaint or a guaranteed response. The Inuit Circumpolar Council (ICC) describes itself as an international Indigenous Peoples’ Organization representing Inuit from Alaska, Canada, Kalaallit Nunaat (Greenland) and Chukotka. In a private map, separate a community’s chosen authority, a representative organization, its relevant office and a state agency. For each, note its stated mandate, the decision it can address, the source date and unanswered questions. These roles are not interchangeable.",
           "scope": "reader-controlled",
           "source_ids": [
             "un-declaration",
-            "un-legal-note"
+            "un-legal-note",
+            "icc-institutions"
           ]
         },
         {
@@ -760,7 +768,8 @@
       ],
       "verify": [
         "Confirm the current rules and the authority of any representative or intermediary. This page does not submit complaints or conduct outreach.",
-        "Check translation and local terminology with people qualified to interpret them. Recognition categories do not exhaust the world’s Indigenous identities."
+        "Check translation and local terminology with people qualified to interpret them. Recognition categories do not exhaust the world’s Indigenous identities.",
+        "Use ICC’s own linked offices as a starting point for institutional research. This example establishes no border-crossing entitlement, complaint eligibility, universal community mandate or current office availability. Keep missing answers marked unknown."
       ],
       "deliverable": "A jurisdiction-and-process map with the community’s chosen objective, applicable sources, adviser questions and a verified next step.",
       "plate": {
@@ -775,7 +784,8 @@
       "reflection": "What needs to change in this place, and whose knowledge and authority are needed to decide how?",
       "source_ids": [
         "un-declaration",
-        "un-legal-note"
+        "un-legal-note",
+        "icc-institutions"
       ],
       "examples": []
     },

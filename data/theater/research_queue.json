@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24",
+  "updated": "2026-11-26",
   "scope": "Worldwide growing collection with Indigenous voices first. Inclusive geography, current availability and deeper source context remain ongoing; no complete-coverage claim.",
   "items": [
     {
@@ -442,7 +442,7 @@
     },
     {
       "id": "aluna",
-      "status": "full-film-candidate",
+      "status": "published-verified",
       "checked": "2026-11-24",
       "batch": "research/batches/2026-11-24-aluna.json",
       "source_urls": [
@@ -452,7 +452,12 @@
       ],
       "reason": "The current Trust embeds the exact official complete film, corroborated by the independent film distributor and actual provider metadata. The legacy film origin is excluded from public citations after an unrelated-link integrity flag.",
       "next": "Verify generated and live ready-player/thumbnail/caption-limit behavior under the unchanged full-film contract. Actual audiovisual playback and regional/account access remain unverified.",
-      "build_state": "reviewed-candidate"
+      "build_state": "reviewed-candidate",
+      "publication": {
+        "pull_request": "https://github.com/ZOTHEOS/ZOTHEOS-Web/pull/59",
+        "verified_at": "2026-11-24T20:17:39.027247+00:00",
+        "scope": "Reviewed file bytes and Vercel deployment verified; no audiovisual or caption-quality claim."
+      }
     },
     {
       "id": "apache-8-availability-and-credits",
@@ -467,6 +472,26 @@
       "reason": "The archive returned a verification challenge rather than an available film page. Publisher and archive credit descriptions need reconciliation. No film record or full-film count is added.",
       "next": "Find and inspect an accessible authorized complete edition and reconcile credits without bypassing the archive challenge. Search snapshots and metadata are not playback or access evidence.",
       "build_state": "research-only"
+    },
+    {
+      "id": "kumu-hina",
+      "status": "reviewed-candidate",
+      "title": "Kumu Hina",
+      "reason": "Current official film site links exact authorized complete YouTube edition; producer channel cross-check and provider embed flag reviewed separately.",
+      "next": "Publish only after canonical checks and browser review; actual audiovisual, captions and per-viewer access remain unverified.",
+      "source_urls": [
+        "https://kumuhina.com/",
+        "https://kumuhina.com/about",
+        "https://kumuhina.com/filmmakers",
+        "https://www.qwaves.com/",
+        "https://www.piccom.org/programs/kumu-hina",
+        "https://www.youtube.com/watch?v=7Zeond28-UA"
+      ],
+      "checked": "2026-11-26",
+      "source_batch": "research/batches/2026-11-26-kumu-hina.json",
+      "independent_review": "research/batches/2026-11-26-kumu-hina-independent-review.json",
+      "viewing": "full-film",
+      "edition": "7Zeond28-UA;77min selected YouTube edition, distinct from PIC60min listing"
     }
   ]
 }

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-26T02:59:48.626876+00:00",
+  "review_kind": "Independent AI-assisted source, chronology, identity, respect and integrated-data cross-review by a separate research agent",
+  "result": "passed",
+  "registry_id": "cheyenne-river-sioux-tribe-us-sd",
+  "directory_id": "us-fed-7417555e7abc",
+  "base_commit": "7ae7be93b018ab81b9eaa7fc2ebbe9f940cf442b",
+  "body_receipt_matches": 9,
+  "fact_anchor_matches": 4,
+  "checks": [
+    "Read the actual own homepage, history, TECA, Education Agency and Cultural Preservation bodies. All eight factual captures and the robots body match their recorded byte counts and SHA256 values. The public paths are permitted for ZOTHEOSResearch/1.0 and ChatGPT-User. No fresh fetch was necessary.",
+    "The history summary attributes the 1851 and 1868 Fort Laramie Treaties and 1889 Sioux Act sequence to the Tribe. The 1889 year is the latest instrument named, not a people founding date or a new boundary, consent, treaty interpretation or enforceable-remedy finding.",
+    "TECA describes granting and budgetary or operational oversight for eligible programs and entities. Education describes service priorities and technical assistance. Cultural Preservation describes a goal. These are undated statements; all three as_of values remain null and no available award, individual eligibility, measured language outcome or cultural-use permission is inferred.",
+    "All four anchors are exact source substrings after the researcher capitalized We in the TECA anchor. The correction leaves its normalized fact ID unchanged. Facts are 178 characters or less.",
+    "The own homepage identity and archived BIA OBJECTID 286 refer to the same existing South Dakota government. The archived BIA capture keeps its October 12 clock and is not represented as a new directory fetch. The Cheyenne and Arapaho Tribes and other Lakota governments remain distinct.",
+    "Compared integrated canonical data against the exact base commit. Seven facts are present. The first three facts, IDs, source details, checked and last_verified clocks remain exactly unchanged. The appended four match packet text, kind, event year or null, source, evidence and candidate IDs, with November 26 actual check dates.",
+    "Only official_url and name_source_url changed among existing profile metadata fields, exactly as the identity ledger proposes. The own homepage broader acreage wording is not substituted for the old 1.45 million trust-acre fact. Existing name, aliases, lands, countries and pronunciation were preserved.",
+    "The federal directory crosswalk confirms the exact government ID and links the explicit identity ledger. The queue links the same identity and own-site receipt, records needs_review, and preserves nested pending review and unassessed risk fields. This is not a fabricated human approval or current recognition-category change.",
+    "No sacred narrative, flag symbolism, cultural practices, contact information, member records or election results are reproduced. The unread Constitution wrapper is not treated as evidence of current constitutional rules."
+  ],
+  "corrected_before_pass": [
+    {
+      "subject": "TECA exact anchor capitalization",
+      "change": "Lowercase we was corrected to source-exact We before this final pin; no fact ID or factual meaning changed."
+    }
+  ],
+  "source_pins": {
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.raw.json": "7bac910b3975b30bb88a5f2f51755c4aa605dd3d9a487a9b31bf281dc4271262",
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.verify.json": "fd100948a033455af0270ad47e6df83447cedcd5e5493fe3b62a366c83738864",
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.respect.json": "72f90bba3bee2849f3aabd596cc4482cd879d7d0613010d87a768485b38f40ca",
+    "data/nations/research/batches/2026-11-26-cheyenne-river-own-history.json": "a4a8405a0d21aba57967b8314a4e3eb860b30074c9e6a3dcf7125569e7cae73b",
+    "data/nations/research/batches/2026-11-26-cheyenne-river-identity.json": "126242872f8e1ef68a762c227a3cd43af40a9285c494d13f577ba0aaee555eff",
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/nations.min.json": "6ca96981a16d10bfb09ca57a8ceb145399795c89d7729b1416f96c7f911196c3",
+    "data/nations/research/us_federal_directory.json": "536073e81c7b09245bca68683643c45d8f86eb6f69fdb444773a5949048bfc27",
+    "data/nations/research/coverage_queue.json": "5e245a18b0dff51bfca199e19294c7b16da4ed2910e8c341fd0d83e4845d4eb8",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-central-records.receipt.json": "6c8988f22572c64983abaa119d60d25eb4bd9a64c78b4ea42658f997b7343b36",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-constitution.receipt.json": "eca7fd40617333962b00e7e48baaac2c587f95f402194aebf71f90c1feba2865",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-cultural-preservation.receipt.json": "671e5ff2e7fab52001d4b32c6f54f9f1363887783f67ecac95c31e77136898e4",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-education.receipt.json": "1e677a641f16641e72caf2a42344eb5c8987407fc463ba14f4c507b187f9cd61",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-history.receipt.json": "12c1de405b2edc6b0c24b8fc62a1dfe666c6da4c4ed23dd3f06b56ba12cc75c6",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-home.receipt.json": "a459c834659c41757780df3007a970dbcb80794ef51aaf01228fedffaba904b5",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-own-robots.receipt.json": "baaf0f1f16d52d40b5d329041141ae228c817e7ebc47b3bfea1469bab761ed21",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-programs.receipt.json": "dc0c146e473e5c8d1ac2032aa19deb232e78ff6bfb02b5fe18db77ff8fdf5b12",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-teca.receipt.json": "76b1018c1501b8c997fb3f8d3fa591e4d13e4ebee7a8668e4ceea78094b17712",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-own-robots.body.txt": "e8241cca214bc8bd430fb9bdaf65d89c7a6290549e283741b92a17130343b7c8"
+  },
+  "publication_boundary": "Only metadata receipts, short anchors, original summaries, packets and explicitly named robots configuration are pinned for public retention. Full factual HTML captures remain local and must be removed before publication.",
+  "person_review_claimed": false,
+  "human_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "nation_approval_claimed": false
+}

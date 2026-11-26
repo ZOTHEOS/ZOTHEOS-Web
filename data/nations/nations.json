@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-11-24",
-  "count": 503,
-  "facts": 1492,
+  "generated": "2026-11-26",
+  "count": 504,
+  "facts": 1500,
   "regions": {
     "africa": 41,
     "alaska-hawaii-pacific-us": 22,
@@ -18,7 +18,7 @@
     "oceania": 46,
     "us-east-southeast": 43,
     "us-plains-midwest": 43,
-    "us-west-pacific": 49
+    "us-west-pacific": 50
   },
   "nations": [
     {
@@ -26722,8 +26722,8 @@
       "countries": [
         "US"
       ],
-      "official_url": null,
-      "name_source_url": "https://www.bia.gov/regional-offices/great-plains/south-dakota/cheyenne-river-agency",
+      "official_url": "https://www.cheyenneriversioux.com/",
+      "name_source_url": "https://www.cheyenneriversioux.com/",
       "facts": [
         {
           "id": "cheyenne-river-sioux-tribe-us-sd-3f44b34b",
@@ -26772,6 +26772,70 @@
           "status": "verified",
           "checked": "2026-10-08",
           "last_verified": "2026-10-08"
+        },
+        {
+          "id": "cheyenne-river-sioux-tribe-us-sd-e22b10c5",
+          "text": "The Tribe’s history page traces the reservation’s land base through the Fort Laramie Treaties of 1851 and 1868 and the Sioux Act of 1889.",
+          "kind": "history",
+          "as_of": "1889",
+          "source": {
+            "title": "History",
+            "publisher": "Cheyenne River Sioux Tribe",
+            "url": "https://www.cheyenneriversioux.com/history",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "the 1851 and 1868 Fort Laramie Treaties",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "cheyenne-river-sioux-tribe-us-sd-05604053",
+          "text": "The Tribe’s TECA Office describes administering grants to eligible Tribal programs and entities, with budgetary and operational oversight.",
+          "kind": "governance",
+          "as_of": null,
+          "source": {
+            "title": "Tribal Equitable Compensation Act (TECA) Office",
+            "publisher": "Cheyenne River Sioux Tribe",
+            "url": "https://www.cheyenneriversioux.com/tribal-equitable-compensation-act-t",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "We provide budgetary and operational oversight",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "cheyenne-river-sioux-tribe-us-sd-e5fe1fce",
+          "text": "The Tribal Education Agency lists developing infrastructure for Lakota language, culture and standards among its services, alongside school partnerships and technical assistance.",
+          "kind": "language",
+          "as_of": null,
+          "source": {
+            "title": "Tribal Education Agency",
+            "publisher": "Cheyenne River Sioux Tribe",
+            "url": "https://www.cheyenneriversioux.com/education-department",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "Develop infrastructure for CRST Lakota Language, culture, and standards",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "cheyenne-river-sioux-tribe-us-sd-d244c28e",
+          "text": "The Tribe’s Cultural Preservation Office describes a goal of preserving, strengthening and promoting its way of life for future generations.",
+          "kind": "culture",
+          "as_of": null,
+          "source": {
+            "title": "Cultural Preservation Office",
+            "publisher": "Cheyenne River Sioux Tribe",
+            "url": "https://www.cheyenneriversioux.com/cultural-preservation",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "preserve, strengthen, and promote our way of life",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
         }
       ]
     },
@@ -32913,6 +32977,88 @@
           "status": "verified",
           "checked": "2026-11-24",
           "last_verified": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "chicken-ranch-rancheria-us-ca",
+      "region": "us-west-pacific",
+      "name": "Chicken Ranch Rancheria Me-Wuk Indians of California",
+      "also": [
+        "Chicken Ranch Rancheria of Me-Wuk Indians of California",
+        "Chicken Ranch Rancheria"
+      ],
+      "pronounce": null,
+      "lands": "Sierra Nevada foothills, near Jamestown, Tuolumne County, California",
+      "countries": [
+        "US"
+      ],
+      "official_url": "https://chickenranchrancheria.org/home",
+      "name_source_url": "https://chickenranchrancheria.org/home",
+      "facts": [
+        {
+          "id": "chicken-ranch-rancheria-us-ca-dcbdc949",
+          "text": "The Tribe's 2020 wetland plan recounts establishment by Secretary Order in 1908 and termination under the California Rancheria Termination Act in 1958.",
+          "kind": "history",
+          "as_of": "1958",
+          "source": {
+            "title": "Chicken Ranch Rancheria 2020 Wetland Program Plan",
+            "publisher": "Chicken Ranch Rancheria of Me-Wuk Indians of California; hosted by US EPA",
+            "url": "https://www.epa.gov/sites/default/files/2021-03/documents/chicken_ranch_rancheria_wetland_program_plan_signed_2021.pdf",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "was established in 1908 by Secretary Order",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "chicken-ranch-rancheria-us-ca-42dfc678",
+          "text": "The September 2020 wetland plan makes understanding wetland locations and health a priority before major development on Tribal lands.",
+          "kind": "land",
+          "as_of": "2020",
+          "source": {
+            "title": "Chicken Ranch Rancheria 2020 Wetland Program Plan",
+            "publisher": "Chicken Ranch Rancheria of Me-Wuk Indians of California; hosted by US EPA",
+            "url": "https://www.epa.gov/sites/default/files/2021-03/documents/chicken_ranch_rancheria_wetland_program_plan_signed_2021.pdf",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "understand the location and health of the wetlands",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "chicken-ranch-rancheria-us-ca-4aa0159b",
+          "text": "On November 5, 2026, the Tribe announced three climate fellows supporting Suchumumu Tribal Farm, composting, food recovery and environmental education.",
+          "kind": "today",
+          "as_of": "2026",
+          "source": {
+            "title": "Chicken Ranch Rancheria Welcomes Three Tribal Climate Fellows to Support Suchumumu Tribal Farm and Climate Action",
+            "publisher": "Chicken Ranch Rancheria Me-Wuk Indians of California",
+            "url": "https://chickenranchrancheria.org/updates-press/chicken-ranch-rancheria-welcomes-three-tribal-climate-fellows-to-support-suchumumu-tribal-farm-and-climate-action",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "Fellows support composting and edible food recovery efforts",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
+        },
+        {
+          "id": "chicken-ranch-rancheria-us-ca-1f79c26e",
+          "text": "On November 23, 2026, the Tribe reported a $500,000 contribution toward completion of a youth sports pavilion in Tuolumne County.",
+          "kind": "achievement",
+          "as_of": "2026",
+          "source": {
+            "title": "Chicken Ranch Rancheria Donates $500,000 to Support Completion of Youth Sports Foundation Pavilion",
+            "publisher": "Chicken Ranch Rancheria Me-Wuk Indians of California",
+            "url": "https://chickenranchrancheria.org/updates-press/chicken-ranch-rancheria-donates-to-support-youth-sports-foundation-pavilion",
+            "accessed": "2026-11-26"
+          },
+          "evidence": "to support the completion of the new indoor sports pavilion",
+          "status": "verified",
+          "checked": "2026-11-26",
+          "last_verified": "2026-11-26"
         }
       ]
     }

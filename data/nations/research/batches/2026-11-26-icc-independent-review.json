@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-26T02:46:33.053862+00:00",
+  "review_kind": "Independent AI-assisted source-body, exact-evidence, cross-border institutional scope, practical Paths and integration review",
+  "reviewer_role": "Sibling agent, not author of the ICC Paths draft",
+  "reviewer_agent": "/root/cheyenne_recovery",
+  "result": "passed",
+  "source_inventory_task": "discover-us-borders-and-territories",
+  "source_body_checks": [
+    {
+      "url": "https://www.inuitcircumpolar.com/about-icc/",
+      "body_bytes": 212884,
+      "sha256": "57f2ead54787b30c55b7e97baa485b403bfc9a6b48e50bbb60ceded54e1f551e",
+      "result": "matched retained local review bytes"
+    },
+    {
+      "url": "https://www.inuitcircumpolar.com/icc-international/",
+      "body_bytes": 230262,
+      "sha256": "8992d2631c3894f1c607d0fca8d56bdacf302df70e3119f52fb2fd0b433f1ddb",
+      "result": "matched retained local review bytes"
+    },
+    {
+      "url": "https://www.inuitcircumpolar.com/robots.txt",
+      "body_bytes": 187,
+      "sha256": "2896808a5899e9d2c89877feee822e3cf9f9395ba28c0639a25b46919786a530",
+      "result": "matched retained local review bytes"
+    }
+  ],
+  "checks": [
+    "Both factual pages and the robots capture match exact recorded byte counts and SHA-256 values; no new source fetch was made. The robots policy allows both actual public paths for ZOTHEOSResearch/1.0 and ChatGPT-User. Recorded requests are more than three seconds apart.",
+    "All three corrected short evidence anchors occur in the corresponding actual readable source text. Founding in 1977 is stated by the About account; this is not a new event or source publication date.",
+    "The exact current publisher title is Inuit Circumpolar Council Canada. The International page describes the ICC organization, Inuit in Alaska, Canada, Kalaallit Nunaat and Chukotka, and links organizational offices. Public copy attributes this institutional account to ICC and expands its name before the acronym.",
+    "The public chapter uses geographic source terms, not a count of communities, governments or countries. It creates no canonical profile, population denominator or coverage-complete claim.",
+    "The private role/process map is practical preparation attributed to the guide: distinguish community-chosen authority, representative organization, office and state agency; record mandate, decision, source date and missing answers. No outreach or application is performed.",
+    "Public limits preserve distinctions between declarations and enforceable remedies and establish no border-crossing entitlement, admissible complaint, universal mandate, current office availability or legal outcome. Current named leaders and international status claims in the source are excluded.",
+    "The framework source contains an actual November26 review date and omits an unknown as_of date. Its source is linked to the amended reader-controlled step and chapter.",
+    "The separate ICC Alaska TLS receipt explicitly records no HTTP response and contains no fabricated status, body hash, size or exact timestamp. No Alaska factual receipt or content follows that failure in this reviewed set; TLS verification is not represented as disabled.",
+    "The public chapter exactly equals the corrected batch chapter. Compared with the base, all other Paths chapters, prior sources, global capabilities and copy remain unchanged. Only this chapter’s reader-controlled step, source references and one verification item changed. The three-step layout and its other steps remain unchanged."
+  ],
+  "resolved_findings": [
+    {
+      "finding": "The initial founding anchor was not contiguous with readable source text.",
+      "correction": "Changed to exact was founded in 1977; occurrence rechecked."
+    },
+    {
+      "finding": "The first public ICC reference lacked the expanded organization name.",
+      "correction": "Expanded to The Inuit Circumpolar Council (ICC) describes itself as; public chapter and batch equality rechecked."
+    }
+  ],
+  "integration": {
+    "base_commit": "7ae7be93b018ab81b9eaa7fc2ebbe9f940cf442b",
+    "public_draft_matches_batch": true,
+    "other_chapters_and_prior_sources_preserved": true,
+    "final_build_browser_and_release_review": "Parent integrator checks separately; this review does not establish successful publication."
+  },
+  "source_pins": {
+    "data/nations/research/batches/2026-11-26-icc-cross-border.json": "75e4888fb114c6cdc36568b4285cf5229339b1ece2589a24d32efbb9740b8235",
+    "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+    "data/nations/research/receipts/2026-11-26-icc-alaska-robots-failure.receipt.json": "89f76268f601b3bfa2389a1d0c424e4c355bd103665001fdb20a13e7e4eed2f4",
+    "data/nations/research/receipts/2026-11-26-icc-international-about.receipt.json": "8041b3ad2369abfa0dbfb721fae34837047c524303ba0c7168c9463747e57922",
+    "data/nations/research/receipts/2026-11-26-icc-international-robots.receipt.json": "76608eba85e5244c05cb20e2be9bf6ffc91a5b651a664148a9a595c31a18dbf6",
+    "data/nations/research/receipts/2026-11-26-icc-international-structure.receipt.json": "d23ec5122bf84ed4d29c43c0507f9f766dc25dbd4486ae67b80014c3515aa0a4"
+  },
+  "capture_retention": "Full HTML captures were read only as local review material and remain local only for parent cleanup. This ledger retains hashes, short-anchor findings and original scope analysis; it does not publish source bodies.",
+  "person_review_claimed": false,
+  "human_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "icc_endorsement_claimed": false
+}

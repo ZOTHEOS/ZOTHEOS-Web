@@ -1,0 +1,46 @@
+{
+  "region": "us-plains-midwest",
+  "checked": "2026-11-26",
+  "index_base": 0,
+  "reviewer": "ZOTHEOS",
+  "review_reference": {
+    "reviewer": "ZOTHEOS",
+    "reviewed_at": "2026-11-26T02:44:39.939323+00:00",
+    "evidence_receipt": "batches/2026-11-26-cheyenne-river-own-history.json",
+    "review_kind": "AI-assisted own-source history, public service, identity and respect research"
+  },
+  "results": [
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 0,
+      "verdict": "supported",
+      "note": "Own account of three historical instruments. The 1889 year identifies the latest named instrument, not a founding date for the people or an independently established exclusive boundary. No treaty text, consent, cession interpretation or present legal remedy is inferred."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 1,
+      "verdict": "supported",
+      "note": "The undated page describes the Office’s role and board-awarded funding under Ordinance 74. It does not establish current appropriations, grant availability, individual eligibility, awards or compensation outcomes. Statutory text and legal entitlements were not independently examined."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 2,
+      "verdict": "supported",
+      "note": "The own undated service description supports the listed work. No language proficiency gains, participant totals, current funded project, curriculum completion or academic outcomes are claimed."
+    },
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "fact": 3,
+      "verdict": "supported",
+      "note": "This is an attributed goal from an undated office page, not an independently measured cultural outcome. No ceremonial details, sacred knowledge, permit entitlement or authority over every Native Nation is inferred."
+    }
+  ],
+  "names": [
+    {
+      "id": "cheyenne-river-sioux-tribe-us-sd",
+      "ok": true,
+      "verdict": "keep",
+      "note": "The own homepage identifies Cheyenne River Sioux Tribe; archived BIA OBJECTID 286 links this domain for the exact existing South Dakota government. Keep the existing canonical name, aliases, lands and original three facts with their October 8 clocks. Propose only official_url and name_source_url updates from null/BIA to this own homepage. Cheyenne River is not the separate Cheyenne and Arapaho Tribes government, the Blackfeet Nation, or all Lakota governments."
+    }
+  ]
+}

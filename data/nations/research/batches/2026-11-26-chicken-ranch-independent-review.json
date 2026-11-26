@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-26T03:00:03.272485+00:00",
+  "reviewer": "ZOTHEOS independent AI-assisted reviewer /root/film_recovery",
+  "status": "approved-with-stated-source-limits",
+  "review_kind": "Independent retained-source integrity, factual chronology, identity, respect and canonical integration review",
+  "registry_id": "chicken-ranch-rancheria-us-ca",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false,
+  "source_pins": {
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.raw.json": "fcfbdf1828b4d5cd0a4fd5af72bb6c9733977f3be921447d6ac441e24cc4727d",
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.verify.json": "1fd271d3577417178690216f0e3e60e2bf667d4e5cedea980eac976a3cf06525",
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.respect.json": "d8cd43a53fa8ddee0f5b31b998deefaf6b35736430286199a83332124372c3a5",
+    "data/nations/research/batches/2026-11-26-chicken-ranch-own-history.json": "c122ed0e39b39a9cefd643f6c05d8c98a9dc6f5a70e22bab61442279a5cbaf6e",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-identity.json": "6d8fb1e398e1d3008f69548472fce6052545df34f2423264252d3fba5e6ecf4f",
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/research/us_federal_directory.json": "536073e81c7b09245bca68683643c45d8f86eb6f69fdb444773a5949048bfc27",
+    "data/nations/research/coverage_queue.json": "5e245a18b0dff51bfca199e19294c7b16da4ed2910e8c341fd0d83e4845d4eb8",
+    "data/nations/research/directory_sources.json": "15889f8efd6dcabed67874336de2a9bb44ab0647f1e95256a86cd706ee47988b",
+    "data/nations/research/receipts/us-bia-directory.json": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "data/nations/research/receipts/us-bia-directory.receipt.json": "161009daaca3d9ecb4ef3afcd5fb902d528027cd94087ecb71a7582af6b96e7f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-about.receipt.json": "f0812b353c385a3df8ac3c6229f5b0269fb5b082ce1d515230d1492b5b6f4c7f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-ecode-robots.receipt.json": "bca4952cc8f7048ddbe3a9073c1a570136917331e3a25ca9717446f128937a3b",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-epa-robots.receipt.json": "d74cfc0d90a3661ae8eb62f3be9889fac2b52650b3c98033a0e5f951c4f1d9da",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-federal-robots.receipt.json": "417fc617c3ce7c38123850e183d87998903524693a159a2bc6a17e00afc0065c",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-federal.receipt.json": "93224b31f5c9af34841f2c3b0c4a4cf0f5e4bbee61648a91c820ff3a8c94420c",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-fellows.receipt.json": "9dec536a122dbdb4d7c6b72dc9e161d6d944b98ccfbe8066369f4a22e4fe83fc",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-home.receipt.json": "6d2f45bcb3f25a955a1436a1237ae5440eba2ba55a981b82213c64be5563273a",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-own-robots.receipt.json": "5e4ea16c15017343645cb988cad67e39d43cd8430a5c6f74130c264d0198ca1f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-root.receipt.json": "61badc0ceb7184c9ae21733e8e54074baed65ba1693346790ad9d11f4f253d99",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-sports.receipt.json": "447faa72f08f4bb17bf02cf1ec6f5159d3ab236e30ab80288c85ea7891918495",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-wetland-plan.receipt.json": "669e6c0434b95156d97afd6b398715d1ed0f81b2a093cf4e85926b57df392f78"
+  },
+  "checks": [
+    {
+      "check": "source-receipt-integrity",
+      "result": "pass",
+      "detail": "All11individual current Chicken Ranch receipts matched the retained local response lengths andSHA256; sixfactual and fourrobots batch receipts also matched. Historical BIAarchive181580bytes/SHA153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f matched its originalOctober12receipt. No new source fetch was performed by this reviewer."
+    },
+    {
+      "check": "robots-and-limits",
+      "result": "pass",
+      "detail": "Parsed own-site,EPA,Govinfo robots: all six cited factual URLs permitted for ZOTHEOSResearch/1.0 and ChatGPT-User. eCode Content-Signal use=reference was read; no eCode factual body is part of the evidence or packet."
+    },
+    {
+      "check": "scanned-plan-date-and-history",
+      "result": "pass",
+      "detail": "Visually rendered and read full PDFpages1-4. Cover and title identify Chicken Ranch Rancheria2020Wetland Program Plan; title and footers specifySeptember2020. The2021path/filename is not the plan date. PDFpage3 printedpage2 explicitly recounts1908SecretaryOrder and1958termination. Public fact attributes this to the plan; it makes no independent legal finding or current-status determination."
+    },
+    {
+      "check": "wetland-plan-purpose",
+      "result": "pass",
+      "detail": "PDFpage3printedpage2 closing paragraph says understanding wetland location and health precedes major development. Its Purpose section calls this a plan for goals and activities. Fact correctly reports a planning priority, not completed assessment,restoration,development or approved construction."
+    },
+    {
+      "check": "literal-anchors",
+      "result": "pass",
+      "detail": "Both PDF anchors were visually found on PDFpage3; both HTML anchors are literal in parsed article text. Combined PDF anchors18words; no fullsource text,image,logo,map,signature or restricted cultural instruction is published."
+    },
+    {
+      "check": "announcement-dates-and-stages",
+      "result": "pass",
+      "detail": "Fellows page time datetime2026-11-05 agrees with datePublished2026-11-05T16:00:20-0800;3named current fellows and farm,composting,foodrecovery,education support are described. Sports page time2026-11-23 agrees with datePublished2026-11-23T13:40:47-0800; opening reports one$500000contribution toward pavilion completion. Public copy attributes the report and omits cumulative-total arithmetic,transfer verification,completed facility or measured outcomes."
+    },
+    {
+      "check": "distinct-government-name-and-location",
+      "result": "pass",
+      "detail": "Own home and About title/body supply Chicken Ranch Rancheria Me-Wuk Indians of California. FederalJan30notice lists the form with of; historical BIAOBJECTID408 points to the same/homeURL and shorter alias. Own foothill description,plan Jamestown title and climatearticle TuolumneCounty support bounded location. No merge with broadMe-Wuk/Miwok peoples or separateTuolumneBand government."
+    },
+    {
+      "check": "canonical-and-directory-integration",
+      "result": "pass",
+      "detail": "Actual canonical profile matches every rawpacket field and all4fact text/kind/as_of/source/evidence values, with generated IDs and checked/last_verified2026-11-26. Directory crosswalk confirms same ID,ownname,URL andidentity receipt. Queue links matching identity/sourceIDs and exists_in_registry; needs_review and pending review/risk states remain honest workflow states."
+    }
+  ],
+  "blocking_issues": [],
+  "remaining_limits": [
+    "Precise termination/restoration/recognition chronology requires primary order,statute,court or administrative records;1985account is excluded.",
+    "Current-acreage units and dates require reconciliation; no acreage claim is published.",
+    "Announcements are publisher reports,not verified funds transfer,physical building completion,program impact or current eligibility.",
+    "This independentAIreview is not a human or Nation endorsement and does not establish complete coverage."
+  ],
+  "render_review": {
+    "method": "PyMuPDF local PNG renders at a measured rendering scale of 1.8 in each dimension; all four full pages visually inspected. This scale is not a software version.",
+    "pdf_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "local_only": true,
+    "images_published": false
+  }
+}

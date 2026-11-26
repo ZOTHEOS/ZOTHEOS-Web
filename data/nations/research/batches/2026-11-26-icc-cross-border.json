@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-26",
+  "source_inventory_task": "discover-us-borders-and-territories",
+  "review_kind": "AI-assisted Indigenous-led cross-border source inventory and private Paths preparation",
+  "status": "candidate-for-independent-review",
+  "receipts": [
+    {
+      "url": "https://www.inuitcircumpolar.com/about-icc/",
+      "final_url": "https://www.inuitcircumpolar.com/about-icc/",
+      "retrieved_at": "2026-11-26T02:37:38.963526+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 212884,
+      "sha256": "57f2ead54787b30c55b7e97baa485b403bfc9a6b48e50bbb60ceded54e1f551e",
+      "capture_retention": "Measured during local source review. Full captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "international-about.html",
+        "publicly_retained": false
+      }
+    },
+    {
+      "url": "https://www.inuitcircumpolar.com/icc-international/",
+      "final_url": "https://www.inuitcircumpolar.com/icc-international/",
+      "retrieved_at": "2026-11-26T02:37:43.818808+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 230262,
+      "sha256": "8992d2631c3894f1c607d0fca8d56bdacf302df70e3119f52fb2fd0b433f1ddb",
+      "capture_retention": "Measured during local source review. Full captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "international-structure.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "robots": [
+    {
+      "url": "https://www.inuitcircumpolar.com/robots.txt",
+      "final_url": "https://www.inuitcircumpolar.com/robots.txt",
+      "retrieved_at": "2026-11-26T02:37:34.961841+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 187,
+      "sha256": "2896808a5899e9d2c89877feee822e3cf9f9395ba28c0639a25b46919786a530",
+      "capture_retention": "Measured during local source review. Full captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+      "local_capture_at_review": {
+        "filename": "international-robots.html",
+        "publicly_retained": false
+      }
+    }
+  ],
+  "transport_failure_receipt": "receipts/2026-11-26-icc-alaska-robots-failure.receipt.json",
+  "source_evidence": [
+    {
+      "receipt_index": 0,
+      "anchor": "was founded in 1977",
+      "locator": "Our Story; founding paragraph",
+      "event_date": "1977"
+    },
+    {
+      "receipt_index": 1,
+      "anchor": "representing Inuit from Alaska, Canada, Kalaallit Nunaat, and Chukotka.",
+      "locator": "Overview, opening paragraph",
+      "event_date": null
+    },
+    {
+      "receipt_index": 1,
+      "anchor": "Learn more about each office at each of our websites",
+      "locator": "Overview, office links below organizational description",
+      "event_date": null
+    }
+  ],
+  "pathways_source": {
+    "id": "icc-institutions",
+    "title": "ICC International",
+    "publisher": "Inuit Circumpolar Council Canada",
+    "url": "https://www.inuitcircumpolar.com/icc-international/",
+    "reviewed": "2026-11-26"
+  },
+  "pathways_chapter": {
+    "id": "worldwide-and-cross-border",
+    "title": "Worldwide Rights, Local Routes",
+    "intro": "UNDRIP offers a worldwide rights framework, including cross-border relationships in Article 36. Practical routes vary by place. The UN’s legal commentary discusses its influence and relationships with other law; a declaration, a domestic statute, a treaty and a court judgment should not be treated as interchangeable.",
+    "steps": [
+      {
+        "title": "Start With The Right People And Place",
+        "text": "Use worldwide directory navigation to find the distinct people, Nation or representative organization. Then read its own sources. Country and region labels help browsing; they do not define identity, exclusive homelands or who may speak for a community.",
+        "scope": "website-now",
+        "source_ids": [
+          "un-declaration",
+          "un-legal-note"
+        ]
+      },
+      {
+        "title": "Find The Applicable Process",
+        "text": "Identify the decision, the relevant jurisdiction and the community-authorized institution or adviser. Ask which domestic, regional, treaty or international process is actually available, with what requirements and risks. A general rights statement does not by itself establish an enforceable remedy, an admissible complaint or a guaranteed response. The Inuit Circumpolar Council (ICC) describes itself as an international Indigenous Peoples’ Organization representing Inuit from Alaska, Canada, Kalaallit Nunaat (Greenland) and Chukotka. In a private map, separate a community’s chosen authority, a representative organization, its relevant office and a state agency. For each, note its stated mandate, the decision it can address, the source date and unanswered questions. These roles are not interchangeable.",
+        "scope": "reader-controlled",
+        "source_ids": [
+          "un-declaration",
+          "un-legal-note",
+          "icc-institutions"
+        ]
+      },
+      {
+        "title": "Compare Without Flattening Differences",
+        "text": "A proposed ZOTHEOS workflow could compare public accounts across borders while retaining original language, dates and separate legal contexts. It would need reviewed translations and local expertise. It should not turn another Nation’s agreement, legal status or practice into a universal template.",
+        "scope": "future-app",
+        "source_ids": [
+          "un-declaration",
+          "un-legal-note"
+        ]
+      }
+    ],
+    "verify": [
+      "Confirm the current rules and the authority of any representative or intermediary. This page does not submit complaints or conduct outreach.",
+      "Check translation and local terminology with people qualified to interpret them. Recognition categories do not exhaust the world’s Indigenous identities.",
+      "Use ICC’s own linked offices as a starting point for institutional research. This example establishes no border-crossing entitlement, complaint eligibility, universal community mandate or current office availability. Keep missing answers marked unknown."
+    ],
+    "deliverable": "A jurisdiction-and-process map with the community’s chosen objective, applicable sources, adviser questions and a verified next step.",
+    "plate": {
+      "name": "A jurisdiction-and-process map",
+      "parts": [
+        "the community’s chosen objective",
+        "applicable sources",
+        "adviser questions",
+        "a verified next step"
+      ]
+    },
+    "reflection": "What needs to change in this place, and whose knowledge and authority are needed to decide how?",
+    "source_ids": [
+      "un-declaration",
+      "un-legal-note",
+      "icc-institutions"
+    ],
+    "examples": []
+  },
+  "source_limits": [
+    "ICC is a named international Indigenous Peoples’ Organization; the linked offices are organizational routes, not a complete inventory of communities or governments.",
+    "Geographic regions are retained as source wording, not four community or government units. No population total or coverage denominator is created.",
+    "The proposed private map is ZOTHEOS planning guidance, not an ICC-endorsed workflow, service, complaint route or legal finding.",
+    "No current leader, office availability, border entitlement, jurisdictional outcome, recognition category or exclusive community mandate is inferred.",
+    "The separate ICC Alaska robots TLS failure remains a failure. No TLS bypass or factual content request to that origin followed.",
+    "Typed community/government inventories, wider US-associated territories and cross-border legal routes remain incomplete and need their own source review."
+  ],
+  "crawl_policy": "International publisher robots200 read before two permitted factual pages. Actual receipts show more than3seconds between requests; neither reader is disallowed. ICC Alaska transport failure was not bypassed.",
+  "capture_retention": "Full captures are temporary local review material only and excluded from public publication. Exact receipts, measured hashes, short anchors and original summaries remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
