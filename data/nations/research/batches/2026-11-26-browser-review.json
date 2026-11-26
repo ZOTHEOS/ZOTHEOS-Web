@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
+  "result": "passed",
+  "reviewed_at_start": "2026-11-26T02:56:45.980590+00:00",
+  "reviewed_at_end": "2026-11-26T02:57:29.125260+00:00",
+  "chrome_version": "158.0.8127.38",
+  "method": "Chrome through Playwright; exact local files routed to zotheos.org with committed Vercel headers, all external traffic aborted.",
+  "viewport_pixels": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      844
+    ]
+  ],
+  "page_viewport_checks": 15,
+  "observations": [
+    {
+      "page": "directory",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "chicken-ranch-rancheria-us-ca",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "cheyenne-river-sioux-tribe-us-sd",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "responsive desktop panel already visible",
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "chicken-ranch-rancheria-us-ca",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "cheyenne-river-sioux-tribe-us-sd",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "opened through actual keyboard filter toggle",
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+          "resource_type": "image"
+        }
+      ]
+    },
+    {
+      "page": "directory",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "chicken-ranch-rancheria-us-ca",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "cheyenne-river-sioux-tribe-us-sd",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "Paths",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "page": "Theater",
+      "viewport": [
+        320,
+        844
+      ],
+      "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+      "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "filter_mode": "opened through actual keyboard filter toggle",
+      "layout": {
+        "viewport": 320,
+        "scroll": 320
+      },
+      "external_requests_aborted": [
+        {
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+          "resource_type": "image"
+        }
+      ]
+    }
+  ],
+  "page_errors": [],
+  "csp_violations": [],
+  "local_404s": [],
+  "external_requests_aborted": [
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.vimeocdn.com/video/764947225-faebf8a940b2e0f060963ea3568e7980cf4900e602ee8a34d2a917cc79edf090-d_2400?region=us",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+      "resource_type": "document"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+      "resource_type": "image"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+      "resource_type": "image"
+    }
+  ],
+  "source_pins": {
+    "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+    "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+    "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+    "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+    "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+    "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+    "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+  },
+  "source_pins_after": {
+    "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+    "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+    "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+    "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+    "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+    "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+    "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+  },
+  "limits": [
+    "No actual video/audio playback, remote thumbnail appearance, caption quality, geographic availability, account access or physical mobile-device result was established. All external provider frames and images were deliberately aborted.",
+    "Viewport sizes are CSS pixels in desktop Chrome, not tested phone hardware."
+  ],
+  "human_review_claimed": false,
+  "person_review_claimed": false,
+  "nation_approval_claimed": false,
+  "visual_reviewed_at": "2026-11-26T02:57:29.125260+00:00",
+  "visual_review": {
+    "normal_viewport_images_inspected": 6,
+    "scope": "Two profile tops and the worldwide reader-controlled Paths step, each at1440 and390 CSS pixels. Normal viewport screenshots, not stitched full-page images.",
+    "findings": [
+      "Chicken Ranch’s long own name and aliases wrap inside desktop and phone reading columns; its own-site link, record navigation and land section remain readable without overlap.",
+      "Cheyenne River’s heading, aliases, own-site link and record navigation fit both columns. Keyboard Facts navigation displays a clear focus outline on the section heading.",
+      "The worldwide chapter separates its three scope lanes. Desktop guide navigation remains outside the reading column. The phone ICC preparation paragraph is long but wraps legibly inside the single column, with no clipped words or horizontal scroll.",
+      "Sticky navigation and visible focus outlines remain clear. No concrete layout or functional regression was found in these views."
+    ],
+    "temporary_image_pins": [
+      {
+        "filename": "chicken-ranch-rancheria-us-ca-1440.png",
+        "body_bytes": 74417,
+        "sha256": "6b8c18d65447810e91e1849948f6ed12b182c089aa54a9d94f33f50bd89ffae8"
+      },
+      {
+        "filename": "cheyenne-river-sioux-tribe-us-sd-1440.png",
+        "body_bytes": 79986,
+        "sha256": "3e81f5a0f16ef1ec3820697d312a65a781093e98e7a920a4ece08858e2327000"
+      },
+      {
+        "filename": "paths-worldwide-1440.png",
+        "body_bytes": 184862,
+        "sha256": "13cfde4fb1d566afa5fb9a44e2dec6ef9dda53d21a9f7fd7311a672cd1f00392"
+      },
+      {
+        "filename": "chicken-ranch-rancheria-us-ca-390.png",
+        "body_bytes": 47226,
+        "sha256": "e2fdb9a1361e4c657b17b7fb87cbeccf5b7fccf4c882f06c97f5861b022224f3"
+      },
+      {
+        "filename": "cheyenne-river-sioux-tribe-us-sd-390.png",
+        "body_bytes": 47202,
+        "sha256": "80928ccbd829d1cd57019904213bb5001c41a3096cdaa4a285c50c85062b96f0"
+      },
+      {
+        "filename": "paths-worldwide-390.png",
+        "body_bytes": 83405,
+        "sha256": "6bef6594c6d9d7dad8c48c539cc2662cc3306c183e64dc82d454b78ef0596548"
+      }
+    ],
+    "image_retention": "Temporary local QA images were inspected and then removed; no source media or remote thumbnail capture is published."
+  },
+  "external_abort_counts": {
+    "image": 27,
+    "document": 3
+  },
+  "external_abort_total": 30,
+  "production_edits_made_by_reviewer": false,
+  "harness_corrections": [
+    "Initial assertions compared CSS-transformed uppercase labels case-sensitively. Adjusted label inspection to case-folded text or underlying textContent; no website change was required. The final complete15check run passed."
+  ],
+  "reviewer_agent": "/root/cheyenne_recovery",
+  "source_pins_after_visual": {
+    "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+    "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+    "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+    "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+    "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+    "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+    "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+  }
+}

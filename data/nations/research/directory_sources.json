@@ -1698,6 +1698,73 @@
       "discovery_date": "2026-11-24",
       "status": "source_retrieved",
       "note": "One own-published Band example for inclusive discovery. Recognition status is not adjudicated and no federal/state directory crosswalk is inferred."
+    },
+    {
+      "source_id": "icc-institutions-2026-11-26",
+      "countries": [
+        "US",
+        "CA",
+        "GL",
+        "RU"
+      ],
+      "entity_unit": "inuit_representative_body",
+      "url": "https://www.inuitcircumpolar.com/icc-international/",
+      "allowed_hosts": [
+        "www.inuitcircumpolar.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-26",
+      "status": "source_retrieved",
+      "note": "ICC’s own organization and linked-office account. Not a community, government or population denominator; geographic browse labels do not establish political identity or border rights."
+    },
+    {
+      "source_id": "cheyenne-river-own-site-2026-11-26",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://www.cheyenneriversioux.com/",
+      "allowed_hosts": [
+        "www.cheyenneriversioux.com"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-26",
+      "status": "source_retrieved",
+      "note": "Existing government’s own history, TECA, education and cultural preservation pages. Acreage units and old fact dates preserved."
+    },
+    {
+      "source_id": "chicken-ranch-own-site-2026-11-26",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "nation_owned_source",
+      "url": "https://chickenranchrancheria.org/home",
+      "allowed_hosts": [
+        "chickenranchrancheria.org"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-26",
+      "status": "source_retrieved",
+      "note": "Own full name, November2026 climate-fellows and youth-pavilion contribution reports; announcements are not independently measured outcomes."
+    },
+    {
+      "source_id": "chicken-ranch-wetland-plan-2026-11-26",
+      "countries": [
+        "US"
+      ],
+      "entity_unit": "research_subject",
+      "url": "https://www.epa.gov/sites/default/files/2021-03/documents/chicken_ranch_rancheria_wetland_program_plan_signed_2021.pdf",
+      "allowed_hosts": [
+        "www.epa.gov"
+      ],
+      "stated_count": null,
+      "as_of": null,
+      "discovery_date": "2026-11-26",
+      "status": "source_retrieved",
+      "note": "Tribe-authored September2020 Wetland Program Plan, hosted by EPA. Filename2021 is not the document year; history attributed, no present legal conclusion."
     }
   ]
 }

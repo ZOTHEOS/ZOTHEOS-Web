@@ -1,0 +1,18 @@
+{
+  "url": "https://kumuhina.com/robots.txt",
+  "final_url": "https://kumuhina.com/cache/robots.txt",
+  "retrieved_at": "2026-11-26T02:35:58.190512+00:00",
+  "retrieval_method": "http",
+  "http_status": 404,
+  "body_bytes": 50007,
+  "sha256": "7d5b209aa29200627bfcc685b4d4d8e1dd6f98d33b6dfbf683273e44c54dff1c",
+  "redirects": [
+    {
+      "status": 301,
+      "from_url": "https://kumuhina.com/robots.txt",
+      "to_url": "https://kumuhina.com/cache/robots.txt"
+    }
+  ],
+  "capture_retention": "local",
+  "local_capture": ".theater-research-2026-11-26/kumu-hina-own-robots.body.txt"
+}

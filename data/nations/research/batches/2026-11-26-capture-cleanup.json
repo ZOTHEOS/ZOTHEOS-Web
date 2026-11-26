@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "cleaned_at": "2026-11-26T03:00:53.876959+00:00",
+  "method": "Removed only individually verified, untracked files inside four exact owned local capture folders; every byte-count/hash pair matched current source receipts. No recursive delete or unrelated path touched.",
+  "removed_captures": 35,
+  "captures": [
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-image-robots.body.txt",
+      "body_bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-own-about.body.html",
+      "body_bytes": 53667,
+      "sha256": "ba7f67d3540bde75f473666ecc185e9d731cdad6c35cea2c48d5270fb3cfd122"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-own-embed.body.html",
+      "body_bytes": 46947,
+      "sha256": "7ff5a21ab45fdc30f5ebb9b24d873a51638ac760bdf9c03bdcb4ac29a7dcb536"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-own-filmmakers.body.html",
+      "body_bytes": 63479,
+      "sha256": "160340cf7bc7755e72fc6ef8bb96474b27fb9115cc8de0ea6f2feb9008a5bf4e"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-own-home.body.html",
+      "body_bytes": 55856,
+      "sha256": "180f8393a1dd23146867b5fb70ad5c7e4cfff5743d296a1eebe255f4781e0227"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-own-robots.body.txt",
+      "body_bytes": 50007,
+      "sha256": "7d5b209aa29200627bfcc685b4d4d8e1dd6f98d33b6dfbf683273e44c54dff1c"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-pic-film.body.html",
+      "body_bytes": 26498,
+      "sha256": "0d11f0f313a0fd5a17ba7e2cf07b20b1df2f32892bd809c456832f4e8903df38"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-pic-robots.body.txt",
+      "body_bytes": 287,
+      "sha256": "f56142fefd41c67a89514834b5c27ba93d1ffeab4a513cf0e9d90319b9eec53c"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-qwaves-film.body.html",
+      "body_bytes": 91976,
+      "sha256": "ed9ac9ccb20053fe776e3fce252ed4b2af328a2d33b82ad9e5abbd13319611f5"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-qwaves-home.body.html",
+      "body_bytes": 117887,
+      "sha256": "0fcff4ea92188d71800e1b30062c3d76b7c35841a5b0de7a866396a67818ecfd"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-qwaves-robots.body.txt",
+      "body_bytes": 1505,
+      "sha256": "e42201b4bf54e06056db38e8296e381422aa8cb4227435cfe65464cb275d1923"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-youtube-robots.body.txt",
+      "body_bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f"
+    },
+    {
+      "filename": ".theater-research-2026-11-26/kumu-hina-youtube.body.html",
+      "body_bytes": 1501613,
+      "sha256": "55606e2ffb9200709112e1ffceb2765866112045532f9a9cc3bbbe68721d2d43"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/about.html",
+      "body_bytes": 498823,
+      "sha256": "93854b6ac1713bc1f742bbe70f1434239c1466cbf482d2745260fbc553dd93db"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/ecode-robots.txt",
+      "body_bytes": 3613,
+      "sha256": "17a433edcae7310d8ff807fc7047cb453b8d15d74a8c62f38e5fe73fe171ed27"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/epa-robots.txt",
+      "body_bytes": 2035,
+      "sha256": "48c441ffe97205c15534e9827d603504d44aeef04ab57e0f6772fdbd9bf49db5"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/federal-robots.txt",
+      "body_bytes": 5092,
+      "sha256": "44c5698f1245cef059b8722b6108a87a128c61dbf4c25fbe11402952b805309c"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/federal.html",
+      "body_bytes": 27547,
+      "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/fellows.html",
+      "body_bytes": 426914,
+      "sha256": "1894c8bf720912fd2904a94d6f41ad70b075d4251fcef1ea0afbd153f59f91b5"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/home.html",
+      "body_bytes": 270424,
+      "sha256": "3475b0ac18fd7a678f886858d9a638cd43eaa4f741f5daf57d2b3eb34c13ef86"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/own-robots.txt",
+      "body_bytes": 1516,
+      "sha256": "eeb619a71d974b81bd1857484a11d9e837e7bd538fdc59a62c31ff861d2e2eba"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/root.html",
+      "body_bytes": 225906,
+      "sha256": "a7c76d9da6ec37d7dc16a4eef21d714bfec274e3526f1ebce89ac70d4b1fadcc"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/sports.html",
+      "body_bytes": 462258,
+      "sha256": "4750db648f6bd21fd88b17c459bb36ff80378fdf05e7cdbdb0f85c72a880862e"
+    },
+    {
+      "filename": "steward-local-chicken-ranch-1126/wetland-plan.pdf",
+      "body_bytes": 865141,
+      "sha256": "016e9fddbe4ecefe0e7caa94dd7692275d18ec7b901ede363ff6a5a776a6769a"
+    },
+    {
+      "filename": "steward-local-icc-1126/international-about.html",
+      "body_bytes": 212884,
+      "sha256": "57f2ead54787b30c55b7e97baa485b403bfc9a6b48e50bbb60ceded54e1f551e"
+    },
+    {
+      "filename": "steward-local-icc-1126/international-robots.html",
+      "body_bytes": 187,
+      "sha256": "2896808a5899e9d2c89877feee822e3cf9f9395ba28c0639a25b46919786a530"
+    },
+    {
+      "filename": "steward-local-icc-1126/international-structure.html",
+      "body_bytes": 230262,
+      "sha256": "8992d2631c3894f1c607d0fca8d56bdacf302df70e3119f52fb2fd0b433f1ddb"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-central-records.body.html",
+      "body_bytes": 933558,
+      "sha256": "b5fbc739aec1e74b5e96573ab382ec3303f811895f3e4ca74e5aff474d71432c"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-constitution.body.html",
+      "body_bytes": 695567,
+      "sha256": "bf97792d56b32380285281c3438299362d10435129445c9d2be780e598f39a16"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-cultural-preservation.body.html",
+      "body_bytes": 940954,
+      "sha256": "4d3ba6728cc372b7f79a35bb994d61126a442cdde1adce9e316f4c2eea3cd06b"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-education.body.html",
+      "body_bytes": 925755,
+      "sha256": "01740d0823b286e3d07727153a1f533426c44088155d3d7c3de863afe1291a3e"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-history.body.html",
+      "body_bytes": 941724,
+      "sha256": "cb24508fbfe4d382906f3f3df1dc0b55a5706fa91a81380c83ad4ed2fa72dc88"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-home.body.html",
+      "body_bytes": 1140179,
+      "sha256": "c12d3810edda3357cfa6515bc417dc8558ad34a5dd7de62a3193421a27e01560"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-programs.body.html",
+      "body_bytes": 989271,
+      "sha256": "27213a320ef9c7d1189cce0da91cd9c5340fca58d95b6b9e508cd59d63456d2f"
+    },
+    {
+      "filename": "data/nations/research/receipts/.local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-teca.body.html",
+      "body_bytes": 923378,
+      "sha256": "763a9dfeeb3cbf641a459cabed1d65440c4b721c1cb4daef26bee781e3bb06d9"
+    }
+  ],
+  "retained": "Public receipt metadata, short anchors and independent review ledgers remain. The small explicitly pinned Cheyenne River robots configuration remains public; no factual source HTML/PDF or provider response body is published.",
+  "person_review_claimed": false
+}

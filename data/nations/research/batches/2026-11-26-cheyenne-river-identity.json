@@ -1,0 +1,47 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-26T02:44:39.939323+00:00",
+  "review_kind": "AI-assisted explicit source-backed existing-government identity and metadata proposal",
+  "directory_id": "us-fed-7417555e7abc",
+  "registry_id": "cheyenne-river-sioux-tribe-us-sd",
+  "own_published_name": "Cheyenne River Sioux Tribe",
+  "own_name_source": {
+    "url": "https://www.cheyenneriversioux.com/",
+    "final_url": "https://www.cheyenneriversioux.com/",
+    "retrieved_at": "2026-11-26T02:35:51.467101+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 1140179,
+    "sha256": "c12d3810edda3357cfa6515bc417dc8558ad34a5dd7de62a3193421a27e01560",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+    "local_capture_at_review": {
+      "filename": ".local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-home.body.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 286,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://www.cheyenneriversioux.com/",
+    "tribefullname": "Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota"
+  },
+  "proposed_metadata_changes": {
+    "official_url": {
+      "before": null,
+      "after": "https://www.cheyenneriversioux.com/"
+    },
+    "name_source_url": {
+      "before": "https://www.bia.gov/regional-offices/great-plains/south-dakota/cheyenne-river-agency",
+      "after": "https://www.cheyenneriversioux.com/"
+    }
+  },
+  "scope_note": "The own homepage identifies Cheyenne River Sioux Tribe; archived BIA OBJECTID 286 links this domain for the exact existing South Dakota government. Keep the existing canonical name, aliases, lands and original three facts with their October 8 clocks. Propose only official_url and name_source_url updates from null/BIA to this own homepage. Cheyenne River is not the separate Cheyenne and Arapaho Tribes government, the Blackfeet Nation, or all Lakota governments.",
+  "historical_directory_limit": "The BIA archive was fetched October 12 and is not represented as a fresh November government-list fetch. The own domain and publication identity were checked from November 26 captures. No recognition-category change is proposed.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

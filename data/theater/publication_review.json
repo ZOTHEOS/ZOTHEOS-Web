@@ -1,22 +1,22 @@
 {
-  "version": 19,
-  "prepared_at": "2026-11-24T20:15:01.933574+00:00",
-  "publisher": "ZOTHEOS",
+  "version": 20,
+  "prepared_at": "2026-11-26T03:03:05.879928+00:00",
+  "publisher": "Root integrator for David Garcia’s one-person ZOTHEOS project",
   "status": "reviewed-candidate-awaiting-publication",
   "prior_review": {
-    "commit": "319d911cfa3a81cf71eb1c2b45ddbf7ac925be0a",
-    "version": 18,
-    "catalogue_sha256": "597daca0c71958e0cb7b1cc691a23be41f07098e501ba6249ea8b5561ab0b443"
+    "commit": "7ae7be93b018ab81b9eaa7fc2ebbe9f940cf442b",
+    "version": 19,
+    "catalogue_sha256": "bd00c5c5bea7b7c83f52a9825238e44d260967850f138c7247d52987ba99dd0a"
   },
   "catalogue": {
-    "sha256": "bd00c5c5bea7b7c83f52a9825238e44d260967850f138c7247d52987ba99dd0a",
-    "titles": 244,
-    "configured_players": 226,
+    "sha256": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510",
+    "titles": 245,
+    "configured_players": 227,
     "source_only": 18,
     "featured": "yanuni",
     "viewing": {
       "excerpt": 21,
-      "full-film": 31,
+      "full-film": 32,
       "official-page": 7,
       "recorded-program": 67,
       "short": 68,
@@ -24,34 +24,39 @@
     }
   },
   "source_review": {
-    "batch": "research/batches/2026-11-24-aluna.json",
-    "sha256": "aca9f22c80c1f2a61285fe50fc90b7f859f07cc08d96113017fe84abc5f052bf",
-    "edition": "Official complete YouTube edition ftFbCwJfs1I, linked and embedded by the current Tairona Heritage Trust. Distribution and provider embedding are reviewed separately.",
-    "thumbnail_display": "Actual provider-supplied YouTube thumbnail; no image rehosting.",
-    "viewing_access": "Official channel offers public free streaming. Actual audiovisual playback and regional/account/device access remain unverified. Only English ASR captions are listed; text, timing and accuracy are unreviewed.",
-    "source_integrity": "Legacy origin with unrelated SEO links is excluded from public viewing/citations. Current Trust, Film Collaborative and YouTube sources support the selected edition.",
-    "deferred": "Apache 8 remains research-only after an archive challenge and unresolved credit descriptions."
+    "batch": "research/batches/2026-11-26-kumu-hina.json",
+    "sha256": "2b12d4cc2bf3d70e03dcc985c1ec60bd9e4469462a90a3e8a07e3b6ae7c09cee",
+    "edition": "Official complete YouTube7Zeond28-UA linked by film project and supported by producer Qwaves. Provider embedding reviewed separately.",
+    "runtime": "Selected77minute edition;4610/4611second provider fields differ by one second. PIC60minute listing is separate. Original2014release,2015PBS debut and2024upload are distinct.",
+    "thumbnail_display": "Exact provider thumbnail URL; HEAD200image/jpeg with zero body bytes, no image rehosting.",
+    "viewing_access": "Free official edition; actual audiovisual playback, caption quality and regional/account/physical-device access unverified. Only English ASR listed.",
+    "failed_reads": "Own/embed500 excluded from authorization evidence. ICC Alaska robots TLS failure kept without fabricated response/status/hash or bypass.",
+    "deferred": "NFB hold, Apache8 challenge/credits and unverified FrameXTV distribution unchanged."
   },
   "independent_reviews": [
     {
-      "kind": "AI-assisted Trinidad own history, constitutional stages, language priorities, infrastructure, identity and respect review",
-      "record": "data/nations/research/batches/2026-11-24-trinidad-independent-review.json",
+      "kind": "Independent retained-source integrity, factual chronology, identity, respect and canonical integration review",
+      "record": "data/nations/research/batches/2026-11-26-chicken-ranch-independent-review.json",
+      "sha256": "44abf4cd334bb642655f4965242b7e8fc63e94961a0ecf7cfce1bdd5856eabb1",
+      "result": "approved-with-stated-source-limits"
+    },
+    {
+      "kind": "Independent AI-assisted source, chronology, identity, respect and integrated-data cross-review by a separate research agent",
+      "record": "data/nations/research/batches/2026-11-26-cheyenne-river-independent-review.json",
+      "sha256": "8094f92d0ea528a067ee757e0e32f4bfbccf8538df0e721c8c74e070f95a8ce6",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Cheyenne and Arapaho government/records history, separate land reports, identity and integration review",
-      "record": "data/nations/research/batches/2026-11-24-cheyenne-arapaho-independent-review.json",
+      "kind": "Independent AI-assisted source-body, exact-evidence, cross-border institutional scope, practical Paths and integration review",
+      "record": "data/nations/research/batches/2026-11-26-icc-independent-review.json",
+      "sha256": "fa8ae9bfbf8e3e27cab9303f855da12c2121fda549cded1dc5715291de430059",
       "result": "passed"
     },
     {
-      "kind": "AI-assisted Tataviam own identity, historical scope, private Paths case and recognition-boundary review",
-      "record": "data/nations/research/batches/2026-11-24-tataviam-independent-review.json",
-      "result": "passed"
-    },
-    {
-      "kind": "AI-assisted Aluna source-chain, credits, complete edition, provider embedding and thumbnail review",
-      "record": "data/theater/research/batches/2026-11-24-aluna-independent-review.json",
-      "result": "passed"
+      "kind": "Independent AI-assisted full-film publisher-chain, edition, credits, thumbnail and access-limit review by root integrator",
+      "record": "data/theater/research/batches/2026-11-26-kumu-hina-independent-review.json",
+      "sha256": "b0014ff49f1beed11ba656a3095d0f4b78c687369fc083fcf05ae02c69cb60d1",
+      "result": "source and canonical catalog integration passed"
     }
   ],
   "person_review_claimed": false,
@@ -63,15 +68,21 @@
       "failures": 0,
       "skipped": 0
     },
-    "full_suite_wall_seconds": 272.93694459996186,
-    "full_suite_xml_sha256": "24ab0d921b3ffbf816e261faed4bc8b3e2379a18d4a1f7e78dce8a2143d8f236",
-    "full_suite_finished_at": "2026-11-24T20:13:07.172306+00:00",
+    "full_suite_wall_seconds": 261.35345090000004,
+    "full_suite_xml_sha256": "696787080a396b37623526e41a0e452a97c1752bb10f14e028c19d946058ef7f",
+    "full_suite_finished_at": "2026-11-26T02:59:28.563012+00:00",
     "canonical_build": {
       "status": "passed",
-      "pages": 638,
-      "profiles": 503,
-      "visible_facts": 1490,
-      "held_facts": 2
+      "pages": 639,
+      "profiles": 504,
+      "raw_facts": 1500,
+      "visible_facts": 1498,
+      "held_facts": 2,
+      "tier_A": 205,
+      "tier_B": 299,
+      "tier_C": 0,
+      "wall_seconds": 36.33479540000002,
+      "finished_at": "2026-11-26T02:54:21.474783+00:00"
     },
     "registry_validator": {
       "errors": 0,
@@ -80,37 +91,34 @@
     "page_lint": {
       "errors": 0,
       "warnings": 1,
-      "review": "Preexisting full Colusa name triggers the long-name check."
+      "review": "Existing Colusa full-name warning; no new warning."
+    },
+    "research_queue": {
+      "errors": 0,
+      "subjects": 3,
+      "source_rows": 104,
+      "nested_reviews": "pending",
+      "risk": "unassessed",
+      "new_followups": 2
     },
     "game_data": {
-      "quick_cards": 503,
-      "quick_facts": 1000,
-      "profiles_with_history": 127,
-      "new_history_facts": 3,
-      "skipped": 0
+      "quick_cards": 504,
+      "quick_facts": 1002,
+      "profiles_with_history": 129,
+      "skipped": 0,
+      "mechanics_unchanged": true
     },
     "exact_scope_audit": {
       "status": "passed",
-      "prior_profiles": 501,
-      "added_profiles": 2,
-      "existing_profiles_changed": 1,
-      "added_raw_facts": 12,
-      "new_practice_examples": 1,
-      "new_films": 1,
-      "unrelated_game_records_preserved": true,
-      "cheyenne_quick_card": "Existing kind ordering selects a newly sourced governance fact alongside an unchanged prior fact.",
-      "publication_holds_preserved": true,
-      "player_policies_preserved": true,
-      "game_mechanics_preserved": true,
-      "recognition_inventory_not_extended_by_self_published_example": true,
-      "observed_at": "2026-11-24T20:10:05.396773+00:00"
+      "record": "data/nations/research/batches/2026-11-26-integration-audit.json",
+      "sha256": "bae052a143829b577ce68e609bc7461c801fdedda52e216c6b3209b1989121a8"
     },
     "browser": {
       "schema_version": 1,
       "review_kind": "Independent AI-assisted offline Chrome functional, layout and visual review",
       "result": "passed",
-      "reviewed_at_start": "2026-11-24T20:11:20.854747+00:00",
-      "reviewed_at_end": "2026-11-24T20:11:26.200222+00:00",
+      "reviewed_at_start": "2026-11-26T02:56:45.980590+00:00",
+      "reviewed_at_end": "2026-11-26T02:57:29.125260+00:00",
       "chrome_version": "158.0.8127.38",
       "method": "Chrome through Playwright; exact local files routed to zotheos.org with committed Vercel headers, all external traffic aborted.",
       "viewport_pixels": [
@@ -127,7 +135,7 @@
           844
         ]
       ],
-      "page_viewport_checks": 21,
+      "page_viewport_checks": 15,
       "observations": [
         {
           "page": "directory",
@@ -135,55 +143,31 @@
             1440,
             900
           ],
-          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
+          "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "Nations hub",
+          "page": "chicken-ranch-rancheria-us-ca",
           "viewport": [
             1440,
             900
           ],
-          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
+          "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
           }
         },
         {
-          "page": "trinidad-rancheria-us-ca",
+          "page": "cheyenne-river-sioux-tribe-us-sd",
           "viewport": [
             1440,
             900
           ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 1440,
-            "scroll": 1440
-          }
-        },
-        {
-          "page": "cheyenne-and-arapaho-tribes-us-ok",
-          "viewport": [
-            1440,
-            900
-          ],
-          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 1440,
-            "scroll": 1440
-          }
-        },
-        {
-          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
-          "viewport": [
-            1440,
-            900
-          ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+          "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
@@ -195,7 +179,7 @@
             1440,
             900
           ],
-          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+          "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
           "layout": {
             "viewport": 1440,
             "scroll": 1440
@@ -207,8 +191,8 @@
             1440,
             900
           ],
-          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "filter_mode": "responsive desktop panel already visible",
           "layout": {
             "viewport": 1440,
@@ -216,23 +200,51 @@
           },
           "external_requests_aborted": [
             {
-              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
               "resource_type": "document"
             },
             {
-              "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
               "resource_type": "image"
             },
             {
-              "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
               "resource_type": "image"
             },
             {
-              "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
               "resource_type": "image"
             },
             {
-              "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
               "resource_type": "image"
             },
             {
@@ -248,31 +260,7 @@
               "resource_type": "image"
             },
             {
-              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
+              "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
               "resource_type": "image"
             }
           ]
@@ -283,55 +271,31 @@
             390,
             844
           ],
-          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
+          "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "Nations hub",
+          "page": "chicken-ranch-rancheria-us-ca",
           "viewport": [
             390,
             844
           ],
-          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
+          "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
           "layout": {
             "viewport": 390,
             "scroll": 390
           }
         },
         {
-          "page": "trinidad-rancheria-us-ca",
+          "page": "cheyenne-river-sioux-tribe-us-sd",
           "viewport": [
             390,
             844
           ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 390,
-            "scroll": 390
-          }
-        },
-        {
-          "page": "cheyenne-and-arapaho-tribes-us-ok",
-          "viewport": [
-            390,
-            844
-          ],
-          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 390,
-            "scroll": 390
-          }
-        },
-        {
-          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
-          "viewport": [
-            390,
-            844
-          ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
+          "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
           "layout": {
             "viewport": 390,
             "scroll": 390
@@ -343,7 +307,7 @@
             390,
             844
           ],
-          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
+          "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
           "layout": {
             "viewport": 390,
             "scroll": 390
@@ -355,16 +319,96 @@
             390,
             844
           ],
-          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
-          "filter_mode": "disclosed through actual keyboard/touch toggle",
+          "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "filter_mode": "opened through actual keyboard filter toggle",
           "layout": {
             "viewport": 390,
             "scroll": 390
           },
           "external_requests_aborted": [
             {
-              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+              "resource_type": "document"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
+              "resource_type": "image"
+            },
+            {
+              "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+              "resource_type": "image"
+            }
+          ]
+        },
+        {
+          "page": "directory",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Both exact federal source-name queries yield one linked researched profile; keyboard Read First focuses the matching H4, and keyboard profile activation reaches each exact own-named record. Existing 577-record/575-entity source discrepancy remains visible.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "chicken-ranch-rancheria-us-ca",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "4 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "cheyenne-river-sioux-tribe-us-sd",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "7 exact canonical facts, citation destinations, original/source check dates, own website and keyboard Facts navigation verified. Cheyenne River preserves its three October8 clocks and trust-acre unit.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "Paths",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Keyboard chapter navigation reaches Worldwide Rights. Exact ICC attribution and private reader-controlled role/process map render with three separate scope lanes, source review date, and explicit no entitlement/eligibility/mandate/availability limits.",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          }
+        },
+        {
+          "page": "Theater",
+          "viewport": [
+            320,
+            844
+          ],
+          "checks": "Kumu Hina selected as Full Film, exact runtime and official source. Search + Full Film + Watch Here yields one record. Exact provider thumbnail URL/alt, source links and English-ASR/playback limits verified. One selected YouTube-nocookie frame keeps Play-first autoplay0 and inline playback1.",
+          "iframe_src": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "filter_mode": "opened through actual keyboard filter toggle",
+          "layout": {
+            "viewport": 320,
+            "scroll": 320
+          },
+          "external_requests_aborted": [
+            {
+              "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
               "resource_type": "document"
             },
             {
@@ -400,213 +444,62 @@
               "resource_type": "image"
             },
             {
-              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
-              "resource_type": "image"
-            }
-          ]
-        },
-        {
-          "page": "directory",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "Trinidad and Cheyenne exact federal source-name queries each return one linked profile; keyboard Read First focuses correct H4. Tataviam has no inventory match. Empty results preserve the absence limit and expose the researched-profile recovery link.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "Nations hub",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "The real directory recovery link reaches hub Find. An accent-optional Tataviam query finds its own named profile; keyboard activation opens that exact profile.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "trinidad-rancheria-us-ca",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "cheyenne-and-arapaho-tribes-us-ok",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "7 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "fernandeno-tataviam-band-mission-indians-us-ca",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "4 exact canonical facts and source/check dates. Cheyenne preserves three October8 clocks; Tataviam has no assigned recognition status.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "Paths",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "Private Pukúu case, exact citation, distinct1974/2000 stages, nonprofit/government separation, personal-record and current-service boundaries, keyboard action-brief navigation.",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          }
-        },
-        {
-          "page": "Theater",
-          "viewport": [
-            320,
-            844
-          ],
-          "checks": "244 records/31 full films; Aluna Full Film + Watch Here filters, exact runtime, provider-thumbnail URL/alt and English-ASR-only limits. One exact YouTube-nocookie ready iframe retains full-film Play-first autoplay=0 and inline playback configuration.",
-          "iframe_src": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
-          "filter_mode": "disclosed through actual keyboard/touch toggle",
-          "layout": {
-            "viewport": 320,
-            "scroll": 320
-          },
-          "external_requests_aborted": [
-            {
-              "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
-              "resource_type": "document"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-              "resource_type": "image"
-            },
-            {
-              "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+              "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
               "resource_type": "image"
             }
           ]
         }
       ],
-      "source_pins": {
-        "nations/directory.html": "d6e0dde3867f312590d6947b0c7f38b431df8d1e0bd86dda2b601ffcfda327c6",
-        "nations.html": "20277e685306d3a915c2d436e43dfc596157943419045599c02f2b5c66ecd1e7",
-        "nations/trinidad-rancheria-us-ca.html": "4fd53d55212f8cb16fc0577a44f98bcaf8ebea2b11a5c22e4a45a6aca5994c5e",
-        "nations/cheyenne-and-arapaho-tribes-us-ok.html": "4607bc8c911fefefa986a405ea5791782b5515929e169c74404b5da5e17ca499",
-        "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "a2d686304b97a6c94d752de3c6c9e42ea09ab28d2b1b8e5575eae4f4ab169386",
-        "nations/paths-to-action.html": "3b50cfc408616e02780acf779a635681a8d17e37a7d93cac9846705ebf53f43e",
-        "theater.html": "d4355dc7d4867533ee77ab9ed16fcd33ff4d131bcfe271a12fff178615ef01f2",
-        "vercel.json": "2e40d244d49037a7a96332f9a5ac02da441f6452856ac78647f270beb7a2283d"
-      },
-      "horizontal_overflow": 0,
       "page_errors": [],
       "csp_violations": [],
-      "missing_local_assets": [],
+      "local_404s": [],
       "external_requests_aborted": [
         {
-          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "resource_type": "document"
         },
         {
-          "url": "https://i.vimeocdn.com/video/793769401-482f98afe4dca412b286517dfc2b12e15377e5c35313211e5d3c0a136848c83f-d_295x166?region=us",
+          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
           "resource_type": "image"
         },
         {
-          "url": "https://i.vimeocdn.com/video/878727810-9da926961bafee6576f4e02e35a53768dd9798ef5e7fa0ff7bc037022b1ec0ee-d_295x166?region=us",
+          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
           "resource_type": "image"
         },
         {
-          "url": "https://i.vimeocdn.com/video/1765518300-95babcb62c336146bede48fb373c6507af1baee291a94dbdb2303c024d168782-d_295x166?region=us",
+          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/lN46NWkEFow/hqdefault.jpg",
+          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
+          "resource_type": "image"
+        },
+        {
+          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
           "resource_type": "image"
         },
         {
@@ -622,35 +515,27 @@
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "resource_type": "document"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
+          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
+          "url": "https://www.youtube-nocookie.com/embed/7Zeond28-UA?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
           "resource_type": "document"
         },
         {
@@ -686,233 +571,841 @@
           "resource_type": "image"
         },
         {
-          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2022/bill-reid-remembers-XL.jpg?w=704&h=396",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/NeJBg0zVuPQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYfyA4KBMwDw==&rs=AOn4CLDuFw4Cq16tetGi8_B-UPWNXlBVYQ",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://www.youtube-nocookie.com/embed/ftFbCwJfs1I?autoplay=0&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fzotheos.org&cc_load_policy=1",
-          "resource_type": "document"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/SWqC2WRN2S4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBkKGUwDw==&rs=AOn4CLCcTOja_pFMMiPHUolENfqZ7_Rq5A",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2016/angry_inuk_XL_pGHqiKY.jpg?w=704&h=396",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/Wr-jackHWCw/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/ftFbCwJfs1I/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/RhDdAONYZeQ/maxresdefault.jpg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/BitgVgGlsXk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYDyBlKFswDw==&rs=AOn4CLDHuTf8pJRK_iBOrkOCW4XKefqSlg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/cqa74JV8xVk/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBSKC8wDw==&rs=AOn4CLAO6Vco5MLfpZk6frCPe1VuB6ViVg",
-          "resource_type": "image"
-        },
-        {
-          "url": "https://i.ytimg.com/vi/lIjstCO22VE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAK4CIoCDAgAEAEYciBEKCwwDw==&rs=AOn4CLBQ_HtREGdz62uThBh0wyS747qyqA",
+          "url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
           "resource_type": "image"
         }
       ],
-      "external_image_requests_aborted": 42,
-      "external_non_image_requests_aborted": 3,
-      "visual_critique": {
-        "screenshots_inspected": 6,
-        "widths": [
-          390,
-          1440
-        ],
-        "pages": [
-          "Trinidad profile",
-          "Fernandeño Tataviam profile",
-          "Pukúu Paths case"
-        ],
-        "result": "Historical stages, source links, actual check dates and the long Band name remain readable at both widths. The ñ and ú characters render without substitution. Phone paragraphs and citations stay within the reading column; desktop navigation stays separate from the case. No material visual defect was observed.",
-        "capture_scope": "Six temporary viewport captures at normal reading positions below the fixed navigation; all were inspected and will be removed after review."
+      "source_pins": {
+        "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+        "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+        "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+        "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+        "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+        "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+        "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+        "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+        "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
       },
-      "limits": "No physical devices, audiovisual playback, loaded provider-thumbnail pixels, account/region eligibility or caption timing/accuracy were tested. External iframe/image requests were intentionally blocked; DOM configuration does not prove playback.",
-      "person_review_claimed": false,
-      "nation_endorsement_claimed": false,
-      "visual_reviewed_at": "2026-11-24T20:12:26.676350+00:00",
-      "harness_corrections": [
-        "At desktop width the existing responsive layout exposes the filter panel and hides its toggle. The final harness uses that already-visible panel and the actual toggle at both phone widths. No production change was needed."
+      "source_pins_after": {
+        "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+        "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+        "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+        "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+        "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+        "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+        "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+        "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+        "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+      },
+      "limits": [
+        "No actual video/audio playback, remote thumbnail appearance, caption quality, geographic availability, account access or physical mobile-device result was established. All external provider frames and images were deliberately aborted.",
+        "Viewport sizes are CSS pixels in desktop Chrome, not tested phone hardware."
       ],
-      "player_policy_observation": "Aluna uses the existing hold-full policy: one YouTube-nocookie ready iframe, autoplay=0 and playsinline=1. Scrolling it into view preserves the normal Play address. English auto-generated captions are the only listed track type in the viewing limits; actual playback, sound and caption quality are unverified.",
-      "temporary_screenshot_pins": {
-        "fernandeno-tataviam-band-mission-indians-us-ca-1440.png": "546a663a3f2b7b39544c45bdf019f0fe477ba497e57bad95da52f28ddaadca1e",
-        "fernandeno-tataviam-band-mission-indians-us-ca-390.png": "879c355f25b638ba911b7942bf07fc498eef11d0c98efaf76995362b657fd2bd",
-        "pukuu-paths-1440.png": "55f4e4918845228da9720aef4cf2a01a0df49ac2cb747ecdb67009dd9f1a7b0c",
-        "pukuu-paths-390.png": "ef17e6e80f5d868040c87c66b489492be932b97fb479d66e9f7e6d1d14fb4732",
-        "trinidad-rancheria-us-ca-1440.png": "242b2791b6ae54fa24338d246c2c47a1b6d0733670eddf8ec6e09568d7aad4e1",
-        "trinidad-rancheria-us-ca-390.png": "dd5fe3c2e2c926c4a90ff4d4edaecbd0859ad7f207dd6d47f69645a8f379a7f2"
+      "human_review_claimed": false,
+      "person_review_claimed": false,
+      "nation_approval_claimed": false,
+      "visual_reviewed_at": "2026-11-26T02:57:29.125260+00:00",
+      "visual_review": {
+        "normal_viewport_images_inspected": 6,
+        "scope": "Two profile tops and the worldwide reader-controlled Paths step, each at1440 and390 CSS pixels. Normal viewport screenshots, not stitched full-page images.",
+        "findings": [
+          "Chicken Ranch’s long own name and aliases wrap inside desktop and phone reading columns; its own-site link, record navigation and land section remain readable without overlap.",
+          "Cheyenne River’s heading, aliases, own-site link and record navigation fit both columns. Keyboard Facts navigation displays a clear focus outline on the section heading.",
+          "The worldwide chapter separates its three scope lanes. Desktop guide navigation remains outside the reading column. The phone ICC preparation paragraph is long but wraps legibly inside the single column, with no clipped words or horizontal scroll.",
+          "Sticky navigation and visible focus outlines remain clear. No concrete layout or functional regression was found in these views."
+        ],
+        "temporary_image_pins": [
+          {
+            "filename": "chicken-ranch-rancheria-us-ca-1440.png",
+            "body_bytes": 74417,
+            "sha256": "6b8c18d65447810e91e1849948f6ed12b182c089aa54a9d94f33f50bd89ffae8"
+          },
+          {
+            "filename": "cheyenne-river-sioux-tribe-us-sd-1440.png",
+            "body_bytes": 79986,
+            "sha256": "3e81f5a0f16ef1ec3820697d312a65a781093e98e7a920a4ece08858e2327000"
+          },
+          {
+            "filename": "paths-worldwide-1440.png",
+            "body_bytes": 184862,
+            "sha256": "13cfde4fb1d566afa5fb9a44e2dec6ef9dda53d21a9f7fd7311a672cd1f00392"
+          },
+          {
+            "filename": "chicken-ranch-rancheria-us-ca-390.png",
+            "body_bytes": 47226,
+            "sha256": "e2fdb9a1361e4c657b17b7fb87cbeccf5b7fccf4c882f06c97f5861b022224f3"
+          },
+          {
+            "filename": "cheyenne-river-sioux-tribe-us-sd-390.png",
+            "body_bytes": 47202,
+            "sha256": "80928ccbd829d1cd57019904213bb5001c41a3096cdaa4a285c50c85062b96f0"
+          },
+          {
+            "filename": "paths-worldwide-390.png",
+            "body_bytes": 83405,
+            "sha256": "6bef6594c6d9d7dad8c48c539cc2662cc3306c183e64dc82d454b78ef0596548"
+          }
+        ],
+        "image_retention": "Temporary local QA images were inspected and then removed; no source media or remote thumbnail capture is published."
       },
-      "record": "data/nations/research/batches/2026-11-24-browser-review.json",
-      "record_sha256": "971acd08da778942d9992518adfc959943555c60351bc478439693d06d8798a6"
+      "external_abort_counts": {
+        "image": 27,
+        "document": 3
+      },
+      "external_abort_total": 30,
+      "production_edits_made_by_reviewer": false,
+      "harness_corrections": [
+        "Initial assertions compared CSS-transformed uppercase labels case-sensitively. Adjusted label inspection to case-folded text or underlying textContent; no website change was required. The final complete15check run passed."
+      ],
+      "reviewer_agent": "/root/cheyenne_recovery",
+      "source_pins_after_visual": {
+        "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+        "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+        "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+        "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+        "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+        "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a",
+        "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+        "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+        "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+      }
     }
   },
   "review_pins": {
-    "data/nations/nations.json": "574a8631cc9fc6f724d04ff139fc83b98c0eaa980c44628b649fda89bf185cec",
-    "data/nations/nations.min.json": "fa901e69386e02b4f566fd989c72f8cd6ba268420cd4114ceae814adaff8af77",
-    "data/nations/pathways.json": "893f8813a32e0d0202a19c313f04a01e22a8deb3471b381c84664630fe15106c",
-    "data/nations/research/batches/2026-11-24-browser-review.json": "971acd08da778942d9992518adfc959943555c60351bc478439693d06d8798a6",
-    "data/nations/research/batches/2026-11-24-capture-cleanup.json": "d8ce8b868e1156836cfd0bce99f2d966043a0fde04bf6b906260a3472d953ebd",
-    "data/nations/research/batches/2026-11-24-cheyenne-arapaho-independent-review.json": "b25c269174369bbc901941dbdad2128234cd567515dcc8608c36f45e90ed97e5",
-    "data/nations/research/batches/2026-11-24-cheyenne-arapaho-own-history.json": "0580bc3365db39c3592452c543f61511905dffabc5fb26c938879ea619d5a4fa",
-    "data/nations/research/batches/2026-11-24-tataviam-independent-review.json": "22c2d45b484b11f963dd54f96ed095192632f9d45b9c57429f2e0b5bc49c311d",
-    "data/nations/research/batches/2026-11-24-tataviam-own-history.json": "e8b3ce7a583a6cec1614174192166c51b7bef54eb8b71b86533dfd092a81595f",
-    "data/nations/research/batches/2026-11-24-trinidad-independent-review.json": "c731b7696e203c9afbf0dd1fe1e34ca8355c8120ad36921a9daf2ed9f2385f5b",
-    "data/nations/research/batches/2026-11-24-trinidad-own-history.json": "505bc1114f98841ad7416170aaf995e4a268dd95b2eda2f444188151ec5fda5f",
-    "data/nations/research/coverage_queue.json": "25b94337a6b431536e87e59513451e053539cbdcb2239917b3ef647eb3d6e6ef",
-    "data/nations/research/directory_sources.json": "2a7b2e65fd0f904ae7249dbf2b80ed4cadc0ee0118429eeaf440cde7dfa97ae5",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-administration.receipt.json": "1bd3bd4443205d7644e18b5986f0c11ec9fcf51e1a3a8412960b9fc3e8e41d48",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-cdn-robots.receipt.json": "fabeacad23351f4c699dc611d7b297e0a0f897024ab7481de48d0bb0a42b6f15",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-constitution-page.receipt.json": "25c33e601938970b305494ecb5d766411d754d4bfb51953553ee57b265eb6066",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-council.receipt.json": "05f5c28061f2aa0c57184ce3aaf1e731ef1f2d8407a95e93d1c268af264f2273",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-data-centers.receipt.json": "128815095c06d1f15174b31aaa2d9197f26679f096eca3f07d863d81f6e29ff4",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-el-reno-transfer.receipt.json": "8146e17d7ae25f007f2322c68e9617c5127081bff60969e4e41547d0d2f9f0e9",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-federal-robots.receipt.json": "21def1c4763f13181e13be7d84b663669c0706ecfbd7cf8ae0b209640a034c18",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-federal.receipt.json": "88b2889229423880866e824151ba8ca91e6d435a3cef617e00ce72985f4e8b70",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-fort-marion.receipt.json": "ba2f32f87af55f2297906eb4548f29f65802d4a089edfb89f325ed5434d16b04",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-geary-agreement.receipt.json": "4d603ebadd287613228b0c3bbdf28e5ec9f79da0ab51d579117a56d67550dd1c",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-government.receipt.json": "5a4610dc1c66a68e0f05a14e63247156f80eff5cda376a65fbda0f6f91ee2f78",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-home.receipt.json": "ac99b83c344c221f1dc75070b47fd155accfb3adc7596bd159370c3c2f379aaf",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-identity.json": "2e04a3867676cd3d4d901bf4e232d720097225e69922ad468ad7dcdc24ccd572",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-legislative.receipt.json": "71b6fe100aeca5cf883eaa5a63c8c7f0924b5bb9bfd7c6a899cfbe41655567b7",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-own-robots.receipt.json": "65e70a7d6841c62284cf94049e7f5d0b37d4991434d09ca09537f09295c69425",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-records-management.receipt.json": "842129e3076f73e64ba26f8f583ee456cd7d03d87997f0fa649da70cc8ec829e",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-sitemap.receipt.json": "4fb95539abe4dacb8fddba36a8f230f9bce88a2cc2986c04bc7c0fe6d4d12168",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-tribune-own-page.receipt.json": "c86a0dfa6b62c3e5eb954e96003513d51e16a97a92108ecb7d89c2e31a9a262f",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-tribune-robots.receipt.json": "a63c70c2737cfca1a12158c9c6a626d64a0a18a7c7fc2b82a3492e579019d610",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-trust-success.receipt.json": "23f0920d959827a6010cae5b4dd4fba7c307dea26483cdf432ff823f21957e36",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-trust-transfer.receipt.json": "f036d230e217eb7138f8da163d2739ebc17d344a5fca6a649bec9172a062edff",
-    "data/nations/research/receipts/2026-11-24-cheyenne-arapaho-uploads-robots.receipt.json": "1c75629968f7b8ef76c4aeb5b5457b88850b06ce90855fd30a71bd21ad4a7ef7",
-    "data/nations/research/receipts/2026-11-24-tataviam-government.receipt.json": "a76afb7c58f1bfaa40da49c82bda9f24b55e8afa850851532a82cf16e401a132",
-    "data/nations/research/receipts/2026-11-24-tataviam-history.receipt.json": "014b54df3c62e2e4ba66f28728928ea8055559f0bf36904c3e8cf1823db96e68",
-    "data/nations/research/receipts/2026-11-24-tataviam-home.receipt.json": "dd02ae9339fdb49aee5f1b5f7bc45efec2ae79fffcb8e15f75fbed1519ecfcec",
-    "data/nations/research/receipts/2026-11-24-tataviam-identity.json": "9940d5f2809224a772205392fb24b1d1f8e61bc7e4c5ad3d2455c9c72678326d",
-    "data/nations/research/receipts/2026-11-24-tataviam-recognition.receipt.json": "9d41733c61fc6fa60f1d6059041af225356250f4846d96c14bc17b61efdac250",
-    "data/nations/research/receipts/2026-11-24-tataviam-robots.receipt.json": "409fabfcb18457b3138db94a30e8f2d0ae75e74a86689430480a439f1825ee18",
-    "data/nations/research/receipts/2026-11-24-trinidad-about.receipt.json": "73580d63fa3e84181603d285a63cfe8966d3ec8a520576e39d9a01c7e192ecbd",
-    "data/nations/research/receipts/2026-11-24-trinidad-council.receipt.json": "52ac77842e60482fe07137493b80dfff4e277aefd216ef4e8bc49351a16ebec0",
-    "data/nations/research/receipts/2026-11-24-trinidad-cultural.receipt.json": "acb515234ded10937efb9fc53a50c4a2653c8b51e5db735ee5b8942b44d8bb87",
-    "data/nations/research/receipts/2026-11-24-trinidad-environment.receipt.json": "adae64ea36606012bbb9efe80987f477aa492e9ae2cd7207a65b5f25f91d1de3",
-    "data/nations/research/receipts/2026-11-24-trinidad-federal-robots.receipt.json": "13415619af257cb256df6ac1688cb40991d75c1d45cb2b833d70fb8300a534bc",
-    "data/nations/research/receipts/2026-11-24-trinidad-federal.receipt.json": "266dba3fc53b02d97c09fbeeb6b591b9c886d9b6a4db523a0f3c1dfacde82394",
-    "data/nations/research/receipts/2026-11-24-trinidad-home.receipt.json": "7361806faddf1b1542099feb0925e91cc3e50a711611a400159a57ab1ec1ddd6",
-    "data/nations/research/receipts/2026-11-24-trinidad-identity.json": "fc0bffcf5a6c841bcfb9c7583770e02ffd0fbd1df2d1e442a3d1ff372b3d5bc0",
-    "data/nations/research/receipts/2026-11-24-trinidad-own-robots.receipt.json": "2e60c3361cf2a4278b766d8e8a414ef36343ffcfdf2399716faab1c8d4355168",
-    "data/nations/research/us_federal_directory.json": "dda45c227eab9a5f3a23962d1ddb5af8461b704bd97d25cc925ae39fca087730",
-    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.raw.json": "4dfe0530a6d29ae857a7c9d6fb9fb2f735b569da7b0730f7e79fdacc3cdfa51f",
-    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.respect.json": "dc85fa199e7231439152e7f405ab998972d5cf0b3f063bd46af375521b2c170d",
-    "data/nations/sources/us-cheyenne-arapaho-own-history-2026-11-24.verify.json": "b28861d83d6e43290664c4cb97d67896e764dea0bb376e8f9524d1ff6d104dd9",
-    "data/nations/sources/us-tataviam-own-history-2026-11-24.raw.json": "3700ad91822eed731eb3357e90b9547a5c92c7413ee02fbc313f4ecbd13e26d8",
-    "data/nations/sources/us-tataviam-own-history-2026-11-24.respect.json": "2a28dac858c7824ec2f22c9dd06251bc55d13495176e5fee0bcc29e59e1174a8",
-    "data/nations/sources/us-tataviam-own-history-2026-11-24.verify.json": "89ff6d8e6025a6d48aae6c479aea147f899d1279e5067449277e5b7ed8a3efb8",
-    "data/nations/sources/us-trinidad-own-history-2026-11-24.raw.json": "3f8dc81489af6078338f84d73d8cbf54e218aabf51f4a14d331e60ae1c31a0c1",
-    "data/nations/sources/us-trinidad-own-history-2026-11-24.respect.json": "f741337dd5be31241d1f408f469132b7d3a502a8445e38807dc9013e58eb1597",
-    "data/nations/sources/us-trinidad-own-history-2026-11-24.verify.json": "003e2cc99008c46c96a00e7a7059ef8ca29d96b441c55599464fb9ab91141870",
-    "data/theater/films.json": "bd00c5c5bea7b7c83f52a9825238e44d260967850f138c7247d52987ba99dd0a",
-    "data/theater/research/batches/2026-11-24-aluna-collaborative-robots.receipt.json": "e7d0e3d8ecc9d73086ca7ef0ebc5d854e801a7d5fdf93a2e2397b82b3203d4e0",
-    "data/theater/research/batches/2026-11-24-aluna-collaborative.receipt.json": "e17af0f32997ed579967d09a28f3d0da9cffd25e831b41a4d99be4d3197c9879",
-    "data/theater/research/batches/2026-11-24-aluna-image-robots.receipt.json": "3c3dd938686ae90582b2e2e686432ffb4edccfad85aba7c107bfc23ded14872b",
-    "data/theater/research/batches/2026-11-24-aluna-independent-review.json": "cda4578fc1108cca6866914eaf15a45043c4d0b61500f028c92f5eb58a3d0162",
-    "data/theater/research/batches/2026-11-24-aluna-own-credits.receipt.json": "b091650bb9f3eac515e2d677529b9a1f5d9b1425daabee6c5e0328cc29b3853c",
-    "data/theater/research/batches/2026-11-24-aluna-own-home.receipt.json": "3a24581a77825ef9ee8bfb66e1b5c5df01027c685399944522b66a21ca2b8f90",
-    "data/theater/research/batches/2026-11-24-aluna-own-robots.receipt.json": "cce581e72598dbd7b9c5f4731ee49cedf8b11fac2b69e3c45f8ddcf1802ca709",
-    "data/theater/research/batches/2026-11-24-aluna-thumbnail.receipt.json": "8dd9e090dc86b0adfbf4b3cfd0dea7244540f369a8b4c3e892beeec2fb8b11fa",
-    "data/theater/research/batches/2026-11-24-aluna-trust-films.receipt.json": "25316059bedeef0c82a2dc46ecf7726f69fe4c383b8e37127b2abb571fc09970",
-    "data/theater/research/batches/2026-11-24-aluna-trust-robots.receipt.json": "47029379e203a6c325c77e2559a91719a3fe18141df3b53fca1f96a5f7e65886",
-    "data/theater/research/batches/2026-11-24-aluna-youtube.receipt.json": "c8c5911275ff987a054326f4273a6c90cec61d7d5bb9165182cfae90f6cf16bd",
-    "data/theater/research/batches/2026-11-24-aluna-yt-robots.receipt.json": "a8e9696ee241c8efba796ffe84152f78c7db4a26cb553174c2e3a8c4c00afd2c",
-    "data/theater/research/batches/2026-11-24-aluna.json": "aca9f22c80c1f2a61285fe50fc90b7f859f07cc08d96113017fe84abc5f052bf",
-    "data/theater/research/batches/2026-11-24-apache8-aapb-record.receipt.json": "c8b49c2b38dea0b42b1e3d2af857a93ccbb6910de46f62209da6d525a396e3fb",
-    "data/theater/research/batches/2026-11-24-apache8-aapb-robots.receipt.json": "615d75a8b38e585ac61bcd685c25b93bd34c5fff57cbcc15c13b99ab8de5ea15",
-    "data/theater/research/batches/2026-11-24-apache8-vmm-robots.receipt.json": "9e3c1f8d1169745e3c323934e4f9ec12abec3e330dfb15f7fb85a1508961220b",
-    "data/theater/research/batches/2026-11-24-apache8-vmm.receipt.json": "79a1a74253891d50987756b35c745e3a9cdb6a201742f987704e903a863b2e13",
-    "data/theater/research/batches/2026-11-24-apache8.json": "7fb79a0f21e249ee2447ad8f584230f8c3862470278f26be7029df60b350d3cb",
-    "data/theater/research_queue.json": "0e7fc985ab183e5ce60bc12cf31a77ff490d6b945ecab2c497bed795ef4c5d3e",
-    "game/data/n-70baa8cfe07a5a44dcfdd4c5b64533b4.json": "70baa8cfe07a5a44dcfdd4c5b64533b48f8f2b2ec5b20c2aa3d96b0d45454968",
-    "game/data/n-806a8a00e211a392f6b9f137bd39bb72.json": "806a8a00e211a392f6b9f137bd39bb7251723f5a3142347c3421418c9bb46c4a",
-    "game/history.json": "0308a8cb2f559a79c51ffebaef48e86a5cda74e0ef274abb4a39843064258286",
-    "game/nations.json": "7e83bbc1301b3003011ecbcb92678552a8dc2d0199104ff6baa7245c58fcb5c7",
-    "index.html": "2ed21ad9bb9966d3cc2c2badf1b31551e2bf6e0472252855cc5eb7c4c4aceb8b",
-    "nations.html": "20277e685306d3a915c2d436e43dfc596157943419045599c02f2b5c66ecd1e7",
-    "nations/brief/children-and-families.html": "a533292b3377278f3c62ae7cf1b291fc3acff3257732da17d9663243d5d64a5a",
-    "nations/cheyenne-and-arapaho-tribes-us-ok.html": "4607bc8c911fefefa986a405ea5791782b5515929e169c74404b5da5e17ca499",
-    "nations/coverage.html": "de07308a81ab84183088420033e8b9488890f73f5774e140b446d10cd2bc48b7",
-    "nations/directory.html": "d6e0dde3867f312590d6947b0c7f38b431df8d1e0bd86dda2b601ffcfda327c6",
-    "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "a2d686304b97a6c94d752de3c6c9e42ea09ab28d2b1b8e5575eae4f4ab169386",
-    "nations/paths-to-action.html": "3b50cfc408616e02780acf779a635681a8d17e37a7d93cac9846705ebf53f43e",
-    "nations/trinidad-rancheria-us-ca.html": "4fd53d55212f8cb16fc0577a44f98bcaf8ebea2b11a5c22e4a45a6aca5994c5e",
-    "static/nations/coverage.json": "ef8dbe2f62b18dee17905841a7decd8b128a30cf372b1f55f2fda467737330b2",
-    "static/nations/index.json": "fa5ffb65b29cd20baee9d1b564d15f6c8b08ca2f2800a8d92251305b06794c21",
-    "static/nations/us-plains-midwest.fe88a957.json": "fe88a95735610e7f3f029037e7874a45f3a060a5d22b5ade0d66e287189a3b79",
-    "static/nations/us-west-pacific.db6b68d5.json": "db6b68d55c630f1f8afca9b3615757d35d02e660c470ab3dbbc104e236075edd",
-    "theater.html": "d4355dc7d4867533ee77ab9ed16fcd33ff4d131bcfe271a12fff178615ef01f2",
-    "vercel.json": "2e40d244d49037a7a96332f9a5ac02da441f6452856ac78647f270beb7a2283d"
+    "data/nations/nations.json": "0b90e1eae911c369b0e506a783f0969d9c4e47849170661cf5f7a3d86636aa6e",
+    "data/nations/nations.min.json": "6ca96981a16d10bfb09ca57a8ceb145399795c89d7729b1416f96c7f911196c3",
+    "data/nations/pathways.json": "b4a1c112332918f81d821579a87d87ca4f8e9a0dc2289ee6b0a44ca4329fdb85",
+    "data/nations/research/batches/2026-11-26-automated-checks.json": "bb85352ce37976cd4a3b12bf1e5aa3a613a9460ab83bbff2c8066eb0df352001",
+    "data/nations/research/batches/2026-11-26-browser-review.json": "16f9c461220f33f5a410b2a3de9605ef753c8234c0f4157725731ad93ffbfd2e",
+    "data/nations/research/batches/2026-11-26-capture-cleanup.json": "ab79ccd921d4db6256f223e313fd11648743ef5995bdc319e296b530fb09ca87",
+    "data/nations/research/batches/2026-11-26-cheyenne-river-identity.json": "126242872f8e1ef68a762c227a3cd43af40a9285c494d13f577ba0aaee555eff",
+    "data/nations/research/batches/2026-11-26-cheyenne-river-independent-review.json": "8094f92d0ea528a067ee757e0e32f4bfbccf8538df0e721c8c74e070f95a8ce6",
+    "data/nations/research/batches/2026-11-26-cheyenne-river-own-history.json": "a4a8405a0d21aba57967b8314a4e3eb860b30074c9e6a3dcf7125569e7cae73b",
+    "data/nations/research/batches/2026-11-26-chicken-ranch-independent-review.json": "44abf4cd334bb642655f4965242b7e8fc63e94961a0ecf7cfce1bdd5856eabb1",
+    "data/nations/research/batches/2026-11-26-chicken-ranch-own-history.json": "c122ed0e39b39a9cefd643f6c05d8c98a9dc6f5a70e22bab61442279a5cbaf6e",
+    "data/nations/research/batches/2026-11-26-icc-cross-border.json": "75e4888fb114c6cdc36568b4285cf5229339b1ece2589a24d32efbb9740b8235",
+    "data/nations/research/batches/2026-11-26-icc-independent-review.json": "fa8ae9bfbf8e3e27cab9303f855da12c2121fda549cded1dc5715291de430059",
+    "data/nations/research/batches/2026-11-26-integration-audit.json": "bae052a143829b577ce68e609bc7461c801fdedda52e216c6b3209b1989121a8",
+    "data/nations/research/coverage_queue.json": "5e245a18b0dff51bfca199e19294c7b16da4ed2910e8c341fd0d83e4845d4eb8",
+    "data/nations/research/directory_sources.json": "15889f8efd6dcabed67874336de2a9bb44ab0647f1e95256a86cd706ee47988b",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-central-records.receipt.json": "6c8988f22572c64983abaa119d60d25eb4bd9a64c78b4ea42658f997b7343b36",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-constitution.receipt.json": "eca7fd40617333962b00e7e48baaac2c587f95f402194aebf71f90c1feba2865",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-cultural-preservation.receipt.json": "671e5ff2e7fab52001d4b32c6f54f9f1363887783f67ecac95c31e77136898e4",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-education.receipt.json": "1e677a641f16641e72caf2a42344eb5c8987407fc463ba14f4c507b187f9cd61",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-history.receipt.json": "12c1de405b2edc6b0c24b8fc62a1dfe666c6da4c4ed23dd3f06b56ba12cc75c6",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-home.receipt.json": "a459c834659c41757780df3007a970dbcb80794ef51aaf01228fedffaba904b5",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-own-robots.body.txt": "e8241cca214bc8bd430fb9bdaf65d89c7a6290549e283741b92a17130343b7c8",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-own-robots.receipt.json": "baaf0f1f16d52d40b5d329041141ae228c817e7ebc47b3bfea1469bab761ed21",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-programs.receipt.json": "dc0c146e473e5c8d1ac2032aa19deb232e78ff6bfb02b5fe18db77ff8fdf5b12",
+    "data/nations/research/receipts/2026-11-26-cheyenne-river-teca.receipt.json": "76b1018c1501b8c997fb3f8d3fa591e4d13e4ebee7a8668e4ceea78094b17712",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-about.receipt.json": "f0812b353c385a3df8ac3c6229f5b0269fb5b082ce1d515230d1492b5b6f4c7f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-ecode-robots.receipt.json": "bca4952cc8f7048ddbe3a9073c1a570136917331e3a25ca9717446f128937a3b",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-epa-robots.receipt.json": "d74cfc0d90a3661ae8eb62f3be9889fac2b52650b3c98033a0e5f951c4f1d9da",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-federal-robots.receipt.json": "417fc617c3ce7c38123850e183d87998903524693a159a2bc6a17e00afc0065c",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-federal.receipt.json": "93224b31f5c9af34841f2c3b0c4a4cf0f5e4bbee61648a91c820ff3a8c94420c",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-fellows.receipt.json": "9dec536a122dbdb4d7c6b72dc9e161d6d944b98ccfbe8066369f4a22e4fe83fc",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-home.receipt.json": "6d2f45bcb3f25a955a1436a1237ae5440eba2ba55a981b82213c64be5563273a",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-identity.json": "6d8fb1e398e1d3008f69548472fce6052545df34f2423264252d3fba5e6ecf4f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-own-robots.receipt.json": "5e4ea16c15017343645cb988cad67e39d43cd8430a5c6f74130c264d0198ca1f",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-root.receipt.json": "61badc0ceb7184c9ae21733e8e54074baed65ba1693346790ad9d11f4f253d99",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-sports.receipt.json": "447faa72f08f4bb17bf02cf1ec6f5159d3ab236e30ab80288c85ea7891918495",
+    "data/nations/research/receipts/2026-11-26-chicken-ranch-wetland-plan.receipt.json": "669e6c0434b95156d97afd6b398715d1ed0f81b2a093cf4e85926b57df392f78",
+    "data/nations/research/receipts/2026-11-26-icc-alaska-robots-failure.receipt.json": "89f76268f601b3bfa2389a1d0c424e4c355bd103665001fdb20a13e7e4eed2f4",
+    "data/nations/research/receipts/2026-11-26-icc-international-about.receipt.json": "8041b3ad2369abfa0dbfb721fae34837047c524303ba0c7168c9463747e57922",
+    "data/nations/research/receipts/2026-11-26-icc-international-robots.receipt.json": "76608eba85e5244c05cb20e2be9bf6ffc91a5b651a664148a9a595c31a18dbf6",
+    "data/nations/research/receipts/2026-11-26-icc-international-structure.receipt.json": "d23ec5122bf84ed4d29c43c0507f9f766dc25dbd4486ae67b80014c3515aa0a4",
+    "data/nations/research/us_federal_directory.json": "536073e81c7b09245bca68683643c45d8f86eb6f69fdb444773a5949048bfc27",
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.raw.json": "7bac910b3975b30bb88a5f2f51755c4aa605dd3d9a487a9b31bf281dc4271262",
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.respect.json": "72f90bba3bee2849f3aabd596cc4482cd879d7d0613010d87a768485b38f40ca",
+    "data/nations/sources/us-cheyenne-river-own-history-2026-11-26.verify.json": "fd100948a033455af0270ad47e6df83447cedcd5e5493fe3b62a366c83738864",
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.raw.json": "fcfbdf1828b4d5cd0a4fd5af72bb6c9733977f3be921447d6ac441e24cc4727d",
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.respect.json": "d8cd43a53fa8ddee0f5b31b998deefaf6b35736430286199a83332124372c3a5",
+    "data/nations/sources/us-chicken-ranch-own-history-2026-11-26.verify.json": "1fd271d3577417178690216f0e3e60e2bf667d4e5cedea980eac976a3cf06525",
+    "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510",
+    "data/theater/research/batches/2026-11-26-kumu-hina-image-robots.receipt.json": "720ff11ee61326413a9a821d6c514f9a34e1490acf6dd9de0737843f5f84a718",
+    "data/theater/research/batches/2026-11-26-kumu-hina-independent-review.json": "b0014ff49f1beed11ba656a3095d0f4b78c687369fc083fcf05ae02c69cb60d1",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-about.receipt.json": "55c4ed0f9304b24aa9cb9b662c366e315319e306fcccdd8e2a52a8b70bca6e21",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-embed.receipt.json": "04f2921903bbae9bbfaa1af95f4624b4294dfcffda76802b29e4aa72cfeda695",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-filmmakers.receipt.json": "19e3e48ad134493ad39e6d5465590d0edebdfc84d85ab4ca13bc74b2c001b675",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-home.receipt.json": "778211b218ef2120486941866cc06f0026da06c6db23567ab75639cd5bdf778d",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-robots.receipt.json": "6577d3fe81077db2741be59d603743c67b23d5ced92247988240a0cb120df54b",
+    "data/theater/research/batches/2026-11-26-kumu-hina-pic-film.receipt.json": "39b6c52de06bb92dc5b1b0968603ff2581026cbdb0623848b7e6d0b041acb5f9",
+    "data/theater/research/batches/2026-11-26-kumu-hina-pic-robots.receipt.json": "6f9ee784da860e4c8cf1940a56e4d778cb2dd670d859cb68b24092e52060c812",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-film.receipt.json": "713e21bd63619a9e29e21002056c35aa8717e8484c8494e528fa9af28a101d22",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-home.receipt.json": "b06f0054b2da14130b4777e6ec241014a438fd673cda11c1a023572b5756c659",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-robots.receipt.json": "b921fcbda84cb3483d0d9855828fb5c0a94d003979111a44903f034a4b66d085",
+    "data/theater/research/batches/2026-11-26-kumu-hina-thumbnail.receipt.json": "cc2166c64223cdbcbbd4933dc347cfbfa8be7df3e70642d5d513b5c9cd31c49c",
+    "data/theater/research/batches/2026-11-26-kumu-hina-youtube-robots.receipt.json": "2462f9d428efdf98c2366e5d6ec1d166bd356002617112b6ea64c4fe5ef5b441",
+    "data/theater/research/batches/2026-11-26-kumu-hina-youtube.receipt.json": "1ed1e5602159b43250ccd5ff51a95b45c7d18c0a835e79f166e2669ac646160d",
+    "data/theater/research/batches/2026-11-26-kumu-hina.json": "2b12d4cc2bf3d70e03dcc985c1ec60bd9e4469462a90a3e8a07e3b6ae7c09cee",
+    "data/theater/research_queue.json": "c078fdffe3687cdab7b37489bd6c0dee0ab9560cbd2bcae8a53af96e0c8e9041",
+    "game/data/n-19657ffe48055f7914f0a68ebc2316cd.json": "19657ffe48055f7914f0a68ebc2316cd4517d4a401b2bc17ca75debd8cad7415",
+    "game/data/n-9c0e704fae0b55fbb7a83c5ccbecbeab.json": "9c0e704fae0b55fbb7a83c5ccbecbeabcca72f54bd42721030e90007cd2b87cd",
+    "game/history.json": "bef5314a1cc69b29921ca73ea9711c05bf6526c5921dbeef11202d6602010940",
+    "game/nations.json": "9415f024d0412fb8bd1983ef392994dd5918b46449657928fef13aaf52a11c14",
+    "index.html": "b07e156088fd5e019246e94cfd9b8a5d37df5bbff608854c42931de3bfd75708",
+    "nations.html": "a5bdddc72532c8ef6a0a96f924e6df84f507ccf3b980353897555f3541e554a0",
+    "nations/about.html": "66372f0641179b4f6175dfd0ff492d8c28ff78313e24e493f19f782c1e55d547",
+    "nations/absentee-shawnee-tribe-us-ok.html": "71f257a2db4824971eda4bca9b8eef251c405a82077f54cd20d3c854b169c87e",
+    "nations/achuar-pe-ec.html": "cabbe8d6962d48ed3eefdeaf6de9d9b8ff58ce36b3d6529a7d4c1ab9797754f2",
+    "nations/afar-horn-of-africa.html": "5fc9229af19d4eccf5b36014df88895333a9834a4b77b1fcf99d39ab63fc8978",
+    "nations/ahtna-copper-river-alaska.html": "5c3c240b463ebc13a2df7262f49cf0ad3d0ff3b947009e33f3a4c5795820e322",
+    "nations/akawaio-kapon-guyana.html": "9e898147d341238a1cee22163a2deb1b08c62c1a6c8dee8212930f9065a42236",
+    "nations/akimel-ootham-us-az.html": "082e930acbc0a1ac09e5b9c3ef57b83c2abd0f988ca2ad181819e0ab328cb38a",
+    "nations/akwesasne-mohawk-on-qc-ny.html": "5093134e1264e29073fd2f85aee5a8c556d3508e83d71a3df0c65719e69127fe",
+    "nations/alabama-coushatta-tribe-us-tx.html": "01d417990799235b9c1461b96368c96167debd87c1b5d50bd12d9f5f4b4de4a8",
+    "nations/alutiiq-sugpiaq-alaska.html": "cba25d93e8f2d1d09a8b4a29ce522c6ea5a501debea9c0e07bb6f6420896c541",
+    "nations/amuzgo-guerrero-oaxaca-mx.html": "20acc5f8f1d6de9fdc6aba650f076d3420dfa734be770b03916f886e2dfeedb2",
+    "nations/anangu-au.html": "b09ac9f81f942d9bf641e7eb5f21acca1ef1560288e43471f9e3a390e6d68df1",
+    "nations/anishinabek-nation-on-ca.html": "b73b5e5d5b142de00fb5e64c52fec6a6214bc9b69a9a9d955b1766ac3f36b1dc",
+    "nations/anywaa-ethiopia-south-sudan.html": "8355df79880ebdef403abf5f0eece36517accb19858b948f12451aad934b5e68",
+    "nations/apsaalooke-nation-us-mt.html": "02090b83260888959ec07b0b65e165180ac3dcd4d73c704e98bbeabddec72510",
+    "nations/aquinnah-wampanoag-us-ma.html": "d2594103bf9659ade92433e9bcc6d9c72796380da24a4aa0610edcd0d9d7d2c3",
+    "nations/arhuaco-sierra-nevada-co.html": "aeb5ee1cc9a8e924c8de6127c790c92ebed815d728893da91fe4be8705ecea97",
+    "nations/arrernte-au.html": "dad09cd8998a1de30b496335357c573cd56e8f2bc799d7aaa6e409af0d07be16",
+    "nations/ashaninka-br.html": "152587db8760597a73c52e149cef4d2f91b8172ca63bed8cbe55c02326ecd4c6",
+    "nations/ashaninka-pe.html": "97fafda1ea62616c59dc0ae3b89104f05bf53503949589e0a340e4ec6cbec071",
+    "nations/ashiwi-zuni-us-nm.html": "611c22510f2f8a58375d6292a27375e50cc3c374060a2a52d3333b592afc36fe",
+    "nations/at-mzab-algeria.html": "d57863069bf4c76237ae4e72c88f4607765a7d60e3c2715692a9014c1dbaacd2",
+    "nations/atikamekw-nitaskinan-qc-ca.html": "eb8ae589de7c8895d2216cd8f037391eceed6d226537cfca5cb725a70638aefb",
+    "nations/augustine-band-of-cahuilla-indians-us-ca.html": "16531f6060d551839c637acd2c6cd79b7be54e1e7d8c529d3feabce52dd89781",
+    "nations/auwe-xavante-br.html": "b56da6fe66267433ce649b9182c890fb4eb1489e630186bd13b602a6687a11f3",
+    "nations/ava-guarani-nandeva-br-py.html": "df6f1308c6b276c5d9b23f1969033cf6756d6908931c4f843b108dab9e464e09",
+    "nations/awajun-pe.html": "d0a177ddf5068bcf43149f8e1d2e88d6d10b93213d0b457113ada12205c0b60f",
+    "nations/aymara-altiplano-bo-pe-cl.html": "194a17a19bcdc29d76ac897f7185bc8dd479d32312e174ae8636613ed4184c5b",
+    "nations/ayuuk-mixe-oaxaca-mx.html": "43f1483041477d5ac0977b19346b798263fa930c1747e891568d2ef1b3253f4c",
+    "nations/baaka-car-congo.html": "02a000a826c8210c69471147e744bfe5934ee109da6afbf7f116f20b899dab93",
+    "nations/bad-river-band-of-lake-superior-chippewa-us-wi.html": "9972fb36f1ae946e2b028b57b3fae09250c7ac345a02a371fbf9290ff590085b",
+    "nations/bagyeli-cameroon.html": "a69cb0971ac3d7770c30244d7f415cafd8ef50eed292e3afa41517379e84377f",
+    "nations/baka-cameroon-gabon.html": "b5bc96b4a19966b279e1f79b33a827de4648ef2d7c25d1b02b4374a68d50c9ab",
+    "nations/baniwa-br-co-ve.html": "4a6f5ec7bb3531d4fc92ed2131924fd0621ee56f217335b7c90b02de8a5bb2a8",
+    "nations/bari-catatumbo-co-ve.html": "a9fa4f9c58dcd36a256083e86cabd36ffcaa9328f2f3402dd56aca0243822e01",
+    "nations/batwa-great-lakes.html": "3a7e20efd2feddb3379429163e65c4e971726664671a5195fb2079346b4f0853",
+    "nations/bay-mills-indian-community-us-mi.html": "1e2b6913e98d263c8b962e1ace580854ef69c90361c0af18d1e1b352806715de",
+    "nations/bd-chakma.html": "bbeebbefc7d801429f7077152bceff9294eaf6d08375207fb7a41bf7c587dc4b",
+    "nations/bd-marma.html": "f0632eaacd90fdb58ed0d6fdb5ea9d9a68e3578793b301095b8fb693d1264048",
+    "nations/bd-mru.html": "cc3522415bc5639ea4c5cd87a978ad49a263142eb8d1067d926301f71222909a",
+    "nations/bd-tripura.html": "f647cda1455a2939f333189c3c0e56b13f11e7c8734b5e63c28f2f464dbffa5e",
+    "nations/bear-river-band-rohnerville-rancheria-us-ca.html": "cf126f0fb391c6c86ae4256b06fb02a816010c2d969758b989d7afbd2079cf8a",
+    "nations/benet-uganda.html": "b40416246e463fa0484aece9bd5238ba8921b7a49cc4d19b51527f31c801d26c",
+    "nations/berry-creek-rancheria-tyme-maidu-us-ca.html": "5b284c9a2789ac27d5f963f1b2eec1cb3e16d9a510f818b0a5c6386a5dfeff71",
+    "nations/big-lagoon-rancheria-us-ca.html": "f4feb54a7027e065b95148658dbfb3012524cf0d32c4e6ddd01d271d03121f94",
+    "nations/big-pine-paiute-tribe-owens-valley-us-ca.html": "2019eb36e0fd6504427061affe9ab8744d32c19ed286837ff4b0a2d23e982202",
+    "nations/big-sandy-rancheria-us-ca.html": "7c78bbcb32b8989f1148b14a787139de940493e77b34f66a3ee10b4dab694c38",
+    "nations/big-valley-band-pomo-indians-us-ca.html": "0e083d3ed51c4ab987751a946895a73d10e12de4ff82812372c133b47b334902",
+    "nations/binniza-zapotec-mx.html": "e74119623a9737cdde47f11230a96b9eefeb9f58ebe960e08fcbe4b66cb735d6",
+    "nations/bishop-paiute-tribe-us-ca.html": "747f21600050358449fe091faffe21f848ad7f10da07c84b4405a8d533454f6d",
+    "nations/blackfeet-nation-us-mt.html": "e746eca0c8bf934b17ca706cec2491a286d56a945a567e4ce1414363bff24c26",
+    "nations/blue-lake-rancheria-us-ca.html": "46240ec3fd79762a63f8d55073eccedae442cbfc700f33b5b7859b4491900bc3",
+    "nations/bribri-costa-rica.html": "fe233450dd010ce57e84becfcab4b22ab38514c77f38c54e3de4ae3571c1ad5b",
+    "nations/bridgeport-indian-colony-us-ca.html": "f684a2bbfebf660e3c58b7bab433485d363e83ef212b7ce6f0b6058e37b63e1d",
+    "nations/brief/children-and-families.html": "896838eea75a9466235a65ae6dd1289cf040f8e2036cd5701fb82a23e6fcc8fd",
+    "nations/brief/community-economies.html": "f921113fd829f95ea77af7bae9a8062a2ea57bd79cd0e3fc991936861c46740b",
+    "nations/brief/data-sovereignty.html": "e9004e95e4d3bdc7355a15cfaee7dc13b8223fad2081a2e5da4bff3242f8da2d",
+    "nations/brief/education-and-public-truth.html": "08b36205530e55bdc39933832bba05c6018d9aeab9698cfff227e7113fddbd44",
+    "nations/brief/evidence-and-records.html": "77da4c4047c18f104fec29ec356cc0f5d61b7366d078767dbec4c4106d802bd3",
+    "nations/brief/land-and-water.html": "35457cc251c0bd9c26421cc06f984bf1b00df0e584d4e64cf2e1742e3027488d",
+    "nations/brief/language-and-culture.html": "b1682d8da0d37601743889637981db44381c67db159952d8f6e3c72b474c98b7",
+    "nations/brief/repair-and-accountability.html": "0cb25082dec279b59a2cd355a9f38fffa61b11b8904c2eb4f43c4b9b6a82903c",
+    "nations/brief/representation-and-power.html": "fae1304a7547050c2788f28cd76b278172c241fddf395da1a187d5b1c02e0bb8",
+    "nations/brief/worldwide-and-cross-border.html": "d153678a580a8fef2d78477310df87c4bffc9255d57c07fb348acce668c4a1c5",
+    "nations/buena-vista-rancheria-me-wuk-indians-us-ca.html": "43e0946dbd9fd747a67fb3bc7504767ab01a644cef489b716c7f4b436b65fbac",
+    "nations/bugle-panama.html": "85392b94b8bdcf05200f083a28ecaffcadcd7d95cb9dae4030c1904955a046d4",
+    "nations/burns-paiute-tribe-us-or.html": "60749dc2590f589da1903278b23fea71af563e7ff736e56c963b01a103b0ab42",
+    "nations/cabazon-band-of-cahuilla-indians-us-ca.html": "c8fd6b42f7d88a8dea14b955bc5d39be1779284801dbb747079738ed1fde5cc0",
+    "nations/cabecar-costa-rica.html": "0470ac2428ab0867a04b716da0ff90bdb402177fca0f74edaee08e03e913c5ef",
+    "nations/cachil-dehe-band-colusa-indian-community-us-ca.html": "3228e2cf0c6c1ee080a84bc321f6b7d7ea30300d86a23588b31d8d04e2400a84",
+    "nations/caddo-nation-us-ok.html": "6d53d63fab20c65b0eaf768035953dacb0d29425fe200d1ba036ade00ef4ba31",
+    "nations/cahto-tribe-laytonville-rancheria-us-ca.html": "469c057407a53b6cbdabb81078a016c8b4de9fcfe45722710872bcb2c69e40f8",
+    "nations/cahuilla-band-of-indians-us-ca.html": "a89e27ced49bbf51d8120588917d38a5680b84cdf77cef63dd8532da5245e133",
+    "nations/campo-band-kumeyaay-indians-us-ca.html": "29f02be698c93d9df80b69dd296047db57726d62651716221ea992f6d8d6857d",
+    "nations/catawba-nation-us-sc.html": "45d58fb292ba7aa39ce70df90735b418f8e1a5cf6803cda18c5589a1af6b5ef6",
+    "nations/cayuga-nation-us-ny.html": "7b6898ac4da8304688a3e72df8601c2476b166f008f2a8173ebf9100de7cafec",
+    "nations/cedarville-rancheria-us-ca.html": "32272f5e3fb81f2ab0dd611987dc84d7d37a19c5a6ffb6bafb4323ac1860aa0c",
+    "nations/chamoru-guam.html": "4534b9f0d657be14469fa8d5f0bc44a05b2bf0eefbb8cc0e0fb7f15d4551060f",
+    "nations/changes.html": "de706af0f0672c56c17ff816339cc719b2222be4a6cf3d6c04722cf9a5238ddf",
+    "nations/chemehuevi-indian-tribe-us-ca.html": "996819e79e4ea0b69c753a57eb778e8bf2248a7f3c4bb1f58945b2ae3a171d46",
+    "nations/cheroenhaka-nottoway-us-va.html": "ace424166466ca6d461a7a9660453bf0e533330afb15493c4c02b56293a1f7f3",
+    "nations/cherokee-nation-us-ok.html": "7939d124211a6ef9274bff5cc3d638ad499ba436c65315fd638a2e8958f603ac",
+    "nations/cherokee-tribe-of-northeast-alabama-us-al.html": "836022729c6424fabd5f632594529aac895ac599896414722f347ed57b766d8e",
+    "nations/cheyenne-and-arapaho-tribes-us-ok.html": "3838223f2276c4012c51d5f3d82b73fbc1241bf7c8e95641e98d010c6d5dd8ad",
+    "nations/cheyenne-river-sioux-tribe-us-sd.html": "0588e272a1b911ed298725f8a9fcd5882e9932b7b27b7abac5dfc719959e2556",
+    "nations/chickahominy-indian-tribe-eastern-division-us-va.html": "996f3eef56b2a4bdfd6d56712b750c78eff02c19d5bd0cc43d01e7e70c2a124d",
+    "nations/chickahominy-indian-tribe-us-va.html": "0f8196ea05e60301f37cd8ef3912e51e06ba9cbfda676675c969c4a03aa81a17",
+    "nations/chickasaw-nation-us-ok.html": "f04f544d4f17abbd2d008eb750ac4ebce66a9db0ac67348f5a6fddfe9a719ea8",
+    "nations/chicken-ranch-rancheria-us-ca.html": "b9aa832a5be885e536c891526f4c0fa7ae409718920b2aab6136497f367e0bda",
+    "nations/chiricahua-apache-nation-us-nm.html": "3966ed6be978f068e3fec9fc4a67a1dff012f0c8336a3061eaede2422e9eff4e",
+    "nations/choctaw-nation-oklahoma-us-ok.html": "fd5b8902d44db828fb7e268ec7b9f9447e759f7a9ac47dc38fcc3ea7e520a608",
+    "nations/chol-chiapas-mx.html": "cb149ee7c6179f950077ba7b930ced8c952bec27f0d1ee71eb108a0f0ccc7aed",
+    "nations/chorti-maya-guatemala-honduras.html": "134d6ddbcbd314eab6dac2c0b49830c668c8434c4071c0d74011778727f5eaec",
+    "nations/chukchi-luoravetlan-chukotka.html": "d813531ee2e89ec1b3cbdb464444cb047d61b9086fa69bb9c9757998346c1e11",
+    "nations/chuukese-fm.html": "922e70661f2db14516295508443a5c97af322feed2fbe9b413190d43499f6c7c",
+    "nations/citizen-potawatomi-nation-us-ok.html": "a5594e2effe09db4c42c8a447a39f37c4d8875779ea5f91c61c03c48bd34bbe3",
+    "nations/cocopah-cucapa-us-az-mx-bc.html": "bfa280f635c04bbcdb6724cb9f7294cd5c6dedc990bf2c534f35af07ca29c1dd",
+    "nations/coharie-tribe-us-nc.html": "1d6ca62d9e3da78c7105bc862563671fd4eeeb30e9f97db6c545eae96fa0e8e2",
+    "nations/colla-atacama-cl-ar.html": "d409a634e10eb01f2cf98234f05ab2bb151200b1eca74238fb30c769612b8205",
+    "nations/comanche-nation-us-ok.html": "95cc1af577181bd9dc2ff199e2bf8f925ddbad76810483b5f162271b62d6ced7",
+    "nations/comcaac-mx-sonora.html": "d69606e640abdcb9c698aa0ae1a9001d6d3cbad91a8bc4e3a06106d1a5c63816",
+    "nations/confederated-tribes-of-grand-ronde-us-or.html": "6497fccb595f8fa908b30feb577454c393c79f5dcb10eab74c02b8c380bea94f",
+    "nations/confederated-tribes-of-siletz-indians-us-or.html": "38056bd2fdadfefa6f5cd263ae09c0a6fd86ef789fa5300bebf188c57be4c528",
+    "nations/confederated-tribes-of-warm-springs-us-or.html": "1846a676c2296156e514d398f7ff129817dddad4622e46f7ffada6224ab95576",
+    "nations/cook-islands-maori-ck.html": "02a2d8cc59db7bf5f87ba5c2a51d2f8e7d7d10bfb085be7ddde15279e7398e54",
+    "nations/coushatta-tribe-of-louisiana-us-la.html": "df65182891f510d4c77b4fe7f12bb5ad204610d8db207e5ad8970541208002aa",
+    "nations/coverage.html": "aba26b7900eadbf4d740abb17d57dc0330fdaeed0997985e394d63928e412e8d",
+    "nations/credits.html": "e9cfe056f0c022cc68b0ad9f89e8beaa2ead40b3a1ef98e58f9595fdefd3b9ee",
+    "nations/ctuir-umatilla-us-or.html": "13edcfcd760f804e23c271ba76890ad9a3a26c5466fa3bc581e6657966939a44",
+    "nations/cuicateco-oaxaca-mx.html": "62d86073fd8b8599e01d0808b84432a9e2336fa97c9e0f01013c49cee1524326",
+    "nations/cupik-chevak-alaska.html": "953034dc8ade749828f692599a34a37c67a8af08b93f2f53a28a4bac7d0a18e9",
+    "nations/datooga-tanzania.html": "70a3043adddbc9bd2e845221be7259385da2b2d6dc1848057d2d23f00566ea72",
+    "nations/deg-hitan-lower-yukon-alaska.html": "ed97eea942f91b3d1c0012f1b14b72ff0ecfb896fecfea2c7d85d161b5c49eca",
+    "nations/delaware-nation-lenape-us-ok.html": "52b1237a7ccef2ee6f1f387cd1dae74df52e3cb4426958e91a1db7541548bda9",
+    "nations/delaware-tribe-of-indians-lenape-us-ok.html": "ac4cbc24e5e03f13f61e28eedb3327ff12b34cda51153e8ae47ffc09d601c6d0",
+    "nations/denaina-cook-inlet-alaska.html": "1d1e10127ddbd43bf0128926555009cd8a4e8da837a839b7232c37a9b491b2dc",
+    "nations/dene-denendeh-nt-ca.html": "16b1fe1596007a58e7bb48e6374941e3c08b5353a173409589f8836f2de8b734",
+    "nations/diaguita-norte-chico-cl-ar.html": "76ede121b7a2f3bb60254cc6f651d333c1790613dbc7a9184bc9f9b7cc90d7c1",
+    "nations/dine-navajo-nation-us.html": "51d41a7f8689b81a453edf13a03c7486f95bc0873b2f99af886b9a2024f026f4",
+    "nations/directory.html": "cf961e80e9ab80eb912d4a83ed7c546389f65d95338bb985ae5ca078257cf8af",
+    "nations/dolgan-taimyr.html": "ec293599fa7a6553c8429bd162d703718b114958977bc26e6313e2fcf4dd8aea",
+    "nations/eastern-band-cherokee-us-nc.html": "b6e36b4b350747d6bace1c240d4ca3c55018c9cd8fb9234bdf1b80872c3c30d4",
+    "nations/eeyou-istchee-cree-qc-ca.html": "c490d40b75a9fe93bc556b66b7e7a7356cf1aca0e5b7ccd9fcae53afd36c6ef2",
+    "nations/embera-panama-colombia.html": "09aa0b3ff6bf637748ddf9b4ee3eea97a8815d1d782fd5cb7ba2335506472786",
+    "nations/endorois-kenya.html": "74cb148ee14938701fe5f2cb62427d7885a7849004d670c19ebfc807211489a4",
+    "nations/even-northeast-siberia.html": "532d865d6058c9327b593c26245119c7529ed66ebb5085b196f4aca19f273b87",
+    "nations/evenki-siberia.html": "0c3dbc04dc3da7947eb11273e949d0cdb671bd1d596c3cb542f3c73d6f11a28b",
+    "nations/eyak-cordova-alaska.html": "85f832666c8b513971683d4366f2687946b0fce810262a1065c751b37d78a965",
+    "nations/fernandeno-tataviam-band-mission-indians-us-ca.html": "3d7c927b664f69dcdc8f2fa169f75063fba2c0476435f9ae56ab408157d82987",
+    "nations/for-nations.html": "60e0a07c383c22f23de553ca35d63b1788151243f4fcf62849badcde7e27621a",
+    "nations/forest-county-potawatomi-us-wi.html": "4a9104d3025f43c16a7b1108cf1fdd69e22ebf9cec2209f228f2a7faf01a2345",
+    "nations/fort-peck-assiniboine-sioux-us-mt.html": "6c83f1d511855e3503399142f0a2c2776722b38a1716d81714b36cfd685cf918",
+    "nations/fort-sill-apache-us-ok-nm.html": "6fe4e27a1495e13a23edd377463b71995383279bc5e1e51ddaa4c7910b178d78",
+    "nations/gadigal-au.html": "2634208beb24438044531b06c20d89d4a6d4f9a41102f02df1e3cb3c6e60188b",
+    "nations/gamilaraay-au.html": "d531718a5f7952083583801127379f6a213571b22c23648527e630864e14b60f",
+    "nations/garifuna-central-america.html": "8e4bcc6fe6a7c9da092798c4ebe547584b1b6413590f2a0edd4997a0aa672011",
+    "nations/gitxsan-bc-ca.html": "46aeacd3b8619203cdb4f3585400f7ab54e784f0e9869621387e3d71b6af0495",
+    "nations/graton-rancheria-coast-miwok-southern-pomo-us-ca.html": "c08d963a1669b40019896d11166807abb8907c470986573b12eb5452691fc370",
+    "nations/griqua-south-africa.html": "f232a83677563e45067a6fb622a97416dbe400516f3f123bda5fd339d3bd0f5c",
+    "nations/guarani-kaiowa-br-py.html": "4b945f6a76d9e84a4dcd3d3bbe0a62aa6566431ed904b5f85c337a85d0ec6101",
+    "nations/guarani-mbya-br-py-ar-uy.html": "eb8cb8f3700f24ab67da0cd8f6440e54559ca8f2b70316ae671c6031775d8ae2",
+    "nations/guna-gunayala-panama.html": "36372c898067429d1c9117397f1d9a92daf0f0698f56e0e434a418af09d2d1d0",
+    "nations/gunantuna-tolai-pg.html": "99c6dc1627ad019bd0b47b9c19593e0bf403ba98e64e4572d3d3b197d601caa4",
+    "nations/gunditjmara-au.html": "2a9b53e370f360d4c7282b1de8c16cabe29c0e2d5d3a620a3960a2eb02f4f147",
+    "nations/gwichin-alaska-yukon-nwt.html": "784acbd7741e7def4bd866dfc76a084f115bf52242f445dbb6a831fe79444ceb",
+    "nations/ha-shuta-enima-mazatec-oaxaca-mx.html": "ca3099167c8660bad71ecdc128a2620515727b1c582b0d6c526144cd2369d30a",
+    "nations/haaku-acoma-us-nm.html": "19a1d6861f1e0c7e3aa00fd592c81a039c1755c42535abda296cf05ca7c54c29",
+    "nations/hach-winik-lacandon-chiapas-mx.html": "52632a0faad475fbce334868a4a4ba13bba9569af3a082f687466ad5e9148f4d",
+    "nations/hadzabe-tanzania.html": "36a32d40009a7b08ee41ea1c2bb5cf77883fb023f447cd04637d14064120345a",
+    "nations/haida-gwaii-bc-ca.html": "fa1ebf7197986996c749db9c3a4cb4a5040a64f0f9f5e04da41defb2ecce1728",
+    "nations/haida-kaigani-alaska.html": "74e45d4fe623cf4cfa34d4058a7db09ba647fc5c6d139d0c401596d28f64cde8",
+    "nations/haiom-namibia.html": "137a3a327cec93523315dd4e270030c936bde5517f704790f0a21988bb13c3f5",
+    "nations/haliwa-saponi-indian-tribe-us-nc.html": "5ef5a595eed0e38f8bf5b6a7f15791f5f8a01d7328da8af9ff9248ddcbb6f24e",
+    "nations/han-eagle-alaska-dawson-yukon.html": "0fb4974b995fc8601937aea713bd6e36538aab6ff00911044a740f007d0d7eef",
+    "nations/havasu-baaja-havasupai-us-az.html": "56ace8e240ec85dc08c10fb6bd8d09281f514d67e1ea926c8e256f15f4d3ff21",
+    "nations/heiltsuk-bc-ca.html": "404900b0aabdf645c3853e7953aff7f913fc50ef097d453c9032d689a8a413e9",
+    "nations/hnahnu-otomi-mx.html": "4134d436d05d46c457a273a629e0bceca08d9882c704a7644fa72274f4ed15f5",
+    "nations/ho-chunk-nation-us-wi.html": "9459511288274bfb5ddb5d580ee0f6aeb4a11306ec6266f25053e23c21160fc2",
+    "nations/hoopa-valley-tribe-us-ca.html": "9d25db68973bbd87ff9c0aff2d922ac8b1074de4a68c20cc2ac8b805235a46d4",
+    "nations/hopi-us-az.html": "99c2b6f08801d39d93030243140c5d23283a1fcbd81334b0a91b65e224c5db46",
+    "nations/hualapai-us-az.html": "d8880bbc6b6c363ee5c0bb34421eb37baed9d27f6ca1cbdbf466a55eb2757f11",
+    "nations/huni-kuin-br-pe.html": "975efcfdf6f520559532b2580e34cd5d03d448d4f24aa11d2afe1fac710c6af4",
+    "nations/i-kiribati-ki.html": "116426c392ae5b3344289dd2ce50b00abdc88da4f37aa31133d4485fe300a4b5",
+    "nations/id-dayak.html": "b3e3d19420557e119cd5fd7fde97c8fbd68be06443c220f2e7cbb9ef9821c5ce",
+    "nations/id-mentawai.html": "7fdab0994d1f8ae79c91ce0ebe8deee94cec0b3f3ad8c4fa626d9642327964be",
+    "nations/ikoots-huave-oaxaca-mx.html": "89bea013a1c2470cecd8f85c991aedd51c25c145c2cee434ac79b44faa205f65",
+    "nations/imazighen-north-africa.html": "e10d3a9bd7e51cb34cd17a83603614799da8d6375ecc1cba1c6b3a7429d9427f",
+    "nations/in-bhil.html": "4f30f3c7b4fc35f3d73549e83fe3d582a0d00149cd7f054c4ea667c6697a2a37",
+    "nations/in-bodo.html": "41a800530fd7574b7983333f9f7f0140155416989bf9bc8d852d2aaefc43d732",
+    "nations/in-garo.html": "6a96241a50a85d81fa09f0a05ec1e62fa2874a2abf928b062b6a451f3220db09",
+    "nations/in-gond.html": "6c8280f1cccf57bee2b118bc35286d680f68f8ea54543bbd2d8cebeba4cac62b",
+    "nations/in-ho.html": "d8dbdcb12a873a1906c470f6b25808ee5b45f42d7b1e8d94889be47d1965c919",
+    "nations/in-khasi.html": "2b144a4edeaf9ae0ae58299975cbf78f135ca5da59b317d0b8307aec56765650",
+    "nations/in-kurukh.html": "cb01bc9d92e350ceb4e5afc028381edeaee985abb2d943371917231138e81221",
+    "nations/in-mizo.html": "5e1cd0eac29d3072e20a09163c8b9802773b19e1896a69a4ce52428838b592fa",
+    "nations/in-munda.html": "d409cc19f1a520d7cba1ab30a57d2b94136230d159d6bb709c215944f102b801",
+    "nations/in-naga.html": "92e9e00e42c400c3b66a4e1a998da13561b715c8ae416f6677b93fc9eb54bf35",
+    "nations/in-santal.html": "37a992064fce94c31bfe88fe512e6516baf654ec8dbd0547da6b7633b0940b4f",
+    "nations/in/ao.html": "fa37b99a599e2690f501560b14968d1fa175d933a5868cdfcf73f35c6c4d9ca0",
+    "nations/in/ar.html": "e0030a666e93675a7cd4da7a6bc846136352ffff64a27a4f5dd8988afd555259",
+    "nations/in/as.html": "21ac04eb83b4c526d02325cf5cedd9b17b33ebf318a2f97794ee2dfdb21e1aa3",
+    "nations/in/au.html": "2d9907e3e47e06eb118e5320a8032ab8122b52cc2e10bb01cdc598f882fa8185",
+    "nations/in/bd.html": "69c007a5e94610e1b9398d9600289c494411a0bca47f7de8b79a9a3670cd8529",
+    "nations/in/bf.html": "f0bbe00b0dad0496f0d19f45d8c7dd01d5d58ceb102212693490bd1d6ac1716e",
+    "nations/in/bi.html": "6ac08db46d7e4b8252eccdfab8a46836a1ade3b6ea0a07bdb4e3887d46aa5bfa",
+    "nations/in/bn.html": "b33286995ee36d65e865b7dbaba3def7b6cf38af62060c5872a5b006782aca55",
+    "nations/in/bo.html": "e1d7a50a15124af3aa7aec8cfdfdd437f0149b0e89e9f68834312fc32a509deb",
+    "nations/in/br.html": "36b2a2f7c7a32aef7e535234f3d0666548825f7480cc6da5eb8ebcc28e6301b9",
+    "nations/in/bw.html": "6863f953f7d0a1dca7c5bb659d2d8f0f740813749bde3df5a14cba0a3e6744f1",
+    "nations/in/bz.html": "80ea3e480872b4aab98fb7bb70474fc68a12673191ee26474a3ddead1ea3f027",
+    "nations/in/ca.html": "e182549e5a4652cdf075edaa629787d7968d3376b4055852332dc85f76c5f4fd",
+    "nations/in/cd.html": "0c77d3ee32f95facc9b0aea43fdc75f93bce720d94f48755720a0a289e8d2d3e",
+    "nations/in/cf.html": "021b4f4126314436e68fd2a40462e952ecafbe4e69b938ef1c1b31142b354f7d",
+    "nations/in/cg.html": "320b79ffb190234f407f35cbc052184ebd860af39ccf463c4b94f025edaf5688",
+    "nations/in/ck.html": "86195c1f6326279b3f2cb0aecf38b234467ff733a303e63e71a3b0577430f5af",
+    "nations/in/cl.html": "aa88646f841d6023ec0fbc7250bee07fc15d675f79d78f160e7f8b726b2af279",
+    "nations/in/cm.html": "812f0ebd4c09d0f6d042e5244596e74f1d75f8792d53c6c337794ea2227cc163",
+    "nations/in/cn.html": "3d5d324e62ff8e86367201f449d460cdd2ab9e58cb766372ea67aa28eae83caa",
+    "nations/in/co.html": "67d2adde47bc047e1880a72353751aa32576ee63f46f7db7eaeb02830242ac41",
+    "nations/in/cr.html": "2dae12912265c8c0af7de09b0768366baadadccec1c316559fadc93e90bfad91",
+    "nations/in/cu.html": "41add88a3c049879fd83fb800530853f1897a2baef88bcd651f1c2d84ddec597",
+    "nations/in/dj.html": "d4beed0024c9023155f5480f5e8322c2baa980b6ad832626e1099a5b3c4146fc",
+    "nations/in/dm.html": "2e8292bb27706309127d7da514b6a461583c28078beed7fff7528061660b0e23",
+    "nations/in/do.html": "fb207af42148b33025e6084044a2d3d2b7aa0113d496386ee58b84d793ab8553",
+    "nations/in/dz.html": "0e48bc76bb8a77cb23c09ea8a23b2483b68e36858ee2e57a59f245c4ef9d6fc1",
+    "nations/in/ec.html": "afd7186221c6403500d858a819a391e046986fe96ea35e7fc9993af5db2f0ac8",
+    "nations/in/eg.html": "91a9d68fa9f9a26429259c1dea2a1460bc517e61af82009a75c90b3d30887d22",
+    "nations/in/er.html": "047969bd5eee20905d1a4cd885eaa84a13ffc3045544b89829d39d85cf40c383",
+    "nations/in/et.html": "b91b0c49481ddd5ccc5cf34cb68aee50eb6016f7a4407d81ed10993809a48d11",
+    "nations/in/fi.html": "99b9c12085127593423295f6b40345ad63d2dbb8afa4a10cd03556471c9d84c5",
+    "nations/in/fj.html": "4105e7db68450c12e4ce7f4887ceb76de1553c31669b37fc9c734d74b89c0c87",
+    "nations/in/fm.html": "a715e53685246e79f97eea58cdb0b24c1ac33df7193446b03c78e436ed944e0e",
+    "nations/in/ga.html": "4f3a3bf2fedc62382d22aecd601c5d7d52827a8cbfb3d6fc21a67b8a1a72a838",
+    "nations/in/gf.html": "486f456f0209e57217a35ce94d1176be0a5321660f13bcec79d422fe6620cf29",
+    "nations/in/gl.html": "c1bb62e3f332a583059c2aba3dbcc34eb226f39ec304c86b1a9acc8fb8605805",
+    "nations/in/gt.html": "b3812f6cb3343e10e16c8cf9880e360faa4e57a9f9d4219563a7be55b944381b",
+    "nations/in/gu.html": "0446ca9828456c13b177195563741aee46f2ea5163698ae970c86c9d8eab5d27",
+    "nations/in/gy.html": "5b787c7f517046ec5b40e9be04eb2264436ace8fd6b8e19d98de35794565d14a",
+    "nations/in/hn.html": "a5681cbb694087bbefb2759039806012b0d862caaf80731fa353dbf7bfcc8295",
+    "nations/in/id.html": "0959516b148e115534c9e8d58fb096cd0732269f92a05bec2d5166741b93dedd",
+    "nations/in/in.html": "a7a41f8497dc8e811bee1c7341b98c2b5cafa47580ff4f6b15759e43e64708e9",
+    "nations/in/jp.html": "1839b7dfbe7bf2411e5028518a69b53079cb68e950a8a7f1f4b9fcd85750e52a",
+    "nations/in/ke.html": "d2d22052d512c760d7f8c041d28c9f5e7fa359a453fd20e58e1860a0fa5f3376",
+    "nations/in/ki.html": "c1ebb152cd1e98e0bed4b9425b3242100bf1073d2546015b1bde266591e2b98d",
+    "nations/in/la.html": "1b89a90514fe231298f8c9f5467f952161f86a50429409af3efb52a885c28498",
+    "nations/in/lk.html": "52b3050912714f434f63dbca19f561aa806077c73488d56e3e6258151010aeba",
+    "nations/in/ly.html": "bbfc868a7a4f9a954bcabf8857a67a6bd97832d4097715e978f8ad5fa1ad2e33",
+    "nations/in/ma.html": "7f12588f2f9e55c64e052458b3f936ed25a04fedf387fa96bc711411022606d3",
+    "nations/in/mh.html": "1008ec670a85f2a5996048831fbc5a0f453f39a7789d0ef358fcdeee78227b17",
+    "nations/in/ml.html": "a9c5e9bff927dc3476b80b18db0e8c5f408a0a7e89c1bdd78d6ab16619f66dc7",
+    "nations/in/mm.html": "f4bdadfc6d3779339e92c5c7ce15159939b0cc50d06694bc9a224832bb1d07d5",
+    "nations/in/mn.html": "8a35429191f830692e52b7bb8ebc12f5b148bedef73e407530218009f142275f",
+    "nations/in/mp.html": "c70a13f430b76dbdbb4a6fe55d22a206fda80f745f14c2f34fa2f876ff66236e",
+    "nations/in/mx.html": "65b4c946801f92b0c5f0fada83503acc02c78e027b502561bcd5c566460cc79d",
+    "nations/in/my.html": "b0243a1f5be5127bf520469aeabd37c3b269cf5cdb3c27fc9aff85fbad5f32e8",
+    "nations/in/na.html": "f719e2e9e68ac6f061a3709fffbc355d1df865f113bc882a12bd06fe86eb1015",
+    "nations/in/nc.html": "cf6cbe35f96bf10f0a6ee26ce81978bd9ed8ab59a4703ffce22c9db8e34f9eed",
+    "nations/in/ne.html": "38cf6ee9d65a14111eb624e3f60e1b27fb4fcbcc961ff87aff4e105f19509993",
+    "nations/in/ng.html": "90eb7623c0f0d4301385924419ea8b28b67b397d6080fc356a968208d6ee2931",
+    "nations/in/ni.html": "e2e5b1254ffbe283f5ca4ad63d01d459260b47979cec81cd45b2cd5b981a87b5",
+    "nations/in/no.html": "c390188b316b254a7a466f99b5806b7c10f9d634af7f4a6bed17ed7b37f35ed5",
+    "nations/in/np.html": "35f4dc894746d809e94d5c4d4368ce1c1f91094e57dada957133a815e3507c31",
+    "nations/in/nr.html": "267e9abb9f88376c346f00ca405561986c6b3368093f16d485b3c67c0c3f075a",
+    "nations/in/nu.html": "127ff6fea3ba494739f4b2cbcce17f8cdbbf6afd5a706b0c7b9772ff75e7b9bc",
+    "nations/in/nz.html": "91dcf00ee37b049332df80b0e1a96a97cf734de024706bc6ca42f72958d0073a",
+    "nations/in/pa.html": "bd0e01f21709eabf0cff07625ac69002d840ac845752bf33f6669d0000675c30",
+    "nations/in/pe.html": "6e5c72553fb18317406a9941aff953aa477fef1e53f173254ae9186b415b878a",
+    "nations/in/pf.html": "9f3b7969b92c3ebeba4aa661987229a87dee7591eaef3efc97d3363c6a909dab",
+    "nations/in/pg.html": "948a0bde7a566dc2480889f02c629cadde5da013fedcdd31236cdb0fe24b1f69",
+    "nations/in/ph.html": "4aac59667a35a2cf9d90406961b6e6405324d9d9c9367d23c4b56de06c8173f3",
+    "nations/in/pk.html": "d22b8dde0a904df75ef3cd748bbd7478c3740ffe9653cee4322fd3dd40551232",
+    "nations/in/pr.html": "d415ed177d27cb097f8adc781e06adf4f6d423c33fca7a4c0602db74f3b045cc",
+    "nations/in/pw.html": "5256f9c1f39a022c127508f4fe9bd1eb6bfb6f72452a1725f6e1d7621189afac",
+    "nations/in/py.html": "8f4d5c6caaa23ed20bf820eae52a66412ddff490ee23aff5cc8ccfe0b0941358",
+    "nations/in/ru.html": "030132872ee931519da5bcf5b3ec304be38db32b7eca0e03e631bb54ae282ccd",
+    "nations/in/rw.html": "b0c352eca14979fa7ca2f80d7303d731cd428c2378f85724a5270e7f9e435c38",
+    "nations/in/se.html": "9d8660a4dacc4d448f871afb221e5bbfe1ef11a7dda8d21558318794e54accfb",
+    "nations/in/sr.html": "6192509f5a92a6805000ae96360e5346dd4cfae11ff978c061d2edc1da5f8ebb",
+    "nations/in/ss.html": "53e992be2f6d3a5aee75ac83a5e930e0e3232df52ca1cbdb76e252e4b2cd3016",
+    "nations/in/sv.html": "72043961fb3cca9e82f00ee04463d7d5b2c7fca8c5fa8dd13b507bdee3ea7afa",
+    "nations/in/td.html": "96f19caf292969d0f981a49b6b9c36abd7258cc3c00461cd11fa9b6f3731f8d8",
+    "nations/in/th.html": "6f844c7f30d2b11ba8af1b802259772c1356914a1307216c7c2933540ac91434",
+    "nations/in/tk.html": "149bab4e712c58984ceb0c8b76b3fe70d1b972c6cdfa06c9a5fb199df9e13965",
+    "nations/in/tn.html": "138e0570c8a3ed6297d0c6068c592d58bc4ab27ccc2848db0576bbf40a077f07",
+    "nations/in/to.html": "4b061e6339893e7946ebcafb61eb185699a20dad9b4497cca09ee19c7776014e",
+    "nations/in/tt.html": "65bf98c62feb02689cdbc846ca5e92334cb39c18e574ce8fbfd3bfd71c214e9b",
+    "nations/in/tv.html": "4780078031b11b1fe152f1923b038f92f1eba42513bd5e5aaee8c0f9bb37eaff",
+    "nations/in/tw.html": "6d98a975b3e6ad3b7e00a3cc734209eea9092dc45a6b8381533a83aa6c5f2276",
+    "nations/in/tz.html": "a3dc98d974c63fcd78b79d320e5a9aa7e265f7fd1ccf350765a9681d62ade575",
+    "nations/in/ug.html": "6d684144abf40b596a06682f5c8382a8e12df7c7a621f506eddb4b22bafa9f5a",
+    "nations/in/us.html": "b719231f9db5559d776fac0ce6275226b672ff3bfd082836e5448290da5e2c79",
+    "nations/in/uy.html": "dce3f31611eb40c85485ba00d977c3e7480ef4d8334d20c127ab89b52b92374b",
+    "nations/in/ve.html": "6348bf1f46ac4a73a07ad9b97dae16890a3df30e401dc5d656522b5f662d8939",
+    "nations/in/vu.html": "06d3948d882544f8fccc0a998bbfb515396d791d3f0fcd83a0459c62e825e1ea",
+    "nations/in/ws.html": "0d2814a2172a042fefb3ab130b9f81664a29fcee0fb09a8aa610a1f2523b77ca",
+    "nations/in/za.html": "5815f109287516b76aeebbc323cc2fae802720f5538205471503e6f764165d03",
+    "nations/in/zw.html": "ed2c30fd5506f29517a81d34402c2e0b1f4248dd98c05a1f651e18ffa74168b5",
+    "nations/innu-labrador-quebec-ca.html": "18fecf4b1e9269b4242c2b2bdd2d3f85fc3b751f9b75f15cc86f0b4eabda8b96",
+    "nations/inughuit-avanersuaq-greenland.html": "b694f89b9ad0fbee1f036990ddf75dacadb91f51ac96861d3020c4be88ef6cab",
+    "nations/inuit-nunangat-ca.html": "beec87389a7dd09444ed6f4fe48f4878cb15952f905ff5d34e553bd7f8d3221e",
+    "nations/inupiat-alaska.html": "07742437de56ab5fa00db7795ac7500c2ab666227d4afcb1b46f583022913fac",
+    "nations/inuvialuit-nt-ca.html": "ffba136da4b2ccf37892dba94cd4313cccf4f1243fdc6567aeda82c3c40e8416",
+    "nations/iowa-tribe-of-kansas-and-nebraska-us-ks-ne.html": "f68688219ad7dd7be6d5aaf0037f2c7fea679ad6bebab91b9802b92bbd9855be",
+    "nations/iowa-tribe-of-oklahoma-us-ok.html": "51562b447cd50b8c9d7d6bdcbf0fdf855d1b7e87d105771d36e30e2f2dba6d7a",
+    "nations/iqbayliyen-kabyles-algeria.html": "98a96cc9319a4d9026a4862568aaf350e27c3ed30035a94a1a2bfe525223705e",
+    "nations/irifiyen-morocco.html": "61e10bbd23ab60d0b5bfa1979a748262052224ede567e6c0f91e9ddc8154f061",
+    "nations/ishelhin-morocco.html": "827f8ca5ab68986ceb8759cbe68ef53a3afbd89bc9c5083ba8a962ff3e9dfed0",
+    "nations/itaukei-fj.html": "2253ba5b7db630ba59ca00c54296455c0eb9695cac45c8fcb4b478b0bfab2c71",
+    "nations/itelmen-kamchatka.html": "945dcb6474d71baa0fe72eb5a175db766e9396e718df2740a76ac01ad2fe8c59",
+    "nations/ixil-maya-guatemala.html": "010fb3ca9538f0b45be43ad1c867aabba2b0b73363d787d01bef81b4c4217ee2",
+    "nations/jicarilla-apache-us-nm.html": "7c94d3da6019f39474daf6b04c01f067a86cdadf4b22fdc36293335abac7da2b",
+    "nations/jnatjo-mazahua-mx.html": "bfd63f4f0776d4c0940ec715a2d3deb4935145caa4be080a12c93c7c5ea29f9e",
+    "nations/jp-ainu.html": "2b1193d6accf1989e1b2bf321d2277be3a7c4e714ba694cf7e23afd1cc40f691",
+    "nations/kaapor-br.html": "79634813eb86979ac1c00a8d4e583f646a55d13f3622cc6d655dfd6b263d58e3",
+    "nations/kaggaba-kogi-sierra-nevada-co.html": "31ed4549d7b424ac83662e39c813261622935c1c87c7a6353aa2bdd486e95b70",
+    "nations/kahnawake-mohawk-qc-ca.html": "d6d5c9d71f107a7992727f7a639590cbf598022273b2f80b0391bc3c2a923070",
+    "nations/kainai-blood-tribe-ab-ca.html": "785600a2befb68e1449d48d9fd335484aa8695430745732a23ab48abcef84eb6",
+    "nations/kalaallit-greenland.html": "533193ea4478414fafa69a83e752c2c9a9cb754adee2e71b2a2e47b1ed1063a0",
+    "nations/kalina-guianas.html": "d708c68d9ab5d77bfa98df495865d70bf8c028c74bad24cb901314c04be3b48d",
+    "nations/kalinago-dominica.html": "fe10916c6c778534d2421c4558c4aa6151fa71e806b2996eaf073baaee69c60b",
+    "nations/kanak-nc.html": "412d26d4e99583b45e00f4575c3fe8e4dc158e571f660b1cee89a823f70a2fc3",
+    "nations/kankuamo-sierra-nevada-co.html": "6f057172c8e124c1bd281af0bfdce93a5872b5303f5340479458ac8018b73411",
+    "nations/kaqchikel-maya-guatemala.html": "d025c0a269e1575ad649b7dac3506d29efa08efdc5f4dd476a2f930542415b57",
+    "nations/karimojong-uganda.html": "9bcf9260c5189ff9a81424fea7aa61a3d2a6ed94829cae23eba14b2793563e28",
+    "nations/karuk-tribe-us-ca.html": "c80581f0d310e271eee2f33f20f367647c1d8986759e41b40ff4daa17c54a65f",
+    "nations/kashia-band-of-pomo-indians-us-ca.html": "18b2887acb554c3840fa05ac190542a90fc4fb91803c8dc69341e91951c0db28",
+    "nations/kaurna-au.html": "f7bd70f898ab9721bcecea4dba9b73ce04cbba980ea3542332c8f982e1d3c6d7",
+    "nations/kaw-nation-us-ok.html": "de60a456b422c6378f30a7601f4e81f5417913601dca155cdc32068f4c4d5896",
+    "nations/kel-tamasheq-sahara-sahel.html": "d546546d9470153ff44d85674c311d580bdfbbba4ce495272e22321d270c0086",
+    "nations/ket-yenisei.html": "0d08b2ecd4cea6e3a5c5e63628d8b50259d662431f8c6c70c0d6ad1c090e4ab3",
+    "nations/khanty-west-siberia.html": "6b256cf36a23bfec31d95ef7e2ead7b62e20717e2061a48793833baa065581c0",
+    "nations/khapo-santa-clara-us-nm.html": "d4e941b87dd97026ca5fde118667c9a36824f0eafe1fc5a492913a52a5b51730",
+    "nations/khoikhoi-south-africa.html": "ec9544a5b22e8707ac7a124ba1b3fc1e7b4869cf89255508930ee973ace6f5d0",
+    "nations/kiche-maya-guatemala.html": "01889388f5925a426a1391ce7fe3ffc79d3f2651c76383741fcf4989252ec189",
+    "nations/kichwa-kanari-canar-ec.html": "94f5f8fbbadf21116a733ad64bd91fc64f439d1f2314b0ae1750dcd4a60c0a89",
+    "nations/kichwa-kayambi-cayambe-ec.html": "f00853db63e7531182e41f07c13ec147e3a2ee87d23e3535d0f54639ae0ecf24",
+    "nations/kichwa-otavalo-imbabura-ec.html": "11354ecab7b4d632d25d86dc74b9da3064ffe1e97f1c5bb2f32c73245460ac65",
+    "nations/kichwa-puruwa-chimborazo-ec.html": "daebb2bfa45ff6b2ad66c7dd103744baa0c5665200f69c607959f94989f040d2",
+    "nations/kichwa-saraguro-loja-ec.html": "a24c6c1fb946c3e35e163e3a78c827935d75ae8d9586c559390e915be68925d1",
+    "nations/kichwa-sarayaku-ec.html": "63ccf962954ac1cf9251505c530f78e39f1bc53b545f1b8427eab451c9bdf0a8",
+    "nations/kichwa-sierra-ec.html": "e2dbecf852cc89b1d1b8bbb0580246c763662d88109fde9c82cdd8fd87cdbac2",
+    "nations/kiowa-tribe-us-ok.html": "22078c9eaa126ddcd7eff1179a3a71fbfc1aa488c3b0f78d9e362f558565675f",
+    "nations/kitse-chatnio-chatino-oaxaca-mx.html": "8ac002911ffa3eaad2fc91df67477e4a64c38804d8d3295a95a843ff46cfbef1",
+    "nations/konso-ethiopia.html": "aa675f5cfc4f65fad4fb145da801cd096ddc22211e98526ac15fe311e82c9f85",
+    "nations/korana-south-africa.html": "5a2e53f538c75026836f83933fd7d2af16f3e3087f14c9d3eb0f7c31b3b9f95d",
+    "nations/koryak-kamchatka.html": "80b988a51effed977ae3a832b3ee7540893d90ee21cd828d62c088aeec3d1d02",
+    "nations/kosraeans-fm.html": "f34b8344e8efe5ca1960cd2fb27d8be041df253f30fec89a61c7fbb3bf2c7970",
+    "nations/koyukon-interior-alaska.html": "dbdba2c64ce2f2be13831287cd115c76d747f9109e94e87319bd0e020151cefb",
+    "nations/ktunaxa-bc-ca.html": "f1852ea3619e6017f055d9d6730138683f70f06d96cb7eb5ff434601e6222500",
+    "nations/kuikuro-br.html": "794e9909610c06d8bffd8a05c85208f70a545d573cfe3e9dd65c4ce022d93939",
+    "nations/kumeyaay-us-ca-mx-bc.html": "3b0594f046d3950dabe3f8eff3e342f0dcdde29a58ab6f2826d64196d37e6ec1",
+    "nations/larrakia-au.html": "61a0aa03af49d2a03db1ce9bc4413fd8d689e6632f13800d2198600e4ee43ca7",
+    "nations/lenca-honduras-el-salvador.html": "84e1aed3bb8ffc58b8dc4141f0f8659c5f1b2b3101bb31af41dea48403ed48fa",
+    "nations/lickanantay-atacama-cl.html": "3ac2f1aef4a64870c9ee7370d2e3926c693eb784782fe7c8d81c90ec65330228",
+    "nations/lipan-apache-tribe-us-tx.html": "7499dd2f9b8897d7734c3ecc0126605838421e6d4e5ad38c52a8f5c0f75b8f73",
+    "nations/little-traverse-bay-bands-odawa-us-mi.html": "ea0a56e7bd64ca61d1ded9d6ab8814618ee2123a914939e704258caeba67f817",
+    "nations/lk-wanniyala-aetto.html": "c1239277fd043ca7e7bcfed51581f4bc0736985020396121f881cda0f0f15f4f",
+    "nations/lokono-guianas.html": "aa57fbd19348adf0cedb6472ff7eaf99814dd8f21be8144bc5b0ebd2ec70b935",
+    "nations/lower-tanana-dene-alaska.html": "4a295c1022f75fcba0b0aaca295e28ee766f79b15f1a79700c152926d680e026",
+    "nations/lumbee-tribe-us-nc.html": "4d2525dfaac52d9760d268df5c1ef2ff65a1aef65effa663a47b282a8267a591",
+    "nations/lummi-nation-us-wa.html": "bc6f1aeb494ea3a5c37304e73dc29b187a93065951137c54527b09d84808a6d4",
+    "nations/maasai-kenya-tanzania.html": "325f12cd14e4e10de1385e017cee5e6cd7c9179ffb0d9fad56cd681dcb2e7136",
+    "nations/macuxi-br-gy-ve.html": "5e6069e5768081c67c701ee793225b97c9d34dd7f272eda8a612c27259d19edf",
+    "nations/makah-tribe-us-wa.html": "2a0219094f8f30aa3b92cde533dfb8a868e8ff859dc70e153263c857b7d4605b",
+    "nations/mam-maya-guatemala-mexico.html": "20349112b4c5f81684ea787847f7f4a4daebf55a8f2c2e7c29885b73db533423",
+    "nations/mansi-west-siberia.html": "2b97aeeda5782aeb13f7ea71a8dda61365067dcc436e8dbe867e0d20fdcffd0e",
+    "nations/maohi-pf.html": "a5889d98c288dcebe213e6755d5711aa4cc7d4f0a7f0437354b2ea1cf5412076",
+    "nations/mapuche-cl-ar.html": "d821dc8b8de3261f427ab455e542fc98a93cc18c535c92f664faddea66ba5edb",
+    "nations/marshallese-mh.html": "db16172ce2d19c70f6b2cef34dc9b70b6d67f7f2ab1e5f6d1a058019b8ea30d0",
+    "nations/mashpee-wampanoag-us-ma.html": "69cb4afa6426189aeec3e80b9a5fdab0bd9a91076a63a2fc5d962ad136d94dc6",
+    "nations/maya-yucatan-peninsula-mx.html": "d0f71efbc2440fcba9cc3b61b43412a61a164f726ba345b9ef109004a1b6ed39",
+    "nations/mayangna-nicaragua-honduras.html": "3b0e5855748b0f4e5b970a3829418ac41626a9fb05c2a8b9c40e285ae81a6c56",
+    "nations/mbororo-cameroon-chad.html": "3d22eb706a7ef0157a593c8ddfb4a512fc096ff205ea23bb362697541602c923",
+    "nations/mbuti-drc.html": "4968d597eb280b039f2253bb97367c156c1a7f1eb9040f103ad8b97e5cf1fcfe",
+    "nations/mebengokre-kayapo-br.html": "5b6235eb1c90078489f3f095efb2237deada5c639da813be2dcd982dd0f2b9bb",
+    "nations/menominee-indian-tribe-us-wi.html": "5ee6efe00a985f75805914c2c3b11d0a3fc13908c9740510c4c7691af9db2e15",
+    "nations/mephaa-guerrero-mx.html": "46a9aa696939ca6ce3812f97ea567d1ed9294f9f08ed9c4ee5cac0ecb6aab954",
+    "nations/meriam-au.html": "3e0bec540cf8c7ec59775bdeccc9897582fcd7e6ca8b8f70f15359448802d37d",
+    "nations/mescalero-apache-us-nm.html": "d6c3801c501233c5e41f20444cd97233fbac9412079297cc33f2d5b53bcaffd5",
+    "nations/meskwaki-nation-us-ia.html": "30dcff301cf471b22ae88621e9fefcd9593c73be166971c228ac72f268b9a65e",
+    "nations/metis-nation-ca.html": "3e98e3455a7d0905c8cb6114e8f5871409f2dbfe25a5403dbf6a7a18fc26bd3b",
+    "nations/mha-nation-us-nd.html": "536e9b82ced8bd4b7a7d53445a105e0766b777b482a742c04aec11bb09769d30",
+    "nations/mikmaq-mikmaki-ns-ca.html": "5fa0a2e8c1018f6467dd58a09c121f25ad9c295d01a01224139d3d3d2b2dd61a",
+    "nations/mille-lacs-band-of-ojibwe-us-mn.html": "caa8b7767c7519fa8eda2ef44dc4e4aa7b7e2c2ca4568a185aa42d532d7bfcbf",
+    "nations/misak-cauca-co.html": "888c51af6735b57e7ce6a7a55cef9e741698798c02353b91f130b5029019d095",
+    "nations/miskitu-nicaragua-honduras.html": "c200b385c4d7fa9c0de002564e43737c1ab22c227ee7597a13495625a6c13636",
+    "nations/mississippi-band-choctaw-us-ms.html": "fcc7eea595ed083d6877ca057cf32f6e64eebd0ef132d482ba0f18041e738577",
+    "nations/mm-karen.html": "dbe6ae004756e837b75cbd3841b73b59dfc6eec23a9cd8911f67d46fd6b3acad",
+    "nations/monacan-indian-nation-us-va.html": "4e4b2894b1a27fd12ca04a1d4db959f1599a8ae8107867f2c379163786fdb25e",
+    "nations/mopan-maya-belize-guatemala.html": "3e3526081a7549146339e11ff86b37c78e2191edddd56c4b52b85cb22d53cf53",
+    "nations/moriori-nz.html": "438c2ce05487ac99175c18a26557669d067dd29d1ad8cf4575374f340f315572",
+    "nations/morongo-band-of-mission-indians-us-ca.html": "f8cffce34f144d06f4dd3118af956b4a6afe4409019500d7fc569bb20601bee5",
+    "nations/mowa-band-of-choctaw-indians-us-al.html": "ebb65334771e5e50177fa75ccf99d7a084f6c9ade8f4390fe5d6da8597645e87",
+    "nations/muckleshoot-indian-tribe-us-wa.html": "a8dc4d369acfbabd344f6056af7b397e32e45281d205ee89e8412a3de6959f59",
+    "nations/munduruku-br.html": "488613f367ca4530d38d4413e885f2068870094acbd42dfc42a4ad4a610c47a1",
+    "nations/muscogee-creek-nation-us-ok.html": "ddae7bd48b2ffb1ae58bb1b74d536b30c1b53e449ae4de16dc5dacd739d7bbca",
+    "nations/muskeg-lake-cree-nation-sk-ca.html": "ee9ccd532c7c1bddd3035f750a4e21fff93ee482a6b52d2f345d110cdf70f8bc",
+    "nations/musqueam-bc-ca.html": "c2777908f7f3a4208186ba9bd37a52e2f3945b43418572f3297873f4c1db6948",
+    "nations/my-iban.html": "7a1b81f86406f43df143691521d0025dca3a530abab294869eb8ff7c4fc401d9",
+    "nations/my-kadazandusun.html": "a650cdb67e7f49d03c7402743963150e015d9a1c99e8d1f259f2226082dcb73e",
+    "nations/my-orang-asli.html": "a7ad862e242e110845eb858dd498f59ce9ea7ff04d9e5bef283eb33fbe5d5741",
+    "nations/nahua-mx-central-south.html": "9b384b9004b4b9e8d5f03e13d8178438440cc9a2dd13d81587e3ba84aa4e11c3",
+    "nations/nahuat-pipil-el-salvador.html": "728143ab189fc756b3dc5d4dfce528c6bc8f41d70e3e27658b1ce3968219dc3d",
+    "nations/nama-namibia-south-africa.html": "475c724a389faaf9b56eb33247673f09dd5654f92eb9bb428cca36fe61b7be30",
+    "nations/nanai-amur.html": "cd99f3367e653837c0e351888a7d5f1152e616f4acdcfe8472c174044427b165",
+    "nations/nansemond-indian-nation-us-va.html": "cf67f769115ef3797e0098ce35fe51879caef185e79fa753b6b25a830fdb4964",
+    "nations/narragansett-indian-tribe-us-ri.html": "4c338a4af400be6d1103541da6d67274c0e17d4fa830adef01a53182c78aec10",
+    "nations/nasa-cauca-co.html": "9a984706a74416ac562e5136bea9c37b06da0a093161c948b74d95ae3339907b",
+    "nations/naso-tjer-di-panama.html": "2efdebebf6f74593b796dd46bd3a55a58a824c89a3bafbbcb38db550263de083",
+    "nations/native-hawaiians-kanaka-maoli-hawaii.html": "4e8c077b7721ac04185f5ed760c56c1ee7c2701f2af283aa3a1289fd51a6d740",
+    "nations/native-village-of-eklutna-us-ak.html": "380f3ba804e57123b0b3c1d2fe5c96f41d6bb979342b9093d44a863e2d4af5d8",
+    "nations/nauruans-nr.html": "c386c84e83300ae82ab21536dcbcdace27e7703e4e4a86ed799b5cbf1530c902",
+    "nations/nenets-arctic-russia.html": "4642ebc25cb35eae63a361f0a3ce2fa70c5e2fa54bf91b7a52b16fdb23ce831f",
+    "nations/ngabe-panama-costa-rica.html": "46687cac420edc0f0a22b41b786e5a2a17add17e22e4cc692ff91bc473822327",
+    "nations/ngai-tahu-nz.html": "b871b3f5b9b89c972d9b588ef5e11f2edc4125abef592811f343e51ef83f44d3",
+    "nations/ngai-tuhoe-nz.html": "2db12bf7b96c5f0095dcbc8d73bc42aa93b7507184224ba876a164851e0509f6",
+    "nations/nganasan-taimyr.html": "395f36d5972f55d34a195efbb9c61fea6ea77ed97bd7a9542feba42ad708d97f",
+    "nations/ngati-porou-nz.html": "479505ea95a37d62b315b4519a7295550a0b3105c01ed98d979292c19e246a86",
+    "nations/ngati-whatua-orakei-nz.html": "97fec9de16c3804e271bcfbbaf00e97f6a42a2cd25696cfee916d0e4b5ac8f5c",
+    "nations/ni-vanuatu-vu.html": "b0844a8c5480c06f8445482122b06ff67185dfa1d73f946216c08aaa26b417e9",
+    "nations/nimiipuu-nez-perce-tribe-us-id.html": "8cd5f11689010031a5dc84aa70f35d4ab7c2d4d7d2def10c6a439c50e522b109",
+    "nations/nisgaa-bc-ca.html": "364eb9926f2978a8caed2dbd5104fa90c8f09a4afbac59fe272fc3ef5487c0f2",
+    "nations/niueans-nu.html": "944a367ca1d5c0aeaf211604bdfb0f4e2dc0a9bd26fca0ae3b61f923f605c22c",
+    "nations/nivkh-amur-sakhalin.html": "786625d180974e0d217350cc2c6f6a872046400c7b9984d63592efb1c3c3966a",
+    "nations/noongar-au.html": "41352e6d17f31a559388926c84b36eb38327133b755a7552196691f90fdc767a",
+    "nations/northern-arapaho-tribe-us-wy.html": "bed3ef4d6ebc6a2fec0672b2f366684ffbc0d9298b59a6765784c1addca317d5",
+    "nations/northern-cheyenne-tribe-us-mt.html": "da1e375b005ecfcdcf99c0deec2409485e6ddaf102336c079290695569fe6a5a",
+    "nations/nottoway-indian-tribe-virginia-us-va.html": "2c7a60b3b2283952b6a00ecb9f222eb293d95150e65020f2949994afaf8280e4",
+    "nations/np-magar.html": "9420f33b527f6e2d26d8e87640a7e23c931234d7e2781365f721731fa3ecfbed",
+    "nations/np-newa.html": "5d8fe37ce7619228350843c1ebbcf669a2a26bed9a59a40476cadb3c4eb67cf0",
+    "nations/np-rai.html": "9af7d49f7c576967c2ca1d8396d1121f776370e19536bbd77d46c7c6e7be03bf",
+    "nations/np-sherpa.html": "915e869ce649270fff8879ece25eacaccd3f4ab087e8aae8d9190b391e8f49c9",
+    "nations/np-tamang.html": "6f02d94b2ea1e174db5916995a1f81f82864c75e6a6cba0d7c749f51df8ac379",
+    "nations/np-tamu.html": "6001af076f8154e03874d050836611f0e6e2d0d2db18b347ac020dc50c9317b0",
+    "nations/np-tharu.html": "bc53b34cdbd80697a22d9a57dfeed2b7ba9bcd253677c104f9e3f560a687468c",
+    "nations/np-yakthung.html": "bff9a90c287cb1297ba43fe71492d7e913c2690dec253a7070078b6811088b7f",
+    "nations/nuche-ute-us-co-ut.html": "4d46d4759ee6f3de61d75f2703801d7e180e2c05331c7d9dd4ba1b2761082bc9",
+    "nations/nunatsiavut-labrador-inuit-nl-ca.html": "26861e96f224c03f86dac4d9ed9880274a5c375faa964f0db96df7aa26bee729",
+    "nations/nunavik-inuit-qc-ca.html": "3e73afe77985bea7d6487ab3be96a333aea9ecc4d261625e448f37bdeb29c303",
+    "nations/nunavut-inuit-nu-ca.html": "d5728e22740ac4015b5cf6c4e3bb9ca03d7cd423cac9efa9ff0e5ff5264f00eb",
+    "nations/nuu-chah-nulth-bc-ca.html": "faf1eedb346d6053066b0ce6c9c8b097cecd083a2b8e3b8a8c9a266cd88aa464",
+    "nations/nuu-savi-mixtec-mx.html": "438b593bb73bfcc5a42c1b8d1d6562c4819e91dcf15e1da7fd9c69ff88b33fac",
+    "nations/ogiek-kenya.html": "ff6e51b628bd8bcd05b86e2953f5802dd81cdbe4ea12014ce5dc1c6a51615b2d",
+    "nations/oglala-sioux-tribe-us-sd.html": "abb4cd33b6ef8ad4de892b055ce5110850f8364efc3ffe050064648bfec8319e",
+    "nations/ohkay-owingeh-us-nm.html": "e7af7b68a9621a3c5dcd1cb8a80deecdb094e73bcc115c079980788f2e22ff8c",
+    "nations/omaha-tribe-of-nebraska-us-ne.html": "b01cdb8c748228bc13918c204e4c38486f97917b4a669c4d3e5e41535f38813f",
+    "nations/oneida-indian-nation-us-ny.html": "7d8dfae6235a3b3c8a96f7ff4b7bfc4935fa227436139e0f00ea51c47e92abd2",
+    "nations/oneida-nation-us-wi.html": "90b965f2591a5ec8bc8e091869b05fc2697c03871008a9ce9d29a0b350a9b78e",
+    "nations/onondaga-nation-us-ny.html": "79719a1a371d0d3aaacd9482f0b69e5c0d0673bd19e48b70602abe8e23966cc0",
+    "nations/oromo-ethiopia-kenya.html": "656aaa6603aebf1bb0e27776fe63ed652c401c686f9c78ae5b1eec9681ba1f97",
+    "nations/osage-nation-us-ok.html": "56c26da1316bcbff6990340c7852a4945f480a19f36e4915a1446dfc4a2a16ab",
+    "nations/otoe-missouria-tribe-us-ok.html": "2de6a02aa93ca7e17e302f852993ee5d28fd9aa7f0f89afc701f2fc3326fb33d",
+    "nations/ovahimba-namibia-angola.html": "4056f30ded71cf30cbdba899ececdbc5c8f39f7b653d68772c9663e08d0a7e6a",
+    "nations/palauans-pw.html": "5e0b38cb26f6f094f2153e31afcb21eb83bd67967848ce7d25365ab905bb8f3d",
+    "nations/pamunkey-indian-tribe-us-va.html": "abd286fbe1caf1e2a8b61f65b49cab607080192d4ba91f6cb2d0d2b4d6a4b5a1",
+    "nations/papuan-peoples-id.html": "3b03939c1f7a8d53ad86565ec5e00399f46cab9ca35b21b093b7b6911e1da5fc",
+    "nations/parikwene-palikur-amapa-guiana.html": "94c4571b05ca5c5a48d8a00a679b2faea5fb628bd9c2643bcb3ce93cf0bbe142",
+    "nations/passamaquoddy-peskotomuhkati-us-me.html": "c738d0720b87ab1fd44f7964b45bbdaf46df415286c18ad784e8a2d862bf9df4",
+    "nations/pasto-narino-co-ec.html": "cf3236cba048a318ff7cf4df4e83cbdc8812fa71f47476629ee5b27bb070a7c5",
+    "nations/patamona-pakaraima-guyana.html": "b33dca5e2d63561838d4075590723442300be8b59d7578f7e2cdc9a8a2c1877b",
+    "nations/pataxo-br.html": "0af6ec2e15e5029c50768067319d1dac05be0c50dcb91abf2dfba0f5390c0d8d",
+    "nations/paths-to-action.html": "1925a2e40dd4353e7d4161576897f2b873626f851a6a2947d0ef4ee354e048db",
+    "nations/pawnee-nation-of-oklahoma-us-ok.html": "a9133969f9e426ef6e96c6729990a892afdd368648f454774130a45e04e01b6b",
+    "nations/pemon-ve-gy-br.html": "a49937eac6cb83eb5d1ce6f341edbb279987e16daf0c0371b5ff9c540ff4e653",
+    "nations/ph-ibaloi.html": "872c062fa6788a1f2240b8b5fb267363071a9bea2ae358615d9afa05c8e7c5e5",
+    "nations/ph-ifugao.html": "59fcbb4cfd9189741f62a99d81864a206f3397f2f24513164c0b6f043c58f4f6",
+    "nations/ph-kankanaey.html": "0b86c7d656f48cbd2ad8b3dbe9bf6482018305859dc51b8efbda759999e6c353",
+    "nations/ph-lumad.html": "de9f28043b44920c5b3acb5caa6c545bd68a8ccd5c5204061511293e3843d024",
+    "nations/piikani-ab-ca.html": "c8ca9342380d4cf0a3668813b9bf2dd7eba34230987b8428cb80948bbf82fd83",
+    "nations/pk-kalasha.html": "758969de1d7144ad7e27d1510d08ca71c4a7e1fe1ac6b81c5493fdf242b2c18a",
+    "nations/pohnpeians-fm.html": "9531730da2399362f4821539ca233fec97fe0f5df5eaf5285e5e0d9c38ad7cbd",
+    "nations/ponca-tribe-of-indians-of-oklahoma-us-ok.html": "95d0fd66df290a62bddfb48574f7e03f583007743326978979578dda8989e2f3",
+    "nations/ponca-tribe-of-nebraska-us-ne.html": "16577d6baba509ae9e8a4fc2411df4f1b679145d60d3b46a8979f612ee574323",
+    "nations/popoloca-puebla-mx.html": "a25ed078a7924289f642d30049a690a38d5e188d36438ed5e20cf2f265feb2ba",
+    "nations/popoluca-veracruz-mx.html": "602176757e9be0d05670581bfaa3c18dbb99c127f2c60e42b446b159884df455",
+    "nations/prairie-band-potawatomi-nation-us-ks.html": "0809c96f687492b94d454789549b798e269d6343d841f6be6be5b72df288bf5f",
+    "nations/purhepecha-michoacan-mx.html": "bba072a5bf0262d0e4b96ea4daeca75d4fe69d58af978f56a209b740379cee83",
+    "nations/puyallup-tribe-of-indians-us-wa.html": "d3270f08816e894ffa2f269689544b537b7c806b7f2bb593da16c2f36859ebed",
+    "nations/pyramid-lake-paiute-tribe-us-nv.html": "b358a7e0109b99c1f6561b4d750f1bd35edbbc9fdc45b094444e2f93ed8cf348",
+    "nations/qeqchi-maya-guatemala-belize.html": "6eaa3c15cfe02769b22ec9148517222dd25cbaec6f2da2546310ef8af149afa9",
+    "nations/qom-ar-py.html": "dddffd9575998b28fa6566b6a4e0385807d6290e0db1d8b8658ee5db0514e6fd",
+    "nations/quechua-andes-pe-bo.html": "a297ddca3488e46dbba944f6e7f8863eb0e0f20d3913d23f98a1f5bd153df724",
+    "nations/quinault-indian-nation-us-wa.html": "09496aeb1319633adc00f4c342f1e9039949a7e91f73160cd81caebf16af4154",
+    "nations/rapa-nui-cl.html": "a20302f962f6e6bc7dcbecfc9caec793da067017cb871f60e18c4d8928fd3027",
+    "nations/rappahannock-indian-tribe-us-va.html": "ce02238813b3556d23ab1a53fdb7e8258d33d85411f600bca758fe8a6c2d5592",
+    "nations/raramuri-mx-chihuahua.html": "f0507b021512f43947e3b98712f9c1268c0bb701967825156aff6b3da758a2fc",
+    "nations/red-lake-nation-us-mn.html": "235dad2193a62a65e8086bb0c9da0077351fa139360e39732798b9be9afdc358",
+    "nations/refaluwasch-mp.html": "1385dd52e1e6f58920ec0254141f26e045fe7fcfee9bb03ec26410b1654d5f4e",
+    "nations/region/africa.html": "bb73ff94e2ce3952ec18faa3e86254675aa9d0b136306be4d1c031e6798c78a1",
+    "nations/region/alaska-hawaii-pacific-us.html": "afdd99d4ba1a09ca7fa41e12837c310ededfca740bc2034b93d3460bdb41d746",
+    "nations/region/amazon-lowland-sa.html": "6782279f492d99eb3b595f1da34ea9064ec750e1532aa23589af784192762abf",
+    "nations/region/andes.html": "84511d410f76682fcb39e2df40603c89460ca9faf1856d81383f582f07d2bd71",
+    "nations/region/arctic-europe-russia.html": "fa11a2433e3b65d351090decb1a17781c447cbba1d70e52f051eada06e44fccd",
+    "nations/region/asia.html": "34e55331df3468583f23579256241a748fd37e5b0bba71f0ced9db1a94b8a97e",
+    "nations/region/canada.html": "6ae076d5afc5b288bc4f386761ebccf7184c3173f0e3798b624c024190fe8713",
+    "nations/region/caribbean-guianas.html": "8708e2fffbe19e3cc4acb825e7170f3e6e966bfd4a9ba36ea97e4880766cfed7",
+    "nations/region/central-america-caribbean.html": "2de7359e6898e3eeb3a180be4a9346562e65b29f2b1cb5604020b6c752bae072",
+    "nations/region/mx-central-south.html": "04b6e63a9bfbb917a4607b7926f2e214c1cca78b9e322b2180b3619ac441a9a3",
+    "nations/region/mx-north-us-southwest.html": "818c7ba7811f4d8270e64c2fe338e65e0fc1d7e27f865d43fa4b31241e8d820d",
+    "nations/region/oceania.html": "77b447314d2843098f49b309df6c1422027101ead5796a782a4210ef5da0e493",
+    "nations/region/us-east-southeast.html": "e529d67acdf822207dfd9a31f206cd1fbdbada9e39211268410c99adb76eb118",
+    "nations/region/us-plains-midwest.html": "e4aeedc86dc0e95a9b458f686d4c0f7ad862f223f5285345d2476dff97c9b998",
+    "nations/region/us-west-pacific.html": "c80d7c574a7d99d4a7908eaaf9c9d726c23ef8f5ce5cd51bf890a25f4ee2b9e7",
+    "nations/resources.html": "eec1bda164e01552aaf11a2863ac83edaecbf83ae433b90494770db83be72aa1",
+    "nations/rotumans-fj.html": "0a92afb6daa2558bcefa54f1a1d827d9fc3407d9c7c56ba6be23fef4677968c5",
+    "nations/sac-and-fox-nation-us-ok.html": "5a973d314282466271b8edd9f7590e7301aaadd0de13223cd8fec1e01033d9af",
+    "nations/saint-regis-mohawk-akwesasne-us-ny.html": "6c60cda4a4668e1aeaf7a3841c8a60d3edac6561533b42c025e95d70521e42bd",
+    "nations/samburu-kenya.html": "fdb2536b48de64561fc9b16f8fbc8509ff33ae7c49e8b119a916d4c76409c767",
+    "nations/sami-sapmi-nordic-russia.html": "e2a97f352cc81ae7b2bd4d45deea966e2d16a7d4c97f5fe817d88fffce1be30d",
+    "nations/samoans-american-samoa.html": "36799a087da3ec1fec8c98132c3133b765380725553f8b9f9679f4f3907804c7",
+    "nations/samoans-samoa.html": "5bd425be489c5fd1e1623cac040859d72a4c1e31428b439948a7bb2f1cc7ee7c",
+    "nations/san-carlos-apache-us-az.html": "0164dbd2453061f6d76ff29a36ab733c5412cb8ac95b86ffe4b2ae0bb0c77f13",
+    "nations/san-juhoansi-namibia-botswana.html": "ca07c40ab357adb888071cd4d7d004e35fa310c40dfadb24c7d7a6e76cef6fcc",
+    "nations/san-khomani-south-africa.html": "b9809031366c51445e48a23d4205ffaf78cf0d7ccab319f17772df0fe0542770",
+    "nations/san-khwe-southern-africa.html": "5dbe523b683044eca0213a82820b2e32e15e3e79999f0be335cd960fe3dad011",
+    "nations/san-naro-botswana-namibia.html": "116058e9add00fe1da2d72471bf38d69cbfcdfc6f7fa1ba42d8a2e73150a83c7",
+    "nations/san-xun-southern-africa.html": "88e5b6386a2929ee88cd045f3c299ef4c8cf1a3feb75b655db5450e3a7e9e050",
+    "nations/santa-rosa-first-peoples-arima-tt.html": "39bdd96bd0fec11d31b1cab4b005e44ab99c8f74780574084156b9e023ed3c26",
+    "nations/santa-ynez-band-of-chumash-indians-us-ca.html": "eedfe086e9c497caba63e3d6274ee628ecca3d10bee386134d9cf299ecfdcf6a",
+    "nations/sapara-ec-pe.html": "91dfaba9daa13b2a33ce8133aceb7ec5c30cadcbf25ba2fbae53a4a059f9865f",
+    "nations/sappony-us-nc.html": "a1181d1c4fe5099a53e3c1024ad57ee28bedf036a2b9d321bdb4f10504cad3ac",
+    "nations/sault-ste-marie-tribe-chippewa-us-mi.html": "14f66e7661d300288e5d00333e3f0c15b9d25e2078850bb91d44ee1c40e9b7c0",
+    "nations/secwepemc-bc-ca.html": "f3585dc9e75a856810392a383009b2f57b89e4e4b74493ad530cc23556c071a7",
+    "nations/selkup-west-siberia.html": "7f7dab31d233baf502d1805bbe048a06e7fd7dddcb21c225828de0eadb3c79e4",
+    "nations/seminole-nation-oklahoma-us-ok.html": "a297b05d557965298ff3b249032088a576f86bb97cc32d6e4a8c45064257e59f",
+    "nations/seminole-tribe-florida-us-fl.html": "e80131f9bd3d1f3c476d03e21841d1b35fa274552bed66ae11f056bafb55fce7",
+    "nations/seneca-nation-us-ny.html": "14d30589677bcbf935faca437e071facc0c1623252678d38ef4470205151e664",
+    "nations/sengwer-kenya.html": "a440f1577641840a2b59fd8237aad75037a0e45e32c27075a2e553a525985f98",
+    "nations/shakopee-mdewakanton-sioux-community-us-mn.html": "05825f6353858822411dbbe4d75efef816b4e851f3e67c19e781f0dbf978cdf8",
+    "nations/shinnecock-indian-nation-us-ny.html": "c67ab3009d8d6ff54e51c94b17f4e22374c482808c94f23884558b68cb7194cc",
+    "nations/shipibo-konibo-pe.html": "cb23793c4edeaa65c993423873f2063287e9f05a6b90c7e996d656d0cdf9e40d",
+    "nations/shuar-ec.html": "a87760f5fd33f12b33421131214ab09dbbdf56495dc778505f11e6630c5db2f3",
+    "nations/sicangu-lakota-oyate-us-sd.html": "3b299d2fcfe8efd4bac51ff130795cf6d375f8669697d1f71ba874b24b4c0df0",
+    "nations/siksika-blackfoot-ab-ca.html": "9207b1200ccd4b851cbfef1f2d3452b13eaf058b750c332a015e080b4a509051",
+    "nations/sisseton-wahpeton-oyate-us-sd-nd.html": "1515f0f2b7441868cfb1ab56410f38f6569c24e0191d39fbda48a37fc231641b",
+    "nations/siwans-egypt.html": "e4ebb696f12b4c52a8a9053fcd73f7e46254574ea1ea659843c33bff3687d1aa",
+    "nations/six-nations-grand-river-on-ca.html": "620df7b4dea37503cdbf7e6d1e7ff85bf413a5e627add1c2237c474e5cf93be7",
+    "nations/sources.html": "a9fe5e2f989e4c0d42687c0c5cf323a4509f71e56e5e46e5a8a9d078fbdee02c",
+    "nations/southeastern-mvskoke-nation-us-al.html": "ec848039ecd52cbae921d303587dc7d10440045a59f5ae8379273dadfdc3c73e",
+    "nations/southern-paiute-us-ut-az.html": "a2a352f1f3db1beb486999075c69c74d33c414cc4155c36d67d76e52662b856c",
+    "nations/southern-ute-indian-tribe-us-co.html": "3e2001cdc36d52ffc6214132e085742cfbadd55fb2782274cb5a8a51fe4a3ffa",
+    "nations/spirit-lake-nation-us-nd.html": "faa2fef126bc87e29cce099176ac9b50ac606f2296fd5d4465f09f43c05332f1",
+    "nations/squamish-bc-ca.html": "c46df464df9aaa7c5dccfed8dcfc9fcdf56b8048efc07cc04e2c1fff88ad6dc5",
+    "nations/st-lawrence-island-yupik-alaska.html": "d58b2b0c804d55957f08142002f07f8223057e899517de3bfafb1af07f9b88f6",
+    "nations/standing-rock-sioux-tribe-us-nd-sd.html": "e89156098a856f361b7835789e4f698c4d39ac06599b2606bfe5b57912e78c19",
+    "nations/swinomish-indian-tribal-community-us-wa.html": "5f7874f3a93a93f71bc0fe4041a1f8aad009a7f549b983a76273952fbbf9dec5",
+    "nations/syilx-okanagan-bc-wa.html": "5bc6a373df52aa179c869890c2ca1c191673f5913038ca5663e674563e8921fa",
+    "nations/taino-caribbean-diaspora.html": "fa77e1696fc5493d7f5e729f6727540acaa699b87620dc391b4643b679c57c35",
+    "nations/taos-pueblo-us-nm.html": "8897e9d773208efebfd09ba0eed6ad28a74b3f800b335732c4109d18cbfbd8b1",
+    "nations/tareno-trio-suriname-brazil.html": "86812e1c406fb19192350d50343b6fa89e1c532f9314783cd7477cb18dca1be2",
+    "nations/te-arawa-nz.html": "c788c79cfbbc3b3e9ee0c553714343108267c28ccc238912fb6d7b9ecf451649",
+    "nations/te-moak-tribe-western-shoshone-us-nv.html": "d1644d4f4d41015b33a01a65e7c5388d36addd2e7d4aac794fd49f9733c203dd",
+    "nations/teko-french-guiana.html": "d943cc6330863ff3f517eec608fca4f2bdd6633cc58b1c570584890ad994c4e6",
+    "nations/terena-br.html": "897d9d3c5e6aaae6ee786e405122204f039050f34c512e0541024948e7d57fa8",
+    "nations/th-akha.html": "b988e28735258855a6eb7003b5b2ff4a5e52cd28380be3826579fac3135e9c30",
+    "nations/tikuna-maguta-br-pe-co.html": "5d0d26dbbdfed1c9e3631a8df94f211b3363c228de883822339fe5ec03465097",
+    "nations/timbisha-shoshone-tribe-us-ca.html": "162de25fcfa7ae70977637e5cb0f12b49e5e36af5d6771d693939b15b69c3d5d",
+    "nations/tiwi-au.html": "834c38d6b06fae1168f69163e431a6f40451247ae76cd5ac1d6c09f68caff5b9",
+    "nations/tlicho-nt-ca.html": "5c281dfd185af5b4c456ae27d0c16cccc4145d7f1a43b13e92d6d0e679eaed61",
+    "nations/tlingit-southeast-alaska.html": "1b354e0f61748d7ec873f3389dd53aa1f1083f5e9b460ace69669baff1253aa3",
+    "nations/tohono-oodham-us-az-mx-son.html": "b226cf2591b16b1afe301247858291a1e61a4905ae07add3b516315de85e4724",
+    "nations/tojolabal-chiapas-mx.html": "07cca96a5cf815acf8a62b90119865a0449ff3e9ab6055875e7fa6b1a22de485",
+    "nations/tokelauans-tk.html": "5359beee1e7a6fc52a51525cd1bea149b0dd18cf9ebe6e4066b92c18d56f0902",
+    "nations/tolowa-dee-ni-nation-us-ca.html": "096f4fbd07b9f55e73101f64338ab17253dc6ec5282abe33a24e6e8f13c38af3",
+    "nations/tongans-to.html": "2369880eb5b034d2bbc7c4365bc4276b008b390b1d659ab4d667a04fbae69be8",
+    "nations/tongva-us-ca.html": "368a101e45f306e6e50e41a67c4cdb81403e7ab4f45510d74a6295b73cd83e2e",
+    "nations/tonto-apache-tribe-us-az.html": "874e52331201861ef6a8b95e4ea8947784ca742e1ef2ed70abeb3de8396f1657",
+    "nations/torres-strait-islanders-au.html": "63725cb68eef87793ae5c9537f7521745eab80da98663aac6aca779026a9e2fc",
+    "nations/totonaco-veracruz-puebla-mx.html": "dac0cdb0503296f8d9264c17e0f212a08e0795dc26efab3748f32dc16ac2758f",
+    "nations/toubou-chad-libya-niger.html": "f3d4e9371a771817d54b74c113b20519cddce85f45f5f4e4e247b1a26b8e096b",
+    "nations/trinidad-rancheria-us-ca.html": "afe51baa04488ebf684728791ac3dddf48305609654cd2972ba126a0a74543e0",
+    "nations/triqui-oaxaca-mx.html": "f178af25fe1aa188139a5f53f970e43d1a8fb39a87e49975b3cb9004f6e67547",
+    "nations/tsa-ju-jmi-chinantec-oaxaca-mx.html": "cae9ea12c20db17ed042e98d3d107ad352a530b20a98674be0dcc0d5e731df51",
+    "nations/tseltal-chiapas-mx.html": "56b65f67e043cc6b7bcd09d4f51f38e1c45a22cee3c890f3936bbda966c4120c",
+    "nations/tshwa-zimbabwe.html": "e97dacf18b9686f3359ac4793f87c2c5a1d8e11c94e7a77917df4b6e0c7b06c6",
+    "nations/tsimane-bo.html": "81e85d5a5ff19da4f3fac6f7ca6a5f71276855f0f775a56c06a7ae79fbec2092",
+    "nations/tsimshian-metlakatla-alaska.html": "4919083ffcf23123c4c250a36bf6d7ada4893e0ef34c75089acd90b4d03b86a1",
+    "nations/tsleil-waututh-bc-ca.html": "8c3d1924b0d8719c17a315f85588210ce0eb933c24012bc72cb8fe63200c41fe",
+    "nations/tsotsil-chiapas-mx.html": "667a65f55d1054623a856c83290f052de93ff9bcc0359c3e1579cdfb4dbf8250",
+    "nations/tsuutina-ab-ca.html": "57620d91c901f0d6c9d4cf5336f959aa4845444c169d959894e3baa196c2926d",
+    "nations/tulalip-tribes-us-wa.html": "458f02de0b1c13cfd63e7fff5e809f317576588d699b9824d31dbf04835816db",
+    "nations/tuolumne-band-of-me-wuk-indians-us-ca.html": "f7f1882517d50ccc4f3810dcca9d6763c326c6be1805242104fcdaf93b8d29a1",
+    "nations/tupinamba-br.html": "4f0c3525d3ac751b6e1c1ab6383c136a5f0c17ac58453b51c0b649e8c1e6966b",
+    "nations/turtle-mountain-band-of-chippewa-us-nd.html": "b1e7745d489c85e483487611081311c7e2658857de8213c19a473c58fb6d8ec5",
+    "nations/tuscarora-nation-us-ny.html": "031981fb8bd9eae08732a715fe8df1446df5e7a210cf7c3967ec4ac1ba9b5f52",
+    "nations/tuvaluans-tv.html": "0d6a11a59e3cc8605f37f60e49ac1d2e007a5a1090b0ffe7f018a09c3bfb8595",
+    "nations/tw-atayal.html": "84a02ede11b03ece683195fc7a0dca4e4fbc349c6ecfd4d0520903615485062c",
+    "nations/tw-bunun.html": "37eec65d218990478642718c612dd85a8deda694d911fbb0861dbbcda93d5eb1",
+    "nations/tw-hlaalua.html": "b33dcd9070f54779d7fe00d6ab4cb716758e9c642c4df9da68e7949119bacaad",
+    "nations/tw-kanakanavu.html": "6721f5be0467c780525a1a62bdaaa92ad470669ead3aab8af59b1aea308c6ea5",
+    "nations/tw-kavalan.html": "0c2f222e92139955835012bbe465f46e7802237988b0d60aea6bd8b641fc2d2f",
+    "nations/tw-paiwan.html": "0da5108a9ca60e0da5b7228628075998017a8a720954f3664dda765ac8f64263",
+    "nations/tw-pangcah.html": "fe72ca6117bede38564a35c63ced0c02f8a939f22de936dc560f313ef4c38966",
+    "nations/tw-pinuyumayan.html": "94b02fdeb27f09c70f089eb6a8232d8ae3984f59a209c8bd987855d3528de6d6",
+    "nations/tw-rukai.html": "a7cca348b47951ef516936c4b995e7474085ecca0861be36f06fbf8577fd320b",
+    "nations/tw-saisiyat.html": "56739a2fc25105ec780273ef548538ccf49200abc8989dc1cdcd29f489177449",
+    "nations/tw-sakizaya.html": "db6dc86df17ef93fc39795425bf29d3e949b5ce494bc622c6109b2c7535e2b8e",
+    "nations/tw-sediq.html": "9cbe2c4be4aa871d0de20fc8d41ff928fbbe2813ccba30e3a773d3d0a65217eb",
+    "nations/tw-tao.html": "f49c564c61e6ad4faf2e1281d5f2ec2cf01db1beae1db01b37d362a76ec9830d",
+    "nations/tw-thao.html": "24b55d76ced5305316f665dad6011d7727bcf634b36684a129f8f346cb9f9912",
+    "nations/tw-truku.html": "18934e63ae910d3b37a220fe131c43aa1a394e50be3c2f43d3e2cbe544e35aea",
+    "nations/tw-tsou.html": "0e9e2161b9e4b4eabaa9f9915cca3dd61a61e4fad0a50dd5df40e18f2327c1a0",
+    "nations/tzutujil-maya-guatemala.html": "c6ae7ac21c31e1cd062159082bc333675b4e6865e90052fb93a187178eab69ab",
+    "nations/udehe-khor-bikin.html": "ad4c2a26315a5cc9d562cac660423d96635349cb72b5d93e76f68eb083713e7f",
+    "nations/unangax-aleutian-alaska.html": "3b3d43fd081e616c4ab9c55fa2f5c3751c15d38b3ed292cf78fc423b4e5991f0",
+    "nations/united-cherokee-aniyunwiya-nation-us-al.html": "587eea8e27b283c28841a54479a62e0fe4a03686b676125de3fa468ada9bd56f",
+    "nations/united-keetoowah-band-us-ok.html": "0d663c56267481670c9de6fe6e57901f0beba5dc8899e77ab011b08dbf7b8c24",
+    "nations/upper-mattaponi-us-va.html": "49411ea529d2ff1132a680efa862528147c19f2ddececdfbaa356d69b6db8ed0",
+    "nations/upper-tanana-alaska-yukon.html": "82c3e9a1c8724c5d72edb29a73df5838a1ccfa5e4f5820c303085a958e4cfbf5",
+    "nations/uro-titicaca-pe-bo.html": "74d3f3b5aadca55e7958175ea4068f81096ce5f96a647b5ccbb302e36c809575",
+    "nations/uru-chipaya-oruro-bo.html": "fa2595931ccd31c4a3858ec7e388fc9ce7abe643b7d252f09d5d6a748e5c7fd1",
+    "nations/ute-indian-tribe-uintah-ouray-us-ut.html": "a543c8de916668fddbe04c5eb726bd52d0b9cd2180619f6a16e04d2bddbb8dd5",
+    "nations/ute-mountain-ute-tribe-us-co-ut-nm.html": "fd5b540aeb496ac54bd772a2a151a43f403aa027ea57df2ed19f866e1a09e8fb",
+    "nations/uwottuja-piaroa-venezuela.html": "3c09bcaf0f5264de44bb97dc29a0e15c520bf6e89875df7ddb61f73ea2147378",
+    "nations/verification.html": "456a32b0382369682e4e34fadb741b301e22d9dba7533787334b51d9badfa761",
+    "nations/viejas-band-of-kumeyaay-indians-us-ca.html": "f8cc1b58bc69c1f2ff5c7f9885fd16dd5a57a0aa3d05abb2bb73776e22bc0761",
+    "nations/vuntut-gwitchin-yt-ca.html": "cb5d2c349d79b44f734a4f6845af241cc61846497d11632214a5d2cf95bbdf15",
+    "nations/waccamaw-siouan-tribe-us-nc.html": "fbe18afa83222f043ebb62035768d392d6d3db2645b91afaf22b56e30b06abf4",
+    "nations/wai-wai-guyana-brazil.html": "1d086d7b7ab37397fee5822daf5100fccc8737c20277474b98fd7f159ec6b222",
+    "nations/waikato-tainui-nz.html": "17460520f0b2a9830f07bd07de3090f132cae6889fc58516c4bb601c8e8ac588",
+    "nations/wajapi-amapa-oyapock.html": "3f3c2f6689d99781a986db80c01793bdc62869e3eed463066688dc34264d0fbb",
+    "nations/waorani-ec.html": "7ea49c7dd55d6587b54444fc846fc4a6881f122681bc862e00f3bc06efd3b2e4",
+    "nations/wapichana-br-gy.html": "5e5eb93d4cb97ff8d3b0b98395622ec29602d19651e99eb7cdb0daad9247f57e",
+    "nations/warao-orinoco-guyana-trinidad.html": "6fad7e476d3737a8816901b895cf3673805edf85a2a12e077778f190599e0833",
+    "nations/warijo-mx-chihuahua-sonora.html": "94eccf10e7898b61e870e9547ad498d1aedddcc9aec883c22c4708c0bdcfa972",
+    "nations/washoe-tribe-us-nv-ca.html": "40432514604b787099a81334d08267b2d1ac019b2fed42e0f09aaa281459b7ec",
+    "nations/wayana-guianas-brazil.html": "e78b8cfb41ec36f1799ebbb449b2edbb7b2f73c35b6cb835273f818088680c43",
+    "nations/wayuu-guajira.html": "02613e8dcaf82ec13cddfeac772ac2b2ee853237e014c29fbae948f797ca5432",
+    "nations/wendat-wendake-qc-ca.html": "474ebe27012a05719f061ea13ad8e4635c881b7789e551d4ac9b7e5036d95f83",
+    "nations/whanganui-iwi-nz.html": "5055b0fdafa472e49a82820eab9372087b38131fd1d1f6eace413a24bed65583",
+    "nations/white-mountain-apache-us-az.html": "beaf41b01a4f3808460433e92a2013e2913b5b2677e4247d8a0f18d06904c6ca",
+    "nations/wichi-ar-bo.html": "b108351601954b3efdbd6a988083b6e4da761960ac1cc680825803f717031479",
+    "nations/wiradjuri-au.html": "5d8018b966db465a64fe54e0a3f31aef723669a9506184a32187b5cf46c50e8c",
+    "nations/wiwa-sierra-nevada-co.html": "ab6120ca340bbdd9f3755e000cf085399605d4bf3d9555764f2790a09bcd25b1",
+    "nations/wixarika-mx-jalisco-nayarit.html": "0ba2a8c470610272768117d93d95ad61bc7cb68451efea39fa75a9d8e8ba6b09",
+    "nations/wodaabe-niger-sahel.html": "2ba029f797f936fdd12e87494a37ab5dd07f4cba0f727b9700ac3a0baeae98ef",
+    "nations/wolastoqiyik-nb-ca.html": "1d69e297e306b83a4176343e80e61ae7b06e5a21e39c39e144dd5d799e89e650",
+    "nations/wounaan-panama-colombia.html": "6cefdeac9f6347c319ca6b971e8896c661b47b7e4af0679aa0535f5b8551dbaf",
+    "nations/wurundjeri-woi-wurrung-au.html": "1f67ea213ed3d09ead94d8812f6522d9654894fcfe756dbd80df92edbe3b1e0b",
+    "nations/xinka-southeast-guatemala.html": "d7d1cc75da372ec3b75dc2388bfec4c0619c385a20a3c469549ee9fdb2cfc5b2",
+    "nations/yakama-nation-us-wa.html": "36f3025d1524e9a9bc0927a0702a747d4e22cea7cdeaa520e08555d3fe33dc87",
+    "nations/yanacona-macizo-co.html": "9c2cb208ed06ff7c1da0e0a3576fd2d3e5bd911a6bd3b84d98db8548d37833f5",
+    "nations/yanomami-br-ve.html": "c6e37010cb48ec34a3dbc053d3d8304c5f8b14d2005b650a02fe9ecfafbddf0d",
+    "nations/yapese-fm.html": "7d45d4a77a25a2455c80230497666480b7ae42829261a3067039899ecda0c5a0",
+    "nations/yavapai-us-az.html": "b8bb6926a03ba613caf1bffd27a2bae5c59a82c3b0ae484b52fcc37df47ee903",
+    "nations/yawuru-au.html": "4bb4f3d820396ee889855fef46853c44e37c44bd2f792a651123083e2a74ba24",
+    "nations/yekwana-venezuela-brazil.html": "a764c8d52462fff24db8d2fb99289b330b730fd362cfbd408c58afd66017ac13",
+    "nations/yiaku-kenya.html": "bb32d99ff7466fbfe57847493efcd37246a71efba472e80a52612fdd3265bc0f",
+    "nations/yoeme-mx-sonora-us-arizona.html": "7bb16505e3b8454f6842c56bced9adab2538ff53b69e12fdfe69eb5f7c21e197",
+    "nations/yokotan-tabasco-mx.html": "29b54dfb2bd4a309a7ede782a4aadc4f537f853cdf8a0f1ef10a0ab316318372",
+    "nations/yolngu-au.html": "a8032d6e365e4d3741824b92ed67a631fc3b22cbcf1b1038a865475f02e422a5",
+    "nations/yoreme-mx-sonora-sinaloa.html": "40e3ea92545270f6010a849ad7e4f4ed00b97f01ef9a34d2aa528f1c05f8da78",
+    "nations/yukaghir-odul-kolyma.html": "7db4bf8bce736cb8c556697cf401a9037295451240b152e610b6bbaace6e8fb1",
+    "nations/yukpa-perija-ve-co.html": "5dc7d836992ae3ffb6abaf0061ae4a51f31fa31602a07ab845f57f17e5c26d86",
+    "nations/yupik-central-alaska.html": "491585d5baf652dc36ffb87626c2092d84cb3033e1497c321583b33d94001e5e",
+    "nations/yupik-chukotka.html": "f48bcd1c4ded84504949e5a2274804f6bfa46f3e894ba0aca677b90c52166281",
+    "nations/yurok-tribe-us-ca.html": "c4808446adac29f373a531c72c30114073772cc9871e144eddfbd96b86877d20",
+    "nations/zoque-chiapas-mx.html": "988356aa6a81143f3a4d26290ae0feac48211d4feef9e5c384a3e76b2cc45582",
+    "sitemap.xml": "91f6dbe995a84e07631eacde926563b07c12bc501e6c733ec46bad76065d4cc5",
+    "static/nations/action-brief-worldwide-and-cross-border.txt": "b20a5fd5388b73443eef5d7d27f006b8bec51cdd8d4602c0afe650c7a65c03d0",
+    "static/nations/action-brief.txt": "fba83064afcb3caedb4d7f2330e3e6893b49e63ab85bd6eceb39b93413a85312",
+    "static/nations/coverage.json": "82341306235d27af77c2d17bb6cb0a79933247acab18f76475a326b651f7483c",
+    "static/nations/index.json": "e8c0c96ae7df2c7fe4c1e566f0fa9fafea3b224f3672b01c7f93095c0fe7c2d1",
+    "static/nations/search.json": "00fcae205c8450e9014af13ac8b859159bfb523cc84394a6be708bbf29f4efb0",
+    "static/nations/status.json": "e39d5597b60893be0cf64dc2aacfa1b0b5510521602bcf7feea5561f52ec3eae",
+    "static/nations/us-plains-midwest.54131100.json": "541311003b0b8a30671db2916f4ce4772d51c2dac6ecd608e6f965e8b619e050",
+    "static/nations/us-west-pacific.eded603d.json": "eded603de93d99df2e8b0fcfa9d4d111e713155f15ab6bad17296711524114fb",
+    "theater.html": "af5a825250ab3405415f64fb3a6e2df82a921a5a315757599a34cc6fbc0c0532",
+    "vercel.json": "801fd928826f1361ae4e37544a11646d8664eebb68281b4b5142b1973ef7422a"
   },
+  "generated_deleted_paths": [
+    "game/data/n-70baa8cfe07a5a44dcfdd4c5b64533b4.json",
+    "game/data/n-806a8a00e211a392f6b9f137bd39bb72.json",
+    "static/nations/us-plains-midwest.fe88a957.json",
+    "static/nations/us-west-pacific.db6b68d5.json"
+  ],
   "pending": [
-    "Vercel production verification",
-    "Complete inclusive own-source inventory beyond recognition lists",
-    "Tataviam primary federal acknowledgment chronology and source-date difference; no current status assigned",
-    "Apache 8 accessible authorized edition and credit reconciliation",
-    "Actual provider playback and regional/account/device access",
-    "Caption text, timing, accuracy and complete audiovisual editorial review"
+    "Feature/merge Vercel deployment and exact production bytes/security headers require verification after reviewed PR publication.",
+    "Actual film playback, whole-film editorial viewing, caption text/timing/accuracy and per-viewer region/account/device access remain unverified.",
+    "Chicken Ranch primary termination/restoration chronology and acreage unresolved;1985/currentacreage claims excluded.",
+    "Typed cross-border/wider US-associated inventories remain pending; ICC is an institutional starting point, not a denominator or universal mandate.",
+    "Existing holds and577name-record/575stated federal discrepancy preserved. No complete-coverage or human/Nation endorsement claim."
   ]
 }

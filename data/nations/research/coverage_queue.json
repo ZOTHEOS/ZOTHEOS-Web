@@ -1902,9 +1902,10 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "cheyenne-river-own-site-2026-11-26"
       ],
       "review": {
         "identity": "pending",
@@ -1920,9 +1921,34 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.cheyenneriversioux.com/",
+          "final_url": "https://www.cheyenneriversioux.com/",
+          "retrieved_at": "2026-11-26T02:35:51.467101+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 1140179,
+          "sha256": "c12d3810edda3357cfa6515bc417dc8558ad34a5dd7de62a3193421a27e01560",
+          "redirects": [],
+          "user_agent": "ZOTHEOSResearch/1.0",
+          "capture_retention": "Exact bytes were read and hashed during local source review. Full factual HTML captures are local only and excluded from public publication; separately identified robots configuration bodies may be retained.",
+          "local_capture_at_review": {
+            "filename": ".local-2026-11-26-cheyenne-river/2026-11-26-cheyenne-river-home.body.html",
+            "publicly_retained": false
+          },
+          "source_id": "cheyenne-river-own-site-2026-11-26",
+          "evidence_receipt": "receipts/2026-11-26-cheyenne-river-home.receipt.json",
+          "receipt_id": "r-bdddd0bdfb51ea52"
+        }
+      ],
+      "updated_at": "2026-11-26T02:53:34.659340+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "batches/2026-11-26-cheyenne-river-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review",
+      "note": "Own-source bounded history and community-program packet assembled; exact government identity evidence linked. Independent source/respect review and release checks govern publication. Existing fact clocks and recognition-list source dates preserved; current eligibility, outcomes and complete coverage not inferred."
     },
     {
       "task_id": "profile-us-fed-18eeda3f2b93",
@@ -2012,9 +2038,11 @@
       "region": "us-directory-contiguous",
       "priority": 30,
       "priority_reason": "systematic_directory_expansion",
-      "status": "pending",
+      "status": "needs_review",
       "allowed_source_ids": [
-        "us-fr-2026"
+        "us-fr-2026",
+        "chicken-ranch-own-site-2026-11-26",
+        "chicken-ranch-wetland-plan-2026-11-26"
       ],
       "review": {
         "identity": "pending",
@@ -2030,9 +2058,34 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": null,
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://chickenranchrancheria.org/home",
+          "final_url": "https://chickenranchrancheria.org/home",
+          "retrieved_at": "2026-11-26T02:36:12.110282+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 270424,
+          "sha256": "3475b0ac18fd7a678f886858d9a638cd43eaa4f741f5daf57d2b3eb34c13ef86",
+          "redirects": [],
+          "user_agent": "ZOTHEOSResearch/1.0",
+          "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+          "local_capture_at_review": {
+            "filename": "steward-local-chicken-ranch-1126/home.html",
+            "publicly_retained": false
+          },
+          "source_id": "chicken-ranch-own-site-2026-11-26",
+          "evidence_receipt": "receipts/2026-11-26-chicken-ranch-home.receipt.json",
+          "receipt_id": "r-cec8b260e314e4c1"
+        }
+      ],
+      "updated_at": "2026-11-26T02:53:34.552267+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "profile_disposition": "exists_in_registry",
+      "identity_receipt": "receipts/2026-11-26-chicken-ranch-identity.json",
+      "identity_review_kind": "Explicit source-backed identity review",
+      "note": "Own-source bounded history and community-program packet assembled; exact government identity evidence linked. Independent source/respect review and release checks govern publication. Existing fact clocks and recognition-list source dates preserved; current eligibility, outcomes and complete coverage not inferred."
     },
     {
       "task_id": "profile-us-fed-4ef2a386ba3b",
@@ -62664,8 +62717,10 @@
       "region": "us-inclusion-special-scopes",
       "priority": 94,
       "priority_reason": "owner_priority_inclusive_us_coverage",
-      "status": "pending",
-      "allowed_source_ids": [],
+      "status": "needs_review",
+      "allowed_source_ids": [
+        "icc-institutions-2026-11-26"
+      ],
       "review": {
         "identity": "pending",
         "sources": "pending",
@@ -62682,9 +62737,29 @@
         ],
         "signals": []
       },
-      "receipts": [],
-      "updated_at": "2026-10-14T05:19:07.385656+00:00",
-      "next_attempt_after": null
+      "receipts": [
+        {
+          "url": "https://www.inuitcircumpolar.com/icc-international/",
+          "final_url": "https://www.inuitcircumpolar.com/icc-international/",
+          "retrieved_at": "2026-11-26T02:37:43.818808+00:00",
+          "retrieval_method": "http",
+          "http_status": 200,
+          "body_bytes": 230262,
+          "sha256": "8992d2631c3894f1c607d0fca8d56bdacf302df70e3119f52fb2fd0b433f1ddb",
+          "capture_retention": "Measured during local source review. Full captures are local only and excluded from public publication; exact receipts, hashes and short evidence remain.",
+          "local_capture_at_review": {
+            "filename": "international-structure.html",
+            "publicly_retained": false
+          },
+          "source_id": "icc-institutions-2026-11-26",
+          "evidence_receipt": "receipts/2026-11-26-icc-international-structure.receipt.json",
+          "receipt_id": "r-1d330fa61a229ec9"
+        }
+      ],
+      "updated_at": "2026-11-26T02:44:24.109318+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Read ICC’s own international organization and linked-office account for one bounded Indigenous-led cross-border starting point and a private Paths role-and-process map. Not a complete community inventory, recognition finding or border-rights route. Independent source/respect review and publication gates remain; followup-cross-border-typed-inventories stays pending."
     },
     {
       "task_id": "identity-us-state-va-pamunkey",
@@ -64161,6 +64236,82 @@
       "updated_at": "2026-11-24T20:03:54.724172+00:00",
       "next_attempt_after": null,
       "note": "The Band’s own June 2026 release reports a Positive Phase I Proposed Finding and expressly says no final determination had been made. Its homepage displays June 18 while article metadata displays June 19. Check the linked primary OFA decision and later official records before publishing an exact event date or current recognition statement. No federal/state inventory crosswalk or recognition status is added by this batch."
+    },
+    {
+      "task_id": "followup-cross-border-typed-inventories",
+      "task_type": "source_inventory",
+      "entity_id": null,
+      "subject": "Typed cross-border and wider US-associated community and government inventories",
+      "entity_type": "source_discovery",
+      "countries": [
+        "US"
+      ],
+      "region": "us-inclusion-special-scopes",
+      "priority": 94,
+      "priority_reason": "owner_priority_inclusive_us_coverage",
+      "status": "pending",
+      "allowed_source_ids": [
+        "icc-institutions-2026-11-26"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "land_rights",
+          "sovereignty",
+          "history",
+          "language",
+          "community_led_efforts"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-26T02:44:23.794016+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "ICC provides one Indigenous-led institutional starting point. Distinguish communities, chosen authorities, representative bodies, offices and state agencies. Wider US-associated territories and other cross-border peoples remain pending; no complete inventory, mandate or border entitlement established."
+    },
+    {
+      "task_id": "followup-chicken-ranch-termination-restoration-chronology",
+      "task_type": "historical_context",
+      "entity_id": null,
+      "subject": "Chicken Ranch termination, restoration and document-version chronology",
+      "entity_type": "research_subject",
+      "countries": [
+        "US"
+      ],
+      "region": "us-west-pacific",
+      "priority": 90,
+      "priority_reason": "source_chronology_and_naming_distinctions",
+      "status": "pending",
+      "allowed_source_ids": [
+        "chicken-ranch-own-site-2026-11-26",
+        "chicken-ranch-wetland-plan-2026-11-26",
+        "us-fr-2026"
+      ],
+      "review": {
+        "identity": "pending",
+        "sources": "pending",
+        "respect": "pending"
+      },
+      "risk": {
+        "status": "unassessed",
+        "topics": [
+          "sovereignty",
+          "history",
+          "land_rights"
+        ],
+        "signals": []
+      },
+      "receipts": [],
+      "updated_at": "2026-11-26T02:53:34.275582+00:00",
+      "next_attempt_after": null,
+      "lease_until": null,
+      "note": "Own wetland plan recounts1908/1958 stages; own About1985 recognition wording and present acreage excluded. Review primary termination/restoration chronology separately; do not infer present legal status or use signed2021 filename as document year."
     }
   ]
 }

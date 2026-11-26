@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-26T02:47:10.370031+00:00",
+  "review_kind": "Independent AI-assisted full-film publisher-chain, edition, credits, thumbnail and access-limit review by root integrator",
+  "result": "source and canonical catalog integration passed",
+  "record_id": "kumu-hina",
+  "source_body_checks": [
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-image-robots.receipt.json",
+      "url": "https://i.ytimg.com/robots.txt",
+      "http_status": 200,
+      "body_bytes": 107,
+      "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-own-about.receipt.json",
+      "url": "https://kumuhina.com/about",
+      "http_status": 200,
+      "body_bytes": 53667,
+      "sha256": "ba7f67d3540bde75f473666ecc185e9d731cdad6c35cea2c48d5270fb3cfd122",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-own-embed.receipt.json",
+      "url": "https://kumuhina.com/embed",
+      "http_status": 500,
+      "body_bytes": 46947,
+      "sha256": "7ff5a21ab45fdc30f5ebb9b24d873a51638ac760bdf9c03bdcb4ac29a7dcb536",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-own-filmmakers.receipt.json",
+      "url": "https://kumuhina.com/filmmakers",
+      "http_status": 200,
+      "body_bytes": 63479,
+      "sha256": "160340cf7bc7755e72fc6ef8bb96474b27fb9115cc8de0ea6f2feb9008a5bf4e",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-own-home.receipt.json",
+      "url": "https://kumuhina.com/",
+      "http_status": 200,
+      "body_bytes": 55856,
+      "sha256": "180f8393a1dd23146867b5fb70ad5c7e4cfff5743d296a1eebe255f4781e0227",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-own-robots.receipt.json",
+      "url": "https://kumuhina.com/robots.txt",
+      "http_status": 404,
+      "body_bytes": 50007,
+      "sha256": "7d5b209aa29200627bfcc685b4d4d8e1dd6f98d33b6dfbf683273e44c54dff1c",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-pic-film.receipt.json",
+      "url": "https://www.piccom.org/programs/kumu-hina",
+      "http_status": 200,
+      "body_bytes": 26498,
+      "sha256": "0d11f0f313a0fd5a17ba7e2cf07b20b1df2f32892bd809c456832f4e8903df38",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-pic-robots.receipt.json",
+      "url": "https://www.piccom.org/robots.txt",
+      "http_status": 200,
+      "body_bytes": 287,
+      "sha256": "f56142fefd41c67a89514834b5c27ba93d1ffeab4a513cf0e9d90319b9eec53c",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-film.receipt.json",
+      "url": "https://www.qwaves.com/kumu-hina",
+      "http_status": 200,
+      "body_bytes": 91976,
+      "sha256": "ed9ac9ccb20053fe776e3fce252ed4b2af328a2d33b82ad9e5abbd13319611f5",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-home.receipt.json",
+      "url": "https://www.qwaves.com/",
+      "http_status": 200,
+      "body_bytes": 117887,
+      "sha256": "0fcff4ea92188d71800e1b30062c3d76b7c35841a5b0de7a866396a67818ecfd",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-robots.receipt.json",
+      "url": "https://www.qwaves.com/robots.txt",
+      "http_status": 200,
+      "body_bytes": 1505,
+      "sha256": "e42201b4bf54e06056db38e8296e381422aa8cb4227435cfe65464cb275d1923",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-youtube-robots.receipt.json",
+      "url": "https://www.youtube.com/robots.txt",
+      "http_status": 200,
+      "body_bytes": 792,
+      "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+      "result": "matched and read for scope"
+    },
+    {
+      "receipt": "data/theater/research/batches/2026-11-26-kumu-hina-youtube.receipt.json",
+      "url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+      "http_status": 200,
+      "body_bytes": 1501613,
+      "sha256": "55606e2ffb9200709112e1ffceb2765866112045532f9a9cc3bbbe68721d2d43",
+      "result": "matched and read for scope"
+    }
+  ],
+  "checks": [
+    "Current official homepage links exact7Zeond28-UA twice as free viewing. Producer Qwaves independently identifies the Lei Pua Ala channel. This supports selected full edition distribution without treating free access alone as authorization.",
+    "Own About establishes2014original and separate May2015PBS debut. PIC confirms2014/full-length classification but lists60minutes; selected full-documentary provider fields4610/4611seconds are represented as77minutes without false precision.",
+    "Own Filmmakers supports both directors/producers, Connie M. Florez co-producer and Hinaleimoana Wong-Kalu Haku Moolelo/narrator credit. No inferred universal Native Hawaiian or mahu representation.",
+    "Original synopsis describes teacher/student/hula/marriage account without reproducing source prose or equating mahu with every gender-diverse Indigenous identity.",
+    "YouTube reports OK and playableInEmbed true; this is configuration metadata, not evidence of successful audiovisual playback. Own/embed500 is retained as failure and excluded from permission evidence.",
+    "Only English ASR caption track is listed. Translation menu entries are not independent caption tracks. No caption quality, geographic, account or physical-device access guarantee.",
+    "Exact provider thumbnail URL appears in selected videoDetails; HEAD200 image/jpeg is metadata only with zero body bytes and no invented image hash.",
+    "All factual/robots/failure bodies match receipts. Own robots redirects to404HTML, correctly treated as no valid robots policy, while other checked paths are permitted. No account, media/caption stream, proxy or form accessed.",
+    "All244 prior catalog records have no duplicate title/provider match for this candidate. A Place in the Middle remains a separate work.",
+    "The sole appended catalog record exactly equals the independently checked candidate; all244 earlier records, ordering, featuredYanuni and earlier source dates are unchanged. Independent browser review subsequently passed the full-film search/player/source-note configuration."
+  ],
+  "source_pins": {
+    "data/theater/research/batches/2026-11-26-kumu-hina-image-robots.receipt.json": "720ff11ee61326413a9a821d6c514f9a34e1490acf6dd9de0737843f5f84a718",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-about.receipt.json": "55c4ed0f9304b24aa9cb9b662c366e315319e306fcccdd8e2a52a8b70bca6e21",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-embed.receipt.json": "04f2921903bbae9bbfaa1af95f4624b4294dfcffda76802b29e4aa72cfeda695",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-filmmakers.receipt.json": "19e3e48ad134493ad39e6d5465590d0edebdfc84d85ab4ca13bc74b2c001b675",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-home.receipt.json": "778211b218ef2120486941866cc06f0026da06c6db23567ab75639cd5bdf778d",
+    "data/theater/research/batches/2026-11-26-kumu-hina-own-robots.receipt.json": "6577d3fe81077db2741be59d603743c67b23d5ced92247988240a0cb120df54b",
+    "data/theater/research/batches/2026-11-26-kumu-hina-pic-film.receipt.json": "39b6c52de06bb92dc5b1b0968603ff2581026cbdb0623848b7e6d0b041acb5f9",
+    "data/theater/research/batches/2026-11-26-kumu-hina-pic-robots.receipt.json": "6f9ee784da860e4c8cf1940a56e4d778cb2dd670d859cb68b24092e52060c812",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-film.receipt.json": "713e21bd63619a9e29e21002056c35aa8717e8484c8494e528fa9af28a101d22",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-home.receipt.json": "b06f0054b2da14130b4777e6ec241014a438fd673cda11c1a023572b5756c659",
+    "data/theater/research/batches/2026-11-26-kumu-hina-qwaves-robots.receipt.json": "b921fcbda84cb3483d0d9855828fb5c0a94d003979111a44903f034a4b66d085",
+    "data/theater/research/batches/2026-11-26-kumu-hina-thumbnail.receipt.json": "cc2166c64223cdbcbbd4933dc347cfbfa8be7df3e70642d5d513b5c9cd31c49c",
+    "data/theater/research/batches/2026-11-26-kumu-hina-youtube-robots.receipt.json": "2462f9d428efdf98c2366e5d6ec1d166bd356002617112b6ea64c4fe5ef5b441",
+    "data/theater/research/batches/2026-11-26-kumu-hina-youtube.receipt.json": "1ed1e5602159b43250ccd5ff51a95b45c7d18c0a835e79f166e2669ac646160d",
+    "data/theater/research/batches/2026-11-26-kumu-hina.json": "2b12d4cc2bf3d70e03dcc985c1ec60bd9e4469462a90a3e8a07e3b6ae7c09cee",
+    "data/theater/films.json": "53730ae7970f6b36445c2aaa4614abfa99db4bd1de4da8485386c98581c51510"
+  },
+  "person_review_claimed": false,
+  "nation_endorsement_claimed": false,
+  "pending": [
+    "Full-suite result and release/Vercel verification remain publisher gates.",
+    "Actual audiovisual playback, complete editorial viewing, caption text/timing/accuracy and per-viewer region/account/device limits remain unverified."
+  ],
+  "capture_retention": "Full captures are temporary local review material only; exact receipts, hashes and short evidence remain.",
+  "integration_reviewed_at": "2026-11-26T03:00:04.083089+00:00",
+  "browser_review": "data/nations/research/batches/2026-11-26-browser-review.json"
+}

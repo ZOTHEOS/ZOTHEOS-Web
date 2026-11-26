@@ -1,0 +1,74 @@
+{
+  "reviewer": "ZOTHEOS",
+  "reviewed_at": "2026-11-26T02:45:39.653315+00:00",
+  "review_kind": "AI-assisted explicit source-backed government identity research",
+  "directory_id": "us-fed-0d67d0093e56",
+  "registry_id": "chicken-ranch-rancheria-us-ca",
+  "own_published_name": "Chicken Ranch Rancheria Me-Wuk Indians of California",
+  "own_full_name": "Chicken Ranch Rancheria Me-Wuk Indians of California",
+  "official_url": "https://chickenranchrancheria.org/home",
+  "own_name_source": {
+    "url": "https://chickenranchrancheria.org/home",
+    "final_url": "https://chickenranchrancheria.org/home",
+    "retrieved_at": "2026-11-26T02:36:12.110282+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 270424,
+    "sha256": "3475b0ac18fd7a678f886858d9a638cd43eaa4f741f5daf57d2b3eb34c13ef86",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-chicken-ranch-1126/home.html",
+      "publicly_retained": false
+    }
+  },
+  "own_history_source": {
+    "url": "https://chickenranchrancheria.org/about",
+    "final_url": "https://chickenranchrancheria.org/about",
+    "retrieved_at": "2026-11-26T02:36:14.799233+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 498823,
+    "sha256": "93854b6ac1713bc1f742bbe70f1434239c1466cbf482d2745260fbc553dd93db",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-chicken-ranch-1126/about.html",
+      "publicly_retained": false
+    }
+  },
+  "federal_directory_source": {
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-01-30/html/2026-01899.htm",
+    "retrieved_at": "2026-11-26T02:36:14.910236+00:00",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "body_bytes": 27547,
+    "sha256": "bc6974ce2bc56c49f9930f382411c87a2f049e9a923a2164d972467e0a97e274",
+    "redirects": [],
+    "user_agent": "ZOTHEOSResearch/1.0",
+    "capture_retention": "Exact bytes were read and hashed during local source review. Full factual captures are local only and excluded from public publication.",
+    "local_capture_at_review": {
+      "filename": "steward-local-chicken-ranch-1126/federal.html",
+      "publicly_retained": false
+    }
+  },
+  "saved_bia_object_id": 408,
+  "saved_bia_archive": {
+    "path": "us-bia-directory.json",
+    "retrieved_at": "2026-10-12T07:36:00.028011+00:00",
+    "body_bytes": 181580,
+    "sha256": "153b61f401d8e441dabb314941b0dd9bbb08fadfeb8d013ab32da4e7b599280f",
+    "website": "https://chickenranchrancheria.org/home",
+    "tribefullname": "Chicken Ranch Rancheria of Me-Wuk Indians of California",
+    "alternate_name": "Chicken Ranch Rancheria"
+  },
+  "scope_note": "The own home and About pages publish Chicken Ranch Rancheria Me-Wuk Indians of California. The January 30, 2026 federal notice supplies the form with of; saved BIA408 links the same own /home URL and shorter Chicken Ranch Rancheria alias. This is one distinct Tribal government, not all Me-Wuk or Miwok peoples, and is not merged with the Tuolumne Band of Me-Wuk Indians or other neighboring governments.",
+  "location_evidence": "Own home and About pages place the community in the Sierra Nevada foothills; plan title says Jamestown CA and climate announcement places its work in Tuolumne County. This is a geographic description, not a boundary or jurisdiction finding.",
+  "batch": "batches/2026-11-26-chicken-ranch-own-history.json",
+  "capture_retention": "Full factual source captures are local temporary review files only, excluded from public publication. Exact URL/status/time/length/hash receipts, short anchors and original summaries remain.",
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}

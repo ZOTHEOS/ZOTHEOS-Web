@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "checked": "2026-11-26",
+  "prepared_at": "2026-11-26T02:45:28.862931+00:00",
+  "status": "full-film-candidate",
+  "review_kind": "AI-assisted own-publisher edition, rights-chain, embedding metadata, captions, source integrity and perspective research",
+  "record": {
+    "id": "kumu-hina",
+    "title": "Kumu Hina",
+    "year": 2014,
+    "year_scope": "Original documentary and festival premiere year stated by the film project. PBS debut was in May 2015; the selected complete YouTube edition was uploaded October 20, 2024.",
+    "runtime": "77 min · YouTube Edition",
+    "credits": "Directed and produced by Dean Hamer and Joe Wilson; co-producer Connie M. Florez. The film site credits Hinaleimoana Wong-Kalu as Haku Moʻolelo and narrator.",
+    "publisher": "Qwaves / Lei Pua ʻAla Queer Histories of Hawaiʻi",
+    "viewing": "full-film",
+    "youtube_kind": "full-film",
+    "form": "documentary",
+    "region": "oceania",
+    "location": "Honolulu, Oʻahu, Hawaiʻi",
+    "synopsis": "Native Hawaiian teacher Hina Wong-Kalu supports a student’s leadership in a Honolulu hula troupe while navigating her own marriage. The documentary explores māhū identity, cultural learning and belonging.",
+    "perspective": "Centers Hina Wong-Kalu and school participants, with Hina credited as Haku Moʻolelo and narrator in a Qwaves production. These situated stories do not represent every Native Hawaiian or māhū person.",
+    "availability": "The film project links this complete edition free on the Lei Pua ʻAla YouTube channel. Only English auto-generated captions are listed. Regional or account limits may apply; actual playback and caption quality are unverified.",
+    "content_note": "Explores gender identity, mixed reactions to a student’s leadership and conflict within a marriage.",
+    "topics": [
+      "continuity",
+      "leadership"
+    ],
+    "watch_url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+    "youtube_id": "7Zeond28-UA",
+    "vimeo_id": null,
+    "pbs_id": null,
+    "nfb_slug": null,
+    "thumbnail_url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+    "thumbnail_source": "https://www.youtube.com/watch?v=7Zeond28-UA",
+    "sources": [
+      {
+        "url": "https://kumuhina.com/",
+        "title": "Kumu Hina: Watch Free on YouTube",
+        "publisher": "Kumu Hina film project",
+        "checked_at": "2026-11-26T02:36:23.957042+00:00",
+        "http_status": 200,
+        "sha256": "180f8393a1dd23146867b5fb70ad5c7e4cfff5743d296a1eebe255f4781e0227",
+        "checked": "2026-11-26"
+      },
+      {
+        "url": "https://kumuhina.com/about",
+        "title": "About Kumu Hina",
+        "publisher": "Kumu Hina film project",
+        "checked_at": "2026-11-26T02:43:56.428131+00:00",
+        "http_status": 200,
+        "sha256": "ba7f67d3540bde75f473666ecc185e9d731cdad6c35cea2c48d5270fb3cfd122",
+        "checked": "2026-11-26"
+      },
+      {
+        "url": "https://kumuhina.com/filmmakers",
+        "title": "Filmmakers",
+        "publisher": "Kumu Hina film project",
+        "checked_at": "2026-11-26T02:43:59.852306+00:00",
+        "http_status": 200,
+        "sha256": "160340cf7bc7755e72fc6ef8bb96474b27fb9115cc8de0ea6f2feb9008a5bf4e",
+        "checked": "2026-11-26"
+      },
+      {
+        "url": "https://www.qwaves.com/",
+        "title": "Qwaves: Films and Impact Campaigns",
+        "publisher": "Qwaves",
+        "checked_at": "2026-11-26T02:36:26.406330+00:00",
+        "http_status": 200,
+        "sha256": "0fcff4ea92188d71800e1b30062c3d76b7c35841a5b0de7a866396a67818ecfd",
+        "checked": "2026-11-26"
+      },
+      {
+        "url": "https://www.piccom.org/programs/kumu-hina",
+        "title": "Kumu Hina",
+        "publisher": "Pacific Islanders in Communications",
+        "checked_at": "2026-11-26T02:38:28.111224+00:00",
+        "http_status": 200,
+        "sha256": "0d11f0f313a0fd5a17ba7e2cf07b20b1df2f32892bd809c456832f4e8903df38",
+        "checked": "2026-11-26"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+        "title": "Kumu Hina (full documentary)",
+        "publisher": "Lei Pua ʻAla Queer Histories of Hawaiʻi",
+        "checked_at": "2026-11-26T02:37:05.060119+00:00",
+        "http_status": 200,
+        "sha256": "55606e2ffb9200709112e1ffceb2765866112045532f9a9cc3bbbe68721d2d43",
+        "checked": "2026-11-26"
+      }
+    ]
+  },
+  "duplicate_check": {
+    "existing_catalogue_records": 244,
+    "title_or_provider_id_match": false,
+    "method": "Parsed every existing title and YouTube ID before proposing this single complete edition."
+  },
+  "edition": {
+    "duration_seconds_video_details": 4610,
+    "duration_seconds_microformat": 4611,
+    "runtime_display_minutes": 77,
+    "duration_scope": "The two provider metadata fields differ by one second (4610 versus 4611). Display is rounded to77minutes; no second-precise runtime claim.",
+    "film_release_year": 2014,
+    "provider_upload_date": "2024-10-20T01:48:14-07:00",
+    "provider_channel": "Lei Pua ʻAla Queer Histories of Hawaiʻi",
+    "provider_channel_id": "UC1YpuYENw3HYcZilr8SiexA",
+    "provider_flags": {
+      "playability_status": "OK",
+      "playable_in_embed": true,
+      "is_private": false,
+      "is_unlisted": false,
+      "has_ypc_metadata": false
+    },
+    "distribution_scope": "The current official film homepage links the exact selected YouTube ID under Free on YouTube. The producer Qwaves homepage independently identifies the Lei Pua ʻAla channel as a streaming destination for its films, and the provider identifies the upload as full documentary. This chain supports an authorized public complete edition rather than an anonymous reupload.",
+    "embedding_scope": "The provider public response reports playableInEmbed:true and supplies https://www.youtube.com/embed/7Zeond28-UA. Use the existing official YouTube player contract. The film-site /embed page returned HTTP500 and is not treated as embed permission evidence. No download, proxy, reupload, edited artwork or public-screening permission is inferred.",
+    "edition_distinction": "Pacific Islanders in Communications lists60minutes for its2014catalogue entry. The selected authorized complete YouTube edition is about77minutes; the broadcast listing is not substituted for this provider runtime. The children’s educational A Place in the Middle is a separate work and not a duplicate complete edition.",
+    "caption_tracks": [
+      {
+        "language_code": "en",
+        "name": "English (auto-generated)",
+        "kind": "asr",
+        "scope": "Metadata only. No caption body, timing, translation or accuracy review."
+      }
+    ],
+    "geographic_scope": "No per-country or account playback test or worldwide guarantee. Available-country metadata does not establish actual access for a particular viewer.",
+    "playback_scope": "No actual audiovisual playback or whole-film editorial review. Metadata OK and embedding flags are not evidence of successful playback."
+  },
+  "receipts": [
+    {
+      "url": "https://kumuhina.com/",
+      "final_url": "https://kumuhina.com/",
+      "retrieved_at": "2026-11-26T02:36:23.957042+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 55856,
+      "sha256": "180f8393a1dd23146867b5fb70ad5c7e4cfff5743d296a1eebe255f4781e0227",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-own-home.body.html"
+    },
+    {
+      "url": "https://kumuhina.com/about",
+      "final_url": "https://kumuhina.com/about",
+      "retrieved_at": "2026-11-26T02:43:56.428131+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 53667,
+      "sha256": "ba7f67d3540bde75f473666ecc185e9d731cdad6c35cea2c48d5270fb3cfd122",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-own-about.body.html"
+    },
+    {
+      "url": "https://kumuhina.com/filmmakers",
+      "final_url": "https://kumuhina.com/filmmakers",
+      "retrieved_at": "2026-11-26T02:43:59.852306+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 63479,
+      "sha256": "160340cf7bc7755e72fc6ef8bb96474b27fb9115cc8de0ea6f2feb9008a5bf4e",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-own-filmmakers.body.html"
+    },
+    {
+      "url": "https://www.qwaves.com/",
+      "final_url": "https://www.qwaves.com/",
+      "retrieved_at": "2026-11-26T02:36:26.406330+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 117887,
+      "sha256": "0fcff4ea92188d71800e1b30062c3d76b7c35841a5b0de7a866396a67818ecfd",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-qwaves-home.body.html"
+    },
+    {
+      "url": "https://www.qwaves.com/kumu-hina",
+      "final_url": "https://www.qwaves.com/kumu-hina",
+      "retrieved_at": "2026-11-26T02:37:07.969539+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 91976,
+      "sha256": "ed9ac9ccb20053fe776e3fce252ed4b2af328a2d33b82ad9e5abbd13319611f5",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-qwaves-film.body.html"
+    },
+    {
+      "url": "https://www.piccom.org/programs/kumu-hina",
+      "final_url": "https://www.piccom.org/programs/kumu-hina",
+      "retrieved_at": "2026-11-26T02:38:28.111224+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 26498,
+      "sha256": "0d11f0f313a0fd5a17ba7e2cf07b20b1df2f32892bd809c456832f4e8903df38",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-pic-film.body.html"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+      "final_url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+      "retrieved_at": "2026-11-26T02:37:05.060119+00:00",
+      "retrieval_method": "http",
+      "http_status": 200,
+      "body_bytes": 1501613,
+      "sha256": "55606e2ffb9200709112e1ffceb2765866112045532f9a9cc3bbbe68721d2d43",
+      "redirects": [],
+      "capture_retention": "local",
+      "local_capture": ".theater-research-2026-11-26/kumu-hina-youtube.body.html"
+    }
+  ],
+  "robots": [
+    {
+      "receipt": {
+        "url": "https://www.qwaves.com/robots.txt",
+        "final_url": "https://www.qwaves.com/robots.txt",
+        "retrieved_at": "2026-11-26T02:36:00.665121+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 1505,
+        "sha256": "e42201b4bf54e06056db38e8296e381422aa8cb4227435cfe65464cb275d1923",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-26/kumu-hina-qwaves-robots.body.txt"
+      },
+      "checked_url": "https://www.qwaves.com/",
+      "allowed": {
+        "ZOTHEOSResearch/1.0": true,
+        "ChatGPT-User": true
+      }
+    },
+    {
+      "receipt": {
+        "url": "https://www.piccom.org/robots.txt",
+        "final_url": "https://www.piccom.org/robots.txt",
+        "retrieved_at": "2026-11-26T02:37:51.680776+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 287,
+        "sha256": "f56142fefd41c67a89514834b5c27ba93d1ffeab4a513cf0e9d90319b9eec53c",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-26/kumu-hina-pic-robots.body.txt"
+      },
+      "checked_url": "https://www.piccom.org/programs/kumu-hina",
+      "allowed": {
+        "ZOTHEOSResearch/1.0": true,
+        "ChatGPT-User": true
+      }
+    },
+    {
+      "receipt": {
+        "url": "https://www.youtube.com/robots.txt",
+        "final_url": "https://www.youtube.com/robots.txt",
+        "retrieved_at": "2026-11-26T02:36:02.945933+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 792,
+        "sha256": "96f8640ca357626e7d9a894057fef8b5746eb838c29ed68fc176af58c9348c6f",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-26/kumu-hina-youtube-robots.body.txt"
+      },
+      "checked_url": "https://www.youtube.com/watch?v=7Zeond28-UA",
+      "allowed": {
+        "ZOTHEOSResearch/1.0": true,
+        "ChatGPT-User": true
+      }
+    },
+    {
+      "receipt": {
+        "url": "https://i.ytimg.com/robots.txt",
+        "final_url": "https://i.ytimg.com/robots.txt",
+        "retrieved_at": "2026-11-26T02:37:54.051423+00:00",
+        "retrieval_method": "http",
+        "http_status": 200,
+        "body_bytes": 107,
+        "sha256": "cb9a002d6f08c0ac6ab70e3f27ff800e2df604f7a8b539115d559acd26e327a1",
+        "redirects": [],
+        "capture_retention": "local",
+        "local_capture": ".theater-research-2026-11-26/kumu-hina-image-robots.body.txt"
+      },
+      "checked_url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+      "allowed": {
+        "ZOTHEOSResearch/1.0": true,
+        "ChatGPT-User": true
+      }
+    }
+  ],
+  "own_robots": {
+    "url": "https://kumuhina.com/robots.txt",
+    "final_url": "https://kumuhina.com/cache/robots.txt",
+    "retrieved_at": "2026-11-26T02:35:58.190512+00:00",
+    "retrieval_method": "http",
+    "http_status": 404,
+    "body_bytes": 50007,
+    "sha256": "7d5b209aa29200627bfcc685b4d4d8e1dd6f98d33b6dfbf683273e44c54dff1c",
+    "redirects": [
+      {
+        "status": 301,
+        "from_url": "https://kumuhina.com/robots.txt",
+        "to_url": "https://kumuhina.com/cache/robots.txt"
+      }
+    ],
+    "capture_retention": "local",
+    "local_capture": ".theater-research-2026-11-26/kumu-hina-own-robots.body.txt"
+  },
+  "crawl_policy": "Robots checks preceded the source reads. Public Qwaves, PIC, YouTube watch and provider-image paths are permitted for the recorded research user agents. The own film robots URL redirected to a404HTML response; that response is not claimed to be a valid robots file. Only known public film pages were read. No account, private API, media or caption-download endpoint or form was accessed.",
+  "capture_policy": "Full HTML and robots bodies remain in the scoped local review folder. Individual receipts mark capture_retention:local. Proposed public files contain original summaries, short evidence anchors and receipt metadata, not copies of source pages.",
+  "thumbnail_review": {
+    "provider_url": "https://i.ytimg.com/vi/7Zeond28-UA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyg1MA8=&rs=AOn4CLDIOia9xKnXIg5rVZR0oLenVUlfjA",
+    "checked_at": "2026-11-26T02:38:29.018496+00:00",
+    "http_method": "HEAD",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "content_length": 46955,
+    "body_bytes_read": 0,
+    "redirects": [],
+    "provenance": "Exact largest thumbnail URL supplied by the selected official full-film YouTube videoDetails metadata.",
+    "display": "Provider thumbnail through the existing Theater YouTube contract; no image copy or rehosting."
+  },
+  "failed_request": {
+    "url": "https://kumuhina.com/embed",
+    "final_url": "https://kumuhina.com/embed",
+    "retrieved_at": "2026-11-26T02:37:10.965116+00:00",
+    "retrieval_method": "http",
+    "http_status": 500,
+    "body_bytes": 46947,
+    "sha256": "7ff5a21ab45fdc30f5ebb9b24d873a51638ac760bdf9c03bdcb4ac29a7dcb536",
+    "redirects": [],
+    "capture_retention": "local",
+    "local_capture": ".theater-research-2026-11-26/kumu-hina-own-embed.body.html"
+  },
+  "evidence_locators": [
+    {
+      "receipt": "own-home",
+      "locator": "WATCH module href and free-viewing heading",
+      "anchor": "Free on YouTube",
+      "supports": "Exact official full-film destination7Zeond28-UA and channel identity; this short anchor is not a transcript."
+    },
+    {
+      "receipt": "own-about",
+      "locator": "OVERVIEW opening paragraph and festival/broadcast paragraph",
+      "anchor": "2014 documentary film",
+      "supports": "Original release year, Qwaves directors/producers, Hina/student/hula story and2015broadcast distinction."
+    },
+    {
+      "receipt": "own-filmmakers",
+      "locator": "Hinaleimoana Wong-Kalu, directors/producers and co-producer entries",
+      "anchor": "HAKU MO'OLELO & NARRATOR",
+      "supports": "Hina’s credited role, Native Hawaiian self-description, named directors/producers and co-producer."
+    },
+    {
+      "receipt": "qwaves-home",
+      "locator": "Opening description and Lei Pua Ala paragraph",
+      "anchor": "all are available to stream",
+      "supports": "Producer cross-check of authorized channel; no universal access or playback guarantee."
+    },
+    {
+      "receipt": "pic-film",
+      "locator": "Category/Length/Year and Creative Team fields",
+      "anchor": "60 Minutes",
+      "supports": "2014original, filmmakers/co-producer, Honolulu screening and the separate shorter catalogue runtime."
+    },
+    {
+      "receipt": "youtube",
+      "locator": "ytInitialPlayerResponse.videoDetails/microformat/playabilityStatus/captions",
+      "supports": "Exact full-documentary title, channel,2024upload,4610/4611second metadata, embed availability, EnglishASRonly and supplied thumbnail."
+    }
+  ],
+  "pending": [
+    "Independent source/record cross-review by another agent or parent",
+    "Actual audiovisual playback",
+    "Per-region, account and device access",
+    "English automatic caption accuracy and timing",
+    "Whole-film editorial review"
+  ],
+  "human_review_claimed": false,
+  "nation_approval_claimed": false
+}
